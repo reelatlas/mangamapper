@@ -38,7 +38,7 @@ export const searchTextFor = (parts: (string | null | undefined)[], synonyms: st
 // override manga-wide totals with the entry's OWN range. Applied by every
 // writer AND runnable standalone (scopes-apply) after curated edits.
 export async function applyScope(
-  aflSlug: string,
+  seriesId: string,
   fields: {
     total_volumes: number | null;
     total_chapters: number | null;
@@ -46,7 +46,8 @@ export async function applyScope(
     manga_start_chapter: number | null;
   },
 ) {
-  const { data: scope } = await db.from('series_scopes').select('*').eq('afl_slug', aflSlug).maybeSingle();
+  // keyed by the entry's series.id since 2026-09-03 (an AFL-less entry can own a scope — the Ranking of Kings side series)
+  const { data: scope } = await db.from('series_scopes').select('*').eq('series_id', seriesId).maybeSingle();
   if (!scope) return fields;
   return {
     total_volumes: scope.end_volume ?? fields.total_volumes,
@@ -624,7 +625,7 @@ export async function resolveSeries(runId: number, slug: string): Promise<{ epis
     manga_anilist_id: manga?.id ?? null,
     manga_status: mangaStatusOf(manga),
     ...(await (async () => {
-      const scoped = await applyScope(slug, {
+      const scoped = await applyScope(id, {
         total_volumes: manga?.volumes ?? null,
         total_chapters: manga?.chapters ?? null,
         manga_start_volume: null,

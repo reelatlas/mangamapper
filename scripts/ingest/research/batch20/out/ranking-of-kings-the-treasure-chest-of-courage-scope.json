@@ -1,0 +1,163 @@
+{
+  "series_id": "ranking-of-kings-the-treasure-chest-of-courage",
+  "summary": "SCOPE ANSWER, and it is not either of the two options in the ask: The Treasure Chest of Courage is an ANTHOLOGY for nine of its ten rows (tankobon extras printed in vols 1-12 plus anime-original vignettes, all position-less under A44 — those rows carry no anchor), but its FINALE owns a real, exclusive mainline range. ep 10 'The Return of the Sword King' adapts the OPENING OF PART TWO — ch 156 onward in vol 13 — which the 2021-22 TV series never touches: ja-WP says verbatim that the main series animated 'the original's part one (vol 1 ch 1 - vol 12 ch 155)', KADOKAWA's own vol-13 copy is '第二部開幕!!', and the publisher's vol-13 blurb is ep 10's official synopsis almost word for word. So the family splits cleanly at 155/156 with no overlap, and the recommendation is TWO series_scopes rows on the naruto / naruto-shippuden precedent: ranking-kings end vol 12 / ch 155 (part one, fully adapted, NO tail), and this entry start vol 13 / ch 156 with an OPEN end (it is the family's last covering entry, so the never-adapted tail from ch 162 to the manga's frontier — MU latest_chapter 276 — belongs here). That start floor is also the structural fix for the leak the ask names: MU's only segment reads 'Vol 12, Chap 155 (S1) The Treasure Chest of Courage covers skipped content' — an (S1)-labelled pin for the MAIN entry (G37), which a 156 floor puts out of this entry's scope for good. Rows 1-9 carry no anchor and do not extend the range: a tankobon bonus chapter has no number in the manga's 第N話 space (A44), and re-printing volume is not story position — ep 1's extra is printed in vol 8 but plays during the Despa training arc. Two record gains beyond the wave-8 verdict, both on a source that wave did not use (the publisher's own per-volume e-book copy): ep 9's segment 'ミランジョと魔神' IS the vol-11 描き下ろし ('ミランジョと魔神の出会いを描く単行本描き下ろしエピソードも収録!!'), and vol 12's 描き下ろし ('本編直後のボッジとカゲを描く') is a live candidate for ep 6 — both were open queue items. eps 3 and 5 stay filler here (A1, no anchor by type), with one caveat flagged: the vol-7 16-page 描き下ろし (MangaDex 92.5, es-la 'Devocion inquebrantable') is an unresolved candidate for ep 5's Hokuro segment. ep 10's stored anchor 161 [156] v13 is CONFIRMED unchanged as a floor (no value moves in this file).",
+  "anchors": [
+    {
+      "episode": 10,
+      "end_chapter": 161,
+      "start_chapter": 156,
+      "chapters_adapted": "156, 157 (the Kuhya inn scene moved to the episode's close), 158, 159, 160, 161",
+      "volume": 13,
+      "confidence": "medium",
+      "note": "CONFIRMS the stored anchor — no value change. A4/A10: the only row in the run carrying first-time MAINLINE pages. START 156 = the episode's first scene (Bojji and Kage on the wagon passing the ruined Desha) = ch 156's first page; the fandom's chapter pages 156-161 match the episode beat for beat in order (vault + sword case / cursed swords + the Kuhya inn / speared corpse + the prison + the demon child / the lake, the rope, the catfish, the wish / Ouken human again + the lost connection / Despa's flashback, the knights' report, the armoured man at the vault). END 161 is a VERIFIED FLOOR, not a ceiling: the episode's last act (Ouken beating the golems, the judge's 'superiors', the nameless god, Desha's cape and crown, the report that Desha traded his memories) runs past ch 161's close, and no readable source summarises 162-167 (the fandom has no Chapter_162+ page; MangaDex carries no title for 162-167 in 1011 chapter rows). See flags_for_sean.",
+      "sources": [
+        "https://ousamaranking.fandom.com/api.php?action=parse&page=Chapter_156&prop=wikitext&format=json",
+        "https://ousamaranking.fandom.com/api.php?action=parse&page=Chapter_161&prop=wikitext&format=json",
+        "https://ousamaranking.fandom.com/api.php?action=parse&page=Special_Episode_10&prop=wikitext&format=json",
+        "https://osama-ranking-treasurechest.com/story/?id=10",
+        "https://booklive.jp/product/index/title_id/10002571/vol_no/013",
+        "https://www.kadokawa.co.jp/product/322201000490/"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 10,
+      "continue_chapter": 162,
+      "kind": "post_series",
+      "note": "CONFIRMS the stored continue (C5 = coverage + 1). Resume at ch 162 in vol 13 and expect a SHORT OVERLAP: the finale's closing act plays out over the chapters immediately after 161 and this verdict could not fix that boundary. Nothing later is animated — vol 13's remaining Kuhya material (Oyabu debuts ch 166) and vol 14 onward are never-adapted, to the manga's frontier (MU latest_chapter 276).",
+      "sources": [
+        "https://ousamaranking.fandom.com/api.php?action=parse&page=Volume_13&prop=wikitext&format=json",
+        "https://api.mangadex.org/manga/7e2933d2-8587-4c0f-b69c-4233864b96a8/aggregate",
+        "https://api.mangaupdates.com/v1/series/9873638769"
+      ]
+    }
+  ],
+  "anchor_hostile": [
+    {
+      "episode": 1,
+      "why": "A44 position-less, and the row is stored MIXED. Segment A カゲのおつかい (a morning at Despa's during the training stay: Despa's age spot, Kage's Shuddercap errand) is anime-original on pixiv (cross-check) and matches no bonus the publisher's per-volume copy names; segment B 王子とお金 adapts the extra printed at the back of vol 8 (MangaDex 104.5, es-la 'Inversion de Despa' — the segment ends with Despa lending the poor girl money as an investment). REFINEMENT on the stored annotation: BookLive/the publisher's vol-8 copy says that extra is a 読切番外篇 first published in 月刊コミックビーム 2019年7月号 and collected in vol 8 — a magazine one-shot by the same author in the same work, so still side_story (never side_source), and still with NO number in the manga's 第N話 space. TIMELINE: both segments sit inside Bojji's training under Despa, i.e. between main-series eps ~7 and 11 (ch ~42-68) — the printing volume (8) is not the story position.",
+      "sources": [
+        "https://osama-ranking-treasurechest.com/story/?id=01",
+        "https://ousamaranking.fandom.com/api.php?action=parse&page=Special_Episode_1&prop=wikitext&format=json",
+        "https://booklive.jp/product/index/title_id/10002571/vol_no/008",
+        "https://ja.wikipedia.org/wiki/%E7%8E%8B%E6%A7%98%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0",
+        "https://api.mangadex.org/manga/7e2933d2-8587-4c0f-b69c-4233864b96a8/aggregate",
+        "https://dic.pixiv.net/a/%E7%8E%8B%E6%A7%98%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%E5%8B%87%E6%B0%97%E3%81%AE%E5%AE%9D%E7%AE%B1"
+      ]
+    },
+    {
+      "episode": 2,
+      "why": "A44 position-less (row stored canon). 荒野の獣 is the vol-6 extra (MangaDex 80.5; pixiv: 原作は単行本6巻の書き下ろし; the publisher's vol-6 blurb names no extra — silence, not a contradiction); ふしぎな砂漠 (the sandstorm, the oasis, the regenerating beast) has no identified manga counterpart. TIMELINE: both are on the road back to the Bosse Kingdom with the Order of the Underworld — between main-series eps 11 and 12 (after ch ~68).",
+      "sources": [
+        "https://osama-ranking-treasurechest.com/story/?id=02",
+        "https://ousamaranking.fandom.com/api.php?action=parse&page=Special_Episode_2&prop=wikitext&format=json",
+        "https://booklive.jp/product/index/title_id/10002571/vol_no/006",
+        "https://ja.wikipedia.org/wiki/%E7%8E%8B%E6%A7%98%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0",
+        "https://api.mangadex.org/manga/7e2933d2-8587-4c0f-b69c-4233864b96a8/aggregate",
+        "https://dic.pixiv.net/a/%E7%8E%8B%E6%A7%98%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%E5%8B%87%E6%B0%97%E3%81%AE%E5%AE%9D%E7%AE%B1"
+      ]
+    },
+    {
+      "episode": 4,
+      "why": "A44 position-less (row stored canon). The whole episode is the vol-9 描き下ろし 'Immortality' — the publisher's own vol-9 copy: 'デスハー、デスパー、オウケンの三兄弟の過去を描く単行本描き下ろしエピソードも収録!!' = the episode's title 不死と三兄弟 and its official synopsis; the fandom's Volume 9 page lists 'Bonus Chapter, \"Immortality\"' after ch 117 and MangaDex places it as 117.5. A bonus chapter carries no mainline number, so no anchor. TIMELINE: the Underworld princes' revolt against Satun — a flashback generations before main ep 1 (the manga prints it beside main ep 18's chapters).",
+      "sources": [
+        "https://osama-ranking-treasurechest.com/story/?id=04",
+        "https://ousamaranking.fandom.com/api.php?action=parse&page=Special_Episode_4&prop=wikitext&format=json",
+        "https://booklive.jp/product/index/title_id/10002571/vol_no/009",
+        "https://ja.wikipedia.org/wiki/%E7%8E%8B%E6%A7%98%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0",
+        "https://api.mangadex.org/manga/7e2933d2-8587-4c0f-b69c-4233864b96a8/aggregate",
+        "https://dic.pixiv.net/a/%E7%8E%8B%E6%A7%98%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%E5%8B%87%E6%B0%97%E3%81%AE%E5%AE%9D%E7%AE%B1"
+      ]
+    },
+    {
+      "episode": 6,
+      "why": "A44 position-less (row stored canon). 王になったボッジ (Bojji as the new king inspecting the town with Bebin and Hokuro, cross-cut with Kage in the forest; it closes with Bebin sending a snake to find Kage) and ダイダ王の憂鬱 (Daida as king with Miranjo) both sit immediately AFTER main-series ep 23 / ch 155 and before ch 156. NEW CANDIDATE (medium, see annotations + flags): the publisher's vol-12 copy names a 描き下ろし '本編直後のボッジとカゲを描く単行本描き下ろしエピソード' (MangaDex 155.5) — which is what segment A is; pixiv places the episode as 無印最終話の直後 without labelling it original, unlike the segments it does label. Either way there is no mainline number, so no anchor.",
+      "sources": [
+        "https://osama-ranking-treasurechest.com/story/?id=06",
+        "https://ousamaranking.fandom.com/api.php?action=parse&page=Special_Episode_6&prop=wikitext&format=json",
+        "https://booklive.jp/product/index/title_id/10002571/vol_no/012",
+        "https://ja.wikipedia.org/wiki/%E7%8E%8B%E6%A7%98%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0",
+        "https://api.mangadex.org/manga/7e2933d2-8587-4c0f-b69c-4233864b96a8/aggregate",
+        "https://dic.pixiv.net/a/%E7%8E%8B%E6%A7%98%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%E5%8B%87%E6%B0%97%E3%81%AE%E5%AE%9D%E7%AE%B1"
+      ]
+    },
+    {
+      "episode": 7,
+      "why": "A44 position-less (row stored mixed). 薄ら笑いの蛇使い is the vol-3 extra — ja-WP cites it as コミックス3巻書き下ろし『薄ら笑いを浮かべる彼』 for exactly this story (Bebin trains under Despa, is given the serpent sword, beats Apeas), the publisher's vol-3 copy is 'ベビンの成長を描いた描き下ろしも収録した第3巻', the fandom's Volume 3 page lists the bonus after ch 41 and MangaDex places it as 41.5. 四天王の宴 is anime-original (its チャンピオン is on ja-WP's アニメオリジナルのキャラクター list). TIMELINE: 7A is young Bebin, long before main ep 1; 7B is after Daida is given the throne, i.e. after main ep 23 / ch 155.",
+      "sources": [
+        "https://osama-ranking-treasurechest.com/story/?id=07",
+        "https://ousamaranking.fandom.com/api.php?action=parse&page=Special_Episode_7&prop=wikitext&format=json",
+        "https://booklive.jp/product/index/title_id/10002571/vol_no/003",
+        "https://ja.wikipedia.org/wiki/%E7%8E%8B%E6%A7%98%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0",
+        "https://api.mangadex.org/manga/7e2933d2-8587-4c0f-b69c-4233864b96a8/aggregate",
+        "https://dic.pixiv.net/a/%E7%8E%8B%E6%A7%98%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%E5%8B%87%E6%B0%97%E3%81%AE%E5%AE%9D%E7%AE%B1"
+      ]
+    },
+    {
+      "episode": 8,
+      "why": "A44 position-less (row stored mixed). カゲのあこがれ is the vol-10 extra — the publisher's vol-10 copy: 'カゲの幼少期を描く単行本描き下ろしエピソードも収録!!' (MangaDex 129.5, es-la 'Capitulo extra: aspiracion' = あこがれ); 偉大な母 shares its opening beat with vol 1's untitled bonus (an expanded remake of Bosse and Sheena's first meeting, MangaDex 13.5) but runs on through the demon contract, Bojji's birth, the founding of the kingdom and the judge's visit, which pixiv labels オリジナルエピソード. Neither is a mainline number, and 8B's shared beat is a REMAKE of already-animated material — no first-time pages. TIMELINE: both are before main ep 1.",
+      "sources": [
+        "https://osama-ranking-treasurechest.com/story/?id=08",
+        "https://ousamaranking.fandom.com/api.php?action=parse&page=Special_Episode_8&prop=wikitext&format=json",
+        "https://booklive.jp/product/index/title_id/10002571/vol_no/010",
+        "https://ja.wikipedia.org/wiki/%E7%8E%8B%E6%A7%98%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0",
+        "https://api.mangadex.org/manga/7e2933d2-8587-4c0f-b69c-4233864b96a8/aggregate",
+        "https://dic.pixiv.net/a/%E7%8E%8B%E6%A7%98%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%E5%8B%87%E6%B0%97%E3%81%AE%E5%AE%9D%E7%AE%B1"
+      ]
+    },
+    {
+      "episode": 9,
+      "why": "A44 position-less (row stored canon). NEW, and it closes an open queue item: ミランジョと魔神 IS the vol-11 描き下ろし — the publisher's vol-11 copy reads 'ミランジョと魔神の出会いを描く単行本描き下ろしエピソードも収録!!', which is this segment's title and its content (young Miranjo in the Houma forest meets the demon child, tames a bear, is led back out), and pixiv independently says 9A's 原作は単行本で、幼少期のミランジョと魔神の子のエピソード; MangaDex places vol 11's extra as 141.5. 王子と宝物 (Bojji's farewell gifts on the day he abdicates) is anime-original on pixiv and is a coda sitting at the close of ch 155, before ch 156. A bonus chapter has no mainline number: annotation, not anchor. TIMELINE: 9A long before main ep 1; 9B at the very end of main ep 23.",
+      "sources": [
+        "https://osama-ranking-treasurechest.com/story/?id=09",
+        "https://ousamaranking.fandom.com/api.php?action=parse&page=Special_Episode_9&prop=wikitext&format=json",
+        "https://booklive.jp/product/index/title_id/10002571/vol_no/011",
+        "https://ja.wikipedia.org/wiki/%E7%8E%8B%E6%A7%98%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0",
+        "https://api.mangadex.org/manga/7e2933d2-8587-4c0f-b69c-4233864b96a8/aggregate",
+        "https://dic.pixiv.net/a/%E7%8E%8B%E6%A7%98%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%E5%8B%87%E6%B0%97%E3%81%AE%E5%AE%9D%E7%AE%B1"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [
+        9
+      ],
+      "kind": "side_story",
+      "chapters": "vol 11 描き下ろし bonus chapter (MangaDex 141.5, untitled in every language) for segment A ミランジョと魔神; segment B 王子と宝物 is anime-original",
+      "note": "NEW — the identification the wave-8 verdict and its verifier left open ('a tankobon source with no volume named'). The publisher's own vol-11 e-book copy names the bonus by its content: 'ミランジョと魔神の出会いを描く単行本描き下ろしエピソードも収録!!'; pixiv independently gives 9A a tankobon origin; MangaDex places vol 11's extra as 141.5. A bonus chapter printed inside the tankobon IS the source (the GTO/Toroko rule) — side_story, never side_source — and it carries no mainline number (A44)."
+    },
+    {
+      "episodes": [
+        6
+      ],
+      "kind": "side_story",
+      "chapters": "CANDIDATE (medium): vol 12 描き下ろし bonus chapter (MangaDex 155.5, untitled) for segment A 王になったボッジ",
+      "note": "CANDIDATE, not a confirmed pairing — Sean's call whether to store it. The publisher's vol-12 copy names a bonus '本編直後のボッジとカゲを描く単行本描き下ろしエピソード' (Bojji AND Kage immediately after the main story); segment A is exactly that shape (Bojji as the new king, cross-cut with Kage in the forest, closing on Bebin sending a snake after Kage) and pixiv places the episode as 無印最終話の直後 WITHOUT the オリジナルエピソード label it applies to eps 1A/3/5/7B/8B/9B. No position effect either way (A44): a bonus chapter has no mainline number."
+    },
+    {
+      "episodes": [
+        1
+      ],
+      "kind": "side_story",
+      "chapters": "the extra printed at the back of vol 8 (MangaDex 104.5, es-la 'Inversion de Despa') for segment B 王子とお金",
+      "note": "REFINEMENT of the stored annotation's wording, not a new fact: the publisher's vol-8 copy calls that extra a 読切番外篇 first published in 月刊コミックビーム 2019年7月号 and specially collected in the volume — a magazine one-shot by Toka inside his own work, so side_story (never side_source), and not literally a 描き下ろし. Segment A カゲのおつかい stays unidentified/original."
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [],
+  "structure": {
+    "notes": "A. WHAT EACH ROW ADAPTS, AND WHERE IT SITS IN THE MAIN STORY (17 segments over 10 rows; JP titles from ja-WP 各話リスト（勇気の宝箱）and the official STORY pages; origins from the publisher's per-volume e-book copy (BookLive, syndicating KADOKAWA/BLIC), ja-WP, the fandom's Volume/manga pages, MangaDex's per-volume placement, and dic.pixiv.net as a labelled CROSS-CHECK).\n row | segment | origin | placed in the main story\n 1A | カゲのおつかい | anime-original (pixiv; no bonus in the publisher's enumerated list matches) | during Bojji's training under Despa — main eps ~7-11 (ch ~42-68)\n 1B | 王子とお金 | vol 8's extra = a 読切番外篇 from 月刊コミックビーム 2019年7月号, collected at the back of vol 8 (MangaDex 104.5) | same training stay\n 2A | 荒野の獣 | vol 6 描き下ろし (MangaDex 80.5; pixiv) | on the road back to the Bosse Kingdom with the Underworld Knights — between main eps 11 and 12\n 2B | ふしぎな砂漠 | unidentified; no bonus matches | same journey, immediately after 2A\n 3A | ヒリングの旧友 | anime-original (its ドドン is on ja-WP's アニメオリジナルのキャラクター list; pixiv) | Hiling and Dorshe in exile — between main eps 9 and 11\n 3B | ダイダと魔法 | anime-original (pixiv) | Bojji and Daida's childhood — before main ep 1\n 4  | 不死と三兄弟 | vol 9 描き下ろし 「不死」 / 'Immortality' (MangaDex 117.5) — the publisher names it: '三兄弟の過去を描く単行本描き下ろし' | the Underworld revolt against Satun, generations before main ep 1\n 5A | 冥府の掟 | anime-original (pixiv 'いずれもオリジナルエピソード'; its フレン is ja-WP anime-original) | Furen's hunt for a demon, before Bojji reaches the Underworld\n 5B | 恋する白馬 | anime-original — ja-WP attributes the horse's diet/rebound explicitly to 「勇気の宝箱」5話 | after Despa left the Underworld castle\n 5C | 優しき兵士ホクロ | CONTESTED: pixiv says original, but vol 7's 16-page 描き下ろし (MangaDex 92.5, es-la 'Devocion inquebrantable') is a live candidate and ja-WP carries Hokuro's flower-at-the-grave backstory WITHOUT an anime attribution | Hokuro's past — before main ep 1\n 6A | 王になったボッジ | CANDIDATE vol 12 描き下ろし (MangaDex 155.5; publisher: '本編直後のボッジとカゲを描く') | immediately after main ep 23 / ch 155\n 6B | ダイダ王の憂鬱 | unidentified | immediately after main ep 23 / ch 155\n 7A | 薄ら笑いの蛇使い | vol 3 描き下ろし — ja-WP: 『薄ら笑いを浮かべる彼』; publisher: 'ベビンの成長を描いた描き下ろし'; fandom: 'Those Who Smile Will Be Blessed…' (MangaDex 41.5) | young Bebin, before main ep 1\n 7B | 四天王の宴 | anime-original (its チャンピオン is ja-WP anime-original; pixiv) | after Daida is given the throne — after main ep 23\n 8A | カゲのあこがれ | vol 10 描き下ろし (MangaDex 129.5, es-la 'aspiracion'; publisher: 'カゲの幼少期を描く単行本描き下ろし') | Kage's childhood in the Bo Kingdom, before main ep 1\n 8B | 偉大な母 | opening beat shared with vol 1's untitled bonus (MangaDex 13.5, itself a REMAKE of the Bosse/Sheena meeting); the remainder anime-original (pixiv) | Bosse's youth, before main ep 1\n 9A | ミランジョと魔神 | vol 11 描き下ろし (MangaDex 141.5; publisher: 'ミランジョと魔神の出会いを描く単行本描き下ろしエピソード') — NEW this pass | young Miranjo in Houma, before main ep 1\n 9B | 王子と宝物 | anime-original (pixiv) | the day Bojji abdicates — the close of main ep 23 / ch 155\n 10 | 剣王の復活 | MAINLINE ch 156-161+ (vol 13) — the opening of the manga's PART TWO | after main ep 23; the first animated material past ch 155\n\nB. THE TANKOBON EXTRA REGISTRY (why none of rows 1-9 can carry a number). Every volume of Ousama Ranking closes with an extra; the scanlations label them N.5 but the manga's own numbering knows only 第N話 (the 単話版 digital edition publishes only numbered units, and ja-WP names extras by title alone — 'コミックス14巻描き下ろし「冥府に迫る影」', 'コミックス15巻描き下ろしエピソード「盗賊首領 オヤーブ」', which are exactly MangaDex's 180.5 and 193.5). Registry as read this pass (volume — publisher's description — MangaDex unit — adapted by): v1 untitled remake of the Bosse/Sheena meeting — 13.5 — ep 8B (opening beat only); v2 untitled remake of the Bojji/Kage meeting — 27.5 — not adapted; v3 Bebin's growth — 41.5 — ep 7A; v4 'ドーマスの誓い' / 'A New Vow' — 55.5 — not adapted; v5 'ボッジの優しさを垣間見る' / fandom 'A Safe Haven' — 68.5 — not adapted (ep 1A is the contradicted candidate); v6 (unnamed in the publisher's copy) — 80.5 — ep 2A; v7 16 pages, unnamed — 92.5 — CONTESTED candidate for ep 5C; v8 a 読切番外篇 from 月刊コミックビーム 2019年7月号 — 104.5 — ep 1B; v9 the three brothers' past — 117.5 — ep 4; v10 Kage's childhood — 129.5 — ep 8A; v11 Miranjo meets the demon — 141.5 — ep 9A; v12 Bojji and Kage immediately after the main story — 155.5 — ep 6A (candidate); v13 the grown Poise — 167.5 — not adapted; v14 冥府三兄弟 — 180.5 — not adapted; v15 Oyabu's past — 193.5 — not adapted. A44 applies to every one of them: no number in the source's own space, so no END, no START.\n\nC. CHAPTER SPACE AND THE 155/156 SEAM. One space only — the manga's 第N話 numbering, which the tankobon reproduce contiguously. Part one = ch 1-155 = vols 1-12; part two opens with ch 156 = vol 13. Four independent witnesses: ja-WP, verbatim in the 2021 TV section, '原作の第一部（1巻1話〜12巻155話）が映像化された'; ja-WP's infobox 発表期間 第一部 2017-05-20 – 2021-01-02 / 第二部 2021-05-08 –; KADOKAWA's own vol-13 copy '第二部開幕!!　ボッジとカゲの新たなる冒険が今、始まる!!'; MangaDex's aggregate (vol 12 = 142-155 + 155.5, vol 13 = 156-167 + 167.5) matching the fandom's Volume 12/13 pages. The main entry's stored anchors (ep 23 → 150-155 v12) and this entry's (ep 10 → 156-161 v13) meet exactly at the seam with NO overlap: nothing in rows 1-9 adapts first-time mainline pages (the only shared-page case, 8B, is a remake of a remake), and the main series never reaches ch 156.\n\nD. THE SCOPE RECOMMENDATION (I36). The side entry is NOT scope-less: it exclusively owns the manga from ch 156. Recommended rows, on the naruto / naruto-shippuden precedent already in series_scopes (predecessor capped at the part boundary, successor gets a start floor and an open end):\n  ranking-kings  → start_volume null, start_chapter null, end_volume 12, end_chapter 155 — 'part one (vol 1 ch 1 - vol 12 ch 155), fully adapted; The Treasure Chest of Courage continues at vol 13 / ch 156'. Effect: total_chapters 155, the entry reads complete, and it carries NO never-adapted tail — which is the truth (it animated all of part one).\n  ranking-of-kings-the-treasure-chest-of-courage → start_volume 13, start_chapter 156, end_volume null, end_chapter null — 'the opening of part two; ep 10 adapts ch 156-161+ (a floor). Its other nine rows are tankobon extras printed in vols 1-12 and anime-originals: position-less (A44), they do not extend the range.' Effect: manga_start_chapter 156, totals stay the manga's frontier, so the never-adapted tail (ch 162 → 276+) sits on this entry — correct, because it is the family's LAST covering entry (the changelog's 'unclaimed range → universe tail' principle).\n  ALTERNATIVE if Sean would rather the side entry's bar close where it stops rather than carry the family tail: end_volume 13 / end_chapter 167 (the volume it stops inside). That reads honestly as an entry bar but leaves ch 168+ unclaimed by any entry — I recommend the open end.\n  WHAT NOT TO DO: leaving this entry unscoped. Unscoped it inherits the whole manga (1 → 276), which is the Naruto bug, and it is the state that let MU's (S1) pin land here in the first place.\n\nE. THE MU PIN, quoted from the API this pass: {\"start\": \"Vol 1, Chap 1 (S1)\", \"end\": \"Vol 12, Chap 155 (S1) The Treasure Chest of Courage covers skipped content\"} with latest_chapter 276. ONE segment, labelled (S1) — the 2021-22 TV series. On this entry the pin is G37 twice over: it is another entry's frontier, and it UNDER-states this one (ep 10 reaches at least 161). The trailing prose is MU's note ABOUT the spin-off, not a chapter claim for it — and it is not even accurate as prose: nine rows cover skipped/extra content, but the finale covers NEW content past the main series' end. With the recommended start floor of 156, any future 155 pin on this entry is automatically out of scope.\n\nF. ROW IDENTITY (unchanged from wave 8, re-verified this pass on ja-WP and the official STORY pages): 10 rows, 2023-04-14 … 2023-06-16, Fuji TV Noitamina; ja-WP 全10話, en-WP's 2023 table, the official site's STORY nav 01-10 and AniList 153452 all agree on 10. ja-WP also records the entry's own framing: '本作の内容は前作で語られなかったスペシャルエピソードとなっており、「第2期」とは銘打たれていない' — a special-episode collection, never billed as a season 2, which is exactly why it needs a scope row rather than a season's inheritance.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "SCOPE, the ask's fork answered: the side entry DOES own a range (ch 156 →) — it is not a pure anthology, and the main entry must NOT keep the whole manga. Two rows recommended (structure.notes D). Precedent: naruto / naruto-shippuden.",
+    "BLOCKER on writing the side entry's row: series_scopes is keyed by afl_slug (primary key), and this entry's afl_slug is NULL (no AnimeFillerList page) — scopes-apply.ts's discovery guard also skips slug-less series ('if (isSequelLinked && s.afl_slug && …)'), which is why the heal has only ever printed the flag on ranking-kings. Capping ranking-kings at 155 alone fixes the MAIN entry and leaves this one inheriting the whole manga. Either mint an afl_slug for this entry or give series_scopes an id-keyed path before the ruling can land on both sides.",
+    "ep 10 END 161 is a FLOOR, unchanged here, and it CONFLICTS with a stored claim on the OTHER entry: the main series' ep-23 annotation (batch 11) reads 'finale has original epilogue expansion; TCoC specials → post-TCoC continue = 165', i.e. it assumes this entry reaches ~164. Both cannot be right. The fandom has no Chapter_162+ page (created only through 161, Aug 2026), MangaDex carries no titles for 162-167, Manga Hack is gone (mangahack.com now redirects to Xfolio) and the storefront pages print only series boilerplate — so 162-167 remain unsummarised anywhere I could read. Reconcile the two records when the END is lifted; do NOT read Oyabu (manga debut ch 166, fandom `anime` field EMPTY) into the finale's closing scene as coverage.",
+    "ep 5 (stored FILLER after wave 8) — one segment may be manga-sourced after all. 5C 優しき兵士ホクロ: the publisher's vol-7 copy records a 16-page 描き下ろし it does not name, MangaDex's vol-7 extra 92.5 carries the es-la title 'Devocion inquebrantable' (unbreakable devotion — Hokuro's devotion to Bojji is the segment), and ja-WP narrates Hokuro's flower-at-the-grave backstory as plain character background while it explicitly attributes other TCoC-only facts to 「勇気の宝箱」5話 (白王's diet, Miranjo's teaching). Against that stands pixiv's 'いずれもオリジナルエピソード' for all three segments — the source the filler ruling rested on. Unresolved; if 5C is the vol-7 extra the row is mixed, not filler. No position effect either way (A44).",
+    "ep 6 candidate (annotations): vol 12's 描き下ろし '本編直後のボッジとカゲを描く' fits segment A closely and pixiv withholds its オリジナル label from this episode. Store the side_story or leave it as a note — Sean's call; no anchor consequence.",
+    "A THIRD entry is coming: a 完全新作劇場版 (a fully new theatrical anime) was announced 2023-06-22 (ja-WP citing MANTAN; en-WP 'An anime film adaptation has been announced'). '完全新作' reads as an original story, i.e. an entry that would own NO manga range — worth deciding before it lands, so it does not inherit the manga the way this entry did.",
+    "Cross-check tier, labelled: dic.pixiv.net's 王様ランキング勇気の宝箱 article is the only segment-by-segment 原作/オリジナル table that exists. The live page is Cloudflare-403; I read it in full through a fetch proxy (r.jina.ai) and my reading matches the wave-8 verifier's word for word. Every claim I lean on is paired with a source I read directly — the publisher's per-volume copy, ja-WP, the fandom, MangaDex, the official STORY pages."
+  ]
+}

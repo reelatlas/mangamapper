@@ -9,12 +9,12 @@ async function main() {
   const runId = await startRun('resolve');
   const actions: string[] = [];
   try {
-    const scopes = await selectAll<{ afl_slug: string; start_volume: number | null; start_chapter: number | null; end_volume: number | null; end_chapter: number | null }>('series_scopes', '*');
+    const scopes = await selectAll<{ series_id: string; afl_slug: string | null; start_volume: number | null; start_chapter: number | null; end_volume: number | null; end_chapter: number | null }>('series_scopes', '*');
 
     // Discovery: sequel-linked series sharing one manga MUST be scoped —
     // otherwise each shows the whole franchise (the Naruto bug). Flag any
     // pair the curated table doesn't cover yet.
-    const scoped = new Set(scopes.map((s) => s.afl_slug));
+    const scoped = new Set(scopes.map((s) => s.series_id));
     const all = await selectAll<{ id: string; afl_slug: string | null; manga_anilist_id: number | null }>('series', 'id, afl_slug, manga_anilist_id', (q) => q.not('manga_anilist_id', 'is', null));
     const byManga = new Map<number, { id: string; afl_slug: string | null }[]>();
     for (const s of all) byManga.set(s.manga_anilist_id!, [...(byManga.get(s.manga_anilist_id!) ?? []), s]);
@@ -24,12 +24,12 @@ async function main() {
       if (group.length < 2) continue;
       for (const s of group) {
         const isSequelLinked = group.some((o) => o.id !== s.id && linked.has(`${s.id}|${o.id}`));
-        if (isSequelLinked && s.afl_slug && !scoped.has(s.afl_slug)) {
-          await fileFlagOnce(runId, s.afl_slug, 'resolve', 'count_mismatch', {
+        if (isSequelLinked && !scoped.has(s.id)) {
+          await fileFlagOnce(runId, s.id, 'resolve', 'count_mismatch', {
             note: 'shares a manga with a sequel-linked series but has no series_scopes row — needs scope curation',
             mangaAnilistId: group[0] && all.find((x) => x.id === s.id)?.manga_anilist_id,
           });
-          actions.push(`UNSCOPED shared-manga series flagged: ${s.afl_slug}`);
+          actions.push(`UNSCOPED shared-manga series flagged: ${s.id}`);
         }
       }
     }
@@ -37,10 +37,10 @@ async function main() {
       const { data: s } = await db
         .from('series')
         .select('id, total_volumes, total_chapters, manga_start_volume, manga_start_chapter')
-        .eq('afl_slug', scope.afl_slug)
+        .eq('id', scope.series_id)
         .maybeSingle();
       if (!s) {
-        actions.push(`${scope.afl_slug}: not in canonical — skipped`);
+        actions.push(`${scope.series_id}: not in canonical — skipped`);
         continue;
       }
       const next = {
@@ -51,24 +51,24 @@ async function main() {
       };
       const changed = (Object.keys(next) as (keyof typeof next)[]).some((k) => next[k] !== s[k]);
       if (!changed) {
-        actions.push(`${scope.afl_slug}: already scoped`);
+        actions.push(`${scope.series_id}: already scoped`);
         continue;
       }
       const { error } = await db
         .from('series')
         .update({ ...next, updated_at: new Date().toISOString() })
         .eq('id', s.id);
-      if (error) throw new Error(`${scope.afl_slug}: ${error.message}`);
+      if (error) throw new Error(`${scope.series_id}: ${error.message}`);
       // a curated scope satisfies the discovery guard's flag for this slug
       await db
         .from('ingest_flags')
         .update({ status: 'dismissed', resolved_at: new Date().toISOString() })
-        .eq('series_key', scope.afl_slug)
+        .in('series_key', [scope.series_id, scope.afl_slug ?? scope.series_id])
         .eq('status', 'open')
         .eq('kind', 'count_mismatch')
         .contains('detail', { note: 'shares a manga with a sequel-linked series but has no series_scopes row — needs scope curation' });
       actions.push(
-        `${scope.afl_slug}: vol ${next.manga_start_volume ?? 1}-${next.total_volumes ?? '—'} · ch ${next.manga_start_chapter ?? 1}-${next.total_chapters ?? '—'}`,
+        `${scope.series_id}: vol ${next.manga_start_volume ?? 1}-${next.total_volumes ?? '—'} · ch ${next.manga_start_chapter ?? 1}-${next.total_chapters ?? '—'}`,
       );
     }
     await finishRun(runId, 'ok', { fetched: 0, unchanged: 0, changed: actions.length, flagged: 0 }, 'scopes apply');

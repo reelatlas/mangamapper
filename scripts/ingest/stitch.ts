@@ -163,7 +163,7 @@ async function main() {
       }
       Object.assign(
         series,
-        await applyScope(cand.slug, {
+        await applyScope(series.id, {
           total_volumes: series.total_volumes,
           total_chapters: series.total_chapters,
           manga_start_volume: series.manga_start_volume,
