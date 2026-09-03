@@ -30,7 +30,9 @@ const VOLUME_SEED: [number, number, number][] = [[1, 1, 5], [2, 6, 14], [3, 15, 
 const CONTINUE_OVERRIDE: Record<number, { chapter: number; why: string }> = {};
 const NOTE_FIX: Record<string, string> = {};
 const CA_OVERRIDE: Record<number, string> = {};
-const ANNOTATION_ADD: { episode: number; kind: AnnotationKind; chapters: string; note: string }[] = [];
+const ANNOTATION_ADD: { episode: number; kind: AnnotationKind; chapters: string; note: string }[] = [
+  { episode: 5, kind: 'partial', chapters: '14 (the C-part tag)', note: 'The verifier (wave 12): ep 5\'s C-part is ch 14\'s opening (nissi0725 ep 5 "そこそこの長さ" Sistana/Calden/Anne C-part; ep 6 "冒頭 … 原作14話の冒頭部分" cold open) — two sources; a tail ep 6 starts on (A47: END 13 unchanged).' },
+];
 
 async function main() {
   const runId = DRY ? 0 : await startRun('resolve');

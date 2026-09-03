@@ -44,7 +44,15 @@ Block totals: **23 / 23 anchors 2 → 75**, 13 continues, 0 retypes, 0 repairs, 
 - A title can be the NEXT chapter's (ep 9 師と弟子 = ch 27's title while the episode stops at 26) — the FotNS title-lag trap on a different series.
 - The licensor host moved (4knights-anime.com → 7sins-4knights.net/story/<N>.html); check the live host before declaring the licensor gone.
 
-## Verification (dispatched at landing — one Fable verifier over the four files: both un-cross-cuts + the pc dissent, the volume table that seeds the boundary table, the A47/A10 page counts, the ch-25 omission).
+## Verification tier (R23/R24 — one Fable verifier over the four Opus sub-blocks; verify/the-seven-deadly-sins-four-knights-of-the-apocalypse-w12.md)
+**SOUND.** All 23 anchors, 13 continues and 23 volumes hold on independently refetched sources (fandom episode 1-25 + chapter 1-78 + volume pages, programming-cafe both tables, 13 licensor synopses, 15 nissi0725 posts, 9 Kodansha records, ja-WP); the lib moves nothing on all 24 anchors; scan 0 items. **Both un-cross-cuts REAL; programming-cafe's ch-69 dissent REFUTED** (the exact 7+6+7 partition; the chapter's own cast order puts the Melagaland thread in the middle; the blog's ep-22 C-part is only the staff activating — a restaged tease; ep 23 opens on Melagaland's birth). Ch 58: the kiss is ep 18's ending (cast list, the blog quoting the manga line, the broadcaster's tweet); ep 19 opens on a re-show + ch 59's head. **The v1-v9 table publisher-confirmed for all nine** (Kodansha's 初出 strings match the fandom wsm= fields chapter for chapter) — safe to seed. **A47/A10 calls all hold on the pages= fields**; ep 6's ch-17 tail is five full pages plus a shared p.7 = more than five → END 17 is the better-supported value (the END-16 fallback withdrawn). Ch 25 p.17-19 stands medium. **New fact:** ep 5's C-part IS a ch-14 opening tag on two sources → `partial`{14} added at apply (END 13 unchanged). Nits: v4/v5 page counts (192 not 200); Kodansha's product pages are readable.
+
+## THE DECISIONS (Sean rules at curation — recommendations marked)
+1. **Apply the four as delivered** + the volume seed v1-v9 (research-tier boundary rows) + the ep-5 partial{14}. *Recommend: yes.*
+2. **The three forks, resolved by the verifier**: ep 6 END 17 (a 6-page tail — the better-supported value); ch 69 split 22/23 as delivered (pc's dissent refuted); ep 18 END 58 (the kiss is ep 18's ending). *Recommend: as delivered.*
+3. No retypes, no repairs, no G53 (ja-WP confirms every stored date; the fandom's ep-23 date is the wrong one, not ours).
+4. Next: **dai 18-99 ×3** (82 rows — the LAST gap block; three waves of ~27 as sub-blocks of ~7).
+
 
 ## Open for Sean (after the verifier)
 1. Apply the four as delivered (+ the volume seed v1-v9 as research-tier boundary rows).
