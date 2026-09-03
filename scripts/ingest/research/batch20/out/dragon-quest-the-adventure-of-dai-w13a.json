@@ -1,0 +1,160 @@
+{
+  "series_id": "dragon-quest-the-adventure-of-dai",
+  "summary": "Rows 18-23 continue the 2020 remake's strictly linear adaptation: ch 60-81 across six episodes (~3.7 chapters each), zero filler and zero anime-original plot. Every boundary is corroborated three ways — dragonquest.fandom's per-episode '|adapted=' field AND its per-chapter reverse '|adapted= 2020: episode N' (ONE wiki, per flag #929), Toei's own per-episode あらすじ (toei-anim.co.jp/tv/dq-dai/episode/summary/N and the identical lineup.toei-anim.co.jp text — one licensor source), and en-WP's original-tankobon chapter/volume list whose Japanese chapter titles namesake five of the six episodes exactly (ep 19 = ch 67 アバン流最後の奥義, ep 20 = ch 70 いま…すべてを斬る…!!!, ep 21 = ch 73 マァムの決意, ep 22 = ch 76 デパートへ行こう!, ep 23 = ch 81 竜の騎士) plus ep 18 = ch 61 激突!!ヒュンケル対ハドラー. Five of the six end on a chapter's last page (clean cuts at 63/64, 68/69, 72/73, 75/76, 78/79 — all confirmed by Toei's synopsis pairs), so only ep 23 needs a continue point. Two A47 calls: ep 23's END stays at 81 because its ch-82 material is a relocated few-page interlude (Hyunckel finding the Carl survivor Horkins) plus Baran's arrival lines, while ch 82's story — Baran's Dragon-Knight mission speech — opens ep 24; and the SAME shape is present in the fence below, so ep 17's stored END 60 is proposed as a repair to 59 (ep 18 starts on ch 60 and carries its bulk). en-WP's volume list confirms our stored v7 = 57-66, v8 = 67-75, v9 = 76-84 exactly.",
+  "anchors": [
+    {
+      "episode": 18,
+      "end_chapter": 63,
+      "start_chapter": 60,
+      "chapters_adapted": "60 (completion/bulk), 61, 62, 63",
+      "volume": 7,
+      "confidence": "high",
+      "note": "Opens IN ch 60 with its bulk — Toei's ep-18 synopsis begins with Popp/Maam's shock at Hyunckel's appearance and his account of Crocodine's rescue, which IS ch 60 戦士復活!! ('Warrior Revived'); START=60 under A10 (a leading partial that is not a sliver). Runs the whole Hyunckel-vs-Hadlar duel: ch 61 激突!!ヒュンケル対ハドラー (= ep title), ch 62 火を吹く最終闘気!! (Grand Cross), ch 63 生と死の十字架 (Hadlar's second heart destroyed). Ends on ch 63's closing page — the fandom's ch-63 order-of-appearance ends on Flazzard and ep 18's own character list carries Flazzard and Bartos (vision), both ch-63-only elements; ep 19 starts on ch 64 (A4). Clean cut, no continue.",
+      "sources": [
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_(2020)_episode_18&prop=wikitext&format=json",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/18/",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes",
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_chapter_63&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 19,
+      "end_chapter": 68,
+      "start_chapter": 64,
+      "chapters_adapted": "64, 65, 66, 67, 68",
+      "volume": 8,
+      "confidence": "high",
+      "note": "Clean both sides. Toei's ep-19 synopsis opens with Dai/Popp/Maam finally reaching the Valge tower and being blocked by Flazzard = ch 64 突入!!レオナを救え, and ends with Dai locating the core with his mind's eye and cutting it with Kuretsuzan = ch 68 出たっ!!空裂斬. Ep title アバン流最後の奥義 is ch 67's title verbatim (en-WP); ch 65 フレイザードの執念 / ch 66 嵐の弾岩!!! carry the Rock-Bullet Shrapnel Detonation and the Avan/Matoriv flashbacks that ep 19's own flashback cast list reproduces. ep 20 starts on ch 69 (its opening scene — Hadlar revived at the Sovereign Rock Castle — is ch 69's first page per the fandom's order-of-appearance). END 68 = v8 (en-WP: v8 = 67-75).",
+      "sources": [
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_(2020)_episode_19&prop=wikitext&format=json",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/19/",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes",
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_chapter_67&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 20,
+      "end_chapter": 72,
+      "start_chapter": 69,
+      "chapters_adapted": "69, 70, 71, 72",
+      "volume": 8,
+      "confidence": "high",
+      "note": "Opens on ch 69 魔炎気の巨人!!! — Toei: Hadlar revived by Mystvearn's dark aura while Dai fights, exactly ch 69's opening (Sovereign Rock Castle / gargoyles / Hadlar / Mystvearn head the chapter's appearance order). Ep title 今すべてを斬る = ch 70 いま…すべてを斬る…!!! verbatim (en-WP). Ch 71 さよなら魔弾銃 = the Magic Bullet Gun destroyed freeing Leona; ch 72 勝利!そして… = the Papnica celebration AND the closing Baran/Zaboera scene in Carl that Toei's synopsis ends on — the fandom's ch-72 appearance order ends 'Baran, Zaboera', so ep 20 runs to ch 72's last page. Clean cut, no continue; ep 21 starts on ch 73.",
+      "sources": [
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_(2020)_episode_20&prop=wikitext&format=json",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/20/",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes",
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_chapter_72&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 21,
+      "end_chapter": 75,
+      "start_chapter": 73,
+      "chapters_adapted": "73, 74, 75",
+      "volume": 8,
+      "confidence": "high",
+      "note": "Three chapters, both boundaries clean. Ep title マァムの決意 = ch 73's title verbatim (en-WP); the fandom's ch-73 cast carries BOTH halves Toei's synopsis has (Maam's decision at Papnica + Killvearn/Piroro arriving at the Sovereign Rock Castle). Ch 74 揺れる鬼岩城…!! = Baran declaring for the Dai fight and reading Hadlar's scheme; ch 75 また会う日まで = Maam's farewell and the castle setting off to move, which is Toei's closing line ('ヒュンケルたちの追跡を逃れるために移動する鬼岩城'). Ch 76 is credited to ep 22 only. END 75 = v8's last chapter (en-WP).",
+      "sources": [
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_(2020)_episode_21&prop=wikitext&format=json",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/21/",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes",
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_chapter_75&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 22,
+      "end_chapter": 78,
+      "start_chapter": 76,
+      "chapters_adapted": "76, 77, 78",
+      "volume": 9,
+      "confidence": "high",
+      "note": "First episode of the Destiny arc and of v9. Ep title デパートへ行こう = ch 76 デパートへ行こう! verbatim (en-WP). Ch 77 超竜軍団猛攻!!! = the dragon assault on Bengarna; ch 78 ベンガーナ市街戦 = the street battle, ending on the cliffhanger Toei's synopsis closes with — the Hydra bearing down on Merle as Dai arrives (the fandom's ch-78 appearance order ends 'Merle, Nabara'). ch 79 is credited to ep 23 only, so the cut is on ch 78's last page: no continue.",
+      "sources": [
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_(2020)_episode_22&prop=wikitext&format=json",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/22/",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes",
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_chapter_78&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 23,
+      "end_chapter": 81,
+      "start_chapter": 79,
+      "chapters_adapted": "79, 80, 81, 82 (partial)",
+      "volume": 9,
+      "confidence": "high",
+      "note": "A47: the END does NOT advance to 82. Coverage is ch 79 巨大竜を倒せ!! (the Hydra, Dai's sword shattering), ch 80 吠えるダイ…!!! (the Dragon Crest rout, the townspeople's fear, Killvearn's smirking appearance — Killvearn is in ch 80's cast), ch 81 竜の騎士 = the ep title verbatim (en-WP) — Merle/Nabara naming Dai the Dragon Knight, the Teran lake-bed temple, the Dragon Crystal, Baran's arrival on the chapter's last page. Ch 82's own story (Baran's Dragon-Knight mission speech) OPENS ep 24 — the fandom credits ch 82 to eps 23 AND 24 and ep 24's field reads '82 (Partial), 83, 84, 85, 86 (Partial)'; Toei's ep-23 synopsis ends at 'バランはそんなダイに意外な言葉をかける' and Toei's ep-24 synopsis begins with that very speech. Ep 23's only ch-82 material is the relocated Hyunckel/Horkins Carl-survivor interlude (the fandom's ep-23 manga-differences list: 'Hyunckel finding a Carl survivor is shown sooner') plus Baran's arrival lines — a scrap, and ch 82 is ep 24's START, so END stays 81 and ch 82 is named as a partial (A47 + A12's spirit: a relocated fragment never sets a position).",
+      "sources": [
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_(2020)_episode_23&prop=wikitext&format=json",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/23/",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/24/",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes",
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_chapter_82&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 23,
+      "continue_chapter": 82,
+      "kind": "parity",
+      "note": "Resume at ch 82 衝撃のバラン!!! — ep 24 starts there and animates its substance (Baran's mission speech). Ep 23 showed only ch 82's short Hyunckel/Horkins interlude, moved earlier in the episode, plus Baran's arrival: nothing to skip, the re-read is a couple of pages (C1/C2 parity with ep 24's START).",
+      "sources": [
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_(2020)_episode_24&prop=wikitext&format=json",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/24/"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [23],
+      "kind": "partial",
+      "chapters": "82",
+      "note": "A47 tie: ch 82's pages in ep 23 are a scrap (the Hyunckel/Horkins Carl-survivor interlude + Baran's arrival lines); the chapter's story-carrying content opens ep 24, which STARTS on 82. END stays 81."
+    },
+    {
+      "episodes": [23],
+      "kind": "rearranged",
+      "chapters": "82",
+      "note": "The Hyunckel/Horkins Carl-survivor scene is played earlier in ep 23 than its position in ch 82 (fandom ep-23 'Manga differences': 'Hyunckel finding a Carl survivor is shown sooner')."
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 17,
+      "field": "end_chapter",
+      "old": 60,
+      "new": 59,
+      "why": "A47 (the END-side sliver, ruled at wave 8): ep 17's stored END advances onto ch 60, but ch 60 is the chapter ep 18 STARTS on and carries in bulk. Toei's ep-17 synopsis ends exactly at ch 59 不死身の救世主!!!'s own title beat — the ice tower crumbling to reveal Hyunckel as Hadlar moves to finish Maam — and the fandom's ch-59 appearance order ENDS on Hyunckel, i.e. that reveal is ch 59's closing page. Toei's ep-18 synopsis then OPENS with ch 60 戦士復活!!'s content (Popp and Maam's shock at Hyunckel's return; his account of Crocodine pulling him from the magma). So ep 17's ch-60 share is a cliffhanger scrap at most and ep 18 owns the chapter: END stays 59, ch 60 remains in ep 17's chapters_adapted as a partial. NOTE: this changes nothing else — ep 17's stored continue 60/parity is correct under either reading (it is parity with ep 18's START = 60), and ep 18's START is unaffected. Outside the 18-23 ask; delivered as a repair rather than a silent contradiction of the batch-17 anchor.",
+      "sources": [
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/17/",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/18/",
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_chapter_59&prop=wikitext&format=json",
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_chapter_60&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 17,
+      "field": "chapters_adapted",
+      "old": "57 (bulk), 58, 59, 60 (partial)",
+      "new": "57 (bulk), 58, 59, 60 (cliffhanger scrap — ep 18 owns the chapter)",
+      "why": "Companion to the END 60 -> 59 repair above (A47): the tail stays in chapters_adapted, named as a scrap, and does not set the position. Same sources.",
+      "sources": [
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/17/",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/18/"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "ROW IDENTITY. ja-WP's 各話リスト（2020）confirms our six rows on title AND date with no conversion: 18 ヒュンケル対ハドラー 2/6, 19 アバン流最後の奥義 2/13, 20 今すべてを斬る 2/20, 21 マァムの決意 2/27, 22 デパートへ行こう 3/6, 23 竜の騎士 3/13 (all 2021). Fandom 2020-series episode numbers = OUR numbers; the fandom's 'episode 37.5' recap page is outside our 1-100 numbering and outside this range. CHAPTER SPACE + VOLUMES. en-WP's ORIGINAL-release volume list confirms the stored boundaries exactly: v7 = 57-66, v8 = 67-75, v9 = 76-84; the fandom's per-chapter '|volume=' field agrees chapter by chapter. TRAP: the same en-WP article carries a SECOND volume list (the 新装彩録版 / re-release edition) whose numbering differs — its 'vol 6' is ch 76-89, 'vol 7' is 90-104 — do not read a volume from that block; our space is the original tankobon. Anchor volumes here follow the stored convention (the END chapter's volume), as in the batch-17 rows. SOURCE HYGIENE (flag #929). dragonquest.fandom's forward ('|adapted=' on episode pages) and reverse ('|adapted= 2020: episode N' on chapter pages) mappings are ONE wiki and were walked in both directions for ch 58-84 with zero disagreement. Independence rests on (a) Toei's own per-episode あらすじ at toei-anim.co.jp/tv/dq-dai/episode/summary/N — beat-level and decisive at every boundary here; note lineup.toei-anim.co.jp prints the SAME text, so it is one source, not two; Bandai Channel's b-ch.com pages for this title carry only a generic service blurb and are no help; (b) en-WP's chapter titles, which namesake all six episodes (ep 18 -> ch 61, 19 -> 67, 20 -> 70, 21 -> 73, 22 -> 76, 23 -> 81) and whose per-volume summaries track the run beat for beat; (c) ja-WP for row identity. The 2020 anime's official site dai-anime.com no longer resolves; dq-dai.com is live but its /story/ path is 403 and it links out to the Toei summary pages used above. STANDING. All six rows are plain canon: strictly linear, no anime-original plot, no recap segments. The fandom's per-episode 'Manga differences' sections list only cuts, dialogue swaps, re-choreographed fights and small added beats (e.g. ep 22's Bengarna customer scene introducing the cursed belt, ep 23's altered Hydra choreography) — under the faithfulness clause these are divergence-grade and keep the rows canon; none approaches the T28 materiality bar. No type corrections. A47 SWEEP. Five of the six rows cut on a chapter's last page (63/64, 68/69, 72/73, 75/76, 78/79), each confirmed by the Toei synopsis pair on both sides plus the fandom's chapter-page credits being single-episode; only ep 23 straddles, and there the END is held at 81 (see the anchor note). The same shape sits in the fence below and is delivered as the ep-17 repair. HANDOFF. My last row is ep 23, END 81, with ch 82 partial. The next sub-block (rows 24+) starts at ch 82: the fandom's ep-24 field reads '82 (Partial), 83, 84, 85, 86 (Partial)' and Toei's ep-24 synopsis opens on Baran's mission speech — so ep 24's START should be 82 and its END 85 or 86 depending on that agent's own A47 read of the ch-86 tail. ENDs delivered here are monotone: 63 < 68 < 72 < 75 < 78 < 81, all above the fence (ep 17 -> 59/60) and below ep 24's range.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "FENCE REPAIR (outside the 18-23 ask): ep 17's END 60 -> 59 under A47. The evidence is the Toei synopsis pair (ep 17 ends on ch 59's own title beat, ep 18 opens on ch 60's content) plus the fandom's ch-59 appearance order ending on Hyunckel; I could not count pages, so the 'scrap' judgement is inferential. It is a no-risk repair in effect — ep 17's continue stays 60/parity either way and ep 18's START is 60 either way — but it does contradict a batch-17 manual anchor, so it is yours to rule.",
+    "ep 23 END = 81 is a RULE call, not a source disagreement: every source agrees the coverage is ch 79-81 plus part of 82. Read raw, the fandom's field would give END 82; A47 (ch 82 is ep 24's START and ep 23's share is a relocated interlude + arrival lines) holds it at 81. If you prefer the raw reading, the anchor becomes 82 [79] and ep 24's START would need the same re-reading.",
+    "Independence note for the census: on this series the only per-episode chapter mapping is dragonquest.fandom (forward + reverse = one wiki). The second and third instruments used here are CONTENT instruments (Toei's per-episode synopsis, en-WP's chapter titles + volume summaries) matched beat to beat — strong, but not a second chapter TABLE. flag #929 stands."
+  ]
+}
