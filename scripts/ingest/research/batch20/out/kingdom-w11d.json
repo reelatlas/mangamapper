@@ -1,0 +1,142 @@
+{
+  "series_id": "kingdom",
+  "summary": "OUR rows 123-128 are Kingdom 4th Series eps 20-25 (row conversion by TITLE + air date against ja-WP's 第4シリーズ 各話リスト and syobocal's per-airing Count column, never by index; S1 38 + S2 39 + S3 26 = 103). All six rows are canon and adapt the close of the State of Ai (Rou Ai rebellion) arc in unbroken running order from ch 422 through ch 438 — nothing is skipped, nothing is revisited, and every END sits inside the stored fence (row 122 = ch 419-421 below, row 129 -> 441 above). Six of six rows therefore take an anchor; no anchor-hostile rows, no filler. Three chapters straddle an episode boundary (424 across 123/124, 427 across 124/125, 436 across 127/128) and get C1 parity continues; the other three rows end on a chapter's last page and need none, including row 128, which closes on ch 438's last page so that row 129 opens cleanly on ch 439 (its material) with nothing left behind. The two defects the wave-2 trap predicted are both present again: kingdom.fandom's Episode 125 field DROPS ch 429 entirely, and its Episode 124 field writes '426 (p.1-12)', orphaning the chapter's climax — both are restored here from programming-cafe's per-chapter index plus the licensor's own per-episode synopses. A separate finding, not a data change: ja-WP's 第4シリーズ table mis-dates 第23話 (prints 9月18日 with the typhoon note attached to the wrong row) and prints 9月24日 for 第24/25話; syobocal's per-airing rows confirm our stored dates (09-11, 09-25, 09-25) are the correct ones.",
+  "anchors": [
+    {
+      "episode": 123,
+      "end_chapter": 424,
+      "start_chapter": 422,
+      "chapters_adapted": "422, 423, 424 (p.1-12)",
+      "volume": 39,
+      "confidence": "high",
+      "note": "S4 ep 20. Opens clean on ch 422 (row 122 = 419-421 by both sources); the licensor synopsis carries 422's title beat verbatim (宮女・向は…我が子・麗を守り抜く決意をし = 第422話「守り抜く命」) and 423's (自身が考える\"天下の起源\"…について語り始める = 第423話「天下の起源」). Ends mid-424 — the episode's own title 夢のような国 IS ch 424's title (ja-WP vs the pcafe chapter-subtitle list). A47: the trailing 12 of 424's 19 pages is not a scrap, so the END advances to 424; ep 124 finishes it.",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_123&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+        "https://kingdom-anime.com/story/detail.php?id=1001101&season=4",
+        "https://ja.wikipedia.org/wiki/%E3%82%AD%E3%83%B3%E3%82%B0%E3%83%80%E3%83%A0_(%E3%82%A2%E3%83%8B%E3%83%A1)"
+      ]
+    },
+    {
+      "episode": 124,
+      "end_chapter": 427,
+      "start_chapter": 424,
+      "chapters_adapted": "424 (p.13-19), 425, 426, 427 (p.1-14)",
+      "volume": 39,
+      "confidence": "high",
+      "note": "S4 ep 21. 424's 7-page lead-in exceeds the sliver bar so START=424 (A10). RESTORES the tail of ch 426, which the fandom field truncates to 'p.1-12': 426's closing pages ARE the episode's centrepiece — Ei Sei's rebuttal and the Kantan/Shi Ka flashback ending on 人の本質は光だ — and the licensor synopsis says exactly that (「人の心の本質とそれを教えてくれた恩人のことを語り始める」 = 第426話「人の本質」 + the 恩人 Shi Ka); pcafe assigns 426 whole to 4-21. Ends mid-427 (pcafe dual-lists 427 as 4-21/4-22; ch 427 opens on everyone still pondering 'human nature is light' and closes on Ryo Fui conceding the verdict falls at Kanyou, which ep 125 carries).",
+      "sources": [
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+        "https://kingdom-anime.com/story/detail.php?id=1001107&season=4",
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_124&prop=wikitext&format=json",
+        "https://kingdom.fandom.com/api.php?action=parse&page=Chapter_426&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 125,
+      "end_chapter": 430,
+      "start_chapter": 428,
+      "chapters_adapted": "427 (p.15-end), 428, 429, 430",
+      "volume": 40,
+      "confidence": "high",
+      "note": "S4 ep 22. The leading 427 tail is 5 pages or fewer (fandom writes p.15-18 of a 19-page chapter) = a sliver, so START=428 (A10); the episode's title 命がけの逃避 is ch 428's title 命懸けの逃避. RESTORES ch 429, which the fandom field skips outright ('428, and 430'): the licensor synopsis carries 429's whole content — 「そこに飛信隊隊長・信が駆けつける」 = Shin dropping in on Han Roki's cavalry to save You and the princess — and pcafe lists 429 in 4-22. END 430: the same synopsis's second half is 430 verbatim (河了貂 commanding outside the wall, out of options), and 430 closes on the horn of Shou Hei Kun's relief force (救世の音色); both sources give 430 wholly to this row, so the boundary with ep 126 is clean.",
+      "sources": [
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+        "https://kingdom-anime.com/story/detail.php?id=1001110&season=4",
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_125&prop=wikitext&format=json",
+        "https://kingdom.fandom.com/api.php?action=parse&page=Chapter_429&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 126,
+      "end_chapter": 433,
+      "start_chapter": 431,
+      "chapters_adapted": "431, 432, 433",
+      "volume": 40,
+      "confidence": "high",
+      "note": "S4 ep 23. Ep title 逆転の猛進 IS ch 431's title. Both sources give 431-433 exactly and no partial: the licensor synopsis runs Shou Hei Kun's charge (431), the run at Wa Tegi's throat (432 決着の夕暮れ) and the rebellion breaking (433 謀略の崩壊 — Ka Ryo Ten opening a gap to rout them). Clean chapter boundaries on both sides, so no continue.",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_126&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+        "https://kingdom-anime.com/story/detail.php?id=1001115&season=4",
+        "https://ja.wikipedia.org/wiki/%E3%82%AD%E3%83%B3%E3%82%B0%E3%83%80%E3%83%A0_(%E3%82%A2%E3%83%8B%E3%83%A1)"
+      ]
+    },
+    {
+      "episode": 127,
+      "end_chapter": 436,
+      "start_chapter": 434,
+      "chapters_adapted": "434, 435, 436 (p.1-9)",
+      "volume": 40,
+      "confidence": "high",
+      "note": "S4 ep 24. Ep title 内乱の終着点 IS ch 435's title. Opens clean on 434 (news of the defeat reaching You), runs Rou Ai's confession and sentence (435) and ends inside 436: the licensor synopsis stops exactly at 「太后は思わぬ事を口走り、その場にいた者すべてを驚かせる行動に出る」 = the Queen Mother's outburst and dagger, 436's opening pages. A47: the 9-page portion of 436 is not a scrap, so the END advances to 436 even though ep 128 starts on it; pcafe dual-lists 436 as 4-24/4-25.",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_127&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+        "https://kingdom-anime.com/story/detail.php?id=1001117&season=4",
+        "https://kingdom.fandom.com/api.php?action=parse&page=Chapter_436&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 128,
+      "end_chapter": 438,
+      "start_chapter": 436,
+      "chapters_adapted": "436 (p.10-20), 437, 438",
+      "volume": 40,
+      "confidence": "high",
+      "note": "S4 ep 25 (aired back-to-back with ep 24 on the same night). 436's 11-page lead-in exceeds the sliver bar so START=436 (A10) — Rou Ai's farewell and the execution. Ep title 雄飛の刻 IS ch 438's title, and the licensor synopsis is 437 + 438 exactly (the sentences and exiles, Ryo Fui's trial still open, then Shin hearing Ei Sei's plan and the words 「\"六大将軍\"を復活させる」). Both sources give 438 whole to this row and 439 to ep 129, so the END sits on ch 438's last page and the stored fence (ep 129 -> 441) holds untouched.",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_128&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+        "https://kingdom-anime.com/story/detail.php?id=1001120&season=4",
+        "https://ja.wikipedia.org/wiki/%E3%82%AD%E3%83%B3%E3%82%B0%E3%83%80%E3%83%A0_(%E3%82%A2%E3%83%8B%E3%83%A1)"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 123,
+      "continue_chapter": 424,
+      "kind": "parity",
+      "note": "C1: the episode stops inside ch 424 (Ryo Fui's money-and-desire address, p.12 of 19). Resume IN 424 — ep 124 finishes it from p.13.",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_124&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/"
+      ]
+    },
+    {
+      "episode": 124,
+      "continue_chapter": 427,
+      "kind": "parity",
+      "note": "C1: the episode stops inside ch 427 (p.14 of 19), just before Ryo Fui concedes the debate. Resume IN 427 — ep 125 opens on its last pages.",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_125&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/"
+      ]
+    },
+    {
+      "episode": 127,
+      "continue_chapter": 436,
+      "kind": "parity",
+      "note": "C1: the episode stops inside ch 436 (p.9 of 20), on the Queen Mother's outburst. Resume IN 436 — ep 128 finishes it with Rou Ai's farewell and the execution.",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_128&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [],
+  "repairs": [],
+  "type_corrections": [],
+  "structure": {
+    "notes": "ROW CONVERSION. Our 104-129 are the 4th Series' 26 episodes; the block's rows map 123=S4 ep 20, 124=21, 125=22, 126=23, 127=24, 128=25, and the fence row 129=26. Joined on TITLE (ja-WP 各話リスト: 第20話 夢のような国 … 第25話 雄飛の刻) AND air date, never index; kingdom.fandom uses OUR cumulative numbering on its own episode pages ('ep number = 123 … the 20th episode of the fourth season'), and its date column runs one day earlier than ours because it labels the Saturday 24:00 slot rather than the Sunday calendar date. WHERE THE BLOCK OPENS. Row 122 = ch 419-421 (kingdom.fandom Episode 122 + pcafe 4-19), so my first row opens clean on ch 422 with no back-fill — rows 117-122 are another agent's and nothing in this block reaches back into them. FENCE. Both per-episode sources put ep 129 at 439, 440, 441 (p.1-11) and pcafe dual-lists 441 as 4-26/5-1, matching the stored ep 129 -> 441 and the stored ep 130 START of 441 exactly; every END here (424, 427, 430, 433, 436, 438) is monotone and below it. CHAPTER SPACE / VOLUMES. The manga's own numbering throughout (pcafe's per-chapter index is the tankoubon table of contents; kingdom.fandom's Chapter pages agree). Volumes: 422-426 = v39, 427-437 = v40, 438-441 = v41 on the fandom chapter pages, identical to the stored boundary table (v39: 416-426, v40: 427-437, v41: 438-448); each anchor's volume is its START chapter's, the convention the stored rows use. PAGE COUNTS used for the A10/A47 calls come from the fandom Chapter pages: 424=19, 426=19, 427=19, 428=20, 436=20, 438=19. WHY ROWS 125, 126 AND 128 CARRY NO CONTINUE. Each ends on a chapter's last page (430, 433, 438) and the next row opens on the next chapter (431, 434, 439) — nothing is straddled and nothing is skipped, so a continue would add nothing; in particular row 128 stops at the end of ch 438 and row 129's own material starts at 439, so the block hands the reader off to the fence with no gap. FANDOM FIELD DEFECTS IN THIS BLOCK (the wave-2 trap, live again): Episode 125's 'adapted from' reads '427 (p.15-18) to 428, and 430' — ch 429 is dropped although the licensor synopsis for that episode is 429's content; Episode 124's reads '426 (p.1-12)', orphaning 426 p.13-19 between two stretches the same episode is credited with, which cannot be a real cut because those pages are Ei Sei's 'human nature is light' declaration that ch 427 immediately picks up. AIR DATES (reported, not repaired — lane B). ja-WP's 第4シリーズ table prints 第23話 as 9月18日 and hangs the Typhoon Nanmadol postponement note on it, then prints 第24話/第25話 as 9月24日, breaking its own Sunday convention. syobocal's per-airing rows for TID 6319 give Count 23 = 2022-09-11 00:00, Count 24 = 2022-09-25 00:00 and Count 25 = 2022-09-25 00:25 (a same-night double header), i.e. the typhoon took out the 09-18 slot, not the 09-11 one — our stored 126=2022-09-11 and 127/128=2022-09-25 are correct and need no change.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "fandom omissions restored (2+ sources each): ch 429 (row 125 — the fandom field jumps 428 -> 430) and the tail of ch 426 (row 124 — the field stops at p.12). Anyone re-deriving these rows from kingdom.fandom alone will re-open both gaps; programming-cafe's anicomi per-chapter index plus the kingdom-anime.com per-episode synopses are the antidote and are chapter-complete for 419-441.",
+    "fence corroborated, not repaired: the stored ep 129 -> 441 is recorded at medium confidence with a +/-4 band ('S4 end ~ ch 437-441'). Both per-episode sources now put ep 129 at exactly 439, 440, 441 (p.1-11), which agrees with the stored ep 130 START of 441 and the stored eps 129,130 partial{441}. Worth promoting to high on a future pass; ep 129 also carries no START / chapters_adapted / volume — the supported values are START 439, '439, 440, 441 (p.1-11)', vol 41.",
+    "air-date finding (lane B, no repair proposed): ja-WP's 第4シリーズ table is wrong on the typhoon postponement — it dates 第23話 to 9月18日 and prints 9月24日 for 第24/25話. syobocal (cal.syoboi.jp TID 6319) has Count 23 on 2022-09-11, Counts 24 and 25 back-to-back on 2022-09-25, and kingdom.fandom's Episode 127 page says the postponement moved that episode (from its Sept 17 label = our 09-18) to Sept 24 (= our 09-25). Our stored dates for rows 123-128 all match syobocal.",
+    "minor source disagreement, no effect on any anchor: pcafe's chapter-subtitle list gives ch 424 the title 夢のような国 (identical to the episode's own title) while kingdom.fandom's Chapter 424 page prints 夢の国. The title-to-title match is used here only as corroboration of coverage, never as the END."
+  ]
+}
