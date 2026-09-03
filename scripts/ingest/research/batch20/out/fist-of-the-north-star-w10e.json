@@ -1,0 +1,192 @@
+{
+  "series_id": "fist-of-the-north-star",
+  "summary": "Rows 133-138 (Hokuto no Ken 2 eps 24-29) are the Land of Asura arc's Kaioh block: the anime runs the manga in order from ch 179 to ch 187 at ~1.5 chapters an episode, and every row here is anchorable. The one real finding is ep 133: three independent sources agree that MOST of it is anime-original (Rock's seven, Hyoh's armoured corps, Rock's death — none of these people exist in the manga; hokutosite calls it '北斗２No1アニオリ回', the #1 anime-original episode of HnK2, and rq87 says 'most of this episode is filler'), so its stored `canon` is wrong; what it does adapt is ch 179's remaining pages — Jukei telling Leia and Tao that Hyoh is Kenshiro's blood brother, with the flashback of Jukei sending Raoh/Toki/Ken across the sea and young Hyoh swimming after the boat — a substantial, story-carrying act that is the arc's central reveal and is animated nowhere else (ep 131 took only ch 179's Xie fight and Han's-corpse pages). That is T28 `mixed`, not canon and not filler, and the row carries the anchor. The ask's worry about ep 135 does NOT hold: the '2000-year tragedy' is not a recap — it is ch 182-183's own content (Jukei's Ryuken flashback is ch 182's Ryūken {{Flash}}; the North Star bloodline reveal is ch 183 '伝説の血脈！！' / 'A Legendary Bloodline!!'), so 135 stays canon. ENDs run 179 → 181 → 183 → 185 → 186 → 187, monotone inside the outer fence (ep 108 → 136, ep 152 → 210), and hand off to ep 139 at ch 188. AFL prints 'Manga Canon' on every row of this block including ep 132, which all three sources call anime-original except one technique — AFL is not a typing witness here.",
+  "anchors": [
+    {
+      "episode": 133,
+      "end_chapter": 179,
+      "start_chapter": 179,
+      "chapters_adapted": "179 (Jūkei's revelation to Leia and Tao that Hyoh is Kenshiro's brother + the 20-odd-years-ago flashback — the pages ep 131 left behind when it took only ch 179's Xie fight and Han's-corpse-reaching-Hyoh scenes); 180 closing pages only (Kaioh's debut before the two patrol Asuras — a closing teaser; A47 holds the END back because ep 134 starts on ch 180); + a forward-grafted cold open from ch 181-182 (the two boys who mistake Kenshiro for Hyoh)",
+      "volume": 20,
+      "confidence": "medium",
+      "note": "A4/A10/A47 + 'pages, not numbers': the episode's manga content is ch 179's Jūkei pages animated here for the first time (rearranged, not re-shown) plus ch 180's closing Kaioh-debut teaser, which A47 leaves to ep 134's chapter. Chapter attribution of the Jūkei scene is a two-source derivation: hokuto.fandom's ch-179 cast is Xie(1st,death), Shachi, Kenshiro, Lin, Leia, Tao, Jūkei, Han(corpse), Hyoh(1st), Toki(Flash), Raoh(Flash), and hokutosite states ep 131 adapted only the Xie fight and Han's corpse from that stretch ('シエとケンとのバトル、ハンの遺体がヒョウのところに流れ着く以外はほぼアニメオリジナル'), leaving exactly the Jūkei/Leia/Tao pages and the Raoh/Toki flashback for ep 133. Marked medium: rq87 places the manga's telling 'outside Hyoh's palace', which would put it at ch 180's opening instead (see flags).",
+      "sources": [
+        "https://hokuto.fandom.com/wiki/HnK_Chapter_179",
+        "https://hokuto.fandom.com/wiki/HnK_Chapter_180",
+        "https://rq87.flyingomelette.com/HNK/1/133/a.html",
+        "https://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/133.html",
+        "https://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/131.html",
+        "https://hokuto.fandom.com/wiki/Kaioh"
+      ]
+    },
+    {
+      "episode": 134,
+      "end_chapter": 181,
+      "start_chapter": 180,
+      "chapters_adapted": "180 (from its opening — Jūkei leaving Leia and Tao to go to Hyoh's palace, then Shachi and Lin at the razed village; its closing Kaioh-debut pages were played at the end of ep 133) - 181 (Kaioh riding off with Lin on Hayabusamaru, his declaration in the castle, Jūkei reaching Hyoh)",
+      "volume": 21,
+      "confidence": "high",
+      "note": "A4/A10. rq87: 'In the manga, Kaioh makes his debut after the scene showing Jukei leaving Leia and Tao' — that scene opens ep 134, so the episode starts at ch 180's first pages. Ch 181 '狂える魔王 / The Mad Demon King' (cast: Kaioh, Hayabusamaru, Leia, Tao, Lin, Kenshiro, Hyoh, Jūkei) is this episode's Lin abduction and Jūkei-vs-Hyoh opening; the Ryūken flashback that starts ch 182 is not here (it is ep 135). Ken vs Gameleo is anime-original padding inside a canon row (hokutosite: 'ケンvsガメレオ追加'; Gameleo's fandom appearances field is 'Anime (ep. 134)' with no manga entry).",
+      "sources": [
+        "https://hokuto.fandom.com/wiki/HnK_Chapter_180",
+        "https://hokuto.fandom.com/wiki/HnK_Chapter_181",
+        "https://rq87.flyingomelette.com/HNK/1/134/a.html",
+        "https://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/134.html",
+        "https://hokuto.fandom.com/wiki/Gameleo"
+      ]
+    },
+    {
+      "episode": 135,
+      "end_chapter": 183,
+      "start_chapter": 182,
+      "chapters_adapted": "182 (Jūkei's pressure-point on Hyoh, his Hokuto Ryūken past and the Ryūken duel — ch 182 carries Ryūken {{Flash}}) - 183 (the guards at Kaioh's castle, Kenshiro reaching Kaioh and Lin, Hyoh's first memory of Raoh handing him the baby, Kaioh's blast — ch 183 carries Raoh {{Flash}} and Toki {{Flash}})",
+      "volume": 21,
+      "confidence": "high",
+      "note": "A4/A10. NOT a recap row (the ask's worry): the '2000-year tragedy of the North Star clan' is ch 183's own title beat, '伝説の血脈！！ / A Legendary Bloodline!!', and the Ryūken confrontation is ch 182's flashback — hokutosite's difference list treats both as manga content with detail changes ('仙気雷弾の奥義内容が原作と異なる。リュウケン額に傷負わず'), and rq87 lists exactly one difference for the whole episode (Kaioh's centipede Messatsu-Tai guards replaced by the anime-only Kaioh Shuō-Tai). The END stops at 183: ch 184 is '玉砕！無想転生！！', the Musou Tensei attempt, which opens ep 136.",
+      "sources": [
+        "https://hokuto.fandom.com/wiki/HnK_Chapter_182",
+        "https://hokuto.fandom.com/wiki/HnK_Chapter_183",
+        "https://rq87.flyingomelette.com/HNK/1/135/a.html",
+        "https://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/135.html",
+        "https://hokuto.fandom.com/wiki/Kaioh_Messatsu-Tai"
+      ]
+    },
+    {
+      "episode": 136,
+      "end_chapter": 185,
+      "start_chapter": 184,
+      "chapters_adapted": "184 (Kenshiro's Musou Tensei stopped by Kaioh, 'the North Star seal has not been lifted') - 185 (Jūkei's last strike restores a fragment of Hyoh's memory, Hyoh turns demon and kills Jūkei, Leia and Tao find him dying, Kenshiro crucified on the Big-Dipper stand)",
+      "volume": 21,
+      "confidence": "high",
+      "note": "A4/A10/A47. Ch 184's title is the episode's opening beat (玉砕！無想転生！！ — 'An Honorable Defeat! The Unconscious Transmigration of Souls!!'), ch 185 is 'ジュウケイ無残！ / Jūkei's Misery!' with Jūkei {{Death}} — the episode's climax. The crucifixion closes the episode; if its pages open ch 186 rather than close 185 the END is unchanged (ep 137 starts on 186, A47). Kaioh's Anma Makakyoku Ha torture, Hyoh not remembering the killing and Hyoh asking Leia to bury Jūkei are anime insertions inside a canon row (hokutosite lists all three as 追加).",
+      "sources": [
+        "https://hokuto.fandom.com/wiki/HnK_Chapter_184",
+        "https://hokuto.fandom.com/wiki/HnK_Chapter_185",
+        "https://rq87.flyingomelette.com/HNK/1/136/a.html",
+        "https://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/136.html"
+      ]
+    },
+    {
+      "episode": 137,
+      "end_chapter": 186,
+      "start_chapter": 186,
+      "chapters_adapted": "186 in full (Kaioh's execution of the crucified Kenshiro, Shachi's suicidal charge, Akashachi and his pirates arriving with the acid, Kaioh's arrow, Akashachi's death in his son's arms)",
+      "volume": 21,
+      "confidence": "high",
+      "note": "A4/A10. Ch 186 '無情の再会！ / A Cruel Reunion!' is the Shachi-Akashachi reunion chapter and carries Akashachi {{Death}}; his fandom appearances field is 'Manga (ch. 161-186), Anime (ep. 123-138)'. The Leia/Tao rescue that opens the episode is anime-added (hokutosite: 'レイア達がジュウケイの弔い中に修羅に絡まれ、赤鯱達に救われるまでのシーン追加'), so the START is 186 and not a tail of 185. Kaioh sinking into the water and reviving at sea one episode later is the anime's re-timing of a manga beat that belongs to ch 187.",
+      "sources": [
+        "https://hokuto.fandom.com/wiki/HnK_Chapter_186",
+        "https://hokuto.fandom.com/wiki/Akashachi",
+        "https://rq87.flyingomelette.com/HNK/1/137/a.html",
+        "https://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/137.html"
+      ]
+    },
+    {
+      "episode": 138,
+      "end_chapter": 187,
+      "start_chapter": 187,
+      "chapters_adapted": "187 in full (Kaioh returns, the pirates buy Shachi time, the flight down the channel, Kaioh cornering Shachi and Kenshiro, the fighting-god phantom rising behind the unconscious Kenshiro and Kaioh's aura turning back on him)",
+      "volume": 21,
+      "confidence": "high",
+      "note": "A4/A10/A47. Ch 187 is '幻影の魔人！！ / The Phantom Demon!!' and the episode's Japanese title is 'カイオウつかの間の勝利宣言！北斗の幻が彼を襲う' — the same phantom; the chapter's cast is exactly Kaioh, Shachi, Akashachi {{Corpse}}, Kenshiro. Everything before the phantom sequence in this episode is anime-added (the ship's doctor, Akashachi's sea burial, the pirates offering Shachi the captaincy, Leia's farewell, the coffin inspection — hokutosite lists each as 追加), which is why one chapter fills a whole episode. If Kaioh's closing realisation is already ch 188's first pages the END is unchanged, since ep 139 starts on 188.",
+      "sources": [
+        "https://hokuto.fandom.com/wiki/HnK_Chapter_187",
+        "https://hokuto.fandom.com/wiki/HnK_Chapter_188",
+        "https://rq87.flyingomelette.com/HNK/1/138/a.html",
+        "https://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/138.html"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 133,
+      "continue_chapter": 180,
+      "kind": "parity",
+      "note": "Read on from ch 180's first page. Ep 133 has already shown you ch 180's last scene out of order — Kaioh appearing before the two patrolling Asuras — and ep 134 picks the chapter up from its opening (Jūkei leaving Leia and Tao); nothing between ch 179 and ch 180 is skipped.",
+      "sources": [
+        "https://rq87.flyingomelette.com/HNK/1/134/a.html",
+        "https://hokuto.fandom.com/wiki/HnK_Chapter_180"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [133],
+      "kind": "rearranged",
+      "chapters": "179-180",
+      "note": "Two reorders in one episode. Ch 179's Jūkei pages (the Hyoh-is-your-brother revelation and the flashback of the three boys sent across the sea, with young Hyoh swimming after the ship to ask Raoh to protect the baby) are held back two episodes — ep 131 animated only ch 179's Xie fight and Han's corpse reaching Hyoh — and are staged here with Rock's anime-original band listening in place of Leia and Tao alone. In the other direction ch 180's closing Kaioh debut is pulled forward ahead of ch 180's opening, which ep 134 plays. [batch 20 wave 10, sub-block E]"
+    },
+    {
+      "episodes": [133],
+      "kind": "partial",
+      "chapters": "180",
+      "note": "Only ch 180's closing pages are here: Kaioh appearing before two patrolling Asuras as an episode-closing teaser, with two of the scene's beats cut (hokutosite: '見回り修羅がリン達の姿を発見するシーン削除', 'カイオウが見回り修羅達を飛び越えていくシーン削除') and Kaioh's line to them dropped (rq87). A47: the END stays at 179 because ep 134 starts on ch 180."
+    },
+    {
+      "episodes": [133],
+      "kind": "graft",
+      "chapters": "181-182 (the scene the manga plays just after Kaioh abducts Lin)",
+      "note": "The cold open — two boys mistaking Kenshiro for Hyoh and fleeing — sits much later in the manga. rq87 (ep 134): 'In the manga, after Kaioh gets Lin, there is a scene where two boys mistake Kenshiro for Hyo and run away from him. This was used earlier in the anime, in the previous episode.' A fragment lifted forward, not a position."
+    },
+    {
+      "episodes": [133],
+      "kind": "divergence",
+      "chapters": "179",
+      "note": "The rest of the episode has no manga counterpart at all: Rock, José and the seven riders do not exist in the source, nor does Hyoh's 親衛機甲団 armoured guard corps, and Nagato — a single-chapter manga character (ch 191) — is introduced here, 58 chapters early. hokutosite: everything except the children scene, the Jūkei revelation and the Kaioh meeting is anime-original; rq87: 'Most of this episode is filler.'"
+    },
+    {
+      "episodes": [134],
+      "kind": "divergence",
+      "chapters": "180-181",
+      "note": "The spine is the manga's (Jūkei goes to Hyoh's palace; Kaioh takes Lin and declares himself at his castle) inside a rebuilt frame: the anime has Shachi hand Lin over instead of Kaioh seizing her in front of Leia and Tao, adds a whole Kenshiro vs Gameleo fight (Gameleo is anime-only), meets Jūkei and Hyoh at the gate rather than the throne, and drops the manga passage in which Leia catches up with Shachi, tells him Kenshiro and Hyoh are brothers and he decides not to pass it on — that passage is never animated."
+    },
+    {
+      "episodes": [135],
+      "kind": "divergence",
+      "chapters": "182-183",
+      "note": "Close to the manga; the substitutions are Kaioh's guard (the manga's centipede Kaioh Messatsu-Tai is replaced by the anime-only gold-armoured Kaioh Shuō-Tai, the Messatsu-Tai having been spent on Gamon's men back in ep 132) plus three inserted scenes: Jūkei's family dying in his aura, Shachi slipping into Kaioh's castle, and Akashachi reading the hundred candles."
+    },
+    {
+      "episodes": [136],
+      "kind": "divergence",
+      "chapters": "184-185",
+      "note": "Manga order throughout, with anime additions around Hyoh: Kaioh's Anma Makakyoku Ha torture of the beaten Kenshiro, Hyoh coming to his senses with no memory of killing Jūkei, Hyoh asking Leia to bury his master, and the execution postponed to sunset so Kaioh can work his troops."
+    },
+    {
+      "episodes": [137],
+      "kind": "divergence",
+      "chapters": "186",
+      "note": "The chapter is intact but padded and re-timed: Leia and Tao are attacked during Jūkei's water burial and rescued by Akashachi (added), Kaioh is driven into the water and revives only in the next episode (the manga has him back at once), Kenshiro falls into the pit so Akashachi has to climb back up into the arrow, and Shachi's confession that his madness was feigned is moved here from the Han fight."
+    },
+    {
+      "episodes": [138],
+      "kind": "divergence",
+      "chapters": "187",
+      "note": "One 20-page chapter stretched over a full episode by anime-original material: the ship's doctor finding no heartbeat, Akashachi's sea burial (2m20s by hokutosite's count), the crew asking Shachi to lead them, his vow to Leia, Kaioh wrecking the pirate ship, Leia staying behind at the channel, and the Asuras stopping Shachi to look inside the coffin."
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [
+    {
+      "episodes": [133],
+      "type": "mixed",
+      "note": "Stored canon; AFL says 'Manga Canon'. Both per-episode sources say the opposite: hokutosite's difference list opens '子供達がケンをヒョウと見紛えるシーン、ジュウケイがケンとヒョウの秘密と過去を明かすシーン、見回り修羅がカイオウと出会うシーン以外は全てアニメオリジナル' (everything except those three scenes is anime-original) and tags the row '北斗２No1アニオリ回'; rq87 writes 'Most of this episode is filler - Rock and his team do not exist in the manga.' It is not filler either: the Jūkei act — the reveal that Hyoh is Kenshiro's blood brother, the flashback of the three boys sent to Ryūken and young Hyoh swimming after the ship, and why Kenshiro cannot beat his brother — is a whole story-carrying act of the episode (three of hokutosite's nine synopsis paragraphs), it is the arc's central reveal, and it is the only adaptation of those ch-179 pages. Source plus anime-original in one episode under T28 = mixed. hokuto.fandom's Filler page, which does list HnK2's 111, 130 and 132, does not list 133.",
+      "sources": [
+        "https://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/133.html",
+        "https://rq87.flyingomelette.com/HNK/1/133/a.html",
+        "https://hokuto.fandom.com/wiki/Filler"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "CHAPTER SPACE: the reading edition is the 245-chapter WSJ numbering (flag #688, settled in wave 6). Independent check on this block: hokuto.fandom's chapter pages carry a `vol` field that agrees exactly with our stored volume boundaries — ch 179 = vol 20 (stored v20 = 171-179), ch 180 and ch 188 = vol 21 (stored v21 = 180-188), ch 189 = vol 22 (stored v22 = 189-197). No phantom offset anywhere in this block; the anchors' volumes are read straight off that agreement. SOURCES: the wave-3/wave-6 trap list holds for HnK2 as well. (1) hokuto.fandom has no per-episode pages but has per-chapter pages carrying title, JP title, volume, page count, WSJ issue and a cast list in order of appearance with {{1st}} / {{Death}} / {{Flash}} / {{Corpse}} tags, plus a character `appearances` field that is a two-way index — the ones that carry this block are Kaioh 'Manga (ch. 180-210), Anime (ep. 133-152)', Hyoh '(ch. 179-210) / (ep. 131-152)', Akashachi '(ch. 161-186) / (ep. 123-138)', Han '(ch. 170-177) / (ep. 126-129)', Xie '(ch. 179) / (ep. 131)', Jūkei '(ch. 174-204) / (ep. 128-149)', Nagato '(ch. 191) / (ep. 133-142)', Sayaka '(ch. 189) / (ep. 139-140)', Kuroyasha '(ch. 192-209) / (ep. 139, 143-150)', and the anime-only Rock '(ep. 131-133)', José '(ep. 131-133)', Gamon '(ep. 132)', Gameleo '(ep. 134)'. (2) rq87.flyingomelette.com/HNK/1/<cumulative ep>/a.html — the URL space is OUR cumulative numbering (ep 133 = 'Hokuto no Ken 2 episode 24', 'Episode 133 overall'), with a 'Manga differences' section on every row. (3) hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/<NNN>.html (Shift-JIS, also cumulative) with a 漫画版との違い bullet list; the same site's g18_syura.html is a manga-side narrative of the whole 修羅の国編 (161-210) whose 敗北編 section runs from the Boro corpses to the phantom behind Kenshiro — i.e. exactly the manga span eps 130-138 cover — and whose 羅将ヒョウ編 opens with Shachi meeting Hyoh, which is ep 139. BLOCK ACCOUNTING: my first row (133) opens on ch 179's leftover Jūkei pages, the pages ep 131 did not take; the block then runs unbroken 180 → 187 with nothing skipped, and hands off to ep 139 at ch 188 ('非情の再会！！ / A Tragic Reunion!!', cast Kaioh, Shachi, Kenshiro, Hyoh — the Hyoh encounter with the coffin). ENDs 179, 181, 183, 185, 186, 187 are monotone and sit inside the outer fence (ep 108 → 136 [135], ep 152 → 210). Ep 133's END of 179 is a plateau, not a regression, if sub-block D anchors ep 131 at 179 — the row carries `rearranged` for the revisit either way. PACE: 9 chapters over 6 episodes, ~1.5/ep, against the 1.72/ep the whole of HnK2 needs (ch 137-210 over 43 episodes); the slack is spent on the anime-original padding this block is full of, above all ep 133 and ep 138. AFL: prints 'Manga Canon' on all of 129-140 including ep 132, which hokuto.fandom's Filler page ('132 - Except for the Centipede villains'), rq87 ('This episode is filler, and does not happen in the manga') and hokutosite ('呪龍羅斬陣が登場する以外は全てアニメオリジナル') all call anime-original — AFL's type column is not a witness in this block, and it was not used for any typing here. A47 was applied twice and is named in the notes: ep 133's ch-180 tail (held back, ep 134 starts on 180) and, defensively, ep 136's possible dip into ch 186's opening and ep 138's into ch 188's.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "ep 133 chapter fork (why the anchor is medium, not high): both per-episode sources agree the Jūkei revelation is manga content played early, but they place it differently in the source. The fandom's ch-179 cast (Jūkei, Leia, Tao, Toki {{Flash}}, Raoh {{Flash}}, Hyoh {{1st}}) plus hokutosite's statement that ep 131 took only ch 179's Xie fight and Han's-corpse pages leaves exactly these pages unanimated until ep 133 — that is the reading I delivered (END 179). rq87 instead writes that in the manga 'Jukei tells Leia and Tao that Hyoh is Kenshiro's brother outside Hyoh's palace', which would put the scene at ch 180's opening and make ep 133's END 180 (with ep 134 then re-entering 180 mid-chapter). Nothing else in the block moves either way. Resolving it needs the pages of ch 179-180.",
+    "ep 132 is NOT my row (sub-block D) but the evidence landed in my lap and contradicts its stored `canon`: hokuto.fandom's Filler page lists '132 - Except for the Centipede villains', rq87 says 'This episode is filler, and does not happen in the manga. However, the centipede guys do appear later on in the manga, but they serve Kaioh, not Gamon', and hokutosite says '呪龍羅斬陣が登場する以外は全てアニメオリジナル'. That is filler + a graft of the Kaioh Messatsu-Tai's technique, whose real position is ch 183 (animated in ep 135 with a substituted guard unit) — i.e. a duplicate graft, not a sole adaptation. Worth handing to whoever holds 127-132.",
+    "ep 130 is NOT my row either, but the same Filler page carries a per-row exception for it: '130 - From 09:03 to 18:31 is a clip show' — nine and a half minutes of the stored-canon row is recap. Worth a look when 127-132 is curated.",
+    "AFL type column: 'Manga Canon' on every row 129-140 including the demonstrably anime-original 132. If any later wave leans on AFL for this series' HnK2 half, it should be told that AFL and AFG are one source here and neither survives contact with the three per-episode sources."
+  ]
+}
