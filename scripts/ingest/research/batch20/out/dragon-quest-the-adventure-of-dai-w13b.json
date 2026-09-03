@@ -1,0 +1,89 @@
+{
+  "series_id": "dragon-quest-the-adventure-of-dai",
+  "summary": "Rows 24-29 are six straight canon rows of the Baran / Destiny arc: they adapt ch 82 through ch 104's opening (vols 9-11) with no filler, no skips and no anime-original block. Four independent instruments agree: dragonquest.fandom (forward '|adapted=' + reverse chapter '|adapted=' fields — ONE wiki, per flag #929), the Toei licensor's per-episode あらすじ pages (toei-anim.co.jp/tv/dq-dai/episode/summary/N/), coco13.club's per-episode 原作 comparison (written while re-reading the manga, and the only source that states WHERE inside a chapter each episode starts and stops — 序盤 / 中盤), and en-WP's volume list (chapter titles + the v9/v10/v11/v12 boundaries, which match our stored table exactly: 85→v10, 95→v11, 105→v12). Four of the six episodes end on a one-beat cliffhanger scrap of the chapter the NEXT episode starts on, so A47 holds their END one chapter back (25→89, 27→97, 28→100, 29→103) with the scrap kept in chapters_adapted and named by a `partial`; ep 24 is the one split where the share is substantial (coco13: ep 24 runs to ch 86's 中盤, i.e. about half the chapter), so its END legitimately advances to 86. Two structural notes: ep 27 pulls ch 98's Teran-castle opening FORWARD into its middle (`rearranged`), and ep 28 grafts two pages of ch 196 (vol 21) into Larhart's flashback without inflating its END.",
+  "anchors": [
+    {"episode": 24, "end_chapter": 86, "start_chapter": 82, "chapters_adapted": "82, 83, 84, 85, 86 (first half)", "volume": 10,
+     "confidence": "high",
+     "note": "A4/A10. coco13: 'アニメ第24話は原作9巻第82話\"衝撃のバラン\"の序盤から原作10巻第86話\"戦慄！竜闘気‼\"の中盤まで' — and its ep-23 line ends 'ch 82 最初まで', so ep 23 kept only ch 82's first pages and ep 24 holds its bulk → START 82 (A10). END advances to 86 because ep 24's share is ~half the chapter (中盤), NOT the ≤5-page/teaser scrap A47 withholds; Toei's ep-24 text ends on Baran meeting Crocodine with 竜の騎士最強の秘密 = ch 86's aura reveal, and ep 24's character list carries ch 86's Soala vision. Fandom ch-86 page: '2020: episode 24 (Partial)'.",
+     "sources": ["https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_(2020)_episode_24&prop=wikitext&format=json", "https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_chapter_86&prop=wikitext&format=json", "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/24/", "http://coco13.club/daianime24/", "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"]},
+
+    {"episode": 25, "end_chapter": 89, "start_chapter": 86, "chapters_adapted": "86 (second half), 87, 88, 89, 90 (opening)", "volume": 10,
+     "confidence": "high",
+     "note": "A4/A10/A47. coco13: '第86話…の中盤から第90話\"最強軍団集合‼\"の序盤まで' → START 86 (the chapter's back half, well past A10's sliver bar; ep 25's ability list carries ch 86's own 'Shining Crest', which ep 24's does not). END stays 89: ep 25's ch-90 share is the single trailing beat 'バランは…竜騎衆を召喚していた――' (Toei), ep 26 STARTS on 90, and ch 90's own content beats (the Soala vision, Ruud, the departure) sit in ep 26's lists — A47 leaves the scrap in chapters_adapted. Ch-89 page credits ep 25 alone.",
+     "sources": ["https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_(2020)_episode_25&prop=wikitext&format=json", "https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_chapter_89&prop=wikitext&format=json", "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/25/", "http://coco13.club/daianime25/", "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"]},
+
+    {"episode": 26, "end_chapter": 94, "start_chapter": 90, "chapters_adapted": "90 (rest), 91, 92, 93, 94", "volume": 10,
+     "confidence": "high",
+     "note": "A4/A10. coco13: '第90話\"最強軍団集合‼\"の序盤から第94話\"狂乱‼ガルダンディー\"まで' — a clean END on ch 94, which is also vol 10's last chapter (en-WP) and whose closing beat (Hyunckel's arrival) is Toei's last line for ep 26. START 90: ep 26 holds ch 90's bulk (its Soala vision and Ruud appear in ep 26's list, not ep 25's). Ch-91..94 pages each credit ep 26 alone.",
+     "sources": ["https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_(2020)_episode_26&prop=wikitext&format=json", "https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_chapter_94&prop=wikitext&format=json", "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/26/", "http://coco13.club/daianime26/", "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"]},
+
+    {"episode": 27, "end_chapter": 97, "start_chapter": 95, "chapters_adapted": "95, 96, 97, 98 (opening fragment, rearranged)", "volume": 11,
+     "confidence": "high",
+     "note": "A4/A10/A47. coco13: '第95話\"猛反撃‼アバンの使徒\"の序盤から第97話\"鎧化対鎧化\"まで' → END 97. The fandom adds '98 (partial)' and ch-98's page reads '27 (Partial), 28 (Partial)': ch 98's Teran-castle opening (Merle/Leona, the crest resonance) is pulled FORWARD into ep 27 — coco13 states the manga draws it after Hyunckel goes down while the anime moves it to just after Borahorn's defeat, and the fandom's ep-27 差分 says 'Baran's arrival is put early on'. Ep 28 starts on ch 98 and holds its bulk, so A47 keeps the END at 97 and the fragment stays in chapters_adapted with a `rearranged` + `partial`.",
+     "sources": ["https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_(2020)_episode_27&prop=wikitext&format=json", "https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_chapter_98&prop=wikitext&format=json", "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/27/", "http://coco13.club/daianime27/", "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"]},
+
+    {"episode": 28, "end_chapter": 100, "start_chapter": 98, "chapters_adapted": "98, 99, 100, 101 (opening)", "volume": 11,
+     "confidence": "high",
+     "note": "A4/A10/A47. coco13: '第98話\"思い出のナイフ\"から第101話\"強敵（とも）に捧ぐ…\"の序盤まで' → START 98 (its bulk — Toei opens ep 28 on the knife scene, ch 98's own item), END 100 (ch-100's page credits ep 28 alone). Ep 28's ch-101 share is the closing beat 'ヒュンケルの背後に…ボラホーンが立ち上がっていた！' (Toei); ep 29 STARTS on 101 and the ch-101 page credits '28 (Partial), 29' (ep 29 unqualified = the bulk), so A47 holds END at 100. This is also ch 99's first FULL adaptation — the stored ep-1 anchor grafted part of ch 99 into its cold open (ch-99's page reads 'episodes 28, 1 (partial)'), and ep 28's own trivia says that ep-1 cold open is re-used inside Larhart's flashback (re-shown footage, weightless). Two pages of ch 196 (vol 21) are grafted in — see annotation; END not inflated (A4).",
+     "sources": ["https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_(2020)_episode_28&prop=wikitext&format=json", "https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_chapter_100&prop=wikitext&format=json", "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/28/", "http://coco13.club/daianime28/", "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"]},
+
+    {"episode": 29, "end_chapter": 103, "start_chapter": 101, "chapters_adapted": "101, 102, 103, 104 (opening)", "volume": 11,
+     "confidence": "high",
+     "note": "A4/A10/A47. coco13: '第101話\"強敵（とも）に捧ぐ…\"の序盤から第104話\"竜魔人目覚める‼\"の序盤まで' → START 101 (its bulk; ch-101's page credits '28 (Partial), 29'), END 103 (ch-103's page credits ep 29 alone). The closing 竜魔人 transformation is ch 104's opening and coco13 states it was 原作では一瞬 — an instant in the manga that the anime stretched; ep 30 STARTS on ch 104 and holds it, so A47 keeps the END at 103 and the scrap stays in chapters_adapted.",
+     "sources": ["https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_(2020)_episode_29&prop=wikitext&format=json", "https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_chapter_103&prop=wikitext&format=json", "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/29/", "http://coco13.club/daianime29/", "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"]}
+  ],
+
+  "continue_points": [
+    {"episode": 24, "continue_chapter": 86, "kind": "parity",
+     "note": "Ep 24 stops in the MIDDLE of ch 86 (coco13: 中盤まで) — resume inside ch 86, which is exactly where ep 25 starts (C1 + C2 parity).",
+     "sources": ["http://coco13.club/daianime24/", "http://coco13.club/daianime25/", "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/25/"]},
+    {"episode": 25, "continue_chapter": 90, "kind": "parity",
+     "note": "Ep 25 ends a few pages into ch 90 (Baran summoning the Dragon Riders); ep 26 restarts inside ch 90 — resume at ch 90 (C1 + C2 parity).",
+     "sources": ["http://coco13.club/daianime25/", "http://coco13.club/daianime26/", "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/25/"]},
+    {"episode": 27, "continue_chapter": 98, "kind": "parity",
+     "note": "Ep 27 has already shown ch 98's Teran-castle opening out of order; ep 28 plays ch 98 properly from its start — resume at ch 98 and expect the Teran/Merle pages to be familiar (C1 + C3).",
+     "sources": ["http://coco13.club/daianime27/", "http://coco13.club/daianime28/", "https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_chapter_98&prop=wikitext&format=json"]},
+    {"episode": 28, "continue_chapter": 101, "kind": "parity",
+     "note": "Ep 28 ends on ch 101's opening beat (Borahorn rising); ep 29 restarts inside ch 101 — resume at ch 101 (C1 + C2 parity).",
+     "sources": ["http://coco13.club/daianime28/", "http://coco13.club/daianime29/", "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/29/"]},
+    {"episode": 29, "continue_chapter": 104, "kind": "parity",
+     "note": "Ep 29 ends on ch 104's opening (the 竜魔人 transformation); ep 30 restarts inside ch 104 — resume at ch 104 (C1 + C2 parity).",
+     "sources": ["http://coco13.club/daianime29/", "http://coco13.club/daianime30/", "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/30/"]}
+  ],
+
+  "anchor_hostile": [],
+
+  "annotations": [
+    {"episodes": [25], "kind": "partial", "chapters": "90 (opening)",
+     "note": "A47 tail: ep 25 plays only ch 90's opening summoning beat; ch 90 belongs to ep 26, whose START it is."},
+    {"episodes": [27], "kind": "rearranged", "chapters": "98 (opening)",
+     "note": "Ch 98's Teran-castle opening (Merle senses Baran; the father/son crest resonance) is moved FORWARD into ep 27 — the manga draws it after Hyunckel falls, the anime plays it right after Borahorn's defeat and again as the episode's closing beat (coco13; fandom ep-27 'Baran's arrival is put early on')."},
+    {"episodes": [27], "kind": "partial", "chapters": "98 (opening)",
+     "note": "A47 tail: the ch-98 fragment does not advance ep 27's END; ep 28 starts on ch 98 and carries its bulk."},
+    {"episodes": [28], "kind": "graft", "chapters": "196 (pp 10, 12)",
+     "note": "Two pages of ch 196 'さらば我が子よ…!!' (vol 21, mainline-adapted in ep 54) are pulled forward into Larhart's account of Baran and Soala. Per the fandom ep-28 field only (page-level, single source); END is not inflated (A4). Ep 28's trivia also notes the ep-1 cold open is re-used inside the same flashback — re-shown footage, cited nowhere."},
+    {"episodes": [28], "kind": "partial", "chapters": "101 (opening)",
+     "note": "A47 tail: ep 28 plays only ch 101's first beat (Borahorn rising behind Hyunckel); ep 29 starts on ch 101."},
+    {"episodes": [29], "kind": "partial", "chapters": "104 (opening)",
+     "note": "A47 tail: ep 29 plays only ch 104's opening 竜魔人 transformation — 原作では一瞬 (coco13) — which the anime expands; ep 30 starts on ch 104."},
+    {"episodes": [29], "kind": "divergence", "chapters": "101, 103",
+     "note": "Faithfulness clause (T28, Sean 2026-09-02): Larhart's childhood/first-meeting flashback is newly animated where the manga carried only narration text, and short Heyedra / Zaboera / Hadlar cutaways are added. Small studio beats inside adapted chapters — noted, never weighed toward mixed; the row stays canon."},
+    {"episodes": [26], "kind": "divergence", "chapters": "91, 93, 94",
+     "note": "Cuts and softenings only (Galdandy's Bengarna rampage dropped, the gore of Ruud's death and Popp's beating toned down, added dialogue for the King of Teran). Faithfulness clause — canon stands."}
+  ],
+
+  "repairs": [],
+  "type_corrections": [],
+
+  "structure": {
+    "notes": "SUB-BLOCK B of seven (rows 24-29), the Baran / Destiny arc. OPENS on ch 82: sub-block A's ep 23 stops at ch 82's very first pages (coco13 ep 23: '第79話…から第82話\"衝撃のバラン\"最初まで'), so ep 24 starts on ch 82 and carries its bulk (ch 82's Shining-Crest vision and the three gods appear in ep 24's lists, not ep 23's). HANDS OFF inside ch 104: ep 29 ends on ch 104's opening transformation and ep 30 (sub-block C) restarts there — sub-block C should open on ch 104, per coco13 ep 30 ('第104話…の序盤から原作12巻第108話…の序盤まで') and the fandom ep-30 field '104, 105, 106, 107, 108 (partial)'. ENDs inside this file are monotone: 86, 89, 94, 97, 100, 103, all above the ep-17 fence (60) and below sub-block C's first END. CHAPTER SPACE: no conversion — the fandom chapter pages' |volume= field reproduces our stored boundaries exactly (ch 84→v9, 85→v10, 94→v10, 95→v11, 104→v11, 105→v12), and en-WP's volume list carries the same chapter titles and boundaries. ROW IDENTITY: ja-WP's 各話リスト（2020）confirms titles and dates for 24-29 (3/20, 3/27, 4/3, 4/10, 4/17, 4/24 2021) against our stored rows; ja-WP has no 原作 column. TITLE-DRIFT TRAP: ep 31 is titled 父と子の戦い, which is ch 85's title — but ch 85 is adapted in ep 24 and the fandom's ch-85 page says so explicitly ('Although the chapter's title was reused for episode 31 of the 2020 series, it is not adapted as part of this episode'). Do not join this run on titles. SCALE for the A47 page tests: the fandom's ch-88 page records that the 1991 anime 'used up 15 of 18 pages' — chapters in this stretch run ~18 pages, so a 序盤 scrap is a handful of pages. NO FILLER, NO SKIPS: chs 82-104 run contiguously across eps 24-29; every chapter in the span is adapted exactly once except the four A47 straddles and ch 98's rearranged fragment. SOURCE INDEPENDENCE (flag #929): the fandom's forward and reverse fields are ONE wiki; independence here rests on Toei's licensor あらすじ pages, coco13.club's per-episode 原作 comparison (the only source with intra-chapter position), en-WP's volume list and ja-WP's episode list.",
+    "order_only": []
+  },
+
+  "flags_for_sean": [
+    "A47 page-count judgement (4 rows): no source publishes the exact page at which eps 25 / 27 / 28 / 29 hand their straddled chapter over, so the ≤5-page test was made on POSITION language rather than a page count — coco13.club's 序盤 ('the opening') for ch 90 / 101 / 104, plus the fandom's '(Partial)' on the earlier episode and an unqualified credit on the later one (ch 101 → '28 (Partial), 29'; ch 104 → '29 (Partial), 30'), plus Toei's one-clause cliffhanger sentence. Ep 24 is deliberately the opposite call: coco13 says 中盤 ('the middle') of ch 86, so its END advances to 86. If you want a uniform convention across the seven sub-blocks instead, ep 25/27/28/29's ENDs would become 90/98/101/104 — the continue points already point the reader into those chapters either way.",
+    "New per-episode instrument for this series: coco13.club/daianimeN/ publishes an 原作 correspondence line for every 2020 episode ('アニメ第N話は原作X巻第Y話…からZ話…まで') written while re-reading the manga, WITH intra-chapter position (序盤 / 中盤 / 最初). It is a fan blog (cross-check tier by itself) but it is the only source that resolves the split points, and it agrees with the fandom on every chapter number in 24-29. Worth handing to the other six dai sub-blocks and to wave 14.",
+    "Single-source page-level claim: the ch-196 graft in ep 28 ('196 (page 10,12)') exists only on dragonquest.fandom's ep-28 field. Recorded as a `graft` annotation, not as coverage; ch 196's own page credits only ep 54.",
+    "Outside the ask, for sub-block A: ep 23 takes only ch 82's 最初 (coco13) while ep 24 holds its bulk — under A47 ep 23's END is 81, not 82."
+  ]
+}
