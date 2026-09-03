@@ -1,0 +1,239 @@
+{
+  "series_id": "fist-of-the-north-star",
+  "summary": "Rows 139-144 are the opening of the manga's 羅将ヒョウ編 (the Rasho Hyoh block of the Land of Asura arc) and they adapt ch 188-195 in running order at ~1.4 chapters per episode — the slowest stretch of HnK2, because the first two rows are half anime-original. Ep 139 opens on ch 188 (Hyoh's 'merciless reunion' with the brother he does not recognise; Shachi gouges out his own eye), handing off from ep 138, which closes on ch 187; ep 144 ends inside ch 196's opening bedroom pages and ep 145 resumes there. Two type findings: eps 139 and 140 are NOT plain canon — hokutosite says of each that everything outside two named scenes is 'ほぼアニメオリジナル', and the fandom + hokutosite character indexes independently prove the padding is invented (Sayaka is ch 189 ONLY yet appears in eps 139-140; Kuroyasha's manga debut is ch 192 yet he appears in ep 139; Cain and Coyote exist only in ep 140) — both are mixed under T28, and both still carry real first-time source pages, so both keep an anchor. Two reorder findings: ep 140 plays ch 190's opening (Kenshiro's revival and the reversed waterfall) BEFORE ch 189's murder of Sayaka, and ep 141 opens on ch 189's held-back closing scene (Hyoh finding Sayaka's body and being told Kenshiro killed her) before finishing ch 190 — so eps 140 and 141 both END on 190 and both START on 189. Eps 141-144 are canon with heavy anime embellishment of manga scenes (Gyoko survives to die at the funeral, Petero and the Nagato flashbacks, the guillotine deaths cut); ep 144 'follows the manga almost identically' (RQ87).",
+  "anchors": [
+    {
+      "episode": 139,
+      "end_chapter": 188,
+      "start_chapter": 188,
+      "chapters_adapted": "188 (Hyoh stops Shachi in the village, the coffin is opened, Shachi tears out his left eye and offers it, Hyoh rides on and his scar flashes; the jeweller scene — ch 188's closing pages — is played FIRST, see the rearranged annotation)",
+      "volume": 21,
+      "confidence": "high",
+      "note": "A4/A10. Ep 138 closes on ch 187 (the Hokuto Soke spirit deflecting Kaioh's blast, Shachi putting Kenshiro in the coffin — RQ87 138), so this row opens the block on ch 188, the last chapter of vol 21. hokuto.fandom's ch-188 cast list is exactly Kaioh / Shachi / Kenshiro / Hyoh — the encounter and nothing else; hokutosite and RQ87 both name the eye scene and the jeweller scene as this episode's only manga content. Ch 188 is finished here (Hyoh's vision and denial close it), so no continue point. Row typed mixed — see type_corrections.",
+      "sources": [
+        "https://hokuto.fandom.com/api.php?action=parse&page=HnK_Chapter_188&prop=wikitext&format=json",
+        "https://rq87.flyingomelette.com/HNK/1/139/a.html",
+        "https://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/139.html",
+        "https://hokuto.fandom.com/api.php?action=parse&page=Kuroyasha&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 140,
+      "end_chapter": 190,
+      "start_chapter": 189,
+      "chapters_adapted": "189 (the shelter by the falls; Kaioh enters Sayaka's room and kills her) + 190 (opening only: Kenshiro wakes, reverses the waterfall, and Shachi names Kaioh's death as his one wish) — the ch-190 opening is played BEFORE the ch-189 murder",
+      "volume": 22,
+      "confidence": "medium",
+      "note": "A4 (furthest mainline chapter adapted). Sayaka is a ch-189-only character in BOTH independent indexes (hokuto.fandom 'Manga (ch. 189), Anime (ep. 139-140)'; hokutosite 'ç™»å ´ï¼šåŽŸä½œï¼ˆ189話）TVアニメ版（139～140話）'), which fixes her murder at ch 189. The tent/waterfall sequence straddles the 189/190 line — hokuto.fandom's cast lists put Shachi+Leia+Kenshiro at the END of ch 189 and at the START of ch 190, and the revival plus Shachi's 'my wish is Kaioh's life' exchange (both animated here, RQ87 + hokutosite) are ch 190's opening pages under either reading of the straddle, so the END reaches 190. A47 does not fire: ep 141 does not start on ch 190 (it starts on ch 189's held-back closing scene) and the ch-190 opening is animated only here. Row typed mixed — see type_corrections.",
+      "sources": [
+        "https://hokuto.fandom.com/api.php?action=parse&page=HnK_Chapter_189&prop=wikitext&format=json",
+        "https://hokuto.fandom.com/api.php?action=parse&page=HnK_Chapter_190&prop=wikitext&format=json",
+        "https://hokuto.fandom.com/api.php?action=parse&page=Sayaka&prop=wikitext&format=json",
+        "http://hokutosite.com/chara/hokuto/syura/sayaka.html",
+        "https://rq87.flyingomelette.com/HNK/1/140/a.html",
+        "https://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/140.html"
+      ]
+    },
+    {
+      "episode": 141,
+      "end_chapter": 190,
+      "start_chapter": 189,
+      "chapters_adapted": "189 (closing pages, deferred from ep 140: Hyoh reaches the castle, is shown Sayaka's body and told Kenshiro killed her, and his matouki rises) - 190 (the cremation; Gyoko's hunt for Kenshiro and his death)",
+      "volume": 22,
+      "confidence": "medium",
+      "note": "A4/A10/A12. Gyoko is a ch-190-only character in two independent indexes (hokuto.fandom 'Manga (ch. 190), Anime (ep. 141)'; hokutosite 'ç™»å ´ï¼šåŽŸä½œï¼ˆ190話）TVアニメ版（141話）'), and hokutosite's manga narrative of the arc places Hyoh finding Kaioh holding Sayaka's corpse immediately after her murder and BEFORE Kenshiro's revival — RQ87 states the anime reverses exactly that pair ('The scene where Hyoh finds out that Sayaka has died happens before Kenshiro revives in the manga. The anime has this the other way around'). So the episode opens on ch 189's held-back closing scene (a full scene, not a sliver — START 189, A10) and finishes ch 190. Ch 190 ends with Gyoko's death, so no continue point; ep 142 opens ch 191.",
+      "sources": [
+        "https://hokuto.fandom.com/api.php?action=parse&page=Gyoko&prop=wikitext&format=json",
+        "http://hokutosite.com/chara/hokuto/syura/gyouko.html",
+        "https://hokuto.fandom.com/api.php?action=parse&page=HnK_Chapter_190&prop=wikitext&format=json",
+        "https://rq87.flyingomelette.com/HNK/1/141/a.html",
+        "https://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/141.html"
+      ]
+    },
+    {
+      "episode": 142,
+      "end_chapter": 191,
+      "start_chapter": 191,
+      "chapters_adapted": "191 (Nagato and his four retainers renounce Hyoh; Hyoh kills all five; Hyoh's army burns Nagato's village; Shachi tells Kenshiro that Hyoh is his real brother)",
+      "volume": 22,
+      "confidence": "high",
+      "note": "A4. Nagato and his sons are ch-191-only characters in two independent indexes (hokuto.fandom 'Nagato — Manga (ch. 191), Anime (ep. 133-142)' and 'Tetsu and Yom — Manga (ch. 191), Anime (ep. 142)'; hokutosite 'ãƒŠã‚¬ト ç™»å ´ï¼šåŽŸä½œï¼ˆ191話）TVアニメ版（133～142話）'), and RQ87 confirms that although Nagato has appeared in earlier ANIME episodes, 'when he appears before Hyoh is the first time he appears in the manga'. hokutosite's arc narrative ends the same passage with Shachi's revelation, so ch 191 is complete here and ep 143 opens ch 192 — no continue point.",
+      "sources": [
+        "https://hokuto.fandom.com/api.php?action=parse&page=Nagato&prop=wikitext&format=json",
+        "https://hokuto.fandom.com/api.php?action=parse&page=Tetsu_and_Yom&prop=wikitext&format=json",
+        "http://hokutosite.com/chara/hokuto/syura/nagato.html",
+        "https://rq87.flyingomelette.com/HNK/1/142/a.html",
+        "https://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/142.html"
+      ]
+    },
+    {
+      "episode": 143,
+      "end_chapter": 193,
+      "start_chapter": 192,
+      "chapters_adapted": "192 (the drained river and the Raiseiden, the graves of the Hokuto Ryuken; Kuroyasha's manga debut) - 193 (Kuroyasha attacks Hyoh and loses an arm; Kenshiro intervenes and breaks the Ankyu Tenha)",
+      "volume": 22,
+      "confidence": "medium",
+      "note": "A4/A10. Kuroyasha's manga debut is ch 192 in two independent indexes (hokuto.fandom 'Manga (ch. 192-209) Anime (ep. 139, 143-150)'; hokutosite 'ç™»å ´ï¼šåŽŸä½œï¼ˆ192～209話）TVアニメ版（139ã€143～150話）') and RQ87 says so in words ('This is the point in the manga where Black Yaksha first appears — the anime introduced him earlier'); ch 192's title is 'The Graves of the Shining Stone Fist!!' (第192話 ç¬æ‹³ã®å¢“å ´) = the Raiseiden this episode opens on, and its cast list runs Shachi/Kenshiro/Tao/Hyoh/Kuroyasha in that order. Ch 193 'Cold Bloodshed!' is the Kuroyasha fight; ep 144 opens with Hyoh cutting out the pressure point Kenshiro struck, which is ch 194 'The Cold Blood Returns!'. The 193/194 line is a chapter boundary, so no continue point — see flags_for_sean for the residual uncertainty.",
+      "sources": [
+        "https://hokuto.fandom.com/api.php?action=parse&page=HnK_Chapter_192&prop=wikitext&format=json",
+        "https://hokuto.fandom.com/api.php?action=parse&page=HnK_Chapter_193&prop=wikitext&format=json",
+        "https://hokuto.fandom.com/api.php?action=parse&page=Kuroyasha&prop=wikitext&format=json",
+        "http://hokutosite.com/chara/hokuto/syura/kuroyasya.html",
+        "https://rq87.flyingomelette.com/HNK/1/143/a.html",
+        "https://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/143.html"
+      ]
+    },
+    {
+      "episode": 144,
+      "end_chapter": 195,
+      "start_chapter": 194,
+      "chapters_adapted": "194 (the duel continues, Hyoh cuts out the struck pressure point; Kaioh unmasks before Lin and names himself Raoh's elder brother) - 195 (Kaioh calls Raoh a fool, admits HE sealed Hyoh's memory; Hyoh's scar burns and the Hokuto Soke aura rises) + ch 196's opening bedroom pages (Lin thrown onto Kaioh's bed, 'the last one alive will be evil') which ep 145 continues — A47 holds the END at 195",
+      "volume": 22,
+      "confidence": "medium",
+      "note": "A4/A47. RQ87: 'This episode follows the manga almost identically' — the only changes hokutosite lists are the blade-to-fingers change on the pressure point, a little extra combat, the cut of Kaioh's 'I invented the Raoh legend' speech, and the throne room replacing the bedroom for the memory-seal reveal. Ch 194 is the chapter where Kaioh appears {{Full}} (unmasked) beside Lin with Raoh mentioned; ch 195 'The Fool!!' (æ„šã‹è€…!!) is Kaioh's judgement of Raoh, its cast running Kaioh/Lin then Shachi/Hyoh/Kenshiro/Kuroyasha. The closing bedroom beat carries Kaioh's ch-196 line quoted on hokuto.fandom's Kaioh page ('The last one alive will be... evil!!!' — [[HnK Chapter 196]]), and ep 145 picks both threads up mid-scene, so that tail is ch 196's opening: under A47 the END stays 195 and the tail is annotated partial.",
+      "sources": [
+        "https://hokuto.fandom.com/api.php?action=parse&page=HnK_Chapter_194&prop=wikitext&format=json",
+        "https://hokuto.fandom.com/api.php?action=parse&page=HnK_Chapter_195&prop=wikitext&format=json",
+        "https://hokuto.fandom.com/api.php?action=parse&page=Kaioh&prop=wikitext&format=json",
+        "https://rq87.flyingomelette.com/HNK/1/144/a.html",
+        "https://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/144.html"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 140,
+      "continue_chapter": 189,
+      "kind": "parity",
+      "note": "Parity with the anime (C2/C3, the d-gray-man shape — parity even when it points backwards). Ep 140 animated ch 189's murder of Sayaka and then jumped ahead to ch 190's opening (Kenshiro's revival); the half of ch 189 it left behind — Hyoh reaching the castle, Sayaka's body, Kaioh's lie — is what ep 141 plays next. Resume at ch 189 and read straight through 190; ch 189's opening pages (Kaioh killing Sayaka) and ch 190's first pages are already animated.",
+      "sources": [
+        "https://rq87.flyingomelette.com/HNK/1/141/a.html",
+        "https://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/141.html"
+      ]
+    },
+    {
+      "episode": 144,
+      "continue_chapter": 196,
+      "kind": "parity",
+      "note": "C1 — ep 144 ends mid-chapter. Ch 195 is finished; ch 196's opening pages (Lin thrown onto Kaioh's bed) close the episode and ep 145 resumes inside ch 196 with Hyoh's spirit and Lin finding the knife. Resume IN ch 196.",
+      "sources": [
+        "https://rq87.flyingomelette.com/HNK/1/145/a.html",
+        "https://hokuto.fandom.com/api.php?action=parse&page=Kaioh&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [
+        139
+      ],
+      "kind": "rearranged",
+      "chapters": "188",
+      "note": "The anime swaps the halves of ch 188: Hyoh collects Sayaka's jewellery from the old craftsman BEFORE he meets Shachi (and in a different village), where the manga has him visit the jeweller after the encounter, in the same village. hokutosite: 'åŽŸä½œã®ãƒ’ãƒ§ã‚¦ã¯ã‚·ãƒ£ãƒã«ä¼šã£ãŸå¾Œã«å®ç³»ç´°å·¥ã®è€äººã‚’è¨ªã­ã‚‹ï¼ˆåŒã˜æ‘ï¼‰ãŒã€ã‚¢ãƒ‹ãƒ¡ã§ã¯ã‚·ãƒ£ãƒã«ä¼šã†å‰ï¼ˆåˆ¥ã®æ‘ï¼‰'; RQ87 says the same. [batch 20 wave 10f]"
+    },
+    {
+      "episodes": [
+        139
+      ],
+      "kind": "divergence",
+      "chapters": "188",
+      "note": "Everything outside the eye scene and the jeweller scene is anime-original (hokutosite: 'ãƒ’ãƒ§ã‚¦ãŒå®ç³»ç´°å·¥ã®è€äººã‚’è¨ªã­ã‚‹ã‚·ãƒ¼ãƒ³ã¨ã€ã‚·ãƒ£ãƒãŒç›®ã‚’å·®ã—å‡ºã™ã‚¨ãƒ”ã‚½ãƒ¼ãƒ‰ä»¥å¤–ã¯ã»ã¼ã‚¢ãƒ‹ãƒ¡ã‚ªãƒªã‚¸ãƒŠãƒ«'): Lin's escape through the sewers and her rescue by Sayaka (Sayaka is a ch-189-only character), the checkpoint battle, and Kuroyasha's rescue — his manga debut is ch 192. Kenshiro travels in a coffin instead of on Shachi's back. [batch 20 wave 10f]"
+    },
+    {
+      "episodes": [
+        140
+      ],
+      "kind": "rearranged",
+      "chapters": "189-190",
+      "note": "The two threads are swapped: ch 190's opening (Kenshiro waking, the reversed waterfall, Shachi naming Kaioh's death as his wish) is played FIRST and ch 189's murder of Sayaka second, where the manga runs murder → Hyoh's discovery → revival. [batch 20 wave 10f]"
+    },
+    {
+      "episodes": [
+        140
+      ],
+      "kind": "divergence",
+      "chapters": "189-190",
+      "note": "Apart from the revival/waterfall and Sayaka's murder the episode is anime-original (hokutosite: 'ã‚±ãƒ³ãŒå¾©æ´»ã—ã¦æ»ã‚’é€†æµã•ã›ã‚‹ã®ã¨ã€ã‚µãƒ¤ã‚«ãŒæ®ºã•ã‚Œã‚‹ã‚·ãƒ¼ãƒ³ä»¥å¤–ã¯ã»ã¼ã‚¢ãƒ‹ãƒ¡ã‚ªãƒªã‚¸ãƒŠãƒ«'): Coyote's hut replaces the manga's tent and Leia, the general Cain and his assault are invented (both hokuto.fandom and hokutosite list Cain and Coyote as anime-only), Lin witnesses the murder and Sayaka shields her, and Kaioh's first blow is given an invented pressure-point rationale. [batch 20 wave 10f]"
+    },
+    {
+      "episodes": [
+        141
+      ],
+      "kind": "rearranged",
+      "chapters": "189",
+      "note": "Ch 189's closing scene — Hyoh at the castle, Sayaka's body, Kaioh's lie that Kenshiro killed her — is held back one episode: the manga plays it before Kenshiro's revival, the anime after. RQ87: 'The scene where Hyoh finds out that Sayaka has died happens before Kenshiro revives in the manga. The anime has this the other way around.' [batch 20 wave 10f]"
+    },
+    {
+      "episodes": [
+        141
+      ],
+      "kind": "divergence",
+      "chapters": "190",
+      "note": "Gyoko's whole sequence is restaged: the manga has his train reach Kenshiro's hiding place and Kenshiro tear his arms off and impale him, sending his men back with the message; the anime has the train plough into a village, Kenshiro stop it barehanded, and Gyoko survive to carry the message himself into Sayaka's funeral, where Hyoh's matouki destroys him. Lin's imprisonment and Hyoh placing a ring on Sayaka's finger are added. [batch 20 wave 10f]"
+    },
+    {
+      "episodes": [
+        142
+      ],
+      "kind": "divergence",
+      "chapters": "191",
+      "note": "Ch 191's spine is intact but padded on both ends: the five retainers' despair, Nagato's flashback to the day he chose to follow Hyoh, and Kenshiro and Shachi being taken into Nagato's house are anime additions; Nagato's father Petero is invented; Hyoh cuts Nagato in half instead of beheading him; and Yom survives where the manga kills him. [batch 20 wave 10f]"
+    },
+    {
+      "episodes": [
+        143
+      ],
+      "kind": "divergence",
+      "chapters": "192-193",
+      "note": "The guillotine victims are spared (the manga kills several), Tao's guiding of Kenshiro to the Raiseiden is cut and replaced by Leia's hand-made protector, and Kuroyasha's first attack on Hyoh — an illusion in the manga, staged before Kenshiro arrives — is deleted so the fight starts only once Kenshiro and Shachi are present. [batch 20 wave 10f]"
+    },
+    {
+      "episodes": [
+        144
+      ],
+      "kind": "partial",
+      "chapters": "196",
+      "note": "A47: the episode's closing bedroom scene (Lin thrown onto the bed, Kaioh's 'the last one alive will be evil', the new-century child) is ch 196's opening, which ep 145 continues without re-showing; the END stays at 195 and the tail is recorded here. Kaioh's line is cited to HnK Chapter 196 on hokuto.fandom's Kaioh page. [batch 20 wave 10f]"
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [
+    {
+      "episodes": [
+        139
+      ],
+      "type": "mixed",
+      "note": "T28. Stored canon, AFL canon. The source half is real and load-bearing — ch 188 entire, the encounter the episode is titled for — but the other half is an invented plot: Lin's flight through the castle sewers and her sheltering by Sayaka (hokuto.fandom and hokutosite both index Sayaka as a MANGA ch-189-only character, so every frame of her here is anime-original), the checkpoint battle, and Kuroyasha's rescue eighteen episodes before his manga debut in ch 192 (both indexes: 'Anime (ep. 139, 143-150)' against 'Manga (ch. 192-209)'). hokutosite states it outright: everything but the jeweller scene and the eye scene is 'ã»ã¼ã‚¢ãƒ‹ãƒ¡ã‚ªãƒªã‚¸ãƒŠãƒ«'. Source + non-source in one episode = mixed; the row keeps its anchor (188).",
+      "sources": [
+        "https://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/139.html",
+        "https://rq87.flyingomelette.com/HNK/1/139/a.html",
+        "https://hokuto.fandom.com/api.php?action=parse&page=Kuroyasha&prop=wikitext&format=json",
+        "https://hokuto.fandom.com/api.php?action=parse&page=Sayaka&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [
+        140
+      ],
+      "type": "mixed",
+      "note": "T28. Stored canon, AFL canon. Two manga beats carry the episode — Kenshiro's revival with the reversed waterfall (ch 190's opening) and Kaioh's murder of his sister (ch 189) — and hokutosite says everything else is 'ã»ã¼ã‚¢ãƒ‹ãƒ¡ã‚ªãƒªã‚¸ãƒŠãƒ«': the hut and its owner Coyote replace the manga's tent and Leia, and the general Cain, his circular from Kaioh and the entire assault are invented. Both Cain and Coyote are indexed as anime-only by hokuto.fandom ('appearances = Anime (ep. 140)') and by hokutosite ('ケイン ç™»å ´ï¼šTVアニメ版（140話）'), and RQ87 independently notes Cain 'isn't in the manga' and that Leia was removed. Source + non-source in one episode = mixed; the row keeps its anchor (190 [189]).",
+      "sources": [
+        "https://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/140.html",
+        "https://rq87.flyingomelette.com/HNK/1/140/a.html",
+        "https://hokuto.fandom.com/api.php?action=parse&page=Cain&prop=wikitext&format=json",
+        "http://hokutosite.com/chara/hokuto/syura/kein.html"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "FENCE AND HANDOFF. The outer fence is ep 108 -> 136 [135] and ep 152 -> 210; my six ENDs run 188, 190, 190, 191, 193, 195, all inside it and monotone non-decreasing. My first row OPENS ON CH 188: ep 138 (another agent's) closes on ch 187 — RQ87's ep-138 synopsis ends with the Hokuto Soke spirit deflecting Kaioh's blast and Shachi laying Kenshiro in the coffin, which is ch 187 'The Phantom Demon!!' (its cast is Kaioh / Shachi / Akashachi's corpse / Kenshiro, no Hyoh), and Akashachi is indexed 'Manga (ch. 161-186), Anime (ep. 123-138)'. My last row HANDS OFF INSIDE CH 196: ep 144 finishes ch 195 and animates ch 196's opening bedroom pages; ep 145 (another agent's) resumes inside ch 196 with the spirit above Hyoh and Lin finding the knife under the pillow. CHAPTER SPACE: the 245-chapter WSJ numbering, unchanged from the wave-6 verdict — hokuto.fandom's chapter boxes print vol 21 for ch 180-188 and vol 22 for ch 189-197, which matches our stored volume table exactly (v21: 180-188, v22: 189-197), and Coamix's own digital edition indexes the same numbers and titles (comic-zenon.com serves '第189話 ヒョウ 狂乱!!ã®å·»' at /episode/14079602755195018621). No anchor_volume_mismatch in this block. SOURCE INDEPENDENCE: three per-episode instruments were used — (1) hokuto.fandom via the MediaWiki API: 245 chapter pages carrying volume, page count, JP title and a cast list IN ORDER OF APPEARANCE, plus a per-character `appearances` field that is a two-way manga<->anime index; (2) rq87.flyingomelette.com/HNK/1/<cumulative ep>/a.html, which has a 'Manga differences' section on every row (note the path uses the CUMULATIVE episode number even though the page header calls ep 139 'Hokuto no Ken 2 episode 30' — /HNK/2/... 404s); (3) hokutosite (Shift-JIS), whose per-episode æ¼«ç”»ç‰ˆã¨ã®é•ã„ bullet lists, per-character ç™»å ´ï¼šåŽŸä½œ(N話) lines and per-arc 原作 story page (sakuhin/gensaku/hokuto/g18_syura.html) all live on ONE site served from TWO hostnames — hokutosite.com and hokutosite.sakura.ne.jp are the same site and count as ONE source. hokuto.fandom's per-chapter Summary sections are all {{Expand section}} stubs, so the chapter-level boundaries in this block rest on the cast lists' order of appearance, the chapter titles, and the two per-episode narrative sites' explicit 'in the manga X happens before Y' statements. THE REORDER ZONE (eps 140/141): the manga runs [ch 189: Kaioh and Lin; Hyoh riding with the jewels; Kaioh kills Sayaka; Hyoh arrives, is told Kenshiro did it, his matouki rises; cut to Shachi/Leia/Kenshiro by the falls] then [ch 190: Kenshiro wakes and reverses the waterfall; Sayaka's cremation; Gyoko hunts Kenshiro and dies]. The anime cuts that into [ep 140: the shelter, the revival, THEN the murder] and [ep 141: Hyoh's discovery, THEN the cremation and Gyoko], so both rows START on 189 and both END on 190 — the display shows no advance across ep 141, which is the truth of the reorder, not a gap. PACE: 8 chapters over 6 episodes (1.33/ep) against the block's ~1.8 average, because eps 139-140 are half anime-original; eps 141-144 run at the normal ~1.8. AIR DATES: RQ87's per-episode broadcast dates (Nov 12 / 19 / 26, Dec 3 / 10 / 17, 1987) match all six stored dates and all six are Thursdays, the series' slot — no date repairs.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "MEDIUM, ep 140/141 — the 189/190 straddle. hokuto.fandom's cast lists put Shachi+Leia+Kenshiro at the END of ch 189 AND at the START of ch 190, i.e. the tent/waterfall sequence crosses the chapter line; no page-level source exists (the wiki's chapter Summary sections are all empty stubs). Ep 140 reaches ch 190 under either reading, because the post-revival exchange ('my wish is the same as yours — Kaioh's life') is ch 190's opening and is animated there. If a page-level check ever shows the revival is entirely ch 189's last pages, ep 140's END drops to 189 and ep 141's stays 190; the continue point (189) is unaffected either way.",
+    "MEDIUM, ep 144 — the ch-196 tail. A47 was applied: the closing bedroom scene is ch 196's opening (Kaioh's line there is cited to HnK Chapter 196 on the fandom's Kaioh page) and ep 145 continues it without re-showing, so the END is held at 195 and the tail is a `partial`. If someone counts the pages and that tail is more than five, the END is 196 and ep 145's START is 196 as well.",
+    "MEDIUM, ep 143 — the 193/194 line. The break rests on ch 194's title 'The Cold Blood Returns!' matching ep 144's opening beat (Hyoh cutting out the pressure point Kenshiro struck, which hokutosite confirms is manga content) and on ch 193 'Cold Bloodshed!' being the Kuroyasha fight. No source states the boundary in words.",
+    "TWO TYPE CORRECTIONS on stored-canon rows (139, 140 -> mixed) — the wave's ask asked for the share on the Hyoh rows and the share is roughly half on 139 and rather less than half on 140, in both cases with a load-bearing source spine that keeps the anchor. If Sean would rather hold these at canon with the divergence annotations alone, the anchors and continues are unaffected."
+  ]
+}
