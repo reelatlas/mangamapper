@@ -887,6 +887,47 @@
    0. Permanence 0 locked / 0 violations; no stale rulings. Cycle: step 1
    — Sean picks wave 8 (L-D ×8 of ~16, or a gap block; dai LAST; the T28
    six + claymore 26 still parked for his ruling).
+99. ✅ **BATCH 20 WAVE 9 APPLIED + CONSOLIDATED — THE L-D PIN LANE CLOSED
+   (2026-09-02; Sean: "great use of the rule and learnings … ready to go").**
+   Landed 9/9, verified 4/4 (Fable over Opus; all sound, corrections at
+   apply). RULED: (1) the nine as delivered — 20 manual anchors, 1 deleted
+   (erased ep 12's mu pin, A1), 8 continues (erased's MOVED to ep 11 — the
+   wave-6 trap), 22 annotations; (2) **erased ep 12 = MIXED** under T28's
+   sole-adaptation exception, reconsidered on the rule text at Sean's ask:
+   the anime's final line is ch 44's verbatim in the same setting, adapted
+   nowhere else, and the manga's arc close is the rule's own example —
+   `partial`{44}; the direction question (the page went on sale after
+   production) is a note on the tie; the row is A44 position-less by
+   ruling (an END of 44 would retire nine unseen chapters), continue 35 on
+   ep 11 (C1); ep 11 → mixed; (3) code-black END 11 (A47's finale clause)
+   + the ep-8 frontier (ch 17, G56) — and, OUTCOME-FORCED (P5): the display
+   interpolates a row-less entry between its anchors, so two anchors across
+   the reorder rendered a false back-jump (verify-series-display FAIL) →
+   the whole verified 13-row map landed as a zone with `rearranged` on eps
+   7 / 9, `graft` on 8 (ch 6's scene), `side_story` on 1-2 (the 出張版) —
+   decision 3's "the rest with the rows" overridden by the outcome check;
+   (4) G53 ×5 rows (killing-bites 11 / 12; gangsta 10-12 — the verifier's
+   three, not the verdict's eight); (5) N35 ×2 (nagatoro 189 → 154;
+   code-black 50 → 48; four-knights' stale 103 → a re-derive, queued);
+   (6) six flags dismissed (#729 #664 #675 #782 #823 #786 — three G55
+   namesake contaminations). CENSUS, every delta named: mu_pin_unverified
+   8 → **0**; annotation_without_row 6 → 7 + asterisk 168 → 175 (the
+   newly annotated); frontier_tail_null 8 → 9 → 8 (erased ep 12 past the
+   terminal until its A44 entry landed in the same pass); ruling_violation
+   0; display 218 / 0; end_sliver_mismatch 0; anchor_without_row 11
+   (code-black's 13 replace its one). Edges rebuilt + deployed (the
+   rulings maps); 166 tests; system census OK. **THE L-D LANE: 29/29 —
+   17 confirmed / 9 wrong-in-part / 3 another work's.** Twelve MU-string
+   pathologies documented across waves 6-9. CAPTURE (P29): seven wave-9
+   traps → research-agent (the frontier-estimate pin, right-chapter-wrong-
+   row, the sole-adaptation page-tie precedent, alias/copy wikis, G55
+   namesake counts, mixed domestic date lineages + the earliest-airing
+   rule, row-less reorder zones); three → apply-batch (row-less
+   interpolation, CONTINUE_MOVE, the A44 entry for a retyped tail); T28's
+   witnesses + erased / ranking-tcoc. Queue: five A44 candidates
+   (tsugumomo 8, d-gray-man 66, reborn 159 / 178 / 189); four-knights 1-23
+   (fence now manual); gangsta done. Cycle: step 1 — the next block is
+   FotNS 109-151 (lane A2), awaiting Sean's go.
 98. ✅ **THE A47 BLOCK SIGNED + APPLIED; WAVE 9 DISPATCHED (2026-09-02;
    Sean: "yes sign it then wave 9 go").** `a47-migrate.ts --apply`: 62
    ENDs moved off owned tails, per-row N22 marker, partial{tail} added

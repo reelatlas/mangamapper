@@ -106,3 +106,6 @@ Verifiers (erased, code-black, killing-bites, gangsta) → Sean rules → apply-
 6. **Flags closable**: #729, #664, #675, #782, #823, #786 (three of them G55 namesake contamination). *Recommend: dismiss with the answers.*
 7. **A44 candidates** (queue, not this apply): tsugumomo ep 8's second segment (an unnumbered vol-5 extra); the four from the A47 pass (d-gray-man 66, reborn 159 / 178 / 189).
 8. **Queue**: four-knights 1-23 gap block (fence now manual); code-black's 12 map anchors when AFL stages rows; gangsta rows 10-12 land now, nothing else owed.
+
+## RULED + APPLIED (§12.99, 2026-09-02 — Sean: "great use of the rule and learnings … ready to go")
+Applied as delivered with the verifier corrections; **erased ep 12 = MIXED** (reconsidered on T28's text: a page tie — ch 44's final line verbatim — on the arc close, adapted nowhere else; `partial`{44}; A44 position-less by ruling; continue 35 on ep 11); code-black's whole 13-row map landed as a reorder zone (outcome-forced: two anchors across the reorder rendered a false back-jump on the row-less entry); G53 ×5; N35 ×2; six flags dismissed. Census: mu_pin_unverified 0, ruling_violation 0, display 218/0. The L-D lane is closed. Next block: FotNS 109-151.

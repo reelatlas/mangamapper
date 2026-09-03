@@ -2,7 +2,7 @@
 
 > GENERATED from `scripts/ingest/lib/rulings/**` by `scripts/restructure/gen-rulings.ts` — do not edit by hand. A ruling is an INSTANCE of a rule (`docs/rules.md`); the map is the record, this is the index.
 
-- rulings: 1891 across 231 series/keys · by Sean: 549 · UNRECORDED reasons: 8 · with a retire condition: 89
+- rulings: 1897 across 236 series/keys · by Sean: 555 · UNRECORDED reasons: 8 · with a retire condition: 89
 
 ## Retire conditions (re-evaluate when…)
 
@@ -674,6 +674,12 @@
 | `A3` | {"episode":15,"chapter":19,"start_chapter":13,"chapters_adapted":"13, 19","volume":4,"source":"manual"} | S2 pairs the S1-skipped chapters | session 2026-08-23 · scripts/ingest/apply-rearranged-anchors.ts, docs/changelog.md §12.32, batch-11 verdict (cells-at-work) |  |
 | `A3` | {"episode":16,"chapter":16,"start_chapter":14,"chapters_adapted":"16, 14","volume":4,"source":"manual"} | S2 pairs the S1-skipped chapters — as-stored | session 2026-08-23 · scripts/ingest/apply-rearranged-anchors.ts, docs/changelog.md §12.32, batch-11 verdict (cells-at-work) |  |
 
+### cells-at-work-code-black (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `N35` | {"chapters":48,"volumes":8} | Batch 20 wave 9 (verified R24), Sean ruled 2026-09-02: 48 is the mainline ceiling (ja-WP 全48話, MU latest_chapter 48, MangaDex, the fandom's chapter pages; vol 8 = 42-48 on Kodansha's 初出); AniList's 50 = 48 + the two-part 出張版 unit collected in vols 4/5 — a unit count, not a number ceiling. The finale anchor (11 v3) and the ep-8 frontier (17 v3) sit in this space. | Sean 2026-09-02 · scripts/ingest/research/batch20/out/cells-at-work-code-black.json, scripts/ingest/research/batch20/verify/cells-at-work-code-black.md |  |
+
 ### chrono-crusade (8)
 
 | rule | value | reason | ruled | retires when |
@@ -833,6 +839,12 @@
 |---|---|---|---|---|
 | `I4` | {"afgSlug":"digimon-adventure","match":"digimon-digital-monsters"} | Zero-episode AFG stub whose slug collides with our 2020 entry's id AND the 1999 entry's afl_slug; AFG's title "Digimon Adventure" is the 1999 romaji exactly (the 2020 reboot is "Digimon Adventure:" per AniList naming), so it registers to the 1999 series. | session 2026-08-24 · docs/franchise-rulings.md "AFG digimon-adventure page = the 1999 series" |  |
 
+### don-t-toy-with-me-miss-nagatoro (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `N35` | {"chapters":154,"volumes":20} | Batch 20 wave 9, Sean ruled 2026-09-02: the mainline ceiling is 154 — MU latest_chapter 154 + its own '154 Chapters + 26 Bonus + 6 Side Story', MangaDex lastChapter 154 / lastVolume 20, exactly 154 fandom 'Chapter N' pages beside 51 extras pages, Kodansha's vol-6 目次 validating the numbering. The stored 189 is a UNIT count that matches no source's arithmetic (MU's own unit total is 186). The S1 anchor (46 v6) and continue (47) sit in this space. | Sean 2026-09-02 · scripts/ingest/research/batch20/out/don-t-toy-with-me-miss-nagatoro.json |  |
+
 ### dorohedoro (3)
 
 | rule | value | reason | ruled | retires when |
@@ -928,6 +940,13 @@
 | `V6` | {"full":true,"rows":[{"volume":1,"chapter_start":1,"chapter_end":7},{"volume":2,"chapter_start":8,"chapter_end":14},{"volume":3,"chapter_start":15,"chapter_e… | no boundaries stored; mainline 52-chapter space over 7 volumes, agreed exactly by en-WP, ja-WP 目次 and fandom (verifier-confirmed; both final chapters are UNNUMBERED — casual counts read 51, the true count is 52) — FULL replace | session 2026-08-25 · scripts/ingest/research/batch17/out/emma-a-victorian-romance.json, scripts/ingest/apply-research-batch-17.ts, §12.50 |  |
 | `A43` | {"episodes":[19,20,21,22,23],"kind":"divergence","chapters":"38-46","note":"curated span correction (verifier 2026-08-25 — evidence supports 38-46, not 37-46… | curated span correction (verifier: evidence supports 38-46, not 37-46): the O'Donnell kidnapping (chs 38-43) and the American rescue (chs 44-46) are cut entirely and replaced by an invented Viscount-Campbell railway-financing conspiracy (ja-WP verbatim); interpolating these five episodes would place readers inside the unadapted block | session 2026-08-25 · scripts/ingest/research/batch17/out/emma-a-victorian-romance.json, scripts/ingest/apply-research-batch-17.ts, §12.50 |  |
 | `T6` | {"19":"mixed","20":"mixed","21":"mixed","22":"mixed","23":"mixed"} | Eps 19-23: the O'Donnell arc (chs 38-46) replaced by an invented conspiracy while the surrounding canon plays out → mixed. | Sean 2026-08-25 · scripts/ingest/research/batch17/out/emma-a-victorian-romance.json |  |
+
+### erased (2)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `A44` | [12] | Batch 20 wave 9 (verified R24), Sean ruled 2026-09-02: ep 12 「宝物」 is the studio's ending — the hospital-rooftop confrontation is anime-invented start to finish — typed MIXED on the sole-adaptation tie to ch 44's arc close (the final line verbatim, the same 高架下 in the same snow; `partial`{44}). A far-forward closing beat is never an END (A4/A47): an anchor of 44 would retire nine unseen chapters (36-43 never adapted), so the row is position-less by ruling; the honest terminal is ep 11 → 35 [33] (G56) with the continue IN 35 (C1). The mu anchor that sat on this row (35) was deleted in the same apply. | Sean 2026-09-02 · scripts/ingest/research/batch20/out/erased.json, scripts/ingest/research/batch20/verify/erased.md |  |
+| `T6` | {"11":"mixed","12":"mixed"} | Batch 20 wave 9 (verified R24), Sean ruled 2026-09-02: the anime leaves the source partway through ep 11 (the official synopsis vs ch 35 — Yashiro re-enters as 西園 at the hospital in 2003, the memory reveal on the roof; the manga keeps him away until ch 37) — ep 11 adapts ch 33-35 (abridged) AND carries an original half → mixed (T28). Ep 12 「宝物」 is the studio's ending (the hospital-rooftop confrontation is anime-invented start to finish; the manga's climax is the camping trap and the burning bridge, ch 40-43) — BUT its closing scene is ch 44's arc close: the final line 「一緒に雪やどりしてもいいですか？」 verbatim, the same 高架下 in the same snow, adapted in no other episode — the sole-adaptation exception (T28, Sean 2026-08-28: a fragment flips to mixed when it is the SOLE adaptation of a major plot point — an arc close is the rule's own example). Sean weighed the direction question (ch 44 went on sale after the episode was produced; both realize the author's conveyed ending) and ruled mixed: the tie is `partial`{44}, the row stays A44 position-less (a far-forward beat is never an END, A4/A47 — an END of 44 would retire nine unseen chapters), the continue is 35 on ep 11 (C1). Reversal to filler = this entry's 12 → 'filler' + drop the partial. | Sean 2026-09-02 · scripts/ingest/research/batch20/out/erased.json, scripts/ingest/research/batch20/verify/erased.md |  |
 
 ### eyeshield-21 (12)
 
@@ -1101,6 +1120,12 @@
 | `T26` | [{"episodes":[1],"kind":"divergence","note":"Anime-original prologue (Isaac McDougal, the Freezing Alchemist); ja-WP: faithful except episode 1. Isaac's desi… | Batch 18 wave 3 (2026-08-26): filler + divergence; adoption laid out, not proposed. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/fullmetal-alchemist-brotherhood.json |  |
 | `T6` | {"1":"filler"} | Batch 18 wave 3 (2026-08-26): the Isaac McDougal prologue is anime-original (ja-WP: faithful 'except episode 1'); Isaac's design came from Arakawa's rough illustration and she attended script meetings — commissioned, not declared (the kinnikuman discriminator) → filler + divergence, no adoption. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/fullmetal-alchemist-brotherhood.json |  |
 | `I17` | {"to":"fullmetal-alchemist","kind":"alternative"} | Fullmetal Alchemist: 2 separate series; Brotherhood is an alternative telling of 2003 (mutually divergent — 2003 diverges from the manga). | session 2026-08-22 · docs/franchise-rulings.md "Fullmetal Alchemist" |  |
+
+### gangsta (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `G53` | {"10":"2015-09-10","11":"2015-09-17","12":"2015-09-24"} | Batch 20 wave 9 (verified R24), Sean ruled 2026-09-02: AFL's column is a mixed ABC / TOKYO MX lineage that drops the unaired #9.5 recap week, so its rows 10-12 hold the previous episode's MX date (09-06 = MX's #9.5 night, 09-13 = MX's ep 10, 09-20 = MX's ep 11). Under the earliest-airing rule (syobocal TID 3815: ABC ChID 67 Counts 10-12 = 09-10 / 09-17 / 09-24 02:45, the 最終回 flag on 12; MAL agrees) rows 5-9 are ALREADY correct — MX aired them first because ABC skipped 07-30 — so the verdict's eight-row 'ABC regime' block was cut by the verifier to these three. One regime across the run (the earliest first airing's calendar date). | Sean 2026-09-02 · scripts/ingest/research/batch20/out/gangsta.json, scripts/ingest/research/batch20/verify/gangsta.md, https://cal.syoboi.jp/db.php?Command=ProgLookup&TID=3815 |  |
 
 ### gantz (3)
 
@@ -1527,6 +1552,12 @@
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `N7` | 20572 | B (medium): Tokubetsu-hen = ep 25, commonly counted; community-practice based — re-open if evidence emerges. | Sean 2026-08-23 |  |
+
+### killing-bites (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `G53` | {"11":"2018-03-24","12":"2018-03-31"} | Batch 20 wave 9 (verified R24), Sean ruled 2026-09-02: a TWO-row AFL seeder defect held since wave 7's slot check — MBS (製作局) aired Counts 1-12 on twelve consecutive Saturdays 2018-01-13 … 03-31 (syobocal TID 4796, no 再, no preemption; en-WP, MAL, ja-WP 毎日放送 1月13日-3月31日 土曜2:25); no station aired ep 11 on 03-31, and 04-01 is BS-TBS's Sunday Count 12; rows 1-10 store the MBS post-midnight calendar date (DB-confirmed by the verifier), so both repairs put the run in ONE regime. No G54 ack: no real deviation exists. AFL's live page still prints both wrong dates — manual tier (P8). | Sean 2026-09-02 · scripts/ingest/research/batch20/out/airdates/killing-bites.json, scripts/ingest/research/batch20/verify/killing-bites-w9.md, https://cal.syoboi.jp/db.php?Command=ProgLookup&TID=4796 |  |
 
 ### kimi-ni-todoke-from-me-to-you (22)
 

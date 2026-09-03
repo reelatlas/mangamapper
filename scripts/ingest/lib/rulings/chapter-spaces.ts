@@ -49,6 +49,26 @@ export const ENTRIES: RulingEntry<ChapterSpace>[] = [
     ruledOn: '2026-08-28',
     cite: ['scripts/ingest/research/batch20/out/orange.json'],
   },
+  {
+    seriesId: 'don-t-toy-with-me-miss-nagatoro',
+    ruleId: 'N35',
+    value: { chapters: 154, volumes: 20 },
+    reason:
+      "Batch 20 wave 9, Sean ruled 2026-09-02: the mainline ceiling is 154 — MU latest_chapter 154 + its own '154 Chapters + 26 Bonus + 6 Side Story', MangaDex lastChapter 154 / lastVolume 20, exactly 154 fandom 'Chapter N' pages beside 51 extras pages, Kodansha's vol-6 目次 validating the numbering. The stored 189 is a UNIT count that matches no source's arithmetic (MU's own unit total is 186). The S1 anchor (46 v6) and continue (47) sit in this space.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-02',
+    cite: ['scripts/ingest/research/batch20/out/don-t-toy-with-me-miss-nagatoro.json'],
+  },
+  {
+    seriesId: 'cells-at-work-code-black',
+    ruleId: 'N35',
+    value: { chapters: 48, volumes: 8 },
+    reason:
+      "Batch 20 wave 9 (verified R24), Sean ruled 2026-09-02: 48 is the mainline ceiling (ja-WP 全48話, MU latest_chapter 48, MangaDex, the fandom's chapter pages; vol 8 = 42-48 on Kodansha's 初出); AniList's 50 = 48 + the two-part 出張版 unit collected in vols 4/5 — a unit count, not a number ceiling. The finale anchor (11 v3) and the ep-8 frontier (17 v3) sit in this space.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-02',
+    cite: ['scripts/ingest/research/batch20/out/cells-at-work-code-black.json', 'scripts/ingest/research/batch20/verify/cells-at-work-code-black.md'],
+  },
 ];
 
 export const CHAPTER_SPACE_OVERRIDES: Record<string, ChapterSpace> = toRecord(ENTRIES);

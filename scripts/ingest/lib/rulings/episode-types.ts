@@ -859,6 +859,16 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
     ruledOn: '2026-09-02',
     cite: ['scripts/ingest/research/batch20/out/ranking-of-kings-the-treasure-chest-of-courage.json', 'scripts/ingest/research/batch20/verify/ranking-of-kings-the-treasure-chest-of-courage.md'],
   },
+  {
+    seriesId: 'erased',
+    ruleId: 'T6',
+    value: { 11: 'mixed', 12: 'mixed' },
+    reason:
+      "Batch 20 wave 9 (verified R24), Sean ruled 2026-09-02: the anime leaves the source partway through ep 11 (the official synopsis vs ch 35 — Yashiro re-enters as 西園 at the hospital in 2003, the memory reveal on the roof; the manga keeps him away until ch 37) — ep 11 adapts ch 33-35 (abridged) AND carries an original half → mixed (T28). Ep 12 「宝物」 is the studio's ending (the hospital-rooftop confrontation is anime-invented start to finish; the manga's climax is the camping trap and the burning bridge, ch 40-43) — BUT its closing scene is ch 44's arc close: the final line 「一緒に雪やどりしてもいいですか？」 verbatim, the same 高架下 in the same snow, adapted in no other episode — the sole-adaptation exception (T28, Sean 2026-08-28: a fragment flips to mixed when it is the SOLE adaptation of a major plot point — an arc close is the rule's own example). Sean weighed the direction question (ch 44 went on sale after the episode was produced; both realize the author's conveyed ending) and ruled mixed: the tie is `partial`{44}, the row stays A44 position-less (a far-forward beat is never an END, A4/A47 — an END of 44 would retire nine unseen chapters), the continue is 35 on ep 11 (C1). Reversal to filler = this entry's 12 → 'filler' + drop the partial.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-02',
+    cite: ['scripts/ingest/research/batch20/out/erased.json', 'scripts/ingest/research/batch20/verify/erased.md'],
+  },
 ];
 
 export const EPISODE_TYPE_OVERRIDES: Record<string, EpisodeTypes> = ENTRIES.reduce<Record<string, EpisodeTypes>>((acc, e) => {

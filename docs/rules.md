@@ -1454,7 +1454,7 @@ An episode is `mixed` only when a SUBSTANTIAL share of its own plot is the sourc
 - layer **process**
 - enforced: [research/batch18/PROTOCOL.md](../scripts/ingest/research/batch18/PROTOCOL.md) · [research/batch18/curate.ts](../scripts/ingest/research/batch18/curate.ts) · [audit-ui-truth.ts#mixed_fragment_only](../scripts/ingest/audit-ui-truth.ts)
 - audit: `mixed_fragment_only`
-- witnesses: claymore, a-certain-scientific-railgun, soul-eater, dragon-ball-super, fullmetal-alchemist, fist-of-the-north-star
+- witnesses: claymore, a-certain-scientific-railgun, soul-eater, dragon-ball-super, fullmetal-alchemist, fist-of-the-north-star, erased, ranking-of-kings-the-treasure-chest-of-courage
 - aliases: mixed_fragment_only, T28 discrepancy queue, materiality bar for mixed, episode job test, what is this episode's job, fragment is an annotation, slivers are not mixed, Claymore-26 shape, mixed threshold, canon sliver, sole adaptation, load-bearing sliver, graft flip, the FotNS-57 test, sole-adaptation exception
 - see: T7, T8, A10, T26, T27, A43, A1, A4
 

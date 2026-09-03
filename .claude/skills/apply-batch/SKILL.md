@@ -131,6 +131,10 @@ ruled), add it to `lib/rulings/index.ts`, move the script to
 - **The END-side normalizer runs in the apply (A47)**: curated anchors go through `sliverEnd` with the next anchored row's START, and the dry run prints "(A47 normalized from N)" beside each move — a delivered END the gate moves is the ruling doing its job, not a defect in the verdict; name the tail on the row as a `partial`.
 - **Row-less landings are legal by ruling (A42, wave 8)**: an anchor on a row AFL has not staged (orient's EMPTY page, one-piece-log 7-21) lands and is listed under `anchor_without_row`; the display synthesizes the row. Never mint the row from research in the apply — a row lineage is a G57 decision.
 
+- **A row-less entry interpolates between its anchors** (wave 9, cells-at-work-code-black): landing a finale anchor plus one frontier anchor on an entry with ZERO episode rows rendered a false back-jump (`verify-series-display` FAIL: "ep 10 starts ch 10 below ep 9's 17") because the synthesized rows in between were interpolated across a reorder. On a row-less entry land the whole verified map with `rearranged` on the jump row, or nothing — never two anchors across a reorder.
+- **A continue on a row whose anchor the same apply deletes lands NOTHING — move it** (`CONTINUE_MOVE`, wave 9 erased: the verdict placed the continue on ep 12, whose mu anchor was deleted under A1; the overlay moved it to the surviving terminal row 11). Read every deletion against every continue before the dry run.
+- **A retyped position-less row past the last anchor needs its A44 entry in the same apply** (erased ep 12 → mixed): `frontier_tail_null` lists a canon/mixed row past the terminal that renders null; the ruling that makes it honest is `ANCHOR_SUPPRESSED` (A44), not an anchor.
+
 ## The standing goal (`P30`)
 
 Every rule applied here should end up enforced by a writer gate and

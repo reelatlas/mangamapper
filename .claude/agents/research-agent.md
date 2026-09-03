@@ -246,6 +246,14 @@ Read both, fully:
 - **Japanese 「原作」 comparison threads for PLUTO mean Tezuka's 1964 地上最大のロボット**, not Urasawa's manga — not anime-vs-source evidence.
 - **dic.pixiv.net serves through a fetch proxy when the live page is Cloudflare-403** (ranking-tcoc: the segment-by-segment 原作 / オリジナルエピソード table lived there and nowhere readable else) — say what tier it is (cross-check) and pair every claim with a source you read directly.
 
+- **A MU pin can be a SERIES-FRONTIER ESTIMATE parked on the finale row, with a skip list that is simply wrong** (batch 20 wave 9, cells-at-work-code-black: "Vol 3, Chap 16 (Skips 11, 14-15)" — the finale adapts ch 10-11, the frontier is ch 17 at ep 8, and 14 / 15 were adapted in eps 6 / 7). Verify the skip list per episode; the honest frontier can sit on an earlier row (G56).
+- **MU's chapter can be right on the WRONG ROW** (erased: ch 35 is reached in ep 11; the finale is a studio ending). The terminal is the last row that adapts pages, never the pin's row — check the row before the finale whenever the finale is reported original.
+- **The sole-adaptation exception applies to a restaged closing scene when the tie is a PAGE tie** (erased ep 12, Sean 2026-09-02): the anime's final line was ch 44's verbatim in the same setting, adapted nowhere else, and the manga's arc close is the rule's own example → mixed + `partial`{44}; a shared OUTCOME from the author's conveyed ending is not a page tie (that stays filler + `loose_parallel`). The direction question (the page went on sale after production) is a note on the tie, not a reason to refuse it; the row stays A44 position-less and the continue does not move.
+- **One fandom can be TWO hostnames and two wikis can be near-verbatim copies** (sevendeadlysins ↔ nanatsu-no-taizai = one wiki; the two Magi wikis' AoS arc tables are copies) — compare `api.php?action=query&meta=siteinfo` and the table text before counting two.
+- **G55 namesake contamination on wiki row counts** ("List of Girls episodes" = HBO's Girls; "List of Orphan Black episodes") — a count_mismatch flag citing a wiki total that is wildly off is this shape first; check the page title before researching the count.
+- **AFL's date column can be a MIXED station lineage on a domestic series too** (gangsta ABC / TOKYO MX; killing-bites MBS / BS-TBS), not only on simulcasts — and the fix is the EARLIEST first airing per Count (syobocal), never "the production station's regime" as a block: gangsta's rows 5-9 were already right because MX aired them first.
+- **A row-less entry's anchors must cover its REORDER ZONE** (code-black): the display interpolates between anchors when no rows exist, so a lone frontier anchor plus a finale anchor rendered a false back-jump — deliver the whole verified map when the run reorders (A42 + `rearranged` on the jump row).
+
 ## Output
 
 Write exactly the JSON path you are given, valid and complete before you

@@ -500,6 +500,26 @@ export const ENTRIES: RulingEntry<Record<number, RuledAirDate>>[] = [
     ruledOn: '2026-09-02',
     cite: ['scripts/ingest/research/batch20/out/ranking-of-kings-the-treasure-chest-of-courage.json', 'scripts/ingest/research/batch20/verify/ranking-of-kings-the-treasure-chest-of-courage.md', 'https://cal.syoboi.jp/db.php?Command=ProgLookup&TID=6691'],
   },
+  {
+    seriesId: 'killing-bites',
+    ruleId: 'G53',
+    value: { 11: '2018-03-24', 12: '2018-03-31' },
+    reason:
+      "Batch 20 wave 9 (verified R24), Sean ruled 2026-09-02: a TWO-row AFL seeder defect held since wave 7's slot check — MBS (製作局) aired Counts 1-12 on twelve consecutive Saturdays 2018-01-13 … 03-31 (syobocal TID 4796, no 再, no preemption; en-WP, MAL, ja-WP 毎日放送 1月13日-3月31日 土曜2:25); no station aired ep 11 on 03-31, and 04-01 is BS-TBS's Sunday Count 12; rows 1-10 store the MBS post-midnight calendar date (DB-confirmed by the verifier), so both repairs put the run in ONE regime. No G54 ack: no real deviation exists. AFL's live page still prints both wrong dates — manual tier (P8).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-02',
+    cite: ['scripts/ingest/research/batch20/out/airdates/killing-bites.json', 'scripts/ingest/research/batch20/verify/killing-bites-w9.md', 'https://cal.syoboi.jp/db.php?Command=ProgLookup&TID=4796'],
+  },
+  {
+    seriesId: 'gangsta',
+    ruleId: 'G53',
+    value: { 10: '2015-09-10', 11: '2015-09-17', 12: '2015-09-24' },
+    reason:
+      "Batch 20 wave 9 (verified R24), Sean ruled 2026-09-02: AFL's column is a mixed ABC / TOKYO MX lineage that drops the unaired #9.5 recap week, so its rows 10-12 hold the previous episode's MX date (09-06 = MX's #9.5 night, 09-13 = MX's ep 10, 09-20 = MX's ep 11). Under the earliest-airing rule (syobocal TID 3815: ABC ChID 67 Counts 10-12 = 09-10 / 09-17 / 09-24 02:45, the 最終回 flag on 12; MAL agrees) rows 5-9 are ALREADY correct — MX aired them first because ABC skipped 07-30 — so the verdict's eight-row 'ABC regime' block was cut by the verifier to these three. One regime across the run (the earliest first airing's calendar date).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-02',
+    cite: ['scripts/ingest/research/batch20/out/gangsta.json', 'scripts/ingest/research/batch20/verify/gangsta.md', 'https://cal.syoboi.jp/db.php?Command=ProgLookup&TID=3815'],
+  },
 ];
 
 export const AIR_DATE_OVERRIDES: Record<string, Record<number, RuledAirDate>> = toMergedRecord(ENTRIES);

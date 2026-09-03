@@ -153,6 +153,16 @@ export const ENTRIES: RulingEntry<number[]>[] = [
     ruledOn: '2026-08-27',
     cite: ['scripts/ingest/research/batch19/out/ranma-1-2.json', 'scripts/ingest/research/batch19/verify/b5c-ranma-bobobo-arms-emma.md'],
   },
+  {
+    seriesId: 'erased',
+    ruleId: 'A44',
+    value: [12],
+    reason:
+      "Batch 20 wave 9 (verified R24), Sean ruled 2026-09-02: ep 12 「宝物」 is the studio's ending — the hospital-rooftop confrontation is anime-invented start to finish — typed MIXED on the sole-adaptation tie to ch 44's arc close (the final line verbatim, the same 高架下 in the same snow; `partial`{44}). A far-forward closing beat is never an END (A4/A47): an anchor of 44 would retire nine unseen chapters (36-43 never adapted), so the row is position-less by ruling; the honest terminal is ep 11 → 35 [33] (G56) with the continue IN 35 (C1). The mu anchor that sat on this row (35) was deleted in the same apply.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-02',
+    cite: ['scripts/ingest/research/batch20/out/erased.json', 'scripts/ingest/research/batch20/verify/erased.md'],
+  },
 ];
 
 export const ANCHOR_SUPPRESSED: Record<string, number[]> = toRecord(ENTRIES);
