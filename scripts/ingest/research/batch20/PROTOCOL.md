@@ -183,3 +183,17 @@ the T28 recap clause + recap boundary (re-shown footage is weightless; a
 newly animated sequence of significant length weighs), the faithfulness
 clause (alterations keep canon; a small studio beat is noted). The landing
 scan checks monotonicity across the four files. No contract change.
+
+## Amendment 2026-09-02f (wave 13 — pinned before dispatch; R31)
+
+Wave 13 = **dragon-quest-the-adventure-of-dai 18-59** (lane A2, the GAP shape
+unchanged; the LAST gap block, wave 1 of 2 — rows 60-99 + the ep-100 MU pin
+follow in wave 14) as SEVEN six-row sub-blocks (18-23 / 24-29 / 30-35 /
+36-41 / 42-47 / 48-53 / 54-59; files `-w13a` … `-w13g`). Lower fence ep 17 →
+60 [57] v7 (manual); no anchored fence above within this wave — ENDs are
+monotone within the run and the landing scan checks across the seven files.
+Rules in force: `A47` (chapters_adapted as a COMMA list), the T28 recap
+clause + boundary, the faithfulness clause. Source hygiene from batch 17 /
+flag #929: the fandom's forward and reverse mappings are ONE wiki —
+independence rests on en-WP's volume list, ja-WP's 各話リスト and the
+licensor's story pages. No contract change.
