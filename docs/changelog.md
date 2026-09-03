@@ -887,6 +887,52 @@
    0. Permanence 0 locked / 0 violations; no stale rulings. Cycle: step 1
    — Sean picks wave 8 (L-D ×8 of ~16, or a gap block; dai LAST; the T28
    six + claymore 26 still parked for his ruling).
+104. ✅ **BATCH 20 WAVE 14 APPLIED — dai 60-100 CLOSED; THE GAP LANE CLOSES
+   (anchor_gap_research 1 → 0); A47'S EXISTENCE CLAUSE (2026-09-03; Sean
+   ruled).** Seven sub-blocks landed 7/7, verified 2/2 (Fable over Opus).
+   THE FINDING: wave 13's fandom window ('numbers vol 22's extra as its 207,
+   so ≥ 208 = printed + 1') was an ARITHMETIC inference — five agents refuted
+   it independently on chapter titles (the fandom's field is printed through
+   its 335; from its 336 it is list-space inside ep 97's field, a source
+   switch, not an extra — the fandom's own volumes page and the Jump+ feed
+   are 348 contiguous). The N35 entry, the wave protocol and the trap were
+   amended MID-WAVE and the six running agents messaged (five had already
+   found it). Consequence: wave 13's eps 57-59 sat one low → repaired
+   (57 → 208 [204] c209 + partial{209}; 58 → 213 [209] c213; 59 → 217 [213]
+   c217 — A's START 214 refused on coco13's 途中から = A10's leading
+   partial); notes replaced (they quoted list-space titles). RULED: (1) the
+   seven applied with the verifier corrections — **A47 AS WRITTEN on the
+   licensor's own teaser closes**: 83 → 289, 86 → 300, 92 → 320 (Toei
+   「――？」/「――」; three agents had advanced past it); ep 96's '335 sliver'
+   re-kinded rearranged{335} (a forward pull, not a tail); ep 75 → high;
+   (2) **THE EXISTENCE CLAUSE — R3 before A47**: a trailing share credited
+   by ONE source's straddle mark alone (the fandom's '281 (partial)', coco13
+   / Toei stop at 280) HOLDS the END at the two-source chapter; the share
+   stays in chapters_adapted, the partial says single-source — dai 80 → 280
+   (delivered 281), 70 / 87 stand (249 / 303); Sean: 'HOLD makes the most
+   sense given the available information'. In the A47 record + both traps.
+   (3) ep 61 = A44 position-less + `side_story` (the unnumbered 番外編「勇者
+   アバン」 in full, out of order — the map entry is the ruling; the reader's
+   position carries over from ep 60, continue IN 220). (4) ep 100 = the
+   finale 348 [345] v37 — the MU pin VERIFIED (Toei ep 100; the Jump+ feed
+   第1話…第348話; en-WP list 349 = さらば!!!愛する地上よ), flipped mu →
+   manual, NO continue (the manga ends where the anime does). (5) the 85-87
+   reorder real and bidirectional (three simultaneous battles interleaved)
+   — rearranged on all three. APPLIED: **40 manual anchors 220 → 348** (4
+   A47-normalized), 29 continues, 91 annotations, 3 fence repairs, 1 A44
+   row; volumes derived (0 disagreements). CENSUS: anchor_gap_research
+   **1 → 0** (the LAST gap block — lane A2 CLOSED); ruling_violation 0;
+   anchor_beyond_chapter_space 0; end_sliver_mismatch 0; anchor_nonmonotonic
+   0; mu_pin_unverified 0; anchor_volume_mismatch 20 / frontier_tail_null 8
+   / anchor_without_row 11 unchanged; display 218 / 0. No lib GATE change
+   (a ruling entry and a test) — no deploy needed beyond §12.103's. Traps
+   → research-agent: the existence clause; Toei's close IS teaser wording;
+   an arithmetic slot inference is a hypothesis until the title test; coco13
+   = the printed-space title witness; morisan3rd = per-chapter summaries
+   (Wayback). → apply-batch: reconcile repairs by field across files; the
+   single-source partial stamp. BATCH 20 = 14 waves, 96 verdicts; the
+   pin lane (29/29) and the gap lane are both closed.
+
 103. ✅ **BATCH 20 WAVE 13 APPLIED — dai 18-59 CLOSED IN THE PRINTED
    CHAPTER SPACE; N35 SOURCE SHIFTS BUILT; A47'S UNPROVEN-TAIL CONVENTION
    (2026-09-02; Sean ruled).** Seven sub-blocks landed 7/7, verified 2/2.

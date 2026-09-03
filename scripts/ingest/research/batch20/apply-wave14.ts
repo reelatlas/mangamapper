@@ -44,7 +44,13 @@ const END_OVERRIDE: Record<number, number> = {
   // THE FANDOM-ONLY FORK (both verifiers): a trailing share asserted by the fandom's straddle mark ALONE (coco13 / Toei stop one short,
   // no teaser wording). B held ep 70 (249), E held ep 87 (303), D advanced ep 80 (281). RECOMMENDED: R3 before A47 — a tail's EXISTENCE
   // needs two sources before its SIZE is even a question; hold, keep the share in chapters_adapted, the partial notes it single-source.
-  80: 280, // HOLD (recommended; delete this line if Sean rules ADVANCE — then also add 70: 250 and 87: 304)
+  80: 280, // HOLD — Sean ruled 2026-09-03: a tail's existence needs two sources before its size is a question (R3 before A47); 70 and 87 stand as delivered
+};
+// the single-source partials (the fandom's straddle mark alone) carry the ruling in their note
+const ANNOTATION_NOTE_SUFFIX: Record<string, string> = {
+  '70#partial': 'SINGLE-SOURCE (Sean ruled HOLD 2026-09-03, R3 before A47): only the fandom\'s straddle mark credits a share of ch 250; coco13 and Toei stop at 249 — END holds at 249, the continue is 250 either way.',
+  '80#partial': 'SINGLE-SOURCE (Sean ruled HOLD 2026-09-03, R3 before A47): only the fandom\'s straddle mark credits a share of ch 281; coco13 and Toei stop at 280 — END held at 280 (delivered 281), the continue is 281 either way.',
+  '87#partial': 'SINGLE-SOURCE (Sean ruled HOLD 2026-09-03, R3 before A47): only the fandom\'s straddle mark credits a share of ch 304; coco13 and Toei stop at 303 — END holds at 303, the continue is 304 either way.',
 };
 const CA_OVERRIDE: Record<number, string> = {};
 const NOTE_FIX: Record<string, string> = Object.fromEntries<string>([78, 79, 80, 81, 82, 83].map((ep) => [`${ep}#anchor`, `Toei's synopsis (added at curation; the verifier read it live): https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/${ep}/`]));
@@ -112,7 +118,8 @@ async function main() {
   for (const a of annos) for (const ep of a.episodes as number[]) {
     const chO = ANNOTATION_CHAPTERS_OVERRIDE[`${ep}#${a.kind}`];
     console.log(`  annotation ep ${ep} ${a.kind}${(chO ?? a.chapters) ? `{${String(chO ?? a.chapters).slice(0, 40)}}` : ''}${chO ? ' (overlay)' : ''}`);
-    if (!DRY) await upsertAnnotation({ series_id: SID, episode: ep, kind: a.kind as AnnotationKind, chapters: chO ?? a.chapters ?? null, note: `${a.note} [${B}]`.slice(0, 1200), origin: 'research' });
+    const suffix = ANNOTATION_NOTE_SUFFIX[`${ep}#${a.kind}`];
+    if (!DRY) await upsertAnnotation({ series_id: SID, episode: ep, kind: a.kind as AnnotationKind, chapters: chO ?? a.chapters ?? null, note: `${a.note}${suffix ? ` ${suffix}` : ''} [${B}]`.slice(0, 1200), origin: 'research' });
     annoN++;
   }
   for (const a of ANNOTATION_ADD) {
