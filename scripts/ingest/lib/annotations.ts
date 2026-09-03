@@ -26,6 +26,8 @@ export const ANNOTATION_KINDS = [
   'adopted', // T26: outside the source, ruled CANON by Sean — basis REQUIRED
   'retconned', // T26: material later dropped from canon (world-trigger 49-63)
   'side_source', // T26: adapts a work other than the series' source — the work is named in note
+  'recap', // T28 (2026-09-04): re-shown / retold material of chapters already covered — weightless in the standing; chapters = what is retold
+  'unverified', // T28 (2026-09-04): a chapter certainly in the episode whose SHARE could not be sized — the anchor stands, the row is a census queue (unverified_share)
 ] as const;
 export type AnnotationKind = (typeof ANNOTATION_KINDS)[number];
 

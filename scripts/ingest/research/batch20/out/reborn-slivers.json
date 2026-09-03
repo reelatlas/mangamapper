@@ -1,0 +1,204 @@
+{
+  "series_id": "reborn",
+  "summary": "The plain answer: NO segment of ch 257 could be found in ep 178 or ep 189, and NO segment of ch 232 could be found in ep 159 — every per-episode source I could read (TV Tokyo's own 各話あらすじ, en-WP's season 7/8 summaries, reborn.fandom's episode synopses) describes these three episodes as wholly anime-original, and ja-WP's 未来編 entry maps the manga's ch 136-282 to eps 74-141, 154-177 and 190-203, explicitly excluding 178-189. Ch 257 (Namimori) is in fact adapted in FULL across two other episodes: ep 176 animates its opening block (arrival at the Namimori Shrine, Shoichi's order, Gokudera's Flame Missile, Byakuran recalling the Flame Ring Teleportation System, Kusakabe's arrival, Hibari peeling off, the group reaching the Vongola Base) and ep 190 animates its closing block (Squalo's call to Lussuria, the system reappearing and crashing, the six lights falling on Namimori, the alarms, the wall exploding, Zakuro) before running on into ch 258. Ch 232 (Choice) is likewise fully adapted elsewhere: ep 158 carries its Chrome/I-Pin baozi scene and ep 160 carries Shoichi's rules explanation and Giannini's motorcycle reveal. The fandom's 'Chapter 257 (mostly filler)' / 'Chapter 232 (mostly filler)' episode fields are story-POSITION headers echoing animefillerlist's 'Mixed Canon/Filler' typing, not adaptation claims — the same value is printed on both ends of a 12-episode anime-original arc while eps 179-188 read plain 'Filler', and the same wiki prints plain 'Filler' on ep 158, the one episode in that neighbourhood that demonstrably DOES carry a ch 232 scene. Consequence for the new weighing clause: there is no fragment to weigh on any of the three rows, and even if a frame-level one exists below synopsis resolution it could not reach the T28 sole-adaptation exception, because both chapters are adapted in full by other episodes. All three rows are delivered anchor_hostile (A1/A44) with the type corrections the evidence forces; ep 176's END is proposed to move 256 → 257 (outside the ask, flagged).",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [
+    {
+      "episode": 178,
+      "why": "No ch 257 segment evidenced. TV Tokyo's own synopsis for 標的178 begins inside the anime-original premise — Reborn tells Tsuna and co to gather with Uni in front of Irie's device and vanishes; without explanation they are thrown to Namimori 10 years in the PAST, met by Reborn and the Arcobaleno; Uni's prayer and the pacifiers summon Vongola Primo from the ring and the First Generation's assessment begins. en-WP (season 8) and reborn.fandom give the same content with no manga beat; ja-WP's 未来編 line maps ch 136-282 to eps 74-141 / 154-177 / 190-203 and its episode table heads the block 'I世ファミリー編（アニメオリジナルストーリー・標的178-189）'; Marvelous' own DVD copy labels the whole arc アニメオリジナルストーリー. Ch 257's own scenes are all accounted for by eps 176 and 190. A1/A44 — the row carries no position; the stored 257 anchor should go.",
+      "sources": [
+        "https://web.archive.org/web/20100706104948/http://www.tv-tokyo.co.jp:80/contents/reborn/episodes/episodes8/",
+        "https://en.wikipedia.org/wiki/Reborn!_(season_8)",
+        "https://reborn.fandom.com/wiki/The_Primo_Family_Arrives!",
+        "https://ja.wikipedia.org/wiki/%E5%AE%B6%E5%BA%AD%E6%95%99%E5%B8%AB%E3%83%92%E3%83%83%E3%83%88%E3%83%9E%E3%83%B3REBORN!",
+        "https://www.marv.jp/titles/av/3611/"
+      ]
+    },
+    {
+      "episode": 189,
+      "why": "No ch 257 segment evidenced, and the bookends are NOT the same scenes as ep 178's — they are the anime's own Lal-Mirch-bedside framing device (first used in ep 177) wrapped around a retelling of the anime-original Inheritance trials. TV Tokyo: 'having finished the inheritance they return to the future; Uni and Reborn come to retrieve the pacifiers they had entrusted to Lal; Reborn then tells Lal the details of the trials.' The fandom adds the opening (Uni holding the dead pacifiers, Lal in the emergency-room bed asking how long they were gone — 'not more than about forty minutes to her') and the close (Lal concludes they can beat Byakuran; Reborn doubts the real Six Funeral Wreaths; Uni's faith; Reborn wonders when Byakuran will attack) and states outright 'This episode bears no significance to the main storyline.' None of that is in ch 257 — the chapter's own cast list on the same wiki does not even contain Lal Mirch, and the pacifiers were entrusted to Lal only because of the anime-original trip to the past. A1/A44.",
+      "sources": [
+        "https://web.archive.org/web/20100706104948/http://www.tv-tokyo.co.jp:80/contents/reborn/episodes/episodes8/",
+        "https://en.wikipedia.org/wiki/Reborn!_(season_8)",
+        "https://reborn.fandom.com/wiki/The_Family%27s_Resolve",
+        "https://reborn.fandom.com/wiki/Chapter_257"
+      ]
+    },
+    {
+      "episode": 159,
+      "why": "No ch 232 segment evidenced — 159's share is neither 'the opening of 232 that 160 replays' nor a distinct 232 scene: it is nothing. TV Tokyo's 標的159 synopsis is the baseball plot end to end (Yamamoto's easy-going mood irritating Gokudera; the group learning from a newspaper of this era that the Namimori Middle baseball club has a district qualifier; Kusakabe's account of the club nearly being disbanded; Yamamoto slipping out of the base to coach). en-WP and the fandom agree, both wholly baseball. Ch 232's three scene-blocks are elsewhere: the Chrome-not-eating / I-Pin baozi beat is ep 158, Shoichi's explanation of the rules of Choice and Giannini's Dying-Will-Flame motorcycle reveal are ep 160 (anchored). A1/A44.",
+      "sources": [
+        "https://web.archive.org/web/20100323194314/http://www.tv-tokyo.co.jp:80/contents/reborn/episodes/episodes7/",
+        "https://en.wikipedia.org/wiki/Reborn!_(season_7)",
+        "https://reborn.fandom.com/wiki/For_My_Friends",
+        "https://reborn.fandom.com/wiki/Chapter_232"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189],
+      "kind": "side_story",
+      "chapters": "none",
+      "note": "Primo Family arc (178-189) is anime-original end to end (ja-WP episode table: 'I世ファミリー編（アニメオリジナルストーリー・標的178-189）'; ja-WP's 未来編 line animates ch 136-282 in eps 74-141, 154-177, 190-203 only; Marvelous DVD copy: アニメオリジナルストーリー). SUPERSEDES the stored side_story chapters value '257 (bookends only)': neither bookend is a ch 257 scene. Ep 190 adapts ch 257 in full together with ep 176."
+    },
+    {
+      "episodes": [176],
+      "kind": "partial",
+      "chapters": "254, 255, 256, 257 (opening block)",
+      "note": "OUTSIDE THE ASK, offered with the ep-176 repair. Ep 176 runs past ch 256 into ch 257's opening block and stops when the group reaches the Vongola Base: 'The Vongola team safely arrives in Namimori at the same place they departed from, the Shrine. Shoichi urges Tsuna to destroy the Flame Ring Teleportation System… Gokudera destroys it with a Flame Missile… the Teleportation System is suddenly recalled by Byakuran… Kusakabe arrives… suggests they go back to the Vongola Underground Base… Hibari leaves; Kusakabe and Dino follow. Everyone else head to the Base, including Squalo, who needs to report to his Boss and ask for backup.' That is ch 257 beat for beat and it is well beyond an A47 scrap (multi-scene, not ≤5 pages, no teaser wording), so the END advances (A4). The rest of ch 257 — Squalo's call to Lussuria onward — is ep 190's."
+    },
+    {
+      "episodes": [190],
+      "kind": "partial",
+      "chapters": "257 (closing block), 258",
+      "note": "Ep 190 adapts the remainder of ch 257 — Squalo's call to Lussuria (Lussuria uncooperative, Xanxus eating, Fran off to meet a girl), Hibari's night at Namimori Middle with Dino, the Flame Ring Teleportation System reappearing in the sky and exploding, the six lights falling on Namimori, the base alarms and severed comms, the wall exploding and Zakuro walking in — and runs on through ch 258 (Squalo's stand, Haru's hideout, Kawahira). TV Tokyo's 標的190 synopsis matches. With ep 176 this accounts for ch 257 in full; the sole-adaptation exception (T28) is therefore unavailable to eps 178/189."
+    },
+    {
+      "episodes": [158],
+      "kind": "graft",
+      "chapters": "232 (the Chrome / I-Pin scene)",
+      "note": "OUTSIDE THE ASK, offered because it is the control that exposes the fandom field. Ep 158 — typed Filler by animefillerlist and marked plain 'Filler' by the fandom infobox — is the episode that actually carries a ch 232 scene: Kyoko and Haru worrying that Chrome has not eaten (ch 232's meal-break beat) and I-Pin sneaking into Chrome's room to share a baozi with her (ch 232's mid-chapter scene). The wiki gives ep 159, which carries nothing of 232, the 'Chapter 232' field instead. Ep 160 adapts 232 properly."
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 178,
+      "field": "end_chapter",
+      "old": 257,
+      "new": null,
+      "why": "A1/A44 once the row is typed filler: no ch 257 scene is evidenced in ep 178 by TV Tokyo's synopsis, en-WP, the fandom synopsis or ja-WP; the whole of ch 257 is animated by eps 176 and 190.",
+      "sources": [
+        "https://web.archive.org/web/20100706104948/http://www.tv-tokyo.co.jp:80/contents/reborn/episodes/episodes8/",
+        "https://en.wikipedia.org/wiki/Reborn!_(season_8)",
+        "https://reborn.fandom.com/wiki/Escape_(episode)"
+      ]
+    },
+    {
+      "episode": 178,
+      "field": "start_chapter",
+      "old": 257,
+      "new": null,
+      "why": "Same as the END: the row carries no position (A1/A44).",
+      "sources": ["https://web.archive.org/web/20100706104948/http://www.tv-tokyo.co.jp:80/contents/reborn/episodes/episodes8/"]
+    },
+    {
+      "episode": 189,
+      "field": "end_chapter",
+      "old": 257,
+      "new": null,
+      "why": "A1/A44: ep 189's bookends are the anime's own Lal-Mirch-bedside framing (introduced in ep 177) around a retelling of the anime-original trials; ch 257's cast list on the same wiki does not include Lal Mirch.",
+      "sources": [
+        "https://web.archive.org/web/20100706104948/http://www.tv-tokyo.co.jp:80/contents/reborn/episodes/episodes8/",
+        "https://reborn.fandom.com/wiki/Chapter_257"
+      ]
+    },
+    {
+      "episode": 189,
+      "field": "start_chapter",
+      "old": 257,
+      "new": null,
+      "why": "Same as the END (A1/A44).",
+      "sources": ["https://reborn.fandom.com/wiki/The_Family%27s_Resolve"]
+    },
+    {
+      "episode": 159,
+      "field": "end_chapter",
+      "old": 232,
+      "new": null,
+      "why": "A1/A44: three per-episode sources (TV Tokyo, en-WP, fandom) describe ep 159 as wholly the anime-original baseball plot; ch 232's scenes are in eps 158 and 160.",
+      "sources": [
+        "https://web.archive.org/web/20100323194314/http://www.tv-tokyo.co.jp:80/contents/reborn/episodes/episodes7/",
+        "https://en.wikipedia.org/wiki/Reborn!_(season_7)"
+      ]
+    },
+    {
+      "episode": 159,
+      "field": "start_chapter",
+      "old": 232,
+      "new": null,
+      "why": "Same as the END (A1/A44).",
+      "sources": ["https://reborn.fandom.com/wiki/For_My_Friends"]
+    },
+    {
+      "episode": 178,
+      "field": "annotation",
+      "old": "partial{257 (sliver; anime-original premise)}",
+      "new": "(delete)",
+      "why": "There is no ch 257 fragment in ep 178 to name; the annotation records a tie that no source supports. The arc-level side_story annotation (chapters 'none') carries the honest fact.",
+      "sources": [
+        "https://web.archive.org/web/20100706104948/http://www.tv-tokyo.co.jp:80/contents/reborn/episodes/episodes8/",
+        "https://en.wikipedia.org/wiki/Reborn!_(season_8)"
+      ]
+    },
+    {
+      "episode": 178,
+      "field": "annotation",
+      "old": "side_story{257 (bookends only)} on eps 178-189",
+      "new": "side_story{none} on eps 178-189",
+      "why": "Neither bookend is a ch 257 scene: ep 178 opens on Reborn sending the group to the PAST (anime-original) and ep 189 is the Lal-bedside retelling of the anime-original trials. Same shape as the stored Arcobaleno Trials annotation, which already uses chapters 'none'.",
+      "sources": [
+        "https://web.archive.org/web/20100706104948/http://www.tv-tokyo.co.jp:80/contents/reborn/episodes/episodes8/",
+        "https://ja.wikipedia.org/wiki/%E5%AE%B6%E5%BA%AD%E6%95%99%E5%B8%AB%E3%83%92%E3%83%83%E3%83%88%E3%83%9E%E3%83%B3REBORN!"
+      ]
+    },
+    {
+      "episode": 176,
+      "field": "end_chapter",
+      "old": 256,
+      "new": 257,
+      "why": "OUTSIDE THE ASK — offered because the answer to the ask rests on it. Ep 176 does not stop at ch 256: it runs on through ch 257's opening block (arrival at the Namimori Shrine, Shoichi's order, Gokudera's Flame Missile, Byakuran recalling the system, Kusakabe, Hibari peeling off with Kusakabe and Dino, the rest reaching the Vongola Base with Squalo). reborn.fandom's ep-176 synopsis gives it beat for beat and en-WP's season-7 summary independently ends ep 176 with 'returning them to Namimori. While sheltering at the Vongola base…'; TV Tokyo's 標的190 synopsis presupposes the damage to the 超炎リング転送システム as already done. Not an A47 scrap (multi-scene block, no page count ≤5, no teaser wording), so the END advances (A4) with partial{257 (opening block)}; ep 190 keeps START 257 for the second block. START 254 and the volume (27) are unchanged. Medium confidence — no page-level source exists for this series.",
+      "sources": [
+        "https://reborn.fandom.com/wiki/Escape_(episode)",
+        "https://en.wikipedia.org/wiki/Reborn!_(season_7)",
+        "https://web.archive.org/web/20100706104948/http://www.tv-tokyo.co.jp:80/contents/reborn/episodes/episodes8/",
+        "https://reborn.fandom.com/wiki/Chapter_257"
+      ]
+    }
+  ],
+  "type_corrections": [
+    {
+      "episodes": [178],
+      "type": "filler",
+      "note": "T27/T28: zero standing in the source. TV Tokyo's own synopsis, en-WP season 8, reborn.fandom and Marvelous' DVD copy all describe a wholly anime-original episode (Reborn sends the group to the past; the Arcobaleno gather; Uni's prayer summons Vongola Primo from the ring; the First Generation's assessment begins), and ja-WP's 未来編 line excludes eps 178-189 from the manga's ch 136-282. The stored 'mixed' descends from animefillerlist's 'Mixed Canon/Filler', which prints no chapter and is the same source lineage as the fandom's '(mostly filler)' field. If Sean's new weighing clause prefers to keep an arc-boundary row 'mixed' on continuity grounds, this correction is the alternative to be refused — the FACT it rests on is that no ch 257 content was found.",
+      "sources": [
+        "https://web.archive.org/web/20100706104948/http://www.tv-tokyo.co.jp:80/contents/reborn/episodes/episodes8/",
+        "https://en.wikipedia.org/wiki/Reborn!_(season_8)",
+        "https://ja.wikipedia.org/wiki/%E5%AE%B6%E5%BA%AD%E6%95%99%E5%B8%AB%E3%83%92%E3%83%83%E3%83%88%E3%83%9E%E3%83%B3REBORN!",
+        "https://www.marv.jp/titles/av/3611/"
+      ]
+    },
+    {
+      "episodes": [189],
+      "type": "filler",
+      "note": "T27/T28 plus the recap clause: the episode is a retelling of the anime-original Inheritance trials inside the anime's own Lal-Mirch-bedside frame; the fandom page itself says 'This episode bears no significance to the main storyline.' No ch 257 scene, and no chapter is retold, so even the recap annotation has no chapters to name.",
+      "sources": [
+        "https://web.archive.org/web/20100706104948/http://www.tv-tokyo.co.jp:80/contents/reborn/episodes/episodes8/",
+        "https://en.wikipedia.org/wiki/Reborn!_(season_8)",
+        "https://reborn.fandom.com/wiki/The_Family%27s_Resolve"
+      ]
+    },
+    {
+      "episodes": [159],
+      "type": "filler",
+      "note": "T27/T28: wholly the anime-original Namimori Middle baseball plot in all three per-episode sources; ch 232's scenes are in eps 158 and 160. The stored 'mixed' descends from animefillerlist's 'Mixed Canon/Filler' and the fandom's 'Chapter 232 (mostly filler)' position header.",
+      "sources": [
+        "https://web.archive.org/web/20100323194314/http://www.tv-tokyo.co.jp:80/contents/reborn/episodes/episodes7/",
+        "https://en.wikipedia.org/wiki/Reborn!_(season_7)",
+        "https://reborn.fandom.com/wiki/For_My_Friends"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "PER-SEGMENT TABLE (the ask). Columns: episode | segment | (a) which scene of the chapter / where it sits | (b) chapter's own beat shown first time, or reused framing / re-drawn setup | (c) WEIGHT + reason.\n\nEP 178 「Ｉ世ファミリー来る！」 — ch 257 claimed by the fandom infobox ('Chapter 257 (mostly filler)').\n  seg 1 (opening bookend) | Reborn tells Tsuna and co to bring Uni and gather in front of Irie's device, then vanishes (TV Tokyo: ツナ達に、ユニを連れて入江の装置の前に集合するように告げ、姿を消すリボーン) | (a) NOT a scene of ch 257 — ch 257's only 'device' beats are Gokudera destroying the Flame Ring Teleportation System and Byakuran recalling it, both animated in ep 176; the manga has no scene in which Reborn assembles the group at Irie's device | (b) neither: it is newly drawn anime-original setup for the anime-only trip to the past | (c) SLIVER→NONE: it carries no chapter progression at all; ep 190 adapts 257 in full with ep 176.\n  seg 2 (body) | thrown to Namimori 10 years in the past; the Arcobaleno gather; Uni's prayer + the pacifiers summon Vongola Primo from the ring; the First Generation's assessment begins | (a) no chapter — the manga's Primo/Guardian material (Daemon Spade's betrayal ch 318, Giotto's pocket watches ch 344) is 60+ chapters ahead and is not adapted here | (b) anime-original | (c) NONE.\n  seg 3 (closing bookend) | that night the First Guardians appear from each Guardian's ring and announce they will be observing | (a) no chapter | (b) anime-original | (c) NONE.\n  VERDICT ep 178: no ch 257 segment found by any source. Even a frame-level one could not reach the T28 sole-adaptation exception, because ch 257's pages are adapted elsewhere (eps 176 + 190).\n\nEP 189 「ファミリーの覚悟」 — ch 257 claimed by the same field.\n  seg 1 (opening bookend) | Uni holding the dead Arcobaleno Pacifiers, now pale blue; Lal Mirch in the emergency-room bed asking how long they were gone ('not more than about forty minutes to her'); TV Tokyo: ユニとリボーンは、ラルに預けたおしゃぶりを引き取りに来ていた | (a) NOT ch 257 — the chapter has no Lal Mirch scene and the fandom's own ch 257 cast list omits her; the pacifiers were entrusted to Lal only because of the anime-original trip to the past | (b) reused framing: the Lal-bedside device is the ANIME's, introduced in ep 177, re-dressed here — NOT the same scenes as ep 178's bookends (178's frame is Irie's device in the base; 189's is the emergency room) | (c) SLIVER→NONE.\n  seg 2 (body) | Reborn narrates the Inheritance trials to Lal, pausing on Daemon Spade's betrayal and the Mist inheritance | (a) no chapter — it retells eps 178-188, all anime-original | (b) retelling of anime-original material | (c) NONE (weightless under the T28 recap clause, and there is no chapter to name in a recap annotation).\n  seg 3 (closing bookend) | Lal concludes they can beat Byakuran; Reborn doubts the real Six Funeral Wreaths; Uni's faith; Reborn wonders when Byakuran will attack and mentally warns Tsuna | (a) NOT ch 257 — the chapter's closing pages are Squalo's call to Lussuria, the comms cut and Zakuro through the wall, all in ep 190 | (b) anime-original bridge into ep 190 | (c) SLIVER→NONE. The fandom page states outright 'This episode bears no significance to the main storyline.'\n\nEP 159 「仲間のために」 — ch 232 claimed by the same field.\n  whole episode | Yamamoto's easy-going mood irritating Gokudera; a newspaper of this era carrying the Namimori Middle baseball qualifier; Kusakabe on the club's decline; Yamamoto cleaning the clubroom and coaching three first-years; Hibari's warning; the game, the run, Yamamoto's resolve for Byakuran | (a) no scene of ch 232 — ch 232's three blocks are Shoichi explaining the rules of Choice (ep 160), the meal break + Chrome's empty seat and the I-Pin baozi scene (ep 158), and Giannini's Dying-Will-Flame motorcycle reveal (ep 160) | (b) anime-original throughout | (c) NONE — it is NEITHER '232's opening that 160 replays' NOR a distinct 232 scene; ep 160 adapts 232 in full.\n\nWHERE CH 257 ACTUALLY LIVES (the reason no fragment is left for 178/189):\n  ep 176 『脱出』 = ch 254-256 + ch 257's OPENING block — arrival at the Namimori Shrine, Shoichi's order to destroy the Flame Ring Teleportation System, Gokudera's Flame Missile, Byakuran recalling the system, Kusakabe emerging and proposing the Vongola Underground Base, Hibari leaving with Kusakabe and Dino following, the rest reaching the base with Squalo, who needs to ask Xanxus for backup.\n  ep 190 『真６弔花襲来！』 = ch 257's CLOSING block (Squalo's call to Lussuria; Hibari's night at Namimori Middle with Dino; the system reappearing and exploding; six lights falling on Namimori; alarms and severed comms; the wall exploding; Zakuro) + ch 258 (Squalo's stand, Haru's hideout, Kawahira). Slight reorder inside 257: the anime plays the system's return AFTER Squalo's call.\n  ep 177 『戦いの後』 is Reborn's recap to Lal of everything through 'the return to Namimori' — RE-TOLD, not first-time: ep 176 had already animated it. The stored ep-177 chapters_adapted note ('return to Namimori = opening of 257') attributes ep 176's pages to ep 177; ep 177's END stays 256.\n\nWHY THE FANDOM FIELD IS A POSITION HEADER, NOT AN ADAPTATION CLAIM: (1) the identical value 'Chapter 257 (mostly filler)' is printed on BOTH ends of a 12-episode arc whose interior rows read plain 'Filler'; (2) the same value pattern 'Chapter 232 (mostly filler)' sits on ep 159 while ep 158 — the episode that demonstrably carries a ch 232 scene — reads plain 'Filler'; (3) the strings track animefillerlist's typing exactly (159 / 178 / 189 = 'Mixed Canon/Filler', 158 / 179-188 = 'Filler'), so AFL and the fandom field are ONE source lineage, not two; (4) the wiki's reverse index is silent — the `anime =` field is empty on the Chapter 231/232/233/255/256/257/258 pages (only Chapter 1 is filled), so the chapter side neither confirms nor denies (silence, not evidence).\n\nCHAPTER SPACE / VOLUMES: the manga's own 標的 numbering, identical to our rows' episode numbering (no conversion). ch 232 = vol 25 (227-237), ch 257 = vol 27 (248-258), ch 258 = vol 27. No print/edition shift is in play.\n\nROW IDENTITY: our episode numbers = ja-WP 標的 = fandom Episode N = en-WP overall number = AFL row number; joined on title AND air date for every row named here (178 = 2010-04-03, 189 = 2010-06-19, 159 = 2009-11-14, 176 = 2010-03-20, 190 = 2010-06-26 — all agree across TV Tokyo, ja-WP, en-WP, fandom and AFL).",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "THE ANSWER IS A NEGATIVE, so read the confidence carefully: 'no substantial ch 257 / ch 232 segment' is HIGH (four to five independent sources per row, including the licensor's own 各話あらすじ and ja-WP's explicit ch 136-282 → eps 74-141/154-177/190-203 mapping). 'Literally zero frames' is MEDIUM — a synopsis can omit a 20-second insert. What is not in doubt is that ch 257 and ch 232 are each adapted in FULL by other episodes, so the T28 sole-adaptation exception is unavailable to 178, 189 and 159 whatever the new weighing clause says about slivers.",
+    "OUTSIDE THE ASK, but it is where ch 257's pages went: ep 176 → END 256 should become 257 (repair filed, medium). If that repair lands, ep 190's START stays 257 as a page split and the pair 176/190 accounts for ch 257 completely. If Sean prefers to leave ep 176 at 256 under a conservative reading of A47, the answer to the ask does not change — ep 190 still adapts 257 and 178/189 still carry nothing.",
+    "OUTSIDE THE ASK: ep 158 (stored filler, AFL 'Filler') is the episode that actually carries a ch 232 scene (the Chrome / I-Pin baozi beat) — an inversion with ep 159. I have filed only a graft annotation, no type change: the beat is one scene inside an episode-length anime-original expansion, so under T28 it is filler + graft, exactly the shape ep 159 was wrongly given.",
+    "reborn has no TARGETS entry in scripts/ingest/research/batch20/context.ts, so batch20/validate.ts will report 'no TARGETS entry for reborn' on this sidecar file — add a lane-C entry (range '159,176-190') before running the gate, or exempt the file.",
+    "The three type_corrections are the consequence the evidence forces (T27: zero standing in the source), not a request to pre-empt the ruling. If the new weighing clause chooses to keep an arc-boundary row 'mixed' on continuity grounds, refuse the corrections and keep the annotations — but the chapter numbers must still go (A1/A44), because there is no ch 257 / ch 232 content to point at."
+  ]
+}

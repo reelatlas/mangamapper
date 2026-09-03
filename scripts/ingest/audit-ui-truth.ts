@@ -103,7 +103,7 @@ async function main() {
     rearranged_zone_unanchored: [], rearranged_zone_acknowledged: [],
     title_incomplete: [], airdate_incomplete: [], airdate_regression: [], airdate_withheld: [], episode_date_off_window: [], asterisk_unreviewed: [],
     fractional_unmodeled: [], annotation_invalid: [], annotation_retired_standing: [], afl_anime_canon_unruled: [], format_missing: [], episode_without_component: [], watch_order_kind_missing: [],
-    permanence_candidate: [], permanence_violation: [], mixed_fragment_only: [], run_stuck: [],
+    permanence_candidate: [], permanence_violation: [], mixed_fragment_only: [], run_stuck: [], unverified_share: [], sliver_only_anchor: [],
     series_without_source_kind: [], no_source: [], no_instrument: [], ok_full: [], ok_no_volume: [], ok_loose: [], ok_parallel: [],
     source_relation_missing: [], parallel_has_anchor: [], arcs_not_partition: [], arc_row_conflict: [], correspondence_invalid: [], correspondence_incomplete: [],
     pending_airing_no_anchor: [], pending_finished_no_totals: [], pending_no_canon: [], pending_other: [],
@@ -114,6 +114,21 @@ async function main() {
     const cutoff = new Date(Date.now() - 6 * 3600 * 1000).toISOString();
     for (const r of await selectAll<any>('ingest_runs', 'id, source, started_at', (q) => q.eq('status', 'running').lt('started_at', cutoff)))
       classes.run_stuck.push(`${r.source} run #${r.id} started ${String(r.started_at).slice(0, 16)} still 'running' — killed mid-invocation (G58); heal-stuck-runs marks it`);
+  }
+  // T28's sliver clause (2026-09-04): `unverified` rows are Sean's revisit queue (the anchor stands, the share is unsized);
+  // a canon / mixed row whose ONLY source segment is marked a sliver yet carries an anchor is a candidate for the
+  // significance call (a listing, never an auto-delete — A6)
+  {
+    for (const a of await selectAll<any>('episode_annotations', 'series_id, episode, kind, chapters', (q) => q.eq('kind', 'unverified')))
+      classes.unverified_share.push(`${a.series_id}: ep ${a.episode} — ch ${String(a.chapters ?? '').slice(0, 40)} cited, share unverified (T28; revisit when better information lands)`);
+    const typeOf = new Map<string, string>();
+    for (const e of await selectAll<any>('episodes', 'series_id, number, type')) typeOf.set(`${e.series_id}#${e.number}`, e.type);
+    for (const a of await selectAll<any>('chapter_anchors', 'series_id, episode, chapter, chapters_adapted', (q) => q.eq('source', 'manual').not('chapters_adapted', 'is', null))) {
+      const ca = String(a.chapters_adapted);
+      const single = !/,|·/.test(ca.replace(/\([^)]*\)/g, ''));
+      if (single && /\b(sliver|scrap|1 panel|one panel|p\.?\s*\d+ only|approx\. p)/i.test(ca) && ['canon', 'mixed'].includes(typeOf.get(`${a.series_id}#${a.episode}`) ?? ''))
+        classes.sliver_only_anchor.push(`${a.series_id}: ep ${a.episode} → ch ${a.chapter} on a sliver-only record '${ca.slice(0, 50)}' — significance call (T28's sliver clause): significant → stands with the reason; weightless → no anchor, the remainder decides the type`);
+    }
   }
   // T26: annotations are read once up front — the adopted / side_source rows
   // (canon with NO source counterpart by design, T14) and the set of
