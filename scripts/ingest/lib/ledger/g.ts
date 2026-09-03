@@ -986,4 +986,31 @@ export const RULES: Rule[] = [
     status: 'live',
     see: ['N1', 'N11', 'N20', 'G44', 'A42', 'P5', 'P9', 'P34'],
   },
+  {
+    id: 'G58',
+    aliases: ['budgeted edge', 'structural hash', 'volatile fields', 'edge wall clock', 'run_stuck', 'deferred not skipped', 'the refresh-anilist lesson', 'aniListHash', 'time budget'],
+    family: 'G',
+    title: 'Budgeted edges: structural hash, deferral, closed run row',
+    statement:
+      "An edge refresh never does unbounded work: each invocation decides what changed BEFORE writing anything, processes the stalest work under an explicit budget (a count of re-derives and a wall-clock allowance inside the platform limit), leaves what it could not reach UNSTAGED so it leads the next run (a deferral is data — the old hash — never a silent skip), and always closes its ingest_runs row. The change decision hashes the STRUCTURAL subset of a source payload — for AniList, media minus the metrics it recomputes continuously (averageScore, meanScore, popularity, favourites, trending, tag ranks, relation-node popularity; lib/anilist.ts#aniListStructural) — so a daily sweep re-derives only series whose structure moved (episodes, status, dates, titles, relations, the next-airing pointer); the full raw still refreshes on every fetch for readers of staging. A run still 'running' hours after it started was killed: heal-stuck-runs marks it, and run_stuck reads what is still open.",
+    why:
+      "refresh-anilist died mid-invocation every day from 2026-08-24 to 09-03 (11 runs 'running' forever, fetched 0): it hashed the whole media object, so ~all 679 media read as changed and it re-resolved ~100 series until the edge wall clock killed it — a quiet outage the census could not see because no class read ingest_runs. The healer then found refresh-afl killed on four of ten days for the same reason (20 pages × 10 s crawl delay + overhead). Sean 2026-09-03: 'did we ever address the edge function that was not firing correctly?' — the fix is a rule, not a restart.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-03',
+    origin: 'docs/STATE.md awaiting-Sean item (§12.95 → §12.104); changelog §12.105',
+    enforcement: [
+      { path: 'scripts/ingest/lib/anilist.ts', symbol: 'aniListStructural' },
+      { path: 'scripts/ingest/lib/resolve.ts', symbol: 'aniListHash' },
+      { path: 'scripts/ingest/lib/resolve.ts', symbol: 'stageAniList' },
+      { path: 'supabase/functions/_src/refresh-anilist.ts' },
+      { path: 'supabase/functions/_src/refresh-afl.ts' },
+      { path: 'scripts/ingest/heal-stuck-runs.ts' },
+      { path: 'scripts/ingest/audit-ui-truth.ts', symbol: 'run_stuck' },
+    ],
+    layer: 'writer',
+    auditClass: ['run_stuck'],
+    witnesses: ['refresh-anilist (2026-08-24 → 09-03)', 'refresh-afl (2026-08-29, 08-30, 09-01)'],
+    status: 'live',
+    see: ['G44', 'P3', 'P4', 'P5', 'P20', 'G51'],
+  },
 ];

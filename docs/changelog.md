@@ -887,6 +887,34 @@
    0. Permanence 0 locked / 0 violations; no stale rulings. Cycle: step 1
    — Sean picks wave 8 (L-D ×8 of ~16, or a gap block; dai LAST; the T28
    six + claymore 26 still parked for his ruling).
+105. ✅ **G58 — BUDGETED EDGES: the refresh-anilist outage FIXED as a rule
+   (2026-09-03; Sean asked 'did we ever address the edge function?').**
+   DIAGNOSIS from ingest_runs: every daily refresh-anilist run from 08-24 to
+   09-03 sat 'running' forever with fetched 0 — the edge hashed the WHOLE
+   media object (averageScore / meanScore / popularity / favourites /
+   trending / tag ranks / relation-node popularity move daily), so ~all 679
+   media read as changed and it re-resolved ~100 series until the platform
+   wall clock killed it; the 08-26 local restage (no time limit) proved the
+   code itself worked. No census class read ingest_runs, so the outage was
+   invisible to the cycle for ten days. THE RULE (G58, a G-family
+   /add-rule end to end): (1) the change decision hashes the STRUCTURAL
+   subset (`lib/anilist.ts#aniListStructural`, `resolve.ts#aniListHash`;
+   2 unit tests) — the raw still refreshes on every fetch; (2) the edge
+   decides BEFORE writing, resolves changed series stalest-first under
+   RESOLVE_BUDGET 40 + TIME_BUDGET 110 s, and leaves a series it cannot
+   reach UNSTAGED so it leads the next run (deferred, never skipped); the
+   run row always closes; (3) refresh-afl gets the same wall-clock budget
+   (230 s) — the healer found it killed on 08-29 ×3, 08-30 and 09-01 too;
+   (4) `heal-stuck-runs.ts` (standard roster) marks runs 'running' > 6 h as
+   killed; (5) census class `run_stuck` reads what is still open. PROOF:
+   anilist-restage seeded the structural hashes (679 restaged), then the
+   edge invoked through the cron's own `invoke_edge_refresh` path closed in
+   2 min — 679 fetched, 0 changed, 0 re-resolved, status ok (the first
+   closed daily run since 08-24); 16 stuck runs marked (11 anilist, 4 afl,
+   1 afg). Edges rebuilt + deployed twice; system census OK; 172 tests.
+   Census otherwise unchanged (ruling_violation 0, display 218 / 0).
+   One-hop case 31. Watch: tomorrow's 08:10 UTC run must close on its own.
+
 104. ✅ **BATCH 20 WAVE 14 APPLIED — dai 60-100 CLOSED; THE GAP LANE CLOSES
    (anchor_gap_research 1 → 0); A47'S EXISTENCE CLAUSE (2026-09-03; Sean
    ruled).** Seven sub-blocks landed 7/7, verified 2/2 (Fable over Opus).

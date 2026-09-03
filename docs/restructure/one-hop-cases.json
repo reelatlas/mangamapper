@@ -356,6 +356,18 @@
         "numbering"
       ],
       "source": "batch 20 wave 13 (2026-09-02): the Dai 348-vs-349 ruling — sourceShifts on the chapter-space ruling, consumed by the wikipedia volume backfill, the MU pin writer and the AFG anchor writer"
+    },
+    {
+      "ask": "an edge refresh's run row sits 'running' forever / the cron dies mid-run — what bounds an edge invocation and what does the change hash cover?",
+      "expected": [
+        "G58"
+      ],
+      "terms": [
+        "budget",
+        "structural",
+        "run_stuck"
+      ],
+      "source": "2026-09-03: refresh-anilist killed daily for ten days (whole-object hash → everything changed); the budgeted, structure-hashed edge"
     }
   ]
 }

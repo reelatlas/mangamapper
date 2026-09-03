@@ -129,3 +129,20 @@ export async function searchAnime(search: string): Promise<AniListSearchHit[]> {
   );
   return data.Page.media;
 }
+
+// G58 (2026-09-03): the STRUCTURAL subset of a media object — what a re-resolve
+// can actually change in the catalog. Metrics AniList recomputes continuously
+// (scores, popularity, favourites, trending, tag ranks, relation-node
+// popularity) are stripped before hashing, so a daily sweep re-resolves only
+// series whose structure moved (episodes, status, dates, titles, relations,
+// the next-airing pointer — which drives aired counts). The full raw is still
+// stored on every fetch (refreshStitchedVolatile reads popularity as a weight
+// from staging); only the CHANGE decision reads the structural hash.
+export function aniListStructural(media: AniListMedia): unknown {
+  const { averageScore: _a, meanScore: _m, popularity: _p, favourites: _f, trending: _t, tags, relations, ...rest } = media;
+  return {
+    ...rest,
+    tags: (tags ?? []).map((t) => ({ name: t.name, isMediaSpoiler: t.isMediaSpoiler })),
+    relations: relations ? { edges: (relations.edges ?? []).map((e) => ({ relationType: e.relationType, node: (({ popularity: _np, ...n }) => n)(e.node as any) })) } : relations,
+  };
+}

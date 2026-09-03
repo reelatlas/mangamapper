@@ -182,7 +182,7 @@
 - `I39` Ruled structure: numbered extras and span overrides — aka `ruled structure`, `RULED_STRUCTURE`, `numbered extras`, `span override`, `heal-structure`, `planComponents`, `E4`, `batch-19 E4`, `structure rows`
 - `I40` Source relation: adaptation or parallel telling — aka `source relation`, `source_relation`, `parallel telling`, `parallel tellings`, `parallel series`, `SOURCE_RELATION_OVERRIDES`, `MANGA_LINK_OVERRIDES`, `pickMangaNode`, `ruled manga link`, `the DBS relation`, `dual adaptation`, `ALTERNATIVE edge`, `two realizations of one outline`, `source_relation_missing`
 
-**G — Gates & freshness (sources)** (47)
+**G — Gates & freshness (sources)** (48)
 - `G1` The flag rule: nothing suspicious auto-applies — aka `flag rule`, `the flag rule`, `the confirm queue`, `nothing suspicious ever auto-applies`
 - `G3` Recurring conditions flag once; only Sean dismisses — aka `fileFlagOnce`, `once-per-open-kind`
 - `G4` Permanent conditions leave the open queue *(planned)* — aka `dismissed_permanent`, `permanent-flag disposition`, `A-8`
@@ -230,6 +230,7 @@
 - `G55` Series window: a row dated outside its series is not its row — aka `series window`, `series-window gate`, `identity gate`, `namesake gate`, `namesake lesson`, `episode_date_off_window`, `AIR_DATE_WINDOW_ACK`, `E2`, `batch-19 E2`, `off-window`
 - `G56` Honest terminal: a covered MU pin is redundant, not a flag — aka `honest terminal`, `honest-terminal redundancy`, `covered pin`, `MU "EP N" pin`, `EP N pin`, `skipped_terminal`, `mu_pin_flag_redundant`, `claymore #945 class`, `pin already covered`
 - `G57` Row provenance: a writer deletes only rows it minted — aka `row provenance`, `minted_by`, `a writer deletes only rows it minted`, `row_minted_by_missing`, `the 5D 145 lesson`, `no delete-then-insert`
+- `G58` Budgeted edges: structural hash, deferral, closed run row — aka `budgeted edge`, `structural hash`, `volatile fields`, `edge wall clock`, `run_stuck`, `deferred not skipped`, `the refresh-anilist lesson`, `aniListHash`, `time budget`
 
 **V — Volumes & boundaries** (11)
 - `V1` Monotonic starts, or the row is not data — aka `monotonic-start gate`, `MONOTONIC-START rule`, `monotonic boundaries`, `monotonic starts`, `Sailor Moon v3 report`, `Sailor Moon "v3: chs 10-3"`
@@ -3103,6 +3104,20 @@ Every episodes row names the writer that minted it (minted_by: afl | afg | wiki 
 - aliases: row provenance, minted_by, a writer deletes only rows it minted, row_minted_by_missing, the 5D 145 lesson, no delete-then-insert
 - see: N1, N11, N20, G44, A42, P5, P9, P34
 
+### G58 · Budgeted edges: structural hash, deferral, closed run row
+
+An edge refresh never does unbounded work: each invocation decides what changed BEFORE writing anything, processes the stalest work under an explicit budget (a count of re-derives and a wall-clock allowance inside the platform limit), leaves what it could not reach UNSTAGED so it leads the next run (a deferral is data — the old hash — never a silent skip), and always closes its ingest_runs row. The change decision hashes the STRUCTURAL subset of a source payload — for AniList, media minus the metrics it recomputes continuously (averageScore, meanScore, popularity, favourites, trending, tag ranks, relation-node popularity; lib/anilist.ts#aniListStructural) — so a daily sweep re-derives only series whose structure moved (episodes, status, dates, titles, relations, the next-airing pointer); the full raw still refreshes on every fetch for readers of staging. A run still 'running' hours after it started was killed: heal-stuck-runs marks it, and run_stuck reads what is still open.
+
+*Why:* refresh-anilist died mid-invocation every day from 2026-08-24 to 09-03 (11 runs 'running' forever, fetched 0): it hashed the whole media object, so ~all 679 media read as changed and it re-resolved ~100 series until the edge wall clock killed it — a quiet outage the census could not see because no class read ingest_runs. The healer then found refresh-afl killed on four of ten days for the same reason (20 pages × 10 s crawl delay + overhead). Sean 2026-09-03: 'did we ever address the edge function that was not firing correctly?' — the fix is a rule, not a restart.
+
+- ruled Sean 2026-09-03 (docs/STATE.md awaiting-Sean item (§12.95 → §12.104); changelog §12.105)
+- layer **writer**
+- enforced: [lib/anilist.ts#aniListStructural](../scripts/ingest/lib/anilist.ts) · [lib/resolve.ts#aniListHash](../scripts/ingest/lib/resolve.ts) · [lib/resolve.ts#stageAniList](../scripts/ingest/lib/resolve.ts) · [supabase/functions/_src/refresh-anilist.ts](../supabase/functions/_src/refresh-anilist.ts) · [supabase/functions/_src/refresh-afl.ts](../supabase/functions/_src/refresh-afl.ts) · [heal-stuck-runs.ts](../scripts/ingest/heal-stuck-runs.ts) · [audit-ui-truth.ts#run_stuck](../scripts/ingest/audit-ui-truth.ts)
+- audit: `run_stuck`
+- witnesses: refresh-anilist (2026-08-24 → 09-03), refresh-afl (2026-08-29, 08-30, 09-01)
+- aliases: budgeted edge, structural hash, volatile fields, edge wall clock, run_stuck, deferred not skipped, the refresh-anilist lesson, aniListHash, time budget
+- see: G44, P3, P4, P5, P20, G51
+
 ## V — Volumes & boundaries
 
 ### V1 · Monotonic starts, or the row is not data
@@ -4227,6 +4242,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - anchorsReachEnd → `A37`
 - AniFiller seed → `I10`
 - AniList naming authority → `I7`
+- aniListHash → `G58`
 - anime only retired → `T27`
 - anime parity → `C2`
 - anime_only badge retired → `T19`
@@ -4301,6 +4317,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - boundary-aware volumes → `V3`
 - boundary-aware volumes everywhere → `V3`
 - bridge formats → `I19`
+- budgeted edge → `G58`
 - C1 C2 C3 → `C5`
 - C1 rule → `C1`
 - C2 ANIME-PARITY continue rule → `C2`
@@ -4449,6 +4466,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - deep rescan notes rule → `P23`
 - deep trigger → `P21`
 - default continue = end + 1 → `C9`
+- deferred not skipped → `G58`
 - degenerate span → `I35`
 - delete with evidence → `P24`
 - delete-at-entry → `G38`
@@ -4480,6 +4498,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - early D4 signal → `R28`
 - early-stop → `I22`
 - edge hash → `P4`
+- edge wall clock → `G58`
 - effective total → `N24`
 - effectiveTotalChapters → `N24`
 - empty hold → `G11`
@@ -4963,6 +4982,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - rules_applied[] → `R30`
 - ruling_violation = 0 gate → `P18`
 - ruling_violation MUST be 0 → `P18`
+- run_stuck → `G58`
 - running-order END convention → `A9`
 - running-order END normalization → `A9`
 - Ryuusui lesson → `N11`
@@ -5078,6 +5098,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - stolen slug → `I14`
 - straddled chapter → `C1`
 - strict episode-cell parse → `G20`
+- structural hash → `G58`
 - structure reconciliation → `I33`
 - structure rows → `I39`
 - studio original → `T25`
@@ -5122,6 +5143,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - the Naruto bug → `I36`
 - the reading edition → `N35`
 - the reference point (watch order) → `N32`
+- the refresh-anilist lesson → `G58`
 - the standing goal → `P30`
 - the story test → `T30`
 - the timelines model → `T30`
@@ -5130,6 +5152,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - three standings → `T27`
 - three-numbers model → `C8`
 - ties escalate to research → `R2`
+- time budget → `G58`
 - timeline D → `T30`
 - title-alignment verification → `N21`
 - title-join rule → `R20`
@@ -5181,6 +5204,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - verify pool → `R23`
 - verify-after-adjust ruling → `P19`
 - visual novel source → `T25`
+- volatile fields → `G58`
 - volume = END's volume → `V10`
 - volume ratio fallback → `V3`
 - volume span → `V9`
@@ -5218,6 +5242,6 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 
 ## Scoreboard
 
-- rules: 277 (live 262, planned 8, superseded 7)
+- rules: 278 (live 263, planned 8, superseded 7)
 - live data rules with no audit class (the automation backlog): 83
-- by layer: writer 145 · display 23 · both 26 · process 83
+- by layer: writer 146 · display 23 · both 26 · process 83

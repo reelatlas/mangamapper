@@ -4,6 +4,7 @@
 
 import { db, fileFlag, fileFlagOnce, selectAll } from './db';
 import { contentHash } from './hash';
+import { aniListStructural } from './anilist';
 import { slugify } from './slug';
 import type { AflShowPage } from './afl';
 import type { AniListMedia } from './anilist';
@@ -373,8 +374,18 @@ export async function stageAfl(
   return 'changed';
 }
 
+/** G58: the structural hash — the one change decision every AniList writer uses (the edge, anilist-restage). */
+export const aniListHash = (media: AniListMedia): string => contentHash(aniListStructural(media));
+
+/** G58: read-only — has this media's STRUCTURE changed since staging? (the edge decides its budget before writing anything) */
+export async function aniListChanged(media: AniListMedia): Promise<boolean> {
+  const { data: prev, error } = await db.from('ingest_anilist_media').select('content_hash').eq('anilist_id', media.id).maybeSingle();
+  if (error) throw new Error(`aniListChanged read (${media.id}): ${error.message}`);
+  return prev?.content_hash !== aniListHash(media);
+}
+
 export async function stageAniList(media: AniListMedia): Promise<StageOutcome> {
-  const hash = contentHash(media);
+  const hash = aniListHash(media);
   const { data: prev, error: readErr } = await db
     .from('ingest_anilist_media')
     .select('content_hash')
@@ -382,7 +393,8 @@ export async function stageAniList(media: AniListMedia): Promise<StageOutcome> {
     .maybeSingle();
   if (readErr) throw new Error(`stageAniList read (${media.id}): ${readErr.message}`);
   if (prev?.content_hash === hash) {
-    await db.from('ingest_anilist_media').update({ fetched_at: new Date().toISOString() }).eq('anilist_id', media.id);
+    // structure unchanged: the raw still refreshes (metrics, cover, next-airing pointer for readers of staging), changed_at does not
+    await db.from('ingest_anilist_media').update({ raw: media, fetched_at: new Date().toISOString() }).eq('anilist_id', media.id);
     return 'unchanged';
   }
   const { error } = await db.from('ingest_anilist_media').upsert({

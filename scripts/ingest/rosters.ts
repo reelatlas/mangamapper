@@ -37,6 +37,7 @@ export const HEAL: RosterEntry[] = [
   { file: 'audit-manga-coverage.ts', when: 'standard', note: 'SELF-HEALING despite the name: MU frontier pins, latest_known, status cross-check (G31–G38); classes are a census by-product' },
   { file: 'heal-volume-boundaries.ts', when: 'standard', note: 'monotonic-start rule over stored boundaries (V1/V2)' },
   { file: 'heal-parity-continues.ts', when: 'standard', note: 'C2 parity continues + C3 skip notes over every anchor (moved from research/batch15/ in T2.4)' },
+  { file: 'heal-stuck-runs.ts', when: 'standard', note: "ingest runs left 'running' past the edge wall clock are marked killed (G58) — run_stuck reads as backlog, never as a live run" },
   { file: 'assert-overrides.ts', when: 'standard', note: 'EPISODE_TYPE_OVERRIDES (T6) + AIR_DATE_OVERRIDES (G53) + the air-date order gate (G54) asserted over standing rows' },
   { file: 'sync-watch-order.ts', when: 'standard', note: 'order-only fractionals → watch_order_entries (N31); kind from the matching order-only component (T29)' },
   { file: 'heal-structure.ts', when: 'standard', note: 'series_components re-planned for RULED_STRUCTURE series — numbered extras + span overrides through the one planner (I39); before heal-format' },

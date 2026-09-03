@@ -103,11 +103,18 @@ async function main() {
     rearranged_zone_unanchored: [], rearranged_zone_acknowledged: [],
     title_incomplete: [], airdate_incomplete: [], airdate_regression: [], airdate_withheld: [], episode_date_off_window: [], asterisk_unreviewed: [],
     fractional_unmodeled: [], annotation_invalid: [], annotation_retired_standing: [], afl_anime_canon_unruled: [], format_missing: [], episode_without_component: [], watch_order_kind_missing: [],
-    permanence_candidate: [], permanence_violation: [], mixed_fragment_only: [],
+    permanence_candidate: [], permanence_violation: [], mixed_fragment_only: [], run_stuck: [],
     series_without_source_kind: [], no_source: [], no_instrument: [], ok_full: [], ok_no_volume: [], ok_loose: [], ok_parallel: [],
     source_relation_missing: [], parallel_has_anchor: [], arcs_not_partition: [], arc_row_conflict: [], correspondence_invalid: [], correspondence_incomplete: [],
     pending_airing_no_anchor: [], pending_finished_no_totals: [], pending_no_canon: [], pending_other: [],
   };
+  // G58: an ingest run still 'running' hours after it started was killed mid-invocation (the edge wall clock) — the
+  // outcome the budgeted edge must prevent; heal-stuck-runs marks the backlog, this class reads what is still open
+  {
+    const cutoff = new Date(Date.now() - 6 * 3600 * 1000).toISOString();
+    for (const r of await selectAll<any>('ingest_runs', 'id, source, started_at', (q) => q.eq('status', 'running').lt('started_at', cutoff)))
+      classes.run_stuck.push(`${r.source} run #${r.id} started ${String(r.started_at).slice(0, 16)} still 'running' — killed mid-invocation (G58); heal-stuck-runs marks it`);
+  }
   // T26: annotations are read once up front — the adopted / side_source rows
   // (canon with NO source counterpart by design, T14) and the set of
   // annotated rows are inputs to the gap audit and the AFL unruled queue.
