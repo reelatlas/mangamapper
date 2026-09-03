@@ -939,7 +939,7 @@ END (chapter_anchors.chapter) is the furthest mainline chapter the episode adapt
 
 - ruled Sean 2026-09-02 (scripts/ingest/research/batch20/WAVE8-RECOVERY.md §THE DECISIONS item 2; verify/orient.md (the verifier's finding); changelog §12.96; the unproven-tail convention: WAVE13-RECOVERY.md §THE DECISIONS item 2, changelog §12.103; the existence clause: WAVE14-RECOVERY.md §THE DECISIONS item 2, verify/dragon-quest-the-adventure-of-dai-w14abd.md + -w14cefg.md, changelog §12.104)
 - layer **writer**
-- enforced: [lib/sliver.ts#sliverEnd](../scripts/ingest/lib/sliver.ts) · [research/batch20/apply-wave8.ts#sliverEnd](../scripts/ingest/research/batch20/apply-wave8.ts) · [research/batch20/a47-migrate.ts#sliverEnd](../scripts/ingest/research/batch20/a47-migrate.ts) · [audit-ui-truth.ts#end_sliver_mismatch](../scripts/ingest/audit-ui-truth.ts) · [lib/sliver.test.ts#sliverEnd (A47](../scripts/ingest/lib/sliver.test.ts)
+- enforced: [lib/sliver.ts#sliverEnd](../scripts/ingest/lib/sliver.ts) · [history/apply-wave8.ts#sliverEnd](../scripts/ingest/history/apply-wave8.ts) · [history/a47-migrate.ts#sliverEnd](../scripts/ingest/history/a47-migrate.ts) · [audit-ui-truth.ts#end_sliver_mismatch](../scripts/ingest/audit-ui-truth.ts) · [lib/sliver.test.ts#sliverEnd (A47](../scripts/ingest/lib/sliver.test.ts)
 - audit: `end_sliver_mismatch`
 - witnesses: orient, one-piece-log-fish-man-island-saga, d-gray-man, reborn, dragon-ball-z-kai, dragon-quest-the-adventure-of-dai
 - aliases: END-side sliver, end sliver, owned tail, tail sliver, the A10 twin, sliverEnd, end_sliver_mismatch, END does not advance on a tail, trailing scrap

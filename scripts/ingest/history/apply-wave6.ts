@@ -10,9 +10,9 @@
 // annotations and the flag resolutions. Idempotent; --dry-run prints all.
 //   npx tsx --env-file=.env.ingest scripts/ingest/research/batch20/apply-wave6.ts [--dry-run]
 import { readFileSync } from 'node:fs';
-import { db, startRun, finishRun } from '../../lib/db';
-import { upsertAnnotation, type AnnotationKind } from '../../lib/annotations';
-import { writeCuratedContinue } from '../../lib/continues';
+import { db, startRun, finishRun } from '../lib/db';
+import { upsertAnnotation, type AnnotationKind } from '../lib/annotations';
+import { writeCuratedContinue } from '../lib/continues';
 
 const DRY = process.argv.includes('--dry-run');
 const OUT = 'scripts/ingest/research/batch20/out';

@@ -967,8 +967,8 @@ export const RULES: Rule[] = [
     origin: 'scripts/ingest/research/batch20/WAVE8-RECOVERY.md §THE DECISIONS item 2; verify/orient.md (the verifier\'s finding); changelog §12.96; the unproven-tail convention: WAVE13-RECOVERY.md §THE DECISIONS item 2, changelog §12.103; the existence clause: WAVE14-RECOVERY.md §THE DECISIONS item 2, verify/dragon-quest-the-adventure-of-dai-w14abd.md + -w14cefg.md, changelog §12.104',
     enforcement: [
       { path: 'scripts/ingest/lib/sliver.ts', symbol: 'sliverEnd' },
-      { path: 'scripts/ingest/research/batch20/apply-wave8.ts', symbol: 'sliverEnd' },
-      { path: 'scripts/ingest/research/batch20/a47-migrate.ts', symbol: 'sliverEnd' },
+      { path: 'scripts/ingest/history/apply-wave8.ts', symbol: 'sliverEnd' },
+      { path: 'scripts/ingest/history/a47-migrate.ts', symbol: 'sliverEnd' },
       { path: 'scripts/ingest/audit-ui-truth.ts', symbol: 'end_sliver_mismatch' },
       { path: 'scripts/ingest/lib/sliver.test.ts', symbol: 'sliverEnd (A47' },
     ],

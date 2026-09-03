@@ -11,9 +11,9 @@
 // the file-driven records. Idempotent; --dry-run prints every change.
 //   npx tsx --env-file=.env.ingest scripts/ingest/research/batch20/apply-wave4.ts [--dry-run]
 import { readFileSync } from 'node:fs';
-import { db, selectAll, startRun, finishRun } from '../../lib/db';
-import { upsertAnnotation, type AnnotationKind } from '../../lib/annotations';
-import { writeCuratedContinue } from '../../lib/continues';
+import { db, selectAll, startRun, finishRun } from '../lib/db';
+import { upsertAnnotation, type AnnotationKind } from '../lib/annotations';
+import { writeCuratedContinue } from '../lib/continues';
 
 const DRY = process.argv.includes('--dry-run');
 const OUT = 'scripts/ingest/research/batch20/out';

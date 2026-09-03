@@ -14,9 +14,9 @@
 // (a bare update reverts) — a chapter-count ruling map is the queued /add-rule.
 // Idempotent; --dry-run prints every change.
 //   npx tsx --env-file=.env.ingest scripts/ingest/research/batch20/apply-wave1.ts [--dry-run]
-import { db, selectAll, startRun, finishRun } from '../../lib/db';
-import { upsertAnnotation, type AnnotationKind } from '../../lib/annotations';
-import { writeCuratedContinue } from '../../lib/continues';
+import { db, selectAll, startRun, finishRun } from '../lib/db';
+import { upsertAnnotation, type AnnotationKind } from '../lib/annotations';
+import { writeCuratedContinue } from '../lib/continues';
 
 const DRY = process.argv.includes('--dry-run');
 const OUT = 'scripts/ingest/research/batch20/out';

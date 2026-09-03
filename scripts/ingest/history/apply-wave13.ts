@@ -12,10 +12,10 @@
 // all.
 //   npx tsx --env-file=.env.ingest scripts/ingest/research/batch20/apply-wave13.ts [--dry-run]
 import { readFileSync } from 'node:fs';
-import { db, selectAll, startRun, finishRun } from '../../lib/db';
-import { upsertAnnotation, type AnnotationKind } from '../../lib/annotations';
-import { writeCuratedContinue } from '../../lib/continues';
-import { sliverEnd } from '../../lib/sliver';
+import { db, selectAll, startRun, finishRun } from '../lib/db';
+import { upsertAnnotation, type AnnotationKind } from '../lib/annotations';
+import { writeCuratedContinue } from '../lib/continues';
+import { sliverEnd } from '../lib/sliver';
 
 const DRY = process.argv.includes('--dry-run');
 const OUT = 'scripts/ingest/research/batch20/out';

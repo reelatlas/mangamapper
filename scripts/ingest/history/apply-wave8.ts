@@ -19,10 +19,10 @@
 // prints all.
 //   npx tsx --env-file=.env.ingest scripts/ingest/research/batch20/apply-wave8.ts [--dry-run]
 import { readFileSync } from 'node:fs';
-import { db, startRun, finishRun } from '../../lib/db';
-import { upsertAnnotation, type AnnotationKind } from '../../lib/annotations';
-import { writeCuratedContinue } from '../../lib/continues';
-import { sliverEnd } from '../../lib/sliver';
+import { db, startRun, finishRun } from '../lib/db';
+import { upsertAnnotation, type AnnotationKind } from '../lib/annotations';
+import { writeCuratedContinue } from '../lib/continues';
+import { sliverEnd } from '../lib/sliver';
 
 const DRY = process.argv.includes('--dry-run');
 const OUT = 'scripts/ingest/research/batch20/out';

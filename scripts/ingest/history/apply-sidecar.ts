@@ -8,9 +8,9 @@
 // deleteAnnotation; continues through writeCuratedContinue (C7). Idempotent;
 // --dry-run prints all.
 //   npx tsx --env-file=.env.ingest scripts/ingest/research/batch20/apply-sidecar.ts [--dry-run]
-import { db, startRun, finishRun } from '../../lib/db';
-import { upsertAnnotation, type AnnotationKind } from '../../lib/annotations';
-import { writeCuratedContinue } from '../../lib/continues';
+import { db, startRun, finishRun } from '../lib/db';
+import { upsertAnnotation, type AnnotationKind } from '../lib/annotations';
+import { writeCuratedContinue } from '../lib/continues';
 
 const DRY = process.argv.includes('--dry-run');
 const B = 'batch 20 sidecar (2026-09-04; Sean ruled)';

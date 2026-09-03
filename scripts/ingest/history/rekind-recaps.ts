@@ -6,8 +6,8 @@
 // were ruled — every pure-recap row below is already filler). Curated list,
 // one entry per row with the reason; idempotent; --dry-run prints all.
 //   npx tsx --env-file=.env.ingest scripts/ingest/research/batch20/rekind-recaps.ts [--dry-run]
-import { db, startRun, finishRun } from '../../lib/db';
-import { upsertAnnotation, type AnnotationKind } from '../../lib/annotations';
+import { db, startRun, finishRun } from '../lib/db';
+import { upsertAnnotation, type AnnotationKind } from '../lib/annotations';
 
 const DRY = process.argv.includes('--dry-run');
 const B = 'deep consolidate 2026-09-04 (T28 recap kind)';

@@ -10,11 +10,11 @@
 // annotation kinds so the delete list can be curated.
 //   npx tsx --env-file=.env.ingest scripts/ingest/research/batch20/apply-wave16.ts [--dry-run]
 import { readFileSync, readdirSync } from 'node:fs';
-import { db, selectAll, startRun, finishRun } from '../../lib/db';
-import { upsertAnnotation, type AnnotationKind } from '../../lib/annotations';
-import { writeCuratedContinue } from '../../lib/continues';
-import { sliverEnd } from '../../lib/sliver';
-import { volumeForChapter, type VolumeBound } from '../../lib/volumes';
+import { db, selectAll, startRun, finishRun } from '../lib/db';
+import { upsertAnnotation, type AnnotationKind } from '../lib/annotations';
+import { writeCuratedContinue } from '../lib/continues';
+import { sliverEnd } from '../lib/sliver';
+import { volumeForChapter, type VolumeBound } from '../lib/volumes';
 
 const DRY = process.argv.includes('--dry-run');
 const OUT = 'scripts/ingest/research/batch20/out';

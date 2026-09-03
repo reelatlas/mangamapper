@@ -50,3 +50,21 @@ census asserts nothing here is on a roster.
 | polish-ids.ts | history |
 | stabilize.ts | history |
 | wayback-recover2.ts | dead |
+| a47-migrate.ts | history — batch 20 (P34, 2026-09-04; rulings in lib/rulings/applied/batch-20-waves-*.ts) |
+| apply-wave1.ts | history — batch 20 (P34, 2026-09-04; rulings in lib/rulings/applied/batch-20-waves-*.ts) |
+| apply-wave2.ts | history — batch 20 (P34, 2026-09-04; rulings in lib/rulings/applied/batch-20-waves-*.ts) |
+| apply-wave3.ts | history — batch 20 (P34, 2026-09-04; rulings in lib/rulings/applied/batch-20-waves-*.ts) |
+| apply-wave4.ts | history — batch 20 (P34, 2026-09-04; rulings in lib/rulings/applied/batch-20-waves-*.ts) |
+| apply-wave5.ts | history — batch 20 (P34, 2026-09-04; rulings in lib/rulings/applied/batch-20-waves-*.ts) |
+| apply-wave6.ts | history — batch 20 (P34, 2026-09-04; rulings in lib/rulings/applied/batch-20-waves-*.ts) |
+| apply-wave7.ts | history — batch 20 (P34, 2026-09-04; rulings in lib/rulings/applied/batch-20-waves-*.ts) |
+| apply-wave8.ts | history — batch 20 (P34, 2026-09-04; rulings in lib/rulings/applied/batch-20-waves-*.ts) |
+| apply-wave9.ts | history — batch 20 (P34, 2026-09-04; rulings in lib/rulings/applied/batch-20-waves-*.ts) |
+| apply-wave10.ts | history — batch 20 (P34, 2026-09-04; rulings in lib/rulings/applied/batch-20-waves-*.ts) |
+| apply-wave11.ts | history — batch 20 (P34, 2026-09-04; rulings in lib/rulings/applied/batch-20-waves-*.ts) |
+| apply-wave12.ts | history — batch 20 (P34, 2026-09-04; rulings in lib/rulings/applied/batch-20-waves-*.ts) |
+| apply-wave13.ts | history — batch 20 (P34, 2026-09-04; rulings in lib/rulings/applied/batch-20-waves-*.ts) |
+| apply-wave14.ts | history — batch 20 (P34, 2026-09-04; rulings in lib/rulings/applied/batch-20-waves-*.ts) |
+| apply-wave16.ts | history — batch 20 (P34, 2026-09-04; rulings in lib/rulings/applied/batch-20-waves-*.ts) |
+| apply-sidecar.ts | history — batch 20 (P34, 2026-09-04; rulings in lib/rulings/applied/batch-20-waves-*.ts) |
+| rekind-recaps.ts | history — batch 20 (P34, 2026-09-04; rulings in lib/rulings/applied/batch-20-waves-*.ts) |

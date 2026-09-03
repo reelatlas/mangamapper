@@ -11,9 +11,9 @@
 // class, Sean signs each move; this script is how "each" becomes one
 // decision with the full list in front of him).
 //   npx tsx --env-file=.env.ingest scripts/ingest/research/batch20/a47-migrate.ts [--apply]
-import { db, selectAll, startRun, finishRun } from '../../lib/db';
-import { sliverEnd } from '../../lib/sliver';
-import { upsertAnnotation } from '../../lib/annotations';
+import { db, selectAll, startRun, finishRun } from '../lib/db';
+import { sliverEnd } from '../lib/sliver';
+import { upsertAnnotation } from '../lib/annotations';
 
 const APPLY = process.argv.includes('--apply');
 const MARK = '[A47 migrated 2026-09-02]';

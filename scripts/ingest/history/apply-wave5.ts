@@ -12,10 +12,10 @@
 // --dry-run prints every change.
 //   npx tsx --env-file=.env.ingest scripts/ingest/research/batch20/apply-wave5.ts [--dry-run]
 import { readFileSync } from 'node:fs';
-import { startRun, finishRun } from '../../lib/db';
-import { upsertAnnotation, type AnnotationKind } from '../../lib/annotations';
-import { upsertCorrespondence, type Alignment, type CorrespondenceRow } from '../../lib/rulings/correspondence';
-import { isParallelSeries } from '../../lib/rulings/source-relations';
+import { startRun, finishRun } from '../lib/db';
+import { upsertAnnotation, type AnnotationKind } from '../lib/annotations';
+import { upsertCorrespondence, type Alignment, type CorrespondenceRow } from '../lib/rulings/correspondence';
+import { isParallelSeries } from '../lib/rulings/source-relations';
 
 const DRY = process.argv.includes('--dry-run');
 const OUT = 'scripts/ingest/research/batch20/out';

@@ -887,6 +887,28 @@
    0. Permanence 0 locked / 0 violations; no stale rulings. Cycle: step 1
    — Sean picks wave 8 (L-D ×8 of ~16, or a gap block; dai LAST; the T28
    six + claymore 26 still parked for his ruling).
+108. ✅ **BATCH 20 CLOSED (P34) — the apply scripts' reasoning extracted, the
+   scripts retired (2026-09-04).** Two extraction agents mirrored batch-17's
+   shape: `lib/rulings/applied/batch-20-waves-1-8.ts` (190 RulingEntry records
+   across 54 sections — waves 1-8 + the A47 block; 126 ruledBy Sean) and
+   `batch-20-waves-9-16.ts` (150 records — waves 9-16, the sidecar, the recap
+   re-kind; 62 Sean), one entry per curated decision with the script's reasoning
+   verbatim, rule ids resolved against the ledger (29 + distinct ids; folds →
+   R21, flag dismissals → G3, holds → P16 / R3, the printed-space rebase → N35,
+   the chain → T26 / I41). Eighteen one-shot scripts (`apply-wave1..14`,
+   `apply-wave16`, `apply-sidecar`, `rekind-recaps`, `a47-migrate`) moved to
+   `scripts/ingest/history/` (imports re-pointed; the A47 record's enforcement
+   paths follow; README rows added) — never run again, never deleted (P34).
+   The live gates stay in research/batch20/ (context, validate, baseline, scan,
+   validate-airdates). docs/rulings.md: 1926 → **2266 rulings** over 252
+   series; rulings index 57/57 imported; rosters 40 scripts / 0 history files
+   rostered; edges rebuilt + deployed (the applied files are part of the lib
+   hash); 173 tests; system census OK. Agent caveats recorded in the files'
+   headers: method-level conventions (merge sub-blocks, derived volumes) as one
+   entry each; a47-migrate's per-row moves live in the anchors' marker notes;
+   the T28 six named only in WAVE7-RECOVERY.md. BATCH 20 = 16 waves + a sidecar,
+   113 verdicts, §12.78-§12.108.
+
 107. ✅ **DEEP CONSOLIDATE UNDER THE SLIVER CLAUSE — WAVE 16 APPLIED; T26 THE CHAIN
    + I41 THE SOURCE CHAIN (2026-09-04; Sean ruled).** The deep pass's rescan
    work-list was the catalog's own queue: mixed_fragment_only (16 rows / 15

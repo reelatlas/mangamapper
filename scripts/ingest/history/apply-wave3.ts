@@ -23,12 +23,12 @@
 // Idempotent; --dry-run prints every change (no network in a dry run).
 //   npx tsx --env-file=.env.ingest scripts/ingest/research/batch20/apply-wave3.ts [--dry-run]
 import { readFileSync } from 'node:fs';
-import { db, selectAll, startRun, finishRun } from '../../lib/db';
-import { upsertAnnotation, type AnnotationKind } from '../../lib/annotations';
-import { writeCuratedContinue } from '../../lib/continues';
-import { AFL_BASE, parseShowPage } from '../../lib/afl';
-import { politeFetch } from '../../lib/http';
-import { stageAfl, resolveSeries } from '../../lib/resolve';
+import { db, selectAll, startRun, finishRun } from '../lib/db';
+import { upsertAnnotation, type AnnotationKind } from '../lib/annotations';
+import { writeCuratedContinue } from '../lib/continues';
+import { AFL_BASE, parseShowPage } from '../lib/afl';
+import { politeFetch } from '../lib/http';
+import { stageAfl, resolveSeries } from '../lib/resolve';
 
 const DRY = process.argv.includes('--dry-run');
 const OUT = 'scripts/ingest/research/batch20/out';
