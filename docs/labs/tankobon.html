@@ -1,0 +1,438 @@
+<title>Tankōbon</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+
+<style>
+  /* ══════════════════════════════════════════════════════════════════════
+     DRAWN-FROM-THE-SOURCE — the TURN model.
+     There is no scroll. Content is paginated into leaves, and the leaf
+     rotates around the SPINE, which sits on the right because that is where
+     a Japanese binding puts it. Panels read right-to-left, top-to-bottom.
+
+     THEME  (layer 1) = pagination, the turn, panel+gutter layout, RTL order,
+                        ink-weight hierarchy. Identical in all three variants.
+     VARIANT(layer 2) = paper, ink, spot colour, and TONE — dot pitch, angle,
+                        and the material accidents (yellowing, moiré, skew).
+     ATMOS  (layer 3) = paper grain + the tone plate. Toggleable.
+
+     THE GUTTER IS THE HONEST GAP. The medium already had a convention for
+     "deliberately not shown", and readers parse it without instruction.
+     ══════════════════════════════════════════════════════════════════════ */
+  :root {
+    --paper:#F7F5F0; --paper-2:#EFEDE6; --ink:#1A1A1A; --ink-2:#6E6E6E;
+    --tone:#B0B0B0; --spot:#E03A3A; --rule:#1A1A1A;
+    --c-canon:#1A1A1A; --c-mixed:#6E6E6E; --c-filler:#B0B0B0;
+    --c-anime:#E03A3A; --c-manga:#2B4FA8;
+    --tone-pitch:4px; --tone-dot:1.15px; --skew:0deg; --grain:0.05;
+    --gutter:14px;
+  }
+
+  *,*::before,*::after { box-sizing:border-box; }
+  body {
+    margin:0; height:100vh; overflow:hidden;
+    background:#2A2724; color:var(--ink);
+    font-family:Archivo,ui-sans-serif,system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    display:flex; align-items:center; justify-content:center;
+    padding:26px 26px 66px;
+  }
+
+  /* ── the book ── */
+  #book {
+    position:relative; width:min(720px,100%); aspect-ratio:5/7; max-height:100%;
+    perspective:2200px; perspective-origin:100% 50%;
+  }
+  .leaf {
+    position:absolute; inset:0; background:var(--paper); color:var(--ink);
+    transform-origin:100% 50%;           /* the spine, on the right */
+    transform-style:preserve-3d; backface-visibility:hidden;
+    transition:transform .72s cubic-bezier(.42,.02,.24,1);
+    box-shadow:-14px 0 34px rgba(0,0,0,.34);
+    overflow:hidden; rotate:var(--skew);
+    display:flex; flex-direction:column;
+  }
+  .leaf.turned { transform:rotateY(-176deg); box-shadow:none; }
+  .leaf::after {                          /* paper grain + tone plate */
+    content:''; position:absolute; inset:0; pointer-events:none; z-index:5;
+    background:
+      radial-gradient(var(--ink) var(--tone-dot), transparent calc(var(--tone-dot) + .35px))
+      0 0 / var(--tone-pitch) var(--tone-pitch);
+    opacity:var(--grain); mix-blend-mode:multiply;
+  }
+  body.nogfx .leaf::after { display:none; }
+  /* the spine shadow — paper is thick */
+  .leaf::before {
+    content:''; position:absolute; top:0; bottom:0; right:0; width:26px; z-index:4;
+    background:linear-gradient(270deg, rgba(0,0,0,.15), transparent);
+    pointer-events:none;
+  }
+
+  /* ── panels + gutters: the layout primitive ── */
+  .page { flex:1; display:grid; gap:var(--gutter); padding:var(--gutter); direction:rtl; }
+  .page > * { direction:ltr; }
+  .panel {
+    background:var(--paper-2); border:1.5px solid var(--rule);
+    padding:13px 15px; overflow:hidden; position:relative;
+    display:flex; flex-direction:column; justify-content:center;
+  }
+  .panel.plain { background:var(--paper); }
+  .panel.tone {
+    background:
+      radial-gradient(var(--tone) var(--tone-dot), transparent calc(var(--tone-dot) + .4px))
+      0 0 / var(--tone-pitch) var(--tone-pitch), var(--paper);
+  }
+  .panel.solid { background:var(--ink); color:var(--paper); border-color:var(--ink); }
+
+  .lab {
+    font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:9.5px;
+    letter-spacing:.14em; text-transform:uppercase; color:var(--ink-2); margin-bottom:6px;
+  }
+  .big { font-weight:800; letter-spacing:-.02em; line-height:.95; }
+
+  /* ── cover ── */
+  .cover { display:grid; grid-template-rows:1fr auto; padding:0; direction:ltr; }
+  .cover .art {
+    position:relative; display:flex; flex-direction:column; justify-content:flex-end;
+    padding:34px; gap:14px;
+    background:
+      radial-gradient(var(--tone) var(--tone-dot), transparent calc(var(--tone-dot) + .4px)) 0 0 / var(--tone-pitch) var(--tone-pitch),
+      linear-gradient(200deg, var(--spot) 0%, transparent 58%), var(--paper);
+  }
+  .cover h1 { font-size:clamp(40px,8.5vw,74px); margin:0; font-weight:800; letter-spacing:-.035em; line-height:.9; }
+  .cover .jp { font-size:15px; color:var(--ink-2); font-family:'IBM Plex Mono',monospace; }
+  .cover .obi {                            /* the belly band */
+    background:var(--ink); color:var(--paper); padding:15px 34px;
+    display:flex; justify-content:space-between; align-items:baseline; gap:16px;
+  }
+  .cover .obi .t { font-weight:600; font-size:14px; }
+  .cover .obi .n { font-family:'IBM Plex Mono',monospace; font-size:11px; opacity:.72; }
+
+  /* ── catalog page ── */
+  .cat { grid-template-columns:1fr 1fr; grid-template-rows:auto 1fr 1fr 1fr; }
+  .cat .hd { grid-column:1 / -1; }
+  .serpanel { cursor:pointer; text-align:left; font:inherit; color:inherit; align-items:stretch; }
+  .serpanel:hover, .serpanel:focus-visible { background:var(--ink); color:var(--paper); outline:none; }
+  .serpanel:hover .lab, .serpanel:focus-visible .lab { color:var(--paper); opacity:.7; }
+  .serpanel .nm { font-weight:700; font-size:17px; line-height:1.1; letter-spacing:-.015em; }
+  .serpanel .jpn { font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-2); margin-top:3px; }
+  .serpanel:hover .jpn { color:var(--paper); opacity:.66; }
+  .serpanel .num { font-family:'IBM Plex Mono',monospace; font-size:11px; margin-top:auto; padding-top:9px; font-variant-numeric:tabular-nums; }
+  .wide { grid-column:1 / -1; }
+
+  /* ── series spread ── */
+  .spread { grid-template-columns:1.3fr 1fr; grid-template-rows:auto auto 1fr; }
+  .spread .ttl { font-size:clamp(26px,4.4vw,40px); }
+  .spread .jpn { font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--ink-2); margin-top:5px; }
+  .figs { font-family:'IBM Plex Mono',monospace; font-variant-numeric:tabular-nums; font-size:15px; line-height:1.9; }
+  .figs .d { color:var(--ink-2); }
+  .strip { display:flex; gap:1px; height:18px; margin-top:4px; }
+  .strip i { display:block; min-width:2px; }
+  .leg { display:flex; flex-wrap:wrap; gap:4px; margin-top:8px; }
+  .leg span { font-family:'IBM Plex Mono',monospace; font-size:9px; padding:2px 5px; border:1px solid currentColor; }
+  .eps { grid-column:1 / -1; }
+  .eps ol { margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:5px; }
+  .eps li {
+    display:flex; gap:11px; align-items:baseline;
+    font-family:'IBM Plex Mono',monospace; font-size:11.5px; font-variant-numeric:tabular-nums;
+  }
+  .eps li .e { width:44px; text-align:right; color:var(--ink-2); flex:none; }
+  .eps li .t { flex:1; font-family:Archivo,sans-serif; font-size:12.5px; }
+  .eps li .c { color:var(--ink-2); }
+  /* the gutter IS the gap — an unadapted run is drawn as absence, framed */
+  .gapnote {
+    border:1.5px dashed var(--rule); padding:9px 12px; margin-top:9px;
+    font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:var(--ink-2);
+    display:flex; justify-content:space-between; gap:10px;
+  }
+  .back { background:none; border:0; font:inherit; cursor:pointer; color:inherit; padding:0; text-decoration:underline; }
+
+  /* ── chrome ── */
+  .rail {
+    position:fixed; left:0; right:0; bottom:0; height:56px; z-index:60;
+    display:flex; align-items:center; justify-content:center; gap:18px;
+    color:#CFC8BE; font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:10.5px;
+  }
+  .rail button {
+    font:inherit; padding:6px 11px; cursor:pointer; letter-spacing:.06em;
+    background:#3A3632; color:#E7E1D8; border:1px solid #55504A; border-radius:2px;
+  }
+  .rail button[aria-pressed="true"] { background:#E7E1D8; color:#2A2724; }
+  .rail button:focus-visible { outline:2px solid #E7E1D8; outline-offset:2px; }
+  .rail .seg { display:flex; }
+  .rail .seg button { border-radius:0; border-right-width:0; }
+  .rail .seg button:first-child { border-radius:2px 0 0 2px; }
+  .rail .seg button:last-child { border-radius:0 2px 2px 0; border-right-width:1px; }
+  .rail .folio { font-variant-numeric:tabular-nums; opacity:.75; min-width:96px; text-align:center; }
+  .rtl { position:fixed; top:16px; right:20px; z-index:60; color:#8C857B; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.1em; }
+
+  @media (prefers-reduced-motion:reduce) { .leaf { transition:none; } }
+  @media (max-width:640px) {
+    body { padding:14px 14px 62px; }
+    .cat { grid-template-columns:1fr; grid-template-rows:auto repeat(5,1fr); }
+    .spread { grid-template-columns:1fr; }
+  }
+</style>
+
+<div class="rtl">← reads right to left</div>
+<div id="book"></div>
+
+<div class="rail">
+  <span class="seg" id="vseg"></span>
+  <button id="prev">→ back</button>
+  <span class="folio" id="folio">cover</span>
+  <button id="next">next ←</button>
+  <button id="gfx" aria-pressed="true">tone</button>
+</div>
+
+<script>
+// ── data (real rows from mockAnime.ts) ──────────────────────────────────
+var SERIES = [
+  { id:'one-piece', nm:'One Piece', jp:'ワンピース', ep:1122, vol:108, tvol:110, ch:1092, tch:1130,
+    seq:[[0,6],[1,1],[0,5],[2,4],[0,7],[1,1],[3,3],[0,5],[2,2],[0,6],[4,6]],
+    eps:[[1122,'The Island of New Beginnings','108 / 1092'],[1121,'Gear Fifth Unleashed','108 / 1091'],
+         [1120,'The Climax of Egghead','108 / 1090'],[1119,"Saturn's True Power",'107 / 1088-1089'],
+         [1118,"A Navy Admiral's Resolve",'107 / 1087']] },
+  { id:'jujutsu-kaisen', nm:'Jujutsu Kaisen', jp:'呪術廻戦', ep:47, vol:24, tvol:30, ch:236, tch:271,
+    seq:[[0,9],[1,1],[0,7],[2,2],[0,11],[3,2],[0,8],[4,7]],
+    eps:[[47,'Shibuya Incident — Gate, Close','24 / 236'],[46,'Right and Wrong','24 / 234-235'],
+         [45,'Thunderclap','23 / 232-233'],[44,'Red Scale','23 / 230'],[43,'Metamorphosis','23 / 228-229']] },
+  { id:'chainsaw-man', nm:'Chainsaw Man', jp:'チェンソーマン', ep:12, vol:11, tvol:20, ch:97, tch:190,
+    seq:[[0,12],[4,11]],
+    eps:[[12,'Katana vs. Chainsaw','11 / 97'],[11,'Mission Start','11 / 95-96'],
+         [10,'Bruised & Battered','10 / 92-94'],[9,'From Kyoto','10 / 89-91'],[8,'Gunfire','9 / 85-88']] },
+  { id:'frieren', nm:'Frieren', jp:'葬送のフリーレン', ep:28, vol:13, tvol:14, ch:120, tch:135,
+    seq:[[0,14],[1,1],[0,13],[4,4]],
+    eps:[[28,'A Real Hero','13 / 120'],[27,'Aura the Guillotine','12 / 118-119'],
+         [26,'The Height of Magic','12 / 116-117'],[25,'Golden Land','12 / 114'],[24,'Sein','11 / 111-113']] },
+  { id:'vinland-saga', nm:'Vinland Saga', jp:'ヴィンランド・サガ', ep:48, vol:27, tvol:29, ch:193, tch:214,
+    seq:[[0,20],[2,3],[0,25],[4,5]],
+    eps:[[48,'End of the Prologue','27 / 193'],[47,'Home','26 / 191-192'],
+         [46,'Our Leader','26 / 189-190'],[45,'Home Free','25 / 187'],[44,'Pain','25 / 185-186']] }
+];
+var TYPES = ['canon','mixed','filler','anime','manga'];
+var CVAR = ['--c-canon','--c-mixed','--c-filler','--c-anime','--c-manga'];
+var SOURCE_ONLY = 4;
+
+// ── variants: layer 2 only. The turn above never changes. ───────────────
+var VARIANTS = {
+  tankobon: { label:'shonen', tone:'coarse dot, hard spot',
+    v:{ '--paper':'#F7F5F0','--paper-2':'#EFEDE6','--ink':'#1A1A1A','--ink-2':'#6E6E6E',
+        '--tone':'#B0B0B0','--spot':'#E03A3A','--rule':'#1A1A1A',
+        '--c-canon':'#1A1A1A','--c-mixed':'#6E6E6E','--c-filler':'#B0B0B0',
+        '--c-anime':'#E03A3A','--c-manga':'#2B4FA8',
+        '--tone-pitch':'4px','--tone-dot':'1.15px','--skew':'0deg','--grain':'0.05','--gutter':'14px' } },
+  seinen: { label:'seinen', tone:'fine dot, muted spot, wider gutters',
+    v:{ '--paper':'#F1F0ED','--paper-2':'#E9E8E4','--ink':'#16181A','--ink-2':'#5A5F63',
+        '--tone':'#A9AEB2','--spot':'#8C3A3A','--rule':'#16181A',
+        '--c-canon':'#16181A','--c-mixed':'#5A5F63','--c-filler':'#A9AEB2',
+        '--c-anime':'#8C3A3A','--c-manga':'#3A5566',
+        '--tone-pitch':'2.6px','--tone-dot':'.72px','--skew':'0deg','--grain':'0.07','--gutter':'20px' } },
+  scan: { label:'scan', tone:'yellowed, faded plate, off-square',
+    v:{ '--paper':'#EFE9DA','--paper-2':'#E8E1CF','--ink':'#262019','--ink-2':'#6B6154',
+        '--tone':'#A99E8C','--spot':'#C4564A','--rule':'#3A3229',
+        '--c-canon':'#262019','--c-mixed':'#6B6154','--c-filler':'#A99E8C',
+        '--c-anime':'#C4564A','--c-manga':'#4A5F73',
+        '--tone-pitch':'3.3px','--tone-dot':'1.35px','--skew':'-0.35deg','--grain':'0.13','--gutter':'13px' } }
+};
+
+var root = document.documentElement;
+var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+var book = document.getElementById('book');
+var state = { page:0, variant:'tankobon', gfx:true };
+
+// texture encodes ZONE, never type — source_only stays hatched, and 45°
+// hatching is native to this medium anyway
+function fill(i) {
+  var c = 'var(' + CVAR[i] + ')';
+  if (i !== SOURCE_ONLY) return c;
+  return 'repeating-linear-gradient(45deg,' + c + ' 0 2px,transparent 2px 5px)';
+}
+function stripInto(el, seq) {
+  seq.forEach(function (s) {
+    var i = document.createElement('i');
+    i.style.flex = s[1] + ' 1 0'; i.style.background = fill(s[0]); i.title = TYPES[s[0]];
+    el.appendChild(i);
+  });
+}
+function el(tag, cls, txt) {
+  var n = document.createElement(tag);
+  if (cls) n.className = cls;
+  if (txt != null) n.textContent = txt;
+  return n;
+}
+
+// ── leaves ──────────────────────────────────────────────────────────────
+// 0 = cover, 1 = catalog, 2..n = one spread per series
+function buildCover() {
+  var leaf = el('div', 'leaf');
+  var pg = el('div', 'page cover');
+  var art = el('div', 'art');
+  art.appendChild(el('div', 'lab', 'mangaMapper — 第1巻'));
+  art.appendChild(el('h1', null, 'WHERE DOES\nTHE MANGA\nPICK UP?'));
+  art.querySelector('h1').style.whiteSpace = 'pre-line';
+  art.appendChild(el('div', 'jp', 'アニメとマンガの対応表 · 343 series'));
+  var obi = el('div', 'obi');
+  obi.appendChild(el('span', 't', 'Filler marked. Gaps shown honestly. Nothing guessed.'));
+  obi.appendChild(el('span', 'n', '¥———'));
+  pg.appendChild(art); pg.appendChild(obi);
+  leaf.appendChild(pg);
+  return leaf;
+}
+
+function buildCatalog() {
+  var leaf = el('div', 'leaf');
+  var pg = el('div', 'page cat');
+  var hd = el('div', 'panel plain hd');
+  hd.appendChild(el('div', 'lab', '目次 — contents'));
+  var h = el('div', 'big'); h.style.fontSize = '22px'; h.textContent = 'The catalog';
+  hd.appendChild(h);
+  pg.appendChild(hd);
+
+  SERIES.forEach(function (s, i) {
+    var b = el('button', 'panel serpanel' + (i === 0 ? ' wide tone' : ''));
+    b.type = 'button';
+    b.appendChild(el('div', 'lab', String(i + 1).padStart(2, '0')));
+    b.appendChild(el('div', 'nm', s.nm));
+    b.appendChild(el('div', 'jpn', s.jp));
+    var n = el('div', 'num');
+    n.textContent = 'ep:' + s.ep + '  ch:' + s.ch + '/' + s.tch;
+    b.appendChild(n);
+    b.addEventListener('click', function () { go(2 + i); });
+    pg.appendChild(b);
+  });
+  leaf.appendChild(pg);
+  return leaf;
+}
+
+function buildSpread(s) {
+  var leaf = el('div', 'leaf');
+  var pg = el('div', 'page spread');
+
+  var t = el('div', 'panel plain wide');
+  t.appendChild(el('div', 'lab', 'series'));
+  var ttl = el('div', 'big ttl'); ttl.textContent = s.nm; t.appendChild(ttl);
+  t.appendChild(el('div', 'jpn', s.jp));
+  pg.appendChild(t);
+
+  var f = el('div', 'panel solid');
+  f.appendChild(el('div', 'lab', 'position'));
+  var figs = el('div', 'figs');
+  figs.innerHTML = 'ep:' + s.ep + '<span class="d">/—</span><br>vol:' + s.vol +
+    '<span class="d">/' + s.tvol + '</span><br>ch:' + s.ch + '<span class="d">/' + s.tch + '</span>';
+  f.appendChild(figs);
+  f.querySelector('.lab').style.color = 'var(--paper)';
+  f.querySelector('.lab').style.opacity = '.62';
+  pg.appendChild(f);
+
+  var st = el('div', 'panel');
+  st.appendChild(el('div', 'lab', 'episode types'));
+  var strip = el('div', 'strip'); stripInto(strip, s.seq); st.appendChild(strip);
+  var leg = el('div', 'leg');
+  TYPES.forEach(function (n, i) {
+    var sp = el('span', null, n); sp.style.color = 'var(' + CVAR[i] + ')'; leg.appendChild(sp);
+  });
+  st.appendChild(leg);
+  pg.appendChild(st);
+
+  var e = el('div', 'panel plain eps');
+  e.appendChild(el('div', 'lab', 'latest — episode / volume / chapter'));
+  var ol = el('ol');
+  s.eps.forEach(function (r) {
+    var li = el('li');
+    li.appendChild(el('span', 'e', r[0]));
+    li.appendChild(el('span', 't', r[1]));
+    li.appendChild(el('span', 'c', r[2]));
+    ol.appendChild(li);
+  });
+  e.appendChild(ol);
+  // the unadapted run, drawn as framed absence rather than a filled bar
+  var unread = s.tch - s.ch;
+  var gap = el('div', 'gapnote');
+  gap.appendChild(el('span', null, unread > 0 ? 'not yet animated' : 'fully adapted'));
+  gap.appendChild(el('span', null, unread > 0 ? 'ch:' + (s.ch + 1) + '–' + s.tch + '  (' + unread + ')' : '—'));
+  e.appendChild(gap);
+  var back = el('button', 'back', '← back to contents');
+  back.type = 'button';
+  back.style.marginTop = '10px';
+  back.style.fontFamily = "'IBM Plex Mono', monospace";
+  back.style.fontSize = '10.5px';
+  back.addEventListener('click', function (ev) { ev.stopPropagation(); go(1); });
+  e.appendChild(back);
+  pg.appendChild(e);
+
+  leaf.appendChild(pg);
+  return leaf;
+}
+
+var LEAVES = [];
+function build() {
+  book.textContent = ''; LEAVES = [];
+  var pages = [buildCover(), buildCatalog()].concat(SERIES.map(buildSpread));
+  // stacked in reverse so leaf 0 sits on top — turning it reveals leaf 1
+  for (var i = pages.length - 1; i >= 0; i--) {
+    pages[i].style.zIndex = String(pages.length - i);
+    book.appendChild(pages[i]);
+    LEAVES[i] = pages[i];
+  }
+  paint();
+}
+
+var FOLIO = ['cover', 'contents'].concat(SERIES.map(function (s) { return s.nm; }));
+function paint() {
+  LEAVES.forEach(function (l, i) { l.classList.toggle('turned', i < state.page); });
+  document.getElementById('folio').textContent =
+    FOLIO[state.page] + '  ' + (state.page + 1) + '/' + LEAVES.length;
+  document.getElementById('prev').disabled = state.page === 0;
+  document.getElementById('next').disabled = state.page === LEAVES.length - 1;
+}
+function go(p) {
+  state.page = Math.max(0, Math.min(LEAVES.length - 1, p));
+  paint();
+}
+
+// ── the turn: wheel, keys, buttons. RTL — "next" advances leftward. ─────
+var wheelLock = 0;
+addEventListener('wheel', function (e) {
+  var now = Date.now();
+  if (now < wheelLock || Math.abs(e.deltaY) < 8) return;
+  wheelLock = now + (reduce ? 120 : 620);
+  go(state.page + (e.deltaY > 0 ? 1 : -1));
+}, { passive:true });
+
+addEventListener('keydown', function (e) {
+  if (e.key === 'ArrowLeft' || e.key === 'ArrowDown' || e.key === ' ') { e.preventDefault(); go(state.page + 1); }
+  if (e.key === 'ArrowRight' || e.key === 'ArrowUp') { e.preventDefault(); go(state.page - 1); }
+  if (e.key === 'Home') go(0);
+});
+document.getElementById('next').addEventListener('click', function () { go(state.page + 1); });
+document.getElementById('prev').addEventListener('click', function () { go(state.page - 1); });
+
+// ── switches ────────────────────────────────────────────────────────────
+function setVariant(k) {
+  state.variant = k;
+  var v = VARIANTS[k].v;
+  Object.keys(v).forEach(function (prop) { root.style.setProperty(prop, v[prop]); });
+  document.querySelectorAll('#vseg button').forEach(function (b) {
+    b.setAttribute('aria-pressed', String(b.dataset.v === k));
+  });
+}
+var vseg = document.getElementById('vseg');
+Object.keys(VARIANTS).forEach(function (k) {
+  var b = el('button', null, VARIANTS[k].label);
+  b.type = 'button'; b.dataset.v = k;
+  b.title = VARIANTS[k].tone;
+  b.addEventListener('click', function () { setVariant(k); });
+  vseg.appendChild(b);
+});
+
+var gfxBtn = document.getElementById('gfx');
+gfxBtn.addEventListener('click', function () {
+  state.gfx = !state.gfx;
+  document.body.classList.toggle('nogfx', !state.gfx);
+  gfxBtn.setAttribute('aria-pressed', String(state.gfx));
+});
+
+build();
+setVariant('tankobon');
+</script>

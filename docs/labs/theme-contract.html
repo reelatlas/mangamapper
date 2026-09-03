@@ -1,0 +1,817 @@
+<title>Theme Contract</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+
+<style>
+  :root {
+    --ground:#0E1012; --surface:#16191C; --raised:#1D2226;
+    --line:#262B30; --line-2:#343B42;
+    --ink:#D9DEE3; --ink-dim:#8D97A1; --ink-faint:#616B74;
+    --accent:#7FB2C9; --warn:#D98A5B; --lock:#7E9E86;
+  }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) {
+      --ground:#ECEEF0; --surface:#FFFFFF; --raised:#F5F7F8;
+      --line:#D6DCE1; --line-2:#BCC5CC;
+      --ink:#171B1F; --ink-dim:#58626B; --ink-faint:#7C868F;
+      --accent:#29647E; --warn:#A85A28; --lock:#3F6B4E;
+    }
+  }
+  :root[data-theme="light"] {
+    --ground:#ECEEF0; --surface:#FFFFFF; --raised:#F5F7F8;
+    --line:#D6DCE1; --line-2:#BCC5CC;
+    --ink:#171B1F; --ink-dim:#58626B; --ink-faint:#7C868F;
+    --accent:#29647E; --warn:#A85A28; --lock:#3F6B4E;
+  }
+
+  *,*::before,*::after { box-sizing:border-box; }
+  body {
+    background:var(--ground); color:var(--ink);
+    font-family:Archivo, ui-sans-serif, system-ui, sans-serif;
+    font-size:15px; line-height:1.6; -webkit-font-smoothing:antialiased;
+  }
+  .wrap { max-width:1140px; margin-inline:auto; padding:0 28px 96px; }
+
+  /* ── masthead ── */
+  .masthead { padding:72px 0 36px; border-bottom:1px solid var(--line); }
+  .eyebrow {
+    font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:11px;
+    letter-spacing:.14em; text-transform:uppercase; color:var(--ink-faint); margin:0 0 20px;
+  }
+  h1 {
+    font-family:Newsreader,Georgia,serif; font-weight:400;
+    font-size:clamp(42px,7vw,72px); line-height:1.02; letter-spacing:-.02em;
+    margin:0 0 20px; text-wrap:balance;
+  }
+  .standfirst {
+    font-family:Newsreader,Georgia,serif; font-size:clamp(18px,2.2vw,21px);
+    line-height:1.5; color:var(--ink-dim); max-width:62ch; margin:0 0 30px;
+  }
+  .standfirst em { color:var(--ink); font-style:italic; }
+  .runline {
+    display:flex; flex-wrap:wrap; gap:8px 26px;
+    font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:11.5px;
+    color:var(--ink-faint); font-variant-numeric:tabular-nums;
+  }
+  .runline b { color:var(--ink-dim); font-weight:500; }
+
+  section { padding-top:58px; }
+  .sec-head { display:flex; align-items:baseline; gap:14px; margin-bottom:6px; }
+  .sec-num { font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:11px; color:var(--accent); letter-spacing:.1em; }
+  h2 { font-family:Newsreader,Georgia,serif; font-weight:400; font-size:30px; letter-spacing:-.01em; margin:0; text-wrap:balance; }
+  .sec-note { color:var(--ink-dim); max-width:70ch; margin:0 0 28px; font-size:14.5px; }
+  .sec-note b { color:var(--ink); font-weight:500; }
+  code, .ic {
+    font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:.87em;
+    color:var(--ink); background:var(--raised); padding:1px 5px; border-radius:2px;
+  }
+
+  /* ── the layer stack ── */
+  .layers { display:flex; flex-direction:column; gap:2px; }
+  .layer {
+    display:grid; grid-template-columns:132px 1fr; gap:0;
+    background:var(--surface); border:1px solid var(--line);
+  }
+  .layer-tab {
+    padding:18px 16px; border-right:1px solid var(--line);
+    display:flex; flex-direction:column; gap:3px; justify-content:center;
+  }
+  .layer-n {
+    font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:10px;
+    letter-spacing:.12em; text-transform:uppercase; color:var(--ink-faint);
+  }
+  .layer-name { font-family:Newsreader,Georgia,serif; font-size:20px; line-height:1.1; }
+  .layer-body { padding:18px 20px; }
+  .layer-body p { margin:0 0 10px; font-size:14px; color:var(--ink-dim); }
+  .layer-body p:last-child { margin-bottom:0; }
+  .layer-body b { color:var(--ink); font-weight:500; }
+  .owns {
+    display:flex; flex-wrap:wrap; gap:5px; margin-top:12px;
+  }
+  .owns span {
+    font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:10px;
+    padding:2px 7px; border:1px solid var(--line-2); color:var(--ink-dim); border-radius:2px;
+  }
+  .layer.locked { border-left:2px solid var(--lock); }
+  .layer.themed { border-left:2px solid var(--accent); }
+  .layer.varied { border-left:2px solid var(--ink-faint); }
+  .layer.optional { border-left:2px solid var(--warn); }
+
+  /* ── rule callout ── */
+  .rule {
+    margin-top:22px; padding:20px 24px; background:var(--surface);
+    border:1px solid var(--line); border-left:2px solid var(--warn);
+  }
+  .rule h3 { font-family:Archivo,sans-serif; font-size:15px; font-weight:600; margin:0 0 8px; }
+  .rule p { margin:0 0 10px; font-size:14px; color:var(--ink-dim); }
+  .rule p:last-child { margin-bottom:0; }
+  .rule b { color:var(--ink); font-weight:500; }
+
+  /* ── theme blocks ── */
+  .theme-head {
+    display:flex; align-items:baseline; justify-content:space-between;
+    gap:16px; flex-wrap:wrap;
+    padding-bottom:12px; margin-bottom:22px; border-bottom:1px solid var(--line);
+  }
+  .theme-title { display:flex; align-items:baseline; gap:12px; }
+  .theme-title h3 { font-family:Newsreader,Georgia,serif; font-weight:400; font-size:27px; margin:0; }
+  .theme-title .cls {
+    font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:11px; color:var(--accent);
+  }
+  .theme-gfx { font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:10.5px; color:var(--ink-faint); letter-spacing:.06em; }
+
+  .theme-owns {
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+    gap:1px; background:var(--line); border:1px solid var(--line); margin-bottom:26px;
+  }
+  .to-cell { background:var(--surface); padding:14px 16px; }
+  .to-cell dt {
+    font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:10px;
+    letter-spacing:.1em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:5px;
+  }
+  .to-cell dd { margin:0; font-size:13.5px; color:var(--ink-dim); line-height:1.5; }
+
+  .variants { display:grid; gap:18px; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); }
+  .variant { display:flex; flex-direction:column; gap:12px; }
+  .variant > .vmeta { display:flex; flex-direction:column; gap:6px; }
+  .vname { font-family:Newsreader,Georgia,serif; font-size:19px; line-height:1.2; }
+  .vid { font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:10.5px; color:var(--ink-faint); }
+  .vnote { font-size:13.5px; color:var(--ink-dim); margin:0; }
+  .vnote b { color:var(--ink); font-weight:500; }
+
+  /* ══ the card mock — ONE markup, driven entirely by tokens.
+        Theme class sets structure (face, radius, border style);
+        inline style sets the variant palette. The artifact is the
+        argument: same DOM, different layer, different result.      ══ */
+  .mock {
+    background:var(--m-card); color:var(--m-ink);
+    border:1px var(--m-bstyle,solid) var(--m-line);
+    border-radius:var(--m-radius,2px);
+    font-family:var(--m-font);
+    padding:0; overflow:hidden; font-size:11px; line-height:1.4;
+  }
+  .mock-path {
+    display:flex; justify-content:space-between; align-items:center;
+    padding:5px 9px; border-bottom:1px var(--m-bstyle,solid) var(--m-line);
+    color:var(--m-dim); font-size:10px; letter-spacing:var(--m-track,0);
+  }
+  .mock-band { display:flex; gap:10px; align-items:flex-start; padding:10px 9px 8px; }
+  .mock-stamp {
+    width:34px; height:51px; flex:none;
+    border:1px solid var(--m-line); border-radius:var(--m-radius,2px);
+    background:linear-gradient(160deg, var(--c1) 0%, transparent 62%), var(--m-ground);
+    opacity:.55;
+  }
+  .mock-idy { flex:1; min-width:0; display:flex; flex-direction:column; gap:3px; }
+  .mock-title {
+    font-size:14px; font-weight:var(--m-tweight,500); color:var(--m-title);
+    letter-spacing:var(--m-ttrack,0); line-height:1.15;
+    text-shadow:var(--m-glow,none); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+  }
+  .mock-sub { font-size:9.5px; color:var(--m-dim); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .mock-status {
+    font-size:9px; padding:1px 5px; flex:none; border-radius:var(--m-radius,2px);
+    color:var(--c1); background:color-mix(in srgb, var(--c1) 14%, transparent);
+  }
+  .mock-pos {
+    display:flex; flex-wrap:wrap; gap:3px 12px; padding:0 9px 9px;
+    font-variant-numeric:tabular-nums; font-size:11px; color:var(--m-ink);
+  }
+  .mock-pos .dim { color:var(--m-dim); }
+  .mock-strip-zone { padding:0 9px 9px; }
+  .strip { display:flex; gap:1px; height:18px; width:100%; }
+  .strip i { display:block; min-width:2px; }
+  .mock-legend { display:flex; flex-wrap:wrap; gap:4px; margin-top:6px; justify-content:flex-end; }
+  .mock-legend span {
+    font-size:9px; padding:1px 5px; border-radius:var(--m-radius,2px);
+    font-variant-numeric:tabular-nums;
+  }
+
+  /* theme-level structure — this is the whole point of the split */
+  .t-terminal { --m-font:'IBM Plex Mono',ui-monospace,monospace; --m-radius:2px; --m-bstyle:solid; }
+  .t-depth    { --m-font:Archivo,system-ui,sans-serif; --m-radius:3px; --m-bstyle:solid; --m-ttrack:.01em; }
+  .t-source   { --m-font:Archivo,system-ui,sans-serif; --m-radius:1px; --m-bstyle:solid; --m-tweight:700; --m-ttrack:-.01em; }
+  /* rolled: radius 4px, warped mono (width axis pushed off true), 2° skew */
+  .t-paper    {
+    --m-font:'IBM Plex Mono',ui-monospace,monospace; --m-radius:4px; --m-bstyle:solid;
+    --m-track:.04em; --m-ttrack:.02em;
+    box-shadow:0 6px 18px rgba(0,0,0,.41);
+  }
+  .t-paper .mock-band { transform:rotate(-.35deg); transform-origin:left center; }
+  .t-paper .mock-stamp { transform:rotate(2deg); }
+  @media (prefers-reduced-motion:reduce) {
+    .t-paper .mock-band, .t-paper .mock-stamp { transform:none; }
+  }
+
+  /* ── open questions ── */
+  .open { display:grid; gap:18px; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); }
+  .qcard { background:var(--surface); border:1px solid var(--line); padding:20px 22px; }
+  .qcard h3 { font-family:Archivo,sans-serif; font-size:15px; font-weight:600; margin:0 0 4px; }
+  .qcard .q {
+    font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:10.5px;
+    letter-spacing:.1em; text-transform:uppercase; color:var(--ink-faint); margin:0 0 12px;
+  }
+  .qcard p { margin:0 0 11px; font-size:14px; color:var(--ink-dim); }
+  .qcard p:last-child { margin-bottom:0; }
+  .qcard b { color:var(--ink); font-weight:500; }
+  .qcard .rec { color:var(--ink); }
+  .qcard .rec b { color:var(--accent); }
+
+  .fact { display:flex; gap:10px; font-size:13.5px; color:var(--ink-dim); margin-bottom:7px; }
+  .fact:last-of-type { margin-bottom:0; }
+  .fact .k {
+    font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:10.5px;
+    color:var(--ink-faint); flex:none; width:88px; padding-top:2px;
+    letter-spacing:.06em; text-transform:uppercase;
+  }
+  .fact .v b { color:var(--ink); font-weight:500; }
+
+  .close { margin-top:60px; padding:26px 30px; border:1px solid var(--line); background:var(--surface); }
+  .close h2 { font-size:23px; margin-bottom:14px; }
+  .close ol { margin:0; padding-left:20px; color:var(--ink-dim); font-size:14.5px; }
+  .close li { margin-bottom:9px; }
+  .close li:last-child { margin-bottom:0; }
+  .close b { color:var(--ink); font-weight:500; }
+
+  a { color:var(--accent); }
+  a:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+
+  @media (max-width:620px) {
+    .wrap { padding-inline:18px; }
+    .masthead { padding-top:48px; }
+    .layer { grid-template-columns:1fr; }
+    .layer-tab { border-right:none; border-bottom:1px solid var(--line); }
+    .variants, .open { grid-template-columns:1fr; }
+    .fact { flex-direction:column; gap:2px; }
+    .fact .k { width:auto; }
+  }
+</style>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="eyebrow">mangaMapper · theming architecture · narrowed from Atmosphere Lab</p>
+    <h1>Theme Contract</h1>
+    <p class="standfirst">Four themes, twelve variants, four layers. A theme owns <em>behaviour</em> — type, motion, interaction, and its optional graphics. A variant owns <em>appearance</em>, material included. Neither is ever allowed to touch the rulings underneath.</p>
+    <div class="runline">
+      <span><b>themes</b> 4</span>
+      <span><b>variants</b> 12</span>
+      <span><b>graphics</b> user-toggleable</span>
+      <span><b>material</b> layer 2 (amended)</span>
+      <span><b>branch</b> theming · d38d763</span>
+    </div>
+  </header>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">01</span><h2>The four layers</h2></div>
+    <p class="sec-note">Your split — theme owns graphics, animation and interaction; variant owns colour — works, but it needs a layer above it and a layer below it to be safe. Above: the graphics layer has to be separable or the toggle can't exist. Below: <b>a large body of locked rulings must survive every theme</b>, and the contract is what stops a theme from quietly reopening them.</p>
+
+    <div class="layers">
+
+      <div class="layer locked">
+        <div class="layer-tab"><span class="layer-n">Layer 0 · locked</span><span class="layer-name">Structure</span></div>
+        <div class="layer-body">
+          <p>Not themeable, by any theme, ever. These are <b>correctness rulings, not taste</b> — the strip's pixel-snapped geometry and clamped indicator ticks, the meta-row baseline strut, position math, the focus-ownership laws, scroll anchoring by walk direction, component-owned scroll.</p>
+          <p>A theme that needs one of these to change is <b>rejected, not accommodated.</b> This layer is why the contract is worth writing down: months of rulings live here and a theming pass is exactly the kind of work that erodes them by accident.</p>
+          <div class="owns">
+            <span>strip geometry</span><span>hit-testing</span><span>baseline strut</span><span>focus laws</span><span>scroll anchoring</span><span>position math</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="layer themed">
+        <div class="layer-tab"><span class="layer-n">Layer 1 · per theme</span><span class="layer-name">Behaviour</span></div>
+        <div class="layer-body">
+          <p>What makes a theme a <em>world</em> rather than a palette. Typeface and scale, the border / radius / elevation vocabulary, the motion vocabulary, the construction model, and the interaction grammar — what selection looks like, what a cursor is, how depth reads.</p>
+          <p>Built <b>once per theme</b> and inherited unchanged by all its variants. This is where nearly all the engineering cost sits, which is the argument for four themes rather than twelve.</p>
+          <p><b>The line against layer 2:</b> this layer says what a thing <em>is and does</em>; layer 2 says what it is <em>made of</em>. "Everything is a flat that occludes and slides" is construction, so it lives here. "The paper is waxed, deckled, and slightly foxed" is material, so it doesn't.</p>
+          <div class="owns">
+            <span>typeface + scale</span><span>border vocabulary</span><span>radius</span><span>elevation</span><span>motion</span><span>construction</span><span>selection grammar</span><span>nav model</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="layer varied">
+        <div class="layer-tab"><span class="layer-n">Layer 2 · per variant</span><span class="layer-name">Appearance</span></div>
+        <div class="layer-body">
+          <p>The surface ramp, the five <code>--type-*</code> colours, the semantic colours, and — <b>amended, per your call</b> — the whole of <b>material</b>: glow, hatch angle, tone density, texture, ink weight, edge treatment.</p>
+          <p>That amendment is what buys the cheap aesthetic wins. The theme states the <em>role</em> — "the title is the card's one accent" — and each variant answers it in its own material: phosphor glow, ink weight, a rule beneath, a drop shadow off a paper edge. No theme needs re-engineering to get a genuinely different look.</p>
+          <p>A variant stays cheap: a token block and nothing else. That is the test for whether something belongs here. If a variant needs new markup or new behaviour, it is a theme wearing the wrong label.</p>
+          <div class="owns">
+            <span>surface ramp</span><span>type palette ×5</span><span>semantic colour</span><span>hatch / tone</span><span>glow</span><span>texture</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="layer optional">
+        <div class="layer-tab"><span class="layer-n">Layer 3 · toggleable</span><span class="layer-name">Atmosphere</span></div>
+        <div class="layer-body">
+          <p>The graphics layer. Per theme, off by default on anything that can't prove it can carry it, and switchable by hand — persisted exactly like the minimap preference already is (<code>useMinimapPref</code>, localStorage, private-mode safe).</p>
+          <p>Lazy-loaded with the theme that needs it, so a terminal user never downloads a renderer.</p>
+          <div class="owns">
+            <span>ambient render</span><span>particulate</span><span>attenuation</span><span>depth wash</span><span>tone rendering</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="rule">
+      <h3>The rule that makes the toggle honest</h3>
+      <p><b>Graphics-off is the design target, not the degraded mode.</b> Every theme has to be finished and good with the layer disabled — that is the state most people will see, and it is the only state you can guarantee.</p>
+      <p>Which gives one hard constraint: <b>the atmosphere layer carries no information.</b> Never a value, a state, or an affordance that exists only there. It sits behind and around the instrument, never inside it — nothing renders under the card interior, the strip, or the episode list, all of which have frame budgets they already spend.</p>
+      <p>Auto-off without asking: <code>prefers-reduced-motion</code>, coarse pointer, small viewport, and a dropped-frame bail-out. The manual toggle is for taste; those are for not shipping a slideshow.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">02</span><h2>terminal</h2></div>
+    <p class="sec-note">The lineage you already have. This theme's job is to <b>prove the graphics-off case</b> — it should be the best-looking thing in the app with layer 3 disabled entirely, and its variants are pure token swaps against rulings that are already locked and shipping.</p>
+
+    <div class="theme-head">
+      <div class="theme-title"><span class="cls">.theme-terminal</span><h3>Three variants</h3></div>
+      <span class="theme-gfx">atmosphere: minimal — scanline / persistence only</span>
+    </div>
+
+    <dl class="theme-owns">
+      <div class="to-cell"><dt>Type</dt><dd>IBM Plex Mono throughout. Already ruled: title 18px = the field's TEXT_PX.</dd></div>
+      <div class="to-cell"><dt>Borders</dt><dd>Dashed = list vocabulary, solid <code>border-strong</code> = the focused instrument. Locked in instrument_v1.</dd></div>
+      <div class="to-cell"><dt>Elevation</dt><dd>None. Separation is surface step + border + dim. Radius 2px.</dd></div>
+      <div class="to-cell"><dt>Motion</dt><dd>The print entrance — stepped delays, no easing, regions arriving like terminal output.</dd></div>
+      <div class="to-cell"><dt>Selection</dt><dd>Two registers: <code>&gt;&nbsp;</code> cursor in the field, type-coloured inset rail in the list.</dd></div>
+    </dl>
+
+    <div class="variants">
+
+      <div class="variant">
+        <div class="mock t-terminal" style="--m-ground:#0B0A07;--m-card:#100D08;--m-line:#2B2110;--m-ink:#FFCE73;--m-dim:#8A6A22;--m-title:#FFB000;--m-glow:0 0 3px rgba(255,176,0,.35);--c1:#FFB000;--c2:#C98A16;--c3:#7A5410;--c4:#FFD27F;--c5:#4E3A0C;">
+          <div class="mock-path"><span>~/catalog/one-piece</span><span>x</span></div>
+          <div class="mock-band">
+            <div class="mock-stamp"></div>
+            <div class="mock-idy">
+              <div class="mock-title">ONE PIECE</div>
+              <div class="mock-sub">ワンピース · 1999–</div>
+            </div>
+            <span class="mock-status">airing</span>
+          </div>
+          <div class="mock-pos">
+            <span>ep:1122<span class="dim">/—</span></span>
+            <span>vol:108<span class="dim">/110</span> · ch:1092<span class="dim">/1130</span></span>
+          </div>
+          <div class="mock-strip-zone"><div class="strip"></div><div class="mock-legend"></div></div>
+        </div>
+        <div class="vmeta">
+          <span class="vid">phosphor</span>
+          <span class="vname">Phosphor</span>
+          <p class="vnote"><b>Material: persistence.</b> One amber, five intensities, hatch doing the work hue normally does. The CRT idea worth keeping isn't the scanline — it's that a changed value leaves a brief afterglow, which is exactly the moment the position row already needs to mark.</p>
+          <p class="vnote"><b>Open:</b> five steps on one hue is a narrow ladder. This variant has to clear the same ΔE bar the current set does, or it fails on the strip before anything else.</p>
+        </div>
+      </div>
+
+      <div class="variant">
+        <div class="mock t-terminal" style="--m-ground:#0A2740;--m-card:#0C2E4A;--m-line:#1B4B6B;--m-ink:#CDE7F5;--m-dim:#5E8FAD;--m-title:#8FD8F5;--c1:#8FD8F5;--c2:#F2D06B;--c3:#F08A6E;--c4:#A9B8F0;--c5:#5FC4A8;">
+          <div class="mock-path"><span>~/catalog/one-piece</span><span>x</span></div>
+          <div class="mock-band">
+            <div class="mock-stamp"></div>
+            <div class="mock-idy">
+              <div class="mock-title">ONE PIECE</div>
+              <div class="mock-sub">ワンピース · 1999–</div>
+            </div>
+            <span class="mock-status">airing</span>
+          </div>
+          <div class="mock-pos">
+            <span>ep:1122<span class="dim">/—</span></span>
+            <span>vol:108<span class="dim">/110</span> · ch:1092<span class="dim">/1130</span></span>
+          </div>
+          <div class="mock-strip-zone"><div class="strip"></div><div class="mock-legend"></div></div>
+        </div>
+        <div class="vmeta">
+          <span class="vid">blueprint</span>
+          <span class="vname">Blueprint</span>
+          <p class="vnote"><b>Material: the drawn rule.</b> The dimension line was the tension here — line-work sounds like layer 1. It isn't: the terminal theme already draws rules and borders, and blueprint just renders them with ticks and end-caps. Same elements, different treatment, so it stays a legal variant.</p>
+          <p class="vnote">Which is a useful precedent — <b>a variant may restyle a mark the theme already draws, never add a new one.</b></p>
+        </div>
+      </div>
+
+      <div class="variant">
+        <div class="mock t-terminal" style="--m-ground:#F6F1E4;--m-card:#FBF8F0;--m-line:#DCD3BE;--m-ink:#3A3527;--m-dim:#8A8069;--m-title:#1E6E8C;--c1:#1E6E8C;--c2:#A66A00;--c3:#B03A55;--c4:#6B4CA8;--c5:#2C7A4B;">
+          <div class="mock-path"><span>~/catalog/one-piece</span><span>x</span></div>
+          <div class="mock-band">
+            <div class="mock-stamp"></div>
+            <div class="mock-idy">
+              <div class="mock-title">ONE PIECE</div>
+              <div class="mock-sub">ワンピース · 1999–</div>
+            </div>
+            <span class="mock-status">airing</span>
+          </div>
+          <div class="mock-pos">
+            <span>ep:1122<span class="dim">/—</span></span>
+            <span>vol:108<span class="dim">/110</span> · ch:1092<span class="dim">/1130</span></span>
+          </div>
+          <div class="mock-strip-zone"><div class="strip"></div><div class="mock-legend"></div></div>
+        </div>
+        <div class="vmeta">
+          <span class="vid">daylight</span>
+          <span class="vname">Daylight</span>
+          <p class="vnote"><b>Material: ink weight.</b> On a dark ground hierarchy comes from glow; on paper it comes from density. The title's phosphor glow has no meaning here and should be dropped rather than translated — the first real test of whether a variant can decline part of its theme's vocabulary.</p>
+          <p class="vnote"><b>Open:</b> the honest answer is that it can't, under a strict reading. Either the contract allows a variant to null a treatment, or glow moves to layer 2 where it belongs.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">03</span><h2>depth</h2></div>
+    <p class="sec-note">The theme that earns a graphics layer. Its three variants are <b>one mechanic seen through three registers</b> — organic, instrumental, extracted — which means the depth behaviour is engineered once and worn three ways. That is the strongest argument for your theme/variant split holding up.</p>
+
+    <div class="theme-head">
+      <div class="theme-title"><span class="cls">.theme-depth</span><h3>Three variants</h3></div>
+      <span class="theme-gfx">atmosphere: full — attenuation, particulate, parallax</span>
+    </div>
+
+    <dl class="theme-owns">
+      <div class="to-cell"><dt>Nav model</dt><dd>Depth <em>is</em> navigation. Landing = surface, catalog = layer 2, card open = layer 4, episode list = deepest. Each level a token set.</dd></div>
+      <div class="to-cell"><dt>Motion</dt><dd>Descent and ascent are the signature. Going back up costs a held beat — the transition, not the page, is the theme.</dd></div>
+      <div class="to-cell"><dt>Type</dt><dd><b>Open.</b> Almost certainly not mono — this is where the theme diverges hardest from terminal and the choice is unmade.</dd></div>
+      <div class="to-cell"><dt>Elevation</dt><dd>Real. Distance from the viewer is the organising idea, so shadow and blur finally mean something.</dd></div>
+      <div class="to-cell"><dt>Graphics</dt><dd>Attenuation with depth, drifting particulate, parallax on scroll. Behind the catalog, never inside the card.</dd></div>
+    </dl>
+
+    <div class="variants">
+
+      <div class="variant">
+        <div class="mock t-depth" style="--m-ground:#05121A;--m-card:#08202C;--m-line:#164554;--m-ink:#BFE6DE;--m-dim:#4E8A87;--m-title:#4FE0C4;--m-glow:0 0 10px rgba(79,224,196,.25);--c1:#4FE0C4;--c2:#E0C86A;--c3:#E86A9C;--c4:#9B7BE8;--c5:#3E9E7A;">
+          <div class="mock-path"><span>catalog / one piece</span><span>×</span></div>
+          <div class="mock-band">
+            <div class="mock-stamp"></div>
+            <div class="mock-idy">
+              <div class="mock-title">One Piece</div>
+              <div class="mock-sub">ワンピース · 1999–</div>
+            </div>
+            <span class="mock-status">airing</span>
+          </div>
+          <div class="mock-pos">
+            <span>ep:1122<span class="dim">/—</span></span>
+            <span>vol:108<span class="dim">/110</span> · ch:1092<span class="dim">/1130</span></span>
+          </div>
+          <div class="mock-strip-zone"><div class="strip"></div><div class="mock-legend"></div></div>
+        </div>
+        <div class="vmeta">
+          <span class="vid">abyss</span>
+          <span class="vname">Abyss</span>
+          <p class="vnote"><b>Register: organic.</b> Bioluminescent, warm at the surface and cold below. The only light left at layer 4 is light the thing makes itself, which is a natural fit for the type colours being the brightest marks on screen.</p>
+          <p class="vnote"><b>Worth stealing:</b> the curse of ascending. The back gesture costs something — a held beat, a bleach — so descent feels one-way the way the source means it.</p>
+        </div>
+      </div>
+
+      <div class="variant">
+        <div class="mock t-depth" style="--m-ground:#EEF4F7;--m-card:#F8FBFC;--m-line:#C3D6E0;--m-ink:#20343E;--m-dim:#6E8B9B;--m-title:#17607F;--c1:#17607F;--c2:#9A6A12;--c3:#B2445C;--c4:#5B4BA0;--c5:#1E7A5E;">
+          <div class="mock-path"><span>catalog / one piece</span><span>×</span></div>
+          <div class="mock-band">
+            <div class="mock-stamp"></div>
+            <div class="mock-idy">
+              <div class="mock-title">One Piece</div>
+              <div class="mock-sub">ワンピース · 1999–</div>
+            </div>
+            <span class="mock-status">airing</span>
+          </div>
+          <div class="mock-pos">
+            <span>ep:1122<span class="dim">/—</span></span>
+            <span>vol:108<span class="dim">/110</span> · ch:1092<span class="dim">/1130</span></span>
+          </div>
+          <div class="mock-strip-zone"><div class="strip"></div><div class="mock-legend"></div></div>
+        </div>
+        <div class="vmeta">
+          <span class="vid">sounding</span>
+          <span class="vname">Sounding</span>
+          <p class="vnote"><b>Register: instrumental.</b> The same descent, drawn as survey. Proves the theme isn't dependent on darkness — depth here is contour density and figure spacing, not brightness falling off.</p>
+          <p class="vnote"><b>The idea that outlives the variant:</b> unsurveyed water is left blank on principle, because a guessed depth wrecks ships. That is your <code>// no_source</code>, and it should inform every theme whether or not this one ships.</p>
+        </div>
+      </div>
+
+      <div class="variant">
+        <div class="mock t-depth" style="--m-ground:#14100D;--m-card:#1A1512;--m-line:#3E3226;--m-ink:#D8C9AE;--m-dim:#8A755A;--m-title:#C9A227;--c1:#C9A227;--c2:#B5651D;--c3:#8C4A3F;--c4:#6E7B8B;--c5:#4E6B4A;">
+          <div class="mock-path"><span>catalog / one piece</span><span>×</span></div>
+          <div class="mock-band">
+            <div class="mock-stamp"></div>
+            <div class="mock-idy">
+              <div class="mock-title">One Piece</div>
+              <div class="mock-sub">ワンピース · 1999–</div>
+            </div>
+            <span class="mock-status">airing</span>
+          </div>
+          <div class="mock-pos">
+            <span>ep:1122<span class="dim">/—</span></span>
+            <span>vol:108<span class="dim">/110</span> · ch:1092<span class="dim">/1130</span></span>
+          </div>
+          <div class="mock-strip-zone"><div class="strip"></div><div class="mock-legend"></div></div>
+        </div>
+        <div class="vmeta">
+          <span class="vid">core</span>
+          <span class="vname">Core</span>
+          <p class="vnote"><b>Register: extracted.</b> Depth you can hold — the column pulled up and logged. Canon is bedrock, filler is intrusion, volume boundaries are bedding planes, and the manga-only tail is the section below where the drill stopped.</p>
+          <p class="vnote"><b>Its job in the set:</b> this is depth's graphics-off proof. If <em>core</em> works with layer 3 disabled, the theme is safe to ship to everyone.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">04</span><h2>drawn from the source</h2></div>
+    <p class="sec-note">One variant named, and it is the only theme whose vocabulary comes from the medium the app is about rather than an instrument that resembles it. Its graphics need is modest — halftone is a shader's worth of work at most, and a canvas or CSS treatment at least.</p>
+
+    <div class="theme-head">
+      <div class="theme-title"><span class="cls">.theme-source</span><h3>Three variants</h3></div>
+      <span class="theme-gfx">atmosphere: moderate — tone rendering, no 3D needed</span>
+    </div>
+
+    <dl class="theme-owns">
+      <div class="to-cell"><dt>Layout</dt><dd>Panels and gutters as the layout primitive. The gutter is the medium's own honest gap — readers already parse it without instruction.</dd></div>
+      <div class="to-cell"><dt>Density</dt><dd>Screentone. Filler density encodes as tone density, in greyscale, so hue stays free for the one thing that matters.</dd></div>
+      <div class="to-cell"><dt>Type</dt><dd>Heavy, tight, high-contrast. Ink weight is the hierarchy — the opposite of the terminal's even mono colour.</dd></div>
+      <div class="to-cell"><dt>Reading order</dt><dd><b>Open.</b> Right-to-left is available and authentic, and would be a genuine departure — but it fights every other affordance in the app.</dd></div>
+    </dl>
+
+    <div class="variants">
+
+      <div class="variant">
+        <div class="mock t-source" style="--m-ground:#F7F5F0;--m-card:#FFFDF8;--m-line:#1A1A1A;--m-ink:#1A1A1A;--m-dim:#8A8880;--m-title:#111111;--c1:#1A1A1A;--c2:#6E6E6E;--c3:#B0B0B0;--c4:#E03A3A;--c5:#2B4FA8;">
+          <div class="mock-path"><span>catalog / one piece</span><span>×</span></div>
+          <div class="mock-band">
+            <div class="mock-stamp"></div>
+            <div class="mock-idy">
+              <div class="mock-title">ONE PIECE</div>
+              <div class="mock-sub">ワンピース · 1999–</div>
+            </div>
+            <span class="mock-status">airing</span>
+          </div>
+          <div class="mock-pos">
+            <span>ep:1122<span class="dim">/—</span></span>
+            <span>vol:108<span class="dim">/110</span> · ch:1092<span class="dim">/1130</span></span>
+          </div>
+          <div class="mock-strip-zone"><div class="strip"></div><div class="mock-legend"></div></div>
+        </div>
+        <div class="vmeta">
+          <span class="vid">tankobon</span>
+          <span class="vname">Tankōbon</span>
+          <p class="vnote"><b>Material: ink and tone.</b> Note what the palette does to the strip — four of the five types are greyscale and only one spot colour is spent. It reads differently from every other specimen here, and it is the only one where the strip looks like the medium it describes.</p>
+          <p class="vnote"><b>Also the only theme</b> where <code>vol:108/110</code> could be a picture rather than a number — a volume is a physical object with a spine.</p>
+        </div>
+      </div>
+
+      <div class="variant">
+        <div class="mock t-source" style="--m-ground:#F1F0ED;--m-card:#F8F8F6;--m-line:#16181A;--m-ink:#16181A;--m-dim:#878C90;--m-title:#0F1113;--m-tweight:600;--c1:#16181A;--c2:#5A5F63;--c3:#A9AEB2;--c4:#8C3A3A;--c5:#3A5566;">
+          <div class="mock-path"><span>catalog / one piece</span><span>×</span></div>
+          <div class="mock-band">
+            <div class="mock-stamp"></div>
+            <div class="mock-idy">
+              <div class="mock-title">ONE PIECE</div>
+              <div class="mock-sub">ワンピース · 1999–</div>
+            </div>
+            <span class="mock-status">airing</span>
+          </div>
+          <div class="mock-pos">
+            <span>ep:1122<span class="dim">/—</span></span>
+            <span>vol:108<span class="dim">/110</span> · ch:1092<span class="dim">/1130</span></span>
+          </div>
+          <div class="mock-strip-zone"><div class="strip"></div><div class="mock-legend"></div></div>
+        </div>
+        <div class="vmeta">
+          <span class="vid">seinen</span>
+          <span class="vname">Seinen</span>
+          <p class="vnote"><b>Material: finer tone, cooler ink.</b> The adult-magazine register — the spot colour drops from signal red to brick, the tones tighten, and the type gets denser and quieter. Less impact per mark, more marks.</p>
+          <p class="vnote">Proves the theme survives losing its loudest instrument. If the panel-and-gutter grammar still reads when nothing shouts, the grammar is doing the work rather than the spot colour.</p>
+        </div>
+      </div>
+
+      <div class="variant">
+        <div class="mock t-source" style="--m-ground:#EFE9DA;--m-card:#F4EFE2;--m-line:#262019;--m-ink:#262019;--m-dim:#948A78;--m-title:#1C1710;--c1:#262019;--c2:#6B6154;--c3:#A99E8C;--c4:#C4564A;--c5:#4A5F73;">
+          <div class="mock-path"><span>catalog / one piece</span><span>×</span></div>
+          <div class="mock-band">
+            <div class="mock-stamp"></div>
+            <div class="mock-idy">
+              <div class="mock-title">ONE PIECE</div>
+              <div class="mock-sub">ワンピース · 1999–</div>
+            </div>
+            <span class="mock-status">airing</span>
+          </div>
+          <div class="mock-pos">
+            <span>ep:1122<span class="dim">/—</span></span>
+            <span>vol:108<span class="dim">/110</span> · ch:1092<span class="dim">/1130</span></span>
+          </div>
+          <div class="mock-strip-zone"><div class="strip"></div><div class="mock-legend"></div></div>
+        </div>
+        <div class="vmeta">
+          <span class="vid">scan</span>
+          <span class="vname">Scan</span>
+          <p class="vnote"><b>Material: age and error.</b> Paper yellowed toward warm, ink faded off true black, moiré where tone meets tone, and a degree of rotation that never quite resolves.</p>
+          <p class="vnote">The riskiest variant on the board and the most characterful — it is the only one that would make the app look <b>found rather than designed</b>. Worth building precisely because it puts the material amendment under maximum load: everything that makes it distinct is layer 2, and not a line of behaviour changes.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">05</span><h2>paper theatre</h2></div>
+    <p class="sec-note">Theme four, generated rather than designed — which is the method the movement actually used. Surrealism ran on chance operations: the exquisite corpse, automatic drawing, Duchamp dropping three metre-long threads and keeping the curves they landed in as a new unit of measurement. So the theme was rolled from a 128-character random string, and the string is in the document so the roll is reproducible and inspectable.</p>
+
+    <div class="rule" style="border-left-color:var(--accent);">
+      <h3>The roll</h3>
+      <p style="font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:11px;line-height:1.7;color:var(--ink-dim);word-break:break-all;">3oo5578m6mbjz7x62ifonq0ohcnyfwdfv0be1ymwpsfghrkx3xmdze4sx4po5d80jg6o28d3nseg901506o7uukvc0q8jsfctafcrz7c51jqksie4a5p5lqh9q8s3bz8</p>
+      <p><b>Chars 0–15 set the theme law</b> (shared by every variant); chars 16–47, 48–79 and 80–111 are the three variant palettes; 112–127 are tuning constants. Base-36 slices map to enumerated options and hue angles.</p>
+      <p><b>What the seed does not get to decide:</b> the lightness and saturation bands. Those are designer-set, so a roll can pick any hue relationship it likes and still never produce mud — the same split your <code>syntax_v1</code> palette already ran, where the original hues "failed as-is" and were validator-tuned rather than accepted.</p>
+    </div>
+
+    <div class="theme-head" style="margin-top:26px;">
+      <div class="theme-title"><span class="cls">.theme-paper</span><h3>Three variants</h3></div>
+      <span class="theme-gfx">atmosphere: moderate — parallax flats, no 3D required</span>
+    </div>
+
+    <dl class="theme-owns">
+      <div class="to-cell"><dt>Spatial law <span style="color:var(--accent)">· rolled</span></dt><dd><b>Impossible stair.</b> Descending the nav returns you to where you started. Breadcrumbs that don't add up, a back gesture that arrives somewhere plausible but wrong.</dd></div>
+      <div class="to-cell"><dt>Motion <span style="color:var(--accent)">· rolled</span></dt><dd><b>Drift.</b> Nothing snaps. Flats settle at slightly different rates, so the composition is never quite finished resolving.</dd></div>
+      <div class="to-cell"><dt>Construction <span style="color:var(--accent)">· rolled</span></dt><dd><b>Cut paper.</b> Every element is a flat that occludes, casts, and slides — staged at depths like a toy theatre. Layer 1, because it is how things are built, not what they're made of.</dd></div>
+      <div class="to-cell"><dt>Type <span style="color:var(--accent)">· rolled</span></dt><dd><b>Warped mono.</b> The app's own face, deformed — a variable mono on a width axis that drifts a few units off true. Keeps the lineage, breaks the certainty.</dd></div>
+      <div class="to-cell"><dt>Ground <span style="color:var(--accent)">· rolled</span></dt><dd><b>Void.</b> Dark, and unbounded — the flats hang in it rather than sitting on it.</dd></div>
+      <div class="to-cell"><dt>Constants <span style="color:var(--accent)">· rolled</span></dt><dd>radius <b>4px</b> · gutter <b>9px</b> · shadow <b>41%</b> · skew <b>2°</b>. The 4px radius is the first real departure from the terminal's 2px.</dd></div>
+    </dl>
+
+    <div class="rule" style="border-left-color:var(--warn);margin-bottom:26px;margin-top:0;">
+      <h3>The guardrail this theme needs and the others don't</h3>
+      <p>Your product promise is that a position shown to a user is true, and an honest gap beats a plausible guess. A surreal theme is in direct tension with that — so the rule is: <b>the surrealism lives in the chrome, never in the values.</b></p>
+      <p>The stair may misbehave, the flats may drift, the type may warp. <code>ep:1122/—</code> stays dead literal, the strip stays pixel-snapped, and the episode list never lies for effect. A theme that makes the data feel uncertain has broken layer 0, whatever it looks like.</p>
+    </div>
+
+    <div class="variants">
+
+      <div class="variant">
+        <div class="mock t-paper" style="--m-ground:#171A14;--m-card:#21251D;--m-line:#383B35;--m-ink:#D6DAD2;--m-dim:#808C73;--m-title:#B1D45E;--c1:#5EA3D4;--c2:#5CCC6F;--c3:#DEAC73;--c4:#B581DA;--c5:#B1D45E;">
+          <div class="mock-path"><span>catalog / one piece</span><span>×</span></div>
+          <div class="mock-band">
+            <div class="mock-stamp"></div>
+            <div class="mock-idy">
+              <div class="mock-title">One Piece</div>
+              <div class="mock-sub">ワンピース · 1999–</div>
+            </div>
+            <span class="mock-status">airing</span>
+          </div>
+          <div class="mock-pos">
+            <span>ep:1122<span class="dim">/—</span></span>
+            <span>vol:108<span class="dim">/110</span> · ch:1092<span class="dim">/1130</span></span>
+          </div>
+          <div class="mock-strip-zone"><div class="strip"></div><div class="mock-legend"></div></div>
+        </div>
+        <div class="vmeta">
+          <span class="vid">glasshouse · chars 16–47</span>
+          <span class="vname">Glasshouse</span>
+          <p class="vnote"><b>Material: pressed specimen.</b> Matte stock, deckled edges, the soft shadow of a herbarium sheet. A conservatory after dark — the roll handed over greens, sand and one cold blue, and the flats read as pressed leaves staged at depth.</p>
+          <p class="vnote"><b>Nudged:</b> the roll put filler, anime and manga within 14° of each other. Anime moved to violet at 275° — which is also the better semantics, since anime-original is the one thing in the garden that was never grown there. Min separation now 46°.</p>
+        </div>
+      </div>
+
+      <div class="variant">
+        <div class="mock t-paper" style="--m-ground:#141A16;--m-card:#1C2620;--m-line:#3E4741;--m-ink:#CDD5D0;--m-dim:#7B8E82;--m-title:#6DCAE3;--c1:#6DCAE3;--c2:#C96BE1;--c3:#E2658E;--c4:#8585E0;--c5:#B0E24B;">
+          <div class="mock-path"><span>catalog / one piece</span><span>×</span></div>
+          <div class="mock-band">
+            <div class="mock-stamp"></div>
+            <div class="mock-idy">
+              <div class="mock-title">One Piece</div>
+              <div class="mock-sub">ワンピース · 1999–</div>
+            </div>
+            <span class="mock-status">airing</span>
+          </div>
+          <div class="mock-pos">
+            <span>ep:1122<span class="dim">/—</span></span>
+            <span>vol:108<span class="dim">/110</span> · ch:1092<span class="dim">/1130</span></span>
+          </div>
+          <div class="mock-strip-zone"><div class="strip"></div><div class="mock-legend"></div></div>
+        </div>
+        <div class="vmeta">
+          <span class="vid">fairground · chars 48–79</span>
+          <span class="vname">Fairground</span>
+          <p class="vnote"><b>Material: poster paper.</b> Printed flats with the registration a hair out, so every colour edge carries a sliver of the plate beneath it. Gloss where the others are matte.</p>
+          <p class="vnote"><b>The clean roll:</b> the only one of the three that needed no hue correction at all — 47° minimum separation straight out of the string. Widest spread on the board, and the one that will stress-test whether five loud types can share an 18px strip without turning into confetti.</p>
+        </div>
+      </div>
+
+      <div class="variant">
+        <div class="mock t-paper" style="--m-ground:#0E0C0B;--m-card:#191514;--m-line:#544240;--m-ink:#D5CECD;--m-dim:#8E7D7B;--m-title:#E75064;--c1:#E75064;--c2:#DC6ADC;--c3:#A67EDD;--c4:#5CC6E0;--c5:#4DCB97;">
+          <div class="mock-path"><span>catalog / one piece</span><span>×</span></div>
+          <div class="mock-band">
+            <div class="mock-stamp"></div>
+            <div class="mock-idy">
+              <div class="mock-title">One Piece</div>
+              <div class="mock-sub">ワンピース · 1999–</div>
+            </div>
+            <span class="mock-status">airing</span>
+          </div>
+          <div class="mock-pos">
+            <span>ep:1122<span class="dim">/—</span></span>
+            <span>vol:108<span class="dim">/110</span> · ch:1092<span class="dim">/1130</span></span>
+          </div>
+          <div class="mock-strip-zone"><div class="strip"></div><div class="mock-legend"></div></div>
+        </div>
+        <div class="vmeta">
+          <span class="vid">anaglyph · chars 80–111</span>
+          <span class="vname">Anaglyph</span>
+          <p class="vnote"><b>Material: channel separation.</b> Every flat printed twice, red and cyan, offset by the rolled 2° — depth you'd need glasses for and are not given.</p>
+          <p class="vnote"><b>The roll broke here, and the break became the idea.</b> It dealt <code>mixed</code> and <code>anime</code> the identical hue — 192° both — which would have made two episode types indistinguishable on the strip. Fixing it by the anaglyph's own logic put <code>mixed</code> on magenta at 300°, <b>the colour red and cyan actually make where they overlap</b>. The one type that means "both" is now the one colour that means "both". Min separation 35°.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">06</span><h2>Settled &amp; open</h2></div>
+    <p class="sec-note">Two calls closed, two still live, and the facts on the library you shared.</p>
+    <div class="open">
+
+      <div class="qcard" style="border-left:2px solid var(--lock);">
+        <p class="q">Settled</p>
+        <h3>Material moved to layer 2</h3>
+        <p>Glow, hatch, tone, texture, ink weight and edge treatment now sit with colour in the variant, not with behaviour in the theme.</p>
+        <p class="rec">This is what makes cheap aesthetic wins possible: a theme states the <em>role</em>, each variant answers it in its own material. <b>Construction stays at layer 1</b> — "everything is a flat that occludes and slides" is how a thing is built, not what it's made of, which is the line paper theatre had to test first.</p>
+      </div>
+
+      <div class="qcard" style="border-left:2px solid var(--lock);">
+        <p class="q">Settled</p>
+        <h3>Tankōbon gets seinen and scan</h3>
+        <p>Both built above. Seinen proves the theme survives losing its loudest instrument; scan is the one that would make the app look found rather than designed.</p>
+        <p class="rec"><b>Scan is also the best test of the amendment.</b> Everything that distinguishes it — yellowing, faded ink, moiré, a rotation that never resolves — is layer 2. If it lands without a single behavioural change, the material call was right.</p>
+      </div>
+
+      <div class="qcard">
+        <p class="q">Open</p>
+        <h3>The warped-mono type axis</h3>
+        <p>Paper theatre rolled "warped mono", which wants a variable font with a real width or slant axis — the app's IBM Plex Mono has neither in the weights you load.</p>
+        <p class="rec"><b>Three ways out:</b> swap to a variable mono for this theme only; fake the warp with a CSS transform per glyph run; or read the roll as <em>character</em> rather than mechanism and pick a mono that is already strange. I'd try the third first — it costs nothing and the other two are recoverable if it looks tame.</p>
+      </div>
+
+      <div class="qcard">
+        <p class="q">Open</p>
+        <h3>Whether the impossible stair is shippable</h3>
+        <p>A back gesture that lands somewhere plausible but wrong is a wonderful surreal device and a genuinely bad navigation bug — and the two are indistinguishable from the user's side.</p>
+        <p class="rec"><b>My instinct:</b> keep the stair <em>visual</em>, not functional. The breadcrumb can depict an impossible descent while the router behaves perfectly. That preserves the guardrail above — surreal chrome, honest mechanism — and it's the only version I'd be willing to ship.</p>
+      </div>
+
+      <div class="qcard">
+        <p class="q">Library</p>
+        <h3>ThreeUI — yes, readable, MIT</h3>
+        <div class="fact"><span class="k">source</span><span class="v">Open source by Meng To, <b>MIT licensed</b> — <a href="https://github.com/MengTo/threeui">MengTo/threeui</a>. I can read and adapt the actual component code, not just be inspired by screenshots.</span></div>
+        <div class="fact"><span class="k">why the site failed</span><span class="v">threeui.com renders client-side, so fetching it returns an empty shell. GitHub raw files work fine — that's the way in.</span></div>
+        <div class="fact"><span class="k">community</span><span class="v">50 parent components, 141 variant records, 23 singletons. React, <code>@designcodeio/threeui</code>.</span></div>
+        <div class="fact"><span class="k">pro</span><span class="v">50+ extra components, plus an <b>MCP server and skills</b> — that would let me query it directly rather than reading files, but it isn't required to use the free set.</span></div>
+        <div class="fact"><span class="k">fit</span><span class="v">Peer deps want react <code>&gt;=18 &lt;20</code> — your 19.2.8 qualifies. <b>Watch the weight:</b> <code>three</code> is a peer dep and the package additionally aliases two pinned builds (0.128 and 0.165). On a 25-dependency app that is the single largest thing you'd add, which is the whole case for lazy-loading it per theme.</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="close">
+    <h2>The order from here</h2>
+    <ol>
+      <li><b>Terminal first, all three variants.</b> Cheapest, rides rulings that already shipped, and it is the honest test of whether the split survives contact — if phosphor, blueprint and daylight really are just token blocks, the contract holds and the other three themes get much less risky.</li>
+      <li><b>Then depth, once, with core as the target.</b> Build the descent against the variant that needs no graphics. If it's good there, abyss's atmosphere is enrichment rather than life support — §01's rule applied as a build order.</li>
+      <li><b>Paper theatre and tankōbon last</b>, and in either order. Both are further from the current app than the first two, and both will benefit from a theming mechanism that has already been exercised twice.</li>
+      <li><b>The strip is the fast test at every stage.</b> Five distinguishable types at 18px with 1px gaps. Phosphor, tankōbon and fairground each fight it from a different direction — one hue, near-greyscale, and five loud hues at once. Run it early on those three.</li>
+      <li><b>Then the lab</b> — live presets over the real card, switchable in place, the way Card Skin and Keycap were settled. Then you rule, it ports, and it lands in <b>DESIGN_SYSTEM.md</b> with a name and a date.</li>
+    </ol>
+  </div>
+
+</div>
+
+<script>
+  // Same episode-type sequence in every mock — identical data is the
+  // entire basis of the comparison. [type, ep count] → --c1..--c5.
+  var SEQ = [[1,6],[2,1],[1,5],[3,4],[1,7],[2,1],[4,3],[1,5],[3,2],[1,6],[5,6]];
+  var LABELS = { 1:'canon', 2:'mixed', 3:'filler', 4:'anime', 5:'manga' };
+  var COUNTS = { 1:29, 2:2, 3:6, 4:3, 5:6 };
+
+  document.querySelectorAll('.mock').forEach(function (mock) {
+    var strip = mock.querySelector('.strip');
+    SEQ.forEach(function (seg) {
+      var el = document.createElement('i');
+      el.style.flex = seg[1] + ' 1 0';
+      // manga_only is hatched in the live app — canon the anime never reached
+      el.style.background = seg[0] === 5
+        ? 'repeating-linear-gradient(45deg, var(--c5) 0 3px, transparent 3px 6px), color-mix(in srgb, var(--c5) 28%, transparent)'
+        : 'var(--c' + seg[0] + ')';
+      el.title = LABELS[seg[0]] + ' · ' + seg[1] + ' ep';
+      strip.appendChild(el);
+    });
+
+    var legend = mock.querySelector('.mock-legend');
+    [1,2,3,4,5].forEach(function (t) {
+      var c = document.createElement('span');
+      c.textContent = LABELS[t] + ' ' + COUNTS[t];
+      c.style.color = 'var(--c' + t + ')';
+      c.style.background = 'color-mix(in srgb, var(--c' + t + ') 13%, transparent)';
+      legend.appendChild(c);
+    });
+  });
+</script>

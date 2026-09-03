@@ -1,0 +1,646 @@
+<title>Atmosphere Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+
+<style>
+  /* ── chrome tokens ── dark-first: the specimens are mostly dark grounds,
+     and a bright page would read every dark swatch as a hole.            */
+  :root {
+    --ground:  #0E1012;
+    --surface: #16191C;
+    --raised:  #1D2226;
+    --line:    #262B30;
+    --line-2:  #343B42;
+    --ink:     #D9DEE3;
+    --ink-dim: #8D97A1;
+    --ink-faint:#616B74;
+    --accent:  #7FB2C9;
+    --accent-quiet: #2A4550;
+    --lock:    #7E9E86;
+  }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) {
+      --ground:  #ECEEF0;
+      --surface: #FFFFFF;
+      --raised:  #F5F7F8;
+      --line:    #D6DCE1;
+      --line-2:  #BCC5CC;
+      --ink:     #171B1F;
+      --ink-dim: #58626B;
+      --ink-faint:#7C868F;
+      --accent:  #29647E;
+      --accent-quiet: #CFE0E8;
+      --lock:    #3F6B4E;
+    }
+  }
+  :root[data-theme="light"] {
+    --ground:  #ECEEF0;
+    --surface: #FFFFFF;
+    --raised:  #F5F7F8;
+    --line:    #D6DCE1;
+    --line-2:  #BCC5CC;
+    --ink:     #171B1F;
+    --ink-dim: #58626B;
+    --ink-faint:#7C868F;
+    --accent:  #29647E;
+    --accent-quiet: #CFE0E8;
+    --lock:    #3F6B4E;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: Archivo, ui-sans-serif, system-ui, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: 1180px; margin-inline: auto; padding: 0 28px 96px; }
+
+  /* ── masthead ── */
+  .masthead { padding: 72px 0 40px; border-bottom: 1px solid var(--line); }
+  .eyebrow {
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: 11px; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--ink-faint); margin: 0 0 20px;
+  }
+  h1 {
+    font-family: Newsreader, Georgia, serif;
+    font-weight: 400; font-size: clamp(44px, 7vw, 76px);
+    line-height: 1.02; letter-spacing: -.02em;
+    margin: 0 0 22px; text-wrap: balance;
+  }
+  .standfirst {
+    font-family: Newsreader, Georgia, serif;
+    font-size: clamp(18px, 2.2vw, 22px); line-height: 1.5;
+    color: var(--ink-dim); max-width: 60ch; margin: 0 0 32px;
+  }
+  .standfirst em { color: var(--ink); font-style: italic; }
+  .runline {
+    display: flex; flex-wrap: wrap; gap: 8px 28px;
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: 11.5px; color: var(--ink-faint);
+    font-variant-numeric: tabular-nums;
+  }
+  .runline b { color: var(--ink-dim); font-weight: 500; }
+
+  /* ── sections ── */
+  section { padding-top: 60px; }
+  .sec-head { display: flex; align-items: baseline; gap: 16px; margin-bottom: 8px; }
+  .sec-num {
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: 11px; color: var(--accent); letter-spacing: .1em;
+  }
+  h2 {
+    font-family: Newsreader, Georgia, serif;
+    font-weight: 400; font-size: 30px; letter-spacing: -.01em;
+    margin: 0; text-wrap: balance;
+  }
+  .sec-note {
+    color: var(--ink-dim); max-width: 68ch; margin: 0 0 30px;
+    font-size: 14.5px;
+  }
+
+  /* ── the two gating decisions ── */
+  .decisions { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); }
+  .decision {
+    background: var(--surface); border: 1px solid var(--line);
+    border-left: 2px solid var(--accent);
+    padding: 22px 24px;
+  }
+  .decision h3 {
+    font-family: Archivo, sans-serif; font-size: 15px; font-weight: 600;
+    margin: 0 0 4px; letter-spacing: -.005em;
+  }
+  .decision .q {
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: 10.5px; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--ink-faint); margin: 0 0 12px;
+  }
+  .decision p { margin: 0 0 12px; font-size: 14px; color: var(--ink-dim); }
+  .decision p:last-child { margin-bottom: 0; }
+  .decision code, .inline-code {
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: .88em; color: var(--ink);
+    background: var(--raised); padding: 1px 5px; border-radius: 2px;
+  }
+  .verdict { color: var(--ink) !important; }
+  .verdict b { color: var(--accent); font-weight: 600; }
+
+  /* ── specimen grid ── */
+  .plate { display: grid; gap: 20px; grid-template-columns: repeat(auto-fill, minmax(370px, 1fr)); }
+
+  .spec {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    display: flex; flex-direction: column;
+  }
+
+  /* the swatch panel keeps the THEME's own ground — never the chrome's —
+     so every specimen is judged on the surface it would really live on */
+  .spec-view {
+    background: var(--g);
+    padding: 18px 18px 16px;
+    border-bottom: 1px solid var(--line);
+  }
+  .spec-id {
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: 11px; letter-spacing: .04em;
+    color: var(--c1); margin: 0 0 12px;
+    display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  }
+  .spec-id .depth { color: var(--l); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; }
+
+  /* the mapping strip — the app's fundamental visual atom, identical
+     episode-type sequence in all twelve palettes (18px, 1px gaps) */
+  .strip { display: flex; gap: 1px; height: 18px; width: 100%; }
+  .strip i { display: block; min-width: 2px; }
+  .strip-caption {
+    display: flex; justify-content: space-between;
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: 9.5px; color: var(--l);
+    margin-top: 5px; font-variant-numeric: tabular-nums;
+  }
+  .chips { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 12px; }
+  .chip {
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: 9.5px; padding: 2px 6px; border-radius: 2px;
+    line-height: 1.5;
+  }
+
+  .spec-body { padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 12px; flex: 1; }
+  .spec-name {
+    font-family: Newsreader, Georgia, serif;
+    font-size: 24px; font-weight: 400; letter-spacing: -.01em;
+    margin: 0; line-height: 1.15;
+  }
+  .spec-world {
+    font-family: Newsreader, Georgia, serif; font-style: italic;
+    font-size: 15.5px; color: var(--ink-dim); margin: -8px 0 0;
+  }
+  .hook { margin: 0; font-size: 14px; color: var(--ink-dim); }
+  .hook b { color: var(--ink); font-weight: 500; }
+
+  /* outcome of the narrowing pass — injected from one map, see script */
+  .spec-status {
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: 9.5px; letter-spacing: .09em; text-transform: uppercase;
+    padding: 3px 8px; border-radius: 2px; align-self: flex-start;
+    margin-top: -4px;
+  }
+  .spec-status.kept  { color: var(--lock); border: 1px solid var(--lock); }
+  .spec-status.aside { color: var(--ink-faint); border: 1px dashed var(--line-2); }
+  .spec.is-aside .spec-view { opacity: .58; }
+  .spec-foot {
+    margin-top: auto; padding-top: 14px; border-top: 1px dashed var(--line);
+    display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 10.5px;
+  }
+  .cost { letter-spacing: .06em; text-transform: uppercase; }
+  .cost.skin  { color: var(--accent); }
+  .cost.line  { color: var(--ink-dim); }
+  .cost.world { color: #D98A5B; }
+  @media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) .cost.world { color: #A85A28; } }
+  :root[data-theme="light"] .cost.world { color: #A85A28; }
+  .spec-foot .strip-note { color: var(--ink-faint); text-align: right; }
+
+  /* ── closing ── */
+  .close {
+    margin-top: 64px; padding: 28px 30px;
+    border: 1px solid var(--line); background: var(--surface);
+  }
+  .close h2 { font-size: 24px; margin-bottom: 14px; }
+  .close ol { margin: 0; padding-left: 20px; color: var(--ink-dim); font-size: 14.5px; }
+  .close li { margin-bottom: 8px; }
+  .close li:last-child { margin-bottom: 0; }
+  .close b { color: var(--ink); font-weight: 500; }
+
+  a { color: var(--accent); }
+  a:focus-visible, .spec:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  @media (max-width: 620px) {
+    .wrap { padding-inline: 18px; }
+    .masthead { padding-top: 48px; }
+    .plate { grid-template-columns: 1fr; }
+  }
+</style>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="eyebrow">mangaMapper · aesthetic exploration · pre-lab</p>
+    <h1>Atmosphere Lab</h1>
+    <p class="standfirst">Twelve candidate worlds for the catalog, drawn from what the app actually <em>is</em> — a concordance between two tellings of the same story, where an honest gap beats a plausible guess. <em>Narrowing complete:</em> seven were kept as variants of three themes, five were set aside, and a fourth theme was generated from a random seed rather than chosen.</p>
+    <div class="runline">
+      <span><b>branch</b> theming</span>
+      <span><b>base</b> d38d763</span>
+      <span><b>generated</b> 12 across 5 families</span>
+      <span><b>kept</b> 7 → 3 themes</span>
+      <span><b>rolled</b> 3 → paper theatre</span>
+      <span><b>next</b> terminal lab</span>
+    </div>
+  </header>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">00</span><h2>Two things to settle before anything gets built</h2></div>
+    <p class="sec-note">Neither is an aesthetic question, but both gate the aesthetic work — and one of them is the reason a lab comes before a repo change.</p>
+    <div class="decisions">
+
+      <div class="decision">
+        <p class="q">Architecture</p>
+        <h3>There is no theme mechanism yet</h3>
+        <p>Today <code>:root</code> <em>is</em> the dark theme. The <code>.light</code> class exists in <span class="inline-code">index.css</span> but nothing ever applies it — the design doc says to treat light mode as unsupported until you decide otherwise.</p>
+        <p>Multiple themes each with variations needs three things that don't exist: token sets keyed by theme rather than baked into <code>:root</code>, a provider plus persistence, and — for the world themes below — a per-theme graphics layer that the terminal themes never load.</p>
+        <p class="verdict"><b>Recommendation:</b> explore in a lab first, exactly as Card Skin and Keycap did. Build the mechanism once you know how many themes are real and whether any of them need more than tokens.</p>
+      </div>
+
+      <div class="decision">
+        <p class="q">Dependencies</p>
+        <h3>Three.js wouldn't conflict — weight is the real cost</h3>
+        <p>You already ship <code>motion@13.1.0</code>; there is no <code>three</code> in your 25 dependencies. They don't collide: Motion animates DOM and SVG, Three renders into its own <code>&lt;canvas&gt;</code>. Different layers.</p>
+        <p>The actual cost is bundle size and contention. Three is larger than most of your current dependency set combined, and this app is a virtualized episode list with pixel-snapped hit-testing — a WebGL layer competing for the same frame is a real risk to the thing that has to stay smooth.</p>
+        <p class="verdict"><b>Recommendation:</b> if a world theme earns it, WebGL as <b>atmosphere only</b> — landing hero, depth wash behind the catalog — never behind the instrument, and lazy-loaded so terminal users pay nothing. I couldn't verify ThreeUI's licensing or MCP offering; that page renders client-side and returned nothing fetchable.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">01</span><h2>Terminal lineage</h2></div>
+    <p class="sec-note">Variations that keep the mono / near-sharp / dash-bordered vocabulary intact. All three are token swaps — cheap to try, cheap to abandon, and none of them threaten the rulings already locked into <span class="inline-code">instrument_v1</span>.</p>
+    <div class="plate">
+
+      <article class="spec" style="--g:#0B0A07;--l:#4A3A18;--c1:#FFB000;--c2:#C98A16;--c3:#7A5410;--c4:#FFD27F;--c5:#4E3A0C;">
+        <div class="spec-view">
+          <p class="spec-id"><span>phosphor_v1</span><span class="depth">amber CRT</span></p>
+          <div class="strip"></div>
+          <div class="strip-caption"><span>ep:1</span><span>ep:46</span></div>
+          <div class="chips"></div>
+        </div>
+        <div class="spec-body">
+          <h3 class="spec-name">Phosphor</h3>
+          <p class="spec-world">One hue, five intensities, a faint bloom.</p>
+          <p class="hook"><b>The hook:</b> forces the strip to encode type by intensity and hatch instead of hue — which is the accessibility win hiding inside an aesthetic. If five episode types stay legible on a single amber, they stay legible for every colour-vision profile you'd otherwise have to validate.</p>
+          <p class="hook"><b>The risk:</b> that's also the hard part. Five steps on one hue is a narrow ladder, and your <span class="inline-code">--type-*</span> set currently earns ΔE 9.6 across ten pairs. This one has to prove it.</p>
+          <div class="spec-foot"><span class="cost skin">token swap</span><span class="strip-note">hatch carries type</span></div>
+        </div>
+      </article>
+
+      <article class="spec" style="--g:#0A2740;--l:#2E6288;--c1:#8FD8F5;--c2:#F2D06B;--c3:#F08A6E;--c4:#A9B8F0;--c5:#5FC4A8;">
+        <div class="spec-view">
+          <p class="spec-id"><span>blueprint_v1</span><span class="depth">drafting</span></p>
+          <div class="strip"></div>
+          <div class="strip-caption"><span>ep:1</span><span>ep:46</span></div>
+          <div class="chips"></div>
+        </div>
+        <div class="spec-body">
+          <h3 class="spec-name">Blueprint</h3>
+          <p class="spec-world">Cyan on Prussian, dimension lines, callout leaders.</p>
+          <p class="hook"><b>The hook:</b> the app is a measuring instrument and this is the native visual language for measurement. "Episode 337 corresponds to chapter 291" is a <b>dimension line</b> — a drafting convention that already exists for stating a correspondence between two points, with the value written on the rule.</p>
+          <p class="hook">Un-adapted manga gets the draughtsman's own honesty device: a break symbol and <span class="inline-code">NOT TO SCALE</span>, rather than a span drawn as though it were measured.</p>
+          <div class="spec-foot"><span class="cost line">tokens + line-work</span><span class="strip-note">strip → measured rule</span></div>
+        </div>
+      </article>
+
+      <article class="spec" style="--g:#F6F1E4;--l:#B0A68C;--c1:#1E6E8C;--c2:#A66A00;--c3:#B03A55;--c4:#6B4CA8;--c5:#2C7A4B;">
+        <div class="spec-view">
+          <p class="spec-id"><span>daylight_v1</span><span class="depth">light terminal</span></p>
+          <div class="strip"></div>
+          <div class="strip-caption"><span>ep:1</span><span>ep:46</span></div>
+          <div class="chips"></div>
+        </div>
+        <div class="spec-body">
+          <h3 class="spec-name">Daylight</h3>
+          <p class="spec-world">The same terminal, in a room with a window.</p>
+          <p class="hook"><b>The hook:</b> the least exciting specimen here and probably the most used. It closes the open decision in the design doc and makes the app legible on a laptop outdoors — the exact situation where someone finishes an episode and wants to know where to start reading.</p>
+          <p class="hook"><b>The trap:</b> don't invert the dark tokens. Dark grounds hide a lot of contrast sin; a light terminal needs its type palette re-derived from scratch and re-validated, not flipped.</p>
+          <div class="spec-foot"><span class="cost skin">token swap</span><span class="strip-note">re-derive, never invert</span></div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">02</span><h2>Depth worlds</h2></div>
+    <p class="sec-note">Your abyss direction, taken three ways. All three exploit the same structural fact: your navigation already <em>has</em> depth — landing, then catalog, then the card opens, then the episode list — and a series' chapter count is itself a distance downward.</p>
+    <div class="plate">
+
+      <article class="spec" style="--g:#05121A;--l:#164554;--c1:#4FE0C4;--c2:#E0C86A;--c3:#E86A9C;--c4:#9B7BE8;--c5:#3E9E7A;">
+        <div class="spec-view">
+          <p class="spec-id"><span>abyss_v1</span><span class="depth">layer 4</span></p>
+          <div class="strip"></div>
+          <div class="strip-caption"><span>ep:1</span><span>ep:46</span></div>
+          <div class="chips"></div>
+        </div>
+        <div class="spec-body">
+          <h3 class="spec-name">The Abyss</h3>
+          <p class="spec-world">Strata. Light attenuates as you descend.</p>
+          <p class="hook"><b>The hook:</b> depth is the navigation. The landing sits at the surface — verdant, hazy, overexposed; the catalog is the second layer; opening a card drops you to the fourth, where the ground darkens, particulate drifts, and the only colour left is bioluminescent. Each layer is a complete token set, and moving between them is a transition rather than a page.</p>
+          <p class="hook"><b>The detail worth stealing:</b> the curse of ascending. Going <em>back up</em> costs something — a held beat, a bleach of colour — so the descent feels one-way in the way the source material means it.</p>
+          <div class="spec-foot"><span class="cost world">graphics layer</span><span class="strip-note">nav depth = token set</span></div>
+        </div>
+      </article>
+
+      <article class="spec" style="--g:#EEF4F7;--l:#9DB6C4;--c1:#17607F;--c2:#9A6A12;--c3:#B2445C;--c4:#5B4BA0;--c5:#1E7A5E;">
+        <div class="spec-view">
+          <p class="spec-id"><span>sounding_v1</span><span class="depth">survey chart</span></p>
+          <div class="strip"></div>
+          <div class="strip-caption"><span>ep:1</span><span>ep:46</span></div>
+          <div class="chips"></div>
+        </div>
+        <div class="spec-body">
+          <h3 class="spec-name">Sounding</h3>
+          <p class="spec-world">Bathymetric survey — contours, depth figures, chart paper.</p>
+          <p class="hook"><b>The hook:</b> the instrument version of the abyss, and the strongest fit for your product promise. Nautical charts have a formal convention for water that has not been surveyed: it is left <b>blank</b>. Not estimated, not interpolated from the depths around it — blank, because a guessed depth wrecks ships.</p>
+          <p class="hook">That is <span class="inline-code">// no_source</span> and the honest dash, already solved by a discipline that has taken it seriously for two centuries. The strip becomes a depth trace; the manga tail is unsounded water.</p>
+          <div class="spec-foot"><span class="cost line">tokens + line-work</span><span class="strip-note">blank = unsurveyed</span></div>
+        </div>
+      </article>
+
+      <article class="spec" style="--g:#14100D;--l:#3E3226;--c1:#C9A227;--c2:#B5651D;--c3:#8C4A3F;--c4:#6E7B8B;--c5:#4E6B4A;">
+        <div class="spec-view">
+          <p class="spec-id"><span>core_v1</span><span class="depth">stratigraphic</span></p>
+          <div class="strip"></div>
+          <div class="strip-caption"><span>ep:1</span><span>ep:46</span></div>
+          <div class="chips"></div>
+        </div>
+        <div class="spec-body">
+          <h3 class="spec-name">Core Sample</h3>
+          <p class="spec-world">A drilled column, logged by hand, read top to bottom.</p>
+          <p class="hook"><b>The hook:</b> your strip rotated ninety degrees already <em>is</em> a core log. Canon is bedrock, filler is intrusion, volume boundaries are bedding planes, and the manga-only tail is the section below where the drill stopped.</p>
+          <p class="hook">The cheapest structural idea on this board: it needs earth tones and a rotation, not a graphics layer — and it turns the vertical episode list and the horizontal strip into the same object seen twice.</p>
+          <div class="spec-foot"><span class="cost skin">token swap</span><span class="strip-note">strip = the list, rotated</span></div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">03</span><h2>Archive &amp; document</h2></div>
+    <p class="sec-note">Three paper worlds. They read closest together in swatch form because their separation is typographic and structural rather than chromatic — judge these on their type and their furniture, not their palettes.</p>
+    <div class="plate">
+
+      <article class="spec" style="--g:#EFE7D6;--l:#B9A785;--c1:#8C2F1F;--c2:#9A6B12;--c3:#5C6B52;--c4:#3F4E8C;--c5:#2E5E4E;">
+        <div class="spec-view">
+          <p class="spec-id"><span>concordance_v1</span><span class="depth">vellum</span></p>
+          <div class="strip"></div>
+          <div class="strip-caption"><span>ep:1</span><span>ep:46</span></div>
+          <div class="chips"></div>
+        </div>
+        <div class="spec-body">
+          <h3 class="spec-name">Concordance</h3>
+          <p class="spec-world">A critical edition — parallel columns, marginal glosses, rubrication.</p>
+          <p class="hook"><b>The hook:</b> the app is literally a concordance, and textual scholarship has spent centuries building display conventions for exactly your problem — two versions of one text, set in parallel, with every divergence annotated in the margin rather than smoothed away.</p>
+          <p class="hook">It also hands you the right word. A gap in a manuscript is a <b>lacuna</b>: marked, measured, never invented. Filler becomes scribal interpolation — present in one witness, absent in the other, and labelled as such.</p>
+          <div class="spec-foot"><span class="cost line">tokens + type work</span><span class="strip-note">honest gap = lacuna</span></div>
+        </div>
+      </article>
+
+      <article class="spec" style="--g:#E8E1D0;--l:#B3A992;--c1:#26424F;--c2:#8A6A1F;--c3:#9B3B34;--c4:#4A3F6B;--c5:#35603F;">
+        <div class="spec-view">
+          <p class="spec-id"><span>catalog_v1</span><span class="depth">card drawer</span></p>
+          <div class="strip"></div>
+          <div class="strip-caption"><span>ep:1</span><span>ep:46</span></div>
+          <div class="chips"></div>
+        </div>
+        <div class="spec-body">
+          <h3 class="spec-name">Card Catalog</h3>
+          <p class="spec-world">Buff stock, typewriter, date stamps, a rod through the drawer.</p>
+          <p class="hook"><b>The hook:</b> the app already calls itself this — the path bar reads <span class="inline-code">~/catalog/{id}</span> — and the interaction is already the metaphor. A compact row expanding in place <em>is</em> a card lifted from a drawer and read, then dropped back.</p>
+          <p class="hook">Muted almost to monochrome by design: an index card carries one ink and one stamp colour, so the five type colours have to earn their presence rather than being handed a full spectrum.</p>
+          <div class="spec-foot"><span class="cost skin">token swap</span><span class="strip-note">expand-in-place = the metaphor</span></div>
+        </div>
+      </article>
+
+      <article class="spec" style="--g:#F1EDE2;--l:#B5AC96;--c1:#2F5F3E;--c2:#A8791F;--c3:#A34632;--c4:#4C5A87;--c5:#6B4A7A;">
+        <div class="spec-view">
+          <p class="spec-id"><span>fieldguide_v1</span><span class="depth">plate 14</span></p>
+          <div class="strip"></div>
+          <div class="strip-caption"><span>ep:1</span><span>ep:46</span></div>
+          <div class="chips"></div>
+        </div>
+        <div class="spec-body">
+          <h3 class="spec-name">Field Guide</h3>
+          <p class="spec-world">Specimen plates, taxonomic keys, hand-lettered annotation.</p>
+          <p class="hook"><b>The hook:</b> your data is already a taxonomy — <span class="inline-code">kind: season / movie / ova / special</span> is a rank, <span class="inline-code">series_relations</span> is a cladogram, and the source-scope rule is the working definition of a species boundary.</p>
+          <p class="hook">A field guide is also honest by construction: plates carry "range uncertain" and "not observed" as first-class states, drawn with the same care as a confirmed sighting. That is your empty-state brief, already illustrated.</p>
+          <div class="spec-foot"><span class="cost skin">token swap</span><span class="strip-note">343 series = a taxonomy</span></div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">04</span><h2>Instrument &amp; machine</h2></div>
+    <p class="sec-note">Where the article's Industrial Control Panel lands once it is pulled toward what this app actually does — comparing two runs of the same thing and being candid about where one of them stops.</p>
+    <div class="plate">
+
+      <article class="spec" style="--g:#0D0F0E;--l:#2F3D33;--c1:#35D07F;--c2:#F2C14E;--c3:#FF5C5C;--c4:#4EC5F2;--c5:#B07FE8;">
+        <div class="spec-view">
+          <p class="spec-id"><span>telemetry_v1</span><span class="depth">two traces</span></p>
+          <div class="strip"></div>
+          <div class="strip-caption"><span>ep:1</span><span>ep:46</span></div>
+          <div class="chips"></div>
+        </div>
+        <div class="spec-body">
+          <h3 class="spec-name">Telemetry</h3>
+          <p class="spec-world">Mission control — synchronised traces, warning stripes, machine labels.</p>
+          <p class="hook"><b>The hook:</b> two runs of one story, plotted against a shared clock, diverging and rejoining. Flight telemetry is the discipline that displays exactly that, and it has a hard-won convention for missing data: <b>loss of signal</b> is drawn as its own state, hatched and labelled, never as a flat line pretending the signal was zero.</p>
+          <p class="hook">Your card is already called the instrument. This is what happens if you take that name completely literally.</p>
+          <div class="spec-foot"><span class="cost skin">token swap</span><span class="strip-note">gap = loss of signal</span></div>
+        </div>
+      </article>
+
+      <article class="spec" style="--g:#17161A;--l:#3B3843;--c1:#E8E3D8;--c2:#D9A441;--c3:#C0453F;--c4:#5FA8C7;--c5:#8A7BB5;">
+        <div class="spec-view">
+          <p class="spec-id"><span>flatbed_v1</span><span class="depth">reel 3</span></p>
+          <div class="strip"></div>
+          <div class="strip-caption"><span>ep:1</span><span>ep:46</span></div>
+          <div class="chips"></div>
+        </div>
+        <div class="spec-body">
+          <h3 class="spec-name">Flatbed</h3>
+          <p class="spec-world">An editing bay — timeline, splice marks, leader tape, grease pencil.</p>
+          <p class="hook"><b>The hook:</b> the most literally true metaphor on the board. Adaptation <em>is</em> editing. Filler is inserted footage, a compressed arc is a cut, an anime-original ending is a rewritten reel, and volume boundaries are reel changes.</p>
+          <p class="hook">It brings a motion vocabulary with it that your print-style card entrance would sit comfortably beside: leader countdown, sprocket registration, the frame-accurate scrub. Grease-pencil marks are what a human writes directly on the film when something needs flagging — which is what a manual anchor is.</p>
+          <div class="spec-foot"><span class="cost line">tokens + motion</span><span class="strip-note">adaptation = editing</span></div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">05</span><h2>Drawn from the source</h2></div>
+    <p class="sec-note">One specimen, and the only one whose visual language comes from the medium the app is about rather than from an instrument that resembles it.</p>
+    <div class="plate">
+
+      <article class="spec" style="--g:#F7F5F0;--l:#A8A49C;--c1:#1A1A1A;--c2:#6E6E6E;--c3:#B0B0B0;--c4:#E03A3A;--c5:#2B4FA8;">
+        <div class="spec-view">
+          <p class="spec-id"><span>tankobon_v1</span><span class="depth">right to left</span></p>
+          <div class="strip"></div>
+          <div class="strip-caption"><span>ep:1</span><span>ep:46</span></div>
+          <div class="chips"></div>
+        </div>
+        <div class="spec-body">
+          <h3 class="spec-name">Tankōbon</h3>
+          <p class="spec-world">Ink, screentone, panel gutters, an obi band around a real object.</p>
+          <p class="hook"><b>The hook:</b> the medium already solved your central problem. The <b>gutter</b> — the white channel between panels — is where a manga puts everything it deliberately does not show, and readers understand it perfectly without being told. That is the honest gap, native.</p>
+          <p class="hook">Screentone gives you a density encoding that is greyscale by default, so filler density can read without spending a single hue; the spot colour stays reserved for the one thing that matters. And a volume is a physical object with a spine — which is the only theme here where <span class="inline-code">vol:108/110</span> is a picture rather than a number.</p>
+          <div class="spec-foot"><span class="cost world">tone work</span><span class="strip-note">gutter = the honest gap</span></div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">06</span><h2>Rolled, not chosen</h2></div>
+    <p class="sec-note">The fourth theme was not picked from this board. It was <b>generated from a 128-character random string</b> — which is the method surrealism actually used: the exquisite corpse, automatic drawing, Duchamp dropping three metre-long threads and keeping the curves they fell in as a new unit of measurement. Base-36 slices of the seed map to enumerated options and hue angles, so the theme is reproducible and every choice is inspectable.</p>
+
+    <div class="decision" style="border-left-color:var(--lock);margin-bottom:30px;">
+      <p class="q">The seed · 128 chars, [a-z0-9], from /dev/urandom</p>
+      <p style="font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:11px;line-height:1.75;color:var(--ink-dim);word-break:break-all;margin-bottom:14px;">3oo5578m6mbjz7x62ifonq0ohcnyfwdfv0be1ymwpsfghrkx3xmdze4sx4po5d80jg6o28d3nseg901506o7uukvc0q8jsfctafcrz7c51jqksie4a5p5lqh9q8s3bz8</p>
+      <p><b>Chars 0–15 → the theme law:</b> impossible stair · drift · cut paper · warped mono · void ground · complementary pair. Plus radius 4px, gutter 9px, shadow 41%, skew 2°. Chars 16–47, 48–79 and 80–111 are the three variant palettes.</p>
+      <p class="verdict"><b>What the seed does not get to decide:</b> the lightness and saturation bands are designer-set, so a roll can pick any hue relationship it likes and never produce mud. The same split <span class="inline-code">syntax_v1</span> already ran, where the original hues failed as-is and were validator-tuned rather than accepted.</p>
+    </div>
+
+    <div class="plate">
+
+      <article class="spec" style="--g:#171A14;--l:#4E5A44;--c1:#5EA3D4;--c2:#5CCC6F;--c3:#DEAC73;--c4:#B581DA;--c5:#B1D45E;">
+        <div class="spec-view">
+          <p class="spec-id"><span>glasshouse</span><span class="depth">chars 16–47</span></p>
+          <div class="strip"></div>
+          <div class="strip-caption"><span>ep:1</span><span>ep:46</span></div>
+          <div class="chips"></div>
+        </div>
+        <div class="spec-body">
+          <h3 class="spec-name">Glasshouse</h3>
+          <p class="spec-world">A conservatory after dark — pressed specimens, staged at depth.</p>
+          <p class="hook"><b>Material: pressed specimen.</b> Matte stock, deckled edges, the soft shadow of a herbarium sheet. The roll handed over greens, sand and one cold blue, and the flats read as pressed leaves.</p>
+          <p class="hook"><b>Nudged:</b> filler, anime and manga landed within 14° of each other. Anime moved to violet at 275°, which is also the better semantics — anime-original is the one thing in the garden that was never grown there. Now 46°.</p>
+          <div class="spec-foot"><span class="cost skin">1 hue corrected</span><span class="strip-note">min sep 46°</span></div>
+        </div>
+      </article>
+
+      <article class="spec" style="--g:#141A16;--l:#4A5C51;--c1:#6DCAE3;--c2:#C96BE1;--c3:#E2658E;--c4:#8585E0;--c5:#B0E24B;">
+        <div class="spec-view">
+          <p class="spec-id"><span>fairground</span><span class="depth">chars 48–79</span></p>
+          <div class="strip"></div>
+          <div class="strip-caption"><span>ep:1</span><span>ep:46</span></div>
+          <div class="chips"></div>
+        </div>
+        <div class="spec-body">
+          <h3 class="spec-name">Fairground</h3>
+          <p class="spec-world">Poster paper with the registration a hair out of true.</p>
+          <p class="hook"><b>Material: printed flats.</b> Every colour edge carries a sliver of the plate beneath it. Gloss where the others are matte.</p>
+          <p class="hook"><b>The clean roll</b> — the only one of the three that needed no correction at all, 47° straight out of the string. Widest spread on the whole board, and the one that will stress-test whether five loud types can share an 18px strip without turning into confetti.</p>
+          <div class="spec-foot"><span class="cost skin">uncorrected</span><span class="strip-note">min sep 47°</span></div>
+        </div>
+      </article>
+
+      <article class="spec" style="--g:#0E0C0B;--l:#5A4A48;--c1:#E75064;--c2:#DC6ADC;--c3:#A67EDD;--c4:#5CC6E0;--c5:#4DCB97;">
+        <div class="spec-view">
+          <p class="spec-id"><span>anaglyph</span><span class="depth">chars 80–111</span></p>
+          <div class="strip"></div>
+          <div class="strip-caption"><span>ep:1</span><span>ep:46</span></div>
+          <div class="chips"></div>
+        </div>
+        <div class="spec-body">
+          <h3 class="spec-name">Anaglyph</h3>
+          <p class="spec-world">Every flat printed twice, red and cyan, 2° apart.</p>
+          <p class="hook"><b>Material: channel separation.</b> Depth you would need glasses for and are not given.</p>
+          <p class="hook"><b>The roll broke here, and the break became the idea.</b> It dealt <span class="inline-code">mixed</span> and <span class="inline-code">anime</span> the identical hue — 192° both — which would have made two episode types indistinguishable on the strip. Fixing it by the anaglyph's own logic put <span class="inline-code">mixed</span> on magenta at 300°, <b>the colour red and cyan actually make where they overlap</b>. The type that means "both" is now the colour that means "both".</p>
+          <div class="spec-foot"><span class="cost world">collision repaired</span><span class="strip-note">min sep 35°</span></div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <div class="close">
+    <h2>What came of it</h2>
+    <p style="color:var(--ink-dim);font-size:14.5px;margin:0 0 16px;max-width:70ch;">Seven specimens became variants of three themes; five were set aside; a fourth theme was rolled. The full architecture — the four layers, what a theme owns versus a variant, and all twelve variants on the real card — lives in the companion document, <b>Theme Contract</b>.</p>
+    <ol>
+      <li><b>The five set aside are not wasted.</b> Their ideas travel even though their skins don't: <b>lacuna</b> from Concordance as the word for a marked, measured, never-invented gap; <b>loss of signal</b> from Telemetry as a state drawn in its own right rather than as a flat line; and Field Guide's insistence that "not observed" is illustrated with the same care as a confirmed sighting — which is the empty-state brief exactly.</li>
+      <li><b>Archive was the runner-up for the fourth slot</b> and lost it to a random string. If a fifth theme is ever wanted, it arrives with three coherent variants already assembled.</li>
+      <li><b>Next: the Terminal Lab</b> — live presets over the real card, real strip, real episode list, switchable in place, the way Card Skin and Keycap were settled. Terminal goes first because it is cheapest and rides rulings that already shipped, so it is the honest test of whether the theme/variant split survives contact.</li>
+      <li><b>Phosphor is the first variant built</b>, deliberately. One hue carrying five episode types is the likeliest failure on the board, and finding that out early is worth more than three easy wins.</li>
+      <li><b>Then you rule</b>, it ports, and it lands in <b>DESIGN_SYSTEM.md</b> with a name and a date — same as <span class="inline-code">instrument_v1</span>, <span class="inline-code">interior_v1</span>, <span class="inline-code">kbd_v4</span>.</li>
+    </ol>
+  </div>
+
+</div>
+
+<script>
+  // One episode-type sequence, rendered in all twelve palettes — the whole
+  // comparison rests on the data being identical across specimens.
+  // [type, episode count] · types map to --c1..--c5 in --type-* order.
+  var SEQ = [
+    [1, 6], [2, 1], [1, 5], [3, 4], [1, 7], [2, 1],
+    [4, 3], [1, 5], [3, 2], [1, 6], [5, 6]
+  ];
+  var TOTAL = SEQ.reduce(function (n, s) { return n + s[1]; }, 0);
+  var LABELS = { 1: 'canon', 2: 'mixed', 3: 'filler', 4: 'anime', 5: 'manga' };
+
+  // Outcome of the narrowing pass, keyed by specimen id.
+  var STATUS = {
+    phosphor_v1:    ['kept', '→ terminal'],
+    blueprint_v1:   ['kept', '→ terminal'],
+    daylight_v1:    ['kept', '→ terminal'],
+    abyss_v1:       ['kept', '→ depth'],
+    sounding_v1:    ['kept', '→ depth'],
+    core_v1:        ['kept', '→ depth'],
+    concordance_v1: ['aside', 'set aside · idea kept'],
+    catalog_v1:     ['aside', 'set aside'],
+    fieldguide_v1:  ['aside', 'set aside · idea kept'],
+    telemetry_v1:   ['aside', 'set aside · idea kept'],
+    flatbed_v1:     ['aside', 'set aside'],
+    tankobon_v1:    ['kept', '→ drawn from the source'],
+    glasshouse:     ['kept', '→ paper theatre'],
+    fairground:     ['kept', '→ paper theatre'],
+    anaglyph:       ['kept', '→ paper theatre']
+  };
+
+  document.querySelectorAll('.spec').forEach(function (spec) {
+    var idEl = spec.querySelector('.spec-id span');
+    var st = idEl && STATUS[idEl.textContent.trim()];
+    if (st) {
+      var tag = document.createElement('span');
+      tag.className = 'spec-status ' + st[0];
+      tag.textContent = st[1];
+      if (st[0] === 'aside') spec.classList.add('is-aside');
+      var name = spec.querySelector('.spec-name');
+      name.parentNode.insertBefore(tag, name);
+    }
+
+    var strip = spec.querySelector('.strip');
+    SEQ.forEach(function (seg) {
+      var el = document.createElement('i');
+      el.style.flex = seg[1] + ' 1 0';
+      // manga_only is hatched in the live app — the tail the anime never reached
+      el.style.background = seg[0] === 5
+        ? 'repeating-linear-gradient(45deg, var(--c5) 0 3px, transparent 3px 6px), color-mix(in srgb, var(--c5) 30%, transparent)'
+        : 'var(--c' + seg[0] + ')';
+      el.title = LABELS[seg[0]] + ' · ' + seg[1] + ' ep';
+      strip.appendChild(el);
+    });
+
+    var chips = spec.querySelector('.chips');
+    [1, 2, 3, 4, 5].forEach(function (t) {
+      var c = document.createElement('span');
+      c.className = 'chip';
+      c.textContent = LABELS[t];
+      c.style.color = 'var(--c' + t + ')';
+      c.style.background = 'color-mix(in srgb, var(--c' + t + ') 14%, transparent)';
+      chips.appendChild(c);
+    });
+  });
+</script>

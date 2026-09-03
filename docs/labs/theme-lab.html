@@ -1,0 +1,1600 @@
+<title>Theme Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Archivo:wght@400;500;600;700;800&display=swap">
+
+<style>
+  /* ══════════════════════════════════════════════════════════════════════
+     THEME LAB — one catalog, 343 synthetic series, three interaction models.
+       THEME   (layer 1) = the interaction model. Scroll/descend/turn/track.
+       VARIANT (layer 2) = colour + material. Never touches behaviour.
+       ATMOS   (layer 3) = toggleable. Every theme complete without it.
+     ══════════════════════════════════════════════════════════════════════ */
+  :root {
+    --sh-bg:#101214; --sh-fg:#DDE2E6; --sh-dim:#7C868F; --sh-line:#282E33;
+    --sh-raise:#1A1F23; --sh-accent:#7FB2C9;
+  }
+  *,*::before,*::after { box-sizing:border-box; }
+  body {
+    margin:0; height:100vh; overflow:hidden; background:var(--sh-bg); color:var(--sh-fg);
+    font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:13px;
+    -webkit-font-smoothing:antialiased; display:flex; flex-direction:column;
+  }
+
+  /* ── shell ── */
+  #bar {
+    flex:none; display:flex; flex-wrap:wrap; gap:10px 18px; align-items:center;
+    padding:9px 14px; border-bottom:1px solid var(--sh-line); background:var(--sh-bg); z-index:100;
+  }
+  #bar .grp { display:flex; align-items:center; gap:7px; }
+  #bar .cap { font-size:9px; letter-spacing:.13em; text-transform:uppercase; color:#5D666E; }
+  .seg { display:flex; border:1px solid #333A40; border-radius:3px; overflow:hidden; }
+  .seg button {
+    font:inherit; font-size:11px; padding:5px 10px; cursor:pointer; line-height:1.4;
+    background:transparent; color:var(--sh-dim); border:0; border-right:1px solid #333A40;
+  }
+  .seg button:last-child { border-right:0; }
+  .seg button:hover:not(:disabled) { background:var(--sh-raise); color:var(--sh-fg); }
+  .seg button[aria-pressed="true"] { background:var(--sh-accent); color:#0C1013; font-weight:600; }
+  .seg button:disabled { opacity:.32; cursor:not-allowed; }
+  .seg button:focus-visible { outline:2px solid var(--sh-accent); outline-offset:-2px; }
+  #q {
+    font:inherit; font-size:11.5px; padding:5px 9px; width:190px;
+    background:var(--sh-raise); color:var(--sh-fg); border:1px solid #333A40; border-radius:3px;
+  }
+  #q:focus { outline:none; border-color:var(--sh-accent); }
+  #meter {
+    margin-left:auto; display:flex; gap:14px; font-size:10.5px; color:#5D666E;
+    font-variant-numeric:tabular-nums;
+  }
+  #meter b { color:var(--sh-dim); font-weight:500; }
+  #meter .warn { color:#D98A5B; }
+
+  /* ── stage: each theme mounts its own world here ── */
+  #stage { flex:1; position:relative; overflow:hidden; }
+  .fixture-tag {
+    position:fixed; right:10px; bottom:8px; z-index:200; font-size:9px; letter-spacing:.1em;
+    color:#5D666E; text-transform:uppercase; pointer-events:none;
+  }
+
+  /* ══ THEME: terminal — a pager over a buffer ══
+     Measured in COLUMNS, not pixels: 100ch wide and it does not grow with
+     the browser, because that is what a terminal is. */
+  .t-terminal {
+    position:absolute; inset:0; background:var(--m-ground); color:var(--m-ink);
+    display:flex; justify-content:center;
+  }
+  .t-terminal .term {
+    position:relative; width:min(100ch, 100%); height:100%;
+    display:flex; flex-direction:column; background:var(--m-card);
+    border-left:1px dashed var(--m-line); border-right:1px dashed var(--m-line);
+  }
+  .t-terminal .termhead, .t-terminal .termstatus {
+    flex:none; display:flex; justify-content:space-between; gap:16px;
+    padding:7px 14px; font-size:10.5px; color:var(--m-dim);
+    letter-spacing:.1em; font-variant-numeric:tabular-nums;
+  }
+  .t-terminal .termhead { border-bottom:1px dashed var(--m-line); text-transform:uppercase; }
+  .t-terminal .termstatus {
+    border-top:1px solid var(--m-line);
+    background:color-mix(in srgb,var(--m-ink) 7%,transparent);
+  }
+  .t-terminal .termstatus .keys { opacity:.6; }
+  .t-terminal .termbody { flex:1; overflow-y:auto; }
+
+  .t-terminal .row {
+    display:grid; grid-template-columns:1ch 4ch 1fr 13ch 19ch; gap:0 1ch;
+    align-items:center; height:22px; padding:0 14px; width:100%;
+    background:none; border:0; font:inherit; color:inherit; text-align:left;
+    font-size:12px; cursor:pointer;
+    /* PRINT: output arrives, it does not fade in */
+    animation:printrow 1ms steps(1,end) both;
+  }
+  @keyframes printrow { from { opacity:0 } to { opacity:1 } }
+  .t-terminal .row.nodelay { animation:none; }
+  .t-terminal .row:hover { background:color-mix(in srgb,var(--m-ink) 6%,transparent); }
+  .t-terminal .row.on { background:color-mix(in srgb,var(--m-ink) 10%,transparent); outline:none; }
+  .t-terminal .row .cur { color:var(--c1); opacity:0; font-size:11px; }
+  .t-terminal .row.on .cur { opacity:1; animation:blink 1.06s steps(1,end) infinite; }
+  @keyframes blink { 0%,49%{opacity:1} 50%,100%{opacity:0} }
+  .t-terminal .row .ix { color:var(--m-dim); font-size:10px; text-align:right; font-variant-numeric:tabular-nums; }
+  .t-terminal .row .nm { color:var(--m-title); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .t-terminal .row .nm i { color:var(--m-dim); font-style:normal; font-size:10.5px; margin-left:8px; }
+  .t-terminal .row .num { color:var(--m-dim); font-size:10.5px; font-variant-numeric:tabular-nums; text-align:right; }
+
+  /* layer 3 — the glass. Scanlines, phosphor bloom, tube vignette. */
+  .t-terminal .crt {
+    position:absolute; inset:0; pointer-events:none; z-index:5;
+    background:
+      repeating-linear-gradient(0deg, rgba(0,0,0,.22) 0 1px, transparent 1px 3px),
+      radial-gradient(125% 95% at 50% 50%, transparent 52%, rgba(0,0,0,.5) 100%);
+  }
+  body.nogfx .t-terminal .crt { display:none; }
+  body:not(.nogfx) .t-terminal .row .nm {
+    text-shadow:var(--m-bloom, 0 0 0) color-mix(in srgb,var(--m-title) 45%,transparent);
+  }
+  body:not(.nogfx) .t-terminal .row.on .cur {
+    text-shadow:var(--m-bloom, 0 0 0) var(--c1);
+  }
+  @media (prefers-reduced-motion:reduce) {
+    .t-terminal .row { animation:none; }
+    .t-terminal .row.on .cur { animation:none; opacity:1; }
+  }
+
+  /* ══ THEME: abyss — one scalar, scroll-driven ══ */
+  /* z-order: column behind, atmosphere over it, content on top */
+  #colbg {
+    position:absolute; inset:0; z-index:0; pointer-events:none;
+    background:
+      radial-gradient(120% 70% at 50% -12%, var(--m-fog) 0%, transparent 62%),
+      linear-gradient(180deg, var(--m-fog) 0%, var(--m-ground) 52%, var(--m-card) 100%);
+  }
+  .t-abyss {
+    position:absolute; inset:0; overflow-y:auto; z-index:2;
+    color:var(--m-ink); background:transparent;
+  }
+  .t-abyss .colwrap { min-height:100%; }
+  .t-abyss .surface {
+    min-height:88%; display:flex; flex-direction:column; justify-content:center;
+    padding:0 34px; max-width:900px; margin-inline:auto;
+  }
+  .t-abyss h1 { font-size:clamp(28px,4.6vw,52px); line-height:1.03; margin:0 0 16px; color:var(--m-title); font-weight:500; letter-spacing:-.03em; }
+  .t-abyss .blurb { color:var(--m-dim); max-width:48ch; font-family:Archivo,sans-serif; font-size:14px; line-height:1.6; }
+  .t-abyss .cat { max-width:900px; margin:0 auto; padding:8vh 34px 34vh; }
+  .t-abyss .row {
+    display:grid; grid-template-columns:34px 1fr 124px 104px; gap:14px; align-items:center;
+    padding:9px 10px; cursor:pointer; width:100%; text-align:left; font:inherit; color:inherit;
+    background:none; border:0; border-left:2px solid transparent;
+    border-bottom:1px solid color-mix(in srgb,var(--m-line) 45%,transparent);
+  }
+  .t-abyss .row:hover, .t-abyss .row:focus-visible {
+    background:color-mix(in srgb,var(--m-card) 55%,transparent); border-left-color:var(--c1); outline:none;
+  }
+  .t-abyss .row .ix { font-size:10px; color:var(--m-dim); text-align:right; font-variant-numeric:tabular-nums; }
+  .t-abyss .row .nm { color:var(--m-title); font-size:14px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .t-abyss .row .jp { font-size:10px; color:var(--m-dim); margin-top:2px; }
+  .t-abyss .row .num { font-size:10.5px; color:var(--m-dim); text-align:right; font-variant-numeric:tabular-nums; }
+  #colcanvas { position:absolute; inset:0; pointer-events:none; z-index:1; }
+  /* the gauge is an instrument: bands sit at their TRUE depths, so the
+     spacing is uneven — the shallow layers crowd, the deep ones are vast */
+  .gauge {
+    position:absolute; right:16px; top:50%; transform:translateY(-50%); z-index:6;
+    display:flex; align-items:center; gap:9px; font-size:9px;
+    color:var(--m-dim); letter-spacing:.06em;
+  }
+  .gauge .strata { position:relative; height:246px; width:118px; }
+  .gauge .strata span {
+    position:absolute; right:0; transform:translateY(-50%);
+    display:flex; align-items:baseline; gap:6px; white-space:nowrap;
+    opacity:.42; transition:opacity .3s, color .3s;
+  }
+  .gauge .strata span.on { opacity:1; color:var(--m-ink); font-weight:600; }
+  .gauge .strata .bn { font-style:normal; }
+  .gauge .rule {
+    width:2px; height:246px; position:relative;
+    background:color-mix(in srgb,var(--m-ink) 16%,transparent);
+  }
+  .gauge .rule .tick {
+    position:absolute; left:-4px; width:9px; height:1px;
+    background:var(--m-ink); opacity:.3;
+  }
+  .gauge .needle {
+    position:absolute; left:-5px; width:12px; height:2px; background:var(--m-ink);
+    box-shadow:0 0 6px color-mix(in srgb,var(--m-ink) 60%,transparent);
+  }
+  .gauge .read {
+    font-variant-numeric:tabular-nums; min-width:66px; font-size:11px;
+    color:var(--m-ink); padding-top:0; letter-spacing:.02em;
+  }
+
+  /* ══ THEME: tankobon — no scroll; leaves turn on a right-hand spine ══ */
+  .t-tankobon {
+    position:absolute; inset:0; background:#2A2724;
+    display:flex; align-items:center; justify-content:center;
+    padding:6px 26px 48px;    /* the bar already costs 44px; give the rest to the book */
+  }
+  /* 5:7 — a tankōbon's proportions. Height follows width, so the object keeps
+     its shape at any viewport instead of stretching to fill the stage. */
+  .t-tankobon .book {
+    position:relative; width:min(720px,100%); aspect-ratio:5 / 7; max-height:100%;
+    perspective:2200px; perspective-origin:100% 50%; rotate:var(--skew);
+  }
+  /* The spine is on the RIGHT — a Japanese binding. The free edge is on the
+     left, and turning a page means lifting that edge TOWARD the reader and
+     carrying it over the spine. That is a POSITIVE rotateY about the right
+     edge; negative would push the page away into the screen, which is the
+     one thing hands never do. */
+  .t-tankobon .leaf {
+    position:absolute; inset:0;
+    transform-origin:100% 50%; transform-style:preserve-3d;
+    transition:transform .78s cubic-bezier(.36,.05,.28,1);
+  }
+  .t-tankobon .leaf.turned { transform:rotateY(178deg); }
+  .t-tankobon .face {
+    position:absolute; inset:0; overflow:hidden; backface-visibility:hidden;
+    background:var(--paper); color:var(--ink);
+    display:flex; flex-direction:column;
+  }
+  .t-tankobon .face.front { box-shadow:-14px 0 34px rgba(0,0,0,.34); }
+  .t-tankobon .leaf.turned .face { box-shadow:none; }
+  /* the reverse of the sheet — you see it from 90° onward */
+  .t-tankobon .face.back {
+    transform:rotateY(180deg);
+    background:
+      linear-gradient(90deg, rgba(0,0,0,.14), transparent 22%, transparent 78%, rgba(0,0,0,.05)),
+      var(--paper-2);
+  }
+  .t-tankobon .face::after {
+    content:''; position:absolute; inset:0; pointer-events:none; z-index:5;
+    background:radial-gradient(var(--ink) var(--tone-dot), transparent calc(var(--tone-dot) + .35px)) 0 0 / var(--tone-pitch) var(--tone-pitch);
+    opacity:var(--grain); mix-blend-mode:multiply;
+  }
+  body.nogfx .t-tankobon .face::after { display:none; }
+  /* paper is thick: a gutter shadow pools against the spine */
+  .t-tankobon .face.front::before {
+    content:''; position:absolute; top:0; bottom:0; right:0; width:26px; z-index:4;
+    background:linear-gradient(270deg, rgba(0,0,0,.15), transparent); pointer-events:none;
+  }
+  .t-tankobon .page { flex:1; display:grid; gap:var(--gutter); padding:var(--gutter); min-height:0; }
+  .t-tankobon .panel { background:var(--paper-2); border:1.5px solid var(--rule); padding:11px 13px; overflow:hidden; min-height:0; }
+  .t-tankobon .panel.plain { background:var(--paper); }
+  .t-tankobon .lab { font-size:9px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-2); margin-bottom:5px; }
+  .t-tankobon .idx { grid-template-rows:auto 1fr; }
+  .t-tankobon .idxgrid {
+    columns:2; column-gap:var(--gutter); column-rule:1.5px solid var(--rule);
+    height:100%; overflow:hidden; font-size:11px;
+  }
+  .t-tankobon .idxrow {
+    display:flex; gap:8px; align-items:baseline; padding:2.5px 0; cursor:pointer; width:100%;
+    background:none; border:0; font:inherit; color:inherit; text-align:left; break-inside:avoid;
+  }
+  .t-tankobon .idxrow:hover, .t-tankobon .idxrow:focus-visible { background:var(--ink); color:var(--paper); outline:none; }
+  .t-tankobon .idxrow .n { width:30px; text-align:right; color:var(--ink-2); font-size:9.5px; flex:none; font-variant-numeric:tabular-nums; }
+  .t-tankobon .idxrow:hover .n { color:var(--paper); opacity:.7; }
+  .t-tankobon .idxrow .t { flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-family:Archivo,sans-serif; font-size:11.5px; }
+  .t-tankobon .idxrow .p { font-size:9.5px; color:var(--ink-2); flex:none; font-variant-numeric:tabular-nums; }
+  .t-tankobon .idxrow:hover .p { color:var(--paper); opacity:.7; }
+  .t-tankobon .cover { padding:0; grid-template-rows:1fr auto; }
+  .t-tankobon .cover .art {
+    display:flex; flex-direction:column; justify-content:flex-end; padding:30px; gap:12px;
+    background:radial-gradient(var(--tone) var(--tone-dot), transparent calc(var(--tone-dot) + .4px)) 0 0 / var(--tone-pitch) var(--tone-pitch),
+      linear-gradient(200deg, var(--spot) 0%, transparent 58%), var(--paper);
+  }
+  .t-tankobon .cover h1 { font-family:Archivo,sans-serif; font-size:clamp(32px,6.4vw,58px); margin:0; font-weight:800; letter-spacing:-.035em; line-height:.9; white-space:pre-line; }
+  .t-tankobon .cover .obi { background:var(--ink); color:var(--paper); padding:12px 30px; display:flex; justify-content:space-between; gap:14px; font-size:12px; }
+  .t-tankobon .rail2 {
+    position:absolute; left:0; right:0; bottom:9px; display:flex; justify-content:center; gap:12px;
+    color:#9A9288; font-size:10px; align-items:center;
+  }
+  .t-tankobon .rail2 button { font:inherit; padding:4px 9px; background:#3A3632; color:#E7E1D8; border:1px solid #55504A; border-radius:2px; cursor:pointer; }
+  .t-tankobon .rail2 button:disabled { opacity:.35; cursor:not-allowed; }
+  .t-tankobon .folio { font-variant-numeric:tabular-nums; min-width:130px; text-align:center; }
+
+  /* tankobon — VISUAL view: preview panels, panel grammar not a grid */
+  /* ── VISUAL view — asymmetric panel grammar, read RIGHT TO LEFT ──
+     A manga page is not a grid of equal cells: panels differ in width and
+     height, and the eye enters top-right and leaves bottom-left.
+     `direction:rtl` makes grid line 1 the RIGHT edge, so DOM order 1..6
+     lands in true reading order and the numbering needs no reordering. */
+  .t-tankobon .page.vis {
+    grid-template-columns:repeat(6, 1fr);
+    grid-template-rows:1.12fr .96fr .74fr .56fr;
+    direction:rtl;
+  }
+  .t-tankobon .page.vis > * { direction:ltr; }
+  .t-tankobon .vispanel:nth-child(1) { grid-column:1 / -1; grid-row:1; }      /* establishing */
+  .t-tankobon .vispanel:nth-child(2) { grid-column:1 / 5;  grid-row:2; }      /* wide, right  */
+  .t-tankobon .vispanel:nth-child(3) { grid-column:5 / 7;  grid-row:2; }      /* narrow, left */
+  .t-tankobon .vispanel:nth-child(4) { grid-column:1 / 4;  grid-row:3; }
+  .t-tankobon .vispanel:nth-child(5) { grid-column:4 / 7;  grid-row:3 / 5; }  /* tall, spans  */
+  .t-tankobon .vispanel:nth-child(6) { grid-column:1 / 4;  grid-row:4; }      /* the beat out */
+  .t-tankobon .vispanel:nth-child(5) .strip { height:15px; }
+  .t-tankobon .vispanel:nth-child(3) .vnm,
+  .t-tankobon .vispanel:nth-child(6) .vnm { font-size:clamp(12.5px,1.55vw,16px); }
+  .t-tankobon .vispanel:nth-child(6) .vjp { display:none; }
+  .t-tankobon .vispanel {
+    cursor:pointer; font:inherit; color:inherit; text-align:left; display:flex; flex-direction:column;
+  }
+
+  .t-tankobon .vispanel:hover, .t-tankobon .vispanel:focus-visible {
+    background:var(--ink); color:var(--paper); outline:none;
+  }
+  .t-tankobon .vispanel:hover .lab, .t-tankobon .vispanel:hover .vjp,
+  .t-tankobon .vispanel:hover .vnum { color:var(--paper); opacity:.72; }
+  .t-tankobon .vnm {
+    font-family:Archivo,sans-serif; font-weight:800; letter-spacing:-.02em; line-height:1.02;
+    font-size:clamp(15px,2.1vw,21px);
+  }
+  .t-tankobon .vispanel.hero .vnm { font-size:clamp(24px,4.2vw,40px); }
+  .t-tankobon .vjp { font-size:10px; color:var(--ink-2); margin-top:4px; }
+  .t-tankobon .vspacer { flex:1; min-height:8px; }
+  .t-tankobon .vnum { font-size:10px; color:var(--ink-2); margin-top:7px; font-variant-numeric:tabular-nums; }
+
+  /* tankobon — the entry SPREAD: a page of the book, never a modal */
+  .t-tankobon .page.full { grid-template-columns:1.35fr 1fr; grid-template-rows:auto auto 1fr; }
+  .t-tankobon .fulltitle {
+    font-family:Archivo,sans-serif; font-weight:800; letter-spacing:-.025em; line-height:.98;
+    font-size:clamp(26px,5vw,46px);
+  }
+  .t-tankobon .figpanel { background:var(--ink); color:var(--paper); border-color:var(--ink); }
+  .t-tankobon .figpanel .lab { color:var(--paper); opacity:.6; }
+  .t-tankobon .figs { font-family:'IBM Plex Mono',monospace; font-size:16px; line-height:1.85; font-variant-numeric:tabular-nums; }
+  .t-tankobon .figs .d { opacity:.55; }
+  .t-tankobon .leg { display:flex; flex-wrap:wrap; gap:4px; margin-top:9px; }
+  .t-tankobon .leg span { font-family:'IBM Plex Mono',monospace; font-size:9px; padding:2px 5px; border:1px solid currentColor; }
+  .t-tankobon .footpanel { grid-column:1 / -1; display:flex; flex-direction:column; justify-content:center; gap:10px; }
+  .t-tankobon .gapnote {
+    border:1.5px dashed var(--rule); padding:10px 13px; font-family:'IBM Plex Mono',monospace;
+    font-size:11px; color:var(--ink-2); display:flex; justify-content:space-between; gap:12px;
+  }
+  .t-tankobon .back {
+    background:none; border:0; font:inherit; font-family:'IBM Plex Mono',monospace; font-size:10.5px;
+    cursor:pointer; color:var(--ink-2); text-decoration:underline; align-self:flex-start; padding:0;
+  }
+
+  /* depth — the DIVE: the detail is a further descent, not a card on top */
+  .dive {
+    position:absolute; inset:0; z-index:8; display:flex; align-items:center; justify-content:center;
+    padding:34px; background:linear-gradient(180deg, rgba(3,10,16,.55), rgba(3,10,16,.93));
+    opacity:0; transition:opacity .5s ease-out;
+  }
+  .dive.on { opacity:1; }
+  .diveinner {
+    max-width:620px; width:100%; color:var(--m-ink);
+    transform:translateY(40px); opacity:0;
+    transition:transform .62s cubic-bezier(.16,.8,.28,1), opacity .5s ease-out;
+  }
+  .dive.on .diveinner { transform:none; opacity:1; }
+  .divelab { font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--m-dim); margin-bottom:14px; }
+  .divetitle {
+    font-size:clamp(30px,5.4vw,52px); line-height:1.02; letter-spacing:-.03em; color:var(--m-title);
+    text-shadow:0 0 26px color-mix(in srgb,var(--m-title) 38%,transparent);
+  }
+  .divejp { font-size:12px; color:var(--m-dim); margin:7px 0 22px; }
+  .divefigs { font-size:15px; font-variant-numeric:tabular-nums; margin-bottom:16px; }
+  .divefigs b { font-weight:500; }
+  .divefigs .d { color:var(--m-dim); }
+  .diveleg { display:flex; flex-wrap:wrap; gap:5px; margin-top:10px; }
+  .diveleg span { font-size:9.5px; padding:2px 7px; border-radius:2px; }
+  .divegap { margin-top:18px; padding:9px 12px; border:1px dashed var(--m-line); color:var(--m-dim); font-size:11px; }
+  .diveup {
+    margin-top:22px; font:inherit; font-size:11px; padding:7px 14px; cursor:pointer;
+    background:transparent; color:var(--m-ink); border:1px solid var(--m-line); border-radius:2px;
+  }
+  .diveup:hover { background:color-mix(in srgb,var(--m-ink) 10%,transparent); }
+  @media (prefers-reduced-motion:reduce) { .dive, .diveinner { transition:none; } }
+
+  /* ══ THEME: paper theatre — a diorama tracked sideways ══ */
+  .t-paper { position:absolute; inset:0; background:var(--m-ground); overflow:hidden; cursor:grab; }
+  .t-paper.grabbing { cursor:grabbing; }
+  .t-paper .backdrop { position:absolute; inset:0; z-index:0; pointer-events:none; }
+  .t-paper .plane {
+    position:absolute; left:0; top:50%; height:0; will-change:transform;
+  }
+  .t-paper .plane.mid { z-index:1; }
+  .t-paper .plane.content { z-index:3; }
+  .t-paper .plane.near { z-index:5; }
+
+  /* cut paper: a hard edge, a 4px corner, and a shadow at the rolled 41% */
+  .t-paper .flat, .t-paper .cut {
+    position:absolute; border-radius:4px;
+    filter:drop-shadow(6px 10px 14px rgba(0,0,0,.41));
+  }
+  .t-paper .flat {
+    width:210px; padding:12px 13px; top:0; margin-top:-90px;
+    background:var(--m-card); border:1px solid var(--m-line); color:var(--m-ink);
+    display:flex; flex-direction:column; text-align:left; font:inherit; cursor:pointer;
+    transition:filter .3s, border-color .3s;
+  }
+  .t-paper .flat:hover, .t-paper .flat:focus-visible {
+    border-color:var(--c1); outline:none;
+    filter:drop-shadow(6px 14px 20px rgba(0,0,0,.5));
+  }
+  .t-paper .fnum {
+    font-size:9px; letter-spacing:.18em; color:var(--m-dim);
+    font-variant-numeric:tabular-nums;
+  }
+  /* "warped mono" — the app's own face, never quite regular */
+  .t-paper .fnm {
+    font-size:15px; color:var(--m-title); line-height:1.15; margin-top:5px;
+    letter-spacing:.005em; text-shadow:var(--m-sep) var(--c4);
+  }
+  .t-paper .fjp { font-size:9.5px; color:var(--m-dim); margin-top:3px; }
+  .t-paper .fspace { flex:1; min-height:10px; }
+  .t-paper .ffig { font-size:9.5px; color:var(--m-dim); margin-top:6px; font-variant-numeric:tabular-nums; }
+  .t-paper .cut { background:var(--m-card); opacity:.85; top:0; border:1px solid var(--m-line); }
+  .t-paper .cut.soft { background:color-mix(in srgb,var(--m-card) 60%,transparent); border-color:transparent; opacity:.5; }
+  body.nogfx .t-paper .cut { display:none; }
+  body.nogfx .t-paper .flat { filter:none; box-shadow:0 6px 16px rgba(0,0,0,.35); }
+
+  /* the stage recedes when a flat comes downstage */
+  .t-paper .plane, .t-paper .backdrop { transition:opacity .42s, filter .42s; }
+  .t-paper.downstage .backdrop, .t-paper.downstage .plane.mid,
+  .t-paper.downstage .plane.near { opacity:.18; filter:blur(2px); }
+  .t-paper.downstage .plane.content { opacity:.12; }
+  .t-paper.downstage { cursor:pointer; }
+  .t-paper .flat.front { opacity:0; }
+
+  .t-paper .prail {
+    position:absolute; left:0; right:0; bottom:0; z-index:8;
+    display:flex; align-items:center; gap:16px; padding:12px 22px;
+    font-size:10px; color:var(--m-dim); letter-spacing:.1em;
+  }
+  .t-paper .pread { font-variant-numeric:tabular-nums; flex:none; }
+  .t-paper .ptrack {
+    flex:1; height:2px; background:color-mix(in srgb,var(--m-ink) 16%,transparent);
+    position:relative; cursor:pointer;
+  }
+  .t-paper .pthumb {
+    position:absolute; top:-4px; width:10px; height:10px; border-radius:4px;
+    background:var(--c1); transform:translateX(-50%);
+  }
+  .t-paper .phint { flex:none; opacity:.55; }
+
+  .t-paper .dossier {
+    position:absolute; z-index:9; left:50%; top:50%; width:min(600px,86%);
+    transform:translate(-50%,-46%) scale(.97); opacity:0;
+    transition:transform .46s cubic-bezier(.16,.8,.28,1), opacity .34s;
+    background:var(--m-card); border:1px solid var(--m-line); border-radius:4px;
+    padding:24px 26px; color:var(--m-ink);
+    filter:drop-shadow(10px 18px 34px rgba(0,0,0,.55));
+  }
+  .t-paper .dossier.on { opacity:1; transform:translate(-50%,-50%) scale(1); }
+  .t-paper .dnum { font-size:9.5px; letter-spacing:.18em; color:var(--m-dim); font-variant-numeric:tabular-nums; }
+  .t-paper .dnm {
+    font-size:clamp(24px,3.6vw,36px); color:var(--m-title); line-height:1.05; margin-top:8px;
+    letter-spacing:-.01em; text-shadow:var(--m-sep) var(--c4);
+  }
+  .t-paper .djp { font-size:11px; color:var(--m-dim); margin:6px 0 18px; }
+  .t-paper .dfig { font-size:14px; font-variant-numeric:tabular-nums; margin-bottom:14px; }
+  .t-paper .dfig .d { color:var(--m-dim); }
+  .t-paper .dleg { display:flex; flex-wrap:wrap; gap:5px; margin-top:9px; }
+  .t-paper .dleg span { font-size:9.5px; padding:2px 7px; border-radius:3px; }
+  .t-paper .dgap { margin-top:16px; padding:9px 12px; border:1px dashed var(--m-line); color:var(--m-dim); font-size:10.5px; }
+  .t-paper .dback {
+    margin-top:20px; font:inherit; font-size:10.5px; padding:7px 14px; cursor:pointer;
+    background:transparent; color:var(--m-ink); border:1px solid var(--m-line); border-radius:4px;
+  }
+  .t-paper .dback:hover { background:color-mix(in srgb,var(--m-ink) 10%,transparent); }
+  @media (prefers-reduced-motion:reduce) {
+    .t-paper .dossier, .t-paper .plane, .t-paper .backdrop { transition:none; }
+  }
+  @media (max-width:700px) { .t-paper .phint { display:none; } }
+
+  /* shared strip */
+  .strip { display:flex; gap:1px; height:14px; }
+  .strip i { display:block; min-width:2px; }
+  .t-abyss .strip, .t-terminal .strip { height:12px; }
+
+  /* ── detail overlay (shared shell, themed inside) ── */
+  #ov { position:absolute; inset:0; z-index:50; display:none; align-items:center; justify-content:center; padding:24px; }
+  #ov.on { display:flex; }
+  #ovbg { position:absolute; inset:0; }
+  #ovcard { position:relative; width:min(660px,100%); max-height:100%; overflow:auto; }
+
+  @media (prefers-reduced-motion:reduce) { .t-tankobon .leaf { transition:none; } }
+  @media (max-width:700px) {
+    .t-terminal .row { grid-template-columns:1ch 1fr 11ch; }
+    .t-terminal .row .ix { display:none; }
+    .t-terminal .termstatus .keys { display:none; }
+    .t-terminal .row .strip, .t-abyss .row .strip { display:none; }
+    .t-abyss .row { grid-template-columns:28px 1fr 92px; }
+    .gauge { display:none; }
+    .t-tankobon .idxgrid { columns:1; }
+  }
+</style>
+
+<div id="bar">
+  <div class="grp"><span class="cap">theme</span><span class="seg" id="segTheme"></span></div>
+  <div class="grp"><span class="cap">variant</span><span class="seg" id="segVar"></span></div>
+  <div class="grp" id="viewGrp" hidden><span class="cap">view</span><span class="seg" id="segView"></span></div>
+  <div class="grp"><input id="q" type="search" placeholder="search 343 series…" aria-label="Search catalog"></div>
+  <div class="grp"><span class="seg" id="segGfx"></span></div>
+  <div id="meter">
+    <span><b id="mFps">—</b> fps</span>
+    <span><b id="mRows">—</b> rows</span>
+    <span><b id="mNodes">—</b> nodes</span>
+    <span><b id="mPaint">—</b> ms build</span>
+  </div>
+</div>
+
+<div id="stage"></div>
+<div class="fixture-tag">synthetic fixture — not catalog data</div>
+
+<script>
+// ══ SYNTHETIC CATALOG — 343 fictional series, seeded and reproducible ══
+// Deliberately NOT real titles. A fixture showing a real work beside invented
+// chapter mappings would be a false claim about a real thing, which is the one
+// claim this product promises never to make. Fictional titles test layout
+// identically and carry none of that risk.
+// Shape and distribution ARE realistic: title lengths, the long tail of
+// episode counts, filler tendency, unadapted tails, and anime-originals with
+// no source at all.
+function makeCatalog(n) {
+  var seed = 0x5eed1e;
+  function rnd() {                                  // mulberry32
+    seed |= 0; seed = seed + 0x6D2B79F5 | 0;
+    var t = Math.imul(seed ^ seed >>> 15, 1 | seed);
+    t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
+    return ((t ^ t >>> 14) >>> 0) / 4294967296;
+  }
+  var pick = function (a) { return a[Math.floor(rnd() * a.length)]; };
+  var between = function (a, b) { return a + Math.floor(rnd() * (b - a + 1)); };
+
+  var A = ['Crimson','Hollow','Ashen','Verdant','Gilded','Severed','Quiet','Iron','Pale','Drowned',
+    'Lantern','Ember','Thorn','Cradle','Fang','Prism','Wake','Hymn','Salt','Amber',
+    'Nine','Vermillion','Glass','Winter','Hallow','Rust','Silent','Bright','Cobalt','Grave',
+    'Falling','Second','Last','Northern','Blue','Endless','Broken','Sable','Wandering','Sunless'];
+  var B = ['Oath','Choir','Machine','Saint','Compass','Harvest','Gate','Bell','Orchard','Anchor',
+    'Signal','Marrow','Pilgrim','Atlas','Requiem','Vessel','Sovereign','Tide','Lament','Reliquary',
+    'Verdict','Garden','Lighthouse','Cartographer','Almanac','Ledger','Threshold','Beacon','Foundry','Meridian',
+    'Chorus','Archive','Aviary','Bastion','Cipher','Dominion','Errand','Fable','Gallows','Hourglass'];
+  var SUF = ['Arc','Chronicle','Saga','Record','Cycle','Tale'];
+  var KA = ['ク','リ','ム','ゾ','ン','ホ','ロ','ウ','ア','シ','ェ','ヴ','ァ','デ','ト','ラ','ジ','カ','セ','ノ','ヨ','ミ','ハ','ネ','ル','マ','キ','タ','スイ','ガ'];
+  var KJ = ['鋼','影','花','剣','空','海','月','龍','紅','闇','光','風','刃','詩','塔','匣','archive','夜','灰','鐘'];
+
+  function title() {
+    var r = rnd();
+    if (r < 0.30) return pick(A) + ' ' + pick(B);
+    if (r < 0.50) return 'The ' + pick(B) + ' of ' + pick(A);
+    if (r < 0.66) return pick(A) + ' no ' + pick(B);
+    if (r < 0.78) return pick(A) + ' ' + pick(B) + ': ' + pick(A) + ' ' + pick(SUF);
+    if (r < 0.88) return pick(B) + '!';
+    return pick(A) + ' ' + pick(B) + ' ' + between(2, 4);
+  }
+  function jp() {
+    var s = '', k = between(3, 6);
+    for (var i = 0; i < k; i++) s += rnd() < 0.55 ? pick(KA) : pick(KJ);
+    return s.replace(/archive/g, '巻');
+  }
+
+  var out = [];
+  for (var i = 0; i < n; i++) {
+    // episode counts follow a real long tail: mostly cours, a few monsters
+    var r = rnd(), ep;
+    if (r < 0.46) ep = pick([12, 12, 13, 24, 25, 26]);
+    else if (r < 0.74) ep = between(24, 64);
+    else if (r < 0.90) ep = between(64, 180);
+    else if (r < 0.97) ep = between(180, 500);
+    else ep = between(500, 1180);
+
+    var hasManga = rnd() > 0.11;              // ~11% are anime-original
+    var filler = rnd() < 0.30 ? rnd() * 0.34 : rnd() * 0.06;   // filler tendency
+    var tch = 0, tvol = 0, ch = 0, vol = 0, tail = 0;
+    if (hasManga) {
+      ch = Math.max(4, Math.round(ep * (1.4 + rnd() * 1.5)));
+      tail = rnd() < 0.62 ? between(1, Math.max(2, Math.round(ch * 0.22))) : 0;
+      tch = ch + tail;
+      tvol = Math.max(1, Math.round(tch / (8 + rnd() * 3)));
+      vol = Math.max(1, Math.round(ch / (tch / tvol)));
+    }
+
+    // episode-type runs. index 4 = source_only, a ZONE not a type.
+    var seq = [], left = ep;
+    while (left > 0) {
+      var run = Math.min(left, between(3, Math.max(4, Math.round(ep / 6))));
+      seq.push([0, run]); left -= run;
+      if (left <= 0) break;
+      if (rnd() < filler * 2.2) {
+        var f = Math.min(left, between(1, Math.max(2, Math.round(ep * filler * 0.5))));
+        seq.push([rnd() < 0.72 ? 2 : 3, f]); left -= f;
+      } else if (rnd() < 0.16) { seq.push([1, 1]); left -= 1; }
+    }
+    if (tail > 0) seq.push([4, Math.max(1, Math.round(tail / (tch / ep)))]);
+
+    var fillerCount = seq.reduce(function (a, s) { return a + (s[0] === 2 || s[0] === 3 ? s[1] : 0); }, 0);
+    out.push({
+      id: 'series-' + (i + 1), nm: title(), jp: jp(),
+      ep: ep, hasManga: hasManga, vol: vol, tvol: tvol, ch: ch, tch: tch,
+      tail: tail, filler: fillerCount, seq: seq,
+      status: rnd() < 0.22 ? 'airing' : 'finished'
+    });
+  }
+  return out;
+}
+
+
+// ── catalog ─────────────────────────────────────────────────────────────
+var CATALOG = makeCatalog(343);
+var TYPES = ['canon','mixed','filler','anime','manga'];
+var CVAR  = ['--c1','--c2','--c3','--c4','--c5'];
+var SOURCE_ONLY = 4;
+
+function fill(i) {
+  var c = 'var(' + CVAR[i] + ')';
+  // texture encodes ZONE, never type — source_only is hatched unconditionally
+  return i === SOURCE_ONLY
+    ? 'repeating-linear-gradient(45deg,color-mix(in srgb,' + c + ' 40%,transparent) 0 3px,transparent 3px 6px)'
+    : c;
+}
+function stripEl(seq, h) {
+  var d = document.createElement('div');
+  d.className = 'strip';
+  if (h) d.style.height = h;
+  for (var i = 0; i < seq.length; i++) {
+    var s = document.createElement('i');
+    s.style.flex = seq[i][1] + ' 1 0';
+    s.style.background = fill(seq[i][0]);
+    d.appendChild(s);
+  }
+  return d;
+}
+function el(t, c, x) { var n = document.createElement(t); if (c) n.className = c; if (x != null) n.textContent = x; return n; }
+function pos(s) { return s.hasManga ? 'ch:' + s.ch + '/' + s.tch : '// no_source'; }
+
+// ══ THEMES — each owns an interaction model (layer 1) and hosts variants
+//    (layer 2). Same catalog, same rows, radically different experience.
+var THEMES = {};
+
+// ─────────────────────────────────────────────────────────────────────────
+// TERMINAL — a PAGER over a buffer, not a scrolling page.
+// The frame is measured in COLUMNS (ch), because that is what a terminal is:
+// 100×N, stated in the header, and it does not grow with the browser.
+// Rows PRINT on arrival — stepped, no easing, the grammar already ruled in
+// `card-print`. A block cursor holds the selection, j/k walk, space pages,
+// g/G jump, and the status line is `less`.
+// ATMOS (layer 3) = the glass: scanlines, bloom, vignette.
+// ─────────────────────────────────────────────────────────────────────────
+THEMES.terminal = {
+  variants: {
+    current:   { label:'current', tok:{ '--m-ground':'#12141A','--m-card':'#171A20','--m-line':'#3A3E45','--m-ink':'#C9D1D9','--m-dim':'#7E8894','--m-title':'#58E08A','--m-bloom':'0 0 6px',
+                 '--c1':'#58B8E4','--c2':'#ECB351','--c3':'#DC6AA3','--c4':'#896ADC','--c5':'#298E57' } },
+    phosphor:  { label:'phosphor', tok:{ '--m-ground':'#0B0A07','--m-card':'#100D08','--m-line':'#2B2110','--m-ink':'#FFCE73','--m-dim':'#8A6A22','--m-title':'#FFB000','--m-bloom':'0 0 8px',
+                 '--c1':'#FFBE3D','--c2':'#EB9C14','--c3':'#A36E1F','--c4':'#E5D29E','--c5':'#6B4F1F' } },
+    duotone:   { label:'duotone', tok:{ '--m-ground':'#0B0A07','--m-card':'#100D08','--m-line':'#2B2110','--m-ink':'#FFCE73','--m-dim':'#8A6A22','--m-title':'#FFB000','--m-bloom':'0 0 8px',
+                 '--c1':'#FFC247','--c2':'#C38418','--c3':'#B9CCD5','--c4':'#EBE0C2','--c5':'#527B98' } },
+    blueprint: { label:'blueprint', tok:{ '--m-ground':'#0A2740','--m-card':'#0C2E4A','--m-line':'#21587C','--m-ink':'#CDE7F5','--m-dim':'#5E8FAD','--m-title':'#89E8F0','--m-bloom':'0 0 7px',
+                 '--c1':'#89E8F0','--c2':'#E6D94C','--c3':'#E64F37','--c4':'#8D68C0','--c5':'#50A589' } },
+    daylight:  { label:'daylight', tok:{ '--m-ground':'#F6F1E4','--m-card':'#FBF8F0','--m-line':'#CFC5AC','--m-ink':'#3A3527','--m-dim':'#8A8069','--m-title':'#244260','--m-bloom':'0 0 0',
+                 '--c1':'#244260','--c2':'#906713','--c3':'#8E153F','--c4':'#7523C7','--c5':'#0D7D6E' } }
+  },
+  mount: function (stage, list) {
+    var root = el('div', 't-terminal');
+    var term = el('div', 'term');
+    var head = el('div', 'termhead');
+    var body = el('div', 'termbody');
+    var stat = el('div', 'termstatus');
+    term.appendChild(head); term.appendChild(body); term.appendChild(stat);
+    root.appendChild(term);
+    root.appendChild(el('div', 'crt'));       // layer 3 — the glass
+    stage.appendChild(root);
+
+    var sel = 0, ROWH = 22;
+    var rowEls = [];
+    var frag = document.createDocumentFragment();
+    list.forEach(function (s, i) {
+      var b = el('button', 'row'); b.type = 'button';
+      b.appendChild(el('span', 'cur', '\\u2588'));    // the block cursor
+      b.appendChild(el('span', 'ix', i + 1));
+      var nm = el('span', 'nm', s.nm);
+      nm.appendChild(el('i', null, s.jp));
+      b.appendChild(nm);
+      b.appendChild(stripEl(s.seq));
+      b.appendChild(el('span', 'num', 'ep:' + s.ep + ' ' + pos(s)));
+      // PRINT: output arrives stepped, and only the first screenful staggers —
+      // a terminal does not take four seconds to draw 343 lines
+      if (i < 46) b.style.animationDelay = (i * 7) + 'ms';
+      else b.classList.add('nodelay');
+      b.addEventListener('click', function () { sel = i; paintSel(); overlayCard(s); });
+      rowEls.push(b); frag.appendChild(b);
+    });
+    body.appendChild(frag);
+
+    function cols() {
+      var probe = el('span', null, '0'.repeat(10));
+      probe.style.cssText = 'position:absolute;visibility:hidden;font:inherit';
+      term.appendChild(probe);
+      var w = probe.getBoundingClientRect().width / 10;
+      probe.remove();
+      return Math.max(1, Math.round(term.clientWidth / w));
+    }
+    function paintHead() {
+      head.textContent = '';
+      head.appendChild(el('span', null, '~/catalog'));
+      head.appendChild(el('span', null, cols() + '\\u00d7' + Math.round(body.clientHeight / ROWH) +
+        '  \\u00b7  ' + list.length + ' series'));
+    }
+    function paintSel() {
+      rowEls.forEach(function (r, i) { r.classList.toggle('on', i === sel); });
+      paintStatus();
+    }
+    function paintStatus() {
+      var max = body.scrollHeight - body.clientHeight;
+      var pct = max > 0 ? Math.round(body.scrollTop / max * 100) : 100;
+      stat.textContent = '';
+      stat.appendChild(el('span', null, ':' + (list.length ? (sel + 1) : 0) + '/' + list.length));
+      stat.appendChild(el('span', 'keys', 'j/k walk   space page   g/G ends   / search'));
+      stat.appendChild(el('span', null, (max <= 0 ? 'ALL' : pct + '%')));
+    }
+    function reveal() {
+      var r = rowEls[sel];
+      if (r) r.scrollIntoView({ block:'nearest' });
+    }
+    function move(d) {
+      if (!rowEls.length) return;
+      sel = Math.max(0, Math.min(rowEls.length - 1, sel + d));
+      paintSel(); reveal();
+    }
+    function onKey(e) {
+      var q = document.getElementById('q');
+      if (e.key === '/' && e.target !== q) { e.preventDefault(); q.focus(); q.select(); return; }
+      if (e.target === q) { if (e.key === 'Escape') q.blur(); return; }
+      var page = Math.max(1, Math.floor(body.clientHeight / ROWH) - 2);
+      if (e.key === 'j' || e.key === 'ArrowDown') { e.preventDefault(); move(1); }
+      else if (e.key === 'k' || e.key === 'ArrowUp') { e.preventDefault(); move(-1); }
+      else if (e.key === ' ' || e.key === 'PageDown') { e.preventDefault(); move(page); }
+      else if (e.key === 'b' || e.key === 'PageUp') { e.preventDefault(); move(-page); }
+      else if (e.key === 'G') { e.preventDefault(); sel = rowEls.length - 1; paintSel(); reveal(); }
+      else if (e.key === 'g') { e.preventDefault(); sel = 0; paintSel(); reveal(); }
+      else if (e.key === 'Enter' && rowEls[sel]) { e.preventDefault(); overlayCard(list[sel]); }
+    }
+    addEventListener('keydown', onKey);
+    body.addEventListener('scroll', paintStatus, { passive:true });
+    addEventListener('resize', paintHead);
+    requestAnimationFrame(function () { paintHead(); paintSel(); });
+    return {
+      unmount: function () { removeEventListener('keydown', onKey); removeEventListener('resize', paintHead); }
+    };
+  }
+};
+
+// ─────────────────────────────────────────────────────────────────────────
+// ABYSS — one scalar, scroll-driven. Ascent eased slower than descent.
+// The variant decides what the ramp ramps.
+// ─────────────────────────────────────────────────────────────────────────
+var DEPTH_KEYS = ['--m-ground','--m-fog','--m-card','--m-ink','--m-dim','--m-line','--m-title'];
+function hx(h) { h = h.replace('#',''); return [parseInt(h.slice(0,2),16),parseInt(h.slice(2,4),16),parseInt(h.slice(4,6),16)]; }
+function mixc(a,b,t) { var A=hx(a),B=hx(b); return 'rgb('+Math.round(A[0]+(B[0]-A[0])*t)+','+Math.round(A[1]+(B[1]-A[1])*t)+','+Math.round(A[2]+(B[2]-A[2])*t)+')'; }
+
+THEMES.abyss = {
+  variants: {
+    descent: { label:'descent', ramps:'luminance',
+      tok:{ '--c1':'#4FE0C4','--c2':'#E0C86A','--c3':'#E86A9C','--c4':'#9B7BE8','--c5':'#3E9E7A' },
+      unit:'m', max:22000,
+      strata:[
+        { n:'surface',               d:0 },
+        { n:'forest of temptation',  d:1350 },
+        { n:'great fault',           d:2600 },
+        { n:'goblet of giants',      d:7000 },
+        { n:'sea of corpses',        d:12000 },
+        { n:'capital of unreturned', d:13000 },
+        { n:'maelstrom',             d:15500 },
+        // theorised, never confirmed — no one has brought back a name or a number
+        { n:'womb',                  d:20000, unknown:true }
+      ],
+      stops:[['#9FC2A6','#C3DCC2','#8FB69B','#16241C','#3D5648','#7BA189','#12301F'],
+             ['#4E8A7C','#6BA592','#437A6E','#0E1F1C','#1E4038','#3B7266','#0B2620'],
+             ['#1B4A50','#28626A','#173F45','#CBE7E2','#5E9A96','#2A5F64','#8FE0D2'],
+             ['#0A2830','#123A44','#0A2029','#BFE6DE','#4E8A87','#164554','#4FE0C4'],
+             ['#05121A','#08202C','#071A22','#BFE6DE','#3F726F','#123845','#4FE0C4']] },
+    sounding: { label:'sounding', ramps:'contour density',
+      tok:{ '--c1':'#17607F','--c2':'#9A6A12','--c3':'#B2445C','--c4':'#5B4BA0','--c5':'#1E7A5E' },
+      unit:'m', max:12000,
+      strata:[
+        { n:'shelf', d:0 }, { n:'slope', d:500 }, { n:'rise', d:1500 },
+        { n:'abyssal plain', d:3500 }, { n:'hadal', d:6000 }, { n:'trench', d:8500 },
+        { n:'challenger deep', d:10000 },
+        { n:'unsounded', d:11000, unknown:true }
+      ],
+      stops:[['#F4F8FA','#FFFFFF','#EAF2F6','#17303D','#5C7E92','#C3D6E0','#17607F'],
+             ['#E3EEF3','#F2F8FA','#D8E7EE','#16303E','#557A8E','#B3CADA','#155A78'],
+             ['#CFE2EB','#E0EDF3','#C2DAE6','#142D3A','#4C7286','#9FBDD0','#12526E'],
+             ['#B6D2E0','#C9E0EA','#A9C9DA','#122733','#446A7E','#8AAFC6','#0F4862'],
+             ['#9CC0D4','#B0CFDF','#8FB6CC','#10222D','#3C6276','#79A2BC','#0C3E56']] },
+    core: { label:'core', ramps:'strata banding',
+      tok:{ '--c1':'#C9A227','--c2':'#B5651D','--c3':'#8C4A3F','--c4':'#6E7B8B','--c5':'#4E6B4A' },
+      unit:'km', max:48,
+      strata:[
+        { n:'topsoil', d:0 }, { n:'subsoil', d:2 }, { n:'weathered', d:6 },
+        { n:'bedrock', d:12 }, { n:'basement', d:20 }, { n:'lower crust', d:30 },
+        { n:'moho', d:38 },
+        { n:'mantle', d:42, unknown:true }
+      ],
+      stops:[['#CFC3AC','#E0D6C2','#C2B49A','#241C12','#5A4A34','#A8977C','#2E2314'],
+             ['#8A7358','#A08A6C','#7C6549','#1E1710','#43341F','#6E5A42','#241A0E'],
+             ['#4E3F30','#61503C','#453728','#D8C9AE','#9A8264','#5E4C39','#E0B93A'],
+             ['#2A2119','#3A2E22','#241C15','#D8C9AE','#8A755A','#463726','#C9A227'],
+             ['#14100D','#1F1811','#1A1512','#D8C9AE','#7A664E','#3E3226','#C9A227']] }
+  },
+  mount: function (stage, list) {
+    var V = THEMES.abyss.variants[state.variant];
+    var root = el('div', 't-abyss');
+    var cv = document.createElement('canvas'); cv.id = 'colcanvas';
+    var wrap = el('div', 'colwrap');
+
+    var surf = el('div', 'surface');
+    surf.appendChild(el('h1', null, 'You finished the episode. Where does the manga pick up?'));
+    surf.appendChild(el('p', 'blurb', list.length + ' series, mapped episode to chapter. Filler marked, gaps shown honestly, nothing guessed. Scroll to descend.'));
+    wrap.appendChild(surf);
+
+    var cat = el('div', 'cat');
+    var frag = document.createDocumentFragment();
+    list.forEach(function (s, i) {
+      var b = el('button', 'row'); b.type = 'button';
+      b.appendChild(el('span', 'ix', i + 1));
+      var c = el('span');
+      c.appendChild(el('div', 'nm', s.nm));
+      c.appendChild(el('div', 'jp', s.jp));
+      b.appendChild(c);
+      b.appendChild(stripEl(s.seq));
+      b.appendChild(el('span', 'num', 'ep:' + s.ep + ' · ' + pos(s)));
+      b.addEventListener('click', function () { dive(s); });
+      frag.appendChild(b);
+    });
+    cat.appendChild(frag);
+    wrap.appendChild(cat);
+    root.appendChild(wrap);
+
+    var GH = 246;
+    var g = el('div', 'gauge');
+    var st = el('div', 'strata');
+    function buildBands() {
+      st.textContent = ''; rule.textContent = ''; rule.appendChild(needle);
+      V.strata.forEach(function (b) {
+        var y = (b.d / V.max) * GH;
+        var lab = el('span');
+        lab.style.top = y + 'px';
+        lab.appendChild(el('i', 'bn', b.n));
+        st.appendChild(lab);
+        var tk = el('div', 'tick'); tk.style.top = y + 'px'; rule.appendChild(tk);
+      });
+    }
+    var rule = el('div', 'rule'); var needle = el('div', 'needle'); rule.appendChild(needle);
+    var read = el('div', 'read');
+    buildBands();
+    g.appendChild(st); g.appendChild(rule); g.appendChild(read);
+    var bg = el('div'); bg.id = 'colbg';
+    stage.appendChild(bg); stage.appendChild(cv); stage.appendChild(root); stage.appendChild(g);
+
+    var ctx = cv.getContext('2d'), depth = 0, target = 0, raf = 0, dead = false;
+    var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    // The abyss is always as deep as it is — the layers have real depths and
+    // do not move. A shorter list gets you down faster, it does not make the
+    // world shallower. Atmosphere density still scales with the catalog.
+    var MOTES = Math.round(Math.min(260, 40 + list.length * 0.62));
+    var motes = [], forced = null;
+    function size() {
+      var r = Math.min(2, devicePixelRatio || 1);
+      cv.width = stage.clientWidth * r; cv.height = stage.clientHeight * r;
+      cv.style.width = stage.clientWidth + 'px'; cv.style.height = stage.clientHeight + 'px';
+      ctx.setTransform(r, 0, 0, r, 0, 0);
+      motes = [];
+      for (var i = 0; i < MOTES; i++) motes.push({ x:Math.random()*cv.clientWidth, y:Math.random()*cv.clientHeight,
+        r:.4+Math.random()*1.8, v:.10+Math.random()*.4, s:Math.random()*6.28, a:.14+Math.random()*.44 });
+    }
+    size(); addEventListener('resize', size);
+
+    // Non-uniform: sunlight persists, then the column darkens fast and late.
+    // Evenly-spaced stops make the whole dive read as one grey slide.
+    var POS = [0, 0.12, 0.32, 0.59, 1];   // fault · goblets · capital · womb
+    function apply(d) {
+      var SS = V.stops, i = 0;
+      while (i < POS.length - 2 && d > POS[i + 1]) i++;
+      var t = Math.max(0, Math.min(1, (d - POS[i]) / (POS[i + 1] - POS[i])));
+      DEPTH_KEYS.forEach(function (k, j) {
+        document.documentElement.style.setProperty(k, mixc(SS[i][j], SS[i + 1][j], t));
+      });
+      needle.style.top = (d * GH) + 'px';
+      var here = d * V.max, band = 0;
+      for (var b = 0; b < V.strata.length; b++) if (here >= V.strata[b].d) band = b;
+      st.childNodes.forEach(function (n, j) { n.className = j === band ? 'on' : ''; });
+      // past the last threshold nobody has a number, so neither do we
+      read.textContent = V.strata[band].unknown ? '???'
+        : Math.round(here).toLocaleString() + ' ' + V.unit;
+    }
+    function paint(ts) {
+      if (dead) return;
+      var max = root.scrollHeight - root.clientHeight;
+      target = forced != null ? forced : (max > 0 ? Math.min(1, root.scrollTop / max) : 0);
+      var rising = target < depth;
+      depth += (target - depth) * (reduce ? 1 : (rising ? .045 : .11));   // the curse of ascending
+      apply(depth);
+      ctx.clearRect(0, 0, cv.clientWidth, cv.clientHeight);
+      if (state.gfx) V.atmos(ctx, cv.clientWidth, cv.clientHeight, depth, ts, motes, reduce);
+      raf = requestAnimationFrame(paint);
+    }
+    raf = requestAnimationFrame(paint);
+
+    // DEPTH'S DETAIL — not a card on top of the world, a further descent.
+    // The scalar is forced to the floor and the ascent back is the slow one.
+    var held = null;
+    function dive(s) {
+      if (held) return;
+      var d = el('div', 'dive');
+      var inner = el('div', 'diveinner');
+      inner.appendChild(el('div', 'divelab', '~/catalog/' + s.id + '  ·  layer 4'));
+      inner.appendChild(el('div', 'divetitle', s.nm));
+      inner.appendChild(el('div', 'divejp', s.jp));
+      var f = el('div', 'divefigs');
+      f.innerHTML = s.hasManga
+        ? 'ep:<b>' + s.ep + '</b><span class="d">/—</span>   vol:<b>' + s.vol + '</b><span class="d">/' + s.tvol +
+          '</span>   ch:<b>' + s.ch + '</b><span class="d">/' + s.tch + '</span>'
+        : 'ep:<b>' + s.ep + '</b><span class="d">/—</span>   <span class="d">// no_source</span>';
+      inner.appendChild(f);
+      inner.appendChild(stripEl(s.seq, '22px'));
+      var leg = el('div', 'diveleg');
+      TYPES.forEach(function (n, i) {
+        var sp = el('span', null, n);
+        sp.style.color = 'var(' + CVAR[i] + ')';
+        sp.style.background = 'color-mix(in srgb,var(' + CVAR[i] + ') 12%,transparent)';
+        leg.appendChild(sp);
+      });
+      inner.appendChild(leg);
+      if (s.tail > 0) inner.appendChild(el('div', 'divegap',
+        'unlit — ch:' + (s.ch + 1) + '–' + s.tch + ' has no episode above it (' + s.tail + ')'));
+      var up = el('button', 'diveup', '▲ ascend'); up.type = 'button';
+      up.addEventListener('click', surface);
+      inner.appendChild(up);
+      d.appendChild(inner);
+      stage.appendChild(d);
+      held = { node:d, scroll:root.scrollTop };
+      requestAnimationFrame(function () { d.classList.add('on'); });
+      forced = 1;
+    }
+    function surface() {
+      if (!held) return;
+      held.node.classList.remove('on');
+      var n = held.node; held = null; forced = null;
+      setTimeout(function () { n.remove(); }, 620);
+    }
+    addEventListener('keydown', function (e) { if (e.key === 'Escape') surface(); });
+
+    return {
+      unmount: function () { dead = true; cancelAnimationFrame(raf); removeEventListener('resize', size); },
+      revariant: function () { V = THEMES.abyss.variants[state.variant];
+        st.textContent = ''; V.strata.forEach(function (t) { st.appendChild(el('span', null, t)); }); apply(depth); }
+    };
+  }
+};
+
+THEMES.abyss.variants.descent.atmos = function (ctx, W, H, d, ts, motes, reduce) {
+  var shaft = Math.max(0, 1 - d * 2.1);
+  if (shaft > .01) for (var s = 0; s < 4; s++) {
+    var x = W * (.13 + s * .25) + Math.sin(ts / 5200 + s) * 26;
+    var g = ctx.createLinearGradient(x, -60, x + 130, H);
+    g.addColorStop(0, 'rgba(255,255,240,' + (.16 * shaft) + ')'); g.addColorStop(1, 'rgba(255,255,240,0)');
+    ctx.fillStyle = g; ctx.beginPath();
+    ctx.moveTo(x - 34, -60); ctx.lineTo(x + 40, -60); ctx.lineTo(x + 168, H); ctx.lineTo(x + 52, H);
+    ctx.closePath(); ctx.fill();
+  }
+  ctx.fillStyle = '#fff';
+  for (var i = 0; i < motes.length; i++) {
+    var m = motes[i];
+    if (i / motes.length > .34 + d * .66) continue;
+    if (!reduce) { m.y += m.v * (.5 + m.r * .5); m.s += .006; m.x += Math.sin(m.s) * .22; if (m.y > H + 6) { m.y = -6; m.x = Math.random() * W; } }
+    ctx.globalAlpha = m.a * (.3 + d * .7);
+    ctx.beginPath(); ctx.arc(m.x, m.y, m.r, 0, 6.284); ctx.fill();
+  }
+  ctx.globalAlpha = 1;
+};
+THEMES.abyss.variants.sounding.atmos = function (ctx, W, H, d, ts) {
+  var n = Math.round(4 + d * 26); ctx.lineWidth = 1; ctx.font = '9px "IBM Plex Mono", monospace';
+  for (var i = 0; i < n; i++) {
+    var t = i / n, y = H * (.06 + t * .92) + Math.sin(ts / 9000 + i) * 1.2;
+    ctx.globalAlpha = .05 + .16 * (1 - Math.abs(t - d) * 1.6);
+    if (ctx.globalAlpha <= .01) continue;
+    ctx.strokeStyle = '#0C3E56'; ctx.beginPath();
+    for (var x = 0; x <= W; x += 12) {
+      var yy = y + Math.sin(x / 190 + i * .7) * (7 + i * .5) + Math.cos(x / 90 + i) * 2.5;
+      x === 0 ? ctx.moveTo(x, yy) : ctx.lineTo(x, yy);
+    }
+    ctx.stroke();
+    if (i % 5 === 0) { ctx.fillStyle = '#0C3E56'; ctx.globalAlpha *= 1.5; ctx.fillText(Math.round(t * 6000), 18 + (i % 3) * 190, y - 3); }
+  }
+  ctx.globalAlpha = 1;
+};
+THEMES.abyss.variants.core.atmos = function (ctx, W, H, d) {
+  var n = Math.round(3 + d * 22);
+  for (var i = 0; i < n; i++) {
+    var y = H * (i / n), h = H / n;
+    ctx.globalAlpha = .05 + .09 * Math.abs(Math.sin(i * 2.7));
+    ctx.fillStyle = i % 3 === 0 ? '#000' : '#C9A227';
+    ctx.fillRect(0, y, W, h * (.35 + .5 * Math.abs(Math.cos(i * 1.9))));
+    ctx.globalAlpha = .16; ctx.fillStyle = '#000'; ctx.fillRect(0, y, W, 1);
+  }
+  ctx.globalAlpha = .35 * d; ctx.fillStyle = '#000';
+  for (var k = 0; k < 200; k++) ctx.fillRect(k * 3739 % W, k * 7919 % H, 1, 1);
+  ctx.globalAlpha = 1;
+};
+
+// ─────────────────────────────────────────────────────────────────────────
+// TANKŌBON — no scroll. Leaves turn on a right-hand spine, RTL.
+// At 343 the contents becomes a real 目次: dense, columned, paginated.
+// ─────────────────────────────────────────────────────────────────────────
+// ─────────────────────────────────────────────────────────────────────────
+// TANKŌBON — no scroll. Sheets turn on a right-hand spine, RTL.
+// VIEWS (layer 1, a third axis — not colour, not material): how dense a
+// leaf is. index = a real 目次; visual = preview panels you flip through.
+// ─────────────────────────────────────────────────────────────────────────
+THEMES.tankobon = {
+  views: { index:{ label:'index', per:44 }, visual:{ label:'visual', per:6 } },
+  variants: {
+    shonen: { label:'shonen', tok:{ '--paper':'#F7F5F0','--paper-2':'#EFEDE6','--ink':'#1A1A1A','--ink-2':'#6E6E6E',
+      '--tone':'#B0B0B0','--spot':'#E03A3A','--rule':'#1A1A1A','--tone-pitch':'4px','--tone-dot':'1.15px',
+      '--skew':'0deg','--grain':'0.05','--gutter':'13px',
+      '--c1':'#1A1A1A','--c2':'#6E6E6E','--c3':'#B0B0B0','--c4':'#E03A3A','--c5':'#2B4FA8' } },
+    seinen: { label:'seinen', tok:{ '--paper':'#F1F0ED','--paper-2':'#E9E8E4','--ink':'#16181A','--ink-2':'#5A5F63',
+      '--tone':'#A9AEB2','--spot':'#8C3A3A','--rule':'#16181A','--tone-pitch':'2.6px','--tone-dot':'.72px',
+      '--skew':'0deg','--grain':'0.07','--gutter':'19px',
+      '--c1':'#16181A','--c2':'#5A5F63','--c3':'#A9AEB2','--c4':'#8C3A3A','--c5':'#3A5566' } },
+    scan: { label:'scan', tok:{ '--paper':'#EFE9DA','--paper-2':'#E8E1CF','--ink':'#262019','--ink-2':'#6B6154',
+      '--tone':'#A99E8C','--spot':'#C4564A','--rule':'#3A3229','--tone-pitch':'3.3px','--tone-dot':'1.35px',
+      '--skew':'-0.35deg','--grain':'0.13','--gutter':'12px',
+      '--c1':'#262019','--c2':'#6B6154','--c3':'#A99E8C','--c4':'#C4564A','--c5':'#4A5F73' } }
+  },
+  mount: function (stage, list) {
+    var VIEW = THEMES.tankobon.views[state.view] || THEMES.tankobon.views.index;
+    var PER = VIEW.per;
+    var root = el('div', 't-tankobon');
+    var book = el('div', 'book');
+    var leaves = [], page = 0;
+
+    function sheet(pageEl) {                 // a real two-sided sheet
+      var lf = el('div', 'leaf');
+      var front = el('div', 'face front');
+      front.appendChild(pageEl);
+      lf.appendChild(front);
+      lf.appendChild(el('div', 'face back'));
+      return lf;
+    }
+
+    // ── cover ──
+    var cp = el('div', 'page cover');
+    var art = el('div', 'art');
+    art.appendChild(el('div', 'lab', 'mangaMapper — 第1巻'));
+    art.appendChild(el('h1', null, 'WHERE DOES\nTHE MANGA\nPICK UP?'));
+    art.appendChild(el('div', null, list.length + ' series'));
+    var obi = el('div', 'obi');
+    obi.appendChild(el('span', null, 'Filler marked. Gaps shown honestly.'));
+    obi.appendChild(el('span', null, '目次 →'));
+    cp.appendChild(art); cp.appendChild(obi);
+    leaves.push(sheet(cp));
+
+    // ── contents leaves ──
+    var nLeaves = Math.max(1, Math.ceil(list.length / PER));
+    for (var L = 0; L < nLeaves; L++) {
+      var slice = list.slice(L * PER, (L + 1) * PER);
+      leaves.push(sheet(state.view === 'visual' ? visualPage(slice, L) : indexPage(slice, L)));
+    }
+
+    function pageHead(L, slice) {
+      var hd = el('div', 'panel plain');
+      hd.appendChild(el('div', 'lab', '目次 — contents'));
+      var t = el('div', null, 'The catalog  ' + (L * PER + 1) + '–' + (L * PER + slice.length));
+      t.style.cssText = 'font-family:Archivo,sans-serif;font-weight:700;font-size:17px';
+      hd.appendChild(t);
+      return hd;
+    }
+
+    function indexPage(slice, L) {
+      var pg = el('div', 'page idx');
+      pg.appendChild(pageHead(L, slice));
+      var body = el('div', 'panel plain');
+      var grid = el('div', 'idxgrid');
+      slice.forEach(function (s, i) {
+        var b = el('button', 'idxrow'); b.type = 'button';
+        b.appendChild(el('span', 'n', L * PER + i + 1));
+        b.appendChild(el('span', 't', s.nm));
+        b.appendChild(el('span', 'p', s.hasManga ? s.ch + '/' + s.tch : '—'));
+        b.addEventListener('click', function () { openSpread(s); });
+        grid.appendChild(b);
+      });
+      body.appendChild(grid); pg.appendChild(body);
+      return pg;
+    }
+
+    // preview panels — big title, strip, figures. Panel grammar, not a grid.
+    function visualPage(slice, L) {
+      var pg = el('div', 'page vis');
+      slice.forEach(function (s, i) {
+        var b = el('button', 'panel vispanel' + (i === 0 ? ' hero' : '')); b.type = 'button';
+        b.appendChild(el('div', 'lab', String(L * PER + i + 1).padStart(3, '0') + (s.status === 'airing' ? ' · airing' : '')));
+        b.appendChild(el('div', 'vnm', s.nm));
+        b.appendChild(el('div', 'vjp', s.jp));
+        b.appendChild(el('div', 'vspacer'));
+        b.appendChild(stripEl(s.seq, i === 0 ? '16px' : '11px'));
+        b.appendChild(el('div', 'vnum', 'ep:' + s.ep + '   ' + pos(s)));
+        b.addEventListener('click', function () { openSpread(s); });
+        pg.appendChild(b);
+      });
+      return pg;
+    }
+
+    // ── the detail SPREAD — a page of the book, never a modal ──
+    var spread = null;
+    function buildSpread(s) {
+      var pg = el('div', 'page full');
+      var top = el('div', 'panel plain');
+      top.appendChild(el('div', 'lab', 'series'));
+      var t = el('div', 'fulltitle', s.nm); top.appendChild(t);
+      top.appendChild(el('div', 'vjp', s.jp));
+      pg.appendChild(top);
+
+      var fig = el('div', 'panel figpanel');
+      fig.appendChild(el('div', 'lab', 'position'));
+      var f = el('div', 'figs');
+      f.innerHTML = s.hasManga
+        ? 'ep:' + s.ep + '<span class="d">/—</span><br>vol:' + s.vol + '<span class="d">/' + s.tvol +
+          '</span><br>ch:' + s.ch + '<span class="d">/' + s.tch + '</span>'
+        : 'ep:' + s.ep + '<span class="d">/—</span><br><span class="d">// no_source</span>';
+      fig.appendChild(f);
+      pg.appendChild(fig);
+
+      var st = el('div', 'panel');
+      st.appendChild(el('div', 'lab', 'episode types'));
+      st.appendChild(stripEl(s.seq, '20px'));
+      var leg = el('div', 'leg');
+      TYPES.forEach(function (n, i) {
+        var sp2 = el('span', null, n); sp2.style.color = 'var(' + CVAR[i] + ')'; leg.appendChild(sp2);
+      });
+      st.appendChild(leg);
+      pg.appendChild(st);
+
+      var foot = el('div', 'panel plain footpanel');
+      if (s.tail > 0) {
+        var g = el('div', 'gapnote');
+        g.appendChild(el('span', null, 'not yet animated'));
+        g.appendChild(el('span', null, 'ch:' + (s.ch + 1) + '–' + s.tch + '  (' + s.tail + ')'));
+        foot.appendChild(g);
+      } else {
+        foot.appendChild(el('div', 'gapnote', s.hasManga ? 'fully adapted' : 'no source material'));
+      }
+      var back = el('button', 'back', '→ back to contents'); back.type = 'button';
+      back.addEventListener('click', closeSpread);
+      foot.appendChild(back);
+      pg.appendChild(foot);
+      return pg;
+    }
+
+    function openSpread(s) {
+      if (spread) { spread.remove(); leaves.splice(leaves.indexOf(spread), 1); }
+      spread = sheet(buildSpread(s));
+      leaves.splice(page + 1, 0, spread);      // one turn away — physical
+      book.appendChild(spread);
+      restack(); paint();
+      requestAnimationFrame(function () { go(page + 1); });
+    }
+    function closeSpread() {
+      var at = leaves.indexOf(spread);
+      if (at < 0) return;
+      go(at - 1);
+      var s2 = spread; spread = null;
+      setTimeout(function () {
+        var j = leaves.indexOf(s2);
+        if (j >= 0) leaves.splice(j, 1);
+        s2.remove(); restack(); paint();
+      }, 820);
+    }
+
+    for (var i = leaves.length - 1; i >= 0; i--) book.appendChild(leaves[i]);
+    root.appendChild(book);
+
+    var rail = el('div', 'rail2');
+    var prev = el('button', null, '→ back'), folio = el('span', 'folio'), next = el('button', null, 'next ←');
+    prev.type = next.type = 'button';
+    rail.appendChild(prev); rail.appendChild(folio); rail.appendChild(next);
+    root.appendChild(rail);
+    stage.appendChild(root);
+
+    function restack() { leaves.forEach(function (l, i) { l.style.zIndex = String(leaves.length - i); }); }
+    function paint() {
+      leaves.forEach(function (l, i) { l.classList.toggle('turned', i < page); });
+      folio.textContent = (page === 0 ? 'cover' : (spread && leaves.indexOf(spread) === page ? 'entry' : 'contents ' + page)) +
+        '   ' + (page + 1) + '/' + leaves.length;
+      prev.disabled = page === 0; next.disabled = page === leaves.length - 1;
+    }
+    var settle = 0;
+    function go(p) {
+      p = Math.max(0, Math.min(leaves.length - 1, p));
+      if (p === page) return;
+      var moving = leaves[Math.min(page, p)];
+      restack();
+      moving.style.zIndex = String(leaves.length + 4);
+      page = p; paint();
+      clearTimeout(settle);
+      settle = setTimeout(restack, 820);
+    }
+    prev.addEventListener('click', function () { go(page - 1); });
+    next.addEventListener('click', function () { go(page + 1); });
+
+    var lock = 0;
+    function onWheel(e) {
+      var now = Date.now();
+      if (now < lock || Math.abs(e.deltaY) < 8) return;
+      lock = now + 560; go(page + (e.deltaY > 0 ? 1 : -1));
+    }
+    function onKey(e) {
+      if (e.target === document.getElementById('q')) return;
+      if (e.key === 'ArrowLeft' || e.key === 'ArrowDown') { e.preventDefault(); go(page + 1); }
+      if (e.key === 'ArrowRight' || e.key === 'ArrowUp') { e.preventDefault(); go(page - 1); }
+      if (e.key === 'Escape' && spread) closeSpread();
+    }
+    root.addEventListener('wheel', onWheel, { passive:true });
+    addEventListener('keydown', onKey);
+    restack(); paint();
+    return { unmount: function () { removeEventListener('keydown', onKey); clearTimeout(settle); } };
+  }
+};
+
+// ─────────────────────────────────────────────────────────────────────────
+// PAPER THEATRE — rolled from a 128-char seed, not designed:
+//   impossible stair · drift · cut paper · warped mono · void · 4px/9px/41%/2°
+//
+// The other three themes are one-dimensional — a list you travel along. This
+// one is a STAGE you track sideways through. Flats are cut paper at different
+// depths, and each plane eases toward your position at its OWN rate, so they
+// never quite agree and the composition is always still settling. That is
+// "drift" as a mechanic rather than a decoration.
+//
+// THE GUARDRAIL: surrealism lives in the chrome, never in the values. So the
+// impossible stair is in the BACKDROP — the far plane loops forever — while
+// the content plane is finite, ordered, and tells you exactly where you are.
+// ─────────────────────────────────────────────────────────────────────────
+THEMES.paper = {
+  variants: {
+    glasshouse: { label:'glasshouse', tok:{
+      '--m-ground':'#171A14','--m-card':'#21251D','--m-line':'#383B35','--m-ink':'#D6DAD2',
+      '--m-dim':'#808C73','--m-title':'#B1D45E','--m-sep':'0 0',
+      '--c1':'#5EA3D4','--c2':'#5CCC6F','--c3':'#DEAC73','--c4':'#B581DA','--c5':'#B1D45E' } },
+    fairground: { label:'fairground', tok:{
+      '--m-ground':'#141A16','--m-card':'#1C2620','--m-line':'#3E4741','--m-ink':'#CDD5D0',
+      '--m-dim':'#7B8E82','--m-title':'#6DCAE3','--m-sep':'0 0',
+      '--c1':'#6DCAE3','--c2':'#C96BE1','--c3':'#E2658E','--c4':'#8585E0','--c5':'#B0E24B' } },
+    // the roll dealt this one two identical hues; fixing it by the anaglyph's
+    // own logic put `mixed` on the magenta that red and cyan actually make
+    anaglyph: { label:'anaglyph', tok:{
+      '--m-ground':'#0E0C0B','--m-card':'#191514','--m-line':'#544240','--m-ink':'#D5CECD',
+      '--m-dim':'#8E7D7B','--m-title':'#E75064','--m-sep':'1.5px 0',
+      '--c1':'#E75064','--c2':'#DC6ADC','--c3':'#A67EDD','--c4':'#5CC6E0','--c5':'#4DCB97' } }
+  },
+  mount: function (stage, list) {
+    var root = el('div', 't-paper');
+    var cv = document.createElement('canvas'); cv.className = 'backdrop';
+    var mid = el('div', 'plane mid');
+    var content = el('div', 'plane content');
+    var near = el('div', 'plane near');
+    root.appendChild(cv); root.appendChild(mid); root.appendChild(content); root.appendChild(near);
+
+    var rail = el('div', 'prail');
+    var readout = el('div', 'pread');
+    var track = el('div', 'ptrack'); var thumb = el('div', 'pthumb'); track.appendChild(thumb);
+    var hint = el('div', 'phint', 'drag or scroll to track across the stage');
+    rail.appendChild(readout); rail.appendChild(track); rail.appendChild(hint);
+    root.appendChild(rail);
+    stage.appendChild(root);
+
+    var PITCH = 250, reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var maxX = Math.max(1, (list.length - 1) * PITCH);
+    var target = 0;
+    // each plane has its own damping — this is why they never agree
+    var planes = [
+      { el:mid,     rate:0.34, k:0.055, x:0 },
+      { el:content, rate:1.00, k:0.115, x:0 },
+      { el:near,    rate:1.55, k:0.170, x:0 }
+    ];
+
+    // ── the flats ──
+    var flats = [];
+    list.forEach(function (s, i) {
+      var f = el('button', 'flat'); f.type = 'button';
+      // no two cuts are identical: height, lift and skew vary per flat
+      var tall = 168 + ((i * 37) % 74);
+      var lift = ((i * 53) % 120) - 60;
+      var tilt = (((i * 29) % 40) - 20) / 10;          // ±2.0deg, the rolled skew
+      f.style.left = (i * PITCH) + 'px';
+      f.style.height = tall + 'px';
+      f.style.transform = 'translateY(' + lift + 'px) rotate(' + tilt + 'deg)';
+      f.appendChild(el('div', 'fnum', String(i + 1).padStart(3, '0')));
+      f.appendChild(el('div', 'fnm', s.nm));
+      f.appendChild(el('div', 'fjp', s.jp));
+      f.appendChild(el('div', 'fspace'));
+      f.appendChild(stripEl(s.seq, '10px'));
+      f.appendChild(el('div', 'ffig', 'ep:' + s.ep + '  ' + pos(s)));
+      f.addEventListener('click', function () { bring(i); });
+      content.appendChild(f); flats.push(f);
+    });
+    // a few foreground cuts that occlude — pure material, no data
+    for (var n = 0; n < 26; n++) {
+      var g = el('div', 'cut');
+      g.style.left = (n * 1180 + (n * 311) % 500) + 'px';
+      g.style.height = (90 + (n * 47) % 150) + 'px';
+      g.style.width = (40 + (n * 23) % 90) + 'px';
+      g.style.transform = 'translateY(' + (((n * 71) % 200) - 100) + 'px) rotate(' + ((((n * 13) % 30) - 15) / 5) + 'deg)';
+      near.appendChild(g);
+    }
+    for (var m = 0; m < 22; m++) {
+      var h = el('div', 'cut soft');
+      h.style.left = (m * 1420 + (m * 197) % 700) + 'px';
+      h.style.height = (180 + (m * 61) % 220) + 'px';
+      h.style.width = (150 + (m * 89) % 260) + 'px';
+      h.style.transform = 'translateY(' + (((m * 43) % 260) - 130) + 'px)';
+      mid.appendChild(h);
+    }
+
+    // ── the backdrop: an impossible stair that never resolves and never ends.
+    //    It loops because it carries no information — the honest part is the
+    //    readout below, which counts a finite catalog.
+    var ctx = cv.getContext('2d');
+    function size() {
+      var r = Math.min(2, devicePixelRatio || 1);
+      cv.width = stage.clientWidth * r; cv.height = stage.clientHeight * r;
+      cv.style.width = stage.clientWidth + 'px'; cv.style.height = stage.clientHeight + 'px';
+      ctx.setTransform(r, 0, 0, r, 0, 0);
+    }
+    size(); addEventListener('resize', size);
+
+    function backdrop(off) {
+      var W = cv.clientWidth, H = cv.clientHeight;
+      ctx.clearRect(0, 0, W, H);
+      if (!state.gfx) return;
+      var cs = getComputedStyle(document.documentElement);
+      var line = cs.getPropertyValue('--m-line').trim() || '#333';
+      var SW = 96, SH = 30, o = -(off * 0.07) % (SW * 2);
+      for (var pass = 0; pass < 2; pass++) {
+        // two runs, one ascending and one descending, meeting in the middle —
+        // read either way and the staircase never arrives anywhere
+        ctx.globalAlpha = pass ? 0.30 : 0.16;
+        ctx.fillStyle = line;
+        var base = H * (pass ? 0.72 : 0.58);
+        var dir = pass ? 1 : -1;
+        for (var i = -2; i < Math.ceil(W / SW) + 3; i++) {
+          var x = i * SW + o * (pass ? 1 : 0.62);
+          var step = ((i % 8) + 8) % 8;
+          var y = base + dir * (step - 4) * (SH * 0.34);
+          ctx.fillRect(x, y, SW - 3, H - y);
+        }
+      }
+      ctx.globalAlpha = 1;
+    }
+
+    // ── drift ──
+    var raf = 0, dead = false;
+    function tick() {
+      if (dead) return;
+      planes.forEach(function (p) {
+        var want = -target * p.rate;
+        p.x += (want - p.x) * (reduce ? 1 : p.k);
+        p.el.style.transform = 'translate3d(' + p.x.toFixed(2) + 'px,0,0)';
+      });
+      backdrop(target);
+      var i = Math.round(target / PITCH);
+      readout.textContent = String(Math.min(list.length, i + 1)).padStart(3, '0') + ' / ' + list.length;
+      thumb.style.left = (target / maxX * 100).toFixed(2) + '%';
+      raf = requestAnimationFrame(tick);
+    }
+    raf = requestAnimationFrame(tick);
+
+    function moveTo(x) { target = Math.max(0, Math.min(maxX, x)); }
+    function onWheel(e) { moveTo(target + (Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY) * 1.6); }
+    root.addEventListener('wheel', onWheel, { passive:true });
+
+    var drag = null;
+    root.addEventListener('pointerdown', function (e) {
+      // the dossier owns its own clicks — capturing the pointer here would
+      // redirect them to root and swallow the button
+      if (e.target.closest('.dossier')) return;
+      // and while a flat is downstage, pressing the receded stage returns you
+      if (front != null) { dismiss(); return; }
+      if (e.target.closest('.flat') || e.target.closest('.prail')) return;
+      drag = { x:e.clientX, t:target }; root.setPointerCapture(e.pointerId); root.classList.add('grabbing');
+    });
+    root.addEventListener('pointermove', function (e) { if (drag) moveTo(drag.t - (e.clientX - drag.x) * 1.5); });
+    root.addEventListener('pointerup', function () { drag = null; root.classList.remove('grabbing'); });
+    track.addEventListener('pointerdown', function (e) {
+      var r = track.getBoundingClientRect();
+      moveTo((e.clientX - r.left) / r.width * maxX);
+    });
+    function onKey(e) {
+      if (e.target === document.getElementById('q')) return;
+      if (e.key === 'ArrowRight') { e.preventDefault(); moveTo(target + PITCH); }
+      if (e.key === 'ArrowLeft') { e.preventDefault(); moveTo(target - PITCH); }
+      if (e.key === 'Escape') dismiss();
+    }
+    addEventListener('keydown', onKey);
+
+    // ── bringing a flat downstage: the theatre move. It comes forward, the
+    //    rest of the stage recedes. No overlay, no modal — same space.
+    var front = null;
+    function bring(i) {
+      if (front != null) { dismiss(); return; }
+      front = i;
+      moveTo(i * PITCH);
+      root.classList.add('downstage');
+      flats[i].classList.add('front');
+      var s = list[i];
+      var d = el('div', 'dossier');
+      d.appendChild(el('div', 'dnum', String(i + 1).padStart(3, '0') + ' / ' + list.length));
+      d.appendChild(el('div', 'dnm', s.nm));
+      d.appendChild(el('div', 'djp', s.jp));
+      var fig = el('div', 'dfig');
+      fig.innerHTML = s.hasManga
+        ? 'ep:<b>' + s.ep + '</b><span class="d">/—</span>  vol:<b>' + s.vol + '</b><span class="d">/' + s.tvol +
+          '</span>  ch:<b>' + s.ch + '</b><span class="d">/' + s.tch + '</span>'
+        : 'ep:<b>' + s.ep + '</b><span class="d">/—</span>  <span class="d">// no_source</span>';
+      d.appendChild(fig);
+      d.appendChild(stripEl(s.seq, '20px'));
+      var leg = el('div', 'dleg');
+      TYPES.forEach(function (t, k) {
+        var sp = el('span', null, t);
+        sp.style.color = 'var(' + CVAR[k] + ')';
+        sp.style.background = 'color-mix(in srgb,var(' + CVAR[k] + ') 12%,transparent)';
+        leg.appendChild(sp);
+      });
+      d.appendChild(leg);
+      if (s.tail > 0) d.appendChild(el('div', 'dgap',
+        'ch:' + (s.ch + 1) + '–' + s.tch + ' exists and has never been animated  (' + s.tail + ')'));
+      var b = el('button', 'dback', 'back to the stage'); b.type = 'button';
+      b.addEventListener('click', dismiss); d.appendChild(b);
+      root.appendChild(d);
+      requestAnimationFrame(function () { d.classList.add('on'); });
+    }
+    function dismiss() {
+      if (front == null) return;
+      flats[front].classList.remove('front');
+      root.classList.remove('downstage');
+      front = null;
+      var d = root.querySelector('.dossier');
+      if (d) { d.classList.remove('on'); setTimeout(function () { d.remove(); }, 420); }
+    }
+
+    return {
+      unmount: function () {
+        dead = true; cancelAnimationFrame(raf);
+        removeEventListener('resize', size); removeEventListener('keydown', onKey);
+      }
+    };
+  }
+};
+
+// ── terminal's detail: an overlay card, which is what a terminal does ────
+function overlayCard(s) {
+  var stage = document.getElementById('stage');
+  var ov = el('div'); ov.id = 'ov'; ov.className = 'on';
+  var bg = el('div'); bg.id = 'ovbg';
+  bg.style.background = 'color-mix(in srgb, var(--m-ground,#000) 82%, transparent)';
+  var card = el('div'); card.id = 'ovcard';
+  card.style.cssText = 'background:var(--m-card);color:var(--m-ink);border:1px solid var(--m-line);border-radius:2px';
+  var hd = el('div');
+  hd.style.cssText = 'display:flex;justify-content:space-between;padding:7px 13px;font-size:10.5px;color:var(--m-dim);border-bottom:1px dashed var(--m-line)';
+  hd.appendChild(el('span', null, '~/catalog/' + s.id));
+  var x = el('button', null, 'x'); x.type = 'button';
+  x.style.cssText = 'background:none;border:0;color:inherit;font:inherit;cursor:pointer';
+  hd.appendChild(x); card.appendChild(hd);
+  var b = el('div'); b.style.padding = '15px 13px';
+  var t = el('div', null, s.nm); t.style.cssText = 'font-size:20px;color:var(--m-title);line-height:1.15';
+  b.appendChild(t);
+  var j = el('div', null, s.jp); j.style.cssText = 'font-size:11px;color:var(--m-dim);margin:4px 0 13px';
+  b.appendChild(j);
+  var p = el('div', null, 'ep:' + s.ep + '   ' + (s.hasManga ? 'vol:' + s.vol + '/' + s.tvol + ' · ch:' + s.ch + '/' + s.tch : '// no_source'));
+  p.style.cssText = 'font-size:14px;font-variant-numeric:tabular-nums;margin-bottom:13px';
+  b.appendChild(p);
+  b.appendChild(stripEl(s.seq, '18px'));
+  var leg = el('div');
+  leg.style.cssText = 'display:flex;gap:5px;justify-content:flex-end;margin-top:8px;flex-wrap:wrap';
+  TYPES.forEach(function (n, i) {
+    var sp = el('span', null, n);
+    sp.style.cssText = 'font-size:9.5px;padding:2px 6px;border-radius:2px;color:var(' + CVAR[i] +
+      ');background:color-mix(in srgb,var(' + CVAR[i] + ') 13%,transparent)';
+    leg.appendChild(sp);
+  });
+  b.appendChild(leg);
+  if (s.tail > 0) {
+    var g = el('div', null, '// not_yet_animated  ch:' + (s.ch + 1) + '–' + s.tch + '  (' + s.tail + ')');
+    g.style.cssText = 'margin-top:13px;padding:7px 10px;border:1px dashed var(--m-line);color:var(--m-dim);font-size:10.5px';
+    b.appendChild(g);
+  }
+  card.appendChild(b);
+  ov.appendChild(bg); ov.appendChild(card);
+  stage.appendChild(ov);
+  function close() { ov.remove(); removeEventListener('keydown', esc); }
+  function esc(e) { if (e.key === 'Escape') close(); }
+  bg.addEventListener('click', close); x.addEventListener('click', close);
+  addEventListener('keydown', esc);
+}
+
+// ── shell ───────────────────────────────────────────────────────────────
+var stage = document.getElementById('stage');
+var state = { theme:'terminal', variant:null, view:null, gfx:true, q:'' };
+var current = null;
+
+function rows() {
+  if (!state.q) return CATALOG;
+  var q = state.q.toLowerCase();
+  return CATALOG.filter(function (s) { return s.nm.toLowerCase().indexOf(q) >= 0; });
+}
+
+function applyVariant() {
+  var v = THEMES[state.theme].variants[state.variant];
+  var root = document.documentElement;
+  Object.keys(v.tok).forEach(function (k) { root.style.setProperty(k, v.tok[k]); });
+  document.querySelectorAll('#segVar button').forEach(function (b) {
+    b.setAttribute('aria-pressed', String(b.dataset.v === state.variant));
+  });
+}
+
+function mount() {
+  var t0 = performance.now();
+  if (current && current.unmount) current.unmount();
+  stage.textContent = '';
+  var th = THEMES[state.theme];
+  if (!state.variant || !th.variants[state.variant]) state.variant = Object.keys(th.variants)[0];
+  buildVariantSeg();
+  buildViewSeg();
+  applyVariant();
+  current = th.mount(stage, rows());
+  var ms = performance.now() - t0;
+  document.getElementById('mRows').textContent = rows().length;
+  document.getElementById('mNodes').textContent = stage.getElementsByTagName('*').length;
+  var p = document.getElementById('mPaint');
+  p.textContent = ms.toFixed(0);
+  p.className = ms > 120 ? 'warn' : '';
+}
+
+function buildSeg(id, items, active, onPick, disabledSet) {
+  var box = document.getElementById(id);
+  box.textContent = '';
+  items.forEach(function (it) {
+    var b = el('button', null, it[1]);
+    b.type = 'button'; b.dataset.v = it[0];
+    b.setAttribute('aria-pressed', String(it[0] === active));
+    if (disabledSet && disabledSet.indexOf(it[0]) >= 0) { b.disabled = true; b.title = 'not built yet'; }
+    else b.addEventListener('click', function () { onPick(it[0]); });
+    box.appendChild(b);
+  });
+}
+// VIEW is a third axis: layout density. Not the theme (behaviour), not the
+// variant (colour + material) — the same axis as the app's compact/expanded.
+function buildViewSeg() {
+  var th = THEMES[state.theme], grp = document.getElementById('viewGrp');
+  if (!th.views) { grp.hidden = true; state.view = null; return; }
+  grp.hidden = false;
+  if (!state.view || !th.views[state.view]) state.view = Object.keys(th.views)[0];
+  buildSeg('segView', Object.keys(th.views).map(function (k) { return [k, th.views[k].label]; }),
+    state.view, function (k) { state.view = k; mount(); });
+}
+function buildVariantSeg() {
+  var th = THEMES[state.theme];
+  buildSeg('segVar', Object.keys(th.variants).map(function (k) { return [k, th.variants[k].label]; }),
+    state.variant, function (k) { state.variant = k; applyVariant(); if (current && current.revariant) current.revariant(); });
+}
+
+buildSeg('segTheme',
+  [['terminal','terminal'],['abyss','abyss'],['tankobon','tankōbon'],['paper','paper theatre']],
+  'terminal',
+  function (k) {
+    state.theme = k; state.variant = null; state.view = null;
+    document.querySelectorAll('#segTheme button').forEach(function (b) {
+      b.setAttribute('aria-pressed', String(b.dataset.v === k));
+    });
+    mount();
+  },
+  []);
+
+buildSeg('segGfx', [['on','atmosphere']], 'on', function () {
+  state.gfx = !state.gfx;
+  document.body.classList.toggle('nogfx', !state.gfx);
+  document.querySelector('#segGfx button').setAttribute('aria-pressed', String(state.gfx));
+  if (current && current.regfx) current.regfx();
+});
+
+var qEl = document.getElementById('q'), qT;
+qEl.addEventListener('input', function () {
+  clearTimeout(qT);
+  qT = setTimeout(function () { state.q = qEl.value.trim(); mount(); }, 130);
+});
+
+// fps meter — the point of the fixture is measuring, so measure
+var frames = 0, last = performance.now();
+(function loop(now) {
+  frames++;
+  if (now - last >= 1000) {
+    var f = Math.round(frames * 1000 / (now - last));
+    var m = document.getElementById('mFps');
+    m.textContent = f; m.className = f < 45 ? 'warn' : '';
+    frames = 0; last = now;
+  }
+  requestAnimationFrame(loop);
+})(performance.now());
+
+mount();
+</script>

@@ -1,0 +1,568 @@
+<title>Descent</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Archivo:wght@400;500;600&display=swap">
+
+<style>
+  /* ══════════════════════════════════════════════════════════════════════
+     DEPTH THEME — three variants. A working prototype, not a mockup.
+     Depth is a single 0..1 scalar driven by scroll and by opening a card.
+     Every token below is INTERPOLATED from it, so the theme is continuous
+     rather than a set of states: there is no moment where it "switches".
+
+     THEME  (layer 1) = the descent itself. One scalar, scroll-driven, with
+                        ascent eased slower than descent. Identical in all three.
+     VARIANT(layer 2) = the ramp AND what it ramps. abyss ramps luminance,
+                        sounding ramps contour density on paper that never
+                        darkens, core ramps strata banding.
+     ATMOS  (layer 3) = per-variant canvas. Toggleable, and every variant is
+                        designed to be complete without it.
+     ══════════════════════════════════════════════════════════════════════ */
+  :root {
+    --ground:#9FC2A6; --fog:#B7D2B8; --card:#8FB69B;
+    --ink:#16241C; --dim:#3D5648; --line:#7BA189; --title:#12301F;
+    --depth:0;
+    /* bioluminescence — the light things make themselves, so it does NOT
+       attenuate. Constant at every depth; only the ground falls away. */
+    --c-canon:#4FE0C4; --c-mixed:#E0C86A; --c-filler:#E86A9C;
+    --c-anime:#9B7BE8; --c-manga:#3E9E7A;
+  }
+
+  *,*::before,*::after { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body {
+    margin:0; min-height:340vh; background:var(--ground); color:var(--ink);
+    font-family:'IBM Plex Mono',ui-monospace,monospace;
+    -webkit-font-smoothing:antialiased; overflow-x:hidden;
+  }
+  body.locked { overflow:hidden; }
+
+  /* the water column itself — fixed, painted from the depth scalar */
+  #column {
+    position:fixed; inset:0; z-index:-2;
+    background:
+      radial-gradient(120% 70% at 50% -10%, var(--fog) 0%, transparent 62%),
+      linear-gradient(180deg, var(--fog) 0%, var(--ground) 55%, var(--card) 100%);
+  }
+  #atmos { position:fixed; inset:0; z-index:-1; pointer-events:none; }
+
+  .wrap { max-width:940px; margin-inline:auto; padding:0 24px; position:relative; }
+
+  /* ── depth gauge — an instrument, not a decoration ── */
+  .gauge {
+    position:fixed; right:20px; top:50%; transform:translateY(-50%); z-index:30;
+    display:flex; align-items:center; gap:9px; font-size:10px; color:var(--dim);
+    letter-spacing:.08em;
+  }
+  .gauge .rule {
+    width:2px; height:190px; background:color-mix(in srgb,var(--ink) 16%,transparent);
+    position:relative; border-radius:1px;
+  }
+  .gauge .needle {
+    position:absolute; left:-4px; width:10px; height:2px; background:var(--ink);
+    transition:top .12s linear;
+  }
+  .gauge .strata { display:flex; flex-direction:column; justify-content:space-between; height:190px; }
+  .gauge .strata span { line-height:1; opacity:.45; font-size:9px; }
+  .gauge .strata span.on { opacity:1; font-weight:600; }
+  .gauge .read { font-variant-numeric:tabular-nums; min-width:52px; }
+
+  /* ── controls ── */
+  .switches {
+    position:fixed; left:20px; bottom:20px; z-index:30; display:flex; gap:8px;
+  }
+  .switches button {
+    font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:10.5px;
+    padding:6px 10px; cursor:pointer; letter-spacing:.06em;
+    background:color-mix(in srgb,var(--card) 78%,transparent);
+    color:var(--ink); border:1px solid var(--line); border-radius:2px;
+    backdrop-filter:blur(3px);
+  }
+  .switches button[aria-pressed="false"] { opacity:.5; }
+  .switches .seg { display:flex; gap:0; }
+  .switches .seg button { border-radius:0; border-right-width:0; }
+  .switches .seg button:first-child { border-radius:2px 0 0 2px; }
+  .switches .seg button:last-child { border-radius:0 2px 2px 0; border-right-width:1px; }
+  .switches .seg button[aria-pressed="true"] { opacity:1; font-weight:600; }
+  .switches button:focus-visible { outline:2px solid var(--c-canon); outline-offset:2px; }
+
+  /* ── surface ── */
+  .surface { min-height:96vh; display:flex; flex-direction:column; justify-content:center; padding:80px 0 0; }
+  .kicker { font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--dim); margin:0 0 18px; }
+  h1 {
+    font-size:clamp(38px,6.5vw,68px); line-height:1.02; margin:0 0 20px;
+    letter-spacing:-.03em; font-weight:500; color:var(--title); text-wrap:balance;
+  }
+  .blurb { font-size:15px; line-height:1.6; color:var(--dim); max-width:52ch; margin:0 0 30px; font-family:Archivo,sans-serif; }
+  .searchline {
+    display:flex; align-items:center; gap:10px; border-bottom:1px solid var(--line);
+    padding-bottom:9px; max-width:460px; font-size:14px; color:var(--dim);
+  }
+  .searchline .cursor { color:var(--title); }
+  .scroll-hint { margin-top:64px; font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--dim); opacity:.8; }
+
+  /* ── catalog ── */
+  .catalog { padding:14vh 0 40vh; }
+  .cat-head {
+    display:flex; justify-content:space-between; align-items:baseline;
+    font-size:10.5px; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--dim); border-bottom:1px solid var(--line); padding-bottom:9px; margin-bottom:4px;
+  }
+  .row {
+    display:grid; grid-template-columns:1fr 138px 96px; gap:16px; align-items:center;
+    padding:13px 8px 13px 12px; cursor:pointer; border-bottom:1px solid color-mix(in srgb,var(--line) 55%,transparent);
+    background:transparent; border-left:2px solid transparent; width:100%; text-align:left;
+    color:inherit; font:inherit;
+  }
+  .row:hover, .row:focus-visible {
+    background:color-mix(in srgb,var(--card) 55%,transparent);
+    border-left-color:var(--c-canon); outline:none;
+  }
+  .row .name { font-size:15px; color:var(--title); }
+  .row .jp { font-size:10.5px; color:var(--dim); margin-top:2px; }
+  .row .nums { font-size:11.5px; color:var(--dim); font-variant-numeric:tabular-nums; }
+  .row .mini { display:flex; gap:1px; height:8px; }
+  .row .mini i { display:block; min-width:2px; }
+
+  /* ── the card: a descent, not a modal ── */
+  #scrim {
+    position:fixed; inset:0; z-index:40; display:none;
+    background:color-mix(in srgb,var(--ground) 82%,transparent);
+    backdrop-filter:blur(2px);
+    align-items:center; justify-content:center; padding:24px;
+  }
+  #scrim.open { display:flex; }
+  .deep {
+    width:min(660px,100%); background:var(--d-card); color:var(--d-ink);
+    border:1px solid var(--d-line); border-radius:3px; overflow:hidden;
+    box-shadow:0 40px 90px rgba(0,0,0,.6);
+    transform:translateY(26px) scale(.985); opacity:0;
+    transition:transform .5s cubic-bezier(.16,.8,.28,1), opacity .38s ease-out;
+  }
+  #scrim.open .deep { transform:none; opacity:1; }
+  #scrim.rising .deep { transition-duration:.86s; }   /* the curse of ascending */
+  .deep .dpath {
+    display:flex; justify-content:space-between; padding:7px 13px; font-size:10.5px;
+    color:var(--d-dim); border-bottom:1px dashed var(--d-line);
+  }
+  .deep .dpath button { background:none;border:0;color:inherit;font:inherit;cursor:pointer;padding:0 2px; }
+  .deep .dband { display:flex; gap:14px; padding:16px 13px 12px; align-items:flex-start; }
+  .deep .dstamp {
+    width:56px;height:84px;flex:none;border:1px solid var(--d-line);border-radius:2px;
+    background:linear-gradient(155deg,var(--c-canon) 0%,transparent 62%),var(--ground);opacity:.5;
+  }
+  .deep .dtitle { font-size:20px; color:var(--d-title); text-shadow:var(--d-glow); line-height:1.15; }
+  .deep .dsub { font-size:11px; color:var(--d-dim); margin-top:4px; }
+  .deep .dpos { padding:0 13px 13px; font-size:13.5px; font-variant-numeric:tabular-nums; display:flex; gap:20px; flex-wrap:wrap; }
+  .deep .dpos .d { color:var(--d-dim); }
+  .deep .dstrip { padding:0 13px 16px; }
+  .deep .strip { display:flex; gap:1px; height:18px; }
+  .deep .strip i { display:block; min-width:2px; }
+  .deep .dleg { display:flex; gap:5px; justify-content:flex-end; margin-top:7px; }
+  .deep .dleg span { font-size:9.5px; padding:2px 6px; border-radius:2px; }
+
+  .note {
+    position:fixed; left:50%; transform:translateX(-50%); bottom:22px; z-index:31;
+    font-size:10.5px; color:var(--dim); letter-spacing:.06em; pointer-events:none;
+    background:color-mix(in srgb,var(--card) 70%,transparent); padding:5px 12px; border-radius:2px;
+    backdrop-filter:blur(3px); opacity:0; transition:opacity .4s;
+  }
+  .note.show { opacity:1; }
+
+  @media (prefers-reduced-motion:reduce) {
+    html { scroll-behavior:auto; }
+    .deep { transition:none; }
+  }
+  @media (max-width:700px) {
+    .gauge { display:none; }
+    .row { grid-template-columns:1fr 88px; }
+    .row .mini { display:none; }
+  }
+</style>
+
+<div id="column"></div>
+<canvas id="atmos" aria-hidden="true"></canvas>
+
+<div class="gauge" aria-hidden="true">
+  <div class="strata" id="strata">
+    <span data-l="0">surface</span><span data-l="1">forest</span>
+    <span data-l="2">fault</span><span data-l="3">goblets</span><span data-l="4">sea of corpses</span>
+  </div>
+  <div class="rule"><div class="needle" id="needle" style="top:0"></div></div>
+  <div class="read" id="depthRead">0 m</div>
+</div>
+
+<div class="switches">
+  <span class="seg" id="vseg"></span>
+  <button id="gfx" aria-pressed="true">atmosphere</button>
+  <button id="top">▲ surface</button>
+</div>
+
+<div class="note" id="note"></div>
+
+<div class="wrap">
+  <section class="surface">
+    <p class="kicker">mangaMapper</p>
+    <h1>You finished the episode.<br>Where does the manga pick up?</h1>
+    <p class="blurb">Every series, mapped episode to chapter. Filler marked, gaps shown honestly, nothing guessed. Descend to the catalog.</p>
+    <div class="searchline"><span class="cursor">&gt;</span><span>search 343 series</span></div>
+    <p class="scroll-hint">scroll to descend ↓</p>
+  </section>
+
+  <section class="catalog">
+    <div class="cat-head"><span>~/catalog</span><span>343 series</span></div>
+    <div id="rows"></div>
+  </section>
+</div>
+
+<div id="scrim" role="dialog" aria-modal="true" aria-label="Series detail">
+  <div class="deep" id="deep"></div>
+</div>
+
+<script>
+// ── the catalog (real rows from mockAnime.ts) ───────────────────────────
+var SERIES = [
+  { id:'one-piece', name:'One Piece', jp:'ワンピース', ep:1122, vol:108, tvol:110, ch:1092, tch:1130,
+    seq:[[0,6],[1,1],[0,5],[2,4],[0,7],[1,1],[3,3],[0,5],[2,2],[0,6],[4,6]] },
+  { id:'jujutsu-kaisen', name:'Jujutsu Kaisen', jp:'呪術廻戦', ep:47, vol:24, tvol:30, ch:236, tch:271,
+    seq:[[0,9],[1,1],[0,7],[2,2],[0,11],[3,2],[0,8],[4,7]] },
+  { id:'chainsaw-man', name:'Chainsaw Man', jp:'チェンソーマン', ep:12, vol:11, tvol:20, ch:97, tch:190,
+    seq:[[0,12],[4,11]] },
+  { id:'frieren', name:'Frieren', jp:'葬送のフリーレン', ep:28, vol:13, tvol:14, ch:120, tch:135,
+    seq:[[0,14],[1,1],[0,13],[4,4]] },
+  { id:'vinland-saga', name:'Vinland Saga', jp:'ヴィンランド・サガ', ep:48, vol:27, tvol:29, ch:193, tch:214,
+    seq:[[0,20],[2,3],[0,25],[4,5]] }
+];
+var TYPES = ['canon','mixed','filler','anime','manga'];
+var CVAR  = ['--c-canon','--c-mixed','--c-filler','--c-anime','--c-manga'];
+var SOURCE_ONLY = 4;
+
+// texture encodes ZONE, never type — source_only is hatched unconditionally,
+// matching MappingStrip's MANGA_ONLY_BACKGROUND (45deg, 40%, 3px on 3px off)
+function fill(i) {
+  var c = 'var(' + CVAR[i] + ')';
+  if (i !== SOURCE_ONLY) return c;
+  return 'repeating-linear-gradient(45deg,color-mix(in srgb,' + c + ' 40%,transparent) 0 3px,transparent 3px 6px)';
+}
+function buildStrip(el, seq, h) {
+  el.textContent = '';
+  seq.forEach(function (s) {
+    var i = document.createElement('i');
+    i.style.flex = s[1] + ' 1 0';
+    i.style.background = fill(s[0]);
+    i.title = TYPES[s[0]];
+    el.appendChild(i);
+  });
+  if (h) el.style.height = h;
+}
+
+// ── the depth ramp: every token is a function of one scalar ─────────────
+// Bright verdant surface → bioluminescent dark. Ink inverts on the way down,
+// which is the whole reason this is a ramp and not two themes.
+var VARIANTS = {
+  abyss: {
+    label:'abyss', ramps:'luminance',
+    strata:['surface','forest','fault','goblets','sea of corpses'],
+    c:['#4FE0C4','#E0C86A','#E86A9C','#9B7BE8','#3E9E7A'],
+    deep:{ card:'#08202C', line:'#164554', ink:'#BFE6DE', dim:'#4E8A87', title:'#4FE0C4', glow:'0 0 14px rgba(79,224,196,.3)' },
+    stops:[
+      { d:0.00, ground:'#9FC2A6', fog:'#C3DCC2', card:'#8FB69B', ink:'#16241C', dim:'#3D5648', line:'#7BA189', title:'#12301F' },
+      { d:0.28, ground:'#4E8A7C', fog:'#6BA592', card:'#437A6E', ink:'#0E1F1C', dim:'#1E4038', line:'#3B7266', title:'#0B2620' },
+      { d:0.58, ground:'#1B4A50', fog:'#28626A', card:'#173F45', ink:'#CBE7E2', dim:'#5E9A96', line:'#2A5F64', title:'#8FE0D2' },
+      { d:0.82, ground:'#0A2830', fog:'#123A44', card:'#0A2029', ink:'#BFE6DE', dim:'#4E8A87', line:'#164554', title:'#4FE0C4' },
+      { d:1.00, ground:'#05121A', fog:'#08202C', card:'#071A22', ink:'#BFE6DE', dim:'#3F726F', line:'#123845', title:'#4FE0C4' }
+    ]
+  },
+  sounding: {
+    // A survey chart does NOT darken with depth — the paper stays paper and the
+    // CONTOURS densify. Same scalar, same scroll, a different thing ramping.
+    label:'sounding', ramps:'contour density',
+    strata:['0 m','shelf','slope','rise','abyssal plain'],
+    c:['#17607F','#9A6A12','#B2445C','#5B4BA0','#1E7A5E'],
+    deep:{ card:'#E7F0F5', line:'#A8C4D4', ink:'#17303D', dim:'#5C7E92', title:'#17607F', glow:'none' },
+    stops:[
+      { d:0.00, ground:'#F4F8FA', fog:'#FFFFFF', card:'#EAF2F6', ink:'#17303D', dim:'#5C7E92', line:'#C3D6E0', title:'#17607F' },
+      { d:0.28, ground:'#E3EEF3', fog:'#F2F8FA', card:'#D8E7EE', ink:'#16303E', dim:'#557A8E', line:'#B3CADA', title:'#155A78' },
+      { d:0.58, ground:'#CFE2EB', fog:'#E0EDF3', card:'#C2DAE6', ink:'#142D3A', dim:'#4C7286', line:'#9FBDD0', title:'#12526E' },
+      { d:0.82, ground:'#B6D2E0', fog:'#C9E0EA', card:'#A9C9DA', ink:'#122733', dim:'#446A7E', line:'#8AAFC6', title:'#0F4862' },
+      { d:1.00, ground:'#9CC0D4', fog:'#B0CFDF', card:'#8FB6CC', ink:'#10222D', dim:'#3C6276', line:'#79A2BC', title:'#0C3E56' }
+    ]
+  },
+  core: {
+    // Depth you can hold. The ramp is STRATA — banding accumulates downward.
+    label:'core', ramps:'strata banding',
+    strata:['topsoil','subsoil','weathered','bedrock','basement'],
+    c:['#C9A227','#B5651D','#8C4A3F','#6E7B8B','#4E6B4A'],
+    deep:{ card:'#1A1512', line:'#3E3226', ink:'#D8C9AE', dim:'#8A755A', title:'#C9A227', glow:'0 0 10px rgba(201,162,39,.22)' },
+    stops:[
+      { d:0.00, ground:'#CFC3AC', fog:'#E0D6C2', card:'#C2B49A', ink:'#241C12', dim:'#5A4A34', line:'#A8977C', title:'#2E2314' },
+      { d:0.28, ground:'#8A7358', fog:'#A08A6C', card:'#7C6549', ink:'#1E1710', dim:'#43341F', line:'#6E5A42', title:'#241A0E' },
+      { d:0.58, ground:'#4E3F30', fog:'#61503C', card:'#453728', ink:'#D8C9AE', dim:'#9A8264', line:'#5E4C39', title:'#E0B93A' },
+      { d:0.82, ground:'#2A2119', fog:'#3A2E22', card:'#241C15', ink:'#D8C9AE', dim:'#8A755A', line:'#463726', title:'#C9A227' },
+      { d:1.00, ground:'#14100D', fog:'#1F1811', card:'#1A1512', ink:'#D8C9AE', dim:'#7A664E', line:'#3E3226', title:'#C9A227' }
+    ]
+  }
+};
+var KEYS = ['ground','fog','card','ink','dim','line','title'];
+
+function hx(h){ h=h.replace('#',''); return [parseInt(h.slice(0,2),16),parseInt(h.slice(2,4),16),parseInt(h.slice(4,6),16)]; }
+function mix(a,b,t){ var A=hx(a),B=hx(b); return 'rgb('+Math.round(A[0]+(B[0]-A[0])*t)+','+Math.round(A[1]+(B[1]-A[1])*t)+','+Math.round(A[2]+(B[2]-A[2])*t)+')'; }
+function tokensAt(d) {
+  var SS = V.stops, i = 0;
+  while (i < SS.length - 2 && d > SS[i+1].d) i++;
+  var a = SS[i], b = SS[i+1];
+  var t = Math.min(1, Math.max(0, (d - a.d) / (b.d - a.d)));
+  var out = {};
+  KEYS.forEach(function (k) { out[k] = mix(a[k], b[k], t); });
+  return out;
+}
+
+var root = document.documentElement;
+var state = { depth:0, target:0, gfx:true, open:false, variant:'abyss' };
+var V = VARIANTS.abyss;
+var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+function applyDepth(d) {
+  var t = tokensAt(d);
+  KEYS.forEach(function (k) { root.style.setProperty('--' + k, t[k]); });
+  root.style.setProperty('--depth', d.toFixed(3));
+  document.getElementById('needle').style.top = (d * 188) + 'px';
+  document.getElementById('depthRead').textContent = Math.round(d * 6000) + ' m';
+  var band = Math.min(4, Math.floor(d * 5));
+  document.querySelectorAll('#strata span').forEach(function (s, i) {
+    s.classList.toggle('on', i === band);
+  });
+}
+
+function scrollDepth() {
+  var max = document.body.scrollHeight - innerHeight;
+  return max > 0 ? Math.min(1, scrollY / max) : 0;
+}
+
+// ── atmosphere: marine snow + surface shafts. Layer 3, toggleable. ──────
+var cv = document.getElementById('atmos'), ctx = cv.getContext('2d'), motes = [];
+function sizeCanvas() {
+  var r = Math.min(2, devicePixelRatio || 1);
+  cv.width = innerWidth * r; cv.height = innerHeight * r;
+  cv.style.width = innerWidth + 'px'; cv.style.height = innerHeight + 'px';
+  ctx.setTransform(r, 0, 0, r, 0, 0);
+}
+function seed() {
+  motes = [];
+  for (var i = 0; i < 150; i++) {
+    motes.push({ x:Math.random()*innerWidth, y:Math.random()*innerHeight,
+      r:0.4 + Math.random()*1.9, v:0.10 + Math.random()*0.42,
+      sway:Math.random()*Math.PI*2, a:0.14 + Math.random()*0.44 });
+  }
+}
+sizeCanvas(); seed();
+addEventListener('resize', function () { sizeCanvas(); seed(); });
+
+// ATMOSPHERE (layer 3) — one renderer per variant. The scroll, the scalar and
+// the token ramp are the THEME and are identical across all three; what depth
+// is made of is the VARIANT's business.
+function drawAbyss(ts, d) {
+  var shaft = Math.max(0, 1 - d * 2.1);          // sunlight, gone by the fault
+  if (shaft > 0.01) {
+    for (var s2 = 0; s2 < 4; s2++) {
+      var x = innerWidth * (0.13 + s2 * 0.25) + Math.sin(ts / 5200 + s2) * 26;
+      var g = ctx.createLinearGradient(x, -60, x + 130, innerHeight);
+      g.addColorStop(0, 'rgba(255,255,240,' + (0.16 * shaft) + ')');
+      g.addColorStop(1, 'rgba(255,255,240,0)');
+      ctx.fillStyle = g;
+      ctx.beginPath();
+      ctx.moveTo(x - 34, -60); ctx.lineTo(x + 40, -60);
+      ctx.lineTo(x + 168, innerHeight); ctx.lineTo(x + 52, innerHeight);
+      ctx.closePath(); ctx.fill();
+    }
+  }
+  var density = 0.34 + d * 0.66;                  // marine snow
+  ctx.fillStyle = '#ffffff';
+  for (var i = 0; i < motes.length; i++) {
+    var m = motes[i];
+    if (i / motes.length > density) continue;
+    if (!reduce) {
+      m.y += m.v * (0.5 + m.r * 0.5); m.sway += 0.006;
+      m.x += Math.sin(m.sway) * 0.22;
+      if (m.y > innerHeight + 6) { m.y = -6; m.x = Math.random() * innerWidth; }
+    }
+    ctx.globalAlpha = m.a * (0.3 + d * 0.7);
+    ctx.beginPath(); ctx.arc(m.x, m.y, m.r, 0, 6.284); ctx.fill();
+  }
+  ctx.globalAlpha = 1;
+}
+
+function drawSounding(ts, d) {
+  // isobaths: the paper never darkens, the contours crowd together
+  var n = Math.round(4 + d * 26);
+  ctx.lineWidth = 1;
+  ctx.font = '9px "IBM Plex Mono", monospace';
+  for (var i = 0; i < n; i++) {
+    var t = i / n;
+    var y = innerHeight * (0.06 + t * 0.92) + Math.sin(ts / 9000 + i) * 1.2;
+    ctx.globalAlpha = 0.05 + 0.16 * (1 - Math.abs(t - d) * 1.6);
+    if (ctx.globalAlpha <= 0.01) continue;
+    ctx.strokeStyle = '#0C3E56';
+    ctx.beginPath();
+    for (var x = 0; x <= innerWidth; x += 12) {
+      var yy = y + Math.sin(x / 190 + i * 0.7) * (7 + i * 0.5) + Math.cos(x / 90 + i) * 2.5;
+      x === 0 ? ctx.moveTo(x, yy) : ctx.lineTo(x, yy);
+    }
+    ctx.stroke();
+    if (i % 5 === 0) {                            // sounding figures
+      ctx.fillStyle = '#0C3E56';
+      ctx.globalAlpha *= 1.5;
+      ctx.fillText(Math.round(t * 6000), 18 + (i % 3) * 190, y - 3);
+    }
+  }
+  ctx.globalAlpha = 1;
+}
+
+function drawCore(ts, d) {
+  // strata accumulate downward — the column is read, not swum through
+  var n = Math.round(3 + d * 22);
+  for (var i = 0; i < n; i++) {
+    var t = i / n;
+    var y = innerHeight * t, h = innerHeight / n;
+    ctx.globalAlpha = 0.05 + 0.09 * Math.abs(Math.sin(i * 2.7));
+    ctx.fillStyle = i % 3 === 0 ? '#000000' : '#C9A227';
+    ctx.fillRect(0, y, innerWidth, h * (0.35 + 0.5 * Math.abs(Math.cos(i * 1.9))));
+    ctx.globalAlpha = 0.16;
+    ctx.fillStyle = '#000000';
+    ctx.fillRect(0, y, innerWidth, 1);            // the bedding plane
+  }
+  ctx.globalAlpha = 0.4 * d;                      // grain
+  ctx.fillStyle = '#000000';
+  for (var k = 0; k < 220; k++) {
+    var gx = (k * 3739 % innerWidth), gy = (k * 7919 % innerHeight);
+    ctx.fillRect(gx, gy, 1, 1);
+  }
+  ctx.globalAlpha = 1;
+}
+
+var ATMOS = { abyss:drawAbyss, sounding:drawSounding, core:drawCore };
+
+function draw(ts) {
+  ctx.clearRect(0, 0, innerWidth, innerHeight);
+  if (state.gfx) ATMOS[state.variant](ts, state.depth);
+  requestAnimationFrame(draw);
+}
+requestAnimationFrame(draw);
+
+// ── loop: ease toward the target depth ─────────────────────────────────
+function tick() {
+  if (!state.open) state.target = scrollDepth();
+  // ascending is slower than descending — the curse, as an easing asymmetry
+  var rising = state.target < state.depth;
+  var k = reduce ? 1 : (rising ? 0.045 : 0.11);
+  state.depth += (state.target - state.depth) * k;
+  if (Math.abs(state.target - state.depth) < 0.0004) state.depth = state.target;
+  applyDepth(state.depth);
+  requestAnimationFrame(tick);
+}
+tick();
+
+// ── catalog rows ────────────────────────────────────────────────────────
+var rowsEl = document.getElementById('rows');
+SERIES.forEach(function (s) {
+  var b = document.createElement('button');
+  b.className = 'row'; b.type = 'button';
+  var left = document.createElement('div');
+  left.innerHTML = '<div class="name"></div><div class="jp"></div>';
+  left.querySelector('.name').textContent = s.name;
+  left.querySelector('.jp').textContent = s.jp;
+  var mini = document.createElement('div'); mini.className = 'mini';
+  buildStrip(mini, s.seq, '8px');
+  var nums = document.createElement('div'); nums.className = 'nums';
+  nums.textContent = 'ep:' + s.ep + ' · ch:' + s.ch + '/' + s.tch;
+  b.appendChild(left); b.appendChild(mini); b.appendChild(nums);
+  b.addEventListener('click', function () { open(s); });
+  rowsEl.appendChild(b);
+});
+
+// ── descending into a card ──────────────────────────────────────────────
+var scrim = document.getElementById('scrim'), deep = document.getElementById('deep');
+var noteEl = document.getElementById('note'), noteTimer;
+function say(t) {
+  noteEl.textContent = t; noteEl.classList.add('show');
+  clearTimeout(noteTimer);
+  noteTimer = setTimeout(function () { noteEl.classList.remove('show'); }, 2600);
+}
+
+function open(s) {
+  deep.innerHTML =
+    '<div class="dpath"><span>~/catalog/' + s.id + '</span><button id="cls" aria-label="Ascend">ascend ▲</button></div>' +
+    '<div class="dband"><div class="dstamp"></div><div style="flex:1;min-width:0">' +
+      '<div class="dtitle">' + s.name + '</div><div class="dsub">' + s.jp + '</div></div></div>' +
+    '<div class="dpos"><span>ep:' + s.ep + '<span class="d">/—</span></span>' +
+      '<span>vol:' + s.vol + '<span class="d">/' + s.tvol + '</span> · ch:' + s.ch +
+      '<span class="d">/' + s.tch + '</span></span></div>' +
+    '<div class="dstrip"><div class="strip"></div><div class="dleg"></div></div>';
+  buildStrip(deep.querySelector('.strip'), s.seq);
+  var leg = deep.querySelector('.dleg');
+  TYPES.forEach(function (t, i) {
+    var sp = document.createElement('span');
+    sp.textContent = t;
+    sp.style.color = 'var(' + CVAR[i] + ')';
+    sp.style.background = 'color-mix(in srgb,var(' + CVAR[i] + ') 13%,transparent)';
+    leg.appendChild(sp);
+  });
+  deep.querySelector('#cls').addEventListener('click', close);
+
+  state.open = true; state.target = 1;
+  scrim.classList.remove('rising'); scrim.classList.add('open');
+  document.body.classList.add('locked');
+  say('layer 4 — the episode axis is the only light down here');
+}
+function close() {
+  scrim.classList.add('rising');
+  state.open = false;
+  document.body.classList.remove('locked');
+  scrim.classList.remove('open');
+  say('ascending costs more than descending did');
+}
+scrim.addEventListener('click', function (e) { if (e.target === scrim) close(); });
+addEventListener('keydown', function (e) { if (e.key === 'Escape' && state.open) close(); });
+
+// ── switches ────────────────────────────────────────────────────────────
+var gfxBtn = document.getElementById('gfx');
+gfxBtn.addEventListener('click', function () {
+  state.gfx = !state.gfx;
+  gfxBtn.setAttribute('aria-pressed', String(state.gfx));
+  say(state.gfx ? 'atmosphere on — shafts and marine snow'
+                : 'atmosphere off — the depth ramp is layer 2 and stays');
+});
+// ── variant: swaps layer 2 only. The descent above never changes. ───────
+function setVariant(key) {
+  state.variant = key; V = VARIANTS[key];
+  V.c.forEach(function (col, i) { root.style.setProperty(CVAR[i], col); });
+  ['card','line','ink','dim','title','glow'].forEach(function (k) {
+    root.style.setProperty('--d-' + k, V.deep[k]);
+  });
+  document.querySelectorAll('#strata span').forEach(function (el, i) {
+    el.textContent = V.strata[i];
+  });
+  document.querySelectorAll('#vseg button').forEach(function (b) {
+    b.setAttribute('aria-pressed', String(b.dataset.v === key));
+  });
+  applyDepth(state.depth);
+  if (booted) say(V.label + ' — same descent, ramping ' + V.ramps);
+}
+var booted = false;
+
+var vseg = document.getElementById('vseg');
+Object.keys(VARIANTS).forEach(function (k) {
+  var b = document.createElement('button');
+  b.type = 'button'; b.textContent = VARIANTS[k].label; b.dataset.v = k;
+  b.setAttribute('aria-pressed', String(k === 'abyss'));
+  b.addEventListener('click', function () { setVariant(k); });
+  vseg.appendChild(b);
+});
+setVariant('abyss');
+booted = true;
+
+document.getElementById('top').addEventListener('click', function () {
+  if (state.open) close();
+  scrollTo({ top:0, behavior: reduce ? 'auto' : 'smooth' });
+});
+</script>

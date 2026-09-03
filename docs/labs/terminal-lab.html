@@ -1,0 +1,523 @@
+<title>Terminal Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+
+<style>
+  :root {
+    --ground:#0E1012; --surface:#16191C; --raised:#1D2226;
+    --line:#262B30; --line-2:#343B42;
+    --ink:#D9DEE3; --ink-dim:#8D97A1; --ink-faint:#616B74;
+    --accent:#7FB2C9; --pass:#7E9E86; --warn:#D98A5B; --fail:#C97A7A;
+  }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) {
+      --ground:#ECEEF0; --surface:#FFFFFF; --raised:#F5F7F8;
+      --line:#D6DCE1; --line-2:#BCC5CC;
+      --ink:#171B1F; --ink-dim:#58626B; --ink-faint:#7C868F;
+      --accent:#29647E; --pass:#3F6B4E; --warn:#A85A28; --fail:#9B3B3B;
+    }
+  }
+  :root[data-theme="light"] {
+    --ground:#ECEEF0; --surface:#FFFFFF; --raised:#F5F7F8;
+    --line:#D6DCE1; --line-2:#BCC5CC;
+    --ink:#171B1F; --ink-dim:#58626B; --ink-faint:#7C868F;
+    --accent:#29647E; --pass:#3F6B4E; --warn:#A85A28; --fail:#9B3B3B;
+  }
+
+  *,*::before,*::after { box-sizing:border-box; }
+  body {
+    background:var(--ground); color:var(--ink); margin:0;
+    font-family:Archivo,ui-sans-serif,system-ui,sans-serif;
+    font-size:14px; line-height:1.55; -webkit-font-smoothing:antialiased;
+  }
+  .wrap { max-width:1240px; margin-inline:auto; padding:0 24px 80px; }
+
+  header.top { padding:44px 0 22px; }
+  .eyebrow {
+    font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:10.5px;
+    letter-spacing:.14em; text-transform:uppercase; color:var(--ink-faint); margin:0 0 14px;
+  }
+  h1 {
+    font-family:Newsreader,Georgia,serif; font-weight:400;
+    font-size:clamp(36px,5.5vw,54px); line-height:1.05; letter-spacing:-.02em; margin:0 0 14px;
+  }
+  .lede { color:var(--ink-dim); max-width:66ch; margin:0; font-size:15px; }
+  .lede b { color:var(--ink); font-weight:500; }
+
+  /* ── controls ── */
+  .controls {
+    position:sticky; top:0; z-index:20;
+    background:var(--ground); border-block:1px solid var(--line);
+    padding:14px 0; margin:26px 0 0;
+    display:flex; flex-wrap:wrap; gap:22px 30px; align-items:flex-end;
+  }
+  .ctl { display:flex; flex-direction:column; gap:6px; }
+  .ctl > label {
+    font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:9.5px;
+    letter-spacing:.12em; text-transform:uppercase; color:var(--ink-faint);
+  }
+  .seg { display:flex; border:1px solid var(--line-2); border-radius:3px; overflow:hidden; }
+  .seg button {
+    font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:11.5px;
+    padding:6px 11px; background:transparent; color:var(--ink-dim);
+    border:0; border-right:1px solid var(--line-2); cursor:pointer; line-height:1.4;
+  }
+  .seg button:last-child { border-right:0; }
+  .seg button:hover { background:var(--raised); color:var(--ink); }
+  .seg button[aria-pressed="true"] { background:var(--accent); color:var(--ground); }
+  .seg button:focus-visible { outline:2px solid var(--accent); outline-offset:-2px; }
+  :root[data-theme="light"] .seg button[aria-pressed="true"],
+  :root:not([data-theme="dark"]) .seg button[aria-pressed="true"] { color:#fff; }
+
+  /* ── stage ── */
+  .stage { display:grid; gap:26px; grid-template-columns:minmax(0,1fr) 320px; align-items:start; margin-top:30px; }
+  @media (max-width:960px) { .stage { grid-template-columns:1fr; } }
+
+  .specimen-frame { display:flex; flex-direction:column; gap:10px; min-width:0; }
+  .frame-label {
+    font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:10px;
+    letter-spacing:.1em; text-transform:uppercase; color:var(--ink-faint);
+    display:flex; justify-content:space-between; gap:12px;
+  }
+
+  /* ══ the card — token-driven, structure fixed. This is the specimen. ══ */
+  #specimen {
+    background:var(--m-ground); padding:20px; border-radius:3px;
+    border:1px solid var(--line);
+  }
+  .card {
+    background:var(--m-card); color:var(--m-ink);
+    border:1px solid var(--m-strong); border-radius:2px;
+    font-family:'IBM Plex Mono',ui-monospace,monospace;
+    font-size:12px; overflow:hidden;
+  }
+  .path {
+    display:flex; justify-content:space-between; align-items:center;
+    padding:6px 11px; border-bottom:1px dashed var(--m-line); color:var(--m-dim); font-size:11px;
+  }
+  .band { display:flex; gap:14px; align-items:flex-start; padding:14px 11px 11px; }
+  .stamp {
+    width:52px; height:78px; flex:none; border:1px solid var(--m-line); border-radius:2px;
+    background:linear-gradient(155deg,var(--c1) 0%,transparent 60%),var(--m-ground); opacity:.6;
+  }
+  .idy { flex:1; min-width:0; display:flex; flex-direction:column; gap:5px; }
+  .ttl {
+    font-size:18px; color:var(--m-title); line-height:1.15;
+    text-shadow:var(--m-glow,none); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+  }
+  .sub { font-size:11px; color:var(--m-dim); }
+  .status {
+    font-size:10px; padding:2px 7px; flex:none; border-radius:2px;
+    color:var(--c1); background:color-mix(in srgb,var(--c1) 14%,transparent);
+  }
+  .pos {
+    display:flex; flex-wrap:wrap; gap:4px 18px; padding:0 11px 12px;
+    font-variant-numeric:tabular-nums; font-size:13px;
+  }
+  .pos .dim { color:var(--m-dim); }
+  .stripzone { padding:0 11px 12px; }
+  .strip { display:flex; gap:1px; height:18px; width:100%; }
+  .strip i { display:block; min-width:2px; }
+  .legend { display:flex; flex-wrap:wrap; gap:5px; margin-top:7px; justify-content:flex-end; }
+  .legend span { font-size:10px; padding:2px 6px; border-radius:2px; font-variant-numeric:tabular-nums; }
+
+  .eplist { border-top:1px dashed var(--m-line); }
+  .sechead {
+    display:flex; justify-content:space-between; align-items:center;
+    padding:6px 11px; font-size:11px; color:var(--m-ink);
+    border-bottom:1px solid var(--m-line);
+  }
+  .sechead .marker { display:inline-block; width:8px; height:8px; margin-right:7px; vertical-align:-1px; }
+  .eprow {
+    display:flex; align-items:center; gap:10px; padding:5px 11px 5px 0;
+    font-size:11.5px; color:var(--m-ink); border-left:2px solid transparent;
+    font-variant-numeric:tabular-nums;
+  }
+  .eprow .n { color:var(--m-dim); width:46px; text-align:right; flex:none; }
+  .eprow .t { flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .eprow .ch { color:var(--m-dim); flex:none; }
+  .eprow.sel { background:color-mix(in srgb,var(--m-ink) 7%,transparent); }
+
+  /* ── verdict panel ── */
+  .panel { background:var(--surface); border:1px solid var(--line); border-radius:3px; }
+  .panel h2 {
+    font-family:Newsreader,Georgia,serif; font-weight:400; font-size:19px; margin:0;
+    padding:16px 18px 0;
+  }
+  .panel .pbody { padding:12px 18px 18px; }
+  .score { display:flex; align-items:baseline; gap:9px; margin-bottom:3px; }
+  .score .big {
+    font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:30px; line-height:1;
+    font-variant-numeric:tabular-nums;
+  }
+  .score .of { font-size:12px; color:var(--ink-faint); font-family:'IBM Plex Mono',ui-monospace,monospace; }
+  .verdict-tag {
+    display:inline-block; font-family:'IBM Plex Mono',ui-monospace,monospace;
+    font-size:10px; letter-spacing:.1em; text-transform:uppercase;
+    padding:3px 8px; border-radius:2px; margin-bottom:12px;
+  }
+  .verdict-tag.pass { color:var(--pass); border:1px solid var(--pass); }
+  .verdict-tag.fail { color:var(--fail); border:1px solid var(--fail); }
+  .verdict-tag.deviation { color:var(--warn); border:1px dashed var(--warn); }
+  .vrows { border-top:1px solid var(--line); margin-top:4px; }
+  .vrow {
+    display:flex; justify-content:space-between; gap:10px; padding:6px 0;
+    border-bottom:1px solid var(--line);
+    font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:11px;
+    font-variant-numeric:tabular-nums; color:var(--ink-dim);
+  }
+  .vrow:last-child { border-bottom:0; }
+  .vrow.active { color:var(--ink); }
+  .vrow .pair { color:var(--ink-faint); }
+  .pnote { font-size:12.5px; color:var(--ink-dim); margin:14px 0 0; }
+  .pnote b { color:var(--ink); font-weight:500; }
+
+  .findings { margin-top:34px; display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); }
+  .finding { background:var(--surface); border:1px solid var(--line); border-left:2px solid var(--accent); padding:18px 20px; }
+  .finding.bad { border-left-color:var(--fail); }
+  .finding h3 { font-family:Archivo,sans-serif; font-size:14.5px; font-weight:600; margin:0 0 8px; }
+  .finding p { margin:0 0 10px; font-size:13.5px; color:var(--ink-dim); }
+  .finding p:last-child { margin-bottom:0; }
+  .finding b { color:var(--ink); font-weight:500; }
+  code {
+    font-family:'IBM Plex Mono',ui-monospace,monospace; font-size:.88em;
+    background:var(--raised); padding:1px 5px; border-radius:2px; color:var(--ink);
+  }
+
+  @media (prefers-reduced-motion:reduce) { * { transition:none !important; } }
+  @media (max-width:620px) { .wrap { padding-inline:16px; } .controls { gap:16px 20px; } }
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- RGB→LMS → dichromat → LMS→RGB, composed to one matrix.
+         feColorMatrix already operates in linearRGB, which is the space
+         the LMS math assumes. Row sums = 1, so greys pass through. -->
+    <filter id="protan" color-interpolation-filters="linearRGB"><feColorMatrix type="matrix"
+      values="0.17056 0.82948 0 0 0  0.17056 0.82948 0.00008 0 0  -0.00452 0.00453 1.00002 0 0  0 0 0 1 0"/></filter>
+    <filter id="deutan" color-interpolation-filters="linearRGB"><feColorMatrix type="matrix"
+      values="0.33068 0.66937 0 0 0  0.33067 0.66937 0.00008 0 0  -0.02786 0.02786 1.00002 0 0  0 0 0 1 0"/></filter>
+    <filter id="tritan" color-interpolation-filters="linearRGB"><feColorMatrix type="matrix"
+      values="1.00002 0.12744 -0.12743 0 0  0.00001 0.87401 0.12611 0 0  -0.00001 0.87390 0.12609 0 0  0 0 0 1 0"/></filter>
+  </defs>
+</svg>
+
+<div class="wrap">
+
+  <header class="top">
+    <p class="eyebrow">mangaMapper · theme 1 of 4 · terminal</p>
+    <h1>Terminal Lab</h1>
+    <p class="lede">Four variants of the theme you already ship, on the real card, against the live palette as control. All three originals failed the strip test as colour palettes: two were re-derived and now beat what ships today, and <b>phosphor stays monochrome as a ruled deviation</b> — with a duotone beside it showing what the aesthetic costs. The <code>source_only</code> hatch is unconditional in every preset, because texture encodes zone, not type.</p>
+  </header>
+
+  <div class="controls">
+    <div class="ctl">
+      <label id="l-preset">Variant</label>
+      <div class="seg" role="group" aria-labelledby="l-preset" id="seg-preset"></div>
+    </div>
+    <div class="ctl">
+      <label id="l-vision">Colour vision</label>
+      <div class="seg" role="group" aria-labelledby="l-vision" id="seg-vision"></div>
+    </div>
+    <div class="ctl">
+      <label id="l-len">Series length</label>
+      <div class="seg" role="group" aria-labelledby="l-len" id="seg-len"></div>
+    </div>
+  </div>
+
+  <div class="stage">
+    <div class="specimen-frame">
+      <div class="frame-label"><span id="fl-name">terminal / current</span><span id="fl-vision">normal vision</span></div>
+      <div id="specimen">
+        <div class="card">
+          <div class="path"><span>~/catalog/one-piece</span><span>x</span></div>
+          <div class="band">
+            <div class="stamp"></div>
+            <div class="idy">
+              <div class="ttl">ONE PIECE</div>
+              <div class="sub">ワンピース · 1999–</div>
+            </div>
+            <span class="status">airing</span>
+          </div>
+          <div class="pos">
+            <span>ep:1122<span class="dim">/—</span></span>
+            <span>vol:108<span class="dim">/110</span> · ch:1092<span class="dim">/1130</span></span>
+          </div>
+          <div class="stripzone">
+            <div class="strip" id="strip"></div>
+            <div class="legend" id="legend"></div>
+          </div>
+          <div class="eplist" id="eplist"></div>
+        </div>
+      </div>
+    </div>
+
+    <aside class="panel">
+      <h2>Strip test</h2>
+      <div class="pbody">
+        <div class="score"><span class="big" id="v-score">13.8</span><span class="of" id="v-pct">100% of control</span></div>
+        <span class="verdict-tag pass" id="v-tag">pass</span>
+        <div class="vrows" id="v-rows"></div>
+        <p class="pnote" id="v-note"></p>
+      </div>
+    </aside>
+  </div>
+
+  <div class="findings">
+    <div class="finding bad">
+      <h3>Texture belongs to zone, not to type — permanently</h3>
+      <p>The hatch in the live strip is not a type mark. It is a <b>zone</b> mark — <code>'run' | 'hatch' | 'out'</code> — and it changes behaviour: in the hatch there are no episode numbers, so a click drives the chapter field instead of the episode field.</p>
+      <p>So the strip already encodes two independent dimensions on two separate channels: <b>hue = type, texture + position = zone.</b> Giving type a texture would make a hatched segment sometimes mean "I drive chapters" and sometimes "I'm filler" — the texture stops predicting what a click does.</p>
+      <p><b>The rule:</b> one visual variable per dimension, and when two compete, the <em>robust</em> channel goes to the <em>higher-stakes</em> distinction. Texture survives greyscale and every dichromacy; zone changes behaviour where type only changes a label. Zone keeps texture, in every theme.</p>
+    </div>
+
+    <div class="finding">
+      <h3>The second phosphor has to be cold</h3>
+      <p>Phosphor stays monochrome by choice, so the duotone sits beside it rather than replacing it — identical chrome, palette the only variable. But <em>which</em> second hue is not a free choice.</p>
+      <p>Amber + P1 green scores <b>56%</b>, barely better than mono, because amber↔green <em>is</em> the protan/deutan confusion axis — it spends a hue and buys nothing. Amber + cold blue-white scores <b>108%</b>, because blue↔yellow is the axis dichromats <b>retain</b>. And three phosphors score <b>40%</b>, worse than one, because crowding hues together lets tritanopia collapse the blue/green pair.</p>
+      <p>That generalises past this theme: <b>any near-monochrome variant should reach for the blue-yellow axis</b>, and adding hues is not monotonic — more is not safer.</p>
+    </div>
+    <div class="finding">
+      <h3>The zone hatch itself thins at scale — set length to 1122</h3>
+      <p>Switch the series to One Piece's shape: thirty-odd runs across ~1120 episodes, laid out with the real model — proportional widths, <code>MIN_SEG_PX = 2</code>, 1px gaps. Short runs get their 2px floor and the long ones absorb it.</p>
+      <p>The tail survives here because 38 unadapted chapters is still a wide span. But the hatch has a <b>6px period</b>, so any <code>source_only</code> tail narrower than about 12px shows fewer than two stripes and reads as a flat dim block — the zone marker degrades into "a dimmer colour" exactly when the tail is shortest.</p>
+      <p><b>Worth checking against real data:</b> a series one or two chapters ahead of its adaptation is the common case, not a rare one. If the hatch is the honest-gap marker, it should not be the thing that disappears when the gap is small.</p>
+    </div>
+    <div class="finding">
+      <h3>Three of four now beat what ships</h3>
+      <p>Blueprint <b>132%</b>, daylight <b>122%</b>, phosphor duotone <b>108%</b> — all more robust than the live palette, and all reached without leaving their identity: blueprint's canon stayed locked to the cyan family, daylight's every type clears 4.5:1 on paper, the duotone kept phosphor's exact chrome.</p>
+      <p>Treat the numbers as a floor, not a finish. These came from an optimiser with no taste term, so they want the same hand pass <code>syntax_v1</code> got.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+// ── data ────────────────────────────────────────────────────────────────
+var ROLES = ['canon','mixed','filler','anime','manga'];
+var SEQ = [[0,6],[1,1],[0,5],[2,4],[0,7],[1,1],[3,3],[0,5],[2,2],[0,6],[4,6]];
+
+// One Piece-shaped: ~1120 episodes across many short runs, and a SHORT
+// manga_only tail (38 unadapted chapters out of ~1130) — the case where the
+// zone hatch is most at risk of vanishing into the 2px floor.
+var SEQ_LONG = (function () {
+  var out = [], canon = [24,31,18,44,27,12,38,21,16,29,35,19,26,14,41,23];
+  for (var i = 0; i < canon.length; i++) {
+    out.push([0, canon[i]]);
+    out.push([[1,2,3][i % 3], i % 4 === 0 ? 4 : 1]);
+  }
+  out.push([4, 38]); // the tail: real, published, unadapted
+  return out;
+})();
+var COUNTS = [29,2,6,3,6];
+
+var PRESETS = {
+  current: {
+    label:'current', name:'terminal / current (syntax_v1)',
+    tok:{ ground:'#12141A', card:'#171A20', line:'#3A3E45', strong:'#3C4048',
+          ink:'#C9D1D9', dim:'#7E8894', title:'#58E08A', glow:'0 0 2px rgba(88,224,138,.18)' },
+    c:['#58B8E4','#ECB351','#DC6AA3','#896ADC','#298E57'],
+    score:13.8, pct:100, verdict:'pass',
+    vis:{ normal:[22.9,'filler/anime'], protan:[14.3,'canon/filler'], deutan:[13.8,'canon/anime'], tritan:[14.1,'mixed/filler'] },
+    note:'The control. It ships, so whatever it scores is by definition passable — every other variant is judged as a percentage of this.'
+  },
+  phosphor: {
+    label:'phosphor', name:'terminal / phosphor',
+    tok:{ ground:'#0B0A07', card:'#100D08', line:'#2B2110', strong:'#33270F',
+          ink:'#FFCE73', dim:'#8A6A22', title:'#FFB000', glow:'0 0 3px rgba(255,176,0,.35)' },
+    c:['#FFBE3D','#EB9C14','#A36E1F','#E5D29E','#6B4F1F'],
+    score:7.0, pct:50, verdict:'deviation',
+    vis:{ normal:[9.0,'canon/mixed'], protan:[8.2,'canon/mixed'], deutan:[7.0,'canon/mixed'], tritan:[8.0,'canon/mixed'] },
+    note:'Kept as a deliberate monochrome. Half the control, and identical under normal vision — canon/mixed is the price of the aesthetic, paid knowingly and written down rather than hidden. Texture cannot buy it back: that channel belongs to zone.'
+  },
+  phosphor_duo: {
+    label:'phosphor duo', name:'terminal / phosphor (duotone)',
+    tok:{ ground:'#0B0A07', card:'#100D08', line:'#2B2110', strong:'#33270F',
+          ink:'#FFCE73', dim:'#8A6A22', title:'#FFB000', glow:'0 0 3px rgba(255,176,0,.35)' },
+    c:['#FFC247','#C38418','#B9CCD5','#EBE0C2','#527B98'],
+    score:14.9, pct:108, verdict:'pass',
+    vis:{ normal:[17.2,'canon/mixed'], protan:[17.2,'canon/mixed'], deutan:[16.1,'canon/mixed'], tritan:[14.9,'canon/anime'] },
+    note:'Same tube, two phosphors — identical chrome to the monochrome, so the palette is the only thing that changed. The second hue has to be COLD: amber+blue is the axis dichromats retain. Amber + P1 green scores 56%, barely better than mono, because amber↔green IS the confusion axis.'
+  },
+  blueprint: {
+    label:'blueprint', name:'terminal / blueprint (re-derived)',
+    tok:{ ground:'#0A2740', card:'#0C2E4A', line:'#1B4B6B', strong:'#21587C',
+          ink:'#CDE7F5', dim:'#5E8FAD', title:'#89E8F0', glow:'0 0 3px rgba(137,232,240,.25)' },
+    c:['#89E8F0','#E6D94C','#E64F37','#8D68C0','#50A589'],
+    score:18.3, pct:132, verdict:'pass',
+    vis:{ normal:[23.0,'canon/manga'], protan:[18.5,'filler/manga'], deutan:[18.7,'mixed/filler'], tritan:[18.3,'canon/manga'] },
+    note:'Re-derived with canon locked to the cyan family, so the drafting identity survives. Anime was pushed off blue — the original had two pale blues that collapsed for a deuteranope.'
+  },
+  daylight: {
+    label:'daylight', name:'terminal / daylight (re-derived)',
+    tok:{ ground:'#F6F1E4', card:'#FBF8F0', line:'#DCD3BE', strong:'#CFC5AC',
+          ink:'#3A3527', dim:'#8A8069', title:'#244260', glow:'none' },
+    c:['#244260','#906713','#8E153F','#7523C7','#0D7D6E'],
+    score:16.9, pct:122, verdict:'pass',
+    vis:{ normal:[20.9,'canon/anime'], protan:[17.5,'canon/filler'], deutan:[17.5,'canon/anime'], tritan:[16.9,'mixed/anime'] },
+    note:'Every type clears 4.5:1 on paper, not the 3:1 a dark ground lets you get away with. The original failed worst of all three — rose filler and green manga collapsed for a deuteranope.'
+  }
+};
+
+// TEXTURE IS THE ZONE CHANNEL, AND ONLY THE ZONE CHANNEL.
+// index 4 is not a sixth episode type — it is `source_only`, the zone where
+// the episode axis stops existing (mapping.ts: state 'run' | 'hatch' | 'out';
+// in the hatch a click drives the chapter field, not the episode field). So
+// its hatch is unconditional, exactly as MappingStrip.tsx paints it, and no
+// episode type may ever claim a texture in any theme.
+var SOURCE_ONLY = 4;
+function fill(i, color) {
+  if (i !== SOURCE_ONLY) return color;
+  // matches MANGA_ONLY_BACKGROUND — 45°, the type colour at 40%, 3px on 3px off
+  return 'repeating-linear-gradient(45deg,' +
+         'color-mix(in srgb,' + color + ' 40%,transparent) 0 3px,transparent 3px 6px)';
+}
+
+var state = { preset:'current', vision:'normal', len:'46' };
+
+// ── controls ────────────────────────────────────────────────────────────
+function buildSeg(id, items, key) {
+  var box = document.getElementById(id);
+  items.forEach(function (it) {
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.textContent = it[1];
+    b.setAttribute('aria-pressed', String(state[key] === it[0]));
+    b.addEventListener('click', function () { state[key] = it[0]; render(); });
+    b.dataset.val = it[0];
+    box.appendChild(b);
+  });
+}
+buildSeg('seg-preset', Object.keys(PRESETS).map(function (k) { return [k, PRESETS[k].label]; }), 'preset');
+buildSeg('seg-vision', [['normal','normal'],['protan','protan'],['deutan','deutan'],['tritan','tritan']], 'vision');
+buildSeg('seg-len', [['46','46 eps'],['1122','1122 eps']], 'len');
+
+// ── render ──────────────────────────────────────────────────────────────
+function render() {
+  var p = PRESETS[state.preset];
+
+  document.querySelectorAll('.seg').forEach(function (seg) {
+    var key = seg.id.replace('seg-', '');
+    seg.querySelectorAll('button').forEach(function (b) {
+      b.setAttribute('aria-pressed', String(state[key] === b.dataset.val));
+    });
+  });
+
+  var spec = document.getElementById('specimen');
+  spec.style.setProperty('--m-ground', p.tok.ground);
+  spec.style.setProperty('--m-card', p.tok.card);
+  spec.style.setProperty('--m-line', p.tok.line);
+  spec.style.setProperty('--m-strong', p.tok.strong);
+  spec.style.setProperty('--m-ink', p.tok.ink);
+  spec.style.setProperty('--m-dim', p.tok.dim);
+  spec.style.setProperty('--m-title', p.tok.title);
+  spec.style.setProperty('--m-glow', p.tok.glow);
+  p.c.forEach(function (c, i) { spec.style.setProperty('--c' + (i + 1), c); });
+  spec.style.filter = state.vision === 'normal' ? 'none' : 'url(#' + state.vision + ')';
+
+  document.getElementById('fl-name').textContent = p.name;
+  document.getElementById('fl-vision').textContent =
+    state.vision === 'normal' ? 'normal vision' : state.vision + 'opia simulated';
+
+  // strip — at 1122 episodes every segment hits the 2px paint floor
+  var strip = document.getElementById('strip');
+  strip.textContent = '';
+  var long = state.len === '1122';
+  (long ? SEQ_LONG : SEQ).forEach(function (seg) {
+    var el = document.createElement('i');
+    el.style.flex = seg[1] + ' 1 0';
+    var c = p.c[seg[0]];
+    el.style.background = fill(seg[0], c);
+    el.title = ROLES[seg[0]];
+    strip.appendChild(el);
+  });
+  if (long) {
+    // MIN_SEG_PX = 2: a run too small to earn 2px is given 2px anyway, and the
+    // large runs absorb it proportionally — the live chapter-bar layout model.
+    var total = SEQ_LONG.reduce(function (n, s2) { return n + s2[1]; }, 0);
+    var px = strip.getBoundingClientRect().width || 600;
+    var avail = px - (SEQ_LONG.length - 1);
+    strip.querySelectorAll('i').forEach(function (el, i) {
+      el.style.flex = '0 0 ' + Math.max(2, (SEQ_LONG[i][1] / total) * avail).toFixed(2) + 'px';
+    });
+  }
+
+  var legend = document.getElementById('legend');
+  legend.textContent = '';
+  ROLES.forEach(function (r, i) {
+    var s = document.createElement('span');
+    s.textContent = r + ' ' + COUNTS[i];
+    s.style.color = p.c[i];
+    s.style.background = 'color-mix(in srgb,' + p.c[i] + ' 13%,transparent)';
+    legend.appendChild(s);
+  });
+
+  // episode list — section bands + type rails, where the colours do real work
+  var SECTIONS = [
+    { t:0, label:'canon', range:'ep:1-6', rows:[[1,'Romance Dawn','ch:1'],[2,'The Great Swordsman','ch:2-3'],[3,'Morgan versus Luffy','ch:4-6']] },
+    { t:2, label:'filler', range:'ep:13-16', rows:[[13,'The Calm Belt Detour','—'],[14,'A Burning Island','—']] },
+    { t:1, label:'mixed', range:'ep:7', rows:[[7,'Epic Showdown','ch:7-8']] }
+  ];
+  var list = document.getElementById('eplist');
+  list.textContent = '';
+  SECTIONS.forEach(function (sec, si) {
+    var c = p.c[sec.t];
+    var h = document.createElement('div');
+    h.className = 'sechead';
+    h.style.background = 'linear-gradient(color-mix(in srgb,' + c + ' 7%,transparent),' +
+                         'color-mix(in srgb,' + c + ' 7%,transparent)),' + p.tok.card;
+    var mk = document.createElement('span');
+    mk.className = 'marker';
+    mk.style.background = fill(sec.t, c);
+    var lbl = document.createElement('span');
+    lbl.appendChild(mk);
+    lbl.appendChild(document.createTextNode(sec.label));
+    var rng = document.createElement('span');
+    rng.style.color = p.tok.dim;
+    rng.textContent = sec.range;
+    h.appendChild(lbl); h.appendChild(rng);
+    list.appendChild(h);
+
+    sec.rows.forEach(function (row, ri) {
+      var r = document.createElement('div');
+      r.className = 'eprow' + (si === 0 && ri === 1 ? ' sel' : '');
+      if (si === 0 && ri === 1) r.style.borderLeftColor = c;
+      var n = document.createElement('span'); n.className = 'n'; n.textContent = row[0];
+      var t = document.createElement('span'); t.className = 't'; t.textContent = row[1];
+      var ch = document.createElement('span'); ch.className = 'ch'; ch.textContent = row[2];
+      r.appendChild(n); r.appendChild(t); r.appendChild(ch);
+      list.appendChild(r);
+    });
+  });
+
+  // verdict panel
+  var VCOLOR = { pass:'var(--pass)', fail:'var(--fail)', deviation:'var(--warn)' };
+  var VLABEL = { pass:'pass', fail:'fail', deviation:'documented deviation' };
+  document.getElementById('v-score').textContent = p.score.toFixed(1);
+  document.getElementById('v-score').style.color = VCOLOR[p.verdict];
+  document.getElementById('v-pct').textContent = p.pct + '% of control';
+  var tag = document.getElementById('v-tag');
+  tag.textContent = VLABEL[p.verdict]; tag.className = 'verdict-tag ' + p.verdict;
+
+  var rows = document.getElementById('v-rows');
+  rows.textContent = '';
+  ['normal','protan','deutan','tritan'].forEach(function (v) {
+    var d = p.vis[v];
+    var row = document.createElement('div');
+    row.className = 'vrow' + (v === state.vision ? ' active' : '');
+    var a = document.createElement('span'); a.textContent = v;
+    var b = document.createElement('span');
+    b.innerHTML = '<span class="pair">' + d[1] + '</span>  ΔE ' + d[0].toFixed(1);
+    row.appendChild(a); row.appendChild(b);
+    rows.appendChild(row);
+  });
+
+  var note = p.note;
+  if (state.len === '1122') {
+    note += ' — At 1122 episodes every segment is clamped to the 2px paint floor, so pattern is gone and only colour is left.';
+  }
+  document.getElementById('v-note').textContent = note;
+}
+
+render();
+</script>

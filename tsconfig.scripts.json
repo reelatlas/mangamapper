@@ -31,6 +31,7 @@
     "supabase/functions/_src",
     "src/types/anime.ts",
     "src/lib/mapping.ts",
+    "src/lib/palette.ts",
     "src/data/catalog/assemble.ts"
   ]
 }
