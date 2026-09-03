@@ -1,0 +1,189 @@
+{
+  "series_id": "naruto-shippuden",
+  "summary": "Rows 374-384 are the anime's straight run through the Obito-as-Ten-Tails-jinchūriki block: nine canon rows adapting manga ch 634-652 in monotone running order at a steady ~2 chapters per episode, plus the anime-original Mecha-Naruto special (376-377) dropped between eps 375 and 378. Every canon target row takes an anchor and the block sits cleanly inside the fence (ep 373 → 633 below, ep 393 → 661 above): 374 → 635, 375 → 637, 378 → 640, 379 → 642, 380 → 644, 381 → 646, 382 → 648, 383 → 650, 384 → 652. Only ONE chapter in the block is split mid-chapter: ch 635, whose first two-thirds (the Orochimaru/Suigetsu/Karin arrival and Tsunade's healing) closes ep 374 while its remainder (Sai and Sakura, the Ten-Tails shedding its burning flesh, the Kage setting out, Kakashi and Obito impaling each other) opens ep 375 — so ep 374 gets the only C1 continue in the block. Narutopedia's per-episode `chapters=` field and AFG's chapter column agree row for row, and en-WP's season-18 episode summaries match Narutopedia's per-CHAPTER summaries beat for beat at every boundary, which is what lets the two shared-chapter seams be resolved on content rather than on a wiki field: ep 374/375 share ch 635 by a real page split, while ep 383's listed '648' is only the re-shown closing image of the five Kage's arrival that ep 382 already animated (ch 648's last page) — its own story starts at ch 649, so START 649 (A10: re-shown pages are never cited). Every other episode boundary in the block falls exactly on a chapter's last page, so no other continue is needed. 376-377 take nothing (A1): the Mecha-Naruto two-parter is a one-hour anime-original special (Narutopedia: empty `chapters` and no `arc`; AFG 'N/A * Filler'; ja-WP bolds both rows and footnotes them as NARUTO疾風伝スペシャル) built around a character created for the game Ultimate Ninja Storm Revolution — the stored filler type holds, no repair.",
+  "anchors": [
+    {
+      "episode": 374,
+      "end_chapter": 635,
+      "start_chapter": 634,
+      "chapters_adapted": "634, 635 (opening ~two-thirds: Orochimaru, Suigetsu and Karin reach the Kage; Tsunade healed and Orochimaru's return revealed; the rest of 635 opens ep 375)",
+      "volume": 66,
+      "confidence": "high",
+      "note": "A4/A10: opens exactly on ch 634's first page (the Gamakichi/Aoda/Katsuyu summons that ep 373 ended on) and runs to the combined Rasenshuriken + Amaterasu strike (634's penultimate page), then plays ch 635's opening block — the Orochimaru trio reaching the Kage, Suigetsu and Karin restoring Tsunade, Orochimaru departing for the main battle. That block is well over the A47 sliver bar (roughly half the episode per en-WP), so the END advances to 635 even though ep 375 finishes the chapter. Narutopedia and AFG both print '634, 635'; en-WP's summary is what proves the 635 share is the Kage/Orochimaru half.",
+      "sources": [
+        "https://naruto.fandom.com/wiki/The_New_Three-Way_Deadlock",
+        "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_18",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/",
+        "https://naruto.fandom.com/wiki/A_New_Wind"
+      ]
+    },
+    {
+      "episode": 375,
+      "end_chapter": 637,
+      "start_chapter": 635,
+      "chapters_adapted": "634 (closing page carried over: Sai questions Jūgo about Sasuke's motives), 635 (remainder: Sai and Sakura, Naruto vs Sasuke over the tailed beasts, the Ten-Tails sheds its burning flesh, the healed Kage prepare to move out, Kakashi and Obito impale each other), 636, 637",
+      "volume": 66,
+      "confidence": "high",
+      "note": "A10: the leading ch-634 beat is one closing page carried over from the previous episode, so START is 635 — the chapter this episode actually opens its own coverage in (both Narutopedia and AFG list 635 first). A4: the END lands on ch 637's LAST page — Minato's shadow clone cuts Obito down, Minato learns he was the masked man, and Obito frees and absorbs the Ten-Tails to become its jinchūriki — which is where ch 638 (ep 378) picks up. No mid-chapter tail: ep 378 starts clean at 638.",
+      "sources": [
+        "https://naruto.fandom.com/wiki/Kakashi_vs._Obito",
+        "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_18",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/",
+        "https://naruto.fandom.com/wiki/The_Ten-Tails%27_Jinch%C5%ABriki"
+      ]
+    },
+    {
+      "episode": 378,
+      "end_chapter": 640,
+      "start_chapter": 638,
+      "chapters_adapted": "638, 639, 640",
+      "volume": 67,
+      "confidence": "high",
+      "note": "A4/A10: opens on ch 638's first page (the Alliance's confusion at the Ten-Tails' disappearance, Hinata explaining the absorption to Sakura) and closes on ch 640's last page (Obito seizes control of the beast, tears Minato's arm off, and the Truth-Seeking Ball attached to the regenerating stump begins to glow) — en-WP's summary ends on that exact beat and ep 379 opens on it as ch 641's first page. Clean chapter boundaries both sides, so no continue. Note the title trap: the episode's title 十尾の人柱力 is ch 637's title, but the episode adapts 638-640 (Narutopedia's own page carries a 'looking for chapter 637' hatnote).",
+      "sources": [
+        "https://naruto.fandom.com/wiki/The_Ten-Tails%27_Jinch%C5%ABriki_(episode)",
+        "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_18",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/",
+        "https://naruto.fandom.com/wiki/Finally"
+      ]
+    },
+    {
+      "episode": 379,
+      "end_chapter": 642,
+      "start_chapter": 641,
+      "chapters_adapted": "641, 642",
+      "volume": 67,
+      "confidence": "high",
+      "note": "A4/A10: opens on ch 641's first page (Tobirama's clone teleports the detonating Truth-Seeking Ball back to Obito) and ends on ch 642's last page (Naruto lands the senjutsu Rasengan, Minato compares his son's Sage Mode to Jiraiya's and Yin-Kurama praises him). Narutopedia + AFG both '641, 642'; en-WP's summary runs the same two chapters end to end. Clean boundaries — no continue.",
+      "sources": [
+        "https://naruto.fandom.com/wiki/An_Opening",
+        "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_18",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/"
+      ]
+    },
+    {
+      "episode": 380,
+      "end_chapter": 644,
+      "start_chapter": 643,
+      "chapters_adapted": "643, 644",
+      "volume": 67,
+      "confidence": "high",
+      "note": "A4/A10: opens on ch 643's first page (Yin-Kurama questioning Minato) and ends on ch 644's last page (Naruto tells Minato he needn't speak — both his parents' feelings were already conveyed). Narutopedia + AFG both '643, 644'; en-WP's summary closes on the same line. Clean boundaries — no continue.",
+      "sources": [
+        "https://naruto.fandom.com/wiki/The_Day_Naruto_Was_Born",
+        "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_18",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/"
+      ]
+    },
+    {
+      "episode": 381,
+      "end_chapter": 646,
+      "start_chapter": 645,
+      "chapters_adapted": "645, 646",
+      "volume": 67,
+      "confidence": "high",
+      "note": "A4/A10: opens on ch 645 (the father-and-son exchange, then Naruto's Sage Mode + Tailed Beast Mode combination) — the extended Minato reflection at the top is anime expansion of that same opening, not a separate chapter — and ends on ch 646's last page (Hiruzen saves Naruto with Enma's staff, Obito tells the Alliance to give in as the flower begins to open). Narutopedia + AFG both '645, 646'. Clean boundaries — no continue. Row identity: Narutopedia titles this episode 'God Tree' (神樹) where our row and AFG carry the Viz/dub title 'The Divine Tree'; same episode, 2014-10-09.",
+      "sources": [
+        "https://naruto.fandom.com/wiki/God_Tree_(episode)",
+        "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_18",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/",
+        "https://naruto.fandom.com/wiki/God_Tree_(chapter)"
+      ]
+    },
+    {
+      "episode": 382,
+      "end_chapter": 648,
+      "start_chapter": 647,
+      "chapters_adapted": "647, 648",
+      "volume": 68,
+      "confidence": "high",
+      "note": "A4/A10: opens on ch 647's first page (the five Kage riding Gaara's sand, Katsuyu briefing them) and ends on ch 648's LAST page (Hashirama's first-Kage-Summit memory relayed through Ino, then the five current Kage arriving as a united front). Narutopedia + AFG both '647, 648'; en-WP's summary ends on the same image. Clean boundaries — no continue; ep 383 re-shows only that closing arrival page.",
+      "sources": [
+        "https://naruto.fandom.com/wiki/A_Shinobi%27s_Dream",
+        "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_18",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/",
+        "https://naruto.fandom.com/wiki/A_Shinobi%27s_Dream%E2%80%A6!!"
+      ]
+    },
+    {
+      "episode": 383,
+      "end_chapter": 650,
+      "start_chapter": 649,
+      "chapters_adapted": "648 (re-shown closing image only: the five Kage's arrival, animated at the end of ep 382), 649, 650",
+      "volume": 68,
+      "confidence": "high",
+      "note": "A10 / 'pages, not numbers': Narutopedia and AFG both list 648 first, but the episode's own coverage starts at ch 649 — its opening line, 'as the five Kage arrive they see this is no battle to be lost', is ch 649's first page (the Kage dispersing across the battlefield); ch 648's arrival page was already animated as ep 382's ending, and re-shown pages are never cited. START 649. A4: the END is ch 650's last page (Naruto forced out of Sage Tailed Beast Mode, the nindō answer, 'I'll sleep tomorrow and dream on my own' as Sasuke's Susanoo encases him). The Kamui-dimension Kakashi beat that sits mid-650 in the manga is moved to the episode's close (a within-chapter reorder, not a coverage change). Clean chapter end — no continue.",
+      "sources": [
+        "https://naruto.fandom.com/wiki/Pursuing_Hope",
+        "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_18",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/",
+        "https://naruto.fandom.com/wiki/A_Shinobi%27s_Will",
+        "https://naruto.fandom.com/wiki/I_Will_Sleep"
+      ]
+    },
+    {
+      "episode": 384,
+      "end_chapter": 652,
+      "start_chapter": 651,
+      "chapters_adapted": "651, 652",
+      "volume": 68,
+      "confidence": "high",
+      "note": "A4/A10: opens on ch 651's first page (Kakashi watching through the Sharingan link as Sasuke's Susanoo equips onto Naruto's senjutsu Tailed Beast Mode) and ends on ch 652's last page (Naruto reaching Obito's consciousness and declaring he will destroy the mask of being no one). Narutopedia + AFG both '651, 652'; en-WP's summary closes on the same beat, and ep 385 (another agent's row) opens on ch 653's first page. Clean boundary — no continue; this is the block's hand-off.",
+      "sources": [
+        "https://naruto.fandom.com/wiki/A_Heart_Filled_With_Comrades",
+        "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_18",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/",
+        "https://naruto.fandom.com/wiki/Naruto%27s_Furrow"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 374,
+      "continue_chapter": 635,
+      "kind": "parity",
+      "note": "C1: the episode stops inside ch 635 — it animates the chapter's opening block (Orochimaru, Suigetsu and Karin reaching the Kage; Tsunade healed; the trio leaving for the battlefield) and ep 375 plays the rest of the chapter (Sai and Sakura, the Ten-Tails shedding its burning flesh, the Kage preparing to move out, Kakashi and Obito impaling each other). Resume IN ch 635.",
+      "sources": [
+        "https://naruto.fandom.com/wiki/A_New_Wind",
+        "https://en.wikipedia.org/wiki/Naruto:_Shippuden_season_18",
+        "https://naruto.fandom.com/wiki/Kakashi_vs._Obito"
+      ]
+    },
+    {
+      "episode": 375,
+      "continue_chapter": 638,
+      "kind": "parity",
+      "note": "C2 parity: ep 375 finishes ch 637 and the next two rows (376-377) are the anime-original Mecha-Naruto one-hour special — nothing of the manga is in them and nothing is skipped. Canon resumes at ep 378, which starts at ch 638; read to the end of ch 637 and hold there through 376-377.",
+      "sources": [
+        "https://naruto.fandom.com/wiki/The_Ten-Tails%27_Jinch%C5%ABriki_(episode)",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/",
+        "https://ja.wikipedia.org/wiki/NARUTO_-%E3%83%8A%E3%83%AB%E3%83%88-_%E7%96%BE%E9%A2%A8%E4%BC%9D"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [374, 375],
+      "kind": "partial",
+      "chapters": "635",
+      "note": "Ch 635 is page-split across the pair: ep 374 animates its opening block (the Orochimaru/Suigetsu/Karin arrival at the five Kage and Tsunade's healing) as the episode's B-half; ep 375 animates the remainder (Sai and Sakura on Sasuke's return, Naruto vs Sasuke over extracting the tailed beasts, the Ten-Tails severing its burning flesh, the healed Kage preparing to depart, and the mutual impalement in Kamui's dimension). Ep 375 also carries over ch 634's closing page (Sai questioning Jūgo). Recorded as the tie behind ep 374's C1 continue."
+    },
+    {
+      "episodes": [383],
+      "kind": "rearranged",
+      "chapters": "648, 650",
+      "note": "The episode opens by re-showing ch 648's closing image (the five Kage arriving as a united front — already animated at the end of ep 382) before starting its own coverage at ch 649, and it moves ch 650's Kamui-dimension beat (Kakashi recognising that Obito still carries the Will of Fire, and preparing to return) from mid-chapter to the episode's final scene. Neither move changes coverage: START 649, END 650."
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [],
+  "structure": {
+    "notes": "ROW IDENTITY (checked first, per the wave-2 lesson): ja-WP's 各話リスト, en-WP season 18, Narutopedia and AFG all join to OUR rows 373-393 on title AND air date with no offset — 374 新たなる三竦み 2014-08-28, 375 カカシVSオビト 09-04, 376+377 both 09-11 (the one-hour NARUTO疾風伝スペシャル「ナルト対メカナルト〜九尾強奪指令〜」, counted as TWO rows by every source and by us), 378 十尾の人柱力 09-18, 379 突破口 09-25, 380 ナルトが生まれた日 10-02, 381 神樹 10-09, 382 忍の夢 10-16, 383 希望を追う 10-23, 384 仲間で満ちた心 10-30. All ten stored air dates match ja-WP exactly; no date or numbering repair is needed in this block.\nTITLE VARIANCE (not a defect): ep 381 is 'God Tree' on Narutopedia (a straight rendering of 神樹) and 'The Divine Tree' in our row and on AFG (the Viz/dub title). Same episode, same date. Ep 376's ja title is 九尾強奪指令; our row's 'The Directive to Take the Nine Tails' matches AFG's 'The Directive to Take the Nine-Tails!'.\nCHAPTER SPACE: the manga's own 1-700 numbering throughout (Narutopedia's chapter pages carry `chapter=` and `volume=` and agree with our stored volume boundaries at every seam used here — 637 = vol 66, 638 = vol 67, 647 = vol 67, 648 = vol 68). Anchor volumes follow the END chapter, as the stored rows do.\nTRAP RE-CONFIRMED: ja-WP's 通算話 column reads 594-604 across rows 374-384 — those are CUMULATIVE episode numbers (Naruto 220 + Shippuden N), never chapters. An index join there would fabricate anchors 594-604.\nWHY THE TWO WIKI FIELDS ARE NOT ENOUGH ALONE: Narutopedia's `chapters=` and AFG's chapter column agree row for row here (374 634-635, 375 635-637, 378 638-640, 379 641-642, 380 643-644, 381 645-646, 382 647-648, 383 648-650, 384 651-652), but neither says WHICH pages. Both shared-chapter seams were resolved on content by matching en-WP's season-18 episode summaries against Narutopedia's per-chapter summaries: ch 635 is a genuine page split (374 takes the opening two-thirds), while ep 383's '648' is only ep 382's closing image re-shown, so 383's START is 649. Narutopedia's own ep-374 summary omits the Kage/Orochimaru half of the episode entirely — reading it alone would have produced END 634 and a false gap in ch 635.\nFENCE + HAND-OFF: the block sits inside ep 373 → 633 (ep 373 ends on ch 633's last page — the Team 7 summons that ch 634 opens on) and ep 393 → 661. ENDs are strictly monotone 635 < 637 < 640 < 642 < 644 < 646 < 648 < 650 < 652 with no revisit. My last row is ep 384 → 652; the next agent's sub-block starts at ep 385, which opens on ch 653's first page (Narutopedia ep 385 `chapters=653`, AFG '653') — the hand-off is clean and needs no continue from my side.\nFOR THE 385-392 AGENT (not acted on here): AFG labels row 388 'Mixed' with explicit timestamps ('we only watch from 2:05 to 5:18 and then 20:42 to 21:05', chapter 656) where our stored type is filler; AFG also prints 656, 657 for 391 and 658-660 for 392, and 660-662 for the fence row 393 while the stored fence anchor is 661.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "A1 rows, type confirmed not researched further: 376-377 (the Mecha-Naruto one-hour special) stay FILLER. Narutopedia's episode pages carry an EMPTY `chapters` field and no `arc` field, AFG prints 'N/A * Filler', ja-WP bolds both rows and footnotes them as a special, and the Narutopedia arc page for Birth of the Ten-Tails' Jinchūriki says in so many words that in the anime the arc 'is preceded by two Mecha-Naruto stand-alone episodes'. The material is built around a character created for the game Naruto Shippuden: Ultimate Ninja Storm Revolution and is set in a what-if continuity (Itachi, Kisame, Jiraiya and Orochimaru all alive) — zero manga pages, no T28 question to answer. The stored `graft` annotation with chapters=null on 376-377 remains accurate.",
+    "ONE JUDGEMENT CALL worth Sean's eye: ep 383's START. Two per-episode sources print '648' as its first chapter, and I deliver START 649 because ch 648's only page in ep 383 is the Kage-arrival image ep 382 already animated as its ending (A10 / 'pages, not numbers': re-shown pages are never cited). If the house preference is to let the shared page set the START, 383 becomes [648] and nothing else in the block moves (END 650 is unaffected). The ch-635 split at 374/375 is the opposite shape and is not in doubt — en-WP's ep-374 summary describes the 635 block in detail."
+  ]
+}
