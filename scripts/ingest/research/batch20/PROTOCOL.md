@@ -224,3 +224,19 @@ A47's unproven-tail convention: hold an END only on a page count ≤ 5 or
 teaser wording — an unquantified 'opening of X' ADVANCES to X with a
 `partial`. Eps 85-87 carry a real reorder (`rearranged` with the
 back-jump START, never a plain range).
+
+Wave 16 = **the mixed_fragment_only queue under T28's SLIVER CLAUSE** (deep
+consolidate 2026-09-04; 16 rows across 15 series; lane C, narrow questions —
+files `<series>-w16.json`). Sean ruled the clause 2026-09-04: source material
+carries a WEIGHT — SIGNIFICANT (progresses the story in a meaningful way; size
+is not the test; or the SOLE adaptation of load-bearing material) earns the
+type and can carry the anchor; a SLIVER (tease / fragment / graft / page tie /
+adapted properly later) is canon material with NO weight — neither type nor
+anchor — NOTED with the episode that adapts the chapter properly; the
+REMAINDER decides the type. Every row in this wave is typed mixed on fragment
+ties alone with no anchor: your job is the weight of each segment, with the
+sole-adaptation check against the stored anchors. Deliver `weight: significant
+— because …` or `weight: sliver — because …` in every annotation note; a
+type_correction to filler where the weight says so; an anchor ONLY for
+significant first-time material. `recap` and `unverified` are annotation kinds
+now (see research-agent.md). Two independent sources per claim (R3).
