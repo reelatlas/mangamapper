@@ -1,0 +1,138 @@
+{
+  "series_id": "kingdom",
+  "summary": "OUR rows 117-122 are Kingdom S4 eps 14-19 (row conversion verified by TITLE and air date against ja-WP's 第4シリーズ 各話リスト, never by index; S1 38 + S2 39 + S3 26 = 103, so our 104 = S4 ep 1). All six rows are canon and adapt the State of Ai arc (毐国反乱編) in unbroken running order from ch 404 through ch 421 at a steady three chapters per episode, inside the stored fence (ep 103 -> 364, ep 129 -> 441). Every row gets an anchor - 6 of 6, no anchor-hostile rows, no filler, no anime-original inserts found by any of the three per-episode sources. Nothing is skipped anywhere in the block, so the only continue point is the single mid-chapter ending: ep 119 stops inside ch 412 (加冠の儀) at the ceremony preparations and ep 120 opens on that chapter's last three pages (Ei Sei's entrance / the Ai army massed at Kankoku Pass) before moving into 413 - a leading sliver under A10, so ep 120's START is 413. The block's real finding is a third, independent per-episode source: somanystars.net publishes its own 原作対応 range per S4 episode, and it agrees with the fandom page-level splits everywhere - including the 412 straddle that programming-cafe's index misses, and including ch 414, which kingdom.fandom's Episode 120 infobox silently DROPS (the episode's own Japanese title 三方ゆずらず IS ch 414's title, and the same fandom page's Trivia line says 'Chapter 413 to 415').",
+  "anchors": [
+    {
+      "episode": 117,
+      "end_chapter": 406,
+      "start_chapter": 404,
+      "chapters_adapted": "404-406",
+      "volume": 38,
+      "confidence": "high",
+      "note": "S4 ep 14 新しい国 (= ch 405's title). Opens on Ryo Fui's completed Lüshi Chunqiu (404 p.1; the fandom character order opens Ryo Fui / Sai Taku = 404's cast) and closes on Tou's elevation to Qin's second Great General, which is ch 406's last page - ch 407 re-opens on the Tou Army cheering that promotion, so the boundary is a full-chapter one (no straddle). Ep 116 ends at 403, so START=404 with no leading partial (A10 not engaged). Three per-episode sources give 404-406 exactly.",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_117&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+        "https://somanystars.net/archives/10149",
+        "https://kingdom-anime.com/story/detail.php?id=1001075&season=4",
+        "https://kingdom.fandom.com/api.php?action=parse&page=Chapter_406&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 118,
+      "end_chapter": 409,
+      "start_chapter": 407,
+      "chapters_adapted": "407-409",
+      "volume": 38,
+      "confidence": "high",
+      "note": "S4 ep 15 何もない男 (= ch 409's title). START=407 (the promotion ceremony: Shin and Ou Hon made 5000-Man Commanders) picking up from 406's final panel; END=409 on its last page - Ko Reki reporting that Kanyou has learned of the Queen Mother's two children and is mustering a subjugation force, which is exactly the licensor's closing line 「嫪毐は大臣・虎歴からあることを持ちかけられ……？」. Full chapter, no straddle: ep 119 opens on 410. All three per-episode sources give 407-409.",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_118&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+        "https://somanystars.net/archives/10149",
+        "https://kingdom-anime.com/story/detail.php?id=1001080&season=4",
+        "https://kingdom.fandom.com/api.php?action=parse&page=Chapter_409&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 119,
+      "end_chapter": 412,
+      "start_chapter": 410,
+      "chapters_adapted": "410-411, 412 (p.1-15)",
+      "volume": 38,
+      "confidence": "high",
+      "note": "S4 ep 16; the true Japanese title is 加冠の儀 (ja-WP) = ch 412's title. START=410 二つに一つ (Chou Kou and the Queen Mother; Ko Reki pressing Rou Ai) - the fandom character order opens on exactly that cast. END=412: the episode stops at the ceremony PREPARATIONS (both the licensor synopsis 「式典の準備が着々と進められていた」 and somanystars 「加冠の儀の準備が行われています」), i.e. before the king enters, which fandom places at 412 p.16. 412 runs 18 pages (fandom chapter page), so ep 119 carries 15 of them - the bulk, not a scrap, so A47 does not pull the END back. See the ep 119 continue point (C1).",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_119&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+        "https://somanystars.net/archives/10149",
+        "https://kingdom-anime.com/story/detail.php?id=1001084&season=4",
+        "https://kingdom.fandom.com/api.php?action=parse&page=Chapter_412&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 120,
+      "end_chapter": 415,
+      "start_chapter": 413,
+      "chapters_adapted": "412 (p.16-18), 413-415",
+      "volume": 38,
+      "confidence": "high",
+      "note": "S4 ep 17 三方ゆずらず = ch 414's title, and ch 414 is the chapter kingdom.fandom's infobox DROPS - restored here by three sources (pcafe lists 414 in 4-17; somanystars gives the range 412-415; the same fandom page's own Trivia line reads 'Chapter 413 to 415'). START=413 (A10): the 3-page head of ch 412 the episode re-enters on (Ei Sei's entrance 「目の前に現れた嬴政の堂々たる姿に皆が息を呑む」 plus the Ai army massed at Kankoku Pass) is a sliver of an 18-page chapter, so the START is the first FULL chapter, 413 祖霊の声. END=415 on its last page - Ei Sei telling Ryo Fui that an army capable of stopping the rebels is already on its way (the Hi Shin Unit), which is the episode's closing reveal; ch 416 opens on that unit riding.",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_120&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+        "https://somanystars.net/archives/10149",
+        "https://kingdom-anime.com/story/detail.php?id=1001087&season=4",
+        "https://kingdom.fandom.com/api.php?action=parse&page=Chapter_414&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 121,
+      "end_chapter": 418,
+      "start_chapter": 416,
+      "chapters_adapted": "416-418",
+      "volume": 39,
+      "confidence": "high",
+      "note": "S4 ep 18 渡河の戦い = ch 417's title. START=416 伏兵の場所 (the Hi Shin Unit reaching the Isui and the militia of Sai revealed as the hidden army); END=418 on its last page - Kanyou under siege, Kou shielding Rei in the harem, and the closing panel of the capital's gates swinging open, which ch 419 re-opens on. Full-chapter boundaries at both ends. All three per-episode sources give 416-418.",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_121&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+        "https://somanystars.net/archives/10149",
+        "https://kingdom-anime.com/story/detail.php?id=1001090&season=4",
+        "https://kingdom.fandom.com/api.php?action=parse&page=Chapter_418&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 122,
+      "end_chapter": 421,
+      "start_chapter": 419,
+      "chapters_adapted": "419-421",
+      "volume": 39,
+      "confidence": "high",
+      "note": "S4 ep 19 袂を分かつ = ch 420's title. START=419 立つ男 (the open gates, Ten's decoded message, Shou Hei Kun's cavalry arriving); END=421 二の舞 on its last page - Ten invoking the failure at Tonryuu and Shin rallying the Hi Shin Unit and the men of Sai toward the royal family. Ep 123 opens on 422 守り抜く命 (Kou and Rei), so the boundary is a full-chapter one. All three per-episode sources give 419-421.",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_122&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+        "https://somanystars.net/archives/10149",
+        "https://kingdom-anime.com/story/detail.php?id=1001096&season=4",
+        "https://kingdom.fandom.com/api.php?action=parse&page=Chapter_421&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 119,
+      "continue_chapter": 412,
+      "kind": "parity",
+      "note": "C1: ch 412 加冠の儀 straddles the episode boundary - ep 119 stops at the ceremony preparations (p.1-15) and ep 120 finishes the chapter (p.16-18: Ei Sei's entrance, the Ai army at Kankoku Pass). Resume IN 412; nothing is skipped anywhere in 404-421, so there is no material to catch up on.",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_120&prop=wikitext&format=json",
+        "https://somanystars.net/archives/10149"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [
+        119,
+        120
+      ],
+      "kind": "partial",
+      "chapters": "412",
+      "note": "ch 412 (18 pages) is split across the boundary: ep 119 takes p.1-15 (the elder's talk with Ei Sei, the officials and foreign envoys gathering at Kinen Temple, the Queen Mother's entrance) and ep 120 re-enters on p.16-18 (the king enters, the Ai army massed at Kankoku Pass) before moving into 413. Sourced by kingdom.fandom's page-level fields on both episode pages and by somanystars.net's range for S4 ep 17 (412-415); programming-cafe's index assigns 412 wholly to S4 ep 16 - split evidence, flagged."
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [],
+  "structure": {
+    "notes": "ROW IDENTITY: our rows 117-122 = S4 eps 14-19. Joined by TITLE and air date against ja-WP's 第4シリーズ 各話リスト (第14話 新しい国 7月10日 / 第15話 何もない男 7月17日 / 第16話 加冠の儀 7月24日 / 第17話 三方ゆずらず 7月31日 / 第18話 渡河の戦い 8月7日 / 第19話 袂を分かつ 8月14日) - every stored date matches to the day. kingdom.fandom uses the SAME cumulative numbering as ours (its Episode 117 page = 'the 117th episode... the 14th of season four'), and its 'air date' column runs one day earlier (US date), as documented in the wave-2 verdict. HANDOFF: this sub-block's first row (117) opens on ch 404 呂氏春秋 - ep 116 ends at 403 太后の狙い (programming-cafe 4-13 = 401-403; kingdom.fandom's Episode 116 field agrees on the 403 endpoint) - and its last row (122) hands off at ch 422 守り抜く命, which opens ep 123 (fandom Episode 123 = '422, 423, 424 (p.1-12)'; pcafe 4-20 = 422-424). ENDs are monotone 406 < 409 < 412 < 415 < 418 < 421 and sit inside the outer fence 364 (ep 103) -> 441 (ep 129). No re-use, no reorder, no rearranged rows in this block. CHAPTER SPACE: the manga's own numbering; the fandom chapter pages' volume field agrees with our stored boundary table exactly at both crossings here (404 = vol 37, 405-415 = vol 38, 416+ = vol 39), so no conversion is needed. Volumes on the anchors follow the stored convention (the END chapter's volume). ARC BRACKET (cross-check): subculview's arc table puts 毐国反乱編 加冠の儀 at 37巻402話-41巻440話 = S4 eps 13-26, which brackets this whole block. SOURCE INSTRUMENTS: three independent per-episode sources agree on the chapter set of all six rows - kingdom.fandom's episode pages, programming-cafe's per-chapter -> episode anicomi index, and somanystars.net's per-episode 原作対応 ranges (a Japanese blog with its own written summaries, matched here beat-for-beat against the licensor's per-episode synopses on kingdom-anime.com and the fandom chapter-page summaries). WIKI DEFECTS FOUND (data hygiene, not our data): (1) Episode 120's 'adapted from' field drops ch 414 - the episode's own title IS ch 414's title and the same page's Trivia line says 'Chapter 413 to 415'; (2) Episode 116's field drops ch 402 (the arc's opening chapter - not our row, reported for the 111-116 sub-block); (3) Episode 119's field renders '[[Chapter 412|424]]' - the LINK target is Chapter 412, the displayed '424' is a typo; (4) Episode 119's kanji field wrongly carries 三方ゆずらず (Episode 120's title) - ja-WP gives 加冠の儀; (5) Episode 121's kanji and romaji fields are swapped. None of these change our stored titles, which are the English ones and are correct.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "split evidence, the ch 412 straddle (eps 119/120): kingdom.fandom splits it p.1-15 / p.16-18 and somanystars.net gives S4 ep 17's range as 412-415, but programming-cafe's index assigns 412 wholly to S4 ep 16. Delivered as a straddle (ep 119 END 412 + C1 continue at 412 + a partial annotation); the END and START values are the SAME under either reading (ep 120's 3-page head of 412 is an A10 sliver, so its START is 413 either way) - only the continue point moves (412 vs 413) if pcafe is preferred.",
+    "fandom omission restored, ep 120: kingdom.fandom's Episode 120 'adapted from' field lists 412 (p.16-18), 413 and 415 but NOT 414 - the same wave-2 defect class as 274 / 306 / 310-311 / 339-340. Restored with three independent supports (pcafe 4-17 = 413/414/415; somanystars 412-415; the episode's own Japanese title 三方ゆずらず IS ch 414's title, and fandom's own Trivia line on that page reads 'Chapter 413 to 415'). Anyone re-deriving row 120 from the fandom infobox alone will re-open the gap.",
+    "neighbouring sub-block, not my rows: kingdom.fandom's Episode 116 field reads '400 (p.19-20) to 401, and 403' - it drops ch 402 咸陽の動き, which is both the State of Ai arc's opening chapter and ep 116's own title. pcafe puts 401-403 in 4-13. Passed to whoever holds rows 111-116.",
+    "somanystars.net (https://somanystars.net/archives/10149) is a new per-episode instrument for Kingdom S4: it publishes an explicit 原作対応 chapter range plus its own plot summary for every one of the 26 episodes, and it agrees with the fandom page-level splits (including the 412 straddle) where pcafe's single-assignment index does not. Worth reusing on the 104-110 / 111-116 / 123-128 sub-blocks."
+  ]
+}
