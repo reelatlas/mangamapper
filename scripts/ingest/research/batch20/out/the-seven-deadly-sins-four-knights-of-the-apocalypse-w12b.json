@@ -1,0 +1,210 @@
+{
+  "series_id": "the-seven-deadly-sins-four-knights-of-the-apocalypse",
+  "summary": "Sub-block B (rows 7-12) is a straight, continuous, faithful adaptation: ep 7 opens on ch 17 p.7 (taking over from ep 6's ch 17 p.2-7) and ep 12 hands off mid-ch 35 (p.8) to ep 13. Every one of the six rows is anchored, all six stay canon, and no chapter in 17-35 is skipped. Two page-level instruments agree on every boundary — nanatsu-no-taizai.fandom's page-partitioned |chapters= episode fields and programming-cafe's anicomi tables (BOTH directions: its episode->chapter table and its chapter->episode reverse index) — and three further instruments corroborate the block's edges: the wiki's ARC pages (Sistana arc ch 14-23 = eps 5-8; Cant arc ch 24-31 = eps 9-11; Dalflare Range arc ch 32-41 = eps 12-14), the licensor's own per-episode synopses on 7sins-4knights.net, and the wiki's character-debut reverse fields (Mortlach ch 22 -> ep 8, Edlin ch 25 -> ep 9, Ardbeg ch 32 / Cernunnos ch 32 / Dolchomonte ch 33 -> ep 12). A47 bites exactly once: ep 7's trailing ch 21 p.1-2 (2 pages, the 'Hope' name-reveal beat) is ep 8's — ep 8 STARTS on ch 21 — so ep 7's END stays 20, and programming-cafe independently prints ep 7 = ch 17-20 and ep 8 = ch 21-23. A47 does NOT bite at ep 12: its tail of ch 35 is 8 pages, above the scrap bar, no teaser wording, and the episode carries ch 35's own title. The reported intra-chapter omission is CONFIRMED as far as one wiki can confirm it: ep 9 plays ch 25 p.1-16 and p.20 and drops p.17-19 — the same page's Manga/Anime Differences section names the cut content ('the Gouren match where Anghalhad bets on is not shown'), consistent with ch 25 'A Thrilling Day in Cant'. It moves no position (ep 9's END is 26 either way); it is delivered as an `abridged` annotation, medium, and as the C3 clause on ep 9's continue. The stored VOLUME BOUNDARIES are empty, so every volume here is derived from three sources: the fandom Volume pages' chapter lists, programming-cafe's 単行本 column, and Kodansha's own 初出 strings matched against the wiki's per-chapter |wsm= (WSM issue) fields — v3 = ch 15-23 (WSM 2021 #24-31, #33), v4 = ch 24-32 (#34-43), v5 = ch 33-41 (#44-52).",
+  "anchors": [
+    {
+      "episode": 7,
+      "end_chapter": 20,
+      "start_chapter": 17,
+      "chapters_adapted": "17 (p.7-20), 18, 19, 20, 21 (p.1-2)",
+      "volume": 3,
+      "confidence": "high",
+      "note": "END 20 under A47, not 21: the trailing ch 21 p.1-2 is a 2-page scrap (<=5 pages) of the chapter the NEXT episode STARTS on (ep 8 takes 21 p.3-20), so the tail is ep 8's, the END stays 20, the pages stay in chapters_adapted and a `partial` names them. Independently, programming-cafe's episode table prints ep 7 = ch 17-20 and its chapter->episode reverse index assigns ch 21 solely to 1-8. START 17 (A10): the leading partial ch 17 p.7-20 is 14 pages of real content (ep 6 took 17 p.2-7); pc's reverse index splits ch 17 across '1-6,1-7'. Corroboration: the episode's title その魔力の名は IS ch 20's title, and the licensor synopsis (Ironside's Coffin ritual releasing the Chaos undead, the group's assault, the unity fraying) is ch 17-20's content, while ep 8's licensor synopsis OPENS on the magic 『希望（ホープ）』 = ch 21 'Hope'. Volume 3 = ch 15-23 (Kodansha 初出 WSM 2021 #24-31 + #33 = the wiki's wsm 24-2021 on ch 15 through 33-2021 on ch 23). Row displays 17 (A13).",
+      "sources": [
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%207&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-mokushirokunoyonkishi-list/",
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Chapter%2020%20(4KOA)&prop=wikitext&format=json",
+        "https://7sins-4knights.net/story/7.html",
+        "https://www.kodansha.co.jp/comic/products/0000355291"
+      ]
+    },
+    {
+      "episode": 8,
+      "end_chapter": 23,
+      "start_chapter": 21,
+      "chapters_adapted": "20 (p.20), 21 (p.3-20), 22, 23",
+      "volume": 3,
+      "confidence": "high",
+      "note": "START 21 (A10 sliver): the leading ch 20 fragment is a single page (p.20), far under the 5-page bar, so it does not pull the START back to 20 — it stays in chapters_adapted with a `partial`. Ch 21 p.3-20 is 18 pages of real content and picks up exactly where ep 7 stopped (p.2). END 23 (A4): ch 23 'Arthur Pendragon' closes the Sistana arc (wiki arc page: Sistana arc = ch 14-23, eps 5-8) and closes volume 3; ep 9 opens the Cant arc on ch 24. Two independent tables agree: programming-cafe's episode table prints ep 8 = ch 21-23 and its reverse index assigns ch 21, 22 and 23 to 1-8. Third instrument: the wiki's Mortlach character page gives manga debut ch 22 / anime debut ep 8, and ep 8's own character list carries Arthur Pendragon + Merlin (ch 23's cast). Volume 3 per Kodansha's 初出 (WSM 2021 #24-31, #33) matched to the wiki's per-chapter wsm fields.",
+      "sources": [
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%208&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-mokushirokunoyonkishi-list/",
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Sistana%20arc&prop=wikitext&format=json",
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Mortlach&prop=wikitext&format=json",
+        "https://7sins-4knights.net/story/8.html"
+      ]
+    },
+    {
+      "episode": 9,
+      "end_chapter": 26,
+      "start_chapter": 24,
+      "chapters_adapted": "24, 25 (p.1-16, p.20), 26",
+      "volume": 4,
+      "confidence": "high",
+      "note": "START 24, END 26 — a clean whole-chapter block opening the Cant arc and opening volume 4. Both instruments agree: the fandom episode field gives 24, 25 (p.1-16, p.20), 26 and programming-cafe prints ep 9 = ch 24-26 with its reverse index putting ch 24, 25 and 26 all on 1-9 and ch 27 on 1-10. THE TITLE TRAP IS EXPLICITLY REJECTED: the episode's title 師と弟子 'Master and Pupil' is ch 27's title, but ch 27's content (Howzer reproaching Donny for abandoning knighthood) is ep 10's opening per the licensor synopsis — the anime borrowed the title one chapter AHEAD because it grafts an original Howzer/Donny/Edlin training flashback into this episode; the END does NOT advance to 27. Third instrument: the wiki's Edlin page gives manga debut ch 25 / anime debut ep 9, and its Cant location page gives manga debut ch 25 / anime ep 9. Intra-chapter omission: ch 25 p.17-19 is dropped (see the `abridged` annotation and the C3 continue) — it does not move the END. Volume 4 = ch 24-32 (Kodansha 初出 WSM 2021 #34-43; wiki wsm 34-2021 on ch 24, 43-2021 on ch 32).",
+      "sources": [
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%209&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-mokushirokunoyonkishi-list/",
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Edlin&prop=wikitext&format=json",
+        "https://7sins-4knights.net/story/9.html",
+        "https://www.kodansha.co.jp/comic/products/0000357966"
+      ]
+    },
+    {
+      "episode": 10,
+      "end_chapter": 29,
+      "start_chapter": 27,
+      "chapters_adapted": "27, 28, 29",
+      "volume": 4,
+      "confidence": "high",
+      "note": "A clean three-chapter block, no page splits at either edge (A4/A10 both trivial). The fandom episode field gives 27, 28, 29; programming-cafe's episode table prints ep 10 = ch 27-29 and its reverse index assigns each of 27, 28, 29 to 1-10 with ch 30 to 1-11. Content check on the licensor synopses: ep 10 opens on Donny fleeing after Howzer reproaches him (ch 27 'Master and Pupil'), runs the capture and the tavern master's account of the power behind Edlin (ch 28 'Roar of Destruction'), and closes on Donny's resolve (ch 29 'A Boy's Resolve'); ep 11's synopsis opens on the already-rampaging dragon (ch 30 'Raging Storms'). Volume 4 = ch 24-32 (Kodansha 初出 WSM 2021 #34-43).",
+      "sources": [
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%2010&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-mokushirokunoyonkishi-list/",
+        "https://7sins-4knights.net/story/10.html",
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Chapter%2029%20(4KOA)&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 11,
+      "end_chapter": 31,
+      "start_chapter": 30,
+      "chapters_adapted": "30, 31",
+      "volume": 4,
+      "confidence": "high",
+      "note": "Only TWO chapters (ch 30 = 23 pages, ch 31 = 20) fill this episode — verified, not an under-report: both the fandom field and programming-cafe's episode table print ep 11 = ch 30-31, pc's reverse index puts ch 30 and 31 on 1-11 and ch 32 on 1-12, and the wiki's Cant arc page closes the arc at ch 31 across eps 9-11. The slack is taken up by studio-added material the wiki's own differences list enumerates (an expanded Howzer/Edlin master-apprentice flashback, Sylvan's stumble, Sin transforming to relay a message to Meliodas) — elaboration inside adapted chapters, so the row stays canon under the T28 faithfulness clause and the additions are annotated as divergence. END 31 sits on ch 31's last page (its title 本物の聖騎士 is the episode's title) and ep 12 opens the next arc on ch 32, so no continue point is owed. Volume 4 = ch 24-32.",
+      "sources": [
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%2011&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-mokushirokunoyonkishi-list/",
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Cant%20arc&prop=wikitext&format=json",
+        "https://7sins-4knights.net/story/11.html"
+      ]
+    },
+    {
+      "episode": 12,
+      "end_chapter": 35,
+      "start_chapter": 32,
+      "chapters_adapted": "32, 33, 34, 35 (p.1-8)",
+      "volume": 5,
+      "confidence": "high",
+      "note": "START 32 (A10, clean): ch 32 'The Peaks of Fear' opens the Dalflare Range arc (wiki arc page: ch 32-41 = eps 12-14) and the licensor synopsis opens the episode on the party leaving Cant and entering the range. END 35 (A4) and A47 does NOT demote it: the ch 35 tail is 8 pages (p.1-8 of 20), above the 5-page scrap bar, carries no teaser/cold-open wording, and the episode is TITLED 邪悪なる試み = ch 35's own title; ep 13 resumes at p.9. Both instruments agree on the split — the fandom field gives 35 (p.1-8) and programming-cafe's reverse index assigns ch 35 to BOTH '1-12,1-13'; pc's episode table prints ep 12 = ch 32-35. Third instrument: the wiki's Ardbeg and Cernunnos pages give manga debut ch 32 / anime debut ep 12 and Dolchomonte manga ch 33 / anime ep 12. Volume 5 = ch 33-41 (V10: the END chapter's volume; Kodansha 初出 WSM 2021 #44-52 = the wiki's wsm 44-2021 on ch 33 through 52-2021 on ch 41); note the episode STRADDLES the v4/v5 boundary (ch 32 is vol 4's last chapter). Row displays 32 (A13).",
+      "sources": [
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%2012&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-mokushirokunoyonkishi-list/",
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Dalflare%20Range%20arc&prop=wikitext&format=json",
+        "https://www.kodansha.co.jp/comic/products/0000360675",
+        "https://7sins-4knights.net/story/12.html"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 7,
+      "continue_chapter": 21,
+      "kind": "parity",
+      "note": "C1 + parity: the episode ends 2 pages INTO ch 21 (the 'Hope' name-reveal), so resume IN ch 21 (vol 3) — the first two pages will be a re-read, and ep 8 picks up at p.3 and runs the chapter out. Nothing earlier is left unread: ch 17-20 are fully animated in this episode.",
+      "sources": [
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%207&prop=wikitext&format=json",
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%208&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-mokushirokunoyonkishi-list/"
+      ]
+    },
+    {
+      "episode": 9,
+      "continue_chapter": 27,
+      "kind": "parity",
+      "note": "C2/C3 parity at ep 10's START: resume at ch 27 (vol 4). The episode ends on ch 26's last page, so no straddle — but three pages BEHIND you were never animated and never will be: ch 25 p.17-19, the gouren tournament match Anghalhad bets on (the anime cuts straight from the Cant sightseeing to ch 25's last page). Go back for those three pages if you want them; nothing else in ch 1-26 is missing.",
+      "sources": [
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%209&prop=wikitext&format=json",
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Cant&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-mokushirokunoyonkishi-list/"
+      ]
+    },
+    {
+      "episode": 12,
+      "continue_chapter": 35,
+      "kind": "parity",
+      "note": "C1 + parity: the episode ends MID-chapter 35 (p.8 of 20), so resume IN ch 35 (vol 5) — ep 13 opens on p.9 and carries the chapter out. Everything through ch 34 is fully animated; the only earlier gap in the run is ch 25 p.17-19 (ep 9).",
+      "sources": [
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%2012&prop=wikitext&format=json",
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%2013&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-mokushirokunoyonkishi-list/"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [7],
+      "kind": "partial",
+      "chapters": "17 (p.7-20), 21 (p.1-2)",
+      "note": "Both ends are page splits: ch 17 is shared with ep 6 (p.2-7 there, p.7-20 here) and ch 21 is shared with ep 8 (p.1-2 here, p.3-20 there). The ch 21 tail is A47-held — 2 pages of the chapter ep 8 STARTS on, so it does not advance the END past 20."
+    },
+    {
+      "episodes": [7],
+      "kind": "divergence",
+      "chapters": "17-20",
+      "note": "Two small studio-made beats inside adapted chapters: during the Chaos monsters' attack an unnamed watcher (Lancelot) is shown on a rooftop, and a vision of Varghese is inserted before Percival names his Power. Faithfulness clause (T28): noted, never weighed toward mixed — the row is canon."
+    },
+    {
+      "episodes": [8],
+      "kind": "partial",
+      "chapters": "20 (p.20), 21 (p.3-20)",
+      "note": "A single leading page of ch 20 (p.20) opens the episode — an A10 sliver, so the START is 21, not 20; ch 21 is shared with ep 7 (p.1-2 there). programming-cafe assigns ch 20 wholly to ep 7 and ch 21 wholly to ep 8, which is the same boundary read at chapter granularity."
+    },
+    {
+      "episodes": [8],
+      "kind": "divergence",
+      "chapters": "22",
+      "note": "The anime shows on screen WHO destroyed the Chaos monsters (Lancelot), a reveal the manga withholds at this point. An alteration inside an adapted chapter — canon under the faithfulness clause."
+    },
+    {
+      "episodes": [9],
+      "kind": "abridged",
+      "chapters": "25 (p.17-19)",
+      "note": "The run's only intra-chapter omission: ep 9 animates ch 25 p.1-16 and p.20 and drops p.17-19 — the gouren tournament match Anghalhad bets on (the wiki's own differences list: 'In the anime, the Gouren match where Anghalhad bets on is not shown'; the Cant location page places the gouren tournament in this stretch). MEDIUM: only nanatsu-no-taizai.fandom carries page-level data for this series, so the three-page range rests on one wiki (two separate fields of it); programming-cafe has no page column and can neither confirm nor deny. It moves no position — ep 9's END is 26 either way."
+    },
+    {
+      "episodes": [9],
+      "kind": "divergence",
+      "chapters": "24-26",
+      "note": "Studio additions and reorders inside adapted chapters: an added Anghalhad scene about her Power, an ADDED Donny/Edlin training flashback under Howzer (which is why the episode borrows ch 27's title 師と弟子 while its content stops at ch 26), Taizoo's face shown rather than obscured, a minion rather than Taizoo informing Edlin, and the Dragon Handle beat restaged. Canon under the faithfulness clause."
+    },
+    {
+      "episodes": [10],
+      "kind": "divergence",
+      "chapters": "27-29",
+      "note": "Edlin's backstory is retold as a flashback voiced by Taizoo AND several bandits (the manga has Taizoo alone), and the manga's young-Taizoo comparison panel is dropped. Presentation changes inside adapted chapters — canon."
+    },
+    {
+      "episodes": [11],
+      "kind": "divergence",
+      "chapters": "30-31",
+      "note": "Two chapters stretched across a full episode by studio-added material: an expanded Howzer/Edlin master-apprentice flashback, a repeated Donny/Edlin training flashback, Sylvan tripping and throwing its riders, Donny hiding behind Anghalhad, and Sin transforming into human form to relay a message to King Meliodas. All elaboration of the source's own beats, no original plot line — canon under T28's faithfulness clause, not mixed."
+    },
+    {
+      "episodes": [12],
+      "kind": "partial",
+      "chapters": "35 (p.1-8)",
+      "note": "The closing page split: ch 35 is shared with ep 13 (p.1-8 here, p.9-20 there). Named per A47 so the boundary is visible; at 8 pages it is above the scrap bar and does not demote the END."
+    },
+    {
+      "episodes": [12],
+      "kind": "divergence",
+      "chapters": "32-35",
+      "note": "Opening reorder and small studio beats: the manga's short mountain-travel scene before the campfire is dropped and the episode opens on the party bedding down; Sin's Dalflare Range lore is cut; Sin questions his vision immediately instead of the next day; an added shot of Ardbeg watching from a hill; Ardbeg's stated motive changed to his daughter; Anghalhad needs two attempts at the idol stone. Cuts and alterations of the source's own events — canon."
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [],
+  "structure": {
+    "notes": "SUB-BLOCK B = rows 7-12 of the wave-12 gap block. HAND-OFFS: my first row (ep 7) opens on ch 17 p.7 — sub-block A owns ep 6, which ends on ch 17 p.7 (its END is 17 at most, so 17 -> 20 is monotone whichever way A rules it); my last row (ep 12) ends on ch 35 p.8 and hands off to sub-block C's ep 13, which opens on ch 35 p.9. ENDs inside my block are strictly increasing: 20, 23, 26, 29, 31, 35 — no revisit, no `rearranged`, and all six sit inside the outer fence (ch 1 .. ep 24 -> 77 [75] v9).\n\nCHAPTER SPACE. One space throughout: the manga's own WSM serialization numbering, used identically by the fandom chapter infoboxes (|chapter=, |wsm=, |volume=), programming-cafe's 話数 column, Kodansha's 初出 (via the WSM issue numbers) and MU. No edition conversion; the parent Nanatsu no Taizai has its own numbering and is not involved.\n\nVOLUME BOUNDARY TABLE v1-v9 (the stored table is EMPTY; this is the deliverable). v1 = ch 1-5 (2021-04-16, ISBN 978-4065229828; Kodansha 初出 WSM 2021 #9-13). v2 = 6-14 (2021-06-17, 978-4065235799). v3 = 15-23 (2021-09-17, 978-4065248386; Kodansha 初出 WSM 2021 #24-31, #33 — issue 32 was a break week — matching the wiki's wsm 24-2021 on ch 15 and 33-2021 on ch 23). v4 = 24-32 (2021-11-17, 978-4065259993; 初出 WSM 2021 #34-43 = wsm 34-2021 on ch 24, 43-2021 on ch 32). v5 = 33-41 (2022-01-17, 978-4065266014; 初出 WSM 2021 #44-52 = wsm 44-2021 on ch 33, 52-2021 on ch 41). v6 = 42-50 (2022-03-17, 978-4065272862). v7 = 51-59 (2022-05-17, 978-4065279113). v8 = 60-68 (2022-08-17, 978-4065286562). v9 = 69-77 (2022-11-17, 978-4065294871). Every boundary is carried by TWO independent tables — the fandom Volume pages' explicit chapter lists and programming-cafe's 単行本 column (which opens 第2巻 at 6, 第3巻 at 15, 第4巻 at 24, 第5巻 at 33, 第6巻 at 42, 第7巻 at 51, 第8巻 at 60, 第9巻 at 69, 第10巻 at 78) — and the three volumes my anchors land in (3, 4, 5) are additionally confirmed by the publisher's own 初出 strings. Nine chapters per volume from v2 on; v1 is the outlier at five (ch 1 is a long opener).\n\nA47 IN THIS BLOCK. Applied once (ep 7: the 2-page ch 21 tail is ep 8's, END stays 20) and explicitly declined once (ep 12: an 8-page ch 35 tail, above the scrap bar, no teaser wording, the episode carries ch 35's title). The A10 twin applied once at ep 8 (a 1-page leading fragment of ch 20 is a sliver; START is 21).\n\nCONTINUES NOT OWED. Eps 8, 10 and 11 each end on a chapter's LAST page (23, 29, 31) with the next episode opening cleanly on the next chapter (24, 30, 32), so no continue point is delivered for them per the protocol.\n\nTITLE TRAP, DOCUMENTED. This anime's episode titles are drawn from a chapter inside the episode's range in five of my six rows (ep 7 = ch 20's title, ep 8 = ch 22's, ep 10 = ch 28's, ep 11 = ch 31's, ep 12 = ch 35's) — but ep 9's title 師と弟子 is ch 27's title while ep 9 stops at ch 26 (ch 27 is ep 10's opening, per both instruments and the licensor synopsis). A future joiner reading titles alone would push ep 9's END to 27; it is 26.\n\nSOURCE HYGIENE / INDEPENDENCE. sevendeadlysins.fandom.com is an ALIAS of nanatsu-no-taizai.fandom.com (one wiki). animefillerguide has no page for this series. ja.wikipedia's article is 黙示録の四騎士 (漫画); its 各話リスト has staff + 初放送日 only (NO 原作 column) and confirms my six rows' titles and dates exactly as stored (第7話 その魔力の名は 11月26日 ... 第12話 邪悪なる試み 2024年1月7日) — a date/title witness, not a chapter witness. The genuinely independent chapter instruments are: (1) the fandom episode |chapters= fields (page-level), (2) programming-cafe's anicomi list, which is bidirectional and self-checking (an episode->chapter table AND a chapter->episode reverse index that agree with each other and with the fandom on every boundary in 17-35), (3) the fandom ARC pages (a different editorial layer: Sistana 14-23/eps 5-8, Cant 24-31/eps 9-11, Dalflare 32-41/eps 12-14), (4) the fandom CHARACTER/location debut fields (a reverse index: Darak ch 15/ep 6, Mortlach ch 22/ep 8, Edlin ch 25/ep 9, Cant ch 25/ep 9, Ardbeg ch 32/ep 12, Cernunnos ch 32/ep 12, Dolchomonte ch 33/ep 12), (5) the licensor's per-episode synopses at 7sins-4knights.net (loaded as /story/N.html fragments; the /story/ index is JS-driven).\n\nTWO SMALL SOURCE DEFECTS, NEITHER POSITION-BEARING. (a) The wiki's Chapter 20 page reads |pages = 24 while the episode splits label ep 8's leading fragment 'p.20'; ch 20's neighbours are all 20-22 pages, so the 24 is most likely a count including a colour/title spread. Either reading leaves ep 8's leading fragment a sliver, and pc puts ch 20 wholly in ep 7 — the START is 21 on both readings. (b) The wiki's Sylvan page gives manga debut ch 24 / anime debut ep 8, i.e. Anghalhad's horse appears one episode before his manga debut chapter. No source puts any ch 24 PAGE in ep 8 (the episode field lists 20-23, pc's reverse index assigns ch 24 solely to 1-9), so this is a design/cameo carry-forward, not a graft, and no annotation is proposed.\n\nSTANDINGS. All six rows stay canon (stored canon, AFL canon). Every 'difference' the wiki records in this block is an addition, cut, reorder or restaging INSIDE an adapted chapter — the T28 faithfulness clause keeps them canon and they are delivered as `divergence`. There is no anime-original story share anywhere in 7-12, no recap segment (the recap clause never fires here; ep 12 opens the second cour with new OP/ED after the 2024-01-07 break and carries no recap), and therefore no `mixed` candidate and no type correction.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "MEDIUM, one wiki: ch 25 p.17-19 (ep 9's dropped gouren match). nanatsu-no-taizai.fandom is the only source with page-level data for this series; its episode-9 |chapters= field ('25 p.1~16, p.20') and the same page's Manga/Anime Differences line ('the Gouren match where Anghalhad bets on is not shown') are two fields of ONE wiki, corroborated only in kind by the wiki's Cant page placing the gouren tournament there. programming-cafe has no page column. Delivered as an `abridged` annotation + the C3 clause on ep 9's continue; it moves no anchor (END 26 either way). If you would rather not carry a single-wiki page range, dropping it costs one sentence of the continue note and nothing else.",
+    "The volume boundary table v1-v9 in structure.notes is a SERIES-LEVEL deliverable this sub-block produced as a by-product (the stored table is empty). It is carried by fandom + programming-cafe throughout and by Kodansha's own 初出 for v1, v3, v4 and v5; v2 and v6-v9 have not had the publisher check run, so if it is to be written as boundaries rather than just anchor volumes, those four are worth the extra fetch.",
+    "ep 11 adapts only TWO chapters (30-31, ~43 pages) for a full episode. I verified this from four angles rather than assume an under-report (fandom field, pc episode table, pc reverse index, the Cant arc page closing at ch 31) — the slack is studio-added flashback material, listed in the divergence annotation. It stays canon: the additions elaborate the source's beats, no original plot line, so T28's bar for mixed is not met.",
+    "Row-identity note for the landing scan: ja-WP's 各話リスト matches our stored titles and air dates for all six rows exactly, so no title/date repair arises in this sub-block. (The wave-9 verdict flagged a WRONG airdate on the wiki's Episode 23 page — March 17 for both 22 and 23; that is sub-block D's row, not mine, and the same defect does NOT appear on episode pages 6-13, which all match ja-WP.)"
+  ]
+}
