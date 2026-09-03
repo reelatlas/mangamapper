@@ -62,8 +62,22 @@ Block totals: **40 anchors 137 → 209 across 39 canon/mixed rows** (all 39 anch
 | 150 | canon | anchor 207 [205]; + divergence{203-206} |
 | 151 | canon | anchor 209 [208]; + divergence{208-209} |
 
-## Verification (R23/R24 — three Fable verifiers over the Opus sub-blocks, dispatched at landing)
-a+b (109-120: the double reorder + the 114/115 seam), d+e (127-138: the three retypes + the 179/180 fork), f+g (139-151: the 144/145 seam + F's retypes + the fence). c (121-126, every boundary read on pages) not separately verified.
+## Verification tier (R23/R24 — three Fable verifiers over the Opus sub-blocks; reports in verify/)
+| files | result |
+|---|---|
+| a+b (109-120) | all ten chapter values SOUND on refetched evidence; both back-jumps real; 109/111 filler on three sources. **REFUTED: two copied volumes** (117 v16 → 17, 119 v17 → 18 — the END's volume); the 114/115 seam → B's START 145 (A's continue 146 → 145); ep 119 END 153 under A47 strengthened but the `partial`{154} was missing → added at curation. P5 note: sliverEnd read these prose-style chapters_adapted as ONE segment (A47 was a no-op here — right outcome, not the rule's doing). |
+| d+e (127-138) | all 11 anchors SOUND; the three retypes SOUND under T28 (131 mixed, 132 filler, 133 mixed); **F1: ep 131's continue 180 → 179** (ends mid-179; ep 133 finishes it — C1 parity); both forks resolve to the delivered values (133 END 179, 129 START 176 — medium right); **ep 130 canon vs mixed = Sean's call** (a 9m28s recap inside an episode whose job is ch 178 in full; T28 as written supports canon + divergence); the ep-126 date flag is stale (G53 already holds 08-13). |
+| f+g (139-151) | SOUND WITH CORRECTIONS: all 13 ENDs hold, monotone, volumes match; **the seam: F's ep 144 END 195 CONFIRMED, G's "194" REFUTED — but ep 144 also grafts ch 196's Jūkei flashback → `graft`{196} beside the partial**; ep 144's continue → **195** (F's 196 would skip ch 195's fight pages ep 145 shows; parity with G's START — the no-skip choice); F's 139/140 → mixed SOUND (the ruled eps 54 / 84-86 shape); ep 150 NOT a recap; 148 → 202 verified verbatim; 151 → 209 keep, "ep 152 finishes 209" unwitnessed → medium; the 140/141 reorder better witnessed than cited (closes F's straddle fork). |
+
+The apply (drafted, dry-run): derives every anchor's VOLUME from the boundary table — it caught FOUR copied volumes (the verifier's two + 123 v18 → 19, 126 v19 → 20) — and carries the seam overlays 114 → 145, 131 → 179, 144 → 195, the graft on 144 and the partial on 119.
+
+## THE DECISIONS (Sean rules at curation — recommendations marked)
+1. **Apply the seven as delivered with the verifier corrections** (the overlays above; volumes derived). *Recommend: yes.*
+2. **Retypes ×5** (T6): 131 / 133 / 139 / 140 → mixed, 132 → filler — all verified SOUND under T28 on 2-3 sources each; AFL's "Manga Canon" on 129-140 is the only dissent. *Recommend: yes.*
+3. **ep 130 canon vs mixed** — a 9-minute clip-show recap inside an episode that adapts ch 178 in full and is that chapter's only adaptation; no precedent covers "majority source + large recap". *Recommend: canon + divergence (T28 as written); the value and the C1 continue are unaffected either way.*
+4. **Forks resolved by the verifiers, for the record**: 119 END 153 (A47); 129 START 176; 133 END 179; 144 END 195 + graft{196}; 144's continue 195; the 189/190 line at ch 190's opening. *Recommend: as delivered + corrected.*
+5. **Capture**: the sliverEnd prose-segment gap (a P5 note — a chapters_adapted written as prose, "145 prison, 146 …, 147-149 the duel", is one segment to the parser; the rule needs the trailing chapter parsed from prose too, or the agents held to the comma-list shape); volume derivation in the apply as the standing shape (the wave-9 a47-migrate lesson, now general).
+
 
 ## Open for Sean (after the verifiers)
 1. Apply the seven as delivered with the verifier corrections (114's continue = B's START 145).

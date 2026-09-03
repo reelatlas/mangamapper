@@ -25,12 +25,16 @@ const FILES = ['a', 'b', 'c', 'd', 'e', 'f', 'g'].map((x) => `fist-of-the-north-
 // seam / C1 corrections from the verifiers (verify/fist-of-the-north-star-w10ab.md, -w10de.md)
 const CONTINUE_OVERRIDE: Record<number, { chapter: number; why: string }> = {
   114: { chapter: 145, why: 'C2 parity = ep 115\'s START (B read the seam on Falco\'s {1st} cast entry: ch 145; the verifier agreed) — the delivered 146 was A\'s guess at the handoff' },
+  144: { chapter: 195, why: 'C2 parity = ep 145\'s START 195: F\'s 196 would skip ch 195\'s remaining fight pages that ep 145 shows (the f+g verifier: the no-skip choice)' },
   131: { chapter: 179, why: 'C1: ep 131 ends MID-ch 179 (the Hyoh debut) and ep 133 finishes the chapter (the Jūkei revelation) — parity with 133\'s START; the delivered 180 contradicted the ch-179 cast (verifier F1)' },
 };
 const NOTE_FIX: Record<string, string> = {
+  '148#continue': 'ch 202\'s Hyoh/Kuroyasha opening is ep 149\'s (verifier note).',
+  '151#continue': 'MEDIUM: whether ep 152 finishes ch 209 is unwitnessed — ch 210\'s cast opens on the duel and Bat\'s arrival follows the final blow (verifier note).',
   '113#anchor': 'ch 142\'s tail is RESTAGED at ep 117 (not animated first-time there) — verifier wording fix.',
 };
 const ANNOTATION_ADD: { episode: number; kind: AnnotationKind; chapters: string; note: string }[] = [
+  { episode: 144, kind: 'graft', chapters: '196 (the Jūkei flashback)', note: 'The Jūkei flashback sits LAST in ch 196\'s cast (at the reunion) and RQ87 states the relocation on both episode pages — ep 144 grafts it forward; END stays 195 (Kaioh\'s "Raoh was a fool" speech is ch 195\'s title beat). Added at curation (the f+g verifier).' },
   { episode: 119, kind: 'partial', chapters: '154 (the duel\'s opening pages)', note: 'A47: ep 119\'s closing pages are ch 154\'s opening, which ep 120 starts on and replays — the tail is ep 120\'s; END stays 153 (Rihaku absent from ch 153\'s cast; ch 154 opens with the observers). Added at curation — the verdict applied A47 but omitted the tie annotation.' },
 ];
 
@@ -65,7 +69,8 @@ async function main() {
     const o = CONTINUE_OVERRIDE[Number(c.episode)];
     const chapter = o?.chapter ?? Number(c.continue_chapter);
     console.log(`  continue ep ${c.episode} → ${chapter} (${c.kind})${o ? ` (overlay: was ${c.continue_chapter})` : ''}`);
-    if (!DRY) await writeCuratedContinue(SID, Number(c.episode), { chapter, kind: c.kind, note: `${o ? `${o.why} ` : ''}${c.note ?? c.why ?? ''} ${B}` });
+    const nf = NOTE_FIX[`${c.episode}#continue`];
+    if (!DRY) await writeCuratedContinue(SID, Number(c.episode), { chapter, kind: c.kind, note: `${o ? `${o.why} ` : ''}${nf ? `${nf} ` : ''}${c.note ?? c.why ?? ''} ${B}` });
     continues++;
   }
   for (const a of annos) for (const ep of a.episodes as number[]) {
