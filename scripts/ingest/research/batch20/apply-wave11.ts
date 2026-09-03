@@ -27,7 +27,7 @@ const SERIES: { sid: string; files: string[]; upperFence: number }[] = [
 ];
 // fence-row repairs delivered by the verdicts (old → new on stored MANUAL rows)
 const FENCE_REPAIR: { sid: string; episode: number; set: Record<string, unknown>; why: string }[] = [
-  { sid: 'kingdom', episode: 103, set: { chapter: 363 }, why: 'A47 (kingdom-w11a): the S3 finale ends on ch 364\'s first pages (Kyou Kai rejoining the unit, 364 p.1-5 — the fandom\'s Episode 103 page contradicts its own infobox; pcafe assigns 364 to S4 ep 1; ep 104 opens on 364 p.6) — the tail is ep 104\'s; END 364 → 363 (closes the wave-2 flag).' },
+  { sid: 'kingdom', episode: 103, set: { chapter: 363, start_chapter: 360, chapters_adapted: '359 (p.14-18), 360-363, 364 (p.1-5)' }, why: 'A47 (kingdom-w11a): the S3 finale ends on ch 364\'s first pages (Kyou Kai rejoining the unit, 364 p.1-5 — the fandom\'s Episode 103 page contradicts its own infobox; pcafe assigns 364 to S4 ep 1; ep 104 opens on 364 p.6) — the tail is ep 104\'s; END 364 → 363 (closes the wave-2 flag).' },
   { sid: 'bleach', episode: 203, set: { start_chapter: 313, chapters_adapted: '313, 314, 315' }, why: 'Enrichment (bleach-w11b, three sources; the verifier: carry the span so start_without_span cannot list it): ep 203 opens on ch 313 — the 202 → 203 seam is no longer interpolated.' },
   { sid: 'bleach', episode: 167, set: { start_chapter: 284, chapters_adapted: '284, 285, 286 (p.1-8)' }, why: 'Enrichment (bleach-w11a + the verifier): ep 167 = ch 284-286 p.8 in front of the 22-episode Amagai arc (A47: an 8-page share is substantive — END 286 stands); its continue 286 is precedented (127 → 229, 146 → 247 across filler blocks). Sean ruled the fence-row addition in scope.' },
 ];
