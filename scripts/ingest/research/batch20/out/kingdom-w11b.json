@@ -1,0 +1,167 @@
+{
+  "series_id": "kingdom",
+  "summary": "OUR rows 111-116 are Kingdom S4 eps 8-13 (row conversion by TITLE + air date against ja-WP's 第4シリーズ 各話リスト and syobocal TID 6319 - never by index; S1 38 + S2 39 + S3 26 = 103, so our 104 = S4 ep 1). All six rows are canon and adapt the Choyou / Fire Dragons of Wei arc in unbroken running order from ch 386 through ch 403, with the arc handover to the State of Ai arc falling INSIDE row 116 (ch 401 closes Choyou, ch 402 opens the Ai rebellion). Six anchors, no anchor-hostile rows, no filler, nothing skipped - so no C2/C3 parity points, only three C1 mid-chapter continues (388, 397, 400). kingdom.fandom's per-episode 'adapted from' field DROPS two adapted chapters in this block exactly as the wave-2 trap predicted: ch 390 (ep 112) and ch 402 (ep 116); both are restored with independent evidence - the official kingdom-anime.com synopsis, programming-cafe's chapter->episode index, and (for 402) subculview's arc table, which places the 毐国反乱編 start (37巻402話) at 4期13話. Two structural findings: our stored air date for row 111 is one day early (2022-05-28, a Saturday; ja-WP and syobocal both give 5月29日, the Sunday slot) - repaired here - and the same defect sits on the neighbouring row 110 (flagged, not mine). One boundary is split evidence and marked medium: ep 115's START, where fandom writes the ch-397 lead-in as 'p.16-20' (5 pages = a sliver) while its own Chapter 397 page says the chapter runs 22 pages (p.17-22 = 6 pages = a real START).",
+  "anchors": [
+    {
+      "episode": 111,
+      "end_chapter": 388,
+      "start_chapter": 386,
+      "chapters_adapted": "386, 387, 388 (p.1-17)",
+      "volume": 36,
+      "confidence": "high",
+      "note": "S4 ep 8 貂の存在 = ch 386's title, and the licensor synopsis walks the three chapters in order: Ten carried off to the Gai Mou HQ and Kyou Kai's one gambit (386), the prisoner exchange (387 交換), and the Gyoku Hou Unit's unbroken advance thanks to Kan Jou's 1000-man unit (388 新生玉鳳隊 - Kan Jou is the chapter's own subject). START 386: ep 110 takes ch 385 whole (fandom + pcafe, no dual-listing). END 388: ep 111 takes p.1-17 of an 18-page chapter, so A47 does not bite (ep 112's leading page is the scrap, not this one). Ends mid-388 -> C1 continue.",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_111&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+        "https://kingdom-anime.com/story/detail.php?id=1001065&season=4",
+        "https://kingdom.fandom.com/api.php?action=parse&page=Chapter_388&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 112,
+      "end_chapter": 391,
+      "start_chapter": 389,
+      "chapters_adapted": "388 (p.18), 389, 390, 391",
+      "volume": 36,
+      "confidence": "high",
+      "note": "RESTORES ch 390, which the fandom field skips (it prints '388 (p.18) to 389, and 391'). Ch 390 同士討ちの過去 is Rei Ou narrating how Tai Ro Ji killed Shi Kika and split the Seven Fire Dragons - which is verbatim this episode's own fandom synopsis ('the one who started the conflict between the Fire Dragons of Wei fourteen years ago, for reasons that Rei Ou will explain') and its character list (Shi Tai, Shi Kika, Tai Ro Ji, Shou Sen, Ba Tou appear in the manga ONLY in 390-391); pcafe lists 390 in 4-9; the licensor synopsis carries the same 生い立ち backstory. START 389 (ep title 紫伯の名 = ch 389's title): 388's 1-page tail is a sliver, A10. END 391 喪失 = the close of Rei Ou's account (Earl Shi kills Shi Tai, Tai Ro Ji and two more dragons), chapter-complete - no continue.",
+      "sources": [
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+        "https://kingdom-anime.com/story/detail.php?id=1001066&season=4",
+        "https://kingdom.fandom.com/api.php?action=parse&page=Chapter_390&prop=wikitext&format=json",
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_112&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 113,
+      "end_chapter": 394,
+      "start_chapter": 392,
+      "chapters_adapted": "392, 393, 394",
+      "volume": 37,
+      "confidence": "high",
+      "note": "Ep title 中華の注目 = ch 392's title, and the content check runs past the title trap: the licensor synopsis opens '著雍の戦い三日目' = ch 393 著雍三日目 and ends on the Kan Jou unit being pressed as the Gyoku Hou's main attack = ch 394 見物 (Tou watching as a spectator, Kan Jou brawling out of style). fandom and pcafe both give 392-394 exactly, with no dual-listing at either edge. Chapter-complete ending (394 is 18 pages, ep 114 opens on 395) - no continue.",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_113&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+        "https://kingdom-anime.com/story/detail.php?id=1001067&season=4",
+        "https://kingdom.fandom.com/api.php?action=parse&page=Chapter_394&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 114,
+      "end_chapter": 397,
+      "start_chapter": 395,
+      "chapters_adapted": "395, 396, 397 (p.1-16)",
+      "volume": 37,
+      "confidence": "high",
+      "note": "Ep title 修練の日々 = ch 396's title; the licensor synopsis is the Ou Hon / Shi Haku rematch built on 王一族宗家を継ぐ者 duty = ch 395 王賁の責務 plus the training-days flashback (396), and the fandom synopsis's 'half a day left to reach Go Hou Mei's headquarters ... Ka Ryo Ten and Jun Sou test their skills' is ch 397 本陣へ's middle. END 397 on 16 of the chapter's 22 pages - the bulk, so A47 does not pull it back to 396. pcafe dual-lists 397 into 4-11 and 4-12. Ends mid-397 -> C1 continue.",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_114&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+        "https://kingdom-anime.com/story/detail.php?id=1001068&season=4",
+        "https://kingdom.fandom.com/api.php?action=parse&page=Chapter_397&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 115,
+      "end_chapter": 400,
+      "start_chapter": 397,
+      "chapters_adapted": "397 (p.17-22), 398, 399, 400 (p.1-18)",
+      "volume": 37,
+      "confidence": "medium",
+      "note": "END 400 is solid and high: the licensor synopsis ends on Go Hou Mei moving the instant he spots the plan's one flaw = ch 400 陥落と退避 (the decoy beheading, the flight from the HQ, Shin cutting down the man who named himself Go Hou Mei), and fandom splits 400 at p.18/p.19 with pcafe listing it in 4-12. START is the MEDIUM half: fandom writes ep 115's lead-in as '397 (p.16-20)' = 5 pages (a sliver -> START would be 398), but its own Chapter 397 page gives the chapter 22 pages, so a lead-in from p.17 runs 6 pages and carries the chapter's turn (Ten's morning flashback, Den Yuu and Taku Kei wounded, Ryuu Koku's army arriving) - not teaser/recap wording. Delivered START 397 on the chapter's true length; the alternative reading is flagged. Ends mid-400 -> C1 continue.",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_115&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+        "https://kingdom-anime.com/story/detail.php?id=1001069&season=4",
+        "https://kingdom.fandom.com/api.php?action=parse&page=Chapter_400&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 116,
+      "end_chapter": 403,
+      "start_chapter": 401,
+      "chapters_adapted": "400 (p.19-20), 401, 402, 403",
+      "volume": 37,
+      "confidence": "high",
+      "note": "RESTORES ch 402, which the fandom field skips (it prints '400 (p.19-20) to 401, and 403'). Ch 402 咸陽の動き is literally this episode's title AND its content is confirmed independently of the title: the licensor synopsis carries the post-battle fortification of Choyou and '王都・咸陽の動きも慌ただしくなる' before the Royal Harem faction appears, which is 402's own opening (Choyou's workers two months on, Ri Boku troubled at Kantan) - and the fandom character list carries Ri Boku, Kei Sha, Fu Tei and Kaine, 402's Kantan cast. pcafe lists 402 in 4-13, and subculview's arc table starts the 毐国反乱編 at 37巻402話 = 4期13話, i.e. the arc seam falls inside this row. START 401 (400's 2-page tail - Shin's strike on the man who named himself Go Hou Mei - is a sliver, A10). END 403 太后の狙い = the Queen Mother demanding Tougon and Choyou for the Harem and naming Rou Ai governor, the licensor synopsis's closing beat; chapter-complete, and ep 117 opens on 404 - no continue.",
+      "sources": [
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/",
+        "https://kingdom-anime.com/story/detail.php?id=1001071&season=4",
+        "https://kingdom.fandom.com/api.php?action=parse&page=Chapter_402&prop=wikitext&format=json",
+        "https://subculview.com/kingdom-manga-anime-guide",
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_116&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 111,
+      "continue_chapter": 388,
+      "kind": "parity",
+      "note": "C1: ep 111 stops one page short of ch 388's end (p.1-17 of 18); ep 112 opens on p.18. Resume inside ch 388.",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_112&prop=wikitext&format=json",
+        "https://kingdom.fandom.com/api.php?action=parse&page=Chapter_388&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 114,
+      "continue_chapter": 397,
+      "kind": "parity",
+      "note": "C1: ep 114 ends mid-ch 397 (p.1-16 of 22) with Shin ordering the push left; ep 115 finishes the chapter (Ryuu Koku's arrival). Resume inside ch 397.",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_115&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-kingdom-list/"
+      ]
+    },
+    {
+      "episode": 115,
+      "continue_chapter": 400,
+      "kind": "parity",
+      "note": "C1: ep 115 ends mid-ch 400 (p.1-18 of 20); ep 116 opens on 400's last two pages before moving into 401. Resume inside ch 400.",
+      "sources": [
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_116&prop=wikitext&format=json",
+        "https://kingdom.fandom.com/api.php?action=parse&page=Chapter_400&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [
+        114,
+        115
+      ],
+      "kind": "partial",
+      "chapters": "397",
+      "note": "ch 397 (22 pages) straddles the boundary: ep 114 takes p.1-16 and ep 115 opens on the remainder (Ten's morning flashback, Den Yuu and Taku Kei wounded, Ryuu Koku's army arriving). fandom writes ep 115's share as 'p.16-20', which would leave p.21-22 unaccounted and make the lead-in a 5-page sliver; the chapter's own page count makes it p.17-22 = 6 pages, which is why START 397 is delivered at medium."
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 111,
+      "field": "air_date",
+      "old": "2022-05-28",
+      "new": "2022-05-29",
+      "why": "G53: the stored date is a Saturday; every other S4 row sits on the NHK Sunday slot. ja-WP's 第4シリーズ 各話リスト gives 第8話 貂の存在 = 5月29日 and syobocal's per-airing record for TID 6319 gives Count 8 = 2022-05-29 00:00 with no 再 flag. The stored value is kingdom.fandom's US date (its Episode 111 page prints 'May 28, 2022'), the same one-day-early lineage the wave-2 verdict recorded for the S3 rows.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%AD%E3%83%B3%E3%82%B0%E3%83%80%E3%83%A0_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+        "https://cal.syoboi.jp/db.php?Command=ProgLookup&TID=6319",
+        "https://kingdom.fandom.com/api.php?action=parse&page=Episode_111&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "ROW IDENTITY. Our 111-116 = S4 eps 8-13. Joined on TITLE (kanji) and air date against ja-WP 第4シリーズ and syobocal TID 6319, never on index (R20): 111 貂の存在 5/29, 112 紫伯の名 6/5, 113 中華の注目 6/12, 114 修練の日々 6/19, 115 傑物達の世代 6/26, 116 咸陽の動き 7/3. kingdom.fandom's page NAMES use the same cumulative numbering as ours (Episode_111 ... Episode_116) and each page's prose states both numbers ('the 8th episode of the fourth season and the 111th episode of the anime') - that prose is the reliable join key, because the infobox 'ep number' field is corrupt on three of the six pages (Episode_111, Episode_115 and Episode_116 all print 'ep number = 114'), and the same pages swap the kanji and romaji fields. HANDOFF. This sub-block opens on ch 386 (row 110 takes ch 385 whole - fandom and pcafe agree, no dual-listing) and hands off after ch 403; row 117 A New Nation opens on ch 404 呂氏春秋 (fandom Episode_117 = 404-406; pcafe puts 404 in 4-14). ENDs are monotone 388 < 391 < 394 < 397 < 400 < 403, inside the outer fence 364 (ep 103) -> 441 (ep 129) and between the neighbouring sub-blocks. No revisits, no reorder, so no `rearranged` in this block. CHAPTER SPACE. The manga's own serialization numbering; fandom chapter pages, pcafe and the stored volume table agree (v36 = 383-393, v37 = 394-404, v38 = 405-415). Volumes are given for the END chapter, matching every stored kingdom anchor. ARC SEAM. The Fire Dragons of Wei / Choyou arc closes at ch 401 and the State of Ai arc opens at ch 402 - both inside row 116; subculview's arc table states the seam as '35巻379話-37巻401話 = 4期6話-13話' and '37巻402話-41巻440話 = 4期13話-26話', which is independent corroboration that ch 402 is in this row and not in 117. FANDOM DROPS (the wave-2 trap, live again): ch 390 missing from Episode_112's field and ch 402 missing from Episode_116's field; both restored above with the licensor synopsis + pcafe + the chapter pages' own content. The same page also drops ch 384 from Episode_110 (not our row - flagged).",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "split evidence, ep 115 START (delivered 397, medium): kingdom.fandom's Episode 115 field writes the ch-397 lead-in as 'p.16-20' = 5 pages, which under A10 is a sliver and would make the START 398; but the wiki's own Chapter 397 page gives the chapter 22 pages, so with ep 114 taking p.1-16 the lead-in is p.17-22 = 6 pages and carries the chapter's turn (Ryuu Koku's army arriving), i.e. a real START. Delivered 397 on the chapter's true length - the same 'trust the chapter page's length' method the wave-2 verdict used on ep 95 / ch 326. If Sean prefers the wiki's literal range, ep 115 START = 398 and the 397 head stays in chapters_adapted. Either way ep 114's END (397) and ep 115's END (400) are unaffected.",
+    "DATE DEFECT, cross-block: our S4 rows carry the JST Sunday dates EXCEPT rows 110 and 111, which carry kingdom.fandom's US date (one day early, a Saturday). Row 111 is repaired here (2022-05-28 -> 2022-05-29). ROW 110 IS NOT MINE but has the same defect: stored 2022-05-21, true 2022-05-22 per ja-WP 第7話 呼びかけ 5月22日 and syobocal TID 6319 Count 7 = 2022-05-22. Rows 112-116 are already correct. Recommend the 104-110 agent (or a lane-B pass) repair 110.",
+    "fandom omissions restored (2+ sources each): ch 390 (ep 112) and ch 402 (ep 116). Anyone re-deriving these rows from kingdom.fandom alone will re-open the gaps; programming-cafe's anicomi chapter->episode index is chapter-complete for 386-404 and is the antidote. The same defect drops ch 384 from Episode_110's field (row 110, not a target here).",
+    "kingdom.fandom data defect to record: Episode_111, Episode_115 and Episode_116 all print 'ep number = 114' in the infobox, and several S4 pages swap the kanji and romaji fields (e.g. Episode_110 '|kanji = Yobikake |romaji = 呼びかけ'). Join on the page prose or the page name, never on that field.",
+    "no filler, no anchor-hostile rows and no skipped chapters in 111-116: coverage is continuous 386-403, so the only continues are the three C1 mid-chapter ones (388, 397, 400). No C2/C3 parity point is warranted anywhere in this sub-block."
+  ]
+}
