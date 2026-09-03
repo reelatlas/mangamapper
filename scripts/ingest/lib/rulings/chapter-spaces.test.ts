@@ -9,10 +9,10 @@ describe('toRuledChapter (N35 sourceShifts)', () => {
     expect(toRuledChapter('dragon-quest-the-adventure-of-dai', 'mu', 349)).toBe(348);
     expect(toRuledChapter('dragon-quest-the-adventure-of-dai', 'afg', 200)).toBe(199);
   });
-  it('dai: the fandom follows the printed numbers to 206 and runs + 1 from 208 (its 207 = the vol-22 extra)', () => {
+  it('dai: the fandom has NO ruled shift (wave 13\'s inferred from-208 window was refuted by wave 14 B — the title test)', () => {
     expect(toRuledChapter('dragon-quest-the-adventure-of-dai', 'fandom', 206)).toBe(206);
-    expect(toRuledChapter('dragon-quest-the-adventure-of-dai', 'fandom', 208)).toBe(207);
-    expect(toRuledChapter('dragon-quest-the-adventure-of-dai', 'fandom', 349)).toBe(348);
+    expect(toRuledChapter('dragon-quest-the-adventure-of-dai', 'fandom', 208)).toBe(208);
+    expect(toRuledChapter('dragon-quest-the-adventure-of-dai', 'fandom', 221)).toBe(221);
   });
   it('identity for a series with no ruled shift, and for null', () => {
     expect(toRuledChapter('orange', 'mu', 22)).toBe(22);

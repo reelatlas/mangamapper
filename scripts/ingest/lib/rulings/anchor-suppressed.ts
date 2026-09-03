@@ -163,6 +163,16 @@ export const ENTRIES: RulingEntry<number[]>[] = [
     ruledOn: '2026-09-02',
     cite: ['scripts/ingest/research/batch20/out/erased.json', 'scripts/ingest/research/batch20/verify/erased.md'],
   },
+  {
+    seriesId: 'dragon-quest-the-adventure-of-dai',
+    ruleId: 'A44',
+    value: [61],
+    reason:
+      "Batch 20 wave 14 (sub-block A, verified R24), Sean's standing ruling 2026-09-02 (unnumbered extras are noted, never numbered): ep 61 特別篇「勇者アバン」 adapts the UNNUMBERED 番外編「勇者アバン」 (V Jump, Nov 1991; printed as bonus matter at the back of tankōbon vol 13, between printed ch 121 覇者の剣 and 122 決勝戦の異変!!) in full, out of order, and no numbered mainline chapter — the catalog's chapter space is the PRINTED 348 (N35), which does not number it, so the row has no position: canon + `side_story` naming it; the reader's position carries over from ep 60 (continue IN 220). An anchor of 121/122 would drag the reader 100 chapters back (A12).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-03',
+    cite: ['scripts/ingest/research/batch20/out/dragon-quest-the-adventure-of-dai-w14a.json', 'scripts/ingest/research/batch20/verify/dragon-quest-the-adventure-of-dai-w14abd.md'],
+  },
 ];
 
 export const ANCHOR_SUPPRESSED: Record<string, number[]> = toRecord(ENTRIES);

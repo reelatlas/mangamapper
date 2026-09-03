@@ -208,9 +208,13 @@ PRINTED space — the tankōbon's 1-348.** The stored anchors, volume table
 are already printed. The lists are not: en-WP's volume list, AniList,
 MangaUpdates and MangaDex number the unnumbered 番外編「勇者アバン」 as
 their 122, so their N ≥ 123 = printed N − 1 (their 349 = printed 348);
-dragonquest.fandom matches the print up to 206, numbers vol 22's unnumbered
-extra as its 207, so ITS N ≥ 208 = printed N − 1 too. State the conversion
-you applied on every row whose source number differs. **Unnumbered extras
+dragonquest.fandom's per-episode field IS the printed number through at
+least ep 97 (AMENDED mid-wave from sub-block B's proof: ep 62 opens on
+破邪の洞窟 = list 222 = printed 221 = the fandom's 221; the wave-13 'from
+208' window was an arithmetic inference and is refuted) — it gains +1 only
+near the finale (its ep-100 field ends at 349); sub-block G locates the
+slot. State the conversion you applied on every row whose source number
+differs, proven by the TITLE test. **Unnumbered extras
 and one-shots are noted, never numbered**: ep 61 adapts 「勇者アバン」 out of
 order → a `side_story` annotation naming it (title, printed at the back of
 vol 13 between ch 121 and 122); the same for any 読切 an episode adapts.
