@@ -1,0 +1,183 @@
+{
+  "series_id": "the-seven-deadly-sins-four-knights-of-the-apocalypse",
+  "summary": "Rows 19-23 are a continuous, faithful adaptation of ch 58 p.1 through ch 75 p.13 (vol 7 -> vol 9), with TWO page-level un-cross-cuts and no anime-original episode. Ep 19 = 58 (p.1-14), 59-61; ep 20 = 62-64; ep 21 = 65-68; ep 22 = 69 (p.1-7, p.14-20), 70-72; ep 23 = 69 (p.8-13), 73-75 (p.1-13). Three independent instruments agree on the block: nanatsu-no-taizai.fandom's page-partitioned |chapters= fields, programming-cafe's anicomi episode table + chapter->episode reverse index, and the nissi0725 fan blog, which prints an explicit 'this episode = manga ch X-Y' line per episode AND a scene-by-scene recap (the licensor's own per-episode synopsis on 7sins-4knights.net / Bandai Channel corroborates the content of each). The reorder shape the ask predicted is REAL and is confirmed by two of the three: ch 69 is page-partitioned across eps 22/23 (p.1-7 + p.14-20 in 22, p.8-13 in 23) because the anime un-cross-cuts Suzuki's three parallel threads — ep 22 takes the post-battle party and the dungeon/Jericho thread, ep 23 opens on the Chaos-Staff fusion that births Melagaland; ep 22 only TEASES that beat in its C-part (a teaser tail, A47) and the blog's ep-23 line is the non-contiguous '9巻第69話、第73〜第75話'. So ep 23 carries a START BACK-JUMP to 69 with `rearranged`, ep 22's continue is C2 parity at 69 with only pp. 8-13 unread. A SECOND un-cross-cut sits at the 18/19 seam (not my row to anchor): ep 18 closes on ch 58 p.15-20 (the Guinevere kiss) and ep 19 opens on ch 59's continuation before playing ch 58 p.1-14 — so my first row opens on ch 58, page-behind ep 18's tail of the same chapter. The stored ep 24 -> 77 [75] v9 fence holds unrepaired: my furthest END is 75 (p.13), exactly where ep 24 starts. All five rows stay canon: every anime-original element found is a short bridging beat inside adapted chapters (T28 faithfulness clause), and ep 21's newly-drawn 16-years-ago Ten Commandments flashback is a recap-class insert that counts for nothing (T28 recap clause). The stored volume table is empty; v1-v9 is delivered in structure.notes from two independent sources.",
+  "anchors": [
+    {
+      "episode": 19,
+      "end_chapter": 61,
+      "start_chapter": 58,
+      "chapters_adapted": "58 (p.1-14), 59, 60, 61",
+      "volume": 8,
+      "confidence": "high",
+      "note": "END 61 (A4): the episode closes on the Four Knights assembling before Pellegarde, which is ch 61 'The Fourth Arrives' (四人目現る) — its last beat; ep 20 opens on 62, so A47 is not in play. START 58 (A10): ch 58 p.1-14 (14 pages, the search for Gawain — Chion/Jade/Tristan, the white armour, Pellegarde's arrival in the square) is substantive first-time content, well above the sliver bar; ep 18 had taken only 58 p.15-20 (the Guinevere/Lancelot kiss) as its closer, so this is a PAGE-level back-jump inside one chapter, annotated `rearranged` + `partial` (the bleach 152-159 shape). In playback the episode opens by continuing that kiss into ch 59's head (Lancelot flustered, the maid, Guinevere names herself) — a continuation of re-shown pages, which never sets a START ('pages, not numbers'); 58 is the earliest first-time chapter and takes it. Volume 8 = the END chapter's volume (58-59 are vol 7, 60-61 vol 8; the blog states the span as '原作7巻第58話〜8巻第61話'). Row displays 58 (A13).",
+      "sources": [
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%2019&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-mokushirokunoyonkishi-list/",
+        "https://nissi0725.livedoor.blog/archives/27069253.html",
+        "https://7sins-4knights.net/story/19.html",
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Chapter%2061%20(4KOA)&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 20,
+      "end_chapter": 64,
+      "start_chapter": 62,
+      "chapters_adapted": "62, 63, 64",
+      "volume": 8,
+      "confidence": "high",
+      "note": "A clean chapter-boundary row: 62 'The Start of a New Legend' -> 64 'Those Seeking Revenge'. END 64 (A4) is confirmed on the pages, not just the range: the episode's last scene is the interrogation of the two cloaked figures, Chaos Melascula's chant and the REVIVAL of Galand and Melascula with Hendrickson reacting — and ch 64's own character-order list ends exactly ... Star Visor Knight > Chaos Melascula > Chaos Galand > Hendrickson. START 62 (A10): no leading partial; ep 19 ended on 61's last page. A47 is not in play (ep 21 starts on 65). All three instruments print 62-64. Volume 8 (ch 60-68).",
+      "sources": [
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%2020&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-mokushirokunoyonkishi-list/",
+        "https://nissi0725.livedoor.blog/archives/27152823.html",
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Chapter%2064%20(4KOA)&prop=wikitext&format=json",
+        "https://7sins-4knights.net/story/20.html"
+      ]
+    },
+    {
+      "episode": 21,
+      "end_chapter": 68,
+      "start_chapter": 65,
+      "chapters_adapted": "65, 66, 67, 68",
+      "volume": 8,
+      "confidence": "high",
+      "note": "END 68 (A4): the episode's last beat is Tristan taking his demon form and killing the giant-serpent Melascula — ch 68 'Nephilim' (the wiki's own difference note for this row, 'Chaos Melascula doesn't refer to Tristan as a Nephilim', is a ch-68 beat). START 65 (A10): ch 65 'The Nightmare Anew' opens the episode's body (the Chaos Apostles slaughtering the fairies, giants and the Holy Knights' leader; then Gilthunder/Meliodas reading the decoy). The episode's cold open is a NEWLY DRAWN picture-book flashback of the Ten Commandments 16 years ago plus Arthur taking them as pawns — flashback/recap wording, which never sets a START behind 65 (A10) and counts for nothing in the standing (T28 recap clause). One instrument (the nissi0725 blog header) brackets this row as '8巻第64話〜9巻第69話'; its own scene-by-scene body starts at the ch-65 massacre and ends at ch 68, ch 64 ends inside ep 20 on the pages (see ep 20) and ep 22 opens on ch 69 p.1 — so the bracket is loose at both edges and does not move this anchor; had ep 21 in fact carried a scrap of ch 69, A47 would keep the END at 68 anyway (ep 22 STARTS on 69). Volume 8.",
+      "sources": [
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%2021&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-mokushirokunoyonkishi-list/",
+        "https://nissi0725.livedoor.blog/archives/27239304.html",
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Chapter%2068%20(4KOA)&prop=wikitext&format=json",
+        "https://7sins-4knights.net/story/21.html"
+      ]
+    },
+    {
+      "episode": 22,
+      "end_chapter": 72,
+      "start_chapter": 69,
+      "chapters_adapted": "69 (p.1-7, p.14-20), 70, 71, 72",
+      "volume": 9,
+      "confidence": "high",
+      "note": "END 72 (A4): the episode plays the Jericho arc to the end of ch 72 'A Freezing, Burning Heart' (its title chapter) — Jericho's confession, her return to Camelot, Lancelot finding the prisoner dead and roaring at Arthur. START 69 (A10) at p.1: the post-battle aftermath (sulking Gawain, Nasiens fussing over Percival, the Liones Holy Knights welcoming the Four Knights) is ch 69's opening, 7 pages, no partial before it. THE UN-CROSS-CUT: ch 69 cross-cuts three threads and the anime separates them — this row takes p.1-7 (the party) and p.14-20 (the dungeon: Chion, Jade, the Star-Visor Knight), and LEAVES p.8-13 (Pelliot/Golgius, the Chaos Staff, the fusion) to ep 23; ch 69's own character order (… Nasiens > Pelliot > Golgius > Melagaland > Chion > Jade > Star Visor Knight) is exactly that three-part shape. The C-part closes on the Chaos Staff activating — the OPENING BEAT of the p.8-13 block, played in full at the head of ep 23: a teaser tail, so under A47 it neither advances this END nor claims those pages (annotated `partial`). Volume 9 (ch 69-77).",
+      "sources": [
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%2022&prop=wikitext&format=json",
+        "https://nissi0725.livedoor.blog/archives/27325344.html",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-mokushirokunoyonkishi-list/",
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Chapter%2069%20(4KOA)&prop=wikitext&format=json",
+        "https://7sins-4knights.net/story/22.html"
+      ]
+    },
+    {
+      "episode": 23,
+      "end_chapter": 75,
+      "start_chapter": 69,
+      "chapters_adapted": "69 (p.8-13), 73, 74, 75 (p.1-13)",
+      "volume": 9,
+      "confidence": "high",
+      "note": "END 75 (A4), MID-CHAPTER: the episode's last beat is the powered-up Percival attacking Melagaland; the stored ep 24 anchor starts on ch 75 p.13, so this row ends inside ch 75 at p.13 of 20 (13 pages, far above any scrap bar — A47 does not demote). START 69 (A10 + 'pages, not numbers'): the episode OPENS on ch 69 p.8-13 — the Chaos Staff, the fusion, Melagaland's birth witnessed by Pelliot and Golgius — 6 pages of FIRST-TIME content that appear in no other episode (ep 22 only teased the staff in its C-part). That is a START BACK-JUMP behind ep 22's END 72 and is annotated `rearranged` (the bleach 152-159 shape); the running-order body is 73, 74, 75 (p.1-13). Two independent instruments carry the fragment: the fandom episode field ('69 p.8~13, 73, 74, 75 p.1~13') and the nissi0725 blog's explicitly NON-CONTIGUOUS line '今回のアニメ第23話の内容は原作9巻第69話、第73〜第75話の内容です' plus its recap opening on Melagaland's birth ('メラガランの誕生の仕方あんな感じだったんですな'). programming-cafe's coarser episode table prints 73-75 and its reverse index leaves ch 69 with ep 22 only — the dissent is named in flags_for_sean; it is a table that also omits the ch-75 split its own reverse index carries. Volume 9. Row displays 69 (A13).",
+      "sources": [
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%2023&prop=wikitext&format=json",
+        "https://nissi0725.livedoor.blog/archives/27412389.html",
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Chapter%2069%20(4KOA)&prop=wikitext&format=json",
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Volume%209%20(4KOA)&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-mokushirokunoyonkishi-list/",
+        "https://7sins-4knights.net/story/23.html"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 22,
+      "continue_chapter": 69,
+      "kind": "parity",
+      "note": "C2 parity, and it points BACKWARDS on purpose (the d-gray-man / bobobo precedent). After ep 22 you have read ch 69 pages 1-7 and 14-20, then 70, 71 and 72 in full — but NOT ch 69 pages 8-13, the Chaos Staff and the fusion that births Melagaland, which the episode only flashed in its post-credits C-part. Ep 23 plays exactly those six pages at its head. So resume at ch 69 (vol 9) for pp. 8-13 only, then skip straight to ch 73 — pp. 1-7 and 14-20 of 69 and all of 70-72 are already read (C3 skip).",
+      "sources": [
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%2022&prop=wikitext&format=json",
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%2023&prop=wikitext&format=json",
+        "https://nissi0725.livedoor.blog/archives/27325344.html",
+        "https://nissi0725.livedoor.blog/archives/27412389.html"
+      ]
+    },
+    {
+      "episode": 23,
+      "continue_chapter": 75,
+      "kind": "parity",
+      "note": "C1 — the episode ends MID-chapter 75 'Royal Holy Knights vs. Melagaland' (p.13 of 20), on Percival's powered-up attack, so resume IN ch 75 (vol 9) at page 13. Nothing else is outstanding: ch 69 pp. 8-13 were the episode's own cold open and 73-74 were adapted in full. Ep 24 'Advent' picks up on ch 75 p.13 (the stored ep-24 anchor), so this is also parity with the next row's START.",
+      "sources": [
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%2023&prop=wikitext&format=json",
+        "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Four%20Knights%20of%20the%20Apocalypse%20Episode%2024&prop=wikitext&format=json",
+        "https://programming-cafe.com/amazon/primevideo/anime/anicomi-mokushirokunoyonkishi-list/"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [19],
+      "kind": "rearranged",
+      "chapters": "58",
+      "note": "A page-level un-cross-cut at the 18/19 seam: ep 18 closed on ch 58 p.15-20 (Guinevere kissing Lancelot — the episode's cliffhanger and ch 58's last pages), and ep 19 continues that scene into ch 59's head before going BACK to ch 58 p.1-14 (the search for Gawain). Same chapter number on both rows, inverted page order across them; ep 19's ch-58 pages are first-time content and take the START (A10)."
+    },
+    {
+      "episodes": [19],
+      "kind": "partial",
+      "chapters": "58 (p.1-14)",
+      "note": "Ch 58 (20 pages) is split exactly once across two rows: p.1-14 here, p.15-20 in ep 18. Named per A10/A47 so the boundary is visible; the split moves neither END."
+    },
+    {
+      "episodes": [19],
+      "kind": "divergence",
+      "chapters": "58-59",
+      "note": "Two small studio-made beats inside adapted chapters, both noted rather than weighed (T28 faithfulness clause): an anime-only exchange between Tristan and the Holy Knight Pelliot during the Gawain search, and Chion visibly summoning Sylph and Gnome before attacking Tantal (the manga does not show the summons). No original story share; the row stays canon."
+    },
+    {
+      "episodes": [21],
+      "kind": "divergence",
+      "chapters": "65, 66, 67-68",
+      "note": "Recap clause + faithfulness clause (T28). The cold open is a NEWLY DRAWN picture-book flashback of the Seven Deadly Sins vs the Ten Commandments 16 years ago and Arthur taking Galand/Melascula as pawns — recap-class material that counts for nothing in the standing. Inside the adapted chapters: Merlin is added beside Arthur and Mortlach watching from Camelot; the Holy Knights who ask Percival's name after his revival are CUT; and an anime-original beat has Tristan drop Melascula's 悪食の霊神 onto Gawain, who incinerates it. Alterations and cuts of the source's own events; the row stays canon."
+    },
+    {
+      "episodes": [22],
+      "kind": "partial",
+      "chapters": "69 (p.1-7, p.14-20)",
+      "note": "Ch 69 (20 pages) is page-partitioned across eps 22 and 23 because the anime un-cross-cuts its three threads: p.1-7 (the post-battle party) and p.14-20 (the dungeon — Chion, Jade, the Star-Visor Knight) here, p.8-13 (the Chaos Staff and Melagaland's birth) at the head of ep 23. The C-part of this episode closes on the staff activating — the first beat of that block, a teaser tail which under A47 stays ep 23's (it is played there in full)."
+    },
+    {
+      "episodes": [22],
+      "kind": "divergence",
+      "chapters": "70-72",
+      "note": "Anime-added material inside adapted chapters (T28 faithfulness clause): a flashback of Gustaf's body while Guila speaks of Jericho's oath; flashbacks of Ban removing Jericho's demon seed and Gowther helping Guila; and an added scene in which Jericho kills the captured Chaos Knight before Lancelot arrives, so Camelot's secrets are not spilled (the manga leaves the death off-page). Elaborations of the source's own beats, not an original plot line."
+    },
+    {
+      "episodes": [23],
+      "kind": "rearranged",
+      "chapters": "69 (p.8-13)",
+      "note": "The START back-jump of the 22/23 un-cross-cut: this episode opens six chapters' worth of running order BEHIND its body, on ch 69 p.8-13 (the Chaos Staff, the fusion, Melagaland's birth seen by Pelliot and Golgius), then runs 73, 74, 75 (p.1-13). The pages are first-time — ep 22 only teased the staff in its C-part — so the position instrument must show 69 or those pages would read as never adapted."
+    },
+    {
+      "episodes": [23],
+      "kind": "partial",
+      "chapters": "69 (p.8-13), 75 (p.1-13)",
+      "note": "Both ends are page splits: ch 69 is shared with ep 22 (p.1-7 + 14-20 there) and ch 75 is shared with ep 24 (p.13-20 there, per the stored ep-24 anchor). Named per A10/A47 so the boundaries are visible."
+    },
+    {
+      "episodes": [23],
+      "kind": "divergence",
+      "chapters": "73-75",
+      "note": "An anime-original bridging scene opens the B-part — Chion and Jade reporting that Jericho is a Camelot knight and that Guila is safe, and Lancelot brooding in the castle dungeon (a coda to ep 22's arc that the manga does not draw). Plus small alterations inside the adapted chapters: Percival and Tristan attack Melagaland in sequence rather than all three at once, an added Hendrickson/Dreyfus poison flashback, and a mini-Percival healing Golgius where the manga uses two unnamed knights. Short, non-story-carrying studio beats — noted, never weighed toward mixed (T28 faithfulness clause); the row stays canon."
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [],
+  "structure": {
+    "notes": "WHICH CHAPTER MY FIRST ROW OPENS ON (the seam with rows 13-18, another agent's block). Ep 19 opens on ch 58 — specifically p.1-14, the search for Gawain — which sits BEHIND ep 18's own closing pages of the same chapter (58 p.15-20, the Guinevere/Lancelot kiss). Three sources agree ep 18 = ch 55-58 and that it ENDS on the kiss: the fandom field (55 p.2-21, 56, 57, 58 p.15-20), the nissi0725 blog ('今回のアニメ第18話の内容は原作7巻第55話〜第58話の内容です', with the kiss as its last recap section), and the broadcaster's own post-episode tweet ('ランスロットの前に現れた少女は、ランスロットの恋人!?'). programming-cafe's coarser episode table is the dissenter here too (it prints ep 18 = 55-57, ep 19 = 58-61). If the 13-18 agent delivers ep 18 END 58, the seam is the same page-partition shape as 22/23 and ep 18 should carry the matching `partial` (58 p.15-20) — ep 19's START 58 does not conflict with it, and A47 does not demote ep 18's END either (6 pages, a real scene, and ep 19 does NOT re-adapt p.15-20; it only re-shows the kiss as a cold open before continuing into ch 59).\n\nVOLUME BOUNDARY TABLE v1-v9 (the stored table is EMPTY; delivered for ingest). v1 = ch 1-5 (2021-04-16); v2 = 6-14 (2021-06-17); v3 = 15-23 (2021-09-17); v4 = 24-32 (2021-11-17); v5 = 33-41 (2022-01-17); v6 = 42-50 (2022-03-17, ISBN 978-4065272862); v7 = 51-59 (2022-05-17, 978-4065279113); v8 = 60-68 (2022-08-17, 978-4065286562); v9 = 69-77 (2022-11-17, 978-4065294871). TWO independent sources, agreeing exactly: nanatsu-no-taizai.fandom's Volume N (4KOA) pages (each lists its chapters explicitly, and every chapter infobox carries a |volume= field that matches) and programming-cafe's 単行本 column (第7巻 opens at 51, 第8巻 at 60, 第9巻 at 69, 第10巻 at 78). The nissi0725 blog is a third, per episode: '原作7巻第58話〜8巻第61話' (ep 19), '原作8巻第62話〜第64話' (ep 20), '原作9巻第69話〜第72話' (ep 22), '原作9巻第69話、第73〜第75話' (ep 23). I could not read Kodansha's own product pages machine-side (kc.kodansha.co.jp 301s to a JS shell) — the ISBNs above come from the fandom volume infoboxes and are given for whoever ingests the table.\n\nCHAPTER SPACE. One space throughout: the manga's own Weekly Shonen Magazine serialization numbering, used identically by the fandom (|chapter=, |wsm=, |volume=), by programming-cafe's 話数 column, by the blog and by MU. No edition conversion; the parent Nanatsu no Taizai has its own numbering and is not involved. Page counts used for the sliver tests, from the chapter infoboxes: ch 58 = 20, 61 = 23, 64 = 20, 68 = 20, 69 = 20, 72 = 20, 73 = 16, 75 = 20.\n\nTHE 22/23 UN-CROSS-CUT, ON THE PAGES. Ch 69 'Those Acting Behind The Scenes' (暗躍する者) cross-cuts three threads and its own character-order list prints them in order: [Percival > Tristan > Gawain > Anghalhad > Donny > Nasiens] = the post-battle party (p.1-7); [Pelliot > Golgius > Melagaland] = the Chaos Staff and the fusion (p.8-13); [Chion > Jade > Star Visor Knight] = the dungeon (p.14-20). The anime keeps the party and dungeon threads together in ep 22 (whose recap order runs: sulking Gawain -> Nasiens fussing -> the Holy Knights welcoming -> Jade/Chion in the dungeon -> the intruder -> ch 70-72 -> a C-part in which the Chaos Staff activates) and moves the middle thread to the head of ep 23 (whose fandom character order opens Gawain > Golgius > Pelliot > Percival > Tristan > Melagaland, and whose blog recap opens on Melagaland's birth). This is the bleach 152-159 shape: one END that does not advance (ep 22 stays 72) and one START that jumps back (ep 23 = 69), both annotated `rearranged`/`partial`, never a plain 69-75 range.\n\nEPISODE TITLES vs CONTENT — a corroboration, not an anchor. Every row in this block takes its title from a chapter INSIDE its own range, usually the penultimate one: ep 19 灼熱のリオネス = ch 60, ep 20 じゃじゃ馬ならし = ch 63, ep 21 〈黙示録の四騎士〉VS混沌の使徒 = ch 67, ep 22 凍てつき燃ゆる心 = ch 72, ep 23 王国聖騎士VS.メラガラン = ch 75 (and ep 18 予言の騎士の邂逅 = ch 56, ep 24 降臨 = ch 76). The pattern is consistent enough to flag an outlier, and none of the five rows is one.\n\nSOURCE HYGIENE (inherited + extended). sevendeadlysins.fandom.com is an ALIAS of nanatsu-no-taizai.fandom.com — ONE wiki. animefillerguide has no page for this series (404). ja-WP's article is '黙示録の四騎士 (漫画)' and its 各話リスト has no 原作 column — a title/date witness only. The licensor synopsis is ONE source under three hostnames: 7sins-4knights.net/story/N.html, Bandai Channel b-ch.com/titles/8283/0NN and the press reprints (ota-suke.jp, moview.jp, at-s.com, tvguide.or.jp) all carry the identical press text, so it is cited once per row and used for content orientation, never as a second chapter witness. The nissi0725 blog is an independent instrument of a different kind: a per-episode 'this episode = manga ch X-Y' line plus a scene-by-scene recap that names the first and last beat, which is what let me verify ends on the pages rather than on a range. Its one weakness is visible in this block: its ep-21 header reads '第話の内容は原作8巻第64話〜9巻第69話' (episode number missing, and both edges loose) while its own body starts at ch 65 and ends at ch 68 — headers on that blog are brackets, bodies are evidence.\n\nFANDOM DATE DEFECT (noted, no repair). nanatsu-no-taizai.fandom's Episode 23 page prints |airdate = March 17, 2024 — the same date as Episode 22. Our stored ep 23 date (2024-03-24) is correct and matches ja-WP, the broadcaster's own 2024-03-24 tweets and the ota-suke/moview articles dated 2024-03-24. No repair is proposed; the warning is that this wiki's airdate fields are not trustworthy on this series even where its chapter fields are.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "SPLIT EVIDENCE on ep 23's ch-69 fragment (the only contested value in the block). FOR: the fandom episode field ('69 p.8~13, 73, 74, 75 p.1~13'), the nissi0725 blog's explicitly non-contiguous '原作9巻第69話、第73〜第75話' plus its recap opening on Melagaland's birth, and ch 69's own three-thread character order. AGAINST: programming-cafe's episode table prints ep 23 = 73-75 and its chapter->episode reverse index assigns ch 69 to 1-22 only. I delivered START 69 + `rearranged` (two independent sources for, one coarse against — the same table also omits the ch-75 split that its own reverse index carries). If you prefer the conservative read, ep 23 becomes START 73 and ep 22's continue becomes 73; the END 75 and every other anchor in the block are unaffected either way.",
+    "DISPLAY CONSEQUENCE of accepting the un-cross-cut: under A13 both ep 22 and ep 23 display chapter 69, and ep 22's continue points backwards to 69 (six unread pages) before the reader jumps to 73. That is the intended bleach-152 behaviour, but it is the kind of row a user reads as a bug — worth a note in the UI copy if the annotation is not surfaced.",
+    "SEAM WITH ROWS 13-18 (not my rows): ep 19's START 58 presumes ep 18 ENDS on ch 58 p.15-20. Three sources support that (fandom field, the blog's '55〜58' + its kiss ending, the broadcaster's post-episode tweet); programming-cafe prints ep 18 = 55-57. If the 13-18 agent lands ep 18 END 57, the 18/19 page partition disappears and ep 19's `rearranged`/`partial` annotations should be dropped — the anchor itself (58 -> 61) does not change. Worth reconciling the two sub-block files before apply.",
+    "ep 21's third source (nissi0725) brackets the row as ch 64-69 while the fandom and programming-cafe both print 65-68 and the blog's own body runs 65 -> 68. I took 65-68. If a later reader finds a genuine ch-69 tail in ep 21, A47 keeps the END at 68 (ep 22 starts on 69) and only chapters_adapted would gain a `partial`.",
+    "The v1-v9 volume boundary table in structure.notes is ready to ingest — the stored table for this manga is EMPTY, which is why every anchor's volume in this block had to be derived per row. Two independent sources agree exactly (fandom volume pages + programming-cafe's 単行本 column); Kodansha's own product pages could not be read machine-side.",
+    "nanatsu-no-taizai.fandom's Episode 23 page carries a WRONG airdate (March 17, 2024 — a duplicate of ep 22). Our stored value is right; flagging only so nobody 'repairs' our correct date from that page later."
+  ]
+}
