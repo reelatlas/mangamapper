@@ -169,3 +169,17 @@ clause** (alterations / cuts / reorders keep canon while faithful; a small
 studio-made beat is noted as divergence, never weighed toward mixed). The
 landing scan checks monotonicity across each series' files. No contract
 change.
+
+## Amendment 2026-09-02e (wave 12 — pinned before dispatch; R31)
+
+Wave 12 = **the-seven-deadly-sins-four-knights-of-the-apocalypse 1-23** (lane
+A2, the GAP shape unchanged; the last mid-size gap block) as FOUR sub-blocks
+(1-6 / 7-12 / 13-18 / 19-23; files `-w12a` … `-w12d`). No fence below (ch 1);
+the upper fence is the wave-9 manual anchor ep 24 → 77 [75] v9. The stored
+volume boundaries for this manga are EMPTY — each anchor's volume comes from
+the fandom volume pages + Kodansha's 初出, and the v1-v9 table goes in
+structure.notes. Rules in force: `A47` (chapters_adapted as a COMMA list),
+the T28 recap clause + recap boundary (re-shown footage is weightless; a
+newly animated sequence of significant length weighs), the faithfulness
+clause (alterations keep canon; a small studio beat is noted). The landing
+scan checks monotonicity across the four files. No contract change.
