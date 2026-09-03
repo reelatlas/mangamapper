@@ -924,8 +924,9 @@
    **1 → 0** (the LAST gap block — lane A2 CLOSED); ruling_violation 0;
    anchor_beyond_chapter_space 0; end_sliver_mismatch 0; anchor_nonmonotonic
    0; mu_pin_unverified 0; anchor_volume_mismatch 20 / frontier_tail_null 8
-   / anchor_without_row 11 unchanged; display 218 / 0. No lib GATE change
-   (a ruling entry and a test) — no deploy needed beyond §12.103's. Traps
+   / anchor_without_row 11 unchanged; display 218 / 0. Two lib RULINGS changed
+   (the withdrawn fandom shift, the ep-61 A44 entry) → edges rebuilt +
+   deployed (P3; the system census caught the stale hash first). Traps
    → research-agent: the existence clause; Toei's close IS teaser wording;
    an arithmetic slot inference is a hypothesis until the title test; coco13
    = the printed-space title witness; morisan3rd = per-chapter summaries
