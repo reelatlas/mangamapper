@@ -212,7 +212,7 @@
 - `G35` Scope-consumed: research already reached the scope end — aka `D1 scope-consumed`, `scope-consumed`, `scope-consumed refusal`, `refused_scope_consumed`
 - `G36` A1 at the MU writer: no pin on a filler/anime-only row — aka `D1 episode-type refusal`, `A1 at the MU writer`, `refused_episode_type`, `A1 / D1 episode-type refusal`
 - `G37` MU_FRONTIER_SUPPRESSED: declarative per-entry suppression — aka `MU_FRONTIER_SUPPRESSED`, `MU suppression record`
-- `G38` 'mu' anchors are wiped and re-derived every run — aka `mu anchors wiped and rebuilt`, `mu anchors are derivations`, `delete-at-entry`
+- `G38` 'mu' anchors are wiped and re-derived every run — aka `mu anchors wiped and rebuilt`, `mu anchors are derivations`, `delete-at-entry`, `coverage floor`, `latest_known floor`, `mu-latest`
 - `G39` MU targets are universal: every manga-linked series — aka `MU targets: UNIVERSAL`, `MU targets universal`, `universal MU targeting`
 - `G41` Manga-status cross-check flags, never auto-applies — aka `manga-status cross-check`, `cross-check tier`, `taxonomy_conflict (MU status)`
 - `G42` MU change detection hashes only the acted-on fields — aka `muHash`, `hash-only-acted-on-fields`, `MU hash gate`
@@ -2863,15 +2863,16 @@ For an entry whose MU pin is wrong for a reason NO structural gate can derive, a
 
 ### G38 · 'mu' anchors are wiped and re-derived every run
 
-Applying the MU frontier first DELETES the series' existing 'mu' anchor and then re-derives it through the gate stack, on every run of every caller (audit-manga-coverage, mu-backfill, refresh-mu). A rule fix therefore heals every series on the next pass; a suppressed series stops after the delete. The same contract holds for afg-continua anchors.
+Applying the MU frontier first DELETES the series' existing 'mu' anchor and then re-derives it through the gate stack, on every run of every caller (audit-manga-coverage, mu-backfill, refresh-mu). A rule fix therefore heals every series on the next pass; a suppressed series stops after the delete. The same contract holds for afg-continua anchors. THE COVERAGE FLOOR (Sean 2026-09-04, four-knights): latest_known never sits below a chapter MU's own anime-coverage field names ('Vol 14, Chap 120 Page 12 (S2)' — that chapter exists even when MU's release-derived count lags scanlation at 103), nor below the volume table's last bounded chapter; lib/mu-latest.ts#bestLatestKnown (pure, unit-tested) is the one derivation every writer uses (the coverage healer, mu-backfill, the refresh-mu edge).
 
 *Why:* Derivation-tier rows are wipe-and-rebuild by contract — which is exactly why a repaired value on a mu row does not survive (hikaru ep-75 wipe → invariant 7: repairs live at the manual tier).
 
 - ruled session 2026-08-23 (lib/mu-frontier.ts header; data-pipeline §10 "MU-frontier rule")
 - layer **writer**
-- enforced: [lib/mu-frontier.ts#applyMuFrontier](../scripts/ingest/lib/mu-frontier.ts) · [lib/anchors.ts#applyContinua](../scripts/ingest/lib/anchors.ts)
+- enforced: [lib/mu-frontier.ts#applyMuFrontier](../scripts/ingest/lib/mu-frontier.ts) · [lib/anchors.ts#applyContinua](../scripts/ingest/lib/anchors.ts) · [lib/mu-latest.ts#bestLatestKnown](../scripts/ingest/lib/mu-latest.ts) · [lib/mu-latest.ts#muCoverageChapterMax](../scripts/ingest/lib/mu-latest.ts)
 - **audit: none — automation backlog**
-- aliases: mu anchors wiped and rebuilt, mu anchors are derivations, delete-at-entry
+- witnesses: , the-seven-deadly-sins-four-knights-of-the-apocalypse
+- aliases: mu anchors wiped and rebuilt, mu anchors are derivations, delete-at-entry, coverage floor, latest_known floor, mu-latest
 - see: G31, G22, G37, invariant 7, hikaru ep-75 wipe
 
 ### G39 · MU targets are universal: every manga-linked series
@@ -4428,6 +4429,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - cover-page serial rule → `A44`
 - coverage = furthest adapted → `A4`
 - coverage = max → `A4`
+- coverage floor → `G38`
 - coverage gate → `A37`
 - coverage synthesis → `A38`
 - covered pin → `G56`
@@ -4701,6 +4703,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - large-diff hold → `G10`
 - lastChapterNumber → `N29`
 - latest not total → `N25`
+- latest_known floor → `G38`
 - latest_known writer gate → `N27`
 - latestKnown synthesis → `A38`
 - legend by count → `T18`
@@ -4790,6 +4793,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - mu_refused_multiwork → `G32`
 - mu-558-as-anchor → `A32`
 - MU-frontier rule → `G31`
+- mu-latest → `G38`
 - MU-pin episode-keyed redundancy → `A26`
 - muHash → `G42`
 - multi-work MU string → `G32`
