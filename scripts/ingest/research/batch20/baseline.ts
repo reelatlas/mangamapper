@@ -24,7 +24,7 @@ async function main() {
   for (const f of files) {
     const v = JSON.parse(readFileSync(f, 'utf8'));
     const sid: string = v.series_id;
-    const wv = /-w(\d)[a-z]?\.json$/.exec(f)?.[1];
+    const wv = /-w(\d+)[a-z]?\.json$/.exec(f)?.[1];
     const mine = TARGETS.filter((t) => t[0] === sid).sort((a, b) => a[4] - b[4]);
     const sameWave = wv ? mine.filter((t) => t[4] === Number(wv)) : [];
     const touched = [...(v.anchors ?? []), ...(v.anchor_hostile ?? []), ...(v.repairs ?? []), ...(v.continue_points ?? [])].map((x: any) => Number(x.episode)).concat(...[...(v.type_corrections ?? []), ...(v.annotations ?? [])].map((x: any) => (x.episodes ?? []).map(Number)));

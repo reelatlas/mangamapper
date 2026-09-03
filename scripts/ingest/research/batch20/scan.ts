@@ -23,7 +23,7 @@ async function main() {
     const v = JSON.parse(readFileSync(OUT + f, 'utf8'));
     // a series can have one TARGETS entry per wave: `<id>-w<N>.json` names the wave; no suffix = the series' lowest wave
     const mine = TARGETS.filter((t) => t[0] === v.series_id).sort((a, b) => a[4] - b[4]);
-    const wv = /-w(\d)[a-z]?\.json$/.exec(f)?.[1];
+    const wv = /-w(\d+)[a-z]?\.json$/.exec(f)?.[1];
     const sameWave = wv ? mine.filter((t) => t[4] === Number(wv)) : [];
     const touched = [...(v.anchors ?? []), ...(v.anchor_hostile ?? []), ...(v.repairs ?? []), ...(v.continue_points ?? [])].map((x: any) => Number(x.episode)).concat(...[...(v.type_corrections ?? []), ...(v.annotations ?? [])].map((x: any) => (x.episodes ?? []).map(Number)));
     const inRange = (t: (typeof mine)[number]) => touched.length > 0 && touched.every((n) => ranges(t[1]).some(([a, b]) => n >= a && n <= b));

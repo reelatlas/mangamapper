@@ -140,3 +140,15 @@ chapters_adapted and a `partial` names it; a finale's tail stands (no owner;
 C1). Deliver page splits in chapters_adapted as before — the apply layer
 normalizes through `lib/sliver.ts#sliverEnd` and prints every move. No other
 contract change.
+
+## Amendment 2026-09-02c (wave 10 — pinned before dispatch; R31)
+
+Wave 10 = **FotNS 109-151** (lane A2, the GAP shape unchanged; the largest
+anchor_gap_research block: 41 rows, 39 canon), split into SEVEN sub-blocks
+(109-114, 115-120, 121-126, 127-132, 133-138, 139-144, 145-151) under the
+8-agent cap — one JSON per sub-block, named `fist-of-the-north-star-w10a.json`
+… `-w10g.json` in that order. The outer fence is ep 108 → 136 [135] and
+ep 152 → 210; neighbouring sub-blocks are other agents' rows — deliver only
+yours, ENDs monotone within the outer fence, a revisit `rearranged`; the
+landing scan checks monotonicity ACROSS the seven files. `A47` (the
+END-side sliver) binds every END. No contract change.
