@@ -1,0 +1,199 @@
+{
+  "series_id": "dragon-quest-the-adventure-of-dai",
+  "summary": "Rows 36-41 are six consecutive canon rows of the Holy Sword arc, adapting OUR chapters 125-150 (vols 14-16) at ~4.3 chapters per episode with no filler and no anime-original block. All six take anchors. The block's only structural quirk is a genuine reorder at eps 38/39: ep 38 plays the opening of ch 135 (the World Summit convening), jumps to 136-137 (Lankarks / Lon Berk), and ep 39 returns to ch 135's remainder (the summit in session) before 138-141 — confirmed independently by the fandom's dual '(partial)' credit, TV Tokyo's own ep-38/39 synopses, and coco13's note that ep 38 crammed five chapters '一部次回へ繰り越し'. One stored-source defect resolved: dragonquest.fandom's ep-40 '|adapted=' field over-reaches by one chapter (it claims OUR ch 146); the chapter page, ep 41's own content notes (the Decimation Field beats) and the coco13 comparison all put ch 146 at the head of ep 41, so ep 40 ends at 145. Three chapter straddles carry continue points (129, 141, 150) plus one skip-parity continue at ep 38 (135). ALL chapter numbers below are in OUR space (349, slot 122 = the tankōbon vol-13 番外編「勇者アバン」); every Japanese source used here numbers only the 348 mainline chapters, so each of their numbers has been +1'd — the conversion is stated per anchor.",
+  "anchors": [
+    {
+      "episode": 36,
+      "end_chapter": 129,
+      "start_chapter": 125,
+      "chapters_adapted": "125, 126, 127, 128, 129 (partial)",
+      "volume": 14,
+      "confidence": "high",
+      "note": "OUR space = fandom/JP-source number +1 for ch >= 122 (slot 122 is the vol-13 番外編). Adapts fandom 124-128 = OURS 125-129: ch 125 恐怖の超魔生物 (the Superior Being's terror) through ch 128 うなれ必殺拳 (Chiu's deadly fist) and into ch 129 閃光の大逆襲 to its midpoint. coco13 (reading the manga alongside): 'アニメ第36話は原作14巻第124話”恐怖の超魔生物”から128話”閃光の大逆襲”の途中まで' = OURS 125 → 129 midway. TV Tokyo's synopsis matches beat for beat (Zamza's power, Popp's help failing, Dai collapsing = ch 126 のみこまれたダイ, only Chiu not giving up = ch 128). START=125 under A10: ep 35 took only the closing tail of ch 125, ep 36 carries its bulk (coco13 ep 35 = '124話…の途中まで'). END=129 is NOT an A47 tail: 途中まで (to midway) plus three ch-129 beats in the fandom's Manga-differences list (Maam's gloves, fist-not-elbow, Five Finger Flares) is a substantial share, not a <=5-page scrap. Volume 14 = OUR v14 (123-132); coco13 labels the same pages 14巻.",
+      "sources": [
+        "https://dragonquest.fandom.com/wiki/The_Adventure_of_Dai_(2020)_episode_36",
+        "https://dragonquest.fandom.com/wiki/The_Adventure_of_Dai_chapter_127",
+        "https://coco13.club/daianime36/",
+        "https://www.tv-tokyo.co.jp/anime/dai/episodes/index_7.html",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"
+      ]
+    },
+    {
+      "episode": 37,
+      "end_chapter": 132,
+      "start_chapter": 129,
+      "chapters_adapted": "129 (from midway), 130, 131, 132",
+      "volume": 14,
+      "confidence": "high",
+      "note": "OUR space = JP number +1. Adapts fandom 128(途中から)-131 = OURS 129 (second half) - 132: 閃光の大逆襲 → 秘蔵のアイテム → 一瞬にすべてを (the episode's own title, an exact namesake of ch 131) → ザムザ落日に消ゆ (Zamza's death, the last chapter of the volume). coco13: '128話”閃光の大逆襲!!”の途中から131話”ザムザ落日に消ゆ…”のまで'. TV Tokyo's synopsis opens on Maam's 閃華裂光拳 freeing Dai from the belly-mouth = ch 129's core, so the leading partial is substantive and counts as the START (A10, not a sliver). Ends on a chapter's last page (ep 38 opens at 133) — no continue point. Volume 14 = OUR v14 (123-132); ch 132 is v14's last chapter (A4).",
+      "sources": [
+        "https://dragonquest.fandom.com/wiki/The_Adventure_of_Dai_(2020)_episode_37",
+        "https://dragonquest.fandom.com/wiki/The_Adventure_of_Dai_chapter_130",
+        "https://coco13.club/daianime37/",
+        "https://www.tv-tokyo.co.jp/anime/dai/episodes/index_7.html",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"
+      ]
+    },
+    {
+      "episode": 38,
+      "end_chapter": 137,
+      "start_chapter": 133,
+      "chapters_adapted": "133, 134, 135 (partial), 136, 137",
+      "volume": 15,
+      "confidence": "high",
+      "note": "OUR space = JP number +1. Adapts fandom 132-136 = OURS 133-137: 新たなる出発 → 影の参謀動く → 世界会議開催 (opening only) → 故郷ランカークス → 伝説の名工 (Lon Berk). coco13: 'アニメ第38話は原作15巻第132話”新たなる出発‼”から136話”伝説の名工”まで', with the standalone remark that ep 38 crammed 原作5話分（一部次回へ繰り越し）— part carried over to the next episode, which is exactly ch 135's remainder. TV Tokyo's ep-38 synopsis has the summit being CALLED and Dai setting out for Papnica, while the ep-39 synopsis has the summit already IN SESSION and stalling — the split is licensor-visible. END=137 is a clean chapter end (ep 39 does not carry any of it), so A47 does not bite. Volume 15 = OUR v15 (133-141); coco13 labels these pages 15巻.",
+      "sources": [
+        "https://dragonquest.fandom.com/wiki/The_Adventure_of_Dai_(2020)_episode_38",
+        "https://dragonquest.fandom.com/wiki/The_Adventure_of_Dai_chapter_134",
+        "https://coco13.club/daianime38/",
+        "https://www.tv-tokyo.co.jp/anime/dai/episodes/index_7.html",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"
+      ]
+    },
+    {
+      "episode": 39,
+      "end_chapter": 141,
+      "start_chapter": 135,
+      "chapters_adapted": "135 (remainder, rearranged), 138, 139, 140, 141 (partial)",
+      "volume": 15,
+      "confidence": "high",
+      "note": "OUR space = JP number +1. Adapts the deferred remainder of ch 135 世界会議開催 plus fandom 137-140 = OURS 138-141: 鬼岩城大上陸 (the episode's own title, exact namesake of ch 138) → 巨大魔城をとめろ → 絶望の巨人 → the opening of 魔影軍団の猛威. coco13 names 137→140序盤 (= OURS 138→141 opening); the ch-135 remainder is carried by the fandom's dual '(partial)' credit on eps 38/39, by coco13's ep-38 '一部次回へ繰り越し', and by TV Tokyo's ep-39 synopsis ('パプニカでは、世界各国の王によるサミットが開幕していた…話し合いがなかなか進展しないことにレオナは頭を抱えてしまう'). START=135 under 'pages, not numbers' (Sean 2026-08-27): those are FIRST-TIME pages of ch 135 and therefore a real position even though 135's number sits behind ep 38's END — the row carries `rearranged`; note the episode's running order actually opens on ch 138's Lon Berk scene and inserts the summit after it (A12 alternative flagged for Sean). END=141: the fandom marks 141 partial on eps 39 and 40 and coco13 says ep 39 reaches only its 序盤 — A47 could not be adjudicated (no page counts obtainable; see flags). Volume 15 = OUR v15 (133-141), ch 141 is v15's last.",
+      "sources": [
+        "https://dragonquest.fandom.com/wiki/The_Adventure_of_Dai_(2020)_episode_39",
+        "https://dragonquest.fandom.com/wiki/The_Adventure_of_Dai_chapter_134",
+        "https://coco13.club/daianime39/",
+        "https://www.tv-tokyo.co.jp/anime/dai/episodes/index_7.html",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"
+      ]
+    },
+    {
+      "episode": 40,
+      "end_chapter": 145,
+      "start_chapter": 141,
+      "chapters_adapted": "141 (bulk), 142, 143, 144, 145",
+      "volume": 16,
+      "confidence": "high",
+      "note": "OUR space = JP number +1. Adapts fandom 140序盤から-144 = OURS 141 (bulk) - 145: 魔影軍団の猛威 → 決死の防衛線 → 見よ!!アバン流槍殺法 → 闇の師弟対決 (the episode's own title, exact namesake of ch 144) → 正と邪のはざまで. coco13: '原作15巻第140話”魔影軍団の猛威‼”の序盤から原作16巻144話”正と邪のはざまで…‼”まで' = OURS 141 → 145 complete. TV Tokyo's synopsis runs from Mystvearn's declaration of war through the Shadow Legion battle to Mystvearn emerging from Sovereign Rock Castle. START=141 by the bulk rule (ep 39 took only its 序盤). END=145, NOT 146: the fandom's ep-40 forward field wrongly lists OUR ch 146 — its own chapter page credits 146 to ep 41, ep 41's forward field excludes it, ep 41's Manga-differences carry ch 146's Decimation Field beats ('Baduck does not cry from the Decimation Field attack') and coco13 stops ep 40 at 145. Clean chapter end → no continue. Volume 16 = OUR v16 (142-151), the END's volume; the START (141) sits in v15 — a volume-crossing row.",
+      "sources": [
+        "https://dragonquest.fandom.com/wiki/The_Adventure_of_Dai_chapter_144",
+        "https://dragonquest.fandom.com/wiki/The_Adventure_of_Dai_(2020)_episode_40",
+        "https://coco13.club/daianime40/",
+        "https://www.tv-tokyo.co.jp/anime/dai/episodes/index_7.html",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"
+      ]
+    },
+    {
+      "episode": 41,
+      "end_chapter": 150,
+      "start_chapter": 146,
+      "chapters_adapted": "146, 147, 148, 149, 150 (partial)",
+      "volume": 16,
+      "confidence": "high",
+      "note": "OUR space = JP number +1. Adapts fandom 145-149序盤 = OURS 146-150: 魔影参謀の秘密 → ダイの剣 → 勇者見参 → 一刀両断 → the opening of 暗黒の怒り. coco13: 'アニメ第41話は原作16巻第145話”魔影参謀の秘密‼”から149話”暗黒の怒り”の序盤まで' = OURS 146 → 150 opening. TV Tokyo's synopsis opens on Hyunckel's righteous strike and Mystvearn's answering 暗黒闘気 (= ch 146) and closes on Lon Berk finishing Dai's sword (= ch 147 ダイの剣, the episode's own title 最強の剣). START=146 (A10): the fandom's chapter page and coco13 both give ep 41 the whole of 146 — ep 40 does not carry it. END=150: fandom marks it partial on eps 41 and 42, coco13 gives ep 41 only its 序盤 — A47 not adjudicable without page counts (see flags). Volume 16 = OUR v16 (142-151).",
+      "sources": [
+        "https://dragonquest.fandom.com/wiki/The_Adventure_of_Dai_(2020)_episode_41",
+        "https://dragonquest.fandom.com/wiki/The_Adventure_of_Dai_chapter_145",
+        "https://coco13.club/daianime41/",
+        "https://www.tv-tokyo.co.jp/anime/dai/episodes/index_6.html",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 36,
+      "continue_chapter": 129,
+      "kind": "parity",
+      "note": "Ep 36 stops midway through ch 129 閃光の大逆襲 (Maam's counterattack has begun but Dai is not yet freed). Resume IN ch 129 (C1); ep 37 picks it up from the same point.",
+      "sources": [
+        "https://coco13.club/daianime36/",
+        "https://coco13.club/daianime37/",
+        "https://dragonquest.fandom.com/wiki/The_Adventure_of_Dai_chapter_128"
+      ]
+    },
+    {
+      "episode": 38,
+      "continue_chapter": 135,
+      "kind": "parity",
+      "note": "Ep 38 animated only the opening of ch 135 世界会議開催 (the summit being convened) before jumping ahead to 136-137; the rest of ch 135 plays in ep 39. Resume at ch 135 — then SKIP 136 and 137 on arrival (ep 38 already animated them) and continue at 138 (C2/C3 parity with ep 39's START).",
+      "sources": [
+        "https://coco13.club/daianime38/",
+        "https://www.tv-tokyo.co.jp/anime/dai/episodes/index_7.html",
+        "https://dragonquest.fandom.com/wiki/The_Adventure_of_Dai_chapter_134"
+      ]
+    },
+    {
+      "episode": 39,
+      "continue_chapter": 141,
+      "kind": "parity",
+      "note": "Ep 39 ends in the opening pages of ch 141 魔影軍団の猛威 (Mystvearn appears and declares war). Resume IN ch 141 (C1); ep 40 carries its bulk.",
+      "sources": [
+        "https://coco13.club/daianime39/",
+        "https://coco13.club/daianime40/",
+        "https://dragonquest.fandom.com/wiki/The_Adventure_of_Dai_chapter_140"
+      ]
+    },
+    {
+      "episode": 41,
+      "continue_chapter": 150,
+      "kind": "parity",
+      "note": "Ep 41 ends in the opening pages of ch 150 暗黒の怒り. Resume IN ch 150 (C1); ep 42 carries the rest of it and runs on to ch 153.",
+      "sources": [
+        "https://coco13.club/daianime41/",
+        "https://coco13.club/daianime42/",
+        "https://dragonquest.fandom.com/wiki/The_Adventure_of_Dai_chapter_149"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [38, 39],
+      "kind": "rearranged",
+      "chapters": "135",
+      "note": "OUR ch 135 世界会議開催 is split NON-CONTIGUOUSLY: ep 38 plays its opening (the summit being called) and then jumps to 136-137 (Lankarks, Lon Berk); ep 39 returns to ch 135's remainder (the summit in session, Leona unable to move the kings) alongside 138-141. Both fandom directions mark 135 '(partial)' on both episodes; coco13 records ep 38 as five chapters '一部次回へ繰り越し'; TV Tokyo's two synopses show the summit called in ep 38 and in session in ep 39. First-time pages in ep 39 → 'pages, not numbers'."
+    },
+    {
+      "episodes": [36, 37],
+      "kind": "partial",
+      "chapters": "129",
+      "note": "Ch 129 閃光の大逆襲 straddles eps 36/37 at its midpoint (coco13: '途中まで' / '途中から'). Ep 36 carries Maam's arrival and first strike; ep 37 carries the rescue of Dai."
+    },
+    {
+      "episodes": [39, 40],
+      "kind": "partial",
+      "chapters": "141",
+      "note": "Ch 141 魔影軍団の猛威 straddles eps 39/40; ep 39 has only its 序盤 (Mystvearn's appearance and declaration), ep 40 the bulk."
+    },
+    {
+      "episodes": [41],
+      "kind": "partial",
+      "chapters": "150",
+      "note": "Ch 150 暗黒の怒り straddles eps 41/42; ep 41 has only its 序盤, ep 42 (another sub-block's row) carries the bulk."
+    },
+    {
+      "episodes": [38],
+      "kind": "abridged",
+      "chapters": "133-137",
+      "note": "Five chapters in one episode: coco13 lists a run of cuts (Popp refusing to enter Lankarks village, the Nabara/Merle double return reduced to Merle, the Popp-mother reunion simplified, the Brass chess scene changed). Faithfulness clause — cuts and compressions keep the row canon."
+    },
+    {
+      "episodes": [41],
+      "kind": "divergence",
+      "chapters": "146-150",
+      "note": "One studio-made beat inside adapted chapters: the anime adds Mystvearn sealing the Papnica sages' spells with Mahotoon (absent from the manga), plus Merle spotting the Shadow overhead rather than in the Bengarna king's shadow. Small additions inside an otherwise faithful adaptation — noted, never weighed toward mixed (T28 faithfulness clause)."
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [],
+  "structure": {
+    "notes": "CHAPTER SPACE (applied throughout). OUR space totals 349 and reserves slot 122 for the 番外編「勇者アバン」 printed at the back of tankōbon vol 13; the stored v1-v37 boundary table is in that space. Every source used here EXCEPT en-WP's volume list numbers only the 348 mainline chapters contiguously (dragonquest.fandom's chapter pages; coco13's per-episode 原作 lines; the tankōbon TOC transcription at manga.outatimes.com, which prints 第121話「覇者の剣」→「番外編」(unnumbered)→第122話「決勝戦の異変!!」 and ends at 第348話). CONVERSION APPLIED: source number N >= 122 → OUR N+1. Sanity check that the conversion is self-consistent: after the +1 every coco13 VOLUME label lands exactly on our stored boundaries (its 14巻124話 = ours 125 ∈ v14 123-132; its 15巻132話 = ours 133 = v15's first; its 15巻140話 = ours 141 = v15's last; its 16巻144話 = ours 145 ∈ v16 142-151; its 17巻152話 = ours 153 ∈ v17 152-161). Volume ASSIGNMENT is identical under both numberings for the same physical pages, so none of the six anchors has a volume ambiguity.\n\nHANDOFFS. Lower: my first row (ep 36) opens on OUR ch 125 恐怖の超魔生物 — its bulk; sub-block C's ep 35 owns ch 125's leading tail (coco13 ep 35 = '…124話の途中まで' = ours 125 midway), so sub-block C's ep-35 END should be 125 in OUR space. Upper: my last row (ep 41) ends in the opening pages of OUR ch 150 暗黒の怒り; sub-block E's ep 42 opens there (coco13 ep 42 = '16巻第149話の序盤から17巻152話まで' = OURS 150 → 153). ENDs inside this sub-block are monotone: 129 < 132 < 137 < 141 < 145 < 150, all above the lower fence ep 17 → 60 [57] v7 and far below the ep-100 pin.\n\nROW IDENTITY. Fandom 2020 episode numbers = OUR numbers (no conversion). All six stored air dates are confirmed by TV Tokyo's official episode archive: 36 = 2021.06.12, 37 = 2021.06.19, 38 = 2021.07.03, 39 = 2021.07.10, 40 = 2021.07.17, 41 = 2021.07.24 — no date or title repairs. The 2021-06-26 slot between eps 37 and 38 held the recap special the fandom calls 'episode 37.5'「冒険の軌跡、この先へ」; it is OUTSIDE our 1-100 numbering, is not a target row, and was not joined on.\n\nSOURCE DEFECT FOUND. dragonquest.fandom's ep-40 '|adapted=' field over-reaches by one chapter (it lists OUR ch 146 魔影参謀の秘密). Refuted three ways: the ch-146 page itself credits ep 41; ep 41's own '|adapted=' field is silent on it while its Manga-differences section carries ch 146's Decimation Field beats; coco13 stops ep 40 at ch 145 and starts ep 41 at ch 146. The fandom's forward and reverse fields are ONE wiki (flag #929), so the tie was broken by coco13 + TV Tokyo, not inside the wiki.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "CHAPTER SPACE — complied with the coordinator's mid-task ruling (source N >= 122 → OUR N+1) and independently confirmed the two spaces exist. For the record, the counter-evidence I gathered before the ruling: the tankōbon's own table of contents numbers only the 348 mainline chapters (第121話「覇者の剣」, then an UNNUMBERED 「番外編」, then 第122話「決勝戦の異変!!」; the run ends at 第348話「さらば!!!愛する地上よ」) — transcription at web.archive.org/web/20260121053813/https://manga.outatimes.com/115/adventure-of-dai-comic2/ and its sibling pages, and the same numbering is used by dragonquest.fandom and by every Japanese per-episode comparison. en-WP's volume list is the source of OUR 349: it prints '* SP.' between 121 and 123, i.e. it reserves the number without printing it, and AniList/MU's 349 is a UNIT count (348 chapters + 1 番外編). Nothing here needs to change if OUR space is the ruled one — the conversion is mechanical and volume assignments are identical — but any future Japanese-source anchor on this series must be +1'd, and the ep-100 MU pin 'Vol 37, Chap 349' is the same unit count landing on the true final chapter (JP 第348話). Worth pinning as a series ruling so wave 14 and any later agent do not re-derive it.",
+    "A47 NOT ADJUDICATED on eps 39 and 41. Both end inside the next chapter's 序盤 (ch 141 and ch 150 respectively) and both sources say only '(partial)' / '序盤' — no page-level source exists for this series (the fandom's chapter pages have no |pages= field, no scanlation page counts, the licensor's per-episode pages dq-dai.com/episode/ep_NN.php are dead at S3 and only eps 1-15 are on the Wayback Machine). I delivered END = the straddled chapter, matching the batch-17 convention already stored on this series (eps 2/5/10/15/16/17 all END on a '(partial)' chapter, incl. the fence ep 17 → 60). If page evidence later shows either tail is <=5 pages, ep 39's END → 140 and ep 41's END → 149, with the tail staying in chapters_adapted. Ep 36's END (129) is safe either way — coco13 says 途中まで, not 序盤.",
+    "ep 39 START = 135 is a deliberate BACK-JUMP behind ep 38's END (137). Ch 135's remainder is FIRST-TIME material ('pages, not numbers', Sean 2026-08-27) and it is what ep 38's continue point sends the reader to, so a START of 138 would hand the reader nothing for the summit pages the anime plays next (the d-gray-man 5→2 / bleach 152-159 precedent). The alternative reading — START = 138 with ch 135 as a rearranged insert, the batch-17 ep-7 shape — is defensible because the episode's running order actually opens on ch 138's Lon Berk scene; say which you want and I will not have to be asked twice.",
+    "SOURCE INDEPENDENCE for this block rests on three instruments, per flag #929: dragonquest.fandom (forward + reverse = ONE source), TV Tokyo's official per-episode synopsis archive (licensor, tv-tokyo.co.jp/anime/dai/episodes/), and coco13.club's per-episode 原作 comparison (a fan blog that states it re-reads the manga alongside each episode and lists per-scene changes — comparison-blog tier, used as a positive witness only where the licensor or the fandom corroborates). en-WP's volume list supplies the chapter-title correlation (ep 37 = ch 131 一瞬にすべてを, ep 38's title = ch 135 世界会議開催, ep 39 = ch 138 鬼岩城大上陸, ep 40 = ch 144 闇の師弟対決 — four exact namesakes inside their spans)."
+  ]
+}
