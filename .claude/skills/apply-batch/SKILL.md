@@ -135,6 +135,9 @@ ruled), add it to `lib/rulings/index.ts`, move the script to
 - **A continue on a row whose anchor the same apply deletes lands NOTHING — move it** (`CONTINUE_MOVE`, wave 9 erased: the verdict placed the continue on ep 12, whose mu anchor was deleted under A1; the overlay moved it to the surviving terminal row 11). Read every deletion against every continue before the dry run.
 - **A retyped position-less row past the last anchor needs its A44 entry in the same apply** (erased ep 12 → mixed): `frontier_tail_null` lists a canon/mixed row past the terminal that renders null; the ruling that makes it honest is `ANCHOR_SUPPRESSED` (A44), not an anchor.
 
+- **Derive every anchor's VOLUME from the boundary table in the apply** (waves 10-11): agents copy the START's volume or a neighbour's; the derivation caught four wrong volumes on FotNS and two on kingdom. Print "(volume derived: agent said vN)" beside each move.
+- **Merge a block's sub-block files into one episode-sorted list per series before A47** (waves 10-11): the normalizer needs the NEXT anchored row's START across seams, and a fence-row repair delivered by one sub-block must ride as an overlay on the stored manual row, never as a second anchor write.
+
 ## The standing goal (`P30`)
 
 Every rule applied here should end up enforced by a writer gate and

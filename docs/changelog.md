@@ -887,6 +887,48 @@
    0. Permanence 0 locked / 0 violations; no stale rulings. Cycle: step 1
    — Sean picks wave 8 (L-D ×8 of ~16, or a gap block; dai LAST; the T28
    six + claymore 26 still parked for his ruling).
+101. ✅ **BATCH 20 WAVE 11 APPLIED — kingdom 104-128, bleach 190-202,
+   naruto-shippuden 374-392 CLOSED; THE RECAP BOUNDARY (2026-09-02; Sean
+   ruled).** Eight sub-blocks landed 8/8, verified 3/3 (Fable over Opus —
+   kingdom, bleach, shippuden: every chapter value sound; the lib reproduced
+   all STARTs and ENDs with 0 mismatches on kingdom). APPLIED: **53 manual
+   anchors** (kingdom 25 → 366-438, bleach 13 → 287-312, shippuden 15 →
+   635-660), 21 continues, 31 annotations, volumes derived (two copied
+   volumes wrong on kingdom); **four fence-row repairs**: kingdom 103 END
+   364 → 363 [360] + span (A47 — the lib's own output; the wave-2 flag
+   closed), bleach 203 START 313 + span, bleach 167 enriched (START 284,
+   '284, 285, 286 (p.1-8)') with its continue 286 in front of the Amagai
+   arc (Sean ruled the fence-row addition in scope; precedented at 127 /
+   146), **shippuden 393 END 661 → 662 [660] v69** (the verifier confirmed
+   the flag: ep 393 adapts 660-662 in full; its own continue 663 was the
+   tell). REFUTED before apply: kingdom's ep-111 date "repair" + ep-110
+   flag (the fandom's US labels misread as stored values — the stored
+   Sunday dates were right; no G53 this wave). RULED (T6): bleach 190 →
+   canon (a 15:08 clip-show recap; the recap clause), bleach 193 → canon
+   (extended banter around a faithful 292-293 — the faithfulness clause;
+   "no source names an original block" recorded as silence, not evidence),
+   **shippuden 388 filler → MIXED under THE RECAP BOUNDARY, ruled on this
+   row**: a recap is re-shown or plainly retold material that progresses
+   nothing and counts for nothing; a NEWLY ANIMATED sequence of significant
+   length is anime production that shapes the episode, and with scenes the
+   source lacks it is original material however familiar its subject — it
+   weighs toward filler, and with a real canon share (ch 656's opening
+   third, sole) the row is mixed. Recorded in the T28 record, the T6 entry
+   and the research-agent vocabulary (with the recycled-vs-new-drawn test).
+   CENSUS, every delta named: anchor_gap_research 5 → **2** (four-knights
+   1-23, dai 18-99 remain); continue_skip_unnoted 1 → 0 (FotNS 115, fixed
+   §12.100); ruling_violation 0; display 218 / 0; end_sliver_mismatch 0.
+   Edges rebuilt + deployed; system census OK. Mid-wave gate fix: the
+   landing gates' task picker now takes the sub-block covering the MOST
+   touched rows (a legitimate fence-row repair outside every range threw
+   the every-row pick). CAPTURE: five wave-11 traps → research-agent (the
+   kingdom fandom drops + somanystars' ±1 wobble; a repair's `old` is the
+   CONTEXT's value; silence is not a finding; Narutopedia's split-share
+   omission + ja-WP's 通算話 column + title ≠ content; the fence-row
+   continue in front of a filler block); two → apply-batch (volume
+   derivation; merge sub-blocks before A47). Next: four-knights 1-23 (the
+   last mid-size block; its fence ep 24 → 77 manual, the S1 arc table in
+   the wave-9 verdict), then dai 18-99 ×3.
 100. ✅ **BATCH 20 WAVE 10 APPLIED — FotNS 109-151, THE LARGEST GAP BLOCK,
    CLOSED (2026-09-02; Sean ruled).** Seven sub-blocks (-w10a … -w10g)
    landed 7/7, verified 3/3 (Fable over Opus: a+b, d+e, f+g — all sound

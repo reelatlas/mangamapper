@@ -879,6 +879,26 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
     ruledOn: '2026-09-02',
     cite: ['scripts/ingest/research/batch20/out/fist-of-the-north-star-w10d.json', 'scripts/ingest/research/batch20/out/fist-of-the-north-star-w10e.json', 'scripts/ingest/research/batch20/out/fist-of-the-north-star-w10f.json', 'scripts/ingest/research/batch20/verify/fist-of-the-north-star-w10de.md', 'scripts/ingest/research/batch20/verify/fist-of-the-north-star-w10fg.md'],
   },
+  {
+    seriesId: 'bleach',
+    ruleId: 'T6',
+    value: { 190: 'canon', 193: 'canon' },
+    reason:
+      "Batch 20 wave 11 (verified R24), Sean ruled 2026-09-02: both stored MIXED rows come apart under the T28 recap + faithfulness clauses. 190 'Hueco Mundo Chapter, Restart!' — its only non-source share is a 15:08 clip-show RECAP of ch 178 onward (bleach.fandom Trivia + AFG's own timestamp note); the recap counts for nothing and the remainder is a full adaptation of ch 286 p.9-21 + 287 → canon + divergence. 193 'Irresistible, Puppet Show of Terror' — three positive pure-manga readings (AFG canon; TV Tokyo's 第193話 synopsis = ch 292-293; the fandom summary) and no source names an original block (the fandom's Anime Notes stop at ep 167 — silence, noted as such); the padding is extended banter and drawn-out exchanges around a faithful adaptation of 292-293 (Sean: 'the filler parts are very insignificant and the main brunt is canon') → canon + divergence. AFL's 'Mixed' (bleachfiller.com is the same list) is the only dissent.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-02',
+    cite: ['scripts/ingest/research/batch20/out/bleach-w11a.json', 'scripts/ingest/research/batch20/verify/bleach-w11.md'],
+  },
+  {
+    seriesId: 'naruto-shippuden',
+    ruleId: 'T6',
+    value: { 388: 'mixed' },
+    reason:
+      "Batch 20 wave 11 (verified R24), Sean ruled 2026-09-02: 388 'My First Friend' is NOT filler on four witnesses (Narutopedia chapters=656 + the arc page; ja-WP unbolded under the 全編アニメオリジナル legend; AFG 'Mixed' 2:05-5:18 / 20:42-21:05; ch 656's opening third adapted nowhere else — a sole, load-bearing canon share) — and NOT canon: its ~15-minute Gaara retrospective is NEWLY ANIMATED (not recycled footage; better art than the Rin episodes, fresh cast credits incl. a child role), retells Part I story already adapted from ch 129-131, and carries scenes the manga never drew (the Temari/Kankurō childhood dinner) plus a studio framing beat (Son Gokū's question / 'my first friend' — not in ch 656). THE RECAP CLAUSE'S BOUNDARY (Sean, this ruling): a recap is re-shown or plainly retold material that progresses nothing and counts for nothing; a newly animated sequence of significant length is anime production that shapes the episode, and with scenes the source lacks it is original material however familiar its subject — it weighs toward filler; with a real canon share in the same episode → MIXED. The anchor 656 [656] v68 rides the mixed row; divergence names the retrospective.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-02',
+    cite: ['scripts/ingest/research/batch20/out/naruto-shippuden-w11b.json', 'scripts/ingest/research/batch20/verify/naruto-shippuden-w11.md'],
+  },
 ];
 
 export const EPISODE_TYPE_OVERRIDES: Record<string, EpisodeTypes> = ENTRIES.reduce<Record<string, EpisodeTypes>>((acc, e) => {

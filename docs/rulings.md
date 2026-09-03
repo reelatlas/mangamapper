@@ -2,7 +2,7 @@
 
 > GENERATED from `scripts/ingest/lib/rulings/**` by `scripts/restructure/gen-rulings.ts` — do not edit by hand. A ruling is an INSTANCE of a rule (`docs/rules.md`); the map is the record, this is the index.
 
-- rulings: 1898 across 236 series/keys · by Sean: 556 · UNRECORDED reasons: 8 · with a retire condition: 89
+- rulings: 1900 across 236 series/keys · by Sean: 558 · UNRECORDED reasons: 8 · with a retire condition: 89
 
 ## Retire conditions (re-evaluate when…)
 
@@ -439,7 +439,7 @@
 |---|---|---|---|---|
 | `V6` | {"delete_volume":31,"upsert":{"volume":30,"chapter_start":198,"chapter_end":206,"source":"research"}} | stored table had v31: 198-? and NO v30 — Dark Horse's 31-volume count leaked into the JP 30-volume table; the manga's own numbering space has 30 volumes and true JP v30 = acts 198-206 (Wikipedia chapter list; verifier-confirmed). Research-tagged so a re-ingest flags rather than overwrites | session 2026-08-25 · scripts/ingest/research/batch17/out/blade-of-the-immortal-ona.json, scripts/ingest/apply-rulings-20260825b.ts, §12.47 |  |
 
-### bleach (56)
+### bleach (57)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -498,6 +498,7 @@
 | `A43` | {"episodes":[46],"kind":"partial","chapters":"gaiden -17","asterisk_review":"pending (if unset)"} | Shinigami Academy flashback adapts gaiden ch -17 — near-zero forward progress | session 2026-08-23 · scripts/ingest/apply-research-batch-9.ts, docs/changelog.md §12.26, session scratchpad batch9/bleach.json |  |
 | `A43` | {"episodes":[31,32],"kind":"partial","chapters":"96-98","asterisk_review":"pending (if unset)"} | ep 32 stretches ch 98 (Renji flashback) into a full episode | session 2026-08-23 · scripts/ingest/apply-research-batch-9.ts, docs/changelog.md §12.26, session scratchpad batch9/bleach.json |  |
 | `T6` | {"149":"mixed"} | Ep 149 adapts ch 247 p.16-end in its closing minutes inside an otherwise-filler episode (fandom page-level + AFG 'Mixed'; AFL dissents). | session 2026-08-24 · scripts/ingest/research/batch15/out/bleach.json |  |
+| `T6` | {"190":"canon","193":"canon"} | Batch 20 wave 11 (verified R24), Sean ruled 2026-09-02: both stored MIXED rows come apart under the T28 recap + faithfulness clauses. 190 'Hueco Mundo Chapter, Restart!' — its only non-source share is a 15:08 clip-show RECAP of ch 178 onward (bleach.fandom Trivia + AFG's own timestamp note); the recap counts for nothing and the remainder is a full adaptation of ch 286 p.9-21 + 287 → canon + divergence. 193 'Irresistible, Puppet Show of Terror' — three positive pure-manga readings (AFG canon; TV Tokyo's 第193話 synopsis = ch 292-293; the fandom summary) and no source names an original block (the fandom's Anime Notes stop at ep 167 — silence, noted as such); the padding is extended banter and drawn-out exchanges around a faithful adaptation of 292-293 (Sean: 'the filler parts are very insignificant and the main brunt is canon') → canon + divergence. AFL's 'Mixed' (bleachfiller.com is the same list) is the only dissent. | Sean 2026-09-02 · scripts/ingest/research/batch20/out/bleach-w11a.json, scripts/ingest/research/batch20/verify/bleach-w11.md |  |
 | `I20` | {"splitOffSeries":"bleach-thousand-year-blood-war","splitAt":367} | AFG's bleach page numbers TYBW as 367+; TYBW is a separate entry (bleach-thousand-year-blood-war) by the Naruto→Shippuden pattern, so the page's tail belongs to that series' own scope. | session 2026-08-24 · docs/franchise-rulings.md "Bleach→TYBW" |  |
 
 ### bleach-thousand-year-blood-war (22)
@@ -1873,7 +1874,7 @@
 | `A10` | {"episode":127,"start_chapter":216} | 216-217 (span opens on a whole chapter — sliver and majority rules agree) | Sean 2026-08-23 · scripts/ingest/apply-start-chapters.ts, docs/changelog.md §12.27, batch 9 verdict (naruto) | RETIRED 2026-08-26 — batch 19 E3 (§12.67): lib/sliver.ts re-derived all 27 under A10 and every seed STANDS; the seeding comments became chapters_adapted on Sean's signature (start_without_span 0) |
 | `A10` | {"episode":132,"start_chapter":226} | 226-228 (span opens on a whole chapter — sliver and majority rules agree) | Sean 2026-08-23 · scripts/ingest/apply-start-chapters.ts, docs/changelog.md §12.27, batch 9 verdict (naruto) | RETIRED 2026-08-26 — batch 19 E3 (§12.67): lib/sliver.ts re-derived all 27 under A10 and every seed STANDS; the seeding comments became chapters_adapted on Sean's signature (start_without_span 0) |
 
-### naruto-shippuden (90)
+### naruto-shippuden (91)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -1966,6 +1967,7 @@
 | `A43` | {"episodes":[72,73,74],"kind":"rearranged","chapters":"312-319","asterisk_review":"pending (if unset)"} | re-covers 54-56 chapters; non-monotonic 54-74; ep 75 first clean point | session 2026-08-23 · scripts/ingest/apply-research-batch-9.ts, docs/changelog.md §12.26, session scratchpad batch9/naruto-shippuden.json |  |
 | `T6` | {"452":"canon","453":"canon","454":"canon","456":"canon","457":"canon"} | Eps 452-454/456-457 adapt the Itachi Shinden NOVEL — zero manga pages (Narutopedia + AFG + Wikipedia S20). A licensed canon side story = anime-only-canon per the Boruto/Black Clover precedent (T9). Ep 455 stays mixed: disputed ch-678 frame. T4.3 (T26/T27, 2026-08-26): anime-only-canon → canon; the override lives as an adopted / side_source annotation (lib/rulings/standing-annotations.ts), mapping null by design. | session 2026-08-24 · scripts/ingest/research/batch15/out/naruto-shippuden.json |  |
 | `T6` | {"28":"filler"} | Batch 18 wave 3 (2026-08-26): ep 28 — only the start/end of Team Guy's clone fights are in the manga (ch 275-276 seam fragments); all four finishing techniques debut anime-only; AFG N/A → filler + partial (T28). | Sean 2026-08-26 · scripts/ingest/research/batch18/out/naruto-shippuden.json |  |
+| `T6` | {"388":"mixed"} | Batch 20 wave 11 (verified R24), Sean ruled 2026-09-02: 388 'My First Friend' is NOT filler on four witnesses (Narutopedia chapters=656 + the arc page; ja-WP unbolded under the 全編アニメオリジナル legend; AFG 'Mixed' 2:05-5:18 / 20:42-21:05; ch 656's opening third adapted nowhere else — a sole, load-bearing canon share) — and NOT canon: its ~15-minute Gaara retrospective is NEWLY ANIMATED (not recycled footage; better art than the Rin episodes, fresh cast credits incl. a child role), retells Part I story already adapted from ch 129-131, and carries scenes the manga never drew (the Temari/Kankurō childhood dinner) plus a studio framing beat (Son Gokū's question / 'my first friend' — not in ch 656). THE RECAP CLAUSE'S BOUNDARY (Sean, this ruling): a recap is re-shown or plainly retold material that progresses nothing and counts for nothing; a newly animated sequence of significant length is anime production that shapes the episode, and with scenes the source lacks it is original material however familiar its subject — it weighs toward filler; with a real canon share in the same episode → MIXED. The anchor 656 [656] v68 rides the mixed row; divergence names the retrospective. | Sean 2026-09-02 · scripts/ingest/research/batch20/out/naruto-shippuden-w11b.json, scripts/ingest/research/batch20/verify/naruto-shippuden-w11.md |  |
 | `I17` | {"to":"naruto","kind":"sequel"} | The Naruto→Shippuden baseline: a major narrative shift is a separate series linked as sequel (newer → base). | session 2026-08-22 · docs/franchise-rulings.md |  |
 
 ### nisekoi (19)

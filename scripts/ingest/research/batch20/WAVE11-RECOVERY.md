@@ -118,3 +118,6 @@ Block totals: **53 anchors** (kingdom 25 / 25 → 366-438; bleach 13 / 13 → 28
 4. The shippuden 393 fence (661 vs 662) — a one-row follow-up if the verifier confirms.
 5. The ep-167 bleach continue (a fence-row addition — in scope?); the 286 straddle's vocabulary (partial vs rearranged).
 6. Next: four-knights 1-23 (the last mid-size block), then dai 18-99 ×3.
+
+## RULED + APPLIED (§12.101, 2026-09-02 — Sean: "I agree completely with everything you said and recommend")
+Applied with the verifier corrections: 53 manual anchors, 21 continues, 31 annotations, 4 fence repairs (kingdom 103 → 363 [360]; bleach 203 START 313; bleach 167 enriched + its continue in scope; shippuden 393 → 662 [660]); T6: bleach 190 / 193 → canon, **shippuden 388 → MIXED under the recap boundary** (a newly animated retelling of significant length with scenes the source lacks weighs toward filler; with a canon share → mixed); no G53 (the kingdom dates were a phantom). Census: anchor_gap_research 5 → 2, ruling_violation 0, display 218/0. Next: four-knights 1-23.
