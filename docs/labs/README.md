@@ -1,11 +1,23 @@
 # Theme labs — the aesthetic exploration (2026-09-02)
 
-Sources for the theming exploration, kept in the repo because the session
-scratchpad they were authored in does not survive. The published artifacts
-are the live versions; these are what you edit to produce the next one.
+**An aesthetic and theming exploration**, run in the `theming` worktree while
+the main session was mid-wave on the data cycle. The point was to get ideas out
+as working prototypes — fast, cheap, and without touching anything that ships —
+so they could be judged by using them, then merged back and developed properly
+when there's room.
 
-**Nothing here is wired into the app.** No component, route or token in
-`src/` imports any of it. Deleting this directory changes nothing that ships.
+**This is exploration, not implementation.** Nothing here is wired into the
+app: no component, route or token in `src/` imports any of it, nothing is
+behind a flag, and the app's theming situation is exactly as it was (`:root` is
+the dark theme, `.light` is dead code). Deleting this directory changes nothing
+that ships.
+
+**See [MERGE.md](MERGE.md)** for the file-by-file manifest — what to keep, what
+to delete, and the findings that should outlive the files.
+
+Sources are kept in the repo because the session scratchpad they were authored
+in does not survive. The published artifacts are the live versions; these are
+what you edit to produce the next one.
 
 ## The published labs
 
