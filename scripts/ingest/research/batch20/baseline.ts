@@ -28,8 +28,9 @@ async function main() {
     const mine = TARGETS.filter((t) => t[0] === sid).sort((a, b) => a[4] - b[4]);
     const sameWave = wv ? mine.filter((t) => t[4] === Number(wv)) : [];
     const touched = [...(v.anchors ?? []), ...(v.anchor_hostile ?? []), ...(v.repairs ?? []), ...(v.continue_points ?? [])].map((x: any) => Number(x.episode)).concat(...[...(v.type_corrections ?? []), ...(v.annotations ?? [])].map((x: any) => (x.episodes ?? []).map(Number)));
-    const inRange = (t: (typeof mine)[number]) => touched.length > 0 && touched.every((n) => ranges(t[1]).some(([a, b]) => n >= a && n <= b));
-    const task = (sameWave.length > 1 ? sameWave.find(inRange) ?? sameWave[0] : sameWave[0]) ?? mine[0];
+    // several same-wave entries (sub-blocks): the entry covering the MOST touched rows wins — a repair on the fence row outside every range must not throw the pick (wave 11, bleach-w11b's ep-203 START enrichment)
+    const covered = (t: (typeof mine)[number]) => touched.filter((n) => ranges(t[1]).some(([a, b]) => n >= a && n <= b)).length;
+    const task = (sameWave.length > 1 ? [...sameWave].sort((x, y) => covered(y) - covered(x))[0] : sameWave[0]) ?? mine[0];
     const rows = await selectAll<any>('episodes', 'number, type', (q) => q.eq('series_id', sid).order('number'));
     const anns = await selectAll<any>('episode_annotations', 'episode, kind, chapters', (q) => q.eq('series_id', sid).order('episode'));
     const anchors = await selectAll<any>('chapter_anchors', 'episode, chapter, start_chapter', (q) => q.eq('series_id', sid).order('episode'));

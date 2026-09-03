@@ -30,8 +30,9 @@ async function main() {
     const wv = /-w(\d+)[a-z]?\.json$/.exec(f)?.[1];
     const sameWave = wv ? mine.filter((t) => t[4] === Number(wv)) : [];
     const touched = [...(v.anchors ?? []), ...(v.anchor_hostile ?? []), ...(v.repairs ?? []), ...(v.continue_points ?? [])].map((x: any) => Number(x.episode)).concat(...[...(v.type_corrections ?? []), ...(v.annotations ?? [])].map((x: any) => (x.episodes ?? []).map(Number)));
-    const inRange = (t: (typeof mine)[number]) => touched.length > 0 && touched.every((n) => ranges(t[1]).some(([a, b]) => n >= a && n <= b));
-    const task = (sameWave.length > 1 ? sameWave.find(inRange) ?? sameWave[0] : sameWave[0]) ?? mine[0];
+    // several same-wave entries (sub-blocks): the entry covering the MOST touched rows wins — a repair on the fence row outside every range must not throw the pick (wave 11, bleach-w11b's ep-203 START enrichment)
+    const covered = (t: (typeof mine)[number]) => touched.filter((n) => ranges(t[1]).some(([a, b]) => n >= a && n <= b)).length;
+    const task = (sameWave.length > 1 ? [...sameWave].sort((x, y) => covered(y) - covered(x))[0] : sameWave[0]) ?? mine[0];
     if (!task) { console.log(`FAIL ${f}: no TARGETS entry for ${v.series_id}`); bad++; continue; }
     const { data: s } = await db.from('series').select('total_chapters, latest_known_chapters').eq('id', v.series_id).maybeSingle();
     const space = Math.max(s?.total_chapters ?? 0, s?.latest_known_chapters ?? 0);
