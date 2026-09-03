@@ -2,6 +2,7 @@
 // wave-1 refusals (2026-08-27) and on season-split controls that must keep
 // today's behaviour. Pure; no DB.
 import { describe, expect, it } from 'vitest';
+import { bestLatestKnown, muCoverageChapterMax } from './mu-latest';
 import { parseCoverageAll, parseCoverageSegments, pickEntrySegments, segmentIsEntry } from './mu-coverage';
 
 const pick = (text: string, w: { airedEpisodes: number; startYear?: number | null; endYear?: number | null }) => {
@@ -113,5 +114,15 @@ describe('G32 gate 0 — season-scoped entries (wave 6)', () => {
   it('a TV label is unaffected', () => {
     const picked = pes(pcs('Vol 22, Chap 197 (TV) / Vol 31, Chap 276 (The First Slam Dunk)'), { airedEpisodes: 101, startYear: 1993, endYear: 1996, seasonCount: 1 });
     expect(picked.chosen.map((x) => x.chapter)).toEqual([197]);
+  });
+});
+
+describe('bestLatestKnown — the coverage floor (G38, four-knights 2026-09-04)', () => {
+  it('never sits below a chapter MU\'s own anime-coverage field names', () => {
+    const mu = { latest_chapter: 103, status: '27 Volumes (Ongoing)', anime: { start: 'Vol 1, Chap 1 (S1) / Vol 9, Chap 77 (S2)', end: 'Vol 9, Chap 77 (S1) / Vol 14, Chap 120 Page 12 (S2)' } };
+    expect(muCoverageChapterMax(mu)).toBe(120);
+    expect(bestLatestKnown(mu, null, 77, 'the-seven-deadly-sins-four-knights-of-the-apocalypse')).toBe(120);
+    expect(bestLatestKnown({ latest_chapter: 130, status: null, anime: mu.anime }, null, 0)).toBe(130);
+    expect(bestLatestKnown({ latest_chapter: null, status: null, anime: null }, null, 0, undefined, 88)).toBe(88);
   });
 });

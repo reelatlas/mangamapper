@@ -887,6 +887,58 @@
    0. Permanence 0 locked / 0 violations; no stale rulings. Cycle: step 1
    — Sean picks wave 8 (L-D ×8 of ~16, or a gap block; dai LAST; the T28
    six + claymore 26 still parked for his ruling).
+106. ✅ **T28 THE SLIVER CLAUSE + THE UNVERIFIED SHARE; the sidecar list APPLIED
+   (2026-09-04; Sean ruled after a two-day exploration).** THE RULING, in Sean's
+   words: source material carries a WEIGHT — significant (it progresses the story
+   in a meaningful way; size is not the test) earns the type and the anchor, and
+   the note says why when it is small; a sliver / fragment / graft / tease / page
+   tie is CANON MATERIAL, never called filler, but carries NO weight: neither
+   type nor anchor; it is NOTED and the note names the episode that adapts the
+   chapter properly; the remainder decides the type (as for recaps); shared
+   chapters across episodes are normal and documented; the sole-adaptation
+   exception and relocation (A44) stand as separate axes; A47 is the clause at
+   the seam. THE UNVERIFIED SHARE: a chapter certainly present whose share cannot
+   be sized lands as an anchor + `unverified` annotation — a census queue
+   (unverified_share), the UI can say 'cited, share unverified', revisited when
+   better information lands. The road there: Cursor's chapter-number test
+   ('beyond the previous anchored END') was replaced by Sean's content test
+   (new material, weighed on significance) — recorded so the reasoning is not
+   re-derived. NEW DATA VOCABULARY: annotation kinds `recap` (the batch-14
+   reborn rows had filed recaps as `abridged`) and `unverified` (migration
+   20260904100000); census classes unverified_share (the queue) and
+   sliver_only_anchor (canon / mixed rows anchored on a sliver-only record — a
+   significance call, never an auto-delete); the research-agent contract: every
+   segment delivered with `weight: significant | sliver` and its reason, the
+   adapting episode named; apply-batch: weights decide. THE RESEARCH (R1 before
+   the ruling, verified R24): reborn 178's 'ch-257 bookends' were PHANTOM — no
+   ch-257 material in 178 or 189, none of ch 232 in 159 (TV Tokyo's synopses,
+   ja-WP's 未来編 line excludes 178-189, Marvelous' DVD copy); the fandom's
+   per-episode chapter field restates animefillerlist's typing (22/22 sampled —
+   ONE lineage, a trap now); ch 257 opens in ep 176 (END 256 → 257, the fence)
+   and closes in ep 190; ep 177 is a wholesale recap (the recap clause). APPLIED
+   (apply-sidecar.ts, 30 changes): reborn 159 / 177 / 178 / 189 → filler (T6),
+   anchors deleted (A1), phantom partial / side_story / abridged rows deleted,
+   `recap`{240-256} on 177 and {256-257} on 189 (the kind's first rows),
+   graft{232} weight sliver on 158, partial{257 opening} on 176 + partial{257
+   closing, 258} on 190; **d-gray-man 66 → filler, anchor deleted** (the sliver
+   clause's first witness: one page of ch 78; ep 65 ends inside 78, ep 67
+   adapts it); **tsugumomo 8 → anchor 19 + side_story** (the unnumbered vol-5
+   extra — not A44: a numbered chapter is adapted; 1-11 = a next-batch gap
+   target under the class threshold); **Ranking of Kings scopes** (series_id-
+   keyed): main entry ends vol 12 / ch 155, The Treasure Chest of Courage
+   starts vol 13 / ch 156 open-ended (four witnesses for the part-one/two seam;
+   the Naruto shape), ep 10's continue 162 stands (C5 from the proven END; the
+   batch-11 '165' was an uncited note), ep 23's note is the handoff pointer,
+   ep 9A = the vol-11 描き下ろし (side_story), ep 1's extra re-worded; **the G38
+   coverage floor**: latest_known never sits below a chapter MU's own anime-
+   coverage field names, nor the volume table's last bounded chapter
+   (lib/mu-latest.ts — the pure derivation split out for tests; four-knights
+   103 → 120 = the witness). CENSUS: ruling_violation 0; anchor_on_noncanon_row
+   0; anchor_nonmonotonic 0; sliver_only_anchor 0 (after tightening the class
+   to ONE chapter token — three range rows were false positives);
+   unverified_share 0; anchor_volume_mismatch 0; display 218 / 0. Edges rebuilt
+   + deployed; 173 tests; system census OK. Next: P34 (the batch-20 extraction).
+
 105. ✅ **G58 — BUDGETED EDGES: the refresh-anilist outage FIXED as a rule
    (2026-09-03; Sean asked 'did we ever address the edge function?').**
    DIAGNOSIS from ingest_runs: every daily refresh-anilist run from 08-24 to

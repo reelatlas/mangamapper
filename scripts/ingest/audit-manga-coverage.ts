@@ -54,6 +54,9 @@ async function main() {
       chapterMax.set(r.series_id, Math.max(chapterMax.get(r.series_id) ?? 0, r.chapter));
     }
     const muRows = await selectAll<{ manga_anilist_id: number; raw: unknown }>('ingest_mangaupdates', 'manga_anilist_id, raw');
+  // G38 floor: the volume table's last bounded chapter per manga (a printed fact) — latest_known never sits below it
+  const tableMax = new Map<number, number>();
+  for (const b of await selectAll<{ manga_anilist_id: number; chapter_end: number | null }>('volume_boundaries', 'manga_anilist_id, chapter_end')) if (b.chapter_end != null) tableMax.set(b.manga_anilist_id, Math.max(tableMax.get(b.manga_anilist_id) ?? 0, Number(b.chapter_end)));
     const muByManga = new Map(muRows.map((r) => [r.manga_anilist_id, r.raw as MuRaw]));
 
     const series = await selectAll<{
@@ -97,7 +100,7 @@ async function main() {
       const mu = muByManga.get(s.manga_anilist_id);
       if (mu) {
         await crossCheckMangaStatus(runId, s.id, s.manga_status, mu);
-        const editionLatest = bestLatestKnown(mu, s.total_chapters, chapterMax.get(s.id) ?? 0, s.id);
+        const editionLatest = bestLatestKnown(mu, s.total_chapters, chapterMax.get(s.id) ?? 0, s.id, tableMax.get(s.manga_anilist_id) ?? 0);
         // same-edition band + confirmed-anchor chapter floor: write the
         // number-space end only when MU tracks the same edition AND the
         // number reaches at least the confirmed anchors (release-derived

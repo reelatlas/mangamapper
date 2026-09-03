@@ -899,6 +899,26 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
     ruledOn: '2026-09-02',
     cite: ['scripts/ingest/research/batch20/out/naruto-shippuden-w11b.json', 'scripts/ingest/research/batch20/verify/naruto-shippuden-w11.md'],
   },
+  {
+    seriesId: 'reborn',
+    ruleId: 'T6',
+    value: { 159: 'filler', 177: 'filler', 178: 'filler', 189: 'filler' },
+    reason:
+      "Batch 20 sidecar (verified R24), Sean ruled 2026-09-04 under T28's sliver clause — and the research found the ties were PHANTOM: eps 159 / 178 / 189 contain no segment of ch 232 / 257 at all (TV Tokyo's synopses, ja-WP's 未来編 episode ↔ chapter line excludes 178-189 outright, Marvelous' DVD copy アニメオリジナルストーリー; the fandom's 'Chapter 257 (mostly filler)' field restates animefillerlist's typing, 22/22 sampled rows one lineage). Ch 232's scenes are in eps 158 (graft) and 160; ch 257 opens in ep 176 and closes in ep 190. Ep 177 is a wholesale recap of the Choice arc on every source → the recap clause: weightless, filler, `recap`{240-256}, no anchor (its stored 256 also sat one below ep 176's corrected 257 — a back-jump). Anchors on all four deleted (A1). Reversal = these entries + the verdict's rows.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-04',
+    cite: ['scripts/ingest/research/batch20/out/reborn-slivers.json', 'scripts/ingest/research/batch20/verify/reborn-slivers.md'],
+  },
+  {
+    seriesId: 'd-gray-man',
+    ruleId: 'T6',
+    value: { 66: 'filler' },
+    reason:
+      "Sean ruled 2026-09-04 (T28's sliver clause, the first witness): ep 66 「焦燥と混乱」 is an original Asian-Branch training episode built out of roughly ONE page of ch 78 (batch 17, agent-verified; both wiki families place it inside ch 78 and nowhere else); ep 65 already ends inside ch 78 and ep 67 adapts it properly. A sliver is canon material that carries no weight: the remainder (all original) decides → filler; no anchor (A44: no position of its own — the display carries ep 65's 78 forward); the `partial`{78 (p13 only)} stays and names ep 67. Was canon (AFL + batch 17) — the type over-claimed a page.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-04',
+    cite: ['scripts/ingest/research/batch17/out/d-gray-man.json', 'scripts/ingest/research/batch20/SIDECAR-DECISIONS.md'],
+  },
 ];
 
 export const EPISODE_TYPE_OVERRIDES: Record<string, EpisodeTypes> = ENTRIES.reduce<Record<string, EpisodeTypes>>((acc, e) => {

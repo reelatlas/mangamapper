@@ -125,7 +125,8 @@ async function main() {
     for (const e of await selectAll<any>('episodes', 'series_id, number, type')) typeOf.set(`${e.series_id}#${e.number}`, e.type);
     for (const a of await selectAll<any>('chapter_anchors', 'series_id, episode, chapter, chapters_adapted', (q) => q.eq('source', 'manual').not('chapters_adapted', 'is', null))) {
       const ca = String(a.chapters_adapted);
-      const single = !/,|·/.test(ca.replace(/\([^)]*\)/g, ''));
+      // sliver-only = ONE chapter token outside the parentheticals (no range, no list) AND sliver wording on it
+      const single = /^\s*\d+\s*$/.test(ca.replace(/\([^)]*\)/g, ''));
       if (single && /\b(sliver|scrap|1 panel|one panel|p\.?\s*\d+ only|approx\. p)/i.test(ca) && ['canon', 'mixed'].includes(typeOf.get(`${a.series_id}#${a.episode}`) ?? ''))
         classes.sliver_only_anchor.push(`${a.series_id}: ep ${a.episode} → ch ${a.chapter} on a sliver-only record '${ca.slice(0, 50)}' — significance call (T28's sliver clause): significant → stands with the reason; weightless → no anchor, the remainder decides the type`);
     }

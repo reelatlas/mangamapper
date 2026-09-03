@@ -2,7 +2,7 @@
 
 > GENERATED from `scripts/ingest/lib/rulings/**` by `scripts/restructure/gen-rulings.ts` — do not edit by hand. A ruling is an INSTANCE of a rule (`docs/rules.md`); the map is the record, this is the index.
 
-- rulings: 1902 across 237 series/keys · by Sean: 560 · UNRECORDED reasons: 8 · with a retire condition: 89
+- rulings: 1904 across 237 series/keys · by Sean: 562 · UNRECORDED reasons: 8 · with a retire condition: 89
 
 ## Retire conditions (re-evaluate when…)
 
@@ -748,7 +748,7 @@
 | `G54` | [2,7,18] | TV Tokyo first aired a 12-session subset (Apr–Jun 1998) before WOWOW ran all 26 (Oct 1998–Apr 1999); rows 2, 7 and 18 carry their TX first-air dates and so regress against WOWOW-dated neighbours — real broadcast order. Session 24 (regresses 146 d against 23's 1999-09-03) is NOT acknowledged: 23's date is suspect (WOWOW's run ended 1999-04-24) → batch-18 G53 candidate. | Sean 2026-08-26 · https://en.wikipedia.org/wiki/List_of_Cowboy_Bebop_episodes, docs/restructure/DRIFT-LIST.md A-11 |  |
 | `I39` | {"extras":[{"anilistId":5,"kind":"movie","label":"Knockin' on Heaven's Door","after":1,"rows":1}]} | Row 27 'The Movie' 2001-09-01 = AniList 5 (MOVIE, 2001-09-01), numbered after the 26 sessions by AFL. The movie-kind component gives the row its format (E2 residual: bebop 27 belongs to E4, Sean 2026-08-26). | Sean 2026-08-26 · https://anilist.co/anime/5, docs/changelog.md §12.66 |  |
 
-### d-gray-man (8)
+### d-gray-man (9)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -760,6 +760,7 @@
 | `A43` | {"episodes":[103],"kind":"divergence","chapters":"~ch 157 area","asterisk_review":"pending (if unset)"} | 2006 finale replaced the canonical Attack on HQ with an anime-original ending | session 2026-08-23 · scripts/ingest/apply-research-batch-6.ts |  |
 | `C8` | {"continue_from_chapter":206} | Hallow ends ch 206-208 page-level; safe continue 206+. | session 2026-08-23 · scripts/ingest/apply-research-batch-6.ts |  |
 | `T6` | {"28":"filler","37":"filler","40":"filler"} | Batch 20 wave 2 (verified R24, Sean ruled 2026-08-27): ep 28 'Exorcist Krory' (Krory's solo mission, the stained-glass Innocence) adapts no manga page — dgrayman.fandom's episode page has no chapter field and no chapter page names it; ep 40 'Requiem Rose' opens the anime-original Lulu Bell arc, its only manga content a spoken recap of ch 44 already animated in ep 39 (the balcony flashback may be ch 30's Lenalee exchange — loose_parallel {30, 44}); ep 37 is Daisya Barry's anime-original origin story (the wiki's Second Filler Arc list 'Episodes 35-37', no chapter field, no reverse-index entry, a JP witness; the Order in Crisis arc box '36-39' is arc-granular and already holds filler-typed ep 36) — loose_parallel {30, 43}. AFL and AFG both print Manga Canon on all three and are ONE source (AFG reproduces AFL's column). T28: an original plot quoting a fragment is filler with the tie annotated. | Sean 2026-08-27 · scripts/ingest/research/batch20/out/d-gray-man.json, scripts/ingest/research/batch20/verify/d-gray-man.md |  |
+| `T6` | {"66":"filler"} | Sean ruled 2026-09-04 (T28's sliver clause, the first witness): ep 66 「焦燥と混乱」 is an original Asian-Branch training episode built out of roughly ONE page of ch 78 (batch 17, agent-verified; both wiki families place it inside ch 78 and nowhere else); ep 65 already ends inside ch 78 and ep 67 adapts it properly. A sliver is canon material that carries no weight: the remainder (all original) decides → filler; no anchor (A44: no position of its own — the display carries ep 65's 78 forward); the `partial`{78 (p13 only)} stays and names ep 67. Was canon (AFL + batch 17) — the type over-claimed a page. | Sean 2026-09-04 · scripts/ingest/research/batch17/out/d-gray-man.json, scripts/ingest/research/batch20/SIDECAR-DECISIONS.md |  |
 
 ### dagashi-kashi (5)
 
@@ -2244,13 +2245,14 @@
 | `V2` | {"rows":[{"volume":9,"chapter_start":65,"chapter_end":73},{"volume":10,"chapter_start":74,"chapter_end":79}]} | stored v9 "65-14" and v10 "15-79" are corrupt (omake chapter numbering 0014/0015 polluted the parse); true v9=65-73, v10=74-79 per Wikipedia chapter list + fandom chapter pages | session 2026-08-24 · scripts/ingest/research/batch17/out/rave-master.json, scripts/ingest/apply-research-batch-17.ts, §12.42 |  |
 | `T6` | {"41":"mixed"} | Ep 41: filler sites say filler, but its core IS ch 74 (Let joins / Silver Knights) — chapter overlap in an original frame = mixed. | session 2026-08-24 · scripts/ingest/research/batch17/out/rave-master.json |  |
 
-### reborn (4)
+### reborn (5)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `G53` | {"64":"2008-01-05"} | Batch 19 wave 2 lane B3 (ja-WP + en-WP / syoboi / fandom, 2+ sources per row; the contradictions verified R24; Sean ruled B3-7): ep 64: Ep 64 'The Truth Behind The Rage' (怒りの真相) aired 2008-01-05 (the first Saturday after the 2007-12-29 New Year skip). ja-WP 各話リスト 2008年 and en-WP 'Reborn! season 2' both gi | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/reborn.json, https://en.wikipedia.org/wiki/Reborn!_season_2, https://ja.wikipedia.org/wiki/%E5%AE%B6%E5%BA%AD%E6%95%99%E5%B8%AB%E3%83%92%E3%83%83%E3%83%88%E3%83%9E%E3%83%B3REBORN! |  |
 | `R21` | {"file":"scripts/ingest/research/batch14/out/reborn.json","anchors":173} | batch-14 verdict applied as-curated | session 2026-08-23 · scripts/ingest/research/batch14/out/reborn.json |  |
 | `T6` | {"111":"mixed","112":"mixed"} | Eps 111-112: fights against anime-only characters with anime-original box weapons inside the canon Future Arc (ja.wikipedia アニメオリジナル匣 + fandom Future Arc page). | session 2026-08-23 · scripts/ingest/research/batch14/out/reborn.json |  |
+| `T6` | {"159":"filler","177":"filler","178":"filler","189":"filler"} | Batch 20 sidecar (verified R24), Sean ruled 2026-09-04 under T28's sliver clause — and the research found the ties were PHANTOM: eps 159 / 178 / 189 contain no segment of ch 232 / 257 at all (TV Tokyo's synopses, ja-WP's 未来編 episode ↔ chapter line excludes 178-189 outright, Marvelous' DVD copy アニメオリジナルストーリー; the fandom's 'Chapter 257 (mostly filler)' field restates animefillerlist's typing, 22/22 sampled rows one lineage). Ch 232's scenes are in eps 158 (graft) and 160; ch 257 opens in ep 176 and closes in ep 190. Ep 177 is a wholesale recap of the Choice arc on every source → the recap clause: weightless, filler, `recap`{240-256}, no anchor (its stored 256 also sat one below ep 176's corrected 257 — a back-jump). Anchors on all four deleted (A1). Reversal = these entries + the verdict's rows. | Sean 2026-09-04 · scripts/ingest/research/batch20/out/reborn-slivers.json, scripts/ingest/research/batch20/verify/reborn-slivers.md |  |
 | `T29` | {"position":203.1,"record":{"kind":"ova","anilistId":8532}} | en-WP Reborn!: 'An original video animation (OVA) was produced under the same staff and cast and was released in October 2009 during the annual Jump Super Anime Tour'; the franchise infobox reads '203 + 2 OVAs' and 'List of Reborn! episodes' carries an == OVAs == table whose first row is this work. DISAGREEMENT: AniList 8532 format=ONA (ja-WP files it under ジャンプアニメ, 上映 at Jump Super Anime Tour 2009, complete-edition DVD 2010-07-21). AniList id now verified (the stored note said unverified). | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/8532, https://en.wikipedia.org/wiki/Reborn!, https://en.wikipedia.org/wiki/List_of_Reborn!_episodes |  |
 
 ### record-of-ragnarok (14)

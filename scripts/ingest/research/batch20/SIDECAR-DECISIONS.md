@@ -1,4 +1,4 @@
-# SIDECAR DECISIONS — awaiting Sean (paused 2026-09-03, Sean: "need to sleep; I'll come back with my examples")
+# SIDECAR DECISIONS — RULED + APPLIED 2026-09-04 (§12.106). Historical record of the exploration; the rule text lives in T28 / A44, the data in the sidecar apply.
 
 Read this first when the session resumes. Nothing below is applied. Sean is working through
 the sliver logic with his own examples before ruling; do NOT proceed until he says go.
