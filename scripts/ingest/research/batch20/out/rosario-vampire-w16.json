@@ -1,0 +1,73 @@
+{
+  "series_id": "rosario-vampire",
+  "summary": "Ep 14 'Reunion and a Vampire' is Capu2's opener, and the segment it is typed mixed on is not a fragment of our source at all — it is the SEQUEL manga. Its spine is Rosario + Vampire Season II ch 1 'A Brand-New Season' (Tsukune's return for his second year, the four-way squabble at the school gate, the rosario coming off) and ch 3 'Superglue Girl' (the orange-haired freshman who licks his blood — 'you smell delicious' — attacks Moka, and is revealed as her little sister Kokoa); MangaUpdates' Season II entry independently pins the anime's start at 'Vol 1, Chap 1 Different settings'. Season II is a separate licensed work in its own chapter space (the Trigun Maximum shape, A44 / T26), so no anchor is possible in this entry's 1-40 space. Relative to the IDENTIFIED SOURCE — Rosario + Vampire, 40 chapters, 10 volumes — ep 14 contains no weighted material at all: the only season-one presence is the in-episode recap gag (Kou the bat: 'that was the recap of the show for any idiot who didn't watch the first season'), which is weightless under T28's recap clause, and the death-threat-letter plot around which the episode is built is Gonzo's own. So the remainder decides and I propose FILLER + side_source + recap, which is also how the catalog already types the other Season-II-only Capu2 rows (15-19, 21-23, 25-26). The alternative reading is flagged, not hidden.",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [
+    {
+      "episode": 14,
+      "why": "A44 shape: the episode's source material is Rosario + Vampire Season II ch 1 and ch 3 — the SEQUEL manga's own chapter numbering (rosariovampire.fandom titles those pages 'Rosario + Vampire II Chapter 001/003' and its Season I ch 40 links forward to 'Rosario + Vampire II Chapter 001'), never convertible into this entry's Rosario + Vampire 1-40 space. Same shape as the ruled trigun ep 18 (Trigun Maximum ch 1-2). Nothing of Season I is adapted here, so no anchor exists in our space under any typing.",
+      "sources": [
+        "https://rosariovampire.fandom.com/wiki/Rosario_%2B_Vampire_II_Chapter_001",
+        "https://rosariovampire.fandom.com/wiki/Rosario_%2B_Vampire_Chapter_040",
+        "https://api.mangaupdates.com/v1/series/67686957603"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [14],
+      "kind": "side_source",
+      "chapters": "Rosario + Vampire Season II ch 1 'A Brand-New Season' + ch 3 'Superglue Girl' (SEPARATE numbering — the sequel manga)",
+      "note": "weight: significant IN THE SEQUEL WORK, zero in this entry's source — the licensed second work carries the episode's spine (ch 1: Tsukune returns for year two, Moka/Kurumu/Mizore/Yukari fight over him, the rosario comes off; ch 3: the freshman who crashes into him, licks his blood saying he 'smells delicious', turns on Moka and is revealed as her sister Kokoa), so this is not a tease or a page tie. But it is another chapter space (A44) and another work, so it earns no anchor and no standing in the Rosario + Vampire (1-40) line. MangaUpdates' Season II record pins the anime's start at 'Vol 1, Chap 1 Different settings' — the 'different settings' is the anime-original letter plot below. Sharpens the stored graft {Season II vol 1 (S2 chs 1-4)}: chs 1 and 3 are evidenced in this episode; chs 2 (the Monster Durian hunt) and 4 are not.",
+      "sources": [
+        "https://rosariovampire.fandom.com/wiki/Rosario_%2B_Vampire_Capu2_Episode_01",
+        "https://rosariovampire.fandom.com/wiki/Rosario_%2B_Vampire_II_Chapter_001",
+        "https://rosariovampire.fandom.com/wiki/Rosario_%2B_Vampire_II_Chapter_003",
+        "https://api.mangaupdates.com/v1/series/67686957603"
+      ]
+    },
+    {
+      "episodes": [14],
+      "kind": "recap",
+      "chapters": "Season I (no chapter — the season-one cast and premise re-established)",
+      "note": "weight: nil — the episode's first act re-establishes the season-one cast and is explicitly labelled a recap inside the episode itself (Kou the bat, to camera: 'that was the recap of the show for any idiot who didn't watch the first season'). Under T28's recap clause a recap progresses nothing and counts for NOTHING in the standing; it is the only season-one presence in this episode and it cannot make the row mixed against our source.",
+      "sources": [
+        "https://rosariovampire.fandom.com/wiki/Rosario_%2B_Vampire_Capu2_Episode_01"
+      ]
+    },
+    {
+      "episodes": [14],
+      "kind": "divergence",
+      "chapters": "none in this chapter space",
+      "note": "The plot that actually drives the episode is Gonzo's own: Kokoa's campaign of death-threat letters delivered by Kou (in Moka's locker, on a snack bag, on Tsukune's back, one every ten minutes overnight), the freshman welcoming ceremony, the two delinquents Inner Moka kicks, Ruby's snack-bar job and Gin's photo gag. In Season II ch 3 Kokoa simply attacks Moka in the classroom and the sister reveal lands mid-chapter; the anime reorders it into a whodunit that closes on the reveal. Kyoko Aono's doorstep cameo is likewise moved far ahead of her manga role.",
+      "sources": [
+        "https://rosariovampire.fandom.com/wiki/Rosario_%2B_Vampire_Capu2_Episode_01",
+        "https://rosariovampire.fandom.com/wiki/Rosario_%2B_Vampire_II_Chapter_003"
+      ]
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [
+    {
+      "episodes": [14],
+      "type": "filler",
+      "note": "T27/T28: standing is relative to the IDENTIFIED SOURCE — Rosario + Vampire, 40 chapters / 10 volumes (AniList 30894), the space every stored anchor uses. Ep 14 adapts none of it: its manga content is the sequel work (Season II ch 1 + 3, another chapter space, carried as side_source above), its only season-one content is the in-episode recap gag (weightless, T28 recap clause), and the rest is anime-original. Mixed requires source + non-source in one episode; there is no weighted source share here, so the remainder decides and the row is filler + side_source. This is also how the catalog already types every other Season-II-only Capu2 row (15-19, 21-23, 25-26). NOTE the title trap: ep 14 'Reunion and a Vampire' (再会とバンパイア) is NOT Season I ch 39 'The Promise of a Reunion' — ch 39 is the school-festival close already anchored at ep 20.",
+      "sources": [
+        "https://rosariovampire.fandom.com/wiki/Rosario_%2B_Vampire_Capu2_Episode_01",
+        "https://rosariovampire.fandom.com/wiki/Rosario_%2B_Vampire_II_Chapter_003",
+        "https://api.mangaupdates.com/v1/series/67686957603",
+        "https://rosariovampire.fandom.com/wiki/Rosario_%2B_Vampire_Chapter_039"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "Two chapter spaces, one franchise: Rosario + Vampire (Season I) 1-40 in 10 volumes = OUR source and the space of every stored anchor; Rosario + Vampire Season II 1-66 in 14 volumes = a separate MangaUpdates series (id 67686957603) and a separate page family on rosariovampire.fandom ('Rosario + Vampire II Chapter NNN'). Season I ch 40 'Forecast of Happiness' is a bonus chapter set back in Tsukune's first days and links forward to Season II ch 1; it is not in ep 14 (nor in any episode). AFL's Capu2 typings (14, 20, 24 'Mixed', all other Capu2 rows 'Filler') track SEASON I chapters only — eps 20 and 24 are the two Capu2 rows with real Season I grafts (stored ep 20 -> 39, ep 24 -> 38 [37]) — which is why AFL's 'Mixed' on ep 14 must not be read as a Season I claim; the only Season I thing in ep 14 is the recap gag. rosariovampire.fandom's own 'Adapted From' section on the ep-14 page is an empty stub, i.e. silence.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "THE FORK, stated openly: T26 says side_source is an annotation on a CANON row (Black Clover 55-56 = a licensed novel), and trigun ep 18 — the closest precedent, a sequel-manga episode — is stored MIXED + side_source + A44. Read that way, ep 14 would keep a non-filler type. I recommend FILLER because (a) the standing is measured against the identified source and ep 14 has zero weighted Season-I content, and (b) consistency: the catalog already types every other Season-II-only Capu2 row as filler, so a non-filler ep 14 would make the entry self-contradictory. If Sean prefers the T26 reading, it is a SERIES-level ruling (all of Capu2), not a one-row one — and the same question is open on trigun ep 18.",
+    "Either way the annotations stand unchanged: side_source (Season II ch 1 + 3), recap (Season I), divergence (the letter plot), and no anchor is possible (A44, sequel chapter space).",
+    "Housekeeping: the stored graft {Season II vol 1 (S2 chs 1-4, SEPARATE numbering)} overstates the span — chs 1 and 3 are evidenced in ep 14, chs 2 and 4 are not. Superseded by the side_source annotation above."
+  ]
+}

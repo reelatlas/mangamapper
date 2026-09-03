@@ -1,0 +1,95 @@
+{
+  "series_id": "tokyo-mew-mew",
+  "summary": "All three rows are typed mixed on a single fragment tie and all three are already ruled position-less (A44, Sean 2026-08-27). Weighed under the sliver clause, none of them shows a page of the source at all. Ep 19 is an invented beach story (the girl Iruka has no counterpart in the 27-chapter mainline) in which Mew Lettuce's porpoise fin is PREVIEWED; ch 21's own underwater rescue — the fin activating in the polluted Tokyo Bay — is adapted properly at ep 41. Ep 21's only source-derived content is Ryou and Keiichirou's mew-aqua briefing, a retelling of the briefing that closes ch 9 and was already animated at ep 12; Minto's lorikeet dream, her resignation and the fake mew aqua have no chapter. Ep 37 is the anime's invented Christmas set-up (the 'Tears for Christmas' necklace, the Odaiba tree, mew aqua materialising); ch 19 'Truth or Dare' stages the reveal as Quiche attacking a lunch date, and the pages the anime actually takes from ch 19 (pp 102-107) are at ep 38. Every segment is a sliver or less, so the remainder decides: all three → filler. No anchors (A1 and the standing A44 ruling agree). The one dissent — ja-WP bolds eps 19 and 21 as 原作ベース — is reported and weighed: that marker misses two of our own page-verified adaptations (ep 38 → ch 19-20 and ep 41 → ch 21 are both unbolded).",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [
+    {
+      "episode": 19,
+      "why": "A1 (proposed filler) and the standing A44 ruling. The episode adapts nothing: the porpoise-fin debut is a loose parallel of ch 21, not a scene from it, and the beach story around it has no counterpart in chs 1-27. The only sea chapter it could have been, ch 11 'Cruise Control', is a cruise-ship attack with no Lettuce-swimming content and is ruled never adapted anywhere in the run (stored abridged {11}).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Tokyo_Mew_Mew_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Tokyo_Mew_Mew_chapters",
+        "https://tokyomewmewpower.fandom.com/api.php?action=parse&page=Episode%2019:%20A%20Girl%20with%20a%20Porpoise&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 21,
+      "why": "A1 (proposed filler) and the standing A44 ruling. The only source-derived content is a restatement of the mew-aqua briefing that closes ch 9, already animated at ep 12 (stored ep 12 → 9) — a duplicate, no new pages, so no position.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Tokyo_Mew_Mew_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Tokyo_Mew_Mew_chapters"
+      ]
+    },
+    {
+      "episode": 37,
+      "why": "A1 (proposed filler) and the standing A44 ruling. No page of ch 19 is shown here; the pages ep 37 was tied to (ch 19 pp 102-107) are carried by ep 38's stored anchor.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Tokyo_Mew_Mew_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Tokyo_Mew_Mew_chapters"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [19],
+      "kind": "loose_parallel",
+      "chapters": "21",
+      "note": "weight: sliver — because no scene of ch 21 is shown. The episode is an original beach story (Retasu cannot swim; a girl named Iruka, who exists in no chapter of the 27-chapter mainline, is afraid of water; the aliens attack the beach) in which Mew Lettuce's porpoise fin activates for the first time. Ch 21 'Who is the Blue Knight?' places that power in the Tokyo Bay red-tide rescue, and THAT is adapted properly at EP 41 (stored anchor ep 41 → 21 {21, the red-tide half; the Mew Project history half of the same chapter is at ep 36}). The material here is a preview of a power, not source pages — new to the viewer, but nothing of the source. Remainder wholly anime-original → the row is filler (T27/T28)."
+    },
+    {
+      "episodes": [21],
+      "kind": "loose_parallel",
+      "chapters": "8-9",
+      "note": "weight: sliver — because the only source-derived beat is Ryou and Keiichirou's mew-aqua briefing, and it is a DUPLICATE, not new pages: that briefing closes ch 9 (en-WP's vol-2 summary: 'Ryou and Keiichiro tell them more about the alien invasion and tell them to begin searching for a mew aqua') and was already animated at EP 12 (stored anchor ep 12 → 9). Everything the episode's own plot rests on — Minto's dream of the ultramarine lorikeet, her quarrel with Ichigo, returning her pendant and uniform, Zakuro talking her back, and the mew aqua turning out to be a fake — has no counterpart in chs 1-27. Remainder wholly anime-original → filler. (The kind could equally be `recap`; it is left as the Sean-ruled loose_parallel because the briefing is restated, not re-shown, and no type turns on the choice.)"
+    },
+    {
+      "episodes": [37],
+      "kind": "loose_parallel",
+      "chapters": "19",
+      "note": "REPLACES the stored `partial {19}`: `partial` asserts adapted pages, and this row has none. weight: sliver — because ch 19 'Truth or Dare' stages the reveal as Quiche attacking Ichigo and Masaya's lunch date, forcing her to transform in front of him, with the Blue Knight nearly killing Quiche; ep 37 discards that staging entirely and invents the Christmas approach (Zakuro's shopping advice, the 'Tears for Christmas' necklace, the Odaiba tree, mew aqua materialising at its top when Ichigo transforms). The pages the anime does take from ch 19 — pp 102-107, Kish carried off, 'He saw all of it', Masaya's 'I knew you were a Mew Mew' — are at EP 38 (stored anchor ep 38 → 20 [20] {19 pp 102-107, 20 pp 108-121}); the rest of ch 19 is never adapted (stored ep 38 divergence {19}: 'the reveal is relocated wholesale'). Remainder wholly anime-original → filler."
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [
+    {
+      "episodes": [19],
+      "type": "filler",
+      "note": "T27/T28 sliver clause. Zero standing in the source: the porpoise-fin debut is a loose parallel of ch 21 with no ch-21 scene shown, and ch 21's own version is at ep 41. en-WP's episode summary and the fandom's independently written (dub-based) summary describe the same wholly invented beach plot; the manga's chapter list for the adjacent volumes (ch 10 'Shall We Dance?', 11 'Cruise Control', 12 'Alien Invasion', 13 'The Truth About Cats and Dogs') contains nothing resembling it, and chs 10, 12-13 are already claimed by eps 13 and 28 while ch 11 is ruled never adapted.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Tokyo_Mew_Mew_episodes",
+        "https://tokyomewmewpower.fandom.com/api.php?action=parse&page=Episode%2019:%20A%20Girl%20with%20a%20Porpoise&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Tokyo_Mew_Mew_chapters"
+      ]
+    },
+    {
+      "episodes": [21],
+      "type": "filler",
+      "note": "T27/T28 sliver clause. The one source-derived segment is a weightless restatement of ch 9's closing mew-aqua briefing, already animated at ep 12; the episode's own plot (Minto's dream, her resignation, the fake mew aqua) exists in no chapter. en-WP's summary and the fandom's dub summary agree on the beat list, and en-WP's vol-2 chapter summary places the briefing at the end of ch 9.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Tokyo_Mew_Mew_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Tokyo_Mew_Mew_chapters",
+        "https://tokyomewmewpower.fandom.com/api.php?action=parse&page=Episode%2021:%20One%20Flew%20Out%20Of%20The%20Mew%20Mew%27s%20Nest&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [37],
+      "type": "filler",
+      "note": "T27/T28 sliver clause. No page of ch 19 is in this row: en-WP's ep-37 summary is entirely the invented Christmas set-up, and en-WP's vol-5 chapter summary gives ch 19's content as the lunch-date attack and forced transformation, which the anime replaces (the stored ep-38 divergence {19} already records the relocation). The ch-19 pages the anime keeps are on ep 38's anchor. Consistent with the A44 ruling of 2026-08-27, which already found this row holds no truthful position.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Tokyo_Mew_Mew_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Tokyo_Mew_Mew_chapters",
+        "https://tokyomewmewpower.fandom.com/api.php?action=parse&page=Episode%2037:%20The%20Shining%20Tear%20-%20Celebrating%20Christmas%20With%20Just%20The%20Two%20Of%20Us!&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "SOLE-ADAPTATION CHECK against the stored anchors, per row. Ep 19 ↔ ch 21: NOT sole — ch 21 is adapted twice already, its Mew-Project-history half at ep 36 (ep 36 → 21 {20, 21}) and its red-tide/porpoise-fin half at ep 41 (ep 41 → 21). Ep 21 ↔ chs 8-9: NOT sole — ch 8 is at ep 11 and ch 9 at ep 12. Ep 37 ↔ ch 19: NOT sole — ch 19's adapted pages (pp 102-107) are at ep 38. So the sole-adaptation exception is unavailable to all three rows, and each falls to the plain sliver rule.\n\nTHE ONE DISSENT, weighed. ja.wikipedia's 各話リスト（2002年版） carries the legend 「'''太字'''は原作を元にしたエピソード。」 and BOLDS eps 19 and 21 (ep 37 is not bolded). That marker is coarse and demonstrably fails in both directions against our own page-verified data: it does NOT bold ep 38 (stored anchor → ch 19-20, page-split verified in the TokyoPop vol-5 scan) and does NOT bold ep 41 (stored anchor → ch 21, page-verified in the vol-6 scan), while it DOES bold eps 5-6, which batch 17 established as wholly anime-original padding, and ep 46, which the stored A43 ruling calls anime-original finale build-up. Two false negatives and three disputed positives in one 52-row table: presence of the bold is not proof and absence is not evidence. Nothing in the manga's chapter list supports a manga basis for a beach/Iruka story (ep 19) or a Minto-resigns story (ep 21) — chs 10-16 are 'Shall We Dance?', 'Cruise Control', 'Alien Invasion', 'The Truth About Cats and Dogs', 'Kiss and Tell', 'Tokyo Power Tales', 'Young Love', all otherwise claimed except ch 11.\n\nCH 11 RE-CHECKED (the only conceivable alternative for ep 19). en-WP's vol-3 summary gives ch 11 'Cruise Control' as 'Pie attacks a cruise ship but the Mew Mews again defeat the monster he sends' — a cruise ship, no beach, no swimming lesson, no porpoise fin. The stored `abridged {11}` ruling (ch 11 has no counterpart anywhere in the 52 episodes) stands; ep 19 is not a hidden adaptation of it.\n\nONE WIKI: tokyomewmew.fandom.com, tokyo-mew-mew.fandom.com and mewmew.fandom.com all resolve to tokyomewmewpower.fandom.com (siteinfo `base`) — one source, not three. Its episode pages are written from the Mew Mew Power dub and are independent prose from en-WP, but its 'Differences from the Manga' section on ep 37 is EMPTY, which is silence, not a finding.\n\nA44 STATUS: the ANCHOR_SUPPRESSED list [19, 21, 37, 44] stays correct and becomes redundant for these three once they are filler (A1 already forbids the anchor). No change requested.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "DISSENT ON RECORD: ja-WP bolds eps 19 and 21 as 原作ベース. I read against it, with the reason in structure.notes (the same marker leaves eps 38 and 41 — both page-verified adaptations in our own store — unbolded, and bolds eps 5-6 and 46, which our own rulings call anime-original). If you want the bold honoured instead, the rows would go back to mixed with the same annotations; no anchor is possible either way under the standing A44 ruling.",
+    "NOT IN THE ASK but surfaced by the same table: ja-WP bolds eps 5 and 6, which the stored eps-1-13 annotation calls 'wholly anime-original padding' along with 8-9 (8 and 9 are correctly unbolded). If that pair is ever revisited, this is the source that disagrees.",
+    "All three rows already carry the correct annotation kinds after this wave except ep 37, where `partial {19}` is replaced by `loose_parallel {19}` — `partial` was asserting pages the row does not have."
+  ]
+}

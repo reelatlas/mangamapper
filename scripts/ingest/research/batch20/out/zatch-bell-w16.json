@@ -1,0 +1,51 @@
+{
+  "series_id": "zatch-bell",
+  "summary": "Ep 122 ('The Legend of Kaguya. Gash's Summer Festival. The Girl Who Returned to the Moon', 2005-09-04) is an anime-original summer-festival story: Zatch goes to the festival with Hana and Ponygon, is separated, meets a rich runaway girl who calls herself Princess Kaguya, spends his last 300 yen on festival games with her, and she is collected by helicopter as 'Lady Natsuko'. Kaguya exists in no chapter (she is listed as the episode's only new character on konjikinogash.fandom and appears nowhere in the manga), and vol 20 — ch 183-192, the chapters this stretch of the anime is in — contains no festival story at all (en-WP's chapter list: 183 'Kyle's Shout', 184 'Oh My', 185 'The Awakening', 186 'A Frightening Spell', 187 'Kiyo's Mood', 188 'The Power of Riou', 189 'Faudo's True Form'). The episode's only manga-derived beat is the framing scene of Kiyomaro shut in his room researching the Demon World structure — the thread ep 121 set — which konjikinogash.fandom credits as 'Chapter 186 (Partially)' and which the same wiki's article calls out explicitly: 'While this episode features some moments originally adapted from the manga, this episode is mostly filler.' Sole-adaptation check: ch 186 'A Frightening Spell' IS the Chājiru Saifodon chapter and is adapted in full at ep 121 (konjikinogash's ep-121 field 'Chapter 185, Chapter 186'; our stored anchor ep 121 → 186 [186]), and its neighbour ch 187 'Kiyo's Mood' is adapted at ep 124 (konjikinogash ep-124 field 'Chapter 187'; our stored anchor ep 124 → 187) — so the fragment is a DUPLICATE of pages already carried by another episode, the exception cannot fire, the weight is sliver and the remainder (the entire Kaguya story) is original: ep 122 → filler, no anchor (A1).",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [
+    {
+      "episode": 122,
+      "why": "A1 (under the proposed type correction) and A44: the row's only source content is a framing beat of ch 186 whose chapter is adapted properly at ep 121 — a position-less duplicate inside an anime-original plot. No anchor; the reader's position across 120-124 is carried by ep 121 → 186 and ep 124 → 187 (stored).",
+      "sources": [
+        "https://konjikinogash.fandom.com/wiki/Episode_122",
+        "https://konjikinogash.fandom.com/wiki/Episode_121"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [122],
+      "kind": "partial",
+      "chapters": "186",
+      "note": "weight: sliver — the only manga-derived beat is the opening framing scene of Kiyomaro shut in his room researching the Demon World structure (konjikinogash.fandom's per-episode field: 'Chapter 186 (Partially)'; the same page: 'this episode is mostly filler'). DUPLICATE, not new: ch 186 'A Frightening Spell' is adapted in full at ep 121 (the Chājiru Saifodon battle — the episode is literally titled after the spell), and the neighbouring ch 187 'Kiyo's Mood' is adapted at ep 124; the beat carries no story of its own and earns neither a type nor an anchor (T28 sliver clause, A1/A44). Ep 121 is the episode that adapts ch 186 properly."
+    },
+    {
+      "episodes": [122],
+      "kind": "divergence",
+      "chapters": null,
+      "note": "weight: n/a (non-source) — the episode's whole plot (Zatch and the runaway 'Princess Kaguya' at the summer festival) is anime-original; Kaguya is the episode's only new character and appears in no chapter. Vol 20 (ch 183-192) carries the Momon fight, Kiyo's mood, and the opening of the Faudo arc — no festival story."
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [
+    {
+      "episodes": [122],
+      "type": "filler",
+      "note": "T27/T28 (sliver clause, Sean 2026-09-04): the stored 'mixed' rests on the single `partial{186}` framing beat, and that beat is a duplicate of a chapter adapted in full at ep 121 — a sliver with no weight. The remainder (the entire Kaguya festival story) is anime-original, so the row is filler. This does NOT contradict Sean's T6 ruling of 2026-08-25 (which set 122 → mixed against AFL's 'canon'): that ruling rested on konjikinogash's per-episode chapter field alone, before the sliver clause existed; the same field is what shows the beat is a duplicate. AFL still prints 'Canon' for 122 (and for the already-filler 118/119/123) — AFL's typing on this block was overruled once already.",
+      "sources": [
+        "https://konjikinogash.fandom.com/wiki/Episode_122",
+        "https://konjikinogash.fandom.com/wiki/Episode_121",
+        "https://en.wikipedia.org/wiki/List_of_Zatch_Bell!_chapters"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "Row identity: our ep 122 = konjikinogash.fandom 'Episode 122' and zatchbell.fandom 'The Legend of Kaguya…', both dated September 4, 2005 — matches the stored air date; no numbering conversion (one 150-episode season, 1:1 with both wikis). Chapter space = the manga's own numbering; vol 20 = ch 183-192 in the context matches en-WP's chapter list (183 'Kyle's Shout' … 192). SOURCE HYGIENE: zatchbell.fandom and konjikinogash.fandom are two distinct wikis (different `base`/`sitename` in siteinfo), but zatchbell.fandom's `chaps=` field is NOT usable as a typing witness — it prints 'Filler' on ep 121, which adapts ch 185-186 (our stored anchor), and 'N/A' on ep 120, which adapts ch 184-185. Its 'Filler' on ep 122 agrees with this verdict but is not counted as a source; the independent legs are konjikinogash's per-episode fields + article text and en-WP's chapter list (which shows vol 20 has no festival chapter).",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "TRAP for the catalog: zatchbell.fandom's per-episode `chaps` field is a typing field of unknown provenance and is wrong in both directions on this block (ep 121 'Filler' though it adapts ch 185-186; ep 120 'N/A' though it adapts 184-185). konjikinogash.fandom's `manga_chapter` field remains the usable per-episode instrument on this series.",
+    "No stored anchor, annotation or continue point on ep 122 changes except the `partial{186}` note text; the surrounding positions (ep 121 → 186, ep 124 → 187) are untouched, so the type flip has no reader-position effect."
+  ]
+}

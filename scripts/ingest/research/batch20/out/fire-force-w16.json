@@ -1,0 +1,59 @@
+{
+  "series_id": "fire-force",
+  "summary": "Ep 25 (S2 ep 1, the double-titled 'A Fire Soldier's Fight / A Man's Fight', 2020-07-04) is NOT a fragment row: it adapts two complete chapters that no other episode touches, and it is the only Mixed row AFL prints for the whole series. Both of its title cards are the two readings of ch 91's punned title 消防官(おとこ)の戦い. The manga content: ch 92 'The Lieutenant's Transformation Project' (中隊長改造計画) — Shinra's day off, Iris/Maki/Tamaki dragging him to the Shibuya shopping district to re-dress the chronically unfashionable Hinawa, ending with Ōbi snapping at them — opens the A-part; ch 91 'Fight Between Men' — the 8th's annual Naked Firefighter's Calendar shoot, last place again — is the whole B-part. Both are the opening chapters of the VS. Special Fire Force Company 4 arc (fireforce.fandom's arc page lists the arc as ch 91-99 / eps 25-26 and narrates exactly this content under 'Rest Period'); animefillerguide's chapter table independently gives ep 25 = '91, 92'. The anime-original share is the giant five-core sentient Infernal that interrupts the day off — the battle the official synopsis headlines ('急行した面々の前に現れたのは、かつて見たことがない巨大な焔ビトだった……！') and which appears nowhere in the arc's chapters. So both shares are substantial: the source segment is SIGNIFICANT (two whole chapters, first and only adaptation, they open the arc), the original segment is a story-carrying battle — mixed STANDS under T28 and the row takes an anchor. Sole-adaptation check: ep 24 ends at ch 90 (stored, AFG '88, 89, 90') and ep 26 starts at ch 93 (AFG '93…98'; the fandom arc page's 'Back to School' = ep 26), so ch 91-92 are adapted here and nowhere else. One wrinkle: the anime plays ch 92's day-off BEFORE ch 91's calendar, a one-chapter swap inside the episode (annotated `rearranged`; it moves no reader position).",
+  "anchors": [
+    {
+      "episode": 25,
+      "end_chapter": 92,
+      "start_chapter": 91,
+      "chapters_adapted": "91-92",
+      "volume": 11,
+      "confidence": "high",
+      "note": "A4: the furthest mainline chapter adapted is 92 ('The Lieutenant's Transformation Project' — the shopping trip, animated to its end with Ōbi's outburst); ch 91 ('Fight Between Men', the naked-calendar chapter) is the B-part. First and only adaptation of both: ep 24 → 90, ep 26 → 93+. Two sources agree on the chapter set (animefillerguide's chapter table '91, 92'; fireforce.fandom's VS Company 4 arc page, whose 'Rest Period' section narrates exactly these two chapters as the arc's opening and lists eps 25-26 against ch 91-99), and en-WP's episode summary matches beat for beat. Volume 11 = ch 88-96 (stored table; fandom chapter infoboxes give ch 91/92 = Volume 11). The episode also carries a substantial anime-original battle, hence mixed, not canon (T27/T28).",
+      "sources": [
+        "https://www.animefillerguide.com/anime/fire-force/",
+        "https://fireforce.fandom.com/wiki/VS._Special_Fire_Force_Company_4_arc",
+        "https://en.wikipedia.org/wiki/Fire_Force_season_2"
+      ]
+    }
+  ],
+  "continue_points": [],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [
+        25
+      ],
+      "kind": "partial",
+      "chapters": "91-92",
+      "note": "weight: significant — REPLACES the batch-8 note ('first ~17 min of S2E1 anime-original; back half adapts 91-92'), which mislabelled the shopping trip as original. The source segments are two COMPLETE chapters, both NEW (adapted in no other episode: ep 24 ends at 90, ep 26 starts at 93): ch 92 'The Lieutenant's Transformation Project' is the day-off shopping trip that opens the A-part, and ch 91 'Fight Between Men' — the annual Naked Firefighter's Calendar, the chapter whose punned title 消防官(おとこ)の戦い supplies BOTH of this episode's title cards — is the entire B-part. They are the opening chapters of the VS. Special Fire Force Company 4 arc, so they progress the story into the arc; the row keeps its type and carries the anchor (T28 sliver clause, A4)."
+    },
+    {
+      "episodes": [
+        25
+      ],
+      "kind": "divergence",
+      "chapters": null,
+      "note": "weight: n/a (non-source) — the giant sentient Infernal with five cores that interrupts the day off, and its defeat by the whole of Company 8 with Shinra's 'Rapid-Man Kick', is anime-original: no chapter of the VS Company 4 arc (91-99) contains it, and it is the battle the official S2 ep 1 synopsis headlines. Substantial and story-carrying in the episode's own plot — this is the share that keeps the row mixed rather than canon (T28)."
+    },
+    {
+      "episodes": [
+        25
+      ],
+      "kind": "rearranged",
+      "chapters": "91-92",
+      "note": "Intra-episode swap: the manga runs ch 91 (calendar) then ch 92 (day off / shopping); the anime opens on ch 92's day off (the official synopsis: '休日を楽しむシンラたち' before the Infernal appears) and plays ch 91's calendar as the closing B-part ('Later, Captain Obi introduces Shinra to the … calendar project' — en-WP). Both chapters are wholly inside this one episode, so no reader position moves; recorded so the row's chapter order is not read as running order."
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [],
+  "structure": {
+    "notes": "Row identity: our ep 25 = S2 ep 1, aired 2020-07-04 JST (en-WP; the stored date 2020-07-03 is the same broadcast in the pre-midnight/US-date convention — not researched here, outside the ask). NUMBERING TRAP for the apply layer: animefillerguide's Fire Force table splits this episode's double title across two rows — its row 25 is titled 'A Fire Soldier's Fight' (chapters 91, 92) and its row 26 'A Man's Fight' (chapters 93…98), i.e. AFG's row 26 wears our ep 25's SECOND title while carrying our ep 26's ('Flames of Madness') chapters. Positions and chapters still line up 1:1 with our rows (row 27 'A New Flashpoint' re-syncs on title), but a TITLE join on AFG in this zone would mis-map — join by position/date here, or by title from row 27 on. AFL and AFG disagree on the type: AFL prints 'Mixed Canon/Filler' for ep 25 and 'Manga Canon' for every other row it lists (its page stops at ep 48); AFG's blurb claims the series has 0 filler and 0%. The content evidence (an anime-original Infernal battle plus two whole chapters) is what settles it, not the labels.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "START choice: I set START = 91 so the row displays '91-92' and a reader sees both chapters covered. Strictly by A10 the first chapter ANIMATED is 92 (the day-off opens the episode) with 91 played after — if you prefer the letter of A10, the row becomes end 92 / start 92 with chapters_adapted '92, 91' and the same `rearranged` note. Reader position is identical either way (ep 26 starts at 93).",
+    "The batch-8 zone fact for ep 25 ('first ~17 min of S2E1 anime-original; back half adapts 91-92') is superseded by the annotation above: the first ~17 minutes contain ch 92's shopping trip as well as the original Infernal battle, and the 'back half' is ch 91's calendar. The third-party '0:00-16:50 is original' claim circulating online conflates the two.",
+    "AIR DATE, outside the ask, NOT repaired: our stored date for ep 25 is 2020-07-03 (a Friday) while en-WP and fireforce.fandom both give July 4, 2020 (a Saturday) and AFL prints 2020-07-03. Fire Force airs Saturdays (S1 ep 1 = 2019-07-06, a Saturday), so the stored value breaks the slot — this smells like AFL's one-day-early simulcast lineage rather than a single-row error. Worth a lane-B sweep of the whole run's day-of-week before repairing anything; I checked only this row."
+  ]
+}

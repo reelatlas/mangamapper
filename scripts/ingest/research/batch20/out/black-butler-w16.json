@@ -1,0 +1,64 @@
+{
+  "series_id": "black-butler",
+  "summary": "Ep 37 (Book of Circus ep 1, 'His Butler, Presenting') is an anime-original episode: its whole plot is the Cedric Brandel affair — a tea manufacturer / black-market arms dealer who hires hitmen against Ciel and is executed by Sebastian. Cedric has NO manga debut (kuroshitsuji.fandom: 'manga debut =' empty, 'anime debut = Season 3, Episode 37') and en-WP's episode summary is the same original plot. Yana Toboso wrote the script herself, which is why the episode is canon-COMPATIBLE, but authorship is a blanket credit, not an adoption basis (T26) and not source material. The episode's only ties to the manga are page-level fragments restaged inside that original plot, each cited page-for-page by the episode page's own reference list: ch 5 p.2 (the opening narration line), ch 5 pp.9-11 (Mey-Rin's dropped cups and Sebastian's save), ch 5 pp.18-20 (the black cat); ch 22 pp.30-32 (John Brown passing the Queen's letter and the circus tickets — CHANGED: handed to Lau in front of Grey and Phipps instead of slipped into Ciel's pocket) and ch 22 pp.33-34 (the Noah's Ark Circus parade introduction); ch 23 p.2 (the circus newspaper advertisement). Every one of these is a SLIVER under T28's sliver clause — a few pages of framing / gag / a single advertisement panel, restaged, with no story of the source carried; the remainder of the episode is 100% original, so the row is FILLER (T27) and takes no anchor (A1). Sole-adaptation check, both halves stated: ch 22's pages ARE adapted elsewhere (the fandom's chapter page gives 'episodes = Episode 15'; our stored ep-15 anchor covers 15-23), so that tie is a duplicate; ch 5's and ch 23's fragments appear in NO other episode (ch 5's chapter page says 'episodes = N/A'; ch 23's says 'Episode 37 (partially)') — but neither beat is a major plot point of the source (a servants'-day-in-the-life comedy gag; a newspaper advertisement panel), so the sole-adaptation exception does NOT fire and the row stays filler. The Circus arc's real first-time pages start at ep 38 (ch 24-25, stored).",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [
+    {
+      "episode": 37,
+      "why": "A1: the row is filler under the proposed type correction — an anime-original episode whose only source ties are page-level slivers (ch 5, 22, 23) restaged inside an original plot. A44 also applies to every fragment on its own: framing panels and a restaged gag are position-less. The Circus arc's first anchored pages are ep 38 → 24-25 (stored).",
+      "sources": [
+        "https://kuroshitsuji.fandom.com/wiki/37._His_Butler,_Presenting",
+        "https://en.wikipedia.org/wiki/List_of_Black_Butler_episodes"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [37],
+      "kind": "graft",
+      "chapters": "5 (p. 2, pp. 9-11, pp. 18-20)",
+      "note": "weight: sliver — three fragments of ch 5 'The Butler, Busy' are restaged inside the anime-original Cedric plot: Sebastian's opening narration line about a butler's work (p. 2), Mey-Rin knocking down the cups and Sebastian catching them (pp. 9-11) and the black cat (pp. 18-20). Gag/framing panels; they carry none of ch 5's own story (the orphans' visit), so they earn neither a type nor an anchor (T28 sliver clause, A44). NEW material, not a duplicate: ch 5 is animated nowhere else (kuroshitsuji.fandom chapter page: 'episodes = N/A'), but no episode adapts the chapter properly — it remains a permanent skip (open flag #918), and the beat is not a major plot point, so the sole-adaptation exception does not fire."
+    },
+    {
+      "episodes": [37],
+      "kind": "graft",
+      "chapters": "22 (pp. 30-32, pp. 33-34)",
+      "note": "weight: sliver — the arrival of the Queen's envelope with the Noah's Ark Circus tickets (ch 22 pp. 30-32, changed: Lau receives it from Grey/Phipps/John instead of John slipping it into Ciel's pocket) and the circus parade introduction (pp. 33-34) close the episode as a hook. DUPLICATE, not new: ch 22 is adapted at ep 15 (kuroshitsuji.fandom '022. The Butler, Victorious': episodes = Episode 15; our stored ep-15 anchor {15-23}), so the sole-adaptation exception cannot fire. No anchor (A1/A44)."
+    },
+    {
+      "episodes": [37],
+      "kind": "graft",
+      "chapters": "23 (p. 2)",
+      "note": "weight: sliver — one panel: the newspaper advertisement announcing Noah's Ark Circus (ch 23 p. 2) reproduced in the paper Sebastian irons for Ciel. NEW (kuroshitsuji.fandom's ch 23 page lists 'Episode 37 (partially)' and no other episode), but a single advertisement panel is not a major plot point of the source (no death, no reveal, no arc close), so the sole-adaptation exception does not fire and the row stays filler. Ch 23's own content (Soma and Agni settling in at the manor) is not animated here."
+    },
+    {
+      "episodes": [37],
+      "kind": "divergence",
+      "chapters": null,
+      "note": "weight: n/a (non-source) — the episode's entire plot, the Cedric Brandel affair, is anime-original: Cedric has no manga debut (kuroshitsuji.fandom character page: 'manga debut =' empty; 'anime debut = Season 3, Episode 37'). Yana Toboso wrote the script (official Kuroshitsuji anime account, 2014-07-11), so the episode is canon-COMPATIBLE, but a script credit is a blanket credit and NOT an `adopted` basis (T26: the author basis requires the source's author writing the anime material's EVENTS into the source line; no manga chapter carries Cedric Brandel)."
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [
+    {
+      "episodes": [37],
+      "type": "filler",
+      "note": "T27/T28 (sliver clause, Sean 2026-09-04): the episode's own plot is 100% anime-original (Cedric Brandel — no manga debut); every manga tie is a page-level sliver (ch 5 p.2/pp.9-11/pp.18-20, ch 22 pp.30-34, ch 23 p.2) restaged as framing or a gag, so the REMAINDER decides and the remainder is original. Stored type mixed came from the batch-10 `graft` (chapters null) and AFL's 'Mixed Canon/Filler'; under the sliver clause a fragment tie alone no longer earns the type. Sole-adaptation exception checked and refused on both halves (see the graft notes).",
+      "sources": [
+        "https://kuroshitsuji.fandom.com/wiki/37._His_Butler,_Presenting",
+        "https://en.wikipedia.org/wiki/List_of_Black_Butler_episodes",
+        "https://kuroshitsuji.fandom.com/wiki/Cedric_Brandel"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "Row identity: our ep 37 = Kuroshitsuji: Book of Circus ep 1, 'His Butler, Presenting' (その執事、披露), aired 2014-07-11 — kuroshitsuji.fandom and en-WP agree, no numbering conversion needed (our cumulative numbering runs S1 1-24, S2 25-36, Book of Circus 37-46). Chapter space = the Kuroshitsuji manga's own numbering; volume boundaries in the context (v2 = 5-9, v5 = 20-23, v6 = 24-27) match the fandom's chapter infoboxes (ch 5 = Volume 2, ch 22/23 = Volume 5, ch 24 = Volume 6). blackbutler.wiki.gg (the second wiki used in batches 10/14/15) is currently returning wiki.gg's 'Blocked' page to both its API and its HTML, so this verdict rests on kuroshitsuji.fandom (page-level references) + en-WP (independent episode summary) + the official anime Twitter (script credit).",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "Stored anchor conflict, NOT repaired (one source only): our ep 15 → END 23 [15] {15-23} v5 (batch 10, MEDIUM) says S1's faithful adaptation ends at ch 23. kuroshitsuji.fandom disagrees on both sides — its ep-15 page gives 'chapters = Chapter 21 and 22', and its ch-23 page gives 'episodes = Episode 37 (partially)', i.e. ch 23 is animated ONLY as the newspaper panel in ep 37. If that is right, ep 15's END is 22 and ch 23 joins ch 45+ as effectively unadapted. wiki.gg is blocked, so I have one source for the correction and did not write a repair; worth a narrow follow-up (it would also change ep 15's continue from 24 to 23).",
+    "Open flag #918 (ch 5 never animated) survives this verdict but should gain a clause: ch 5's pages 2, 9-11 and 18-20 DO appear on screen in ep 37, restaged inside an original plot. The chapter is still never adapted for position purposes (a filler row takes no anchor, A1) — the flag's 'permanent skip' reading is right, its 'never animated' wording is not literally true.",
+    "Toboso's script credit on ep 37 (official Kuroshitsuji anime account, 2014-07-11: 'I was in charge of the script for the first episode of Book of Circus') is deliberately NOT recorded as `adopted{author}` — the ledger's author basis needs the source's author writing the EVENTS into the source line, and no manga chapter carries Cedric Brandel. Recorded as `divergence` instead."
+  ]
+}

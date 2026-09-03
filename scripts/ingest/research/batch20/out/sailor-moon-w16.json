@@ -1,0 +1,48 @@
+{
+  "series_id": "sailor-moon",
+  "summary": "Ep 36 うさぎ混乱! タキシード仮面は悪? is a Dark-Kingdom monster-of-the-week and, under T28's sliver clause, FILLER. Its plot is anime-original end to end: Minako takes a depressed Usagi to Kariko Tokoyama's newly opened hair salon, whose shampoo basins are a DNA scanner hunting Sailor Moon's identity, a strand of Usagi's hair mixed with Minako's fingers the wrong girl, and Kunzite fuses Kariko and her assistants into the youma Mitsuami - a character and a creature with no manga counterpart (sailormoon.fandom's Mitsuami page records an anime-only youma whose first appearance is this episode; its 'Changes From the Manga' section states the manga has no salon at all). Inside that plot comes the season's turn: Tuxedo Mask reappears alive, knocks the Moon Stick away with a rose and names himself Endymion of the Dark Kingdom. That PLOT POINT is the manga's - Act 10 closes with Beryl reviving the brainwashed Endymion and ordering him to take the Silver Crystal, and Act 11 再会 — エンディミオン is the reunion - but NO page of it is animated here. Act 11's own scenes (the 'Endou' disguise, Motoki hypnotised, the Crown control-room infiltration, the Silver Crystal actually stolen, Beryl's formal kill order) appear nowhere in the 1992 season: en-WP's season-1 summaries have no counterpart to any of them, and the anime reaches the same state by its own route (Mamoru wounded by Zoisite and carried off at ep 35, revealed in a hair salon at ep 36). Weight: SLIVER - an arc-level echo, exactly the stored loose_parallel{11}, not adapted pages. Sole-adaptation test, both halves stated: (1) 'the pages appear in no other episode' never engages, because no source pages appear in this one; (2) the beat IS major in the source - but a major beat realised without the source's pages is a parallel telling of a plot point, not an adaptation, and the exception is a PAGE-TIE rule (the erased ep-12 precedent). So mixed does not stand: the row joins its neighbours 37-41 as filler, takes no anchor (A1), and nothing moves - ep 35 (→Act 10) and ep 45 (→Act 12 [11]) bracket it untouched.",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [
+    {
+      "episode": 36,
+      "why": "A1 after the retype: a filler row takes no anchor. There is also nothing anchorable in it - the episode contains no adapted manga pages at all, only an arc-level echo of the brainwashed-Endymion turn of Acts 10-11 (loose_parallel, weight sliver). Position is unaffected: Act 10 is carried by eps 35 and 44 and Act 11 by ep 45's START in the stored anchors, both of which bracket this row.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Sailor_Moon_season_1",
+        "https://sailormoon.fandom.com/api.php?action=parse&page=Act%2011%20Reunion%20-%20Endymion%20-&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [36],
+      "kind": "loose_parallel",
+      "chapters": "11",
+      "note": "weight: SLIVER - because no source SCENE is shown. The episode's one manga-shaped element is the reveal that Tuxedo Mask is alive and now serves the Dark Kingdom as Endymion (en-WP: 'Tuxedo Mask appears, alive and whole, but calls himself Endymion and appears to be fighting for the Dark Kingdom'), a plot point the manga establishes at the close of Act 10 (Beryl revives the brainwashed Endymion, gives him the shitennou stones and orders him to kill Princess Serenity and take the Silver Crystal) and develops through Act 11. NONE of Act 11's pages are here: the act is the 'Endou' impostor at the Game Center Crown, Motoki hypnotised, the infiltration of the senshi control room, Tuxedo Mask actually stealing the Silver Crystal and Beryl formally introducing herself - and the anime stages a hair-salon youma fight, a rose thrown at the Moon Stick, and Beryl recalling Endymion because Metalia 'cannot let him die'. NEW vs DUPLICATE: neither - it is not manga material being animated, it is the anime's own realisation of a shared plot point, which is what loose_parallel records (the stored annotation, unchanged in kind and chapters). SOLE-ADAPTATION EXCEPTION, both halves: (1) 'the pages appear in NO other episode' cannot engage - there are no source pages in the episode; (2) 'the beat is a major plot point of the source' - TRUE, Endymion's turn is load-bearing. Both halves are required and the rule is a page-tie rule, so the exception does not fire. The remainder - a full anime-original monster-of-the-week - decides the type (T27/T28). WHERE THE SOURCE MATERIAL IS PROPERLY CARRIED: Act 10 at eps 35 and 44 (stored anchors: past-life memories / the Moon ruins and Queen Serenity's message) and Act 11 at ep 45's START (stored, loose); Act 11's own scenes are never animated in this season."
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [
+    {
+      "episodes": [36],
+      "type": "filler",
+      "note": "T28 sliver clause. The episode is a Dark-Kingdom youma-of-the-week with an anime-original antagonist (Kariko Tokoyama) and an anime-only youma (Mitsuami, first and only appearance here, created by Kunzite), and its single source-shaped element - the evil-Endymion reveal - is an arc-level echo of Acts 10-11 with no adapted page, weight SLIVER. The stored mixed comes from AFL's 'Mixed Canon/Filler' label on the row, which is a source label, not a content finding: AFL prints the same label on ep 42 (Minako's past) and prints plain Filler on eps 37-41 and 43, whose Dark-Kingdom framing is identical in kind to this row's. Filler + loose_parallel{11} (annotation unchanged); no anchor (A1).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Sailor_Moon_season_1",
+        "https://sailormoon.fandom.com/api.php?action=parse&page=Usagi%27s%20Confusion%3A%20Is%20Tuxedo%20Mask%20Evil%3F&prop=wikitext&format=json",
+        "https://sailormoon.fandom.com/api.php?action=parse&page=Act%2011%20Reunion%20-%20Endymion%20-&prop=wikitext&format=json",
+        "https://sailormoon.fandom.com/api.php?action=parse&page=Mitsuami&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "ROW IDENTITY (R20, join on title + date): our row 36 = 'Usagi's Confusion: Is Tuxedo Mask Evil?' / うさぎ混乱! タキシード仮面は悪?, 1992-12-12 - identical on en-WP's 'Sailor Moon season 1' article (46 rows, first-season air dates 1992-03-07 to 1993-02-27, so no G55 namesake risk), on sailormoon.fandom's episode page (j airdate December 12, 1992; ep number 36) and on animefillerlist's sailor-moon table (row 36, 1992-12-12). INDEPENDENCE: three legs - en-WP's season-1 summary, sailormoon.fandom's episode page (plot + 'Changes From the Manga' + the Mitsuami youma page), and the manga-side witness, sailormoon.fandom's Act 10 / Act 11 / Act 12 chapter pages, which are what establish that the episode's reveal is not any of Act 11's scenes. AFL is the fourth and is the ORIGIN of the stored typing, not a check on it. CHAPTER SPACE unchanged: Takeuchi's Act numbering (the reading edition our anchors use; open flag #706 is MU's 12-'chapter' volume-numbering artefact and is untouched here). The Dark-Kingdom acts around this row: Act 9 Serenity - Princess -, Act 10 Moon (ends with Beryl reviving the brainwashed Endymion), Act 11 Reunion - Endymion - (the Endou impostor, the Crown control room, the Silver Crystal theft, Beryl's kill order), Act 12 Enemy - Queen Metalia - (D Point). SEASON-1 NEGATIVE CHECKED DIRECTLY: en-WP's 46 season-1 summaries contain no Endymion theft of the Silver Crystal and no Endou/control-room infiltration anywhere - the anime replaces Act 11's scenes rather than relocating them, so nothing in this verdict hides material that some other row carries.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "TIER WARNING (P8). Unlike eyeshield-21, sailor-moon's EPISODE_TYPE_OVERRIDES / T6 map holds only 167-172, so ep 36's stored 'mixed' is DERIVATION-TIER, taken from animefillerlist's 'Mixed Canon/Filler' label. A retype must land at the manual tier or AFL's next re-derive will restore mixed.",
+    "The stored annotation 'eps 36,43 loose_parallel {11}' spans two rows. I propose no change to its kind, chapters or grouping - only ep 36's TYPE. AFL types the other row (43, the staged falling-out) plain Filler, so after this correction both rows the annotation covers sit at the same standing, which is the shape a loose_parallel should have.",
+    "OUT OF ASK, observed and NOT proposed: the stored anchor ep45→12 [11] claims Act 11 as its START, but Act 11's own scenes are not animated anywhere in season 1 (checked against all 46 en-WP summaries). The position is defensible as arc-level framing on this very loose 1992 adaptation and repairing it is outside this row's ask - but if the Act-11 START is ever re-examined, the honest reading is that the anime skips Act 11's content and ep 45 is Act 12.",
+    "Weighing note for the record: the only argument FOR keeping mixed is that ep 36 is the first time the anime shows the brainwashed Endymion, which in the manga is a major turn (Act 10's close). I refused it because the sole-adaptation exception is a PAGE-TIE rule (erased ep 12: the manga's line verbatim, in the same setting) and there is no page tie here - the manga's revival scene, its stones, its Endou disguise and its crystal theft are all absent, and the anime arrives at the same state by its own ep-35 route. If you read the exception as covering a plot point rather than pages, this row flips back to mixed and would still take no anchor (the material sits behind ep 35's Act 10 in running order)."
+  ]
+}

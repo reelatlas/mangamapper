@@ -1,0 +1,163 @@
+{
+  "series_id": "naruto-shippuden",
+  "summary": "All three rows survive the sliver clause as MIXED, and all three turn out to be anchorable — the stored 'fragment ties, no anchor' record understates them. Eps 89-90 are not fragment rows: the anime splits chs 342-347 by THREAD, animating the KONOHA thread here (ep 89 = the rest of ch 342 after ep 88's Rasenshuriken climax — Kakashi's finishing Chidori on Kakuzu, the report to Tsunade, Asuma's grave and the shogi 'king' conversation, ~13 of ~21 minutes per AFG; ep 90 = ch 343's Ichiraku scene, ch 346's Rasenshuriken ban and ch 347's Konohamaru scene, AFG 05:43-9:48) and deferring the SASUKE thread of 343-349 past the 22-episode Three-Tails filler block to eps 113-118. The stored note 'beats re-adapted properly in 113-115' is therefore only half true and is proposed as a repair: eps 113/115 adapt the Sasuke halves of 343/344 and 346/347 — the Konoha halves in eps 89-90 are adapted NOWHERE else, so this is sole-adaptation material. Ep 213 is the same shape one chapter down: ch 482's threads are split between ep 212 (Sakura; Tobi/Sasuke/Karin) and ep 213 (Naruto wakes, Yamato refuses him, the shadow-clone escape) — first-time, load-bearing (it puts Naruto on the road to the Samurai Bridge for eps 214-215) and adapted nowhere else. The surprise is the size of ep 89: AFG marks ~87% of it canon, which raises a canon-vs-mixed question in the OPPOSITE direction from this wave's ask (flagged, not proposed).",
+  "anchors": [
+    {
+      "episode": 89,
+      "end_chapter": 342,
+      "start_chapter": 342,
+      "chapters_adapted": "342 (continuation: Ino heals Naruto, Kakashi's finishing Chidori on Kakuzu, the return to Konoha and report to Tsunade, Shikamaru at Asuma's grave with Kurenai, the shogi game and the 'king of Konoha' conversation - ep 88 animated 342's opening pages), 346 (graft: Tsunade's ruling that the Rasenshuriken is a kinjutsu, restaged as a coroner scene and pulled forward)",
+      "volume": 38,
+      "confidence": "high",
+      "note": "A4 END = the furthest MAINLINE chapter in running order = 342; the ch-346 beat is out of order (343-345 are unadapted at this point) so it stays in chapters_adapted with a graft (the ep-204 precedent, where ch 470 sat behind END 466). START = 342 under A10: ep 89 continues INSIDE ch 342, whose opening pages (Sakura/Sai reaching Shikamaru) are in ep 88. Weight of the 342 segment: SIGNIFICANT - it is Kakuzu's death and the closing beats of the Akatsuki Suppression arc, the chapter's own titular scene, ~13 of ~21 minutes (AFG 0:00-13:25), NEW pages adapted in no other episode. A47 was checked and does not bind: nothing here is a trailing scrap of a chapter a later episode starts on.",
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=The%20Price%20of%20Power&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=The%20King%E2%80%A6!!&prop=wikitext&format=json",
+        "https://en.wikipedia.org/w/api.php?action=parse&page=Naruto:%20Shippuden%20season%205&prop=wikitext&format=json",
+        "https://en.wikipedia.org/w/api.php?action=parse&page=List_of_Naruto_chapters_(Part_II,_volumes_28%E2%80%9348)&prop=wikitext&format=json",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/"
+      ]
+    },
+    {
+      "episode": 90,
+      "end_chapter": 343,
+      "start_chapter": 343,
+      "chapters_adapted": "343 (Konoha thread only: Team 7 at Ramen Ichiraku, Naruto's cast arm, Sai then Kakashi trying to feed him - 343's Sasuke thread opens ep 113), 346 (Konoha thread pulled forward: Kakashi relays Tsunade's ban on the Rasenshuriken - 346's Sasuke/Suigetsu thread is in ep 115), 347 (Konoha thread pulled forward: Konohamaru's new Sexy Technique outside the shop - 347's Sasuke/Suigetsu thread is in ep 115)",
+      "volume": 38,
+      "confidence": "medium",
+      "note": "A4 END = 343, the furthest mainline chapter adapted in RUNNING order; 346 and 347 are out-of-order Konoha-thread scenes and stay in chapters_adapted under a rearranged annotation. A47 considered and NOT applied: ep 113 does start on ch 343, but the 343 share here is a mid-episode block (AFG 05:43-9:48), not a trailing scrap, and its page count is unproven - the dai wave-13/14 convention says an unquantified share ADVANCES the END, so 343 stands with the partial naming it. Weight: the 343 Ichiraku scene and the 346 ban are SIGNIFICANT (complete manga scenes, the sole adaptation of those chapters' Konoha thread, and the 346 ban is the plot ruling that keeps Naruto off the Rasenshuriken for the rest of the arc); the 347 Konohamaru scene is a SLIVER (a one-off out-of-order gag beat; ch 347's plot is adapted properly in ep 115). Medium because the segment is ~4 of ~21 minutes and the page shares are not individually countable from the sources.",
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=A%20Shinobi's%20Determination&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Unfeeling%E2%80%A6&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=The%20Secret%20of%20the%20New%20Technique!!&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Detour!!&prop=wikitext&format=json",
+        "https://en.wikipedia.org/w/api.php?action=parse&page=Naruto:%20Shippuden%20season%205&prop=wikitext&format=json",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/"
+      ]
+    },
+    {
+      "episode": 213,
+      "end_chapter": 482,
+      "start_chapter": 482,
+      "chapters_adapted": "482 (Naruto thread only: Naruto wakes from the Valley-of-the-End dream, learns Kakashi has gone after Sakura, is refused by Yamato, feigns sleep and escapes through a kunai hole leaving a shadow clone - ch 482's Sakura thread and its Tobi/Sasuke/Karin close are in ep 212)",
+      "volume": 51,
+      "confidence": "high",
+      "note": "A4/A10: ch 482 is the only chapter in the episode and its Naruto thread is FIRST-TIME material ('pages, not numbers', Sean 2026-08-27) - ep 212 animated the chapter's other two threads, so the pair completes 482 and ep 214 opens on 483. Weight: SIGNIFICANT - the escape is the sole adaptation of ch 482's Naruto pages and is load-bearing (it is what puts Naruto on the road to the Samurai Bridge for the ep-214/215 climax where he takes Sasuke's stab for Sakura). The long Sasuke-memory montage that fills the episode's middle is weightless under the T28 recap clause; see the annotation and the flag.",
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=Lost%20Bonds&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=One%20More%20Time%E2%80%A6&prop=wikitext&format=json",
+        "https://en.wikipedia.org/w/api.php?action=parse&page=Naruto:%20Shippuden%20season%2010&prop=wikitext&format=json",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 89,
+      "continue_chapter": 343,
+      "kind": "parity",
+      "note": "C2 parity with the anime: ep 90 starts on ch 343. Ch 342 is finished here, so resume at 343 - but note that only 343's Konoha scene (Ichiraku) is animated in ep 90; 343's Sasuke thread and the whole of 344-345 are not animated until eps 113-114, after the 22-episode Three-Tails filler block.",
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=The%20Serpent's%20Pupil&prop=wikitext&format=json",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/"
+      ]
+    },
+    {
+      "episode": 90,
+      "continue_chapter": 343,
+      "kind": "parity",
+      "note": "C2 parity: eps 91-112 are the anime-original Three-Tails arc and the next canon episode, 113, starts on ch 343. C3 skip on arrival: ep 90 has already shown ch 346's Kakashi/Rasenshuriken-ban page and ch 347's Konohamaru scene ahead of this point - read past them unless re-reading.",
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=The%20Serpent's%20Pupil&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Zabuza's%20Blade&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 213,
+      "continue_chapter": 483,
+      "kind": "parity",
+      "note": "C2 parity: eps 212 + 213 between them animate all of ch 482 and ep 214 opens on ch 483 ('Teacher and Student Once More!!').",
+      "sources": [
+        "https://www.animefillerguide.com/anime/naruto-shippuden/",
+        "https://en.wikipedia.org/w/api.php?action=parse&page=Naruto:%20Shippuden%20season%2010&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [89],
+      "kind": "partial",
+      "chapters": "342",
+      "note": "weight: significant - because ch 342 is page-split with ep 88 and ep 89 carries the LARGER, first-time share: ep 88 ends on the second Rasenshuriken landing (ch 341's climax plus 342's opening panels of Sakura and Sai reaching Shikamaru), and ep 89 animates everything after it - Kakashi's finishing Chidori on Kakuzu, the return and report to Tsunade, Shikamaru placing his lighter at Asuma's grave and learning Kurenai is pregnant, and the shogi game with Shikaku that gives the chapter its title (Gyoku, the 'king' = the next generation). AFG puts the canon block at 0:00-13:25, ~13 of ~21 minutes. These pages are NEW here and are adapted in no other episode."
+    },
+    {
+      "episodes": [89],
+      "kind": "graft",
+      "chapters": "346",
+      "note": "weight: sliver - because the episode pulls ONE beat of ch 346 forward past the unadapted 343-345 and restages it: in the manga Kakashi simply relays Tsunade's verdict to Naruto (that page is animated in ep 90), while ep 89 invents a coroner scene in which Tsunade examines Kakuzu's corpse and declares the Rasenshuriken a kinjutsu. A one-off out-of-order beat, not a scene from the page; ch 346 is adapted properly in ep 90 (its Konoha thread) and ep 115 (its Sasuke/Suigetsu thread). Carries no anchor weight."
+    },
+    {
+      "episodes": [90],
+      "kind": "rearranged",
+      "chapters": "343, 346, 347",
+      "note": "weight: significant in aggregate - because the anime splits chs 343-347 by THREAD, not by fragment: ep 90 gathers the three KONOHA-side scenes (343's Ramen Ichiraku scene with Naruto's casted arm and Sai/Kakashi feeding him; 346's Kakashi relaying Tsunade's ban on the Rasenshuriken; 347's Konohamaru Sexy Technique scene outside the shop) into one contiguous block, AFG 05:43-9:48, and defers each chapter's SASUKE thread past the Three-Tails filler to eps 113 (343-344) and 115 (346-347). The 343 and 346 scenes are significant - complete manga scenes, the sole adaptation of those chapters' Konoha thread, and the 346 ban is the plot ruling that governs Naruto for the rest of the arc. The 347 Konohamaru scene is a sliver (a one-off out-of-order gag; ch 347's plot is adapted properly in ep 115). Aggregate = a story-carrying, sole-adapted share, so mixed stands under T28."
+    },
+    {
+      "episodes": [90],
+      "kind": "divergence",
+      "chapters": null,
+      "note": "~17 of ~21 minutes are anime-original and are the episode's own job: the Anbu who dies after locating Orochimaru's hideout, Kabuto putting Guren over the prisoners' death-match, Orochimaru's Gen'yumaru revelation, Sasuke's first meeting with Yukimaru, Tsunade assigning Team 8 the reconnaissance, and Jiraiya's offer to take Naruto training. All of it launches the anime-original Three-Tails arc (eps 91-112, ja-WP bolds every one of those titles as zenpen anime original; ep 90's title is unbolded)."
+    },
+    {
+      "episodes": [213],
+      "kind": "rearranged",
+      "chapters": "482",
+      "note": "weight: significant - because ch 482's three threads are split across two episodes rather than fragmented: ep 212 animates the Sakura thread (the sleep bombs, Sai's counter) and the chapter's close (Tobi's advice, Sasuke about to kill Karin, Sakura's arrival), and ep 213 animates the chapter's OPENING Naruto thread - waking from the Valley-of-the-End dream, learning Kakashi has gone, Yamato refusing him, the feigned sleep and the escape through the kunai hole behind a shadow clone. New pages, adapted in no other episode; ep 216's separate ch-482 tie is reach-back MEMORY panels, not these pages. Load-bearing: it is what sends Naruto to the Samurai Bridge for eps 214-215."
+    },
+    {
+      "episodes": [213],
+      "kind": "recap",
+      "chapters": "Part I chs 3, 34, 84, 176, 226-233 and Shippuden chs 306, 380-383 material, all previously animated",
+      "note": "weight: none (T28 recap clause - a recap segment does not progress the story and counts for nothing in the standing). The episode's middle is a montage of Naruto's history with Sasuke: the Academy shurikenjutsu test, the Uchiha massacre, Team 7's formation, tree-climbing in the Land of Waves, Sasuke vs Itachi, the Valley of the End, the three-year reunion and Sai's 'bond of hatred', Pain's and Kabuto's words, Jiraiya's counsel and death. Every one of those scenes was animated earlier in Naruto / Shippuden. CAVEAT recorded rather than guessed: I could not establish on a primary whether the montage is RECYCLED footage (weightless recap) or NEWLY DRAWN (which under the recap boundary, Sean 2026-09-02, would weigh toward filler) - so the stored MIXED type is kept unchanged and the question goes to Sean rather than becoming a promotion to canon."
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 89,
+      "field": "annotation",
+      "old": "eps 89,90 partial {342-347 (fragments)}: mixed intro to the Three-Tails filler; beats re-adapted properly in 113-115",
+      "new": "per-episode annotations: ep 89 partial{342} + graft{346}; ep 90 rearranged{343, 346, 347} + divergence - and the note's claim is corrected: eps 113-115 adapt only the SASUKE thread of chs 343/344 and 346/347; the KONOHA-side scenes carried by eps 89-90 (all of ch 342 after the Rasenshuriken, 343's Ichiraku scene, 346's Rasenshuriken ban, 347's Konohamaru scene) are adapted in NO other episode",
+      "why": "The stored note calls the ties 'fragments' and says the beats are 're-adapted properly in 113-115'. Both halves are wrong. Narutopedia's ep-113 field is 343,344 and its ep-115 field is 346,347, and en-WP's season-6 summaries show those episodes carry only Sasuke's side (attacking Orochimaru; freeing Suigetsu and retrieving Zabuza's blade) - the Konoha scenes are not in them. And ch 342 in ep 89 is not a fragment: AFG puts ~13 of ~21 minutes on it and it contains Kakuzu's death and the chapter's titular shogi 'king' conversation. Under the sliver clause this material is significant and sole-adapted, which is why the two rows now take anchors.",
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=The%20Serpent's%20Pupil&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Zabuza's%20Blade&prop=wikitext&format=json",
+        "https://en.wikipedia.org/w/api.php?action=parse&page=Naruto:%20Shippuden%20season%206&prop=wikitext&format=json",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/"
+      ]
+    },
+    {
+      "episode": 213,
+      "field": "annotation",
+      "old": "eps 213 partial {482}: mixed - only part canon",
+      "new": "rearranged{482} + recap: ch 482's threads are split between ep 212 (Sakura; Tobi/Sasuke/Karin) and ep 213 (the chapter's opening Naruto thread - waking, Yamato's refusal, the shadow-clone escape); the rest of the episode is a montage of previously animated Naruto/Sasuke scenes, weightless under the T28 recap clause",
+      "why": "'partial' with the bare note 'only part canon' hides what the part IS and reads as a fragment tie. The tie is a complete, first-time, load-bearing scene: Narutopedia's ch-482 page and en-WP's season-10 ep-213 summary describe the same sequence beat for beat (Naruto wakes, learns Kakashi has gone after Sakura, Yamato refuses him, he feigns sleep and slips out behind a shadow clone). AFG carries no Mixed marker on ep 213 at all and heads season 10 'none of which are filler'; AFL types it Mixed - the disagreement is about the montage, not about the ch-482 scene.",
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=One%20More%20Time%E2%80%A6&prop=wikitext&format=json",
+        "https://en.wikipedia.org/w/api.php?action=parse&page=Naruto:%20Shippuden%20season%2010&prop=wikitext&format=json",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/",
+        "https://www.animefillerlist.com/shows/naruto-shippuden"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "CHAPTER SPACE: the manga's own 1-700 numbering; v38 = 340-349 and v51 = 474-483 in the stored volume table, both confirmed by en-WP's volume list (vol 38 opens at ch 340 'The Perilous Bridge', vol 51 opens at ch 474 'A Hokage's Decision'). No conversion needed. THREAD-SPLIT MAP, chs 342-349 (the shape the stored 'fragments' note missed): ep 88 = 339-341 + ch 342's opening panels; ep 89 = the REST of 342 + a grafted 346 beat; ep 90 = the Konoha scenes of 343, 346, 347; eps 91-112 = the anime-original Three-Tails arc (ja-WP bolds all 22 titles); ep 113 = 343-344 (Sasuke attacks Orochimaru); ep 114 = 344-345 (the ritual); ep 115 = 346-347 (Suigetsu, Zabuza's blade); ep 116 = 348 (Karin); ep 117 = 349-350 (Jugo); ep 118 = 351-352 (Hebi formed, stored anchor). CH 482 SPLIT: ep 212 = 481 + 482's Sakura and Tobi/Sasuke/Karin threads; ep 213 = 482's opening Naruto thread; ep 214 = 483-484; ep 216 re-uses 482 as memory panels (stored). SOURCE INDEPENDENCE, stated because it matters here: AFG's per-episode chapter column reproduces Narutopedia's episode-infobox 'chapters' field verbatim on every row I checked (88 = 339,340,341,342; 89 = 342,346; 90 = 343,346,347; 213 = 482), so those two are ONE lineage for chapter numbers - the independent second leg for every claim above is the CONTENT match between en-WP's season summaries (episode side) and Narutopedia's per-chapter summaries plus en-WP's chapter titles (chapter side), e.g. ch 342's title Gyoku / 'The King' against ep 89's shogi conversation, and ch 347 'Detour!!' against ep 90's Konohamaru scene. AFG's TIMESTAMPS are its own contribution and are the share witness (ep 89: 0:00-13:25 + 14:49-17:33 + 19:01-end, ~87% of the episode; ep 90: 05:43-9:48 only, ~19%; ep 213: no window at all). ja-WP's 各話リスト is the control: bold subtitle = 全編アニメオリジナル, and 89, 90 and 213 are all UNBOLDED while 91-112 are all bolded.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "OPPOSITE-DIRECTION FINDING on ep 89 (not proposed, flagged): AFG marks ~87% of the episode canon (0:00-13:25, 14:49-17:33, 19:01-end) and the manga content is a full, sole adaptation of ch 342's second half. The only anime-original material is Guren's introduction and her Crystal Release exchange with Kabuto, ~3 minutes at the end. That is arguably canon + divergence rather than mixed under T28's materiality bar - but AFL and AFG both type it Mixed and the stored type is mixed, and this wave's ask runs the other way, so I have left the type alone. If you want the row re-typed upward it needs its own ruling.",
+    "UNRESOLVED on ep 213: whether the Sasuke-memory montage is recycled footage (T28 recap clause -> weightless -> the remainder is pure ch-482 adaptation -> the row would be CANON + recap) or newly drawn (recap boundary, Sean 2026-09-02 -> it weighs toward filler -> mixed stands). I could not settle it: Narutopedia and en-WP describe the montage only as remembering/reminiscing, ja-WP lists a normal single 作画監督 credit (松竹徳幸) which proves nothing either way, and AFG prints no Mixed window while AFL types the row Mixed - so the two type sources actively disagree. I kept the stored MIXED type rather than guess. Settling it needs the episode itself.",
+    "OUTSIDE THE ASK, offered because the anchors above sit against it: ep 212 ('Sakura's Resolve', canon, Narutopedia + AFG both 481-482) carries no stored anchor, and neither do eps 113-117, which are the episodes that receive the deferred Sasuke thread of chs 343-350. If those rows are anchored later, ep 212 -> 482 [481] v51 and ep 113 -> 344 [343] v38 / 115 -> 347 [346] v38 are the values implied by the same sources used here."
+  ]
+}

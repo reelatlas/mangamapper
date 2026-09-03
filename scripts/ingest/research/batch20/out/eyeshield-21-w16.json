@@ -1,0 +1,94 @@
+{
+  "series_id": "eyeshield-21",
+  "summary": "Both target rows are anime-original episodes whose stored mixed rests on a fragment tie, and under T28's sliver clause both weigh out as FILLER. Ep 39 クリスマスボウルへの道 is the first half of a 2本立て1時間スペシャル: the licensor text (TV Tokyo back-number = Bandai Channel, one lineage) describes a wholly anime-original plot - Suzuna, ALREADY appointed 泥門デビルバッツ盛り上げ隊長, plants a 月刊アメフト article claiming Eyeshield 21 is a heart-throb, a TV crew turns up to interview him, Sena runs - and en-WP adds that the chase frames 'a quick review of the previous 38 episodes'. Its only source content is Suzuna's cheer-captain beat (en-WP's vol-11 summary opens the volume with 'Suzuna becomes the captain of the cheerleader team' = ch 89 決戦は日曜日; page-verified at pp 14-15 in batch 20 wave 3), two pages of a chapter whose substance - the Sunday match, Hiruma reading out the regulars, the bracket - is anchored on ep 38 (89-90). Sole-adaptation test, BOTH halves stated: the pages sit in no other episode (TRUE), but Suzuna's appointment is not a major plot point of the source - no death, no reveal, no arc close (FALSE) - so the exception does not fire and the sliver takes neither type nor anchor. Ep 66 スプリンター・セナ!? is anime-original on three independent sources (ja-WP 備考 アニメオリジナルストーリー; eyeshield21.fandom Category:Anime-Original Episodes; AFG '* Filler' with chapter N/A) and its whole plot is Ishimaru's track-club final meet with Sena running the relay; the stored partial{132-133} rests on ONE fandom infobox field (chapters=133rd Down) plus a thematic line in the licensor synopsis (Hiruma: the win rate against Seibu is nearly 0%). The material that field names - the kicker problem and Musashi's refusal / hospitalised father - is adapted properly at ep 76 戻れ!ムサシ!, so the sole-adaptation test fails on its FIRST half. Neither row takes an anchor (A1). Nothing else moves: ep 38's stored continue of 92 already assumes ep 39 carries nothing, and eps 65 (→130) and 68 (→135 [134]) bracket ep 66 untouched.",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [
+    {
+      "episode": 39,
+      "why": "A1 after the retype (and A44 as stored): a filler row takes no anchor. The episode's job is the clip-show review plus an anime-original TV-interview chase; its only source content is a two-page background beat of ch 89 whose chapter is anchored on ep 38 (89-90). Weight = sliver (see the partial{89} annotation), so no first-time significant material exists to anchor. The stored ANCHOR_SUPPRESSED[39] / A44 ruling stands and is now redundant under A1 - keep it, it is harmless.",
+      "sources": [
+        "https://www.tv-tokyo.co.jp/anime/eyeshield21/backno27.html",
+        "https://en.wikipedia.org/wiki/List_of_Eyeshield_21_episodes_(1%E2%80%9372)"
+      ]
+    },
+    {
+      "episode": 66,
+      "why": "A1 after the retype: a filler row takes no anchor. The episode is anime-original on three independent sources; the single fandom infobox tie (chapters=133rd Down) names material the anime adapts properly at ep 76, so there is no first-time significant source content here and never was an anchor to place.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%A2%E3%82%A4%E3%82%B7%E3%83%BC%E3%83%AB%E3%83%8921",
+        "https://eyeshield21.fandom.com/api.php?action=parse&page=Episode%2066&prop=wikitext&format=json",
+        "https://animefillerguide.com/shows/eyeshield-21/"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [39],
+      "kind": "partial",
+      "chapters": "89",
+      "note": "weight: SLIVER - because the segment is Suzuna's appointment as the Devil Bats' 盛り上げ隊長, two pages of ch 89 決戦は日曜日 (pp 14-15, the BATS cheer uniform; page-verified batch 20 wave 3) carried here as an accomplished FACT rather than a staged scene: the licensor synopsis opens 「ヒル魔に泥門デビルバッツ盛り上げ隊長として任命された鈴音はやる気満々」 - she is already appointed when the episode starts - and everything that follows (the 月刊アメフト article, the TV crew, Sena's flight, the 'I will tell Mamori when I am truly strong' resolution) is anime-original. NEW vs DUPLICATE: the two pages are NEW here (ep 38 took the rest of ch 89), but ch 89 is adapted properly by EP 38, which carries the chapter's substance - the Sunday-match talk, the regular-roster announcement, the tournament bracket - and is anchored ep38→90 [89] {89-90}. SOLE-ADAPTATION EXCEPTION, both halves: (1) the pages appear in no other episode - TRUE; (2) the beat is a major plot point of the source - FALSE (en-WP's vol-11 summary gives it half a clause, 'As they return, Suzuna becomes the captain of the cheerleader team'; it is a light character beat, not a death, a reveal or an arc close). Both halves are required, so the exception does not fire: the sliver earns neither type nor anchor and the remainder decides (T28)."
+    },
+    {
+      "episodes": [39],
+      "kind": "recap",
+      "chapters": "1-91",
+      "note": "The interview chase frames a retrospective of the previous 38 episodes (en-WP: 'This leads to a quick review of the previous 38 episodes'), i.e. re-shown material from chs 1-91, all of it already animated (ep 37 reached ch 91). Weightless in the standing under T28's recap clause - it progresses nothing and counts for NOTHING; the remainder (the anime-original TV-interview plot + the ch-89 sliver) decides the type. SINGLE-SOURCE on the recap itself: only en-WP states the review; ja-WP records the row only as half of a 2本立て1時間スペシャル with ep 40 and the licensor synopsis does not mention it. The typing does not depend on it - filler either way, because the non-recap remainder is anime-original plus a sliver."
+    },
+    {
+      "episodes": [66],
+      "kind": "loose_parallel",
+      "chapters": "132-133",
+      "note": "weight: SLIVER - because no manga scene is identifiable in the episode. The whole plot is anime-original (en-WP: Ishimaru misses practice, Sena runs the relay in his place and the athletics club takes first place; licensor: 助っ人の石丸が陸上部最後の大会を控え、練習に参加できなくなってしまう), and the only tie is the framing line 「ヒル魔は今のままでは勝率はほぼ0％だと冷たく言い放つ」, which ECHOES the manga's 'the Devil Bats realise again the importance of a kicker' turn of vol 15 (chs 131-133, en-WP's vol-15 summary). SOLE-ADAPTATION EXCEPTION, both halves: (1) the pages appear in no other episode - FALSE, the material of chs 132-133 (the kicker problem, Monta's proposal, Musashi's refusal and his hospitalised father) is adapted properly at EP 76 戻れ!ムサシ! on three witnesses - en-WP's ep-76 summary, Bandai's ep-76 synopsis and eyeshield21.fandom's own reverse map 132nd Down → Episode 76; (2) the beat is a major plot point - it is, but half (1) already fails, so the exception cannot fire. Kind changed from the stored partial: no page-level evidence of an adapted panel exists (the positive tie is one fandom infobox field on a page that simultaneously files the episode under Category:Anime-Original Episodes), so an echo, not a partial adaptation, is the honest record - the same shape ep 51 already carries."
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 66,
+      "field": "annotation_kind",
+      "old": "partial {132-133}",
+      "new": "loose_parallel {132-133}",
+      "why": "The stored partial claims part of chs 132-133 is adapted in ep 66. No source shows an adapted panel: the whole plot is the anime-original track-meet story (en-WP, licensor synopsis), the only positive tie is eyeshield21.fandom's chapters=[[133rd Down]] infobox field on a page that also carries Category:Anime-Original Episodes, and the chapters' substance is at ep 76 (en-WP ep-76 + Bandai ep-76 + the same wiki's 132nd Down → Episode 76). loose_parallel records the echo without claiming pages. The batch-17 verdict that created the stored value flagged this itself: 'the ep-66 link is single-source and one-directional... if you want one-source-plus-inference to fail closed, ep 66 should be filler.'",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Eyeshield_21_episodes_(73%E2%80%93145)",
+        "https://www.b-ch.com/titles/8777/076",
+        "https://eyeshield21.fandom.com/api.php?action=parse&page=132nd%20Down&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "type_corrections": [
+    {
+      "episodes": [39],
+      "type": "filler",
+      "note": "T28 sliver clause. The episode's job is the clip-show review (weightless, recap clause) plus a wholly anime-original TV-interview chase; the source share is two pages of ch 89 carried as background, weight SLIVER, adapted-properly episode named (ep 38). Sole-adaptation exception fails on its second half (not a major plot point). Filler + partial{89} + recap{1-91}; no anchor (A1), ANCHOR_SUPPRESSED[39] unaffected. This supersedes the T6 map entry '39':'mixed' (Sean 2026-08-25) - delivered as an explicit correction, not a silent override; the batch-20 wave-3 verdict already flagged this row to Sean as 'the cleanest candidate in the series' for the T28 line and deliberately left the typing to him.",
+      "sources": [
+        "https://www.tv-tokyo.co.jp/anime/eyeshield21/backno27.html",
+        "https://en.wikipedia.org/wiki/List_of_Eyeshield_21_episodes_(1%E2%80%9372)",
+        "https://en.wikipedia.org/wiki/List_of_Eyeshield_21_chapters",
+        "https://ja.wikipedia.org/wiki/%E3%82%A2%E3%82%A4%E3%82%B7%E3%83%BC%E3%83%AB%E3%83%8921"
+      ]
+    },
+    {
+      "episodes": [66],
+      "type": "filler",
+      "note": "T28 sliver clause. Three independent sources call the episode anime-original (ja-WP 備考 アニメオリジナルストーリー; eyeshield21.fandom Category:Anime-Original Episodes; AFG '* Filler', chapter cell N/A) and the licensor synopsis + en-WP describe a plot with no manga counterpart end to end. The single tie is a framing line echoing vol 15's kicker turn, weight SLIVER, and the chapters it names are adapted properly at ep 76 - the sole-adaptation exception fails on its first half. Filler + loose_parallel{132-133}; no anchor (A1). This supersedes the T6 map entry '66':'mixed' (Sean 2026-08-25), whose own research file called it 'a JUDGMENT CALL... the weakest verdict in this file'.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%82%A2%E3%82%A4%E3%82%B7%E3%83%BC%E3%83%AB%E3%83%8921",
+        "https://eyeshield21.fandom.com/api.php?action=parse&page=Episode%2066&prop=wikitext&format=json",
+        "https://animefillerguide.com/shows/eyeshield-21/",
+        "https://en.wikipedia.org/wiki/List_of_Eyeshield_21_episodes_(1%E2%80%9372)",
+        "https://www.b-ch.com/titles/8777/066"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "ROW IDENTITY (R20, join on title + date, never index): ja-WP's 各話リスト, en-WP's two episode lists, AFG's 145-row chart and Bandai Channel agree 1:1 with our rows here - 39 クリスマスボウルへの道 2006-01-11 (ja-WP 備考: rowspan '2本立て1時間スペシャル' shared with 40 決戦前夜! same date), 66 スプリンター・セナ!? 2006-07-12 (ja-WP 備考: アニメオリジナルストーリー). SOURCE LINEAGE / independence: TV Tokyo's archived back-number page (web.archive.org/web/20240815092143, backno27.html) prints the ep-39 synopsis VERBATIM identical to Bandai Channel 8777/039 and to tvguide.or.jp - ONE licensor text, counted once; the independent legs are en-WP's episode summaries and en-WP's volume summaries (fan-written, cross-check tier) plus ja-WP's 備考 column and AFG. AFG's chapter column is empty from ep 22 onward on this series (the known 'empty cell is not a claim' trap), so its blank on ep 39 is silence, not a canon claim; likewise ja-WP's 備考 UNDER-marks (ep 88 is marked アニメオリジナルストーリー although it animates ch 100's 4-koma, and ep 39 is unmarked although its plot is original) - the marked rows are a positive claim, the unmarked ones are not a negative one. FANDOM PER-EPISODE FIELDS IN THIS ZONE ARE UNRELIABLE IN BOTH DIRECTIONS: eyeshield21.fandom gives ep 39 an EMPTY chapters field (silence), ep 66 chapters=[[133rd Down]] while filing it under Category:Anime-Original Episodes, and ep 67 三人の約束 chapters=[[131st Down]] although the stored A18 regime relocates ch 131's Tokyo All-Star roll-call to ep 87 (whose ja-WP title 東京最強の戦士達!! is ch 131's title verbatim) - while the same wiki's 132nd Down chapter page reverse-maps to Episode 76. CHAPTER SPACE unchanged: the manga's own 'Nth Down' numbering, 333 chapters, 37 volumes; v11 = 89-97 (89 決戦は日曜日, 90 遅すぎたアスリート, 91 一流の夢), v15 = 125-133 (131 東京最強の戦士たち, 132 デビルバッツ創世記, 133 奇跡への希望). MangaDex's EN upload of ch 89 is 23 images including credits, consistent with the batch-20 wave-3 page check that put Suzuna's cheer-captain beat at pp 14-15.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "TYPING MAP: both corrections change EPISODE_TYPE_OVERRIDES / T6 entries you set on 2026-08-25 ('39':'mixed', '66':'mixed'). They are delivered as explicit corrections with the evidence, per the wave-16 sliver clause; the batch-20 wave-3 verdict deliberately left ep 39's typing to you and the batch-17 contested file said in its own flags that ep 66 'should be filler' if one-source-plus-inference fails closed. Nothing else in the series is touched.",
+    "NO POSITION MOVES. Ep 38's stored continue (92/parity, 'ep 39 is the clip show') already treats ep 39 as carrying nothing, and ep 66 sits between ep 65 (→130) and ep 68 (→135 [134]) with no stored continue - the retypes only remove two rows from the interpolation set, which is strictly an improvement for the reader.",
+    "OUT OF ASK, observed: chs 131-133 are NOT adapted where the manga puts them (before the Seibu game). The anime holds 132-133 to ep 76 戻れ!ムサシ! and ch 131's roll-call to ep 87, so a reader following eps 65→68 walks past 131-133. A C3 'skip on arrival' note on ep 65 or an ep-67 anchor would make that visible; ep 67 is canon and currently unanchored, and its fandom chapters field (131st Down) conflicts with the stored A18 relocation - worth a narrow follow-up, not delivered here.",
+    "SINGLE-SOURCE detail (does not affect the verdict): only en-WP states that ep 39 contains a review of the previous 38 episodes. The licensor text and ja-WP describe the episode without mentioning it. The row is filler on the non-recap remainder alone, so the recap annotation is a description, not the reason."
+  ]
+}

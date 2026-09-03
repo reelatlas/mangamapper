@@ -1,0 +1,160 @@
+{
+  "series_id": "bleach",
+  "summary": "All three queued rows were typed mixed on 'fragment ties' — and on the evidence NONE of the three ties is a sliver. Ep 32 carries ch 98 'A Star And A Stray Dog' from p.3 to the chapter's end (ep 31 took only p.1-3): the whole Renji/Rukia Rukongai flashback plus the closing plea to Ichigo, i.e. the episode's entire spine, adapted nowhere else — SIGNIFICANT, and it takes the anchor (98, vol 11) that closes part of the ep 27→89 / ep 41→117 hole. Ep 46 adapts the numbered-outside-the-mainline bonus chapter -17 'Prelude for the Straying Stars' (printed at the back of tankobon 15 behind ch 130) essentially in full and is its SOLE adaptation — significant, so mixed stands, but the row is A44 position-less: -17 is in the negative gaiden space, exactly the ruling already applied to the Turn Back the Pendulum eps 206-212, and ep 46's only mainline touchpoints are ch 129's off-page events that eps 45/47 own. Ep 284's ch-376 share is p.1-7 — Aizen cutting down Harribel, the last Espada, and turning to goad the Gotei 13 and the Visored; the fandom's page-level refs partition ch 376 exactly at p.7/8 (Aizen p.1-7; Mashiro/Wonderweiss/Kensei p.8-19, ep 285's half), so the share is 7 pages, above A47's 5-page bar, it is the sole adaptation of an arc-pivot beat, and the END advances to 376 (vol 43) with a C1 continue inside 376. No type corrections: all three rows stay mixed, each with a substantial anime-original remainder (ep 32's invented academy/childhood scenes, ep 46's academy scenes plus the present-day bookends, ep 284's anime-only Tres Bestias past, which bleach.fandom itself files under a 'Fake Karakura Town arc (anime only)' heading). Two anchors produced, one anchor-hostile row, two continue points, three annotation repairs.",
+  "anchors": [
+    {
+      "episode": 32,
+      "end_chapter": 98,
+      "start_chapter": 98,
+      "chapters_adapted": "98 (p.3-end)",
+      "volume": 11,
+      "confidence": "high",
+      "note": "A4/A10 — ch 98 'A Star And A Stray Dog' (the episode's Japanese title, 星と野良犬, is the chapter's) runs from p.3 to the chapter's end here: the Inuzuri water theft, Rukia tripping the old man, the reiryoku demonstration, the ten-years-later decision, the three graves, the Shin'o Academy among nobles, Byakuya/Nobutsune and the Kuchiki adoption, Renji's 'that's great', and the present-day plea to Ichigo. bleach.fandom's episode field states 'Chapter 98 (from page 3)' where ep 31's states 'Chapter 98 (up to page 3)'; animefillerguide's chapter column prints 98 on row 032 independently; ch 98's own page lists eps 31 and 32 as its only adaptations. START = 98 (no ch 96/97 material). Weight: SIGNIFICANT — a whole chapter's content, first-time and adapted in no other episode; the mixed typing rests on the anime-original expansion woven through it, not on a fragment. Volume 11 = ch 89-98 (en-WP volume list), consistent with the stored ep 27 → 89 v11.",
+      "sources": [
+        "https://bleach.fandom.com/api.php?action=parse&page=The%20Star%20and%20the%20Stray%20Dog&prop=wikitext&format=json",
+        "https://bleach.fandom.com/api.php?action=parse&page=A%20STAR%20AND%20A%20STRAY%20DOG&prop=wikitext&format=json",
+        "https://www.animefillerguide.com/anime/bleach/",
+        "https://en.wikipedia.org/wiki/List_of_Bleach_chapters_(1%E2%80%93187)",
+        "https://en.wikipedia.org/wiki/Bleach_season_2"
+      ]
+    },
+    {
+      "episode": 284,
+      "end_chapter": 376,
+      "start_chapter": 376,
+      "chapters_adapted": "376 (p.1-7)",
+      "volume": 43,
+      "confidence": "high",
+      "note": "A4 — the episode's closing act is ch 376 'EXecution, EXtinction 2' p.1-7: Aizen's 'more powerful than the lot of you', Harribel stabbing the Kyoka Suigetsu clone, Aizen running her through from behind, her fall into the town, and Aizen goading the Gotei 13 and the Visored ('imitation Arrancar'). bleach.fandom's episode field says Chapter 376; animefillerguide prints 376 on row 284 independently; en-WP's season-14 summary ends the episode on exactly those beats. PAGE SPLIT: the fandom's page-level references partition ch 376 at p.7/8 — Sousuke Aizen's page cites '376, pages 1-7' for this scene while Mashiro Kuna / Wonderweiss Margela / Kensei Muguruma cite '376, pages 8-19' for the fight that OPENS ep 285 ('After a grievously injured Tier Harribel falls into the town below…'). A47 therefore does NOT hold the END back: the share is 7 pages, above the 5-page bar, with no teaser/cold-open wording. Weight: SIGNIFICANT — the fall of the Tres Espada by Aizen's own hand and the turn of the battle to Aizen vs the captains/Visored, adapted in NO other episode (ch 375 → ep 283 only; ch 376 p.8-19 and 377 → ep 285); the sole-adaptation test is met on both halves (the pages appear nowhere else AND the beat is a major plot point of the source). Volume 43 = ch 368-377 (en-WP volume list).",
+      "sources": [
+        "https://bleach.fandom.com/api.php?action=parse&page=Chain%20of%20Sacrifice...Harribel's%20Past&prop=wikitext&format=json",
+        "https://bleach.fandom.com/api.php?action=parse&page=KINGDOM%20OF%20HOLLOWS&prop=wikitext&format=json",
+        "https://bleach.fandom.com/api.php?action=parse&page=Sousuke%20Aizen&prop=wikitext&format=json",
+        "https://www.animefillerguide.com/anime/bleach/",
+        "https://en.wikipedia.org/wiki/Bleach_season_14",
+        "https://en.wikipedia.org/wiki/List_of_Bleach_chapters_(188%E2%80%93423)"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 284,
+      "continue_chapter": 376,
+      "kind": "parity",
+      "note": "C1 — ep 284 stops 7 pages into ch 376 (Aizen's challenge to the Gotei 13 and the Visored); ep 285 opens at 376 p.8 with Mashiro noting the last Espada is down. Resume INSIDE 376.",
+      "sources": [
+        "https://bleach.fandom.com/api.php?action=parse&page=The%20Hundred-Year%20Grudge...Hiyori's%20Revenge&prop=wikitext&format=json",
+        "https://bleach.fandom.com/api.php?action=parse&page=Mashiro%20Kuna&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 46,
+      "continue_chapter": 129,
+      "kind": "parity",
+      "note": "C2 parity — ep 46 makes NO mainline progress (its source content is the position-less bonus chapter -17), so the reader's position after it is the position after ep 45; ep 47 opens on ch 129 'Suspicion [for Assassination]' (fandom episode field 129/130/131; AFG row 047 = 129, 130, 131). Ch 129 is partly shown in ep 45 already (its chapter page lists eps 45 and 47), so a little re-reading at 129 is the anime's own overlap, not a skip.",
+      "sources": [
+        "https://bleach.fandom.com/api.php?action=parse&page=BEGINNING%20OF%20THE%20DEATH%20OF%20TOMORROW&prop=wikitext&format=json",
+        "https://www.animefillerguide.com/anime/bleach/"
+      ]
+    }
+  ],
+  "anchor_hostile": [
+    {
+      "episode": 46,
+      "why": "A44 position-less — the episode's source content is bonus chapter -17 「逸れゆく星々の為の前奏曲」 'Prelude for the Straying Stars', which carries NO mainline number: it is printed at the back of tankobon 15 behind ch 130 (en-WP's volume list prints it as the volume's last entry; bleach.fandom's volume page carries its full summary and names Episode 46 as its only adaptation; AFG's chapter column prints '-17' on row 046). That is the negative gaiden space, outside the series' 1-479 line — the same treatment already ruled for the Turn Back the Pendulum eps 206-212 ('CANON but negative chapter numbering outside the 1-479 line'). Weight: SIGNIFICANT (see the side_story annotation) — it is a whole Kubo chapter adapted essentially beat-for-beat and its SOLE adaptation — but significance does not create a position in a numbering the chapter is not in. The episode's only mainline touchpoints are the present-day bookends (Renji forcing his cell, Gin walking out with Kira, Hinamori's Hakufuku on the guard), which stage on screen what ch 129 reports after the fact; ch 129 is owned by eps 45 and 47, so nothing first-time and mainline is lost by taking no anchor here.",
+      "sources": [
+        "https://bleach.fandom.com/api.php?action=parse&page=Authentic%20Records!%20School%20of%20Shinigami&prop=wikitext&format=json",
+        "https://bleach.fandom.com/api.php?action=parse&page=BEGINNING%20OF%20THE%20DEATH%20OF%20TOMORROW&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Bleach_chapters_(1%E2%80%93187)",
+        "https://www.animefillerguide.com/anime/bleach/"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [32],
+      "kind": "partial",
+      "chapters": "98 (p.3-end)",
+      "note": "weight: SIGNIFICANT — ch 98 is split exactly once and ep 32 carries the whole of it from p.3 on (the entire Renji/Rukia flashback and the closing plea); ep 31 carries only p.1-3 (Renji's defeat and scream). NEW material, not a duplicate: nothing of p.3-end is shown in any other episode (ch 98's own page lists eps 31 and 32 only). The material is not adapted 'properly later' — this IS the proper adaptation, and it is the episode's spine, so the row takes the anchor (98, vol 11)."
+    },
+    {
+      "episodes": [32],
+      "kind": "divergence",
+      "chapters": "98",
+      "note": "The non-source share is anime-original EXPANSION of the same flashback, roughly a third of the running time in four invented sequences: the candy-sharing scene in the children's hut with Rukia lecturing the older boy; the marketplace rickshaw scene where a passing Shinigami gives the starving Rukia onigiri; the river fishing / flower scene at sunset; and the academy classroom scenes where Renji raises his hand and Rukia later encourages him. Ch 98 narrates these ideas in Renji's monologue but shows none of these scenes. That original share is what keeps the row MIXED rather than canon-with-divergence (T28: mixed needs a story-carrying original share; the faithfulness clause covers only a SMALL studio-made beat)."
+    },
+    {
+      "episodes": [46],
+      "kind": "side_story",
+      "chapters": "-17 (「逸れゆく星々の為の前奏曲」 'Prelude for the Straying Stars', printed at the back of tankobon 15 behind ch 130)",
+      "note": "weight: SIGNIFICANT — the episode adapts the bonus chapter essentially in full and is its SOLE adaptation (the chapter page's reverse index lists Episode 46 only): Hinamori's farewell to the young Hitsugaya, Izuru at his parents' grave, Gengoro Onabara's welcome address, Renji kicking Rukia in the corridor before the Human-World field trip, the Hisagi/Aoga/Kanisawa rooftop briefing, the groups of three, Kanisawa and Aoga killed by the Huge Hollow, Hinamori refusing to flee, the three intercepting the blades with Shakkaho, Gin's Shinso and Aizen's rescue. It carries no mainline chapter number, so the row is A44 position-less (see anchor_hostile) — the significance is recorded here, not as an anchor. The stored fact calls this a 'partial' of 'gaiden -17'; the chapter is adapted whole, so side_story is the correct kind (the same shape as the eps 206-212 Turn Back the Pendulum fact)."
+    },
+    {
+      "episodes": [46],
+      "kind": "divergence",
+      "chapters": "-17; 129 (off-page)",
+      "note": "The non-source share, roughly a third of the episode: anime-original academy sequences the bonus chapter does not contain (the Hado #31 Shakkaho practice class, the Renji-vs-Izuru sparring match and the friendship scene under the tree, Aizen and Gin's visit to the academy, the watermelon-seed scene with Hitsugaya, the dummy-Hollow training that replaces the chapter's konso practice), plus the present-day bookends — Renji forcing his way out of his cell, Gin walking out with Kira, and Hinamori knocking out her guard with Hakufuku. Those bookends dramatize on screen what ch 129 only REPORTS after the fact (the guard's account to Hitsugaya); ch 129 itself is adapted by eps 45 and 47, so the bookends are staging, not first-time mainline coverage. This original share is why the row stays MIXED."
+    },
+    {
+      "episodes": [284],
+      "kind": "partial",
+      "chapters": "376 (p.1-7)",
+      "note": "weight: SIGNIFICANT — ch 376 is split exactly once: ep 284 takes p.1-7 (Aizen cuts down Harribel and turns on the Gotei 13 and the Visored), ep 285 takes p.8-19 (Mashiro and Kensei vs Wonderweiss). NEW, not a duplicate, and the SOLE adaptation of those pages — an arc pivot (the last Espada removed, Aizen facing the captains himself), which is why the row keeps its type and takes the anchor even though the segment is roughly a quarter of the running time. A47 does not apply: 7 pages, above the 5-page bar, with no teaser or cold-open wording."
+    },
+    {
+      "episodes": [284],
+      "kind": "divergence",
+      "chapters": "376",
+      "note": "The remaining three quarters of the episode is an anime-original flashback with no chapter behind it: Harribel as a Vasto Lorde saving Apacci, gathering Mila Rose and Sung-Sun, the confrontation with Baraggan's court, the Hammerhead Arrancar's ambush, the Tres Bestias' sacrifice and Aizen's intervention and offer. bleach.fandom files the whole of it on Tier Harribel's page under the heading 'Fake Karakura Town arc (anime only)', sourced to Episode 284 alone, and no chapter of vol 43 contains it; AFL and AFG both type the row Mixed. This is the original share that keeps the row MIXED."
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 284,
+      "field": "annotation.chapters (eps 284, kind partial)",
+      "old": "376-377",
+      "new": "376 (p.1-7)",
+      "why": "Ch 377 'Shout at the Dark' is not in ep 284: its chapter page lists Episode 285 as its only adaptation, ep 285's own field reads 376/377/378, and AFG prints 376 on row 284 against 376, 377, 378 on row 285. Ep 284's share of 376 is p.1-7 by the wiki's own page-level references (Aizen p.1-7 vs Mashiro/Wonderweiss/Kensei p.8-19). The stored note's 'roughly half anime-original' also understates: the anime-only Tres Bestias flashback is about three quarters of the episode.",
+      "sources": [
+        "https://bleach.fandom.com/api.php?action=parse&page=KINGDOM%20OF%20HOLLOWS&prop=wikitext&format=json",
+        "https://bleach.fandom.com/api.php?action=parse&page=The%20Hundred-Year%20Grudge...Hiyori's%20Revenge&prop=wikitext&format=json",
+        "https://www.animefillerguide.com/anime/bleach/"
+      ]
+    },
+    {
+      "episode": 46,
+      "field": "annotation.kind + chapters (eps 46)",
+      "old": "partial {gaiden -17}",
+      "new": "side_story {-17 (「逸れゆく星々の為の前奏曲」, at the back of tankobon 15 behind ch 130)}",
+      "why": "The stored fact reads as a fragment tie ('adapts gaiden ch -17 — near-zero forward progress') and is what put the row in the mixed_fragment_only queue. The chapter is adapted essentially in full and ep 46 is its only adaptation, so the honest kind is side_story with the chapter named and located (the same shape as the eps 206-212 Turn Back the Pendulum fact). 'Near-zero forward progress' remains true as a POSITION statement — -17 has no mainline number — and is preserved in the anchor_hostile entry, but it must not be read as a weight: the segment is significant.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Bleach_chapters_(1%E2%80%93187)",
+        "https://bleach.fandom.com/api.php?action=parse&page=BEGINNING%20OF%20THE%20DEATH%20OF%20TOMORROW&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 32,
+      "field": "annotation.chapters (eps 31,32, kind partial)",
+      "old": "96-98",
+      "new": "ep 31: 96, 97, 98 (p.1-3) · ep 32: 98 (p.3-end)",
+      "why": "The shared fact should carry the page split it is about: bleach.fandom's fields read 'Chapter 96, Chapter 97, Chapter 98 (up to page 3)' on ep 31 and 'Chapter 98 (from page 3)' on ep 32, and ch 98's page lists exactly those two episodes. As stored, '96-98' on both rows reads as ep 32 sharing chs 96-97, which it does not, and it hides that ep 32 carries the whole body of ch 98.",
+      "sources": [
+        "https://bleach.fandom.com/api.php?action=parse&page=The%20Resolution%20to%20Kill&prop=wikitext&format=json",
+        "https://bleach.fandom.com/api.php?action=parse&page=The%20Star%20and%20the%20Stray%20Dog&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "CHAPTER SPACE. All numbers are Bleach's own serialization numbering (1-479 for this entry's scope, plus the negative gaiden space). The gaiden chapters are NOT in the mainline line: -108 to -97 (Turn Back the Pendulum, already ruled position-less on eps 206-212) and -17 「逸れゆく星々の為の前奏曲」, printed as the last entry of tankobon 15 behind ch 130 (en-WP volume list; bleach.fandom volume page). There is also a decimal bonus chapter 88.5 'KARAKURA SUPER HEROES' at the back of tankobon 10. VOLUMES used here, from en-WP's volume lists (the stored boundary table only holds v28-v32): v11 = 89-98; v15 = 124-130 + (-17); v43 = 368-377. PAGE SPLITS established for this wave: ch 98 splits once at p.3 (ep 31 p.1-3 / ep 32 p.3-end); ch 376 splits once at p.7/8 (ep 284 p.1-7 / ep 285 p.8-19, from the fandom's per-character page-level references: Sousuke Aizen '376, pages 1-7'; Mashiro Kuna '376, pages 8-10, 10-18'; Wonderweiss Margela '376, pages 8-19'; Kensei Muguruma '376, pages 10-19'). SOURCE INDEPENDENCE: bleach.fandom's episode fields, chapter pages, volume pages and character pages are ONE wiki and count as one source; animefillerguide's chapter column is the second; en-WP's season summaries and volume/chapter lists the third. AFL and AFG's TYPE columns are one lineage and all three rows read 'Mixed Canon/Filler' there — that typing is retained on all three, but on the weight of the source segments, not on the filler-site label. REVERSE INDEX used throughout: bleach.fandom's chapter sections carry an 'Episodes adapted from this chapter' list (ch 375 → ep 283; ch 376 → eps 284, 285; ch 377 → ep 285; ch 98 → eps 31, 32; ch -17 → ep 46; ch 129 → eps 45, 47), which is what settles every sole-adaptation question in this wave.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "ZERO type corrections in this wave — and that is the finding: none of the three queued 'fragment ties' is a sliver. Ep 32 carries a whole chapter (98 p.3-end), ep 46 a whole bonus chapter (-17), ep 284 the sole adaptation of ch 376's arc-pivot opening. The queue's premise (mixed on fragments alone) fails on all three; two of them were simply missing anchors, and the third is position-less by chapter space, not by weight.",
+    "Canon-vs-mixed fork on eps 32 and 46 (I kept MIXED). Both episodes are a faithful adaptation of one chapter plus roughly a third of a running time of newly invented scenes that expand the SAME flashback (ep 32: the candy hut, the rickshaw Shinigami, the river, the classroom; ep 46: the Hado class, the sparring/friendship, Aizen's academy visit, the watermelon scene, plus the present-day bookends). If the faithfulness clause's 'expanded flashback and padding keep a row canon' is read to cover an original share this large, both rows become canon + divergence — the shape already used on eps 156/160/161. I read ~8 minutes across four invented sequences as more than 'a small studio-made beat', so mixed stands; the anchors and annotations are unaffected either way.",
+    "OUTSIDE THE ASK — ep 31 (stored canon) has no anchor and one is available: ep 31 → END 97 [START 96] {96, 97, 98 (p.1-3)} v11. A47 holds the END at 97 because ep 32 STARTS on ch 98 and ep 31's share of it is 3 pages (fandom: 'Chapter 98 (up to page 3)'), below the 5-page bar. Not delivered as an anchor because the row is not in this wave's ask.",
+    "OUTSIDE THE ASK — ep 33 (stored filler, AFL filler) is tied to a real Kubo bonus chapter: bleach.fandom's episode field reads 'Chapter 88.5' (KARAKURA SUPER HEROES, at the back of tankobon 10), and that chapter's page lists eps 33, 54 and 55. AFG prints 'N/A' for the row. This looks like a seed/graft of a ~10-page omake into a full anime-original Don Kanonji episode — filler + a mandatory graft{88.5} annotation under T28 — but I did not research the episode's content, so it is a flag, not a verdict.",
+    "OUTSIDE THE ASK — ep 285 (stored mixed) is unanchored and is anchorable: 376 (p.8-19), 377, 378 per the fandom fields and AFG row 285; that would give END 378 [START 376] v43 subject to checking ep 286's start (AFG row 286 = 378, 379, 380). Delivering it would also make the ep-284 → ep-285 hand-off explicit.",
+    "OUTSIDE THE ASK — the anchor gap around ep 46 is wider than the row: eps 42-53 hold no anchors at all (fence: ep 41 → 117, ep 54 → 152) even though eps 44, 45, 47, 48, 49 are canon with clean fandom + AFG chapter fields (44 = 124-126, 45 = 127-129 [AFG 126-128], 47 = 129-131, 48 = 132-133). A small A2-shaped block would close it."
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "series_id": "detective-school-q",
+  "summary": "Ep 1 ('目指せ！世界一の名探偵！！ / Awaken! The Best Detective in the World!!', 2003-04-15) is an anime-original prologue: NO scene of the manga is shown in it. The licensor's own per-episode synopsis (dアニメストア) gives the whole plot — Kyu, a third-year middle schooler sent out to shop for dinner, collides with an elderly man, Nakajima Yoshio, just out of the bank; the scattered money is one 10,000-yen note short; a girl, Minami Megumi, whose photographic memory prices the coins on the ground exactly, appears; Kyu deduces the note fell inside Nakajima's umbrella; on the way home the two witness a man fall from a construction site and it is Nakajima, who had said he was off to buy a Hokkaido ticket for his daughter's wedding; a site worker and a boy who happens to be there, Tōyama Kintarō, are questioned alongside them, and Kyu spots someone behaving suspiciously. None of this exists in the manga: the cast meet at the DDS entrance exam in ch 1 (adapted at ep 2, stored), and the manga's own construction-site case — 'The Death in Construction Arc', ch 45-46, where KINTA is already a DDS student working part-time on a site and investigates the apparent suicide of a CO-WORKER — is stated by tanteigakuenq.fandom's arc table to have ZERO anime episodes: 'The Anime doesn't adapt this Arc, but the Episode 1 is about a case based on the case of this Arc, with a lot of changes in the plot.' The same page lists ep 1 among the nine filler episodes (1, 4-7, 15, 35, 44-45) and excludes it from the 36 that adapt manga arcs. So the tie is a LOOSE PARALLEL — a shared premise (a construction-site death staged as suicide), different victim, different investigator, different point in the timeline — not a page tie, and under the erased precedent (Sean 2026-09-02) a shared outcome or premise without pages stays filler + `loose_parallel`. Sole-adaptation check, both halves: ch 45-46 are indeed adapted in NO episode (stored anchors jump ep 25 → 42-44 and ep 27 → 47-48), but the exception needs an actual page tie AND a major plot point of the source; there is no page tie at all here, so it cannot fire. Ep 1 → filler, no anchor (A1/A44); ch 45-46 stay a permanent skip, which the stored continue regime (ep 26 → 47) already handles.",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [
+    {
+      "episode": 1,
+      "why": "A1 (under the proposed type correction) and A44: nothing of the source is shown — the episode is an original pre-DDS prologue whose case merely echoes the premise of ch 45-46. A parallel is not a position: the first anchored row is ep 2 → 2 [1] {1-2}.",
+      "sources": [
+        "https://tanteigakuenq.fandom.com/wiki/Story_Arcs",
+        "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=21352&partId=21352001"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [1],
+      "kind": "loose_parallel",
+      "chapters": "45-46",
+      "note": "weight: sliver — and strictly speaking not source material at all: there is no page tie, only a shared premise. The manga's 'Death in Construction' case (ch 45-46) has Kinta, already a Q-Class student, working part-time on a building site and investigating the apparent suicide of a co-worker; ep 1 has a pre-DDS Kyu and a stranger, Nakajima, whom he had met an hour earlier over a lost banknote, falling from a site — and its real job is to introduce Kyu, Megu and Kinta to each other before the entrance exam, an event the manga does not contain (they meet at the exam in ch 1, animated at ep 2). tanteigakuenq.fandom's arc table records the arc's anime episodes as 0 ('The Anime doesn't adapt this Arc, but the Episode 1 is about a case based on the case of this Arc, with a lot of changes in the plot') and lists ep 1 as filler. NO episode adapts ch 45-46 properly — they are a permanent skip, already covered by the ep 26 → 47 continue; the parallel earns neither a type nor an anchor (T28 sliver clause; the erased 2026-09-02 precedent: a shared outcome without a page tie stays filler + loose_parallel)."
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [
+    {
+      "episodes": [1],
+      "type": "filler",
+      "note": "T27/T28 (sliver clause, Sean 2026-09-04): the stored 'mixed' rests on the `loose_parallel{45-46}` tie alone, inherited from AFL's 'Mixed Canon/Filler'. A parallel is not source content: no scene, panel or beat of ch 45-46 is animated, the victim, investigator and timeline all differ, and the episode's own plot (the bank-note misunderstanding, the first meeting of Kyu/Megu/Kinta before the DDS exam) is anime-original. The remainder decides → filler. This is consistent with the batch-17 verdict's own finding ('Nine episodes adapt nothing (1, 4-7, 15, 35, 44-45)') and with Sean's T11/T6 rulings of 2026-08-25, which already typed 35/44/45 filler on the same logic; ep 1 is the row that was left holding AFL's label.",
+      "sources": [
+        "https://tanteigakuenq.fandom.com/wiki/Story_Arcs",
+        "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=21352&partId=21352001",
+        "https://tanteigakuenq.fandom.com/wiki/Episode_01"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "Row identity: our ep 1 = ja-WP 各話リスト row 1, 第1話「目指せ！世界一の名探偵！！」, 2003年4月15日 — matches the stored air date; single 45-episode TBS season, 1:1 with every source, no conversion. NOTE the stored English title 'Awaken! The Best Detective in the World!!' renders 目指せ (= 'aim for'), not 目覚めよ ('awaken') — a translation quirk inherited from AFL, not a row-identity problem (title, number and date all agree). SOURCE STATE: AFL's Detective School Q page classifies only 25 of the 45 rows (its own header says 'In total 25 episodes … were aired'; open flag #131) and is the origin of the stored 'Mixed Canon/Filler' on eps 1-3; ja-WP's episode table carries no 原作 column, so the per-episode instruments on this series are tanteigakuenq.fandom's arc/chapter table and the licensor's per-episode synopses (dアニメストア, which carries all 45).",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "Ch 45-46 remain adapted by NOTHING — this verdict does not change that, and the stored continue regime already skips them (ep 26 → 47/parity). If the never-adapted ranges are ever collected for this series, 45-46 belong with the eps 39/40 `abridged` list (77-83, 87.5, 90-94).",
+    "AFL also prints 'Mixed Canon/Filler' for eps 2 and 3, which our catalog types mixed and which DO carry anchors (ep 2 → 1-2, ep 3 → 3) — those rows are genuinely mixed (real chapters plus the anime's changed exam structure) and are untouched here; only ep 1, whose tie is a parallel with no pages, changes."
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "series_id": "trigun",
+  "summary": "Ep 6 'Lost July' is an anime-original story (Elizabeth the plant technician, the masked assassin Kesskass, the sabotaged Inepril plant) built around two source slivers. Segment A = ch 4 'Popo' opening beats (the Nebraska bounty money, the sandsteamer's arrival, the town's party): a DUPLICATE — trigun.fandom's ch-4 page maps the chapter to episodes 5, 7 and 20 and NOT to ep 6, and our stored anchor ep 7 -> 6 [4] {4-6} already carries ch 4 in full (ep 7's own summary opens on the celebratory party and the steamer departure). Segment B = ch 0 'High Noon at July', a 6-page wordless prologue (the ruins of July, the date caption 02:06 7/21/0104, no corpses), used as Vash's flashback image inside Elizabeth's revenge plot; even at its maximum extent that is establishing imagery, not a story beat. Neither segment carries weight under T28's sliver clause, so the REMAINDER — a wholly anime-original episode — decides: ep 6 is FILLER, and the mixed override T6 (Sean 2026-08-25) is superseded for this row with evidence. No anchor (A1 for the retyped row; and a first-time sliver inside an original plot is A44 position-less in any case). Ep 16, the other T6 mixed row, is outside this ask and untouched.",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [
+    {
+      "episode": 6,
+      "why": "Retyped filler under T28's sliver clause (A1: filler rows never take anchors). Both source segments are slivers with no weight: ch 4's opening beats are a duplicate of pages ep 5 and ep 7 carry (ep 7 -> 6 [4] {4-6} is the proper adaptation), and ch 0 is a 6-page wordless prologue used as flashback imagery inside an anime-original plot — a first-time sliver inside an original plot is A44 position-less even before the retype.",
+      "sources": [
+        "https://trigun.fandom.com/wiki/Chapter_4",
+        "https://trigun.fandom.com/wiki/B.D.N.",
+        "https://trigun.fandom.com/wiki/Lost_July"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [6],
+      "kind": "partial",
+      "chapters": "4 (opening beats — the bounty money, the sandsteamer's arrival, the town party)",
+      "note": "weight: sliver — because these are ch 4's opening pages restaged as the frame of an anime-original story, and they are a DUPLICATE, not new material: trigun.fandom's Chapter 4 page lists its adaptations as Episode 5, Episode 7 and Episode 20 and does NOT list ep 6, and ch 4 is adapted properly at EP 7 (stored anchor ep 7 -> 6 [4] {4-6}; ep 7's own summary opens on the celebratory party and the steamer departure, then Kaite the stowaway). Ep 5 already carries ch 4's first page (the bounty handed to the town). The wiki's own ep-6 page says only 'partially covers chapter 4' — read against its chapter-side reverse index, that is a framing tie, not an adaptation share. Refines the stored partial {0, 4} (batch 17).",
+      "sources": [
+        "https://trigun.fandom.com/wiki/Chapter_4",
+        "https://trigun.fandom.com/wiki/Lost_July",
+        "https://trigun.fandom.com/wiki/B.D.N.",
+        "https://trigun.fandom.com/wiki/Hard_Puncher_(anime)"
+      ]
+    },
+    {
+      "episodes": [6],
+      "kind": "graft",
+      "chapters": "0 (High Noon at July — the ruins-of-July imagery)",
+      "note": "weight: sliver — because ch 0 is a 6-page WORDLESS prologue whose entire content is the aftermath of the July incident (the debris, the date caption '02:06 July 21st 0104 A.D.', not a single corpse, Vash standing among the ruins); ep 6 transplants that image as Vash's flashback ('all he remembered was waking to a city in ruins') inside the anime-original Elizabeth plot. SOLE-ADAPTATION CHECK, both halves stated: (1) no other 1998 episode is tied to ch 0 — trigun.fandom's Chapter 0 page has an EMPTY anime field, which is silence, not proof, and the ch-0 imagery is not named in any other episode page; (2) the beat is NOT a major plot point of the source — ch 0 carries no death, reveal or arc close, it is a wordless establishing prologue, and the July incident's actual telling sits far later in the manga line. The exception therefore does not apply and the segment stays weightless. Refines the stored partial {0, 4} (batch 17).",
+      "sources": [
+        "https://trigun.fandom.com/wiki/Chapter_0",
+        "https://trigun.fandom.com/wiki/July",
+        "https://trigun.fandom.com/wiki/Elizabeth"
+      ]
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [
+    {
+      "episodes": [6],
+      "type": "filler",
+      "note": "T28 sliver clause (Sean 2026-09-04): both source segments are slivers with no weight (ch 4's opening = a duplicate of pages ep 5 / ep 7 carry; ch 0 = 6 wordless prologue pages used as flashback imagery), so the remainder decides — and the remainder is wholly anime-original. Elizabeth (the plant technician who hires the assassin and sabotages the Inepril plant) and Kesskass are anime-only characters: trigun.fandom's Elizabeth page carries ONLY anime fields (AniDebut = Episode 6) and no manga counterpart, and none of the episode's plot appears in ch 4's chapter summary. animefillerlist independently types ep 6 'Filler'. SUPERSEDES the T6 override {'6':'mixed'} (Sean 2026-08-25) for this row only — declared, not silent; ep 16's override is outside this ask.",
+      "sources": [
+        "https://trigun.fandom.com/wiki/Elizabeth",
+        "https://trigun.fandom.com/wiki/Chapter_4",
+        "https://www.animefillerlist.com/shows/trigun"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "Chapter space unchanged: Trigun's own 0-20 (Trigun Maximum is a separate space, A44/T26 as ruled for ep 18). Source-hygiene finding: trigun.fandom contradicts itself across field directions on this row — the EPISODE page (Lost July) says 'partially covers chapter 4' while the CHAPTER page (Chapter 4) lists its adaptations as eps 5, 7 and 20 only. The chapter-side reverse index agrees with the stored anchors (ep 5 -> 3 {1-3} closing on ch 4's bounty page; ep 7 -> 6 [4] {4-6}) and with ep 7's own summary, so the ep-6 forward field is a framing tie. Ch 0's anime field is empty on the same wiki — silence, since the wiki also hosts Trigun Stampede episodes and its 2023 ep 12 'High Noon at July' is likewise unlinked there.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "T6 supersession: this verdict retypes ep 6 mixed -> filler, which contradicts the stored EPISODE_TYPE_OVERRIDES {'6':'mixed','16':'mixed'} (Sean 2026-08-25). Declared with evidence as required; ep 16 is NOT in this ask and its override stands untouched.",
+    "The stored annotation 'eps 6 partial {0, 4}' (batch 17) is superseded by the two weighted annotations above (partial {4} duplicate-sliver + graft {0} imagery-sliver). Same facts, weights added, no new chapter claims.",
+    "Sole-adaptation exception NOT invoked for ch 0: half one (pages nowhere else) is plausible but rests on wiki silence, and half two (a major plot point of the source) fails outright for a wordless 6-page establishing prologue. Stated both halves per the rule."
+  ]
+}

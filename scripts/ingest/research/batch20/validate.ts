@@ -84,7 +84,8 @@ async function main() {
     const sum = String(v.summary ?? '').toLowerCase();
     // "no anchor-hostile rows" / "no anchor_hostile" is a count of the OTHER list, not a claim about anchors — strip it before the contradiction test;
     // likewise a parenthetical rule citation "(A1, no anchor)" is the stated A1 reason the protocol asks for
-    const sumNoHostile = sum.replace(/\bno anchors?[-_ ]hostile\b/g, '').replace(/\(a1,? no anchors?\)/g, '');
+    // a QUOTED phrase is the stored record's wording, not a claim ('the stored \'fragment ties, no anchor\' record understates them' — wave 16)
+    const sumNoHostile = sum.replace(/'[^']*'|"[^"]*"|‘[^’]*’|“[^”]*”/g, '').replace(/\bno anchors?[-_ ]hostile\b/g, '').replace(/\(a1,? no anchors?\)/g, '');
     if (/\bno anchors?\b/.test(sumNoHostile) && (v.anchors?.length ?? 0) > 0 && !/\b(takes?|took|carry|carries|carried|get|gets|receives?) no anchors?\b|\bno anchors? (for|on|at|in|under|either|there|here|,? stated)\b/.test(sumNoHostile)) problems.push('summary says "no anchor" but anchors are present — read it');
     const n = v.anchors?.length ?? 0;
     if (problems.length) { bad++; console.log(`FAIL ${f} (${n} anchors over ${targets.length} target rows)`); for (const p of problems) console.log(`   - ${p}`); }

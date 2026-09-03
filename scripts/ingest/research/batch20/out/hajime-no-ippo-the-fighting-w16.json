@@ -1,0 +1,51 @@
+{
+  "series_id": "hajime-no-ippo-the-fighting",
+  "summary": "Ep 76 'Boxer's Fist' (ボクサーの拳) is the 23-minute special that shipped only on the 25th and final season-1 DVD; it never aired. Its whole substance is an anime-original expansion of how Kamogawa recruited Takamura: the reporter framing scene, the street brawl, the left-only sandbag training, the scooter-pull, and Takamura's 25-second debut KO over SAKURA — a boxer who exists only in the anime (ippo.fandom's Sakura page carries an anime_debut field and no manga debut). The single source tie is two panels: Round 383 p.4-5, the flashback in which Takamura recalls Kamogawa getting him into boxing. Those two pages are NOT sole: ippo.fandom's Chapter 383 page maps the chapter to Season 2 Round 21 = OUR ep 97, p.1-19, and our stored anchor ep 97 -> 383 [380] {380-383, 384 (p.1-4)} carries the chapter in full. So the graft is a weightless DUPLICATE sliver, the remainder is wholly anime-original, and ep 76 is FILLER — the fandom's own trivia says so outright ('While this episode is considered filler, a small amount of panels from Round 383 were adapted') and the page sits in Category:Filler Episodes. No anchor, which also keeps the standing A2 exclusion (Sean 2026-08-24) intact.",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [
+    {
+      "episode": 76,
+      "why": "Retyped filler under T28's sliver clause (A1: filler rows never take anchors). The only source content is Round 383 p.4-5, two flashback panels that ep 97 already adapts inside the full chapter — a duplicate sliver, no weight, no position. This agrees with the standing A2 ruling (Sean 2026-08-24) that anchoring END 383 at run position ~76 would break the curve; that ruling now rests on the typing as well as on the curve.",
+      "sources": [
+        "https://ippo.fandom.com/wiki/Episode_76_(Season_1)",
+        "https://ippo.fandom.com/wiki/Chapter_383"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [76],
+      "kind": "graft",
+      "chapters": "383 (p.4-5)",
+      "note": "weight: sliver — because it is two flashback panels ('Takamura recalls the time when Kamogawa got him into boxing and the training he did for his left') expanded into a 23-minute anime-original special, and they are a DUPLICATE rather than new material: Round 383 is adapted properly at EP 97 (Season 2 Round 21), which ippo.fandom's Chapter 383 page records as covering p.1-19, and which our stored anchor ep 97 -> 383 [380] {380-383, 384 (p.1-4)} already carries. Nothing else in the special comes from the manga: Sakura, Takamura's debut opponent, has an anime_debut field and no manga debut, and the reporter frame, the brawl, the left-only training and the debut bout have no chapter behind them. Confirms and re-weights the stored graft {383 (p.4-5)} (batch 15, page-resolved).",
+      "sources": [
+        "https://ippo.fandom.com/wiki/Episode_76_(Season_1)",
+        "https://ippo.fandom.com/wiki/Chapter_383",
+        "https://ippo.fandom.com/wiki/Sakura",
+        "https://anilist.co/anime/12069"
+      ]
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [
+    {
+      "episodes": [76],
+      "type": "filler",
+      "note": "T28 sliver clause (Sean 2026-09-04): the two-panel Round 383 graft carries no weight (duplicate — ep 97 adapts the chapter in full), so the remainder decides, and the remainder is anime-original throughout. Two independent witnesses to the content: ippo.fandom's Episode 76 page (full synopsis + trivia 'While this episode is considered filler, a small amount of panels from Round 383 were adapted', filed under Category:Filler Episodes) and AniList 12069's own description of the special ('A special episode included in the DVDs. It tells how Takamura started boxing', SPECIAL, 23 min). en-WP records it as the DVD-only episode numbered 76 that did not air. animefillerlist prints 'Mixed Canon/Filler' for ep 76 — that label is the two panels; under the sliver clause a duplicate fragment does not earn a type.",
+      "sources": [
+        "https://ippo.fandom.com/wiki/Episode_76_(Season_1)",
+        "https://anilist.co/anime/12069",
+        "https://en.wikipedia.org/wiki/List_of_Hajime_no_Ippo_episodes"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "Row identity confirmed: our ep 76 = AniList 12069 'Hajime no Ippo: THE FIGHTING! Boxer no Kobushi', SPECIAL, 1 ep, 23 min, released on the final (25th) season-1 DVD 2003-03-21 and never broadcast (en-WP: 'The last DVD includes a special episode which did not air in Japan, numbered 76'); ippo.fandom numbers it Season 1 #76 with the same date. This is the N7 counted special, not the Champion Road TV film (2003-04-18, our 76.6) or the Mashiba vs Kimura OVA (2003-09-05, our 76.3). Reverse-index note: ippo.fandom's Chapter 383 'episode' field names only Season 2 Round 21 (p.1-19) — the ep-76 tie exists only on the episode side, which is exactly the fragment shape.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "AFL and the fandom disagree on the label (AFL 'Mixed Canon/Filler' vs fandom Category:Filler Episodes + 'considered filler'); they agree on the FACT (two panels of Round 383). The sliver clause resolves it to filler.",
+    "The stored A2 ruling (ep 76 excluded from anchors, Sean 2026-08-24) and the batch-15 note's superseded 'no anchor' clause both remain correct after this retype; no anchor is proposed and none is possible under A1."
+  ]
+}

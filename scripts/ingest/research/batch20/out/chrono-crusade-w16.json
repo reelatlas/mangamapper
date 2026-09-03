@@ -1,0 +1,130 @@
+{
+  "series_id": "chrono-crusade",
+  "summary": "All four rows were typed mixed on fragment ties alone. Under T28's sliver clause three of them carry NO source segment at all and go to filler; one is significant and stays mixed. Page-level reading of the manga (MangaDex, the ADV/Fujimi tankoubon numbering) settles the middle of the run: the anime adapts Acts 19-21 in ep 13 (Marionette Train), then JUMPS the whole Chicago block — Acts 22-26 — and lands on Act 27 'Carnival Night', which opens on the caption 'San Francisco' and is the stored ep-18 anchor. Eps 14-17 are the anime's own substitute for that leg of the journey: ep 14 is a sick/breather episode (Satella's desert villa, Chrono's fever, the fortune teller's folk-remedy kiss — all three beats are listed under tropedia's ANIME ONLY section), ep 17 is the San Francisco battle in which Carv blows himself up to kill Viede (in the manga Viede dies far later, defending Eden in v7-v8) and Rosette's stigmata bleed (ja-WP: the 'sanctified' Rosette exists only in the anime). Ep 8 adapts no page either: it is an anime-original Rizelle prologue at Grand Central borrowing only the spider/puppet gimmick of Acts 19-21, and those Acts are adapted properly and in full by ep 13 — the sole-adaptation test fails. Ep 21 is the opposite case: its Mary Magdalene flashback is the ONLY place in the anime that carries volume 6's Magdalene backstory (Magdalene's manga debut is Act 36; Act 38's own narration is 'I am now journeying in the swirling depths of Chrno's memory'), it is load-bearing in a manga whose printed subtitle IS 'Mary Magdalene', and it is the episode's job — so it is SIGNIFICANT and mixed stands; but the row stays position-less (A44, upheld) because the material is a far-out-of-order graft inside the anime-original ending and no source states its Act extent. Structural finding for the census: MU's 'Skips Chap 7, 12-18' understates the gap — Acts 22-26 are never adapted either.",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [
+    {
+      "episode": 21,
+      "why": "A44 UPHELD (Sean 2026-08-26, ANCHOR_SUPPRESSED [21]). The wave-16 weight finding is SIGNIFICANT (see the annotation) and under the sliver clause a significant row MAY carry an anchor — but this one still cannot: (a) the segment is a far-out-of-order graft of volume 6 inside an anime-original ending, so an END of 36-42 would drag A4 coverage past MU's declared bound (Vol 5, Chap 30) and past the never-adapted Acts 22-26 and 31-35; (b) no source states which Acts of v6 the flashback covers — en-WP's chapter list and MangaDex's tankoubon aggregate agree v6 = Acts 36-42, the fandom pairs Magdalene's manga debut with Act 36, and Act 38's narration places the memory-dive mid-volume, but the flashback's first and last Act are unverified; (c) the manga tells the same backstory as ROSETTE'S DIVE into Chrono's memory (ADV vol 6 back cover) while the anime tells it as petrified Chrono remembering, with different motives (fandom Mary Magdalene: 'In the anime the plot differs'), so there are no page-partitioned boundaries to anchor on. Position-less, not typeless: the graft annotation carries the record that these pages ARE animated here and nowhere else.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Chrono_Crusade_chapters",
+        "https://api.mangadex.org/manga/1a0b6925-9710-48b0-83a5-adf144d10479/aggregate?translatedLanguage%5B%5D=en",
+        "https://chronocrusade.fandom.com/api.php?action=parse&page=Mary%20Magdalene&prop=wikitext&format=json",
+        "https://mangadex.org/chapter/7b85f477-bd35-4009-ae46-7e537342b7e5",
+        "https://archive.org/metadata/chronocrusadevol00dais"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [8],
+      "kind": "graft",
+      "chapters": "19-21 (concept only)",
+      "note": "weight: sliver — because the episode adapts NO source page at all: Rizelle's Grand Central Station attack (Remington webbed, Rosette lured onto a train, Chrono and Azmaria tranquilising the victims) has no counterpart in the manga, where Rizelle appears only in the Marionette Train arc, Acts 19-21. The tie is concept-level (the spider/puppet gimmick). SOLE-ADAPTATION CHECK FAILS: Acts 19-21 are adapted properly and in full by ep 13 (stored anchor ep 13 -> 21 [19] {19-21} v3, whose ADV title is literally 'Marionette Train'), so nothing here is first-time material. The v3 extra 'Doll in the Skyscraper' (21.5) was checked as a possible source and is a Macy's haunted-doll one-shot, not this story. Remainder = the whole episode, anime-original -> filler (T27/T28); the graft is kept as the mandatory tie (A1: no anchor).",
+      "sources": [
+        "https://chronocrusade.fandom.com/api.php?action=parse&page=Chrono%20Crusade%20Episode%2008&prop=wikitext&format=json",
+        "https://chronocrusade.fandom.com/api.php?action=parse&page=Rizelle&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Chrono_Crusade_chapters",
+        "https://mangadex.org/chapter/06b79f32-08b7-4a7a-a236-c980e37708d3"
+      ]
+    },
+    {
+      "episodes": [14],
+      "kind": "loose_parallel",
+      "chapters": "22-26",
+      "note": "weight: sliver — because the episode adapts no source scene whatever; the tie is shape-only. Ep 14's entire plot (Satella's limousine, the desert villa, Chrono's demon fever, the pharmacy run, the fortune teller's folk remedy, Azmaria's dinner, Rosette kissing the sleeping Chrono) is listed by tropedia under ANIME ONLY in three separate entries ('Sick Episode', 'Intimate Healing', 'Dude He's, Like, In A Coma'). The only chapters that could sit between the ep-13 anchor (Act 21) and the ep-18 anchor (Acts 27-28) are Acts 22-26, and those pages are the CHICAGO block: Act 23 'I'll be in Chicago very soon' + the car chase, Acts 23-24 the fight with the armoured demons Kalv / Gigi / Ghouleo who demand Chrono 'atone for those sins with death', Act 25 'we are currently staying at Magdala Chicago branch... 10 days since you left N.Y.', Act 26 a night truck run. Nothing in them is a villa, a fever or a kiss; Act 27 then opens on the caption 'San Francisco'. So Acts 22-26 are never adapted and this row parallels only the story SLOT (the group's journey between the Marionette Train and the carnival). Original -> filler (T27/T28); the tie is kept, no anchor (A1).",
+      "sources": [
+        "https://chronocrusade.fandom.com/api.php?action=parse&page=Chrono%20Crusade%20Episode%2014&prop=wikitext&format=json",
+        "https://tropedia.fandom.com/api.php?action=parse&page=Chrono%20Crusade&prop=wikitext&format=json",
+        "https://mangadex.org/chapter/517a4bb1-c1f5-4748-bba3-6fb7a9007924",
+        "https://mangadex.org/chapter/5dd07f96-e2f2-4d9f-b6ed-fa04c440f909",
+        "https://mangadex.org/chapter/2052497c-b072-4c68-9fa0-d2d95dbf6f44",
+        "https://en.wikipedia.org/wiki/List_of_Chrono_Crusade_episodes"
+      ]
+    },
+    {
+      "episodes": [17],
+      "kind": "loose_parallel",
+      "chapters": "22-26",
+      "note": "weight: sliver — because the episode adapts no source scene; the tie is shape-only. Ep 17's plot is the noon battle on the outskirts of San Francisco (Militia + Pursuers vs the Sinners), Carv restraining Viede so Rosette's Gospel absorbs them both, and Rosette's stigmata bleeding. None of it is in the source at this point: the fandom's Viede page states 'In the manga he dies defending Eden against the Order and Pandaemonium's Pursuers. In the anime he is the second Sinner to be killed along with his enemy Carv' — the manga's Pursuers-vs-Sinners crusade is v7-v8, far past the anime's Act-30 bound; Gurio, present in this battle, 'was found in the anime only'; and ja-WP records the sanctified / holy-blood Rosette as アニメ版のみに登場する (anime-only), which is what the stigmata thread becomes. The manga's own v4 Pursuers thread (Acts 23-24) is the INVERSE of this episode — armoured demons hunting Chrono to make him 'atone for those sins with death', not an allied army — and it is set in Chicago, which the anime skips entirely (see ep 14's note). Original -> filler (T27/T28); the tie is kept, no anchor (A1).",
+      "sources": [
+        "https://chronocrusade.fandom.com/api.php?action=parse&page=Chrono%20Crusade%20Episode%2017&prop=wikitext&format=json",
+        "https://chronocrusade.fandom.com/api.php?action=parse&page=Viede&prop=wikitext&format=json",
+        "https://chronocrusade.fandom.com/api.php?action=parse&page=Gurio&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E3%82%AF%E3%83%AD%E3%83%8E%E3%82%AF%E3%83%AB%E3%82%BB%E3%82%A4%E3%83%89",
+        "https://mangadex.org/chapter/6bc46663-4266-4a8c-abe5-0cbde057d50c"
+      ]
+    },
+    {
+      "episodes": [21],
+      "kind": "graft",
+      "chapters": "36-42 (v6 — the Mary Magdalene backstory)",
+      "note": "weight: SIGNIFICANT — because this is the SOLE adaptation anywhere in the anime of load-bearing source material, and it is the episode's own job. (1) Sole: the stored anchors cover Acts 1-6, 8-11, 19-21, 27-30 and stop there (ep 20 -> 30, continue 31/post_series); no other row touches volume 6, so if this row were filler the Magdalene pages would be falsely marked never-adapted. (2) Load-bearing: the Magdalene backstory is the origin of Chrono's contract and of the Order itself — the manga's printed subtitle IS 'Mary Magdalene' (ja-WP lead; it is set on the vol 4 and vol 6 covers), Magdalene's manga debut is Act 36 (fandom infobox), and Act 38's narration reads 'I am now... journeying in the swirling depths of Chrno's memory... the ethereal Holy Maiden, Magdalena'. (3) Share: the flashback (Chrono taking Magdalene from the Order, Remington's pursuit, her foresight, Aion tearing off his horns, the soul timepiece and the Ritual of Atonement, her stigmata, Aion's order to kill her, the contract that saves Chrono) is the bulk of the episode; the present-day frame (Satella/Fiore, Chrono unfreezing, Duffau's death) brackets it. So MIXED STANDS. The telling diverges — the manga frames the same past as Rosette's dive into Chrono's memory (ADV vol 6 back cover) while the anime has petrified Chrono remember it, and the fandom notes 'In the anime the plot differs' on Aion's motive — so this is a divergent graft, not a page-faithful adaptation, and it stays position-less (A44, see anchor_hostile).",
+      "sources": [
+        "https://chronocrusade.fandom.com/api.php?action=parse&page=Chrono%20Crusade%20Episode%2021&prop=wikitext&format=json",
+        "https://chronocrusade.fandom.com/api.php?action=parse&page=Mary%20Magdalene&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E3%82%AF%E3%83%AD%E3%83%8E%E3%82%AF%E3%83%AB%E3%82%BB%E3%82%A4%E3%83%89",
+        "https://mangadex.org/chapter/7b85f477-bd35-4009-ae46-7e537342b7e5",
+        "https://en.wikipedia.org/wiki/List_of_Chrono_Crusade_chapters",
+        "https://archive.org/metadata/chronocrusadevol00dais"
+      ]
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 21,
+      "field": "annotation_chapters",
+      "old": "36-41 (v6 flashback; extent inferred, end Act unverified)",
+      "new": "36-42 (v6 — the Mary Magdalene backstory)",
+      "why": "The stored string names v6 as Acts 36-41; volume 6 is Acts 36-42 ('Mary Magdalene', 'The Passing of Days', 'A Dream That Enfolds the Stars', 'Signs and Bonds', 'Our Song', '54 Years Ago', 'To A Distant Place') on en-WP's chapter list and on MangaDex's tankoubon aggregate independently. The 'extent inferred / end Act unverified' caveat is TRUE and is preserved in the new annotation note — this repair only fixes the volume span, it does not claim the flashback runs 36 to 42.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Chrono_Crusade_chapters",
+        "https://api.mangadex.org/manga/1a0b6925-9710-48b0-83a5-adf144d10479/aggregate?translatedLanguage%5B%5D=en"
+      ]
+    }
+  ],
+  "type_corrections": [
+    {
+      "episodes": [8],
+      "type": "filler",
+      "note": "T28 sliver clause: no source segment at all — the Grand Central Rizelle story is anime-original and the only tie is the spider/puppet CONCEPT of Acts 19-21, which ep 13 adapts properly and in full (sole-adaptation test fails). Remainder is 100% original -> filler; graft{19-21 (concept only)} kept as the mandatory tie; A1 forbids an anchor. This also aligns the row with the existing A7 ruling ('concept-level, never a position', session 2026-08-24), which the mixed type had been sitting on top of.",
+      "sources": [
+        "https://chronocrusade.fandom.com/api.php?action=parse&page=Chrono%20Crusade%20Episode%2008&prop=wikitext&format=json",
+        "https://chronocrusade.fandom.com/api.php?action=parse&page=Rizelle&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Chrono_Crusade_episodes"
+      ]
+    },
+    {
+      "episodes": [14],
+      "type": "filler",
+      "note": "T28 sliver clause: the row adapts no source scene — it merely parallels the source's SLOT. Its three defining beats (the fever, the fortune teller's remedy, the kiss) are tropedia ANIME ONLY entries; the only candidate chapters (Acts 22-26, the Chicago block) contain nothing of the kind and are never adapted, the anime going straight from Act 21 (ep 13) to Act 27 (ep 18). Same shape as eps 15 and 16, which batch 19 already retyped filler on the identical {22-26} tie. loose_parallel{22-26} kept; A1 forbids an anchor.",
+      "sources": [
+        "https://tropedia.fandom.com/api.php?action=parse&page=Chrono%20Crusade&prop=wikitext&format=json",
+        "https://mangadex.org/chapter/5dd07f96-e2f2-4d9f-b6ed-fa04c440f909",
+        "https://en.wikipedia.org/wiki/List_of_Chrono_Crusade_episodes"
+      ]
+    },
+    {
+      "episodes": [17],
+      "type": "filler",
+      "note": "T28 sliver clause: the row adapts no source scene. The San Francisco battle, Viede's and Carv's deaths and Rosette's stigmata are anime constructs — the fandom places Viede's death at the Eden crusade (v7-v8) and Gurio in the anime only, and ja-WP records the sanctified Rosette as anime-only. The v4 Pursuers thread it echoes (Acts 23-24) is set in Chicago and inverts the alliance, and is never adapted. Same shape as eps 15 and 16 on the identical {22-26} tie. loose_parallel{22-26} kept; A1 forbids an anchor.",
+      "sources": [
+        "https://chronocrusade.fandom.com/api.php?action=parse&page=Viede&prop=wikitext&format=json",
+        "https://chronocrusade.fandom.com/api.php?action=parse&page=Gurio&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E3%82%AF%E3%83%AD%E3%83%8E%E3%82%AF%E3%83%AB%E3%82%BB%E3%82%A4%E3%83%89",
+        "https://mangadex.org/chapter/517a4bb1-c1f5-4748-bba3-6fb7a9007924"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "CHAPTER SPACE (unchanged, no conversion needed). The manga runs 56 numbered Acts plus an Epilogue and four unnumbered extras; en-WP's chapter list and MangaDex's tankoubon aggregate agree on the volume boundaries, and our stored anchors (Acts 1-30) already sit in this space. v1 = 1-6 (+extra 6.5); v2 = 7-14 (+14.5); v3 = 15-21 (+extra 'Doll in the Skyscraper' = 21.5); v4 = 22-28; v5 = 29-35; v6 = 36-42; v7 = 43-48 (+extra 'Elizabeth, 1921' = 48.5); v8 = 49-56 + Epilogue (MangaDex files the Epilogue as its 57). The context's total_chapters=59 is a UNIT count (56 Acts + Epilogue + extras), not a number ceiling: the ceiling is Act 56. The context lists ZERO stored volume boundaries — the table above is offered for that gap. || COVERAGE SHAPE OF THE RUN. Acts 19-21 -> ep 13; Acts 22-26 (the Chicago block: the car chase, the Kalv / Gigi / Ghouleo fight, the Magdala Chicago branch, the night truck) -> NEVER ADAPTED; Act 27 'Carnival Night' opens on the caption 'San Francisco' and is the stored ep-18 anchor. So the anime jumps Act 21 -> Act 27 and fills the gap with eps 14-17, which relocate the leg to San Francisco and invent it. Combined with the already-known gaps this makes the never-adapted set below the Act-30 bound: Act 7, Acts 12-18, Acts 22-26. || SOURCE-QUALITY NOTE: chronocrusade.fandom's infobox for Jack Guilliam reads 'appearances = Anime', but Guilliam is addressed by name in Act 23 ('I think I understand now, Guiliam') — an infobox field lying in the absence direction, the known trap. The wiki has no chapter pages and no per-episode manga field, so the per-episode instruments here are the episode synopses plus the manga pages themselves.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "MU's coverage string understates the gap. The stored ep-20 continue (31 / post_series) is CORRECT and unchanged, but its note quotes MU's 'Ends at Vol 5, Chap 30 (Skips Chap 7, 12-18)'. Page-level reading shows Acts 22-26 are also never adapted (the anime jumps Act 21 -> Act 27). Suggest the continue note name the full never-adapted set below the bound: Act 7, Acts 12-18, Acts 22-26. Note only — no value changes.",
+    "Ep 21 is the one row in this wave where the sliver clause and a standing A44 ruling meet. The weight verdict is SIGNIFICANT and sole (v6's Magdalene backstory is animated here and nowhere else), which under the sole-adaptation exception would normally permit an anchor. I have NOT delivered one: the material is a far-out-of-order graft inside the anime-original ending, an END would drag A4 coverage past MU's Act-30 bound and over the never-adapted Acts 22-26 and 31-35, and no source states the flashback's Act extent. If you want the pages recorded as adapted without moving position, the graft annotation now carries exactly that. Overturning A44 would need a page-level extent source that does not exist today.",
+    "Ep 14's loose_parallel{22-26} is the weakest tie in the set — it was inherited from a block-level judgement covering eps 14-17 and, unlike eps 15/16/17, ep 14 shares not even furniture with Acts 22-26 (no Pursuers, no Guilliam, no San Francisco; it is a desert-villa sick episode). I kept it so the filler row retains a T28 tie and so the 14-17 block reads consistently, but dropping it entirely is defensible.",
+    "Independence caveat, stated rather than hidden: tropedia is a fork of TV Tropes, so those two are ONE lineage. The ep-14 finding therefore rests on tropedia PLUS two independent instruments — en-WP's episode-list lead ('the remainder of the series is primarily an original story line') and my own reading of the only candidate pages (Acts 22-26 on MangaDex), which are set in Chicago and contain no villa, fever or kiss. Residual risk named: a kiss scene exists somewhere in the manga's later volumes; I found no source pairing it with ep 14, and a v6+ scene could not be this row's position in any case."
+  ]
+}

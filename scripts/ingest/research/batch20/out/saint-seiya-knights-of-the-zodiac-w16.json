@@ -1,0 +1,68 @@
+{
+  "series_id": "saint-seiya-knights-of-the-zodiac",
+  "summary": "Ep 64 is Toei's Sagittarius-temple trial gauntlet (the crushing roof, the flooded cavern, the cliff Seiya cannot climb — none of it in the manga) wrapped around the CLOSE of ch 38, and that close is the chapter's own title beat. Ch 38 (our 109-chapter space; en-WP's inflated list numbers it 039 '少年たちよ！女神を託す') opens with the Sagittarius Cloth firing its arrow at Seiya — ep 63's final scene, already anchored — and its climax is the arrow striking the wall, the hidden Greek inscription, Aiolos's testament 'To the young men who have come here, I entrust you with Athena's life', and Hyoga rejoining the party. Ep 63 stops at the arrow's flight; ep 65 opens inside the House of Capricorn. So ep 64 is the SOLE adaptation of ch 38's testament pages, and they are the chapter's load-bearing reveal — the sole-adaptation exception is satisfied in both halves, mixed STANDS, and the row carries the anchor (which is the point: filler would falsely mark those pages never-adapted). Ep 64 -> END 38 [START 38] v11, ending mid-chapter, so the continue is IN 38 (C1) — ch 38's back half (the dash through Capricorn, the crack, Shura's appearance) is played next, at ep 65.",
+  "anchors": [
+    {
+      "episode": 64,
+      "end_chapter": 38,
+      "start_chapter": 38,
+      "chapters_adapted": "38 (the arrow strikes the wall, Aiolos's testament revealed in Greek, Hyoga rejoins the party; the trial gauntlet between those beats is anime-original)",
+      "volume": 11,
+      "confidence": "high",
+      "note": "A4/A10: first-time pages of ch 38, adapted in no other episode ('pages, not numbers', Sean 2026-08-27). Ep 63's anchor already reaches ch 38 but stops on the arrow being fired (en-WP ep 63: '...suddenly shoots an arrow at Seiya' — its last line); ep 64 opens on that arrow's impact and closes on the testament and the exit appearing, entering nothing of ch 38's Capricorn back half; ep 65 opens there. START = 38 (the straddled chapter, continuous with ep 63 — the same shape as this series' stored 27/28 -> 25 and 36/37 -> 26 straddles). Volume 11 per the stored boundary table (v11: 37-40).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_episodes",
+        "https://saintseiya.fandom.com/es/wiki/Episodio_064",
+        "https://saintseiya.fandom.com/es/wiki/Saint_Seiya_-_Cap%C3%ADtulo_38_%22%C2%A1J%C3%B3venes!_Les_encomiendo_a_Athena%22",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 64,
+      "continue_chapter": 38,
+      "kind": "parity",
+      "note": "C1: ep 64 ends mid-chapter — it plays ch 38's Sagittarius-house close and leaves the chapter's back half (the Bronze Saints' dash through the House of Capricorn, the crack that cuts Shiryu off, Shura's appearance) to ep 65. Resume INSIDE ch 38; the Sagittarius pages you have just seen are behind you.",
+      "sources": [
+        "https://saintseiya.fandom.com/es/wiki/Saint_Seiya_-_Cap%C3%ADtulo_38_%22%C2%A1J%C3%B3venes!_Les_encomiendo_a_Athena%22",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_episodes"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [64],
+      "kind": "partial",
+      "chapters": "38 (close — the arrow's impact, the Greek inscription, Aiolos's testament, Hyoga rejoins)",
+      "note": "weight: significant — because it is a resolution, not a fragment: the Aiolos testament is ch 38's own title beat (ep 64's JP title 少年よ！君たちにアテナを託す is the chapter title 少年たちよ！女神を託す, ja-WP + en-WP chapter list), it closes the Sagittarius house, it restores the four Saints and it reunites Hyoga with the party for the rest of the Twelve Houses. NEW material, not a duplicate: ep 63 ends on the arrow being fired and ep 65 opens inside Capricorn, so these pages are adapted NOWHERE else in the run. SOLE-ADAPTATION EXCEPTION, both halves stated: (1) the pages appear in no other episode — checked against every stored anchor around it (ep 63 -> 38 [37], ep 65 -> 39 [39]); (2) the beat is a major plot point of the source — the reveal of Aiolos's dying message and the arc-node it closes. Mixed therefore stands and the row carries the anchor. Refines the stored partial {38}, whose batch-17 note still reads 'ch 39' in Wikipedia's pre-N22 phantom +1 space.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_episodes",
+        "https://saintseiya.fandom.com/es/wiki/Episodio_064",
+        "https://ja.wikipedia.org/wiki/%E8%81%96%E9%97%98%E5%A3%AB%E6%98%9F%E7%9F%A2_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_chapters_(series)"
+      ]
+    },
+    {
+      "episodes": [64],
+      "kind": "divergence",
+      "chapters": "38",
+      "note": "The whole middle of the episode — the second arrow-hole passage, the crushing roof Shiryu holds back, the flooded cavern Hyoga stops, the cliff-swing Shun gives up to Seiya, the warm Cosmos that restores all four, the teleport back to the temple — is Toei's own; the manga has the arrow strike the wall and expose the testament directly, with Hyoga simply walking in from Scorpio. Anime-original material inserted INSIDE an adapted chapter; it is what makes the row mixed rather than canon, and it moves no position.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Saint_Seiya_episodes",
+        "https://saintseiya.fandom.com/es/wiki/Saint_Seiya_-_Cap%C3%ADtulo_38_%22%C2%A1J%C3%B3venes!_Les_encomiendo_a_Athena%22"
+      ]
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [],
+  "structure": {
+    "notes": "Chapter space: OUR true 109-chapter tankobon numbering (V6/N22, Sean 2026-08-25). Conversion applied and proven at the boundary: en-WP's 'List of Saint Seiya chapters (series)' prints 037 'Scorpion vs. Cygnus' / 038 'Only Death Can Stop Us!' / 039 'Young men! To You I Entrust Athena!' / 040 'Shura! The Man Who Wields Excalibur' — one higher than ours from ch 30 up, so our 36/37/38/39. The ES saintseiya.fandom manga pages are already in OUR space (its page is titled 'Saint Seiya - Capitulo 38' with kanji 少年たちよ！女神を託す and volume 11), which is why it is quoted directly. Note the stored chapters_adapted STRINGS on the neighbouring anchors are still pre-N22 (ep 63 '{38-39}' = our 37-38; ep 65 '{40}' = our 39) while their numeric END/START fields are migrated — a display inconsistency, not a data error, but worth a sweep.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "OUTSIDE THE ASK, evidence attached: ep 65's stored START 39 looks one chapter high. Both en-WP's ep-65 summary and the ES wiki's ep-65 synopsis open with the four Saints entering the House of Capricorn, the Athena/Excalibur statue, the crack that separates Shiryu and Shura's appearance — all of which is ch 38's BACK HALF per the ES ch-38 synopsis; ch 39 'Shura! The Man Who Wields Excalibur' begins at the duel. If Sean takes the A10 refinement, ep 65 START 39 -> 38; my ep-64 continue (38, C1) is correct under either reading, but the healer's C2 parity would compute 39 from the stored START, so the two should be ruled together.",
+    "The stored annotation note on 'eps 64 partial {38}' still carries batch-17 prose in the phantom +1 space ('the episode closes on ch 39's Aiolos testament'). The chapters field is right; only the prose is stale — replaced by the weighted annotation above."
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "series_id": "heavens-lost-property",
+  "summary": "All three rows were typed mixed on 'unidentified chapter' ties from a batch-17 MAL reader; every tie is now identified from the manga pages themselves and none of them is a sliver. Ep 18 is ch 23 'War!!' (the boys-vs-girls snowball war, Kadokawa's own vol-6 back-cover copy names 雪合戦 and 捕虜尋問) plus the vol-6 番外編 「はじめてのはっくつ」 (The First Excavation — Mikako dragging Sugata up a mountain to dig a hot spring): both segments are source and both are significant, so the row is not mixed but CANON, and it carries the sole adaptation of ch 23 (ep 16 → 22, ep 19 → 24 leave it uncovered). Ep 23 is ch 32 'Letter!!' — the yo-yo (\"boing boing\") fishing contest at the shrine festival — played three episodes AHEAD of ch 31 (ep 25) under the ruled A18 reorder, plus the 番外編 「はじめてのおこづかい」 (The First Allowance: Ikaros's first pocket money, she buys a watermelon) as its whole B-part; the anime-original Chaos-in-the-sea coda keeps it mixed. Ep 24's A-part is BOTH 「北風と太陽」 extras — vol 4's 'He won't come out of the washroom' and vol 7's 'He won't come out of the closet' — significant but position-less (unnumbered 番外編), so the row stays mixed, takes no anchor, and its B-part (the periscope network, Ikaros's memory erasure, Chaos emerging) has no identified counterpart. Two new anchors, one anchor-hostile row, one retype to canon.",
+  "anchors": [
+    {
+      "episode": 18,
+      "end_chapter": 23,
+      "start_chapter": 23,
+      "chapters_adapted": "23",
+      "volume": 6,
+      "confidence": "high",
+      "note": "A4/A10. Ch 23 'War!!' is the whole spine of the episode: Mikako stages the boys-vs-girls snow war with 'the winners boss the losers around', Astraea fights on the girls' side, the boys take prisoners, the popular boys rebel and free them (ch 23 p25 'those damned popular guys...'), and the chapter closes on Astraea being unable to return to Synapse until she kills Tomoki — the beat en-WP puts in ep 18's last scene. Kadokawa's vol-6 back-cover copy names the volume's content as 男組vs女組での雪合戦 and 捕虜尋問. Ch 23's first ~4 story pages (Astraea attacking Sugata after he overhears confidential information) are shown at ep 17, so this row carries the remainder; START is still 23 (A10). SOLE ADAPTATION: no other stored anchor reaches ch 23 (ep 16 → 22, ep 19 → 24). Weight of the source segments: significant (see annotations).",
+      "sources": [
+        "https://mangadex.org/chapter/908d34cf-2133-405b-aa8e-193e81a6ee52",
+        "https://en.wikipedia.org/wiki/List_of_Heaven%27s_Lost_Property_episodes",
+        "https://soranootoshimono.fandom.com/api.php?action=parse&page=Manga&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 23,
+      "end_chapter": 32,
+      "start_chapter": 32,
+      "chapters_adapted": "32",
+      "volume": 8,
+      "confidence": "high",
+      "note": "A4/A10. Ch 32 'Letter!!' (vol 8) opens on Mikako raging that she has had no role in four months, becomes the shrine-festival yo-yo (\"boing boing\") catching contest — the manga page reads 'What does yo-yo mean in yo-yo catching? Isn't it just referring to those bouncy things?' with the girls tied in the pool — and closes on Ikaros cutting flowers and a letter going into the postbox. Ep 23 carries that chapter substantially whole (en-WP: Mikako's yo-yo fishing contest, Tomoko competing, Sugata baiting Astraea, the 'legendary fish', then Ikaros and the letter). REARRANGED: ch 32 lands here, two episodes BEFORE ch 31 (ep 25) and three before ch 33 (ep 26) — the series' ruled A18 reorder regime. SOLE ADAPTATION: no other stored anchor reaches ch 32.",
+      "sources": [
+        "https://mangadex.org/chapter/dac8ebf7-7885-4318-beee-4fde6de34bbf",
+        "https://en.wikipedia.org/wiki/List_of_Heaven%27s_Lost_Property_episodes",
+        "https://soranootoshimono.fandom.com/api.php?action=parse&page=Manga&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 18,
+      "continue_chapter": 24,
+      "kind": "parity",
+      "note": "C2 parity — ep 19 starts ch 24 'Investigation' (Sugata and Sohara dive into Tomoki's dream). Ep 18 finishes ch 23 on its last page, so there is no C1 straddle; resume at ch 24.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Heaven%27s_Lost_Property_episodes",
+        "https://mangadex.org/chapter/908d34cf-2133-405b-aa8e-193e81a6ee52"
+      ]
+    },
+    {
+      "episode": 23,
+      "continue_chapter": 31,
+      "kind": "parity",
+      "note": "C2 parity, the backwards case (the d-gray-man / bobobo precedent): the next chapter the anime shows is ch 31 at ep 25, not ch 33 — ch 32 was played early here. C3: ch 32 is already read; skip it when you reach it after ch 31. (Ep 24, in between, adapts only unnumbered 番外編 and moves no position.)",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Heaven%27s_Lost_Property_episodes",
+        "https://soranootoshimono.fandom.com/api.php?action=parse&page=Manga&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "anchor_hostile": [
+    {
+      "episode": 24,
+      "why": "A44 position-less. The episode's source content is two UNNUMBERED 番外編 — 「北風と太陽」 UMA chapter (vol 4) and 「北風と太陽」 UMA Chapter 2 (vol 7) — which carry no mainline chapter number and therefore no position; the rest of the episode has no identified manga counterpart. The segments are significant (they ARE the episode's A-part, adapted in full and nowhere else), so the row is not filler — mixed stands — but it takes no anchor. Delivered as a side_story annotation naming both extras (the Dai convention: unnumbered extras are facts, never numbers).",
+      "sources": [
+        "https://mangadex.org/chapter/771869e3-5205-463d-accb-d7e74bf3a7a8",
+        "https://mangadex.org/chapter/50586314-005b-480b-a0b5-52b357e71fd3",
+        "https://en.wikipedia.org/wiki/List_of_Heaven%27s_Lost_Property_episodes"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [18],
+      "kind": "partial",
+      "chapters": "23",
+      "note": "REPLACES the stored `partial {unidentified + special chapter}`. weight: significant — because ch 23 'War!!' carries the episode's entire plot (the snow war, the prisoners, the popular boys' rebellion, Astraea's blocked chance at Tomoki, and the chapter's own closing beat that she cannot return to Synapse), and this is its SOLE adaptation: ep 16 ends on ch 22 and ep 19 starts on ch 24. The material is NEW here — the only part of ch 23 shown before is its first ~4 story pages (Astraea attacking Sugata), used at ep 17; those pages are not re-adapted, ep 18 takes the rest."
+    },
+    {
+      "episodes": [18],
+      "kind": "side_story",
+      "chapters": "Extra: The First Excavation 「はじめてのはっくつ」 — an unnumbered 番外編 printed in vol 6 between ch 26 'Supplementary Lessons' and vol 7's ch 27 'Swimming'",
+      "note": "weight: significant — because it IS the episode's hot-spring thread, the thread the Japanese title puns on (「死闘！零下1.4度の温泉（カッセン）」), and it is adapted nowhere else in the run. The extra opens 'Ei-kun, I want to bathe in a hot spring~' / 'Let's go DIG UP a hot spring' with Mikako and Sugata digging on a mountainside. DIVERGENCE: the anime folds the dig into the snowball-fight day and sends Ikaros and Nymph with Mikako. Unnumbered — no chapter number, no position (the Dai convention); the row's anchor is unaffected."
+    },
+    {
+      "episodes": [23],
+      "kind": "rearranged",
+      "chapters": "32",
+      "note": "weight: significant — because ch 32 'Letter!!' is the episode's whole A-part (the shrine festival's yo-yo catching contest) plus its closing letter beat, adapted nowhere else. A18 settled reorder: the anime plays ch 32 here and only reaches ch 31 at ep 25 and ch 33 at ep 26 — a genuine back-jump, not a range."
+    },
+    {
+      "episodes": [23],
+      "kind": "side_story",
+      "chapters": "Extra: The First Allowance - UMA chapter 「はじめてのおこづかい」 — an unnumbered 番外編; the fandom's volume list prints it in vol 2 between ch 8 'Homeless' and ch 9 'Lies' (MangaDex slots the same scan after ch 18, in vol 4 — a placement discrepancy, not a numbering one)",
+      "note": "REPLACES the stored `partial {unidentified + early Extra}`. weight: significant — because it IS the episode's B-part, adapted in full and nowhere else: 'Here, your allowance. It's money that you can use however you like!!', Ikaros canvassing everyone for what to buy, and buying a watermelon at the end (the fandom's own synopsis for the extra ends 'She buys a watermelon in the end'). The batch-17 reader's 'a special chapter waaay back' is this vol-2 extra. Unnumbered — no position."
+    },
+    {
+      "episodes": [23],
+      "kind": "divergence",
+      "chapters": "n/a",
+      "note": "The episode's original share, which is what keeps the row mixed rather than canon: Ikaros brooding on Chaos's 'what is love?' after the ep-22 battle, and the closing scene of Chaos on the sea floor deciding love = suffering. That thread belongs to the anime's original Chaos-return continuation (stored loose_parallel {46-53} on eps 24-26), not to the manga at this point."
+    },
+    {
+      "episodes": [24],
+      "kind": "side_story",
+      "chapters": "Extra: The North Wind and the Sun - UMA chapter (unnumbered 番外編, vol 4, printed between ch 15 'Toy' and ch 16 'Orders') and Extra: The North Wind and the Sun - UMA Chapter 2 (unnumbered 番外編, vol 7, printed after ch 30 'Dolly')",
+      "note": "REPLACES the stored `partial {two unidentified chapters}` — both are now identified. weight: significant — because the two extras ARE the episode's A-part and are adapted nowhere else: vol 4's opens on Ikaros at a W.C. door, 'He won't come out of the washroom...', and vol 7's on the same gag at the fusuma, 'He won't come out of the closet...' — exactly en-WP's 'first in the bathroom until he is washed out, and then in a closet'. The batch-17 reader's 'two different manga chapters' are these. Both are unnumbered 番外編 → no chapter number, no anchor (A44)."
+    },
+    {
+      "episodes": [24],
+      "kind": "divergence",
+      "chapters": "n/a",
+      "note": "The episode's original share, which keeps the row mixed: Tomoki's town-wide periscope network and its destruction, Ikaros overheating and resolving to erase her memories of him, and Chaos emerging from the sea. No source names a manga chapter for any of it, and the Chaos-return arc the last beat opens is ruled anime-original (stored loose_parallel {46-53} on eps 24-26). The 'bridal magazine / Tomoki's proposal' exchange is a follow-on of ch 32's letter, already carried at ep 23 — a duplicate, not new pages."
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [
+    {
+      "episodes": [18],
+      "type": "canon",
+      "note": "T27/T28 under the sliver clause. Both of this episode's segments are SOURCE and both are significant: ch 23 'War!!' (the whole snow-war plot, its sole adaptation) and the vol-6 番外編 「はじめてのはっくつ」 (the hot-spring dig). A side story printed inside the tankōbon IS the source (the GTO ruling), so there is no non-source share to make the row mixed — en-WP's beat list for ep 18 maps onto ch 23 and that extra with nothing left over, and the fandom's independently written episode summary lists the same beats. AFL's 'mixed' is the coarse call the sliver clause exists to correct; flagged for Sean since I cannot watch the episode.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_Heaven%27s_Lost_Property_episodes",
+        "https://soranootoshimono.fandom.com/api.php?action=parse&page=Mortal%20Combat!%20Hot%20Spring%20Snowball%20Fight%20at%201.4%C2%B0%20Below&prop=wikitext&format=json",
+        "https://mangadex.org/chapter/908d34cf-2133-405b-aa8e-193e81a6ee52",
+        "https://mangadex.org/chapter/32a7fa41-be4e-4835-b1d9-ce6e23b31458"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "CHAPTER SPACE (answers open flag #697, MU 77 vs AniList 97). The reading edition is the serialization's own 1-77 numbering, which is exactly the space our stored volume boundaries already use (v1: 1-4 … v20: 77-). Three sources agree on 77 mainline chapters: ja.wikipedia's manga infobox 「話数= 全77話 + 番外編2話」, the soranootoshimono fandom's volume list (Chapter 1 'Falling' … Chapter 77 'Normality', with the extras listed unnumbered inside each volume), and MangaDex's feed (77 numbered chapters + 18 uploaded extras carried as .1/.2 decimals). AniList's 97 is a UNIT count — the 77 mainline chapters plus the ~20 unnumbered 番外編; the PICO spin-off is a separate MangaDex entry (11 chapters) and is not in this space. MU's 77 is correct; AniList's 97 is the padded count. Recommendation (not applied here): total_chapters 97 → 77, an N22-shaped ruling like tokyo-mew-mew's.\n\nUNNUMBERED EXTRAS ARE FACTS, NOT NUMBERS (the Dai convention). Three of the six segments in this wave are 番外編: The First Excavation (vol 6, ep 18), The First Allowance - UMA chapter (vol 2 per the fandom, ep 23), and the two North Wind and the Sun extras (vol 4 and vol 7, ep 24). They are delivered as side_story annotations naming title + printed position; they never take a chapter number and never move a position.\n\nONE WIKI, THREE HOSTNAMES: heavens-lost-property.fandom.com does not exist; soranootoshimono.fandom.com, tokyo-mew-mew-style aliases and the sitemeta 'base' all resolve to the single Sora No Otoshimono Wiki. Its chapter pages are infobox-only stubs (no plot text) — the chapter content in this verdict was read from the scan pages themselves, and the volume-level content from Kadokawa's own back-cover copy on the vol-6 scan.\n\nSOURCE PLACEMENT DISCREPANCY: the fandom prints 'The First Allowance - UMA chapter' in vol 2 (previous = Homeless/ch 8, next = Lies/ch 9); MangaDex uploads the same scan as 18.1 in vol 4. The extra is unnumbered either way, so no anchor depends on it; the fandom's placement is used above because its volume list is internally consistent (vol 2 = 5, 6, 7, 8, Extra, 9).\n\nROWS OUTSIDE THE ASK, found while mapping: ep 17 'A Proud-fought Battle!' (mixed, no anchor) adapts ch 19 'Contest' — the manga's Mask de Pants vs Mikako wrestling chapter, whose colour opening page is the ring announcement 'in the red corner … Satsukitane Mikako / in the blue corner … Mask de PANTIIIES!!' — plus ch 23's opening ~4 pages (Astraea attacking Sugata). That row is anchorable at 19 and should be queued. With ep 17 → 19, ep 18 → 23 and ep 23 → 32, the only mainline chapters left with no episode anywhere in the run are ch 16 'Orders' and ch 20 'Date' (ep 12's stored note already suspects ch 20).",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "TYPE FORK, ep 18: proposed canon, stored/AFL mixed. Both segments are source (ch 23 + the vol-6 番外編), en-WP's and the fandom's independently written summaries leave no beat unaccounted for, and a tankōbon side story IS the source (GTO). If you would rather not retype on summary evidence alone, the anchor (ep 18 → 23 v6) stands either way and mixed is harmless.",
+    "ANCHOR OUTSIDE THE ASK: ep 17 (mixed, no anchor) = ch 19 'Contest' + ch 23's opening pages. Worth a one-row follow-up so the 16 → 22 / 18 → 23 fence has no hole between it.",
+    "FLAG #697 answered: MU's 77 is the reading edition and our volume boundaries are already in it; AniList's 97 counts the unnumbered 番外編. Suggest an N22-style ruling total_chapters 97 → 77.",
+    "The three stored 'unidentified chapter' annotations (eps 18, 23, 24) are all replaced by identified ones above; each replacement names the extra's title and where it is printed, so nothing in the store still says 'unidentified' for this series."
+  ]
+}
