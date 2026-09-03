@@ -24,7 +24,18 @@ const SERIES: { sid: string; files: string[]; upperFence: number | null }[] = [
   { sid: 'dragon-quest-the-adventure-of-dai', files: ['a', 'b', 'c', 'd', 'e', 'f', 'g'].map((x) => `dragon-quest-the-adventure-of-dai-w13${x}.json`), upperFence: null }, // no anchored fence above within this wave (rows 60-99 = wave 14)
 ];
 // fence-row repairs delivered by the verdicts (old → new on stored MANUAL rows)
-const FENCE_REPAIR: { sid: string; episode: number; set: Record<string, unknown>; why: string }[] = [];
+const FENCE_REPAIR: { sid: string; episode: number; set: Record<string, unknown>; why: string }[] = [
+  { sid: 'dragon-quest-the-adventure-of-dai', episode: 17, set: { chapter: 59, chapters_adapted: '57 (bulk), 58, 59, 60 (the relocated Crocodine-sends-Dai beat — a scrap; ep 18 owns ch 60)' }, why: 'A47 (w13a + the a-c verifier on three instruments: coco13 17 = ch 57-59 with no ch 60; Toei 17 ends on the reveal; the fandom ch-59 cast ends Hyunckel): the ch-60 share is a relocated beat, not first-time coverage — END 60 → 59; ep 18 → 63 [60].' },
+];
+// the a-c verifier: w13b ep 28 graft{196} is the fandom's number — OUR 197 (さらば我が子よ = en-WP 197)
+const ANNOTATION_CHAPTERS_OVERRIDE: Record<string, string> = { 'dragon-quest-the-adventure-of-dai#28#graft': '197 (pp 10, 12)' };
+const ANNOTATION_ADD: { sid: string; episode: number; kind: AnnotationKind; chapters: string; note: string }[] = [
+  { sid: 'dragon-quest-the-adventure-of-dai', episode: 17, kind: 'rearranged', chapters: '60', note: 'The a-c verifier: ep 17\'s ch-60 share is the relocated Crocodine-sends-Dai beat (the fandom ep-17 差分 verbatim) — a relocation, not first-time coverage; END 59 (A47).' },
+];
+// A47 CONVENTION (Sean rules, WAVE13-RECOVERY §THE DECISIONS): A/B HOLD on 最初/序盤 tails; C ADVANCED on the same shape (30 → 108, 31 → 111, 32 → 114). Under the HOLD convention: 30 → 107, 31 → 110, 32 → 113 + partials; continues unchanged.
+const HOLD_C = true;
+const END_OVERRIDE: Record<string, number> = HOLD_C ? { 'dragon-quest-the-adventure-of-dai#30': 107, 'dragon-quest-the-adventure-of-dai#31': 110, 'dragon-quest-the-adventure-of-dai#32': 113 } : {};
+const HOLD_PARTIALS: { episode: number; chapters: string }[] = HOLD_C ? [{ episode: 30, chapters: '108 (序盤 — ep 31 starts on it)' }, { episode: 31, chapters: '111 (序盤 — ep 32 starts on it)' }, { episode: 32, chapters: '114 (序盤 — ep 33 starts on it)' }] : [];
 // continues on rows outside the target ranges (fence-row additions — kept only where Sean rules them in scope)
 const CONTINUE_SKIP = new Set<string>([]); // e.g. 'bleach#167' to drop the addition
 const NOTE_FIX: Record<string, string> = {};
@@ -49,7 +60,8 @@ async function main() {
     for (let i = 0; i < all.length; i++) {
       const a = all[i]; const next = all[i + 1];
       const nextStart = next ? Number(next.start_chapter ?? next.end_chapter) : upperFence; // null → sliverEnd 'no-next': the wave's last END stands
-      const verdict = sliverEnd(a.chapters_adapted, Number(a.end_chapter), nextStart);
+      const ruled = END_OVERRIDE[`${sid}#${a.episode}`];
+      const verdict = ruled != null ? { ...sliverEnd(a.chapters_adapted, ruled, nextStart), end: ruled } : sliverEnd(a.chapters_adapted, Number(a.end_chapter), nextStart);
       const moved = verdict.end !== Number(a.end_chapter); if (moved) normalized++;
       const vol = volOf(verdict.end); const agentVol = a.volume != null ? Number(a.volume) : null;
       if (vol != null && agentVol !== vol) revol++;
@@ -67,8 +79,19 @@ async function main() {
       continues++;
     }
     for (const a of annos) for (const ep of a.episodes as number[]) {
-      console.log(`  annotation ep ${ep} ${a.kind}${a.chapters ? `{${String(a.chapters).slice(0, 30)}}` : ''}`);
-      if (!DRY) await upsertAnnotation({ series_id: sid, episode: ep, kind: a.kind as AnnotationKind, chapters: a.chapters ?? null, note: `${a.note} [${B}]`.slice(0, 1200), origin: 'research' });
+      const chO = ANNOTATION_CHAPTERS_OVERRIDE[`${sid}#${ep}#${a.kind}`];
+      console.log(`  annotation ep ${ep} ${a.kind}${(chO ?? a.chapters) ? `{${String(chO ?? a.chapters).slice(0, 30)}}` : ''}${chO ? ' (overlay: verifier)' : ''}`);
+      if (!DRY) await upsertAnnotation({ series_id: sid, episode: ep, kind: a.kind as AnnotationKind, chapters: chO ?? a.chapters ?? null, note: `${a.note} [${B}]`.slice(0, 1200), origin: 'research' });
+      annoN++;
+    }
+    for (const hp of HOLD_PARTIALS) {
+      console.log(`  annotation ep ${hp.episode} partial{${hp.chapters}} (overlay: the A47 hold convention)`);
+      if (!DRY) await upsertAnnotation({ series_id: sid, episode: hp.episode, kind: 'partial', chapters: hp.chapters, note: `A47 hold (Sean ruled one convention for the block, wave 13): the tail is the next episode's — END stays one chapter back. ${B}`, origin: 'research' });
+      annoN++;
+    }
+    for (const a of ANNOTATION_ADD.filter((x) => x.sid === sid)) {
+      console.log(`  annotation ep ${a.episode} ${a.kind}{${a.chapters}} (overlay: verifier)`);
+      if (!DRY) await upsertAnnotation({ series_id: sid, episode: a.episode, kind: a.kind, chapters: a.chapters, note: `${a.note} [${B}]`, origin: 'research' });
       annoN++;
     }
     if (types.length) console.log(`  type corrections delivered (T6 map, asserted by the healer): ${types.map((t) => `${t.episodes.join(',')} → ${t.type}`).join('; ')}`);
