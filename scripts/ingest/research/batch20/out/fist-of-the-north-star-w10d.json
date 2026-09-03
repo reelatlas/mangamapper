@@ -1,0 +1,219 @@
+{
+  "series_id": "fist-of-the-north-star",
+  "summary": "Sub-block D (eps 127-132) is the Han fight and its aftermath in the Land of Asura arc: the six rows run ch 172-179 in unbroken manga order at ~1.5 chapters an episode, then fall off the manga entirely for the anime-original Rock arc. Eps 127-130 are dense adaptation (172-173, 174-176, 176-177, 178) and take high-confidence anchors; the only page-level care needed is ch 176, which straddles eps 128/129 — the fandom's Tensho Honretsu page pins Kenshiro's counter to Han to 'volume 20, chapter 176', which is ep 128's climax, and ch 176's closing pages (Leia and Tao reaching Jukei at the holy marsh, arriving by raft in the manga) open ep 129. Two typing findings, both against AFL (which prints Manga Canon on all six): ep 131 is mixed — hokutosite states flatly that 'apart from the Xie vs Ken battle and Han's body washing up at Hyoh's, it is almost entirely anime-original', and both of those segments are ch 179, one of them Hyoh's manga debut (Hyoh = manga ch 179-210 / anime ep 131-152), so the row carries the ch-179 anchor; ep 132 is filler — 'apart from the Juryu Razan Jin appearing, everything is anime-original' (hokutosite), and that centipede formation is Kaioh's Messatsu-Tai lifted out of ch 183/186 and handed to the anime-original Gamon, so it is a graft, not an adaptation. Ep 130 keeps its stored canon even though 9m28s of it (09:03-18:31) is a clip show: the rest of the episode is the whole of ch 178 and it is that chapter's only adaptation. The block opens on ch 172 and hands off after ch 179; ep 133 (another agent's row) opens the ch-180 Kaioh material.",
+  "anchors": [
+    {
+      "episode": 127,
+      "end_chapter": 173,
+      "start_chapter": 172,
+      "chapters_adapted": "172-173 (the fight's opening exchange closes the row; the Shachi/Leia boat flashback is played early — see the rearranged annotation)",
+      "volume": 20,
+      "confidence": "high",
+      "note": "A10 START: the row cold-opens on Akashachi waiting on the pirate ship for Shachi, and ch 172 'A Call From Afar!' (はるかなる呼び声) lists Akashachi FIRST in its cast-in-order-of-appearance — ep 126 ended one chapter earlier (Kaijin = manga ch 171 / anime ep 126). A4 END: ch 173 'For a Loved One!' (愛しき者のために) is the Shachi/Leia boat flashback ('I cannot abandon Leia'), Shachi's assassination attempt on Han (Sohai Gyakuso deflecting the chess piece), Lin handed over and Kenshiro walking in; the row ends on the first Ken/Han exchange (Shikka Kojin, both men drawing blood). A47: if the last pages of that exchange belong to ch 174 — the chapter ep 128 starts on — the END stays 173; the tail is ep 128's. Han's fandom index is Manga ch. 170-177 / Anime ep. 126-129, which brackets this row.",
+      "sources": [
+        "https://hokuto.fandom.com/wiki/HnK_Chapter_172",
+        "https://hokuto.fandom.com/wiki/HnK_Chapter_173",
+        "https://hokuto.fandom.com/wiki/Han",
+        "https://rq87.flyingomelette.com/HNK/1/127/a.html",
+        "https://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/127.html",
+        "https://en.wikipedia.org/wiki/List_of_Fist_of_the_North_Star_chapters"
+      ]
+    },
+    {
+      "episode": 128,
+      "end_chapter": 176,
+      "start_chapter": 174,
+      "chapters_adapted": "174-176 (176 up to the Tensho Honretsu and the rag pulling the red-water lever; ch 176's closing pages open ep 129)",
+      "volume": 20,
+      "confidence": "high",
+      "note": "Ch 174 'The Legend of Fate!' is Jukei's first manga appearance and his fandom index is Manga ch. 174-204 / Anime ep. 128-149 — his debut is Shachi's flashback, which is this episode's centre (Leia's school, the two Asuras, Jukei killing them, Shachi begging to be taught Hokuto Ryuken). Ch 175 'The Successor of the Legend!' has the cast Shachi, Lin, Kenshiro, Han, Raoh, Kokuoh, Akashachi — exactly the second flashback (Raoh at the shore with Akashachi and the boy Shachi, then Raoh and Kokuoh charging the bandits). END: the fandom's Tensho Honretsu page pins Kenshiro's use of the technique against Han to 'volume 20, chapter 176', and that is this episode's climax (Han's Hakura Messei beaten by Ken's Tensho Honretsu on both comparison sites); the red-water lever follows it inside the same chapter — RQ87: in the manga the rag pulls the switch because Kenshiro used the Heaven's Command Charge. C1: the row stops mid-176.",
+      "sources": [
+        "https://hokuto.fandom.com/wiki/Tensho_Honretsu",
+        "https://hokuto.fandom.com/wiki/HnK_Chapter_175",
+        "https://hokuto.fandom.com/wiki/Jukei",
+        "https://rq87.flyingomelette.com/HNK/1/128/a.html",
+        "https://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/128.html"
+      ]
+    },
+    {
+      "episode": 129,
+      "end_chapter": 177,
+      "start_chapter": 176,
+      "chapters_adapted": "176 (cont.: Leia and Tao reach Jukei at the holy marsh) - 177",
+      "volume": 20,
+      "confidence": "medium",
+      "note": "START 176 under A10: the row opens on Leia and Tao arriving at Jukei's marsh and Jukei explaining the forbidden transmission of Hokuto Ryuken — real manga pages, not a recap (hokutosite's difference list for this episode cuts a scene the manga has: 'レイアやタオがイカダから降りるシーン削除', the pair disembarking from their raft), and ch 176's cast-in-order ends Leia, Tao, Jukei. END 177: ch 177 'Blazing Fate!' has the cast Lin, Shachi, Kenshiro, Han, Jukei, Toki, Raoh, Ryuken, Leia, Tao, Bat, Lui — Han's defeat and death, the twenty-years-ago flashback (Jukei sending Raoh, Toki and the infant Kenshiro to Ryuken) and Lin's closing thought of Bat and Lui on the beach, which is literally this episode's last scene. Han's index closes at ch 177 / ep 129. MEDIUM because the alternative split (the Leia/Tao arrival being ch 177's opening, ep 128 finishing 176) cannot be ruled out on page counts — see flags.",
+      "sources": [
+        "https://hokuto.fandom.com/wiki/HnK_Chapter_176",
+        "https://hokuto.fandom.com/wiki/HnK_Chapter_177",
+        "https://hokuto.fandom.com/wiki/Han",
+        "https://rq87.flyingomelette.com/HNK/1/129/a.html",
+        "https://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/129.html"
+      ]
+    },
+    {
+      "episode": 130,
+      "end_chapter": 178,
+      "start_chapter": 178,
+      "chapters_adapted": "178 (Kosem's Raoh-pendant flashback, the Boro night raid on the training camp, Chain's reunion, Buron's massacre and Kenshiro killing him; ch 178's closing beat — Kosem's death at Buron's hands — is withheld and restaged in ep 131)",
+      "volume": 20,
+      "confidence": "high",
+      "note": "One chapter across the row. Buron's fandom index is Manga ch. 178 / Anime ep. 130 and Kosem's is Manga ch. 178 / Anime ep. 130-131; ch 178's title 'The Wretched Rise Up!' (ボロ蜂起す) IS this episode's plot, and its cast-in-order (Lin, Kenshiro, Shachi, Jukei, Leia, Tao, Kosem, Raoh, Chain, Buron) is accounted for by hokutosite's difference list, which says the anime cut the manga's Lin-and-Shachi companions and the Jukei/Leia/Tao visit to the destroyed village. The row's middle 09:03-18:31 is a clip show (fandom Filler page; hokutosite prints the montage's shot list) — re-shown pages, never cited, and they do not move the position.",
+      "sources": [
+        "https://hokuto.fandom.com/wiki/Buron",
+        "https://hokuto.fandom.com/wiki/Kosem",
+        "https://hokuto.fandom.com/wiki/Filler",
+        "https://rq87.flyingomelette.com/HNK/1/130/a.html",
+        "https://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/130.html"
+      ]
+    },
+    {
+      "episode": 131,
+      "end_chapter": 179,
+      "start_chapter": 179,
+      "chapters_adapted": "179 (two segments only: Kenshiro killing Xie — restaged from the manga's Valley of No Return to the anime's prison camp — and Han's body reaching Hyoh's castle, Hyoh's manga debut and his vow of vengeance. Everything else in the row is anime-original.)",
+      "volume": 20,
+      "confidence": "high",
+      "note": "The row is retyped mixed (see type_corrections) and a mixed row carries the anchor — which is the point: ch 179 is animated nowhere else, so filler here would mark the chapter never-adapted. Two independent fandom indexes pin both segments to the same chapter: Xie = Manga ch. 179 / Anime ep. 131, Hyoh = Manga ch. 179-210 / Anime ep. 131-152. hokutosite's difference list is explicit — 'シエとケンとのバトル、ハンの遺体がヒョウのところに流れ着く以外はほぼアニメオリジナル' (apart from the Xie/Ken battle and Han's body washing up at Hyoh's, almost entirely anime-original). A4: 179 is the furthest chapter reached in running order; the Kosem death scene played earlier in the row is the anime's own rewrite of ch 178's beat (RQ87: 'Kosem does die in the manga, but he is killed earlier, by Buron'), not new pages, so it does not move the START back.",
+      "sources": [
+        "https://hokuto.fandom.com/wiki/Xie",
+        "https://hokuto.fandom.com/wiki/Hyoh",
+        "https://rq87.flyingomelette.com/HNK/1/131/a.html",
+        "https://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/131.html"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 128,
+      "continue_chapter": 176,
+      "kind": "parity",
+      "note": "Ch 176 straddles eps 128/129: the episode stops when the rag pulls the lever and the rivers run red, and the chapter's closing pages — Leia and Tao reaching Jukei at the holy marsh — open ep 129. Resume INSIDE ch 176 (C1).",
+      "sources": [
+        "https://hokuto.fandom.com/wiki/Tensho_Honretsu",
+        "https://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/129.html"
+      ]
+    },
+    {
+      "episode": 130,
+      "continue_chapter": 178,
+      "kind": "parity",
+      "note": "Ch 178's last beat — Buron killing Kosem — is not animated: the anime keeps Kosem alive and gives him a rewritten death in ep 131 with an anime-original son at his bedside. Resume INSIDE ch 178 (C1); nothing between 177 and 178 is skipped.",
+      "sources": [
+        "https://rq87.flyingomelette.com/HNK/1/130/a.html",
+        "https://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/131.html"
+      ]
+    },
+    {
+      "episode": 131,
+      "continue_chapter": 180,
+      "kind": "parity",
+      "note": "Resume at ch 180 — ep 132 is filler and ep 133 opens the ch-180 Kaioh material (the Kaioh/Hayabusamaru debut). C3 skip to read on the way: ch 179's un-animated passages — Shachi and Lin travelling with Kenshiro, Xie's own troop and the Valley of No Return trap he dies in — are replaced by the anime's Rock material and are never staged in any later episode. (Parity value depends on ep 133's START, which is another agent's row.)",
+      "sources": [
+        "https://rq87.flyingomelette.com/HNK/1/131/a.html",
+        "https://hokuto.fandom.com/wiki/Hokuto_no_Ken_episodes"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [
+        127
+      ],
+      "kind": "rearranged",
+      "chapters": "173",
+      "note": "The Shachi/Leia boat flashback (Leia secretly building the boat that would take Shachi home, her blistered hands, Shachi turning back for her) is played before Shachi and Lin reach Han's castle; in the manga it sits later — RQ87 places it after Shachi kills the two rags travelling with Lin, hokutosite says ' 原作はハンvsケンの時' (in the manga it is during the Han/Ken fight)."
+    },
+    {
+      "episodes": [
+        127
+      ],
+      "kind": "divergence",
+      "chapters": "172-173",
+      "note": "Anime additions around the manga's spine: the Asura in the jeep is made a local ruler who tries to run Kenshiro down and attacks with two swords (in the manga Kenshiro simply smashes an unarmed Asura's head against a cliff until he talks); Han drinks the poisoned cup himself after the dog dies; and Kenshiro cuts a path through the castle guards on the way in. Han's would-be poisoner is never explained in either version."
+    },
+    {
+      "episodes": [
+        128
+      ],
+      "kind": "divergence",
+      "chapters": "174-176",
+      "note": "Cuts and one change of agency: the manga's giant lion statue falling on the duellists and crushing the watching Asuras is dropped, as is Shachi cloaking Lin before his story; and where the manga has a rag deduce on his own that Kenshiro is Raoh from the Tensho Honretsu, the anime has Shachi tell the crowd so — his lie, not their inference."
+    },
+    {
+      "episodes": [
+        129
+      ],
+      "kind": "rearranged",
+      "chapters": "177",
+      "note": "The twenty-years-ago flashback is moved: in the manga the dying Han tells it after his defeat, and the anime deletes that telling (hokutosite: '原作ではハンが死ぬ間際に、２０数年前の出来事を話すが、アニメでは削除') and plays it earlier in the episode as Jukei's explanation to Leia and Tao, while the fight is still running. The farewell to Lin and Shachi is also relocated to the beach in sight of Akashachi's ship."
+    },
+    {
+      "episodes": [
+        130
+      ],
+      "kind": "divergence",
+      "chapters": "178",
+      "note": "Padding and softening around a complete chapter: 09:03-18:31 is a clip show of eps 123-129 framed as Kenshiro reflecting (fandom Filler page; hokutosite lists the montage's shots); Kenshiro travels alone where the manga has Lin and Shachi with him; the Jukei/Leia/Tao visit to the destroyed village is cut; Buron is given an added massacre of his own deserters and survives his returned boomerang to die on a pressure point; and Kosem is kept alive past the death the chapter gives him."
+    },
+    {
+      "episodes": [
+        131
+      ],
+      "kind": "partial",
+      "chapters": "179",
+      "note": "Only two segments of ch 179 are adapted — Kenshiro killing Xie (moved from the manga's Valley of No Return to the prison camp, and killed by a pressure point instead of his own ground trap) and Han's corpse reaching Hyoh's castle, which is Hyoh's manga debut and his vow to avenge Han. Everything else — Rock and his seven riders, Onyudo, Johann, Kosem's rewritten death, Shachi rescuing Leia and Tao in disguise — is anime-original."
+    },
+    {
+      "episodes": [
+        132
+      ],
+      "kind": "graft",
+      "chapters": "183, 186",
+      "note": "The one manga element in a wholly anime-original episode: the Juryu Razan Jin centipede formation and Kenshiro's whirlwind-kick answer to it. In the manga that squad is Kaioh's Messatsu-Tai, guarding his castle in ch 183 and 186; the anime hands the technique to the anime-original Gamon's men and gives Kaioh a newly designed guard instead (hokutosite: '呪龍羅斬陣を使うのが、カイオウ滅殺隊から、ギャモン配下に変更'). No pages of 183/186 are adapted here — their events are animated in their own place later in the run."
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [
+    {
+      "episodes": [
+        131
+      ],
+      "type": "mixed",
+      "note": "Stored canon (AFL: Manga Canon). Source and anime-original both sit in this episode and the source side is story-carrying: hokutosite's difference list says in one line that everything except the Xie/Ken battle and Han's body arriving at Hyoh's is 'ほぼアニメオリジナル', and RQ87 says 'Rock and his gang were never in the manga — this episode marks the start of a mostly filler arc'. The fandom character index confirms both sides independently: Xie = Manga ch. 179 / Anime ep. 131 and Hyoh = Manga ch. 179-210 / Anime ep. 131-152, against Rock = Anime (ep. 131-133), Onyudo = Anime (ep. 131) and Jose = Anime (ep. 131-133), i.e. anime-only. T28: the two ch-179 fragments aggregate to roughly a quarter of the running time, and one of them is sole AND load-bearing — Hyoh's introduction and his vow of vengeance are animated only here and are the node the whole 133-152 block hangs on, so the row is mixed and carries the ch-179 anchor rather than being filler with an orphaned chapter.",
+      "sources": [
+        "https://rq87.flyingomelette.com/HNK/1/131/a.html",
+        "https://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/131.html",
+        "https://hokuto.fandom.com/wiki/Xie",
+        "https://hokuto.fandom.com/wiki/Hyoh",
+        "https://hokuto.fandom.com/wiki/Rock"
+      ]
+    },
+    {
+      "episodes": [
+        132
+      ],
+      "type": "filler",
+      "note": "Stored canon (AFL: Manga Canon). Two independent sources say the episode is anime-original: RQ87 — 'This episode is filler, and does not happen in the manga. However, the centipede guys do appear later on in the manga, but they serve Kaioh, not Gamon (Gamon never appeared in the manga)' — and hokutosite — '呪龍羅斬陣が登場する以外は全てアニメオリジナル' (apart from the Juryu Razan Jin appearing, everything is anime-original). The fandom Filler page agrees ('132 - Except for the Centipede villains') and Gamon's own page says he 'only appears in the TV series'. T28: an original plot that quotes a fragment is filler with a mandatory tie annotation (graft {183, 186}). The sole-adaptation exception is tested and FAILS on both halves — the squad's pages are not sole to this episode (ch 183/186's events, Kenshiro fighting his way to Kaioh's castle, are animated in their place in the 135-137 block, with a redesigned guard), and a castle guard's formation is not a major plot point of the source (no death, no reveal, no arc close). This follows the series' standing ruling (T6, Sean 2026-08-25) that the fandom plus content accounting beat AFL on this show. A1: the row takes no anchor.",
+      "sources": [
+        "https://rq87.flyingomelette.com/HNK/1/132/a.html",
+        "https://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/132.html",
+        "https://hokuto.fandom.com/wiki/Filler",
+        "https://hokuto.fandom.com/wiki/Gamon",
+        "https://hokuto.fandom.com/wiki/Kaioh_Messatsu-Tai"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "CHAPTER SPACE. The 245-chapter WSJ numbering, as settled for this series (flag #688) and re-verified here independently of the fandom: en.wikipedia's 'List of Fist of the North Star chapters' gives Shueisha volume 20 (ISBN 4-08-851680-X) as chapters 171-179 with the same Japanese titles the fandom carries (172 はるかなる呼び声, 173 愛しき者のために, 174 宿命の伝説, 175 伝説を継ぐ者, 176 ラオウ伝説走る, 177 燃えさかる宿命, 178 ボロ蜂起す, 179 もどりこぬ愛) and volume 21 starting at 180 — which matches the stored volume boundaries (v20: 171-179) exactly. Every anchor in this file is volume 20. BLOCK ACCOUNTING. The six rows run ch 172-179 in unbroken manga order with nothing skipped between them: 127 = 172-173, 128 = 174-176 (mid), 129 = 176 (cont.)-177, 130 = 178, 131 = 179 (two segments), 132 = none. The first row opens on ch 172 (Akashachi waiting on the pirate ship — ch 172 lists him first in its cast-in-order); ep 126, the previous sub-block's last row, ends at ch 171 (Kaijin = Manga ch. 171 / Anime ep. 126, Kaiser = Manga ch. 165-170 / Anime ep. 123-126). The last row hands off after ch 179: ep 132 is filler and ep 133 (the next sub-block) opens the ch-180 Kaioh/Hayabusamaru material, so the handoff chapter is 180. ENDs ascend 173 -> 176 -> 177 -> 178 -> 179, inside the outer fence 136 (ep 108) -> 210 (ep 152). WHERE THE MANGA STOPS CARRYING THE ANIME. Ch 179 is the last chapter this sub-block touches and it is touched only in two segments; from ep 131 the anime runs its own Rock / 'Seven of the Wasteland' (荒野の七人) arc — hokutosite's ep-131 commentary says Rock's seven appear across three episodes from this one (131-133), and the fandom lists Rock, Onyudo, Jose and Gamon as anime-only. That is why the reported 'anime-expanded' rows split two ways rather than one: 131 keeps real ch-179 pages (mixed, anchored), 132 keeps none (filler). ROW IDENTITY. Our rows 127-132 join by title AND date with no shift: AFL, the fandom 'Hokuto no Ken episodes' list, RQ87 (which numbers them Hokuto no Ken 2 eps 18-23 / overall 127-132) and hokutosite (第127話…第132話) all carry the same six titles on 1987-08-20, 08-27, 09-03, 09-10, 09-17 and 09-24 — every one a Thursday, the series' slot — and all six agree with the stored dates. SOURCES. Three independent per-episode instruments, as the wave-6 verdict recorded: (1) hokuto.fandom via the API — no episode pages, but 245 per-chapter pages carrying volume, page count, Japanese title and a cast list IN ORDER OF APPEARANCE, a per-character `appearances` field that is a two-way index ('Manga (ch. 179), Anime (ep. 131)'), technique pages that occasionally carry an exact chapter pin (Tensho Honretsu: 'volume 20, chapter 176'), one 'Hokuto no Ken episodes' page with per-episode summaries and arc-level chapter spans ('The Land of Asura Arc ... adapts Chapters 161 to 210'), and a 'Filler' page with per-episode exceptions; (2) rq87.flyingomelette.com/HNK/1/<ep>/a.html, English, with a 'Manga differences' section on every row; (3) hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/<NNN>.html, Japanese (Shift-JIS), with a 漫画版との違い bullet list and, on ep 130, a 総集編詳細 shot list for the clip-show block. AFL was read and DISSENTS: it prints 'Manga Canon' on all six rows including 132, which two independent sources call anime-original — the same pattern Sean already ruled on for eps 61/78/83. AFG's page could not be read (its table is script-loaded); it is cross-check only in any case.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "ep 129 START — medium, one alternative reading. I place ch 176's closing pages (Leia and Tao reaching Jukei by raft) at the head of ep 129, which makes 176 straddle eps 128/129 and gives ep 128 a C1 continue. The alternative is that the arrival is ch 177's opening, in which case ep 128 finishes 176 (no continue) and ep 129's START is 177. Evidence for my reading: ch 176's cast-in-order ends Leia, Tao, Jukei; ch 177's puts Jukei fifth, before Leia and Tao, which fits the flashback he narrates after Han's death rather than a conversation with them at the start. Nothing else in the block moves either way.",
+    "ep 130 canon vs mixed — Sean's call. I left the stored canon standing: the row adapts the whole of ch 178 and is that chapter's only adaptation, so the source is the episode's plot. But 09:03-18:31 (about 43% of the slot) is a clip show of eps 123-129 (fandom Filler page; hokutosite's shot list). If a recap block of that size counts as the 'non-source' half of T27's mixed, this row is mixed rather than canon. My reading is that re-shown pages are padding, not a second standing, which is also how the series' ruled rows read (ep 78, 'everything except the very beginning is a clip show', went to filler on CONTENT, not on the recap's size).",
+    "ep 126 air date, NOT my row — for the 121-126 agent and lane B. AFL prints 1987-08-03 for ep 126, which is a Monday and breaks the Thursday slot. The fandom episode list, RQ87 and hokutosite all give August 13, 1987 (a Thursday), and RQ87 notes explicitly that 'there was a two week gap between this episode and the previous one airing during the original broadcast' (ep 125 = July 30). If our stored value is AFL's, it is a G53 repair.",
+    "For the 133-138 agent: ep 132 lifts the Kaioh Messatsu-Tai's Juryu Razan Jin (manga ch 183 and 186) forward into an anime-original plot, and the fandom notes the anime replaces Kaioh's own guard with a newly designed 'Kaioh Shuo-Tai'. So when eps 135/137 adapt ch 183/186, the squad on screen is NOT the manga's — the events are adapted there, the design is not; worth a divergence note on those rows rather than a second graft.",
+    "ep 131's continue (180) is parity with ep 133's START, which is another agent's row. If ep 133 turns out to open earlier than ch 180, the healer's value wins and my note about ch 179's un-animated passages should ride along."
+  ]
+}
