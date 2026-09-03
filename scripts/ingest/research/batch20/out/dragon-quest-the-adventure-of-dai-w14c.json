@@ -1,0 +1,166 @@
+{
+  "series_id": "dragon-quest-the-adventure-of-dai",
+  "summary": "Episodes 72-77 are six consecutive canon rows adapting PRINTED chapters 253-271 (tankobon vols 27-29) in strict running order: the Giga Strash that ends the Hadlar duel and Kilburn's Kill Trap (72), the escape from the flames, Hadlar's death and Avan's return (73), the reunion and Avan vs Kilburn (74), Hyunckel's 'rebellion' and the Haja no Hiho opening the Vearn Palace gate (75), the palace entry plus the surface battle and Zaboera's Chouma Zombie (76), Nova's stand and Ron Berk's Seiou Juujiken (77). No filler, no recap segment, no anime-original block; every row stays canon under the faithfulness clause (T28) with the coco13-listed cuts and added beats annotated as divergence. THE BLOCK'S NUMBERING FINDING (independently reached here, then confirmed by the coordinator mid-task): dragonquest.fandom's per-episode `adapted` field IS ALREADY THE PRINTED NUMBER in this range - the wave-14 contract's 'fandom N >= 208 = printed N - 1' does NOT hold. Three legs: (1) the fandom's own chapter page 196 is 'Farwell, My Son...!!!' = さらば我が子よ...!! with |volume=21, and en-WP's list 197 = printed 196 in printed v21, so the fandom does not reserve a slot for the vol-13 番外編; (2) coco13's per-episode 原作 lines, which carry BOTH the tankobon chapter number and its title, match the fandom's raw numbers unit for unit on eps 50-60 (ep 50 = 177 正邪のチームワーク -> 181 意外なる救援 = fandom '177 (partial), 178, 179, 180, 181 (partial)'; ep 58 = 209 恐怖の切り札 -> 213 世界破滅への序曲 = fandom '209, 210, 211, 212, 213 (partial)'); (3) on my own six rows coco13's title ranges reproduce the fandom's raw numbers exactly, and the -1 conversion would open ep 75 on printed 261 死神との対決 (the Avan/Kilburn duel), which Toei's own synopsis places wholly inside ep 74 - refuted. CONSEQUENCE, delivered as repairs below: the wave-13 anchors for eps 57, 58 and 59 (the lower fence lineage) were converted -1 and are each one chapter low; ep 59's own stored note gives it away ('ends inside ch 217 最後の希望, as the Demon Army's notice arrives' - the notice is printed 217 処刑宣告の罠!!!, while printed 216 is 最後の希望). The fandom's one surplus number (its finale field ends 349, printed ends 348) opens near ep 96-98, not at 208 - flagged for sub-block G.",
+  "anchors": [
+    {
+      "episode": 72,
+      "end_chapter": 256,
+      "start_chapter": 253,
+      "chapters_adapted": "253 (from its opening), 254, 255, 256 (partial)",
+      "volume": 28,
+      "confidence": "high",
+      "note": "PRINTED space; NO conversion applied to the fandom (its numbers are printed here - see structure). START 253 最後の一太刀!!! (the episode's title chapter and its core: the sheath, Giga Brake read, the Giga Strash that beats Hadlar); coco13 'アニメ第72話は原作27巻の\"最後の一太刀\"の序盤から原作28巻の\"炎の中の希望‼\"の途中まで', fandom field '253 (partial), 254, 255, 256 (partial)'. 254 大死闘決着...!? = the two praising each other; 255 死神!!殺しの罠 = Kilburn's appearance and the Kill Trap; END advances onto 256 炎の中の希望!!! because coco13 says 途中まで (partway through), not an opening sliver, and no source quantifies it as <=5 pages - A47's unproven-tail convention therefore ADVANCES with a `partial` (ep 73 starts on 256; C1 continue below). v28 = printed 255-264.",
+      "sources": [
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The%20Adventure%20of%20Dai%20(2020)%20episode%2072&prop=wikitext&format=json",
+        "https://coco13.club/daianime72/",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/72/",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"
+      ]
+    },
+    {
+      "episode": 73,
+      "end_chapter": 259,
+      "start_chapter": 256,
+      "chapters_adapted": "256 (partial), 257, 258, 259 (bulk)",
+      "volume": 28,
+      "confidence": "high",
+      "note": "PRINTED space, fandom unconverted. START 256 炎の中の希望!!! (coco13: '28巻の\"炎の中の希望‼\"の序盤から'; the flames wearing Popp down, Hadlar rousing them) - a real leading share, not a sliver, so A10 keeps the START there. 257 なるか!?奇蹟の脱出 = the Medroa escape plan; 258 ポップ・炎に死す...!!! = Dai escapes, Popp does not, the five feathers; END 259 復活!!!大勇者 = Avan revealed and Hadlar's death, which coco13 gives as the episode's endpoint ('\"復活‼大勇者\"までだよ') and Toei's synopsis carries in full. Ep 74 opens on 259's 終盤, so the chapter straddles and the END takes a `partial` (C1 continue below); A47 does not hold it back - ep 73 has 259's bulk, not a scrap. v28.",
+      "sources": [
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The%20Adventure%20of%20Dai%20(2020)%20episode%2073&prop=wikitext&format=json",
+        "https://coco13.club/daianime73/",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/73/",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"
+      ]
+    },
+    {
+      "episode": 74,
+      "end_chapter": 261,
+      "start_chapter": 259,
+      "chapters_adapted": "259 (終盤), 260, 261, 262 (closing hook only)",
+      "volume": 28,
+      "confidence": "high",
+      "note": "PRINTED space, fandom unconverted. START 259 復活!!!大勇者 - coco13 says the episode opens at that chapter's 終盤 (Hadlar's send-off), continuation not recap, so A10 keeps it. 260 アバン復活の謎...!!! = Leona's question and the カールのまもり; END 261 死神との対決!! = Avan out-thinking Kilburn, which Toei gives a full paragraph and coco13 names as the endpoint ('\"死神との対決‼\"までだよ'). A47 HOLDS the END at 261: the fandom's '262 (partial)' is Toei's one-line teaser 'そんな彼に、ヒュンケルが意外な言葉を投げかける……' - teaser wording, coco13 does not count 262 in this episode at all, and ep 75 STARTS on 262 and owns it. The scrap stays in chapters_adapted with a `partial`. v28.",
+      "sources": [
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The%20Adventure%20of%20Dai%20(2020)%20episode%2074&prop=wikitext&format=json",
+        "https://coco13.club/daianime74/",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/74/",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"
+      ]
+    },
+    {
+      "episode": 75,
+      "end_chapter": 264,
+      "start_chapter": 262,
+      "chapters_adapted": "262, 263, 264 (to its 終盤), 265 (relocated fragment - the Vearn/Mistvearn exchange)",
+      "volume": 28,
+      "confidence": "medium",
+      "note": "PRINTED space, fandom unconverted. START 262 反逆児ヒュンケル!!! (coco13: '28巻の\"反逆児ヒュンケル\"から'; Hyunckel calling Avan weak and taking the rear guard). 263 明かされた空白 = Avan's missing time, 264 輝け!!!破邪の秘法 = the Haja no Hiho, the Abakam and the gate opening - coco13 puts the episode's end in 264's 終盤 and Toei's last line is the gate opening. MEDIUM because the fandom also lists '265 (partial)': coco13's own difference list says the anime plays the Vearn->Mistvearn 'Avan is alive' exchange EARLIER than its manga position, which is that 265 share - a relocated fragment, so A4/A12 keep the END at 264 (ep 76 carries 265 in running order and also starts inside 264). If a verifier finds ep 75's 265 share is in running order instead, the END is 265; the START and the 262-264 span are not in doubt. v28.",
+      "sources": [
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The%20Adventure%20of%20Dai%20(2020)%20episode%2075&prop=wikitext&format=json",
+        "https://coco13.club/daianime75/",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/75/",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"
+      ]
+    },
+    {
+      "episode": 76,
+      "end_chapter": 267,
+      "start_chapter": 264,
+      "chapters_adapted": "264 (終盤), 265, 266, 267",
+      "volume": 29,
+      "confidence": "high",
+      "note": "PRINTED space, fandom unconverted. START 264 輝け!!!破邪の秘法 - coco13: 'アニメ第76話は原作28巻の\"破邪の秘法\"の終盤から'; the gate finishing its opening and the party entering is real coverage, so A10 keeps the START in 264 (straddle with ep 75). 265 ゆれる大魔宮...!!! = the palace interior and the rest; 266 正義の快進撃!! is the episode's own title chapter; END 267 究極の結論...!!? = Zaboera killing his own troops, becoming the 超魔ゾンビ and shattering Ron Berk's sword - the episode's cliffhanger. Both sources close the episode exactly there with no partial marker (coco13 '\"究極の結論…‼?\"までだよ', fandom '…266, 267'), so the row ends on a chapter boundary and needs no continue (ep 77 starts on 268). v29 = printed 265-274.",
+      "sources": [
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The%20Adventure%20of%20Dai%20(2020)%20episode%2076&prop=wikitext&format=json",
+        "https://coco13.club/daianime76/",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/76/",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"
+      ]
+    },
+    {
+      "episode": 77,
+      "end_chapter": 271,
+      "start_chapter": 268,
+      "chapters_adapted": "268, 269, 270, 271 (to its 終盤)",
+      "volume": 29,
+      "confidence": "high",
+      "note": "PRINTED space, fandom unconverted. START 268 ザボエラ最強変身!!! clean (fandom lists it with no partial; coco13 'アニメ第77話は原作29巻の\"ザボエラ最強変身‼\"から'). 269 もうひとりの勇者 is the episode's own title chapter (Nova standing up); 270 超兵器招来!!! = the 星皇剣 and 星皇十字剣; END 271 未完の究極剣 = Ron Berk's arms wrecked, Nova's promise to finish the unfinished sword - coco13 says the episode runs to that chapter's 終盤, so the share is substantial and A47 does NOT hold the END back (ep 78 carries 271's remainder; C1 continue below). v29.",
+      "sources": [
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The%20Adventure%20of%20Dai%20(2020)%20episode%2077&prop=wikitext&format=json",
+        "https://coco13.club/daianime77/",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/77/",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 72,
+      "continue_chapter": 256,
+      "kind": "parity",
+      "note": "C1 - ep 72 stops partway through ch 256 炎の中の希望!!! (trapped in the Makai flames); ep 73 resumes inside the same chapter. Resume at 256; nothing to skip.",
+      "sources": ["https://coco13.club/daianime72/", "https://coco13.club/daianime73/"]
+    },
+    {
+      "episode": 73,
+      "continue_chapter": 259,
+      "kind": "parity",
+      "note": "C1 - ep 73 carries ch 259 復活!!!大勇者 up to Hadlar's death; ep 74 opens on the same chapter's 終盤. Resume IN 259.",
+      "sources": ["https://coco13.club/daianime73/", "https://coco13.club/daianime74/"]
+    },
+    {
+      "episode": 74,
+      "continue_chapter": 262,
+      "kind": "parity",
+      "note": "A47/C2 - ep 74 finishes ch 261 死神との対決!! and shows only the closing hook of 262 反逆児ヒュンケル!!! (Hyunckel's unexpected words). Resume at 262 - ep 75 starts there and plays the chapter properly.",
+      "sources": ["https://coco13.club/daianime74/", "https://coco13.club/daianime75/"]
+    },
+    {
+      "episode": 75,
+      "continue_chapter": 264,
+      "kind": "parity",
+      "note": "C1/C3 - ep 75 ends inside ch 264 輝け!!!破邪の秘法 (the gate opening); ep 76 resumes in the same chapter. Resume at 264; on arrival at ch 265 note that the Vearn/Mistvearn 'Avan is alive' exchange was already animated, out of order, inside ep 75.",
+      "sources": ["https://coco13.club/daianime75/", "https://coco13.club/daianime76/"]
+    },
+    {
+      "episode": 77,
+      "continue_chapter": 271,
+      "kind": "parity",
+      "note": "C1 - ep 77 ends in the 終盤 of ch 271 未完の究極剣; ep 78 carries the rest of it. Resume IN 271.",
+      "sources": ["https://coco13.club/daianime77/", "https://coco13.club/daianime78/"]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {"episodes": [72, 73], "kind": "partial", "chapters": "256", "note": "Ch 256 炎の中の希望!!! straddles eps 72/73: ep 72 has its first stretch (the flames closing on Dai, Popp and Hadlar), ep 73 its bulk (Hadlar rousing them, the escape plan). Both sources credit both episodes. [printed space]"},
+    {"episodes": [73, 74], "kind": "partial", "chapters": "259", "note": "Ch 259 復活!!!大勇者 straddles eps 73/74: ep 73 carries its bulk (Avan revealed, Hadlar's death), ep 74 opens on its 終盤 (the send-off and the reunion). [printed space]"},
+    {"episodes": [74], "kind": "partial", "chapters": "262", "note": "A47 - only ch 262 反逆児ヒュンケル!!!'s opening hook (Hyunckel's unexpected words, Toei's '……' closing line) ends ep 74; ep 75 STARTS on 262 and owns it, so ep 74's END stays 261. coco13 does not count 262 in ep 74 at all. [printed space]"},
+    {"episodes": [75, 76], "kind": "partial", "chapters": "264", "note": "Ch 264 輝け!!!破邪の秘法 straddles eps 75/76: ep 75 runs to its 終盤 (the Abakam, the gate beginning to open), ep 76 opens on the remainder (the gate open, the party entering). [printed space]"},
+    {"episodes": [75], "kind": "rearranged", "chapters": "265 (partial)", "note": "The Vearn -> Mistvearn 'Avan is alive' exchange from ch 265 ゆれる大魔宮...!!! is played EARLIER than its manga position (coco13's ep-75 difference list: 'バーンがミストバーンにアバンが生きていると伝える場面が、原作より早い段階で描かれている'; the fandom lists '265 (partial)' on both eps 75 and 76). A relocated fragment - the END is not advanced (A4/A12); ep 76 carries 265 in running order. [printed space]"},
+    {"episodes": [77], "kind": "partial", "chapters": "271", "note": "Ch 271 未完の究極剣 straddles eps 77/78: ep 77 runs to its 終盤 (Ron Berk's arms, Nova's promise), ep 78 carries the remainder. [printed space]"},
+    {"episodes": [72, 73, 74, 75, 76, 77], "kind": "divergence", "chapters": "253-271", "note": "Faithfulness clause (T28, Sean 2026-09-02): every row is a faithful adaptation with only line-level alterations and small studio beats, listed per episode by coco13's 原作との変更点 sections - ep 72: an added Kilburn line during the Raidein, the manga's post-trap Kilburn/Vearn conversation cut; ep 73: the manga's narration replaced by staging, an added Kilburn reaction and a Hadlar-POV shot; ep 74: added Avan lines on how his pupils have grown, an added Hyunckel inner monologue, an added Flora beat; ep 75: Avan's training account, told over two chapters in the manga, merged into one telling, plus an added Vearn/Mistvearn scene and a changed Hyunckel farewell sign; ep 76: the Chiu / Onikozou exchange cut (so the Onikozou die and become Chouma Zombie parts) and a Popp/Maam gag toned down; ep 77: Nova breaking his father's sword changed to a fallen sword, and Ron Berk's 'mastered the strongest swordsmanship within ten years' line cut. No original plot in any row - canon stands (T27/T28)."}
+  ],
+  "repairs": [
+    {"episode": 57, "field": "end_chapter", "old": 207, "new": 208, "why": "OUTSIDE THE ASK, fence lineage: the wave-13 g-block converted dragonquest.fandom -1 from its 208 on the (unproven) premise that the fandom numbers vol 22's unnumbered extra 大魔宮の秘密 as its 207. The fandom's numbers in this range ARE the printed numbers (see structure). coco13: 'アニメ第57話は原作22巻204話\"大魔王からの褒美\"から原作23巻208話\"不屈の勇者・ダイ\"までだよ' - number AND title, printed space; Toei's ep-57 synopsis ends on 'ダイが再び立ち上がる！', which is printed 208 不屈の勇者・ダイ!!!'s own title beat (en-WP list 209 = printed 208). The fandom's '209 (1 panel)' is a scrap of printed 209 恐怖の切り札, which ep 58 starts on - A47 keeps it out of the END.", "sources": ["https://coco13.club/daianime57/", "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/57/", "https://dragonquest.fandom.com/api.php?action=parse&page=The%20Adventure%20of%20Dai%20(2020)%20episode%2057&prop=wikitext&format=json", "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"]},
+    {"episode": 57, "field": "chapters_adapted", "old": "204 (bulk), 205, 206, 207, 208 (1 panel)", "new": "204 (bulk), 205, 206, 207, 208, 209 (1 panel)", "why": "Same conversion repair: the 1-panel tail is printed 209 恐怖の切り札 (ep 58's chapter), not printed 208. The stored `partial {208}` annotation on ep 57 should read 209 for the same reason.", "sources": ["https://coco13.club/daianime57/", "https://coco13.club/daianime58/", "https://dragonquest.fandom.com/api.php?action=parse&page=The%20Adventure%20of%20Dai%20(2020)%20episode%2057&prop=wikitext&format=json"]},
+    {"episode": 57, "field": "continue_chapter", "old": 208, "new": 209, "why": "Follows the END repair: ep 57 completes printed 208; only a panel of 209 is shown and ep 58 opens on 209. Resume at 209 (A47/C2 parity, the stored note's shape unchanged).", "sources": ["https://coco13.club/daianime58/", "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/58/"]},
+    {"episode": 58, "field": "end_chapter", "old": 212, "new": 213, "why": "Same -1 conversion error. coco13: 'アニメ第58話は原作23巻209話\"恐怖の切り札\"から213話\"世界破滅への序曲‼\"の途中までだよ' (numbers + titles, printed); fandom field '209, 210, 211, 212, 213 (partial)' unconverted. Toei's ep-58 synopsis matches: the 光魔の杖 (209 恐怖の切り札), Dai's sword snapped (210 折れたる剣...!!!), Hadlar's rescue (211 まさか!!?の救援者), Block's sacrifice (212 思わぬ伏兵!!!), Mother Dragon carrying Dai away (213's opening).", "sources": ["https://coco13.club/daianime58/", "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/58/", "https://dragonquest.fandom.com/api.php?action=parse&page=The%20Adventure%20of%20Dai%20(2020)%20episode%2058&prop=wikitext&format=json", "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"]},
+    {"episode": 58, "field": "start_chapter", "old": 208, "new": 209, "why": "Same conversion: ep 58 opens on printed 209 恐怖の切り札 (both sources; no leading partial marked).", "sources": ["https://coco13.club/daianime58/", "https://dragonquest.fandom.com/api.php?action=parse&page=The%20Adventure%20of%20Dai%20(2020)%20episode%2058&prop=wikitext&format=json"]},
+    {"episode": 58, "field": "chapters_adapted", "old": "208 (bulk), 209, 210, 211, 212 (partial)", "new": "209, 210, 211, 212, 213 (partial)", "why": "Same conversion. Volume 23 stays correct (printed v23 = 207-215). Continue 212 -> 213 (C1: ep 59 resumes inside 213 世界破滅への序曲!!!).", "sources": ["https://coco13.club/daianime58/", "https://coco13.club/daianime59/"]},
+    {"episode": 58, "field": "continue_chapter", "old": 212, "new": 213, "why": "Follows the END repair: ep 58 stops partway through printed 213 and ep 59 resumes in it (C1).", "sources": ["https://coco13.club/daianime58/", "https://coco13.club/daianime59/"]},
+    {"episode": 59, "field": "end_chapter", "old": 216, "new": 217, "why": "Same -1 conversion error, and the stored note gives it away: it says ep 59 'ends inside ch 217 最後の希望, as the Demon Army's notice arrives' - but printed 216 is 最後の希望 and printed 217 is 処刑宣告の罠!!!, and the notice IS 217. coco13: '213話\"世界破滅への序曲‼\"の途中から217話\"処刑宣告の罠\"の序盤まで'; Toei ep 59 ends 'そこに魔王軍からの通告が届き――？' and Toei ep 60 opens '魔王軍からの通告は、明後日の正午にヒュンケルとクロコダインを処刑するという内容だった'. Unquantified 序盤 -> the END advances with a `partial` (wave-14 A47 convention). Volume 24 stays correct (printed v24 = 216-225).", "sources": ["https://coco13.club/daianime59/", "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/59/", "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/60/", "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"]},
+    {"episode": 59, "field": "chapters_adapted", "old": "212 (tail), 213, 214, 215, 216 (partial)", "new": "213 (partial), 214, 215, 216, 217 (序盤)", "why": "Same conversion; START stays 213 (coco13 '213話...の途中から' = a substantive leading share, A10).", "sources": ["https://coco13.club/daianime59/", "https://dragonquest.fandom.com/api.php?action=parse&page=The%20Adventure%20of%20Dai%20(2020)%20episode%2059&prop=wikitext&format=json"]},
+    {"episode": 59, "field": "continue_chapter", "old": 216, "new": 217, "why": "Follows the END repair: ep 59 shows only the arrival of the execution notice (217's opening) and ep 60 completes the chapter - resume IN 217 (C1).", "sources": ["https://coco13.club/daianime59/", "https://coco13.club/daianime60/", "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/60/"]}
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "CHAPTER SPACE / CONVERSION (the block's main structural finding). Every value in this file is the PRINTED tankobon numbering (1-348). (a) en-WP's original-release volume list is LIST space: it prints the vol-13 番外編「勇者アバン」 as an unnumbered 'SP' and then resumes at 123, so its numbered set is 1-121 + 123-349 = 348 units and printed = en-WP - 1 from its 123 up (its 349 = printed 348). Its volume spans convert to exactly the stored printed boundary table (list v27 247-255 = printed 246-254; v28 256-265 = 255-264; v29 266-275 = 265-274; v30 276-285 = 275-284) - the conversion is confirmed against stored data at four boundaries. (b) dragonquest.fandom's per-episode `adapted` field is NOT list space and is NOT printed+1 in this range: it is the PRINTED number. Proofs: its own chapter page 'The Adventure of Dai chapter 196' carries さらば我が子よ...!! with |volume=21 (en-WP list 197 = printed 196, printed v21 = 189-197); coco13's numbered+titled 原作 lines for eps 50-60 reproduce the fandom's raw numbers unit for unit; and on eps 71-78 coco13's title ranges reproduce the fandom's raw numbers on all eight rows, while the -1 conversion would open ep 75 on printed 261 死神との対決, which Toei places wholly inside ep 74. The wave-14 contract's 'fandom N >= 208 = printed N - 1' is therefore WRONG for eps 54-97 (confirmed by the coordinator mid-task from sub-block B). (c) The fandom does gain exactly one surplus number by the finale (its ep-100 field ends 349; printed ends 348). It is NOT at 207/208: coco13 vs the fandom agree in printed space through ep 95 (fandom '328, 329, 330, 331, 332 (partial)' = coco13 '渾身(328)から響く闇からの声(332)序盤'), while ep 98 ('339 (partial), 340, 341, 342, 343 (partial)' vs coco13 '心をひとつに(338)序盤から咆哮(342)序盤'), ep 99 and ep 100 ('346 (partial), 347, 348, 349' vs coco13 'この腕で勝利を(345)序盤からエンディングまで') fit printed = fandom - 1. The seam opens between eps 95 and 98, i.e. around printed 332-339 - sub-block G (96-100) must resolve it before anchoring the finale, and the ep-100 MU pin of 348 is the PRINTED terminal (the fandom's 349 is the same chapter). PRINTED CHAPTER TABLE FOR THIS BLOCK (printed | vol | title): 252 v27 燃えつきる生命...!!!; 253 v27 最後の一太刀!!!; 254 v27 大死闘決着...!?; 255 v28 死神!!殺しの罠; 256 v28 炎の中の希望!!!; 257 v28 なるか!?奇蹟の脱出; 258 v28 ポップ・炎に死す...!!!; 259 v28 復活!!!大勇者; 260 v28 アバン復活の謎...!!!; 261 v28 死神との対決!!; 262 v28 反逆児ヒュンケル!!!; 263 v28 明かされた空白; 264 v28 輝け!!!破邪の秘法; 265 v29 ゆれる大魔宮...!!!; 266 v29 正義の快進撃!!; 267 v29 究極の結論...!!?; 268 v29 ザボエラ最強変身!!!; 269 v29 もうひとりの勇者; 270 v29 超兵器招来!!!; 271 v29 未完の究極剣. FENCES: block B landed ep 71 END 253 [250]; my ep 72 STARTS on 253 (the chapter straddles - both sources mark it partial on 71 and 72). My ep 77 END 271 hands to ep 78, which both sources start on 271 (partial) - monotone across the seam. ROW IDENTITY: all six stored titles and air dates match the fandom's episode pages and Toei's back numbers exactly (72 最後の一太刀 2022-03-05; 73 炎の中の希望 2022-04-16 - delayed six weeks by the Toei ransomware incident, the fandom notes the original 2022-03-12 slot; 74 大勇者の復活 2022-04-23; 75 破邪の秘法 2022-04-30; 76 正義の快進撃 2022-05-07; 77 もうひとりの勇者 2022-05-14). One fandom defect noted, no repair needed on our side: its ep-77 page carries |japanese=正義の快進撃 (ep 76's Japanese title) beside the correct transliteration Mō Hitori no Yūsha - a copy-paste, our stored title is right. SOURCE INDEPENDENCE (flag #929): the fandom's chapter pages stop at 196/201, so no reverse index exists for this range; independence here rests on coco13's per-episode 原作 title ranges (a fan comparison blog that reads the tankobon while watching), Toei Animation's per-episode あらすじ (the licensor) and en-WP's volume/title list - the fandom is one of three, not the sole source.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "CONVERSION - WAVE-WIDE: the wave-14 contract's 'dragonquest.fandom N >= 208 = printed N - 1' is refuted for eps 54-97 (three legs in structure.notes; the coordinator confirmed it mid-task from sub-block B). The ruled N35 sourceShift {source: fandom, from: 208, delta: -1} should be amended - the fandom is printed through at least ep 95 and gains its one surplus number around printed 332-339 (between eps 95 and 98).",
+    "FENCE REPAIRS OUTSIDE THE ASK: eps 57, 58, 59 (wave 13, already applied) are each one chapter low at both ends because of that conversion - repairs delivered with old -> new. Ep 59's own stored note is self-refuting ('ch 217 最後の希望' - printed 217 is 処刑宣告の罠!!!). Eps 18-56 are BELOW the alleged seam and are unaffected (spot-checked: stored eps 50, 54, 55, 56 equal the fandom's raw numbers and coco13's numbered lines exactly). The ep-57 `partial {208}` annotation should become {209} with the same repair.",
+    "SUB-BLOCK G: the fandom's finale field '346 (partial), 347, 348, 349' is list-space at the top; coco13 puts ep 100 at printed 345 この腕で勝利を (序盤) -> 348 さらば!!!愛する地上よ. The MU pin 348 is therefore the correct PRINTED terminal, but ep 100's START/chapters must be re-derived in printed space, and the exact seam episode (96, 97 or 98) is unresolved here.",
+    "EP 75 END is the one medium call in this block: coco13 ends the episode in ch 264's 終盤 while the fandom also lists '265 (partial)'. I read the 265 share as the relocated Vearn/Mistvearn exchange (coco13's own difference list says that scene is played earlier than in the manga) and kept the END at 264 with a `rearranged` annotation. If a page-level check shows the 265 share is in running order, ep 75's END is 265 and ep 76's START stays 264."
+  ]
+}

@@ -1,0 +1,237 @@
+{
+  "series_id": "dragon-quest-the-adventure-of-dai",
+  "summary": "Episodes 84-89 are six consecutive canon rows adapting PRINTED chapters 290-310 (vols 31-33) of the Vearn Palace endgame: Dai's second dragon crest and the reactor fight (84), reaching Vearn at the tower's summit (85), Vearn's recruitment offer / Avan vs Killvearn / the White Garden merge (86), Him's victory and Dai's double Douloura (87), Vearn's disappearance and Mistvearn unmasked (88), the Frozen-Time secret and Popp's Medroa (89). EVERY number below is PRINTED (tankobon 1-348) and the conversion is stated per row. THE NUMBERING FINDING OF THIS SUB-BLOCK: dragonquest.fandom's per-episode `adapted` field is ALREADY PRINTED in this range - N35's stored sourceShift `fandom: from 208 delta -1` does not hold here. Three independent legs prove it (see structure.notes): coco13.club's per-episode 'from TITLE to TITLE' ranges, Toei Animation's own per-episode arasuji, and dai.morisan3rd.site's per-CHAPTER summaries, whose chapter numbers are printed (its 290 = Makyu no Shinzo = en-WP's list 291 minus 1). Eps 85-87 carry the wave's flagged REORDER, and it is a genuine un-cross-cut in BOTH directions: the manga tells the three simultaneous battles (Dai vs Vearn / Avan vs Killvearn / White Garden vs Mistvearn) one after another, the anime interleaves them, so ep 85 pulls the White Garden halves of ch 299-300 FORWARD out of order and ep 87 plays the Dai-vs-Vearn half of ch 299 BACKWARD, after ch 301-302 (coco13 documents both moves in words). No filler, no mixed: every row is a faithful adaptation with cuts and small studio additions only (faithfulness clause, T28).",
+  "anchors": [
+    {
+      "episode": 84,
+      "end_chapter": 293,
+      "start_chapter": 290,
+      "chapters_adapted": "290 (bulk), 291, 292, 293",
+      "volume": 31,
+      "confidence": "high",
+      "note": "PRINTED space; NO conversion applied - dragonquest.fandom's field reads '290 (partial), 291, 292, 293' and those are already printed numbers (see structure.notes). Toei walks the chapters in order: Leona seized and the maryokuro revealed as Vearn Palace's living engine (290 Makyu no Shinzo), Dai pinned by Goroa's gravity wave, Soala's death vision and Baran telling him to rise (291 Tate! Shukumei no Kishi - the episode's own title), the crest on the second fist and the reactor cut open (292 Dai 2 no Kakusei!!!), Goroa's last attack met with the two-crest Douloura (293 Hoero!!! Soryumon). A10: ch 290's opening panels closed ep 83, but ep 84 carries the chapter's substance, so START stays 290; coco13 states the range as 'Makyu no Shinzo to Hoero! Soryumon'. END 293 is whole - both ep-85 sources start ep 85 on 294. v31 = printed 285-294.",
+      "sources": [
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_(2020)_episode_84&prop=wikitext&format=json",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/84/",
+        "https://coco13.club/daianime84/",
+        "https://web.archive.org/web/20250711081225/https://dai.morisan3rd.site/entry/story290",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"
+      ]
+    },
+    {
+      "episode": 85,
+      "end_chapter": 296,
+      "start_chapter": 294,
+      "chapters_adapted": "294, 295, 296, 299 (partial, rearranged - the White Garden half pulled forward), 300 (partial, rearranged - Him's arrival pulled forward)",
+      "volume": 32,
+      "confidence": "high",
+      "note": "PRINTED space; NO conversion (fandom field '294, 295, 296, 299 (partial), 300 (partial)'). Running order = 294 Daimakyu no Chojo!!! (the Douloura's aftermath, the palace stopped, Dai and Leona reach the top room where Vearn waits with the Komma no Tsue), 295 Kyofu to Mayoi...! (Dai's fear, Vearn's sokuji funsai, Leona's 'bunnagucchae!'), 296 Tatakai no Idenshi!! (Dai's first strike, the sword that does not break, Calamity Wall turned aside by the Dragonic Aura) - exactly coco13's stated range and exactly Toei's three Dai paragraphs. The episode then jumps FORWARD to the White Garden thread: Larhart's futile blows and Him's arrival are the second half of ch 299 and the opening of ch 300 (morisan3rd's per-chapter summaries), which the manga plays only AFTER Vearn's Kaiser-Phoenix double attack - coco13's ep-85 'changes' section says so verbatim ('gensaku de wa Him kyushutsu bamen wa Baan no Kaiser Phoenix ni yoru W kogeki no ato deshita ga ... jikeiretsu ga henko sare, gensaku yori hayai dankai de Him ga tojo'). A4 + the ep-45 precedent: pages pulled forward out of running order do NOT advance the END, they are recorded here with a `rearranged` annotation. v32 = printed 295-304 (END 296).",
+      "sources": [
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_(2020)_episode_85&prop=wikitext&format=json",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/85/",
+        "https://coco13.club/daianime85/",
+        "https://web.archive.org/web/20251214231117/https://dai.morisan3rd.site/entry/story299",
+        "https://web.archive.org/web/20251117070655/https://dai.morisan3rd.site/entry/story300"
+      ]
+    },
+    {
+      "episode": 86,
+      "end_chapter": 301,
+      "start_chapter": 297,
+      "chapters_adapted": "297, 298, 299 (partial - the White Garden half, split with ep 85), 300, 301 (partial)",
+      "volume": 32,
+      "confidence": "medium",
+      "note": "PRINTED space; NO conversion (fandom field '297, 298, 299 (partial), 300 (partial), 301 (partial)'). START 297 Tagatame no Shori is a BACK-JUMP: ep 85 had already played pages of 299-300, so the run returns behind itself here (`rearranged`, and this is why ep 85's END is 296 and not 300). Toei's paragraph order is the episode's order: Vearn's recruitment offer and Dai's refusal, 'if humans persecute me I will defeat you and leave the surface too' (297), then the Avan/Killvearn duel in the alternate space - the phantom-razor trap, Judge rigged to self-destruct, Killvearn escaping (298 Chinurareta Ketchaku...!!!, whose own pages are the trap being sprung, morisan3rd), then the White Garden: Popp's group merges with Hyunckel, Crocodine, Beast-kun and Chiu and Him attacks with the light aura (300 Misuto Saishu Kessen). END 301: the fandom marks a trailing partial of 301 Hakugin no Moi!! and the wave-14 unproven-tail convention advances onto it (no page count, no teaser wording); coco13 DISSENTS, bounding the episode at Misuto Saishu Kessen (300) - see flags. The chapter boundary is genuinely blurred (both 300 and 301 describe Him pressing Mistvearn with the light aura). Either way the continue is 301. v32.",
+      "sources": [
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_(2020)_episode_86&prop=wikitext&format=json",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/86/",
+        "https://coco13.club/daianime86/",
+        "https://web.archive.org/web/20250711084511/https://dai.morisan3rd.site/entry/story298",
+        "https://web.archive.org/web/20250612155941/https://dai.morisan3rd.site/entry/story301"
+      ]
+    },
+    {
+      "episode": 87,
+      "end_chapter": 303,
+      "start_chapter": 301,
+      "chapters_adapted": "301, 302, 299 (remainder, rearranged - the Kaiser-Phoenix/Komma-no-Tsue double attack, played after 302), 303, 304 (partial - the closing Douloura impact; ep 88 owns 304)",
+      "volume": 32,
+      "confidence": "high",
+      "note": "PRINTED space; NO conversion (fandom field '299 (partial), 301, 302, 303, 304 (partial)'). Toei's paragraph order gives the running order and it contains the sub-block's second reorder: the episode OPENS on the White Garden (Him breaks the Tomametsusaijin, sacrifices his right arm to destroy the Toma Saishusho and settles the fight = 301 Hakugin no Moi!!), then the mask debate stopped by Crocodine on Ron Berk's word (302 Yami no Koromo - the chapter ep 88 is TITLED after, the title/content trap), and only THEN jumps BACK to Dai vs Vearn for the Kaiser Phoenix + Komma-no-Tsue simultaneous attack, which is the first half of ch 299 Fuan na Yusei ('Dai wa yusei ni tatakai o susumemasu. Furi o mitomeru Baan wa Kaiser Phoenix to dageki no doji kogeki o shikakete kimasu', morisan3rd) - the half ep 85 did not take. It then runs forward to 303 Shobu o Kaketa Kogeki!!! (Dai dives into the Kaiser Phoenix, wounds Vearn, fires the Douloura, recovers MP from Leona's Silver Feather and fires a second). A47: the END does NOT advance onto 304 - Toei's ep-87 close is the second Douloura being FIRED (303's last beat) and Toei's ep-88 open is its impact ('Douloura nirenpatsu wa ... Daimao Baan o nomikonda' = 304's first beat), so ep 87's share of 304 is a closing flash and ep 88 STARTS on 304 and owns it. coco13 agrees on both edges (301 -> 303). v32.",
+      "sources": [
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_(2020)_episode_87&prop=wikitext&format=json",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/87/",
+        "https://coco13.club/daianime87/",
+        "https://web.archive.org/web/20251214231117/https://dai.morisan3rd.site/entry/story299",
+        "https://web.archive.org/web/20250810195854/https://dai.morisan3rd.site/entry/story303"
+      ]
+    },
+    {
+      "episode": 88,
+      "end_chapter": 306,
+      "start_chapter": 304,
+      "chapters_adapted": "304 (bulk), 305, 306",
+      "volume": 33,
+      "confidence": "high",
+      "note": "PRINTED space; NO conversion (fandom field '304 (partial), 305, 306'). Three whole chapters in running order, with A10 leaving START on 304 because ep 88 carries its substance (ep 87 showed at most the impact flash): the double Douloura swallows Vearn and Mistvearn rises and strips off the Dark Veil (304 Daimao Kiyu...!!), the unmasked Mistvearn overpowers everyone and twists off Him's hand (305 Watashi ga Saikyo da!!!), Him and Larhart attack again to buy Popp a Medroa opening, Maam notices his face is unmarked and Brokeena solves the immortality (306 Fujimi no Himitsu!!!) - Toei's four beats in that exact order, and morisan3rd's per-chapter summaries carry each one. coco13 states the range as 'Daimao Kiyu to Fujimi no Himitsu'. 306 is whole: both ep-89 sources start ep 89 on 307. Volume = the END's volume, v33 = printed 305-313 (the START 304 is the last chapter of v32).",
+      "sources": [
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_(2020)_episode_88&prop=wikitext&format=json",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/88/",
+        "https://coco13.club/daianime88/",
+        "https://web.archive.org/web/20250908155149/https://dai.morisan3rd.site/entry/story304",
+        "https://web.archive.org/web/20250512215129/https://dai.morisan3rd.site/entry/story306"
+      ]
+    },
+    {
+      "episode": 89,
+      "end_chapter": 310,
+      "start_chapter": 307,
+      "chapters_adapted": "307, 308, 309, 310 (first third - the Phoenix Wing deflection and Popp and Brokeena consumed by their own Medroa)",
+      "volume": 33,
+      "confidence": "medium",
+      "note": "PRINTED space; NO conversion (fandom field '307, 308, 309, 310 (partial)'). Running order: Brokeena reads Mistvearn as cold and lifeless and names the Frozen-Time secret (307 Koreru Toki...!), the flashback to Avan, Matriv and Brokeena's assault on Hadlar and the birth of Medroa (308 Oinaru Senkushatachi), Brokeena's Doryu-shohaken feint, his capture and Popp firing the Medroa (309 Chokugeki!! Medoroa). A47 does NOT hold this END: Toei's ep-89 close is Mistvearn deflecting the Medroa with the Phoenix Wing and Popp and Brokeena vanishing into the light - the OPENING of 310 Senritsu no Jijitsu...!!! per morisan3rd, first-time pages and the episode's climax (a death), not a five-page scrap or a teaser, so the END advances with a `partial` and ep 90 carries 310's remainder (Hyunckel's deduction, Killvearn's arrival). coco13 dissents by bounding the episode at 309 - see flags. v33.",
+      "sources": [
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_(2020)_episode_89&prop=wikitext&format=json",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/89/",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/90/",
+        "https://web.archive.org/web/20250119005040/https://dai.morisan3rd.site/entry/story309",
+        "https://web.archive.org/web/20250323101511/https://dai.morisan3rd.site/entry/story310"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 85,
+      "continue_chapter": 297,
+      "kind": "parity",
+      "note": "C2/C3 - resume at ch 297 Tagatame no Shori, which is exactly where ep 86 starts. Ep 85 has already animated, out of order, the White Garden pages of ch 299-300 (Larhart's blows failing, Him arriving to save Popp and Maam); you will meet them again on arrival, and ch 299's Vearn-fight half is still unanimated at this point (ep 87 plays it).",
+      "sources": [
+        "https://coco13.club/daianime85/",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/86/"
+      ]
+    },
+    {
+      "episode": 86,
+      "continue_chapter": 301,
+      "kind": "parity",
+      "note": "C1 - ep 86 stops inside ch 301 Hakugin no Moi!! (Him's light-aura assault has begun); resume IN 301, which ep 87 opens on and carries to its end. Ch 299's Dai-vs-Vearn half is still unseen here; ep 87 plays it after ch 302, so read 299 whole and expect the anime to return to it.",
+      "sources": [
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_(2020)_episode_86&prop=wikitext&format=json",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/87/"
+      ]
+    },
+    {
+      "episode": 89,
+      "continue_chapter": 310,
+      "kind": "parity",
+      "note": "C1 - ep 89 ends inside ch 310 Senritsu no Jijitsu...!!!, on the deflected Medroa consuming Popp and Brokeena; resume IN 310 - ep 90 carries the rest of it (Hyunckel naming Mistvearn's true identity, Killvearn's arrival).",
+      "sources": [
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/89/",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/90/"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [84],
+      "kind": "divergence",
+      "chapters": "290-293",
+      "note": "Faithfulness clause (T28): cuts only - Goroa's Makai folk-tale of the 'immortal swordsman' is dropped, Vearn's long explanation of the Soryumon is heavily trimmed, and Leona's clothes are far less ruined than in the manga (coco13's ep-84 change list). Canon stands."
+    },
+    {
+      "episodes": [85],
+      "kind": "divergence",
+      "chapters": "294-296",
+      "note": "Faithfulness clause (T28): the Dai/Vearn and Mistvearn fights are EXPANDED beyond the manga's pages (an arrow version of Daichizan, Popp's Begirama and Merazoma, Maam's spinning bird kick) - studio-made beats inside adapted chapters, noted, never weighed toward mixed (coco13's ep-85 change list)."
+    },
+    {
+      "episodes": [85, 86],
+      "kind": "rearranged",
+      "chapters": "299, 300",
+      "note": "The anime un-cross-cuts in reverse: the manga tells the three simultaneous battles one after another, the anime interleaves them, so the White Garden half of ch 299 (Larhart's blows failing) and the opening of ch 300 (Him's rescue) are pulled FORWARD into ep 85 - in the manga Him's rescue comes only after Vearn's Kaiser-Phoenix double attack (coco13, ep 85: 'jikeiretsu ga henko sare, gensaku yori hayai dankai de Him ga tojo'; ep 86: 'Baan-sen, Mistbaan-sen, Killbaan-sen ga gensaku to chigai, doji shinko de egakarete iru') - and the rest of both chapters runs in ep 86. Ep 86's START 297 is therefore a back-jump behind ep 85's furthest pages."
+    },
+    {
+      "episodes": [86],
+      "kind": "divergence",
+      "chapters": "297",
+      "note": "Faithfulness clause (T28): studio additions inside adapted chapters - the Bengarna scenes are cut in when Vearn warns Dai he will be persecuted, a montage of the people Dai has met is added to his decision, and Popp gains a line when Him's light aura is revealed (coco13's ep-86 change list)."
+    },
+    {
+      "episodes": [86],
+      "kind": "partial",
+      "chapters": "301",
+      "note": "Ch 301 Hakugin no Moi!! straddles eps 86/87: ep 86 has only its opening (Him's first light-aura blows), ep 87 carries the bulk and the settlement. The END advances onto it under the wave-14 unproven-tail convention (no page count, no teaser wording); coco13 bounds ep 86 at ch 300 instead - flagged."
+    },
+    {
+      "episodes": [87],
+      "kind": "rearranged",
+      "chapters": "299",
+      "note": "Ch 299 Fuan na Yusei is split NON-CONTIGUOUSLY and out of order: its White Garden half ran in eps 85-86, and its Dai-vs-Vearn half (Dai's uneasy advantage, Vearn's Kaiser Phoenix + Komma-no-Tsue simultaneous attack) is played in ep 87 AFTER ch 301-302 - a back-jump inside the episode, per Toei's paragraph order against morisan3rd's per-chapter content."
+    },
+    {
+      "episodes": [87],
+      "kind": "partial",
+      "chapters": "304",
+      "note": "A47 tail: ep 87 closes on the second Douloura being fired (ch 303's last beat) and shows at most the impact flash of ch 304 Daimao Kiyu...!!; ep 88 STARTS on 304 and owns it, so ep 87's END stays 303."
+    },
+    {
+      "episodes": [88],
+      "kind": "divergence",
+      "chapters": "304-306",
+      "note": "Faithfulness clause (T28): staging changes and one added beat inside adapted chapters - Mistvearn holds Larhart's face while landing the body blow (the manga simply blows him away), and Larhart, who left before Medroa existed, is given a short beat of not understanding what everyone is hoping for (coco13's ep-88 change list)."
+    },
+    {
+      "episodes": [89],
+      "kind": "divergence",
+      "chapters": "307-309",
+      "note": "Faithfulness clause (T28): an added reaction (Brokeena surprised that Him and Larhart are combatants) and cosmetic substitutions inside Brokeena's flashback - Papirus and Sabertiger become Hikuidori and Killer Panther, and Matriv's spells are named (Begirama, Bagicross) where the manga leaves them generic (coco13's ep-89 change list)."
+    },
+    {
+      "episodes": [89],
+      "kind": "partial",
+      "chapters": "310",
+      "note": "Ch 310 Senritsu no Jijitsu...!!! straddles eps 89/90: ep 89 takes its first third (the Phoenix Wing deflection, Popp and Brokeena consumed), ep 90 the remainder (Hyunckel's deduction that Mistvearn is Vearn himself, Killvearn's arrival). Not an A47 hold - the tail is the episode's climax and a major plot beat, not a scrap."
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 58,
+      "field": "end_chapter",
+      "old": 212,
+      "new": 213,
+      "why": "OUTSIDE MY ASK - a fence-adjacent consequence of the numbering finding below; verify before applying. Toei's ep-58 arasuji ends with the Mother Dragon carrying Dai away over the sea, which is ch 213 Sekai Hametsu e no Jokyoku!!! ('jo-ku ni wa Seibo-ryu ga araware Dai o kakaete tonde ikimasu', morisan3rd's per-chapter summary), one chapter past the stored END; dragonquest.fandom's ep-58 field (printed, per the finding) reads '209, 210, 211, 212, 213 (partial)' and coco13 states 'ch 209 Kyofu no Kirifuda to ch 213 Sekai Hametsu e no Jokyoku no tochu made'. The stored START 208 is RIGHT and must not move (Toei's ep-58 opening is the Avan Strash = ch 208 Fukutsu no Yusha, Dai!!!); chapters_adapted should read '208 (bulk), 209, 210, 211, 212, 213 (partial)' and the ep-58 continue 212 -> 213 (C1).",
+      "sources": [
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/58/",
+        "https://coco13.club/daianime58/",
+        "https://web.archive.org/web/20251018112132/https://dai.morisan3rd.site/entry/story213",
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_(2020)_episode_58&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 59,
+      "field": "start_chapter",
+      "old": 213,
+      "new": 214,
+      "why": "OUTSIDE MY ASK - same cause; verify before applying. Toei's ep-59 arasuji opens with Popp and Maam washed ashore in Carl and rescued by Chiu = ch 214 Seizonsha wa...!!?, not ch 213 (whose substance - Block's sacrifice enabling the escape and the Mother Dragon - is ep 58's, above). The fandom's ep-59 field (printed) is '213 (partial), 214, 215, 216, 217 (partial)', so 213 is a leading TAIL and A10 leaves the START on 214; chapters_adapted should read '213 (tail), 214, 215, 216, 217 (partial)'. The stored END 216 and the stored continue 216 are CORRECT and must not move (ch 216 Saigo no Kibo is the Mother Dragon giving Dai her last power; the episode closes as the Demon Army's notice arrives, the opening of ch 217 Shokei Senkoku no Wana - coco13: '217wa Shokei Senkoku no Wana no joban made'). NOTE the stored ep-59 continue NOTE quotes '217 Saigo no Kibo', which is the 349-slot LIST number beside a correct printed value - prose only, not a defect.",
+      "sources": [
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/59/",
+        "https://coco13.club/daianime59/",
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_(2020)_episode_59&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "CHAPTER SPACE AND THE CONVERSION APPLIED. Every value in this file is PRINTED (tankobon 1-348, N35). (1) en-Wikipedia's original-release volume list is LIST space: its vol 13 ends with an unnumbered '* SP. Avan, The Hero - Side Story' and its vol 14 opens at 123, so the list runs 1-121, SP, 123-349 and printed = list - 1 from list 123 up. Checked against the stored volume table at four boundaries in this range: list v31 = 286-295 -> printed 285-294, list v32 = 296-305 -> printed 295-304, list v33 = 306-314 -> printed 305-313, list v34 = 315-323 -> printed 314-322, all matching the stored table exactly. (2) THE FANDOM DOES NOT NEED CONVERTING HERE - this is the sub-block's numbering finding, and it CONTRADICTS the stored N35 sourceShift `fandom: from 208 delta -1`. dragonquest.fandom's per-episode `adapted` field is already the printed number for eps 54-97; its surplus number (it has 153 field values for the 152 printed chapters 197-348) is gained between its ep-97 and ep-98 fields, not at 207/208. Three independent legs: (a) coco13.club's per-episode 'from CHAPTER TITLE to CHAPTER TITLE' ranges match the fandom's raw numbers, unconverted, on ep 80 (278 Saigo no Toshi Moyu -> 280 Cho Senshi Suisan), ep 81 (281 Saraba! Tatakai no Hibi yo -> 283 Aban Massatsu Kanryo), ep 82 (284 Seigi no Kokeisha -> 286 Fudo!! Mistbaan), ep 84 (290 -> 293), ep 85 (294 -> 296), ep 86 (297 -> 300), ep 87 (301 -> 303), ep 88 (304 -> 306), ep 89 (307 -> 309), ep 91 (314 -> 317), ep 93 (321 -> 324), ep 94 (324 -> 327), ep 95 (328 -> 332) - a uniform -1 would put every one of those a chapter early and strand the episode-title chapters; (b) coco13 also prints NUMBERS with the titles in eps 53-60 and they are printed numbers (its '187wa Kaitei no Fukushusha' = en-WP list 188 minus 1; its '204wa Daimao kara no Hobi' = list 205 minus 1); (c) dai.morisan3rd.site's per-CHAPTER pages are printed too (story290 = Makyu no Shinzo = list 291 minus 1, story298 = Chinurareta Ketchaku = list 299 minus 1, story310 = Senritsu no Jijitsu = list 311 minus 1) and their contents match Toei's per-episode arasuji chapter for chapter. The fandom DOES flip to list numbering from its ep-98 field on (its ep-98 '339 (partial), 340, 341, 342, 343 (partial)' and ep-99 '343 (partial)...346 (partial)' only fit coco13's 'Kokoro o Hitotsu ni -> Hoko' and 'Hoko -> Kono Ude de Shori o' as printed 338-342 and 342-345, and its ep-100 ends at 349, a number the printed space does not have) - the 96-100 agent owns that seam. (3) CONSEQUENCE FOR STORED ROWS 57-59 (outside my ask, two repairs proposed): eps 54, 55, 56 and 59's END are correct as stored, ep 57's END 207 is correct (Toei's ep-57 close 'Dai ga futatabi tachiagaru!' is the last line of ch 207 Taiyo o Waga Te ni...!!, morisan3rd), but ep 58's END and ep 59's START are each one chapter low. (4) REORDER MAP for eps 85-87, in running order, printed: ep 85 = 294, 295, 296 | 299b, 300a (forward jump); ep 86 = 297 | 298 | 299b', 300, 301a (back-jump to 297); ep 87 = 301, 302 | 299a (back-jump) | 303, 304a. Chapter 299 Fuan na Yusei is the hinge - its White Garden half airs two episodes before its Vearn half. (5) The unnumbered vol-13 Bangaihen 'Yusha Aban' is not touched by any row in this range (it is ep 61's).",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "N35 RULING CHANGE PROPOSED (series-level, not a row): the stored sourceShift `fandom: from 208 delta -1` is wrong for eps 54-97 - dragonquest.fandom's per-episode field is already PRINTED there and its one surplus number appears only from its ep-98 field. Evidence: three legs in structure.notes (coco13's title ranges on 13 episodes, coco13's printed chapter numbers in eps 53-60, morisan3rd's printed per-chapter pages). This matches the coordinator's mid-task correction from sub-block B. The 96-100 agent should locate the exact seam inside eps 97-100; my reading is that the fandom's ep-98 field onwards is list-space (printed = fandom - 1).",
+    "TWO STORED ROWS OUTSIDE MY ASK look one chapter low as a consequence (repairs proposed, medium confidence, please cross-check with the 60-65 agent): ep 58 END 212 -> 213 (Toei's close is the Mother Dragon = ch 213), ep 59 START 213 -> 214 (Toei's open is Popp and Maam ashore in Carl = ch 214). Ep 57's END 207 and ep 59's END 216 are CORRECT as stored - do not move them.",
+    "TWO END JUDGEMENT CALLS where the wave-14 unproven-tail convention and coco13 disagree, both stated in the anchor notes: ep 86 END 301 (convention: advance onto the fandom's unquantified trailing partial; coco13 bounds the episode at 300 - the alternative value is 300 and the continue is 301 either way), and ep 89 END 310 (I advance because Toei's own ep-89 close narrates ch 310's opening events - the Phoenix Wing deflection and Popp and Brokeena's deaths - so it is not a scrap; coco13 bounds the episode at 309, the alternative value).",
+    "FENCE NOTE for the 78-83 agent: dragonquest.fandom gives ep 83 a trailing '290 (partial)', but Toei's ep-83 close is only the shadow creeping up behind Leona (the last beat of ch 289 Yokisenu Nankan...!?) and ep 84 carries all of ch 290's substance - so ep 83's END should stay 289 with the tail annotated (A47), and my ep-84 START 290 assumes exactly that.",
+    "SOURCE FOUND, worth adding to the series' source list: dai.morisan3rd.site ('Dragon Quest Dai no Daiboken oen blog') carries a per-CHAPTER arasuji page for every chapter in the PRINTED numbering (`/entry/storyNNN`). The live site now serves a parked-domain anti-adblock redirect, so it must be read through web.archive.org (every page I needed had a 2025 snapshot). It is the only per-chapter content source I found for chapters above 201, where dragonquest.fandom's chapter pages stop."
+  ]
+}

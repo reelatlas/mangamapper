@@ -1,0 +1,187 @@
+{
+  "series_id": "dragon-quest-the-adventure-of-dai",
+  "summary": "Episodes 96-100 are the run's last five rows and they adapt the manga's last block straight through to its final page. ALL numbers are PRINTED (tankobon 1-348, N35). CONVERSION FINDING (the coordinator's extra task, confirmed): dragonquest.fandom's per-episode field is NOT one space across this block — its numbers UP TO 335 are PRINTED and its numbers FROM 336 ON are printed + 1. Proof at both edges: ep 95's field '328, 329, 330, 331, 332 (partial)' matches coco13's ep 95 'from vol 35 渾身！ to the 序盤 of vol 36 響く闇からの声' chapter-for-chapter and volume-for-volume (printed 328 in v35, printed 332 in v36); ep 94's field ends on 327 = printed 327 絆にかけて, which is ep 94's own title; while ep 100's field must end at printed 348 and reads 349, and ep 97's '338, 339 (partial)' can only be printed 337/338 because 世界が輝く時 (printed 339) is demonstrably ep 98's content in Toei's own synopses. The seam is INSIDE ep 97's field, which duplicates one chapter across it ('335 (partial)' and '336' are both printed 335 瞳の中の奇蹟). The inserted slot is NOT a real extra near vol 36 — it is en-WP's reserved 122 (the unnumbered 番外編「勇者アバン」) arriving with a source switch; see structure.notes for the proof that vols 35-37 hold no unnumbered matter. Coverage after conversion: ep 96 = 332-334 (+ a 335 sliver), ep 97 = 335-338(opening), ep 98 = 338-342(opening), ep 99 = 342-345(opening), ep 100 = 345-348. Under the corrected conversion dragonquest.fandom and coco13 AGREE on every boundary in this block. THE MU PIN IS CONFIRMED: its 2020 segment 'Vol 37, Chap 349 (2020)' is printed 348 v37, and ep 100 really does adapt the manga's last chapter in full (Toei's synopsis carries Killvearn's last black-core trap, Dai flying alone into the blast and the 'それから数週間' epilogue with the sword's gem still shining). Consequence: the anime adapts the source to completion, so ep 100 has NO post-series continue. All five rows are faithful adaptations with cuts and small studio beats only — canon stands.",
+  "anchors": [
+    {
+      "episode": 96,
+      "end_chapter": 334,
+      "start_chapter": 332,
+      "chapters_adapted": "332 (bulk; ep 95 took its opening), 333, 334, 335 (closing sliver — ep 97 starts on it)",
+      "volume": 36,
+      "confidence": "high",
+      "note": "PRINTED space. dragonquest.fandom's field '332 (partial), 333, 334, 335 (partial)' is in the PRINTED space here (all numbers <= 335), and coco13 says 'アニメ第96話は原作36巻\"響く闇からの声\"の序盤から\"閃光のように\"までだよ' — printed 332 響く闇からの声 (its bulk; ep 95 stopped in its opening) through printed 334 閃光のように, the episode's own title chapter. Toei's synopsis is that content exactly: Verzer's voice from the darkness, Merle's telepathic report, Ron Berk and Nova on the black cores, Popp's 'live brilliantly like a flash of light' speech, Dai finally standing. A47: the fandom's trailing 335 (partial) is a tail of the chapter ep 97 STARTS on and coco13 does not see it at all — the END stays 334 and the tail is recorded here with a `partial`.",
+      "sources": [
+        "https://coco13.club/daianime96/",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/96/",
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The%20Adventure%20of%20Dai%20(2020)%20episode%2096&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"
+      ]
+    },
+    {
+      "episode": 97,
+      "end_chapter": 338,
+      "start_chapter": 335,
+      "chapters_adapted": "335, 336, 337, 338 (opening)",
+      "volume": 36,
+      "confidence": "high",
+      "note": "PRINTED space. coco13: 'アニメ第97話は原作36巻\"瞳に中の奇蹟\"から\"心を1つに\"の序盤まで' = printed 335 瞳の中の奇蹟 (from its start — coco13 writes plain から, not 序盤から) to the opening of printed 338 心をひとつに...!!. dragonquest.fandom's field '335 (partial), 336, 337, 338, 339 (partial)' straddles the numbering seam: its leading 335 is printed 335 and its 336-339 are printed 335-338, so the field resolves to the same printed 335 → 338 (opening) with one chapter written twice. Toei's synopsis confirms the beats: the Eye Jewels move against Barn (335), Barn crushes Gome and names it 神の涙 (336, the episode's title chapter), Gome's farewell and Dai's last wish (337 最後の願い), the last miracle beginning (338's opening) — and 339 世界が輝く時's content is in Toei's ep-98 text, which is what rules out the printed reading of the field's tail. A47 unproven-tail: '序盤 / opening of X' with no page count ADVANCES the END to 338 with a `partial`.",
+      "sources": [
+        "https://coco13.club/daianime97/",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/97/",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/98/",
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The%20Adventure%20of%20Dai%20(2020)%20episode%2097&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 98,
+      "end_chapter": 342,
+      "start_chapter": 338,
+      "chapters_adapted": "338 (bulk), 339, 340, 341, 342 (opening)",
+      "volume": 37,
+      "confidence": "high",
+      "note": "PRINTED space; both per-episode sources agree exactly. coco13: 'アニメ第98話は原作36巻\"心を1つに\"の序盤から原作37巻\"咆哮\"の序盤までだよ'. dragonquest.fandom's field '339 (partial), 340, 341, 342, 343 (partial)' is entirely above the seam, so printed = field - 1 → 338 (partial), 339, 340, 341, 342 (partial) — identical. Toei's synopsis: the world's hearts as one (338), the cores fail as the world is bathed in light (339 世界が輝く時), Barn's massacre vow and Dai's decision to open the twin crests (340 ダイの決断, the title chapter), the 竜魔人 transformation (341 たぎる竜の血!!!). END volume 37 — printed v37 = 341-348, and both sources place 咆哮 in vol 37. A47 unproven-tail: '序盤' with no count ADVANCES to 342 with a `partial`.",
+      "sources": [
+        "https://coco13.club/daianime98/",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/98/",
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The%20Adventure%20of%20Dai%20(2020)%20episode%2098&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"
+      ]
+    },
+    {
+      "episode": 99,
+      "end_chapter": 345,
+      "start_chapter": 342,
+      "chapters_adapted": "342 (bulk), 343, 344, 345 (opening)",
+      "volume": 37,
+      "confidence": "high",
+      "note": "PRINTED space; both sources agree exactly. coco13: 'アニメ第99話は原作37巻\"咆哮\"の序盤から原作37巻\"この腕で勝利を\"の序盤までだよ'; dragonquest.fandom '343 (partial), 344, 345, 346 (partial)' is above the seam → printed 342 (partial), 343, 344, 345 (partial). Toei's synopsis: 竜魔人 Dai beating Barn down (342 咆哮!!!), Popp/Leona and the Eye Jewels dropped into the palace's heart and Him's Grand Cross opening the escape (343 大魔宮 脱出せよ), the fight carried into the sky and Barn releasing the 鬼眼王 (344 死闘・天空へ), into the title chapter 345 この腕で勝利を. A47 unproven-tail: '序盤' with no count ADVANCES to 345 with a `partial`.",
+      "sources": [
+        "https://coco13.club/daianime99/",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/99/",
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The%20Adventure%20of%20Dai%20(2020)%20episode%2099&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"
+      ]
+    },
+    {
+      "episode": 100,
+      "end_chapter": 348,
+      "start_chapter": 345,
+      "chapters_adapted": "345 (bulk), 346, 347, 348",
+      "volume": 37,
+      "confidence": "high",
+      "note": "THE FINALE — MU PIN VERIFIED (G56/G32). MU's segment for THIS entry is 'Vol 37, Chap 349 (2020)' (the other segment, 'Vol 10, Chap 88 Page 15 (1991)', belongs to the 1991 series); MU is list-space throughout (printed = list - 1 from 123), so its 349 = PRINTED 348 さらば!!!愛する地上よ v37 — the stored END and volume are CORRECT, and this anchor confirms them and adds the START and the split. Ep 100 reaches the manga's last page: Toei's own synopsis carries printed 347 さらば!!大魔王 (Barn cut in two and destroyed) and all of printed 348 (the return to the surface, Pirollo revealed as Killvearn's true body with a black-core doll, Dai flying alone into the blast, and the 'それから数週間' epilogue with the sword's gem still shining); coco13 reads the episode as 'この腕で勝利をの序盤からエンディングまで'. dragonquest.fandom '346 (partial), 347, 348, 349' is above the seam → printed 345 (partial), 346, 347, 348 — identical. Because printed 348 is the last chapter there is NO post-series continue: the anime adapts the source to completion.",
+      "sources": [
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/100/",
+        "https://coco13.club/daianime100/",
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The%20Adventure%20of%20Dai%20(2020)%20episode%20100&prop=wikitext&format=json",
+        "https://shonenjumpplus.com/atom/series/13932016480029243319",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 96,
+      "continue_chapter": 335,
+      "kind": "parity",
+      "note": "Resume at printed 335 瞳の中の奇蹟 — ep 97 starts there and carries the chapter. Ep 96's END is 334; the fandom credits it with a closing sliver of 335, which is why the resume is AT 335 rather than after it (A47 + C2 parity — the instruction is the same under either reading).",
+      "sources": ["https://coco13.club/daianime96/", "https://coco13.club/daianime97/"]
+    },
+    {
+      "episode": 97,
+      "continue_chapter": 338,
+      "kind": "parity",
+      "note": "C1 — ep 97 stops in the opening pages of printed 338 心をひとつに...!! (Gome's last miracle beginning); ep 98 restarts in the same chapter and carries its bulk. Resume IN 338 (C1 + C2 parity with the anime).",
+      "sources": ["https://coco13.club/daianime97/", "https://coco13.club/daianime98/"]
+    },
+    {
+      "episode": 98,
+      "continue_chapter": 342,
+      "kind": "parity",
+      "note": "C1 — ep 98 ends in the opening of printed 342 咆哮!!! (the 竜魔人 roar); ep 99 restarts in the same chapter. Resume IN 342 (C1 + C2 parity).",
+      "sources": ["https://coco13.club/daianime98/", "https://coco13.club/daianime99/"]
+    },
+    {
+      "episode": 99,
+      "continue_chapter": 345,
+      "kind": "parity",
+      "note": "C1 — ep 99 ends in the opening of printed 345 この腕で勝利を (its own title chapter); the finale carries the rest. Resume IN 345 (C1 + C2 parity).",
+      "sources": ["https://coco13.club/daianime99/", "https://coco13.club/daianime100/"]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [96],
+      "kind": "partial",
+      "chapters": "332, 335",
+      "note": "Two tie chapters on this row. Printed 332 響く闇からの声 straddles eps 95/96 — ep 95 stops in its opening pages (coco13 marks both sides 序盤; the fandom marks '332 (partial)' on both), ep 96 carries the bulk, so ep 96's START is inside 332. Printed 335 瞳の中の奇蹟 is an A47 TAIL: the fandom credits ep 96 with a closing sliver of it, coco13 does not see it at all, and ep 97 STARTS on 335 and owns the chapter — so ep 96's END stays 334 and the sliver is recorded here. [PRINTED space, N35]"
+    },
+    {
+      "episodes": [96],
+      "kind": "rearranged",
+      "chapters": "334",
+      "note": "Inside adapted chapter 334: the manga plays Gomez's rally at Romos castle and Nova heading for Ozam AFTER Dai stands up; the anime plays them BEFORE (coco13's ep-96 変更点 list). A reorder within the chapter, not a coverage change. [PRINTED space]"
+    },
+    {
+      "episodes": [96],
+      "kind": "divergence",
+      "chapters": "332-334",
+      "note": "Faithfulness clause (T28): studio-made beats inside adapted chapters — an added flashback of Verzer defeated by Baran and sealed by the celestial spirits; an added scene of Ron Berk telling Flora the black cores can be frozen with Hyado; Barn's explicit 'under five minutes' softened to an abstract phrase; the Rura-lament reassigned from Eimi to Badack. coco13: 'ほぼ原作通り進みました'. Canon stands."
+    },
+    {
+      "episodes": [97],
+      "kind": "partial",
+      "chapters": "338",
+      "note": "A47 tail: ep 97 plays only the opening of printed 338 心をひとつに...!!; ep 98 STARTS on 338 and carries its bulk. The unquantified '序盤' advances ep 97's END to 338 with this partial (wave-14 convention). [PRINTED space]"
+    },
+    {
+      "episodes": [97],
+      "kind": "divergence",
+      "chapters": "335-338",
+      "note": "Faithfulness clause: cuts and small studio changes only — Chiu's miracle in the flashback montage replaced by Popp's revival from the Baran fight, Marin's destination renamed (ベルナの森 → パプニカ西部), Delmurin Island's monsters added to the hearts-as-one sequence, a fanservice panel cut. coco13: 'ほぼ原作通り進みました'. Canon stands."
+    },
+    {
+      "episodes": [98],
+      "kind": "partial",
+      "chapters": "342",
+      "note": "A47 tail: ep 98 plays only the opening of printed 342 咆哮!!!; ep 99 STARTS on 342. Both per-episode sources mark the same straddle point. [PRINTED space]"
+    },
+    {
+      "episodes": [98],
+      "kind": "abridged",
+      "chapters": "338-341",
+      "note": "Faithfulness clause: a run of line-level cuts inside adapted chapters (Matoriv's joke to Mazottsu, the Gome-memory montage for Leona/Popp/Maam, Leona asking Popp their odds, Dai's crest-resonance and Goroa flashbacks before opening the twin crests, two fanservice beats), offset by an expanded battle. coco13: 'ところどころカットが目立ちましたが、その分バトルは原作以上に'. Canon stands."
+    },
+    {
+      "episodes": [99],
+      "kind": "partial",
+      "chapters": "345",
+      "note": "A47 tail: ep 99 plays only the opening of printed 345 この腕で勝利を; the finale carries the rest. [PRINTED space]"
+    },
+    {
+      "episodes": [99],
+      "kind": "divergence",
+      "chapters": "342-345",
+      "note": "Faithfulness clause: added beats (Merle losing her link to Popp as the palace falls; an added Barn line crediting Hadlar; a shoulder-laser attack style invented for the 鬼眼王) and a few cut lines. Canon stands."
+    },
+    {
+      "episodes": [100],
+      "kind": "divergence",
+      "chapters": "348",
+      "note": "Faithfulness clause on the finale: the manga's post-escape narration about Killvearn is replaced by a ~5-second montage staging exactly what that narration described (Avan's Gold Feather, Dai and Popp lifting the doll skyward, Maam's punch); Leona left alone in shock on the cliff is a studio addition; more of the cast is gathered at the cape where Dai's sword stands; the end roll adds the Beast King squad. Small studio beats inside a full adaptation of the source's last chapter — canon stands (T28)."
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [],
+  "structure": {
+    "notes": "CHAPTER SPACE (N35, printed 1-348) — verified at the PUBLISHER: Shueisha's own 少年ジャンプ+ edition lists exactly 348 entries, 第1話 … 第348話, contiguous, no gap (atom feed of series 13932016480029243319). ja-WP states the serialization ran 全343話 '読切や番外編を除いて'; the five 読切 installments are デルパ! イルイル! (2 parts, WSJ 1989 #25-26) and ダイ爆発!!! (3 parts, #35-37), printed at the head of vol 1 — 343 + 5 = 348, which is why the printed numbering has no room for an extra anywhere later. THE FANDOM'S CONVERSION, LOCATED (the extra task): dragonquest.fandom's per-episode `adapted` field is PRINTED up to its 335 and printed + 1 from its 336 on. Evidence below the seam — ep 94's field ends on 327 = printed 327 絆にかけて, ep 94's own title (the list number 328 is absent), and ep 95's field '328, 329, 330, 331, 332 (partial)' matches coco13's ep 95 'from vol 35 渾身！to the 序盤 of vol 36 響く闇からの声' chapter-for-chapter AND volume-for-volume (printed 328 in v35, printed 332 in v36). Evidence above the seam — ep 100's field ends at 349, one past the last printed chapter, and ep 97's '338, 339 (partial)' cannot be printed because 世界が輝く時 (printed 339) is in Toei's ep-98 synopsis, not its ep-97 one. The seam sits INSIDE ep 97's field, which counts one chapter twice across it: its '335 (partial)' and its '336' are both printed 335 瞳の中の奇蹟. WHAT THE SLOT IS: not a real unnumbered extra near vol 36 — vols 35/36/37 are nine + nine + eight consecutive mainline chapters with no bonus matter in either en-WP's volume list or the Jump+ edition. It is en-WP's reserved slot 122 (the unnumbered 番外編「勇者アバン」, vol 13 back matter) arriving via a SOURCE SWITCH: from ep 97's field on the editor used en-WP/list numbers (which skip 122 and therefore run printed + 1 from 123), while the earlier fields use the printed numbers. No episode in this block adapts an extra or a 読切, so no `side_story` annotation is owed here (ep 61's 勇者アバン side story is another sub-block's row). CONVERSIONS APPLIED PER ROW: ep 96 fandom 332/333/334/335 = printed 332/333/334/335 (below the seam, no shift); ep 97 fandom 335 = printed 335 and fandom 336/337/338/339 = printed 335/336/337/338; eps 98/99/100 fandom N = printed N - 1 throughout. en-WP's volume list, AniList, MangaUpdates and MangaDex are LIST space throughout (printed = list - 1 from 123) — every en-WP chapter number quoted here has been converted. PRINTED CHAPTER TITLES for the block: 331 地上消滅, 332 響く闇からの声, 333 起って...!!!, 334 閃光のように, 335 瞳の中の奇蹟, 336 神の涙, 337 最後の願い, 338 心をひとつに...!!, 339 世界が輝く時, 340 ダイの決断, 341 たぎる竜の血!!!, 342 咆哮!!!, 343 大魔宮 脱出せよ, 344 死闘・天空へ, 345 この腕で勝利を, 346 さらば! 我が友, 347 さらば!! 大魔王, 348 さらば!!! 愛する地上よ. VOLUME CHECK (en-WP's volume blocks, converted): v35 = printed 323-331, v36 = printed 332-340, v37 = printed 341-348 — identical to the stored table, whose v37 is printed '341-?'; the honest close is 348. FOUR of five episode titles are chapter titles: ep 96 閃光のように = 334 (its END), ep 97 神の涙 = 336 (inside), ep 98 ダイの決断 = 340 (inside), ep 99 この腕で勝利を = 345 (its END), ep 100 さらば！愛する地上よ = 348 (its END, the manga's last chapter). ROW IDENTITY: ja-WP's 各話リスト gives 96 閃光のように 9/24, 97 神の涙 10/1, 98 ダイの決断 10/8, 99 この腕で勝利を 10/15, 100 さらば！愛する地上よ 10/22 — all match the stored titles and dates; no identity repair. COMPLETION: with ep 100 reaching printed 348 the 2020 anime adapts the manga in full (100 episodes / 348 chapters), no mainline chapter unadapted, hence no post-series continue on the finale. SOURCE INDEPENDENCE: the fandom's forward and reverse fields are one wiki AND its chapter pages stop at its 196/201, so there is NO reverse index for this block; independence rests on coco13's weekly per-episode 原作 range line, Toei Animation's own per-episode あらすじ (mirrored verbatim by dアニメストア, partId 24241NNN where NNN = episode + 1), en-WP's volume/chapter-title list, ja-WP's episode list and Shueisha's Jump+ chapter index.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "CONVERSION FINDING for the whole series, not just this block: dragonquest.fandom's per-episode chapter field changes numbering space MID-RUN — printed up to its 335, printed + 1 from its 336 (the seam is inside ep 97's own field, which counts printed 335 twice). The wave-14 briefing's blanket rule 'fandom N >= 208 = printed N - 1' is therefore WRONG for eps 54-96 and right only from ep 97's second entry onward. Sub-blocks that applied the blanket rule to rows below ep 97 will have shifted every value one chapter early; the fence rows worth re-checking are eps 54-96. The tell to re-run cheaply: an episode whose TITLE is a chapter title should have that chapter's PRINTED number inside its field (ep 94 = 327, ep 95 = 330, ep 96 = 334 all pass in the printed reading).",
+    "NO POST-SERIES CONTINUE ON THE FINALE, and that is the honest value rather than a gap: ep 100 adapts printed 348, the manga's final chapter, including its epilogue, so C5's 'coverage + 1' would name a chapter that does not exist. If the display needs a terminal statement it should read 'the anime covers the manga to its end', never a number.",
+    "The stored ep-100 row is at the `mu` derivation tier; landing this anchor flips it to manual (P8), which is also what keeps the added START and chapters_adapted from being re-derived away. MU's pin itself is now REDUNDANT rather than wrong (G56): its 'Vol 37, Chap 349 (2020)' segment converts to printed 348 v37, exactly the verified terminal.",
+    "One single-source page-level claim left standing: dragonquest.fandom credits ep 96 with a closing sliver of printed 335 瞳の中の奇蹟 that coco13 does not see and Toei's synopsis does not reach (its ep-96 text ends on Dai standing up). I held the END at 334 under A47 (ep 97 starts on 335 and owns it) and recorded the sliver in chapters_adapted plus a `partial`. If you prefer the tail to advance, the only delta is ep 96 END 334 → 335; the START, the continue (335) and every other row are unaffected."
+  ]
+}

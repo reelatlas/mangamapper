@@ -1,0 +1,258 @@
+{
+  "series_id": "dragon-quest-the-adventure-of-dai",
+  "summary": "Sub-block F (eps 90-95) is six straight canon rows adapting printed chapters 310-332 in strict running order, with no reorder and no anime-original material (coco13 calls every one of the six ほぼ原作通り). Ep 90 closes tankobon v33 exactly (313 裁きは下った…! = Killvearn's self-destruction), ep 91 opens v34 (314 バーン最大の謎), and the block ends with ep 95 entering v36's first chapter (332 響く闇からの声). Four rows end mid-chapter (91/92/93/95) and take C1 parity continues; 90 and 94 end on a chapter's last page and need none. THE NUMBERING FINDING: dragonquest.fandom's per-episode `adapted` field in this range is ALREADY the printed number — the wave-14 contract's blanket 'fandom N ≥ 208 = printed N − 1' does NOT hold and applying it would put every row one chapter low. Proven three ways: the fandom's own chapter page 122 = 決勝戦の異変!! (printed 122, not the 番外編) and 196 = さらば我が子よ; its volume page lists v33 = 私が最強だ…裁きは下った (9 chapters = printed 305-313) and v22/v37 with NO extra chapter anywhere; and ep 94's own title 絆にかけて is printed 327, which sits inside the unshifted range 324-327 and outside the shifted one. The same defect is visible BELOW my fence: the landed wave-13 anchors for eps 57/58/59 are one chapter low (coco13 prints explicit 話数 for eps 56-60 and Toei's synopses confirm the beats) — repairs proposed. The fandom's fields DO gain +1 at the very top (its ep-100 field ends at 349, one past printed 348); the drift is not present anywhere in 90-95 and first appears at the ep 97/98 seam (its 339 = printed 338).",
+  "anchors": [
+    {
+      "episode": 90,
+      "end_chapter": 313,
+      "start_chapter": 310,
+      "chapters_adapted": "310, 311, 312, 313",
+      "volume": 33,
+      "confidence": "high",
+      "note": "PRINTED space; no conversion applied — the fandom's field (310 (partial), 311, 312, 313) is already printed (see structure.notes). coco13: '原作33巻”戦慄の事実…！”から”裁きは下った！”まで' = printed 310 → 313 (en-WP list 311/314 − 1). Toei's あらすじ carries the four beats in order: the shock of Popp/Brokeena vanishing + Hyunckel's clue (310 戦慄の事実), the Killvearn/Mistvearn stand-off (311 影と死神 = the episode's own title), Avan's account of the duel (312 死を越えた決着戦) and Killvearn dying in his own trap (313 裁きは下った). END 313 is v33's last chapter (A4); ends on a chapter boundary, so no continue.",
+      "sources": [
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The%20Adventure%20of%20Dai%20(2020)%20episode%2090&prop=wikitext&format=json",
+        "https://coco13.club/daianime90/",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/90/",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"
+      ]
+    },
+    {
+      "episode": 91,
+      "end_chapter": 317,
+      "start_chapter": 314,
+      "chapters_adapted": "314, 315, 316, 317 (序盤)",
+      "volume": 34,
+      "confidence": "high",
+      "note": "PRINTED space, no conversion (fandom field 314, 315, 316, 317 (partial)). coco13: '原作34巻”バーン最大の謎”から”宿命の終焉”の序盤まで' = printed 314 → 317 (en-WP 315/318 − 1). Toei: Avan reveals Mistvearn's identity and Vearn's greatest secret (314 バーン最大の謎), the true Dark King descends (315 真・大魔王降臨), Maam is possessed and freed by 虚空閃 (316 黒いマァム), and it closes on Myst picking his next target = the opening of 317 宿命の終焉. A47's unproven-tail convention: the 317 share is an unquantified 序盤, so the END ADVANCES to 317 with a `partial` (the wave-13 block convention, Sean 2026-09-02).",
+      "sources": [
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The%20Adventure%20of%20Dai%20(2020)%20episode%2091&prop=wikitext&format=json",
+        "https://coco13.club/daianime91/",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/91/",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"
+      ]
+    },
+    {
+      "episode": 92,
+      "end_chapter": 321,
+      "start_chapter": 317,
+      "chapters_adapted": "317 (remainder), 318, 319, 320, 321 (序盤)",
+      "volume": 34,
+      "confidence": "high",
+      "note": "PRINTED space, no conversion (fandom field 317 (partial), 318, 319, 320, 321 (partial)). Toei's あらすじ walks the chapters in order: Myst takes Hyunckel and is destroyed, closing the dark master/disciple duel (317 宿命の終焉), the recovered party leaves for Dai (318 勇者の下へ), Dai and the true Vearn collide (319 正面激突), Vearn takes the 天地魔闘 stance and wins the clash (320 不動の構え), and the episode's last line is Vearn's proposal to Leona = the opening of 321 魔界への誘い. A47: the 321 share is unquantified → END advances with a `partial`. DISSENT: coco13 stops this episode at '不動の構えの序盤' (= 320) — a boundary wobble; the licensor's own summary plus the fandom field both put 321's opening in ep 92, and coco13 itself starts ep 93 at 321.",
+      "sources": [
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The%20Adventure%20of%20Dai%20(2020)%20episode%2092&prop=wikitext&format=json",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/92/",
+        "https://coco13.club/daianime92/",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"
+      ]
+    },
+    {
+      "episode": 93,
+      "end_chapter": 324,
+      "start_chapter": 321,
+      "chapters_adapted": "321 (remainder), 322, 323, 324 (序盤)",
+      "volume": 35,
+      "confidence": "high",
+      "note": "PRINTED space, no conversion (fandom field 321 (partial), 322, 323, 324 (partial)). coco13: '原作34巻”魔界への誘い”から35巻”天地魔闘の死角”の序盤まで' = printed 321 → 324 (en-WP 322/325 − 1), and the volume seam it names (v34 → v35) matches the stored boundary table exactly (v34 = 314-322, v35 = 323-331). Toei: Leona refuses and is turned into an eye-jewel (322 閉じない瞳 — 閉じない瞳!!), the party arrives and is jewelled, Avan/Him/Larhart charge and Avan falls (323 勝機をつかめ), closing on the question of the stance's blind spot (324 天地魔闘の死角). A47: unquantified 序盤 → END advances with a `partial`.",
+      "sources": [
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The%20Adventure%20of%20Dai%20(2020)%20episode%2093&prop=wikitext&format=json",
+        "https://coco13.club/daianime93/",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/93/",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"
+      ]
+    },
+    {
+      "episode": 94,
+      "end_chapter": 327,
+      "start_chapter": 324,
+      "chapters_adapted": "324 (remainder), 325, 326, 327",
+      "volume": 35,
+      "confidence": "high",
+      "note": "PRINTED space, no conversion (fandom field 324 (partial), 325, 326, 327). coco13: '原作35巻”天地魔闘の死角”の序盤から”絆にかけて・・・！”まで' = printed 324 → 327. This row is the conversion's own witness: the episode's TITLE 絆にかけて is printed ch 327 (en-WP 328 − 1), which lies inside the unshifted range and outside the '−1' one. Toei confirms the beats: Popp deduces the stance's blind spot (324), Him and Larhart stake their lives (325 生命でぶつかれ), the last attack (326 ラストアタック) and the bond-woven trump card cliffhanger (327). Ends on 327's last page — no continue.",
+      "sources": [
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The%20Adventure%20of%20Dai%20(2020)%20episode%2094&prop=wikitext&format=json",
+        "https://coco13.club/daianime94/",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/94/",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"
+      ]
+    },
+    {
+      "episode": 95,
+      "end_chapter": 332,
+      "start_chapter": 328,
+      "chapters_adapted": "328, 329, 330, 331, 332 (序盤)",
+      "volume": 36,
+      "confidence": "high",
+      "note": "PRINTED space, no conversion (fandom field 328, 329, 330, 331, 332 (partial)). coco13: '原作35巻”渾身！”から原作36巻”響く闇からの声”の序盤まで' = printed 328 → 332 (en-WP 329/333 − 1); the v35 → v36 seam it names matches the stored table (v35 = 323-331, v36 = 332-340). Toei: Shahal's mirror and the counter (328 渾身), the one-moment opening (329 一瞬), Avan Strash X breaking the stance = the episode's title chapter (330 最大最後の逆転), then the Pillar of Vearn + black core aimed at Loloi valley and Dai collapsing (331 地上消滅). VOLUME = 36 by the END's volume (the block's convention), though the bulk is v35. A47: unquantified 序盤 of 332 → END advances with a `partial`; ep 96 starts on 332.",
+      "sources": [
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The%20Adventure%20of%20Dai%20(2020)%20episode%2095&prop=wikitext&format=json",
+        "https://coco13.club/daianime95/",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/95/",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 91,
+      "continue_chapter": 317,
+      "kind": "parity",
+      "note": "C1 + C2 parity: ep 91 stops in the opening pages of ch 317 宿命の終焉 (Myst choosing Hyunckel as his next vessel); ep 92 plays the chapter's bulk. Resume IN ch 317. [printed space]",
+      "sources": [
+        "https://coco13.club/daianime91/",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/92/"
+      ]
+    },
+    {
+      "episode": 92,
+      "continue_chapter": 321,
+      "kind": "parity",
+      "note": "C1 + C2 parity: ep 92 closes on ch 321 魔界への誘い's opening (Vearn's proposal to Leona); ep 93 carries the rest. Resume IN ch 321. [printed space]",
+      "sources": [
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/92/",
+        "https://coco13.club/daianime93/"
+      ]
+    },
+    {
+      "episode": 93,
+      "continue_chapter": 324,
+      "kind": "parity",
+      "note": "C1 + C2 parity: ep 93 ends in the opening of ch 324 天地魔闘の死角…!!? ; ep 94 opens on the same chapter and carries its bulk. Resume IN ch 324. [printed space]",
+      "sources": [
+        "https://coco13.club/daianime93/",
+        "https://coco13.club/daianime94/"
+      ]
+    },
+    {
+      "episode": 95,
+      "continue_chapter": 332,
+      "kind": "parity",
+      "note": "C1 + C2 parity: ep 95 ends in the opening of ch 332 響く闇からの声 (v36's first chapter); ep 96 opens on it. Resume IN ch 332. [printed space]",
+      "sources": [
+        "https://coco13.club/daianime95/",
+        "https://coco13.club/daianime96/"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [
+        90
+      ],
+      "kind": "partial",
+      "chapters": "310",
+      "note": "Ch 310 戦慄の事実…!!! is marked '(partial)' on BOTH ep 89's and ep 90's fandom fields — ep 89 takes its opening pages, ep 90 its bulk (coco13 assigns the chapter to ep 90: '戦慄の事実…！から'). START 310 stands under A10. [printed space]"
+    },
+    {
+      "episodes": [
+        91,
+        92
+      ],
+      "kind": "partial",
+      "chapters": "317",
+      "note": "Ch 317 宿命の終焉 straddles eps 91/92: ep 91 has only its 序盤 (Myst choosing Hyunckel), ep 92 the bulk (the possession, Hyunckel's light-闘気 soul, Myst's end). [printed space]"
+    },
+    {
+      "episodes": [
+        92,
+        93
+      ],
+      "kind": "partial",
+      "chapters": "321",
+      "note": "Ch 321 魔界への誘い straddles eps 92/93: ep 92 closes on Vearn's proposal to Leona, ep 93 opens on her refusal. [printed space]"
+    },
+    {
+      "episodes": [
+        93,
+        94
+      ],
+      "kind": "partial",
+      "chapters": "324",
+      "note": "Ch 324 天地魔闘の死角…!!? straddles eps 93/94 (coco13 marks 'の序盤まで' on 93 and 'の序盤から' on 94). [printed space]"
+    },
+    {
+      "episodes": [
+        95
+      ],
+      "kind": "partial",
+      "chapters": "332",
+      "note": "Ch 332 響く闇からの声 straddles eps 95/96: ep 95 has only its 序盤, ep 96 (another sub-block's row) carries the rest. [printed space]"
+    },
+    {
+      "episodes": [
+        90,
+        91,
+        92,
+        93,
+        94,
+        95
+      ],
+      "kind": "divergence",
+      "chapters": "310-332",
+      "note": "Faithfulness clause (T28, Sean 2026-09-02): all six rows are faithful adaptations — coco13 records only line-level alterations and small studio beats, e.g. ep 90 (Hyunckel's deduction drops the manga's 'same speech and pronunciation as Vearn' reasoning), ep 91 (Him's '話が見えねえ' line cut to an expression), ep 92 (the manga's unattributed 'せっかく回復したのに' line given to Brokeena on screen), ep 93 (Calamity End drawn as an aura blade rather than a bare hand-chop; Him's line changed; the three fighters turn to Dai's voice before charging), ep 94 (Vearn's dropped-stance normal attacks, cut in the manga, are shown; 'pain' → 'fear'), ep 95 (the hexagram redrawn as a hexagon; the countdown changed from 5 to 10 minutes). No anime-original story share — every row stays canon."
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 58,
+      "field": "start_chapter",
+      "old": 208,
+      "new": 209,
+      "why": "OUTSIDE MY ASK, but it is my block's conversion evidence and the wave-13 landed value is one chapter low. coco13 prints explicit 話数 for this episode: 'アニメ第58話は原作23巻209話”恐怖の切り札”から213話”世界破滅への序曲‼”の途中まで' — printed 209 → 213, and Toei's あらすじ confirms it (the episode opens with the Avan Strash landing and Vearn summoning the 光魔の杖 = 209 恐怖の切り札). The fandom's own field reads 209, 210, 211, 212, 213 (partial); its numbers are printed (chapter page 122 = 決勝戦の異変!!, 196 = さらば我が子よ), so the wave-13 '−1' conversion was wrong.",
+      "sources": [
+        "https://coco13.club/daianime58/",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/58/",
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The%20Adventure%20of%20Dai%20(2020)%20episode%2058&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 58,
+      "field": "end_chapter",
+      "old": 212,
+      "new": 213,
+      "why": "Same evidence: coco13 '…213話”世界破滅への序曲‼”の途中まで'; the fandom field ends '213 (partial)'. Under the block's A47 convention an unquantified mid-chapter tail ADVANCES the END. chapters_adapted should read '209, 210, 211, 212, 213 (途中まで)' (the stored '208 (bulk)' opener is the −1 artefact) and the continue moves 212 → 213. Volume 23 (207-215) is unchanged.",
+      "sources": [
+        "https://coco13.club/daianime58/",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/58/",
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The%20Adventure%20of%20Dai%20(2020)%20episode%2058&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 59,
+      "field": "end_chapter",
+      "old": 216,
+      "new": 217,
+      "why": "OUTSIDE MY ASK — this is my block's lower fence. coco13: '第59話は原作23巻213話の途中から217話”処刑宣告の罠”の序盤まで' = printed 213 → 217; Toei's あらすじ ends on the Demon Army's notice arriving = the opening of 217 処刑宣告の罠. START 213 is already correct; chapters_adapted should read '213 (remainder), 214, 215, 216, 217 (序盤)' (the stored '212 (tail)' is the −1 artefact) and the continue moves 216 → 217. Volume 24 (216-225) is unchanged. NOTE the stored continue note already says 'ends inside ch 217 最後の希望' — the number is the printed truth and the TITLE is printed 216's, i.e. the note mixes the two spaces.",
+      "sources": [
+        "https://coco13.club/daianime59/",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/59/",
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The%20Adventure%20of%20Dai%20(2020)%20episode%2059&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 57,
+      "field": "end_chapter",
+      "old": 207,
+      "new": 208,
+      "why": "OUTSIDE MY ASK; same −1 defect. coco13: '第57話は原作22巻204話”大魔王からの褒美”から原作23巻208話”不屈の勇者・ダイ”まで' — printed 204 → 208; Toei's あらすじ ends 'ダイが再び立ち上がる！' = 208 不屈の勇者・ダイ. The fandom field is '204 (partial), 205, 206, 207, 208, 209 (1 panel)'. chapters_adapted should read '204 (bulk), 205, 206, 207, 208, 209 (1 panel)' and the continue 208 → 209 (the 1-panel tail is a quantified ≤5-page scrap, so A47 holds the END at 208 and ep 58 owns 209). Volume 23 unchanged. LOWER CONFIDENCE THAN 58/59: Toei's line could also be read as the last panel of 207, and coco13's '208話まで' is what carries it — Sean may prefer to keep 207 with '208 (partial)'; either way the stored '208 (1 panel)' tail is really ch 209.",
+      "sources": [
+        "https://coco13.club/daianime57/",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/57/",
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The%20Adventure%20of%20Dai%20(2020)%20episode%2057&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "CHAPTER SPACE — the conversion applied on every row of this sub-block: NONE. dragonquest.fandom's per-episode `adapted` field is already the PRINTED tankobon number in this range, so the wave-14 contract's 'fandom N ≥ 208 = printed N − 1' must NOT be applied here (it would put all six rows one chapter low). Three independent proofs: (1) the fandom's chapter pages are in the printed space — chapter 122 = 決勝戦の異変!! |volume=14 (printed 122; en-WP/AniList/MU/MangaDex give slot 122 to the 番外編) and chapter 196 = さらば我が子よ…!! |volume=21; (2) the fandom's own 'The Adventure of Dai volumes' page lists v33 = 私が最強だ … 裁きは下った (9 chapters = printed 305-313), v34 = バーン最大の謎 … 閉じない瞳 (314-322), v35 = 勝機をつかめ … 地上消滅 (323-331), v36 = 響く闇からの声 … ダイの決断 (332-340), v37 = たぎる竜の血 … さらば‼―愛する地上よ (341-348) — all identical to the stored printed boundary table, with NO extra chapter anywhere (so the wave-13 inference that the fandom numbers vol 22's unnumbered 大魔宮の秘密 as its 207 is not supported by the wiki's own data); (3) the title test: ep 94's title 絆にかけて is printed 327 (en-WP list 328 − 1), inside the unshifted range 324-327 and outside the shifted 323-326. en-WP's ORIGINAL-release volume list IS list-space (its vol 13 ends '121. 覇者の剣' + an unnumbered 'SP. 【番外編】勇者アバン' and its vol 14 starts at 123, so its N ≥ 123 = printed + 1); every en-WP number quoted above was converted −1 before use. Cross-check of that conversion on primaries: coco13 prints explicit 話数 with titles for eps 56-60 and all seven land exactly on en-WP − 1 (天かける不死鳥 201, 大魔王からの褒美 204, 不屈の勇者・ダイ 208, 恐怖の切り札 209, 世界破滅への序曲 213, 処刑宣告の罠 217, 五つめのしるし 220). | WHERE THE FANDOM DOES DRIFT: its ep-100 field ends at 349, one past printed 348, so the fields gain +1 at the very top. The drift is absent from every row 90-95 (all six match coco13's title ranges and Toei's beats unshifted) and from ep 96 (field 332 (partial), 333, 334, 335 (partial) vs coco13's 響く闇からの声[332] → 閃光のように[334]). It is unmistakable from ep 98 on: ep 98's field 339 (partial)…343 (partial) vs coco13's 心をひとつに[338]序盤 → 咆哮[342]序盤; ep 99's 343-346 vs coco13's 342 → 345; ep 100's 346-349 vs printed 345-348. The seam sits inside ep 97's list (335 (partial), 336, 337, 338, 339 (partial) — five numbers for coco13's four chapters 335-338): sub-block G must convert −1 for eps 98-100 and adjudicate ep 97 on content, not arithmetic. | RUNNING ORDER: strict, no reorder anywhere in 90-95 (the reorder this wave was warned about sits at eps 85-87, below my rows). ENDs monotone 313 → 317 → 321 → 324 → 327 → 332, inside the fence (ep 59 below, ep 100 → 348 above). Volume seams crossed: v33→v34 between eps 90/91 (a clean chapter boundary) and v35→v36 inside ep 95.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "THE CONVERSION IS A SERIES-LEVEL REPAIR, not just my rows: the N35 sourceShift {source:'fandom', from:208, delta:-1} is not supported by the wiki's own data — dragonquest.fandom's chapter space IS the printed space (its chapter page 122 = 決勝戦の異変!!, its volume page lists exactly the printed 348 with no extras). What is real is a +1 drift in its per-EPISODE fields at the top of the run (ep 100's field ends at 349). Recommend: replace the fandom shift with 'no shift; the episode fields run +1 from the ep 97/98 seam' and re-check any wave-13/14 row that applied −1.",
+    "FENCE ROWS BELOW ME ARE ONE LOW: the landed wave-13 anchors for eps 57, 58, 59 applied the −1 and are one chapter short (repairs proposed with coco13's explicit 話数 + Toei's synopses). Ep 56 and everything below it are correct (wave 13's A-F rows converted fandom → 349-space → printed, which cancels to identity). The stored ep-59 continue note already shows the mixture: 'ends inside ch 217 最後の希望' pairs printed 217's number with printed 216's title.",
+    "ep 92 END split evidence: the fandom field and Toei's あらすじ both put ch 321 魔界への誘い's opening (Vearn's proposal to Leona) in ep 92; coco13 stops the episode at '不動の構え(320)の序盤'. I delivered END 321 (2 sources vs 1, and coco13 starts ep 93 at 321 anyway). If Sean prefers coco13's boundary the row becomes END 320 with a graft/partial on 321 — the continue (321) is unchanged either way.",
+    "ep 95's volume is 36 by the END-chapter convention although four of its five chapters are v35 — flagged in case the display prefers the bulk volume."
+  ]
+}

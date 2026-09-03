@@ -1,0 +1,372 @@
+{
+  "series_id": "dragon-quest-the-adventure-of-dai",
+  "summary": "Episodes 66-71 are six consecutive, faithful canon rows covering PRINTED chapters 233-253 (v25 tail through v27) with no skipped material: 66 = 233-236(opening), 67 = 236-239, 68 = 240-242, 69 = 242-246, 70 = 246-249 (+ an unquantified 250 tail the fandom alone records), 71 = 250-253(opening). Every value is in the PRINTED 1-348 space, and the wave-14 contract's stated conversion did NOT have to be applied to the fandom in this range: dragonquest.fandom's per-episode `adapted` field is ALREADY the printed number here, so 'fandom N >= 208 = printed N - 1' (ruling N35) is wrong for this stretch and has already produced three off-by-one stored anchors (eps 57, 58, 59), repaired below with evidence. Proof: (a) coco13's per-episode range is given as volume + chapter TITLE, and every title resolves through en-WP's volume list (list N = printed N + 1 for N >= 123) to exactly the fandom's number — ep 62 opens on the chapter its own title names, 破邪の洞窟 = printed 221 = the fandom's '221'; (b) the fandom's ep-57 field lists six consecutive numbers 204,205,206,207,208,209, which the ruled shift would collapse onto 207 twice — an arithmetic impossibility. All six target rows stay canon (faithfulness clause, T28): coco13's cut/addition lists are line-level studio beats inside adapted chapters. Four straddles take a `partial`; ep 70's END is held at 249 under A47 because only one of three sources places it inside 250, which ep 71 starts on.",
+  "anchors": [
+    {
+      "episode": 66,
+      "end_chapter": 236,
+      "start_chapter": 233,
+      "chapters_adapted": "233, 234, 235, 236 (opening)",
+      "volume": 26,
+      "confidence": "high",
+      "note": "PRINTED space; no conversion needed — dragonquest.fandom's field ('233, 234, 235, 236 (partial)') is already printed here (see structure.notes). coco13 independently bounds the episode 25巻ロン・ベルクの秘密 → 26巻魔界軍団包囲網!!!の序盤 = printed 233 → 236 (en-WP list 234 / 237 minus 1). A47 unproven-tail convention (wave 14): an unquantified 'opening of 236' ADVANCES the END with a `partial`. Episode title 五色の光 = printed 235, inside the range. A4/A10.",
+      "sources": [
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_(2020)_episode_66&prop=wikitext&format=json",
+        "https://coco13.club/daianime66/",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/66/"
+      ]
+    },
+    {
+      "episode": 67,
+      "end_chapter": 239,
+      "start_chapter": 236,
+      "chapters_adapted": "236 (bulk), 237, 238, 239",
+      "volume": 26,
+      "confidence": "high",
+      "note": "PRINTED space (fandom field '236 (partial), 237, 238, 239' is already printed). coco13: 26巻魔界軍団包囲網!!!の序盤から その人の名は…!! まで = printed 236 → 239 (en-WP list 237 / 240 minus 1). START = the leading partial of 236 (A10 — a substantial share, coco13 gives ep 66 only its 序盤). END 239 is complete: Toei's synopsis closes on Popp shouting Maam's name and his mark blazing = その人の名は…!!, and ep 68 opens on 240. A4.",
+      "sources": [
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_(2020)_episode_67&prop=wikitext&format=json",
+        "https://coco13.club/daianime67/",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/67/"
+      ]
+    },
+    {
+      "episode": 68,
+      "end_chapter": 242,
+      "start_chapter": 240,
+      "chapters_adapted": "240, 241, 242 (partial)",
+      "volume": 26,
+      "confidence": "high",
+      "note": "PRINTED space (fandom field '240, 241, 242 (partial)' is already printed). coco13: 26巻涙の敵陣突入!!! から 女王!!秘めたる決意 まで = printed 240 → 242 (en-WP list 241 / 243 minus 1). Both independent sources place the episode inside 242, so the END advances with a `partial` (wave-14 A47 convention); Toei's synopsis ends on Albinass's hidden intent, the chapter's own hook. Episode title 最後の挑戦 = ハドラー最後の挑戦 printed 241, inside the range. A4/A10.",
+      "sources": [
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_(2020)_episode_68&prop=wikitext&format=json",
+        "https://coco13.club/daianime68/",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/68/"
+      ]
+    },
+    {
+      "episode": 69,
+      "end_chapter": 246,
+      "start_chapter": 242,
+      "chapters_adapted": "242 (bulk), 243, 244, 245, 246 (partial)",
+      "volume": 27,
+      "confidence": "high",
+      "note": "PRINTED space (fandom field '242 (partial), 243, 244, 245, 246 (partial)' is already printed). coco13: 26巻女王!!秘めたる決意 から 27巻想いよ走れ…!! の終盤 まで = printed 242 → 246 (en-WP list 243 / 247 minus 1). START = the leading share of 242 (A10; Toei's ep-69 synopsis opens on Albinass's true purpose, that chapter's substance). END advances into 246 — coco13 says the episode reaches its 終盤, well past a scrap. Episode title 愛の超激突 = printed 244, inside the range. A4.",
+      "sources": [
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_(2020)_episode_69&prop=wikitext&format=json",
+        "https://coco13.club/daianime69/",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/69/"
+      ]
+    },
+    {
+      "episode": 70,
+      "end_chapter": 249,
+      "start_chapter": 246,
+      "chapters_adapted": "246 (remainder), 247, 248, 249, 250 (tail)",
+      "volume": 27,
+      "confidence": "high",
+      "note": "PRINTED space (fandom field '246 (partial), 247, 248, 249, 250 (partial)' is already printed). coco13 and Toei both END the episode at マァムの返事 = printed 249 (en-WP list 250 minus 1) — Toei's last beat is Popp's confession and Maam's answer. Only the fandom names a share of 250, unquantified; ep 71 STARTS on 250 (both sources), so A47 HOLDS the END at 249 and the tail is recorded here with a `partial`. Episode title 勝利か消滅か = printed 248, inside the range. A4/A10/A47.",
+      "sources": [
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_(2020)_episode_70&prop=wikitext&format=json",
+        "https://coco13.club/daianime70/",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/70/",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"
+      ]
+    },
+    {
+      "episode": 71,
+      "end_chapter": 253,
+      "start_chapter": 250,
+      "chapters_adapted": "250 (bulk), 251, 252, 253 (opening)",
+      "volume": 27,
+      "confidence": "high",
+      "note": "PRINTED space (fandom field '250 (partial), 251, 252, 253 (partial)' is already printed). coco13: 27巻真竜の闘い!!! から 最後の一太刀!!! まで = printed 250 → 253 (en-WP list 251 / 254 minus 1). Both sources place the episode inside 253, so the END advances with a `partial`; Toei's synopsis closes on Hadlar taking the stance for the final blow, 253's opening, and ep 72 starts on 253's 序盤. Episode title 真竜の闘い = printed 250 = its START. A4/A10.",
+      "sources": [
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_(2020)_episode_71&prop=wikitext&format=json",
+        "https://coco13.club/daianime71/",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/71/"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 66,
+      "continue_chapter": 236,
+      "kind": "parity",
+      "note": "C1 — ep 66 stops in the opening pages of ch 236 魔界軍団包囲網!!! (Zaboera throws the Makai monsters into the battle); ep 67 replays it from there and carries the chapter. Resume IN 236. PRINTED space.",
+      "sources": [
+        "https://coco13.club/daianime66/",
+        "https://coco13.club/daianime67/"
+      ]
+    },
+    {
+      "episode": 68,
+      "continue_chapter": 242,
+      "kind": "parity",
+      "note": "C1 — ep 68 ends inside ch 242 女王!!秘めたる決意 (Albinass alone is shown to have another intent); ep 69 opens on that chapter's substance. Resume IN 242. PRINTED space.",
+      "sources": [
+        "https://coco13.club/daianime68/",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/69/"
+      ]
+    },
+    {
+      "episode": 69,
+      "continue_chapter": 246,
+      "kind": "parity",
+      "note": "C1 — ep 69 ends inside ch 246 想いよ走れ…!! (coco13: its 終盤); ep 70 opens from that same late stretch. Resume IN 246. PRINTED space.",
+      "sources": [
+        "https://coco13.club/daianime69/",
+        "https://coco13.club/daianime70/"
+      ]
+    },
+    {
+      "episode": 70,
+      "continue_chapter": 250,
+      "kind": "parity",
+      "note": "C2 parity — ep 70 finishes ch 249 マァムの返事; the fandom records an unquantified sliver of ch 250 as its closing shot, which ep 71 owns and starts on (A47). Resume at 250; the sliver has been seen.",
+      "sources": [
+        "https://coco13.club/daianime70/",
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_(2020)_episode_71&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 71,
+      "continue_chapter": 253,
+      "kind": "parity",
+      "note": "C1 — ep 71 ends in the opening pages of ch 253 最後の一太刀!!! (Hadlar's final stance); ep 72 starts on ch 253's 序盤 and carries it. Resume IN 253. PRINTED space.",
+      "sources": [
+        "https://coco13.club/daianime71/",
+        "https://coco13.club/daianime72/"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [
+        66,
+        67
+      ],
+      "kind": "partial",
+      "chapters": "236",
+      "note": "Ch 236 魔界軍団包囲網!!! straddles eps 66/67 — ep 66 has only its 序盤 (Zaboera commits the Makai army), ep 67 the bulk (coco13 gives both sides the same boundary). PRINTED numbering."
+    },
+    {
+      "episodes": [
+        68,
+        69
+      ],
+      "kind": "partial",
+      "chapters": "242",
+      "note": "Ch 242 女王!!秘めたる決意 straddles eps 68/69 — ep 68 closes on the hint that Albinass has her own purpose, ep 69 opens with the reveal and carries the chapter. PRINTED numbering."
+    },
+    {
+      "episodes": [
+        69,
+        70
+      ],
+      "kind": "partial",
+      "chapters": "246",
+      "note": "Ch 246 逆転… / 想いよ走れ…!! straddles eps 69/70 at its 終盤 (coco13 uses the same words on both episodes). PRINTED numbering."
+    },
+    {
+      "episodes": [
+        70
+      ],
+      "kind": "partial",
+      "chapters": "250",
+      "note": "A47 tail: dragonquest.fandom alone records an unquantified share of ch 250 真竜の闘い!!! at the end of ep 70; coco13 and Toei both stop the episode at ch 249. Ep 71 STARTS on 250 and owns it, so ep 70's END stays 249 and the tail is recorded here. PRINTED numbering."
+    },
+    {
+      "episodes": [
+        71,
+        72
+      ],
+      "kind": "partial",
+      "chapters": "253",
+      "note": "Ch 253 最後の一太刀!!! straddles eps 71/72 — ep 71 has its opening (Hadlar's final stance), ep 72 (another sub-block's row) carries it from the 序盤. PRINTED numbering."
+    },
+    {
+      "episodes": [
+        66
+      ],
+      "kind": "divergence",
+      "chapters": "233-236",
+      "note": "Faithfulness clause (T28): studio beats inside adapted chapters only — Lon Berk's past moved from 90 to nearly 100 years ago; an added Hyunckel line recognising Lon Berk; an added Badack gag; Hyunckel's added surprise at Eimi handing him the reforged Armour Spear; Flora and Merle added to Eimi's approach; Garuda given a re-appearance. Canon stands (coco13's 原作との変更点 list)."
+    },
+    {
+      "episodes": [
+        67
+      ],
+      "kind": "divergence",
+      "chapters": "236-239",
+      "note": "Faithfulness clause (T28): Zaboera explains the Makai monsters unprompted instead of answering Nova; DQ11 monsters mixed into the manga's DQ4/5 line-up; Dai's fake-heroes flashback cut with the monsters that cued it; Chiu's fight with the two 裏切り小僧 cut; an added Chiu-stands-firm beat; Beast-kun given a kick. Canon stands."
+    },
+    {
+      "episodes": [
+        68
+      ],
+      "kind": "divergence",
+      "chapters": "240-242",
+      "note": "Faithfulness clause (T28): added Dai line praising Popp; Avan's silent smile given dialogue; an added Zaboera reaction to Minakatoru succeeding; the Chiu / 裏切り小僧 exchange cut again; an added Popp line about Vearn Palace being repaired; the Dai-vs-Hadlar bare-handed exchange expanded well beyond the manga's single clash. Canon stands."
+    },
+    {
+      "episodes": [
+        69
+      ],
+      "kind": "abridged",
+      "chapters": "242-246",
+      "note": "Faithfulness clause (T28): the manga's father-and-elder chess scene that gives Maam the idea for beating Albinass is cut entirely (she reasons it out unaided); Albinass's 'even if this body is destroyed' line, Maam's Bagirugon/Vearn-class assessment and the queen-piece explanation are cut or simplified; the Hyunckel-vs-Him finish is shortened (the knee-blade beat dropped). Cuts only — canon stands."
+    },
+    {
+      "episodes": [
+        70
+      ],
+      "kind": "divergence",
+      "chapters": "246-249",
+      "note": "Faithfulness clause (T28): Sigma's 'zombie' line changed to 魔族; Lightning Buster restaged as a delayed strike; Sigma's dying line given Popp the title 大魔導士 (absent from the manga); an added cutaway to Crocodine and Nova seeing the Medroa flash from the ground. Canon stands."
+    },
+    {
+      "episodes": [
+        71
+      ],
+      "kind": "divergence",
+      "chapters": "250-253",
+      "note": "Faithfulness clause (T28): the manga beat of Popp unable to see the Dai/Hadlar clash through the energy storm cut; Nova added on the ground reacting to Avan Strash X; Hyunckel's explanatory lines about the technique trimmed. Canon stands."
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 57,
+      "field": "end_chapter",
+      "old": 207,
+      "new": 208,
+      "why": "Off-by-one from the N35 `fandom from 208 delta -1` shift, which does not hold: dragonquest.fandom's ep-57 field lists SIX consecutive numbers '204 (partial), 205, 206, 207, 208, 209 (1 panel)' — the ruled shift maps its 207 and its 208 both to printed 207 (an arithmetic collision), and wave 13 dropped one. coco13 bounds ep 57 at 原作23巻208話 不屈の勇者・ダイ (en-WP list 209 minus 1 = printed 208), so ch 208 is fully in ep 57 and the END is 208; the 1-panel tail is ch 209, which ep 58 starts on (A47 holds there). Volume unchanged (208 is in v23 207-215).",
+      "sources": [
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_(2020)_episode_57&prop=wikitext&format=json",
+        "https://coco13.club/daianime57/",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"
+      ]
+    },
+    {
+      "episode": 57,
+      "field": "chapters_adapted",
+      "old": "204 (bulk), 205, 206, 207, 208 (1 panel)",
+      "new": "204 (bulk), 205, 206, 207, 208, 209 (1 panel)",
+      "why": "Same defect: the stored list is the fandom's six entries with one number lost to the phantom shift. The 1-panel shot is ch 209 恐怖の切り札's first panel, not ch 208's — 208 不屈の勇者・ダイ is adapted in full (coco13: ep 57 runs 204話 through 208話).",
+      "sources": [
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_(2020)_episode_57&prop=wikitext&format=json",
+        "https://coco13.club/daianime57/"
+      ]
+    },
+    {
+      "episode": 57,
+      "field": "continue_chapter",
+      "old": 208,
+      "new": 209,
+      "why": "Follows the END repair: ep 57 completes ch 208 and shows a single panel of 209; ep 58 opens on 209 (coco13: ep 58 = 209話恐怖の切り札 から). Resume at 209 (C1/A47 parity).",
+      "sources": [
+        "https://coco13.club/daianime58/",
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_(2020)_episode_58&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 58,
+      "field": "start_chapter",
+      "old": 208,
+      "new": 209,
+      "why": "The N35 fandom shift is phantom in this range: the fandom's ep-58 field reads '209, 210, 211, 212, 213 (partial)' in PRINTED numbers, and coco13 independently opens ep 58 at 原作23巻209話 恐怖の切り札 (en-WP list 210 minus 1 = printed 209). Ch 208 belongs to ep 57.",
+      "sources": [
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_(2020)_episode_58&prop=wikitext&format=json",
+        "https://coco13.club/daianime58/",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"
+      ]
+    },
+    {
+      "episode": 58,
+      "field": "end_chapter",
+      "old": 212,
+      "new": 213,
+      "why": "Same phantom shift. coco13: ep 58 runs to 213話 世界破滅への序曲!!! の途中 (en-WP list 214 minus 1 = printed 213) and the fandom marks '213 (partial)'; 途中 (midway) is well past a scrap, so the END advances with a `partial` (wave-14 A47 convention). Volume unchanged (213 is in v23 207-215).",
+      "sources": [
+        "https://coco13.club/daianime58/",
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_(2020)_episode_58&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"
+      ]
+    },
+    {
+      "episode": 58,
+      "field": "chapters_adapted",
+      "old": "208 (bulk), 209, 210, 211, 212 (partial)",
+      "new": "209, 210, 211, 212, 213 (partial)",
+      "why": "The stored list is the fandom's list minus one on every entry; the fandom's numbers are already printed here (proof in structure.notes).",
+      "sources": [
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_(2020)_episode_58&prop=wikitext&format=json",
+        "https://coco13.club/daianime58/"
+      ]
+    },
+    {
+      "episode": 58,
+      "field": "continue_chapter",
+      "old": 212,
+      "new": 213,
+      "why": "C1 follows the repaired END: ep 58 stops midway through ch 213 世界破滅への序曲!!!; ep 59 restarts inside it (coco13: 213話…の途中から). Resume IN 213.",
+      "sources": [
+        "https://coco13.club/daianime58/",
+        "https://coco13.club/daianime59/"
+      ]
+    },
+    {
+      "episode": 59,
+      "field": "end_chapter",
+      "old": 216,
+      "new": 217,
+      "why": "Same phantom shift. The fandom's ep-59 field is '213 (partial), 214, 215, 216, 217 (partial)' in PRINTED numbers and coco13 bounds the episode 213話の途中 → 217話 処刑宣告の罠 の序盤 (en-WP list 214 / 218 minus 1). Two independent sources place ep 59 inside 217, so the END advances with a `partial` (wave-14 A47 convention: an unquantified 'opening of X' advances). Volume unchanged (217 is in v24 216-225).",
+      "sources": [
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_(2020)_episode_59&prop=wikitext&format=json",
+        "https://coco13.club/daianime59/",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"
+      ]
+    },
+    {
+      "episode": 59,
+      "field": "chapters_adapted",
+      "old": "212 (tail), 213, 214, 215, 216 (partial)",
+      "new": "213 (from midway), 214, 215, 216, 217 (opening)",
+      "why": "The stored list is the fandom's list minus one on every entry. Ch 212 まさか!!?の救援者 belongs to ep 58, not ep 59; the episode's own title 生存者たち answers ch 214 生存者は…!!? (en-WP list 215), which sits mid-range under the corrected mapping.",
+      "sources": [
+        "https://dragonquest.fandom.com/api.php?action=parse&page=The_Adventure_of_Dai_(2020)_episode_59&prop=wikitext&format=json",
+        "https://coco13.club/daianime59/",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"
+      ]
+    },
+    {
+      "episode": 59,
+      "field": "continue_chapter",
+      "old": 216,
+      "new": 217,
+      "why": "C1 follows the repaired END: ep 59 ends in the opening pages of ch 217 処刑宣告の罠 (the execution notice); ep 60 restarts inside 217 (coco13: 217話…の途中から). Resume IN 217. NOTE the stored note already NAMES ch 217 最後の希望 — that prose is in the en-WP LIST space (list 217 = printed 216); under the correction the printed chapter the episode ends inside is 217 処刑宣告の罠 (list 218).",
+      "sources": [
+        "https://coco13.club/daianime59/",
+        "https://coco13.club/daianime60/",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "CHAPTER SPACE — every number in this file is the PRINTED tankobon numbering (1-348), per the wave-14 contract. Conversions actually applied: (1) en-WP's volume list / AniList / MU / MangaDex number the unnumbered 番外編 勇者アバン as their 122, so their N >= 123 = printed N - 1 — applied to EVERY en-WP title lookup in this file (e.g. en-WP 234 ロン・ベルクの秘密 = printed 233; en-WP 254 最後の一太刀!!! = printed 253). Checked against the stored volume table at four boundaries: en-WP v23 = list 208-216 = printed 207-215 (stored v23 207-215), v24 = list 217-226 = printed 216-225 (stored 216-225), v25 = list 227-236 = printed 226-235 (stored 226-235), v26 = list 237-246 = printed 236-245 (stored 236-245), v27 = list 247-255 = printed 246-254 (stored 246-254). (2) coco13.club's per-episode 原作 range is given as volume + chapter TITLE (and, for eps 55-60, volume + NUMBER); its numbers are PRINTED — coco13 ep 57 calls 不屈の勇者・ダイ '208話' where en-WP lists it as 209, coco13 ep 56 calls 天かける不死鳥 '201話' where en-WP lists 202. No conversion needed on coco13. (3) THE CONTRACT'S THIRD CONVERSION DOES NOT APPLY HERE: dragonquest.fandom's per-episode `adapted` field is ALREADY in the printed space in this range, so 'fandom N >= 208 = printed N - 1' (ruling N35) must NOT be applied to eps 54-97. Two decisive proofs. (a) COLLISION: the fandom's ep-57 field lists six consecutive numbers '204 (partial), 205, 206, 207, 208, 209 (1 panel)'; the ruled shift maps its 207 -> 207 and its 208 -> 207, which cannot be a coverage list. (b) TITLE TEST: the fandom's ep-62 field is '221, 222, 223 (partial)' and coco13 says ep 62 OPENS on 破邪の洞窟, which is en-WP list 222 = printed 221 — i.e. the fandom's '221' IS printed 221; under the shift the episode would open on 起てよ勇者 (printed 220) and reach its own title chapter only as a closing partial. The same test passes on every episode 54-97 I checked (54, 55, 56, 58, 59, 60, 62, 63, 64, 65, 66-71, 74, 75, 77, 78, 79, 91, 93, 94, 95, 96): the fandom's number equals the printed number that coco13's TITLE resolves to. The fandom's own chapter PAGES are printed too (chapter 122 = 決勝戦の異変!! vol 14, chapter 196 = さらば我が子よ vol 21) — they simply stop existing above 201, which is presumably why wave 13 had to infer the shift arithmetically. WHERE THE FANDOM DOES GAIN +1: its ep-100 field ends at '349', one past printed 348, and the coco13 title test flips between eps 97 and 98 — ep 97's fandom field starts on 335 = 瞳の中の奇蹟 (printed, correct) but ep 98's '339 (partial), 340, 341, 342, 343 (partial)' matches coco13's 心をひとつに(printed 338)の序盤 → 咆哮(printed 342)の序盤 only under a -1. So the fandom's episode fields are PRINTED through ~ep 97 and run +1 from ~ep 98; the 96-100 sub-block must re-derive that seam row by row, and the ep-100 MU pin (348 v37) is unaffected by it. ROW-IDENTITY: our rows 66-71 match dragonquest.fandom, Toei and coco13 on title AND air date one-for-one (66 = 五色の光 2022-01-22 … 71 = 真竜の闘い 2022-02-26); no renumbering anywhere in this block. COVERAGE: eps 66-71 cover printed 233-253 with no gap and no skipped chapter, so no C2/C3 skip note is needed inside the sub-block. FENCE: the lower fence (ep 59 -> 216) is repaired UP to 217 above; sub-block A's rows 60-65 then run printed 217-232 (fandom fields 217-220, [ep 61 = the vol-13 番外編], 221-223, 223-226, 226-229, 229-232 — all already printed), which hands cleanly to my ep 66 START of 233.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "RULING CONFLICT (N35, 2026-09-02) — `sourceShifts: fandom from 208 delta -1` is wrong for eps 54-97. dragonquest.fandom's per-episode `adapted` field is in the PRINTED space there (two decisive proofs in structure.notes: the ep-57 six-number collision; the ep-62 title test on 破邪の洞窟 = printed 221). It has already corrupted three stored anchors (eps 57, 58, 59 — repairs above) and it is the conversion this wave's contract instructs every sub-block agent to apply, so sub-blocks A and C-G will produce the same off-by-one unless the shift is withdrawn or narrowed. Proposed narrowing: fandom = printed for chapters <= ~338 (eps <= 97); a +1 appears somewhere at eps 97/98 (its ep-100 field ends at 349, one past printed 348) — that seam needs its own row-by-row derivation in the 96-100 sub-block, not a blanket delta.",
+    "ANNOTATION REPAIR (follows the ep-57 anchor repair): the stored annotation `eps 57 partial {208}` — 'a single panel of ch 209 (不屈の勇者・ダイ — Dai standing up) closes ep 57' — is in the wrong space twice over. 不屈の勇者・ダイ is PRINTED 208 and is adapted IN FULL in ep 57; the single panel is of printed 209 恐怖の切り札. The annotation's chapters should read {209} and its text should name 209, not 208.",
+    "SINGLE-SOURCE FORK, ep 70/71: dragonquest.fandom records '250 (partial)' at the end of ep 70; coco13 (which reads the manga alongside) and Toei's synopsis both stop ep 70 at ch 249 マァムの返事, and both place ep 71's START on 250 真竜の闘い!!! (also ep 71's own title). I held the END at 249 under A47 and recorded the tail as a `partial`. If Sean prefers the wave-14 'unquantified partial advances' reading uniformly, ep 70's END becomes 250 — it stays monotone either way (249/250 < 253).",
+    "coco13 writes vol 26's opening chapter as 魔王軍団包囲網 where en-WP and the tankobon read 魔界軍団包囲網!!! (Makai, not Maou) — a typo on coco13's side, same chapter (printed 236); it does not affect the mapping."
+  ]
+}

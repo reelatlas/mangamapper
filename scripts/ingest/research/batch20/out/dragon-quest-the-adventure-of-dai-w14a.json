@@ -1,0 +1,301 @@
+{
+  "series_id": "dragon-quest-the-adventure-of-dai",
+  "summary": "Episodes 60-65 are six consecutive canon rows in the Holy Ordeal arc, adapting PRINTED chapters 217-232 (tankobon vols 24-25) in strict running order, with ONE out-of-order insertion: ep 61 is the unnumbered bangaihen side story. Ep 60 finishes ch 217 (the execution notice) and runs to the opening of 220 'The Fifth Symbol' where Flora names Leona the fifth apostle and begins to tell Avan's past; ep 61 then plays that past as the whole episode, adapting the unnumbered side story 番外編「勇者アバン」 (V Jump, Nov 1991; printed as bonus matter at the back of tankobon vol 13, between printed ch 121 and 122) OUT OF ORDER, and carries no mainline chapter at all (A44 anchor_hostile + side_story). Eps 62-65 then run 221 -> 232 with a clean mid-chapter split at 223, 226 and 229 and a clean close on 232 'Gather!! The Five Disciples'. EVERY number below is the PRINTED space (tankobon 1-348) per the wave-14 contract. THE SUB-BLOCK'S STRUCTURAL FINDING, reached independently here and concurred by sub-block B: dragonquest.fandom's per-episode `adapted` field is ALREADY PRINTED in this range — the ruled N35 sourceShift {fandom, from 208, delta -1} is wrong and its true seam sits ~130 chapters higher (around the fandom's 338). The proof is coco13.club's per-episode 原作 ranges, which quote chapter TITLES with numbers and pin to printed = en-WP list - 1 at every one of ~20 checks: coco13 ep 60 = '原作24巻217話\"処刑宣告の罠\"の途中から220話\"五つめのしるし…！\"の序盤まで' while the fandom's ep-60 field reads '217 (partial), 218, 219, 220 (partial)' — identical, unconverted; the same identity holds at eps 59, 62, 63, 64, 65, 66, 67, 68, 69, 70, 72-96. It BREAKS at ep 98 (fandom 339/343 = coco13's printed 338 心をひとつに / 342 咆哮) and at ep 100 (fandom 346 = printed 345 この腕で勝利を), so the fandom's one surplus number lands near its 338, not at 208. Consequence: the fence anchor ep 59 -> 216 [213] was -1'd by the wrong conversion and is one LOW; the repair below restores 217 [214], which is exactly what ep 60's START requires for the seam to close (printed ch 217 処刑宣告の罠 straddles eps 59/60 — Toei's ep-59 synopsis ends 'そこに魔王軍からの通告が届き――？' and Toei's ep-60 synopsis opens '魔王軍からの通告は、明後日の正午にヒュンケルとクロコダインを処刑するという内容だった'). Eps 57 and 58 carry the same -1 defect and are named in flags_for_sean with old -> new.",
+  "anchors": [
+    {
+      "episode": 60,
+      "end_chapter": 220,
+      "start_chapter": 217,
+      "chapters_adapted": "217 (from midway), 218, 219, 220 (opening)",
+      "volume": 24,
+      "confidence": "high",
+      "note": "PRINTED SPACE (N35, wave-14 contract). NO conversion applied: the fandom's field '217 (partial), 218, 219, 220 (partial)' is already printed (see structure.notes) and coco13 states the same range in printed numbers WITH titles — '原作24巻217話\"処刑宣告の罠\"の途中から220話\"五つめのしるし…！\"の序盤まで'. en-WP's list gives 218 処刑宣告の罠 / 221 五つめのしるし, i.e. printed 217 / 220 (list - 1 from 123). START 217 (A10): ch 217 straddles eps 59/60 and ep 60 carries its substance — Toei's ep-60 opening line IS the chapter's title beat ('魔王軍からの通告は、明後日の正午にヒュンケルとクロコダインを処刑するという内容だった'), so the leading partial is no sliver. Toei then walks 218 ダイ戦線離脱...!!? ('勇者の重圧に耐えかねて砦を飛び出してしまう'), 219 起てよ勇者!!! (Popp's talk; 'ポップの想いに背中を押され再び立ち上がったダイ' — the episode's own title ダイとポップ) and opens 220 五つめのしるし...!!! ('\"5人目のアバンの使徒\"としてレオナを指名する'). END 220 (A47 unproven-tail convention): the tail is 'の序盤' with no page count, and NO later episode starts on 220 (ep 61 is the side story, ep 62 opens on 221 破邪の洞窟), so the END advances onto 220 with a `partial`. v24 = printed 216-225.",
+      "sources": [
+        "https://dragonquest.fandom.com/wiki/The_Adventure_of_Dai_(2020)_episode_60",
+        "https://coco13.club/daianime60/",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/60/",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"
+      ]
+    },
+    {
+      "episode": 62,
+      "end_chapter": 223,
+      "start_chapter": 221,
+      "chapters_adapted": "221, 222, 223 (first half)",
+      "volume": 24,
+      "confidence": "high",
+      "note": "PRINTED SPACE; NO conversion (fandom field '221, 222, 223 (partial)' is already printed). coco13: 'アニメ第62話は原作24巻の\"破邪の洞窟\"から\"希望への前進\"の途中までだよ' — 破邪の洞窟 = en-WP list 222 = printed 221 (and the episode's own title), 希望への前進 = list 224 = printed 223. START 221 clean (no leading partial on either source; ch 220's remainder is never animated — see the ep-60 continue). Toei walks the three: Leona diving into the Evil-Dispelling Cave with Maam, Merle and Flora (221 破邪の洞窟), the 30-hour descent to B25 with its traps (222 30時間の挑戦!!!), the advance toward Minakatoul (223 希望への前進!!!, first half). END 223 (A47): ep 63 STARTS on 223, but the share here is 'の途中まで' — a mid-chapter half, not a <=5-page scrap and no teaser wording — so the END advances and a `partial` names the split. v24 = printed 216-225.",
+      "sources": [
+        "https://dragonquest.fandom.com/wiki/The_Adventure_of_Dai_(2020)_episode_62",
+        "https://coco13.club/daianime62/",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/62/",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"
+      ]
+    },
+    {
+      "episode": 63,
+      "end_chapter": 226,
+      "start_chapter": 223,
+      "chapters_adapted": "223 (second half), 224, 225, 226 (first half)",
+      "volume": 25,
+      "confidence": "high",
+      "note": "PRINTED SPACE; NO conversion (fandom field '223 (partial), 224, 225, 226 (partial)'). coco13: '原作24巻の\"希望の前進\"の途中から25巻\"見参‼最新装備\"の途中まで' — printed 223 (list 224 希望への前進) to printed 226 (list 227 見参! 最新装備). START 223 (A10): a substantial leading half, the same shape wave 13 anchored on eps 25/37/50 ('second half' / 'from midway' / 'completion' rows take the START). Toei confirms the run: Dai mastering the Arrow/Break Avan Strash split with Nova, Leona reaching B25 and passing the god's last trial to learn Minakatoul (224 聖なる継承 — the episode's own title 聖なる継承), Popp's despair at his unlit mark and Matoriv's 'believe in yourself' (225 ポップの苦悩), and Ron Berk arriving with the repaired Sword of Dai, which opens 226 見参! 最新装備. END 226 (A47): ep 64 starts on 226 but this share is 'の途中まで', a real half — the END advances with a `partial`. VOLUME CHANGE: printed 226 opens v25 (226-235); the episode's first chapter 223 is v24 (A13 display is a separate concern — the anchor's volume is the END's, as on the stored rows).",
+      "sources": [
+        "https://dragonquest.fandom.com/wiki/The_Adventure_of_Dai_(2020)_episode_63",
+        "https://coco13.club/daianime63/",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/63/",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"
+      ]
+    },
+    {
+      "episode": 64,
+      "end_chapter": 229,
+      "start_chapter": 226,
+      "chapters_adapted": "226 (second half), 227, 228, 229 (first half)",
+      "volume": 25,
+      "confidence": "high",
+      "note": "PRINTED SPACE; NO conversion (fandom field '226 (partial), 227, 228, 229 (partial)'). coco13: '原作25巻の\"見参‼最新装備\"の途中から\"邪悪な杯\"の途中まで' — printed 226 (list 227) to printed 229 (list 230 邪悪の杯...!!!); both chapters are v25 per en-WP's vol-25 block (list 227-236). START 226 (A10, a substantial leading half). Toei's beats in order: Ron Berk's weapons for the whole party (226 見参! 最新装備), Eimi's confession to Maam and Maam taking it to Popp, whose own mark still will not light (227 決戦前夜の葛藤 — the episode's own title 決戦前夜), Merle's 夢見の実 and Dai's dream of Soala and Baran (228 勇者よ眠れ), and the execution day opening (229 邪悪の杯...!!!). END 229 (A47): ep 65 starts on 229, but the share is 'の途中まで' — a half, not a scrap — so the END advances with a `partial`. v25 = printed 226-235.",
+      "sources": [
+        "https://dragonquest.fandom.com/wiki/The_Adventure_of_Dai_(2020)_episode_64",
+        "https://coco13.club/daianime64/",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/64/",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"
+      ]
+    },
+    {
+      "episode": 65,
+      "end_chapter": 232,
+      "start_chapter": 229,
+      "chapters_adapted": "229 (second half), 230, 231, 232",
+      "volume": 25,
+      "confidence": "high",
+      "note": "PRINTED SPACE; NO conversion (fandom field '229 (partial), 230, 231, 232' — note 232 carries NO partial). coco13: '原作25巻の\"邪悪な杯\"の途中から\"集結‼5人の使徒\"までだよ' — printed 229 (list 230) to printed 232 (list 233 結集!! 5人の使徒). START 229 (A10, the leading half). Toei's run: Hyunckel and Crocodine crucified at Roroi valley at noon, Mistvearn's offer and Hyunckel drinking the dark aura (229 邪悪の杯...!!! / 230 魔剣戦士復活...!!? — the episode's own title 暗黒のヒュンケル), Crocodine's call and Hyunckel turning the dark aura into his own light (231 光と闇の戦い!!!), and the close 'レオナがヒュンケルにアバンのしるしのことを伝えると、彼の輝聖石も…光り出す。これでミナカトールに必要な五人が集結した' = 232 結集!! 5人の使徒, adapted whole. CLEAN CHAPTER BOUNDARY: ep 66 opens on 233 ロン・ベルクの秘密 (coco13 ep 66; fandom '233, 234, 235, 236 (partial)'), so no continue point is needed on this row. v25 = printed 226-235.",
+      "sources": [
+        "https://dragonquest.fandom.com/wiki/The_Adventure_of_Dai_(2020)_episode_65",
+        "https://coco13.club/daianime65/",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/65/",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 60,
+      "continue_chapter": 220,
+      "kind": "parity",
+      "note": "C1 — ep 60 stops in the OPENING of printed ch 220 五つめのしるし...!!! (Flora names Leona the fifth apostle and begins to tell Avan's past); resume IN 220. Read it through: the anime does NOT return to 220's remaining pages — ep 61 replaces Flora's telling with the full side story and ep 62 opens on 221 破邪の洞窟 (C3 note: 220's rest is the block's only skipped source material).",
+      "sources": [
+        "https://coco13.club/daianime60/",
+        "https://coco13.club/daianime62/",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/62/"
+      ]
+    },
+    {
+      "episode": 61,
+      "continue_chapter": 220,
+      "kind": "parity",
+      "note": "C1 — ep 61 adapts only the unnumbered side story 番外編「勇者アバン」 and advances no mainline position, so a viewer who stops here resumes exactly where ep 60 left them: IN printed ch 220. (Read the side story at the back of tankobon vol 13 if you have not; the anime plays it here, out of order.)",
+      "sources": [
+        "https://dragonquest.fandom.com/wiki/The_Adventure_of_Dai_(2020)_episode_61",
+        "https://coco13.club/daianime61/"
+      ]
+    },
+    {
+      "episode": 62,
+      "continue_chapter": 223,
+      "kind": "parity",
+      "note": "C1 — ep 62 ends midway through printed ch 223 希望への前進!!! (the descent toward B25); resume IN 223 — ep 63 carries its second half.",
+      "sources": [
+        "https://coco13.club/daianime62/",
+        "https://coco13.club/daianime63/"
+      ]
+    },
+    {
+      "episode": 63,
+      "continue_chapter": 226,
+      "kind": "parity",
+      "note": "C1 — ep 63 ends midway through printed ch 226 見参! 最新装備 (Ron Berk arrives with the repaired Sword of Dai); resume IN 226 — ep 64 carries its second half.",
+      "sources": [
+        "https://coco13.club/daianime63/",
+        "https://coco13.club/daianime64/"
+      ]
+    },
+    {
+      "episode": 64,
+      "continue_chapter": 229,
+      "kind": "parity",
+      "note": "C1 — ep 64 ends midway through printed ch 229 邪悪の杯...!!! (execution day opens); resume IN 229 — ep 65 carries its second half.",
+      "sources": [
+        "https://coco13.club/daianime64/",
+        "https://coco13.club/daianime65/"
+      ]
+    }
+  ],
+  "anchor_hostile": [
+    {
+      "episode": 61,
+      "why": "A44 position-less: ep 61 特別篇「勇者アバン」 adapts the UNNUMBERED side story 番外編「勇者アバン」 in full and no numbered mainline chapter at all. The side story ran in V Jump (Nov 1991) during the WSJ serialization and is printed as bonus matter at the BACK OF TANKOBON VOL 13, between printed ch 121 覇者の剣 and ch 122 決勝戦の異変!! — the catalog's chapter space is the PRINTED 348, which does not number it (N35), so there is no chapter number to anchor on. Both per-episode sources say the same thing and neither names a mainline chapter: the fandom's field is literally 'Special chapter: Avan, The Hero — Side Story' and coco13 writes 'アニメ第61話は原作13巻番外編の\"勇者アバン\"だよ'. Toei's synopsis is 100% that story (young Avan in Flora's Carl knights, shirking guard duty to research cooking; Hadlar storms Carl castle; Avan's 毒蛾の粉 and his flash strike drive Hadlar off; Avan and Roka set out) — ja-WP independently attributes 毒蛾の粉 to 「外伝・勇者アバン」, and the fandom's chapter page for the side story lists exactly that cast (Hadlar, Flora, Avan, Roka). The row stays CANON (a side story printed inside the source IS the source — never side_source) with a `side_story` annotation; the reader's position does not move (continue 220 above).",
+      "sources": [
+        "https://dragonquest.fandom.com/wiki/The_Adventure_of_Dai_(2020)_episode_61",
+        "https://coco13.club/daianime61/",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/61/",
+        "https://dragonquest.fandom.com/wiki/The_Hero_Avan"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [
+        60
+      ],
+      "kind": "partial",
+      "chapters": "217, 220 (opening)",
+      "note": "Two page-splits on this row. Printed ch 217 処刑宣告の罠!!! straddles eps 59/60 — ep 59 has only its 序盤 (Toei ep 59 closes 'そこに魔王軍からの通告が届き――？'), ep 60 carries the rest from midway (coco13: '217話…の途中から'). Printed ch 220 五つめのしるし...!!! is only OPENED here (Flora naming Leona the fifth apostle); its remainder is animated nowhere — ep 62 starts on 221."
+    },
+    {
+      "episodes": [
+        60
+      ],
+      "kind": "divergence",
+      "chapters": "217-220",
+      "note": "Faithfulness clause (T28, Sean 2026-09-02): small cuts and alterations inside adapted chapters only — Hyunckel's cell memory of Eimi redrawn in tears rather than calm, Gome reporting Dai's flight to Chiu cut, Dai only watching the praying Teran child instead of speaking to him, and Leona's and Maam's reactions to Popp also leaving cut wholesale (coco13's 変更点 list). Canon stands."
+    },
+    {
+      "episodes": [
+        61
+      ],
+      "kind": "side_story",
+      "chapters": "the unnumbered 番外編「勇者アバン」 (V Jump, Nov 1991; printed as bonus matter at the back of tankobon vol 13, between printed ch 121 and 122)",
+      "note": "The whole episode adapts the unnumbered side story 「勇者アバン」, played OUT OF ORDER — ~99 printed chapters after its position in the book — because ep 60 ends with Flora beginning to tell Leona about Avan's past. It carries no chapter number in the PRINTED space (N35), hence no anchor (A44). It is the source's own bonus matter, so the row is canon, not side_source. Note for curation: the 2020 prequel manga 『勇者アバンと獄炎の魔王』 re-adapts this same story in its own ch 1, but both per-episode sources name the 番外編, not the prequel."
+    },
+    {
+      "episodes": [
+        62
+      ],
+      "kind": "partial",
+      "chapters": "223 (first half)",
+      "note": "Printed ch 223 希望への前進!!! is split at its middle across eps 62/63 (coco13: ep 62 '…の途中まで', ep 63 '…の途中から'); the fandom marks '223 (partial)' on both rows."
+    },
+    {
+      "episodes": [
+        62
+      ],
+      "kind": "divergence",
+      "chapters": "221-223",
+      "note": "Faithfulness clause: the manga's narration explaining the Evil-Dispelling Cave is given to General Bowson on screen, and the Maam/Merle changing scene is toned down from the manga's (coco13's 変更点 list). Canon stands."
+    },
+    {
+      "episodes": [
+        63
+      ],
+      "kind": "partial",
+      "chapters": "223 (second half), 226 (first half)",
+      "note": "Ep 63 opens on printed ch 223's second half (ep 62 took the first) and stops midway through printed ch 226 見参! 最新装備, whose second half opens ep 64."
+    },
+    {
+      "episodes": [
+        63
+      ],
+      "kind": "divergence",
+      "chapters": "223-226",
+      "note": "Faithfulness clause: the Minakatoul pillar of light appears somewhat later relative to Dai perfecting his new technique than in the manga, where it follows immediately (coco13). A timing reorder inside adapted chapters — canon stands."
+    },
+    {
+      "episodes": [
+        64
+      ],
+      "kind": "partial",
+      "chapters": "226 (second half), 229 (first half)",
+      "note": "Ep 64 opens on printed ch 226's second half and stops midway through printed ch 229 邪悪の杯...!!!, whose second half opens ep 65."
+    },
+    {
+      "episodes": [
+        64
+      ],
+      "kind": "divergence",
+      "chapters": "226-229",
+      "note": "Faithfulness clause: small studio beats inside adapted chapters — the party noticing Popp's absence when Ron Berk hands out the weapons (the manga passes over it), an added Ron Berk line ('最後まで付き合ってやろうと思ってな' for the manga's '用心棒がいるじゃないか'), and Merle sorting equipment rather than washing dishes when Dai finds her (coco13). Canon stands."
+    },
+    {
+      "episodes": [
+        65
+      ],
+      "kind": "partial",
+      "chapters": "229 (second half)",
+      "note": "Ep 65 opens on printed ch 229's second half (ep 64 took the first). Its END, printed ch 232 結集!! 5人の使徒, is adapted whole — ep 66 starts clean on 233."
+    },
+    {
+      "episodes": [
+        65
+      ],
+      "kind": "divergence",
+      "chapters": "229-232",
+      "note": "Faithfulness clause: Mistvearn only watches where the manga has him clap Hyunckel's shoulder at the moment of his darkening, and Maam freeing the still-chained Crocodine is a studio-made addition (coco13 calls it 'ナイスなアニオリ'). Small beats inside adapted chapters — canon stands."
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 59,
+      "field": "end_chapter",
+      "old": 216,
+      "new": 217,
+      "why": "THE FENCE. The stored value was produced by applying the ruled N35 sourceShift {fandom, from 208, delta -1} to wave 13's ep-59 numbers, but the fandom's per-episode field is ALREADY PRINTED in this range (see structure.notes: coco13 pins the fandom's numbers to printed chapter TITLES at ~20 consecutive episode boundaries), so the -1 was applied to values that needed none. The fandom's ep-59 field is '213 (partial), 214, 215, 216, 217 (partial)' = printed 213-217, and coco13 states the identical range with titles: 'アニメ第59話は原作23巻213話\"世界破滅への序曲‼\"の途中から217話\"処刑宣告の罠\"の序盤までだよ'. Toei's ep-59 synopsis closes on the Demon Army's notice arriving ('そこに魔王軍からの通告が届き――？') = printed 217 処刑宣告の罠!!!'s opening (en-WP list 218), NOT printed 216 最後の希望. Under A47's unproven-tail convention the 序盤 has no page count and no teaser wording, so the END advances onto 217 with a `partial`, and ep 60 STARTS on 217 from midway — which is exactly what closes the seam.",
+      "sources": [
+        "https://dragonquest.fandom.com/wiki/The_Adventure_of_Dai_(2020)_episode_59",
+        "https://coco13.club/daianime59/",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/59/",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"
+      ]
+    },
+    {
+      "episode": 59,
+      "field": "start_chapter",
+      "old": 213,
+      "new": 214,
+      "why": "Same cause as the END repair (the fandom's field needed no conversion), so the stored 213 is a -1 of the true printed 214. Printed 213 = 世界破滅への序曲!!! (en-WP list 214) and printed 214 = 生存者は...!!? (en-WP list 215). Ch 213 straddles eps 58/59 — coco13 gives ep 58 '213話…の途中まで' and ep 59 '213話の途中から' — and wave 13 judged ep 59's share of it a closing TAIL (Block's sacrifice carried over), leaving the START one chapter up. Preserving that judgment in the printed space gives START 214 生存者は...!!? , which is also the episode's own title (生存者たち) and Toei's opening beat ('大海原へと投げ出されたポップとマァムは、カール王国の浜辺に流れ着いていた'). If Sean prefers the convention wave 13 used on eps 25 / 37 / 50 — a substantial leading half TAKES the start — the value is 213 instead; the END repair is independent of that choice.",
+      "sources": [
+        "https://dragonquest.fandom.com/wiki/The_Adventure_of_Dai_(2020)_episode_59",
+        "https://coco13.club/daianime59/",
+        "https://coco13.club/daianime58/",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"
+      ]
+    },
+    {
+      "episode": 59,
+      "field": "chapters_adapted",
+      "old": "212 (tail), 213, 214, 215, 216 (partial)",
+      "new": "213 (tail), 214, 215, 216, 217 (partial)",
+      "why": "Every unit is one low for the same reason (the fandom's field needed no conversion). True printed content, all four sources agreeing: ch 213 世界破滅への序曲!!!'s closing pages (Block's sacrifice, carried over from ep 58), 214 生存者は...!!? (Popp and Maam washed up at Carl, Chiu's rescue, the forest fort — the episode's own title 生存者たち), 215 カールの女王 (Toei: 'カール王国の女王フローラが戦禍を生き延びていた'), 216 最後の希望 (Mother Dragon, Baran's plea, Dai's return), and the opening of 217 処刑宣告の罠!!! (the Demon Army's notice arrives).",
+      "sources": [
+        "https://dragonquest.fandom.com/wiki/The_Adventure_of_Dai_(2020)_episode_59",
+        "https://coco13.club/daianime59/",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/59/",
+        "https://en.wikipedia.org/wiki/List_of_Dragon_Quest:_The_Adventure_of_Dai_volumes"
+      ]
+    },
+    {
+      "episode": 59,
+      "field": "continue_chapter",
+      "old": 216,
+      "new": 217,
+      "why": "C1 follows the corrected END: ep 59 stops in the OPENING of printed ch 217 処刑宣告の罠!!! (the notice arrives), so the reader resumes IN 217 — ep 60 plays its bulk from midway. The stored note's prose ('resume IN 217') was already right; only the number was converted down.",
+      "sources": [
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/59/",
+        "https://www.toei-anim.co.jp/tv/dq-dai/episode/summary/60/",
+        "https://coco13.club/daianime60/"
+      ]
+    }
+  ],
+  "type_corrections": [],
+  "structure": {
+    "notes": "CHAPTER SPACE AND THE CONVERSION APPLIED (stated per the wave-14 contract). Everything above is the PRINTED tankobon space, 1-348. (a) The print's own numbering is confirmed at the seam by dragonquest.fandom's chapter pages: ch 121 覇者の剣 (vol 13) -> next '[[chapter 122]] 決勝戦の異変!! (vol 14)', with the side story listed as unnumbered matter between them; en-WP's volume list numbers that side story 122, so en-WP / AniList / MU / MangaDex N >= 123 = printed N - 1 (their 349 = printed 348). All en-WP chapter titles quoted above are converted -1. (b) THE FANDOM NEEDS NO CONVERSION IN THIS RANGE — the ruled N35 sourceShift {fandom, from 208, delta -1} is WRONG here and should be moved ~130 chapters up. Instrument: coco13.club's per-episode '原作N巻M話\"title\"' lines, which are unambiguously PRINTED (M pins to en-WP's list - 1 at every check: 104 竜魔人目覚める, 108 勇者ダイ復活, 121 覇者の剣, 124 恐怖の超魔生物, 152 よみがえった魔神, 177 正邪のチームワーク, 196 さらば我が子よ, 200 大魔宮出現, 204 大魔王からの褒美, 208 不屈の勇者・ダイ, 209 恐怖の切り札, 213 世界破滅への序曲, 217 処刑宣告の罠, 220 五つめのしるし) and whose volume citations match the stored printed boundary table at v22/v23, v24/v25 and v25/v26. Set that beside the fandom's per-episode `adapted` fields and they are IDENTICAL, unconverted, at eps 59, 60, 62, 63, 64, 65, 66, 67, 68, 69, 70, 72, 73, 74, 75, 76, 78, 80, 82, 84, 86, 87, 88, 89, 90, 92, 93, 94, 95, 96. (c) WHERE THE FANDOM'S ONE SURPLUS NUMBER ACTUALLY IS: its ep-96 field starts '332 (partial)' = coco13's printed 332 響く闇からの声 (no shift), but its ep-98 field '339 (partial), 340, 341, 342, 343 (partial)' = coco13's printed 338 心をひとつに -> 342 咆哮 and its ep-100 field starts '346 (partial)' = coco13's printed 345 この腕で勝利を (shift -1). So the fandom gains its extra slot around its own 338 — between printed 337 神の涙 and printed 338 心をひとつに — not at 208. The w14f (90-95) and especially the w14g (96-100) agents must re-derive there; a uniform 'fandom = printed' assumption breaks inside ep 97. (d) COLLATERAL DAMAGE FROM THE WRONG SEAM: wave 13's eps 54-56 survived intact only because two errors cancelled (wave 13 added +1 to the fandom's numbers and the apply layer subtracted 1), but eps 57, 58 and 59 — where wave 13 stopped converting because it believed the seam sat at 208 — took a net -1. Ep 59 is repaired above (it is this sub-block's fence); eps 57 and 58 are named with old -> new in flags_for_sean. (e) OUT-OF-ORDER MATERIAL: the block's only reordering is ep 61, the unnumbered 番外編「勇者アバン」 played ~99 chapters ahead of its printed position; it is annotated, not numbered. (f) THE BLOCK'S ONLY SKIPPED SOURCE MATERIAL: printed ch 220 五つめのしるし...!!! is opened in ep 60 and its remainder is animated in no episode (ep 62 opens clean on 221) — the ep-60 continue names it.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "RULING REPAIR (N35 sourceShifts): the entry {source: fandom, from: 208, delta: -1} is wrong. dragonquest.fandom's per-episode chapter fields are the PRINTED numbers from at least its 121 through its ~337; its single surplus slot sits around its 338 (evidence in structure.notes (b)/(c): coco13's title-pinned printed ranges agree with the fandom unconverted at 30 episode boundaries between eps 59 and 96, then disagree by one at eps 98 and 100). Proposed: move the fandom shift to 'from 338, delta -1' (the w14g agent should confirm the exact first shifted number inside ep 97's field, 335-339). Sub-block B reached the same conclusion independently.",
+    "COLLATERAL, OUTSIDE MY ASK (eps 57-58, wave 13's rows, same cause as the ep-59 fence repair). ep 57 — stored 207 [204] {204 (bulk), 205, 206, 207, 208 (1 panel)} v23; true printed 208 [204] {204 (bulk), 205, 206, 207, 208, 209 (1 panel)} v23, continue 208 -> 209. coco13: 'アニメ第57話は原作22巻204話\"大魔王からの褒美\"から原作23巻208話\"不屈の勇者・ダイ\"までだよ'; fandom field '204 (partial), 205, 206, 207, 208, 209 (1 panel)'; the START 204 is already correct (two errors cancelled there). ep 58 — stored 212 [208] {208 (bulk), 209, 210, 211, 212 (partial)} v23; true printed 213 [209] {209, 210, 211, 212, 213 (partial)} v23, continue 212 -> 213. coco13: 'アニメ第58話は原作23巻209話\"恐怖の切り札\"から213話\"世界破滅への序曲‼\"の途中まで'; Toei ep 58 opens on the Avan Strash landing and Bahn calling the 光魔の杖 = printed 209 恐怖の切り札!!, and closes on Block's sacrifice inside 213. Sub-block B reports the ep-58 pair too; do not double-apply.",
+    "JUDGMENT CALL on the ep-59 START repair (213 vs 214): printed ch 213 世界破滅への序曲!!! is split mid-chapter across eps 58/59. Wave 13 treated ep 59's share as a closing TAIL (START one up); wave 13's own eps 25 / 37 / 50 treated a comparable leading half as the START. I preserved wave 13's judgment (START 214) so the repair is a pure numbering correction and not a re-typing of the split; if Sean prefers the other convention the value is 213. The END repair (216 -> 217) is independent of this choice.",
+    "SOURCE INDEPENDENCE (flag #929 context): the fandom's forward episode fields and its reverse chapter pages are ONE wiki, and its chapter pages STOP at its 201 — there is no reverse index anywhere in eps 60-65's range. Independence here rests on three non-wiki legs that all agree: coco13.club's per-episode printed 原作 ranges (Japanese fan blog, reads the tankobon, quotes chapter titles with numbers), Toei Animation's own per-episode あらすじ (licensor; its sentences quote chapter title beats almost verbatim), and en-WP's volume list for the title/volume table. Every anchor above is carried by at least three of the four.",
+    "SIDE-STORY PROVENANCE (ep 61): the fandom's own page for the side story notes that the 2020 prequel manga 『勇者アバンと獄炎の魔王』 re-adapts this story 'down to some page panelling' in its ch 1. Both per-episode sources name the 番外編 (coco13: '原作13巻番外編の\"勇者アバン\"'; the fandom: 'Special chapter: Avan, The Hero — Side Story'), so I delivered side_story on the source's own bonus matter and NOT side_source on the prequel; if Sean wants that tested, the discriminator is whether ep 61 carries prequel-only material (Roka's characterisation, the Jinyuall house) that the 1991 one-shot lacks."
+  ]
+}
