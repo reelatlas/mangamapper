@@ -263,6 +263,9 @@ Read both, fully:
 - **Narutopedia's episode summary can omit a page-split chapter's opening share** (374 → 634 vs the true 635) — en-WP's season summaries matched against the per-CHAPTER summaries settle a split; ja-WP's 通算話 column is cumulative EPISODE numbers, never chapters; an episode titled with a chapter's title can adapt a different chapter (385 うちはオビト = ch 599's title, ch 653's content).
 - **The parity / C1 continue on a fence row in front of a filler block is legitimate and precedented** (bleach 167 → 286 before the 22-episode Amagai arc; stored 127 → 229, 146 → 247) — deliver it, flag it as outside the ask, and enrich the row (START, span) so the census can prove it.
 
+- **A run can hold TWO un-cross-cuts a few episodes apart** (four-knights 18/19 inside ch 58, 22/23 inside ch 69): the chapter's own cast order splitting where the wiki partitions it is the page-level witness; programming-cafe single-assigns a partitioned chapter to one episode — a dissent by convention, not evidence. Deliver the START back-jump + `rearranged`, never a plain range.
+- **A licensor host can MOVE** (4knights-anime.com → 7sins-4knights.net/story/<N>.html): check the live site before declaring the licensor's synopses gone; a dead host in the context is a claim, not a fact.
+
 ## Output
 
 Write exactly the JSON path you are given, valid and complete before you

@@ -58,3 +58,6 @@ Block totals: **23 / 23 anchors 2 → 75**, 13 continues, 0 retypes, 0 repairs, 
 1. Apply the four as delivered (+ the volume seed v1-v9 as research-tier boundary rows).
 2. Forks: ep 6 END 17 vs 16 (a 6-page tail — one page above A47's bar); the pc dissent on ch 69 (22 vs 23); ep 18 END 58 (pc says 55-57 by its uneven-split convention).
 3. Next: dai 18-99 ×3 (82 rows; three waves), the LAST gap block.
+
+## RULED + APPLIED (§12.102, 2026-09-02 — Sean: "yes to all and go")
+Applied as delivered: 23 manual anchors 2 → 75, 13 continues, 40 annotations (+ ep 5 partial{14}); volume_boundaries v1-v9 seeded research-tier and every volume derived (0 disagreements). Census: anchor_gap_research 2 → 1 (dai 18-99 remains), ruling_violation 0, display 218/0. Next: dai 18-99 in two waves.

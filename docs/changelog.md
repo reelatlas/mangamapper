@@ -887,6 +887,29 @@
    0. Permanence 0 locked / 0 violations; no stale rulings. Cycle: step 1
    — Sean picks wave 8 (L-D ×8 of ~16, or a gap block; dai LAST; the T28
    six + claymore 26 still parked for his ruling).
+102. ✅ **BATCH 20 WAVE 12 APPLIED — four-knights 1-23 CLOSED; ONE GAP BLOCK
+   LEFT (2026-09-02; Sean: "yes to all and go").** Four sub-blocks landed
+   4/4, verified SOUND by one Fable verifier over the block (23 anchors, 13
+   continues, 23 volumes on refetched sources; the lib moves nothing; both
+   un-cross-cuts REAL — 18/19 inside ch 58, 22/23 inside ch 69 —
+   programming-cafe's ch-69 dissent REFUTED on the chapter's own cast order;
+   the v1-v9 volume table publisher-confirmed against Kodansha's 初出).
+   APPLIED: **23 manual anchors 2 → 75** under the wave-9 fence ep 24 →
+   77 [75], 13 continues, 40 annotations (+ the verifier's ep-5
+   `partial`{14} — the C-part is a ch-14 tag on two sources); **the EMPTY
+   volume table SEEDED v1-v9 as research-tier rows** (source 'research',
+   provenance = the verdict files; the volumes backfill deletes only its
+   own wikipedia rows — P8-safe) and every anchor's volume derived from it
+   (0 disagreements). No retypes, no repairs, no dates (ja-WP confirms
+   every stored date; the fandom's ep-23 date is the wrong one). CENSUS:
+   anchor_gap_research 2 → **1** (dragon-quest-the-adventure-of-dai 18-99,
+   82 rows — the LAST gap block); the seeded boundaries pass the boundary
+   healer (0 dropped) and boundaries_wrong_page 0; ruling_violation 0;
+   display 218 / 0. No lib change (no deploy). Traps → research-agent: two
+   un-cross-cuts a few episodes apart, witnessed on the chapter's own cast
+   order; a title can be the NEXT chapter's (ep 9); the licensor host moved
+   (7sins-4knights.net). Next: dai 18-99 in two waves of seven sub-blocks
+   (18-59, 60-99).
 101. ✅ **BATCH 20 WAVE 11 APPLIED — kingdom 104-128, bleach 190-202,
    naruto-shippuden 374-392 CLOSED; THE RECAP BOUNDARY (2026-09-02; Sean
    ruled).** Eight sub-blocks landed 8/8, verified 3/3 (Fable over Opus —
