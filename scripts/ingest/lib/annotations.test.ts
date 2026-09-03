@@ -3,8 +3,8 @@ import { describe, expect, it } from 'vitest';
 import { ADOPTED_BASES, ANNOTATION_KINDS, annotationProblem } from './annotations';
 
 describe('annotationProblem (T26)', () => {
-  it('the vocabulary is the seven research kinds, the three T4.2 override kinds, and the T28 recap + unverified kinds (2026-09-04)', () => {
-    expect([...ANNOTATION_KINDS]).toEqual(['divergence', 'partial', 'graft', 'rearranged', 'side_story', 'loose_parallel', 'abridged', 'adopted', 'retconned', 'side_source', 'recap', 'unverified']);
+  it('the vocabulary is the seven research kinds, the three T4.2 override kinds, and the T28 recap + unverified kinds and the T26/I41 chain_source kind (2026-09-04)', () => {
+    expect([...ANNOTATION_KINDS]).toEqual(['divergence', 'partial', 'graft', 'rearranged', 'side_story', 'loose_parallel', 'abridged', 'adopted', 'retconned', 'side_source', 'recap', 'unverified', 'chain_source']);
     expect([...ADOPTED_BASES]).toEqual(['author', 'studio', 'community']);
   });
   it('accepts a well-formed research annotation', () => {

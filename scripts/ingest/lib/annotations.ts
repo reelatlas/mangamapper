@@ -28,6 +28,7 @@ export const ANNOTATION_KINDS = [
   'side_source', // T26: adapts a work other than the series' source — the work is named in note
   'recap', // T28 (2026-09-04): re-shown / retold material of chapters already covered — weightless in the standing; chapters = what is retold
   'unverified', // T28 (2026-09-04): a chapter certainly in the episode whose SHARE could not be sized — the anchor stands, the row is a census queue (unverified_share)
+  'chain_source', // T26 / I41 (2026-09-04): adapts material from ANOTHER WORK ON THE SERIES' READING CHAIN (a sequel / prequel manga — canon to the series, told out of order; position-less; chapters = '<work label>: ch …')
 ] as const;
 export type AnnotationKind = (typeof ANNOTATION_KINDS)[number];
 

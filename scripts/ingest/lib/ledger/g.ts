@@ -608,7 +608,7 @@ export const RULES: Rule[] = [
     ],
     layer: 'writer',
     auditClass: [],
-    witnesses: [, 'the-seven-deadly-sins-four-knights-of-the-apocalypse'],
+    witnesses: ['the-seven-deadly-sins-four-knights-of-the-apocalypse'],
     status: 'live',
     see: ['G31', 'G22', 'G37', 'invariant 7', 'hikaru ep-75 wipe'],
   },

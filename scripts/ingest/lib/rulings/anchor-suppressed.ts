@@ -173,6 +173,36 @@ export const ENTRIES: RulingEntry<number[]>[] = [
     ruledOn: '2026-09-03',
     cite: ['scripts/ingest/research/batch20/out/dragon-quest-the-adventure-of-dai-w14a.json', 'scripts/ingest/research/batch20/verify/dragon-quest-the-adventure-of-dai-w14abd.md'],
   },
+  {
+    seriesId: 'bleach',
+    ruleId: 'A44',
+    value: [46],
+    reason:
+      "Batch 20 wave 16 (T28's sliver clause; verified R24), Sean ruled 2026-09-04 — mixed stands, position-less: A44 position-less — the episode's source content is bonus chapter -17 「逸れゆく星々の為の前奏曲」 'Prelude for the Straying Stars', which carries NO mainline number: it is printed at the back of tankobon 15 behind ch 130 (en-WP's volume list prints it as the volume's last entry; bleach.fandom's volume page carries its full summary and names Episode 46 as its only adaptation; AFG's chapter column prints '-17' on row 046). That is the negative gaiden space, outside the series' 1-479 line — the same treatment already ruled for the Turn Back the Pendulum eps 206-212 ('CANON but negative chapter numbering outsi",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-04',
+    cite: ['scripts/ingest/research/batch20/out/bleach-w16.json', 'scripts/ingest/research/batch20/verify/w16-anchors.md'],
+  },
+  {
+    seriesId: 'heavens-lost-property',
+    ruleId: 'A44',
+    value: [24],
+    reason:
+      "Batch 20 wave 16 (T28's sliver clause; verified R24), Sean ruled 2026-09-04 — mixed stands, position-less: A44 position-less. The episode's source content is two UNNUMBERED 番外編 — 「北風と太陽」 UMA chapter (vol 4) and 「北風と太陽」 UMA Chapter 2 (vol 7) — which carry no mainline chapter number and therefore no position; the rest of the episode has no identified manga counterpart. The segments are significant (they ARE the episode's A-part, adapted in full and nowhere else), so the row is not filler — mixed stands — but it takes no anchor. Delivered as a side_story annotation naming both extras (the Dai convention: unnumbered extras are facts, never numbers).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-04',
+    cite: ['scripts/ingest/research/batch20/out/heavens-lost-property-w16.json', 'scripts/ingest/research/batch20/verify/w16-anchors.md'],
+  },
+  {
+    seriesId: 'rosario-vampire',
+    ruleId: 'A44',
+    value: [14],
+    reason:
+      "T26 THE CHAIN / I41 (Sean ruled 2026-09-04): ep 14 adapts Rosario + Vampire Season II ch 1 + 3 (the sequel manga on the chain) inside an original plot — mixed, but the material lives in another work's chapter space, so the row has no position in Season I's instrument (A12: a far-forward beat never sets the position); the display carries the previous position forward. `chain_source`{Season II: ch 1, 3} is the record.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-04',
+    cite: ['scripts/ingest/research/batch20/out/rosario-vampire-w16.json', 'scripts/ingest/research/batch20/verify/w16-types.md'],
+  },
 ];
 
 export const ANCHOR_SUPPRESSED: Record<string, number[]> = toRecord(ENTRIES);

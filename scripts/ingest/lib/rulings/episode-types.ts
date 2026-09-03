@@ -919,6 +919,176 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
     ruledOn: '2026-09-04',
     cite: ['scripts/ingest/research/batch17/out/d-gray-man.json', 'scripts/ingest/research/batch20/SIDECAR-DECISIONS.md'],
   },
+  {
+    seriesId: 'black-butler',
+    ruleId: 'T6',
+    value: { 37: 'filler' },
+    reason:
+      "Batch 20 wave 16 (the mixed_fragment_only queue under T28's sliver clause; verified R24), Sean ruled 2026-09-04: T27/T28 (sliver clause, Sean 2026-09-04): the episode's own plot is 100% anime-original (Cedric Brandel — no manga debut); every manga tie is a page-level sliver (ch 5 p.2/pp.9-11/pp.18-20, ch 22 pp.30-34, ch 23 p.2) restaged as framing or a gag, so the REMAINDER decides and the remainder is original. Stored type mixed came from the batch-10 `graft` (chapters null) and AFL's 'Mixed Canon/Filler'; under the sliver clause a fragment tie alone no longer earns the type. Sole-adaptation exception checked and refused on both halves (see the graft notes).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-04',
+    cite: ['scripts/ingest/research/batch20/out/black-butler-w16.json', 'scripts/ingest/research/batch20/verify/w16-types.md', 'scripts/ingest/research/batch20/verify/w16-anchors.md'],
+  },
+  {
+    seriesId: 'chrono-crusade',
+    ruleId: 'T6',
+    value: { 8: 'filler' },
+    reason:
+      "Batch 20 wave 16 (the mixed_fragment_only queue under T28's sliver clause; verified R24), Sean ruled 2026-09-04: T28 sliver clause: no source segment at all — the Grand Central Rizelle story is anime-original and the only tie is the spider/puppet CONCEPT of Acts 19-21, which ep 13 adapts properly and in full (sole-adaptation test fails). Remainder is 100% original -> filler; graft{19-21 (concept only)} kept as the mandatory tie; A1 forbids an anchor. This also aligns the row with the existing A7 ruling ('concept-level, never a position', session 2026-08-24), which the mixed type had been sitting on top of.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-04',
+    cite: ['scripts/ingest/research/batch20/out/chrono-crusade-w16.json', 'scripts/ingest/research/batch20/verify/w16-types.md', 'scripts/ingest/research/batch20/verify/w16-anchors.md'],
+  },
+  {
+    seriesId: 'chrono-crusade',
+    ruleId: 'T6',
+    value: { 14: 'filler' },
+    reason:
+      "Batch 20 wave 16 (the mixed_fragment_only queue under T28's sliver clause; verified R24), Sean ruled 2026-09-04: T28 sliver clause: the row adapts no source scene — it merely parallels the source's SLOT. Its three defining beats (the fever, the fortune teller's remedy, the kiss) are tropedia ANIME ONLY entries; the only candidate chapters (Acts 22-26, the Chicago block) contain nothing of the kind and are never adapted, the anime going straight from Act 21 (ep 13) to Act 27 (ep 18). Same shape as eps 15 and 16, which batch 19 already retyped filler on the identical {22-26} tie. loose_parallel{22-26} kept; A1 forbids an anchor.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-04',
+    cite: ['scripts/ingest/research/batch20/out/chrono-crusade-w16.json', 'scripts/ingest/research/batch20/verify/w16-types.md', 'scripts/ingest/research/batch20/verify/w16-anchors.md'],
+  },
+  {
+    seriesId: 'chrono-crusade',
+    ruleId: 'T6',
+    value: { 17: 'filler' },
+    reason:
+      "Batch 20 wave 16 (the mixed_fragment_only queue under T28's sliver clause; verified R24), Sean ruled 2026-09-04: T28 sliver clause: the row adapts no source scene. The San Francisco battle, Viede's and Carv's deaths and Rosette's stigmata are anime constructs — the fandom places Viede's death at the Eden crusade (v7-v8) and Gurio in the anime only, and ja-WP records the sanctified Rosette as anime-only. The v4 Pursuers thread it echoes (Acts 23-24) is set in Chicago and inverts the alliance, and is never adapted. Same shape as eps 15 and 16 on the identical {22-26} tie. loose_parallel{22-26} kept; A1 forbids an anchor.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-04',
+    cite: ['scripts/ingest/research/batch20/out/chrono-crusade-w16.json', 'scripts/ingest/research/batch20/verify/w16-types.md', 'scripts/ingest/research/batch20/verify/w16-anchors.md'],
+  },
+  {
+    seriesId: 'detective-school-q',
+    ruleId: 'T6',
+    value: { 1: 'filler' },
+    reason:
+      "Batch 20 wave 16 (the mixed_fragment_only queue under T28's sliver clause; verified R24), Sean ruled 2026-09-04: T27/T28 (sliver clause, Sean 2026-09-04): the stored 'mixed' rests on the `loose_parallel{45-46}` tie alone, inherited from AFL's 'Mixed Canon/Filler'. A parallel is not source content: no scene, panel or beat of ch 45-46 is animated, the victim, investigator and timeline all differ, and the episode's own plot (the bank-note misunderstanding, the first meeting of Kyu/Megu/Kinta before the DDS exam) is anime-original. The remainder decides → filler. This is consistent with the batch-17 verdict's own finding ('Nine episodes adapt nothing (1, 4-7, 15, 35, 44-45)') and with Sean's T11/T6 rulings of 2026-08-25, which already typed 35/44/45 filler on the same logic; ep 1 is the row that was left h",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-04',
+    cite: ['scripts/ingest/research/batch20/out/detective-school-q-w16.json', 'scripts/ingest/research/batch20/verify/w16-types.md', 'scripts/ingest/research/batch20/verify/w16-anchors.md'],
+  },
+  {
+    seriesId: 'eyeshield-21',
+    ruleId: 'T6',
+    value: { 39: 'filler' },
+    reason:
+      "Batch 20 wave 16 (the mixed_fragment_only queue under T28's sliver clause; verified R24), Sean ruled 2026-09-04: T28 sliver clause. The episode's job is the clip-show review (weightless, recap clause) plus a wholly anime-original TV-interview chase; the source share is two pages of ch 89 carried as background, weight SLIVER, adapted-properly episode named (ep 38). Sole-adaptation exception fails on its second half (not a major plot point). Filler + partial{89} + recap{1-91}; no anchor (A1), ANCHOR_SUPPRESSED[39] unaffected. This supersedes the T6 map entry '39':'mixed' (Sean 2026-08-25) - delivered as an explicit correction, not a silent override; the batch-20 wave-3 verdict already flagged this row to Sean as 'the cleanest candidate in the series' for the T28 line and deliberately left the typing to h",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-04',
+    cite: ['scripts/ingest/research/batch20/out/eyeshield-21-w16.json', 'scripts/ingest/research/batch20/verify/w16-types.md', 'scripts/ingest/research/batch20/verify/w16-anchors.md'],
+  },
+  {
+    seriesId: 'eyeshield-21',
+    ruleId: 'T6',
+    value: { 66: 'filler' },
+    reason:
+      "Batch 20 wave 16 (the mixed_fragment_only queue under T28's sliver clause; verified R24), Sean ruled 2026-09-04: T28 sliver clause. Three independent sources call the episode anime-original (ja-WP 備考 アニメオリジナルストーリー; eyeshield21.fandom Category:Anime-Original Episodes; AFG '* Filler', chapter cell N/A) and the licensor synopsis + en-WP describe a plot with no manga counterpart end to end. The single tie is a framing line echoing vol 15's kicker turn, weight SLIVER, and the chapters it names are adapted properly at ep 76 - the sole-adaptation exception fails on its first half. Filler + loose_parallel{132-133}; no anchor (A1). This supersedes the T6 map entry '66':'mixed' (Sean 2026-08-25), whose own research file called it 'a JUDGMENT CALL... the weakest verdict in this file'.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-04',
+    cite: ['scripts/ingest/research/batch20/out/eyeshield-21-w16.json', 'scripts/ingest/research/batch20/verify/w16-types.md', 'scripts/ingest/research/batch20/verify/w16-anchors.md'],
+  },
+  {
+    seriesId: 'hajime-no-ippo-the-fighting',
+    ruleId: 'T6',
+    value: { 76: 'filler' },
+    reason:
+      "Batch 20 wave 16 (the mixed_fragment_only queue under T28's sliver clause; verified R24), Sean ruled 2026-09-04: T28 sliver clause (Sean 2026-09-04): the two-panel Round 383 graft carries no weight (duplicate — ep 97 adapts the chapter in full), so the remainder decides, and the remainder is anime-original throughout. Two independent witnesses to the content: ippo.fandom's Episode 76 page (full synopsis + trivia 'While this episode is considered filler, a small amount of panels from Round 383 were adapted', filed under Category:Filler Episodes) and AniList 12069's own description of the special ('A special episode included in the DVDs. It tells how Takamura started boxing', SPECIAL, 23 min). en-WP records it as the DVD-only episode numbered 76 that did not air. animefillerlist prints 'Mixed Canon/Fille",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-04',
+    cite: ['scripts/ingest/research/batch20/out/hajime-no-ippo-the-fighting-w16.json', 'scripts/ingest/research/batch20/verify/w16-types.md', 'scripts/ingest/research/batch20/verify/w16-anchors.md'],
+  },
+  {
+    seriesId: 'heavens-lost-property',
+    ruleId: 'T6',
+    value: { 18: 'canon' },
+    reason:
+      "Batch 20 wave 16 (the mixed_fragment_only queue under T28's sliver clause; verified R24), Sean ruled 2026-09-04: T27/T28 under the sliver clause. Both of this episode's segments are SOURCE and both are significant: ch 23 'War!!' (the whole snow-war plot, its sole adaptation) and the vol-6 番外編 「はじめてのはっくつ」 (the hot-spring dig). A side story printed inside the tankōbon IS the source (the GTO ruling), so there is no non-source share to make the row mixed — en-WP's beat list for ep 18 maps onto ch 23 and that extra with nothing left over, and the fandom's independently written episode summary lists the same beats. AFL's 'mixed' is the coarse call the sliver clause exists to correct; flagged for Sean since I cannot watch the episode.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-04',
+    cite: ['scripts/ingest/research/batch20/out/heavens-lost-property-w16.json', 'scripts/ingest/research/batch20/verify/w16-types.md', 'scripts/ingest/research/batch20/verify/w16-anchors.md'],
+  },
+  {
+    seriesId: 'rosario-vampire',
+    ruleId: 'T6',
+    value: { 14: 'mixed' }, // T26 THE CHAIN (Sean 2026-09-04): Season II ch 1 + 3 are canon told out of order — MIXED, not filler; pinned against the AFL re-derive (P8)
+    reason:
+      "Batch 20 wave 16 (the mixed_fragment_only queue under T28's sliver clause; verified R24), Sean ruled 2026-09-04: T27/T28: standing is relative to the IDENTIFIED SOURCE — Rosario + Vampire, 40 chapters / 10 volumes (AniList 30894), the space every stored anchor uses. Ep 14 adapts none of it: its manga content is the sequel work (Season II ch 1 + 3, another chapter space, carried as side_source above), its only season-one content is the in-episode recap gag (weightless, T28 recap clause), and the rest is anime-original. Mixed requires source + non-source in one episode; there is no weighted source share here, so the remainder decides and the row is filler + side_source. This is also how the catalog already types every other Season-II-only Capu2 row (15-19, 21-23, 25-26). NOTE the title trap: ep 14 'Reuni",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-04',
+    cite: ['scripts/ingest/research/batch20/out/rosario-vampire-w16.json', 'scripts/ingest/research/batch20/verify/w16-types.md', 'scripts/ingest/research/batch20/verify/w16-anchors.md'],
+  },
+  {
+    seriesId: 'sailor-moon',
+    ruleId: 'T6',
+    value: { 36: 'filler' },
+    reason:
+      "Batch 20 wave 16 (the mixed_fragment_only queue under T28's sliver clause; verified R24), Sean ruled 2026-09-04: T28 sliver clause. The episode is a Dark-Kingdom youma-of-the-week with an anime-original antagonist (Kariko Tokoyama) and an anime-only youma (Mitsuami, first and only appearance here, created by Kunzite), and its single source-shaped element - the evil-Endymion reveal - is an arc-level echo of Acts 10-11 with no adapted page, weight SLIVER. The stored mixed comes from AFL's 'Mixed Canon/Filler' label on the row, which is a source label, not a content finding: AFL prints the same label on ep 42 (Minako's past) and prints plain Filler on eps 37-41 and 43, whose Dark-Kingdom framing is identical in kind to this row's. Filler + loose_parallel{11} (annotation unchanged); no anchor (A1).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-04',
+    cite: ['scripts/ingest/research/batch20/out/sailor-moon-w16.json', 'scripts/ingest/research/batch20/verify/w16-types.md', 'scripts/ingest/research/batch20/verify/w16-anchors.md'],
+  },
+  {
+    seriesId: 'tokyo-mew-mew',
+    ruleId: 'T6',
+    value: { 19: 'filler' },
+    reason:
+      "Batch 20 wave 16 (the mixed_fragment_only queue under T28's sliver clause; verified R24), Sean ruled 2026-09-04: T27/T28 sliver clause. Zero standing in the source: the porpoise-fin debut is a loose parallel of ch 21 with no ch-21 scene shown, and ch 21's own version is at ep 41. en-WP's episode summary and the fandom's independently written (dub-based) summary describe the same wholly invented beach plot; the manga's chapter list for the adjacent volumes (ch 10 'Shall We Dance?', 11 'Cruise Control', 12 'Alien Invasion', 13 'The Truth About Cats and Dogs') contains nothing resembling it, and chs 10, 12-13 are already claimed by eps 13 and 28 while ch 11 is ruled never adapted.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-04',
+    cite: ['scripts/ingest/research/batch20/out/tokyo-mew-mew-w16.json', 'scripts/ingest/research/batch20/verify/w16-types.md', 'scripts/ingest/research/batch20/verify/w16-anchors.md'],
+  },
+  {
+    seriesId: 'tokyo-mew-mew',
+    ruleId: 'T6',
+    value: {}, // ep 21 HELD by the verifier (w16-types.md): the first and only animation of ch 9's closing mew-aqua briefing — significant; stays MIXED + partial{9} + A44
+    reason:
+      "Batch 20 wave 16 (the mixed_fragment_only queue under T28's sliver clause; verified R24), Sean ruled 2026-09-04: T27/T28 sliver clause. The one source-derived segment is a weightless restatement of ch 9's closing mew-aqua briefing, already animated at ep 12; the episode's own plot (Minto's dream, her resignation, the fake mew aqua) exists in no chapter. en-WP's summary and the fandom's dub summary agree on the beat list, and en-WP's vol-2 chapter summary places the briefing at the end of ch 9.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-04',
+    cite: ['scripts/ingest/research/batch20/out/tokyo-mew-mew-w16.json', 'scripts/ingest/research/batch20/verify/w16-types.md', 'scripts/ingest/research/batch20/verify/w16-anchors.md'],
+  },
+  {
+    seriesId: 'tokyo-mew-mew',
+    ruleId: 'T6',
+    value: { 37: 'filler' },
+    reason:
+      "Batch 20 wave 16 (the mixed_fragment_only queue under T28's sliver clause; verified R24), Sean ruled 2026-09-04: T27/T28 sliver clause. No page of ch 19 is in this row: en-WP's ep-37 summary is entirely the invented Christmas set-up, and en-WP's vol-5 chapter summary gives ch 19's content as the lunch-date attack and forced transformation, which the anime replaces (the stored ep-38 divergence {19} already records the relocation). The ch-19 pages the anime keeps are on ep 38's anchor. Consistent with the A44 ruling of 2026-08-27, which already found this row holds no truthful position.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-04',
+    cite: ['scripts/ingest/research/batch20/out/tokyo-mew-mew-w16.json', 'scripts/ingest/research/batch20/verify/w16-types.md', 'scripts/ingest/research/batch20/verify/w16-anchors.md'],
+  },
+  {
+    seriesId: 'trigun',
+    ruleId: 'T6',
+    value: { 6: 'filler' },
+    reason:
+      "Batch 20 wave 16 (the mixed_fragment_only queue under T28's sliver clause; verified R24), Sean ruled 2026-09-04: T28 sliver clause (Sean 2026-09-04): both source segments are slivers with no weight (ch 4's opening = a duplicate of pages ep 5 / ep 7 carry; ch 0 = 6 wordless prologue pages used as flashback imagery), so the remainder decides — and the remainder is wholly anime-original. Elizabeth (the plant technician who hires the assassin and sabotages the Inepril plant) and Kesskass are anime-only characters: trigun.fandom's Elizabeth page carries ONLY anime fields (AniDebut = Episode 6) and no manga counterpart, and none of the episode's plot appears in ch 4's chapter summary. animefillerlist independently types ep 6 'Filler'. SUPERSEDES the T6 override {'6':'mixed'} (Sean 2026-08-25) for this row on",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-04',
+    cite: ['scripts/ingest/research/batch20/out/trigun-w16.json', 'scripts/ingest/research/batch20/verify/w16-types.md', 'scripts/ingest/research/batch20/verify/w16-anchors.md'],
+  },
+  {
+    seriesId: 'zatch-bell',
+    ruleId: 'T6',
+    value: { 122: 'filler' },
+    reason:
+      "Batch 20 wave 16 (the mixed_fragment_only queue under T28's sliver clause; verified R24), Sean ruled 2026-09-04: T27/T28 (sliver clause, Sean 2026-09-04): the stored 'mixed' rests on the single `partial{186}` framing beat, and that beat is a duplicate of a chapter adapted in full at ep 121 — a sliver with no weight. The remainder (the entire Kaguya festival story) is anime-original, so the row is filler. This does NOT contradict Sean's T6 ruling of 2026-08-25 (which set 122 → mixed against AFL's 'canon'): that ruling rested on konjikinogash's per-episode chapter field alone, before the sliver clause existed; the same field is what shows the beat is a duplicate. AFL still prints 'Canon' for 122 (and for the already-filler 118/119/123) — AFL's typing on this block was overruled once already.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-04',
+    cite: ['scripts/ingest/research/batch20/out/zatch-bell-w16.json', 'scripts/ingest/research/batch20/verify/w16-types.md', 'scripts/ingest/research/batch20/verify/w16-anchors.md'],
+  },
+  {
+    seriesId: 'saint-seiya-knights-of-the-zodiac',
+    ruleId: 'T6',
+    value: { 64: 'mixed' },
+    reason:
+      "Batch 20 wave 16 (verified R24 — w16-anchors.md), Sean ruled 2026-09-04: ep 64 carries the Aiolos testament pages of ch 38 (the chapter's title beat and reveal) and no other episode adapts them (ep 63 ends on the arrow being fired, ep 65 opens inside ch 38's aftermath) — T28's sole-adaptation exception: mixed, with the anchor 38 [38] v11 so the pages are not falsely marked never-adapted. animefillerlist types the row FILLER; this entry pins mixed against the re-derive (P8).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-04',
+    cite: ['scripts/ingest/research/batch20/out/saint-seiya-knights-of-the-zodiac-w16.json', 'scripts/ingest/research/batch20/verify/w16-anchors.md'],
+  },
 ];
 
 export const EPISODE_TYPE_OVERRIDES: Record<string, EpisodeTypes> = ENTRIES.reduce<Record<string, EpisodeTypes>>((acc, e) => {

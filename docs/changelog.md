@@ -887,6 +887,56 @@
    0. Permanence 0 locked / 0 violations; no stale rulings. Cycle: step 1
    — Sean picks wave 8 (L-D ×8 of ~16, or a gap block; dai LAST; the T28
    six + claymore 26 still parked for his ruling).
+107. ✅ **DEEP CONSOLIDATE UNDER THE SLIVER CLAUSE — WAVE 16 APPLIED; T26 THE CHAIN
+   + I41 THE SOURCE CHAIN (2026-09-04; Sean ruled).** The deep pass's rescan
+   work-list was the catalog's own queue: mixed_fragment_only (16 rows / 15
+   series typed mixed on fragment ties alone, no anchor). Seven agents delivered
+   per-segment weights; two Fable verifiers over the Opus verdicts (w16-types.md,
+   w16-anchors.md — all nine anchors verified at page level, one type move
+   REFUTED). THE OUTCOME sorted the "fragments" three ways: **11 → filler**
+   (chrono-crusade 8 / 14 / 17, trigun 6, hajime-no-ippo 76, black-butler 37,
+   zatch-bell 122, detective-school-q 1, eyeshield-21 39 / 66, sailor-moon 36,
+   tokyo-mew-mew 19 / 37 — shape-only parallels, duplicates, teases);
+   **9 new anchors on significant first-time / sole-adaptation material the
+   record had understated** (bleach 32 → 98, 284 → 376; naruto-shippuden 89 →
+   342, 90 → 343, 213 → 482 — a THREAD SPLIT, the Konoha half of chs 342-347
+   adapted nowhere else; saint-seiya 64 → 38 + ep 65 START 39 → 38; fire-force
+   25 → 92 [91]; heavens-lost-property 18 → 23 AND → CANON, 23 → 32);
+   **3 mixed rows position-less (A44)**: chrono 21 (the Magdalene backstory,
+   load-bearing, extent unproven), bleach 46 (the whole bonus ch -17 as
+   side_story), HLP 24 (two unnumbered extras); **tokyo-mew-mew 21 HELD as
+   mixed** (the verifier: the only animation of ch 9's closing mew-aqua
+   briefing, which launches the rest of the manga). RULED ON THE WAY: **T26 THE
+   CHAIN + I41** — rosario-vampire 14 adapts the SEQUEL manga (Season II ch 1 +
+   3) and came out filler under T26's single 'other work' label; Sean: the
+   sequel is the same cohesive canon, told out of order (an original-Naruto
+   episode adapting Shippuden chapters is never filler). Cursor named the pair:
+   `chain_source` (a work on the series' READING CHAIN = the ordered sequence of
+   named MANGA works; canon, out of order, POSITION-LESS; no extra rearranged
+   kind — chain material is out of order by definition) vs `side_source` (a work
+   OUTSIDE the chain — novels, games, parallel tellings; canon only by
+   adoption); the chain is a ruling map (lib/rulings/source-chains.ts: rosario
+   Season I → Season II; Trigun → Trigun Maximum) and the census checks the pair
+   as MISMATCHES against it (chain_source_unmapped / side_source_on_chain —
+   never 'side_source on a canon row', which is the correct Itachi-novel
+   pattern) + source_work_unlabelled (the '<work label>:' convention; 55
+   standing side_source rows to backfill). Applied: rosario 14 → mixed (T6 pin),
+   position-less (A44), chain_source{Season II: ch 1, 3}; trigun 18 side_source
+   → chain_source{Trigun Maximum: ch 1, 2}. Migration 20260904120000. ALSO this
+   pass: rekind-recaps (13 rows → the `recap` kind); the G38 record amended for
+   the coverage floor; four + one one-hop cases; the retire conditions reviewed
+   (gantz / GTO / toriko G37 still overstated by MU — suppressions stand); the
+   validate gate ignores quoted phrases. CENSUS: mixed_fragment_only 16 → **3**
+   (the A44-ruled residue); sliver_only_anchor 0; unverified_share 0;
+   ruling_violation 0; anchor_on_noncanon_row 0; anchor_nonmonotonic 0;
+   chain_source_unmapped 0; side_source_on_chain 0; source_work_unlabelled 55
+   (a new backlog class, honest); display 218 / 0; T6 asserted 14 rows; edges
+   rebuilt + deployed; 173 tests. Traps → research-agent: loose_parallel adapts
+   nothing unless a scene is shown; a fragment record can hide a thread split;
+   the fandom's per-chapter reverse index is the sole-adaptation witness;
+   zatchbell.fandom's chaps field lies; fireforce.fandom = fire-force.fandom.
+   Next: P34 (the batch-20 extraction).
+
 106. ✅ **T28 THE SLIVER CLAUSE + THE UNVERIFIED SHARE; the sidecar list APPLIED
    (2026-09-04; Sean ruled after a two-day exploration).** THE RULING, in Sean's
    words: source material carries a WEIGHT — significant (it progresses the story

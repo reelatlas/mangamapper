@@ -415,6 +415,19 @@
         "latest_known"
       ],
       "source": "2026-09-04: the coverage floor (four-knights 103 → 120)"
+    },
+    {
+      "ask": "an episode adapts chapters from the SEQUEL manga (same story, same author) inside an original plot — filler, or canon out of order, and which annotation kind?",
+      "expected": [
+        "T26",
+        "I41"
+      ],
+      "terms": [
+        "chain_source",
+        "chain",
+        "position-less"
+      ],
+      "source": "2026-09-04: rosario-vampire 14 / trigun 18 — the chain (Sean + Cursor): mixed, position-less, chain_source{Season II: ch 1, 3}; novels/games/parallel stay side_source"
     }
   ]
 }

@@ -22,6 +22,7 @@ import { STANDING_ANNOTATIONS } from './lib/rulings/standing-annotations';
 import { AIR_DATE_OVERRIDES } from './lib/rulings/air-dates';
 import { EPISODE_TITLE_OVERRIDES } from './lib/rulings/episode-titles';
 import { continueUnprovenanced, curatedOverwritten } from './lib/continues';
+import { annotationWorkLabel, isChainWork } from './lib/rulings/source-chains';
 import { ANCHOR_SUPPRESSED } from './lib/rulings/anchor-suppressed';
 import { deriveFormat } from './lib/format';
 import { LOCKED } from './lib/rulings/permanence';
@@ -103,7 +104,7 @@ async function main() {
     rearranged_zone_unanchored: [], rearranged_zone_acknowledged: [],
     title_incomplete: [], airdate_incomplete: [], airdate_regression: [], airdate_withheld: [], episode_date_off_window: [], asterisk_unreviewed: [],
     fractional_unmodeled: [], annotation_invalid: [], annotation_retired_standing: [], afl_anime_canon_unruled: [], format_missing: [], episode_without_component: [], watch_order_kind_missing: [],
-    permanence_candidate: [], permanence_violation: [], mixed_fragment_only: [], run_stuck: [], unverified_share: [], sliver_only_anchor: [],
+    permanence_candidate: [], permanence_violation: [], mixed_fragment_only: [], run_stuck: [], unverified_share: [], sliver_only_anchor: [], chain_source_unmapped: [], side_source_on_chain: [], source_work_unlabelled: [],
     series_without_source_kind: [], no_source: [], no_instrument: [], ok_full: [], ok_no_volume: [], ok_loose: [], ok_parallel: [],
     source_relation_missing: [], parallel_has_anchor: [], arcs_not_partition: [], arc_row_conflict: [], correspondence_invalid: [], correspondence_incomplete: [],
     pending_airing_no_anchor: [], pending_finished_no_totals: [], pending_no_canon: [], pending_other: [],
@@ -129,6 +130,17 @@ async function main() {
       const single = /^\s*\d+\s*$/.test(ca.replace(/\([^)]*\)/g, ''));
       if (single && /\b(sliver|scrap|1 panel|one panel|p\.?\s*\d+ only|approx\. p)/i.test(ca) && ['canon', 'mixed'].includes(typeOf.get(`${a.series_id}#${a.episode}`) ?? ''))
         classes.sliver_only_anchor.push(`${a.series_id}: ep ${a.episode} → ch ${a.chapter} on a sliver-only record '${ca.slice(0, 50)}' — significance call (T28's sliver clause): significant → stands with the reason; weightless → no anchor, the remainder decides the type`);
+    }
+  }
+  // I41 (2026-09-04): chain_source / side_source are checked against the SOURCE CHAIN map — a chain_source naming a work off the
+  // chain, or a side_source naming a work on it, is a mismatch (a sitting, never an auto-change); an unlabelled one cannot be checked
+  {
+    for (const a of await selectAll<any>('episode_annotations', 'series_id, episode, kind, chapters', (q) => q.in('kind', ['chain_source', 'side_source']))) {
+      const label = annotationWorkLabel(a.chapters);
+      if (!label) { classes.source_work_unlabelled.push(`${a.series_id}: ep ${a.episode} ${a.kind} — chapters does not start with '<work label>:' (I41 convention; backfill so the chain check can run)`); continue; }
+      const on = isChainWork(a.series_id, label);
+      if (a.kind === 'chain_source' && !on) classes.chain_source_unmapped.push(`${a.series_id}: ep ${a.episode} chain_source names '${label}', not on the series' chain (I41) — rule the chain or re-kind to side_source`);
+      if (a.kind === 'side_source' && on) classes.side_source_on_chain.push(`${a.series_id}: ep ${a.episode} side_source names '${label}', which IS on the chain (I41) — re-kind to chain_source (canon, out of order)`);
     }
   }
   // T26: annotations are read once up front — the adopted / side_source rows
