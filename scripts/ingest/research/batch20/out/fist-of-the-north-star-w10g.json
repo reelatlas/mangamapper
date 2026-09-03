@@ -1,0 +1,207 @@
+{
+  "series_id": "fist-of-the-north-star",
+  "summary": "Episodes 145-151 are the top of the wave-10 gap block: the close of the Kenshiro/Hyoh duel, the Taiseiden sequence in which Shachi dies and Kenshiro receives the Hokuto Soke's secret, and then the whole Kenshiro-vs-Kaioh finale up to Bat's arrival. All seven rows are canon and all seven take anchors, running 195 -> 209 strictly inside the outer fence (ep 108 -> 136, ep 152 -> 210) at ~2 chapters per episode. Row 150 is NOT a recap: its title is only the broadcaster's 'three episodes remaining' banner — the episode adapts the poison-gas cavern and the Hokuto Gyakushiso (ch 205-206), Hyoh's rescue of Lin from Samoto/Numeri (ch 206) and the entire 2,000-year Hokuto Soke history of ch 207 (Oka, Shume and Shuken all make their only appearance there, and hokuto.fandom's own character index pins all three to manga ch 207 / anime ep 150). It stays canon; no type change is proposed anywhere in the block. Two real reorderings carry the block: ep 148 lifts ch 202's Kaioh-mother flashback forward (the manga plays it during the fight, after Lin is struck with Shikanhaku, and the anime deletes the ch-202 fight pages around it entirely), and ep 149 pulls Zebra's death (ch 205) forward past the descent into the cavern, which the manga stages first. The stored ep 152 -> 210 fence is CONFIRMED, not repaired: ch 210 is Kaioh's and Hyoh's deaths, which are ep 152's closing scenes, and ep 151 stops inside ch 209 at Bat's unmasking.",
+  "anchors": [
+    {
+      "episode": 145,
+      "end_chapter": 196,
+      "start_chapter": 195,
+      "chapters_adapted": "195-196",
+      "volume": 22,
+      "confidence": "medium",
+      "note": "A4/A10. Ep 144 ends on ch 194's title beat (Kaioh unmasks as Raoh's elder brother and the Soke blood 'revives' in Hyoh — HnK Chapter 194 'The Cold Blood Returns', Kaioh {{Full}} + Lin), so ep 145 opens in ch 195 'The Fool!!', which the chapter page opens on Kaioh and Lin — the anime's knife scene, where Kaioh sits down and invites her to kill herself. END 196 'The Brute Beast of Evil!!': its cast carries Sayaka {{Mo}} and a Jukei {{Flash}}, i.e. the reunion exchange that closes the episode ('did you kill Sayaka?' — 'I have never heard of her'). Ch 197 introduces Leia, who is absent from ep 145. Hyoh's flashback of the infant Kenshiro being put on the boat, which opens the episode, is anime-original (hokutosite lists it under 漫画版との違い as an added scene) and is not what sets the START.",
+      "sources": [
+        "https://hokuto.fandom.com/wiki/HnK_Chapter_195",
+        "https://hokuto.fandom.com/wiki/HnK_Chapter_196",
+        "https://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/145.html",
+        "https://rq87.flyingomelette.com/HNK/1/145/a.html"
+      ]
+    },
+    {
+      "episode": 146,
+      "end_chapter": 198,
+      "start_chapter": 197,
+      "chapters_adapted": "197-198 (198 to the statue's tears and Shachi rising)",
+      "volume": 23,
+      "confidence": "medium",
+      "note": "A4/A10. START 197 'Lin's Tragedy!!' — the chapter's cast runs Hyoh, Kenshiro, Shachi (the post-duel camp where Hyoh names Taiseiden), then Kaioh and Lin (his rage at Shachi), then Leia, exactly the episode's spine; Leia's first chapter in this stretch is 197 and her last is 200 (hokuto.fandom character index: Leia = manga ch 169-200 / anime ep 126-148). END 198 'The Tears of a Goddess!!' is the episode's closing beat verbatim: the Nyoninzo weeps and the dead Shachi stands up (hokutosite 「女人像が涙を流し始めた」; RQ87 'The statue is somehow crying, and then suddenly Shachi is able to get back up'). Ch 199 opens on Kenshiro running, which is ep 147's first scene, so the chapter break falls on the cliffhanger and no continue is needed.",
+      "sources": [
+        "https://hokuto.fandom.com/wiki/HnK_Chapter_197",
+        "https://hokuto.fandom.com/wiki/HnK_Chapter_198",
+        "https://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/146.html",
+        "https://rq87.flyingomelette.com/HNK/1/146/a.html"
+      ]
+    },
+    {
+      "episode": 147,
+      "end_chapter": 200,
+      "start_chapter": 199,
+      "chapters_adapted": "199-200",
+      "volume": 23,
+      "confidence": "high",
+      "note": "A4/A10. Ch 199 'Into Gentle Arms!' opens on Kenshiro (running to Taiseiden — ep 147's first scene) and carries Shachi {{Death}}: in the manga Shachi dies here, before Kenshiro arrives, which both per-episode sites state as the episode's chief difference. Ch 200 'A Sleeping Love!' has Shachi {{Corpse}}, Leia, Kenshiro and a Hyoh {{Flash}} — Kenshiro's arrival, the statue crumbling to the Holy Obelisk, the Shihorin pressure point (told by Hyoh in the manga, by the obelisk itself in the anime) and the vision of the founder's life. hokuto.fandom's character index closes both Shachi (manga ch 166-200 / anime ep 125-147) and Leia (manga ch 169-200) exactly here.",
+      "sources": [
+        "https://hokuto.fandom.com/wiki/HnK_Chapter_199",
+        "https://hokuto.fandom.com/wiki/HnK_Chapter_200",
+        "https://hokuto.fandom.com/wiki/Shachi",
+        "https://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/147.html",
+        "https://rq87.flyingomelette.com/HNK/1/147/a.html"
+      ]
+    },
+    {
+      "episode": 148,
+      "end_chapter": 202,
+      "start_chapter": 201,
+      "chapters_adapted": "201 (the Mashou swamp, the grave marker, the Shikanhaku strike and Lin sent off on Kaioh's horse) + 202's Kaioh-mother flashback, played out of order — see the rearranged annotation",
+      "volume": 23,
+      "confidence": "high",
+      "note": "A4 + 'pages, not numbers' (Sean 2026-08-27). Ch 201 'A Sorrowful Sacred Pagoda!' is the swamp: its cast runs Lin, Kaioh, Hayabusamaru, Kenshiro, Samoto {{1st}}, Hahaja {{1stm}} (the mother first MENTIONED), and it is the last chapter of Kaioh's horse (hokuto.fandom: manga ch 180-201 / anime ep 133-149 — the horse carries the unconscious Lin away). Ch 202 'The Scars of Hatred!' is the mother flashback itself — Hahaja {{1st}}{{Flash}}{{Death}}, Ryu the dog {{1st}}{{Flash}}{{Death}}, Raoh and Toki in flashback — and hokuto.fandom's Hahaja page pins it: 'Manga (ch. 202), Anime (ep. 148)'. Those flashback pages air for the first time here and nowhere else (ep 149 deletes the surrounding ch-202 fight pages), so they are a real position and the END advances to 202 with the reorder annotated.",
+      "sources": [
+        "https://hokuto.fandom.com/wiki/Hahaja",
+        "https://hokuto.fandom.com/wiki/HnK_Chapter_201",
+        "https://hokuto.fandom.com/wiki/HnK_Chapter_202",
+        "https://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/148.html",
+        "https://rq87.flyingomelette.com/HNK/1/148/a.html"
+      ]
+    },
+    {
+      "episode": 149,
+      "end_chapter": 205,
+      "start_chapter": 203,
+      "chapters_adapted": "203-205 (205 = Zebra's death, pulled forward past the descent into the cavern; ch 203's Raoh-in-Asura flashback is dropped)",
+      "volume": 23,
+      "confidence": "high",
+      "note": "A4/A10. hokuto.fandom's Zebra page is the pin: 'Manga (ch. 203-205), Anime (ep. 149)' — Zebra attacks Hyoh in ch 203 (his {{1st}}) and dies in ch 205 ({{Death}}), and ep 149 plays both. Ch 204 'The Conqueror's Request!' carries the Raoh testament that closes the episode (Raoh {{Flash}}) and the Jukei/Raoh/Toki flashback of the rigged bridge match that humiliated Kaioh — RQ87 and hokutosite both place that flashback inside the Zebra fight in the manga. Samoto's bride hunt is his manga run 201-206 (fandom: 'Anime (ep. 149-150)'). A47 is satisfied: ep 150 does not open on 205's tail but on 205's earlier cavern pages (see that anchor).",
+      "sources": [
+        "https://hokuto.fandom.com/wiki/Zebra",
+        "https://hokuto.fandom.com/wiki/HnK_Chapter_203",
+        "https://hokuto.fandom.com/wiki/HnK_Chapter_204",
+        "https://hokuto.fandom.com/wiki/HnK_Chapter_205",
+        "https://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/149.html",
+        "https://rq87.flyingomelette.com/HNK/1/149/a.html"
+      ]
+    },
+    {
+      "episode": 150,
+      "end_chapter": 207,
+      "start_chapter": 205,
+      "chapters_adapted": "205 (cont.: the fall into the depths, the Ryuma-Ouen gas and the Hokuto Gyakushiso — pages the manga plays BEFORE Zebra's death, which ep 149 pulled forward) - 207",
+      "volume": 24,
+      "confidence": "medium",
+      "note": "A4. END 207 'The Birth of Hokuto Shin Ken!' is hard-pinned: Oka and Shume both appear only there, and hokuto.fandom gives each 'Manga, (ch. 207), Anime (ep. 150)'; the episode's whole second half is that 2,000-year history (the two sisters, Shuken and Ryuo). Ch 206 'Abominable Blood' supplies the bloodline reveal (the Big Dipper birthmark proving Kaioh is of the Soke) and the deaths of Samoto and Numeri as Hyoh saves Lin — Numeri: 'Manga (ch. 206), Anime (ep. 149-150)'. START is medium: RQ87 states that in the manga Hyoh defeats Zebra AFTER Kenshiro and Kaioh go down into the depths, so the descent sits before ch 205's Zebra pages; ep 150 therefore resumes inside 205 rather than at 206. NOT a recap despite the 'three episodes remaining' title banner — the row stays canon.",
+      "sources": [
+        "https://hokuto.fandom.com/wiki/Oka",
+        "https://hokuto.fandom.com/wiki/Shume",
+        "https://hokuto.fandom.com/wiki/Numeri",
+        "https://hokuto.fandom.com/wiki/HnK_Chapter_206",
+        "https://hokuto.fandom.com/wiki/HnK_Chapter_207",
+        "https://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/150.html",
+        "https://rq87.flyingomelette.com/HNK/1/150/a.html"
+      ]
+    },
+    {
+      "episode": 151,
+      "end_chapter": 209,
+      "start_chapter": 208,
+      "chapters_adapted": "208-209 (209 to Kuroyasha's death and Bat's unmasking; ep 152 finishes the chapter)",
+      "volume": 24,
+      "confidence": "high",
+      "note": "A4/A10/A47. Ch 208 'A War between Cruel Fists!' (Kaioh, Kenshiro, Kuroyasha, Hyoh, Lin) is the Seimyo Danretsu / Kento Shadan exchange plus Hyoh and Kuroyasha against Kaioh's landing force; ch 209 carries Kuroyasha {{Death}}, Bat, Kokuoh and the mention-roll Shin / Rei / Shu / Souther / Toki / Raoh that is Kenshiro's own speech in this episode. hokuto.fandom's Bat page pins the arrival: 'Manga (ch. 1-136, 136½-160, 209-211 ...), Anime (ep. ... 151-152)'. The END does not advance on a scrap — ep 151 plays the bulk of 209 (the army's destruction, Kuroyasha's death, Bat's unmasking) and hands ep 152 the chapter's last pages.",
+      "sources": [
+        "https://hokuto.fandom.com/wiki/Bat",
+        "https://hokuto.fandom.com/wiki/HnK_Chapter_208",
+        "https://hokuto.fandom.com/wiki/HnK_Chapter_209",
+        "https://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/151.html",
+        "https://rq87.flyingomelette.com/HNK/1/151/a.html"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 148,
+      "continue_chapter": 202,
+      "kind": "parity",
+      "note": "C1. Resume inside ch 202 'The Scars of Hatred!'. You have already seen its Kaioh-mother flashback — the anime played it early, in this episode. What you have NOT seen is the rest of the chapter: Kenshiro and Kaioh grappling in the boiling mud, Kaioh's blast shattering his mother's grave marker, and Kaioh smashing his own armour to show the scars he cut into himself. The anime deletes those pages outright (hokutosite lists both cuts for ep 149), so they are never animated anywhere.",
+      "sources": [
+        "https://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/149.html",
+        "https://rq87.flyingomelette.com/HNK/1/149/a.html"
+      ]
+    },
+    {
+      "episode": 149,
+      "continue_chapter": 205,
+      "kind": "parity",
+      "note": "C1. Ep 149 ends inside ch 205 — it has taken the chapter's Zebra pages but not the pages the manga plays first, Kenshiro's fall into the underground cavern. Ep 150 opens on exactly those, so read on in 205 and expect Zebra's defeat to arrive later on the page than it did on screen.",
+      "sources": [
+        "https://rq87.flyingomelette.com/HNK/1/150/a.html",
+        "https://hokuto.fandom.com/wiki/Zebra"
+      ]
+    },
+    {
+      "episode": 151,
+      "continue_chapter": 209,
+      "kind": "parity",
+      "note": "C1. Ep 151 stops inside ch 209 'The Exhaustion of a Tenacious Hellfire!' at Bat's unmasking; ep 152 finishes that chapter (Kaioh's last stand) and closes the anime on ch 210 'Farewell to My Loved Ones!'. Resume in 209.",
+      "sources": [
+        "https://hokutosite.sakura.ne.jp/sakuhin/gensaku/hokuto/152.html",
+        "https://hokuto.fandom.com/wiki/HnK_Chapter_210"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [145],
+      "kind": "divergence",
+      "chapters": "195-196",
+      "note": "The duel's close follows the manga but is re-dressed: Hyoh's flashback of the infant Kenshiro being put on the boat is anime-original, Lin finds the knife herself under the pillow (Kaioh hands it to her in the manga, unarmoured and much closer, in far less clothing), extra rounds of the fight and Kenshiro tearing his own jacket are added, and Hyoh's final technique is never named on screen (Manju Maon Ken in the manga). [batch 20 wave 10g]"
+    },
+    {
+      "episodes": [146],
+      "kind": "divergence",
+      "chapters": "197-198",
+      "note": "The Taiseiden ambush keeps the manga's spine inside a rebuilt frame: an Asura manhunt for Shachi is added, Leia joins him by collapsing in the wasteland instead of meeting the group, Tao rather than Kuroyasha brings Kenshiro the news, Kaioh keeps his helmet on, the floor gives way because Shachi pulls at the glowing stone rather than from Kaioh's missed blow, and Shachi only loses the use of his limbs where the manga tears them off. [batch 20 wave 10g]"
+    },
+    {
+      "episodes": [147],
+      "kind": "rearranged",
+      "chapters": "199-200",
+      "note": "Shachi's death is moved: the manga kills him in ch 199, before Kenshiro reaches Taiseiden in ch 200; the anime holds him alive until after Kenshiro has taken the Soke's secret from the obelisk, so he dies at the episode's end. The manga's other Taiseiden closer — the statue's broken arm pointing the way to Kaioh — is cut and replaced in ep 148 by Kuroyasha reporting his location. [batch 20 wave 10g]"
+    },
+    {
+      "episodes": [148],
+      "kind": "rearranged",
+      "chapters": "201-202",
+      "note": "The order inside the episode is inverted against the manga. Manga: Kenshiro arrives, Kaioh strikes Lin's Shikanhaku almost at once (ch 201), the fight starts, and only later, when a stray blast hits his mother's grave marker, does Kaioh tell her story (ch 202). Anime: the mother's story comes first, then an anime-original exchange (a revived Muso Tensei and 'Raoh's fist' — Muso Tensei is used against Kaioh only in ch 184 in the manga), and the Shikanhaku strike closes the episode. The ch-202 flashback pages air here and nowhere else. [batch 20 wave 10g]"
+    },
+    {
+      "episodes": [149],
+      "kind": "rearranged",
+      "chapters": "204-205",
+      "note": "Two moves. Kenshiro speaks Raoh's request — that his brother be beaten as a hero rather than left to rot as a demon — on the surface here; the manga stages that conversation down in the cavern. And Zebra's defeat, which the manga plays after Kenshiro has already been dropped into the depths, is pulled forward to before the descent. The episode also drops ch 203's flashback of Raoh crossing to the Land of Asura and confronting Kaioh, which is never animated. [batch 20 wave 10g]"
+    },
+    {
+      "episodes": [149, 150],
+      "kind": "divergence",
+      "chapters": "203-206",
+      "note": "Samoto and Numeri are fused into one character — Numeri's design, Samoto's name and manner — so the manga's chain (Numeri kills Samoto's men, then Samoto, then takes Lin, then Hyoh kills him) collapses into a single Asura whom Hyoh kills. Ep 150 also adds an adult Ryuo, who never appears grown in the manga, and gives him the founding of Hokuto Ryuken, and adds Oka's plea that Ryuo be spared. [batch 20 wave 10g]"
+    },
+    {
+      "episodes": [151],
+      "kind": "divergence",
+      "chapters": "208-209",
+      "note": "Bat crosses the sea alone in the manga; the anime lands him with the whole Hokuto Army and Rihaku. Kuroyasha dies only after Lin's safety is confirmed (in the manga immediately, buried under the corpses), the fresh Asura wave is dozens of men instead of one, no Asura carries Lin off, and Kaioh shatters his armour later than he does on the page. [batch 20 wave 10g]"
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [],
+  "structure": {
+    "notes": "CHAPTER SPACE: the 245-chapter WSJ numbering, as ruled at flag #688. Every chapter page used here carries a volume that matches our stored boundary table exactly (196 -> v22 [189-197], 198/200/202/205 -> v23 [198-206], 207/209 -> v24 [207-215]), so no conversion is involved; MU's latest_chapter 71 (open flag #1047) is not this space and is not used. MY FIRST ROW OPENS ON CH 195 'The Fool!!': ep 144 closes on ch 194's own title beat (Kaioh unmasks as Raoh's elder brother; the Soke blood 'revives' in Hyoh), so the 139-144 sub-block should land on 194 for its last anchor — if that agent finds ep 144 stopping mid-194 instead, ep 145's START becomes 194 (cont.) and nothing else in this file moves. MONOTONE CHAIN inside the outer fence: 108 -> 136 ... 145 -> 196, 146 -> 198, 147 -> 200, 148 -> 202, 149 -> 205, 150 -> 207, 151 -> 209, 152 -> 210 (stored, CONFIRMED — ch 210 is Kaioh's and Hyoh's deaths, which are ep 152's closing scenes; no fence repair). Pace ~2.0 chapters/episode, matching the block's 136 -> 210 average. INSTRUMENTS: hokuto.fandom has no episode pages but its 245 chapter pages carry volume, page count and Characters in Order of Appearance, and its character pages carry a two-way index — Hahaja 'Manga (ch. 202), Anime (ep. 148)', Zebra 'ch. 203-205 / ep. 149', Samoto 'ch. 201-206 / ep. 149-150', Numeri 'ch. 206 / ep. 149-150', Oka and Shume 'ch. 207 / ep. 150', Bat 'ch. 209-211 / ep. 151-152', Shachi 'ch. 166-200 / ep. 125-147', Leia 'ch. 169-200 / ep. 126-148', Kaioh's horse 'ch. 180-201 / ep. 133-149'. Those pins are what make 148-151 high confidence; 145/146/150 rest on chapter titles plus cast order plus the two per-episode sites and are marked medium. FIELD CAVEAT (read both directions): the same index gives Kuroyasha 'Anime (ep. 139, 143-150)', but Kuroyasha dies in EP 151 on both hokutosite and RQ87 — the anime side of that field under-reports, exactly the kingdom.fandom failure mode; its manga side (ch 192-209) is corroborated by ch 209's {{Death}} tag and was used. NEVER-ANIMATED PAGES inside this block: ch 202's fight pages (the boiling-mud grapple, the grave marker shattering, Kaioh baring his self-inflicted scars) and ch 203's flashback of Raoh reaching the Land of Asura and confronting Kaioh. ROW 150 IS NOT A RECAP: 'The Final Chapter: Three Episodes Remaining' is a broadcast banner; the episode adapts the cavern, the bloodline reveal and the whole of ch 207 — stays canon.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "Neighbouring sub-block cross-check (139-144, another agent's rows): RQ87 states for ep 145 that the manga's flashback of Kaioh and Hyoh training — Kaioh's attempt on Hyoh's life, stopped by Jukei, and the theft of Hyoh's memory — 'was used earlier in the anime, in the previous episode', and RQ87's ep 144 page repeats it ('the flashback scene with Kaioh, Hyoh and Jukei isn't shown until later on in the manga'). hokuto.fandom puts a Jukei {{Flash}} in ch 196. That reads as a graft{196} on ep 144, i.e. ep 144's END should still be 194 with a graft annotation, not an END of 196. Worth checking against the 139-144 verdict before landing.",
+    "Medium-confidence seam, ep 149/150: the exact chapter of the descent into the cavern. RQ87 is explicit that in the manga Zebra is defeated AFTER Kenshiro and Kaioh go down, and hokutosite says the Raoh-request conversation happens in the underground cavern in the manga, which places the cavern at ch 204-205 while ep 149 ends on 205's Zebra pages. I have delivered ep 149 END 205 + C1 continue 205 + ep 150 START 205 (cont.). If a page-level source later shows the descent opening ch 205 rather than sitting inside it, ep 149's END drops to 204 and its continue to 204; ep 150 is unaffected.",
+    "Ep 148's END rests on the 'pages, not numbers' ruling: the ch-202 flashback is played out of order but airs for the first and only time there (ep 149 deletes the surrounding ch-202 pages), so the END advances to 202 with a rearranged annotation rather than staying 201 with a graft. The alternative reading (END 201, graft{202}) is the ep-30/ch-41 shape and would leave ch 202 marked never-adapted, which is false."
+  ]
+}
