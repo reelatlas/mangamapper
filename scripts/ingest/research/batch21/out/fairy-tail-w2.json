@@ -1,0 +1,98 @@
+{
+  "series_id": "fairy-tail",
+  "summary": "ONE target row, and AFL and the stored type (mixed) are RIGHT — animefillerguide is the source that lied, by a mechanism worth naming: it types the row by ARC MEMBERSHIP, not by content. AFG's chart puts a 'Daphne' arc header above rows 069-072 and 073-075 and strikes every one of them through as '* Filler / N/A', then hands the WHOLE of chapter 165 to row 076 ('165, 166'). That is a single-assignment convention on a chapter the anime actually SPLITS, and it erases the episode's first act. Two independent sources beyond the two labels settle it. (1) fairytail.fandom page-partitions ch 165 across exactly two rows, explicitly and non-overlappingly: Episode 69's infobox reads 'Adapted = Chapter 165 (to page 16)' and Episode 76's reads 'Adapted = Chapter 165 (from page 17) / Adapted 2 = Chapter 166'; the reverse direction agrees — Chapter 165 ('Wendy the Fairy Girl' / 妖精少女のウェンディ, volume #20) carries 'relepisode = Episode 69 <br> Episode 76'. Beat for beat, ch 165's own summary is ep 69's first act: Gemini, Aries and Scorpio asking Lucy to be their master after Angel's arrest; the boat home; Wendy and Carla arriving at the guild and being mobbed; Mirajane's welcome; the Sky Dragon Slayer reveal; Gajeel envying the other Dragon Slayers their cats; Makarov's party; Mystogan appearing on the balcony and vanishing — every one of those is in ep 69's summary and in NO other episode. The chapter's last pages ('a few days later ... the bells ring, Gildarts is back') are ep 76's opening, six episodes later. (2) The licensor: Bandai Channel's own synopsis for 第69話「竜の誘い」 opens 「妖精の尻尾（フェアリーテイル）」に久しぶりに帰ってきたナツ達。変わらないギルドの空気に触れ、激戦の疲れも癒えてきた。ウェンディとシャルルも仲間に加わる事になり、盛り上がるギルド！ — the guild return, Wendy and Carla joining, the celebration — and only THEN 数日後 ... グレイが驚くべき情報をもたらす (Gray's Daphne rumour). The manga act is where the licensor's own summary starts and it is the larger half of that summary. T28 accounting: segment 1 (weight: SIGNIFICANT) = ch 165 pp.1-16, sixteen pages, the Oración Seis arc's entire epilogue and a permanent status change for the cast (Wendy and Carla join Fairy Tail; Lucy gains three Zodiac keys), NEW and sole-adapted — ep 68 ends at ch 164 and ep 76 resumes at p.17; segment 2 (weight: n/a, no source pages) = the Daphne arc's opening, an anime-original plot with an anime-original antagonist (Daphne, the Lizardmen, Gray's staged betrayal) plus an anime-original Ultear/Hades cold open. Source plus anime-original, both story-carrying, in one episode = MIXED (T27). Nothing here reaches the sole-adaptation exception, and it is not needed: this is a plain mixed row. CONSEQUENCE: the row is mixed and carries no anchor today, which leaves eps 69-75 interpolating between ep 68's END 164 and ep 76's END 166 — I propose the anchor the accounting supports, ep 69 -> 165 [165] {165 (p.1-16)}, volume 20.",
+  "anchors": [
+    {
+      "episode": 69,
+      "end_chapter": 165,
+      "start_chapter": 165,
+      "chapters_adapted": "165 (p.1-16)",
+      "volume": 20,
+      "confidence": "high",
+      "note": "NEW anchor — none is stored for this row, and the gap it fills is real: today ep 68 -> 164 and ep 76 -> 166 [165] with nothing between, so eps 69-75 interpolate and ch 165's first sixteen pages are invisible. A4: END = 165, the furthest mainline chapter adapted in running order, and it is a genuine frontier advance (ep 68's END is 164). A10: START = 165 — the episode's cold open (Ultear reporting to Hades aboard an airship) has no source pages, so the first chapter animated is 165 itself; there is no leading partial of 164 to weigh. A47 does NOT hold this END back: A47 is for a trailing scrap the NEXT anchored episode starts on, and here the geometry is the opposite — ep 69 owns the chapter's HEAD (pp.1-16) and ep 76 owns the tail (from p.17), so this is the ordinary page-split shape the catalog already carries at fairy-tail 245/246 ('Chapter 380 (to page 21)' / '(from page 22)'). Sixteen pages is far past any sliver line, and the split is the wiki's own, exact and non-overlapping, stated on BOTH episode pages and confirmed from the chapter side (Chapter 165 'relepisode = Episode 69 <br> Episode 76'). Volume 20: the fandom's Chapter 165 page says 'volume = #20' and the stored boundary table says v20 = ch 161-169 — the two agree, so no chapter-space question arises (N35: Fairy Tail runs in one printed space, AniList 545 chapters / 63 volumes, and no sourceShift is recorded for it). Sizing caveat: ch 165's TOTAL page count is not stated anywhere I could read — MangaDex holds only 13 chapters of this title (aggregate checked via the API, not the filtered web page; ch 164/165/166 are all absent) — so 'pp.1-16' is an absolute page count, not a percentage.",
+      "sources": [
+        "https://fairytail.fandom.com/api.php?action=parse&page=Episode%2069&prop=wikitext&format=json",
+        "https://fairytail.fandom.com/api.php?action=parse&page=Episode%2076&prop=wikitext&format=json",
+        "https://fairytail.fandom.com/api.php?action=parse&page=Chapter%20165&prop=wikitext&format=json",
+        "https://fairytail.fandom.com/api.php?action=parse&page=Episode%2068&prop=wikitext&format=json",
+        "https://www.b-ch.com/titles/4189/069",
+        "https://www.animefillerguide.com/anime/fairy-tail/"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 69,
+      "continue_chapter": 165,
+      "kind": "parity",
+      "note": "C1 and C2 agree on 165, which is why this is safe: the episode stops inside ch 165 at p.16 (C1 — continue IN the straddled chapter), and the next canon row, ep 76, STARTS at ch 165 p.17 (C2 parity), with eps 70-75 filler in between and nothing skipped. The reader who stops after ep 69 resumes at ch 165 and will re-read at most the sixteen pages the episode just showed. Downstream consequence for the healer, recorded not proposed: once ep 69 is anchored, ep 68's continue should land on 165 as well (it currently has none stored).",
+      "sources": [
+        "https://fairytail.fandom.com/api.php?action=parse&page=Episode%2076&prop=wikitext&format=json",
+        "https://fairytail.fandom.com/api.php?action=parse&page=Chapter%20165&prop=wikitext&format=json",
+        "https://www.animefillerguide.com/anime/fairy-tail/"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [
+        69
+      ],
+      "kind": "partial",
+      "chapters": "165 (p.1-16)",
+      "note": "weight: SIGNIFICANT — because sixteen pages of ch 165 carry the whole close of the Oración Seis arc and a permanent change to the cast: Wendy Marvell and Carla formally join Fairy Tail, and Lucy receives the Gemini, Aries and Scorpio keys from Angel's broken contracts. Size is not the test, but size does not undercut it either: this is the episode's entire first act, and it is where Bandai Channel's own synopsis for 第69話 begins. The material is NEW, not a duplicate: ep 68 adapts ch 163-164 and stops (fandom infobox 'Adapted = Chapter 163 / Adapted 2 = Chapter 164'), and ep 76 resumes at 'Chapter 165 (from page 17)' with the Fairy Hills conversation and Gildarts' return — the only pages of ch 165 that ep 69 does not carry. No other episode animates pp.1-16. The tail (p.17-end) is adapted in full by ep 76, whose stored anchor already carries START 165, so nothing is left unread by this split.",
+      "sources": [
+        "https://fairytail.fandom.com/api.php?action=parse&page=Episode%2069&prop=wikitext&format=json",
+        "https://fairytail.fandom.com/api.php?action=parse&page=Episode%2076&prop=wikitext&format=json",
+        "https://fairytail.fandom.com/api.php?action=parse&page=Chapter%20165&prop=wikitext&format=json",
+        "https://fairytail.fandom.com/api.php?action=parse&page=Episode%2068&prop=wikitext&format=json",
+        "https://www.b-ch.com/titles/4189/069"
+      ]
+    },
+    {
+      "episodes": [
+        69
+      ],
+      "kind": "divergence",
+      "chapters": "no source chapters — anime-original second act",
+      "note": "weight: n/a (this segment has NO source pages) — and it is what keeps the row out of plain canon. Roughly the back half of the episode opens the anime-original Daphne arc: Gray tells Natsu that a woman named Daphne has seen a Dragon; Erza is ambushed in an alley by a hooded copy of herself; Natsu, Wendy, Happy and Carla are sealed inside Daphne's illusory inn; Gray turns on Natsu. Daphne, the Lizardmen and the Dragonoid exist only in the anime (fairytail.fandom files ep 69 under Category:Anime Exclusive Episodes together with the rest of the arc, and the 'Daphne arc' page carries the same category). The episode's cold open — Ultear reporting the Oración Seis' defeat to Hades — is likewise not in ch 165 (neither appears in the chapter's Characters in Order of Appearance list; Grimoire Heart is not introduced in the manga at this point). Original plot of this weight, alongside a significant source act, is exactly T27's `mixed`.",
+      "sources": [
+        "https://fairytail.fandom.com/api.php?action=parse&page=Episode%2069&prop=wikitext&format=json",
+        "https://fairytail.fandom.com/api.php?action=query&list=categorymembers&cmtitle=Category:Anime%20Exclusive%20Episodes&cmlimit=500&format=json",
+        "https://fairytail.fandom.com/api.php?action=parse&page=Chapter%20165&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=FAIRY_TAIL&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [
+    {
+      "episodes": [
+        69
+      ],
+      "type": "mixed",
+      "confidence": "high",
+      "reason": "CONFIRMATION — the stored type is CORRECT and AFL ('Mixed Canon/Filler', 2011-03-07) is right; delivered as a type entry so Sean can pin it (T6) against the AFG class, and because the row simultaneously gains an anchor that A1 would bar if the type were ever flipped to filler. Segment 1 (weight: SIGNIFICANT): ch 165 pp.1-16 — the guild's return, Wendy and Carla joining Fairy Tail, Lucy's three new Zodiac spirits, the welcome party, Mystogan on the balcony. Two independent witnesses: fairytail.fandom's page split, stated from both sides (Episode 69 'Chapter 165 (to page 16)', Episode 76 'Chapter 165 (from page 17)', Chapter 165 'relepisode = Episode 69 <br> Episode 76') with ch 165's own summary matching ep 69's summary beat for beat; and Bandai Channel's licensor synopsis, which opens on precisely that act. Segment 2 (weight: n/a, no source pages): the Daphne arc's opening, anime-original. Source + anime-original in one episode, both story-carrying -> mixed. WHO LIED AND HOW: animefillerguide, whose row 069 is red-classed '* Filler' with 'N/A' in the chapter cell, sits under an arc header reading 'Daphne', and whose row 076 is given the undivided '165, 166'. Its class is an arc-block judgement and its chapter column a single-assignment reading position — neither is a content claim about this row. TWO honest dissents, stated rather than hidden, and neither is a per-share claim: (i) ja-Wikipedia bolds ep 69's subtitle 竜の誘い, and its legend (「サブタイトルが太字の回はアニメオリジナルストーリー」) makes that an anime-original-story mark — a whole-episode flag, of exactly the kind the catalog already records as under-marking (ep 73 虹の桜, filler on every other source, is NOT bolded; ep 256, our T6 mixed row, is not bolded either); (ii) fairytail.fandom's own Category:Anime Exclusive Episodes contains ep 69 — while the SAME wiki's infobox on the same page names the sixteen adapted pages. Where a blanket marker and a page-level partition conflict, the partition is the positive, checkable claim, and the licensor synopsis independently corroborates the content it names.",
+      "sources": [
+        "https://www.animefillerlist.com/shows/fairy-tail",
+        "https://www.animefillerguide.com/anime/fairy-tail/",
+        "https://fairytail.fandom.com/api.php?action=parse&page=Episode%2069&prop=wikitext&format=json",
+        "https://fairytail.fandom.com/api.php?action=parse&page=Episode%2076&prop=wikitext&format=json",
+        "https://fairytail.fandom.com/api.php?action=parse&page=Chapter%20165&prop=wikitext&format=json",
+        "https://www.b-ch.com/titles/4189/069",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=FAIRY_TAIL&prop=wikitext&format=json",
+        "https://fairytail.fandom.com/api.php?action=query&list=categorymembers&cmtitle=Category:Anime%20Exclusive%20Episodes&cmlimit=500&format=json"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "ROW IDENTITY FIRST. animefillerlist's live fairy-tail page holds 329 <tr> = 328 episode rows against our 328 — 1:1 — and every reading was keyed by TITLE + AIR DATE, never index: 69 = 'Call of the Dragon', 2011-03-07, matching the context, with 68 (2011-02-28, Manga Canon), 70 (2011-03-14, Filler) and 76 (2011-04-23, Manga Canon) checked around it. animefillerguide's chart interleaves arc-header rows AND carries a second, season-relative number column ('(21)' beside '069.'), so it was joined on the absolute number plus title; note also that its row 073 is a Filler row that ja-WP does NOT bold, so the two filler-marking instruments are independent of each other. ja-WP's FAIRY TAIL 各話リスト was parsed line-wise and its two bold conventions kept distinct per the legend at 「サブタイトルが太字の回はアニメオリジナルストーリー、話数が太字の回は…再放映」 — only the SUBTITLE mark was read as a typing claim; ep 69's subtitle is bolded, ep 69's number is not. CHAPTER SPACE (N35): one printed space throughout — the fandom's Chapter 165 page says volume #20, the stored boundary table says v20 = ch 161-169, AniList says 545 chapters / 63 volumes; no sourceShift is recorded for Fairy Tail and none is needed. PAGE-LEVEL CHECK ATTEMPTED AND FAILED, stated so no one repeats it: MangaDex's Fairy Tail entry (227e3f72-863f-46f9-bafe-c43104ca29ee) was queried through the aggregate API rather than the language-filtered web page and holds only 13 chapters, none of them 164-166 — so ch 165's total page count is unverifiable and 'pp.1-16' stands as an absolute count. THE SHAPE THIS ROW BELONGS TO: it is the same page-split shape as fairy-tail 245/246 (ch 380 'to page 21' / 'from page 22'), with one difference that makes this case easier — here the episode owns the chapter's HEAD, sixteen pages, not a closing fragment, so no sole-adaptation exception and no A47 argument is needed to justify either the type or the anchor.",
+    "coverage_set_checked": "ep 67 {161-162}, ep 68 {163-164}, ep 69 {165 pp.1-16}, eps 70-72 {no source pages — Daphne arc, AFG red, ja-WP bold, fandom Category:Anime Exclusive Episodes}, ep 73 {no source pages — AFG red, ja-WP NOT bold, not in the fandom category}, eps 74-75 {no source pages}, ep 76 {165 p.17-end, 166}, ep 77 {167-168}. Chapter 165 is page-partitioned across exactly two rows with no overlap and no gap; every other chapter in the window is single-assigned."
+  },
+  "flags_for_sean": [
+    "THE ASK IS ANSWERED AS A CONFIRMATION, but the row is not a no-op: ep 69 is typed correctly today and carries NO anchor, so the display interpolates ch 165 across the whole Daphne block. The deliverable here is the anchor (ep 69 -> 165 [165] {165 (p.1-16)}) plus the type pin that protects it from A1 if the AFG class ever wins a re-derive. If you take the anchor, ep 68's continue should land on 165 as well.",
+    "AFG's failure mode on this series is ARC-BLOCK typing, not a plateau: it prints an arc header ('Daphne') and strikes through every row beneath it, then gives the shared chapter wholly to the first row AFTER the block. That will mis-type the FIRST episode of any anime-original arc that opens by finishing the previous chapter — a common shape. Fairy Tail has more such seams than this one (the Key of the Starry Sky block at 125-150, the Eclipse Celestial Spirits block at 204-218, per the same fandom category); I did NOT research them, this is a pointer.",
+    "A WITHIN-WIKI CONFLICT worth knowing before the next Fairy Tail task: fairytail.fandom simultaneously says ep 69 adapts 'Chapter 165 (to page 16)' (infobox, mirrored on ep 76 and on the Chapter 165 page) and files it under Category:Anime Exclusive Episodes (55 members, arc-shaped: 19, 69-72, 74-75, 125-150, 204-218, 221, 225, 268 — note 73 is absent, matching ja-WP's unbolded 73). The category tracks ARC membership; the infobox tracks pages. They are not two sources, and only the infobox is a per-share claim."
+  ]
+}

@@ -1,0 +1,382 @@
+{
+  "series_id": "naruto-shippuden",
+  "summary": "Six rows settled by chapter accounting on three legs beyond AFL and AFG: (1) Narutopedia's EPISODE synopses, (2) Narutopedia's CHAPTER pages (separate pages, content claims), (3) TV Tokyo's own archived per-episode synopses (the licensor, Wayback 2011-01-22, Shift-JIS), with ja-Wikipedia's 太字 = 全編アニメオリジナル marker as a control. Row identity joined on title + air date (R20), no offset: our 71/72/112/176/178/181 = ja-WP 通算 291/292/332/396/398/401 = TV Tokyo's 291話 friend/292話 忍び寄る脅威/332話 帰るべき場所/396話 新米教師イルカ/398話 イルカの決意/401話 ナルト、仇討ち指南塾 = AFL 71/72/112/176/178/181 = AFG 071/072/112/176/178/181.\n\nRESULT: ONE type flip (112 -> mixed, with an anchor), FIVE confirmations (71, 72, 176, 178, 181 stand as stored). AFG's Mixed class is right about the PRESENCE of source content on all six rows and wrong about the standing on five of them; AFL is right on five and wrong on 112.\n\nWHAT AFG'S 'MIXED' ACTUALLY MEANS — the ep-72 witness. AFG's class is a VIEWING-GUIDE opinion and it conflates two different things: 'partly anime-original' and 'partly material you have already watched'. Ep 72 is the proof. AFG types it Mixed and tells you to watch only 10:20-14:25 and 18:38-end (~7.5 of ~21 minutes) — but the two windows it keeps are exactly ch 313's two first-time scenes (Asuma starting to tell Kakashi something before Kurenai interrupts; Yugito's defeat by Hidan's ritual), and what it tells you to skip is ch 312's Sai/new-technique material ALREADY ANIMATED in ep 54 (stored anchor ep 54 = 311-312) and re-staged here from a lunch into the hospital, plus ch 314's grave visit. That is duplicated SOURCE material, not filler. Under T28's recap clause a re-told already-covered share counts for nothing in the standing and the REMAINDER decides — and ep 72's remainder is source. AFL is right: CANON CONFIRMED.\n\nEP 71 'My Friend' (友よ) — FILLER CONFIRMED, and AFG's chapter cell on this row is bad data. AFG prints chapters '120, 121'; Naruto chs 120-121 are 'Hokage vs. Hokage!!' and 'The Horrible Experiment…!!', the Part-I Hiruzen-vs-Orochimaru fight (vol 14), which have nothing to do with this episode — so on THIS row AFG's chapter column and Narutopedia's infobox are NOT one lineage (contrast wave 1's finding for 175-197). Narutopedia's infobox gives 312, 316 and its synopsis identifies both: (a) 'Asuma and Shikamaru play a game of shōgi where they discuss the king of Konoha. Shikamaru states that it is the Hokage, and Asuma tells him that he once thought the same thing, but that Shikamaru would one day learn otherwise' = ch 316 'Training, Begin!!' verbatim ('Asuma makes an uncharacteristic move, sacrificing a knight to protect the king … Asuma tells him that he has the identity of the king wrong, and that he'll learn someday'); (b) 'Hidan attempts to strike her with his Triple-Bladed Scythe but misses, and Kakuzu warns his partner not to take the woman lightly, as she is the Two-Tails' jinchūriki' = ch 312's closing page ('Elsewhere, Akatsuki members Hidan and Kakuzu attack Yugito Nii'). AFG's own timed note (16:40 to the end; Crunchyroll 18:09) sizes both at ~4 minutes of ~21. The other ~16:40 is the climax and resolution of the anime-original Twelve Guardian Ninja arc (Kazuma killed, the Nine-Tails chakra expelled from Sora, Sora leaving Konoha) — TV Tokyo's 291話 synopsis is entirely that story and closes with one teaser sentence, 「だがその頃、遠く離れた地では『二尾』狩りを開始する暁の二人、飛段と角都の姿があった」. The ch-312 fragment is a teaser AND a duplicate: ep 72 STARTS on ch 312 and re-covers the confrontation. The ch-316 shōgi scene IS sole — I checked ep 55 ('Wind', chs 314-316), whose whole 21 minutes are the nature-transformation lecture, the litmus paper and the shadow-clone method with no shōgi at all, and ep 56's shōgi game is the different, ch-317 one (the barbecue bet, interrupted by Naruto's clone) — but the sole-adaptation exception needs BOTH halves and the second fails: a knight-and-king riddle that Asuma explicitly leaves unanswered ('you'll learn someday') is foreshadowing, not a death, a reveal or an arc close. Filler stands; both ties annotated.\n\nEP 112 'A Place to Return To' (帰るべき場所) — MIXED (type_correction; AFL wrong, AFG right) + anchor 318 [START 317]. The episode's closing block is a complete, first-time adaptation of chs 317-318's AKATSUKI thread: Deidara summons the Three-Tails with detonating clay, hands the job to Tobi who cannot do it, flips the turtle with C1 and knocks it out, then tows it to the Akatsuki base with two clay birds — Narutopedia's ep-112 synopsis and Narutopedia's ch-317/318 pages agree scene for scene, AFG times it at 13:38-17:16 + 17:46-19:39 (~5.5 of ~21 minutes, the episode's climax), and TV Tokyo's own 332話 synopsis names it: 「そしてナルト達の出立の日、湖には三尾を求めてやってきた暁のデイダラとトビの姿があった」. SOLE, verified against the whole coverage set: chs 317-318 are thread-partitioned, and every other episode that carries them carries only the KONOHA half — ep 56 (Naruto's leaf training, Asuma's chakra-blade lesson, Tsunade's D-rank assignment), ep 73 (the waterfall stage; ch 314's Zetsu/Fire Temple), ep 74 (the Nijū Shōtai deployed, the waterfall severed). Nothing in eps 91-111 (all Filler on AFL, all N/A on AFG) animates Deidara and Tobi. And it is an ARC CLOSE in the source's own terms — the Three-Tails is captured and delivered, which is how the anime-original arc is reconciled with the manga. Both halves of the sole-adaptation exception hold, and independently the segment is a substantial, story-carrying part of this episode's own plot (it IS the arc's resolution), so T28's plain materiality bar reaches the same answer.\n\nEPS 176 / 178 / 181 — FILLER CONFIRMED, all three (AFL right). They are the same shape as ep 180, which Sean ruled filler in wave 1, not the same shape as ep 179, which he ruled mixed — and the licensor's synopses are the discriminator. TV Tokyo's 399話 (ep 179) LEADS with the source beat: 「ペイン戦直後、火の国の大名殿では…ダンゾウは倒れた綱手に代わる新たな火影を選出すべきと提案するが…」. TV Tokyo's 396話, 398話 and 401話 do not mention their source frames AT ALL — 396話 is wholly Iruka's memory of the rookie-teacher year, 398話 wholly the forest/kunai story, 401話 opens 「イナリ、タヅナと久々の再会を喜び合うナルトとサクラ。二人は…ある出来事を思い出す。約三年前…」, i.e. the reunion is explicitly the device that triggers a three-years-ago anime-original story. Their source frames are real, first-time and sole, but each is a 2-4 minute bookend that produces no plot fact: 176 = Zetsu deciding to report Pain's death and Team Samui setting out (AFG 1:48-3:58, ch 450); 178 = Taka mobilising after Suigetsu retrieves the Kubikiribōchō and Zetsu telling Tobi and Kisame that Pain is dead and Konan has left, Tobi assigning Kisame the Eight-Tails (AFG 18:02-end, chs 449-450 — 449 is Konan's departure); 181 = Kakashi thanking Tazuna and Inari, Naruto covering for Sasuke's absence and concluding that he now understands him (AFG 18:15-end, ch 451). Ch 450 is thread-partitioned across eps 175/176/178/179 and ch 451 across eps 180/181/197, so every one of these frames is sole — but soleness alone is not the test (Sean, ep 180), and none of the three carries a death, a reveal or an arc close the way ep 179's appointment of the Sixth Hokage does. Each gets a mandatory annotation with its weight and its reason; no anchors (A1).\n\nWHO LIED, precisely. AFL: right on 71, 72, 176, 178, 181; wrong on 112, where its Filler bucket swallows a five-and-a-half-minute first-time adaptation that closes a manga thread — and AFL is capable of the distinction here, since it types eps 54 and 56 'Mixed Canon/Filler' for exactly this shape. AFG: right that all six rows contain source material and its timed notes are the best sizing instrument available; its CLASS is wrong on 71/72/176/178/181 because it means 'do not watch all of this', which covers re-covered canon (72) and two-minute bookends (176/181) alike; and its chapter CELL is wrong on 71 (120, 121). ja-Wikipedia: over-marks — it bolds 71, 112, 176, 178, 181 (and 179) as 全編アニメオリジナル although all six carry timed source frames; it does NOT bold 72, which is its one useful positive signal here.",
+  "anchors": [
+    {
+      "episode": 112,
+      "end_chapter": 318,
+      "start_chapter": 317,
+      "chapters_adapted": "317 (Akatsuki thread only: Deidara and Tobi arrive at the lake for the Three-Tails, Tobi flees in fright and Deidara has to intervene), 318 (Akatsuki thread only: the Three-Tails knocked out with C1 and towed to the Akatsuki base on two clay birds)",
+      "volume": 35,
+      "confidence": "high",
+      "note": "A4/A10. Delivered together with the type_correction to mixed — while the row is typed filler A1 forbids the anchor, so the two must land in the same wave. END 318 = the furthest mainline chapter the episode adapts; START 317 = the first (a full scene, not a leading sliver, so A10's sliver test does not bite). Volume 35 per the stored boundary table (310-319) and Narutopedia's ch-317/318 infoboxes. PAGES, NOT NUMBERS (Sean 2026-08-27): chs 317 and 318 were already ENDs at eps 56 and 74, but those episodes animate only the chapters' KONOHA half — the Akatsuki half is animated for the first time here, 56 episodes later, so it is a real position. It is deliberately BEHIND ep 90's END 343 and ep 113's 343-344; the row therefore carries a `rearranged` annotation and must not be read as advancing or regressing the frontier. In-series precedent for a back-jump of this size: eps 119-120 (Kakashi Gaiden, chs 239-244) sit behind ep 118's 352. Three legs: Narutopedia's ep-112 synopsis, Narutopedia's ch-317 and ch-318 pages, TV Tokyo's own 332話 synopsis; AFG's timed windows (13:38-17:16, 17:46-19:39) size it and AFG's chapter cell independently prints 317, 318.",
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=A%20Place%20to%20Return%20To&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=The%20Beginning%20of%20the%20Nightmare!!&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Smooth%20Training&prop=wikitext&format=json",
+        "https://web.archive.org/web/20110122041021/http://www.tv-tokyo.co.jp/anime/naruto/episodes2009.html",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 112,
+      "continue_chapter": 343,
+      "kind": "parity",
+      "note": "C2 parity with the anime. The reader's forward position is unchanged by this episode: ep 90 already ended on ch 343 and its stored continue is 343/parity, and ep 113 ('The Serpent's Pupil') opens on ch 343 (AFG 343, 344; Narutopedia 343, 344). Ep 112's own coverage is a BACKWARD, first-time pass over chs 317-318's Akatsuki thread — reading it does not move the frontier, and chs 319-342 were read long ago (eps 74-89). So: resume at ch 343. WARNING for the apply layer (the same hazard wave 1 named): the healer sets a parity continue to the NEXT ANCHORED row's START, and the next anchored row after 112 is ep 118 (START 351) — that would silently skip chs 343-350, which eps 113-117 do adapt. Either pin this continue at the manual tier, or anchor eps 113-117 in the same wave, or drop this continue and leave ep 90's 343/parity to carry the zone.",
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=A%20Place%20to%20Return%20To&prop=wikitext&format=json",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/",
+        "https://www.animefillerlist.com/shows/naruto-shippuden"
+      ]
+    }
+  ],
+  "anchor_hostile": [
+    {
+      "episode": 71,
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=My%20Friend&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Training,%20Begin!!&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=The%20Creeping%20Threat!!&prop=wikitext&format=json",
+        "https://web.archive.org/web/20110122041021/http://www.tv-tokyo.co.jp/anime/naruto/episodes2008.html"
+      ],
+      "why": "A1 + A44. The row stays FILLER (the type is confirmed, see type_corrections' confirmation block and the annotations), so it takes no anchor; and both of its source segments are position-less anyway. The ch-316 shōgi scene is a one-off out-of-order beat lifted out of a chapter ep 55 already covered and dropped at the end of a filler episode as a bridge (A44: 'acts behind an earlier anchor' — ep 74 was already at ch 319), and the ch-312 fragment is a teaser tail that ep 72 STARTS on and re-covers (A47's twin: the tail belongs to the next episode). Note for the pipeline: AFG's chapter cell for this row reads '120, 121' — Part I chapters that are not in this episode — so if the row were ever typed mixed the afg writer would produce a phantom ep 71 -> ch 121 anchor; A1 is the only thing suppressing it today."
+    },
+    {
+      "episode": 176,
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=Rookie%20Instructor%20Iruka&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=The%20Joyous%20Village!!&prop=wikitext&format=json",
+        "https://web.archive.org/web/20110122041021/http://www.tv-tokyo.co.jp/anime/naruto/episodes2010.html",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/"
+      ],
+      "why": "A1: the row stays FILLER. Its only source content is ch 450's Akatsuki/Kumo thread in a 2:10 window (AFG 1:48-3:58) — Zetsu deciding to report Pain's death to Tobi, and Team Samui setting out for Konoha. Real, first-time and sole (ch 450 is thread-partitioned across eps 175/176/178/179), but weightless under T28's sliver clause: a setup bookend with no resolution, exactly the shape Sean ruled filler on ep 180. Ch 450's position is carried by ep 175 (END 450) and by ep 179's Sean-ruled anchor."
+    },
+    {
+      "episode": 178,
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=Iruka's%20Decision&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=The%20Joyous%20Village!!&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Flowers%20of%20Hope&prop=wikitext&format=json",
+        "https://web.archive.org/web/20110122041021/http://www.tv-tokyo.co.jp/anime/naruto/episodes2010.html"
+      ],
+      "why": "A1: the row stays FILLER. Its source content is the closing bookend only (AFG 18:02 to the end): Taka mobilising once Suigetsu returns with the Kubikiribōchō, and Zetsu telling Tobi and Kisame that Pain has been killed and Konan has left, with Tobi assigning Kisame the Eight-Tails. Sole (ch 450's other threads are in eps 175/176/179) and first-time, but a bookend of setup decisions with no resolution — weightless under T28's sliver clause. Ch 450's position is carried by ep 175 and ep 179."
+    },
+    {
+      "episode": 181,
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=Naruto's%20School%20of%20Revenge&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Dealing%20with%20Sasuke!!&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=The%20Sixth%20Hokage%20Danz%C5%8D&prop=wikitext&format=json",
+        "https://web.archive.org/web/20110122041021/http://www.tv-tokyo.co.jp/anime/naruto/episodes2010.html"
+      ],
+      "why": "A1: the row stays FILLER. Its source content is ch 451's Naruto/Tazuna/Inari thread in the closing block (AFG 18:15 to the end) — the frame around an anime-original three-years-ago story that TV Tokyo's own synopsis presents in full as the episode. This is the CLOSEST call in the bundle (see flags_for_sean 3): the block is sole and it is ch 451's emotional core, but it produces no plot fact, and ch 451's position belongs to ep 197 (451-453 on both AFG and Narutopedia), which animates the chapter's Team Samui / Danzō-kill-order thread properly."
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [
+        71
+      ],
+      "kind": "rearranged",
+      "chapters": "316 (the Asuma/Shikamaru shōgi scene: the knight sacrificed to protect the king, Shikamaru naming the Hokage as Konoha's king, Asuma telling him he has the king wrong and will learn someday)",
+      "note": "weight: SLIVER — because it is a one-off out-of-order beat, not a share of this episode's plot: ch 316's OTHER half (the nature-transformation lecture and the leaf-cutting training) was animated in ep 55 sixteen episodes earlier, and the anime held this one scene back to use as the bridge out of the anime-original Twelve Guardian Ninja arc and into the Akatsuki Suppression Mission. It is NEW, not a duplicate — I checked the coverage set: ep 55 ('Wind', chs 314-316) is entirely the training with no shōgi, and ep 56's shōgi game is the different ch-317 one (the barbecue bet, interrupted by Naruto's shadow clone). It is also SOLE, so the first half of T28's sole-adaptation exception holds; the exception still does not fire because the second half fails — a riddle Asuma explicitly refuses to answer ('you'll learn someday') is foreshadowing, not a death, a reveal or an arc close. Cost stated plainly: with the row filler these pages are marked never-animated at page level even though ch 316 as a NUMBER is covered by ep 55. Sources: Narutopedia's ep-71 synopsis vs its ch-316 page (same wording, different pages); AFG's timed note 16:40-to-end sizes the whole coda at ~4 of ~21 minutes.",
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=My%20Friend&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Training,%20Begin!!&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Wind%20(episode)&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Writhe&prop=wikitext&format=json",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/"
+      ]
+    },
+    {
+      "episodes": [
+        71
+      ],
+      "kind": "partial",
+      "chapters": "312 (closing page: Hidan and Kakuzu track Yugito Nii down in Kumogakure — Hidan's scythe misses and Kakuzu warns him she is the Two-Tails' jinchūriki)",
+      "note": "weight: SLIVER — because it is a teaser AND a duplicate. TV Tokyo's own 291話 synopsis ends on it as a one-sentence trailer (「だがその頃、遠く離れた地では『二尾』狩りを開始する暁の二人、飛段と角都の姿があった」), and ep 72 — whose stored START is ch 312 — re-covers the confrontation from the beginning (Yugito luring the two into the cave, the explosive tags, the transformation), so under A47's twin the tail belongs to ep 72, not here. New pages, no position.",
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=My%20Friend&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=The%20Creeping%20Threat!!&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=The%20Quietly%20Approaching%20Threat&prop=wikitext&format=json",
+        "https://web.archive.org/web/20110122041021/http://www.tv-tokyo.co.jp/anime/naruto/episodes2008.html"
+      ]
+    },
+    {
+      "episodes": [
+        72
+      ],
+      "kind": "recap",
+      "chapters": "312 (the Sai material and the new-technique setup, first animated in ep 54 and re-told here re-staged from Team 10's lunch into Naruto's hospital room)",
+      "note": "weight: NONE (T28 recap clause — re-told material of a chapter already covered progresses nothing and counts for nothing in the standing; the remainder decides, and this episode's remainder is source). This is the segment AFG's Mixed class is actually reacting to: its 'we only watch 10:20-14:25 and 18:38-end' keeps exactly ch 313's two first-time scenes and discards the re-cover — a viewing instruction, not a claim of anime-original content. Stored ep 54 = 311-312 ('Sai's nickname study (311) and the Akatsuki talk / new-training setup (312)'), and the stored eps 72/73/74 `rearranged` note already records this block as a re-cover pass.",
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=The%20Quietly%20Approaching%20Threat&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=The%20Creeping%20Threat!!&prop=wikitext&format=json",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/",
+        "https://www.animefillerlist.com/shows/naruto-shippuden"
+      ]
+    },
+    {
+      "episodes": [
+        72
+      ],
+      "kind": "divergence",
+      "chapters": "314",
+      "note": "weight: NONE for the standing (T28 faithfulness clause — a studio-made beat inside adapted chapters is noted, never weighed toward mixed). Three anime-made elements, all of them bridge work out of the Twelve Guardian Ninja arc: (a) TV Tokyo's 292話 synopsis opens the episode on Konoha's reconstruction after the anime-original Kazuma battle, with Iruka watching Konohamaru's class help and feeling his students' growth — no manga counterpart; (b) Kakashi is shown RETURNING from an investigation with Jiraiya and reporting that Akatsuki has moved, an anime bridge (in the manga Kakashi never left Konoha during this stretch); (c) ch 314's one-page grave visit ('Asuma also visits his father's grave, and remarks that, despite their differences, the Third was a good father') is expanded into a newly drawn young-Asuma-vs-Hiruzen argument about who the king of the Land of Fire is. None of these carries a story the source lacks — (a) and (b) are connective tissue for an arc the manga does not have and (c) dramatises a line the manga does have — so the row stays CANON. I could not put a stopwatch on (c); AFG's skip windows imply the non-first-time share is large, but the ep-72 accounting shows that share is dominated by the ch-312 re-cover, not by original story.",
+      "sources": [
+        "https://web.archive.org/web/20110122041021/http://www.tv-tokyo.co.jp/anime/naruto/episodes2008.html",
+        "https://naruto.fandom.com/api.php?action=parse&page=The%20Quietly%20Approaching%20Threat&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Akatsuki%20Invades%E2%80%A6!!&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=The%20New%20Twosome!!&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [
+        112
+      ],
+      "kind": "partial",
+      "chapters": "317-318 (Akatsuki thread only: Deidara summons the Three-Tails with detonating clay, Tobi fails the assignment, C1 flips and knocks the turtle out, and it is towed to the Akatsuki base on two clay birds)",
+      "note": "weight: SIGNIFICANT — because it is a complete scene with a resolution that progresses the source's own story (a tailed beast is captured and delivered to Akatsuki), it is NEW material animated in no other episode, and it is this episode's climax and the anime-original arc's actual conclusion; AFG times it at 13:38-17:16 plus 17:46-19:39, ~5.5 of ~21 minutes, and TV Tokyo's 332話 synopsis names it as the episode's closing beat. Chs 317-318 are thread-partitioned, not fragmented: the KONOHA halves are in ep 56 (leaf training, Asuma's chakra-blade lesson, Tsunade's D-rank assignment), ep 73 (the waterfall stage) and ep 74 (the Nijū Shōtai deployed, the waterfall severed); the AKATSUKI half is here, and nowhere else. This is the segment that carries the row's mixed standing and its anchor.",
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=A%20Place%20to%20Return%20To&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=The%20Beginning%20of%20the%20Nightmare!!&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Smooth%20Training&prop=wikitext&format=json",
+        "https://web.archive.org/web/20110122041021/http://www.tv-tokyo.co.jp/anime/naruto/episodes2009.html",
+        "https://naruto.fandom.com/api.php?action=parse&page=Writhe&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [
+        112
+      ],
+      "kind": "rearranged",
+      "chapters": "317-318 (held back 56 episodes: ep 74 had already reached ch 319 and ep 90 ch 343)",
+      "note": "weight: NONE (a position note, not a standing claim). The anime split chs 317-318 by THREAD and deferred the Akatsuki half by 56 episodes so that the anime-original Three-Tails arc could end on the manga's own capture scene. The anchor delivered on this row is therefore deliberately BEHIND ep 90's END 343, and ep 113 jumps forward again to ch 343 — the display must read this as a reorder, not as a regression of the frontier. Precedent in this same series: eps 119-120 (Kakashi Gaiden, chs 239-244) sit behind ep 118's 352.",
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=A%20Place%20to%20Return%20To&prop=wikitext&format=json",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/",
+        "https://naruto.fandom.com/api.php?action=parse&page=Under%20the%20Starry%20Sky&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [
+        176
+      ],
+      "kind": "partial",
+      "chapters": "450 (Akatsuki/Kumo thread: Zetsu, having watched Pain's assault from afar, decides to notify Tobi of Pain's death; Team Samui set out for Konoha on the Fourth Raikage's mission)",
+      "note": "weight: SLIVER — because it is a 2:10 opening bookend (AFG 1:48-3:58) of a ~21-minute episode, made of two setup beats with no resolution: nobody learns anything yet (the report itself is ep 178's) and nobody arrives (Team Samui reach Konoha in ep 197). The pages ARE new and sole — ch 450 is thread-partitioned across ep 175 (the hero's welcome), ep 176 (this), ep 178 (Taka; Tobi and Kisame) and ep 179 (the daimyō's council, Sean-ruled) — but the sole-adaptation exception does not fire: no death, no reveal, no arc close. The remainder, ~18 minutes of newly drawn anime-original Academy retrospective, is the episode's job and is the whole of TV Tokyo's own 396話 synopsis. Filler stands.",
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=Rookie%20Instructor%20Iruka&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=The%20Joyous%20Village!!&prop=wikitext&format=json",
+        "https://web.archive.org/web/20110122041021/http://www.tv-tokyo.co.jp/anime/naruto/episodes2010.html",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/"
+      ]
+    },
+    {
+      "episodes": [
+        178
+      ],
+      "kind": "partial",
+      "chapters": "449, 450 (closing bookend: Taka mobilised for Konoha once Suigetsu returns with the Kubikiribōchō (450); Zetsu tells Tobi and Kisame that Pain has been killed and that Konan has left Akatsuki (449's close + 450), and Tobi assigns Kisame the Eight-Tails)",
+      "note": "weight: SLIVER — because it is a closing bookend (AFG 18:02 to the end, ~3 of ~21 minutes) made of two setup scenes: two parties decide to move, and nothing resolves inside the episode. The ch-449 tie is thin but real and is the only ch-449 fact present: Konan's desertion is ch 449's closing beat ('Konan takes Nagato's body … back to Amegakure'), and it reaches Akatsuki only in Zetsu's line here; ch 449's body (the revival, Kakashi and Sakumo, Nagato's death) was fully animated in ep 175. Sole for its ch-450 pages, but the exception does not fire — Tobi's assignment is a plot decision, not a death, a reveal or an arc close, and its payoff is 20+ episodes away. The remainder — the newly drawn Iruka/Naruto forest story, which is all TV Tokyo's 398話 synopsis describes — is the episode's job. Filler stands.",
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=Iruka's%20Decision&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=The%20Joyous%20Village!!&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Flowers%20of%20Hope&prop=wikitext&format=json",
+        "https://web.archive.org/web/20110122041021/http://www.tv-tokyo.co.jp/anime/naruto/episodes2010.html",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/"
+      ]
+    },
+    {
+      "episodes": [
+        181
+      ],
+      "kind": "partial",
+      "chapters": "451 (Naruto/Tazuna/Inari thread: Kakashi thanks Tazuna and Inari for coming to help rebuild, Naruto covers for Sasuke's absence with the fight story, and he tells Sakura and Kakashi that after Jiraiya and Nagato he finally understands what Sasuke feels and knows how to reform Team 7)",
+      "note": "weight: SLIVER — because it is the episode's FRAMING bracket: the reunion opens the episode as the trigger for an anime-original three-years-ago story and closes it as the return to the present (AFG 18:15 to the end, ~3 of ~21 minutes). TV Tokyo's 401話 synopsis states the structure outright — 「イナリ、タヅナと久々の再会を喜び合うナルトとサクラ。二人は…ある出来事を思い出す。約三年前…」 — and then describes only the flashback. THE COUNTER-READING, stated because this is the bundle's closest call: these pages are ch 451's emotional core, they are SOLE (ep 180 carries the chapter's opening reconstruction/arrival pages, ep 197 its Team Samui / Danzō-kill-order thread), and Sean's own wave-1 ep-180 note calls them one of ch 451's 'story-carrying beats' — read that way the segment is SIGNIFICANT and the sole-adaptation exception would fire, making the row mixed. I rule SLIVER and FILLER because the second half of the exception fails on the evidence: the block produces no plot fact — no death, no reveal, no arc close — it is characterisation, whereas ep 179's sole block appoints the Sixth Hokage, and the licensor's synopses draw exactly that line between the two episodes (399話 leads with the council; 401話 does not mention this scene at all).",
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=Naruto's%20School%20of%20Revenge&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Dealing%20with%20Sasuke!!&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=The%20Sixth%20Hokage%20Danz%C5%8D&prop=wikitext&format=json",
+        "https://web.archive.org/web/20110122041021/http://www.tv-tokyo.co.jp/anime/naruto/episodes2010.html",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/"
+      ]
+    }
+  ],
+  "repairs": [
+    {
+      "target": "annotations",
+      "series_id": "naruto-shippuden",
+      "episodes": [
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71
+      ],
+      "field": "note",
+      "old": "research-tier batch 9 (2026-08-23, agent-verified 2+ sources): Twelve Guardian Ninja anime-original block (54-56 carry real manga; 71 mixed)",
+      "new": "research-tier batch 9 (2026-08-23), amended batch 21 wave 2: Twelve Guardian Ninja anime-original block (54-56 carry real manga; 71 stays FILLER — its last ~4 minutes carry two source slivers, ch 316's Asuma/Shikamaru shōgi scene held back out of ep 55's coverage and ch 312's closing page as a teaser that ep 72 re-covers, both annotated on ep 71)",
+      "confidence": "high",
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=My%20Friend&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Training,%20Begin!!&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Wind%20(episode)&prop=wikitext&format=json",
+        "https://web.archive.org/web/20110122041021/http://www.tv-tokyo.co.jp/anime/naruto/episodes2008.html"
+      ],
+      "why": "The stored batch-9 note asserts '71 mixed' inside a block annotation, contradicting the stored TYPE (filler, AFL) and contradicting this verdict's accounting. Note-only repair; the annotation's kind, episode set and chapters are unchanged. Flagged rather than silently overridden per the standing rule."
+    },
+    {
+      "target": "chapter_anchors",
+      "series_id": "naruto-shippuden",
+      "episode": 90,
+      "field": "continue_note",
+      "old": "C2 parity: eps 91-112 are the anime-original Three-Tails arc and the next canon episode, 113, starts on ch 343.",
+      "new": "C2 parity: eps 91-111 are the anime-original Three-Tails arc; ep 112 is MIXED — its closing ~5½ minutes adapt chs 317-318's Akatsuki thread (Deidara and Tobi capture the Three-Tails), a backward first-time pass that does not move the frontier — and the next episode with forward mainline motion, 113, starts on ch 343.",
+      "confidence": "high",
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=A%20Place%20to%20Return%20To&prop=wikitext&format=json",
+        "https://web.archive.org/web/20110122041021/http://www.tv-tokyo.co.jp/anime/naruto/episodes2009.html",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/"
+      ],
+      "why": "The stored ep-90 continue note calls eps 91-112 wholly anime-original; ep 112's closing block is a first-time adaptation of chs 317-318's Akatsuki thread (three legs). Note-only repair — ep 90's anchor values and its continue chapter (343) are unchanged. I quote the stored note as it is printed in the context file; if the live note's wording differs, apply the substance (91-112 -> 91-111 plus the ep-112 clause), not the string."
+    }
+  ],
+  "type_corrections": [
+    {
+      "episodes": [
+        112
+      ],
+      "type": "mixed",
+      "note": "Stored filler (AFL). FLIP TO MIXED on chapter accounting. SEGMENT WEIGHTS. (1) ~13:38-19:39 (AFG's two timed windows, ~5.5 of ~21 minutes, the episode's climax) = chs 317-318's Akatsuki thread, animated in full and for the first time: Deidara kills the Anbu guards (anime-added), drops detonating clay into the lake to draw the Three-Tails out, hands the capture to Tobi who runs, flips the turtle with C1 and knocks it out, then tows it to the Akatsuki base on two clay birds. Narutopedia's ch-317 page ('Deidara and his new partner, Tobi, confront the Three-Tails. Although it is his assignment, Tobi runs away in fright, forcing Deidara to intervene') and ch-318 page ('Deidara and Tobi defeated the Three-Tails and started towing it to the nearest Akatsuki base') match scene for scene, and TV Tokyo's 332話 synopsis names it as the episode's closing beat. WEIGHT: SIGNIFICANT — a complete scene with a resolution that progresses the source's story (a tailed beast is captured), new, and the episode's own climax. (2) The remaining ~15 minutes = the epilogue of the anime-original Three-Tails arc (Yūkimaru's chakra network ruined, Katsuyu relaying Tsunade's recall order, Yūkimaru slipping away to Guren, Naruto letting him go, Kabuto reporting to Orochimaru). WEIGHT: original, and it is why the row was typed filler. WHY MIXED AND NOT FILLER, both halves of T28's sole-adaptation exception stated explicitly: (a) SOLE — chs 317-318 are thread-partitioned and every other episode carrying them carries only the Konoha half (ep 56 = the leaf training, Asuma's chakra-blade lesson, Tsunade's D-rank assignment; ep 73 = the waterfall stage; ep 74 = the Nijū Shōtai deployed and the waterfall severed), and nothing in eps 91-111 (all Filler on AFL, all N/A on AFG) animates Deidara and Tobi, so these pages appear in NO other episode; (b) ARC CLOSE — the Three-Tails is captured and delivered to Akatsuki, the resolution of the source's own Deidara/Tobi assignment and the beat the whole anime-original arc was built to hand back to the manga. Independently, T28's plain materiality bar reaches the same answer: the segment is a substantial, story-carrying part of THIS episode's plot, because it IS the arc's conclusion. WHO LIED: AFL's Filler bucket swallows a five-and-a-half-minute first-time adaptation — and AFL is capable of the distinction, since it types eps 54 and 56 'Mixed Canon/Filler' for exactly this shape; ja-Wikipedia bolds 帰るべき場所 as 全編アニメオリジナル, which is false for the last quarter of the episode (its bold over-marks on this series — it bolds 71, 176, 178, 179 and 181 too); AFG is RIGHT here, both in its class and in its chapter cell (317, 318).",
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=A%20Place%20to%20Return%20To&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=The%20Beginning%20of%20the%20Nightmare!!&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Smooth%20Training&prop=wikitext&format=json",
+        "https://web.archive.org/web/20110122041021/http://www.tv-tokyo.co.jp/anime/naruto/episodes2009.html",
+        "https://naruto.fandom.com/api.php?action=parse&page=Writhe&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Under%20the%20Starry%20Sky&prop=wikitext&format=json",
+        "https://www.animefillerlist.com/shows/naruto-shippuden",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/"
+      ]
+    },
+    {
+      "episodes": [
+        71
+      ],
+      "type": "filler",
+      "note": "CONFIRMATIONS — the stored type stands on all five, each settled by chapter accounting on two or more legs beyond AFL and AFG. 71 FILLER (stored filler): ~16:40 of ~21 minutes is the climax and resolution of the anime-original Twelve Guardian Ninja arc (TV Tokyo's 291話 synopsis is entirely that), and the ~4-minute coda holds two source slivers — ch 316's shōgi 'king of Konoha' scene (sole, but foreshadowing, not a death/reveal/arc close) and ch 312's closing page (a teaser that ep 72 STARTS on and re-covers). 72 CANON (stored canon): AFG's Mixed is a viewing-guide class about RE-COVERED material, not original material — the windows it keeps (10:20-14:25, 18:38-end) are precisely ch 313's two first-time scenes, and what it drops is ch 312's Sai/new-technique material already animated in ep 54 and re-staged here in the hospital, plus ch 314's grave visit; under T28's recap clause the re-told share is weightless and the remainder is source, so canon stands, with the anime-made bridge work (the post-arc reconstruction with Iruka and Konohamaru in TV Tokyo's 292話 synopsis, Kakashi's return from the Jiraiya investigation, the newly drawn young-Asuma-vs-Hiruzen argument around ch 314's one-page grave visit) recorded as divergence per the faithfulness clause. 176 / 178 / 181 FILLER (stored filler): each is an anime-original retrospective with a 2-4 minute source bookend (AFG 1:48-3:58 / 18:02-end / 18:15-end; chs 450 / 449-450 / 451), sole in every case but producing no plot fact — and the licensor's synopses draw the line for us: TV Tokyo's 399話 (ep 179, Sean-ruled mixed) LEADS with the daimyō's council, while 396話, 398話 and 401話 do not mention their source frames at all. WHO LIED: AFG's class on all five (a 'do not re-watch all of this' instruction read as a typing claim) and, on ep 71 only, AFG's chapter CELL, which prints '120, 121' — Part I's Hiruzen-vs-Orochimaru chapters, not in this episode; ja-Wikipedia's bold 全編アニメオリジナル marker over-marks 71, 176, 178 and 181 (all four carry timed source frames) while correctly leaving 72 unbolded.",
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=My%20Friend&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=The%20Quietly%20Approaching%20Threat&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Rookie%20Instructor%20Iruka&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Iruka's%20Decision&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Naruto's%20School%20of%20Revenge&prop=wikitext&format=json",
+        "https://web.archive.org/web/20110122041021/http://www.tv-tokyo.co.jp/anime/naruto/episodes2008.html",
+        "https://web.archive.org/web/20110122041021/http://www.tv-tokyo.co.jp/anime/naruto/episodes2010.html",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=NARUTO%20-%E3%83%8A%E3%83%AB%E3%83%88-%20%E7%96%BE%E9%A2%A8%E4%BC%9D&prop=wikitext&format=json",
+        "https://www.animefillerlist.com/shows/naruto-shippuden",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/"
+      ],
+      "why": "CONFIRMED AS STORED (filler) — "
+    },
+    {
+      "episodes": [
+        72
+      ],
+      "type": "canon",
+      "note": "CONFIRMATIONS — the stored type stands on all five, each settled by chapter accounting on two or more legs beyond AFL and AFG. 71 FILLER (stored filler): ~16:40 of ~21 minutes is the climax and resolution of the anime-original Twelve Guardian Ninja arc (TV Tokyo's 291話 synopsis is entirely that), and the ~4-minute coda holds two source slivers — ch 316's shōgi 'king of Konoha' scene (sole, but foreshadowing, not a death/reveal/arc close) and ch 312's closing page (a teaser that ep 72 STARTS on and re-covers). 72 CANON (stored canon): AFG's Mixed is a viewing-guide class about RE-COVERED material, not original material — the windows it keeps (10:20-14:25, 18:38-end) are precisely ch 313's two first-time scenes, and what it drops is ch 312's Sai/new-technique material already animated in ep 54 and re-staged here in the hospital, plus ch 314's grave visit; under T28's recap clause the re-told share is weightless and the remainder is source, so canon stands, with the anime-made bridge work (the post-arc reconstruction with Iruka and Konohamaru in TV Tokyo's 292話 synopsis, Kakashi's return from the Jiraiya investigation, the newly drawn young-Asuma-vs-Hiruzen argument around ch 314's one-page grave visit) recorded as divergence per the faithfulness clause. 176 / 178 / 181 FILLER (stored filler): each is an anime-original retrospective with a 2-4 minute source bookend (AFG 1:48-3:58 / 18:02-end / 18:15-end; chs 450 / 449-450 / 451), sole in every case but producing no plot fact — and the licensor's synopses draw the line for us: TV Tokyo's 399話 (ep 179, Sean-ruled mixed) LEADS with the daimyō's council, while 396話, 398話 and 401話 do not mention their source frames at all. WHO LIED: AFG's class on all five (a 'do not re-watch all of this' instruction read as a typing claim) and, on ep 71 only, AFG's chapter CELL, which prints '120, 121' — Part I's Hiruzen-vs-Orochimaru chapters, not in this episode; ja-Wikipedia's bold 全編アニメオリジナル marker over-marks 71, 176, 178 and 181 (all four carry timed source frames) while correctly leaving 72 unbolded.",
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=My%20Friend&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=The%20Quietly%20Approaching%20Threat&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Rookie%20Instructor%20Iruka&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Iruka's%20Decision&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Naruto's%20School%20of%20Revenge&prop=wikitext&format=json",
+        "https://web.archive.org/web/20110122041021/http://www.tv-tokyo.co.jp/anime/naruto/episodes2008.html",
+        "https://web.archive.org/web/20110122041021/http://www.tv-tokyo.co.jp/anime/naruto/episodes2010.html",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=NARUTO%20-%E3%83%8A%E3%83%AB%E3%83%88-%20%E7%96%BE%E9%A2%A8%E4%BC%9D&prop=wikitext&format=json",
+        "https://www.animefillerlist.com/shows/naruto-shippuden",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/"
+      ],
+      "why": "CONFIRMED AS STORED (canon) — "
+    },
+    {
+      "episodes": [
+        176
+      ],
+      "type": "filler",
+      "note": "CONFIRMATIONS — the stored type stands on all five, each settled by chapter accounting on two or more legs beyond AFL and AFG. 71 FILLER (stored filler): ~16:40 of ~21 minutes is the climax and resolution of the anime-original Twelve Guardian Ninja arc (TV Tokyo's 291話 synopsis is entirely that), and the ~4-minute coda holds two source slivers — ch 316's shōgi 'king of Konoha' scene (sole, but foreshadowing, not a death/reveal/arc close) and ch 312's closing page (a teaser that ep 72 STARTS on and re-covers). 72 CANON (stored canon): AFG's Mixed is a viewing-guide class about RE-COVERED material, not original material — the windows it keeps (10:20-14:25, 18:38-end) are precisely ch 313's two first-time scenes, and what it drops is ch 312's Sai/new-technique material already animated in ep 54 and re-staged here in the hospital, plus ch 314's grave visit; under T28's recap clause the re-told share is weightless and the remainder is source, so canon stands, with the anime-made bridge work (the post-arc reconstruction with Iruka and Konohamaru in TV Tokyo's 292話 synopsis, Kakashi's return from the Jiraiya investigation, the newly drawn young-Asuma-vs-Hiruzen argument around ch 314's one-page grave visit) recorded as divergence per the faithfulness clause. 176 / 178 / 181 FILLER (stored filler): each is an anime-original retrospective with a 2-4 minute source bookend (AFG 1:48-3:58 / 18:02-end / 18:15-end; chs 450 / 449-450 / 451), sole in every case but producing no plot fact — and the licensor's synopses draw the line for us: TV Tokyo's 399話 (ep 179, Sean-ruled mixed) LEADS with the daimyō's council, while 396話, 398話 and 401話 do not mention their source frames at all. WHO LIED: AFG's class on all five (a 'do not re-watch all of this' instruction read as a typing claim) and, on ep 71 only, AFG's chapter CELL, which prints '120, 121' — Part I's Hiruzen-vs-Orochimaru chapters, not in this episode; ja-Wikipedia's bold 全編アニメオリジナル marker over-marks 71, 176, 178 and 181 (all four carry timed source frames) while correctly leaving 72 unbolded.",
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=My%20Friend&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=The%20Quietly%20Approaching%20Threat&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Rookie%20Instructor%20Iruka&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Iruka's%20Decision&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Naruto's%20School%20of%20Revenge&prop=wikitext&format=json",
+        "https://web.archive.org/web/20110122041021/http://www.tv-tokyo.co.jp/anime/naruto/episodes2008.html",
+        "https://web.archive.org/web/20110122041021/http://www.tv-tokyo.co.jp/anime/naruto/episodes2010.html",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=NARUTO%20-%E3%83%8A%E3%83%AB%E3%83%88-%20%E7%96%BE%E9%A2%A8%E4%BC%9D&prop=wikitext&format=json",
+        "https://www.animefillerlist.com/shows/naruto-shippuden",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/"
+      ],
+      "why": "CONFIRMED AS STORED (filler) — "
+    },
+    {
+      "episodes": [
+        178
+      ],
+      "type": "filler",
+      "note": "CONFIRMATIONS — the stored type stands on all five, each settled by chapter accounting on two or more legs beyond AFL and AFG. 71 FILLER (stored filler): ~16:40 of ~21 minutes is the climax and resolution of the anime-original Twelve Guardian Ninja arc (TV Tokyo's 291話 synopsis is entirely that), and the ~4-minute coda holds two source slivers — ch 316's shōgi 'king of Konoha' scene (sole, but foreshadowing, not a death/reveal/arc close) and ch 312's closing page (a teaser that ep 72 STARTS on and re-covers). 72 CANON (stored canon): AFG's Mixed is a viewing-guide class about RE-COVERED material, not original material — the windows it keeps (10:20-14:25, 18:38-end) are precisely ch 313's two first-time scenes, and what it drops is ch 312's Sai/new-technique material already animated in ep 54 and re-staged here in the hospital, plus ch 314's grave visit; under T28's recap clause the re-told share is weightless and the remainder is source, so canon stands, with the anime-made bridge work (the post-arc reconstruction with Iruka and Konohamaru in TV Tokyo's 292話 synopsis, Kakashi's return from the Jiraiya investigation, the newly drawn young-Asuma-vs-Hiruzen argument around ch 314's one-page grave visit) recorded as divergence per the faithfulness clause. 176 / 178 / 181 FILLER (stored filler): each is an anime-original retrospective with a 2-4 minute source bookend (AFG 1:48-3:58 / 18:02-end / 18:15-end; chs 450 / 449-450 / 451), sole in every case but producing no plot fact — and the licensor's synopses draw the line for us: TV Tokyo's 399話 (ep 179, Sean-ruled mixed) LEADS with the daimyō's council, while 396話, 398話 and 401話 do not mention their source frames at all. WHO LIED: AFG's class on all five (a 'do not re-watch all of this' instruction read as a typing claim) and, on ep 71 only, AFG's chapter CELL, which prints '120, 121' — Part I's Hiruzen-vs-Orochimaru chapters, not in this episode; ja-Wikipedia's bold 全編アニメオリジナル marker over-marks 71, 176, 178 and 181 (all four carry timed source frames) while correctly leaving 72 unbolded.",
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=My%20Friend&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=The%20Quietly%20Approaching%20Threat&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Rookie%20Instructor%20Iruka&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Iruka's%20Decision&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Naruto's%20School%20of%20Revenge&prop=wikitext&format=json",
+        "https://web.archive.org/web/20110122041021/http://www.tv-tokyo.co.jp/anime/naruto/episodes2008.html",
+        "https://web.archive.org/web/20110122041021/http://www.tv-tokyo.co.jp/anime/naruto/episodes2010.html",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=NARUTO%20-%E3%83%8A%E3%83%AB%E3%83%88-%20%E7%96%BE%E9%A2%A8%E4%BC%9D&prop=wikitext&format=json",
+        "https://www.animefillerlist.com/shows/naruto-shippuden",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/"
+      ],
+      "why": "CONFIRMED AS STORED (filler) — "
+    },
+    {
+      "episodes": [
+        181
+      ],
+      "type": "filler",
+      "note": "CONFIRMATIONS — the stored type stands on all five, each settled by chapter accounting on two or more legs beyond AFL and AFG. 71 FILLER (stored filler): ~16:40 of ~21 minutes is the climax and resolution of the anime-original Twelve Guardian Ninja arc (TV Tokyo's 291話 synopsis is entirely that), and the ~4-minute coda holds two source slivers — ch 316's shōgi 'king of Konoha' scene (sole, but foreshadowing, not a death/reveal/arc close) and ch 312's closing page (a teaser that ep 72 STARTS on and re-covers). 72 CANON (stored canon): AFG's Mixed is a viewing-guide class about RE-COVERED material, not original material — the windows it keeps (10:20-14:25, 18:38-end) are precisely ch 313's two first-time scenes, and what it drops is ch 312's Sai/new-technique material already animated in ep 54 and re-staged here in the hospital, plus ch 314's grave visit; under T28's recap clause the re-told share is weightless and the remainder is source, so canon stands, with the anime-made bridge work (the post-arc reconstruction with Iruka and Konohamaru in TV Tokyo's 292話 synopsis, Kakashi's return from the Jiraiya investigation, the newly drawn young-Asuma-vs-Hiruzen argument around ch 314's one-page grave visit) recorded as divergence per the faithfulness clause. 176 / 178 / 181 FILLER (stored filler): each is an anime-original retrospective with a 2-4 minute source bookend (AFG 1:48-3:58 / 18:02-end / 18:15-end; chs 450 / 449-450 / 451), sole in every case but producing no plot fact — and the licensor's synopses draw the line for us: TV Tokyo's 399話 (ep 179, Sean-ruled mixed) LEADS with the daimyō's council, while 396話, 398話 and 401話 do not mention their source frames at all. WHO LIED: AFG's class on all five (a 'do not re-watch all of this' instruction read as a typing claim) and, on ep 71 only, AFG's chapter CELL, which prints '120, 121' — Part I's Hiruzen-vs-Orochimaru chapters, not in this episode; ja-Wikipedia's bold 全編アニメオリジナル marker over-marks 71, 176, 178 and 181 (all four carry timed source frames) while correctly leaving 72 unbolded.",
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=My%20Friend&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=The%20Quietly%20Approaching%20Threat&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Rookie%20Instructor%20Iruka&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Iruka's%20Decision&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Naruto's%20School%20of%20Revenge&prop=wikitext&format=json",
+        "https://web.archive.org/web/20110122041021/http://www.tv-tokyo.co.jp/anime/naruto/episodes2008.html",
+        "https://web.archive.org/web/20110122041021/http://www.tv-tokyo.co.jp/anime/naruto/episodes2010.html",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=NARUTO%20-%E3%83%8A%E3%83%AB%E3%83%88-%20%E7%96%BE%E9%A2%A8%E4%BC%9D&prop=wikitext&format=json",
+        "https://www.animefillerlist.com/shows/naruto-shippuden",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/"
+      ],
+      "why": "CONFIRMED AS STORED (filler) — "
+    }
+  ],
+  "structure": {
+    "notes": "AFG AFTER THE PARSER FIX — what the live page really says for these rows (four-column format, class on a <span> inside the first <td>, sub-number cell '(NN).'): 071 BLUE/Mixed, chapters '120, 121', note 'we watch from minute 16:40 to the end ~ Crunchyroll 18:09 ~ Netflix 18:08 … here is the departure of Shougi between Shikamaru and Asuma, also the previous one of the battle of Hidan and Kakuzu against Nii Yugito'; 072 BLUE/Mixed, '312, 313, 314', 'we only watch from minute 10:20 to 14:25 and then from minute 18:38 to the end'; 112 BLUE/Mixed, '317, 318', 'we only watch from 13:38 to 17:16 and then from 17:46 to 19:39, here is the attempt to capture the Sanbi by Deidara and Tobi'; 176 BLUE/Mixed, '450', '1:48 to minute 3:58'; 178 BLUE/Mixed, '449, 450', '18:02 until the end, here the meeting of Sasuke, Suigetsu, Karin and Jugo takes place, also the talk of Tobi with Zetgu and Kisame'; 181 BLUE/Mixed, '451', '18:15 to the end, here follows the conversation of Inari and Tazuna towards Kakashi'. Neighbours for calibration: 070 RED/Filler N/A, 073 plain '314, 318', 111 RED/Filler N/A, 113 plain '343, 344', 177 RED/Filler N/A, 182 RED/Filler N/A, 197 plain '451, 452, 453'.\nAFG'S CHAPTER CELL IS WRONG ON ROW 71 — a hard data defect, not an interpretation. It prints '120, 121'; Naruto ch 120 is 'Hokage vs. Hokage!!' and ch 121 'The Horrible Experiment…!!' (vol 14, Hiruzen vs Orochimaru during the Konoha Crush, animated by the 2002 series). AFG's own NOTE on the same row names content that is ch 316 (the shōgi scene) and ch 312 (the Yugito ambush), and Narutopedia's infobox prints 312, 316. So the wave-1 finding that 'AFG's chapter column and Narutopedia's episode infobox agree token for token' holds for the 175-197 block but NOT globally — on row 71 they disagree outright, and AFG is the one that is wrong. PIPELINE CONSEQUENCE: ep 71 stays filler, so the A1 gate suppresses it; if the row were ever typed mixed the afg writer would land a phantom ep 71 -> ch 121 anchor, a 190-chapter back-jump.\nWHAT AFG'S 'MIXED' MEANS ON THIS SERIES (the wave-2 lesson, ep 72 is the witness): the class marks 'do not watch all of this', and the reason can be EITHER anime-original content OR canon you have already seen. Ep 72's kept windows are exactly ch 313's two first-time scenes and its dropped stretch is ch 312 re-covered from ep 54. Never read an AFG Mixed class as 'partly anime-original' without checking whether the neighbourhood contains a re-cover pass; the minute-range note is still the best sizing instrument available, but sizing is not typing.\nAFL HAS A MIXED BUCKET AND USES IT HERE: 054 'Mixed Canon/Filler', 055 'Manga Canon', 056 'Mixed Canon/Filler', 070 Filler, 071 Filler, 072 'Manga Canon', 073-074 'Manga Canon', 110-112 Filler, 113 'Mixed Canon/Filler', 175 'Manga Canon', 176-182 Filler, 197 'Manga Canon'. That AFL types 54 and 56 Mixed for filler-arc framing and still types 112 plain Filler is what makes 112 a genuine AFL error rather than a bucket limitation.\nJA-WIKIPEDIA'S MARKER (「サブタイトルが太字の回は、全編がアニメオリジナルストーリーの回。それ以外は原作ストーリーもしくは原作ストーリーとアニメオリジナルがミックスされた回」): BOLD on 70, 71, 110, 111, 112, 176, 177, 178, 179, 180, 181, 182, 196; NOT BOLD on 54, 56, 72, 73, 90, 175, 197. It OVER-marks on this series — it bolds five of my six rows although all five carry timed source frames (and it bolds 179, which Sean ruled mixed) — so its bold is a claim about an episode's dominant character, never a denial of a frame. Its one useful positive here is the UNBOLDED 72, which is a positive claim that the episode carries manga story.\nTV TOKYO'S ARCHIVED BACK-NUMBERS ARE THE DISCRIMINATOR (web.archive.org 2011-01-22, Shift-JIS, episodes2008/2009/2010.html; blocks keyed 'NNN話' by 通算 number, joined by title + date, never index — the flattened text puts a stray next-episode title/date line at the foot of each block). For the Past Arc the licensor's own framing separates 179 from its neighbours: 399話 opens 「ペイン戦直後、火の国の大名殿では…ダンゾウは倒れた綱手に代わる新たな火影を選出すべきと提案するが…」 (the source beat is the episode's subject), while 396話, 398話 and 401話 describe only the anime-original retrospectives and never mention Zetsu, Taka, Kisame or the Sasuke conversation. For 332話 the licensor DOES name the source beat as the closing event 「そしてナルト達の出立の日、湖には三尾を求めてやってきた暁のデイダラとトビの姿があった」, and for 292話 it opens the episode on the anime-original reconstruction and Iruka before naming Kakashi's report and the Two-Tails hunt.\nCOVERAGE-SET CHECKS RUN FOR THIS VERDICT (the soleness tests): ch 316's shōgi scene — ep 55 'Wind' (chs 314-316) is entirely the nature-transformation lecture, litmus paper, Yamato's waterfall and the shadow-clone method, no shōgi; ep 56's shōgi game is ch 317's (the barbecue bet interrupted by Naruto's clone). Chs 317-318's Akatsuki thread — absent from ep 56, ep 73 and ep 74, whose ch-317/318 shares are all Konoha-side, and absent from eps 91-111. Ch 450's four threads — ep 175 (hero's welcome), 176 (Zetsu decides; Team Samui set out), 178 (Taka mobilised; Zetsu reports; Kisame assigned), 179 (the daimyō's council; Sean-ruled). Ch 451's three threads — ep 180 (the reconstruction and the Tazuna/Inari arrival), 181 (the Sasuke deflection and Naruto's conclusion), 197 (Team Samui's letter, Danzō's self-proclamation and the kill order, Kiba relaying it).\nROW IDENTITY: no offset anywhere in this bundle. 71 'My Friend' 2008-08-14 = 通算291「友よ」; 72 'The Quietly Approaching Threat' 2008-08-21 = 通算292「忍び寄る脅威」 (= ch 312's exact title 忍び寄る脅威!!); 112 'A Place to Return To' 2009-06-04 = 通算332「帰るべき場所」; 176 2010-09-02 = 通算396「新米教師イルカ」; 178 2010-09-16 = 通算398「イルカの決意」; 181 2010-10-14 = 通算401「ナルト、仇討ち指南塾」. AFL's dates match ours on all six."
+  },
+  "flags_for_sean": [
+    "1) EP 112 IS THE ONLY FLIP, AND IT CARRIES A DELIBERATE BACK-JUMP. Typing 112 mixed opens A1 and the anchor 318 [317] lands 56 episodes behind ep 90's END 343, with ep 113 jumping forward to 343 again. That is the saint-seiya / TMM 'pages, not numbers' shape and the series already has one (eps 119-120, Kakashi Gaiden, chs 239-244, behind ep 118's 352) — but it is a display decision, so it is yours: anchor + `rearranged` as delivered, or anchor_hostile with the `partial` annotation alone. 2) CONTINUE HAZARD, same as wave 1: the ep-112 parity continue (343) will be healed to the next ANCHORED row's START, which today is ep 118 (351), silently skipping chs 343-350 that eps 113-117 do adapt. Pin it manually, anchor 113-117 in the same wave, or drop the continue and let ep 90's 343/parity carry the zone. 3) THE TWO CLOSEST CALLS, both ruled the conservative way with the counter-reading written into the note: ep 71 (ch 316's Asuma/Shikamaru shōgi scene is a complete, SOLE scene animated nowhere else — ep 55 does not have it — but a riddle Asuma refuses to answer is not a death, a reveal or an arc close, so the sole-adaptation exception fails its second half and the row stays filler; the cost is that those pages read as never-animated at page level) and ep 181 (ch 451's Naruto-thread block is sole and is what your own wave-1 ep-180 note called one of the chapter's 'story-carrying beats'; I rule it a framing bracket producing no plot fact, on the licensor's own framing of 401話). If you want either flipped, the annotation already carries the segment description an anchor would need — 71 would be ch 316 (A44 position-less: it acts behind ep 74's 319, so `rearranged` + no anchor) and 181 would be ch 451 [451] v48. 4) AFG DATA DEFECT ON ROW 71: the chapter cell reads '120, 121', which is the Part-I Hiruzen-vs-Orochimaru pair, not this episode. Worth an afg-side note: A1 is the only thing keeping it out of the catalog. 5) BLOCK CONSISTENCY: 176, 178, 180 and 181 now move together as filler-with-a-source-bookend and 179 is the single exception in the Past Arc (176-196). If you would rather rule the arc's frames as a block in the other direction, all four flip together and 112's reasoning is unaffected. 6) TWO NOTE-ONLY REPAIRS proposed (the batch-9 eps 57-71 divergence note, which asserts '71 mixed'; and ep 90's continue note, which calls eps 91-112 wholly anime-original). Neither touches an anchor value. 7) EP 72 IS A CONFIRMATION WORTH KEEPING VISIBLE: it is the wave's evidence that an AFG 'Mixed' class can mean 're-covered canon', not 'anime-original'. If that becomes a trap entry, the witness line is: AFG's kept windows on ep 72 are exactly ch 313's two first-time scenes, and its dropped stretch is ch 312 already animated in ep 54."
+  ]
+}

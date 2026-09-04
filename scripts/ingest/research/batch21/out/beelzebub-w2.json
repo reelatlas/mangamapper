@@ -1,0 +1,71 @@
+{
+  "series_id": "beelzebub",
+  "summary": "ONE target row, the stored type CONFIRMED, and the two labels are BOTH partly right — which is the whole finding. Premise re-read live: animefillerguide's row 49 is red-classed 'Beelzebub's New Year's Special! Beelbeel Journey to the West! * Filler' with a chapter cell that reads not 'N/A' but 'SPECIAL'; animefillerlist's row 49 reads 'Manga Canon', 2012-01-08. Title and date match ours exactly on both pages, and all three tables hold 60 rows, so no index join was needed or used. WHAT THE EPISODE ADAPTS. beelzebub.fandom's episode page for 「べるぜバブお正月スペシャル！ベルベル西遊記」 gives 'chapters = BeelBeel☆Saiyuki ~Let's Head for Tenjiku!!~' AND 'Long Novel'. Both are real, both are licensed, and neither carries a mainline chapter number. (1) 「ベルベル☆西遊記〜天竺までぶっとばせ!!〜」 is a special extra chapter by Ryuhei Tamura printed inside tankobon volume 10 of the Beelzebub manga, made to promote the novel — the fandom's chapter page says so ('a special extra chapter published in volume 10 ... to promote the long novel', chapter field = 'Special Extra', episodes = Episode 49), and ja-Wikipedia says it independently: 'コミックス10巻に収録された番外の短編物語が好評価を得たので小説版として長編物語となった。また、2012年の正月スペシャルでアニメ化されている。' (2) 『大長編べるぜバブ ベルベル☆西遊記 魔王、孫悟空になる』 is a LIGHT NOVEL — Shueisha's own catalogue page: JUMP jBOOKS, on sale 2011-05-02, 240 pages, ISBN 978-4-08-703247-5, 著者 SOW, 原作＆イラスト 田村隆平, and its blurb is the episode's premise verbatim ('ヒルダが魔界から取り寄せた絵本…。それはとんでもない欠陥品だった！！ 現実世界と絵本の中身「西遊記」が入れ替わってしまったのだ！！'). ja-Wikipedia's 各話リスト puts the decisive footnote directly on the row: バブ49 ... 「小説版が原作。」 — 'the novel version is the source'. THE TYPE. Canon, unchanged. Under T25 the standing is measured against the source, and a side story serialized inside the source IS the source (the GTO rule) — the vol-10 extra chapter is Tamura's, printed in the tankobon. Under T26 a second LICENSED work is not a fourth type but an annotation on a canon row: `side_source`, naming the novel, exactly the Black Clover 55-56 / FMA-2003 11-12 shape. There is no significant anime-original share to weigh against them: the only non-source material in the fandom's summary is the meta framing ('they need to do a TV special every New Year's Day') and a recap of the previous episodes, and a recap is weightless under T28's recap clause — the remainder decides, and the remainder is the extra chapter plus the novel. The strongest independent check that this is NOT anime-original: ja-Wikipedia bolds anime-original subtitles in this table by an explicit legend ('アニメ版オリジナルストーリーのサブタイトルは、太字で表記するものとする') and バブ49 is NOT bold, while its neighbours バブ51 and the 52-55 block are. POSITION. A44 position-less, and no anchor is owed: the extra chapter has no number (the fandom's own field calls it 'Special Extra'), and the novel is another work entirely. The mainline line closes over it without a gap — ep 48 carries ch 106-110 and ep 50 carries ch 110-113 (AFG's own cells, matching our stored ep 47 -> 115 and ep 51 -> 115 fence), so nothing is stranded. Note the story's own placement for the reader's sake: ja-WP puts the novel's timeline at 原作第5巻 (just before Lamia and Forcas return to the demon world) with some settings taken from up to vol 11 — it is not a position, it is a placement fact. WHICH SOURCE LIED: animefillerguide, in its CLASS only. Its chapter cell 'SPECIAL' is an honest statement that this row has no mainline chapter behind it; the red Filler class then reads that absence as an absence of source, which is the same defect this wave found on bleach 109/227 and soul-eater 32. AFL's 'Manga Canon' is right about the standing but silent about the fact that half the derivation is a novel — hence the two new annotations.",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [
+    {
+      "episode": 49,
+      "why": "A44 position-less, NOT A1 — the row is CANON (stored type and AFL confirmed), but neither of the two works it adapts sits in the mainline chapter space. The manga side is 「ベルベル☆西遊記〜天竺までぶっとばせ!!〜」, an UNNUMBERED special extra chapter printed inside tankobon volume 10 (beelzebub.fandom's chapter infobox: volume = 10, chapter = 'Special Extra'; ja-Wikipedia: 'コミックス10巻に収録された番外の短編物語'), and the novel side is a separate licensed work with no chapter numbering at all (Shueisha JUMP jBOOKS, ISBN 978-4-08-703247-5). There is no chapter number this row could hold, and inventing one would place ep 49 back inside vol 10 (ch 80-88) — twenty-five chapters behind ep 48, which would read as a catastrophic regression on the display. The mainline line closes over the row without a gap: ep 48 covers ch 106-110 and ep 50 covers ch 110-113 (animefillerguide's own cells), inside the stored ep 47 -> 115 / ep 51 -> 115 fence. Volume 10 is a printing fact here, never a position.",
+      "sources": [
+        "https://beelzebub.fandom.com/api.php?action=parse&page=Beelzebub%20New%20Year's%20Special!%20BeelBeel%20Journey%20to%20the%20West&prop=wikitext&format=json",
+        "https://beelzebub.fandom.com/api.php?action=parse&page=BeelBeel%E2%98%86Journey%20to%20the%20West%20~Let's%20Head%20for%20Tenjiku!!~&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E3%81%B9%E3%82%8B%E3%81%9C%E3%83%90%E3%83%96",
+        "https://books.shueisha.co.jp/items/contents.html?isbn=978-4-08-703247-5",
+        "https://www.animefillerguide.com/anime/beelzebub/"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [
+        49
+      ],
+      "kind": "side_story",
+      "chapters": "the unnumbered special extra chapter 「ベルベル☆西遊記〜天竺までぶっとばせ!!〜」 ('BeelBeel Journey to the West ~Let's Head for Tenjiku!!~'), printed inside tankobon volume 10",
+      "note": "weight: SIGNIFICANT — because it is one of the episode's two derivations and it is the origin of the whole conceit: beelzebub.fandom's chapter page states it is 'a special extra chapter published in volume 10 of the Beelzebub manga to promote the long novel' with chapter = 'Special Extra' and episodes = Episode 49, and ja-Wikipedia states the same relation from the other side ('コミックス10巻に収録された番外の短編物語が好評価を得たので小説版として長編物語となった。また、2012年の正月スペシャルでアニメ化されている'). Written and drawn by Ryuhei Tamura and printed inside the source's own tankobon, so under the GTO rule it IS the source, not a side_source — but it carries NO number (the fandom's own field says 'Special Extra'), which is why this row is A44 position-less and why the mainline anchors are untouched (N35: an unnumbered extra is a fact, never a number). Material is NEW: its sole adaptation.",
+      "sources": [
+        "https://beelzebub.fandom.com/api.php?action=parse&page=Beelzebub%20New%20Year's%20Special!%20BeelBeel%20Journey%20to%20the%20West&prop=wikitext&format=json",
+        "https://beelzebub.fandom.com/api.php?action=parse&page=BeelBeel%E2%98%86Journey%20to%20the%20West%20~Let's%20Head%20for%20Tenjiku!!~&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E3%81%B9%E3%82%8B%E3%81%9C%E3%83%90%E3%83%96"
+      ]
+    },
+    {
+      "episodes": [
+        49
+      ],
+      "kind": "side_source",
+      "chapters": "『大長編べるぜバブ ベルベル☆西遊記 魔王、孫悟空になる』 — the Beelzebub light novel (Shueisha, JUMP j BOOKS, 2011-05-02, 240 pages, ISBN 978-4-08-703247-5; author SOW, original work and illustrations by Ryuhei Tamura)",
+      "note": "weight: SIGNIFICANT — the novel supplies the episode's actual plot, and ja-Wikipedia's 各話リスト says so in a footnote sitting on this exact row: 'バブ49 べるぜバブお正月スペシャル! ベルベル西遊記【小説版が原作。】' ('the novel version is the source'). The publisher's own catalogue blurb is the episode's premise verbatim: Hilda's picture book fetched from the demon world is defective, so the real world and the book's contents, Journey to the West, are swapped, and Oga's group must find their way out. beelzebub.fandom's episode infobox lists 'Long Novel' beside the extra chapter as the episode's chapters. T26: a second LICENSED work is an ANNOTATION on a canon row, never a fourth type — the Black Clover 55-56 and FMA-2003 11-12 shape; the row's standing stays canon and it takes no anchor (the novel has no chapter numbering, A44). ja-WP also records the novel's placement in the manga's timeline — 原作第5巻, just before Lamia and Forcas return to the demon world, with some settings drawn from up to vol 11 — which is a placement fact for the reader, not a position for the catalog.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%81%B9%E3%82%8B%E3%81%9C%E3%83%90%E3%83%96",
+        "https://books.shueisha.co.jp/items/contents.html?isbn=978-4-08-703247-5",
+        "https://beelzebub.fandom.com/api.php?action=parse&page=Beelzebub%20New%20Year's%20Special!%20BeelBeel%20Journey%20to%20the%20West&prop=wikitext&format=json",
+        "https://beelzebub.fandom.com/api.php?action=parse&page=Beelzebub%20Long%20Novel:%20BeelBeel%E2%98%86Journey%20to%20the%20West,%20The%20Demon%20Lord%20Becomes%20the%20Monkey%20King&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [
+        49
+      ],
+      "kind": "recap",
+      "chapters": "the preceding episodes' events (a recap inside the New Year's special's framing)",
+      "note": "weight: WEIGHTLESS by the T28 recap clause — beelzebub.fandom's summary notes that after Oga explains the Journey-to-the-West situation the episode recaps the events of the previous episodes before Furuichi objects to the absurdity. It progresses nothing and it is not counted in the standing; the remainder of the episode (the vol-10 extra chapter plus the novel) decides the type, and that remainder is entirely source. The other non-source material is the meta joke that frames it ('we need to do a TV special every New Year's Day'), which is a studio beat inside the adapted story, not an original plot share — under the faithfulness clause it does not weigh toward mixed.",
+      "sources": [
+        "https://beelzebub.fandom.com/api.php?action=parse&page=Beelzebub%20New%20Year's%20Special!%20BeelBeel%20Journey%20to%20the%20West&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/%E3%81%B9%E3%82%8B%E3%81%9C%E3%83%90%E3%83%96"
+      ]
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [],
+  "structure": {
+    "notes": "STORED TYPE CONFIRMED — no type_correction, deliberately: ep 49 stays canon and AFL is the label that got the standing right. Row identity FIRST (R20): animefillerlist's beelzebub page holds 60 data rows, animefillerguide's holds 60, ours holds 60, and rows 44-55 were matched on TITLE (AFL additionally on DATE — row 49 'Beelzebub's New Year's Special! Beelbeel Journey to the West!', 2012-01-08, exactly the context's values). WHICH SOURCE LIED, and how: animefillerguide, in its CLASS. Its chapter cell for this row is 'SPECIAL', not 'N/A' — an honest statement that no mainline chapter sits behind the episode — and the red Filler class then treats that absence as an absence of source. That is the same defect this wave found on soul-eater 32 and bleach 109/227: an AFG chapter column that can only hold mainline numbers, being read as a typing claim. AFL's 'Manga Canon' is right about the standing and silent about the derivation, which the two annotations now record. CHAPTER SPACE: unchanged; this row touches none of it. The manga is 240 mainline chapters over 28 volumes plus unnumbered extras, and the vol-10 extra is named as a title, never converted to a number. SOURCES BEYOND AFL AND AFG: (1) beelzebub.fandom via the MediaWiki API — the episode page (its chapters field naming both works, plus the full summary and cast list), the chapter page for the vol-10 special extra, and the novel page. (2) ja-Wikipedia べるぜバブ — the 各話リスト footnote '小説版が原作。' on row バブ49, the 小説 section describing the extra chapter's promotion to a full novel and its animation as the 2012 New Year's special, and the episode-list legend that makes the absence of bolding on this row a positive signal ('アニメ版オリジナルストーリーのサブタイトルは、太字で表記するものとする' — バブ49 is not bold). (3) Shueisha's own catalogue page for the novel (ISBN 978-4-08-703247-5) for the publisher-tier facts and the blurb. The licensor's per-episode synopses were checked and are NOT usable: ytv.co.jp/beelze/story/ survives on the Wayback Machine but the archived pages are a JS/frame shell with no text.",
+    "coverage_set_checked": "ep 47 -> END 115 START 115 {102-105, 115} (stored); ep 48 = ch 106-110 (AFG); ep 49 = the vol-10 special extra chapter + the novel, no mainline chapters, position-less; ep 50 = ch 110-113 (AFG); ep 51 -> END 115 START 115 {114-115} (stored); eps 52-55 filler on both labels. No mainline chapter is stranded by leaving ep 49 position-less."
+  },
+  "flags_for_sean": [
+    "OUT OF SCOPE, found while reading the same ja-Wikipedia table, and it is a live retype candidate: バブ51 「コマ犬様が見てる」 is BOLD (anime-original by the table's legend) and carries the footnote '葵がコマちゃんと出会うシーンなどは原作通りであるが、エピソードの半分はアニメオリジナルとなっている' — 'the scenes where Aoi meets Koma-chan and so on follow the original, but HALF THE EPISODE is anime-original'. Our row 51 is stored canon with an anchor (END 115, START 115, {114-115}) and AFL types it Manga Canon. Under T28 a half-original episode is mixed, not canon. I did not touch it because it is not in this ask and it needs its own second source, but it is a one-row job for a later wave.",
+    "AFG's chapter column has THREE distinct 'no mainline chapter' spellings on this page and they are not equivalent: 'N/A' on the 52-55 filler block, and 'SPECIAL' on row 49. If the T4 strong-tier flag treats them alike it will keep pairing a red class with a genuinely-sourced row. A row whose AFG chapter cell reads 'SPECIAL' is worth routing to research as a probable side_story / side_source case rather than as a suspected retype.",
+    "This is the fourth row in the wave whose stored type was CONFIRMED and whose real deliverable was an annotation, not a number (soul-eater 32, bleach 109, bleach 227, beelzebub 49). All four adapt unnumbered material printed inside the source or a licensed sibling work. If that class is worth a name, it is the 'A44 canon' shape: correct type, no position, and the only carrier of the coverage fact is the annotation text."
+  ]
+}
