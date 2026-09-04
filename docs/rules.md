@@ -1122,8 +1122,8 @@ An episode's type comes from, in precedence: a research-ruled EPISODE_TYPE_OVERR
 
 - ruled Sean 2026-08-25 (lib/resolve.ts batch-17 chunk-1 comment; CHUNK1-RECOVERY §11; data-pipeline §10 semantics row)
 - layer **writer**
-- enforced: [lib/resolve.ts#filterEpisodeRows](../scripts/ingest/lib/resolve.ts) · [lib/afl.ts#CLASS_TO_TYPE](../scripts/ingest/lib/afl.ts) · [afg-expansion.ts#main](../scripts/ingest/afg-expansion.ts) · [afg-extend.ts#main](../scripts/ingest/afg-extend.ts) · [audit-ui-truth.ts#type_source_disagreement](../scripts/ingest/audit-ui-truth.ts)
-- audit: `ruling_violation`, `type_source_disagreement`
+- enforced: [lib/resolve.ts#filterEpisodeRows](../scripts/ingest/lib/resolve.ts) · [lib/afl.ts#CLASS_TO_TYPE](../scripts/ingest/lib/afl.ts) · [afg-expansion.ts#main](../scripts/ingest/afg-expansion.ts) · [afg-extend.ts#main](../scripts/ingest/afg-extend.ts) · [audit-ui-truth.ts#type_source_disagreement](../scripts/ingest/audit-ui-truth.ts) · [audit-ui-truth.ts#type_default_unclassified](../scripts/ingest/audit-ui-truth.ts)
+- audit: `ruling_violation`, `type_source_disagreement`, `type_default_unclassified`
 - witnesses: sket-dance, fist-of-the-north-star, one-piece
 - aliases: typing precedence, AFL/AFG advisory, AFL is the type authority, fandom + accounting beats AFL, AFL label past table stop, override > AFL > AFG
 - see: T1, T2, T6, T15
@@ -3143,8 +3143,8 @@ When AFL has nothing for an entry (no page, an empty page, a page held sparse), 
 
 - ruled Sean 2026-09-04 (docs/STATE.md awaiting-Sean item (4) 2026-09-02 → §12.109)
 - layer **writer**
-- enforced: [lib/rulings/wiki-pages.ts#WIKI_PAGES](../scripts/ingest/lib/rulings/wiki-pages.ts) · [lib/rulings/minted-grids.ts#MINTED_GRIDS](../scripts/ingest/lib/rulings/minted-grids.ts) · [wiki-episodes-backfill.ts](../scripts/ingest/wiki-episodes-backfill.ts) · [mint-grids.ts](../scripts/ingest/mint-grids.ts) · [audit-ui-truth.ts#grid_unminted](../scripts/ingest/audit-ui-truth.ts)
-- audit: `grid_unminted`, `anchor_without_row`
+- enforced: [lib/rulings/wiki-pages.ts#WIKI_PAGES](../scripts/ingest/lib/rulings/wiki-pages.ts) · [lib/rulings/minted-grids.ts#MINTED_GRIDS](../scripts/ingest/lib/rulings/minted-grids.ts) · [wiki-episodes-backfill.ts](../scripts/ingest/wiki-episodes-backfill.ts) · [mint-grids.ts](../scripts/ingest/mint-grids.ts) · [audit-ui-truth.ts#grid_unminted](../scripts/ingest/audit-ui-truth.ts) · [audit-ui-truth.ts#type_default_unclassified](../scripts/ingest/audit-ui-truth.ts)
+- audit: `grid_unminted`, `anchor_without_row`, `type_default_unclassified`
 - witnesses: orient, cells-at-work-code-black, shounan-junai-gumi, shy
 - aliases: the mint rule, who mints the grid, grid minting, ruled wiki page, WIKI_PAGES, MINTED_GRIDS, manual grid, grid_unminted, AFL has nothing
 - see: G57, G55, A42, N13, P2, P9

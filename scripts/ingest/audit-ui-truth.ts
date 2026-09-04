@@ -106,7 +106,7 @@ async function main() {
     rearranged_zone_unanchored: [], rearranged_zone_acknowledged: [],
     title_incomplete: [], airdate_incomplete: [], airdate_regression: [], airdate_withheld: [], episode_date_off_window: [], asterisk_unreviewed: [],
     fractional_unmodeled: [], annotation_invalid: [], annotation_retired_standing: [], afl_anime_canon_unruled: [], format_missing: [], episode_without_component: [], watch_order_kind_missing: [],
-    permanence_candidate: [], permanence_violation: [], mixed_fragment_only: [], run_stuck: [], unverified_share: [], sliver_only_anchor: [], chain_source_unmapped: [], side_source_on_chain: [], source_work_unlabelled: [], grid_unminted: [], type_source_disagreement: [],
+    permanence_candidate: [], permanence_violation: [], mixed_fragment_only: [], run_stuck: [], unverified_share: [], sliver_only_anchor: [], chain_source_unmapped: [], side_source_on_chain: [], source_work_unlabelled: [], grid_unminted: [], type_source_disagreement: [], type_default_unclassified: [],
     series_without_source_kind: [], no_source: [], no_instrument: [], ok_full: [], ok_no_volume: [], ok_loose: [], ok_parallel: [],
     source_relation_missing: [], parallel_has_anchor: [], arcs_not_partition: [], arc_row_conflict: [], correspondence_invalid: [], correspondence_incomplete: [],
     pending_airing_no_anchor: [], pending_finished_no_totals: [], pending_no_canon: [], pending_other: [],
@@ -142,6 +142,7 @@ async function main() {
     const pages = new Map((await selectAll<any>('ingest_afg_pages', 'slug, raw')).map((p: any) => [p.slug, p.raw]));
     const typeByRow = new Map<string, { type: string; minted_by: string | null }>();
     for (const e of await selectAll<any>('episodes', 'series_id, number, type, minted_by')) typeByRow.set(`${e.series_id}#${e.number}`, { type: e.type, minted_by: e.minted_by });
+    const weakOnly: string[] = [];
     for (const l of afgLinks) {
       const raw: any = pages.get(l.external_id); if (!raw?.episodes?.length) continue;
       const ruled = EPISODE_TYPE_OVERRIDES[l.series_id] ?? {};
@@ -161,8 +162,27 @@ async function main() {
         (strong ? strongD : weakD).push(`${n}: afl ${row.type} / afg ${a.type}${a.type === 'canon' ? ` (ch ${a.chapters!.slice(0, 3).join(',')}${a.chapters!.length > 3 ? '…' : ''})` : ''}`);
       }
       const diffs = [...strongD, ...weakD];
-      if (diffs.length) classes.type_source_disagreement.push(`${l.series_id}: ${strongD.length} STRONG + ${weakD.length} weak — ${strongD.slice(0, 5).join(', ')}${strongD.length > 5 ? ', …' : ''}${weakD.length ? ` | weak: ${weakD.slice(0, 3).join(', ')}${weakD.length > 3 ? ', …' : ''}` : ''} (T4: a sitting, never an auto-flip; research with chapter accounting outranks both labels)`);
+      // STRONG rows are the queue; weak (AFL mixed vs AFG canon-with-chapters) is a COUNT only — it stays parked until a wave already touches the series
+      if (strongD.length) classes.type_source_disagreement.push(`${l.series_id}: ${strongD.length} STRONG — ${strongD.slice(0, 6).join(', ')}${strongD.length > 6 ? ', …' : ''}${weakD.length ? ` (+ ${weakD.length} weak, parked)` : ''} (T4: a sitting, never an auto-flip; research with chapter accounting outranks both labels)`);
+      else if (weakD.length) weakOnly.push(`${l.series_id} ${weakD.length}`);
     }
+    if (weakOnly.length) classes.type_source_disagreement.push(`(weak only, parked — AFL mixed vs AFG canon-with-chapters, granularity not contradiction): ${weakOnly.join(', ')}`);
+  }
+  // G59 / T4 (2026-09-04): wiki-minted rows carry the canon-tier DEFAULT type until AFL classifies the number or T6 rules it —
+  // one line per series whose typing is still owed (Cursor: keep canon in the column, queue the provenance in the census)
+  {
+    const afl = new Map<string, Set<number>>();
+    for (const r of await selectAll<any>('ingest_afl_shows', 'slug, raw')) afl.set(r.slug, new Set(((r.raw?.episodes ?? []) as { number: number }[]).map((e) => e.number)));
+    const slugOf = new Map((await selectAll<any>('series', 'id, afl_slug')).map((s: any) => [s.id, s.afl_slug]));
+    const owed = new Map<string, number[]>();
+    for (const e of await selectAll<any>('episodes', 'series_id, number, minted_by', (q) => q.eq('minted_by', 'wiki'))) {
+      if ((EPISODE_TYPE_OVERRIDES[e.series_id] ?? {})[e.number] != null) continue;
+      const aflNums = afl.get(slugOf.get(e.series_id) ?? '');
+      const aflN = translateEpisodeNumber(e.series_id, e.number, 'afl');
+      if (aflNums && aflN != null && aflNums.has(aflN)) continue;
+      owed.set(e.series_id, [...(owed.get(e.series_id) ?? []), e.number]);
+    }
+    for (const [sid, nums] of owed) classes.type_default_unclassified.push(`${sid}: ${nums.length} wiki-minted row(s) typed by the canon-tier DEFAULT — no AFL classification, no T6 ruling (eps ${nums.sort((a, b) => a - b).slice(0, 5).join(', ')}${nums.length > 5 ? '…' : ''}); typing still owed (research or a ruled type)`);
   }
   // G59 (2026-09-04): an entry with anchors and NO episode rows must have a ruled minter — a wiki page (WIKI_PAGES) or a manual grid
   // (MINTED_GRIDS); otherwise the grid is unminted and the display is synthesizing (A42) what a writer should own
