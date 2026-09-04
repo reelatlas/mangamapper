@@ -22,14 +22,25 @@ const OUT = 'scripts/ingest/research/batch21/out';
 const B = 'batch 21 wave 2 (2026-09-04; T4 contradictions after the AFG parser fix; Sean ruled)';
 const FILES = readdirSync(OUT).filter((f) => /-w2[ab]?\.json$/.test(f)).sort();
 // annotations whose KIND the verdict replaced (old kind deleted; the new kind is in the verdict's annotations)
-const ANNOTATION_DELETE: { sid: string; episode: number; kind: AnnotationKind; why: string }[] = [];
+const ANNOTATION_DELETE: { sid: string; episode: number; kind: AnnotationKind; why: string }[] = [
+  { sid: 'my-hero-academia', episode: 39, kind: 'partial', why: 'replaced by graft{49.5} weight sliver (the recap became its own kind on 2026-09-04)' },
+  { sid: 'naruto-shippuden', episode: 460, kind: 'rearranged', why: 'the batch-12 group rearranged{679-681} narrows to 459 / 462 — 460 holds only a narration frame (graft{681}, sliver); retyped filler' },
+  { sid: 'naruto-shippuden', episode: 461, kind: 'rearranged', why: 'as 460' },
+];
 const CONTINUE_OVERRIDE: Record<string, { chapter: number; why: string }> = {};
 const START_OVERRIDE: Record<string, number> = {};
 const END_OVERRIDE: Record<string, number> = {};
 const ANCHOR_SKIP = new Set<string>(); // 'sid#ep' — a verifier-refuted anchor
 const CONTINUE_SKIP = new Set<string>();
+const CONTINUE_NOTE_FIX: { sid: string; episode: number; chapter: number; note: string }[] = [
+  { sid: 'naruto-shippuden', episode: 459, chapter: 681, note: 'C1: ep 459 stops inside ch 681 (Black Zetsu\'s account begins); ch 681 is finished by ep 462 — eps 460 / 461 are the anime\'s own Kaguya narration (filler, graft{681} frame only). Value 681 unchanged; the batch-12 wording ("ep 460 finishes it") was wrong. (verified w2-flips)' },
+];
 // rows the verdicts retype FILLER whose stored MANUAL anchors come out (A1) — curated after the verifier
-const ANCHOR_DELETE: { sid: string; episode: number; why: string }[] = []; // verifier (w16-anchors): no anchor row can hold it (A44) — the display carries the previous position forward
+const ANCHOR_DELETE: { sid: string; episode: number; why: string }[] = [
+  { sid: 'naruto-shippuden', episode: 460, why: 'retyped FILLER (A1): the only source-tied material is Black Zetsu\'s narration frame from ch 681 — Narutopedia\'s chapters=681 was the anchor\'s only provenance; ch 681 is carried by eps 459 / 462' },
+  { sid: 'naruto-shippuden', episode: 461, why: 'as 460' },
+  { sid: 'black-clover', episode: 86, why: 'retyped FILLER (A1): a graft of ch 133 inside an original episode; eps 84 / 85 / 87 hold ch 133 — nothing strands' },
+]; // verifier (w16-anchors): no anchor row can hold it (A44) — the display carries the previous position forward
 // fence repairs on stored rows outside the verdicts' asks (verifier-ruled)
 const FENCE_REPAIR: { sid: string; episode: number; set: Record<string, unknown>; why: string }[] = [];
 // rows the verifier HELD: the verdict's annotations for them are not applied (the stored record stands)
@@ -116,6 +127,10 @@ async function main() {
     console.log(`  annotation ${x.sid} ep ${x.episode} ${x.kind}{${x.chapters.slice(0, 30)}}${x.deleteKind ? ` (replaces ${x.deleteKind})` : ''}`);
     if (!DRY) { await upsertAnnotation({ series_id: x.sid, episode: x.episode, kind: x.kind, chapters: x.chapters, note: `${x.note} [${B}]`, origin: 'research' }); if (x.deleteKind) { const { error } = await db.from('episode_annotations').delete().eq('series_id', x.sid).eq('episode', x.episode).eq('kind', x.deleteKind); if (error) throw new Error(error.message); } }
     annoN++;
+  }
+  for (const c of CONTINUE_NOTE_FIX) {
+    console.log(`  continue NOTE ${c.sid} ep ${c.episode} (value ${c.chapter} unchanged)`);
+    if (!DRY) await writeCuratedContinue(c.sid, c.episode, { chapter: c.chapter, kind: 'parity', note: `${c.note} ${B}` });
   }
   for (const d of ANCHOR_DELETE) {
     const { data: cur } = await db.from('chapter_anchors').select('chapter, source').eq('series_id', d.sid).eq('episode', d.episode).maybeSingle();
