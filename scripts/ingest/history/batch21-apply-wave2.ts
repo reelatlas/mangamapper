@@ -1,6 +1,6 @@
-// Batch 21 wave 1 — the curated apply (P10): the STRONG AFL-vs-AFG type
+// HISTORY (P34, 2026-09-04) — never run. Batch 21 wave 1 — the curated apply (P10): the STRONG AFL-vs-AFG type
 // contradictions settled by chapter accounting (T4 / T28), 9 verdict files
-// (-w1, -w1a, -w1b). Derived from the wave-16 shape (history/apply-wave1.ts). File-driven with the
+// (-w1, -w1a, -w1b). Derived from the wave-16 shape (history/apply-wave2.ts). File-driven with the
 // curated overlays: anchors land at the MANUAL tier with the volume derived
 // (lib/volumes.ts); continues via writeCuratedContinue (C7); annotations via
 // upsertAnnotation (a same-kind upsert REPLACES); an annotation whose KIND
@@ -9,41 +9,50 @@
 // the healer); anchor_hostile rows that stay mixed are A44 map entries.
 // --dry-run prints all, plus a per-row report of stored vs delivered
 // annotation kinds so the delete list can be curated.
-//   npx tsx --env-file=.env.ingest scripts/ingest/research/batch21/apply-wave1.ts [--dry-run]
+//   npx tsx --env-file=.env.ingest scripts/ingest/research/batch21/apply-wave2.ts [--dry-run]
 import { readFileSync, readdirSync } from 'node:fs';
-import { db, selectAll, startRun, finishRun } from '../../lib/db';
-import { upsertAnnotation, type AnnotationKind } from '../../lib/annotations';
-import { writeCuratedContinue } from '../../lib/continues';
-import { sliverEnd } from '../../lib/sliver';
-import { volumeForChapter, type VolumeBound } from '../../lib/volumes';
+import { db, selectAll, startRun, finishRun } from '../lib/db';
+import { upsertAnnotation, type AnnotationKind } from '../lib/annotations';
+import { writeCuratedContinue } from '../lib/continues';
+import { sliverEnd } from '../lib/sliver';
+import { volumeForChapter, type VolumeBound } from '../lib/volumes';
 
 const DRY = process.argv.includes('--dry-run');
 const OUT = 'scripts/ingest/research/batch21/out';
-const B = 'batch 21 wave 1 (2026-09-04; T4 contradictions by chapter accounting; Sean ruled)';
-const FILES = readdirSync(OUT).filter((f) => /-w1[ab]?\.json$/.test(f)).sort();
+const B = 'batch 21 wave 2 (2026-09-04; T4 contradictions after the AFG parser fix; Sean ruled)';
+const FILES = readdirSync(OUT).filter((f) => /-w2[ab]?\.json$/.test(f)).sort();
 // annotations whose KIND the verdict replaced (old kind deleted; the new kind is in the verdict's annotations)
 const ANNOTATION_DELETE: { sid: string; episode: number; kind: AnnotationKind; why: string }[] = [
-  { sid: 'dragon-ball-z', episode: 43, kind: 'graft', why: 'retired in favour of partial{246 (p.10-14)} — the row is mixed with the anchor (verifier: Kanzenshuu ep 43 = ch 246 p.10-end)' },
-  { sid: 'inuyasha', episode: 79, kind: 'partial', why: 'replaced by graft{219 (p.1)} weight sliver (AFG\'s own note: "only adapts page 1")' },
-  { sid: 'slam-dunk', episode: 92, kind: 'partial', why: 'replaced by graft{194} weight sliver, a duplicate (AFG: "only watch from 19:14 to the end")' },
-  { sid: 'one-piece', episode: 50, kind: 'graft', why: 'no source puts ch 98 in ep 50 (verifier: ch 97/98 summaries have no goggles beat; OPwiki Unbekannt; AFG\'s 98 = the 49 → 52 plateau)' },
-  { sid: 'one-piece', episode: 203, kind: 'graft', why: 'replaced by partial{303 (p.16-18)} + rearranged — the row is mixed with the anchor (fandom infobox chapter = 303 p.16-18)' },
+  { sid: 'my-hero-academia', episode: 39, kind: 'partial', why: 'replaced by graft{49.5} weight sliver (the recap became its own kind on 2026-09-04)' },
+  { sid: 'naruto-shippuden', episode: 460, kind: 'rearranged', why: 'the batch-12 group rearranged{679-681} narrows to 459 / 462 — 460 holds only a narration frame (graft{681}, sliver); retyped filler' },
+  { sid: 'naruto-shippuden', episode: 461, kind: 'rearranged', why: 'as 460' },
 ];
 const CONTINUE_OVERRIDE: Record<string, { chapter: number; why: string }> = {};
 const START_OVERRIDE: Record<string, number> = {};
 const END_OVERRIDE: Record<string, number> = {};
-const ANCHOR_SKIP = new Set<string>(); // 'sid#ep' — a verifier-refuted anchor
-const CONTINUE_SKIP = new Set<string>(); // verifier (w16-anchors): no anchor row can hold it (A44) — the display carries the previous position forward
+const ANCHOR_SKIP = new Set<string>(); // 'sid#ep' — a verifier-refuted anchor. shippuden 112 WAS here as "position-less (A44)"; Sean ruled 2026-09-03 that behind is not a basis: END 318 [317] lands (A8), continue 343 curated (C5), 113-117 are the next narrow ask (verify:hole)
+const CONTINUE_SKIP = new Set<string>(); // shippuden 112's continue 343/parity rides WITH its anchor (C7 — the healer refuses the row while 113 is unanchored)
+const CONTINUE_NOTE_FIX: { sid: string; episode: number; chapter: number; note: string }[] = [
+  { sid: 'naruto-shippuden', episode: 459, chapter: 681, note: 'C1: ep 459 stops inside ch 681 (Black Zetsu\'s account begins); ch 681 is finished by ep 462 — eps 460 / 461 are the anime\'s own Kaguya narration (filler, graft{681} frame only). Value 681 unchanged; the batch-12 wording ("ep 460 finishes it") was wrong. (verified w2-flips)' },
+];
+// rows the verdicts retype FILLER whose stored MANUAL anchors come out (A1) — curated after the verifier
+const ANCHOR_DELETE: { sid: string; episode: number; why: string }[] = [
+  { sid: 'naruto-shippuden', episode: 460, why: 'retyped FILLER (A1): the only source-tied material is Black Zetsu\'s narration frame from ch 681 — Narutopedia\'s chapters=681 was the anchor\'s only provenance; ch 681 is carried by eps 459 / 462' },
+  { sid: 'naruto-shippuden', episode: 461, why: 'as 460' },
+  { sid: 'black-clover', episode: 86, why: 'retyped FILLER (A1): a graft of ch 133 inside an original episode; eps 84 / 85 / 87 hold ch 133 — nothing strands' },
+]; // verifier (w16-anchors): no anchor row can hold it (A44) — the display carries the previous position forward
 // fence repairs on stored rows outside the verdicts' asks (verifier-ruled)
 const FENCE_REPAIR: { sid: string; episode: number; set: Record<string, unknown>; why: string }[] = [];
 // rows the verifier HELD: the verdict's annotations for them are not applied (the stored record stands)
 const ROW_HOLD = new Set<string>();
 // per-annotation SKIPS (verifier w1-flips): fairy-tail 246's divergence carries non-chapter text in `chapters` (wrong kind) and its
 // `unverified` double-records a segment already weighed SIGNIFICANT (would park the row in unverified_share for a page count nobody needs)
-const ANNOTATION_SKIP = new Set<string>(['fairy-tail#246#divergence', 'fairy-tail#246#unverified']);
+const ANNOTATION_SKIP = new Set<string>(['inuyasha#62#unverified', 'the-promised-neverland#22#graft']); // verifier w2-flips: a misused kind; an unplaced chapter attribution
+// verifier: prose in a divergence's chapters field is not a chapter list — nulled at write
+const CHAPTERS_NULL = new Set<string>(['fairy-tail#69#divergence', 'inuyasha#147#divergence', 'inuyasha#148#divergence']);
 // TYPE overrides at curation (the T6 entries are generated from type_corrections MINUS these): one-piece 50 stays FILLER — a
 // novelization is canon only by an `adopted` ruling (T26), which the verdict does not supply; its side_source note lands on the filler row
-const TYPE_SKIP = new Set<string>(['one-piece#50']);
+const TYPE_SKIP = new Set<string>();
 // T26 THE CHAIN (Sean 2026-09-04): a delivered kind rewritten at apply — the sequel manga is ON THE CHAIN (I41), so the row is canon material told out of order
 const KIND_OVERRIDE: Record<string, { kind: AnnotationKind; chapters: string; note: string }> = {};
 const EXTRA_ANNOTATIONS: { sid: string; episode: number; kind: AnnotationKind; chapters: string; note: string; deleteKind?: AnnotationKind }[] = [];
@@ -101,7 +110,7 @@ async function main() {
       if (ko) { delivered.set(ep, (delivered.get(ep) ?? new Set()).add(ko.kind)); console.log(`  annotation ep ${ep} ${a.kind} → ${ko.kind}{${ko.chapters.slice(0, 30)}} (KIND OVERRIDE: the chain)`); if (!DRY) await upsertAnnotation({ series_id: sid, episode: ep, kind: ko.kind, chapters: ko.chapters, note: `${ko.note} Original research note: ${String(a.note).slice(0, 400)} [${B}]`.slice(0, 1200), origin: 'research' }); annoN++; continue; }
       delivered.set(ep, (delivered.get(ep) ?? new Set()).add(a.kind));
       console.log(`  annotation ep ${ep} ${a.kind}{${String(a.chapters ?? '').slice(0, 36)}}`);
-      if (!DRY) await upsertAnnotation({ series_id: sid, episode: ep, kind: a.kind as AnnotationKind, chapters: a.chapters ?? null, note: `${fix ? `${fix} ` : ''}${a.note} [${B}]`.slice(0, 1200), origin: 'research' });
+      if (!DRY) await upsertAnnotation({ series_id: sid, episode: ep, kind: a.kind as AnnotationKind, chapters: CHAPTERS_NULL.has(`${sid}#${ep}#${a.kind}`) ? null : (a.chapters ?? null), note: `${fix ? `${fix} ` : ''}${a.note} [${B}]`.slice(0, 1200), origin: 'research' });
       annoN++;
     }
     for (const [ep, kinds] of delivered) {
@@ -121,6 +130,15 @@ async function main() {
     if (!DRY) { await upsertAnnotation({ series_id: x.sid, episode: x.episode, kind: x.kind, chapters: x.chapters, note: `${x.note} [${B}]`, origin: 'research' }); if (x.deleteKind) { const { error } = await db.from('episode_annotations').delete().eq('series_id', x.sid).eq('episode', x.episode).eq('kind', x.deleteKind); if (error) throw new Error(error.message); } }
     annoN++;
   }
+  for (const c of CONTINUE_NOTE_FIX) {
+    console.log(`  continue NOTE ${c.sid} ep ${c.episode} (value ${c.chapter} unchanged)`);
+    if (!DRY) await writeCuratedContinue(c.sid, c.episode, { chapter: c.chapter, kind: 'parity', note: `${c.note} ${B}` });
+  }
+  for (const d of ANCHOR_DELETE) {
+    const { data: cur } = await db.from('chapter_anchors').select('chapter, source').eq('series_id', d.sid).eq('episode', d.episode).maybeSingle();
+    console.log(`  DELETE anchor ${d.sid} ep ${d.episode}${cur ? ` (was ${cur.chapter}, ${cur.source})` : ' (absent)'} — ${d.why.slice(0, 90)}`);
+    if (!DRY && cur) { const { error } = await db.from('chapter_anchors').delete().eq('series_id', d.sid).eq('episode', d.episode); if (error) throw new Error(error.message); }
+  }
   for (const r of FENCE_REPAIR) {
     console.log(`  REPAIR ${r.sid} ep ${r.episode}: ${JSON.stringify(r.set)} — ${r.why.slice(0, 80)}`);
     if (!DRY) { const { data: cur } = await db.from('chapter_anchors').select('note').eq('series_id', r.sid).eq('episode', r.episode).maybeSingle(); const { error } = await db.from('chapter_anchors').update({ ...r.set, source: 'manual', note: `${r.why} ${B} | ${String(cur?.note ?? '')}`.slice(0, 600) }).eq('series_id', r.sid).eq('episode', r.episode); if (error) throw new Error(error.message); }
@@ -130,7 +148,7 @@ async function main() {
     if (!DRY) { const { error } = await db.from('episode_annotations').delete().eq('series_id', d.sid).eq('episode', d.episode).eq('kind', d.kind); if (error) throw new Error(error.message); }
     deleted++;
   }
-  console.log(`[apply-wave1] ${anchors} anchors, ${continues} continues, ${annoN} annotations, ${deleted} annotation deletions${DRY ? ' — DRY RUN' : ''}. Types (T6) + A44: map entries asserted by the healer; then census.`);
-  if (!DRY) await finishRun(runId, 'ok', { fetched: FILES.length, unchanged: 0, changed: anchors + continues + annoN + deleted, flagged: 0 }, `apply-wave1: ${anchors} anchors, ${continues} continues, ${annoN} annotations`);
+  console.log(`[apply-wave2] ${anchors} anchors, ${continues} continues, ${annoN} annotations, ${deleted} annotation deletions${DRY ? ' — DRY RUN' : ''}. Types (T6) + A44: map entries asserted by the healer; then census.`);
+  if (!DRY) await finishRun(runId, 'ok', { fetched: FILES.length, unchanged: 0, changed: anchors + continues + annoN + deleted, flagged: 0 }, `apply-wave2: ${anchors} anchors, ${continues} continues, ${annoN} annotations`);
 }
 main().then(() => process.exit(0)).catch((e) => { console.error(e); process.exit(1); });

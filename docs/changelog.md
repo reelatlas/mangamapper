@@ -1138,6 +1138,22 @@
    equivalence between two statements stays judgment by design. Record P38;
    rules.md renders 'retired wording'; one-hop case 42. Edges redeployed
    (ledger types in lib); 181 tests; system census OK.
+115. ✅ **BATCH 21 CLOSED (P34, 2026-09-04).** The T4 lane — the STRONG tier of
+   `type_source_disagreement` — ran three waves (§12.110 / 111 / 113): 84 T6
+   rows across 17 series, two AFG parser fixes, the chart-lane suppression
+   (ranma), the sliver clause on standing rows, behind-is-not-a-basis, the
+   Boruto chain. Extracted: `lib/rulings/applied/batch-21.ts` — 27 entries, one
+   per curated overlay (kind replacements, anchor deletions, skips, the A10
+   START override, the sliver-end rewordings, nulled prose chapters, the chain
+   chapters) plus map pointers (T6 / A44 / G26); the three apply scripts moved
+   to history/ as batch21-apply-wave1/2/3.ts (batch 20's history already owns
+   the bare apply-waveN names), imports re-pointed, never run. docs/rulings.md
+   2334. The batch's tooling (context / validate / scan / baseline) stays in
+   research/batch21/ as the template for batch 22. Open from the batch, queued:
+   the C5 curation queue (17 exits without a continue + 49 unnoted), boruto eps
+   19-23 / 39 (chain_source) and 18 / 93-95 (AFL's loose Mixed bucket),
+   beelzebub 15 / 26-28 / 51, rurouni TV ep 95 (identity). Batch 22 opens on
+   the boruto follow-up (lanes I + C) with the batch-21 tooling copied.
 109. ✅ **G59 THE MINT RULE (an /add-rule end to end, 2026-09-04; Sean ruled the
    lane, Cursor's naming fix: who may CREATE the grid, not an amendment of G57's
    who may DELETE).** When AFL has nothing for an entry, the grid is minted by
