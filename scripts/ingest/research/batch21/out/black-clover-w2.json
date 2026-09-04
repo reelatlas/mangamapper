@@ -1,0 +1,270 @@
+{
+  "series_id": "black-clover",
+  "summary": "Batch 21 wave 2, the STRONG type_source_disagreement tier: four Black Clover rows stored CANON (AFL: 'Manga Canon') where animefillerguide prints a BLUE 'Mixed' class with a minute range. Settled by CHAPTER ACCOUNTING on four sources beyond AFL/AFG: (1) blackclover.fandom's CHAPTER pages and CHARACTER pages, which carry page-level {{Ref|ch=|p=|ep=}} citations — a true reverse index (ch 102 p.9-18 and ch 103 p.1-14 -> ep 67; ch 133 p.6 and p.7-8 -> ep 85; ch 133 p.10-14, p.13, p.15-19, p.16, p.17-19 -> ep 87; ch 135 p.1-17 -> ep 88); (2) the LICENSOR's per-episode synopses on TV Tokyo's official site (tv-tokyo.co.jp/anime/bclover/episodes/); (3) the official press release relayed by animateTimes, which calls ep 86 an ORIGINAL episode in so many words ('前回に続きヤミとヴァンジャンスのオリジナル回が描かれる'); (4) the fandom's character infoboxes for the two new characters in the Yami/Vangeance flashback, Goht and Mohl, whose 'manga=' field is EMPTY, whose 'anime=' field reads 'Episode 86', and whose every citation is a chapterless {{Ref|ep=86}}. RESULT: AFG is substantively RIGHT on three of four rows and AFL/our stored 'canon' is WRONG. Ep 67 CONFIRMED CANON (the ~1-minute Yami-vs-Jack tag after 20:46 and a Fuhha haunted-house gag are studio beats inside a full 24-page adaptation — T28's faithfulness clause makes them `divergence`, not weight toward mixed). Ep 85 -> MIXED (ch 133 p.6-9, ~5 minutes, restaged in a bathhouse, plus ~13.5 minutes of the anime-original Yami/Vangeance first-meeting story). Ep 88 -> MIXED (all 17 pages of ch 135 in the back half, plus ~12 minutes of an anime-original eve-of-battle act — Nero at comatose Fuegoleon's bedside, Leopold's send-off, the royal-capital dinner, and Mereoleona and Nozel capturing an Eye of the Midnight Sun SPY, none of which exists in ch 134 or ch 135). Ep 86 -> FILLER, and it is AFG that UNDER-called this one: the source content is a ~1-minute closing tag (Mereoleona bursting into the Black Bulls' base, ch 133 p.10) and it is a DUPLICATE — three separate fandom character pages (Magna, Luck, Vanessa) put ch 133 p.10-14 and p.13 in ep 87, and TV Tokyo's ep-87 synopsis opens on that very scene, so the sole-adaptation exception fails its first half outright. The stored anchor ep 86 -> 133 must go with it (A1); the deletion is LOSSLESS — ep 84 already stores END 133, ep 85 stores END 133, ep 87 stores START 133 / END 134. WHO LIED AND HOW: AFL's 'Manga Canon' bucket is a two-value guess that cannot see a 13-minute anime-original act inside an episode that also adapts a chapter — it printed Manga Canon on 84, 85, 86, 87 and 88 alike, i.e. on the whole Royal Knights block regardless of content. AFG's blue class is a VIEWING GUIDE, not a typing: on ep 67 it fires on a one-minute tag (an overread), and on ep 86 it says 'mixed' where the honest answer is filler. Its minute ranges, however, are the best sizing instrument available for this series and they check out against the chapter page counts every time. Two side findings: eps 89-92 are an UN-CROSS-CUT (ep 88 = ch 135, eps 89-90 = ch 138-142, ep 91 = ch 136, ep 92 = ch 142-143) and ep 91 currently has NO anchor although the fandom's Mereoleona page cites ch 136 p.7-17 and p.14 and p.16-17 to it — flagged, not delivered; and no air-date defects were found (AFL, TV Tokyo and the fandom agree on all four target dates).",
+  "anchors": [
+    {
+      "episode": 67,
+      "start_chapter": 102,
+      "end_chapter": 103,
+      "chapters_adapted": "102 (p.9-18), 103 (p.1-14)",
+      "volume": 12,
+      "confidence": "high",
+      "note": "CONFIRMS the stored anchor (ep 67 -> END 103 [START 102] {102-103}, afg) and enriches chapters_adapted with the page split. blackclover.fandom's Chapter 102 page carries five inline page refs and the last two are {{Ref|ch=102|p=9-10|ep=67}} and {{Ref|ch=102|p=11-18|ep=67}} (p.2-8 go to ep 65); its Chapter 103 page carries {{Ref|ch=103|p=1-4|ep=67}}, {{Ref|ch=103|p=5-9|ep=67}}, {{Ref|ch=103|p=10-14|ep=67}} and then {{Ref|ch=103|p=14-17|ep=68|ep2=69}}. So ep 67 holds 10 pages of ch 102 and 14 of ch 103 = 24 pages, a full episode's worth, which is exactly AFG's own window (manga content 0:34-20:46). END 103 = the furthest mainline chapter adapted in running order (A4). A47 does NOT hold the END back: ch 103's trailing p.14-17 belongs to eps 68/69, but ep 67's own share of ch 103 (p.1-14) is fourteen pages, not a <=5-page scrap, so there is nothing for the rule to bite on. START 102 = the chapter the episode opens in (A10; the leading share is p.9-18, not a sliver). Volume 12 agrees with the stored boundary table (v12 = 101-110).",
+      "sources": [
+        "https://blackclover.fandom.com/api.php?action=parse&page=Chapter%20102&prop=wikitext",
+        "https://blackclover.fandom.com/api.php?action=parse&page=Chapter%20103&prop=wikitext",
+        "https://www.tv-tokyo.co.jp/anime/bclover/episodes/index_9.html",
+        "https://www.animefillerguide.com/anime/black-clover/"
+      ]
+    },
+    {
+      "episode": 85,
+      "start_chapter": 133,
+      "end_chapter": 133,
+      "chapters_adapted": "133 (p.6-9)",
+      "volume": 15,
+      "confidence": "high",
+      "note": "CONFIRMS the stored anchor (ep 85 -> END 133 [START 133] {133}, afg) on a row that is being retyped to MIXED (mixed rows carry anchors; A1 only bars filler). Page evidence: blackclover.fandom's Vanessa Enoteca page — 'A few weeks later, Vanessa tries to comfort Asta who has been zoned out since the end of the Royal Knights Selection Exam.{{Ref|ch=133|p=6|ep=85}}' — and its Charmy Pappitson page — 'Several days later, Charmy is still in awe of Yuno's display of power, and the other Black Bulls worry about Charmy since she has not been eating as much as usual.{{Ref|ch=133|p=7-8|ep=85}}'. The Chapter 133 page's own paragraph refs close that scene at p.9 (Noelle wondering about Langris's mana), and every later page of ch 133 (p.10-19) is cited to ep 87 by the Magna, Luck, Vanessa, Zora and Royal Knights pages — so p.6-9 is ep 85's share and it is NEW, not a duplicate. NOTE THE ONE DISSENT: the Magna and Luck pages cite 'ch=133|p=7|ep=87' for the Magna-is-nervous / Luck-teases beat on the same page; read as the anime splitting one page's panels (or ep 87 restaging a beat), it does not disturb p.6 and p.7-8 being ep 85's. AFG's window for the row (03:08-08:18, ~5m10s) matches four manga pages. END 133 is FLAT, not an advance — ep 84 already stores END 133 — so A47 has nothing to hold back. Volume 15 agrees with the stored table (v15 = 131-140).",
+      "sources": [
+        "https://blackclover.fandom.com/api.php?action=parse&page=Vanessa%20Enoteca&prop=wikitext",
+        "https://blackclover.fandom.com/api.php?action=parse&page=Charmy%20Pappitson&prop=wikitext",
+        "https://blackclover.fandom.com/api.php?action=parse&page=Chapter%20133&prop=wikitext",
+        "https://www.tv-tokyo.co.jp/anime/bclover/episodes/index_9.html"
+      ]
+    },
+    {
+      "episode": 88,
+      "start_chapter": 135,
+      "end_chapter": 135,
+      "chapters_adapted": "135 (p.1-17)",
+      "volume": 15,
+      "confidence": "high",
+      "note": "CONFIRMS the stored anchor (ep 88 -> END 135 [START 135] {135}, afg) on a row being retyped to MIXED. blackclover.fandom's Chapter 135 page carries SIX inline refs and every one of them names ep 88: p.1-3, p.4-6, p.7-9, p.9-11, p.12-17, p.17 — i.e. the whole chapter is in this episode and in no other (the chapter infobox's episode field is 'Episode 88' alone). Corroborated page-by-page from the other side by the Mereoleona page ({{Ref|ch=135|p=1-6|ep=88}}, {{Ref|ch=135|p=9-11|ep=88}}, {{Ref|ch=135|p=12-16|ep=88}}, {{Ref|ch=135|p=14-16|ep=88}}), the Zora page ({{Ref|ch=135|p=1-6|ep=88}}, {{Ref|ch=135|p=12-17|ep=88}}) and the Luck page ({{Ref|ch=135|p=8-11|ep=88}}). TV Tokyo's own synopsis for #88 is pure ch 135 (the Royal Knights reach the Gravito Rock Zone's floating dungeon, split into five teams on Mereoleona's orders, Asta goes in with Mereoleona and Zora, Nozel presses on). The anime-original share sits BEFORE the chapter (AFG: manga from 13:20 to the end), so START 135 is unaffected and END 135 = the furthest mainline chapter adapted (A4). Volume 15 agrees with the stored table.",
+      "sources": [
+        "https://blackclover.fandom.com/api.php?action=parse&page=Chapter%20135&prop=wikitext",
+        "https://blackclover.fandom.com/api.php?action=parse&page=Mereoleona%20Vermillion&prop=wikitext",
+        "https://blackclover.fandom.com/api.php?action=parse&page=Zora%20Ideale&prop=wikitext",
+        "https://www.tv-tokyo.co.jp/anime/bclover/episodes/index_9.html"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 85,
+      "kind": "parity",
+      "continue_chapter": 133,
+      "note": "The stored value (133/parity) is CORRECT but its note names ep 86 ('ep 86 starts ch 133'), which stops being true once ep 86 is typed filler and loses its anchor. Re-stated: the next canon/mixed row after ep 85 is ep 87, and ep 87 STARTS in ch 133 (the fandom's Zora page cites 'ch=133|p=5|ep=87' and 'ch=133|p=17-19|ep=87'; Magna and Luck cite 'ch=133|p=10-14|ep=87'). Parity with the anime: read to the end of ch 133 only when ep 87 plays; at ep 85 you have seen p.6-9 of it.",
+      "sources": [
+        "https://blackclover.fandom.com/api.php?action=parse&page=Zora%20Ideale&prop=wikitext",
+        "https://blackclover.fandom.com/api.php?action=parse&page=Magna%20Swing&prop=wikitext"
+      ]
+    },
+    {
+      "episode": 88,
+      "kind": "parity",
+      "continue_chapter": 138,
+      "note": "OUTSIDE THE ASK, delivered because the row is being touched and it currently stores no continue. Ep 88 finishes ch 135 (p.17 is cited to it), and the next anchored row, ep 89, STARTS at ch 138 (stored ep 89 -> 139 [138]). Chapters 136-137 are NOT skipped forever — the anime un-cross-cuts here: eps 89-90 play the Black Bulls' hideout defence (ch 138-142) while ep 91 goes back and plays ch 136 (the fandom's Mereoleona page cites 'ch=136|p=7-17|ep=91', 'ch=136|p=14|ep=91', 'ch=136|p=16-17|ep=91'). So this is C2/C3 parity: continue at ep 89's START = 138 and note that ch 136-137 arrive at ep 91. Medium confidence — the ep-91 mapping was read off character pages, not researched as its own row.",
+      "sources": [
+        "https://blackclover.fandom.com/api.php?action=parse&page=Mereoleona%20Vermillion&prop=wikitext",
+        "https://blackclover.fandom.com/api.php?action=parse&page=Chapter%20135&prop=wikitext"
+      ]
+    }
+  ],
+  "anchor_hostile": [
+    {
+      "episode": 86,
+      "reason": "A1 — the row is being retyped FILLER, and filler rows never carry chapter anchors. The only source material in the episode is a ~1-minute closing tag (Mereoleona bursting into the Black Bulls' base, ch 133 p.10) which is a DUPLICATE of what ep 87 adapts in full. Deleting the stored anchor (ep 86 -> END 133 [START 133] {133}, afg) is LOSSLESS: ep 84 stores END 133, ep 85 stores END 133, and ep 87 stores START 133 / END 134, so no page and no chapter number becomes unreachable.",
+      "sources": [
+        "https://www.tv-tokyo.co.jp/anime/bclover/episodes/index_9.html",
+        "https://blackclover.fandom.com/api.php?action=parse&page=Magna%20Swing&prop=wikitext",
+        "https://blackclover.fandom.com/api.php?action=parse&page=Luck%20Voltia&prop=wikitext"
+      ],
+      "why": "A1 — the row is being retyped FILLER, and filler rows never carry chapter anchors. The only source material in the episode is a ~1-minute closing tag (Mereoleona bursting into the Black Bulls' base, ch 133 p.10) which is a DUPLICATE of what ep 87 adapts in full. Deleting the stored anchor (ep 86 -> END 133 [START 133] {133}, afg) is LOSSLESS: ep 84 stores END 133, ep 85 stores END 133, and ep 87 stores START 133 / END 134, so no page and no chapter number becomes unreachable."
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [
+        67
+      ],
+      "kind": "divergence",
+      "chapters": "102-103",
+      "note": "weight: the SOURCE segment is SIGNIFICANT and it is the episode — ch 102 p.9-18 (Yami announcing the Star Awards Festival, the squads' star standings, the Black Bulls at minus fifty) and ch 103 p.1-14 (the double date with Kahono and Kiato, the crying girl Emma, Noelle acting as a royal for a commoner) run from 0:34 to 20:46 by AFG's own window and account for 24 manga pages. The studio-made material is (a) a Fuhha haunted-house gag inserted inside the date sequence and (b) a ~1-minute tag after 20:46 in which Captains Yami and Jack square off — a confrontation that does not happen in the manga and that exists to set up ep 68, which is filler. Under T28's FAITHFULNESS clause a small studio-made beat inside an adapted chapter is noted as divergence and never weighed toward mixed, so the row stays CANON. AFG's blue 'Mixed' class here is a viewing-guide overread of a one-minute tag. The Japanese fan recap (anibu) sums the episode up as '原作のシーンにアニオリを多くはさんだ回' — an episode with anime-original material inserted into the manga's scenes, which is the definition of divergence, not of a mix.",
+      "sources": [
+        "https://blackclover.fandom.com/api.php?action=parse&page=Chapter%20103&prop=wikitext",
+        "https://www.animefillerguide.com/anime/black-clover/",
+        "https://anibu.jp/20190123-blackclover67-117030.html"
+      ]
+    },
+    {
+      "episodes": [
+        85
+      ],
+      "kind": "partial",
+      "chapters": "133 (p.6-9)",
+      "note": "weight: SIGNIFICANT — because it is a scene that progresses the story, not a fragment: the Black Bulls in the days after the Royal Knights Selection Exam, Asta still zoned out at having missed Yuno, Vanessa trying to cheer him, Magna nervous about the results, Charmy unable to eat since Yuno's display, Noelle turning over the fact that Langris's mana felt like the Eye of the Midnight Sun's. It is NEW material (ch 133 p.6 and p.7-8 are cited to this episode alone by the Vanessa and Charmy pages) and it is the source's own next scene in running order. The anime RELOCATES it from the base to a bathhouse — the episode's title 裸の付き合い and TV Tokyo's synopsis ('ヤミ団長のひとことで、なぜか黒の暴牛団の仲間たちが、そろって大浴場で汗を流すことになった') — which is a divergence in staging, not a change of standing. Share: AFG times the segment at 03:08-08:18, about five minutes.",
+      "sources": [
+        "https://blackclover.fandom.com/api.php?action=parse&page=Vanessa%20Enoteca&prop=wikitext",
+        "https://blackclover.fandom.com/api.php?action=parse&page=Charmy%20Pappitson&prop=wikitext",
+        "https://www.tv-tokyo.co.jp/anime/bclover/episodes/index_9.html",
+        "https://www.animefillerguide.com/anime/black-clover/"
+      ]
+    },
+    {
+      "episodes": [
+        85
+      ],
+      "kind": "divergence",
+      "chapters": "133",
+      "note": "The anime-original share of ep 85, named so the mixed typing is auditable: from 08:18 to the end (~13m30s) Yami tells the squad about an incident during his 武者修行 as a rank-and-file Magic Knight — fishing in the mountains, being hired by a village for three meals and a napping spot, wiping out the bandit gang at night, and meeting a not-yet-captain William Vangeance for the first time, after which the two acknowledge each other as rivals. None of this is in the manga: blackclover.fandom's own William Vangeance biography sources the Yami/William first meeting to a single manga panel, {{Ref|ch=79|p=2|ep=53}} plus ch 142 p.8, and cites NO episode in the 85-86 range for it. The setting is a bathhouse the manga does not have.",
+      "sources": [
+        "https://blackclover.fandom.com/api.php?action=parse&page=William%20Vangeance&prop=wikitext",
+        "https://www.tv-tokyo.co.jp/anime/bclover/episodes/index_9.html",
+        "https://anibu.jp/20190529-blackclover85-128215.html"
+      ]
+    },
+    {
+      "episodes": [
+        86
+      ],
+      "kind": "graft",
+      "chapters": "133 (p.10)",
+      "note": "weight: SLIVER, and a DUPLICATE — the episode's last ~1 minute (AFG: 20:40 to the end) is Mereoleona arriving at the Black Bulls' base, the cliffhanger that hands over to ep 87. ch 133 is adapted PROPERLY by ep 87: three independent fandom character pages put the scene there — Magna ('Mereoleona barges in... After she collects Asta, Noelle, and Luck, Magna realizes that they are the ones chosen to be Royal Knights'{{Ref|ch=133|p=10-14|ep=87}}), Luck (same ref) and Vanessa ('When Mereoleona barges into the base and leaves a bottle of alcohol for Yami'{{Ref|ch=133|p=13|ep=87}}) — and TV Tokyo's synopsis for #87 opens on exactly that scene. The only source that credits ep 86 at all is one range ref on the Mereoleona page, '{{Ref|ch=133|p=10-18|ep=86|ep2=87}}', which shares the credit with ep 87 anyway. SOLE-ADAPTATION EXCEPTION, both halves stated: (i) the pages do NOT appear in no other episode — they are ep 87's — so the first half FAILS outright; (ii) moot. The row is therefore FILLER and this tie is the mandatory annotation. Nothing is lost: ch 133 is adapted in full across eps 84, 85 and 87.",
+      "sources": [
+        "https://blackclover.fandom.com/api.php?action=parse&page=Magna%20Swing&prop=wikitext",
+        "https://blackclover.fandom.com/api.php?action=parse&page=Luck%20Voltia&prop=wikitext",
+        "https://www.tv-tokyo.co.jp/anime/bclover/episodes/index_9.html",
+        "https://www.animefillerguide.com/anime/black-clover/"
+      ]
+    },
+    {
+      "episodes": [
+        88
+      ],
+      "kind": "partial",
+      "chapters": "135 (p.1-17)",
+      "note": "weight: SIGNIFICANT — the whole of ch 135 in running order, from 13:20 to the end by AFG's window (~8m30s for 17 pages, the series' normal pace of roughly one chapter per nine to eleven minutes). Content: the Royal Knights reach the floating dungeon in the Gravito Rock Zone, Nozel explains how it was found, Siren Tium's Stone Model of the World maps the interior, Mereoleona splits the squad into five teams and takes Asta and Zora herself ('I don't care about royals or commoners — I respect strength'), and the teams break in. NEW, not a duplicate: the Chapter 135 page's six inline refs all read ep=88 and its episode field is 'Episode 88' alone. This is the segment the anchor rests on.",
+      "sources": [
+        "https://blackclover.fandom.com/api.php?action=parse&page=Chapter%20135&prop=wikitext",
+        "https://www.tv-tokyo.co.jp/anime/bclover/episodes/index_9.html",
+        "https://www.animefillerguide.com/anime/black-clover/"
+      ]
+    },
+    {
+      "episodes": [
+        88
+      ],
+      "kind": "divergence",
+      "chapters": "135",
+      "note": "The anime-original share of ep 88, named so the mixed typing is auditable: the first ~12 minutes (everything before 13:20, minus the OP) is an eve-of-battle act with no chapter behind it — Nero perched by the comatose Fuegoleon; Asta and Noelle resolving to avenge him; Leopold entrusting the fight to them; Asta turning over Vetto's words about the elves' hatred and then giving up and doing push-ups; Yuno arriving; a dinner with the assembled Royal Knights in the royal capital; and Mereoleona and Nozel catching and beating an Eye of the Midnight Sun SPY who had infiltrated, learning from him that the enemy does not know the raid is coming, which is why Mereoleona sets the assault for the next morning. CHAPTER ACCOUNTING is what proves it original: ch 134 is adapted entirely by ep 87 (Zora page: ch=134 p.6-8, p.12-13, p.16-17 -> ep 87; Mereoleona page: ch=134 p.7-8 and p.11-17 -> ep 87), and ch 135 opens at the Gravito Rock Zone — so those twelve minutes correspond to no manga pages at all. Structural corroboration from the fandom's own ep-88 infobox: its character list includes Fuegoleon, Leopold and Nero, none of whom appear in ch 135.",
+      "sources": [
+        "https://blackclover.fandom.com/api.php?action=parse&page=Episode%2088&prop=wikitext",
+        "https://blackclover.fandom.com/api.php?action=parse&page=Zora%20Ideale&prop=wikitext",
+        "https://anibu.jp/20190619-blackclover88-130343.html",
+        "https://www.animefillerguide.com/anime/black-clover/"
+      ]
+    },
+    {
+      "episodes": [
+        86
+      ],
+      "kind": "divergence",
+      "chapters": "133",
+      "note": "The anime-original body of ep 86, named for the record: from 1:01 to 20:40 the episode is the second half of Yami's flashback — years after the two saved a bandit-raided village, Wizard King Julius sends vice-captains Yami and William to unmask the Magic Knights colluding with the bandits; William deduces which villages will be hit, they split up, Yami's communication tool is jammed, he charges in alone, is taken hostage-side by the two traitor knights Goht and Mohl, William arrives and frees him, and Julius afterwards makes them captains of two new squads, William naming his the Golden Dawn. TWO NEW CHARACTERS ARE THE PROOF: blackclover.fandom's Goht and Mohl pages both carry an EMPTY 'manga=' field, an 'anime= Episode 86' field, and biographies whose every citation is a chapterless {{Ref|name=e86|ep=86}}. The official press release relayed by animateTimes says it outright — '前回に続きヤミとヴァンジャンスのオリジナル回が描かれる' (continuing from last time, the Yami and Vangeance ORIGINAL episode is depicted) — and TV Tokyo's own synopsis for #86 describes nothing but the flashback.",
+      "sources": [
+        "https://blackclover.fandom.com/api.php?action=parse&page=Goht&prop=wikitext",
+        "https://blackclover.fandom.com/api.php?action=parse&page=Mohl&prop=wikitext",
+        "https://www.animatetimes.com/news/details.php?id=1559532001",
+        "https://www.tv-tokyo.co.jp/anime/bclover/episodes/index_9.html"
+      ]
+    }
+  ],
+  "type_corrections": [
+    {
+      "episodes": [
+        85
+      ],
+      "type": "mixed",
+      "note": "Stored CANON (AFL: 'Manga Canon'). Flip to MIXED under T27/T28: source and non-source in one episode, both shares story-carrying. SEGMENT WEIGHTS. (1) SOURCE, SIGNIFICANT: ch 133 p.6-9, roughly 03:08-08:18 (~5m10s) — the Black Bulls in the days after the exam, Asta zoned out, Vanessa comforting him, Magna anxious about the results, Charmy off her food over Yuno, Noelle uneasy about Langris's mana. Cited page-by-page to THIS episode by the fandom's Vanessa page ('{{Ref|ch=133|p=6|ep=85}}') and Charmy page ('{{Ref|ch=133|p=7-8|ep=85}}'); NEW, since ch 133's later pages are cited to ep 87 by four other pages. The anime restages it in a bathhouse — a divergence in staging, not in standing. (2) NON-SOURCE, STORY-CARRYING: from 08:18 to the end (~13m30s), the first half of an anime-original story of young Yami's 武者修行 — the bandit-plagued village, the night raid, and his first meeting with a pre-captain William Vangeance. The manga has that meeting as ONE panel (fandom's William biography: {{Ref|ch=79|p=2|ep=53}} plus ch 142 p.8) and cites no episode in this range for it; the official press release for the NEXT episode calls the pair an 'オリジナル回'. So this is not a small studio beat inside an adapted chapter (T28 faithfulness clause) — it is a majority-of-the-episode original act with its own plot, which is precisely what makes a row mixed rather than canon. WHO LIED: AFL, whose two-value bucket printed 'Manga Canon' across the entire block 84-88 regardless of content; AFG's blue class is right in substance here even though its class is only a viewing guide. The stored anchor stands (mixed rows carry anchors).",
+      "sources": [
+        "https://blackclover.fandom.com/api.php?action=parse&page=Vanessa%20Enoteca&prop=wikitext",
+        "https://blackclover.fandom.com/api.php?action=parse&page=Charmy%20Pappitson&prop=wikitext",
+        "https://www.tv-tokyo.co.jp/anime/bclover/episodes/index_9.html",
+        "https://www.animatetimes.com/news/details.php?id=1559532001",
+        "https://www.animefillerguide.com/anime/black-clover/"
+      ]
+    },
+    {
+      "episodes": [
+        86
+      ],
+      "type": "filler",
+      "note": "Stored CANON (AFL: 'Manga Canon'); AFG says 'Mixed'. BOTH are wrong — the answer is FILLER. SEGMENT WEIGHTS. (1) NON-SOURCE, the episode: 1:01 to 20:40 (~19m30s) is the second half of the anime-original Yami/Vangeance story — Julius's secret mission to unmask the Magic Knights working with the bandits, William's deduction, the split search, the jammed communication tool, Yami taken by the two traitor knights, William's rescue, and Julius elevating both to captains with William naming the Golden Dawn. Three independent proofs that it is original: blackclover.fandom's Goht and Mohl pages (the two traitor knights) carry an EMPTY 'manga=' field, 'anime= Episode 86', and biographies cited only to {{Ref|ep=86}}; the official press release relayed by animateTimes calls it an 'オリジナル回' in as many words; and TV Tokyo's own synopsis for #86 describes the flashback and nothing else. (2) SOURCE, SLIVER and DUPLICATE: the ~1-minute closing tag (AFG: 20:40 to the end) in which Mereoleona bursts into the Black Bulls' base — ch 133 p.10. SOLE-ADAPTATION EXCEPTION, both halves stated explicitly: (i) the pages do NOT appear in no other episode — ep 87 adapts the scene properly and three fandom character pages say so (Magna and Luck both '{{Ref|ch=133|p=10-14|ep=87}}', Vanessa '{{Ref|ch=133|p=13|ep=87}}'), and TV Tokyo's #87 synopsis opens on it — so the first half fails and the exception cannot fire; (ii) not reached. Plain T28 materiality also fails: a one-minute cliffhanger is not a substantial, story-carrying share of an episode whose job is the flashback. Therefore filler + the mandatory graft annotation. CONSEQUENCE: the stored anchor ep 86 -> 133 must be deleted (A1); it is lossless (eps 84, 85 and 87 all carry ch 133, and ep 87 carries END 134). ONE HONEST GAP: the exact page of the tag (p.10) is inferred from the scene, from AFG's window and from one shared fandom ref ('ch=133|p=10-18|ep=86|ep2=87'); no source states a page range for ep 86 alone. That does not affect the typing — every reading of the tag makes it a duplicate of ep 87's coverage.",
+      "sources": [
+        "https://blackclover.fandom.com/api.php?action=parse&page=Goht&prop=wikitext",
+        "https://blackclover.fandom.com/api.php?action=parse&page=Mohl&prop=wikitext",
+        "https://www.animatetimes.com/news/details.php?id=1559532001",
+        "https://www.tv-tokyo.co.jp/anime/bclover/episodes/index_9.html",
+        "https://blackclover.fandom.com/api.php?action=parse&page=Magna%20Swing&prop=wikitext",
+        "https://www.animefillerguide.com/anime/black-clover/"
+      ]
+    },
+    {
+      "episodes": [
+        88
+      ],
+      "type": "mixed",
+      "note": "Stored CANON (AFL: 'Manga Canon'). Flip to MIXED under T27/T28. SEGMENT WEIGHTS. (1) SOURCE, SIGNIFICANT: all seventeen pages of ch 135, from 13:20 to the end (~8m30s) — the arrival at the Gravito Rock Zone's floating dungeon, Siren Tium's map spell, the five-team split, Mereoleona taking Asta and Zora, the break-in. Every one of the Chapter 135 page's six inline refs reads ep=88 and its episode field names ep 88 alone; the Mereoleona, Zora and Luck pages corroborate the same page ranges from the other side. (2) NON-SOURCE, STORY-CARRYING: the first ~12 minutes — Nero at comatose Fuegoleon's bedside, Leopold entrusting the fight to Asta and Noelle, Asta wrestling with Vetto's words about the elves, the royal-capital dinner, and above all Mereoleona and Nozel capturing and interrogating an Eye of the Midnight Sun SPY, whose intelligence (the enemy does not know the raid is coming) is what makes Mereoleona set the assault for the next morning. That is an original plot beat with a consequence, not a cutaway. CHAPTER ACCOUNTING IS THE PROOF: ch 134 is adapted in its entirety by ep 87 (Zora page ch=134 p.6-8 / p.12-13 / p.16-17 -> ep 87; Mereoleona page ch=134 p.7-8 / p.11-17 -> ep 87) and ch 135 opens at the dungeon, so those twelve minutes map to no manga pages. Corroborated structurally by the fandom's own ep-88 character list, which includes Fuegoleon, Leopold and Nero — none of whom is in ch 135 — and scene-by-scene by the Japanese recap at anibu. WHO LIED: AFL again (its 'Manga Canon' bucket cannot express a half-original episode); AFG's blue class and its 13:20 boundary are substantively right. The stored anchor stands (mixed rows carry anchors).",
+      "sources": [
+        "https://blackclover.fandom.com/api.php?action=parse&page=Chapter%20135&prop=wikitext",
+        "https://blackclover.fandom.com/api.php?action=parse&page=Zora%20Ideale&prop=wikitext",
+        "https://blackclover.fandom.com/api.php?action=parse&page=Episode%2088&prop=wikitext",
+        "https://anibu.jp/20190619-blackclover88-130343.html",
+        "https://www.animefillerguide.com/anime/black-clover/"
+      ]
+    },
+    {
+      "episodes": [
+        67
+      ],
+      "type": "canon",
+      "note": "CONFIRMATION, NOT A CHANGE — stored type is already canon and AFL is RIGHT here. Recorded with evidence so the T4 flag can be closed. Chapter accounting: ch 102 p.9-18 and ch 103 p.1-14 — 24 manga pages, the whole episode — are cited to ep 67 by blackclover.fandom's own inline page refs, and AFG's own window puts manga content from 0:34 to 20:46. The studio-made material is a Fuhha haunted-house gag inserted inside the date sequence and a ~1-minute tag after 20:46 in which Yami and Jack square off to set up ep 68 (which is filler and stays filler). Under T28's FAITHFULNESS clause those are `divergence`, never weight toward mixed; T28's materiality bar is nowhere near met by one minute. WHO LIED: AFG. Its blue 'Mixed' class is a viewing guide that fires whenever any anime-original content exists, however small — here on a one-minute tag — and it is printed in the same visual form as on ep 88, where the original share is twelve minutes.",
+      "sources": [
+        "https://blackclover.fandom.com/api.php?action=parse&page=Chapter%20102&prop=wikitext",
+        "https://blackclover.fandom.com/api.php?action=parse&page=Chapter%20103&prop=wikitext",
+        "https://www.tv-tokyo.co.jp/anime/bclover/episodes/index_9.html",
+        "https://www.animefillerguide.com/anime/black-clover/",
+        "https://www.animefillerlist.com/shows/black-clover"
+      ]
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 86,
+      "field": "anchor",
+      "old": "ep 86 -> end_chapter 133 [start_chapter 133] {133} vol 15 (source: afg), continue 133/parity",
+      "new": "DELETE the anchor and its continue point (A1: filler rows never carry chapter anchors), replacing it with the graft{133 (p.10)} annotation delivered above.",
+      "why": "Only valid if the ep-86 type_correction to filler is taken. The deletion is lossless: ep 84 stores END 133 [START 132] {132-133}, ep 85 stores END 133 [START 133] {133}, and ep 87 stores END 134 [START 133] {133-134}, so ch 133 remains fully covered and END 134 is unaffected. The stored continue on ep 86 ('ep 87 starts ch 133') is subsumed by ep 85's continue, whose note is corrected above.",
+      "sources": [
+        "https://blackclover.fandom.com/api.php?action=parse&page=Magna%20Swing&prop=wikitext",
+        "https://www.tv-tokyo.co.jp/anime/bclover/episodes/index_9.html"
+      ]
+    }
+  ],
+  "structure": [
+    "ROW IDENTITY: all four target rows join three ways with no index joins — blackclover.fandom's Episode N page (episode number + airdate), TV Tokyo's official episodes index (第N話 + onair date) and ja-Wikipedia's episode table (ページN + 放送日). Stored air dates 2019-01-22 / 2019-05-28 / 2019-06-04 / 2019-06-18 match AFL, TV Tokyo and the fandom exactly; no date defects found in the range.",
+    "THE INSTRUMENT FOR THIS SERIES IS THE FANDOM'S PAGE-LEVEL REF TEMPLATE, READ FROM BOTH SIDES. blackclover.fandom cites plot sentences as {{Ref|ch=N|p=A-B|ep=M}}. The CHAPTER pages carry them for most chapters (ch 102, 103, 135 are fully partitioned this way), but ch 133's own page carries only bare {{Ref|ch=133|p=N}} with NO ep= — the episode split for ch 133 had to be recovered from the CHARACTER pages instead (Vanessa, Charmy, Magna, Luck, Zora, Mereoleona, Royal Knights). This is the reverse-index antidote the catalog already knows: a per-episode field that is silent is silence, not absence.",
+    "AFG'S CLASS IS A VIEWING GUIDE; ITS MINUTE RANGE IS THE SIZING INSTRUMENT. On this series the blue rows print prose of the form 'Mixed — watch from minute X to Y ... After minute Y, the episode introduces an anime-original ...'. That is a claim that SOME anime-original content exists, and it is printed identically on ep 67 (a one-minute tag) and ep 88 (twelve minutes). The minute ranges themselves checked out against manga page counts on all four rows (67: 0:34-20:46 for 24 pages; 85: 03:08-08:18 for 4 pages; 86: 20:40-end for ~1 page; 88: 13:20-end for 17 pages). Its chapter column is the usual reading-position plateau — it prints '133' on both 85 and 86 and '103' on both 67 and 68.",
+    "AFL'S 'Manga Canon' IS NOT A TYPE WITNESS ON THIS BLOCK. It prints Manga Canon on 84, 85, 86, 87 and 88 without distinction, i.e. on a full adaptation (87), on a half-original episode (88), on a majority-original episode (85) and on an essentially wholly original one (86). Where AFL and AFG disagree on this series, AFG's positive claim of original content was correct on three of four rows.",
+    "ja-WIKIPEDIA IS NOT USABLE FOR BLACK CLOVER TYPING. Its 『ブラッククローバー』 episode table carries staff columns only — no 原作 / chapter column and no ☆ or アニメオリジナル marker anywhere in the run. Recorded so a later agent does not re-check it.",
+    "THE LICENSOR'S SYNOPSES ARE ALIVE AND ARE THE BEST SECOND SOURCE. The show's own site (bclover.jp) now 500s and its story synopses were JS-loaded even in the Wayback snapshot, but TV Tokyo's anime section still serves the complete per-episode synopsis list at tv-tokyo.co.jp/anime/bclover/episodes/index_N.html (index_9.html covers #81-90). Ten episodes per page, newest first.",
+    "UN-CROSS-CUT AT 88-92, AND A LIKELY ANCHOR GAP AT EP 91 (outside the ask, not delivered as an anchor). Stored anchors run 88 -> 135, 89 -> 139 [138], 90 -> 142 [140], (91 has NO anchor), 92 -> 143 [142]. The fandom's Mereoleona page cites 'ch=136|p=7-17|ep=91', 'ch=136|p=14|ep=91' and 'ch=136|p=16-17|ep=91' — Mereoleona burning Rhya's Dark Cloaked Avidya Slash and punching him. So the anime plays the hideout-defence chapters (138-142) first and comes back for ch 136 at ep 91; ch 137's home is unchecked. If that holds, ep 91 wants an anchor of END 136 [START 136] with a `rearranged` annotation, and the stored ep-90 -> 142 / ep-92 -> 143 pair is a back-jump the display currently interpolates across.",
+    "THE YAMI/VANGEANCE MATERIAL IS NOT A LATER-MANGA ADAPTATION. Checked because the manga does eventually show Yami's and William's pasts: blackclover.fandom's William biography sources their first meeting to ch 79 p.2 and ch 142 p.8 — a panel and a mention, both already animated in eps 53 and (per the ref) elsewhere — and cites no chapter for the bandit mission, the traitor knights, or the founding of the Golden Dawn. The two knights, Goht and Mohl, have empty 'manga=' fields and exist only in ep 86."
+  ],
+  "flags_for_sean": [
+    "EP 86 IS A TYPE FLIP PLUS AN ANCHOR DELETION. Retyping 86 to filler requires deleting its stored anchor (A1). I have checked the deletion is lossless (84/85 hold END 133, 87 holds START 133 and END 134) but it is still a delete, so it is presented as a repair rather than done silently.",
+    "EPS 85 AND 88 ARE THE FIRST 'canon -> mixed' FLIPS ON THIS SERIES' MAIN RUN and they keep their anchors. If you would rather hold the line that a full chapter in the back half keeps a row canon regardless of an equally long original act, then 88 stays canon and only 85 and 86 move — but the same logic would then have to be applied to the rest of the Royal Knights block, which AFL types uniformly.",
+    "OUTSIDE THE ASK: ep 91 appears to adapt ch 136 and currently has no anchor, which makes eps 88-92 an un-cross-cut with a back-jump. I did not research ep 91 as its own row and have not delivered an anchor for it; it is a queue item.",
+    "The ep-86 fragment's exact page (ch 133 p.10) is inferred, not stated by any source for ep 86 alone. The TYPE does not depend on it — under every reading the tag duplicates ep 87 — but if the annotation's page number matters, treat it as single-source."
+  ]
+}

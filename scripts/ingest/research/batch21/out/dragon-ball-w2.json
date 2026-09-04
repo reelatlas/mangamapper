@@ -1,0 +1,98 @@
+{
+  "series_id": "dragon-ball",
+  "summary": "Batch 21 wave 2, the STRONG type_source_disagreement tier: one Dragon Ball row, ep 34 'Cruel General Red' (非情のレッドリボン), stored CANON (AFL: 'Manga Canon') against animefillerguide's BLUE 'mixed' class. Settled by CHAPTER ACCOUNTING on three sources beyond AFL/AFG: Kanzenshuu's episode guide, whose 'Corresponding' field for this row is an ORDERED segment list reading 'Half Filler Episode - Written by Keiji Terui' THEN 'Chapter 055, \"A Red Ribbon\"' THEN 'Chapter 056, \"The Struggle for the Dragon Ball\"'; Kanzenshuu's chapter pages, whose reverse index gives ch 55 and ch 56 to DBep 34 ALONE (ch 54 -> eps 28/29, ch 57 -> ep 35) and whose Page Breakdown gives each as Title + Pages 01-14; and dragonball.fandom's episode page, whose summary partitions the episode scene by scene. ja-Wikipedia's episode table adds a fourth, weaker witness: it carries an 原作 column, which is EMPTY for eps 30, 31, 32 and 33 (the anime-original Silver/Pilaf block) and reads 第5巻 for eps 34-36 — a positive claim that source content resumes at ep 34, with no sizing. RESULT: the row FLIPS to MIXED. Both shares are large and story-carrying. The source share is two complete chapters — Goku finding the Six-Star Ball with Bulma's radar, Silver blowing up the Kinto-Un with a bazooka, Goku knocking him out with one swipe of his tail, the capsule robot and the plane north, Commander Red dismissing Silver for his failure and Staff Officer Black warning General White, the plane freezing and crashing and Suno dragging Goku home — running from 7:55 to the end by AFG's own window. The non-source share is roughly the first eight minutes, the tail of the anime-original arc that eps 30-33 tell: Goku playing with the mountain monkeys he saved in ep 33, a storm that halts both searches, and Silver reporting to Staff Officer Black from his cabin that the flooded river may wash the ball ashore. That is not a small studio beat inside an adapted chapter (T28's faithfulness clause) — it is a self-contained original act occupying about 38% of the episode, and Kanzenshuu grades it exactly that way with its 'Half Filler Episode' label. WHO LIED AND HOW: AFL. Its two-value 'Manga Canon' bucket cannot express an episode that spends its first half finishing an anime-original storyline, and it prints the same label on ep 35, which is a straight adaptation of ch 57. AFG's blue class is substantively right, but note its NOTE is not actually about the filler half at all — it explains a CONTINUITY artefact ('During the encounter between Colonel Silver and Goku, Silver seems to recognize him. This happens because they met in previous filler episodes; however, in the manga, this is their first meeting. You can check this in chapter 55, page 14') — so on this row AFG's class is right for a reason AFG does not state, and the sizing has to come from its 'watch the second half, from minute 7:55 to the end' instruction plus Kanzenshuu's label. No air-date defect: Kanzenshuu (15 October 1986, 7:00-7:30PM Wednesday, Fuji TV), ja-WP (10月15日) and AFL all agree with the stored 1986-10-15.",
+  "anchors": [
+    {
+      "episode": 34,
+      "start_chapter": 55,
+      "end_chapter": 56,
+      "chapters_adapted": "55, 56",
+      "volume": 5,
+      "confidence": "medium",
+      "note": "CONFIRMS the stored anchor (ep 34 -> END 56 [START 55] {55-56}, afg) on a row being retyped from canon to MIXED (mixed rows carry anchors; A1 only bars filler). Kanzenshuu's ep-34 Corresponding field lists both chapters with NO page qualifier — 'Chapter 055, \"A Red Ribbon\"' and 'Chapter 056, \"The Struggle for the Dragon Ball\"' — i.e. both in full, and its chapter pages confirm from the other side that ch 55 and ch 56 each correspond to 'Dragon Ball Episode 034, \"The Heartless Red Ribbon\"' and to no other episode. The neighbours bracket it cleanly: ch 54 -> eps 28 and 29 (stored ep 29 -> 54), ch 57 -> ep 35 (stored ep 35 -> 57). Content check against dragonball.fandom's summary, in order: Goku finds the ball with the radar and beats the two henchmen (ch 55), Silver destroys the Nimbus and Goku knocks him out (ch 55 end / ch 56 start), the capsule robot and the plane north (ch 56), Commander Red dismissing Silver and Black radioing General White (ch 56), the crash and Suno's rescue (ch 56 end). END 56 = the furthest mainline chapter adapted in running order (A4); START 55 = the first chapter animated, and the anime-original share sits BEFORE it rather than inside it, so A10's sliver test is not engaged. A47 does not fire: ep 35 starts on ch 57, not 56. Volume 5 agrees with the stored boundary table (v5 = 49-60) and with ja-WP's own 原作 column, which reads 第5巻 for this row. Confidence MEDIUM because the anchor itself is not in doubt — the medium reflects the sizing of the filler half, which rests on Kanzenshuu's label plus AFG's minute rather than on a page-level split.",
+      "sources": [
+        "https://www.kanzenshuu.com/episode/db/eps-034/",
+        "https://www.kanzenshuu.com/manga/db/chp-055/",
+        "https://www.kanzenshuu.com/manga/db/chp-056/",
+        "https://dragonball.fandom.com/wiki/Cruel_General_Red",
+        "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB_(%E3%82%A2%E3%83%8B%E3%83%A1)"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 34,
+      "kind": "parity",
+      "continue_chapter": 57,
+      "note": "OUTSIDE THE ASK, delivered because the row is being retyped and stores no continue. Ep 34 finishes ch 56 (Kanzenshuu lists the chapter with no page qualifier, and its ch-56 page names ep 34 as the only corresponding episode) and ep 35 starts cleanly at ch 57, 'Assault on Muscle Tower!!' (Kanzenshuu ep 35; stored ep 35 -> 57 [57] {57}). Clean chapter boundary — read on from 57. C1 does not apply.",
+      "sources": [
+        "https://www.kanzenshuu.com/episode/db/eps-034/",
+        "https://www.kanzenshuu.com/episode/db/eps-035/",
+        "https://www.kanzenshuu.com/manga/db/chp-057/"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [
+        34
+      ],
+      "kind": "partial",
+      "chapters": "55, 56",
+      "note": "weight: SIGNIFICANT — two complete chapters, twenty-eight manga pages, running from 7:55 to the end of the episode (AFG's own window) and adapted in running order. Content, in Kanzenshuu's words: 'Using the Dragon Radar that Bulma made, Goku easily spots the Dragon Ball that drifted down the river. However, Kinto-Un is blown away by Captain Silver's bazooka! After defeating Silver with a single swipe of his tail, Goku heads north in a plane flown by a robot who came out of a capsule. Goku shudders from the extreme cold. The robot is frozen solid as well, and the plane crashes!! Having been frozen solid, Goku is saved [by Suno].' Plus, from ch 56's second half, Commander Red hearing of Silver's failure, refusing him a second chance, and Staff Officer Black radioing General White that Goku is heading into his territory. NEW and SOLE: Kanzenshuu's chapter pages give ch 55 and ch 56 to this episode alone. This is the segment the anchor rests on.",
+      "sources": [
+        "https://www.kanzenshuu.com/episode/db/eps-034/",
+        "https://www.kanzenshuu.com/manga/db/chp-055/",
+        "https://www.kanzenshuu.com/manga/db/chp-056/",
+        "https://dragonball.fandom.com/wiki/Cruel_General_Red"
+      ]
+    },
+    {
+      "episodes": [
+        34
+      ],
+      "kind": "divergence",
+      "chapters": "55",
+      "note": "The anime-original share of ep 34, named so the mixed typing is auditable: roughly the first eight minutes (everything before AFG's 7:55) close out the studio-made storyline of eps 30-33 and correspond to no manga pages — Goku fooling around with the mountain monkeys he rescued from Silver's fire in ep 33; a storm that stops both Goku's and the Red Ribbon squad's search for the day; and Colonel Silver in his cabin reporting by transmitter to Staff Officer Black that the river is over-flowing and the ball may wash ashore, so he will resume in the morning. Kanzenshuu grades the row 'Half Filler Episode' and lists that segment FIRST, before the two chapters. Two knock-on divergences inside the adapted half, both caused by the same filler block: Silver appears to RECOGNISE Goku, whereas ch 55 p.14 is their first meeting (AFG records this explicitly); and Staff Officer Black is present from the start, where the manga introduces him only in ch 56 at Red Ribbon headquarters. ja-Wikipedia's 原作 column is the independent structural control: it is EMPTY for eps 30, 31, 32 and 33 and reads 第5巻 from ep 34 on.",
+      "sources": [
+        "https://www.kanzenshuu.com/episode/db/eps-034/",
+        "https://www.kanzenshuu.com/episode/db/eps-033/",
+        "https://dragonball.fandom.com/wiki/Cruel_General_Red",
+        "https://www.animefillerguide.com/anime/dragon-ball/",
+        "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB_(%E3%82%A2%E3%83%8B%E3%83%A1)"
+      ]
+    }
+  ],
+  "type_corrections": [
+    {
+      "episodes": [
+        34
+      ],
+      "type": "mixed",
+      "note": "Stored CANON (AFL: 'Manga Canon'). Flip to MIXED under T27/T28: source and non-source in one episode, both shares substantial and story-carrying. SEGMENT WEIGHTS. (1) NON-SOURCE, story-carrying, roughly the first eight minutes (~38% of the episode's body): the closing act of the anime-original Silver arc that eps 30-33 tell — Goku with the monkeys he saved in ep 33, the storm that suspends both searches, and Silver reporting to Staff Officer Black from his cabin. It corresponds to no manga pages: ch 54 is exhausted at ep 29 (Kanzenshuu's ch-54 reverse index is eps 28 and 29) and ch 55 opens on Goku already at the river with the radar. Kanzenshuu grades the row 'Half Filler Episode' and lists that segment FIRST in its ordered Corresponding field; AFG independently instructs the viewer to 'watch the second half, from minute 7:55 to the end'; and ja-Wikipedia's 原作 column is empty for eps 30-33 and resumes at 第5巻 on ep 34. (2) SOURCE, SIGNIFICANT: chapters 55 and 56 complete, twenty-eight pages, adapted in running order and given to this episode alone by Kanzenshuu's chapter pages. Under T28 the faithfulness clause covers ALTERATIONS inside an adapted chapter, not a self-contained original act that occupies four tenths of the running time and finishes a four-episode storyline — that is the definition of mixed. WHO LIED: AFL. Its 'Manga Canon' bucket has two values and prints the same one on ep 34 and on ep 35, which is a straight adaptation of ch 57 with no filler at all. AFG's blue class is right in substance, but its own NOTE does not argue the case — it explains a continuity artefact (Silver seeming to recognise Goku, because they met in the filler episodes, whereas ch 55 p.14 is their first meeting) rather than the eight anime-original minutes; the sizing had to come from its 7:55 instruction plus Kanzenshuu's label, which is why this verdict is medium and not high. The stored anchor stands (mixed rows carry anchors).",
+      "sources": [
+        "https://www.kanzenshuu.com/episode/db/eps-034/",
+        "https://www.kanzenshuu.com/manga/db/chp-054/",
+        "https://www.kanzenshuu.com/manga/db/chp-055/",
+        "https://www.kanzenshuu.com/manga/db/chp-056/",
+        "https://dragonball.fandom.com/wiki/Cruel_General_Red",
+        "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+        "https://www.animefillerguide.com/anime/dragon-ball/",
+        "https://www.animefillerlist.com/shows/dragon-ball"
+      ]
+    }
+  ],
+  "repairs": [],
+  "structure": [
+    "ROW IDENTITY / TITLE SPACE: our stored titles for this series are the English dub titles ('Cruel General Red') while Kanzenshuu and ja-WP carry the Japanese ones (非情のレッドリボン, 'The Heartless Red Ribbon'). The join is by NUMBER + DATE and it is clean on both sides of the target: our 33 'The Legend of a Dragon' = Kanzenshuu 033 龍の伝説 (1986-10-08) and our 35 'Cold Reception' = Kanzenshuu 035 北の少女スノ (1986-10-22), with 34 at 1986-10-15 in all three sources. Recorded because the dub title 'Cruel General Red' names Commander Red, who is not a General and who is not the episode's subject — a title-keyed lookup on this series will mislead.",
+    "ja-WIKIPEDIA'S DRAGON BALL EPISODE TABLE CARRIES AN 原作 COLUMN — a per-row tankobon volume, using rowspans — which the DBZ table does NOT have (DBZ uses a ★ marker instead). For the Red Ribbon block it reads: ep 29 第5巻, eps 30-33 EMPTY, eps 34-36 第5巻 (one rowspan=3), ep 37 第5巻 - 第6巻. An empty cell in this column is the article's way of saying anime-original; it is volume-level only, so it can confirm that source content is present but never how much.",
+    "KANZENSHUU'S FILLER LADDER, again: this row is graded 'Half Filler Episode', a rung it uses sparingly, between 'Mostly Filler' and 'Partial Filler'. The label is a viewer's grading of how much can be skipped, not a T27 standing, but on this row it is the only quantitative statement about the original share besides AFG's minute mark, and the two agree (half / 7:55 of a ~21-minute body).",
+    "AFG'S NOTE ON THIS ROW IS A CONTINUITY NOTE, NOT A TYPING ARGUMENT. It reads: 'It's a mixed episode; you only need to watch the second half, from minute 7:55 to the end ... During the encounter between Colonel Silver and Goku, Silver seems to recognize him. This happens because they met in previous filler episodes; however, in the manga, this is their first meeting. (You can check this in chapter 55, page 14).' Two things follow: the class is right but unargued, and the note is a genuinely useful page-level fact (ch 55 p.14 is the manga's Silver/Goku first meeting) that corroborates the anime's divergence.",
+    "THE FILLER BLOCK EITHER SIDE IS ALREADY CORRECTLY TYPED: eps 30-33 are stored filler, AFL says Filler, AFG prints red on 33 with an N/A chapter cell, ja-WP leaves their 原作 cells empty, and Kanzenshuu calls ep 33 'Filler Episode - Written by Toshiki Inoue'. Ep 34 is the seam where that block hands back to the manga, which is exactly why it is half and half."
+  ],
+  "flags_for_sean": [
+    "EP 34 IS A canon -> mixed FLIP THAT KEEPS ITS ANCHOR. The chapter accounting is not in doubt (ch 55 and ch 56 complete, and this episode is their only home). What is medium is the SIZE of the original opening: it rests on Kanzenshuu's 'Half Filler Episode' label and AFG's 7:55 instruction, corroborated only structurally by the fandom's scene order and ja-WP's empty 原作 cells for eps 30-33. If you hold that a row adapting two complete chapters stays canon whatever precedes them, the flip should be declined and the two annotations (partial + divergence) delivered on a canon row instead — the anchor and the continue are unaffected either way.",
+    "IF THE FLIP IS TAKEN, this is the seam-episode shape and it will recur across Dragon Ball's several anime-original blocks (eps 79+, 127+, 149+ per ja-WP's own notes). Worth deciding once: does a filler block's closing half-episode make the seam row mixed, or does the source content carry it? I have applied the same test here as to Black Clover 88 in this wave (a story-carrying original act of comparable length alongside a full chapter -> mixed)."
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "series_id": "my-hero-academia",
+  "summary": "ONE target row, ONE stored type CONFIRMED, zero type_corrections -- AFL is right, and animefillerguide is the source that lied, in the mildest of the wave-1 ways: its row 39 prints a chapter value ('49.5') with NO filler class, and that value is myheroacademia.fandom's `adapted from` infobox field copied verbatim. AFG's MHA table is fandom-derived throughout that stretch -- its row 32 is 'Everyone's Internships / N/A / * Filler', its row 34 is '34.5, 60, 61, 67' (which is our own stored batch-15 exact record), its row 39 is '49.5' -- so AFL and AFG are NOT two independent witnesses on the '49.5' claim, and the T4 contradiction is really 'AFL's filler label vs the fandom's chapter field'. ROW IDENTITY FIRST (R20): our row 39 'Game Start' 2018-04-07 = the fandom's Episode 39 (jp air date 2018-04-07) = ja-WP's 第39話 ゲーム・スタート 4月7日 = en-WP's season-3 episode 1 = AFG's '039. (01). Game Start'. Season 3 is 25 episodes (39-63) on every list; no recap/special offset anywhere in the join. WHAT CHAPTER 49.5 ACTUALLY IS: an EXTRA chapter, TWO PAGES long, titled 'The Summer Hope' (The Summer Hope, ザ・サマー・ホープ), first printed in Shonen Jump NEXT!! vol 3, 2015 (July 10, 2015), sitting between ch 49 and ch 50 -- the adjacency is corroborated from both sides, since the fandom's Chapter 49 page lists 'next = Chapter 49.5 / Chapter 50' and its Chapter 50 page lists 'previous = Chapter 49 / Chapter 49.5'. Its ENTIRE content, per the fandom's summary of it: 'Denki Kaminari and Minoru Mineta both relax and think about seeing the girls in Class 1-A in swimsuits because it's summer.' That is the whole chapter. WEIGHING THE SHARE (T28 sliver clause): the two pages supply the SETUP of an anime-original episode and nothing more -- Kaminari and Mineta turn up at Izuku's door wanting to use the school pool so they can see the girls in bikinis -- and the episode immediately SUBVERTS the gag (the girls turn up in school-issued swimsuits). Everything after that is studio-made: Izuku inviting the whole class to endurance training, Ida's fifty-metre race, Bakugo's challenge, All Might's talk with Detective Tsukauchi, Aizawa clearing the pool, and the Shigaraki bookends. weight: SLIVER -- a two-page gag used as an excuse, not a story-carrying share. THE SOLE-ADAPTATION EXCEPTION, both halves stated explicitly: half one HOLDS -- ch 49.5's pages appear in no other episode, the fandom's Chapter 49.5 page names 'anime episode = Episode 39' and only that. Half two FAILS -- a two-page swimsuit daydream in a bonus chapter is the textbook 'trivial first-time beat', not a death, a reveal or an arc close. So the fragment does NOT flip the row: it stays filler and the tie is a mandatory graft annotation, exactly as the rule prescribes. THE RECAP SEGMENT: confirmed and weightless (the recap clause). The fandom's `adapted from` field lists 'Season 1' and 'Season 2' alongside 49.5 and its lead states outright 'This episode is almost completely comprised of anime-original content'; en-Wikipedia, written independently, says the class 'have a PE class at the pool, while reminiscing about the main events of the previous seasons', and the episode's own character list is dense with flashback-tagged names from seasons 1-2 (Best Jeanist, Endeavor, Stain, the Hosu and USJ Nomu, Gran Torino, Mei Hatsume, Present Mic, Midnight, Native, Tensei Ida). Recap footage progresses nothing and counts for nothing; the remainder decides -- and the remainder is anime-original plus a sliver. FILLER (T27). NO ANCHOR IS POSSIBLE HERE EVEN IF THE TYPE CHANGED: 49.5 is not a number in our chapter space. Our space is the mainline 1-432 (the stored volume table runs v5 = 36-44, v6 = 45-53 with no half-numbers anywhere), en-Wikipedia's chapter list does not print the extra at all, and '49.5' is the wikis' convention for an unnumbered bonus. That is A44 position-less on top of A1 filler -- two independent reasons the row takes no anchor.",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [
+    {
+      "episode": 39,
+      "why": "TWO independent reasons, both stated so the '49.5' value cannot be re-imported as an anchor later. (1) A1 -- the row is FILLER (stored type confirmed below) and filler rows never carry anchors. (2) A44 -- even on a canon or mixed row this material could not be anchored, because ch 49.5 is not a position in our chapter space: it is an unnumbered extra printed between ch 49 and ch 50 (Shonen Jump NEXT!! vol 3, 2015; 2 pages), '49.5' is the wikis' own convention for it, our stored chapter space is the mainline 1-432, our volume table has no half-numbers, and en-Wikipedia's List of My Hero Academia chapters does not list the extra in any volume's contents. Nothing mainline is stranded by leaving the row position-less: the stored ep-38 anchor ends at ch 70 and ep 40 resumes in ch 70, so the mainline line is continuous across ep 39.",
+      "sources": [
+        "https://myheroacademia.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&format=json&titles=Episode%2039",
+        "https://myheroacademia.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&format=json&titles=Chapter%2049.5",
+        "https://myheroacademia.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&format=json&titles=Chapter%2049",
+        "https://myheroacademia.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&format=json&titles=Chapter%2050",
+        "https://en.wikipedia.org/wiki/My_Hero_Academia_season_3",
+        "https://ja.wikipedia.org/wiki/%E5%83%95%E3%81%AE%E3%83%92%E3%83%BC%E3%83%AD%E3%83%BC%E3%82%A2%E3%82%AB%E3%83%87%E3%83%9F%E3%82%A2_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+        "https://en.wikipedia.org/wiki/List_of_My_Hero_Academia_chapters",
+        "https://myheroacademia.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&format=json&titles=Episode%2038",
+        "https://myheroacademia.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&format=json&titles=Episode%2040",
+        "https://myheroacademia.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&format=json&titles=Chapter%2070"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [
+        39
+      ],
+      "kind": "graft",
+      "chapters": "49.5",
+      "note": "weight: SLIVER -- because the two pages are the episode's EXCUSE, not its story. Ch 49.5 'The Summer Hope' is a two-page extra (Shonen Jump NEXT!! vol 3, 2015; between ch 49 and ch 50, adjacency confirmed from both neighbours' prev/next fields) whose entire content is 'Denki Kaminari and Minoru Mineta both relax and think about seeing the girls in Class 1-A in swimsuits because it's summer'. The anime uses exactly that as the premise -- Kaminari and Mineta ask Izuku to come to the school pool specifically so they can get permission and see the girls in bikinis -- and then subverts it (the girls arrive in school-issued swimsuits, Kaminari dismayed). Everything else in the episode is studio-made. Material is NEW: the fandom's Chapter 49.5 page names 'anime episode = Episode 39' and no other, so this is its sole adaptation -- but the T28 sole-adaptation exception FAILS on its second half, because a two-page swimsuit gag is a trivial beat, not a major plot point of the source, so the fragment does not flip the row to mixed. SINGLE-LINEAGE CAVEAT: the 49.5 tie itself rests on myheroacademia.fandom (episode page and chapter page, read in both directions); AFG's '49.5' is that field copied, and neither en-WP nor ja-WP mentions a manga tie for this episode. The tie is credible (the premise match is exact and the wiki states it in both directions) but it is one wiki. Delivered as a graft rather than the stored `partial` because ep 39 does not otherwise adapt the chapter -- it transplants a fragment into an original plot, which is what graft means.",
+      "sources": [
+        "https://myheroacademia.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&format=json&titles=Episode%2039",
+        "https://myheroacademia.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&format=json&titles=Chapter%2049.5",
+        "https://myheroacademia.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&format=json&titles=Chapter%2049",
+        "https://myheroacademia.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&format=json&titles=Chapter%2050",
+        "https://www.animefillerguide.com/my-hero-academia/"
+      ]
+    },
+    {
+      "episodes": [
+        39
+      ],
+      "kind": "recap",
+      "chapters": "the series so far",
+      "note": "CONFIRMATION of the stored recap{the series so far} annotation, unchanged. CONFIRMED, and weightless in the standing per the recap clause (T28). The fandom's `adapted from` field lists 'Season 1' and 'Season 2' next to the 49.5 fragment; en-Wikipedia independently describes the pool session as taking place 'while reminiscing about the main events of the previous seasons'; and the episode's character list carries a long tail of flashback-tagged names from ch 1-70's material (Best Jeanist, Endeavor, Stain, the Hosu Nomu, the USJ Nomu, Gran Torino, Mei Hatsume, Tetsutetsu, Present Mic, Death Arms, Midnight, Native, Tensei Ida). This is re-shown material of chapters already covered by eps 1-38, not a new-drawn retelling of unadapted backstory, so the RECAP BOUNDARY does not push it toward filler on its own -- it simply carries no weight, and the remainder (an anime-original pool day plus the 49.5 sliver) decides the type.",
+      "sources": [
+        "https://myheroacademia.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&format=json&titles=Episode%2039",
+        "https://myheroacademia.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&format=json&titles=Chapter%2049.5",
+        "https://myheroacademia.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&format=json&titles=Chapter%2049",
+        "https://myheroacademia.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&format=json&titles=Chapter%2050",
+        "https://en.wikipedia.org/wiki/My_Hero_Academia_season_3",
+        "https://ja.wikipedia.org/wiki/%E5%83%95%E3%81%AE%E3%83%92%E3%83%BC%E3%83%AD%E3%83%BC%E3%82%A2%E3%82%AB%E3%83%87%E3%83%9F%E3%82%A2_(%E3%82%A2%E3%83%8B%E3%83%A1)"
+      ]
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 39,
+      "field": "kind + chapters",
+      "old": "partial {49.5 (partial) + recap}",
+      "new": "graft {49.5}",
+      "why": "Two hygiene problems in one stored record, both now fixable because the recap became its own annotation on 2026-09-04 (T28 session entry, keepFrom = true). (a) The chapters field mixes a chapter number with the word 'recap' -- it must be a comma-separated CHAPTER LIST, and the separate recap{the series so far} annotation already carries the recap, so the '+ recap' text is now duplicated as well as unparseable. (b) The kind is wrong: `partial` means a page-split share of a chapter the row otherwise adapts, and ep 39 adapts nothing else of ch 49 or 50 -- it transplants a two-page bonus chapter's premise into an original plot, which is `graft`. The stored note ('recap ep with anime-original pool scene') stays true either way. If Sean prefers minimal churn, keeping `partial` and cleaning the chapters field to '49.5' also fixes the parsing problem; the kind change is the smaller half of the proposal.",
+      "sources": [
+        "https://myheroacademia.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&format=json&titles=Episode%2039",
+        "https://myheroacademia.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&format=json&titles=Chapter%2049.5",
+        "https://www.animefillerguide.com/my-hero-academia/"
+      ]
+    }
+  ],
+  "type_corrections": [
+    {
+      "episodes": [
+        39
+      ],
+      "type": "filler",
+      "why": "CONFIRMED AS STORED — CONFIRMATION with evidence, not an empty verdict -- AFL is right and AFG's chapter cell is the misleading value. Per-segment accounting for the 24 minutes: (1) SOURCE, weight SLIVER -- ch 49.5, a two-page extra whose whole content is Kaminari and Mineta daydreaming about the girls in swimsuits, used as the setup and then subverted. (2) RECAP, weight NONE -- re-shown footage of seasons 1-2 material (the fandom's own `adapted from` names both seasons; en-WP: 'while reminiscing about the main events of the previous seasons'), which under the recap clause counts for nothing. (3) ANIME-ORIGINAL, the remainder and the bulk -- the Shigaraki bookends, Izuku's apartment training, Aizawa and Vlad King reviewing Quirks, the whole pool session and the fifty-metre race, All Might's meeting with Detective Tsukauchi, and All Might's beach talk with Izuku. The fandom's Episode 39 lead states the conclusion in its own words: 'This episode is almost completely comprised of anime-original content.' The sole-adaptation exception is checked and fails (sole yes, load-bearing no), so the sliver does not flip the row. Zero story-carrying standing in the source = filler (T27). Note also that the row could not be anchored even if it were mixed, because 49.5 is not a mainline number (A44) -- so nothing about the source's position is lost by the filler typing.",
+      "confidence": "high",
+      "sources": [
+        "https://myheroacademia.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&format=json&titles=Episode%2039",
+        "https://myheroacademia.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&format=json&titles=Chapter%2049.5",
+        "https://myheroacademia.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&format=json&titles=Chapter%2049",
+        "https://myheroacademia.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&format=json&titles=Chapter%2050",
+        "https://en.wikipedia.org/wiki/My_Hero_Academia_season_3",
+        "https://ja.wikipedia.org/wiki/%E5%83%95%E3%81%AE%E3%83%92%E3%83%BC%E3%83%AD%E3%83%BC%E3%82%A2%E3%82%AB%E3%83%87%E3%83%9F%E3%82%A2_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+        "https://www.animefillerguide.com/my-hero-academia/"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "ROW IDENTITY (R20, no index joins): row 39 matched on TITLE and DATE across four lists -- ours 'Game Start' 2018-04-07; myheroacademia.fandom Episode 39 (season number 3, jp air date 2018-04-07, us 2019-03-03); ja-WP 第39話 ゲーム・スタート 2018年4月7日; en-WP season 3 episode 1 'Game Start' / ゲーム・スタート 2018-04-07; AFG '039. (01). Game Start'. Season 3 = 25 episodes (39-63) on en-WP, ja-WP and AFG alike, and there is no recap or special counted into the run, so no offset can enter the join. AFG IS FANDOM-DERIVED ON THIS SERIES TOO -- do not count it as an independent second source for '49.5'. Three fingerprints in the adjacent rows: AFG 32 = 'Everyone's Internships / N/A / * Filler' (the fandom's anime-original row), AFG 34 = '34.5, 60, 61, 67' (identical to our stored batch-15 exact record, itself derived from the fandom's page splits), AFG 39 = '49.5' (identical to the fandom's `adapted from`). The two independent content sources used here are therefore (1) myheroacademia.fandom read in BOTH directions -- Episode 39 -> ch 49.5, and Chapter 49.5 -> 'anime episode = Episode 39', plus Chapter 49 and Chapter 50's prev/next fields to establish the extra's position -- and (2) en-Wikipedia's season-3 article, whose per-episode summary is independently written and independently reaches 'a PE class at the pool, while reminiscing about the main events of the previous seasons' with no manga tie at all. ja-WP's episode list carries neither a chapter column nor an アニメオリジナル marker for this series, so it serves only for identity. The licensor was attempted and is NOT available: heroaca.com is behind Cloudflare (403 to both curl and the fetch proxy), its per-episode text is served from episodes/json/ep_N.json which the Wayback Machine captured only from 2019 onward (ep_1 .. ep_25 of the season-4 site), and no 2018 capture of the season-3 JSON exists. That is silence, not evidence, and the verdict does not lean on it. CHAPTER SPACE: one space, the mainline 1-432. Ch 49.5 is outside it -- the stored volume table (v5 = 36-44, v6 = 45-53) has no half-numbers, en-WP's List of My Hero Academia chapters prints volume 6's contents as the plain run 45-53 with no bonus entry, and the fandom's own Chapter 49.5 infobox gives 'volume = 5' while giving ch 49 and ch 50 'volume = 6' -- i.e. the wiki itself places the extra outside the numeric run. No conversion was needed and none was applied.",
+    "unresolved": "A TWO-PAGE HOLE IN CHAPTER 70, noticed while checking the neighbours and NOT resolved. The fandom's Chapter 70 page carries 'anime episode = Episode 38 (p. 1-6) / Episode 40 (p. 9-19)', and the ep-38 and ep-40 infoboxes agree -- so pages 7-8 of ch 70 are assigned to no episode by any source. Ch 70's summary at that point is Aizawa telling Class 1-A that the lodge destination has been changed and will only be announced on the day; en-Wikipedia's ep-39 summary ends 'During the night, Aizawa and Vlad King discuss that the location of the training camp has been changed to protect the students'. That is the same information, restaged. It is a PLAUSIBLE landing for p. 7-8 and I am recording it as an observation only -- NO source states it, so it is not delivered as coverage, not as an annotation and not as an anchor, and it would not change the typing either way (two administrative pages inside a 24-minute original episode are a sliver by any reading). Worth a line in a future MHA pass; the stored ep-38 anchor (END 70) and ep-40's start are both unaffected."
+  },
+  "flags_for_sean": [
+    "SAME FINDING AS MY PROMISED NEVERLAND VERDICT, on a different series: AFG's chapter column is the fandom's `adapted from` field copied. On MHA the fingerprints are rows 32 ('N/A / * Filler'), 34 ('34.5, 60, 61, 67' -- our own stored exact record) and 39 ('49.5'). Wherever the T4 strong tier reads 'AFG maps a chapter' as an independent positive claim against AFL, on these two series it is reading one source twice. A cheap discriminator: if AFG's cell reproduces a fandom oddity verbatim (a decimal, an N/A, a non-contiguous set), treat it as derived.",
+    "AN AFG ROW WITH A CHAPTER VALUE AND NO CLASS IS NOT A CANON CLAIM. Row 39 prints '49.5' with no red and no blue -- the 'AFG canon' side of this flag is an absence-of-class read, and AFG's own convention for an anime-original episode on this very page is a red class plus 'N/A' (row 32). A bonus-chapter row breaks that convention because the column CAN print a number for it. This is the third shape of the same recurring class after soul-eater 32 and bleach 46: an episode tied to an unnumbered/half-numbered extra generates a strong-tier contradiction that resolves as an ANNOTATION, never as a retype and never as an anchor.",
+    "THE STORED ANNOTATION'S CHAPTERS FIELD IS UNPARSEABLE and I have proposed a repair: partial{'49.5 (partial) + recap'} -> graft{'49.5'}. The '+ recap' text is now duplicated by the separate recap annotation created on 2026-09-04, and a chapters field that contains prose defeats the comma-separated-list convention. Low stakes, but this is the exact shape the a+b verifier caught in wave 10.",
+    "RECORDED, NOT ACTED ON: pages 7-8 of ch 70 are assigned to no episode by any source (ep 38 takes p. 1-6, ep 40 takes p. 9-19), and ep 39's closing scene restages that content (the training-camp location change). I did not turn an inference into a claim. If MHA gets another pass, this is a two-page gap worth closing from a page-level source."
+  ]
+}

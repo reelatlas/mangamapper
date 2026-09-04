@@ -1,0 +1,187 @@
+{
+  "series_id": "dragon-ball-z",
+  "summary": "Batch 21 wave 2, the STRONG type_source_disagreement tier: three DBZ rows where animefillerguide's class contradicts ours. Settled by CHAPTER ACCOUNTING on three sources beyond AFL/AFG: Kanzenshuu's episode guide (its 'Corresponding' field is an ORDERED, PAGE-LEVEL segment list) plus its chapter pages (the reverse index of episodes, and the Page Breakdown block that gives every one of these chapters as Title + Pages 01-14, i.e. fourteen pages); dragonball.fandom's episode pages ('Major Events' and, decisively, 'Differences from the manga'); and ja-Wikipedia's episode table, whose ★ marker is declared in the article as アニメオリジナルエピソード. RESULT: two confirmations and one flip. EP 17 (stored mixed, AFL 'Mixed Canon/Filler', AFG red/Filler) STAYS MIXED: Kanzenshuu gives it 'Chapter 210 (Pages 1-4)' THEN 'Filler Episode', and p.1-4 is the episode's OPENING ACT — Piccolo beginning Gohan's real combat training with six months to the Saiyans — adapted in order, first time, and in no other episode (eps 17/18/19 hold p.1-4 / p.5-9 / p.10-End, disjoint); the rest is the Pendulum Room, which the fandom's Differences section names as anime-exclusive, and ja-WP leaves the row UNMARKED while starring ep 16 either side of it. EP 118 (stored CANON, AFL 'Manga Canon', AFG blue mixed) FLIPS TO MIXED: Kanzenshuu says 'Mostly Filler' plus 'Chapter 329 (Pages 11-End)', the fandom's Differences section says 'All events prior to Gohan and the others sensing Frieza's presence are exclusive to the anime', and AFG times the source at 18:37-to-the-end (~3 minutes of ~21) — the tutor Mr. Shu, Vegeta's return from space and Yamcha's song are all studio-made, so 'canon' is simply false. The row survives as mixed under T28's SOLE-ADAPTATION EXCEPTION, both halves stated: the pages are in no other episode (Kanzenshuu's ch-329 reverse index is exactly eps 107 and 118, with 107 holding p.1-4 and p.5-10) and the beat is a major plot point of the source — every warrior on Earth senses a monstrous ki, and Freeza, rebuilt as a cyborg, tells his father 'that's Earth' as their ship comes in: the reveal that opens the Trunks arc, and the episode's own Japanese title is that line. EP 174 (stored FILLER, AFL 'Filler', AFG blue mixed with an EMPTY chapter cell) STAYS FILLER: Kanzenshuu gives it one page, 'Chapter 394 (Page 7)', a montage page (Goku gathering the Dragon Balls, Vegeta emerging from the Room of Spirit and Time, Cell waiting in his ring); the fandom says 'With the exception of the final scene with Goku finding the last Dragon Ball, the entire events of this episode were exclusive to the anime'; and ja-WP stars the row. Sole but not a death, reveal or arc close, so the exception does not fire. WHO LIED AND HOW: on 17 and 174, AFG. Its red class on 17 is a viewing-guide 'skip this' printed on a row it simultaneously maps to ch 210, and its chapter column plateaus 210 across eps 17 and 18. On 174 it prints a blue 'mixed' class with NO chapter at all — the class is an opinion with nothing behind it, on an episode whose entire manga content is one page. On 118 the liar is AFL: its 'Manga Canon' bucket has no way to say 'eighteen minutes of this episode are studio-made', and it printed the same label on 119, which really is a chapter adaptation. Kanzenshuu's own labels are a filler LADDER (Partial Filler < Half Filler < Mostly Filler < Filler Episode), not a T27 standing — it grades ep 17 at the top of that ladder while still listing four manga pages, and that tension is the one live judgement in this file. No air-date defects: Kanzenshuu, ja-WP and AFL agree on 1989-08-30, 1991-11-27 and 1993-02-10; wave 1's AFL one-week-late blocks (73-97 and 122-134) do not touch these rows.",
+  "anchors": [
+    {
+      "episode": 17,
+      "start_chapter": 210,
+      "end_chapter": 210,
+      "chapters_adapted": "210 (p.1-4)",
+      "volume": 18,
+      "confidence": "medium",
+      "note": "CONFIRMS the stored anchor (ep 17 -> END 210 [START 210] {210}, afg) and enriches chapters_adapted with the page range. Kanzenshuu's ep-17 Corresponding field is an ordered list reading 'Chapter 210, \"The Father and Son's Harsh Training\" (Pages 1-4)' THEN 'Filler Episode - Written by Keiji Terui', i.e. the manga opens the episode; its ch-210 page gives the chapter as Title + Pages 01-14 and lists its corresponding episodes as exactly 017, 018, 019 (plus Kai 006), and the three page ranges are disjoint (17: p.1-4; 18: p.5-9; 19: p.10-End). Content check against dragonball.fandom's summary: 'After half a year of overcoming emotional and physical hardship, Gohan is finally being trained by Piccolo who urges Gohan to train seriously and surpass even him as there is only six more months until the arrival of the Saiyans' — that is Kanzenshuu's own rendering of ch 210's first pages. END 210 = the furthest mainline chapter adapted in running order (A4). A47 does NOT hold the END at 209: ep 18 STARTS on ch 210, but the four pages in question are ep 17's OPENING act, not a trailing scrap, and ep 18 does not own them (it holds p.5-9). START 210 = the only chapter in the episode. Volume 18 agrees with the stored boundary table (v18 = 205-216). Confidence MEDIUM because the typing this anchor rests on is the one live judgement in the file — see flags.",
+      "sources": [
+        "https://www.kanzenshuu.com/episode/dbz/eps-017/",
+        "https://www.kanzenshuu.com/manga/db/chp-210/",
+        "https://dragonball.fandom.com/wiki/Pendulum_Room_Peril",
+        "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%ABZ"
+      ]
+    },
+    {
+      "episode": 118,
+      "start_chapter": 329,
+      "end_chapter": 329,
+      "chapters_adapted": "329 (p.11-14)",
+      "volume": 28,
+      "confidence": "high",
+      "note": "CONFIRMS the stored anchor (ep 118 -> END 329 [START 329] {329}, afg) and enriches chapters_adapted, on a row being retyped from canon to MIXED (mixed rows carry anchors; A1 only bars filler). Kanzenshuu's ep-118 Corresponding field reads 'Mostly Filler - Written by Takao Koyama' THEN 'Chapter 329, \"Goku Won't Be Coming Home\" (Pages 11-End)' — the manga closes the episode; its ch-329 page gives Title + Pages 01-14 (so p.11-End = four pages) and lists corresponding episodes 107 and 118 only, with ep 107 holding p.1-4 and p.5-10. Content: about a year has passed with Goku still not home when Gohan and Kuririn both feel an enormous, evil ki; Kaio, Piccolo, Vegeta, Tenshinhan and Chaozu feel it too; a ship like Freeza's comes in and the cyborg-rebuilt Freeza tells King Cold 'that's Earth'; Gohan suits up and flies out. dragonball.fandom's Major Events for the row is 'The warriors of Earth sense the incoming Frieza and King Cold'. THIS IS THE 'PAGES, NOT NUMBERS' SHAPE: ch 329's NUMBER is already an END at ep 107, but p.11-14 air for the first time here after ten intervening filler episodes, so the position is real and forward — no `rearranged` needed. A47 does not fire: ep 119 STARTS on ch 330, not 329. Volume 28 agrees with the stored table (v28 = 326-337).",
+      "sources": [
+        "https://www.kanzenshuu.com/episode/dbz/eps-118/",
+        "https://www.kanzenshuu.com/episode/dbz/eps-107/",
+        "https://www.kanzenshuu.com/manga/db/chp-329/",
+        "https://dragonball.fandom.com/wiki/Frieza%27s_Counterattack"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 17,
+      "kind": "parity",
+      "continue_chapter": 210,
+      "note": "CONFIRMS the stored continue (210/parity). C1: the episode ends inside ch 210 — it shows p.1-4 of fourteen — and ep 18 picks the chapter up at p.5 (Kanzenshuu: ep 18 = 'Mostly Filler' + 'Chapter 210 (Pages 5-9)'). Parity with the anime: continue IN ch 210.",
+      "sources": [
+        "https://www.kanzenshuu.com/episode/dbz/eps-017/",
+        "https://www.kanzenshuu.com/episode/dbz/eps-018/"
+      ]
+    },
+    {
+      "episode": 118,
+      "kind": "parity",
+      "continue_chapter": 330,
+      "note": "OUTSIDE THE ASK, delivered because the row is being retyped and stores no continue. Ep 118 FINISHES ch 329 (Kanzenshuu: 'Pages 11-End') and ep 119 starts cleanly at ch 330 p.1 (Kanzenshuu ep 119: 'Chapter 330 (Pages 1-11)' then 'Partial Filler' then 'Chapter 330 (Pages 12-End)' and 'Chapter 331 (Pages 1-2)'). Clean chapter boundary — read on from 330. C1 does not apply.",
+      "sources": [
+        "https://www.kanzenshuu.com/episode/dbz/eps-118/",
+        "https://www.kanzenshuu.com/episode/dbz/eps-119/"
+      ]
+    }
+  ],
+  "anchor_hostile": [
+    {
+      "episode": 174,
+      "reason": "A1 — the row is filler (confirmed) and filler rows never carry chapter anchors. It correctly stores no anchor today and none should be added: its entire manga content is ONE page, ch 394 p.7, a montage page whose beats (Goku gathering the balls, Vegeta emerging from the Room of Spirit and Time, Cell waiting, Satan's boast) are bracketed by ep 173 (ch 394 p.1-6) and ep 175 (ch 394 p.8-End), both of which are anchored. Recording this so AFG's blue class on the row cannot later be read as an anchor claim — note that AFG's chapter cell for ep 174 is EMPTY, so it makes no chapter claim at all.",
+      "sources": [
+        "https://www.kanzenshuu.com/episode/dbz/eps-174/",
+        "https://www.kanzenshuu.com/manga/db/chp-394/",
+        "https://dragonball.fandom.com/wiki/The_Puzzle_of_General_Tao"
+      ],
+      "why": "A1 — the row is filler (confirmed) and filler rows never carry chapter anchors. It correctly stores no anchor today and none should be added: its entire manga content is ONE page, ch 394 p.7, a montage page whose beats (Goku gathering the balls, Vegeta emerging from the Room of Spirit and Time, Cell waiting, Satan's boast) are bracketed by ep 173 (ch 394 p.1-6) and ep 175 (ch 394 p.8-End), both of which are anchored. Recording this so AFG's blue class on the row cannot later be read as an anchor claim — note that AFG's chapter cell for ep 174 is EMPTY, so it makes no chapter claim at all."
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [
+        17
+      ],
+      "kind": "partial",
+      "chapters": "210 (p.1-4)",
+      "note": "weight: SIGNIFICANT — because it is a scene that carries the story forward, not a fragment quoted inside someone else's plot: the six-month survival is over and Piccolo starts Gohan's real training, blasting him with eye lasers and telling him there is time for nothing but eating, sleeping and fighting, and that if he thinks he will die then he had better get stronger than Piccolo and the Saiyans. It opens the episode (Kanzenshuu lists the chapter segment FIRST), it is the source's own next scene in running order, and it is NEW and SOLE — Kanzenshuu's ch-210 reverse index is eps 17/18/19 with disjoint ranges p.1-4 / p.5-9 / p.10-End, and eps 12-16 are all filler, so nothing of ch 210 has been shown before. Size is four of the chapter's fourteen pages; size is not the test. The remainder of the episode — Mr. Popo taking Krillin, Tien, Yamcha and Chaozu into the Pendulum Room to fight Shorty and Scarface — is anime-original: dragonball.fandom's Differences from the manga says 'Krillin and the others entering the Pendulum Room where they are transported to an alien city and battle two Saiyans is exclusive to the anime.'",
+      "sources": [
+        "https://www.kanzenshuu.com/episode/dbz/eps-017/",
+        "https://www.kanzenshuu.com/manga/db/chp-210/",
+        "https://dragonball.fandom.com/wiki/Pendulum_Room_Peril"
+      ]
+    },
+    {
+      "episodes": [
+        118
+      ],
+      "kind": "partial",
+      "chapters": "329 (p.11-14)",
+      "note": "weight: SIGNIFICANT — because it is the source's own arc-opening reveal, adapted in order and first time: a year has passed with Goku still missing when Gohan and Kuririn each feel a huge, evil ki approaching; Kaio, Piccolo, Vegeta, Tenshinhan and Chaozu feel it too, and two of them; a ship exactly like Freeza's comes in and Freeza, rebuilt with robotic parts, tells his father that this is Earth and that they have beaten the Super Saiyan to it; Gohan suits up and flies off. Four of the chapter's fourteen pages, roughly 18:37 to the end by AFG's own window (~3 minutes). NEW and SOLE: Kanzenshuu's ch-329 page lists its corresponding DBZ episodes as exactly 107 and 118, and ep 107's segments are p.1-4 and p.5-10, disjoint from these. The rest of ep 118 is anime-original — dragonball.fandom's Differences section: 'All events prior to Gohan and the others sensing Frieza's presence are exclusive to the anime.'",
+      "sources": [
+        "https://www.kanzenshuu.com/episode/dbz/eps-118/",
+        "https://www.kanzenshuu.com/manga/db/chp-329/",
+        "https://dragonball.fandom.com/wiki/Frieza%27s_Counterattack",
+        "https://www.animefillerguide.com/anime/dragon-ball-z/"
+      ]
+    },
+    {
+      "episodes": [
+        118
+      ],
+      "kind": "divergence",
+      "chapters": "329",
+      "note": "The anime-original share of ep 118, named so the mixed typing is auditable: roughly the first eighteen minutes have no chapter behind them — Chi-Chi hiring the private tutor Shuu Sai'aku, who whips Gohan for wrong answers and blames Goku, until Chi-Chi throws him out; Gohan's dream of Goku returning; Vegeta coming back from space and being annoyed Goku is not there; Bulma inviting him to stay; Yamcha's cat-food song. dragonball.fandom names the whole of it: 'All events prior to Gohan and the others sensing Frieza's presence are exclusive to the anime.' In the manga, Vegeta has been living at Capsule Corporation since ch 329 p.1-10 (adapted in ep 107), so even 'Vegeta returns to Earth' is a studio invention needed to undo the Garlic Jr. filler arc.",
+      "sources": [
+        "https://dragonball.fandom.com/wiki/Frieza%27s_Counterattack",
+        "https://www.kanzenshuu.com/manga/db/chp-329/",
+        "https://www.kanzenshuu.com/episode/dbz/eps-107/"
+      ]
+    },
+    {
+      "episodes": [
+        174
+      ],
+      "kind": "graft",
+      "chapters": "394 (p.7)",
+      "note": "weight: SLIVER — ONE manga page (Kanzenshuu: 'Chapter 394, \"The Cell Games Begin\" (Page 7)'; the chapter is Title + Pages 01-14). It is the chapter's time-passing montage page: Goku takes the Dragon Radar from Bulma's lab and sets off collecting, time passes, Vegeta emerges from the Room of Spirit and Time, Cell stands in his ring thinking ten days may have been too long, Goku has all seven balls, the world pins its hopes on Mister Satan. NEW and SOLE (ep 173 holds ch 394 p.1-6, ep 175 holds p.8-End) but it is a montage, not a death, a reveal or an arc close, so T28's sole-adaptation exception does NOT fire and the row stays filler. dragonball.fandom states the share outright: 'With the exception of the final scene with Goku finding the last Dragon Ball, the entire events of this episode were exclusive to the anime' — the episode's own plot is Mercenary Tao's puzzle rings at Vodka's fortress, which exists nowhere in the manga, and ja-WP marks the row with its アニメオリジナルエピソード star.",
+      "sources": [
+        "https://www.kanzenshuu.com/episode/dbz/eps-174/",
+        "https://www.kanzenshuu.com/manga/db/chp-394/",
+        "https://dragonball.fandom.com/wiki/The_Puzzle_of_General_Tao",
+        "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%ABZ"
+      ]
+    }
+  ],
+  "type_corrections": [
+    {
+      "episodes": [
+        118
+      ],
+      "type": "mixed",
+      "note": "Stored CANON (AFL: 'Manga Canon'). Flip to MIXED. The stored type is not defensible on any reading: Kanzenshuu calls the episode 'Mostly Filler' and credits it with four of ch 329's fourteen pages; dragonball.fandom's Differences section says 'All events prior to Gohan and the others sensing Frieza's presence are exclusive to the anime'; and AFG times the manga content at 18:37-to-the-end, about three minutes of a twenty-one-minute episode. SEGMENT WEIGHTS. (1) NON-SOURCE, story-carrying, ~18 minutes: the private tutor Shuu Sai'aku whipping Gohan, Chi-Chi throwing him out, Gohan's dream of Goku's return, Vegeta coming back from space and moving into Capsule Corporation, Yamcha's song. Wholly studio-made (in the manga Vegeta has lived at Bulma's since ch 329 p.1-10, animated in ep 107). (2) SOURCE, SIGNIFICANT, ~3 minutes: ch 329 p.11-End — the Earth's fighters all sensing a monstrous ki, and Freeza, rebuilt as a cyborg, arriving with King Cold. Plain T28 materiality FAILS (three minutes is not a substantial share of THIS episode's plot, whose job is the tutor comedy and Vegeta's return). The SOLE-ADAPTATION EXCEPTION carries it, both halves stated explicitly: (i) the pages appear in NO other episode — Kanzenshuu's ch-329 page lists its corresponding DBZ episodes as exactly 107 and 118 and ep 107's two segments are p.1-4 and p.5-10, disjoint; (ii) the beat is a major plot point of the source — it is the reveal that Freeza survived and is descending on Earth, the opening of the Trunks / Artificial Humans arc, and the episode is titled with Freeza's line from that very page ('あれが地球だよパパ'). dragonball.fandom's own Major Events for the row is 'The warriors of Earth sense the incoming Frieza and King Cold'. The stored anchor stands and is enriched to {329 (p.11-14)}. WHO LIED: AFL. Its two-value bucket printed 'Manga Canon' on an episode that is eighteen minutes of studio material, and printed the same label on ep 119, which really is a chapter adaptation. AFG's blue class and its 18:37 boundary are substantively right; its class remains a viewing guide, not a typing.",
+      "sources": [
+        "https://www.kanzenshuu.com/episode/dbz/eps-118/",
+        "https://www.kanzenshuu.com/episode/dbz/eps-107/",
+        "https://www.kanzenshuu.com/manga/db/chp-329/",
+        "https://dragonball.fandom.com/wiki/Frieza%27s_Counterattack",
+        "https://www.animefillerguide.com/anime/dragon-ball-z/",
+        "https://www.animefillerlist.com/shows/dragon-ball-z"
+      ]
+    },
+    {
+      "episodes": [
+        17
+      ],
+      "type": "mixed",
+      "note": "CONFIRMATION, NOT A CHANGE — stored type is already mixed and AFL ('Mixed Canon/Filler') is RIGHT; AFG's red 'Filler' class is refused. Recorded with evidence so the T4 flag can be closed. SEGMENT WEIGHTS. (1) SOURCE, SIGNIFICANT: ch 210 p.1-4, the episode's opening act — Piccolo beginning Gohan's real combat training now the six-month survival is over, with six months left before the Saiyans. Kanzenshuu lists the chapter segment FIRST in its ordered Corresponding field; the pages are NEW and SOLE (its ch-210 reverse index is eps 17/18/19 with disjoint ranges p.1-4 / p.5-9 / p.10-End, and eps 12-16 are pure filler, so nothing of ch 210 precedes this); the beats are a decision and an imperative, not a cutaway that progresses nothing. (2) NON-SOURCE, story-carrying: the Pendulum Room — Mr. Popo sending Krillin, Tien, Yamcha and Chaozu into a mental simulation of a ruined Saiyan city where Shorty and Scarface kill all four — named as anime-exclusive by dragonball.fandom's Differences section. That is T27's plain definition of mixed: source and non-source in one episode, the source share being the episode's own opening thread rather than a fragment quoted by the original plot. Independent control: ja-Wikipedia's episode table declares '★はアニメオリジナルエピソード' and stars ep 16 (and 12, 13, 14, 15) while leaving ep 17 UNMARKED — an explicit statement that ep 17 is not an anime-original episode. THE DISSENT, STATED HONESTLY: Kanzenshuu's second segment for the row reads 'Filler Episode', the top rung of its own filler ladder (Partial Filler < Half Filler < Mostly Filler < Filler Episode) — it grades ep 18, which holds five pages, only 'Mostly Filler'. Kanzenshuu's labels are a viewer's grading of how much filler is present, not a T27 standing, and it lists the chapter segment either way; but if Sean prefers to read that label as decisive, the alternative verdict is filler + graft{210 (p.1-4)} and deletion of the stored anchor (lossless: eps 18 and 19 both carry ch 210). WHO LIED: AFG. Its red class strikes the title through and says 'skip', which is a viewing recommendation, on a row it simultaneously maps to chapter 210 — and its chapter column plateaus '210' across eps 17 and 18 exactly as it plateaus elsewhere in this series.",
+      "sources": [
+        "https://www.kanzenshuu.com/episode/dbz/eps-017/",
+        "https://www.kanzenshuu.com/episode/dbz/eps-018/",
+        "https://www.kanzenshuu.com/manga/db/chp-210/",
+        "https://dragonball.fandom.com/wiki/Pendulum_Room_Peril",
+        "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%ABZ",
+        "https://www.animefillerguide.com/anime/dragon-ball-z/"
+      ]
+    },
+    {
+      "episodes": [
+        174
+      ],
+      "type": "filler",
+      "note": "CONFIRMATION, NOT A CHANGE — stored type is already filler and AFL ('Filler') is RIGHT; AFG's blue 'mixed' class is refused. Recorded with evidence so the T4 flag can be closed. SEGMENT WEIGHTS. (1) NON-SOURCE, the whole episode: Goku tracking two Dragon Balls to Vodka's fortress, Mercenary Tao's three puzzle rings and the dawn deadline, the henchman who nearly gives away the answer, the Instant Transmission to the lakeshore. None of it exists in the manga; dragonball.fandom's Differences section says so — 'With the exception of the final scene with Goku finding the last Dragon Ball, the entire events of this episode were exclusive to the anime' — and ja-Wikipedia stars the row under its declared '★はアニメオリジナルエピソード'. (2) SOURCE, SLIVER: ONE page, ch 394 p.7 (Kanzenshuu), the chapter's time-passing montage. SOLE-ADAPTATION EXCEPTION, both halves stated: (i) the page is sole to this row (ep 173 holds ch 394 p.1-6, ep 175 holds p.8-End) — the first half PASSES; (ii) the beat is NOT a major plot point of the source: it is a montage panel-page, no death, no reveal, no arc close — the second half FAILS, so the exception does not fire. Filler stands, with the mandatory graft annotation. WHO LIED: AFG, and twice over. It prints a blue 'mixed' class ('you only need to watch the final part, from minute 21:13 to the end') on a row whose CHAPTER CELL IS EMPTY — a typing claim with no chapter behind it — while also striking the title through, i.e. its own two signals contradict each other on this row.",
+      "sources": [
+        "https://www.kanzenshuu.com/episode/dbz/eps-174/",
+        "https://www.kanzenshuu.com/manga/db/chp-394/",
+        "https://dragonball.fandom.com/wiki/The_Puzzle_of_General_Tao",
+        "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%ABZ",
+        "https://www.animefillerguide.com/anime/dragon-ball-z/",
+        "https://www.animefillerlist.com/shows/dragon-ball-z"
+      ]
+    }
+  ],
+  "repairs": [],
+  "structure": [
+    "ROW IDENTITY: all three rows join three ways with no index joins — Kanzenshuu episode number + premiere date, ja-WP 話数 + サブタイトル + 放送日, dragonball.fandom infobox. Stored air dates 1989-08-30, 1991-11-27 and 1993-02-10 match Kanzenshuu and ja-WP exactly. Wave 1's finding that AFL runs one week late across DBZ eps 73-97 and 122-134 does not touch any of these rows (118 sits between the New Year gap at 121/122 and the block's start).",
+    "KANZENSHUU'S LABELS ARE A FILLER LADDER, NOT A STANDING. Observed rungs in this file: 'Partial Filler' (eps 107, 119), 'Half Filler Episode' (Dragon Ball ep 34), 'Mostly Filler' (eps 18, 118, 174) and 'Filler Episode' (eps 16, 17). The ladder describes how much of the episode a viewer can skip; it is printed ALONGSIDE the chapter segments, and its top rung appears on ep 17 which nonetheless carries four manga pages. Read the page-level segments, never the label, as the typing evidence — and note the segments are ORDERED (chapter-first on 17, filler-first on 118).",
+    "KANZENSHUU'S PAGE BREAKDOWN IS THE SHARE DENOMINATOR. Every chapter touched here reads 'Title; Pages 01-14', i.e. fourteen pages plus a title page, so 'Pages 1-4' and 'Pages 11-End' are both four-fourteenths and 'Page 7' is one-fourteenth. Its chapter pages also carry the reverse index (ch 210 -> eps 17/18/19; ch 329 -> eps 107/118; ch 394 -> eps 173/174/175), which is what makes the sole-adaptation test answerable.",
+    "ja-WIKIPEDIA'S ★ IS A USABLE CONTROL ON THIS SERIES and its meaning is declared in the article: '★はアニメオリジナルエピソード'. In the three neighbourhoods examined it stars 12, 13, 14, 15, 16 and leaves 17, 18, 19 unmarked; stars 117 and leaves 118 unmarked; stars 170, 171, 174 and 176 and leaves 172, 173, 175 unmarked. It under-marks rather than over-marks, so an UNMARKED row inside a filler run is a positive claim that source material is present.",
+    "AFG'S THREE FAILURE MODES ARE ALL PRESENT IN THESE THREE ROWS: (a) a red 'skip' class on a row it also maps to a chapter (ep 17); (b) a chapter column that plateaus across rows (210 printed on both 17 and 18); (c) a blue 'mixed' class with an EMPTY chapter cell and a struck-through title (ep 174) — the class and the strike contradict each other on the same row. Its minute ranges, where present, remain a good sizing instrument (18:37 on ep 118 matches four manga pages; 21:13 on ep 174 matches one).",
+    "dragonball.fandom's 'Differences from the manga' SECTION IS THE STRONGEST SECOND SOURCE ON THIS SERIES, and on all three rows it is a single sentence that names the anime-exclusive share precisely. Its infobox has no usable manga field (wave 1 already recorded that an empty manga field on the Dragon Universe wiki is not an absence claim); the Differences and Major Events sections are what to read."
+  ],
+  "flags_for_sean": [
+    "EP 17 IS THE ONE LIVE JUDGEMENT. I confirm mixed, but Kanzenshuu labels the row 'Filler Episode' — the same label it gives the wholly-filler ep 16 — while still crediting it four pages of ch 210, and AFG classes it red. The case for mixed is that those four pages are the episode's OPENING ACT (Kanzenshuu's ordered field lists the chapter first), are first-time and sole, carry a decision rather than a cutaway, and that ja-WP declines to star the row while starring eps 12-16. If you prefer the wave-1 line that a four-page share inside a filler plot is a sliver (eps 39/40 were ruled exactly that on 2026-09-04), the alternative is filler + graft{210 (p.1-4)} and DELETION of the stored anchor 17 -> 210, which is lossless because eps 18 and 19 both carry ch 210.",
+    "EP 118 FLIPS canon -> mixed AND KEEPS ITS ANCHOR under the sole-adaptation exception. Note the wrinkle: ch 329's NUMBER is already an END at ep 107, so the usual 'otherwise the pages read as never-adapted' rationale does not apply here — what justifies the anchor is 'pages, not numbers' (four pages airing for the first time ten filler episodes later is a real position). If you would rather the exception be reserved for cases where the chapter number would otherwise go unclaimed, ep 118 becomes filler + graft{329 (p.11-14)} and the anchor is deleted; the continue at ep 107 would then need its note rewritten.",
+    "The three rows are consistent with each other on the same test: 17 (four pages, opening act, sole, a decision) mixed; 118 (four pages, closing act, sole, an arc-opening reveal) mixed; 174 (one page, montage, sole, no reveal) filler. If you move 17, consider whether 18 (five pages, 'Mostly Filler', stored mixed) should move with it — it is not in this wave's ask but it is the same shape."
+  ]
+}
