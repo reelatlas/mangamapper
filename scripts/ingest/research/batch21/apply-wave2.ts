@@ -30,8 +30,8 @@ const ANNOTATION_DELETE: { sid: string; episode: number; kind: AnnotationKind; w
 const CONTINUE_OVERRIDE: Record<string, { chapter: number; why: string }> = {};
 const START_OVERRIDE: Record<string, number> = {};
 const END_OVERRIDE: Record<string, number> = {};
-const ANCHOR_SKIP = new Set<string>(); // 'sid#ep' — a verifier-refuted anchor
-const CONTINUE_SKIP = new Set<string>();
+const ANCHOR_SKIP = new Set<string>(['naruto-shippuden#112']); // recommended: mixed + partial{317-318}, POSITION-LESS (A12 / A44 — a 56-episode back-jump never sets the position; the verifier: anchoring it turns eps 113-117 into NULL holes) — Sean's call // 'sid#ep' — a verifier-refuted anchor
+const CONTINUE_SKIP = new Set<string>(['naruto-shippuden#112']); // rides with the anchor
 const CONTINUE_NOTE_FIX: { sid: string; episode: number; chapter: number; note: string }[] = [
   { sid: 'naruto-shippuden', episode: 459, chapter: 681, note: 'C1: ep 459 stops inside ch 681 (Black Zetsu\'s account begins); ch 681 is finished by ep 462 — eps 460 / 461 are the anime\'s own Kaguya narration (filler, graft{681} frame only). Value 681 unchanged; the batch-12 wording ("ep 460 finishes it") was wrong. (verified w2-flips)' },
 ];
@@ -47,7 +47,9 @@ const FENCE_REPAIR: { sid: string; episode: number; set: Record<string, unknown>
 const ROW_HOLD = new Set<string>();
 // per-annotation SKIPS (verifier w1-flips): fairy-tail 246's divergence carries non-chapter text in `chapters` (wrong kind) and its
 // `unverified` double-records a segment already weighed SIGNIFICANT (would park the row in unverified_share for a page count nobody needs)
-const ANNOTATION_SKIP = new Set<string>();
+const ANNOTATION_SKIP = new Set<string>(['inuyasha#62#unverified', 'the-promised-neverland#22#graft']); // verifier w2-flips: a misused kind; an unplaced chapter attribution
+// verifier: prose in a divergence's chapters field is not a chapter list — nulled at write
+const CHAPTERS_NULL = new Set<string>(['fairy-tail#69#divergence', 'inuyasha#147#divergence', 'inuyasha#148#divergence']);
 // TYPE overrides at curation (the T6 entries are generated from type_corrections MINUS these): one-piece 50 stays FILLER — a
 // novelization is canon only by an `adopted` ruling (T26), which the verdict does not supply; its side_source note lands on the filler row
 const TYPE_SKIP = new Set<string>();
@@ -108,7 +110,7 @@ async function main() {
       if (ko) { delivered.set(ep, (delivered.get(ep) ?? new Set()).add(ko.kind)); console.log(`  annotation ep ${ep} ${a.kind} → ${ko.kind}{${ko.chapters.slice(0, 30)}} (KIND OVERRIDE: the chain)`); if (!DRY) await upsertAnnotation({ series_id: sid, episode: ep, kind: ko.kind, chapters: ko.chapters, note: `${ko.note} Original research note: ${String(a.note).slice(0, 400)} [${B}]`.slice(0, 1200), origin: 'research' }); annoN++; continue; }
       delivered.set(ep, (delivered.get(ep) ?? new Set()).add(a.kind));
       console.log(`  annotation ep ${ep} ${a.kind}{${String(a.chapters ?? '').slice(0, 36)}}`);
-      if (!DRY) await upsertAnnotation({ series_id: sid, episode: ep, kind: a.kind as AnnotationKind, chapters: a.chapters ?? null, note: `${fix ? `${fix} ` : ''}${a.note} [${B}]`.slice(0, 1200), origin: 'research' });
+      if (!DRY) await upsertAnnotation({ series_id: sid, episode: ep, kind: a.kind as AnnotationKind, chapters: CHAPTERS_NULL.has(`${sid}#${ep}#${a.kind}`) ? null : (a.chapters ?? null), note: `${fix ? `${fix} ` : ''}${a.note} [${B}]`.slice(0, 1200), origin: 'research' });
       annoN++;
     }
     for (const [ep, kinds] of delivered) {
