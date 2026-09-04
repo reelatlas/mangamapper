@@ -21,9 +21,12 @@ describe('annotationProblem (T26)', () => {
     expect(annotationProblem({ series_id: 'claymore', episode: 21, kind: 'divergence', chapters: '57', note: 'x' })).toBeNull();
     expect(annotationProblem({ series_id: 'claymore', episode: 20, kind: 'loose_parallel', chapters: 'x', note: 'x' })).toBeNull();
   });
-  it('side_source must name the work', () => {
+  it('side_source must name the work — and, since the I41 label gate (2026-09-05), carry its label in chapters; chain_source too', () => {
     expect(annotationProblem({ series_id: 'naruto-shippuden', episode: 452, kind: 'side_source' })).toMatch(/name the work/);
-    expect(annotationProblem({ series_id: 'naruto-shippuden', episode: 452, kind: 'side_source', note: 'adapts the Itachi Shinden novel' })).toBeNull();
+    expect(annotationProblem({ series_id: 'naruto-shippuden', episode: 452, kind: 'side_source', note: 'adapts the Itachi Shinden novel' })).toMatch(/work label in chapters/);
+    expect(annotationProblem({ series_id: 'naruto-shippuden', episode: 452, kind: 'side_source', chapters: 'Itachi Shinden: the licensed novel', note: 'adapts the Itachi Shinden novel' })).toBeNull();
+    expect(annotationProblem({ series_id: 'trigun', episode: 18, kind: 'chain_source', chapters: 'ch 1-2', note: 'x' })).toMatch(/work label in chapters/);
+    expect(annotationProblem({ series_id: 'trigun', episode: 18, kind: 'chain_source', chapters: 'Trigun Maximum: ch 1-2', note: 'x' })).toBeNull();
   });
   it('refuses an unregistered kind (no fourth type sneaks in as an annotation either)', () => {
     expect(annotationProblem({ series_id: 'x', episode: 1, kind: 'community_canon' as never })).toMatch(/not in the vocabulary/);

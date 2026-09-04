@@ -14,6 +14,7 @@
 // canon / mixed / filler relative to the source; the exception lives here.
 
 import { isAnnotationRetired } from './rulings/retired-annotations';
+import { annotationWorkLabel } from './rulings/source-chains';
 
 export const ANNOTATION_KINDS = [
   'divergence', // the episode departs from the source material it adapts
@@ -55,6 +56,10 @@ export const annotationProblem = (a: AnnotationRow): string | null => {
   if (a.kind !== 'adopted' && a.basis) return `basis is only for kind 'adopted' (got ${a.kind})`;
   if (a.basis && !(ADOPTED_BASES as readonly string[]).includes(a.basis)) return `basis '${a.basis}' is not author | studio | community`;
   if (a.kind === 'side_source' && !a.note?.trim()) return "kind 'side_source' must name the work in note";
+  // I41 THE LABEL GATE (deep consolidate 2026-09-05, §12.119 — landed once source_work_unlabelled read 0): a side_source /
+  // chain_source row's chapters field STARTS with the work's label ('<label>: …') so the chain map can check the pair
+  // (chain_source_unmapped / side_source_on_chain); an unlabelled row hid the trigun-18 contradiction for a day (G5 of the sitting)
+  if ((a.kind === 'side_source' || a.kind === 'chain_source') && !annotationWorkLabel(a.chapters)) return `kind '${a.kind}' must carry the work label in chapters ('<work label>: …', I41)`;
   return null;
 };
 

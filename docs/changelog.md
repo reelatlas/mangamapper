@@ -1154,6 +1154,40 @@
    19-23 / 39 (chain_source) and 18 / 93-95 (AFL's loose Mixed bucket),
    beelzebub 15 / 26-28 / 51, rurouni TV ep 95 (identity). Batch 22 opens on
    the boruto follow-up (lanes I + C) with the batch-21 tooling copied.
+119. ✅ **DEEP CONSOLIDATE after §12.118 (2026-09-05; P21 — two enforcement
+   sites had moved).** THE DEEP PROOF: the full display sweep under the A18
+   START clause is exactly the seven named holes and nothing else (218 / 0
+   failing; every census class unchanged); the P23 read-list for A18 is one
+   batch-17 regime map (the clause only adds holes, no reason invalidated);
+   for T26's parallel clause the only I40 series is DBS and its only
+   side_source rows are 6 (corresponded) and 18-27 (adopted). retiresWhen
+   worklist read: nothing came due (design passes, D2, AFG fixes, MU
+   anime.end). Every non-zero class read by name: all pre-existing queues
+   (asterisk_unreviewed 177 / permanence_candidate 52 — Sean's; no_source 39;
+   pending_finished_no_totals 32; type_default_unclassified 28;
+   airdate_incomplete 22; title_incomplete 21; no_instrument 13;
+   integrity_total_beyond_eps 10; anchor_without_row 7 + annotation_without_row
+   3 — the A42 row-less entries; frontier_tail_null 7; rearranged_zone_
+   acknowledged 4; unverified_share 3; mixed_fragment_only 3;
+   correspondence_incomplete 1 — DBS's standing instrument queue; anchor_
+   beyond_display_total 2 — soul-eater-not N22; integrity_eps_beyond_total 1
+   — fist-of-the-blue-sky; the singles). CLOSED IN THE PASS: (1) THE I41
+   LABEL GATE — queued since §12.111 'behind the 55-row backfill'; the
+   backfill read 0 at §12.117, so upsertAnnotation now refuses a side_source /
+   chain_source whose chapters does not start with '<work label>:' (the
+   trigun-18 contradiction had hidden behind a null label for a day);
+   annotation_invalid 0 — after fixing the sweep's own select, which had
+   omitted `chapters` and made the new gate refuse 68 labelled rows (P5: the
+   audit is what proved the audit wrong). I41 record + enforcement updated;
+   the fourth edge deploy of the day. (2) architecture.md gains the T26
+   standing gate + the one tie derivation, the I41 label gate, and the
+   display's point model with the START clause (an architecture fact had no
+   home). (3) One stale live comment (gto 25-26 'CANON + side_source' →
+   chain_source). Permanence: LOCKED empty, permanence_violation 0. Batch 22
+   stays OPEN — the narrow queue (the seven holes: beelzebub 48 / 50,
+   eyeshield-21 53, record-of-ragnarok 14-16, sailor-moon 72; beelzebub 58;
+   fma 13's share sizing) is its wave 3. Gates: 194 tests, tsc, lint 0
+   errors, build, ledger-check, system-census OK; pushed.
 118. ✅ **BATCH 22 WAVE 2 — THE NARROW WAVE, APPLIED (2026-09-05; Sean ruled
    decisions 1-4 as verified, beelzebub 15 filler).** Five research agents
    (Opus), four verifiers (fable, R24), every value held. THE ROWS: beelzebub

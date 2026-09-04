@@ -56,13 +56,38 @@ see docs/rules.md.
   jsonb until a feature earns its promotion.
 - Anything a writer will not commit to becomes a row in `ingest_flags` — the
   confirm queue — with enough jsonb detail to rule on without re-scraping.
+- **The standing gate on side-source rows (T26, 2026-09-05).** A licence is
+  not adoption: a canon / mixed row whose only source tie is an unadopted
+  `side_source` is FILLER by default. One predicate
+  (`lib/side-source.ts#sideSourceStandingProblem` — weight, not kind: an
+  anchor, `chain_source`, `side_story`, `unverified`, or on a parallel series
+  (I40) a correspondence row of any alignment; slivers weigh nothing; A44 is
+  not a signal) with three consumers reading ONE tie derivation
+  (`loadEpisodeTies` / `loadAllEpisodeTies`): the episode writer defaults the
+  standing in `filterEpisodeRows` before the T6 pins, the healer asserts it
+  (`assert-overrides#assertSideSourceStandings`, after the annotation maps
+  and the pins), the census lists a survivor as `side_source_unadopted` →
+  `ruling_violation`. The annotation writer is NOT the gate — research must
+  be able to land a `side_source` fact on a row Sean has not retyped.
+- **The label gate (I41, §12.119).** `upsertAnnotation` refuses a
+  `side_source` / `chain_source` whose `chapters` does not start with the
+  work's label (`'<label>: …'`) — the chain map checks the pair
+  (`chain_source_unmapped` / `side_source_on_chain`) only through that label.
+- **The display's point model (A18, the START clause 2026-09-05).**
+  `src/lib/mapping.ts` interpolates only BETWEEN anchor points of one regime;
+  a point is off-trend when its END sits below the running maximum, AND a
+  gap is not bridgeable when the later point's own START reaches back past
+  the earlier point's END (a START equal to the previous END is a shared
+  chapter). Rows inside such a crossing render null — honest holes, the
+  `verify-series-display` `hole` work-list — never a formula's number.
 
 Rules: `G51` staging is greedy · `G9` hash gate · `T1` episode-type
 vocabulary · `T4` typing precedence · `I7` naming authority · `N24`
 effective total · `N23` same-edition band · `I38` manga link selection ·
 `I36` source-scope · `G1` flag rule · `G3` flag once · `G4` permanent
-conditions · `P2` rules live in lib · `P3` lib → four edges — see
-docs/rules.md.
+conditions · `T26` a licence is not adoption · `I41` the label gate · `A18`
+the reorder regime + START clause · `P2` rules live in lib · `P3` lib → four
+edges — see docs/rules.md.
 
 ## 3. Identity & matching
 

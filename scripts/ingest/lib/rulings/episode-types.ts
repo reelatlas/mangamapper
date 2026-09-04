@@ -447,7 +447,7 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
     seriesId: 'gto-great-teacher-onizuka',
     ruleId: 'T6',
     value: {
-      ...range(22, 24, 'filler'), ...range(25, 26, 'canon'), // 25-26 CANON + side_source{Shonan Junai Gumi!} — batch 19 wave 1 (Sean 2026-08-26, verified R24): SJG vol 27 ch 234-242 'Last Signal' IS the race; batch19/out/gto-great-teacher-onizuka.json + verify/gto.md
+      ...range(22, 24, 'filler'), ...range(25, 26, 'canon'), // 25-26 CANON + chain_source{Shonan Junai Gumi} (side_source until the T26 sitting of 2026-09-05 put SJG on the chain, I41) — batch 19 wave 1 (Sean 2026-08-26, verified R24): SJG vol 27 ch 234-242 'Last Signal' IS the race; batch19/out/gto-great-teacher-onizuka.json + verify/gto.md
       27: 'mixed', // batch 18 wave 2 (T28): adapts the Toroko Oppai side story serialized INSIDE GTO — the episode's plot IS the source
       28: 'filler',
       ...range(34, 34, 'filler'),

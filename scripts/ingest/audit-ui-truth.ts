@@ -584,7 +584,7 @@ async function main() {
   // tracks sign-off. Heals annotated-but-unmarked series to 'pending';
   // 'pending' rows are Sean's sign-off queue for the asterisk UI pass.
   {
-    const annos = await selectAll<any>('episode_annotations', 'series_id, episode, kind, note, basis');
+    const annos = await selectAll<any>('episode_annotations', 'series_id, episode, kind, note, basis, chapters'); // chapters: the I41 label gate reads it (§12.119)
     // T26 (T4.2): the lib vocabulary and the DB constraint must agree — a
     // stored record the gate would refuse (unknown kind, adopted without a
     // basis, side_source without the work named) is a writer that bypassed

@@ -181,7 +181,7 @@
 - `I38` The source manga is the ADAPTATION edge of type/format MANGA — aka `manga link selection`, `anime→manga linkage`, `pickManga`
 - `I39` Ruled structure: numbered extras and span overrides — aka `ruled structure`, `RULED_STRUCTURE`, `numbered extras`, `span override`, `heal-structure`, `planComponents`, `E4`, `batch-19 E4`, `structure rows`
 - `I40` Source relation: adaptation or parallel telling — aka `source relation`, `source_relation`, `parallel telling`, `parallel tellings`, `parallel series`, `SOURCE_RELATION_OVERRIDES`, `MANGA_LINK_OVERRIDES`, `pickMangaNode`, `ruled manga link`, `the DBS relation`, `dual adaptation`, `ALTERNATIVE edge`, `two realizations of one outline`, `source_relation_missing`
-- `I41` The source chain: the named manga sequence of one story — aka `source chain`, `chain map`, `SOURCE_CHAINS`, `named manga sequence`, `chain work`, `the reading chain map`, `I41`
+- `I41` The source chain: the named manga sequence of one story — aka `source chain`, `chain map`, `SOURCE_CHAINS`, `named manga sequence`, `chain work`, `the reading chain map`, `I41`, `the label gate`, `I41 write gate`, `work label`
 
 **G — Gates & freshness (sources)** (49)
 - `G1` The flag rule: nothing suspicious auto-applies — aka `flag rule`, `the flag rule`, `the confirm queue`, `nothing suspicious ever auto-applies`
@@ -2477,16 +2477,16 @@ series.source_relation names HOW the anime stands to its linked source work — 
 
 ### I41 · The source chain: the named manga sequence of one story
 
-A franchise's READING CHAIN is the ordered sequence of named MANGA works (instruments the catalog can count chapters in) that tell one continuous story — Rosario + Vampire Season I → Season II; Trigun → Trigun Maximum; Naruto's two entries already share one manga and need no chain. It is a ruling map (lib/rulings/source-chains.ts: works with label + AniList manga id + note, the reason cited). Material an episode adapts from ANOTHER work on the chain is canon to the series told out of order — `chain_source` (T26), position-less (A12 / A44). The chain is STRUCTURAL: novels, games and parallel tellings (I40) are never on it however the author blessed them — their canon is the `adopted` ruling and their record is `side_source`. Convention: a chain_source / side_source annotation's chapters field starts with the work's label exactly as the map writes it, so the census can check the pair: chain_source_unmapped (a chain_source naming a work off the map), side_source_on_chain (a side_source naming a work on it), source_work_unlabelled (cannot be checked — backfill the label). Whether a chain work should be its OWN entry (Capu2 with Season II as its instrument) is a separate identity question; the chain works either way.
+A franchise's READING CHAIN is the ordered sequence of named MANGA works (instruments the catalog can count chapters in) that tell one continuous story — Rosario + Vampire Season I → Season II; Trigun → Trigun Maximum; Naruto's two entries already share one manga and need no chain. It is a ruling map (lib/rulings/source-chains.ts: works with label + AniList manga id + note, the reason cited). Material an episode adapts from ANOTHER work on the chain is canon to the series told out of order — `chain_source` (T26), position-less (A12 / A44). The chain is STRUCTURAL: novels, games and parallel tellings (I40) are never on it however the author blessed them — their canon is the `adopted` ruling and their record is `side_source`. Convention, and since 2026-09-05 (§12.119) THE WRITE GATE: a chain_source / side_source annotation's chapters field starts with the work's label exactly as the map writes it ('<label>: …') — upsertAnnotation refuses one without it — so the census can check the pair: chain_source_unmapped (a chain_source naming a work off the map), side_source_on_chain (a side_source naming a work on it), source_work_unlabelled (a stored row the gate would now refuse; read 0 when the gate landed). Whether a chain work should be its OWN entry (Capu2 with Season II as its instrument) is a separate identity question; the chain works either way.
 
 *Why:* Batch 20 wave 16 (2026-09-04): rosario-vampire 14 adapts Season II ch 1 + 3 inside an original episode and came out FILLER under T26's single 'other work' label — Sean: the sequel manga is the same cohesive canon, an original-Naruto episode adapting Shippuden chapters would never be filler; the vocabulary could not tell a sequel manga from a novel. Cursor: name the pair chain_source / side_source, no extra rearranged kind (chain material is out of order by definition), the classes are MISMATCHES against the map (a side_source on a canon row is not itself a mismatch here — since the T26 adoption sitting of 2026-09-05 that standing is the T26 gate's question, and it is filler unless adopted{basis}), and drop 'authorized continuation' from the definition — authorization is how novels sneak onto the chain.
 
 - ruled Sean 2026-09-04 (scripts/ingest/research/batch20/WAVE16-RECOVERY.md §THE DECISIONS item 2; changelog §12.107)
 - layer **writer**
-- enforced: [lib/rulings/source-chains.ts#SOURCE_CHAINS](../scripts/ingest/lib/rulings/source-chains.ts) · [lib/rulings/source-chains.ts#isChainWork](../scripts/ingest/lib/rulings/source-chains.ts) · [lib/annotations.ts#ANNOTATION_KINDS](../scripts/ingest/lib/annotations.ts) · [audit-ui-truth.ts#chain_source_unmapped](../scripts/ingest/audit-ui-truth.ts) · [audit-ui-truth.ts#side_source_on_chain](../scripts/ingest/audit-ui-truth.ts)
+- enforced: [lib/rulings/source-chains.ts#SOURCE_CHAINS](../scripts/ingest/lib/rulings/source-chains.ts) · [lib/rulings/source-chains.ts#isChainWork](../scripts/ingest/lib/rulings/source-chains.ts) · [lib/annotations.ts#ANNOTATION_KINDS](../scripts/ingest/lib/annotations.ts) · [lib/annotations.ts#annotationProblem](../scripts/ingest/lib/annotations.ts) · [audit-ui-truth.ts#chain_source_unmapped](../scripts/ingest/audit-ui-truth.ts) · [audit-ui-truth.ts#side_source_on_chain](../scripts/ingest/audit-ui-truth.ts)
 - audit: `chain_source_unmapped`, `side_source_on_chain`, `source_work_unlabelled`
 - witnesses: rosario-vampire, trigun, naruto-shippuden, gto-great-teacher-onizuka, cobra-the-animation
-- aliases: source chain, chain map, SOURCE_CHAINS, named manga sequence, chain work, the reading chain map, I41
+- aliases: source chain, chain map, SOURCE_CHAINS, named manga sequence, chain work, the reading chain map, I41, the label gate, I41 write gate, work label
 - see: T26, T28, A12, A44, I40, I16
 
 ## G — Gates & freshness (sources)
@@ -4727,6 +4727,7 @@ When a clause of a rule is amended or retired, the EXACT replaced strings go in 
 - hydrated series only → `P37`
 - hydration contract → `P37`
 - I41 → `I41`
+- I41 write gate → `I41`
 - ID COLLISION → `I2`
 - id/title stable → `I28`
 - id/title/afl_slug never change → `I28`
@@ -5234,6 +5235,7 @@ When a clause of a rule is amended or retired, the EXACT replaced strings go in 
 - the four crons → `G47`
 - the governing rule → `P11`
 - the L-P queue → `A46`
+- the label gate → `I41`
 - the mint rule → `G59`
 - the Naruto bug → `I36`
 - the parallel clause → `T26`
@@ -5335,6 +5337,7 @@ When a clause of a rule is amended or retired, the EXACT replaced strings go in 
 - Wikipedia episode-list locks → `G44`
 - Wikipedia fill is fill-only → `G45`
 - Wikipedia page discovery → `G43`
+- work label → `I41`
 - work-list from disk → `P11`
 - writeCuratedContinue → `C7`
 - wrong chapter space by volume → `V11`
