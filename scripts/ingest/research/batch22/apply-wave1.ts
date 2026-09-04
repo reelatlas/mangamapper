@@ -38,6 +38,8 @@ const CONTINUE_SKIP = new Set<string>(); // shippuden 112's continue 343/parity 
 const CONTINUE_NOTE_FIX: { sid: string; episode: number; chapter: number; note: string }[] = [];
 // rows the verdicts retype FILLER whose stored MANUAL anchors come out (A1) — curated after the verifier
 const ANCHOR_DELETE: { sid: string; episode: number; why: string }[] = [];
+// fence repairs on stored rows outside the verdicts' asks (verifier-ruled)
+const FENCE_REPAIR: { sid: string; episode: number; set: Record<string, unknown>; why: string }[] = [];
 // rows the verifier HELD: the verdict's annotations for them are not applied (the stored record stands)
 const ROW_HOLD = new Set<string>();
 // per-annotation SKIPS (verifier w1-flips): fairy-tail 246's divergence carries non-chapter text in `chapters` (wrong kind) and its
