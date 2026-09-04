@@ -1370,6 +1370,16 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
     ruledOn: '2026-09-03',
     cite: ['scripts/ingest/research/batch21/out/bleach-w2.json', 'scripts/ingest/research/batch21/WAVE2-RECOVERY.md'],
   },
+  {
+    seriesId: 'rurouni-kenshin',
+    ruleId: 'T6',
+    value: { 95: 'canon' },
+    reason:
+      'Batch 21 wave 2, Sean ruled 2026-09-04 — CONFIRMED AS STORED: our row 95 is the Tsuioku-hen OVA act 1 (1999-02-20, manga canon on en-WP / animefillerlist, which shares our row space); the type_source_disagreement flag was an R20 INDEX join against animefillerguide\'s TV-only page, whose row 95 is the never-broadcast 1996 TV episode 「流浪の最果て」 (filler) that our grid does not carry. Pinned so the class stops re-listing an artefact; the missing TV ep 95 is an identity fork for Sean (inserting it renumbers the six OVA rows — I39 / T29 / N1).',
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-04',
+    cite: ['scripts/ingest/research/batch21/out/rurouni-kenshin-w2.json', 'scripts/ingest/research/batch21/WAVE2-RECOVERY.md'],
+  },
 ];
 
 export const EPISODE_TYPE_OVERRIDES: Record<string, EpisodeTypes> = ENTRIES.reduce<Record<string, EpisodeTypes>>((acc, e) => {

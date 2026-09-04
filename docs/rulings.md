@@ -2,7 +2,7 @@
 
 > GENERATED from `scripts/ingest/lib/rulings/**` by `scripts/restructure/gen-rulings.ts` — do not edit by hand. A ruling is an INSTANCE of a rule (`docs/rules.md`); the map is the record, this is the index.
 
-- rulings: 2301 across 253 series/keys · by Sean: 807 · UNRECORDED reasons: 8 · with a retire condition: 93
+- rulings: 2302 across 253 series/keys · by Sean: 808 · UNRECORDED reasons: 8 · with a retire condition: 93
 
 ## Retire conditions (re-evaluate when…)
 
@@ -2710,7 +2710,7 @@
 | `P24` | {"episode":14,"kind":"graft"} | replaced by side_source{Season II ch 1 + 3} + recap + divergence (the side_source itself re-kinded chain_source at apply — see KIND_OVERRIDE) | session 2026-09-04 · scripts/ingest/research/batch20/out/rosario-vampire-w16.json, scripts/ingest/history/apply-wave16.ts, §12.107 |  |
 | `T26` | {"episode":14,"from":"side_source","to":"chain_source","chapters":"Season II: ch 1 'A Brand-New Season', ch 3 'Superglue Girl'","note":"T26 THE CHAIN / I41 (… | Rosario + Vampire Season II is the sequel manga on the series' reading chain (I41) — its ch 1 + 3 carry the episode's spine, so the material is CANON told out of order: the row is MIXED, POSITION-LESS (A44); weight significant (in the chain work). Whether Capu2 should be its own entry with Season II as its instrument is queued for the identity pass | Sean 2026-09-04 · scripts/ingest/research/batch20/out/rosario-vampire-w16.json, scripts/ingest/research/batch20/verify/w16-anchors.md, scripts/ingest/history/apply-wave16.ts, §12.107 |  |
 
-### rurouni-kenshin (21)
+### rurouni-kenshin (22)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -2730,6 +2730,7 @@
 | `A43` | {"episode":98,"kind":"side_story","chapters":"pilot one-shots"} | adapts the pre-serialization pilot one-shots — real content outside mainline chapter numbering (episode titles matched the one-shots by name, 2026-08-24 research) | Sean 2026-08-23 · scripts/ingest/apply-research-batch-3.ts |  |
 | `G3` | {"bookmark":"sean_review_bookmark → confirmed"} | resolved: interior anchors (Kyoto ep 28 → 48) + continua cross-verification + side_story annotations for 95-98 (Sean sign-off 2026-08-23) | Sean 2026-08-23 · scripts/ingest/apply-research-batch-7.ts, docs/changelog.md §12.23 |  |
 | `T6` | {"79":"filler","80":"filler","81":"filler","82":"filler"} | Eps 79-82 were typed mixed, but the whole 63-94 block is anime-original (batch-17 verdict: Wikipedia season-3 "not adapted from the manga" + AFL) — the Shimabara/Christian arc included. Found in Sean's post-switch review: these four mistyped rows were why frontier_tail_null flagged the series (the audit was RIGHT; the earlier "false positive" framing was wrong). Rows 95-98 are the Trust & Betrayal OVAs adopted as episodes — real manga adaptation (Remembrance arc), kept canon, flagged for anchor research. | Sean 2026-08-24 · scripts/ingest/research/batch17/out/rurouni-kenshin.json |  |
+| `T6` | {"95":"canon"} | Batch 21 wave 2, Sean ruled 2026-09-04 — CONFIRMED AS STORED: our row 95 is the Tsuioku-hen OVA act 1 (1999-02-20, manga canon on en-WP / animefillerlist, which shares our row space); the type_source_disagreement flag was an R20 INDEX join against animefillerguide's TV-only page, whose row 95 is the never-broadcast 1996 TV episode 「流浪の最果て」 (filler) that our grid does not carry. Pinned so the class stops re-listing an artefact; the missing TV ep 95 is an identity fork for Sean (inserting it renumbers the six OVA rows — I39 / T29 / N1). | Sean 2026-09-04 · scripts/ingest/research/batch21/out/rurouni-kenshin-w2.json, scripts/ingest/research/batch21/WAVE2-RECOVERY.md |  |
 | `N1` | {"adopted":[95,100]} | The 1996 broadcast tail 95-100 overshoots the source count by more than 2; rows 95-98 are the Trust & Betrayal OVAs adopted as episodes (real manga adaptation, the Remembrance arc — see the rurouni-kenshin type ruling), so the floor is adopted rather than flagged. Evidence for 99-100 beyond "broadcast tail" was not recorded at the call site. | session 2026-08-23 |  |
 | `T29` | {"position":94.1,"record":{"kind":"ova","anilistId":44}} | AniList 44 format=OVA, 4 eps, 1999-02-20 to 1999-09-22. en-WP: 'is a Japanese original video animation (OVA) series'. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/44, https://en.wikipedia.org/wiki/Rurouni_Kenshin:_Trust_%26_Betrayal |  |
 | `T29` | {"position":94.2,"record":{"kind":"ova","anilistId":11441}} | AniList 11441 'Shin Kyoto-hen' format=OVA, 2 eps, from 2011-12-17. en-WP: 'is a two-part original video animation (OVA)'. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/11441, https://en.wikipedia.org/wiki/Rurouni_Kenshin:_New_Kyoto_Arc |  |
