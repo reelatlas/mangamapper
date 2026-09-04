@@ -1,0 +1,240 @@
+{
+ "series_id": "record-of-ragnarok",
+ "summary": "THE FORK RESOLVES ON THE SECOND HORN: eps 14/15/16 are NOT a reorder hole — they are three ordinary, in-order adaptations (22-24 / 25-26 / 27-29), and the thing that made them look like a hole is ep 17's stored START 20, which is a batch-12 ROUND-LEVEL anchor ('20-30 (Round 4 complete)') that was never refined when batch 15 refined ep 13 to page level. The pages say ep 17 opens on ch 29 p.25 (Jack standing up after Heracles' punch — literally the frame ep 16 stops on), so the stored START reaches back nine chapters into material eps 13-16 already carry. Repair delivered: ep 17 start_chapter 20 -> 29 and chapters_adapted '20-30 (Round 4 complete)' -> '29 (pp.25-50), 30, 32 (pp.6-8, 30-32), 33 (pp.27-60)'; its END 30 and volume 8 are correct and untouched. THE INSTRUMENT: record-of-ragnarok.fandom's per-episode `adapted=` field is page-partitioned and PAGE-EXHAUSTIVE across this whole zone — every chapter that straddles an episode boundary is split exactly once and the two halves union to the chapter's own page count from the chapter page: ch 22 (33 pp.) = ep 13 pp.1-13 + ep 14 pp.14-34; ch 24 (54 pp.) = ep 13 pp.1-26 + ep 14 pp.27-54; ch 25 (62 pp.) = ep 14 pp.1-3 + ep 15 pp.4-61; ch 29 (50 pp.) = ep 16 pp.1-24 + ep 17 pp.25-50; and beyond the ask ch 32 (38 pp.) = ep 17 pp.6-8,30-32 + ep 19 pp.1-5,9-29,33-38 and ch 33 (60 pp.) = ep 19 pp.1-26 + ep 17 pp.27-60. A field that partitions six chapters without a gap or an overlap is the bleach-152-159 shape, not an infobox guess. It is corroborated chapter-for-chapter by an independent Japanese lineage, programming-cafe's anicomi 対応表 (ep 13 = v5 20-21 + v6 22-24; ep 14 = v5 21 + v6 22-25; ep 15 = v6 25 + v7 26; ep 16 = v7 27-29; ep 17 = v7 29 + v8 30), and beat-for-beat by en-Wikipedia's episode summaries. THREE ANCHORS: ep 14 -> END 24 [START 22] (A47 holds the END at 24: the 3-page ch-25 lead-in is ep 15's, which STARTS on ch 25 p.4); ep 15 -> END 26 [START 25]; ep 16 -> END 29 [START 27]. All three rows stay CANON. One real reorder does sit in this zone but it is the 13/14 pair, already recorded: ep 13 skipped ch 22's back half and all of ch 23 to close on ch 24 pp.1-26, and ep 14 goes BACK to ch 22 p.14, plays the ch-23 Heracles backstory the episode is named after, then completes ch 24 — so `rearranged` belongs on ep 14 too. No number in this verdict needed a space conversion: the fandom, programming-cafe and the stored volume table all use the tankobon's printed chapter numbering (ch 22-25 = v6, 26-29 = v7, 30-33 = v8).",
+ "anchors": [
+  {
+   "episode": 14,
+   "end_chapter": 24,
+   "start_chapter": 22,
+   "chapters_adapted": "22 (pp.14-34), 23, 24 (pp.27-54), 25 (pp.1-3)",
+   "volume": 6,
+   "confidence": "high",
+   "why": "NEW ANCHOR on a row the A18 START clause had left unpainted. START 22 (A10): the episode OPENS inside ch 22 'ヘラクレスの選択' at p.14 — 'the audience notice that Heracles' tattoos are getting bigger; Loki wonders about it and Ares explains they're the price he pays', which is ch 22's own Loki-at-the-Greek-stand / Ares-explains-the-tattoos sequence (the fandom's ch-22 summary reaches exactly that point: 'In the Greek Gods' stand, Loki appears and tells Hermes and Ares...'). That is 21 pages, far above A10's 5-page sliver floor and with no teaser wording, so it is a real START and not a scrap; ep 13 carries ch 22 pp.1-13 only. A12 does not apply — nothing is relocated. END 24 (A4 + A47): the furthest mainline chapter adapted in running order is ch 24, and the episode completes it (pp.27-54 to the chapter's last page, the fandom's ch-24 page giving 54). The episode then plays ch 25 pp.1-3 — Jack musing about what colour Heracles will be dyed in at the moment of his death, en-WP's closing sentence for this episode word for word — and A47 holds the END at 24 for it: 3 pages is at or under the 5-page floor and the next anchored episode, ep 15, STARTS on that very chapter at p.4. R3-BEFORE-A47 (the existence clause) is satisfied in the safe direction anyway: the tail's EXISTENCE has three witnesses (the fandom's page range, programming-cafe listing ch 25 in this episode's span, en-WP's summary), and holding the END is what all of them support. WEIGHT: SIGNIFICANT — ch 22's back half and the whole of ch 23 '不屈の闘神' (Thebes 2000BC, Alcides, the ambrosia, Zeus's invitation) ARE this episode; the episode carries the chapter's own title. The ch-25 share is the one SLIVER (see the partial annotation). VOLUME 6 agrees with both sources (the fandom's ch-24 page volume=6; programming-cafe prints 第6巻 over 22-25) and with the stored table's neighbourhood. TWO INDEPENDENT LINEAGES: (1) record-of-ragnarok.fandom's ep-14 `adapted=` field, whose splits union exactly with ep 13's and ep 15's; (2) programming-cafe's anicomi 対応表 row '第2話 不屈の闘神 | 第5巻 21 第6巻 22〜25' — its leading '21' is the ±1 boundary wobble this class of table is known for (ch 21 is complete inside ep 13 on the page-level source), but its upper edge 25 and its volume column corroborate END 24 + the 25 lead-in. Cross-checked against en-WP's prose summary and against the official Japanese あらすじ, which names ch 24's own title device 『十二の災禍と罪過＜エルキュール・エクソダス＞』 in this episode's synopsis.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2014&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2013&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2015&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2022&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2023&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2024&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2025&prop=wikitext&format=json",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-recordofragnarok-list/",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes"
+   ]
+  },
+  {
+   "episode": 15,
+   "end_chapter": 26,
+   "start_chapter": 25,
+   "chapters_adapted": "25 (pp.4-61), 26",
+   "volume": 7,
+   "confidence": "high",
+   "why": "NEW ANCHOR. START 25 (A10): the episode opens on ch 25 '怪物の誕生' p.4 — 12-year-old Jack in a London back alley, the bread, the aura colours — 58 pages of the chapter, so unambiguously a START; ep 14 holds only pp.1-3 of it (the 3-page hook, held back under A47), so the anime does not re-show anything here. END 26 (A4): ch 26 '真相' is adapted whole and last — Heracles' severed arm, the gloves revealed as the true Divine Treasure, and the Hlökk flashback (the fandom's ch-26 page lists Hlökk as its new character and the ep-15 page lists her as its new character too, the reverse index agreeing in both directions). A47 does not hold anything back: ep 16 STARTS on ch 27, not on 26, and no tail of 26 is credited to any later row. WEIGHT: SIGNIFICANT — the two chapters are the entire episode (Jack's origin plus the fight's turn); no anime-original plot, so the row stays canon. VOLUME 7 = the END chapter's volume, agreeing on both sources (fandom ch-26 volume=7; programming-cafe prints 第7巻 against 26 in this row). TWO INDEPENDENT LINEAGES, in exact agreement here: the fandom's ep-15 `adapted= 25 (p. 4-61), 26` and programming-cafe's '第3話 怪物の誕生 | 25 第7巻 26'. en-WP's summary is the content check (Jack's past, Mary, the gloves reveal, 'in a flashback to before the fourth match, the eleventh Valkyrie, Hlökk, refused to work with Jack' = ch 26), and the official あらすじ for 第3話 covers the same two beats. Page-count nit recorded, not load-bearing: the fandom's ch-25 page gives 62 pages while the two episode splits union to 61 — a one-page cover/title-page discrepancy of the same kind seen on ch 22 (33 vs 34); it does not move any boundary.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2015&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2014&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2016&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2025&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2026&prop=wikitext&format=json",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-recordofragnarok-list/",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes"
+   ]
+  },
+  {
+   "episode": 16,
+   "end_chapter": 29,
+   "start_chapter": 27,
+   "chapters_adapted": "27, 28, 29 (pp.1-24)",
+   "volume": 7,
+   "confidence": "high",
+   "why": "NEW ANCHOR. START 27 (A10): ch 27 '底なしの愛' is adapted from its first page — the gods praying for Heracles, Jack declaring 'we are now in the final act' — which is ep 16's opening scene after a short bridging beat of Anne in Mary's room; ep 15 ends on ch 26's last page, so there is no leading partial to weigh under A10 and no back-jump (A18 does not fire: START 27 = previous END 26 + 1). END 29 (A4): the episode plays 27, then 28 '最後の御業' (the chapter it is named after — Heracles hurls his club and unleashes the Twelfth Labour, Cerberus), then the first half of ch 29 '勝ったのはオレだ' (the London-wide melee, the building dropped on Heracles, Jack impaled on the fence, Jack falling and then starting to sing as he stands). A47 does NOT hold the END at 28: the ch-29 share is pp.1-24 of a 50-page chapter — a story-carrying half, nowhere near the 5-page floor, with no teaser/cold-open wording — so the END advances to 29 and the position continues INSIDE 29 (C1). WEIGHT: SIGNIFICANT for all three chapters; no anime-original plot, row stays canon. VOLUME 7 = ch 29's volume (fandom ch-29 volume=7; programming-cafe prints 第7巻 across 27〜29). TWO INDEPENDENT LINEAGES: the fandom's ep-16 `adapted= 27, 28, 29 (p. 1-24)` — whose ch-29 split unions exactly with ep 17's pp.25-50 — and programming-cafe's '第4話 最後の御業 | 27〜29'. en-WP's summary is the content check and agrees on the stop point ('Jack is gravely wounded in the ensuing melee... the humans in the audience are silent except for Anne'), as does the official あらすじ for 第4話 (『第十二の御業』を解放する).",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2016&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2015&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2017&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2027&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2028&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2029&prop=wikitext&format=json",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-recordofragnarok-list/",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes"
+   ]
+  }
+ ],
+ "continue_points": [
+  {
+   "episode": 14,
+   "continue_chapter": 25,
+   "kind": "parity",
+   "confidence": "high",
+   "why": "C1 + C2 agree on 25. The episode stops 3 pages into ch 25, so the reader is mid-chapter and continues IN ch 25 (C1); and the next canon row, ep 15, STARTS on ch 25 at p.4, so parity lands on the same number. Nothing is skipped and there is no C3 note to give: eps 13 and 14 between them cover chs 20-24 completely (ch 22 = 1-13 + 14-34, ch 24 = 1-26 + 27-54), just not in the manga's order.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2014&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2015&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2025&prop=wikitext&format=json",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-recordofragnarok-list/"
+   ]
+  },
+  {
+   "episode": 15,
+   "continue_chapter": 27,
+   "kind": "parity",
+   "confidence": "high",
+   "why": "C2 parity, which here coincides with END + 1. Ep 15 finishes ch 26 on its last page (no straddle, so C1 does not apply) and the next canon row, ep 16, STARTS on ch 27. No skip note: chs 25-26 are fully animated across eps 14 and 15.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2015&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2016&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2026&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2027&prop=wikitext&format=json",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-recordofragnarok-list/"
+   ]
+  },
+  {
+   "episode": 16,
+   "continue_chapter": 29,
+   "kind": "parity",
+   "confidence": "high",
+   "why": "C1: the episode ends mid ch 29 (p.24 of 50), so the continue is IN 29, and C2 parity agrees because ep 17 resumes at ch 29 p.25. A reader continuing at ch 29 will re-read pp.1-24, which is the ordinary C1 cost of a mid-chapter stop; no C3 skip applies.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2016&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2017&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2029&prop=wikitext&format=json",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-recordofragnarok-list/"
+   ]
+  },
+  {
+   "episode": 17,
+   "continue_chapter": 31,
+   "kind": "parity",
+   "confidence": "medium",
+   "why": "ENRICHMENT, adjacent to the ask — proposed only because this verdict repairs ep 17's anchor and the row has no stored continue. C2 parity: the next canon row, ep 18, STARTS on ch 31 '第五回戦', so the reader resumes there, NOT at 34. C3 SKIP NOTE for the reader arriving at 31: ep 17 has already shown, out of order, ch 32 pp.6-8 and 30-32 and ch 33 pp.27-60 (Loki's confrontation with Buddha at the fountain, the Seven Lucky Gods, Sasaki and the Japanese warriors arriving) — those pages will be re-read when eps 18-19 play the rest of chs 32-34, which is normal in this heavily reordered zone. Marked medium because ep 17 is outside the named rows and the continue was not asked for; drop it if Sean prefers to leave the row's continue unset.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2017&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2018&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2019&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2031&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2032&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2033&prop=wikitext&format=json",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-recordofragnarok-list/",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes"
+   ]
+  }
+ ],
+ "anchor_hostile": [],
+ "annotations": [
+  {
+   "episodes": [
+    14
+   ],
+   "kind": "rearranged",
+   "chapters": "22 (pp.14-34), 23, 24 (pp.27-54)",
+   "note": "weight: SIGNIFICANT — this is the RETURN LEG of the reorder the stored eps-12/13 `rearranged {20, 24}` fact only records the outbound half of. Ep 13 played ch 20 pp.17-31, ch 21 and ch 22 pp.1-13, then SKIPPED ch 22's back half and the whole of ch 23 to close on ch 24 pp.1-26 (fight action as the cliffhanger). Ep 14 goes back to ch 22 p.14 (Loki and Ares on the price of the Twelve Divine Arts), plays ch 23 '不屈の闘神' entire — the Thebes 2000BC backstory the episode takes its title from — and only then completes ch 24 from p.27. Every page here is NEW, never shown before: the two episodes partition chs 22 and 24 exactly once each and nothing is duplicated. In mainline running order the row is still a clean forward step (ep 13's END is 22, ep 14 starts at 22 p.14), so this annotation records the PAGE-ORDER back-jump, not a chapter-number regression, and no anchor is disturbed.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2013&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2014&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2022&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2023&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2024&prop=wikitext&format=json",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes"
+   ]
+  },
+  {
+   "episodes": [
+    14
+   ],
+   "kind": "partial",
+   "chapters": "25 (pp.1-3)",
+   "note": "weight: SLIVER — because it is a 3-page closing hook, not a scene the episode does anything with: Jack, ignoring Heracles, muses about what colour Heracles will be dyed in at the moment of his death and starts singing 'London Bridge'. CH 25 IS ADAPTED PROPERLY BY EP 15, which starts at p.4 and animates the chapter's whole 58-page body (Jack's London childhood). This is the A47 tail: 3 pages, at or under the 5-page floor, and the next anchored episode STARTS on the chapter — so the END stays 24, the pages stay in chapters_adapted, and this annotation names them. Material is NEW (never shown before) but carries no weight in the standing and no anchor.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2014&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2015&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2025&prop=wikitext&format=json",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-recordofragnarok-list/"
+   ]
+  },
+  {
+   "episodes": [
+    17
+   ],
+   "kind": "rearranged",
+   "chapters": "32 (pp.6-8, 30-32), 33 (pp.27-60)",
+   "note": "ADJACENT TO THE ASK — proposed as the companion to this verdict's ep-17 repair, so the new chapters_adapted does not read as a plain range. weight: SIGNIFICANT (it is roughly the episode's last act, and it is the reason the stored round-level anchor was misleading). After finishing Round 4 with ch 29 pp.25-50 and ch 30 '鎮魂', ep 17 SKIPS ch 31 '第五回戦' entirely (ep 18 adapts it) and pulls forward Loki's fountain confrontation with Buddha, the Seven Lucky Gods and the arrival of Sasaki, Okita and Kondo from chs 32-33. The END therefore stays at 30 (A4: furthest mainline chapter in RUNNING order); 32-33 are out-of-order material, and the rest of both chapters is played in ep 19 '百閉' (= ch 33's own title), whose fandom field carries exactly the complementary pages (ch 32 pp.1-5, 9-29, 33-38 and ch 33 pp.1-26). Page-level detail is single-source (the fandom); the EXISTENCE of the pull-forward has a second witness in en-WP's ep-17 summary, which ends on the Buddha/Seven-Lucky-Gods/Sasaki sequence, and programming-cafe dissents only by its usual convention of single-assigning a partitioned chapter (it books 32-33 to ep 19 alone).",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2017&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2019&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2031&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2032&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2033&prop=wikitext&format=json",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-recordofragnarok-list/"
+   ]
+  }
+ ],
+ "repairs": [
+  {
+   "episode": 17,
+   "target": "anchor",
+   "field": "anchor.start_chapter",
+   "old": "20",
+   "new": "29",
+   "why": "THE FORK'S SECOND HORN. The stored ep-17 row is 'END 30 [START 20] {20-30 (Round 4 complete)} v8 (manual)', laid down by research-tier batch 12 (2026-08-23) as a ROUND-LEVEL record — its own note says 'R4 ends (Jack)' and its cited sources were the fandom, List_of_Rounds and Wikipedia, i.e. the round's chapter span, not the episode's. Batch 15 later refined ep 13 to page level (20 pp.17-31, 21, 22 pp.1-13, 24 pp.1-26) but ep 17 was never revisited, which is exactly what produced the A18 hole: a START reaching back nine chapters past the previous END across three unpainted rows. The pages refute it. Ep 17 OPENS on ch 29 p.25 — 'As Jack the Ripper stands up, Heracles commends his durability' — which is the frame ep 16 stops on ('Jack barely starts singing and stands up'); the fandom's ep-17 `adapted=` field reads '29 (p. 25-50), 30' and its ch-29 page gives 50 pages, so eps 16 and 17 partition ch 29 exactly once with no gap. programming-cafe's anicomi 対応表 independently books ep 17 as 第7巻 29 + 第8巻 30 and nothing earlier; en-WP's ep-17 summary starts at Jack impaling Heracles with his blood-soaked gloves (ch 29's back half); the official Japanese あらすじ for 第5話 鎮魂 is entirely the in-fight finish and its aftermath. Chapters 20-28 are carried by eps 13-16 (this verdict's three anchors plus the stored ep-13 row), so nothing is stranded by the repair. END 30 and volume 8 are correct and unchanged.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2016&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2017&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2029&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2030&prop=wikitext&format=json",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-recordofragnarok-list/",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes",
+    "https://www.fami-geki.com/douga/syumatsu-2/"
+   ]
+  },
+  {
+   "episode": 17,
+   "target": "anchor",
+   "field": "anchor.chapters_adapted",
+   "old": "20-30 (Round 4 complete)",
+   "new": "29 (pp.25-50), 30, 32 (pp.6-8, 30-32), 33 (pp.27-60)",
+   "why": "Same defect as the START: the stored string is the ROUND's chapter span, not the episode's coverage, and it double-claims chs 20-28 which eps 13-16 actually animate. Delivered as a comma-separated chapter list (not prose) so the A47 normalizer can parse it. The 29/30 half has three witnesses (fandom page split, programming-cafe 第7巻 29 / 第8巻 30, en-WP summary). The 32/33 half is the out-of-order tail — page-level detail from the fandom alone, existence corroborated by en-WP's summary (Loki accuses Buddha, the Seven Lucky Gods appear, Sasaki and other Japanese figures show up) and validated by its exact complementarity with ep 19's field (ch 32: 6-8 + 30-32 here, 1-5 + 9-29 + 33-38 there = 38 pages, the chapter's own count; ch 33: 27-60 here, 1-26 there = 60 pages, the chapter's own count). It does not move the END, which stays 30 under A4 because chs 32-33 are played out of running order with ch 31 skipped — see the companion `rearranged` annotation. If Sean prefers the conservative form, the two-source-only value '29 (pp.25-50), 30' is also defensible and the 32/33 pages can live in the annotation alone.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2017&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2018&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2019&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2029&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2030&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2032&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2033&prop=wikitext&format=json",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-recordofragnarok-list/",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes"
+   ]
+  }
+ ],
+ "type_corrections": [
+  {
+   "episodes": [
+    14,
+    15,
+    16
+   ],
+   "type": "canon",
+   "note": "CONFIRMED AS STORED (canon), all three rows — delivered so the rows are pinned rather than re-derived. Each is an in-order adaptation of consecutive manga chapters end to end, with no anime-original story-carrying share to weigh under T28 and no recap segment to discount under the recap clause: ep 14 = ch 22 back half + ch 23 + ch 24 back half (+ the ch-25 3-page hook); ep 15 = ch 25 body + ch 26; ep 16 = ch 27 + ch 28 + ch 29 first half. The only deviations from the source's own order are cuts and reorders of the SOURCE's material (ep 13 deferring ch 22's back half and ch 23 into ep 14; ep 17 pulling ch 32-33 forward), which under the faithfulness clause keep a row canon and are recorded as `rearranged` annotations. AFL has no page for this series (the context prints 'AFL: —' on all three rows) and AFG is not used as a type witness; the positive readings are the fandom's episode plots, en-WP's summaries and the official Japanese per-episode あらすじ, all three of which describe only source events. ja-WP's 各話リスト carries no アニメオリジナル marker anywhere in this run — silence, not evidence, and stated as such.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2014&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2015&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2016&prop=wikitext&format=json",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes",
+    "https://ja.wikipedia.org/wiki/%E7%B5%82%E6%9C%AB%E3%81%AE%E3%83%AF%E3%83%AB%E3%82%AD%E3%83%A5%E3%83%BC%E3%83%AC",
+    "https://www.fami-geki.com/douga/syumatsu-2/"
+   ]
+  }
+ ],
+ "structure": {
+  "notes": "IDENTITY FIRST (R20), joined on title + date, never index. All ten S2-part-1 rows released on the same day (2023-01-26, Netflix), so the date cannot discriminate inside the block and the title carries the join — it does so cleanly on three lists. ja-WP's 各話リスト numbers the season internally (第2期 第1話〜第15話) and gives 第1話 正義VS悪 / 第2話 不屈の闘神 / 第3話 怪物の誕生 / 第4話 最後の御業 / 第5話 鎮魂 / 第6話 それぞれの思惑; en-WP's 'List of Record of Ragnarok episodes' prints BOTH numbers (EpisodeNumber 13/14/15/16/17/18 with EpisodeNumber2 1/2/3/4/5/6) and the same titles and dates; record-of-ragnarok.fandom's pages are titled by the CUMULATIVE number (Episode 14 carries `season=2 | episode=14 | jname=不屈の闘神`). So our cumulative rows 13-17 = S2 #1-#5 with no off-by-one anywhere, and the context's four-component structure (12 + 10 + 5 + 15) matches ja-WP's account of a 15-episode second season split into a 10-episode 前編 (2023-01-26) and a 5-episode 後編 (2023-07-12). No count_mismatch, no numbering slip, no date repair. CHAPTER SPACE: the manga's own printed tankobon numbering, used identically by every source here — the fandom's chapter pages carry `chapter=` and `volume=` (22-25 = v6, 26-29 = v7, 30-33 = v8) and programming-cafe's 対応表 prints the same volume breaks against the same numbers, which is also the space the stored anchors and the stored v21 boundary use. No sourceShift applies. THE INSTRUMENT'S SELF-VALIDATION is the main structural finding and is worth recording for future RoK waves: the fandom's `adapted=` field partitions every straddled chapter in this zone exactly once and the parts union to the chapter page's own page count (ch 22 33pp, ch 24 54pp, ch 25 62pp*, ch 29 50pp, ch 32 38pp, ch 33 60pp) — that is a page-partitioned field of the trustworthy kind, not an infobox guess. *Two one-page nits: ch 22's splits union to 34 against a stated 33, and ch 25's to 61 against a stated 62; both are cover/title-page counting and move no boundary. OUT OF SCOPE, as instructed: the RoK 155/156 scope seam, and the wider eps 18-19 reorder (ep 18 = ch 31 + 34 pp.1-27; ep 19 = the rest of 32-33 + 34 pp.28-30 + 35 + 36 pp.1-14) — flagged below but not repaired.",
+  "coverage_set_checked": "Yes, in both directions across chs 20-33. Forward (episode -> chapters), from the fandom's per-episode `adapted=` fields: ep 12 = 19 (19-69), 20 (1-16, 32-52); ep 13 = 20 (17-31), 21, 22 (1-13), 24 (1-26); ep 14 = 22 (14-34), 23, 24 (27-54), 25 (1-3); ep 15 = 25 (4-61), 26; ep 16 = 27, 28, 29 (1-24); ep 17 = 29 (25-50), 30, 32 (6-8, 30-32), 33 (27-60); ep 18 = 31, 34 (1-27); ep 19 = 32 (1-5, 9-29, 33-38), 33 (1-26), 34 (28-30), 35, 36 (1-14); ep 20 = 36 (15-34), 37, 38. Every chapter from 20 to 33 is accounted for exactly once at page level, with no chapter left unclaimed and no page claimed twice — so none of the three new anchors rests on a duplicate, and the sole sliver (ch 25 pp.1-3) is explicitly first-time-but-weightless with ep 15 named as the chapter's real adaptation. Cross-checked chapter-for-chapter against programming-cafe's independent 対応表 (agreeing on every target row; its only divergences are the known ±1 boundary wobble on ep 14's leading '21' and its convention of single-assigning partitioned chs 32-33 to ep 19)."
+ },
+ "flags_for_sean": [
+  "THE HOLE WAS AN ARTEFACT, NOT A REORDER. Eps 14/15/16 needed no special treatment at all — they are three in-order adaptations. The A18 hole existed only because ep 17 still carried a batch-12 ROUND-LEVEL anchor ('20-30 (Round 4 complete)') that batch 15's page-level refinement of ep 13 never revisited. Worth a census sweep: any other row whose stored note says 'Round N ends' / 'complete' may be carrying a round span as a START. On this series the same shape is visible on eps 22 ({31-42 + ch 43 partial}, 'R5 ends'), 27 ({43-54 + ch 55 tease}, 'R6 ends'), 33 ({55-65 + ch 66 partial}, 'R7 ends') and 38 ({66-77}, 'R8 ends') — each is a season/round finale whose START is the round's first chapter, which is plausible for a finale but is the same provenance that failed here, and the intervening rows are likewise unpainted.",
+  "EP 17 IS REPAIRED BUT NOT FULLY RESEARCHED. This verdict fixes its START and chapters_adapted because the fork required testing them, and proposes a companion `rearranged` and a parity continue. What it does NOT settle: whether the ch 32-33 pull-forward should also carry a note on ep 18/19, and whether ep 18's stored typing/anchor (fandom: 31 + 34 pp.1-27; programming-cafe: 31, 33 + 34) is right — chs 31-36 are the most reordered stretch in the series so far and eps 18-20 have no stored anchors at all. Candidate for the next narrow wave.",
+  "ONE SHAPE NOTE ON THE EP-17 chapters_adapted REPAIR: its trailing segment is '33 (pp.27-60)' while the END is 30, because chs 32-33 are out-of-order. The A47 normalizer only ever HOLDS an END back, so it should be inert here, but this is the first row in the batch where the trailing segment is numerically ABOVE the END — worth a glance at apply time. If it is a problem, the conservative value '29 (pp.25-50), 30' plus the `rearranged` annotation carries the same information.",
+  "SOURCE TIERING, stated plainly: the two lineages carrying every anchor are record-of-ragnarok.fandom's page-partitioned per-episode `adapted=` field (read via api.php action=parse, plus its chapter pages for page counts and volumes) and programming-cafe's Japanese anicomi 対応表. en-Wikipedia's episode summaries are a third, content-level witness. The official Japanese per-episode あらすじ were read through a VOD content farm (fami-geki) that attributes them to 公式サイト; the anime's own domains (shuumatsu-no-valkyrie.com, rok-anime.com) no longer resolve, so that text is used as CROSS-CHECK ONLY (R1) and no anchor rests on it. AniList/MangaUpdates were not used: their coverage strings are series-level and cannot speak to a mid-season episode boundary."
+ ]
+}
