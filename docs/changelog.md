@@ -1154,6 +1154,78 @@
    19-23 / 39 (chain_source) and 18 / 93-95 (AFL's loose Mixed bucket),
    beelzebub 15 / 26-28 / 51, rurouni TV ep 95 (identity). Batch 22 opens on
    the boruto follow-up (lanes I + C) with the batch-21 tooling copied.
+117. ✅ **THE T26 ADOPTION SITTING — RULED + APPLIED (2026-09-05; Sean ruled
+   Line B, Cursor's review sharpened the mechanism three times).** THE FORK: two
+   rulings collided on one shape — a canon / mixed row whose only source tie is
+   a work OUTSIDE the reading chain with no adopted{basis} (57 rows / 9 series,
+   the side_source_unadopted class). Line A (batch 18 → 20: 'a licence confers
+   standing') vs Line B (one-piece 50, 09-04: 'only an adoption act does').
+   T26's own text already read to B while the Itachi rows carried no adopted —
+   the ledger described a state the data did not hold. RULED: A LICENCE IS NOT
+   ADOPTION. episodes.type measures the identified source (T25 / T27); a
+   licence names a different work, which is already what side_source records;
+   the standing is filler unless a specific act is cited (Kodachi's blanket
+   credit and an illustrator's name are the same rejected shape). Measured
+   cost: 0 anchors on all 57; mapping.ts:434 / :563 treat filler and offSource
+   identically and assemble.ts:95 already sets offSource on every side_source
+   row — position, coverage, frontier, continues do not move; only the badge
+   changes, and the badge was the claim that lied. THE MECHANISM (/add-rule):
+   lib/side-source.ts#sideSourceStandingProblem — canon / mixed + side_source
+   + no adopted + NO WEIGHT-BEARING TIE (a chapter anchor / chain_source /
+   side_story / unverified) → filler. WEIGHT, NOT KIND (Cursor's first
+   predicate exempted graft / partial — the Itachi rows carry graft +
+   side_source and would have been carved out of their own rule; T28 slivers
+   weigh nothing). A44's ANCHOR_SUPPRESSED is a POSITION ruling and is NOT a
+   signal (Cursor: the map holds two-page slivers beside plot-carrying side
+   stories; boruto 18 fires until adopted{author} lands, as the table said).
+   GATE THE STANDING, NOT THE ANNOTATION: research must be able to land
+   side_source on a row Sean has not retyped (boruto 93) — so the default
+   derives in the episode writer (filterEpisodeRows, ties loaded by every
+   writer, BEFORE the T6 pins so a pin wins), the healer asserts it
+   (assert-overrides#assertSideSourceStandings — AFTER the annotation maps and
+   the pins; the dry run showed the earlier order flipping DBS 18-27 before
+   their adopted existed; converged 0/0/0 on pass 2), and the census lists a
+   stored row that disagrees (side_source_unadopted → ruling_violation, P30).
+   8 unit tests on the sitting's own shapes. THE RULINGS: G1 → 40 prose-novel
+   rows FILLER + side_source by T6 pin (shippuden 452-454/456-457 Itachi
+   Shinden, 484-500 Sasuke Shinden / Shikamaru Hiden / Konoha Hiden; boruto
+   93-95 親子の日, 106-111 湯煙忍法帖, 282-286 Sasuke Retsuden; black-clover
+   55-56 Abareushi no Sho; fma 11-12 The Land of Sand). G2 → DBS 18-21/23-27
+   Resurrection 'F' adopted{author} (原作 AND 脚本 鳥山明 — the act, not the
+   licence), canon; ep 6 Battle of Gods: the 脚本 check FAILED (渡辺雄介;
+   Toriyama 原作・ストーリー — Toei staff page + ja-WP) → no stamp, the default
+   makes it filler + side_source, Sean's T30 load-bearing call on the shared
+   arc is QUEUED. G3 → the author's own other MANGA is a chain question (I41),
+   never adoption: Shonan Junai Gumi (gto 25-26) and Galaxy Knights (cobra
+   10-13 — the verdict's own rowspan-4 flag, not 13 alone) onto the chain,
+   side_source → chain_source with labels, the old keys retired (A45). G4 →
+   boruto 18 adopted{author} (Kishimoto wrote and drew the omake), stays mixed.
+   G5 → trigun 18's leftover ruling-origin side_source (re-asserted by the
+   healer every pass since the 09-04 chain re-kind, invisible to
+   side_source_on_chain because its label was null) retired; the standing
+   entry re-kinded chain_source{Trigun Maximum: ch 1-2}. D7 → fma 37
+   side_story{the two Arakawa bonus chapters} transcribed from its own note (a
+   weight-bearing tie the kinds-only class could not see), type held for the
+   T28 look with ep 13. APPLY-TIME CORRECTION: beelzebub 49 is the FMA-37
+   shape, not G1 — its side_story is Tamura's vol-10 extra chapter (sole
+   adaptation, significant); held out, canon stands on the manga share; the
+   ja-WP 【小説版が原作。】 footnote proves the side_source, not adoption.
+   LEDGER: T26 amended (retiredPhrases: 'an Itachi-novel row is canon +
+   adopted + side_source, and that is correct'; I41's 'which is the correct
+   Itachi-novel pattern'; 'canon relative to a licensed side source' — every
+   standing-annotation note rewritten), 9 aliases, 4 enforcement sites, 2
+   audit classes; I41 Why amended; research-agent.md ×4 + verdict-verifier.md
+   updated (the 'Itachi rows have one' claim was false). LABELS: every
+   side_source / chain_source row in the set starts with its work label
+   (ruling entries edited; research rows via research/batch22/apply-t26.ts).
+   CENSUS: side_source_unadopted 9 → 0; source_work_unlabelled 52 → 0;
+   frontier_tail_null 8 → 7 (shippuden's '17 canon eps past ep 479 render
+   null' were 484-500 — filler now, off the class); ruling_violation 0;
+   anchor_on_noncanon_row 0; afl_anime_canon_unruled 1 (unchanged — every
+   retype is a pin); display 218 / 0; edges rebuilt + deployed twice (a
+   comment edit in a rulings map moves the lib hash — P3 every time); 191
+   tests. NEXT: the narrow wave — beelzebub 15 / 26-28 / 51, boruto 106, fma
+   37 / 13 (T28 on the manga share), DBS ep 6 (T30).
 116. ✅ **THE C5 CURATION QUEUE APPLIED + BATCH 22 WAVE 1 APPLIED (2026-09-05;
    Sean ruled, Cursor's lines).** (A) THE C5 QUEUE — 17 block exits with no
    continue + 49 unnoted continues, proposed mechanically from stored spans

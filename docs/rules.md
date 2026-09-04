@@ -100,7 +100,7 @@
 - `T23` Format is orthogonal to canon standing — aka `format ⟂ canon standing`, `format-is-orthogonal`, `format is orthogonal to standing`, `never overload episodes.type`
 - `T24` LN instrument ruling: volume-space for light novels *(planned)* — aka `LN instrument ruling`, `LN class`, `light-novel instrument`, `Queue 3 LN ruling`, `LN volume-space instrument`
 - `T25` Source is series identity: the SOURCE_KINDS registry — aka `SOURCE_KINDS`, `source kinds registry`, `source-kinds`, `D-9`, `source is identity`, `source is series identity`, `SOURCE_TYPE_OVERRIDES`, `hasInstrument`, `hasSource vs hasInstrument`, `series_without_source_kind`, `studio original`, `fail closed source`, `visual novel source`, `game source`
-- `T26` Overrides are annotations, never a fourth episode type — aka `overrides are annotations`, `adopted annotation`, `adopted`, `retconned`, `side_source`, `adopted basis`, `community canon is not a type`, `no fourth type`, `D-10 annotations`, `annotation_invalid`, `chain_source`, `reading chain`, `the chain`, `chain_source_unmapped`, `side_source_on_chain`, `source_work_unlabelled`
+- `T26` Overrides are annotations, never a fourth episode type — aka `overrides are annotations`, `adopted annotation`, `adopted`, `retconned`, `side_source`, `adopted basis`, `community canon is not a type`, `no fourth type`, `D-10 annotations`, `annotation_invalid`, `chain_source`, `reading chain`, `the chain`, `chain_source_unmapped`, `side_source_on_chain`, `source_work_unlabelled`, `a licence is not adoption`, `licence is not adoption`, `the adoption sitting`, `T26 sitting`, `side_source_unadopted`, `weight-bearing tie`, `weight not kind`, `sideSourceStandingProblem`, `only-tie`
 - `T27` Standing is canon / mixed / filler, relative to the source — aka `three standings`, `canon mixed filler only`, `anime-only-canon retired`, `AFL anime_canon mapping`, `aflAnimeCanon`, `afl_anime_canon_unruled`, `standing migration`, `D-10 standing`, `anime only retired`
 - `T28` mixed needs a substantial share: the episode's job decides — aka `mixed_fragment_only`, `T28 discrepancy queue`, `materiality bar for mixed`, `episode job test`, `what is this episode's job`, `fragment is an annotation`, `slivers are not mixed`, `Claymore-26 shape`, `mixed threshold`, `canon sliver`, `sole adaptation`, `load-bearing sliver`, `graft flip`, `the FotNS-57 test`, `sole-adaptation exception`, `the sliver clause`, `significance not size`, `weightless sliver`, `the unverified share`, `unverified_share`
 - `T29` The format axis: derived, stored, never a type — aka `format axis`, `episodes.format`, `FORMAT_OVERRIDES`, `heal-format`, `format_missing`, `episode_without_component`, `watch_order_kind_missing`, `D-11`, `tv ova special movie recap`
@@ -1424,17 +1424,18 @@ series.source_type names what the anime ADAPTS and is derived ONLY by deriveSour
 
 ### T26 · Overrides are annotations, never a fourth episode type
 
-An author / studio / community override of the source is an ANNOTATION, never a type: the episode's standing stays canon / mixed / filler relative to the identified source (T25), and the exception is a first-class record — kind 'adopted' (REQUIRED basis: author | studio | community; 'author' = the source's author wrote, supervised, declared, or INCORPORATED THE MATERIAL'S EVENTS into the source line — a specific act per arc, never a blanket credit; importing names or designs while contradicting the events is not adoption), 'retconned' (material later dropped from canon), or 'side_source' (adapts a work other than the series' source; the work is named in note). Consensus canon that is not in the source = canon + adopted + a null mapping (an honest dash, no strip units; A1 stands — filler never anchors). The vocabulary is closed (lib/annotations.ts ANNOTATION_KINDS), mirrored by the DB constraints, written only through upsertAnnotation, and a stored record the gate would refuse is annotation_invalid. 'Community canon' is neither a badge nor a type. THE CHAIN (Sean 2026-09-04, rosario-vampire 14 / trigun 18): a work on the series' READING CHAIN — the ordered sequence of named MANGA works telling one continuous story (I41: Rosario + Vampire Season I → Season II; Trigun → Trigun Maximum) — is not a foreign source: material adapted from it is CANON to the series told out of order, kind 'chain_source' (chapters = '<work label>: ch …'), weighed like any adaptation (canon / mixed by the standing), and POSITION-LESS (A12 / A44 — the anchor column is numeric in the entry's own instrument; the display carries the previous position forward; no 'rearranged' is minted: chain material is never in order with the current source by definition). 'side_source' narrows to works OUTSIDE the chain — novels, games, parallel tellings — whose canon is the 'adopted' ruling, never the chain (an Itachi-novel row is canon + adopted + side_source, and that is correct). The chain map makes both checkable: chain_source_unmapped / side_source_on_chain / source_work_unlabelled.
+An author / studio / community override of the source is an ANNOTATION, never a type: the episode's standing stays canon / mixed / filler relative to the identified source (T25), and the exception is a first-class record — kind 'adopted' (REQUIRED basis: author | studio | community; 'author' = the source's author wrote, supervised, declared, or INCORPORATED THE MATERIAL'S EVENTS into the source line — a specific act per arc, never a blanket credit; importing names or designs while contradicting the events is not adoption), 'retconned' (material later dropped from canon), or 'side_source' (adapts a work other than the series' source; the work is named in note). Consensus canon that is not in the source = canon + adopted + a null mapping (an honest dash, no strip units; A1 stands — filler never anchors). The vocabulary is closed (lib/annotations.ts ANNOTATION_KINDS), mirrored by the DB constraints, written only through upsertAnnotation, and a stored record the gate would refuse is annotation_invalid. 'Community canon' is neither a badge nor a type. THE CHAIN (Sean 2026-09-04, rosario-vampire 14 / trigun 18): a work on the series' READING CHAIN — the ordered sequence of named MANGA works telling one continuous story (I41: Rosario + Vampire Season I → Season II; Trigun → Trigun Maximum) — is not a foreign source: material adapted from it is CANON to the series told out of order, kind 'chain_source' (chapters = '<work label>: ch …'), weighed like any adaptation (canon / mixed by the standing), and POSITION-LESS (A12 / A44 — the anchor column is numeric in the entry's own instrument; the display carries the previous position forward; no 'rearranged' is minted: chain material is never in order with the current source by definition). 'side_source' narrows to works OUTSIDE the chain — novels, games, parallel tellings — whose canon is the 'adopted' ruling, never the chain. The chain map makes both checkable: chain_source_unmapped / side_source_on_chain / source_work_unlabelled. A LICENCE IS NOT ADOPTION (Sean 2026-09-05, the adoption sitting — research/batch22/T26-SITTING.md): a canon or mixed standing on a row whose only source tie is a side_source REQUIRES an adopted{basis} record; without one the row is FILLER + side_source{work} (the one-piece 50 shape). The basis is proven PER WORK by a specific authorial / studio / community act — never a franchise-wide credit, a licence, or an illustrator's name on the cover (Kishimoto illustrating the Shinden novels is the Kodachi shape, rejected; Toriyama writing Resurrection 'F' 原作・脚本 is the act, adopted{author}; Kishimoto drawing the boruto-18 omake is the act). WEIGHT, NOT KIND: the ties that hold a standing beside an unadopted side_source are the catalog's own weight-bearing mechanisms — a chapter anchor (A1), chain_source (I41), side_story, unverified (T28); sliver kinds (graft / partial / loose_parallel / divergence / abridged / rearranged / recap) weigh nothing — the Itachi rows carry graft + side_source and still fire; A44's ANCHOR_SUPPRESSED is a position ruling and is NOT a standing signal. The predicate is one lib function (lib/side-source.ts#sideSourceStandingProblem) with three consumers: the episode writer defaults the standing to filler at every write (filterEpisodeRows, before the T6 pins — a pin still wins), the healer asserts it over standing rows (assert-overrides#assertSideSourceStandings), and a stored row that disagrees is side_source_unadopted → ruling_violation. The annotation writer is NOT the gate — side_source is a fact research must be able to land on a row Sean has not retyped yet (boruto 93). The author's own OTHER MANGA is never this question: it is a chain question (I41 — Shonan Junai Gumi, Galaxy Knights → chain_source).
 
 *Why:* T4.0 D-10 (Sean, 2026-08-26): Black Clover 130-157 (author-supervised), Boruto 221-286, Shippuden 452-457 (the Itachi Shinden novel), Evangelion's EoE (studio), X's only ending (community, accepted for lack of an ending) were one class typed three ways (anime-only-canon / filler+asterisk / mixed); a fourth type would have hidden WHO adopted the material and why. The basis is required because 'adopted' without it is not a ruling. Batch 18 sharpened 'author' twice: Kodachi's blanket story-supervision credit on Boruto (also covers undisputed filler) was REJECTED; Kamachi's incorporation of the Railgun anime arcs' EVENTS into his own manga and novels (ch 32's ep-20 photo; Therestina in prison; Saten regretting she let Febrie/Janie go) was ACCEPTED — while Sukeno importing Twin Star's anime DESIGNS and refusing its events stayed filler.
 
 - ruled Sean 2026-08-26 (docs/restructure/T4-GLOSSARY.md §1, §3 (D-10); restructure T4.2)
 - layer **writer**
-- enforced: [lib/annotations.ts#upsertAnnotation](../scripts/ingest/lib/annotations.ts) · [lib/annotations.ts#annotationProblem](../scripts/ingest/lib/annotations.ts) · [supabase/migrations/20260826100000_annotation_kinds.sql](../supabase/migrations/20260826100000_annotation_kinds.sql) · [audit-ui-truth.ts#annotation_invalid](../scripts/ingest/audit-ui-truth.ts) · [lib/rulings/source-chains.ts#isChainWork](../scripts/ingest/lib/rulings/source-chains.ts) · [audit-ui-truth.ts#chain_source_unmapped](../scripts/ingest/audit-ui-truth.ts) · [audit-ui-truth.ts#side_source_on_chain](../scripts/ingest/audit-ui-truth.ts) · [audit-ui-truth.ts#annotation_contradicts_row](../scripts/ingest/audit-ui-truth.ts)
-- audit: `annotation_invalid`, `asterisk_unreviewed`, `chain_source_unmapped`, `side_source_on_chain`, `source_work_unlabelled`, `annotation_contradicts_row`
-- witnesses: black-clover, boruto-naruto-next-generations, naruto-shippuden, x, rosario-vampire, trigun
-- aliases: overrides are annotations, adopted annotation, adopted, retconned, side_source, adopted basis, community canon is not a type, no fourth type, D-10 annotations, annotation_invalid, chain_source, reading chain, the chain, chain_source_unmapped, side_source_on_chain, source_work_unlabelled
-- see: T25, R10, A43, A1, T13
+- enforced: [lib/annotations.ts#upsertAnnotation](../scripts/ingest/lib/annotations.ts) · [lib/annotations.ts#annotationProblem](../scripts/ingest/lib/annotations.ts) · [supabase/migrations/20260826100000_annotation_kinds.sql](../supabase/migrations/20260826100000_annotation_kinds.sql) · [audit-ui-truth.ts#annotation_invalid](../scripts/ingest/audit-ui-truth.ts) · [lib/rulings/source-chains.ts#isChainWork](../scripts/ingest/lib/rulings/source-chains.ts) · [audit-ui-truth.ts#chain_source_unmapped](../scripts/ingest/audit-ui-truth.ts) · [audit-ui-truth.ts#side_source_on_chain](../scripts/ingest/audit-ui-truth.ts) · [audit-ui-truth.ts#annotation_contradicts_row](../scripts/ingest/audit-ui-truth.ts) · [lib/side-source.ts#sideSourceStandingProblem](../scripts/ingest/lib/side-source.ts) · [lib/resolve.ts#filterEpisodeRows](../scripts/ingest/lib/resolve.ts) · [assert-overrides.ts#assertSideSourceStandings](../scripts/ingest/assert-overrides.ts) · [audit-ui-truth.ts#side_source_unadopted](../scripts/ingest/audit-ui-truth.ts)
+- audit: `annotation_invalid`, `asterisk_unreviewed`, `chain_source_unmapped`, `side_source_on_chain`, `source_work_unlabelled`, `annotation_contradicts_row`, `side_source_unadopted`, `ruling_violation`
+- witnesses: black-clover, boruto-naruto-next-generations, naruto-shippuden, x, rosario-vampire, trigun, one-piece, dragon-ball-super, beelzebub, fullmetal-alchemist, gto-great-teacher-onizuka, cobra-the-animation
+- aliases: overrides are annotations, adopted annotation, adopted, retconned, side_source, adopted basis, community canon is not a type, no fourth type, D-10 annotations, annotation_invalid, chain_source, reading chain, the chain, chain_source_unmapped, side_source_on_chain, source_work_unlabelled, a licence is not adoption, licence is not adoption, the adoption sitting, T26 sitting, side_source_unadopted, weight-bearing tie, weight not kind, sideSourceStandingProblem, only-tie
+- retired wording (P38): “an Itachi-novel row is canon + adopted + side_source, and that is correct” · “which is the correct Itachi-novel pattern” · “canon relative to a licensed side source” · “canon relative to the franchise's licensed side source”
+- see: T25, R10, A43, A1, T13, T28, I41, T30
 
 ### T27 · Standing is canon / mixed / filler, relative to the source
 
@@ -2478,13 +2479,13 @@ series.source_relation names HOW the anime stands to its linked source work — 
 
 A franchise's READING CHAIN is the ordered sequence of named MANGA works (instruments the catalog can count chapters in) that tell one continuous story — Rosario + Vampire Season I → Season II; Trigun → Trigun Maximum; Naruto's two entries already share one manga and need no chain. It is a ruling map (lib/rulings/source-chains.ts: works with label + AniList manga id + note, the reason cited). Material an episode adapts from ANOTHER work on the chain is canon to the series told out of order — `chain_source` (T26), position-less (A12 / A44). The chain is STRUCTURAL: novels, games and parallel tellings (I40) are never on it however the author blessed them — their canon is the `adopted` ruling and their record is `side_source`. Convention: a chain_source / side_source annotation's chapters field starts with the work's label exactly as the map writes it, so the census can check the pair: chain_source_unmapped (a chain_source naming a work off the map), side_source_on_chain (a side_source naming a work on it), source_work_unlabelled (cannot be checked — backfill the label). Whether a chain work should be its OWN entry (Capu2 with Season II as its instrument) is a separate identity question; the chain works either way.
 
-*Why:* Batch 20 wave 16 (2026-09-04): rosario-vampire 14 adapts Season II ch 1 + 3 inside an original episode and came out FILLER under T26's single 'other work' label — Sean: the sequel manga is the same cohesive canon, an original-Naruto episode adapting Shippuden chapters would never be filler; the vocabulary could not tell a sequel manga from a novel. Cursor: name the pair chain_source / side_source, no extra rearranged kind (chain material is out of order by definition), the classes are MISMATCHES against the map (never 'side_source on a canon row', which is the correct Itachi-novel pattern), and drop 'authorized continuation' from the definition — authorization is how novels sneak onto the chain.
+*Why:* Batch 20 wave 16 (2026-09-04): rosario-vampire 14 adapts Season II ch 1 + 3 inside an original episode and came out FILLER under T26's single 'other work' label — Sean: the sequel manga is the same cohesive canon, an original-Naruto episode adapting Shippuden chapters would never be filler; the vocabulary could not tell a sequel manga from a novel. Cursor: name the pair chain_source / side_source, no extra rearranged kind (chain material is out of order by definition), the classes are MISMATCHES against the map (a side_source on a canon row is not itself a mismatch here — since the T26 adoption sitting of 2026-09-05 that standing is the T26 gate's question, and it is filler unless adopted{basis}), and drop 'authorized continuation' from the definition — authorization is how novels sneak onto the chain.
 
 - ruled Sean 2026-09-04 (scripts/ingest/research/batch20/WAVE16-RECOVERY.md §THE DECISIONS item 2; changelog §12.107)
 - layer **writer**
 - enforced: [lib/rulings/source-chains.ts#SOURCE_CHAINS](../scripts/ingest/lib/rulings/source-chains.ts) · [lib/rulings/source-chains.ts#isChainWork](../scripts/ingest/lib/rulings/source-chains.ts) · [lib/annotations.ts#ANNOTATION_KINDS](../scripts/ingest/lib/annotations.ts) · [audit-ui-truth.ts#chain_source_unmapped](../scripts/ingest/audit-ui-truth.ts) · [audit-ui-truth.ts#side_source_on_chain](../scripts/ingest/audit-ui-truth.ts)
 - audit: `chain_source_unmapped`, `side_source_on_chain`, `source_work_unlabelled`
-- witnesses: rosario-vampire, trigun, naruto-shippuden
+- witnesses: rosario-vampire, trigun, naruto-shippuden, gto-great-teacher-onizuka, cobra-the-animation
 - aliases: source chain, chain map, SOURCE_CHAINS, named manga sequence, chain work, the reading chain map, I41
 - see: T26, T28, A12, A44, I40, I16
 
@@ -4183,6 +4184,7 @@ When a clause of a rule is amended or retired, the EXACT replaced strings go in 
 - 365-day rule → `G54`
 - 40-chapter band → `C8`
 - 6–8 wave cap → `P12`
+- a licence is not adoption → `T26`
 - a wave is the unit of loss → `P12`
 - a writer deletes only rows it minted → `G57`
 - A-11 → `G54`
@@ -4772,6 +4774,7 @@ When a clause of a rule is amended or retired, the EXACT replaced strings go in 
 - lib → edges → `P3`
 - lib → four edges → `P3`
 - lib-hash stamp → `P4`
+- licence is not adoption → `T26`
 - licensed canon side story → `T9`
 - light-novel instrument → `T24`
 - LN class → `T24`
@@ -4912,6 +4915,7 @@ When a clause of a rule is amended or retired, the EXACT replaced strings go in 
 - one-chapter-dip class → `A16`
 - only ending → `T10`
 - only-ending class → `T10`
+- only-tie → `T26`
 - order-only components never count → `N4`
 - orphan anchor → `A42`
 - orphan records → `A42`
@@ -5108,6 +5112,8 @@ When a clause of a rule is amended or retired, the EXACT replaced strings go in 
 - sibling-scope ceiling → `G33`
 - side_source → `T26`
 - side_source_on_chain → `T26`
+- side_source_unadopted → `T26`
+- sideSourceStandingProblem → `T26`
 - significance not size → `T28`
 - signing queue → `P25`
 - single-source final → `C4`
@@ -5199,6 +5205,7 @@ When a clause of a rule is amended or retired, the EXACT replaced strings go in 
 - T2.5 → `P34`
 - T2.6 → `P4`
 - T2.7 → `P33`
+- T26 sitting → `T26`
 - T28 discrepancy queue → `T28`
 - T3.1 → `P31`
 - T3.3 → `P22`
@@ -5210,6 +5217,7 @@ When a clause of a rule is amended or retired, the EXACT replaced strings go in 
 - the 260-that-is-255 class → `N35`
 - the 5D 145 lesson → `G57`
 - the A10 twin → `A47`
+- the adoption sitting → `T26`
 - the ambiguity rule → `I4`
 - the apply discipline → `P15`
 - the capture table → `P29`
@@ -5310,6 +5318,8 @@ When a clause of a rule is amended or retired, the EXACT replaced strings go in 
 - watch-order v2 unit rendering → `N32`
 - wave cap → `P12`
 - wave cap 6-8 → `P12`
+- weight not kind → `T26`
+- weight-bearing tie → `T26`
 - weightless sliver → `T28`
 - what is this episode's job → `T28`
 - When They Cry case → `G44`

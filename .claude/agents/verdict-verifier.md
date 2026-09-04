@@ -25,7 +25,10 @@ errors.
 3. **Monotonicity claims.** A back-jump that is real reorder vs one that is a
    transcription error. Both look identical in the data; only sources decide.
 4. **A1 violations** — anchors proposed on filler rows, or a mapping on an
-   adopted / side_source row (T26: canon by ruling, no source position).
+   adopted / side_source row (T26: no source position by design). And the
+   STANDING: a canon / mixed row whose only tie is an unadopted `side_source`
+   is a T26 violation (a licence is not adoption, 2026-09-05) — refuse it
+   unless the verdict cites the adoption ACT or a weight-bearing source tie.
    A verdict that writes `anime-only-canon` as a type is invalid outright
    (T27: the vocabulary is canon | mixed | filler).
 5. **Scope leakage** — a sequel entry carrying its predecessor's chapter

@@ -113,6 +113,34 @@ export const ENTRIES: RulingEntry<RetiredAnnotation>[] = [
     ruledOn: '2026-08-27',
     cite: ['scripts/ingest/research/batch19/out/tokyo-mew-mew.json', 'scripts/ingest/research/batch19/verify/b5b-x-seiya-mewmew.md'],
   },
+  // ---- the T26 adoption sitting (Sean 2026-09-05, research/batch22/T26-SITTING.md): three side_source keys RE-KINDED to chain_source (I41) — the fact (the work) stands, the KIND was wrong
+  {
+    seriesId: 'trigun',
+    ruleId: 'A45',
+    value: { episodes: [18], kind: 'side_source' },
+    reason:
+      "Trigun Maximum is ON the reading chain (source-chains.ts, 2026-09-04) — the record is chain_source, and it already stood beside this leftover: the batch-19 ruling entry kept re-asserting side_source every heal pass while side_source_on_chain could not see it (null work label). Re-kinded at the sitting; the side_source key is retired so no apply re-inserts it.",
+    ruledBy: 'Sean', ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/batch22/T26-SITTING.md', 'scripts/ingest/research/batch20/WAVE16-RECOVERY.md'],
+  },
+  {
+    seriesId: 'gto-great-teacher-onizuka',
+    ruleId: 'A45',
+    value: { episodes: [25, 26], kind: 'side_source' },
+    reason:
+      "Shonan Junai Gumi! is Fujisawa's own prequel manga — a chain work (I41), ruled onto the chain at the sitting (G3); the batch-19 side_source{SJG} becomes chain_source{Shonan Junai Gumi: ch 239-242}. Same fact, the kind corrected.",
+    ruledBy: 'Sean', ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/batch22/T26-SITTING.md', 'scripts/ingest/research/batch19/verify/gto.md'],
+  },
+  {
+    seriesId: 'cobra-the-animation',
+    ruleId: 'A45',
+    value: { episodes: [13], kind: 'side_source' },
+    reason:
+      "COBRA Galaxy Knights is Terasawa's own later Cobra serial — a chain work (I41), ruled onto the chain at the sitting (G3); the batch-20 research side_source (a research-origin row with no other delete path) is replaced by the ruling-tier chain_source on eps 10-13 (the block the verdict itself flagged).",
+    ruledBy: 'Sean', ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/batch22/T26-SITTING.md', 'scripts/ingest/research/batch20/out/cobra-the-animation.json'],
+  },
 ];
 
 const key = (seriesId: string, episode: number, kind: string) => `${seriesId}#${episode}#${kind}`;

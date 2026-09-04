@@ -54,7 +54,8 @@ export const ENTRIES: RulingEntry<StandingAnnotation[]>[] = [
       {
         episodes: span(282, 286),
         kind: 'side_source',
-        note: 'Adapts the licensed novel Sasuke Retsuden (ja-WP arc footnote ノベライズ『サスケ烈伝』を原作としてアニメ化; narutopedia arc page) — canon relative to a licensed side source, not adopted; no chapter mapping.',
+        chapters: 'Sasuke Retsuden: the licensed novel (ja-WP arc footnote ノベライズ『サスケ烈伝』を原作としてアニメ化)',
+        note: 'Adapts the licensed novel Sasuke Retsuden (ja-WP arc footnote ノベライズ『サスケ烈伝』を原作としてアニメ化; narutopedia arc page) — FILLER + side_source (T26, the adoption sitting (Sean 2026-09-05, research/batch22/T26-SITTING.md): a licence is not adoption); no chapter mapping.',
       },
       {
         episodes: [...span(128, 136)],
@@ -79,24 +80,33 @@ export const ENTRIES: RulingEntry<StandingAnnotation[]>[] = [
         episodes: [93],
         kind: 'side_source',
         chapters: 'Naruto Shinden: Parent and Child Day (『NARUTO -ナルト- ナルト新伝 親子の日』, Mirei Miyamoto, ill. Kishimoto; JUMP j-BOOKS 2018-05-02) — prologue + chapter 1 「父と娘、木ノ葉を駆ける」',
-        note: 'Adapts the licensed novel 親子の日 (Parent and Child Day) in order — ja-WP arc footnote (ノベライズ…を原作として), Narutopedia\'s novel page + its Novel Adaptation Differences page, TV Tokyo\'s synopses; canon relative to a licensed side source, not adopted (the T26 sitting); no chapter mapping (a prose work).',
+        note: 'Adapts the licensed novel 親子の日 (Parent and Child Day) in order — ja-WP arc footnote (ノベライズ…を原作として), Narutopedia\'s novel page + its Novel Adaptation Differences page, TV Tokyo\'s synopses; FILLER + side_source (T26, the adoption sitting (Sean 2026-09-05, research/batch22/T26-SITTING.md): a licence is not adoption); no chapter mapping (a prose work).',
       },
       {
         episodes: [94],
         kind: 'side_source',
         chapters: 'Naruto Shinden: Parent and Child Day — chapter 3 「父と娘、ひとりの食卓」 (the novel\'s chapter 2 and all four interludes are unadapted — see abridged)',
-        note: 'Adapts the licensed novel 親子の日 (Parent and Child Day) in order — see ep 93; canon relative to a licensed side source, not adopted (the T26 sitting).',
+        note: 'Adapts the licensed novel 親子の日 (Parent and Child Day) in order — see ep 93; FILLER + side_source (T26, the adoption sitting (Sean 2026-09-05, research/batch22/T26-SITTING.md)).',
       },
       {
         episodes: [95],
         kind: 'side_source',
         chapters: 'Naruto Shinden: Parent and Child Day — chapter 4 「父と娘、冷めた炎と滾る火」 + the coda relocated from chapter 1\'s close (Naruto gifts Boruto the kunai set); the novel\'s Epilogue is unadapted',
-        note: 'Adapts the licensed novel 親子の日 (Parent and Child Day) in order — see ep 93; canon relative to a licensed side source, not adopted (the T26 sitting).',
+        note: 'Adapts the licensed novel 親子の日 (Parent and Child Day) in order — see ep 93; FILLER + side_source (T26, the adoption sitting (Sean 2026-09-05, research/batch22/T26-SITTING.md)).',
       },
       {
         episodes: [...span(106, 111)],
         kind: 'side_source',
-        note: 'Steam Ninja Scrolls: adapts the licensed novel 湯煙忍法帖 (ja-WP arc footnote) — canon relative to a licensed side source.',
+        chapters: 'Steam Ninja Scrolls: the licensed novel 湯煙忍法帖 (ja-WP arc footnote)',
+        note: 'Steam Ninja Scrolls: adapts the licensed novel 湯煙忍法帖 (ja-WP arc footnote) — FILLER + side_source (T26, the adoption sitting (Sean 2026-09-05, research/batch22/T26-SITTING.md): a licence is not adoption); no chapter mapping.',
+      },
+      // T26, the adoption sitting (Sean 2026-09-05, research/batch22/T26-SITTING.md): G4 — the ep-18 omake is a manga chapter Kishimoto WROTE AND DREW (『ナルトが火影になった日』, the 2015 movie book) — the specific act T26's author basis requires; unnumbered, so position-less (A44), never a chain work.
+      {
+        episodes: [18],
+        kind: 'adopted',
+        basis: 'author',
+        chapters: 'The Day Naruto Became Hokage: Kishimoto\'s special extra chapter (『NARUTO -ナルト- 秘伝・在の書 オフィシャルムービーBOOK』, 2015-08-07)',
+        note: 'adopted{author} — Masashi Kishimoto wrote and drew the omake the first half of ep 18 adapts (the movie book\'s own contents; AFG names it). A chapter by the source\'s own hand is adoption by the basis test (T26: a specific act per work); the row stays mixed (an original second half), position-less (A44 — no number). Ruled with the T26 adoption sitting, 2026-09-05.',
       },
       {
         episodes: [51, 52, 60],
@@ -130,8 +140,8 @@ export const ENTRIES: RulingEntry<StandingAnnotation[]>[] = [
   {
     seriesId: 'naruto-shippuden',
     ruleId: 'T26',
-    value: [{ episodes: [452, 453, 454, 456, 457], kind: 'side_source', note: 'Adapts the Itachi Shinden NOVEL (Takashi Yano), zero manga pages — Narutopedia + AFG + Wikipedia S20. Canon relative to the franchise\'s licensed side source; the series\' own source stays the manga, so no chapter mapping.' }],
-    reason: 'T4.0 D-10: Shippuden 452-457 adapt a licensed novel → canon + side_source naming the work; ep 455 stays mixed (disputed ch-678 frame).',
+    value: [{ episodes: [452, 453, 454, 456, 457], kind: 'side_source', chapters: 'Itachi Shinden: the licensed novel (Takashi Yano, ill. Kishimoto)', note: 'Adapts the Itachi Shinden NOVEL (Takashi Yano), zero manga pages — Narutopedia + AFG + Wikipedia S20. FILLER + side_source (T26, the adoption sitting (Sean 2026-09-05, research/batch22/T26-SITTING.md)): a licence is not adoption — Yano wrote it, Kishimoto illustrated; no adoption act on record. The series\' own source stays the manga, so no chapter mapping.' }],
+    reason: 'T4.0 D-10: Shippuden 452-457 adapt a licensed novel → side_source naming the work; ep 455 stays mixed (disputed ch-678 frame). RE-RULED 2026-09-05 (the T26 adoption sitting): the standing is FILLER — a licence is not adoption; the T6 pin carries the type, this record carries the work.',
     ruledBy: 'Sean',
     ruledOn: '2026-08-26',
     cite: ['docs/restructure/T4-GLOSSARY.md §3', 'scripts/ingest/lib/rulings/episode-types.ts naruto-shippuden'],
@@ -152,8 +162,10 @@ export const ENTRIES: RulingEntry<StandingAnnotation[]>[] = [
     seriesId: 'fullmetal-alchemist',
     ruleId: 'T26',
     value: [
-      { episodes: [11, 12], kind: 'side_source', note: "Adapts the light novel 'Fullmetal Alchemist: The Land of Sand' (鋼の錬金術師1 砂礫の大地), story by Makoto Inoue from Arakawa's original work, illustrations by Arakawa, Square Enix, published 2003-02-28 — a different licensed work in the same franchise, not the manga. en.wikipedia's light-novel list, citing Square Enix's own novel page, states the novel 'was used as the source material for episodes 11, 12 and part of 37'. Episode titles 砂礫の大地・前編 / ・後編 are the novel's title. No manga chapter is involved, so these rows take no chapter anchor." },
-      { episodes: [37], kind: 'side_source', note: "Third segment adapts a Land of Sand novel story (The Phantom of Warehouse 13) alongside two Arakawa bonus chapters (Dog of the Military?, The Military Festival) — the same basis ep 13 is stored canon on." },
+      { episodes: [11, 12], kind: 'side_source', chapters: "The Land of Sand: the licensed light novel (砂礫の大地, 前編 / 後編)", note: "FILLER + side_source (T26, the adoption sitting (Sean 2026-09-05, research/batch22/T26-SITTING.md): a licence is not adoption — Inoue wrote it, Arakawa illustrated). Adapts the light novel 'Fullmetal Alchemist: The Land of Sand' (鋼の錬金術師1 砂礫の大地), story by Makoto Inoue from Arakawa's original work, illustrations by Arakawa, Square Enix, published 2003-02-28 — a different licensed work in the same franchise, not the manga. en.wikipedia's light-novel list, citing Square Enix's own novel page, states the novel 'was used as the source material for episodes 11, 12 and part of 37'. Episode titles 砂礫の大地・前編 / ・後編 are the novel's title. No manga chapter is involved, so these rows take no chapter anchor." },
+      { episodes: [37], kind: 'side_source', chapters: "The Land of Sand: 'The Phantom of Warehouse 13' (the third segment)", note: "Third segment adapts a Land of Sand novel story (The Phantom of Warehouse 13) alongside two Arakawa bonus chapters (Dog of the Military?, The Military Festival — the side_story record). The novel segment confers no standing (T26: a licence is not adoption); the row's type rests on the manga share (T28) — held out of the 2026-09-05 block flip for the ep-13 / ep-37 T28 look." },
+      // T26, the adoption sitting (Sean 2026-09-05, research/batch22/T26-SITTING.md): the two Arakawa bonus chapters are the row's weight-bearing source tie (the batch-18 note named them; no record carried them, so the class read the row as novel-only). Unnumbered extras → position-less (A44); the type is a T28 call queued with ep 13.
+      { episodes: [37], kind: 'side_story', chapters: "FMA bonus chapters: 'Dog of the Military?', 'The Military Festival' (Arakawa extras, unnumbered)", note: "The first two segments adapt Arakawa's own bonus chapters (batch 18, verified R24) — a side story of the source that IS the segments' plot (T28), transcribed from the standing side_source note at the T26 adoption sitting (2026-09-05). No Lesson-style number → no anchor (A44). Ep 13 is stored canon on the same basis with no record at all — the narrow wave's T28 look covers both." },
       { episodes: [8], kind: 'rearranged', chapters: "24", note: "Chapter 24 (vol 6, Mustang recruiting the Elrics / Ed receiving the name 'Fullmetal') is pulled forward out of serialized order and used as this episode's closing scene, 16 chapters ahead of its published position. FMA 2003 does this repeatedly in eps 1-9 because eps 3-9 are a restructured backstory block." },
       { episodes: [21], kind: 'graft', note: "Screenwriter Sho Aikawa is on record (FMA Wiki episode notes) as having expanded the manga's Laboratory 5 story by grafting Scar, Greed and Kimbley into it 'in order to engage viewers and set up future plotlines'. The Chapter 12-13 material is intact underneath; the grafted threads are what later carry the original half." },
       { episodes: [40, 41], kind: 'divergence', chapters: "30", note: "Chapter 30's Martel-dies-inside-Al scene is relocated into an anime-original context: in the manga it happens in the Devil's Nest tunnels immediately after Greed's capture and triggers Al recovering his memory of the Truth; in the 2003 anime it happens at a military outpost outside Reole, weeks later in story time, with Kimbley reinstated and Reole about to be destroyed, and Al does not see the Truth. Same beat, different continuity around it." },
@@ -366,10 +378,11 @@ export const ENTRIES: RulingEntry<StandingAnnotation[]>[] = [
     seriesId: 'black-clover',
     ruleId: 'T26',
     value: [
-      { episodes: [55, 56], kind: 'side_source', note: "Adapts 'Black Clover: Abareushi no Sho' (ブラッククローバー 暴牛の書, Viz: 'The Book of the Black Bulls'; fandom romanises it 'Bogyu no Sho' / 'Stubborn Bull Book'), the first Black Clover light novel: author Johnny Onda, illustrator Yuki Tabata, Shueisha Jump J-Books, released 4 August 2016, 256pp, ISBN 978-4-08-703400-4 — the same day as manga Volume 7, with a cover illustration that lines up with it. Ep 55 = story 1 'Boy's Challenge'; ep 56 = story 4 'Bulls'. English Wikipedia independently confirms the novel's existence, author, imprint and date ('Three novels written by Johnny Onda have been released under the Jump J-Books imprint. The first, Black Clover: Abareushi no Sho ... was released on August 4, 2016'). This is a DIFFERENT licensed work from the series' source manga, so side_source — not adopted{author}, and not the 130-157 Tabata-supervised class. (Bōgyū no Sho, 暴牛の書 — Jump J-Books 2016-08-04; the Itachi Shinden precedent.)" },
+      { episodes: [55], kind: 'side_source', chapters: "Abareushi no Sho: story 1 'Boy's Challenge'", note: "Adapts 'Black Clover: Abareushi no Sho' (ブラッククローバー 暴牛の書, Viz: 'The Book of the Black Bulls'; fandom romanises it 'Bogyu no Sho' / 'Stubborn Bull Book'), the first Black Clover light novel: author Johnny Onda, illustrator Yuki Tabata, Shueisha Jump J-Books, released 4 August 2016, 256pp, ISBN 978-4-08-703400-4 — the same day as manga Volume 7, with a cover illustration that lines up with it. Ep 55 = story 1 'Boy's Challenge'; ep 56 = story 4 'Bulls'. English Wikipedia independently confirms the novel's existence, author, imprint and date ('Three novels written by Johnny Onda have been released under the Jump J-Books imprint. The first, Black Clover: Abareushi no Sho ... was released on August 4, 2016'). This is a DIFFERENT licensed work from the series' source manga, so side_source — not adopted{author} (Tabata illustrated; an illustrator's name is not an adoption act), and not the 130-157 Tabata-supervised class. FILLER + side_source (T26, the adoption sitting (Sean 2026-09-05, research/batch22/T26-SITTING.md): a licence is not adoption). (Bōgyū no Sho, 暴牛の書 — Jump J-Books 2016-08-04; the Itachi Shinden precedent.)" },
+      { episodes: [56], kind: 'side_source', chapters: "Abareushi no Sho: story 4 'Bulls'", note: "Adapts 'Black Clover: Abareushi no Sho' (ブラッククローバー 暴牛の書, Viz: 'The Book of the Black Bulls'; fandom romanises it 'Bogyu no Sho' / 'Stubborn Bull Book'), the first Black Clover light novel: author Johnny Onda, illustrator Yuki Tabata, Shueisha Jump J-Books, released 4 August 2016, 256pp, ISBN 978-4-08-703400-4 — the same day as manga Volume 7, with a cover illustration that lines up with it. Ep 55 = story 1 'Boy's Challenge'; ep 56 = story 4 'Bulls'. English Wikipedia independently confirms the novel's existence, author, imprint and date ('Three novels written by Johnny Onda have been released under the Jump J-Books imprint. The first, Black Clover: Abareushi no Sho ... was released on August 4, 2016'). This is a DIFFERENT licensed work from the series' source manga, so side_source — not adopted{author} (Tabata illustrated; an illustrator's name is not an adoption act), and not the 130-157 Tabata-supervised class. FILLER + side_source (T26, the adoption sitting (Sean 2026-09-05, research/batch22/T26-SITTING.md): a licence is not adoption). (Bōgyū no Sho, 暴牛の書 — Jump J-Books 2016-08-04; the Itachi Shinden precedent.)" },
       { episodes: [56], kind: 'partial', chapters: "81 p.14-17; 82 p.1-9 (restaged)", note: "Closes on ch 81 p.14-17 (Vanessa swallowed by the gate — the only inline ref crediting ep 56) plus a restage of ch 82 p.1-9 (the Fanzell-house conversation; inline refs credit eps 54/57). Inside held position (ep 54 END 82, ep 57 START 82) → annotation only, NO anchor." },
     ],
-    reason: "Batch 18 wave 3 (2026-08-26), verified R24, Sean ruled: novel episodes are side_source; the manga frame on 56 is a partial, never a mix (two licensed works are two standings).",
+    reason: "RE-RULED 2026-09-05 (the T26 adoption sitting): 55-56 are FILLER + side_source — a licence is not adoption (the T6 pin carries the type). Batch 18 wave 3 (2026-08-26), verified R24, Sean ruled: novel episodes are side_source; the manga frame on 56 is a partial, never a mix (two licensed works are two standings).",
     ruledBy: 'Sean',
     ruledOn: '2026-08-26',
     cite: ["scripts/ingest/research/batch18/out/black-clover.json", "scripts/ingest/research/batch18/verify/black-clover.md"],
@@ -499,10 +512,10 @@ export const ENTRIES: RulingEntry<StandingAnnotation[]>[] = [
     seriesId: 'gto-great-teacher-onizuka',
     ruleId: 'T26',
     value: [
-      { episodes: [25, 26], kind: 'side_source', note: "Adapts Shonan Junai Gumi! (Tohru Fujisawa, Weekly Shonen Magazine / Kodansha, 267 ch / 31 vols) — the 'Last Signal' arc, tankobon vol 27, SJG ch 234-242: ch 239 Kadena challenges Eikichi, 240-241 'Last Signal 1/2' the Route 134 race, 242 the crash flashback and the second race; the identical ¥30,000,000 for her brother. SJG chapter numbers are ANOTHER work's space — never a GTO Lesson, never an anchor (the row is off-source, position holds at the last anchor). Kodansha's vol-27 blurb, GTO fandom SJG tankobon list, MangaDex chapter titles, ja-WP 嘉手納南風, en-WP." },
+      { episodes: [25, 26], kind: 'chain_source', chapters: "Shonan Junai Gumi: ch 239-242 (the 'Last Signal' arc, tankōbon vol 27; SJG ch 234-242 by the volume)", note: "CHAIN WORK (T26, the adoption sitting (Sean 2026-09-05, research/batch22/T26-SITTING.md), I41): Shonan Junai Gumi! is Fujisawa's own prequel manga — a named, countable instrument telling the same continuous story (Onizuka's biker youth → GTO), so the rows are canon told out of order, not a foreign source. Adapts Shonan Junai Gumi! (Tohru Fujisawa, Weekly Shonen Magazine / Kodansha, 267 ch / 31 vols) — the 'Last Signal' arc, tankobon vol 27, SJG ch 234-242: ch 239 Kadena challenges Eikichi, 240-241 'Last Signal 1/2' the Route 134 race, 242 the crash flashback and the second race; the identical ¥30,000,000 for her brother. SJG chapter numbers are ANOTHER work's space — never a GTO Lesson, never an anchor (chain_source is position-less, A44; position holds at the last anchor). Kodansha's vol-27 blurb, GTO fandom SJG tankobon list, MangaDex chapter titles, ja-WP 嘉手納南風, en-WP." },
       { episodes: [25, 26], kind: 'divergence', note: "The SJG arc is recast wholesale for the GTO cast — Kadena replaces the manga nurse Moritaka, and ja-WP records the continuity contradiction it creates (in the anime she has never met Onizuka; in SJG she was his class teacher). Restages the arc's spine (ep 26 most closely); SJG's kanji tests / tattoo / Bay Bridge beats have no counterpart." },
     ],
-    reason: "Batch 19 wave 1 (2026-08-26), verified R24 against five sources incl. Kodansha's own vol-27 product page, Sean ruled: 25-26 CANON + side_source — SJG DOES contain the Eikichi-vs-Kadena race as a nine-chapter story, so the batch-18 ruling's own reopen clause fires; carved out of the A-7 block. Both rows anchor-hostile (another work's chapter space). No GTO Lesson consumed; the ep 21 → 70 / continue 75 chain stands.",
+    reason: "RE-KINDED 2026-09-05 (the T26 adoption sitting, G3): side_source → chain_source — SJG joins the reading chain (lib/rulings/source-chains.ts); the batch-19 side_source key is retired (A45). Batch 19 wave 1 (2026-08-26), verified R24 against five sources incl. Kodansha's own vol-27 product page, Sean ruled: 25-26 CANON + side_source — SJG DOES contain the Eikichi-vs-Kadena race as a nine-chapter story, so the batch-18 ruling's own reopen clause fires; carved out of the A-7 block. Both rows anchor-hostile (another work's chapter space). No GTO Lesson consumed; the ep 21 → 70 / continue 75 chain stands.",
     ruledBy: 'Sean',
     ruledOn: '2026-08-26',
     cite: ['scripts/ingest/research/batch19/out/gto-great-teacher-onizuka.json', 'scripts/ingest/research/batch19/verify/gto.md', 'https://kodansha.co.jp/comic/products/0000004454'],
@@ -511,9 +524,9 @@ export const ENTRIES: RulingEntry<StandingAnnotation[]>[] = [
     seriesId: 'trigun',
     ruleId: 'T26',
     value: [
-      { episodes: [18], kind: 'side_source', note: "Adapts Trigun Maximum ch 1 'HERO REBORN' + ch 2 'LINA' (TM vol 1) — the SEQUEL manga's own numbering, NOT convertible to this entry's Trigun (ch 0-20) space; both wikis publish continuous overall numbers (21/22) that must never enter it. trigun.fandom Goodbye_for_Now + TM Chapter 1/2; trigunwiki HERO REBORN + GOODBYE FOR NOW." },
+      { episodes: [18], kind: 'chain_source', chapters: "Trigun Maximum: ch 1 'HERO REBORN', ch 2 'LINA' (TM vol 1)", note: "Adapts Trigun Maximum ch 1 'HERO REBORN' + ch 2 'LINA' (TM vol 1) — the SEQUEL manga's own numbering, NOT convertible to this entry's Trigun (ch 0-20) space; both wikis publish continuous overall numbers (21/22) that must never enter it. trigun.fandom Goodbye_for_Now + TM Chapter 1/2; trigunwiki HERO REBORN + GOODBYE FOR NOW." },
     ],
-    reason: "Batch 19 wave 1 (2026-08-26), verified R24, Sean ruled: ep 18 is anchor-hostile (A44, another chapter space) and carries the side_source fact. Eps 19-20's Trigun Maximum ties are a batch-20 block look (the dates make ep 19 → TM 3-6 direct, ep 20 one-directional).",
+    reason: "RE-KINDED 2026-09-05 (the T26 adoption sitting, G5): the 09-04 chain ruling wrote a research-origin chain_source on ep 18 but left this ruling entry re-asserting side_source every heal pass — two records contradicting each other on the same chapters, invisible to side_source_on_chain because the work label was null. Now chain_source with the label; the side_source key is retired (A45). Batch 19 wave 1 (2026-08-26), verified R24, Sean ruled: ep 18 is anchor-hostile (A44, another chapter space) and carries the Trigun Maximum fact. Eps 19-20's Trigun Maximum ties are a batch-20 block look (the dates make ep 19 → TM 3-6 direct, ep 20 one-directional).",
     ruledBy: 'Sean',
     ruledOn: '2026-08-26',
     cite: ['scripts/ingest/research/batch19/out/trigun.json', 'scripts/ingest/research/batch19/verify/trigun.md'],
@@ -522,13 +535,27 @@ export const ENTRIES: RulingEntry<StandingAnnotation[]>[] = [
     seriesId: 'dragon-ball-super',
     ruleId: 'T26',
     value: [
-      { episodes: [18, 19, 20, 21, 23, 24, 25, 26, 27], kind: 'side_source', note: "Adapts the theatrical film 『ドラゴンボールZ 復活の「F」』 / Dragon Ball Z: Resurrection 'F' (Toei, 2015-04-18, 94 min) — 原作 AND 脚本 = 鳥山明 (his first sole screenplay); ja-WP in both directions (the TV arc 再構成・再制作 from the film; the film as 原作 of フリーザ復活編). The DBS manga (the series' source) skipped the arc entirely (Kanzenshuu: Beerus ch 1-4 → Champa ch 5+; ja-WP 漫画：未登場; fandom's empty chapter field) and incorporates its events only by reference (ch 5's opener; ch 32 Whis-to-Old-Kai, narration with flashback panels). No chapter position exists in the DBS space — off-source rows, position holds at ep 18's predecessor. Toyotarou's 3-chapter promotional 'DBZ: Resurrection F' manga (chs 1-2 pre-release, ch 3 three days after) stops before Golden Frieza and cannot source 25-27; the Film Animation Comic (2015-12-04) postdates the arc." },
+      { episodes: [18, 19, 20, 21, 23, 24, 25, 26, 27], kind: 'side_source', chapters: "Resurrection 'F': the 2015 film 『ドラゴンボールZ 復活の「F」』 (原作・脚本 鳥山明)", note: "Adapts the theatrical film 『ドラゴンボールZ 復活の「F」』 / Dragon Ball Z: Resurrection 'F' (Toei, 2015-04-18, 94 min) — 原作 AND 脚本 = 鳥山明 (his first sole screenplay); ja-WP in both directions (the TV arc 再構成・再制作 from the film; the film as 原作 of フリーザ復活編). The DBS manga (the series' source) skipped the arc entirely (Kanzenshuu: Beerus ch 1-4 → Champa ch 5+; ja-WP 漫画：未登場; fandom's empty chapter field) and incorporates its events only by reference (ch 5's opener; ch 32 Whis-to-Old-Kai, narration with flashback panels). No chapter position exists in the DBS space — off-source rows, position holds at ep 18's predecessor. Toyotarou's 3-chapter promotional 'DBZ: Resurrection F' manga (chs 1-2 pre-release, ch 3 three days after) stops before Golden Frieza and cannot source 25-27; the Film Animation Comic (2015-12-04) postdates the arc." },
+      // T26, the adoption sitting (Sean 2026-09-05, research/batch22/T26-SITTING.md), G2: the film's material is ADOPTED on the author basis — Toriyama is credited 原作 AND 脚本 (his first sole screenplay; Toei's staff page, ja-WP in both directions). 'The source's author wrote the material' is the plainest reading of T26's author test — a specific act on a specific arc. T30 keeps the record shape (a film the anime adapts is side_source, not A-E); this is the basis that was owed.
+      { episodes: [18, 19, 20, 21, 23, 24, 25, 26, 27], kind: 'adopted', basis: 'author', chapters: "Resurrection 'F': the 2015 film", note: "adopted{author} — 鳥山明 wrote the film (原作・脚本; the batch-19 note's own citation: ja-WP 復活の「F」, Toei). The rows stay canon on that act, not on the licence (T26, the adoption sitting 2026-09-05). Ep 6 (Battle of Gods) is NOT covered: that film's 脚本 is 渡辺雄介, Toriyama is credited 原作・ストーリー — a different credit, a separate call (T30's load-bearing test on a shared arc)." },
       { episodes: [19, 20, 21, 23, 24, 25, 26, 27], kind: 'divergence', note: "A nine-episode TV expansion of a 94-minute film: roughly half the runtime is Toei-added material (the thousand-soldier battle extended, Tagoma's death vs the film, Ginyu — who does not appear in the movie — per fandom). Row 22 is filler by batch 18." },
     ],
-    reason: "Batch 19 wave 1 (2026-08-26), verified R24, Sean ruled: 18-21, 23-27 stay CANON + side_source{the Resurrection 'F' film}, NOT filler under the letter of T27 — a licensed work by the source's author, adapted; the author's sole screenplay and the manga's incorporation of the events are recorded in the note, not stacked as adopted{author}. Nine rows anchor-hostile by shape (no A44 entry needed: side_source rows are off-source). Eps 1-14 (made from Battle of Gods the same way) are NOT extended here — unresearched this wave.",
+    reason: "ADOPTED 2026-09-05 (the T26 adoption sitting, G2): canon on adopted{author} (原作・脚本 鳥山明), not on the licence. Batch 19 wave 1 (2026-08-26), verified R24, Sean ruled: 18-21, 23-27 stay CANON + side_source{the Resurrection 'F' film}, NOT filler under the letter of T27 — a licensed work by the source's author, adapted; the author's sole screenplay and the manga's incorporation of the events are recorded in the note, not stacked as adopted{author}. Nine rows anchor-hostile by shape (no A44 entry needed: side_source rows are off-source). Eps 1-14 (made from Battle of Gods the same way) are NOT extended here — unresearched this wave.",
     ruledBy: 'Sean',
     ruledOn: '2026-08-26',
     cite: ['scripts/ingest/research/batch19/out/dragon-ball-super.json', 'scripts/ingest/research/batch19/verify/dragon-ball-super.md', 'https://ja.wikipedia.org/wiki/ドラゴンボールZ_復活の「F」'],
+  },
+  // ---- T26, the adoption sitting (Sean 2026-09-05, research/batch22/T26-SITTING.md), G3: the author's own other MANGA is a chain question (I41), not adoption
+  {
+    seriesId: 'cobra-the-animation',
+    ruleId: 'T26',
+    value: [
+      { episodes: [10, 11, 12, 13], kind: 'chain_source', chapters: "Galaxy Knights: the six Super Jump instalments (1996; JC Deluxe full-colour vol 4 / KADOKAWA 廉価版 vol 14)", note: "CHAIN WORK (I41): COBRA ギャラクシー・ナイツ is Terasawa's own later Cobra serial — a named, countable manga in the same continuity, so eps 10-13 are canon told out of order, position-less (another edition's space, A44). ja-WP's 各話リスト carries 原作エピソード = ギャラクシー・ナイツ as a rowspan-4 cell over eps 10-13 and its prose names the 1996 work as a source; MU's full-colour entry: 'EP 10-13 adapt the fully new Vol 4' (batch 20 wave 7, verified R24). Ep 13's research side_source is retired (A45) in favour of this record; 10-12 carried no record at all — the verdict's own flag." },
+    ],
+    reason: "The T26 adoption sitting (Sean 2026-09-05), G3: Galaxy Knights is the weaker cousin of Shonan Junai Gumi (a later short serial, same character, same author) but the same I41 shape as Naruto Gaiden — a named manga with its own instrument in one continuity. On the chain, not adopted; the block is 10-13 by ja-WP's rowspan, not 13 alone.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/batch22/T26-SITTING.md', 'scripts/ingest/research/batch20/out/cobra-the-animation.json', 'scripts/ingest/research/batch20/WAVE7-RECOVERY.md'],
   },
   // ---- the A-7 studio-ending class: filler + asterisk, ON THE REVIEW LIST
   ...(

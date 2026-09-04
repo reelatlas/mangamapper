@@ -8,6 +8,7 @@
 import { db, selectAll, startRun, finishRun } from './lib/db';
 import { filterEpisodeRows } from './lib/resolve';
 import { MINTED_GRIDS } from './lib/rulings/minted-grids';
+import { loadEpisodeTies } from './lib/side-source';
 
 async function main() {
   const runId = await startRun('resolve');
@@ -17,7 +18,7 @@ async function main() {
     if (!s) { console.log(`  ${sid}: not in canonical — skipped`); continue; }
     const existing = new Map((await selectAll<any>('episodes', 'number, title, air_date, type, minted_by', (q) => q.eq('series_id', sid))).map((e) => [Number(e.number), e]));
     const rows = grid.rows.map((r) => ({ series_id: sid, number: r.number, title: r.title, type: r.type, air_date: r.air_date }));
-    const ruled = filterEpisodeRows(sid, rows, 'manual', { sourceType: s.source_type });
+    const ruled = filterEpisodeRows(sid, rows, 'manual', { sourceType: s.source_type, ties: await loadEpisodeTies(sid) }); // T26: the side_source default
     for (const r of ruled) {
       checked++;
       const cur = existing.get(r.number);

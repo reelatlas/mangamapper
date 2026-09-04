@@ -37,6 +37,7 @@ import { correspondenceCoverage, correspondenceProblem, type Alignment } from '.
 import { CHAPTER_SPACE_OVERRIDES } from './lib/rulings/chapter-spaces';
 import { pickManga } from './lib/resolve';
 import { annotationProblem } from './lib/annotations';
+import { sideSourceStandingProblem } from './lib/side-source';
 import { REVIEWED_NUMBERED_SPECIALS } from './lib/rulings/reviewed-specials';
 
 async function main() {
@@ -170,20 +171,28 @@ async function main() {
     }
     if (weakOnly.length) classes.type_source_disagreement.push(`(weak only, parked — AFL mixed vs AFG canon-with-chapters, granularity not contradiction): ${weakOnly.join(', ')}`);
   }
-  // T26 (2026-09-04, batch 21 wave 1 — the one-piece 50 sitting): a canon / mixed row whose only source tie is a side_source
-  // (a work OUTSIDE the chain) is canon only by an `adopted` ruling — 57 standing rows carry none; a sitting, never a retype
+  // T26 (2026-09-05, the adoption sitting — a licence is not adoption): a canon /
+  // mixed row whose only source tie is an unadopted side_source (no adopted{basis},
+  // no weight-bearing tie — anchor / chain_source / side_story / unverified;
+  // slivers weigh nothing, T28) holds a standing the writer defaults away
+  // (lib/side-source.ts) and the healer asserts (assert-overrides). A stored row
+  // that still disagrees is a ruling_violation — listed per series here too.
   {
     const kindsByRow = new Map<string, Set<string>>();
     for (const a of await selectAll<any>('episode_annotations', 'series_id, episode, kind')) { const k = `${a.series_id}#${a.episode}`; kindsByRow.set(k, (kindsByRow.get(k) ?? new Set()).add(a.kind)); }
+    const anchoredRows = new Set((await selectAll<any>('chapter_anchors', 'series_id, episode')).map((a: any) => `${a.series_id}#${a.episode}`));
     const typeByRow2 = new Map<string, string>();
     for (const e of await selectAll<any>('episodes', 'series_id, number, type')) typeByRow2.set(`${e.series_id}#${e.number}`, e.type);
     const bySeries = new Map<string, number[]>();
     for (const [k, kinds] of kindsByRow) {
-      if (!kinds.has('side_source') || kinds.has('adopted')) continue;
-      const t = typeByRow2.get(k); if (t !== 'canon' && t !== 'mixed') continue;
+      if (sideSourceStandingProblem(typeByRow2.get(k), { kinds, anchored: anchoredRows.has(k) }) == null) continue;
       const [sid, ep] = k.split('#'); bySeries.set(sid, [...(bySeries.get(sid) ?? []), Number(ep)]);
     }
-    for (const [sid, eps] of bySeries) classes.side_source_unadopted.push(`${sid}: ${eps.length} canon / mixed row(s) tied only to a work OUTSIDE the chain with no adopted{basis} record (T26) — eps ${eps.sort((a, b) => a - b).slice(0, 8).join(', ')}${eps.length > 8 ? '…' : ''}; a sitting: rule adoption (author / studio / community) or retype`);
+    for (const [sid, eps] of bySeries) {
+      const line = `${sid}: ${eps.length} canon / mixed row(s) tied only to a work OUTSIDE the chain with no adopted{basis} and no weight-bearing source tie (T26: a licence is not adoption — the standing is filler) — eps ${eps.sort((a, b) => a - b).slice(0, 8).join(', ')}${eps.length > 8 ? '…' : ''}; run assert-overrides, or rule adoption / a chain work / a side_story`;
+      classes.side_source_unadopted.push(line);
+      classes.ruling_violation.push(line);
+    }
   }
   // G59 / T4 (2026-09-04): wiki-minted rows carry the canon-tier DEFAULT type until AFL classifies the number or T6 rules it —
   // one line per series whose typing is still owed (Cursor: keep canon in the column, queue the provenance in the census)

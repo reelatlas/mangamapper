@@ -1422,6 +1422,51 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
     ruledOn: '2026-09-05',
     cite: ['scripts/ingest/research/batch22/WAVE1-RECOVERY.md', 'scripts/ingest/research/batch22/verify/w1-boruto.md'],
   },
+  // ---- the T26 adoption sitting (Sean 2026-09-05, research/batch22/T26-SITTING.md) — G1: 40 prose-novel rows → FILLER + side_source (beelzebub 49 held out: its side_story — Tamura's vol-10 extra chapter — is a weight-bearing manga tie, the FMA-37 shape)
+  {
+    seriesId: 'naruto-shippuden',
+    ruleId: 'T6',
+    value: { ...range(452, 454, 'filler'), 456: 'filler', 457: 'filler', ...range(484, 500, 'filler') },
+    reason:
+      "G1 of the T26 adoption sitting (Sean 2026-09-05, research/batch22/T26-SITTING.md): a licence is not adoption — a canon / mixed row whose only source tie is a licensed prose novel (side_source, no adopted{basis}, no weight-bearing tie) is FILLER + side_source, the one-piece 50 shape applied consistently. The writer default (lib/side-source.ts) and the healer say the same; the pin is the ruling record and keeps the loose AFL / AFG buckets from re-listing the rows. Position, coverage and the frontier do not move (offSource already, T14); only the badge changes. 452-454 / 456-457 the Itachi Shinden novel (Yano; Kishimoto illustrated — an illustrator's name is the Kodachi blanket-credit shape T26 rejects, not an act); 484-488 Sasuke Shinden, 489-493 Shikamaru Hiden, 494-500 Konoha Hiden (batch 20 wave 2, verified R24). Ep 455 stays mixed (its own disputed manga frame, untouched).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/batch22/T26-SITTING.md', 'docs/changelog.md §12.117'],
+    supersedes: "the 2026-08-24 session pin 452-454/456-457 canon (T9 → T26/T27 anime-only-canon → canon) and the batch-20 wave-2 default canon on 484-500 — Line A ('a licence confers standing'), retired at the sitting",
+  },
+  {
+    seriesId: 'boruto-naruto-next-generations',
+    ruleId: 'T6',
+    value: { 93: 'filler', 94: 'filler', 95: 'filler', ...range(106, 111, 'filler'), ...range(282, 286, 'filler') },
+    reason:
+      "G1 of the T26 adoption sitting (Sean 2026-09-05, research/batch22/T26-SITTING.md): a licence is not adoption — a canon / mixed row whose only source tie is a licensed prose novel (side_source, no adopted{basis}, no weight-bearing tie) is FILLER + side_source, the one-piece 50 shape applied consistently. The writer default (lib/side-source.ts) and the healer say the same; the pin is the ruling record and keeps the loose AFL / AFG buckets from re-listing the rows. Position, coverage and the frontier do not move (offSource already, T14); only the badge changes. 93-95 Naruto Shinden: Parent and Child Day (Miyamoto; Kishimoto illustrated), 106-111 Steam Ninja Scrolls (湯煙忍法帖), 282-286 Sasuke Retsuden — all licensed prose, all side_source with no adoption act on record (Kodachi's blanket credit was already rejected, batch 18). Ep 18 stays mixed on adopted{author} (G4, the Kishimoto omake); 19-23 / 39 are chain / side_story rows and untouched.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/batch22/T26-SITTING.md', 'docs/changelog.md §12.117'],
+    supersedes: "the batch-22 wave-1 pin 93-95 canon ('keeps the stored canon until ruled as a block' — the block is now ruled) and the batch-18 canon + side_source standing on 106-111 / 282-286",
+  },
+  {
+    seriesId: 'black-clover',
+    ruleId: 'T6',
+    value: { 55: 'filler', 56: 'filler' },
+    reason:
+      "G1 of the T26 adoption sitting (Sean 2026-09-05, research/batch22/T26-SITTING.md): a licence is not adoption — a canon / mixed row whose only source tie is a licensed prose novel (side_source, no adopted{basis}, no weight-bearing tie) is FILLER + side_source, the one-piece 50 shape applied consistently. The writer default (lib/side-source.ts) and the healer say the same; the pin is the ruling record and keeps the loose AFL / AFG buckets from re-listing the rows. Position, coverage and the frontier do not move (offSource already, T14); only the badge changes. 55-56 adapt the licensed light novel Abareushi no Sho (Onda; Tabata illustrated — not the 130-157 Tabata-SUPERVISED class, which keeps adopted{author}). Ep 56's ch-81 close stays a partial (a sliver — no weight, no anchor; T28), so nothing lifts the row.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/batch22/T26-SITTING.md', 'docs/changelog.md §12.117'],
+    supersedes: "the batch-18 wave-3 pin 55-56 canon + side_source (Line A)",
+  },
+  {
+    seriesId: 'fullmetal-alchemist',
+    ruleId: 'T6',
+    value: { 11: 'filler', 12: 'filler' },
+    reason:
+      "G1 of the T26 adoption sitting (Sean 2026-09-05, research/batch22/T26-SITTING.md): a licence is not adoption — a canon / mixed row whose only source tie is a licensed prose novel (side_source, no adopted{basis}, no weight-bearing tie) is FILLER + side_source, the one-piece 50 shape applied consistently. The writer default (lib/side-source.ts) and the healer say the same; the pin is the ruling record and keeps the loose AFL / AFG buckets from re-listing the rows. Position, coverage and the frontier do not move (offSource already, T14); only the badge changes. 11-12 adapt the licensed light novel The Land of Sand (Inoue; Arakawa illustrated). Ep 37 is HELD OUT (D7): its note names two Arakawa bonus chapters — a manga tie now recorded as side_story, weight-bearing — so its type rests on the manga share (a T28 call queued with ep 13), not on the novel segment.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/batch22/T26-SITTING.md', 'docs/changelog.md §12.117'],
+    supersedes: "the batch-18 pin 11-12 canon (Line A); 37 canon left standing on its manga share",
+  },
 ];
 
 export const EPISODE_TYPE_OVERRIDES: Record<string, EpisodeTypes> = ENTRIES.reduce<Record<string, EpisodeTypes>>((acc, e) => {

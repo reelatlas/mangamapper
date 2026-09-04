@@ -27,6 +27,7 @@ import { extractTransclusions, findEpisodePages, fetchWikitext, parseEpisodeList
 import { filterEpisodeRows, SOURCE_NUMBERING_SHIFTS, translateEpisodeNumber } from './lib/resolve';
 import { dateFit, disambiguatedTitles, pageFitsSeries } from './lib/wiki-identity';
 import { WIKI_PAGES } from './lib/rulings/wiki-pages';
+import { loadEpisodeTies } from './lib/side-source';
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
@@ -430,7 +431,7 @@ async function main() {
           }
         }
         if (newRows.length) {
-          const ruled = filterEpisodeRows(t.id, newRows, 'wiki', { sourceType: t.source_type });
+          const ruled = filterEpisodeRows(t.id, newRows, 'wiki', { sourceType: t.source_type, ties: await loadEpisodeTies(t.id) }); // T26: the side_source default
           for (let i = 0; i < ruled.length; i += 500) {
             const { error } = await db.from('episodes').insert(ruled.slice(i, i + 500).map((r) => ({ ...r, minted_by: 'wiki' }))); // G57: a wiki-created row is the wiki's — no AFL re-resolve may delete it
             if (error) throw new Error(error.message);

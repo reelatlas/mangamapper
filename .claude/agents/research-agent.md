@@ -37,9 +37,12 @@ Read both, fully:
   standing in the source (anime-original, recap with nothing new, studio
   ending, padding). There is NO fourth type — never write `anime-only-canon`
   / `anime only` / `original` as a type. An exception to the source is an
-  ANNOTATION on a canon row: `adopted` with a REQUIRED basis (`author` |
-  `studio` | `community` — who adopted it, cited), `side_source` (adapts a
-  different licensed work — name it), `retconned` (later dropped from canon).
+  ANNOTATION: `adopted` with a REQUIRED basis (`author` | `studio` |
+  `community` — who adopted it, cited) on a canon row, `side_source` (adapts
+  a different licensed work — name it; the row is FILLER unless an
+  `adopted{basis}` act is cited or the row also carries a weight-bearing
+  source tie — A LICENCE IS NOT ADOPTION, T26 2026-09-05), `retconned`
+  (later dropped from canon).
   The `author` basis also covers INCORPORATION: the source's author writing
   the anime material's EVENTS into the source line (Railgun: the manga shows
   a photo taken in ep 20; Kamachi's novels carry the arcs' outcomes) — never
@@ -67,7 +70,9 @@ Read both, fully:
 - **Parallel tellings (`I40` / `T30` / `A46`, 2026-08-28).** When a series' `source_relation` is `parallel` (the context says so; dragon-ball-super is the witness: the anime and the manga are two realizations of one unpublished outline, AniList's edge ALTERNATIVE), the standing is FROM THE OUTLINE OR NOT, never "in the manga or not": canon = the story in ANY official telling (A manga-only, B anime-only, C both); filler = D, studio padding no telling's story depends on; mixed = D + A/B/C in one episode under the unchanged `T28` bar. The outline is uncitable, so prove membership by proxy: in the manga → canon; anime-only but a LOAD-BEARING node of an arc both tellings share (name the later beats that depend on it) → canon (B) with the manga's version of the node cited; a whole anime-only arc no other telling carries → filler (D) unless a citation proves the author's hand (`adopted{author}`). Chapter numbers are CORRESPONDENCE: report them as `correspondence` rows `{episode, chapters, alignment: aligned | divergent | anime_only, note, sources}` (several per episode when a range splits) — NEVER as anchors, never as a blanket per-row `divergence{arc range}` (the arc's note carries that). A fandom "exclusive to the anime" boilerplate is unreliable on this class in both directions — check the chapter page's own summary. Parallel also requires a COMPARISON INSTRUMENT — arcs both tellings actually share, densely enough to map: an anime-first continuation with the author's spine but disjoint middles and no episode↔chapter source is the OUTLAW STAR class (T21/original), never parallel; author credit does not mint correspondence (regenesis-S2, wave 7).
 - **Four distinctions batch 18 paid for.** `mixed` is source + anime-
   original in one episode, never two canons. A second LICENSED work is
-  `side_source` on a canon row (Black Clover 55-56 adapt a novel). If the
+  `side_source` on a FILLER row (Black Clover 55-56 adapt a novel — filler +
+  side_source since the T26 sitting, 2026-09-05; canon only with an
+  `adopted{basis}` act, e.g. DBS Resurrection 'F': 原作・脚本 鳥山明). If the
   series' identified source IS the light novel, a numbered volume of it is
   plain canon (+ `side_story` when it is not mainline volume progression) —
   86 ep 10, not the Black Clover shape. `retconned` is FILLER + annotation
@@ -135,8 +140,11 @@ Read both, fully:
   while refusing the EVENTS is evidence AGAINST adoption (Twin Star).
 - **A side story serialized inside the source IS the source** (GTO's Toroko
   Oppai Scenes sit between Lessons 92/93 and 97/98) — mixed/canon, never
-  side_source. A licensed novel is side_source (Shippuden 452-457; Boruto
-  Sasuke Retsuden; FMA 2003 eps 11-12).
+  side_source. A licensed novel is FILLER + side_source (Shippuden 452-457;
+  Boruto Sasuke Retsuden; FMA 2003 eps 11-12 — all ruled filler at the T26
+  sitting, 2026-09-05). The author's own OTHER MANGA is a CHAIN question
+  (I41: GTO's Shonan Junai Gumi, Cobra's Galaxy Knights → `chain_source`,
+  canon told out of order), never side_source and never adoption.
 - **Fan comparisons can pair a chapter serialized AFTER the episode**
   (GTO Lesson 143 vs ep 24; souleater.fandom's "anime came first" on eps
   40/47) — check tankōbon dates. AllYourAnime's per-article chapter header
@@ -273,7 +281,7 @@ Read both, fully:
 - **animefillerguide's CLASS is a viewing guide, its NOTE is evidence** (batch 21 wave 1, 2026-09-04) — and on the newer pages BLUE means 'Mixed' OR 'Anime Canon' (boruto: 171 blue rows were Anime Canon, two were Mixed; the note inside the title cell says which; the parser now reads it — Anime Canon = original content the community accepts = FILLER against the source unless adopted): the blue 'Mixed' class means 'manga content is present, you only need to watch 21:34 to the end' — printed identically on a one-page graft and on a real half-episode — and its Chapters column is a READING-POSITION plateau (one chapter printed across neighbouring filler rows). Never a type witness by itself; its minute ranges ARE a sizing instrument for T28 (the first real one). AFL's 'Anime Canon' bucket is a fourth type T27 does not have (page-exact adaptations and montage-only rows alike) — never a type witness either.
 - **AFG's Ranma page has its CHAPTER column in Digital-Remaster production order** while our numbering is broadcast order — an index join mis-aligns 41 of 161 rows (six of seven 'contradictions' were our own join); the lane is suppressed for ranma-1-2 (G-chart suppression). On any series whose AFG page carries a `(NN).` sub-number column, test the join on 5+ rows against the fandom's manga field before trusting a chapter cell — and NEVER title-join (the titles are only in one order for part of the page).
 - **Per-source facts that settle a One Piece row**: ja-WP marks partial-source episodes with `<ref name="original">一部原作のストーリーあり</ref>` (13 rows run-wide); onepiece.fandom writes `chapter = Filler` EXPLICITLY on true filler, so a missing field is silence; OPwiki's `Umgesetzte Kapitel` is a page-level map (validated against the fandom's own splits). ja-WP's 犬夜叉 (アニメ) carries a per-episode 原作 column in 巻話 form for the whole run. TV Tokyo's 2010 back-number synopses survive in the Wayback Machine (Shift-JIS). Kanzenshuu's episode guide gives DBZ page splits.
-- **A novelization is NOT canon by the author's credit** (one-piece 50, Sean 2026-09-04): a licensed novel the anime adapts is `side_source` on a FILLER row unless an `adopted{basis}` ruling exists (the Itachi-novel rows have one); 'same author' is the blanket credit T26 rejects.
+- **A novelization is NOT canon by the author's credit** (one-piece 50, Sean 2026-09-04; the block ruling 2026-09-05, T26-SITTING.md): a licensed novel the anime adapts is `side_source` on a FILLER row unless an `adopted{basis}` act is cited — 'same author', 'illustrated by', a franchise credit are the blanket shapes T26 rejects. Deliver the novel row as `filler` + `side_source{work}`; propose `adopted{author}` only with the specific act (Toriyama wrote Resurrection 'F'; Kishimoto drew the ep-18 omake). The writer defaults an unadopted side_source row to filler at every write (lib/side-source.ts) — a canon delivery without the act is overwritten.
 - **A confirmation is delivered as the STORED type, never as 'no_change'** (batch 21 wave 2): `type_corrections` accepts canon | mixed | filler only; a row research confirms goes in with its stored type and a why that starts 'CONFIRMED AS STORED' — the apply pins it in T6 so the disagreement class stops re-listing a settled row. `flags_for_sean` is a LIST; continue kinds are parity | post_series (write 'C1' / 'C2' / 'C3' in the note).
 - **THE SLIVER CLAUSE — deliver every source segment with a WEIGHT and its reason** (T28, Sean ruled 2026-09-04): source material in an episode is either SIGNIFICANT (it progresses the story in a meaningful way — a scene, a beat, a resolution; size is not the test) or a SLIVER (a tease, a fragment, a one-off out-of-order beat, framing panels, a page tie, material the anime adapts properly later). A sliver is canon material but carries NO weight: it earns neither a type nor an anchor; it is noted (partial / graft / rearranged) and the note NAMES THE EPISODE that adapts the chapter properly ('232 is adapted in full by ep 160'). The remainder of the episode decides the type. So for a row whose source content is small, your annotation note MUST say `weight: significant — because …` or `weight: sliver — because …`; an anchor on such a row is delivered only with `significant`. Shared chapters across episodes are normal — say whether the material is NEW (a scene not shown before) or a DUPLICATE of what an earlier episode showed. Never reason 'small, therefore filler': the sliver is canon material and the note keeps it visible.
 - **reborn: the fandom's per-episode chapter field is the filler list's typing restated, not content** (verified 2026-09-04, 22/22 sampled rows agree with animefillerlist, including every Mixed row): 'Chapter 257 (mostly filler)' sat on both ends of a twelve-episode anime-original arc whose interior read plain Filler, and ep 159's 'Chapter 232' named a chapter whose scenes are in eps 158 and 160. On such a series the two are ONE lineage — never count them as two sources; content witnesses are the licensor's synopses (TV Tokyo's 各話あらすじ via web.archive.org), ja-WP's episode ↔ chapter line, and the chapter pages' cast lists.

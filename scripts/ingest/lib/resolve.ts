@@ -71,6 +71,7 @@ export { AIR_DATE_OVERRIDES } from './rulings/air-dates';
 import { AIR_DATE_OVERRIDES } from './rulings/air-dates';
 import { EPISODE_TITLE_OVERRIDES } from './rulings/episode-titles';
 import { aflAnimeCanonStanding, deriveSourceKind, mangaStatusOf, seriesHasSource } from './rulings/source-kinds';
+import { loadEpisodeTies, sideSourceStanding, type RowTies } from './side-source';
 import { deriveSourceRelation, pickMangaNode } from './rulings/source-relations';
 import { ruledChapterSpace } from './rulings/chapter-spaces';
 import { withholdAirdateRegressions, type AirdateWithheld } from './airdate-order';
@@ -152,7 +153,7 @@ export const filterEpisodeRows = <T extends { number: number; type?: string; air
   seriesId: string,
   rows: T[],
   space: string,
-  opts?: { onAirdateWithheld?: (withheld: AirdateWithheld[]) => void; sourceType?: string | null },
+  opts?: { onAirdateWithheld?: (withheld: AirdateWithheld[]) => void; sourceType?: string | null; ties?: Record<number, RowTies> },
 ): T[] => {
   const t0 = SOURCE_NUMBERING_SHIFTS[seriesId];
   const t = t0 && (!t0.spaces || t0.spaces.includes(space)) ? t0 : undefined;
@@ -165,7 +166,20 @@ export const filterEpisodeRows = <T extends { number: number; type?: string; air
   // (original / game → canon, sourced series → filler) BEFORE the T6 rulings,
   // which then win row by row. No sourceType → filler (fail closed).
   const standing = aflAnimeCanonStanding(opts?.sourceType);
-  const stood = capped.map((r) => ('type' in r && r.type === 'anime-only-canon' ? { ...r, type: standing } : r));
+  const aflStood = capped.map((r) => ('type' in r && r.type === 'anime-only-canon' ? { ...r, type: standing } : r));
+  // T26 (2026-09-05, the adoption sitting): a licence is not adoption — a canon /
+  // mixed row whose only source tie is an unadopted side_source defaults to
+  // FILLER at every write (lib/side-source.ts), BEFORE the T6 pins so a pin still
+  // wins row by row. Callers pass the row ties (loadEpisodeTies); a writer that
+  // creates rows no annotation names yet passes none and nothing changes.
+  const ties = opts?.ties;
+  const stood = !ties ? aflStood : aflStood.map((r) => {
+    if (!('type' in r) || typeof r.type !== 'string') return r;
+    const t = ties[r.number];
+    if (!t) return r;
+    const s = sideSourceStanding(r.type, t);
+    return s === r.type ? r : { ...r, type: s };
+  });
   const types = EPISODE_TYPE_OVERRIDES[seriesId];
   const dates = AIR_DATE_OVERRIDES[seriesId]; // G53: ruled air dates re-applied at every write (a ruled NULL is a value)
   const titles = EPISODE_TITLE_OVERRIDES[seriesId]; // G53: a transposition carries the title with the date
@@ -495,6 +509,7 @@ export async function resolveSeries(runId: number, slug: string): Promise<{ epis
       // deleting to the source-space max would eat rows the translation
       // doesn't refill.
       let stitchedWithheld: AirdateWithheld[] = [];
+      const stitchedTies = await loadEpisodeTies(existing.id); // T26: the side_source default needs the row ties
       const stitchedRows = filterEpisodeRows(
         existing.id,
         page.episodes.map((e) => ({
@@ -505,7 +520,7 @@ export async function resolveSeries(runId: number, slug: string): Promise<{ epis
           air_date: e.airDate,
         })),
         'afl',
-        { onAirdateWithheld: (w) => (stitchedWithheld = w), sourceType: existing.source_type },
+        { onAirdateWithheld: (w) => (stitchedWithheld = w), sourceType: existing.source_type, ties: stitchedTies },
       );
       if (stitchedWithheld.length) await flagAirdateWithheld(runId, slug, 'afl', stitchedWithheld);
       // G57 (2026-08-28): upsert AFL's rows stamped minted_by = 'afl' (re-stamping
@@ -653,13 +668,14 @@ export async function resolveSeries(runId: number, slug: string): Promise<{ epis
   // specials — survive. Community-count caps drop rows the consensus does
   // not number (Psycho-Pass 42-44).
   let withheld: AirdateWithheld[] = [];
+  const ties = await loadEpisodeTies(id); // T26: the side_source default needs the row ties
   const rows = filterEpisodeRows(id, page.episodes.map((e) => ({
     series_id: id,
     number: e.number,
     title: e.title,
     type: e.type,
     air_date: e.airDate,
-  })), 'afl', { onAirdateWithheld: (w) => (withheld = w), sourceType: derived.value });
+  })), 'afl', { onAirdateWithheld: (w) => (withheld = w), sourceType: derived.value, ties });
   if (withheld.length) await flagAirdateWithheld(runId, slug, 'afl', withheld);
   // translated-max boundary (see the stitched-guard note): never delete past
   // what the translated rows refill

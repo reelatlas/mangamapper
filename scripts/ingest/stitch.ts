@@ -18,6 +18,7 @@ import { db, selectAll, startRun, finishRun, fileFlagOnce } from './lib/db';
 import { type AniListMedia } from './lib/anilist';
 import { stageAniList, registerIds, applyScope, applyEpisodeFloor, filterEpisodeRows } from './lib/resolve';
 import { syncMintedRows } from './lib/minted';
+import { loadEpisodeTies } from './lib/side-source';
 import { slugify } from './lib/slug';
 import type { AflShowPage } from './lib/afl';
 import { getMedia, aired, walkChain, aggregate, writeComponents, ownedAnilistIds } from './lib/chain';
@@ -186,7 +187,7 @@ async function main() {
         title: e.title,
         type: e.type,
         air_date: e.airDate,
-      })), 'afl');
+      })), 'afl', { ties: await loadEpisodeTies(series.id) }); // T26: the side_source default
       // AFL-range merge (§10): rewrite only AFL's own (translated) numbering
       // range — rows beyond it (AFG/Wikipedia fills on a ruled extension)
       // survive the re-stitch

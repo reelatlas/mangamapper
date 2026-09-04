@@ -836,7 +836,7 @@ export const RULES: Rule[] = [
     statement:
       "A franchise's READING CHAIN is the ordered sequence of named MANGA works (instruments the catalog can count chapters in) that tell one continuous story — Rosario + Vampire Season I → Season II; Trigun → Trigun Maximum; Naruto's two entries already share one manga and need no chain. It is a ruling map (lib/rulings/source-chains.ts: works with label + AniList manga id + note, the reason cited). Material an episode adapts from ANOTHER work on the chain is canon to the series told out of order — `chain_source` (T26), position-less (A12 / A44). The chain is STRUCTURAL: novels, games and parallel tellings (I40) are never on it however the author blessed them — their canon is the `adopted` ruling and their record is `side_source`. Convention: a chain_source / side_source annotation's chapters field starts with the work's label exactly as the map writes it, so the census can check the pair: chain_source_unmapped (a chain_source naming a work off the map), side_source_on_chain (a side_source naming a work on it), source_work_unlabelled (cannot be checked — backfill the label). Whether a chain work should be its OWN entry (Capu2 with Season II as its instrument) is a separate identity question; the chain works either way.",
     why:
-      "Batch 20 wave 16 (2026-09-04): rosario-vampire 14 adapts Season II ch 1 + 3 inside an original episode and came out FILLER under T26's single 'other work' label — Sean: the sequel manga is the same cohesive canon, an original-Naruto episode adapting Shippuden chapters would never be filler; the vocabulary could not tell a sequel manga from a novel. Cursor: name the pair chain_source / side_source, no extra rearranged kind (chain material is out of order by definition), the classes are MISMATCHES against the map (never 'side_source on a canon row', which is the correct Itachi-novel pattern), and drop 'authorized continuation' from the definition — authorization is how novels sneak onto the chain.",
+      "Batch 20 wave 16 (2026-09-04): rosario-vampire 14 adapts Season II ch 1 + 3 inside an original episode and came out FILLER under T26's single 'other work' label — Sean: the sequel manga is the same cohesive canon, an original-Naruto episode adapting Shippuden chapters would never be filler; the vocabulary could not tell a sequel manga from a novel. Cursor: name the pair chain_source / side_source, no extra rearranged kind (chain material is out of order by definition), the classes are MISMATCHES against the map (a side_source on a canon row is not itself a mismatch here — since the T26 adoption sitting of 2026-09-05 that standing is the T26 gate's question, and it is filler unless adopted{basis}), and drop 'authorized continuation' from the definition — authorization is how novels sneak onto the chain.",
     ruledBy: 'Sean',
     ruledOn: '2026-09-04',
     origin: 'scripts/ingest/research/batch20/WAVE16-RECOVERY.md §THE DECISIONS item 2; changelog §12.107',
@@ -849,7 +849,7 @@ export const RULES: Rule[] = [
     ],
     layer: 'writer',
     auditClass: ['chain_source_unmapped', 'side_source_on_chain', 'source_work_unlabelled'],
-    witnesses: ['rosario-vampire', 'trigun', 'naruto-shippuden'],
+    witnesses: ['rosario-vampire', 'trigun', 'naruto-shippuden', 'gto-great-teacher-onizuka', 'cobra-the-animation'],
     status: 'live',
     see: ['T26', 'T28', 'A12', 'A44', 'I40', 'I16'],
   },

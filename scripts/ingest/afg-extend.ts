@@ -22,6 +22,7 @@ import { db, selectAll, startRun, finishRun, fileFlagOnce } from './lib/db';
 import { stageAniList, applyScope, applyEpisodeFloor, filterEpisodeRows } from './lib/resolve';
 import { aired, walkChain, aggregate, writeComponents, ownedAnilistIds } from './lib/chain';
 import { syncAnchors } from './lib/anchors';
+import { loadEpisodeTies } from './lib/side-source';
 import { RULED_SPLITS } from './lib/rulings/ruled-splits';
 
 // Ruled splits live in lib/rulings/ruled-splits.ts (restructure T2.1): AFG
@@ -158,7 +159,7 @@ async function main() {
         // every episode writer, extension fills included
         const fill = filterEpisodeRows(s.id, page.episodes
           .filter((e) => !have.has(e.number))
-          .map((e) => ({ series_id: s.id, number: e.number, title: e.title, type: e.type, air_date: null })), 'afg');
+          .map((e) => ({ series_id: s.id, number: e.number, title: e.title, type: e.type, air_date: null })), 'afg', { ties: await loadEpisodeTies(s.id) }); // T26: the side_source default
         for (let i = 0; i < fill.length; i += 500) {
           const { error } = await db.from('episodes').insert(fill.slice(i, i + 500).map((r) => ({ ...r, minted_by: 'afg' }))); // G57: the fill is AFG's
           if (error) throw new Error(error.message);
