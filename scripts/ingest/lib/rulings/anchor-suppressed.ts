@@ -240,9 +240,9 @@ export const ENTRIES: RulingEntry<number[]>[] = [
   {
     seriesId: 'boruto-naruto-next-generations',
     ruleId: 'A44',
-    value: [24],
+    value: [18, 19, 20, 21, 22, 23, 24, 39],
     reason:
-      "Batch 21 wave 3, Sean ruled 2026-09-04: ep 24 (MIXED, confirmed) adapts Naruto ch 700 + Naruto Gaiden 700+5 — ANOTHER CHAPTER SPACE on the series' chain (I41: chain_source), never convertible into Boruto's 1-80; the MU frontier / AFG writers must not mint a position here. Basis: another chapter space, not 'behind'.",
+      "Batch 21 wave 3, Sean ruled 2026-09-04: ep 24 (MIXED, confirmed) adapts Naruto ch 700 + Naruto Gaiden 700+5 — ANOTHER CHAPTER SPACE on the series' chain (I41: chain_source), never convertible into Boruto's 1-80; the MU frontier / AFG writers must not mint a position here. Basis: another chapter space, not 'behind'. WIDENED 2026-09-05 (batch 22 wave 1, verified): eps 19-23 adapt the Naruto Gaiden (700+1…700+10 — AFG's live column prints 701-710 on them, Narutopedia flattens to 701-710; neither is a Boruto number), ep 39 the unnumbered one-shot 満ちた月が照らす道 (side_story), ep 18 the unnumbered 在の書 omake (side_source) — no chapter number / another chapter space on every one.",
     ruledBy: 'Sean',
     ruledOn: '2026-09-04',
     cite: ['scripts/ingest/research/batch21/out/boruto-naruto-next-generations-w3.json', 'scripts/ingest/research/batch21/verify/w3-flips.md'],

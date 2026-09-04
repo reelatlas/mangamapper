@@ -43,7 +43,7 @@ for (const [sid, list] of by) {
       let value: number, kind: 'parity' | 'post_series', why: string;
       if (isLast) { value = envelope + 1; kind = 'post_series'; why = `finale of a finished series: post-series resume = coverage ${envelope} + 1`; }
       else if (covered && envRow?.continue_chapter != null && envRow.continue_chapter >= envelope) { value = envRow.continue_chapter; kind = 'parity'; why = `the stretch ${a.chapter + 1}-${envelope} is already adapted; continue = the frontier row's own FORWARD continue (ep ${envRow.episode} → ${envRow.continue_chapter})`; }
-      else if (covered) { value = envelope + 1; kind = 'parity'; why = `the stretch ${a.chapter + 1}-${envelope} is already adapted; the frontier row (ep ${envRow?.episode}) has no forward continue → frontier + 1 (C1 if the frontier chapter was left unfinished — say so when ruling)`; }
+      else if (covered) { value = envelope; kind = 'parity'; why = `the stretch ${a.chapter + 1}-${envelope} is already adapted → resume AT the frontier, ch ${envelope} (C1 by default: stored data cannot prove the chapter was closed, a few pages may repeat — Sean 2026-09-05; frontier + 1 only when the frontier row's own forward continue says so)`; }
       else { value = a.chapter + 1; kind = 'parity'; why = `NOT covered by anchored rows — END + 1 with the unplaced range named (a next known START from research outranks this, C2)`; }
       // the note always describes the stretch up to the FRONTIER (on the uncovered branch the continue is END + 1 and the unplaced range must still be named)
       const note = backjumpNote(backjumpCoverage(a.episode, a.chapter, Math.max(value, envelope + 1), rows), null);

@@ -1154,6 +1154,49 @@
    19-23 / 39 (chain_source) and 18 / 93-95 (AFL's loose Mixed bucket),
    beelzebub 15 / 26-28 / 51, rurouni TV ep 95 (identity). Batch 22 opens on
    the boruto follow-up (lanes I + C) with the batch-21 tooling copied.
+116. ✅ **THE C5 CURATION QUEUE APPLIED + BATCH 22 WAVE 1 APPLIED (2026-09-05;
+   Sean ruled, Cursor's lines).** (A) THE C5 QUEUE — 17 block exits with no
+   continue + 49 unnoted continues, proposed mechanically from stored spans
+   (lib/c3.ts backjumpCoverage / backjumpNote; research/batch22/c5-queue.ts;
+   the dry run in C5-QUEUE.md). Sean's correction, via Cursor: the thirteen
+   'frontier + 1' values were the +1 habit — covered → resume AT the frontier
+   chapter (112 → 343 is that shape), C1 by default because stored data cannot
+   prove the chapter was closed and a few repeated pages are expected; frontier
+   + 1 only when the frontier row's own forward continue says so. Overlap is
+   normal: two episodes can share a chapter, a continue can land on pages the
+   viewer has seen — 'never a re-read' is retired wording (P38). Applied:
+   13 frontier values (bleach 158 → 267, shippuden 154 → 415 / 301 → 556,
+   naruto 108 → 180, hxh 43 → 63 / 55 → 83, kamisama 18 → 50, arms 47 → 190,
+   dagashi 21 → 121, hayate 21 → 68 / 49 → 129, sket 31 → 102), 3 uncovered
+   END + 1 rows with the unplaced range named (conan 887 → 966, 1193 → 1121;
+   ranma 30 → 56), 2 finales post_series (kowloon 13 → 83, ayakashi 12 → 28),
+   all through writeCuratedContinue (C7); 49 notes stamped (already adapted
+   at eps X-Y / adapted later — skip on arrival / not adapted by any anchored
+   row). C5's statement gains the frontier-chapter sentence. Census:
+   backjump_continue_unruled 17 → 0, backjump_continue_unnoted 49 → 0. The
+   healer's covered-branch fill stays deferred — the queue is empty, the
+   class is the guard. (B) BATCH 22 WAVE 1 — the Boruto follow-up (2 agents,
+   verified w1-boruto.md): eps 19-23 canon confirmed + chain_source in the
+   ruled Naruto Gaiden 700+N space (19 = 700+1, 700+2 … 23 = 700+9, 700+10;
+   partial{700+2} shared by 19/20; three divergences); THE CHAIN STAYS THREE
+   WORKS (Sean: AniList ids do not make one-shots instruments — the verifier's
+   fourth/fifth-node recommendation declined): ep 39 = side_story + A44 (the
+   unnumbered one-shot 満ちた月が照らす道 printed in THIS tankōbon), ep 18 =
+   side_source + A44 (the 在の書 omake) beside an original half → mixed
+   confirmed; 93-95 canon confirmed — the per-episode novel map (93 =
+   prologue + ch 1, 94 = ch 3, 95 = ch 4 + ch 1's kunai coda; ch 2, the
+   interludes and the Epilogue unadapted → abridged) landed by EDITING the
+   standing-annotations entry (ruling-tier rows; an apply write would have
+   been reverted by the T26 healer — the verifier's catch), label 'Naruto
+   Shinden' (source_work_unlabelled 55 → 52). A44 [24] → [18-24, 39] (AFG's
+   live column prints 701-710 on 19-23). T6: 10 confirmation pins.
+   chain_source_unmapped 0; side_source_unadopted unchanged at 9 series (the
+   T26 adoption sitting — canon + side_source on 15 Boruto rows vs the
+   one-piece-50 filler + side_source line — is a BLOCK ruling, queued). Crumb:
+   ep 106 carries a real Naruto ch-700 tie (chain_source or nothing). Process
+   trap captured: the ask guessed 93-95 into the Mitsuki arc — quote the class
+   line, add no arc guesses. ruling_violation 0; display 0 failing; A44 41
+   ruled rows; 183 tests; edges redeployed.
 109. ✅ **G59 THE MINT RULE (an /add-rule end to end, 2026-09-04; Sean ruled the
    lane, Cursor's naming fix: who may CREATE the grid, not an amendment of G57's
    who may DELETE).** When AFL has nothing for an entry, the grid is minted by

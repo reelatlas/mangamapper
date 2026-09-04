@@ -26,3 +26,7 @@ Every chain beat verified on the episode pages against the Gaiden volume page; t
 4. **93-95's novel map lands by editing the STANDING entry** (ruling-tier rows), with the epilogue gap noted — part of the apply on go.
 5. **The licensed side-work standing** (canon + side_source on 14 Boruto rows and Black Clover 55-56 vs the one-piece-50 filler + side_source line): the standing T26 adoption sitting — one block ruling, not row by row; types untouched until then.
 6. **Crumbs**: ep 106 (Narutopedia: Manga = Naruto ch 700 — a graft or a wiki slip; chain_source or nothing, never an anchor).
+
+
+## APPLIED 2026-09-05 (§12.116) — Sean ruled (Cursor's lines)
+Yes on 1, 3, 4, 5; NO on 2: the chain stays three works — 39 = side_story + A44, 18 = side_source + A44 (overlays removed / re-kinded). 93-95's novel map via standing-annotations.ts. A44 → [18-24, 39]. The C5 queue applied the same day with the frontier-chapter correction (13 rows at the frontier, not +1).

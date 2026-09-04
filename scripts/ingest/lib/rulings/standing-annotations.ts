@@ -74,10 +74,24 @@ export const ENTRIES: RulingEntry<StandingAnnotation[]>[] = [
         basis: 'author',
         note: 'Chocho arc: based on Kishimoto\'s idea, with him providing dialogue (narutopedia; ja-WP 原作者である岸本斉史が原案を務めた) — the same credit type as Time Slip; repaired from stored filler for consistency.',
       },
+      // batch 22 wave 1 (verified w1-boruto.md, Sean ruled 2026-09-05): the per-episode novel map lands HERE (ruling-tier rows — an apply write would be reverted by this healer). Label 'Naruto Shinden' (I41 convention; off the chain — novels never join it).
       {
-        episodes: [93, 94, 95],
+        episodes: [93],
         kind: 'side_source',
-        note: 'Adapts the licensed novel 親子の日 (Parent and Child Day) — ja-WP arc footnote, same ノベライズ…を原作として form as Sasuke Retsuden.',
+        chapters: 'Naruto Shinden: Parent and Child Day (『NARUTO -ナルト- ナルト新伝 親子の日』, Mirei Miyamoto, ill. Kishimoto; JUMP j-BOOKS 2018-05-02) — prologue + chapter 1 「父と娘、木ノ葉を駆ける」',
+        note: 'Adapts the licensed novel 親子の日 (Parent and Child Day) in order — ja-WP arc footnote (ノベライズ…を原作として), Narutopedia\'s novel page + its Novel Adaptation Differences page, TV Tokyo\'s synopses; canon relative to a licensed side source, not adopted (the T26 sitting); no chapter mapping (a prose work).',
+      },
+      {
+        episodes: [94],
+        kind: 'side_source',
+        chapters: 'Naruto Shinden: Parent and Child Day — chapter 3 「父と娘、ひとりの食卓」 (the novel\'s chapter 2 and all four interludes are unadapted — see abridged)',
+        note: 'Adapts the licensed novel 親子の日 (Parent and Child Day) in order — see ep 93; canon relative to a licensed side source, not adopted (the T26 sitting).',
+      },
+      {
+        episodes: [95],
+        kind: 'side_source',
+        chapters: 'Naruto Shinden: Parent and Child Day — chapter 4 「父と娘、冷めた炎と滾る火」 + the coda relocated from chapter 1\'s close (Naruto gifts Boruto the kunai set); the novel\'s Epilogue is unadapted',
+        note: 'Adapts the licensed novel 親子の日 (Parent and Child Day) in order — see ep 93; canon relative to a licensed side source, not adopted (the T26 sitting).',
       },
       {
         episodes: [...span(106, 111)],

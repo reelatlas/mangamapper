@@ -1411,6 +1411,17 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
     ruledOn: '2026-09-04',
     cite: ['scripts/ingest/research/batch21/WAVE3-RECOVERY.md', 'scripts/ingest/research/batch21/verify/w3-flips.md', 'scripts/ingest/research/batch21/out/boruto-naruto-next-generations-w3.json'],
   },
+  // ---- batch 22 wave 1 (2026-09-05) — the Boruto follow-up, confirmations only
+  {
+    seriesId: 'boruto-naruto-next-generations',
+    ruleId: 'T6',
+    value: { 18: 'mixed', 19: 'canon', 20: 'canon', 21: 'canon', 22: 'canon', 23: 'canon', 39: 'canon', 93: 'canon', 94: 'canon', 95: 'canon' },
+    reason:
+      'Batch 22 wave 1 (verified R24, w1-boruto.md), Sean ruled 2026-09-05 — CONFIRMED AS STORED: 19-23 adapt the Naruto Gaiden in order (chain_source in the 700+N space, position-less by another chapter space), 39 the unnumbered one-shot 満ちた月が照らす道 collected in Boruto vol 1 (side_story, A44 no number), 18 the first half is the Kishimoto omake ナルトが火影になった日 from 秘伝・在の書 (side_source, A44 no number) beside an original half → mixed, 93-95 the novel 親子の日 in order (side_source, the T26 adoption sitting keeps the stored canon until ruled as a block). Pinned so the loose AFL bucket cannot re-list them (T6).',
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/batch22/WAVE1-RECOVERY.md', 'scripts/ingest/research/batch22/verify/w1-boruto.md'],
+  },
 ];
 
 export const EPISODE_TYPE_OVERRIDES: Record<string, EpisodeTypes> = ENTRIES.reduce<Record<string, EpisodeTypes>>((acc, e) => {
