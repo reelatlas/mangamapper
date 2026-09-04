@@ -24,7 +24,21 @@ const FILES = readdirSync(OUT).filter((f) => /-w3\.json$/.test(f)).sort();
 // annotations whose KIND the verdict replaced (old kind deleted; the new kind is in the verdict's annotations)
 const ANNOTATION_DELETE: { sid: string; episode: number; kind: AnnotationKind; why: string }[] = [];
 const CONTINUE_OVERRIDE: Record<string, { chapter: number; why: string }> = {};
-const START_OVERRIDE: Record<string, number> = {};
+const START_OVERRIDE: Record<string, number> = {
+  'naruto-shippuden#114': 345, // verifier w3-flips: the leading share is ch 344's grave FLASHBACK at pp 16-17 — both A10 triggers (≤ 5 pages AND flashback wording); first-time does not exempt it. partial{344 (pp 16-17)} carries the tie (EXTRA_ANNOTATIONS)
+};
+// chapters_adapted rewritten at write (verifier w3-flips): the delivered TAIL wording tripped lib/sliver.ts#sliverEnd — ep 113's
+// 344 segment said 'flashback pages open ep 114' (SCRAPPY → END 343, wrong: the episode adapts 344 through the snake-and-hawk
+// speech), ep 114's 346 segment said 'replays the reversal' (SCRAPPY → END 345, wrong: en-WP credits the Sharingan-to-Kabuto beat
+// independently, A47 advances). The stored text must not re-trip end_sliver_mismatch, so the record is reworded, not overridden.
+const CHAPTERS_ADAPTED_FIX: Record<string, string> = {
+  'naruto-shippuden#113': "343 (Sasuke thread only: Orochimaru's host body starts rejecting him and he coughs blood, Kabuto leaves to fetch stronger medicine, Sasuke finishes his training and drives a Chidori Sharp Spear through the door into Orochimaru's arms — 343's Konoha thread, Team 7 at Ramen Ichiraku, was animated in ep 90), 344 (through the snake-and-hawk speech: Sasuke's 'you have nothing left to teach me' takedown, the disgust at the human experiments, Orochimaru shedding his body into the giant white snake, the snakes sliced away, Cursed Seal stage two — the chapter's last two pages, the white-snake-at-the-grave memory, pp 16-17, are ep 114's leading share)",
+  'naruto-shippuden#114': "344 (pp 16-17 only, the leading share: Orochimaru's memory of the white snake's shed skin near his parents' grave and Hiruzen's words on fortune and rebirth — Narutopedia cites ch 344 pp 16-17; A10: a two-page lead, START 345), 345 (the dismembered snake, the paralysing evaporating blood, Orochimaru swallowing Sasuke to start the Living Corpse Reincarnation, the mental plane, Sasuke's Sharingan reversing the technique, Kabuto returning to a finished ritual; the Akatsuki/Itachi arm-severing scene is ch 345's own material, cited as such by Narutopedia), 346 (the opening third, through Sasuke walking out of the hideout: Sasuke shows Kabuto the reversal with his Sharingan and Orochimaru is confirmed absorbed — 346's Suigetsu release is ep 115's and 346's Konoha thread, Kakashi relaying Tsunade's Rasenshuriken ban, was animated in ep 90)",
+};
+// annotation chapters rewritten at write (verifier): an inferred page count is not a count
+const ANNOTATION_CHAPTERS_FIX: Record<string, string> = {
+  'naruto-shippuden#117#partial': "351 (opening pages only: Sasuke's own partial cursed-seal transformation blocking Jūgo's first strike, and his line that he did not come to fight but to talk — ep 118 starts here and carries the rest)",
+};
 const END_OVERRIDE: Record<string, number> = {};
 const ANCHOR_SKIP = new Set<string>(); // 'sid#ep' — a verifier-refuted anchor. shippuden 112 WAS here as "position-less (A44)"; Sean ruled 2026-09-03 that behind is not a basis: END 318 [317] lands (A8), continue 343 curated (C5), 113-117 are the next narrow ask (verify:hole)
 const CONTINUE_SKIP = new Set<string>(); // shippuden 112's continue 343/parity rides WITH its anchor (C7 — the healer refuses the row while 113 is unanchored)
@@ -42,13 +56,15 @@ const ROW_HOLD = new Set<string>();
 // `unverified` double-records a segment already weighed SIGNIFICANT (would park the row in unverified_share for a page count nobody needs)
 const ANNOTATION_SKIP = new Set<string>(); // verifier w2-flips: a misused kind; an unplaced chapter attribution
 // verifier: prose in a divergence's chapters field is not a chapter list — nulled at write
-const CHAPTERS_NULL = new Set<string>();
+const CHAPTERS_NULL = new Set<string>(['naruto-shippuden#113#recap', 'boruto-naruto-next-generations#24#divergence']); // verifier: prose in a chapters field is not a chapter list
 // TYPE overrides at curation (the T6 entries are generated from type_corrections MINUS these): one-piece 50 stays FILLER — a
 // novelization is canon only by an `adopted` ruling (T26), which the verdict does not supply; its side_source note lands on the filler row
 const TYPE_SKIP = new Set<string>();
 // T26 THE CHAIN (Sean 2026-09-04): a delivered kind rewritten at apply — the sequel manga is ON THE CHAIN (I41), so the row is canon material told out of order
 const KIND_OVERRIDE: Record<string, { kind: AnnotationKind; chapters: string; note: string }> = {};
-const EXTRA_ANNOTATIONS: { sid: string; episode: number; kind: AnnotationKind; chapters: string; note: string; deleteKind?: AnnotationKind }[] = [];
+const EXTRA_ANNOTATIONS: { sid: string; episode: number; kind: AnnotationKind; chapters: string; note: string; deleteKind?: AnnotationKind }[] = [
+  { sid: 'naruto-shippuden', episode: 114, kind: 'partial', chapters: '344 (pp 16-17)', note: "weight: SLIVER (A10) — the episode opens on ch 344's last two pages, Orochimaru's memory at his parents' grave (Narutopedia: ch 344 pp 16-17; TV Tokyo 334 「…思い出がよみがえる」); first-time pages, but a two-page flashback lead is A10's scrap — START 345, the tie kept here (verifier w3-flips, 2026-09-04)." },
+];
 // note fixes from the verifier (prepended to the annotation note of that row + kind)
 const NOTE_FIX: Record<string, string> = {};
 
@@ -78,6 +94,7 @@ async function main() {
         const { data: st } = await db.from('chapter_anchors').select('start_chapter, chapter').eq('series_id', sid).eq('episode', Number(a.episode) + 1).maybeSingle();
         nextStart = st ? Number(st.start_chapter ?? st.chapter) : null;
       }
+      if (CHAPTERS_ADAPTED_FIX[key]) { a.chapters_adapted = CHAPTERS_ADAPTED_FIX[key]; console.log(`  anchor ep ${a.episode} chapters_adapted REWORDED (verifier — sliverEnd wording)`); }
       const ruledEnd = END_OVERRIDE[key];
       const verdict = ruledEnd != null ? { ...sliverEnd(a.chapters_adapted, ruledEnd, nextStart), end: ruledEnd } : sliverEnd(a.chapters_adapted, Number(a.end_chapter), nextStart);
       const vol = volumeForChapter(bounds, verdict.end) ?? (a.volume != null ? Number(a.volume) : null);
@@ -103,7 +120,7 @@ async function main() {
       if (ko) { delivered.set(ep, (delivered.get(ep) ?? new Set()).add(ko.kind)); console.log(`  annotation ep ${ep} ${a.kind} → ${ko.kind}{${ko.chapters.slice(0, 30)}} (KIND OVERRIDE: the chain)`); if (!DRY) await upsertAnnotation({ series_id: sid, episode: ep, kind: ko.kind, chapters: ko.chapters, note: `${ko.note} Original research note: ${String(a.note).slice(0, 400)} [${B}]`.slice(0, 1200), origin: 'research' }); annoN++; continue; }
       delivered.set(ep, (delivered.get(ep) ?? new Set()).add(a.kind));
       console.log(`  annotation ep ${ep} ${a.kind}{${String(a.chapters ?? '').slice(0, 36)}}`);
-      if (!DRY) await upsertAnnotation({ series_id: sid, episode: ep, kind: a.kind as AnnotationKind, chapters: CHAPTERS_NULL.has(`${sid}#${ep}#${a.kind}`) ? null : (a.chapters ?? null), note: `${fix ? `${fix} ` : ''}${a.note} [${B}]`.slice(0, 1200), origin: 'research' });
+      if (!DRY) await upsertAnnotation({ series_id: sid, episode: ep, kind: a.kind as AnnotationKind, chapters: CHAPTERS_NULL.has(`${sid}#${ep}#${a.kind}`) ? null : (ANNOTATION_CHAPTERS_FIX[`${sid}#${ep}#${a.kind}`] ?? a.chapters ?? null), note: `${fix ? `${fix} ` : ''}${a.note} [${B}]`.slice(0, 1200), origin: 'research' });
       annoN++;
     }
     for (const [ep, kinds] of delivered) {
