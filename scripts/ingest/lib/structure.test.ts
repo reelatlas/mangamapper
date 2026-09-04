@@ -33,3 +33,13 @@ describe('planComponents (I39)', () => {
     expect(spans(p)).toEqual(['1:1-12:season', '9:null-null:season', '2:13-24:season']);
   });
 });
+
+import { windowedEnd } from './window';
+describe('windowedEnd (P6 window guard, 2026-09-04)', () => {
+  it('drops an end date that precedes the start (another media\'s date) and keeps a sane one', () => {
+    expect(windowedEnd('2006-10-05', '1987-03-05')).toBeNull();
+    expect(windowedEnd('2006-10-05', '2007-03-15')).toBe('2007-03-15');
+    expect(windowedEnd(null, '2007-03-15')).toBe('2007-03-15');
+    expect(windowedEnd('2006-10-05', null)).toBeNull();
+  });
+});

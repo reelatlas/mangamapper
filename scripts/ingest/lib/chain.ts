@@ -8,6 +8,7 @@
 // splits (Bleach → TYBW, Tokyo Ghoul → :re, Naruto → Shippuden) are safe by
 // construction, whatever any source's continuous numbering suggests.
 
+import { windowedEnd } from './window';
 import { db, selectAll } from './db';
 import { mediaByIds, type AniListMedia } from './anilist';
 import { stageAniList, searchTextFor } from './resolve';
@@ -198,10 +199,13 @@ export function aggregate(chain: AniListMedia[], aflSlug: string | null, fallbac
     start_date: head.startDate.year
       ? `${head.startDate.year}-${String(head.startDate.month ?? 1).padStart(2, '0')}-${String(head.startDate.day ?? 1).padStart(2, '0')}`
       : null,
-    end_date:
+    // P6 window guard (2026-09-04, the fist-of-the-blue-sky 1987 catch): an end before the start is another media's date — null, never stored
+    end_date: windowedEnd(
+      head.startDate.year ? `${head.startDate.year}-${String(head.startDate.month ?? 1).padStart(2, '0')}-${String(head.startDate.day ?? 1).padStart(2, '0')}` : null,
       status === 'finished' && tail.endDate.year
         ? `${tail.endDate.year}-${String(tail.endDate.month ?? 1).padStart(2, '0')}-${String(tail.endDate.day ?? 1).padStart(2, '0')}`
         : null,
+    ),
     season: head.season,
     season_year: head.seasonYear,
     total_episodes: allTotalsKnown ? chain.reduce((s, m) => s + (m.episodes ?? 0), 0) : null,

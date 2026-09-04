@@ -23,6 +23,8 @@ import { AIR_DATE_OVERRIDES } from './lib/rulings/air-dates';
 import { EPISODE_TITLE_OVERRIDES } from './lib/rulings/episode-titles';
 import { continueUnprovenanced, curatedOverwritten } from './lib/continues';
 import { annotationWorkLabel, isChainWork } from './lib/rulings/source-chains';
+import { WIKI_PAGES } from './lib/rulings/wiki-pages';
+import { MINTED_GRIDS } from './lib/rulings/minted-grids';
 import { ANCHOR_SUPPRESSED } from './lib/rulings/anchor-suppressed';
 import { deriveFormat } from './lib/format';
 import { LOCKED } from './lib/rulings/permanence';
@@ -104,7 +106,7 @@ async function main() {
     rearranged_zone_unanchored: [], rearranged_zone_acknowledged: [],
     title_incomplete: [], airdate_incomplete: [], airdate_regression: [], airdate_withheld: [], episode_date_off_window: [], asterisk_unreviewed: [],
     fractional_unmodeled: [], annotation_invalid: [], annotation_retired_standing: [], afl_anime_canon_unruled: [], format_missing: [], episode_without_component: [], watch_order_kind_missing: [],
-    permanence_candidate: [], permanence_violation: [], mixed_fragment_only: [], run_stuck: [], unverified_share: [], sliver_only_anchor: [], chain_source_unmapped: [], side_source_on_chain: [], source_work_unlabelled: [],
+    permanence_candidate: [], permanence_violation: [], mixed_fragment_only: [], run_stuck: [], unverified_share: [], sliver_only_anchor: [], chain_source_unmapped: [], side_source_on_chain: [], source_work_unlabelled: [], grid_unminted: [],
     series_without_source_kind: [], no_source: [], no_instrument: [], ok_full: [], ok_no_volume: [], ok_loose: [], ok_parallel: [],
     source_relation_missing: [], parallel_has_anchor: [], arcs_not_partition: [], arc_row_conflict: [], correspondence_invalid: [], correspondence_incomplete: [],
     pending_airing_no_anchor: [], pending_finished_no_totals: [], pending_no_canon: [], pending_other: [],
@@ -131,6 +133,14 @@ async function main() {
       if (single && /\b(sliver|scrap|1 panel|one panel|p\.?\s*\d+ only|approx\. p)/i.test(ca) && ['canon', 'mixed'].includes(typeOf.get(`${a.series_id}#${a.episode}`) ?? ''))
         classes.sliver_only_anchor.push(`${a.series_id}: ep ${a.episode} → ch ${a.chapter} on a sliver-only record '${ca.slice(0, 50)}' — significance call (T28's sliver clause): significant → stands with the reason; weightless → no anchor, the remainder decides the type`);
     }
+  }
+  // G59 (2026-09-04): an entry with anchors and NO episode rows must have a ruled minter — a wiki page (WIKI_PAGES) or a manual grid
+  // (MINTED_GRIDS); otherwise the grid is unminted and the display is synthesizing (A42) what a writer should own
+  {
+    const rowCount = new Map<string, number>();
+    for (const e of await selectAll<any>('episodes', 'series_id')) rowCount.set(e.series_id, (rowCount.get(e.series_id) ?? 0) + 1);
+    const anchored = new Set((await selectAll<any>('chapter_anchors', 'series_id')).map((a: any) => a.series_id));
+    for (const sid of anchored) if (!(rowCount.get(sid) ?? 0) && !WIKI_PAGES[sid] && !MINTED_GRIDS[sid]) classes.grid_unminted.push(`${sid}: anchors on an entry with ZERO episode rows and no ruled minter (G59) — rule a wiki page or a manual grid`);
   }
   // I41 (2026-09-04): chain_source / side_source are checked against the SOURCE CHAIN map — a chain_source naming a work off the
   // chain, or a side_source naming a work on it, is a mismatch (a sitting, never an auto-change); an unlabelled one cannot be checked

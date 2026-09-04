@@ -26,6 +26,7 @@ import { db, selectAll, startRun, finishRun, fileFlagOnce } from './lib/db';
 import { extractTransclusions, findEpisodePages, fetchWikitext, parseEpisodeList, type WikiEpisode } from './lib/wikipedia';
 import { filterEpisodeRows, SOURCE_NUMBERING_SHIFTS, translateEpisodeNumber } from './lib/resolve';
 import { dateFit, disambiguatedTitles, pageFitsSeries } from './lib/wiki-identity';
+import { WIKI_PAGES } from './lib/rulings/wiki-pages';
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
@@ -91,7 +92,10 @@ async function main() {
         // year-disambiguated forms FIRST (G55): a namesake's plain list page
         // ("List of Rurouni Kenshin episodes" = 1996) would otherwise win
         // the prefix search for a remake / spin-off
-        const pages = await findEpisodePages([...disambiguatedTitles(t.title, t.start_date), t.title, t.title_native ?? ''].filter(Boolean));
+        // G59 path B: a RULED page replaces the finder (the finder matched a namesake / a franchise list for orient / code-black)
+        const ruledPage = WIKI_PAGES[t.id];
+        const pages = ruledPage ? [ruledPage.page] : await findEpisodePages([...disambiguatedTitles(t.title, t.start_date), t.title, t.title_native ?? ''].filter(Boolean));
+        if (ruledPage) console.log(`  ${t.id}: ruled wiki page "${ruledPage.page}" (G59)`);
         counters.fetched++;
         // no list page is NOT terminal — the main-article fallback below
         // still runs (SHY-class: tables live on the series article)

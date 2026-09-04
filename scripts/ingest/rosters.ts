@@ -38,6 +38,7 @@ export const HEAL: RosterEntry[] = [
   { file: 'heal-volume-boundaries.ts', when: 'standard', note: 'monotonic-start rule over stored boundaries (V1/V2)' },
   { file: 'heal-anchor-volumes.ts', when: 'standard', note: 'volume := the boundary table\'s volume for the END chapter over every anchor (lib/volumes.ts, the one derivation — anchor_volume_mismatch reads 0)' },
   { file: 'heal-parity-continues.ts', when: 'standard', note: 'C2 parity continues + C3 skip notes over every anchor (moved from research/batch15/ in T2.4)' },
+  { file: 'mint-grids.ts', when: 'standard', note: 'G59 path C: ruled manual grids (lib/rulings/minted-grids.ts) minted / asserted for entries AFL and the wiki cannot serve (minted_by manual)' },
   { file: 'heal-stuck-runs.ts', when: 'standard', note: "ingest runs left 'running' past the edge wall clock are marked killed (G58) — run_stuck reads as backlog, never as a live run" },
   { file: 'assert-overrides.ts', when: 'standard', note: 'EPISODE_TYPE_OVERRIDES (T6) + AIR_DATE_OVERRIDES (G53) + the air-date order gate (G54) asserted over standing rows' },
   { file: 'sync-watch-order.ts', when: 'standard', note: 'order-only fractionals → watch_order_entries (N31); kind from the matching order-only component (T29)' },

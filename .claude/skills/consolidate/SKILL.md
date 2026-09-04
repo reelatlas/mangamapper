@@ -77,6 +77,11 @@ series (stale-zone healing).
   stamped it; if not, why not.
 - Compare every class to the previous census and explain each delta
   (`P17`). A class that moved without an explanation is an unshipped bug.
+  **Read every NON-ZERO class, not only the watched ones** (2026-09-04:
+  `episode_date_off_window` stood at 1 for three days — fist-of-the-blue-sky's
+  end date was the 1984 Fist of the North Star's — because the grep only
+  covered the classes a wave was expected to move). A standing non-zero class
+  is a finding until it is explained or queued by name.
 - Review-queue classes (`special_numbered_unreviewed`, `fractional_unmodeled`,
   `asterisk_unreviewed`, `mu_pin_unverified`) are Sean's: list them,
   RESEARCH each item first (`R1`, `R3`), present verdicts with context.

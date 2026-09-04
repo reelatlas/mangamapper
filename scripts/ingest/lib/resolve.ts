@@ -75,6 +75,7 @@ import { deriveSourceRelation, pickMangaNode } from './rulings/source-relations'
 import { ruledChapterSpace } from './rulings/chapter-spaces';
 import { withholdAirdateRegressions, type AirdateWithheld } from './airdate-order';
 import { planComponents } from './structure-plan';
+import { windowedEnd } from './window';
 
 // Community-count rulings (Sean 2026-08-24: the community-consensus episode
 // count is the truth — specials/ep-0s the community numbers are IN; large
@@ -208,8 +209,8 @@ export function applyEpisodeFloor(
 export async function refreshStitchedVolatile(seriesId: string) {
   // order-only components (null episode range — Kizu movies, Psycho-Pass
   // films) hold watch-order positions and NEVER count toward aired/totals
-  const comps = await selectAll<{ anilist_id: number }>('series_components', 'anilist_id', (q) =>
-    q.eq('series_id', seriesId).not('episode_start', 'is', null),
+  const comps = await selectAll<{ anilist_id: number; season_order: number }>('series_components', 'anilist_id, season_order', (q) =>
+    q.eq('series_id', seriesId).not('episode_start', 'is', null).order('season_order'),
   );
   if (!comps.length) return;
   const media: AniListMedia[] = [];
@@ -234,17 +235,18 @@ export async function refreshStitchedVolatile(seriesId: string) {
   };
   applyEpisodeFloor(seriesId, volatile, topEp?.[0]?.number ?? 0);
   applyCommunityCap(seriesId, volatile);
+  const status = statuses.has('RELEASING') ? 'airing' : statuses.has('NOT_YET_RELEASED') ? 'upcoming' : statuses.has('HIATUS') ? 'hiatus' : 'finished';
+  // the WINDOW is volatile too (2026-09-04, the fist-of-the-blue-sky 1987 catch): the head's start, the tail's end when
+  // finished, P6-windowed — before this, a stitched series' dates were written once at stitch time and never re-derived
+  const startDate = fuzzyDate(media[0].startDate);
+  const endDate = status === 'finished' ? windowedEnd(startDate, fuzzyDate(media[media.length - 1].endDate)) : null;
   await db
     .from('series')
     .update({
       ...volatile,
-      status: statuses.has('RELEASING')
-        ? 'airing'
-        : statuses.has('NOT_YET_RELEASED')
-          ? 'upcoming'
-          : statuses.has('HIATUS')
-            ? 'hiatus'
-            : 'finished',
+      start_date: startDate,
+      end_date: endDate,
+      status,
       next_airing_at: releasing?.nextAiringEpisode
         ? new Date(releasing.nextAiringEpisode.airingAt * 1000).toISOString()
         : null,
@@ -602,7 +604,7 @@ export async function resolveSeries(runId: number, slug: string): Promise<{ epis
     source_type: derived.value,
     source_relation: deriveSourceRelation(id, seriesHasSource(derived.value)), // I40
     start_date: fuzzyDate(media.startDate),
-    end_date: fuzzyDate(media.endDate),
+    end_date: windowedEnd(fuzzyDate(media.startDate), fuzzyDate(media.endDate)), // P6 window guard
     season: media.season,
     season_year: media.seasonYear,
     total_episodes: media.episodes,

@@ -2,7 +2,7 @@
 
 > GENERATED from `scripts/ingest/lib/rulings/**` by `scripts/restructure/gen-rulings.ts` — do not edit by hand. A ruling is an INSTANCE of a rule (`docs/rules.md`); the map is the record, this is the index.
 
-- rulings: 2266 across 252 series/keys · by Sean: 772 · UNRECORDED reasons: 8 · with a retire condition: 93
+- rulings: 2269 across 252 series/keys · by Sean: 775 · UNRECORDED reasons: 8 · with a retire condition: 93
 
 ## Retire conditions (re-evaluate when…)
 
@@ -704,7 +704,7 @@
 | `A3` | {"episode":15,"chapter":19,"start_chapter":13,"chapters_adapted":"13, 19","volume":4,"source":"manual"} | S2 pairs the S1-skipped chapters | session 2026-08-23 · scripts/ingest/apply-rearranged-anchors.ts, docs/changelog.md §12.32, batch-11 verdict (cells-at-work) |  |
 | `A3` | {"episode":16,"chapter":16,"start_chapter":14,"chapters_adapted":"16, 14","volume":4,"source":"manual"} | S2 pairs the S1-skipped chapters — as-stored | session 2026-08-23 · scripts/ingest/apply-rearranged-anchors.ts, docs/changelog.md §12.32, batch-11 verdict (cells-at-work) |  |
 
-### cells-at-work-code-black (21)
+### cells-at-work-code-black (22)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -729,6 +729,7 @@
 | `A43` | {"episode":8,"kind":"graft","chapters":"6 (the fatty-liver scene)","note":"ja-WP: 原作第6話の脂肪肝の場面がアニメ版第8話に取り込まれている — one scene of ch 6 grafted into ep 8; ch 6 p… | ja-WP: 原作第6話の脂肪肝の場面がアニメ版第8話に取り込まれている — one scene of ch 6 grafted into ep 8; ch 6 proper is ep 9 | session 2026-09-02 · scripts/ingest/research/batch20/out/cells-at-work-code-black.json, scripts/ingest/history/apply-wave9.ts, §12.99 |  |
 | `A42` | {"episode":9,"kind":"rearranged","chapters":"6-10 (the zone, eps 9-13)","note":"A42 settled reorder: after eps 6-8 played ch 12-17 in the first body, eps 9-1… | A42 settled reorder: after eps 6-8 played ch 12-17 in the first body, eps 9-13 return to part one's ch 6-10 (ja-WP verbatim); the frontier stays ch 17 at ep 8 (G56) | session 2026-09-02 · scripts/ingest/research/batch20/out/cells-at-work-code-black.json, scripts/ingest/history/apply-wave9.ts, §12.99 |  |
 | `G3` | {"flagId":786,"why":"cells-at-work-code-black: G55 namesake contamination — \"List of Orphan Black episodes\" (wave 9, verified)."} | G55 namesake contamination — "List of Orphan Black episodes" (verified) | Sean 2026-09-02 · scripts/ingest/research/batch20/out/cells-at-work-code-black.json, scripts/ingest/history/apply-wave9.ts, §12.99 |  |
+| `G59` | {"page":"Cells at Work! Code Black","note":"the series article's own 13-row table; the finder's 'List of Cells at Work! episodes' is the franchise list with … | Batch 20 wave 9 (out/cells-at-work-code-black.json, verified R24): the entry held ZERO rows — AFL staged an empty page; ja-WP 各話リスト, en-WP 'Cells at Work! Code Black' and syobocal TID 5849 agree on every date and title (the 13-row map already carries anchors + a reorder zone, A42). Sean ruled 2026-09-04 (G59): the wiki writer mints the grid from the ruled page. | Sean 2026-09-04 · scripts/ingest/research/batch20/out/cells-at-work-code-black.json, scripts/ingest/research/batch20/verify/cells-at-work-code-black.md |  |
 
 ### chrono-crusade (12)
 
@@ -2344,13 +2345,14 @@
 | `N35` | {"chapters":22,"volumes":5} | The main story is 22 chapters (LETTER 1-21 + LAST LETTER) in 5 tankobon (ja-WP 話数=全22話（本編）; Futabasha's own site dates 第21話 and the 最終回; MU '5 Volumes (Complete)'). The stored 39/7 is AniList's unit count of the whole 7-volume ACTION COMICS line (mainline + numberless 番外編 volumes) that nobody reproduces; the side stories (-未来- etc., adapted by the 2016 FILM) are outside our instrument. Batch 20 wave 7. | Sean 2026-08-28 · scripts/ingest/research/batch20/out/orange.json |  |
 | `R21` | {"file":"scripts/ingest/research/batch20/out/orange.json"} | verdict folded as delivered — N35 22/5 + the G53 atomic block are map edits: anchors re-land at the MANUAL tier (P8: the mu/afg pins they replace would re-derive), continues through writeCuratedContinue (C7), annotations origin 'research'; the curated deviations are the sibling entries of this wave | Sean 2026-08-28 · scripts/ingest/research/batch20/out/orange.json, scripts/ingest/history/apply-wave7.ts, §12.93 |  |
 
-### orient (3)
+### orient (4)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `R21` | {"file":"scripts/ingest/research/batch20/out/orient.json","report":"scripts/ingest/research/batch20/verify/orient.md"} | verdict folded as delivered — the repair 113 → 115 rides the anchor write; zero rows exist — anchors land as A42 anchor_without_row (the entry below); ep 12 stays 46 (sliverEnd refused to move it): anchors re-land at the MANUAL tier (P8: the mu/afg pins they replace would re-derive), continues through writeCuratedContinue (C7), annotations origin 'research'; the curated deviations are the sibling entries of this wave | Sean 2026-09-02 · scripts/ingest/research/batch20/out/orient.json, scripts/ingest/research/batch20/verify/orient.md, scripts/ingest/history/apply-wave8.ts, §12.96 |  |
 | `A42` | {"episodes":"every delivered anchor (zero rows)","why":"zero episode rows exist for the entry"} | row-less target: orient has zero rows; the anchors land as A42 anchor_without_row by ruling (research runs ahead of rows) | Sean 2026-09-02 · scripts/ingest/research/batch20/out/orient.json, scripts/ingest/research/batch20/verify/orient.md, scripts/ingest/history/apply-wave8.ts, §12.96 |  |
 | `G3` | {"flag":769,"resolution":"orient: no edition split — one continuous space 1-156 / 22 vols across the WSM → Bessatsu move (Kodansha 初出 per volume, ja-WP 全156話… | ingest_flags #769 dismissed with the verdict's finding (G3: only Sean dismisses): orient: no edition split — one continuous space 1-156 / 22 vols across the WSM → Bessatsu move (Kodansha 初出 per volume, ja-WP 全156話, MangaDex); MU's 121 is its scanlation release ceiling (wave 8 verdict, verified). | Sean 2026-09-02 · scripts/ingest/history/apply-wave8.ts, §12.96 |  |
+| `G59` | {"page":"Orient (manga)","note":"the series article carries the 24-row episode table (cumulative 1-24 across the two cours); no \"List of Orient episodes\" p… | Batch 20 wave 8 (out/orient.json, verified R24): the entry held ZERO rows — AFL staged an empty page (parse_integrity {empty:true}); ja-WP 各話リスト, en-WP 'Orient (manga)' #Episodes and syobocal (TID 6215 / 6393) agree on all 24 titles and dates. Sean ruled 2026-09-04 (G59, the mint rule): the wiki writer mints the grid from the ruled page. | Sean 2026-09-04 · scripts/ingest/research/batch20/out/orient.json, scripts/ingest/research/batch20/verify/orient.md |  |
 
 ### oshi-no-ko (33)
 
@@ -2834,11 +2836,12 @@
 | `A43` | {"episodes":[36,37,38,39,40],"kind":"partial","chapters":"83-96","note":"research-tier batch 11 (2026-08-23, agent-verified 2+ sources, full-record): Lamplig… | Lamplight 1-5 — continuous, mid-chapter boundaries | session 2026-08-23 · scripts/ingest/apply-research-batch-11.ts, scratchpad batch11/shangri-la-frontier.json (session scratchpad, not on disk), docs/changelog.md §12.30 |  |
 | `A43` | {"episodes":[42,43,44,45,46,47,48,49,50],"kind":"partial","chapters":"99-126","note":"research-tier batch 11 (2026-08-23, agent-verified 2+ sources, full-rec… | Ctarnidd arc runs to S2 end unresolved — S3 picks up at 127 | session 2026-08-23 · scripts/ingest/apply-research-batch-11.ts, scratchpad batch11/shangri-la-frontier.json (session scratchpad, not on disk), docs/changelog.md §12.30 |  |
 
-### shounan-junai-gumi (1)
+### shounan-junai-gumi (2)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `N7` | 1913 | A (high): the series IS the 5-episode OVA run — numbering 1-5 is its identity (Sean 2026-08-24). | Sean 2026-08-24 |  |
+| `G59` | {"source":"AFL page sh%C5%8Dnan-pure-love-gang (5 rows, titles + dates + types, staged 2026-08-22; held sparse for the resolver by the source_map note) + the… | A five-episode OVA (1994-97) with no wiki episode list; the AFL page carries the five rows but the source_map holds it sparse (anilist_id null, 'AFL page stays sparse-held for validation', 2026-08-23), so the resolver refuses by design and the entry sat with five manual anchors and ZERO rows. Sean ruled 2026-09-04 (G59 path C): the grid is ruled here from AFL's own rows (types mixed per AFL's quick list — each OVA condenses a manga arc with original framing) and minted at the manual tier. | Sean 2026-09-04 · scripts/ingest/research/batch17/out/shounan-junai-gumi.json |  |
 
 ### shugo-chara (15)
 

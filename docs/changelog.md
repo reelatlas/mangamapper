@@ -887,6 +887,42 @@
    0. Permanence 0 locked / 0 violations; no stale rulings. Cycle: step 1
    — Sean picks wave 8 (L-D ×8 of ~16, or a gap block; dai LAST; the T28
    six + claymore 26 still parked for his ruling).
+109. ✅ **G59 THE MINT RULE (an /add-rule end to end, 2026-09-04; Sean ruled the
+   lane, Cursor's naming fix: who may CREATE the grid, not an amendment of G57's
+   who may DELETE).** When AFL has nothing for an entry, the grid is minted by
+   exactly one ruled writer, never a research apply script, never the display:
+   (A) the wiki writer from the list its finder locates — the standing path:
+   **shy minted 24 rows** the moment it ran; (B) the wiki writer from a RULED
+   page (lib/rulings/wiki-pages.ts) when the finder fails — **orient** (the
+   finder returned the 1987 TMNT seasons; G55 refused all 18 rows) → 24 rows
+   from 'Orient (manga)', **cells-at-work-code-black** (the franchise list won
+   over the show's own table) → 13 rows; (C) the manual writer from a RULED
+   grid (lib/rulings/minted-grids.ts + the mint-grids healer, standard roster)
+   when no page exists — **shounan-junai-gumi** (a 1994-97 OVA; AFL's five rows
+   held sparse by the source_map, anilist_id null) → 5 rows minted_by manual.
+   G57 governs deletion; G55 + filterEpisodeRows gate every path; A42's
+   synthesized row stays the display's LAG fallback only. Census class
+   grid_unminted (anchors + zero rows + no ruled minter) = 0; anchor_without_row
+   11 → **7** (the residue is AFL lag: to-love-ru 39-44, cells-at-work 12/13/
+   20/21, one-piece-log 7-21, bokuben 26, three single mu/afg rows — G59 path B
+   candidates for the next sitting). The minting EXPOSED a gap the census could
+   not see before: **shy 1-23 unanchored** (anchor_gap_research 0 → 1, an
+   honest work-list item). AND A STANDING FAULT READ AT LAST: episode_date_off_
+   window had been 1 since at least 09-02 and never read (the grep covered only
+   the classes a wave was expected to move) — fist-of-the-blue-sky's end_date
+   was 1987-03-05, the 1984 Fist of the North Star's, written once at stitch
+   time by a chain whose tail was the parent series (before ownedAnilistIds
+   fenced it) and never re-derived: no writer owned a stitched series' window.
+   FIXED AS A RULE: lib/window.ts#windowedEnd (P6: an end before the start is
+   another media's date → null, never stored) in chain.ts#aggregate and
+   resolveSeries; refreshStitchedVolatile now re-derives start / end from the
+   components' head and tail (season-ordered) on every daily sweep — fotbs
+   2006-10-05 → 2007-03-15; the class reads 0; 174 tests. Process capture: the
+   consolidate skill now says READ EVERY NON-ZERO CLASS, not only the watched
+   ones. Edges rebuilt + deployed; system census OK; ruling_violation 0;
+   display 218 / 0. Next: the standing list (label backfill 55; shy 1-23 +
+   tsugumomo 1-11 + the AFL-lag row-mints; identity pass; UI pass).
+
 108. ✅ **BATCH 20 CLOSED (P34) — the apply scripts' reasoning extracted, the
    scripts retired (2026-09-04).** Two extraction agents mirrored batch-17's
    shape: `lib/rulings/applied/batch-20-waves-1-8.ts` (190 RulingEntry records

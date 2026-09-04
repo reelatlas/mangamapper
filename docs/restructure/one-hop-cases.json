@@ -428,6 +428,18 @@
         "position-less"
       ],
       "source": "2026-09-04: rosario-vampire 14 / trigun 18 — the chain (Sean + Cursor): mixed, position-less, chain_source{Season II: ch 1, 3}; novels/games/parallel stay side_source"
+    },
+    {
+      "ask": "AFL has no page (or an empty one) for an entry that already has anchors — who creates the episode rows, and can an apply script insert them?",
+      "expected": [
+        "G59"
+      ],
+      "terms": [
+        "mint",
+        "wiki page",
+        "manual grid"
+      ],
+      "source": "2026-09-04: the mint rule — the wiki writer (finder or a ruled page) or the manual writer from a ruled grid; never a research apply script; A42 is only the display's lag fallback"
     }
   ]
 }

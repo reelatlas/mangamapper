@@ -183,7 +183,7 @@
 - `I40` Source relation: adaptation or parallel telling — aka `source relation`, `source_relation`, `parallel telling`, `parallel tellings`, `parallel series`, `SOURCE_RELATION_OVERRIDES`, `MANGA_LINK_OVERRIDES`, `pickMangaNode`, `ruled manga link`, `the DBS relation`, `dual adaptation`, `ALTERNATIVE edge`, `two realizations of one outline`, `source_relation_missing`
 - `I41` The source chain: the named manga sequence of one story — aka `source chain`, `chain map`, `SOURCE_CHAINS`, `named manga sequence`, `chain work`, `the reading chain map`, `I41`
 
-**G — Gates & freshness (sources)** (48)
+**G — Gates & freshness (sources)** (49)
 - `G1` The flag rule: nothing suspicious auto-applies — aka `flag rule`, `the flag rule`, `the confirm queue`, `nothing suspicious ever auto-applies`
 - `G3` Recurring conditions flag once; only Sean dismisses — aka `fileFlagOnce`, `once-per-open-kind`
 - `G4` Permanent conditions leave the open queue *(planned)* — aka `dismissed_permanent`, `permanent-flag disposition`, `A-8`
@@ -232,6 +232,7 @@
 - `G56` Honest terminal: a covered MU pin is redundant, not a flag — aka `honest terminal`, `honest-terminal redundancy`, `covered pin`, `MU "EP N" pin`, `EP N pin`, `skipped_terminal`, `mu_pin_flag_redundant`, `claymore #945 class`, `pin already covered`
 - `G57` Row provenance: a writer deletes only rows it minted — aka `row provenance`, `minted_by`, `a writer deletes only rows it minted`, `row_minted_by_missing`, `the 5D 145 lesson`, `no delete-then-insert`
 - `G58` Budgeted edges: structural hash, deferral, closed run row — aka `budgeted edge`, `structural hash`, `volatile fields`, `edge wall clock`, `run_stuck`, `deferred not skipped`, `the refresh-anilist lesson`, `aniListHash`, `time budget`
+- `G59` The mint rule: who creates the grid when AFL has nothing — aka `the mint rule`, `who mints the grid`, `grid minting`, `ruled wiki page`, `WIKI_PAGES`, `MINTED_GRIDS`, `manual grid`, `grid_unminted`, `AFL has nothing`
 
 **V — Volumes & boundaries** (11)
 - `V1` Monotonic starts, or the row is not data — aka `monotonic-start gate`, `MONOTONIC-START rule`, `monotonic boundaries`, `monotonic starts`, `Sailor Moon v3 report`, `Sailor Moon "v3: chs 10-3"`
@@ -3134,6 +3135,20 @@ An edge refresh never does unbounded work: each invocation decides what changed 
 - aliases: budgeted edge, structural hash, volatile fields, edge wall clock, run_stuck, deferred not skipped, the refresh-anilist lesson, aniListHash, time budget
 - see: G44, P3, P4, P5, P20, G51
 
+### G59 · The mint rule: who creates the grid when AFL has nothing
+
+When AFL has nothing for an entry (no page, an empty page, a page held sparse), the episode grid is minted by exactly one ruled writer, never by a research apply script and never by the display: (A) the WIKI writer from the episode list its finder locates (the standing path — shy, 24 rows minted 2026-09-04); (B) the WIKI writer from a RULED page when the finder fails (lib/rulings/wiki-pages.ts — a namesake wins the search: orient's finder returned the 1987 TMNT seasons, refused by G55; a franchise-numbered list wins over the show's own table: code-black); (C) the MANUAL writer from a RULED grid (lib/rulings/minted-grids.ts, rows with title / air date / type and the source cited; the mint-grids healer asserts them) when no page exists (shounan-junai-gumi: a 5-episode OVA with a sparse-held AFL page and no wiki list). Every minted row carries minted_by (wiki | manual) and G57 governs its deletion; G55 identity and the alignment gates apply on every path; filterEpisodeRows gates the rows. A42's synthesized row remains the display's LAG fallback (an anchor ahead of AFL by an episode), not a source of rows: an entry with anchors and zero rows and no ruled minter is grid_unminted. The mint rule unblocks DISPLAY (rows exist to hang types, titles and dates on); it does not create anchors (those already landed as anchor_without_row).
+
+*Why:* orient (2 anchors) and cells-at-work-code-black (13 anchors, a reorder zone) sat with ZERO rows for two weeks — AFL's pages were empty and the wiki writer's finder could not locate their lists; the display synthesized rows from the anchors (A42) and every census read anchor_without_row. Cursor's naming fix (2026-09-04): G57 says who may DELETE a row; this is who may CREATE the grid — a new rule, not an amendment. Sean ruled the lane 2026-09-04.
+
+- ruled Sean 2026-09-04 (docs/STATE.md awaiting-Sean item (4) 2026-09-02 → §12.109)
+- layer **writer**
+- enforced: [lib/rulings/wiki-pages.ts#WIKI_PAGES](../scripts/ingest/lib/rulings/wiki-pages.ts) · [lib/rulings/minted-grids.ts#MINTED_GRIDS](../scripts/ingest/lib/rulings/minted-grids.ts) · [wiki-episodes-backfill.ts](../scripts/ingest/wiki-episodes-backfill.ts) · [mint-grids.ts](../scripts/ingest/mint-grids.ts) · [audit-ui-truth.ts#grid_unminted](../scripts/ingest/audit-ui-truth.ts)
+- audit: `grid_unminted`, `anchor_without_row`
+- witnesses: orient, cells-at-work-code-black, shounan-junai-gumi, shy
+- aliases: the mint rule, who mints the grid, grid minting, ruled wiki page, WIKI_PAGES, MINTED_GRIDS, manual grid, grid_unminted, AFL has nothing
+- see: G57, G55, A42, N13, P2, P9
+
 ## V — Volumes & boundaries
 
 ### V1 · Monotonic starts, or the row is not data
@@ -4200,6 +4215,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - AFL alias corruption → `G8`
 - AFL anime_canon mapping → `T27`
 - AFL class map → `T1`
+- AFL has nothing → `G59`
 - AFL is the type authority → `T4`
 - AFL label past table stop → `T4`
 - AFL owns episode types → `T5`
@@ -4641,6 +4657,8 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - graceful degradation → `P6`
 - graft flip → `T28`
 - greedy staging → `G51`
+- grid minting → `G59`
+- grid_unminted → `G59`
 - GTO 20/21 lesson → `A3`
 - GTO lesson → `A3`
 - Haikyu ep-85 lesson → `N14`
@@ -4758,6 +4776,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - manga-status cross-check → `G41`
 - MangaDex bridge → `I6`
 - MangaDex-bridge-only identity → `I6`
+- manual grid → `G59`
 - MANUAL_EXCLUDE → `I11`
 - mapping_mode loose → `A40`
 - mashle HELD → `P16`
@@ -4776,6 +4795,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - mid-chapter END → `C1`
 - mid-chapter straddle → `C1`
 - minted_by → `G57`
+- MINTED_GRIDS → `G59`
 - missed edge deploy → `P3`
 - mixed = canon AND non-canon → `T2`
 - mixed threshold → `T28`
@@ -4997,6 +5017,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - ruled splits stay split → `I20`
 - ruled structure → `I39`
 - ruled titles → `G53`
+- ruled wiki page → `G59`
 - RULED_ARCS → `A46`
 - RULED_CORRESPONDENCE → `A46`
 - RULED_LABELS → `N31`
@@ -5172,6 +5193,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - the four crons → `G47`
 - the governing rule → `P11`
 - the L-P queue → `A46`
+- the mint rule → `G59`
 - the Naruto bug → `I36`
 - the reading chain map → `I41`
 - the reading edition → `N35`
@@ -5259,9 +5281,11 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - weightless sliver → `T28`
 - what is this episode's job → `T28`
 - When They Cry case → `G44`
+- who mints the grid → `G59`
 - whole-series verifier → `P19`
 - wiki fill gates → `G45`
 - WIKI_NUMBERING_SHIFTS → `N21`
+- WIKI_PAGES → `G59`
 - Wikipedia episode-list locks → `G44`
 - Wikipedia fill is fill-only → `G45`
 - Wikipedia page discovery → `G43`
@@ -5279,6 +5303,6 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 
 ## Scoreboard
 
-- rules: 279 (live 264, planned 8, superseded 7)
+- rules: 280 (live 265, planned 8, superseded 7)
 - live data rules with no audit class (the automation backlog): 83
-- by layer: writer 147 · display 23 · both 26 · process 83
+- by layer: writer 148 · display 23 · both 26 · process 83
