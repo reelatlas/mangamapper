@@ -140,7 +140,14 @@ async function main() {
     const rowCount = new Map<string, number>();
     for (const e of await selectAll<any>('episodes', 'series_id')) rowCount.set(e.series_id, (rowCount.get(e.series_id) ?? 0) + 1);
     const anchored = new Set((await selectAll<any>('chapter_anchors', 'series_id')).map((a: any) => a.series_id));
-    for (const sid of anchored) if (!(rowCount.get(sid) ?? 0) && !WIKI_PAGES[sid] && !MINTED_GRIDS[sid]) classes.grid_unminted.push(`${sid}: anchors on an entry with ZERO episode rows and no ruled minter (G59) — rule a wiki page or a manual grid`);
+    for (const sid of anchored) {
+      if (rowCount.get(sid) ?? 0) continue;
+      // the OUTCOME (P5): zero rows is the fault whatever the ruling says; the ruling only decides the NEXT STEP
+      const next = MINTED_GRIDS[sid] ? 'a ruled grid exists — run mint-grids (standard) and read its refusals'
+        : WIKI_PAGES[sid] ? `a ruled page exists ('${WIKI_PAGES[sid].page}') — run wiki-episodes-backfill --ruled (standard) and read its gate refusals (G55 / alignment)`
+        : 'no ruled minter — rule a wiki page (lib/rulings/wiki-pages.ts) or a manual grid (lib/rulings/minted-grids.ts), or research the identity';
+      classes.grid_unminted.push(`${sid}: anchors on an entry with ZERO episode rows (G59) — NEXT: ${next}`);
+    }
   }
   // I41 (2026-09-04): chain_source / side_source are checked against the SOURCE CHAIN map — a chain_source naming a work off the
   // chain, or a side_source naming a work on it, is a mismatch (a sitting, never an auto-change); an unlabelled one cannot be checked

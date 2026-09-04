@@ -903,9 +903,10 @@
    G57 governs deletion; G55 + filterEpisodeRows gate every path; A42's
    synthesized row stays the display's LAG fallback only. Census class
    grid_unminted (anchors + zero rows + no ruled minter) = 0; anchor_without_row
-   11 → **7** (the residue is AFL lag: to-love-ru 39-44, cells-at-work 12/13/
-   20/21, one-piece-log 7-21, bokuben 26, three single mu/afg rows — G59 path B
-   candidates for the next sitting). The minting EXPOSED a gap the census could
+   11 → **7** (the residue is AFL LAG — to-love-ru 39-44, cells-at-work 12/13/
+   20/21, one-piece-log 7-21, bokuben 26, three single mu/afg rows — which is
+   A42's case and title_incomplete's event fill, NOT this rule; corrected
+   2026-09-04 per Cursor's read of the record). The minting EXPOSED a gap the census could
    not see before: **shy 1-23 unanchored** (anchor_gap_research 0 → 1, an
    honest work-list item). AND A STANDING FAULT READ AT LAST: episode_date_off_
    window had been 1 since at least 09-02 and never read (the grep covered only

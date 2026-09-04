@@ -50,7 +50,7 @@ const declaresWikiShift = (sid: string): boolean => {
 };
 
 async function main() {
-  const only = process.argv.slice(2);
+  const only = process.argv.slice(2).filter((a) => !a.startsWith('--'));
   const runId = await startRun('resolve');
   const counters = { fetched: 0, unchanged: 0, changed: 0, flagged: 0 };
   try {
@@ -79,13 +79,17 @@ async function main() {
       if (!e.air_date) s.missingDate++;
       stateBy.set(e.series_id, s);
     }
-    const targets = series.filter((s) => {
+    const allTargets = series.filter((s) => {
       if (only.length) return only.includes(s.id);
       if (!s.aired_episodes) return false;
       const st = stateBy.get(s.id);
       return !st || st.missingTitle > 0 || st.missingDate > 0 || st.rows < s.aired_episodes;
     });
-    console.log(`[wiki-episodes] ${targets.length} target series`);
+    // G59 path B on the STANDARD roster: `--ruled` runs ONLY the ruled-page keys (two fetches, every heal) — the full
+    // lag fill (rows < aired across the catalog) stays an EVENT run on title_incomplete, never a Wikipedia crawl per heal
+    const RULED_ONLY = process.argv.includes('--ruled');
+    const targets = RULED_ONLY ? allTargets.filter((s) => WIKI_PAGES[s.id]) : allTargets;
+    console.log(`[wiki-episodes] ${targets.length} target series${RULED_ONLY ? ' (ruled pages only, G59 path B)' : ''}`);
 
     for (const t of targets) {
       try {
