@@ -90,6 +90,49 @@ const CANDIDATES: Candidate[] = [
     ],
   },
   {
+    name: 'plain / light',
+    note:
+      'The UX-only theme. Derived by docs/labs/tools/plain-palette.mjs, which ' +
+      'inverts the usual objective: the contrast floor is a HARD constraint ' +
+      '(4.5:1 on white, AA) and separation is what the search maximises, ' +
+      'because in plain every colour is also used as label text. Nine ' +
+      'hand-picked five-hue sets were tried first and all failed — they ' +
+      'collapse on tritan canon/manga (blue vs teal) or protan canon/anime ' +
+      '(blue vs purple).',
+    colors: [
+      hslToRgb(213, 45, 24),
+      hslToRgb(37, 75, 36),
+      hslToRgb(345, 73, 30),
+      hslToRgb(271, 82, 48),
+      hslToRgb(174, 69, 30),
+    ],
+  },
+  {
+    name: 'plain / dark',
+    note: 'same hierarchy inverted; 4.5:1 floor against #16181C',
+    colors: [
+      hslToRgb(216, 85, 58),
+      hslToRgb(39, 90, 57),
+      hslToRgb(346, 75, 58),
+      hslToRgb(262, 47, 80),
+      hslToRgb(159, 60, 68),
+    ],
+  },
+  {
+    name: 'plain / contrast',
+    note:
+      'AAA on white — a 7:1 floor on all five. This is the accessibility ' +
+      'ceiling variant, not a style: it exists to prove the theme survives ' +
+      'the strictest legibility constraint without dropping to monochrome.',
+    colors: [
+      hslToRgb(228, 78, 16),
+      hslToRgb(46, 90, 23),
+      hslToRgb(345, 69, 22),
+      hslToRgb(271, 100, 36),
+      hslToRgb(177, 100, 20),
+    ],
+  },
+  {
     name: 'terminal / daylight',
     note: 're-derived 2026-09-02',
     colors: [

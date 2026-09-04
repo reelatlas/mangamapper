@@ -1,4 +1,4 @@
-# Merge manifest — branch `theming` (2026-09-02)
+# Merge manifest — branch `theming` (2026-09-02, amended 2026-09-04)
 
 ## What this branch was for
 
@@ -31,8 +31,9 @@ work back up later starts from evidence instead of from memory.
 Everything this branch adds, what it costs, and what breaks if you delete it.
 Written so the merge decision is a five-minute read rather than archaeology.
 
-**The whole branch is additive: 23 files, 6,841 insertions, 0 deletions.**
-One pre-existing file is touched, by one line.
+**The whole branch is additive: 25 files, ~7,600 insertions, 0 deletions.**
+Two pre-existing files are touched: `tsconfig.scripts.json` by one line, and
+`scripts/design/check-palette.ts` by three added candidate palettes.
 
 Verify before merging:
 
@@ -51,7 +52,7 @@ git diff main:tsconfig.scripts.json theming:tsconfig.scripts.json
 |---|---|---|---|
 | `src/lib/palette.ts` | 307 | typechecked + linted, **0 bytes shipped** | Pure colour math. HSL/hex, WCAG contrast, Viénot–Brettel–Mollon dichromat simulation, ΔE76 + CIEDE2000, `judgePalette()`. |
 | `src/lib/palette.test.ts` | 206 | **+25 tests** in `npm test` | Conversions, contrast, CVD, ΔE, scoring. One test **locks the control bar**. |
-| `scripts/design/check-palette.ts` | 163 | runs only when invoked | The gate. Reads the live `--type-*` tokens out of `src/index.css` (`P5`). |
+| `scripts/design/check-palette.ts` | 205 | runs only when invoked | The gate. Reads the live `--type-*` tokens out of `src/index.css` (`P5`). Now also carries plain's three derived palettes as candidates, so their scores are reproducible. |
 | `tsconfig.scripts.json` | +1 | — | Adds `src/lib/palette.ts` to the scripts project's include list. |
 
 **Cost if kept:** 25 tests (~10ms), one line of config, nothing in the bundle.
@@ -75,8 +76,9 @@ than in the lab.
 
 | file | lines | what it is |
 |---|---|---|
-| `docs/labs/theme-lab.html` | 1,600 | The current lab. All four themes over 343 series. |
-| `docs/labs/src/*.js` | 1,040 | The theme modules, inlined into the HTML by hand. |
+| `docs/labs/theme-lab.html` | 2,050 | The current lab. All five themes over 343 series; `plain` is the default. |
+| `docs/labs/src/*.js` | 1,350 | The theme modules, inlined into the HTML by hand — including `plain-block.js`, the UX-only control theme. |
+| `docs/labs/tools/plain-palette.mjs` | 120 | Derives plain's three palettes under a hard contrast floor. **Keep** — it is the only record of how they were found, and it re-runs. |
 | `docs/labs/README.md` | 90 | Architecture, rulings, artifact URLs. |
 | `docs/labs/MERGE.md` | — | This file. |
 
@@ -165,6 +167,22 @@ one or two chapters ahead of its adaptation is the common case. Worth checking
 against real data; the fix would be a minimum painted width for the tail.
 
 ---
+
+**6. A UX-only control changes what the other themes have to justify.**
+`plain` (2026-09-04) is a sortable table, three honest answer states, an
+always-on legend, in-place expansion and no motion. Two things came out of
+building it that are not about plain:
+
+- **The type palette is a text palette too.** Once colours label rather than
+  only fill, the contrast floor becomes a hard constraint and separation
+  becomes the objective under it. Nine hand-picked sets failed; the search
+  under that constraint cleared the control bar three times over (149 / 147 /
+  120%). *Any* future light theme inherits this — hand-picking five hues that
+  are both legible on white and CVD-separable does not work.
+- **Zone should be stated, not inferred.** Plain writes `data-zone` /
+  `data-type` on every strip segment. That makes the zone-owns-texture rule
+  mechanically checkable instead of a CSS-string grep — which is exactly the
+  `P29`/`P30` direction of travel for the rule that still has no id.
 
 ## Not done, and deliberately so
 
