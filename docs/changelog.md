@@ -1102,6 +1102,37 @@
    redeployed. Cycle: step 6 standard (no enforcement site moved) → step 1:
    close batch 21 (P34 extraction) and plan the next block — the C5 curation
    queue (17 + 49), the boruto chain follow-up, the standing sittings.
+114. ✅ **P38 — RETIRED WORDING IS A LEDGER FIELD THE GATE GREPS; the note-vs-row
+   class; the amendment protocol (2026-09-04; Sean ruled, Cursor's three
+   tightenings).** Sean's question: when we add-rule / consolidate, do we
+   check for conflicting or stale rules and prune them? Honest split: the
+   scripted checks (ledger ids / aliases / citations, one-hop, system census,
+   healers asserting the maps, outcome classes, P23 / P24 in deep) hold; PROSE
+   contradictions between statements did not — this week's leftover 'relocate
+   the reader' sentence (A44 and T28), the sailor-moon 167/168 notes, and the
+   C5 same-record clash were all caught by reading. Built, as ruled: (1)
+   `retiredPhrases` on the Rule type — the EXACT replaced strings, listed at
+   amendment time, never in aliases (aliases keep old citations resolving);
+   ledger-check's `checkRetiredPhrases` reads rule titles + statements from
+   the loaded records and greps the live text scopes (.claude skills + agents,
+   CLAUDE.md, runbook / architecture / STATE / franchise-rulings,
+   scripts/ingest, scripts/restructure, src/lib) — red while one survives;
+   excluded on purpose: changelog, research outputs + pinned protocols,
+   history/, generated docs, the stale .claude/worktrees checkout. A44 / T28 /
+   C5 carry their retired strings (the A44 statement reworded so it no longer
+   quotes its own retired clause); first run found the phrase alive only in the
+   worktree copy. (2) `annotation_contradicts_row` (audit-ui-truth): a standing
+   note asserting no-anchor language from a SMALL banned set ('no anchor by
+   design', 'this row takes no anchor', 'position-less by ruling',
+   'anchor_hostile', 'never anchors') on a row that carries an anchor — 0
+   standing; 'takes no anchor' alone matched notes about the NEXT row (fotns
+   108, shippuden 179) and stays out: an outcome class, not note parsing. (3)
+   Protocol, not a second grep: add-rule step 7 says fill retiredPhrases before
+   the commit; consolidate deep says ledger-check is the gate and P23's
+   read-list for an amended rule is the rulings maps that cite its id. Meaning-
+   equivalence between two statements stays judgment by design. Record P38;
+   rules.md renders 'retired wording'; one-hop case 42. Edges redeployed
+   (ledger types in lib); 181 tests; system census OK.
 109. ✅ **G59 THE MINT RULE (an /add-rule end to end, 2026-09-04; Sean ruled the
    lane, Cursor's naming fix: who may CREATE the grid, not an amendment of G57's
    who may DELETE).** When AFL has nothing for an entry, the grid is minted by

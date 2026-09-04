@@ -104,7 +104,7 @@ async function main() {
     anchor_volume_mismatch: [], row_minted_by_missing: [],
     anchor_nonmonotonic: [], anchor_start_offtrend: [], start_sliver_mismatch: [], start_without_span: [], end_sliver_mismatch: [], anchor_beyond_chapter_space: [], anchor_beyond_display_total: [], anchor_fractional_chapter: [], anchor_on_noncanon_row: [], continue_skip_unnoted: [], continue_provenance_missing: [], boundaries_degenerate: [], ruling_violation: [], repair_on_derivation_tier: [],
     mu_pin_unverified: [], mu_pin_flag_redundant: [], anchor_without_row: [], annotation_without_row: [],
-    rearranged_zone_unanchored: [], rearranged_zone_acknowledged: [], backjump_continue_unruled: [], backjump_continue_unnoted: [],
+    rearranged_zone_unanchored: [], rearranged_zone_acknowledged: [], backjump_continue_unruled: [], backjump_continue_unnoted: [], annotation_contradicts_row: [],
     title_incomplete: [], airdate_incomplete: [], airdate_regression: [], airdate_withheld: [], episode_date_off_window: [], asterisk_unreviewed: [],
     fractional_unmodeled: [], annotation_invalid: [], annotation_retired_standing: [], afl_anime_canon_unruled: [], format_missing: [], episode_without_component: [], watch_order_kind_missing: [],
     permanence_candidate: [], permanence_violation: [], mixed_fragment_only: [], run_stuck: [], unverified_share: [], sliver_only_anchor: [], chain_source_unmapped: [], side_source_on_chain: [], source_work_unlabelled: [], grid_unminted: [], type_source_disagreement: [], type_default_unclassified: [], side_source_unadopted: [],
@@ -723,6 +723,21 @@ async function main() {
             `${sid}: ep ${a.episode}→ch${a.chapter} (${a.source}) exits a jumped-back block behind the frontier ${envelope}${next ? ` (ep ${next.episode} → ${next.chapter})` : ' (last anchored row)'} with NO continue — END + 1 would re-read adapted chapters; the continue is the coverage / parity value (C5), curated via writeCuratedContinue`,
           );
         }
+      }
+    }
+    // P38 — NOTE vs ROW (Sean + Cursor 2026-09-04): a standing note that asserts
+    // no-anchor language on a row that carries an anchor is a stale ruling the
+    // T26 healer re-asserts every pass (sailor-moon 167/168 said 'no anchor by
+    // design' for eight days after the rows anchored). A SMALL banned set,
+    // never note parsing — 'takes no anchor' alone matched notes about the
+    // NEXT row and stays out.
+    {
+      const anchoredRows = new Set(anchors.map((a: any) => `${a.series_id}#${a.episode}`));
+      const BANNED = [/no anchor by design/i, /this row takes no anchor/i, /position-less by ruling/i, /\banchor_hostile\b/i, /never anchors/i];
+      for (const a of annos as any[]) {
+        if (!anchoredRows.has(`${a.series_id}#${a.episode}`)) continue;
+        const hit = BANNED.find((r) => r.test(String(a.note ?? '')));
+        if (hit) classes.annotation_contradicts_row.push(`${a.series_id}: ep ${a.episode} ${a.kind} note says ${String(hit).replace(/^\/|\/i$/g, '')} but the row carries an anchor — a stale standing note (P38; rewrite the ruling entry or the anchor, never leave both)`);
       }
     }
     const spaceOf = new Map(series.map((s: any) => [s.id, Math.max(s.total_chapters ?? 0, s.latest_known_chapters ?? 0)]));

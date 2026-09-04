@@ -574,9 +574,10 @@ export const RULES: Rule[] = [
           { path: 'scripts/ingest/lib/rulings/source-chains.ts', symbol: 'isChainWork' },
       { path: 'scripts/ingest/audit-ui-truth.ts', symbol: 'chain_source_unmapped' },
       { path: 'scripts/ingest/audit-ui-truth.ts', symbol: 'side_source_on_chain' },
+      { path: 'scripts/ingest/audit-ui-truth.ts', symbol: 'annotation_contradicts_row' },
     ],
     layer: 'writer',
-    auditClass: ['annotation_invalid', 'asterisk_unreviewed', 'chain_source_unmapped', 'side_source_on_chain', 'source_work_unlabelled'],
+    auditClass: ['annotation_invalid', 'asterisk_unreviewed', 'chain_source_unmapped', 'side_source_on_chain', 'source_work_unlabelled', 'annotation_contradicts_row'],
     witnesses: ['black-clover', 'boruto-naruto-next-generations', 'naruto-shippuden', 'x', 'rosario-vampire', 'trigun'],
     status: 'live',
     see: ['T25', 'R10', 'A43', 'A1', 'T13'],
@@ -609,6 +610,7 @@ export const RULES: Rule[] = [
   {
     id: 'T28',
     aliases: ['mixed_fragment_only', 'T28 discrepancy queue', 'materiality bar for mixed', 'episode job test', "what is this episode's job", 'fragment is an annotation', 'slivers are not mixed', 'Claymore-26 shape', 'mixed threshold', 'canon sliver', 'sole adaptation', 'load-bearing sliver', 'graft flip', 'the FotNS-57 test', 'sole-adaptation exception', 'the sliver clause', 'significance not size', 'weightless sliver', 'the unverified share', 'unverified_share'],
+    retiredPhrases: ['withheld from the POSITION when anchoring it would relocate the reader', 'Relocation is a separate axis'],
     family: 'T',
     title: "mixed needs a substantial share: the episode's job decides",
     statement:

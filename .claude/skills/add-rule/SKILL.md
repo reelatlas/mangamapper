@@ -65,6 +65,11 @@ explanation is an unshipped bug. `ruling_violation` MUST be 0 (`P18`).
 
 ## 7. The ledger record — last, with everything filled in
 
+**Amending a record?** Before the commit, list the EXACT replaced clause(s) in
+the record's `retiredPhrases` (`P38`) — ledger-check greps every live scope for
+them and is red while one survives. Not aliases: aliases keep old citations
+resolving. A same-record clash is caught only if you list the clause you replaced.
+
 Add the record to `scripts/ingest/lib/ledger/<family>.ts`: id (next in the
 family), aliases (every name it has been called), statement, why, ruledBy /
 ruledOn, `enforcement` (the gate path#symbol, the healer, the audit file),

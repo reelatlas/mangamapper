@@ -117,6 +117,11 @@ series (stale-zone healing).
 
 Re-evaluate existing data against CURRENT rules, ahead of drift.
 
+- **After an amendment** (`P38`): the replaced clause is in `retiredPhrases`
+  before the commit (ledger-check is the gate — no second grep here), and
+  `P23`'s read-list for that rule is the RULINGS MAPS that cite its id (their
+  reasons re-read against the amended statement), not a free-form sweep;
+  `annotation_contradicts_row` must be 0.
 - **Notes are precedence, not blindfolds** (`P23`): rulings, suppressions,
   overrides and "don't touch" notes are scanned and re-checked — no longer
   valid → bring to Sean with evidence; clear-cut under a live rule → apply,

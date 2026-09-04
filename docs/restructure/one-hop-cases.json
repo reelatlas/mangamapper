@@ -494,6 +494,18 @@
         "backjump_continue_unnoted"
       ],
       "source": "2026-09-04 (Sean + Cursor): the continue is watch-along — is the stretch between this END and the frontier already covered? yes → the frontier; no → END + 1 (or the next known START, C2) with the never-adapted range NAMED (kind unseen); never the hole itself unless the next episode starts there; an unfinished END continues in that chapter (C1). The C3 twin (backjump_continue_unnoted) checks the note says already / never."
+    },
+    {
+      "ask": "a rule clause was just retired — where do the old words go so nothing keeps citing them?",
+      "expected": [
+        "P38"
+      ],
+      "terms": [
+        "retiredPhrases",
+        "ledger-check",
+        "never in aliases"
+      ],
+      "source": "2026-09-04 (Sean + Cursor): exact replaced strings into the record's retiredPhrases at amendment time; ledger-check greps live scopes (statements, comments, skills, agents, runbook/architecture/STATE) and is red while one survives; changelog / research outputs / history / generated docs keep the old words; aliases are for resolving old citations, not this; meaning-equivalence stays judgment"
     }
   ]
 }

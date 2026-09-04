@@ -98,8 +98,41 @@ function checkCitations(ids: Map<string, Rule>) {
   for (const [id, fs] of [...seen].sort()) warns.push(`unresolved citation ${id} in ${[...fs].slice(0, 4).join(', ')}${fs.size > 4 ? ` (+${fs.size - 4})` : ''}`);
 }
 
+// P38 — retired wording must not survive in any LIVE scope. Rule titles and
+// statements are read from the loaded records (never the raw ledger files,
+// which carry the phrase inside the retiredPhrases literal); everything else
+// is grepped as text. Excluded on purpose: docs/changelog.md, generated docs,
+// scripts/ingest/research (verdicts + pinned protocols), scripts/ingest/history.
+function checkRetiredPhrases() {
+  const phrases: { id: string; phrase: string }[] = [];
+  for (const r of ALL_RULES) for (const p of r.retiredPhrases ?? []) phrases.push({ id: r.id, phrase: p });
+  if (!phrases.length) return;
+  const norm = (s: string) => s.toLowerCase().replace(/\s+/g, ' ');
+  for (const r of ALL_RULES) {
+    const live = norm(`${r.title} ${r.statement}`);
+    for (const { id, phrase } of phrases) if (live.includes(norm(phrase))) errors.push(`retired phrase (${id}) "${phrase}" still live in rule ${r.id}'s title/statement`);
+  }
+  const roots = ['.claude', 'CLAUDE.md', 'docs/architecture.md', 'docs/runbook.md', 'docs/franchise-rulings.md', 'docs/STATE.md', 'scripts/ingest', 'scripts/restructure', 'src/lib'];
+  const files: string[] = [];
+  const walk = (p: string) => {
+    const full = join(ROOT, p);
+    if (!existsSync(full)) return;
+    if (statSync(full).isDirectory()) { for (const f of readdirSync(full)) if (!f.startsWith('.') || p === '.claude') walk(join(p, f)); }
+    else if (/\.(md|ts)$/.test(p) && !p.includes('lib/ledger/') && !p.includes('scripts/ingest/research/') && !p.includes('scripts/ingest/history/') && !p.includes('.claude/worktrees/') && !p.endsWith('ledger-check.ts')) files.push(p);
+  };
+  roots.forEach(walk);
+  for (const f of files) {
+    const lines = readFileSync(join(ROOT, f), 'utf8').split('\n');
+    lines.forEach((line, i) => {
+      const l = norm(line);
+      for (const { id, phrase } of phrases) if (l.includes(norm(phrase))) errors.push(`retired phrase (${id}) "${phrase}" still live in ${f}:${i + 1}`);
+    });
+  }
+}
+
 function main() {
   const { ids } = checkRules();
+  checkRetiredPhrases();
   if (process.argv.includes('--citations')) checkCitations(ids);
   const perFamily: Record<string, { n: number; noAudit: number; planned: number; superseded: number }> = {};
   for (const r of ALL_RULES) {

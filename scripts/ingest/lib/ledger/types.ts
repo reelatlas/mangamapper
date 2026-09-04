@@ -54,6 +54,11 @@ export type Rule = {
   id: string;
   /** every other name this rule has been cited by (D1, D4, 'sliver rule', 'GTO lesson'). ledger-check makes them resolve. */
   aliases?: string[];
+  /** P38 — exact strings of clauses this record RETIRED or replaced (filled at amendment time, before commit). ledger-check
+   *  greps every LIVE scope for them — rule titles/statements, lib + script comments, skills, agent defs, runbook /
+   *  architecture / STATE — and is red while one survives. Changelog, research outputs, history/ and generated docs keep
+   *  the old words on purpose. Aliases are NOT this: they must keep resolving old citations. */
+  retiredPhrases?: string[];
   family: Family;
   /** ≤ 60 chars — the family-strip line */
   title: string;

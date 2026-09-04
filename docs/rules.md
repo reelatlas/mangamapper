@@ -279,7 +279,7 @@
 - `R30` Verdicts cite the rule ids they applied (planned) *(planned)* — aka `rules_applied`, `rules_applied[]`, `verdict cites rule ids`
 - `R31` The PROTOCOL is pinned for an in-flight batch (planned) *(planned)* — aka `PROTOCOL pin`, `protocol pinned`, `pinned protocol`
 
-**P — Process & pipeline** (33)
+**P — Process & pipeline** (34)
 - `P1` The data cycle, seven steps run in order — aka `the data cycle`, `data cycle`, `the cycle`
 - `P2` Rules live in shared lib code, never inline at a call site — aka `invariant 1`, `hard invariant 1`, `rules live in lib`, `every-writer rule`
 - `P3` Any lib/ change → rebuild and deploy all four edge functions — aka `invariant 2`, `hard invariant 2`, `lib → four edges`, `lib → edges`, `missed edge deploy`
@@ -313,6 +313,7 @@
 - `P34` Historical apply scripts are kept as records, non-runnable — aka `history/`, `historical apply scripts non-runnable`, `history non-runnable`, `T2.5`, `D-5`
 - `P36` Cross-model check the frames, not just the data — aka `cross-model check the frames`, `frame check after T4.0`, `principle 8`
 - `P37` Episode-level display reads only the hydrated series — aka `metadata contract`, `card-hydration rule`, `hydration contract`, `hydrated series only`
+- `P38` Retired wording is a ledger field the gate greps — aka `retired phrases`, `retiredPhrases`, `retired wording`, `retired-phrase register`, `stale clause check`, `note-vs-row check`
 
 ## A — Anchors & position
 
@@ -892,16 +893,17 @@ Non-linear facts about an episode (divergence, partial, graft, rearranged, side_
 
 ### A44 · Position-less rows: a ruled row never takes an anchor
 
-A canon or mixed row whose source content cannot be a reading position — a cover-page side story running ahead of the main line, a side story with no chapter number, another chapter space, re-shown pages, a restaging whose END would fabricate coverage, a first-time sliver inside an original plot, a gag special — is ruled POSITION-LESS in ANCHOR_SUPPRESSED (reason + cite) and every anchor writer refuses it: the AFG chart (syncAnchors), the AFG continua (applyContinua) and the MU frontier (applyMuFrontier). The A1 type gate cannot hold these rows because they are legitimately canon/mixed. The healer removes any standing anchor on a suppressed row (the ruling entry IS the A6 triage); a stored anchor on one is a ruling_violation. POSITION FOLLOWS SIGNIFICANCE (Sean 2026-09-04, T28's sliver clause): a row whose only source material is a weightless sliver has no position of its own — no anchor, the display carries the previous position forward, the sliver is annotated with the episode that adapts the chapter properly. Position (this rule) and weight (T28) are separate axes: a weightless sliver never anchors wherever it sits; a significant beat anchors unless it has NO position at all (the bases above) — distance from the frontier is never the basis. BEHIND IS NOT A BASIS (Sean 2026-09-03, shippuden 112): a canon/mixed row whose source share is a first-time, significant adaptation anchors at ITS OWN END wherever the running frontier stands (A8 — pages, not numbers; the order may skip around as long as every anchor is the truth about its episode) — the `rearranged` annotation names the reorder, the unanchored canon/mixed rows inside the crossing render honest holes until each carries its own exact anchor (A18, `verify:hole` is their work-list), and the row's continue follows C5's covered-or-not test (the frontier when the stretch between END and frontier is already adapted; otherwise END + 1 or the next known START with the never-adapted range named — END + 1 is not a lock, C1 / C2 outrank it). The 2026-08-26 clause 'acts that sit behind an earlier anchor' is retired: the one entry that rested on it (sailor-moon 167-168) was already superseded on 2026-08-27; the audit class `backjump_continue_unruled` lists back-jump rows whose continue is missing or defaulted.
+A canon or mixed row whose source content cannot be a reading position — a cover-page side story running ahead of the main line, a side story with no chapter number, another chapter space, re-shown pages, a restaging whose END would fabricate coverage, a first-time sliver inside an original plot, a gag special — is ruled POSITION-LESS in ANCHOR_SUPPRESSED (reason + cite) and every anchor writer refuses it: the AFG chart (syncAnchors), the AFG continua (applyContinua) and the MU frontier (applyMuFrontier). The A1 type gate cannot hold these rows because they are legitimately canon/mixed. The healer removes any standing anchor on a suppressed row (the ruling entry IS the A6 triage); a stored anchor on one is a ruling_violation. POSITION FOLLOWS SIGNIFICANCE (Sean 2026-09-04, T28's sliver clause): a row whose only source material is a weightless sliver has no position of its own — no anchor, the display carries the previous position forward, the sliver is annotated with the episode that adapts the chapter properly. Position (this rule) and weight (T28) are separate axes: a weightless sliver never anchors wherever it sits; a significant beat anchors unless it has NO position at all (the bases above) — distance from the frontier is never the basis. BEHIND IS NOT A BASIS (Sean 2026-09-03, shippuden 112): a canon/mixed row whose source share is a first-time, significant adaptation anchors at ITS OWN END wherever the running frontier stands (A8 — pages, not numbers; the order may skip around as long as every anchor is the truth about its episode) — the `rearranged` annotation names the reorder, the unanchored canon/mixed rows inside the crossing render honest holes until each carries its own exact anchor (A18, `verify:hole` is their work-list), and the row's continue follows C5's covered-or-not test (the frontier when the stretch between END and frontier is already adapted; otherwise END + 1 or the next known START with the never-adapted range named — END + 1 is not a lock, C1 / C2 outrank it). The 2026-08-26 'behind' clause is retired (retiredPhrases): the one entry that rested on it (sailor-moon 167-168) was already superseded on 2026-08-27; the audit class `backjump_continue_unruled` lists back-jump rows whose continue is missing or defaulted.
 
 *Why:* Batch 18 wave 3 (2026-08-26): retyping one-piece 453-456 (Oda's cover-page serial) from filler to mixed would have silently re-created the ep-455 junk anchor Sean deleted under A6 in batch 17 — that deletion lived only in a history apply script, and AFG's chart prints the cover numbers (545-551) on all four rows; 453/454/456 stayed anchorless by an LIS tie-break on chart values, not by rule. Same exposure on gto 27 (a side story with no Lesson number), sailor-moon 167-168 (Acts behind ep 166), railgun 41.
 
 - ruled Sean 2026-08-26 (scripts/ingest/research/batch18/verify/one-piece.md (verifier finding 1))
 - layer **writer**
 - enforced: [lib/rulings/anchor-suppressed.ts#ANCHOR_SUPPRESSED](../scripts/ingest/lib/rulings/anchor-suppressed.ts) · [lib/anchors.ts#syncAnchors](../scripts/ingest/lib/anchors.ts) · [lib/anchors.ts#applyContinua](../scripts/ingest/lib/anchors.ts) · [lib/mu-frontier.ts#applyMuFrontier](../scripts/ingest/lib/mu-frontier.ts) · [assert-overrides.ts#assertAnchorSuppression](../scripts/ingest/assert-overrides.ts) · [audit-ui-truth.ts#classes.backjump_continue_unruled](../scripts/ingest/audit-ui-truth.ts)
-- audit: `ruling_violation`, `backjump_continue_unruled`, `backjump_continue_unnoted`
+- audit: `ruling_violation`, `backjump_continue_unruled`, `backjump_continue_unnoted`, `annotation_contradicts_row`
 - witnesses: one-piece, gto-great-teacher-onizuka, sailor-moon, a-certain-scientific-railgun, naruto-shippuden
 - aliases: anchor suppression, ANCHOR_SUPPRESSED, anchorless rows, position-less rows, cover-page serial rule, suppressed anchor
+- retired wording (P38): “acts that sit behind an earlier anchor” · “unless anchoring it would relocate the reader” · “never its END + 1”
 - see: A1, A6, A8, A18, C5, T28, T26, G26, G32
 
 ### A45 · Retired annotations: a refuted fact is retired by ruling
@@ -1015,6 +1017,7 @@ The continue point is governed by COVERAGE and KNOWN FUTURE anime coverage, neve
 - audit: `continue_skip_unnoted`, `anchor_beyond_display_total`, `backjump_continue_unruled`, `backjump_continue_unnoted`
 - witnesses: welcome-to-demon-school-iruma-kun, zatch-bell, ranma-1-2, shugo-chara, hajime-no-ippo-the-fighting, naruto-shippuden
 - aliases: continue-read regimes, regime choice, continue point (b17), continue point, C1 C2 C3, continue-read = a regime choice, covered-or-not test, back-jump continue
+- retired wording (P38): “first unadapted chapter after the contiguous run” · “never END + 1, and never a re-read”
 - see: C1, C2, C3, C6, A4, A31, A43
 
 ### C6 · continue_kind vocabulary: parity \| unseen \| post_series
@@ -1427,8 +1430,8 @@ An author / studio / community override of the source is an ANNOTATION, never a 
 
 - ruled Sean 2026-08-26 (docs/restructure/T4-GLOSSARY.md §1, §3 (D-10); restructure T4.2)
 - layer **writer**
-- enforced: [lib/annotations.ts#upsertAnnotation](../scripts/ingest/lib/annotations.ts) · [lib/annotations.ts#annotationProblem](../scripts/ingest/lib/annotations.ts) · [supabase/migrations/20260826100000_annotation_kinds.sql](../supabase/migrations/20260826100000_annotation_kinds.sql) · [audit-ui-truth.ts#annotation_invalid](../scripts/ingest/audit-ui-truth.ts) · [lib/rulings/source-chains.ts#isChainWork](../scripts/ingest/lib/rulings/source-chains.ts) · [audit-ui-truth.ts#chain_source_unmapped](../scripts/ingest/audit-ui-truth.ts) · [audit-ui-truth.ts#side_source_on_chain](../scripts/ingest/audit-ui-truth.ts)
-- audit: `annotation_invalid`, `asterisk_unreviewed`, `chain_source_unmapped`, `side_source_on_chain`, `source_work_unlabelled`
+- enforced: [lib/annotations.ts#upsertAnnotation](../scripts/ingest/lib/annotations.ts) · [lib/annotations.ts#annotationProblem](../scripts/ingest/lib/annotations.ts) · [supabase/migrations/20260826100000_annotation_kinds.sql](../supabase/migrations/20260826100000_annotation_kinds.sql) · [audit-ui-truth.ts#annotation_invalid](../scripts/ingest/audit-ui-truth.ts) · [lib/rulings/source-chains.ts#isChainWork](../scripts/ingest/lib/rulings/source-chains.ts) · [audit-ui-truth.ts#chain_source_unmapped](../scripts/ingest/audit-ui-truth.ts) · [audit-ui-truth.ts#side_source_on_chain](../scripts/ingest/audit-ui-truth.ts) · [audit-ui-truth.ts#annotation_contradicts_row](../scripts/ingest/audit-ui-truth.ts)
+- audit: `annotation_invalid`, `asterisk_unreviewed`, `chain_source_unmapped`, `side_source_on_chain`, `source_work_unlabelled`, `annotation_contradicts_row`
 - witnesses: black-clover, boruto-naruto-next-generations, naruto-shippuden, x, rosario-vampire, trigun
 - aliases: overrides are annotations, adopted annotation, adopted, retconned, side_source, adopted basis, community canon is not a type, no fourth type, D-10 annotations, annotation_invalid, chain_source, reading chain, the chain, chain_source_unmapped, side_source_on_chain, source_work_unlabelled
 - see: T25, R10, A43, A1, T13
@@ -1459,6 +1462,7 @@ An episode is `mixed` only when a SUBSTANTIAL share of its own plot is the sourc
 - audit: `mixed_fragment_only`, `unverified_share`, `sliver_only_anchor`
 - witnesses: claymore, a-certain-scientific-railgun, soul-eater, dragon-ball-super, fullmetal-alchemist, fist-of-the-north-star, erased, ranking-of-kings-the-treasure-chest-of-courage, fist-of-the-north-star, bleach, naruto-shippuden, reborn, d-gray-man
 - aliases: mixed_fragment_only, T28 discrepancy queue, materiality bar for mixed, episode job test, what is this episode's job, fragment is an annotation, slivers are not mixed, Claymore-26 shape, mixed threshold, canon sliver, sole adaptation, load-bearing sliver, graft flip, the FotNS-57 test, sole-adaptation exception, the sliver clause, significance not size, weightless sliver, the unverified share, unverified_share
+- retired wording (P38): “withheld from the POSITION when anchoring it would relocate the reader” · “Relocation is a separate axis”
 - see: T7, T8, A10, T26, T27, A43, A1, A4
 
 ### T29 · The format axis: derived, stored, never a type
@@ -4151,6 +4155,20 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - aliases: metadata contract, card-hydration rule, hydration contract, hydrated series only
 - see: P6
 
+### P38 · Retired wording is a ledger field the gate greps
+
+When a clause of a rule is amended or retired, the EXACT replaced strings go in that record's `retiredPhrases` at amendment time, before the commit — never in aliases (aliases must keep resolving old citations). ledger-check is red while any of them survives in a LIVE scope: rule titles and statements, lib and script comments, skills, agent definitions, runbook / architecture / STATE. The changelog, research outputs and pinned protocols, history/ and the generated docs keep the old words on purpose and are not scanned. Two statements that MEAN the same thing are judgment, not a detector: a same-record clash (the C5 sentence of 2026-09-03) is caught only if the replaced clause is listed when the amendment is made — that is the protocol. The companion outcome class `annotation_contradicts_row` lists a standing note that asserts no-anchor language (a small banned set, not note parsing) on a row that carries an anchor.
+
+*Why:* 2026-09-04: the A44 amendment of 09-03 retired 'acts that sit behind an earlier anchor' but left the same clause standing in other words in A44 ('unless anchoring it would relocate the reader') and in T28 — Cursor found it by reading; the sailor-moon 167/168 standing notes said 'no anchor by design' on anchored rows for eight days while the T26 healer re-asserted them every pass; and the C5 sentence added on 09-03 contradicted C5's own unseen regime. The split is script vs prose: what a grep can hold, a grep holds; the rest is the amendment protocol.
+
+- ruled Sean 2026-09-04 (Sean + Cursor, the three tightenings (2026-09-04); §12.114)
+- layer **process**
+- enforced: [scripts/restructure/ledger-check.ts#checkRetiredPhrases](../scripts/restructure/ledger-check.ts) · [lib/ledger/types.ts#Rule](../scripts/ingest/lib/ledger/types.ts) · [audit-ui-truth.ts#annotation_contradicts_row](../scripts/ingest/audit-ui-truth.ts) · [.claude/skills/add-rule/SKILL.md](../.claude/skills/add-rule/SKILL.md) · [.claude/skills/consolidate/SKILL.md](../.claude/skills/consolidate/SKILL.md)
+- audit: `annotation_contradicts_row`
+- witnesses: sailor-moon, naruto-shippuden
+- aliases: retired phrases, retiredPhrases, retired wording, retired-phrase register, stale clause check, note-vs-row check
+- see: P21, P23, P29, P31, A44, T28, C5
+
 ## Alias index
 
 - * Filler marker → `T16`
@@ -4869,6 +4887,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - no silent TODO → `P28`
 - non-main entries carry the why → `N33`
 - non-monotonic display ruling → `A19`
+- note-vs-row check → `P38`
 - notes are precedence, not blindfolds → `P23`
 - nothing reaches Sean unresearched → `R1`
 - nothing suspicious ever auto-applies → `G1`
@@ -5005,7 +5024,11 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - retconned → `T26`
 - retire an annotation → `A45`
 - retired annotations → `A45`
+- retired phrases → `P38`
+- retired wording → `P38`
 - RETIRED_ANNOTATIONS → `A45`
+- retired-phrase register → `P38`
+- retiredPhrases → `P38`
 - retype stays research-tier → `T6`
 - REVIEWED_NUMBERED_SPECIALS → `N7`
 - routine deep skips locked → `P25`
@@ -5137,6 +5160,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - staging freshness → `G28`
 - staging hashes make re-runs no-ops → `G9`
 - staging is greedy → `G51`
+- stale clause check → `P38`
 - stale cleanup → `P24`
 - stale frontier → `A27`
 - stale verdict HELD → `P16`
@@ -5311,6 +5335,6 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 
 ## Scoreboard
 
-- rules: 280 (live 265, planned 8, superseded 7)
+- rules: 281 (live 266, planned 8, superseded 7)
 - live data rules with no audit class (the automation backlog): 83
-- by layer: writer 148 · display 23 · both 26 · process 83
+- by layer: writer 148 · display 23 · both 26 · process 84

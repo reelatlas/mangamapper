@@ -673,4 +673,29 @@ export const RULES: Rule[] = [
     status: 'live',
     see: ['P6'],
   },
+  {
+    id: 'P38',
+    aliases: ['retired phrases', 'retiredPhrases', 'retired wording', 'retired-phrase register', 'stale clause check', 'note-vs-row check'],
+    family: 'P',
+    title: 'Retired wording is a ledger field the gate greps',
+    statement:
+      "When a clause of a rule is amended or retired, the EXACT replaced strings go in that record's `retiredPhrases` at amendment time, before the commit — never in aliases (aliases must keep resolving old citations). ledger-check is red while any of them survives in a LIVE scope: rule titles and statements, lib and script comments, skills, agent definitions, runbook / architecture / STATE. The changelog, research outputs and pinned protocols, history/ and the generated docs keep the old words on purpose and are not scanned. Two statements that MEAN the same thing are judgment, not a detector: a same-record clash (the C5 sentence of 2026-09-03) is caught only if the replaced clause is listed when the amendment is made — that is the protocol. The companion outcome class `annotation_contradicts_row` lists a standing note that asserts no-anchor language (a small banned set, not note parsing) on a row that carries an anchor.",
+    why:
+      "2026-09-04: the A44 amendment of 09-03 retired 'acts that sit behind an earlier anchor' but left the same clause standing in other words in A44 ('unless anchoring it would relocate the reader') and in T28 — Cursor found it by reading; the sailor-moon 167/168 standing notes said 'no anchor by design' on anchored rows for eight days while the T26 healer re-asserted them every pass; and the C5 sentence added on 09-03 contradicted C5's own unseen regime. The split is script vs prose: what a grep can hold, a grep holds; the rest is the amendment protocol.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-04',
+    origin: 'Sean + Cursor, the three tightenings (2026-09-04); §12.114',
+    enforcement: [
+      { path: 'scripts/restructure/ledger-check.ts', symbol: 'checkRetiredPhrases' },
+      { path: 'scripts/ingest/lib/ledger/types.ts', symbol: 'Rule' },
+      { path: 'scripts/ingest/audit-ui-truth.ts', symbol: 'annotation_contradicts_row' },
+      { path: '.claude/skills/add-rule/SKILL.md' },
+      { path: '.claude/skills/consolidate/SKILL.md' },
+    ],
+    layer: 'process',
+    auditClass: ['annotation_contradicts_row'],
+    witnesses: ['sailor-moon', 'naruto-shippuden'],
+    status: 'live',
+    see: ['P21', 'P23', 'P29', 'P31', 'A44', 'T28', 'C5'],
+  },
 ];

@@ -48,6 +48,7 @@ function main() {
       meta.push(r.auditClass?.length ? `audit: ${r.auditClass.map((c) => `\`${c}\``).join(', ')}` : '**audit: none — automation backlog**');
       if (r.witnesses?.length) meta.push(`witnesses: ${r.witnesses.join(', ')}`);
       if (r.aliases?.length) meta.push(`aliases: ${r.aliases.join(', ')}`);
+      if (r.retiredPhrases?.length) meta.push(`retired wording (P38): ${r.retiredPhrases.map((p) => `“${p}”`).join(' · ')}`);
       if (r.see?.length) meta.push(`see: ${r.see.join(', ')}`);
       if (r.supersedes?.length) meta.push(`supersedes: ${r.supersedes.join(', ')}`);
       L.push(meta.map((m) => `- ${m}`).join('\n'), '');
