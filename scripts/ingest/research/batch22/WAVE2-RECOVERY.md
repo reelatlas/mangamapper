@@ -66,12 +66,21 @@ recommended on four of five — see §THE DECISIONS.
 
 ## Outstanding / queued
 - ep 58 beelzebub (short END, no START) — a census crumb, not this wave's.
-- The T26 predicate gap for parallel series (dbs 6 if B lands): 'on a parallel series (I40) a correspondence row aligned | divergent | anime_only is a weight-bearing tie' — verify no filler row carries one first; one lib change + test + four edges, WITH the apply. The agent hit the same gap independently (its flag: 'the canon can only survive as a T6 pin').
+- The T26 predicate gap for parallel series (dbs 6 if B lands) — PRECONDITION CHECKED 2026-09-05 (episode_correspondence, 61 rows): FIVE filler rows carry correspondence rows (dbs 4: anime_only AND divergent; 15, 22, 52: anime_only) — 'D has no correspondence row' was false. And 10 canon + 4 mixed rows carry anime_only (the ToP-style B rows), so ALIGNMENT does not separate B from D — the TYPE does, and that is T30's ruling (the correspondence sitting), never T26's. The clause therefore reads: 'on a parallel series (I40) a correspondence row OF ANY ALIGNMENT is the T30 record and stands in for the weight-bearing tie' — safe because the T26 gate only sees canon / mixed rows and B-vs-D is T30's question (arc_row_conflict's domain). One lib change (loadEpisodeTies reads episode_correspondence; weightBearingTie gains `corresponded` gated on isParallelSeries) + test + four edges, WITH the apply. The agent hit the same gap independently (its flag: 'the canon can only survive as a T6 pin').
 - Do NOT stamp side_source across dbs eps 1-14 (the agent's warning): post-T26 that would flip the shared arc to filler.
 
-## THE DECISIONS (for Sean, after verification)
+## Verification (R24 — verdict-verifier on fable, authors Opus; 4 of 5, boruto 106 a confirmation)
+
+| verdict | result | file |
+|---|---|---|
+| beelzebub 49 | MIXED — SOUND WITH CORRECTIONS (five pages confirmed on two uploads; the novel refutation holds on three accounts and the verdict still over-credits the novel; the pin must be UPDATED to mixed, never lifted; '88.5' is not a stable id — cite by UUID) | verify/w2-beelzebub-49.md |
+| beelzebub crumbs | every VALUE holds (15 filler + deletion, 16 NEW 22 [21], 26 / 51 mixed, 51 START 114); REWORD before apply: 26's page attribution (Bandai 029 contradicts half — no page numbers, A47 unproven-tail), 15's 'ep 18 in full', 51's false 'stored ep 50' citation (48 / 50 are unanchored — holes); THE FORK: ep 15's beach tableau is staged only in ep 15 — filler (monotonic, recommended) vs mixed + rearranged; ruling text 'eps 15, 18 carry' → 'ep 18 carries' | verify/w2-beelzebub-crumbs.md |
+| fma 37 / 13 | both MIXED — SOUND WITH CORRECTIONS (the repair is right and two-sourced; the transposition's ORIGIN was the batch-18 APPLY, not research — a curation trap; drop the omake's vol-4 label; SlashFilm is 2024; the stored side_story NOTE needs an explicit replacement; Observation Diary vol 6 stays single-source) | verify/w2-fma.md |
+| dbs 6 | CANON (B) — SOUND; the page claim CONFIRMED FROM CH 3'S OWN PAGES (Viz free chapter, descrambled) — the party narrated in caption + dialogue, the flashback staged p5; drop 'the flashback exists ONLY in ep 6' (ep 7 has it too); fix the ja-WP URLs (fullwidth Ｚ); edit arcs.ts:76 'ep 6 is film-only' in the same apply; T6 pin + the parallel-series clause | verify/w2-dbs-6.md |
+
+## THE DECISIONS (for Sean — verified)
 1. beelzebub 49 canon → MIXED (the extra chapter = the first act, sole adaptation; the rest is not the source — and probably not the novel either).
-2. beelzebub 15 → FILLER + graft{23} (anchor deleted, A1/A44); 16 NEW anchor 22 [21] + continue 23; 26 → MIXED (+ divergence, partial{51 pp 1-12}); 51 → MIXED, START 115 → 114, continue 116; 27/28 filler confirmed.
+2. beelzebub 15 → FILLER + graft{23} (anchor deleted, A1/A44) — THE FORK: the beach tableau is ep 15's own staging (filler, monotonic — recommended) or a significant first-time climax (mixed + anchor kept + rearranged); 16 NEW anchor 22 [21] + continue 23; 26 → MIXED (+ divergence, partial{51 — the Kido summons; NO page numbers}); 51 → MIXED, START 115 → 114, continue 116; 27/28 filler confirmed; ep 17's ruling text 'eps 15, 18 carry' → 'ep 18 carries'.
 3. fma 13 → MIXED + side_story{the three vol-3/4 extras} + divergence; 37 → MIXED, side_story REPAIRED to the vol-6/7 gaiden, side_source note repaired.
-4. dbs 6 filler → CANON (T30 timeline B: ch 3 narrates the node, the later beats depend on it) + divergence{3} + two correspondence rows; NO adopted{author}; needs the parallel-series clause in the T26 predicate to hold.
+4. dbs 6 filler → CANON (T30 timeline B — CONFIRMED ON THE PAGES: ch 3 narrates the visit and stages the flashback; the later beats depend on the visit, not the arrival) + divergence{3} + two correspondence rows (divergent 3; anime_only); NO adopted{author}; T6 pin + the parallel-series clause in the T26 predicate; arcs.ts:76 edited; 'ONLY in ep 6' dropped.
 5. boruto 106 confirmed filler — no decision.
