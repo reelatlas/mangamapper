@@ -1,0 +1,118 @@
+// Batch 20 context generator (PLAN.md, Sean's go 2026-08-27): wave 1 = lane
+// A1, the seven G36 refusals (the honest terminal, applied §12.78); wave 2 =
+// lane A2, the eight small gap blocks (anchor_gap_research). Verdicts per batch20/PROTOCOL.md (batch 19's anchoring
+// shape + the pages line + C7). Prints EVERY ruling on the series and ALL
+// anchors (the outlaw-star lesson).
+//   npx tsx --env-file=.env.ingest scripts/ingest/research/batch21/context.ts <outdir>
+import { writeFileSync } from 'node:fs';
+import { CHAPTER_SPACE_OVERRIDES } from '../../lib/rulings/chapter-spaces';
+import { db, selectAll } from '../../lib/db';
+import { EPISODE_TYPE_OVERRIDES, SOURCE_NUMBERING_SHIFTS, COMMUNITY_COUNT_OVERRIDES, translateEpisodeNumber } from '../../lib/resolve';
+import { sourceKindOf } from '../../lib/rulings/source-kinds';
+import { ANCHOR_SUPPRESSED } from '../../lib/rulings/anchor-suppressed';
+import { ALL_RULINGS } from '../../lib/rulings/index';
+
+const OUT = process.argv[2] ?? '/tmp/batch20-ctx';
+
+const TERMINAL = (pin: string, extra = '') => `HONEST TERMINAL (lane A1, G36/G56): ${pin} Deliver (1) the LAST canon/mixed row's anchor — END / START / chapters_adapted / volume, ≥ 2 sources (A4/A10; "pages, not numbers"); (2) its post-series continue (C5 coverage + 1, or C1 in the straddled chapter) with the never-adapted range named for the reader; (3) whether MU's chapter is actually reached by that row (pin redundant, G56) or overstated / another edition (say what MU counted, G37); (4) repairs to stored anchors / types with old → new and evidence — a filler-typed row that in fact adapts source pages is a T28 type repair with 2 sources, never an anchor as stored (A1). ${extra}`;
+
+const GAP = (fence: string, extra = '') => `GAP BLOCK (lane A2, anchor_gap_research): ${fence} Deliver an anchor for EVERY canon/mixed target row — END / START / chapters_adapted / volume, ≥ 2 sources (A4/A10; "pages, not numbers") — or an anchor_hostile entry with the A44 reason; filler-typed rows take nothing (A1) unless you propose the type repair with 2 sources (T28). The two bracketing stored anchors are the fence: a delivered END sits between them in running order, or you REPAIR the fence anchor with old → new and evidence. Continue points where rows skip source material (C2/C3 parity, the unseen range in the note) or end mid-chapter (C1 — any mid-chapter ending, not only at a filler boundary; Sean 2026-08-27). ${extra}`;
+
+// [id, target episodes (OUR numbering), lane, ask]
+const NARROW = (ask: string) => `NARROW FOLLOW-UP (lane C): ${ask} Deliver exactly this — anchors (≥ 2 sources, A4/A10) or anchor_hostile for the named rows, repairs with old → new, type corrections under T28, the named continue; rows outside the ask are not yours.`;
+const DATES = (ask: string) => `NUMBERING / AIR DATES (lane B, N11 / G53 / G54): ${ask} Output the batch-19 B3 shape to out/airdates/<series>.json: repairs only (air_date / title, old → new, ≥ 2 sources), flags_for_sean for TRUE deviations (G54 acks) and numbering findings, structure.notes = the row → title → date identity table for the span. Never index-join (R20).`;
+
+// [id, target episodes (OUR numbering), lane, ask, wave] — the wave tag is how validate.ts / scan.ts match a verdict file (`<id>-w<N>.json`; no suffix = the series' lowest wave)
+const MUPIN = (ask: string) => `MU PIN VERIFICATION (lane L-D, mu_pin_unverified — G31/G32/G37/G56): ${ask} The series' ONLY anchor is an unverified MU frontier pin at the last aired episode. Verify the season END against TWO independent sources (the finale's chapter coverage: fandom episode/chapter pages, ja-WP, vol TOCs — "pages, not numbers", A4/A10): (1) CONFIRMED → deliver the same value as a manual-tier anchor with the citations (and START / chapters_adapted where the sources give pages); (2) WRONG → deliver the corrected anchor with old → new and what MU actually counted (a whole-manga count, another season's endpoint, a continue-pointer stored as an end, ANOTHER EDITION or a franchise-continuous space — name it, G37); (3) NO honest end exists (the finale is anime-original — A1) → anchor_hostile with the type evidence and the honest terminal on the last canon/mixed row. Add the C5 post-series continue (or C1 mid-chapter) with the never-adapted range named. Small task: ONE row plus its continue; rows below the finale are not yours.`;
+
+const IDENTITY = (ask: string) => `IDENTITY (lane I, T21 direction — standings only, NO anchors): ${ask} Deliver type_corrections (≥ 2 sources, T28) + annotations (side_source / adopted{basis} / retconned / divergence) per row or arc, structure.notes = the arc table (arc → episodes → manga chapters → direction → rule id), flags for the forks; anchors: [] — a row that could take one later is a flag. Recap baseline on every row you name (stored type first).`;
+
+export const TARGETS: [string, string, 'A1' | 'A2' | 'C' | 'B' | 'I', string, number][] = [
+  ['one-piece', '50-51,55,93,195,203,214,216,225', 'C', "TYPE CONTRADICTION (T4, batch 21 wave 1 — the STRONG tier of type_source_disagreement): AFL types these rows one way and animefillerguide's row makes the opposite POSITIVE claim (a chapter mapping, or a red / blue class). Rows and the two claims: 50 filler/AFG canon ch 98 · 51 filler/canon ch 98 · 55 filler/AFG mixed · 93 filler/canon ch 158 · 195 canon/AFG mixed · 203 filler/canon ch 303 · 214 filler/canon ch 313 · 216 filler/canon ch 313 · 225 filler/canon ch 303. For EACH row: settle the TYPE with chapter accounting under T28 (what does the episode actually adapt — which chapters, which share; a recap or a sliver is weightless; the remainder decides), on TWO independent sources beyond AFL and AFG (the fandom episode + chapter pages, ja-WP, the licensor synopsis, AFG's own chapter column as one leg). Deliver type_corrections where the stored type is wrong (with the reason and the segment weights), anchors where a canon / mixed row adapts numbered chapters and none is stored, annotations for every segment; if AFL is right, say so with the evidence (a verdict that confirms the stored type is a result). Name which source lied and how (a trap for the agent definition).", 1],
+  ['one-piece', '319,326,418-420,497-498,626,747', 'C', "TYPE CONTRADICTION (T4, batch 21 wave 1 — the STRONG tier of type_source_disagreement): AFL types these rows one way and animefillerguide's row makes the opposite POSITIVE claim (a chapter mapping, or a red / blue class). Rows and the two claims: 319 filler/canon ch 435 · 326 filler/canon ch 442 · 418 filler/canon ch 523 · 419 filler/canon ch 523-524 · 420 filler/canon ch 524 · 497 filler/canon ch 585 · 498 filler/canon ch 584-585 · 626 filler/canon ch 699 · 747 filler/canon ch 802. For EACH row: settle the TYPE with chapter accounting under T28 (what does the episode actually adapt — which chapters, which share; a recap or a sliver is weightless; the remainder decides), on TWO independent sources beyond AFL and AFG (the fandom episode + chapter pages, ja-WP, the licensor synopsis, AFG's own chapter column as one leg). Deliver type_corrections where the stored type is wrong (with the reason and the segment weights), anchors where a canon / mixed row adapts numbered chapters and none is stored, annotations for every segment; if AFL is right, say so with the evidence (a verdict that confirms the stored type is a result). Name which source lied and how (a trap for the agent definition).", 1],
+  ['ranma-1-2', '14,90,123-124,131,134,156', 'C', "TYPE CONTRADICTION (T4, batch 21 wave 1 — the STRONG tier of type_source_disagreement): AFL types these rows one way and animefillerguide's row makes the opposite POSITIVE claim (a chapter mapping, or a red / blue class). Rows and the two claims: 14 filler/canon ch 23-24 · 90 filler/canon ch 156-157 · 123 filler/canon ch 184-187 · 124 filler/canon ch 58 · 131 filler/canon ch 194-196 · 134 filler/canon ch 200 · 156 filler/canon ch 221-224. For EACH row: settle the TYPE with chapter accounting under T28 (what does the episode actually adapt — which chapters, which share; a recap or a sliver is weightless; the remainder decides), on TWO independent sources beyond AFL and AFG (the fandom episode + chapter pages, ja-WP, the licensor synopsis, AFG's own chapter column as one leg). Deliver type_corrections where the stored type is wrong (with the reason and the segment weights), anchors where a canon / mixed row adapts numbered chapters and none is stored, annotations for every segment; if AFL is right, say so with the evidence (a verdict that confirms the stored type is a result). Name which source lied and how (a trap for the agent definition).", 1],
+  ['dragon-ball-z', '39-40,42-43,125,274', 'C', "TYPE CONTRADICTION (T4, batch 21 wave 1 — the STRONG tier of type_source_disagreement): AFL types these rows one way and animefillerguide's row makes the opposite POSITIVE claim (a chapter mapping, or a red / blue class). Rows and the two claims: 39 / 40 / 42 / 43 filler/canon ch 246 · 125 filler/canon ch 336 · 274 filler/canon ch 506. For EACH row: settle the TYPE with chapter accounting under T28 (what does the episode actually adapt — which chapters, which share; a recap or a sliver is weightless; the remainder decides), on TWO independent sources beyond AFL and AFG (the fandom episode + chapter pages, ja-WP, the licensor synopsis, AFG's own chapter column as one leg). Deliver type_corrections where the stored type is wrong (with the reason and the segment weights), anchors where a canon / mixed row adapts numbered chapters and none is stored, annotations for every segment; if AFL is right, say so with the evidence (a verdict that confirms the stored type is a result). Name which source lied and how (a trap for the agent definition).", 1],
+  ['black-clover', '3,68', 'C', "TYPE CONTRADICTION (T4, batch 21 wave 1 — the STRONG tier of type_source_disagreement): AFL types these rows one way and animefillerguide's row makes the opposite POSITIVE claim (a chapter mapping, or a red / blue class). Rows and the two claims: 3 filler/canon ch 1-2 · 68 filler/canon ch 103. For EACH row: settle the TYPE with chapter accounting under T28 (what does the episode actually adapt — which chapters, which share; a recap or a sliver is weightless; the remainder decides), on TWO independent sources beyond AFL and AFG (the fandom episode + chapter pages, ja-WP, the licensor synopsis, AFG's own chapter column as one leg). Deliver type_corrections where the stored type is wrong (with the reason and the segment weights), anchors where a canon / mixed row adapts numbered chapters and none is stored, annotations for every segment; if AFL is right, say so with the evidence (a verdict that confirms the stored type is a result). Name which source lied and how (a trap for the agent definition).", 1],
+  ['naruto-shippuden', '179-180', 'C', "TYPE CONTRADICTION (T4, batch 21 wave 1 — the STRONG tier of type_source_disagreement): AFL types these rows one way and animefillerguide's row makes the opposite POSITIVE claim (a chapter mapping, or a red / blue class). Rows and the two claims: 179 filler/canon ch 1-4 · 180 filler/canon ch 1-2 (a flashback to Part I's opening chapters — recap vs re-adaptation is the question). For EACH row: settle the TYPE with chapter accounting under T28 (what does the episode actually adapt — which chapters, which share; a recap or a sliver is weightless; the remainder decides), on TWO independent sources beyond AFL and AFG (the fandom episode + chapter pages, ja-WP, the licensor synopsis, AFG's own chapter column as one leg). Deliver type_corrections where the stored type is wrong (with the reason and the segment weights), anchors where a canon / mixed row adapts numbered chapters and none is stored, annotations for every segment; if AFL is right, say so with the evidence (a verdict that confirms the stored type is a result). Name which source lied and how (a trap for the agent definition).", 1],
+  ['fairy-tail', '246', 'C', "TYPE CONTRADICTION (T4, batch 21 wave 1 — the STRONG tier of type_source_disagreement): AFL types these rows one way and animefillerguide's row makes the opposite POSITIVE claim (a chapter mapping, or a red / blue class). Rows and the two claims: 246 filler/canon ch 380. For EACH row: settle the TYPE with chapter accounting under T28 (what does the episode actually adapt — which chapters, which share; a recap or a sliver is weightless; the remainder decides), on TWO independent sources beyond AFL and AFG (the fandom episode + chapter pages, ja-WP, the licensor synopsis, AFG's own chapter column as one leg). Deliver type_corrections where the stored type is wrong (with the reason and the segment weights), anchors where a canon / mixed row adapts numbered chapters and none is stored, annotations for every segment; if AFL is right, say so with the evidence (a verdict that confirms the stored type is a result). Name which source lied and how (a trap for the agent definition).", 1],
+  ['inuyasha', '79', 'C', "TYPE CONTRADICTION (T4, batch 21 wave 1 — the STRONG tier of type_source_disagreement): AFL types these rows one way and animefillerguide's row makes the opposite POSITIVE claim (a chapter mapping, or a red / blue class). Rows and the two claims: 79 filler/canon ch 219. For EACH row: settle the TYPE with chapter accounting under T28 (what does the episode actually adapt — which chapters, which share; a recap or a sliver is weightless; the remainder decides), on TWO independent sources beyond AFL and AFG (the fandom episode + chapter pages, ja-WP, the licensor synopsis, AFG's own chapter column as one leg). Deliver type_corrections where the stored type is wrong (with the reason and the segment weights), anchors where a canon / mixed row adapts numbered chapters and none is stored, annotations for every segment; if AFL is right, say so with the evidence (a verdict that confirms the stored type is a result). Name which source lied and how (a trap for the agent definition).", 1],
+  ['slam-dunk', '92', 'C', "TYPE CONTRADICTION (T4, batch 21 wave 1 — the STRONG tier of type_source_disagreement): AFL types these rows one way and animefillerguide's row makes the opposite POSITIVE claim (a chapter mapping, or a red / blue class). Rows and the two claims: 92 filler/canon ch 194. For EACH row: settle the TYPE with chapter accounting under T28 (what does the episode actually adapt — which chapters, which share; a recap or a sliver is weightless; the remainder decides), on TWO independent sources beyond AFL and AFG (the fandom episode + chapter pages, ja-WP, the licensor synopsis, AFG's own chapter column as one leg). Deliver type_corrections where the stored type is wrong (with the reason and the segment weights), anchors where a canon / mixed row adapts numbered chapters and none is stored, annotations for every segment; if AFL is right, say so with the evidence (a verdict that confirms the stored type is a result). Name which source lied and how (a trap for the agent definition).", 1],
+];
+
+const ranges = (s: string): [number, number][] => s.split(',').map((p) => p.trim()).map((p) => { const [a, b] = p.split('-').map(Number); return [a, b ?? a]; });
+
+async function main() {
+  const index: string[] = [];
+  for (const [id, range, lane, ask, wave] of TARGETS) {
+    // a series with more than one TARGETS entry gets one context file per entry (`<id>-w<wave>-<range>.md`), else `<id>.md`
+    const { data: s } = await db.from('series').select('*').eq('id', id).maybeSingle();
+    if (!s) { console.log('MISSING', id); continue; }
+    const comps = await selectAll<any>('series_components', '*', (q) => q.eq('series_id', id).order('season_order'));
+    const anchors = await selectAll<any>('chapter_anchors', 'episode, chapter, start_chapter, chapters_adapted, volume, source, continue_chapter, continue_kind, continue_note, note', (q) => q.eq('series_id', id).order('episode'));
+    const ann = await selectAll<any>('episode_annotations', 'episode, kind, basis, chapters, note', (q) => q.eq('series_id', id).order('episode'));
+    const eps = await selectAll<any>('episodes', 'number, title, type, air_date, format', (q) => q.eq('series_id', id).order('number'));
+    const bounds = s.manga_anilist_id ? await selectAll<any>('volume_boundaries', 'volume, chapter_start, chapter_end', (q) => q.eq('manga_anilist_id', s.manga_anilist_id).order('volume')) : [];
+    const flags = await selectAll<any>('ingest_flags', 'id, kind, detail', (q) => q.eq('series_key', id).eq('status', 'open'));
+    const { data: afl } = s.afl_slug ? await db.from('ingest_afl_shows').select('raw').eq('slug', s.afl_slug).maybeSingle() : { data: null };
+    const aflClaim = new Map<number, string>();
+    for (const e of (afl?.raw?.episodes ?? []) as { number: number; type: string }[]) {
+      const n = translateEpisodeNumber(id, e.number, 'afl');
+      if (n != null) aflClaim.set(n, e.type === 'anime-only-canon' ? 'anime canon' : e.type);
+    }
+    const rs = ranges(range);
+    const inRange = (n: number) => rs.some(([a, b]) => n >= a && n <= b);
+    const near = (n: number) => rs.some(([a, b]) => n >= a - 4 && n <= b + 4);
+    const kind = sourceKindOf(s.source_type);
+    const lines: string[] = [];
+    lines.push(`# ${s.title} (series_id: ${id}) — research context, batch 20 (${lane === 'A1' ? 'the honest terminal' : lane === 'A2' ? 'the gap blocks' : lane === 'C' ? 'narrow follow-ups' : lane === 'I' ? 'identity — standings and direction, no anchors' : 'numbering & dates'}), lane ${lane}`);
+    lines.push(`Target episodes (OUR cumulative numbering): ${range}.`);
+    lines.push(`ASK: ${ask}`);
+    lines.push('');
+    lines.push('## The source and its chapter space');
+    lines.push(`source kind = ${s.source_type ?? 'UNRULED'} (${kind?.noun ?? '?'}; instrument unit = ${kind?.unit ?? '?'}); manga link AniList ${s.manga_anilist_id ?? 'NONE'} (status ${s.manga_status}); chapter space: total_chapters=${s.total_chapters} latest_known=${s.latest_known_chapters} total_volumes=${s.total_volumes}; mapping_mode=${s.mapping_mode}`);
+    {
+      const cs = CHAPTER_SPACE_OVERRIDES[s.id];
+      if (cs) lines.push(`RULED CHAPTER SPACE (N35): ${cs.chapters} chapters${cs.volumes ? ` / ${cs.volumes} volumes` : ''} — the PRINTED numbering; every stored value below is in it.${cs.sourceShifts?.length ? ` sourceShifts (a source's N → ours): ${cs.sourceShifts.map((x) => `${x.source}: from ${x.from} delta ${x.delta}`).join('; ')} — DELIVER IN THE PRINTED SPACE and state each conversion.` : ''}`);
+    }
+    lines.push('');
+    lines.push('## Entry facts');
+    lines.push(`status=${s.status} aired_episodes=${s.aired_episodes} total_episodes=${s.total_episodes}; AniList anime id=${s.anilist_id} (MAL ${s.mal_id})`);
+    lines.push(`Components (season_order: anilist_id episodes [kind] label): ${comps.map((c) => `${c.season_order}: ${c.anilist_id} ${c.episode_start ?? 'null'}-${c.episode_end ?? 'null'} [${c.kind}] ${c.label ?? ''}`).join('; ')}`);
+    const rul: string[] = [];
+    if (EPISODE_TYPE_OVERRIDES[id]) rul.push(`EPISODE_TYPE_OVERRIDES (T6): ${JSON.stringify(EPISODE_TYPE_OVERRIDES[id])}`);
+    if (SOURCE_NUMBERING_SHIFTS[id]) rul.push(`SOURCE_NUMBERING_SHIFTS (N11): ${JSON.stringify(SOURCE_NUMBERING_SHIFTS[id])}`);
+    if (COMMUNITY_COUNT_OVERRIDES[id]) rul.push(`COMMUNITY_COUNT_OVERRIDES (N3): ${JSON.stringify(COMMUNITY_COUNT_OVERRIDES[id])}`);
+    if (ANCHOR_SUPPRESSED[id]) rul.push(`ANCHOR_SUPPRESSED (A44, position-less by ruling): ${JSON.stringify(ANCHOR_SUPPRESSED[id])}`);
+    for (const r of ALL_RULINGS.filter((r) => r.seriesId === id)) rul.push(`${r.ruleId} (${r.ruledBy} ${r.ruledOn}): ${JSON.stringify(r.value).slice(0, 160)} — ${r.reason.slice(0, 240)}`);
+    lines.push(`Rulings in code (ALL — a verdict that contradicts one is a REPAIR with evidence, never a silent override):\n${rul.map((x) => `  - ${x}`).join('\n') || '  none'}`);
+    lines.push('');
+    lines.push(`## Existing anchors (ALL ${anchors.length}) — ep→END [START] {chapters_adapted} vol (source) | continue`);
+    lines.push(anchors.map((a) => `ep${a.episode}→${a.chapter}${a.start_chapter != null ? ` [${a.start_chapter}]` : ''}${a.chapters_adapted ? ` {${a.chapters_adapted}}` : ''}${a.volume != null ? ` v${a.volume}` : ''} (${a.source})${a.continue_chapter != null ? ` | continue ${a.continue_chapter}${a.continue_kind ? `/${a.continue_kind}` : ''}${a.continue_note ? ` — ${String(a.continue_note).slice(0, 120)}` : ''}` : ''}${a.note && near(a.episode) ? ` — ${String(a.note).slice(0, 200)}` : ''}`).join('\n') || 'none');
+    lines.push('');
+    const grouped = new Map<string, number[]>();
+    for (const a of ann) {
+      const k = `${a.kind}${a.basis ? `{${a.basis}}` : ''}${a.chapters ? ` {${a.chapters}}` : ''}: ${(a.note ?? '').slice(0, 220)}`;
+      if (!grouped.has(k)) grouped.set(k, []);
+      grouped.get(k)!.push(a.episode);
+    }
+    lines.push(`## Existing annotations (${ann.length} rows, ${grouped.size} facts)`);
+    lines.push([...grouped].map(([k, e2]) => `eps ${e2.length > 8 ? `${e2[0]}-${e2[e2.length - 1]} (${e2.length})` : e2.join(',')} ${k}`).join('\n') || 'none');
+    lines.push('');
+    lines.push(`## Volume boundaries (${bounds.length})`);
+    lines.push(bounds.map((b) => `v${b.volume}: ${b.chapter_start}-${b.chapter_end ?? '?'}`).join(', ') || 'none');
+    lines.push('');
+    lines.push(`## TARGET rows — number [stored type | AFL's claim] title (air_date)   ← each needs an anchor, an anchor_hostile entry, or a stated A1 reason`);
+    lines.push(eps.filter((e) => inRange(e.number)).map((e) => `${e.number} [${e.type} | AFL: ${aflClaim.get(e.number) ?? '—'}] ${e.title || '(no title)'}${e.air_date ? ` (${e.air_date})` : ''}`).join('\n') || 'no target rows');
+    lines.push('');
+    lines.push('## Rows near the range (orientation)');
+    lines.push(eps.filter((e) => near(e.number) && !inRange(e.number)).map((e) => `${e.number} [${e.type} | AFL: ${aflClaim.get(e.number) ?? '—'}] ${e.title || '(no title)'}`).join('\n') || 'none');
+    lines.push('');
+    lines.push('## Open flags');
+    lines.push(flags.map((f) => `#${f.id} [${f.kind}] ${JSON.stringify(f.detail).slice(0, 400)}`).join('\n') || 'none');
+    const dup = TARGETS.filter((t) => t[0] === id).length > 1;
+    writeFileSync(`${OUT}/${id}${dup ? `-w${wave}-${range.replace(/[^0-9a-z]+/gi, '_')}` : ''}.md`, lines.join('\n'));
+    index.push(`${lane}  ${id} ${range} — anchors ${anchors.length}, rows ${eps.length}, kind ${s.source_type}`);
+  }
+  console.log(index.join('\n'));
+}
+if (process.argv[1]?.endsWith('context.ts')) main().then(() => process.exit(0)).catch((e) => { console.error(e); process.exit(1); });
