@@ -1,0 +1,352 @@
+{
+ "series_id": "naruto-shippuden",
+ "summary": "LANE A2, the five honest reorder holes eps 113-117 opened when the ep-112 anchor landed. ALL FIVE ARE ANCHORED, monotonic and contiguous with the fence at both ends: ep 90's END 343 below (its Konoha-thread pass) and ep 118's stored START 351 above. The block adapts chs 343-350 with no gap — 113 = 343 (Sasuke thread) + 344, 114 = 344 (close) + 345 + 346 (opening), 115 = 346 (remainder) + 347 (Sasuke thread), 116 = 348, 117 = 349 + 350 + a 351 sliver held for ep 118. THE INDEPENDENT LEGS, exactly as the task framed them: Narutopedia's episode infoboxes and AFG's chapter column are ONE lineage (they print the same five chapter strings token for token — 343,344 / 344,345,346 / 346,347 / 348 / 349,350,351 — so I counted them once); the independent legs are (a) Narutopedia's per-CHAPTER pages, which split chs 343/346/347 by thread and let every episode boundary be placed on content rather than on a number, (b) TV Tokyo's archived per-episode synopses (通算 333-337話, Shift-JIS, episodes2009.html), the licensor, and (c) ja-Wikipedia's 太字 control (109-112 bold = 全編アニメオリジナル, 113-118 unbolded) plus its own 通算 join. TYPES: four of the five stored types are CONFIRMED AS STORED (114 canon, 115 mixed, 116 canon, 117 canon) and ONE FLIPS — ep 113 mixed -> CANON under T28's recap clause: the episode is a full, panel-by-panel adaptation of ch 343's Sasuke thread and ch 344 padded with ~8-9 minutes of Part-I retrospective (the Forest of Death, the Cursed Seal, the Yoroi match, the Chidori vs Gaara, the Konoha Crush, the Third's death — all previously animated by the 2002 series), and the ONLY anime-ORIGINAL beat is a ~1-minute Tsunade/Anbu bridge closing the Three-Tails filler arc. A recap's SIZE never makes a row mixed (FotNS 130). AFG independently classes 113 plain canon; AFL is the outlier. On ep 115 the labels swap sides — AFL's Mixed is right and AFG's plain-canon class is the outlier, because ~two thirds of the episode is the anime-only Tenzen Daikoku plot that ch 347 disposes of in one clause. TRAP-4 CHECK RUN AND CLEAN: chs 343, 346 and 347 are thread-partitioned and their KONOHA halves were already animated in eps 89/90 (Ramen Ichiraku; Kakashi relaying Tsunade's Rasenshuriken ban; Konohamaru's new technique) — every page this block credits is the SASUKE thread, first-time, and chs 344, 345, 348, 349 and 350 have no earlier coverage at all. CONTINUES: 113 C1 344 (ch 344 straddles; ep 114 opens on its closing white-snake flashback), 114 C1 346 (ch 346 is split three ways and ep 115 finishes it), 117 C2 351 parity = ep 118's stored START, with a C3 skip note for the 2-3 opening pages of 351 ep 117 already showed.",
+ "anchors": [
+  {
+   "episode": 113,
+   "end_chapter": 344,
+   "start_chapter": 343,
+   "chapters_adapted": "343 (Sasuke thread only: Orochimaru's host body starts rejecting him and he coughs blood, Kabuto leaves to fetch stronger medicine, Sasuke finishes his training and drives a Chidori Sharp Spear through the door into Orochimaru's arms — 343's Konoha thread, Team 7 at Ramen Ichiraku, was animated in ep 90), 344 (Sasuke's 'you have nothing left to teach me' takedown, the disgust at the human experiments, Orochimaru shedding his body into the giant white snake, the snakes sliced away, Cursed Seal stage two and the snake-and-hawk speech; ch 344's closing white-snake-at-the-grave flashback pages open ep 114)",
+   "volume": 38,
+   "confidence": "high",
+   "note": "A4/A10, delivered together with the type_correction to canon (the row is stored mixed, and while A1 only bars FILLER rows, the flip and the anchor belong in one wave). START 343: the episode opens ON ch 343's Sasuke thread — Narutopedia's ch-343 page and TV Tokyo's 333話 synopsis both open on the same beat (「アジトでもがき苦しむ大蛇丸。その肉体を永らえさせるにはもはやレベル10の薬が必要だった」 = Orochimaru writhing, needing level-10 medicine), and it is a complete first-time scene, not a leading sliver, so A10's sliver test does not bite. This START equals ep 90's stored END 343 by design: the anime split ch 343 by THREAD (ep 90 = the Konoha half, this episode = the Sasuke half), which the stored ep-90 annotation already records verbatim ('343's Sasuke thread opens ep 113'). END 344: the episode runs to ch 344's climax — TV Tokyo closes its synopsis on 「今存在の全てをかけて、鷹と大蛇が激突する」 (the hawk and the great serpent clash) and Narutopedia's ch-344 page ends on exactly the beat the episode ends on (Orochimaru revealing his true form and Sasuke answering with cursed-seal stage two). Ch 344 is NOT finished here: Narutopedia's Orochimaru article cites ''Naruto'' chapter 344, pages 16-17 for the white snake found near his parents' grave and Hiruzen's explanation of it — that flashback is what ep 114 opens on, hence the C1 continue at 344. Volume 38 per the stored boundary table (340-349) and en-Wikipedia's volume list, which prints ch 343 「非情に…」 and 344 「蛇と…」 as vol 38's fourth and fifth chapters. PAGES, NOT NUMBERS: ch 343 was already an END at ep 90, but only its Konoha pages were animated there; the Sasuke pages are first-time here, so this is a real position and not a duplicate.",
+   "sources": [
+    "https://naruto.fandom.com/api.php?action=parse&page=The%20Serpent%27s%20Pupil&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=Unfeeling%E2%80%A6&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=The%20Snake%20and%E2%80%A6&prop=wikitext&format=json",
+    "https://web.archive.org/web/20100120034006/http://www.tv-tokyo.co.jp/anime/naruto/episodes2009.html",
+    "https://en.wikipedia.org/wiki/List_of_Naruto_chapters_(Part_II,_volumes_28%E2%80%9348)",
+    "https://naruto.fandom.com/api.php?action=parse&page=Orochimaru&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=NARUTO%20-%E3%83%8A%E3%83%AB%E3%83%88-%20%E7%96%BE%E9%A2%A8%E4%BC%9D&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episode": 114,
+   "end_chapter": 346,
+   "start_chapter": 344,
+   "chapters_adapted": "344 (closing pages: Orochimaru's own flashback to the white snake's shed skin found near his parents' grave and Hiruzen telling him it means fortune and rebirth — Narutopedia cites ch 344 pp 16-17 for it), 345 (the dismembered snake, the paralysing evaporating blood, Orochimaru swallowing Sasuke to start the Living Corpse Reincarnation, the mental plane, Sasuke's Sharingan reversing the technique, Kabuto returning to a finished ritual; the Akatsuki/Itachi arm-severing flashback is ch 345's own material, cited as such by Narutopedia), 346 (opening third: Sasuke replays the reversal to Kabuto with his Sharingan, Orochimaru is confirmed absorbed and Sasuke walks out of the hideout — 346's Suigetsu release is ep 115's and 346's Konoha thread, Kakashi relaying Tsunade's Rasenshuriken ban, was animated in ep 90)",
+   "volume": 38,
+   "confidence": "medium",
+   "note": "A4/A10. Type CONFIRMED AS STORED (canon). START 344 is the one judgement call in this block and it is stated openly: the leading share is ch 344's closing flashback, which Narutopedia pins at pp 16-17 (two pages), and A10's ≤5-page exception would push the START to 345. I do NOT apply it, for two reasons: (a) the pages are FIRST-TIME, not re-shown — ep 113 stops at the cursed-seal/lunge beat and never animates the grave flashback, so this is a straddle, not a recap open; (b) the flashback's full extent is unproven (the page cite covers one fact inside it, and the same retrospective continues into ch 345's own Akatsuki/Itachi flashback), and the catalog's convention on an unproven size is to COUNT it, not to assume it small (the Dai wave-14 lesson, applied to A10's twin). Both legs (Narutopedia's infobox, AFG's cell) print 344 on this row. END 346: the episode stops one third into ch 346 — Narutopedia's ch-346 page carries three blocks (the Sharingan replay to Kabuto / the release of Suigetsu / Kakashi's Rasenshuriken warning in Konoha) and this episode animates only the first, TV Tokyo's 334話 synopsis ends on Kabuto witnessing the unbelievable sight (「薬の調合から戻ったカブトは信じられない光景を目撃する」) with no Suigetsu, and ep 115 opens on the tank. Hence the C1 continue at 346. Volume 38 (boundary table 340-349; en-WP's vol-38 list). The episode's long Orochimaru retrospective is NOT anime invention: chs 344 and 345 carry those flashbacks themselves (Narutopedia's Orochimaru article cites ch 344 pp 16-17 and ch 345); the anime expands them with Part-I material and adds a closing blood-red-sunset coda, both recorded as a divergence annotation with weight none.",
+   "sources": [
+    "https://naruto.fandom.com/api.php?action=parse&page=Eye%20of%20a%20Hawk&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=The%20Snake%20and%E2%80%A6&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=The%20Ritual%E2%80%A6%21%21&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=The%20Secret%20of%20the%20New%20Technique%21%21&prop=wikitext&format=json",
+    "https://web.archive.org/web/20100120034006/http://www.tv-tokyo.co.jp/anime/naruto/episodes2009.html",
+    "https://naruto.fandom.com/api.php?action=parse&page=Orochimaru&prop=wikitext&format=json",
+    "https://en.wikipedia.org/wiki/List_of_Naruto_chapters_(Part_II,_volumes_28%E2%80%9348)",
+    "https://www.animefillerlist.com/shows/naruto-shippuden"
+   ]
+  },
+  {
+   "episode": 115,
+   "end_chapter": 347,
+   "start_chapter": 346,
+   "chapters_adapted": "346 (remainder: Sasuke makes good on his promise and frees Suigetsu from his water tank, and names the team he is forming — Karin of the Southern Hideout and Jūgo of the Northern Hideout), 347 (Sasuke/Suigetsu thread: Suigetsu agrees only on condition that Sasuke help him recover Zabuza's Kubikiribōchō, the detour to the Land of Waves, and the approach to Karin's hideout with Karin sensing them coming — Narutopedia's ch-347 page ends on that same beat; 347's Konoha thread, Konohamaru's new technique outside Ichiraku, was animated in ep 90)",
+   "volume": 38,
+   "confidence": "high",
+   "note": "A4/A10 on a MIXED row (type CONFIRMED AS STORED — see type_corrections). The anchor rests on the SIGNIFICANT segment only: the episode's source share is the recruitment of Suigetsu into Hebi, which is ch 346's closing block and ch 347's Sasuke thread in full, and it is the source's own plot advance. START 346 is a real continuation, not a sliver: ep 114 stopped after ch 346's first block and this episode animates the second. END 347 because Narutopedia's ch-347 page closes exactly where the episode closes ('They go to the Land of Waves to get it and then continue on to Karin's location, who senses them coming') — ep 116 re-shows that Karin beat at its top and then starts ch 348. Everything between those two source blocks is the anime-only Tenzen Daikoku story (the Great Naruto Bridge, the emptied grave, the restaurant, Tazuna gone to the Land of Lightning, the castle bluff, the army, Tenzen's Bodyguard) — Narutopedia's Tenzen Daikoku page is headed 'the ANIME-ONLY crime lord', and the manga disposes of the whole errand in one clause. TV Tokyo's 335話 synopsis is the licensor's own confirmation of the split: it narrates the source beats (freeing 水月, the Kubikiribōchō condition, setting out for 波の国) and then hands the rest to a teaser — 「そこには思わぬ事態が待ち構えていた」. Volume 38 (boundary table 340-349).",
+   "sources": [
+    "https://naruto.fandom.com/api.php?action=parse&page=Zabuza%27s%20Blade&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=The%20Secret%20of%20the%20New%20Technique%21%21&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=Detour%21%21&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=Tenzen%20Daikoku&prop=wikitext&format=json",
+    "https://web.archive.org/web/20100120034006/http://www.tv-tokyo.co.jp/anime/naruto/episodes2009.html",
+    "https://www.animefillerlist.com/shows/naruto-shippuden",
+    "https://en.wikipedia.org/wiki/List_of_Naruto_chapters_(Part_II,_volumes_28%E2%80%9348)"
+   ]
+  },
+  {
+   "episode": 116,
+   "end_chapter": 348,
+   "start_chapter": 348,
+   "chapters_adapted": "347 (re-shown close only: Karin sensing their chakra as they approach the Southern Hideout — animated at the end of ep 115), 348 (adapted whole: Suigetsu's objections, the Kubikiribōchō through the door, the prisoners debating the rumour, Karin's refusal, the freshly dug graves and the informer, the prisoners released on the promise to spread word of Orochimaru's death, Karin alone with Sasuke and her change of tone, and her joining 'for part of the way')",
+   "volume": 38,
+   "confidence": "high",
+   "note": "A4/A10. Type CONFIRMED AS STORED (canon). This is the cleanest row in the block: one chapter, adapted end to end, with both legs printing a bare '348'. START 348, not 347: the only ch-347 material here is the Karin-senses-them beat that ep 115 already animated as its closing scene, and A10 excludes a leading share that is re-shown (the in-series precedent is ep 383, whose stored record carries ch 648 as a 're-shown closing image only' with the START at 649). END 348 because ch 349 opens on Karin warning them about Jūgo on the road, which is ep 117's opening. TV Tokyo's 336話 synopsis matches the chapter beat for beat, including the release of the prisoners as the device that frees Karin from her warden role. Volume 38 (boundary table 340-349; en-WP prints ch 348 「次なる一人!!」 as vol 38's ninth chapter). The episode stretches one ~17-page chapter over ~21 minutes with an anime-original Karin flashback — recorded as a divergence, weight none under T28's faithfulness clause, not as a mixed share.",
+   "sources": [
+    "https://naruto.fandom.com/api.php?action=parse&page=Guardian%20of%20the%20Iron%20Wall&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=Detour%21%21&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=The%20Next%20Person%21%21&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=At%20the%20Northern%20Hideout&prop=wikitext&format=json",
+    "https://web.archive.org/web/20100120034006/http://www.tv-tokyo.co.jp/anime/naruto/episodes2009.html",
+    "https://naruto.fandom.com/api.php?action=parse&page=Karin&prop=wikitext&format=json",
+    "https://en.wikipedia.org/wiki/List_of_Naruto_chapters_(Part_II,_volumes_28%E2%80%9348)"
+   ]
+  },
+  {
+   "episode": 117,
+   "end_chapter": 350,
+   "start_chapter": 349,
+   "chapters_adapted": "349 (Karin's warning about Jūgo on the road — the willing prisoner, the enzyme the cursed seals were made from — and the first rampaging cursed-seal prisoner cut down at the gate), 350 (the horde of escaped prisoners put down without killing, the descent into the hideout, Jūgo in his cell remembering Kimimaro, Karin sending Suigetsu down the wrong corridor, the cell unlocked and Jūgo attacking as the door opens; plus the chapter's Konoha half, moved to the end of the episode — Naruto and Sakura summoned to Tsunade's office and told by her and Jiraiya that Sasuke has killed Orochimaru), 351 (opening pages only: Sasuke's own cursed-seal transformation shielding him from Jūgo's first strike and his 'I did not come to fight, I came to talk' — ep 118 starts here and carries the rest)",
+   "volume": 39,
+   "confidence": "medium",
+   "note": "A4/A10/A47. Type CONFIRMED AS STORED (canon). START 349 is clean: ep 116 finished ch 348 and this episode opens on ch 349's own opening (Karin explaining Jūgo), which TV Tokyo's 337話 synopsis also opens on (「道行き、香燐は北アジトが恐るべき人体実験場であることを告げる」). END HELD AT 350 rather than advanced to 351, on BOTH of the rules that govern the case, stated explicitly. (1) A47: ch 351's share here is the chapter's opening 2-3 pages (Narutopedia's ch-351 page opens 'Sasuke activates his cursed seal to shield himself from Jūgo's attack' and then runs on to Suigetsu engaging Jūgo, the killing intent and Jūgo retreating into his cell — none of which is in this episode), and the next anchored episode, 118, has a stored START of 351, so the tail is that episode's; the tail stays in chapters_adapted and is named by a `partial` annotation. (2) R3 BEFORE A47 (the Dai wave-14 existence clause): the 351 credit rests on ONE lineage only — Narutopedia's infobox and AFG's cell, which are the same lineage on this series — while the licensor stops short of it with teaser wording (TV Tokyo's 337話 ends 「アジト深奥では見たものとは——」, 'and what they saw deep inside the hideout——') and assigns the Jūgo confrontation and the fight to the NEXT episode's synopsis (338話: 「重吾のもとに辿りつくサスケ。しかし重吾は連れ出される事を断固拒否する…サスケとの戦闘に突入してゆく。水月が加わり…」). With only one source crediting the trailing share, the END holds at the furthest two-source chapter. Ch 350 IS finished here — both of its halves are animated (the hideout half and the Konoha half, the latter relocated to the episode's close), so this is not a C1 straddle; the continue is C2 parity at ep 118's START. Volume 39: ch 350 「衝撃の報せ…!!」 is vol 39's FIRST chapter (boundary table 350-359; en-WP's vol-39 list prints it with <li value=\"350\">), so this row crosses the volume line while chs 349 and below sit in vol 38.",
+   "sources": [
+    "https://naruto.fandom.com/api.php?action=parse&page=J%C5%ABgo%20of%20the%20Northern%20Hideout&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=At%20the%20Northern%20Hideout&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=Shocking%20News%E2%80%A6%21%21&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=A%20Conversation%20Between%20Men%21%21&prop=wikitext&format=json",
+    "https://web.archive.org/web/20100120034006/http://www.tv-tokyo.co.jp/anime/naruto/episodes2009.html",
+    "https://en.wikipedia.org/wiki/List_of_Naruto_chapters_(Part_II,_volumes_28%E2%80%9348)",
+    "https://www.animefillerguide.com/naruto-shippuden/",
+    "https://www.animefillerlist.com/shows/naruto-shippuden"
+   ]
+  }
+ ],
+ "continue_points": [
+  {
+   "episode": 113,
+   "continue_chapter": 344,
+   "kind": "parity",
+   "note": "C1: the episode ends inside ch 344. It animates the chapter's mainline through Orochimaru's white-snake form and Sasuke's cursed-seal stage two, but not the chapter's closing flashback (the white snake's shed skin near Orochimaru's parents' grave and Hiruzen's explanation — Narutopedia cites ''Naruto'' ch 344 pp 16-17), which ep 114 opens on. Resume IN ch 344 at that flashback; ep 114 then runs on through 345 and into 346. Parity with the anime: ep 114's START is 344.",
+   "sources": [
+    "https://naruto.fandom.com/api.php?action=parse&page=The%20Serpent%27s%20Pupil&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=Eye%20of%20a%20Hawk&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=The%20Snake%20and%E2%80%A6&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=Orochimaru&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episode": 114,
+   "continue_chapter": 346,
+   "kind": "parity",
+   "note": "C1: the episode ends inside ch 346. Ch 346 is split THREE ways by the anime — its Konoha third (Kakashi relaying Tsunade's ban on the Rasenshuriken) was animated in ep 90, this episode animates its opening third (the Sharingan replay to Kabuto and Sasuke leaving the hideout), and ep 115 animates the remainder (Sasuke freeing Suigetsu from his tank and naming the team). Resume IN ch 346 at the release of Suigetsu; parity with the anime, ep 115's START is 346.",
+   "sources": [
+    "https://naruto.fandom.com/api.php?action=parse&page=Eye%20of%20a%20Hawk&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=Zabuza%27s%20Blade&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=The%20Secret%20of%20the%20New%20Technique%21%21&prop=wikitext&format=json",
+    "https://web.archive.org/web/20100120034006/http://www.tv-tokyo.co.jp/anime/naruto/episodes2009.html"
+   ]
+  },
+  {
+   "episode": 117,
+   "continue_chapter": 351,
+   "kind": "parity",
+   "note": "C2 parity with the anime: ep 118 ('Formation!') has a stored START of 351 and finishes the Jūgo recruitment there (351-352). C3 note for the reader on arrival: ch 351's first 2-3 pages have already been seen — this episode ended on Sasuke's cursed-seal shield against Jūgo's opening strike and the 'I came to talk' line — so 351 resumes in practice at Suigetsu engaging Jūgo. Nothing between ep 117's END (350) and this continue is skipped: chs 343-350 are covered contiguously by eps 113-117.",
+   "sources": [
+    "https://naruto.fandom.com/api.php?action=parse&page=J%C5%ABgo%20of%20the%20Northern%20Hideout&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=A%20Conversation%20Between%20Men%21%21&prop=wikitext&format=json",
+    "https://web.archive.org/web/20100120034006/http://www.tv-tokyo.co.jp/anime/naruto/episodes2009.html",
+    "https://www.animefillerlist.com/shows/naruto-shippuden"
+   ]
+  }
+ ],
+ "anchor_hostile": [],
+ "annotations": [
+  {
+   "episodes": [
+    113
+   ],
+   "kind": "recap",
+   "chapters": "Part I material, all previously animated by the 2002 series: the Forest of Death encounter and the swallowed scroll, the Sharingan/Dragon Fire counter, the Cursed Seal of Heaven and Anko, the Yoroi Akadō match and the Lion Combo, the Chidori against Gaara, the Konoha Crush, the Third Hokage's death and the Sannin",
+   "note": "weight: NONE (T28 recap clause — a recap segment progresses nothing and counts for nothing in the standing; the remainder decides the type, and NEVER let a recap's size make a row mixed — the FotNS-130 witness). This is the largest single block in the episode and it is the whole reason AFL types the row Mixed. Structure of the block: Kabuto pulls out his Chūnin-Exam Ninja Info Cards and Orochimaru walks back through his entire relationship with Sasuke, then Kabuto walks back through the invasion of Konoha. Narutopedia's ep-113 synopsis links each beat to the specific PART-I EPISODE it re-shows ('Eat or be Eaten: Panic in the Forest', 'The Sharingan Revived: Dragon-Flame Jutsu!', 'Narrowing the Field: Sudden Death Elimination!', 'Bushy Brow's Jealousy: Lions Barrage Unleashed!', 'Late for the Show…', 'Zero Hour! The Konoha Crush Begins!', 'The Third Hokage, Forever…', 'Deadlock! Sannin Showdown!') — i.e. every frame of it is a retelling of source chapters the anime had already adapted seven years earlier, which is the recap boundary's first case (re-shown footage or a plain retelling), not its second (a newly animated sequence with scenes the source lacks — the shippuden-388 shape). SIZING, cross-check tier and labelled as such because AFG prints no timed note on this row: two independent contemporaneous fan breakdowns agree — the 2009 one opens 'It begins with a 5 minute recap of Orochimaru's invasion of Konoha… from Orochimaru giving Sasuke a curse hickey to the point where Orochimaru gets his jutsu dissected outta him by the Third' and later 'probably 90% of the episode was either flashbacks or talking… about stuff we already KNOW about', with the fight starting 'about at the 18:30 mark'; the 2016 one puts it at '80% flashbacks' and says the material is 'recycled footage from the original Naruto series'. Even on the most generous reading for AFL, subtracting the recap leaves an episode whose remainder is chs 343-344 plus one ~1-minute original bridge.",
+   "sources": [
+    "https://naruto.fandom.com/api.php?action=parse&page=The%20Serpent%27s%20Pupil&prop=wikitext&format=json",
+    "https://weareawesomeness.wordpress.com/2009/06/13/naruto-shippuden-episode-113-the-serpents-pupil-breakdown-and-discussion/",
+    "https://theadultswimsquad.wordpress.com/2016/05/22/naruto-shippuden-episode-113-recap-the-serpents-pupil/",
+    "https://www.animefillerguide.com/naruto-shippuden/"
+   ]
+  },
+  {
+   "episodes": [
+    113
+   ],
+   "kind": "divergence",
+   "chapters": null,
+   "note": "weight: SLIVER — because this is the ONLY anime-ORIGINAL (non-recap, non-source) material in the episode and it carries no plot of its own: (a) a ~1-minute Konoha scene in which an Anbu reports to Tsunade that the squad sent to the lake has vanished and the Three-Tails is gone, and she dispatches another — a bridge closing the anime-original Three-Tails arc (eps 91-112), naming no new fact the source needs; (b) two wordless foreshadowing images the studio adds before Sasuke's attack, a moth burning in a flame and a mouse taken by a weasel; (c) Orochimaru's current host is named Gen'yūmaru, the anime-original body introduced during that filler arc, where the manga leaves the host unnamed — a substitution inside adapted pages, not a scene. Under T28's faithfulness clause a small studio-made beat inside adapted chapters is NOTED, never weighed toward mixed. Contemporaneous sizing (cross-check tier) puts the Tsunade/Anbu scene at roughly one minute of a ~21-minute episode.",
+   "sources": [
+    "https://naruto.fandom.com/api.php?action=parse&page=The%20Serpent%27s%20Pupil&prop=wikitext&format=json",
+    "https://weareawesomeness.wordpress.com/2009/06/13/naruto-shippuden-episode-113-the-serpents-pupil-breakdown-and-discussion/",
+    "https://theadultswimsquad.wordpress.com/2016/05/22/naruto-shippuden-episode-113-recap-the-serpents-pupil/",
+    "https://web.archive.org/web/20100120034006/http://www.tv-tokyo.co.jp/anime/naruto/episodes2009.html"
+   ]
+  },
+  {
+   "episodes": [
+    113
+   ],
+   "kind": "rearranged",
+   "chapters": "343 (thread split: this episode carries the chapter's SASUKE thread — Orochimaru's body rejecting him, Kabuto leaving for medicine, Sasuke's attack — while its KONOHA thread, Team 7 at Ramen Ichiraku with Naruto's casted arm, was animated 23 episodes earlier in ep 90)",
+   "note": "weight: NONE for the standing (a position note, not a typing claim). Recorded so that the START 343 on this row is not read as a regression or a duplicate of ep 90's stored END 343: the anime partitions chs 343, 346 and 347 by THREAD across the seam of the anime-original Three-Tails arc, gathering all three Konoha-side scenes into ep 90 before the arc and returning for the Sasuke-side pages here. The stored ep-90 annotation already states the same split from the other side ('343's Sasuke thread opens ep 113'; '346's Sasuke/Suigetsu thread is in ep 115'; '347's Sasuke/Suigetsu thread is in ep 115'), and this verdict confirms every one of those three forward pointers on the chapter pages. TRAP-4 CHECK, run and clean: no page of chs 344, 345, 348, 349 or 350 appears in any episode before 113 — eps 74-90's coverage stops at ch 343's Konoha half plus the 346/347 Konoha grafts, and ep 89's ch-346 material is the restaged coroner scene the stored annotation already records.",
+   "sources": [
+    "https://naruto.fandom.com/api.php?action=parse&page=The%20Serpent%27s%20Pupil&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=Unfeeling%E2%80%A6&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=The%20Secret%20of%20the%20New%20Technique%21%21&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=Detour%21%21&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=Zabuza%27s%20Blade&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episodes": [
+    114
+   ],
+   "kind": "divergence",
+   "chapters": null,
+   "note": "weight: NONE for the standing (T28 faithfulness clause). The episode's long Orochimaru retrospective is the manga's OWN flashback content expanded, not an anime invention: Narutopedia's Orochimaru article cites ''Naruto'' chapter 344, pages 16-17 for the white snake's shed skin near his parents' grave and Hiruzen's reading of it, and ''Naruto'' chapter 345 for the Akatsuki episode in which Itachi traps him in the Demonic Illusion: Shackling Stakes and severs his left hand. What the studio adds around them is characterisation without plot: Orochimaru witnessing Nawaki's death and concluding that human lifespan is a weakness, Anko as his apprentice noticing the kept snake skin, the tome of forbidden scrolls, and Jiraiya's last attempt to reason with him as he flees Konoha (Narutopedia sources that last beat to ''Naruto: Shippūden'' episode 114 itself, i.e. anime-only). The episode also closes on an anime-original coda — the blood-red sunset seen by Naruto, Tsunade and Jiraiya in Konoha, Anko pinning and killing a white snake and clutching her cursed seal, and Itachi and Kisame noticing the same sunset. None of it is a story-carrying original plot; the row stays canon.",
+   "sources": [
+    "https://naruto.fandom.com/api.php?action=parse&page=Eye%20of%20a%20Hawk&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=Orochimaru&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=The%20Snake%20and%E2%80%A6&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=The%20Ritual%E2%80%A6%21%21&prop=wikitext&format=json",
+    "https://web.archive.org/web/20100120034006/http://www.tv-tokyo.co.jp/anime/naruto/episodes2009.html"
+   ]
+  },
+  {
+   "episodes": [
+    115
+   ],
+   "kind": "divergence",
+   "chapters": null,
+   "note": "weight: SIGNIFICANT AND ORIGINAL — this is the segment that makes the row mixed, and it is roughly two thirds of the episode. Ch 347 sends Sasuke and Suigetsu to the Land of Waves for Kubikiribōchō in a single clause ('They go to the Land of Waves to get it and then continue on to Karin's location'); the anime builds an entire self-contained adventure in the gap — the Great Naruto Bridge, the rude villager Zōri, Zabuza and Haku's grave with the blade gone, the restaurant, Tazuna and Inari away in the Land of Lightning for a year, the corrupt boss Tenzen Daikoku, Sasuke's bluff in the castle ('my name is Suigetsu, I attack tomorrow with an army'), the fight against Tenzen's men under a no-killing wager, Tenzen's Bodyguard bisecting Suigetsu, the Hydrification counter and the Great Water Arm that takes the blade back. Narutopedia's Tenzen Daikoku page is headed 'the ANIME-ONLY crime lord' and Tenzen's Bodyguard exists only here. Narutopedia's ep-115 synopsis gives this block three of its five paragraphs; TV Tokyo's 335話 synopsis narrates the source beats and then hands the entire remainder to one teaser sentence, 「そこには思わぬ事態が待ち構えていた」. The episode also re-shows Part-I flashbacks (Zabuza's first ambush, Kakashi in the Water Prison, meeting Tazuna) — recap, weight none.",
+   "sources": [
+    "https://naruto.fandom.com/api.php?action=parse&page=Zabuza%27s%20Blade&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=Detour%21%21&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=Tenzen%20Daikoku&prop=wikitext&format=json",
+    "https://web.archive.org/web/20100120034006/http://www.tv-tokyo.co.jp/anime/naruto/episodes2009.html"
+   ]
+  },
+  {
+   "episodes": [
+    115
+   ],
+   "kind": "partial",
+   "chapters": "346 (remainder only: the release of Suigetsu — the chapter's opening third is in ep 114 and its Konoha third in ep 90), 347 (Sasuke/Suigetsu thread only: the recruitment condition and the departure — the Konohamaru thread is in ep 90)",
+   "note": "weight: SIGNIFICANT — because this is a complete, story-carrying sequence with a resolution that progresses the source's own plot (the first member of Hebi is recruited, on a condition that sets up the rest of the episode and the team's shape), it is NEW material animated in no other episode, and it is the episode's premise and its title. It is the segment the anchor on this row rests on. Named as `partial` rather than left implicit because both chapters are page-split with other episodes.",
+   "sources": [
+    "https://naruto.fandom.com/api.php?action=parse&page=Zabuza%27s%20Blade&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=The%20Secret%20of%20the%20New%20Technique%21%21&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=Detour%21%21&prop=wikitext&format=json",
+    "https://web.archive.org/web/20100120034006/http://www.tv-tokyo.co.jp/anime/naruto/episodes2009.html",
+    "https://naruto.fandom.com/api.php?action=parse&page=Eye%20of%20a%20Hawk&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episodes": [
+    116
+   ],
+   "kind": "divergence",
+   "chapters": null,
+   "note": "weight: NONE for the standing (T28 faithfulness clause — one ~17-page chapter stretched over ~21 minutes stays canon while the telling is faithful; alterations and additions inside adapted material are noted, never weighed toward mixed). The addition is Karin's flashback to her first meeting with Sasuke, played while she is locked in the room with him: Orochimaru sets Sasuke to recapture escaped test subjects and orders Karin to sense for them, she notices he kills none of them and hears him say there is only one person he wants to kill, is distracted by his chakra, falls from a tree and is caught by him. Narutopedia's Karin article flags this as anime — 'In the anime… When the two formally met, Karin assisted Sasuke with recapturing one hundred and eighteen test subjects from one of Orochimaru's hideouts', sourced to ''Naruto: Shippūden'' episode 116 — while the manga's account of Karin's first sight of Sasuke is the Chūnin-Exam bear rescue of ch 482 pp 10-12, a different scene the anime does not use here. TV Tokyo's 336話 confirms the flashback's placement without describing it (「サスケを見つめる香燐の脳裏には、数年前の出会いの光景がよみがえっていた」). ONE OBSERVATION, offered as unconfirmed: the exchange inside the flashback ('you did not kill any of them' / 'there is only one person I want to kill') is the dialogue of ch 343's opening pages, where it is Orochimaru who observes Sasuke amid the men he has beaten without killing; if the studio relocated that beat here, ch 343's opening pages have no straight adaptation anywhere in the run. I could not confirm the relocation on a second source, so it is recorded as an observation and NOT as a chapter tie or an anchor.",
+   "sources": [
+    "https://naruto.fandom.com/api.php?action=parse&page=Guardian%20of%20the%20Iron%20Wall&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=Karin&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=Unfeeling%E2%80%A6&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=The%20Next%20Person%21%21&prop=wikitext&format=json",
+    "https://web.archive.org/web/20100120034006/http://www.tv-tokyo.co.jp/anime/naruto/episodes2009.html"
+   ]
+  },
+  {
+   "episodes": [
+    117
+   ],
+   "kind": "partial",
+   "chapters": "351 (opening 2-3 pages only: Sasuke's own partial cursed-seal transformation blocking Jūgo's first strike, and his line that he did not come to fight but to talk)",
+   "note": "weight: SLIVER — because it is a trailing fragment that the NEXT episode owns and adapts properly: ep 118 ('Formation!') has a stored START of 351 and carries the chapter's substance (Jūgo's delight at Sasuke's seal control, Suigetsu joining the fight, Sasuke stopping both with killing intent, Jūgo retreating into his cell and asking them to leave). It earns no anchor and does not move the END — A47, and R3 before A47: the credit rests on ONE lineage (Narutopedia's episode infobox, which AFG's chapter cell copies token for token), while TV Tokyo's 337話 synopsis stops short of the encounter with teaser wording (「アジト深奥では見たものとは——」) and its 338話 synopsis takes the confrontation and the fight as the NEXT episode's content. Recorded as single-source, per the existence clause.",
+   "sources": [
+    "https://naruto.fandom.com/api.php?action=parse&page=J%C5%ABgo%20of%20the%20Northern%20Hideout&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=A%20Conversation%20Between%20Men%21%21&prop=wikitext&format=json",
+    "https://web.archive.org/web/20100120034006/http://www.tv-tokyo.co.jp/anime/naruto/episodes2009.html",
+    "https://www.animefillerguide.com/naruto-shippuden/"
+   ]
+  }
+ ],
+ "repairs": [],
+ "type_corrections": [
+  {
+   "episodes": [
+    113
+   ],
+   "type": "canon",
+   "note": "Stored MIXED (AFL 'Mixed Canon/Filler'). FLIP TO CANON on chapter accounting under T28's RECAP CLAUSE. SEGMENT WEIGHTS. (1) SOURCE — ch 343's Sasuke thread and ch 344, adapted panel by panel: Orochimaru's third host body rejecting him and the level-10 medicine, Kabuto leaving his side, Sasuke finishing his training and driving a Chidori Sharp Spear through the door, the whole 'you have nothing left to teach me' takedown with the human-experiment imagery, Orochimaru shedding into the giant white snake, the snakes cut away, cursed-seal stage two and the snake-and-hawk speech. WEIGHT: SIGNIFICANT — it is the episode's own job and its climax, it is first-time (ch 343's Konoha half went to ep 90; ch 344 has no earlier coverage), and the 2009 breakdown says of this stretch that 'everything is going step-by-step (or panel-by-panel) of the manga'. (2) RECAP — the Part-I retrospective (Forest of Death, Cursed Seal, the Yoroi match, Chidori vs Gaara, the Konoha Crush, the Third's death). WEIGHT: NONE. T28 is explicit: a recap does not progress the story and counts for NOTHING in the standing, judge the remainder, and never let a recap's SIZE make a row mixed — the FotNS-130 witness is a 9m28s clip show inside a full chapter adaptation that stays canon. The recap boundary (shippuden 388) is satisfied on the primary side too: every beat is a retelling of a Part-I chapter the anime had already adapted, which Narutopedia's ep-113 synopsis makes explicit by linking each one to the 2002 episode that first animated it — it is not 'a newly animated sequence with scenes the source lacks', which is what made 388 mixed. (3) ANIME-ORIGINAL — a ~1-minute Tsunade/Anbu bridge closing the Three-Tails filler arc, two wordless foreshadowing images, and the filler-arc host's name. WEIGHT: SLIVER; under the faithfulness clause a small studio-made beat inside adapted chapters is noted, never weighed toward mixed. WHO LIED AND HOW: AFL's 'Mixed Canon/Filler' bucket is measuring RUNTIME NOT ADAPTED, and on this row all of that runtime is recap of material AFL itself types canon elsewhere; it has no way to distinguish 'padded with old footage' from 'padded with new story'. animefillerguide, independently, classes this row plain canon (it is absent from AFG's mixed list — '54, 56, 71-72, 89-90, 112, 176, 178-181, 296…' — and its table row carries no class span), and ja-Wikipedia leaves the subtitle unbolded under a legend where bold means 全編アニメオリジナル. Two independent legs beyond the two labels: Narutopedia's ch-343 and ch-344 pages, whose content matches the episode's present-day half scene for scene, and TV Tokyo's own 333話 synopsis, which describes ONLY the source beats and the clash. COUNTER-READING, stated: if a curator prefers to treat a recap block this large as production that shapes the episode, the row would stay mixed — but that reading is the one T28's recap clause exists to forbid, and the same reading would flip FotNS 130.",
+   "sources": [
+    "https://naruto.fandom.com/api.php?action=parse&page=The%20Serpent%27s%20Pupil&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=Unfeeling%E2%80%A6&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=The%20Snake%20and%E2%80%A6&prop=wikitext&format=json",
+    "https://web.archive.org/web/20100120034006/http://www.tv-tokyo.co.jp/anime/naruto/episodes2009.html",
+    "https://www.animefillerguide.com/naruto-shippuden/",
+    "https://www.animefillerlist.com/shows/naruto-shippuden",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=NARUTO%20-%E3%83%8A%E3%83%AB%E3%83%88-%20%E7%96%BE%E9%A2%A8%E4%BC%9D&prop=wikitext&format=json",
+    "https://weareawesomeness.wordpress.com/2009/06/13/naruto-shippuden-episode-113-the-serpents-pupil-breakdown-and-discussion/",
+    "https://theadultswimsquad.wordpress.com/2016/05/22/naruto-shippuden-episode-113-recap-the-serpents-pupil/"
+   ]
+  },
+  {
+   "episodes": [
+    114
+   ],
+   "type": "canon",
+   "note": "CONFIRMED AS STORED by chapter accounting on two independent sources beyond the labels. SEGMENT WEIGHTS. (1) SOURCE — ch 344's closing flashback pages, ch 345 entire, ch 346's opening third. WEIGHT: SIGNIFICANT; it is the episode's plot (Orochimaru's body-swap ritual reversed and Orochimaru absorbed — a death and the arc's turning point) and Narutopedia's ch-345 page matches it beat for beat, as does TV Tokyo's 334話 synopsis right down to its closing line about Kabuto returning from mixing medicine to an unbelievable sight. (2) FLASHBACK — Orochimaru's history. WEIGHT: NONE, and importantly it is NOT anime invention: Narutopedia's Orochimaru article cites ''Naruto'' ch 344 pp 16-17 for the white snake at his parents' grave and ''Naruto'' ch 345 for Itachi's genjutsu and the severed hand, so the flashback is the chapters' own; the studio's additions inside it (Nawaki's death, Anko and the kept skin, the Jiraiya parting) are characterisation with no plot fact. (3) CODA — the blood-red sunset in Konoha, Anko killing a white snake, Itachi and Kisame. WEIGHT: SLIVER, anime-original atmosphere with no resolution. Nothing here is a story-carrying original share, so the row is canon. AFL and AFG agree; neither lied on this row.",
+   "sources": [
+    "https://naruto.fandom.com/api.php?action=parse&page=Eye%20of%20a%20Hawk&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=The%20Snake%20and%E2%80%A6&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=The%20Ritual%E2%80%A6%21%21&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=The%20Secret%20of%20the%20New%20Technique%21%21&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=Orochimaru&prop=wikitext&format=json",
+    "https://web.archive.org/web/20100120034006/http://www.tv-tokyo.co.jp/anime/naruto/episodes2009.html",
+    "https://www.animefillerlist.com/shows/naruto-shippuden",
+    "https://www.animefillerguide.com/naruto-shippuden/"
+   ]
+  },
+  {
+   "episodes": [
+    115
+   ],
+   "type": "mixed",
+   "note": "CONFIRMED AS STORED by chapter accounting on two independent sources beyond the labels. SEGMENT WEIGHTS. (1) SOURCE — ch 346's remainder (Sasuke frees Suigetsu from his tank and names the team he wants: Karin of the Southern Hideout, Jūgo of the Northern Hideout) and ch 347's Sasuke/Suigetsu thread (Suigetsu's condition — recover Zabuza's Kubikiribōchō — the departure for the Land of Waves and the approach to Karin's hideout). WEIGHT: SIGNIFICANT — a complete recruitment with a resolution that the source itself carries, first-time, and the episode's premise and title. (2) ANIME-ORIGINAL — the whole Tenzen Daikoku plot, roughly two thirds of the episode, for which the manga has ZERO pages: ch 347 disposes of the errand in one clause and Narutopedia heads its Tenzen Daikoku page 'the ANIME-ONLY crime lord'. WEIGHT: SIGNIFICANT AND ORIGINAL — this is the episode's own plot for most of its runtime, which is exactly T28's materiality bar for mixed. (3) RECAP — Part-I flashbacks to Zabuza's ambush, the Water Prison and meeting Tazuna. WEIGHT: NONE. WHO LIED AND HOW: animefillerguide is the outlier here — the row carries no class on its table and is absent from AFG's mixed list, i.e. AFG calls a two-thirds anime-original episode plain canon, the mirror of the mistake AFL makes on ep 113. AFL is right on this row. Independent legs: Narutopedia's ch-346 and ch-347 pages (which between them account for every source beat and nothing else) and TV Tokyo's 335話 synopsis, which narrates the source beats and hands the remainder to a teaser.",
+   "sources": [
+    "https://naruto.fandom.com/api.php?action=parse&page=Zabuza%27s%20Blade&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=The%20Secret%20of%20the%20New%20Technique%21%21&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=Detour%21%21&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=Tenzen%20Daikoku&prop=wikitext&format=json",
+    "https://web.archive.org/web/20100120034006/http://www.tv-tokyo.co.jp/anime/naruto/episodes2009.html",
+    "https://www.animefillerlist.com/shows/naruto-shippuden",
+    "https://www.animefillerguide.com/naruto-shippuden/"
+   ]
+  },
+  {
+   "episodes": [
+    116
+   ],
+   "type": "canon",
+   "note": "CONFIRMED AS STORED by chapter accounting on two independent sources beyond the labels. SEGMENT WEIGHTS. (1) SOURCE — ch 348 adapted end to end, every beat present and in order (Suigetsu's objections, the door broken with Kubikiribōchō, the prisoners debating the rumour of Orochimaru's death, Karin's refusal, the freshly dug graves and the informer, the prisoners freed on the promise to spread the word, Karin's change of tone alone with Sasuke, and her joining 'as far as I am going anyway'). WEIGHT: SIGNIFICANT; it is the whole episode. (2) ANIME-ORIGINAL — Karin's flashback to first meeting Sasuke on a prisoner-recapture detail, flagged as anime by Narutopedia's own Karin article (sourced to ''Naruto: Shippūden'' episode 116, against ch 482 pp 10-12 for the manga's own version of their first meeting). WEIGHT: SLIVER — characterisation inside an adapted chapter, no plot fact of its own; the faithfulness clause keeps the row canon. AFL and AFG agree; neither lied.",
+   "sources": [
+    "https://naruto.fandom.com/api.php?action=parse&page=Guardian%20of%20the%20Iron%20Wall&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=The%20Next%20Person%21%21&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=Karin&prop=wikitext&format=json",
+    "https://web.archive.org/web/20100120034006/http://www.tv-tokyo.co.jp/anime/naruto/episodes2009.html",
+    "https://www.animefillerlist.com/shows/naruto-shippuden",
+    "https://www.animefillerguide.com/naruto-shippuden/"
+   ]
+  },
+  {
+   "episodes": [
+    117
+   ],
+   "type": "canon",
+   "note": "CONFIRMED AS STORED by chapter accounting on two independent sources beyond the labels. SEGMENT WEIGHTS. (1) SOURCE — chs 349 and 350 in full plus ch 351's opening. WEIGHT: SIGNIFICANT; it is the entire episode, and TV Tokyo's 337話 synopsis narrates it as one continuous source line (Karin's warning about the Northern Hideout as a human-experimentation site, Jūgo as the sole original whose enzymes the cursed seals came from, the riot of cursed-seal test subjects triggered by the news of Orochimaru's death, the descent into the hideout). Narutopedia's ch-349 and ch-350 pages match beat for beat, including the Konoha half of ch 350 — Naruto and Sakura told by Tsunade and Jiraiya that Sasuke has killed Orochimaru — which the anime moves to the end of the episode. (2) The only structural liberty is that relocation of ch 350's Konoha pages to the close, a reorder inside adapted material: noted, weight none. I found NO anime-original block in this episode. AFL and AFG agree; neither lied.",
+   "sources": [
+    "https://naruto.fandom.com/api.php?action=parse&page=J%C5%ABgo%20of%20the%20Northern%20Hideout&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=At%20the%20Northern%20Hideout&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=Shocking%20News%E2%80%A6%21%21&prop=wikitext&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&page=A%20Conversation%20Between%20Men%21%21&prop=wikitext&format=json",
+    "https://web.archive.org/web/20100120034006/http://www.tv-tokyo.co.jp/anime/naruto/episodes2009.html",
+    "https://www.animefillerlist.com/shows/naruto-shippuden",
+    "https://www.animefillerguide.com/naruto-shippuden/"
+   ]
+  }
+ ],
+ "structure": {
+  "notes": "ROW IDENTITY (R20) VERIFIED ON TITLE + DATE FOR ALL FIVE, four ways. ja-Wikipedia's 疾風伝 episode table (師の予言と復讐の章 block): 113/通算333 大蛇（ダイジャ）の瞳孔 2009-06-11 | 114/334 鷹の瞳 06-18 | 115/335 再不斬の大刀 06-25 | 116/336 鉄壁の番人 07-02 | 117/337 北アジトの重吾 07-09 | 118/338 結成! 07-23. TV Tokyo's archived episodes2009.html carries the same six 通算 numbers, titles and 放送日. AFL prints 113-117 with the same dates. AFG's row numbers agree and its sub-number column reads (01)-(05) for this season block. No index join was used anywhere.\n\nAFG AND NARUTOPEDIA ARE ONE LINEAGE ON THIS BLOCK — confirmed token for token, so they were counted as ONE leg exactly as the task required. AFG's chapter cells: 113 '343, 344' | 114 '344, 345, 346' | 115 '346, 347' | 116 '348' | 117 '349, 350, 351' | 118 '351, 352'. Narutopedia's episode infoboxes: 113 chapters=343,344 | 114 chapters=344, 345, 346 | 115 chapters=346, 347 | 116 chapters=348 | 117 chapters=349, 350, 351. Identical.\n\nAFG HAS NO TIMED NOTE AND NO CLASS ON ANY OF THESE FIVE ROWS. All five table rows are plain <td> cells with no class span, and none of 113-117 appears in AFG's prose mixed list ('54, 56, 71-72, 89-90, 112, 176, 178-181, 296, 324, 327-328, 330, 346, 362, 388, 415, 417, 426, 429 and 462') or its filler list. So AFG asserts plain canon on all five — it agrees with the flip on 113 and it is the outlier on 115. Because AFG prints no minute ranges here, the wave-1/2 sizing instrument is UNAVAILABLE on this block; sizing for ep 113 came from two contemporaneous fan breakdowns, explicitly used at cross-check tier only.\n\nTHE CHAPTER MAP FOR THIS BLOCK (en-Wikipedia's volume list, which is the boundary authority for the stored table): vol 38 = 340-349 — 343 「非情に…」 Unfeeling/Merciless, 344 「蛇と…」 The Snake and…, 345 「儀式…!!」 The Ritual, 346 「新術の秘密!!」 The Secret of the New Technique, 347 「寄り道!!」 Detour, 348 「次なる一人!!」 The Next Person, 349 「北のアジトにて」 At the Northern Hideout; vol 39 = 350-359 — 350 「衝撃の報せ…!!」 Shocking News, 351 「男との対話!!」 A Conversation Between Men, 352 「目的は…!!」 The Goal is. Two of the five episode titles are chapter titles: ep 117 「北アジトの重吾」 against ch 349 「北のアジトにて」, and ep 118 「結成!」 against the Hebi formation in ch 352. Both are floors for coverage, not ENDs, and neither was used as evidence on its own.\n\nTHREAD PARTITION ACROSS THE FILLER SEAM — the structural fact that governs this whole block. The anime split chs 343, 346 and 347 by THREAD around the anime-original Three-Tails arc: ep 90 (before the arc) gathered all three chapters' KONOHA scenes (Ramen Ichiraku; Kakashi relaying Tsunade's ban on the Rasenshuriken; Konohamaru's new technique), and eps 113-115 (after it) return for the SASUKE pages. Every forward pointer in the stored ep-90 annotation is confirmed by this verdict on the chapter pages. Ch 346 is in fact split THREE ways: Konoha third = ep 90, opening third = ep 114, remainder = ep 115.\n\nTRAP-4 SWEEP (were any of 343-350's pages already carried by eps 74-90?) — RUN AND CLEAN. Prior coverage in that zone is: ep 88 -> 342, ep 89 -> 342 + a restaged ch-346 graft, ep 90 -> 343/346/347 Konoha threads. Chs 344, 345, 348, 349 and 350 have NO earlier coverage of any kind. So all five anchors here rest on first-time pages.\n\nPAGE-LEVEL FACTS THAT SETTLED BOUNDARIES, each from a Narutopedia page OTHER than the episode infobox (the independent leg): (1) ''Naruto'' ch 344 pp 16-17 = the white snake's shed skin near Orochimaru's parents' grave and Hiruzen's explanation — cited on the Orochimaru article's Background section; this is what ep 114 opens on and what makes ep 113's ending a C1 straddle rather than a clean chapter end. (2) ''Naruto'' ch 345 = Itachi's Shackling Stakes genjutsu and the severed left hand — cited on the same article; it proves ep 114's Akatsuki flashback is source, not invention. (3) Narutopedia's ch-346 page carries three separate blocks in one chapter, which is what lets the three-way split be stated on content. (4) Narutopedia's ch-347 page ends on Karin sensing them coming, which is where ep 115 ends and what ep 116 re-shows. (5) Narutopedia's Karin article marks the ep-116 flashback 'In the anime'. (6) Narutopedia's Tenzen Daikoku page is headed 'the ANIME-ONLY crime lord'.\n\nLICENSOR TEXT LOCATION for anyone re-running this: TV Tokyo's back-numbers for this range are at web.archive.org/web/20100120034006/http://www.tv-tokyo.co.jp/anime/naruto/episodes2009.html, Shift-JIS, keyed by 通算 話数 (333話-338話 for our 113-118)."
+ },
+ "flags_for_sean": [
+  "1) ONE TYPE FLIP: ep 113 mixed -> canon. It is a pure application of T28's recap clause (a recap's size never makes a row mixed; FotNS 130 is the witness) and AFG independently classes the row plain canon, but it is the only flip in the block and it rests on a sizing that could only be got at CROSS-CHECK tier: AFG prints no timed note on any of eps 113-117, so the ~5-minute opening recap and the 18:30 action start come from two contemporaneous fan breakdowns, not from a primary. The primary-tier claim is narrower and I believe sufficient: every flashback beat is a retelling of a Part-I chapter the 2002 series already animated (Narutopedia links each to its original episode), the present-day half is chs 343-344 panel by panel, and the only anime-ORIGINAL beat is a ~1-minute Tsunade/Anbu bridge. If you want the conservative call instead, leave 113 mixed and the anchor stands unchanged either way.",
+  "2) EP 114'S START IS THE ONE A10 JUDGEMENT CALL. Its leading share is ch 344's closing flashback, which Narutopedia pins at pp 16-17 — two pages, which would trip A10's <=5-page exception and push the START to 345. I did NOT apply it, because the pages are FIRST-TIME (not re-shown) and because the flashback's full extent is unproven (the page cite covers one fact inside a retrospective that runs on into ch 345's own flashback), and the catalog's convention on unproven size is to count, not to assume small. Both source legs print 344 on the row. If you prefer the strict A10 reading, ep 114 becomes 346 [345] with `partial{344 (pp 16-17)}` weight sliver, and ep 113's C1 continue at 344 still stands.",
+  "3) EP 117'S END IS HELD AT 350, NOT ADVANCED TO 351 — and I want you to see both rules I used, because the wave's other lesson cuts the other way. A47 applies on its face (the 351 share is the chapter's opening 2-3 pages and ep 118's stored START is 351), and R3-before-A47 applies independently (the 351 credit is SINGLE-SOURCE: Narutopedia's infobox, which AFG copies; TV Tokyo's 337話 stops short of the encounter with teaser wording and gives the Jūgo fight to 338話). I did NOT reason 'unquantified means small' — the Dai wave-13 error — because here the size IS quantified by the chapter page's own beat list. If you disagree, ep 117 becomes 351 [349] and ep 118's stored START 351 becomes a re-cover.",
+  "4) EP 115 IS THE MIRROR CASE OF 113 AND IS WORTH KEEPING VISIBLE: AFL is right (Mixed) and AFG is the outlier (plain canon on a row that is ~two-thirds the anime-only Tenzen Daikoku plot). Taken with 113, this block is a clean demonstration that neither label is a type witness on this series in either direction — one is wrong in each direction within five consecutive rows.",
+  "5) NO REPAIRS PROPOSED. Every stored pointer this block touches is confirmed rather than contradicted: ep 90's annotation ('343's Sasuke thread opens ep 113', '346's and 347's Sasuke/Suigetsu threads are in ep 115'), the batch-11 note that the ep-89/90 fragments are 're-adapted properly in 113-115', ep 112's continue at 343, and ep 118's stored 352 [351]. The wave-2 verdict's continue hazard is now closed by construction: with 113 anchored at [343], the healer's parity target for eps 90 and 112 is 343, not 351.",
+  "6) DISPLAY CHECK: the five anchors are monotonic (344, 346, 347, 348, 350) and sit strictly between ep 90's END 343 and ep 118's START 351, so the reorder holes A18 opened after the ep-112 anchor landed all close, and ep 112's deliberate back-jump to 318 is now bracketed on both sides by forward rows.",
+  "7) ONE OBSERVATION LEFT UNCONFIRMED ON PURPOSE (ep 116): the dialogue inside Karin's anime-original flashback ('you did not kill any of them' / 'there is only one person I want to kill') is the dialogue of ch 343's opening pages, where the observer is Orochimaru. If the studio relocated that beat into the Karin flashback, then ch 343's opening pages have no straight adaptation anywhere in the run. I could not confirm it on a second source, so it is written into the ep-116 divergence note as an observation and carries no chapter tie and no anchor. Worth a look if you ever audit ch 343 at page level."
+ ]
+}
