@@ -1,6 +1,6 @@
 {
   "series_id": "one-piece",
-  "summary": "Batch 21 wave 2 (the STRONG type_source_disagreement tier after the AFG parser fix), One Piece rows 209, 210, 211, 212, 217, 219, 886. RESULT: ALL SEVEN STORED TYPES ARE CONFIRMED CANON and AFL is right on all seven; AFG is wrong on all seven, in TWO distinct ways. Settled on four instruments beyond AFL/AFG, three of them page-level: (1) opwiki.org's per-episode 'Umgesetzte Kapitel' field (209 = ch 306 S.17-19 + 307; 210 = 308 + 309; 211 = 310 + 311; 212 = 312 + 313 S.1-9; 217 = 313 S.11-19 + 314; 219 = 317 + 318 S.1-17; 886 = 907 S.7-16 — and, as a control, 213 and 215 read 'Unbekannt'); (2) onepiece.fandom's per-episode `chapter` field (211 = '310 p.2-19 and 311 p.2-19', 212 = '312 p.2-19 and 313 p.2-11', 219 = '317 p.2-21 and 318 p.2-17') PLUS the Long Ring Long Land Arc page's page-level {{Qref}} map and the chapter pages' own reverse index (ch 309 -> 'Episode 210 (p.2-17)'; ch 313 -> 'Episode 212 (p.2-11) / Episode 215 (p.8-9) / Episode 217 (p.12-19)'; ch 318 -> 'Episode 219 (p.2-17) / Episode 226 (p.18-19)'); (3) ja.wikipedia's live episode list, whose legend is '太字はアニメオリジナルストーリー' — it BOLDS 213, 214, 215, 216 and 220-226 and leaves 209, 210, 211, 212, 217, 218, 219 UNMARKED, i.e. the anime-original block is bracketed on both sides by rows ja-WP positively claims as manga story (the strongest possible control: the marker is applied to the immediate neighbours); (4) for 886, Anime News Network's contemporaneous per-episode review, which sizes the episode ('There's maybe twelve minutes of new story material to work with this week', 'even with the usual amount of space allocated to recapping an old arc'). WHO LIED AND HOW — AFG, twice over. (a) ROWS 210 AND 211 are painted RED with a struck-through title (AFG's 'skip this' style) while the SAME ROW's Chapters column prints '308, 309' and '310, 311' and the row carries NEITHER the '*Filler' label NOR the 'N/A' chapter cell that every genuine AFG filler row on this page carries (compare 213 '*Filler / N/A', 215 '*Filler / N/A', 220-224 '*Filler / N/A'). AFG contradicts itself inside one row; its own data column is right and its class is a styling defect (batch 21 wave 1 saw the same two rows and called them 'canon rows 210 and 211 painted red'). Content settles it beyond doubt: ep 210's Long Summary matches ch 308's Long Summary beat for beat (Long Coral currents, the smokescreen, the whirlpool cleared with Usopp's Impact Dial, Capote's Two-Fish Engine, the Fake Sign, Foxy disguised as an old woman, the fake finish line) and then ch 309 p.2-17 (Foxy explains the Noro Noro no Mi, takes Chopper, Zoro's scolding). (b) ROWS 209, 212, 217, 219 are painted BLUE ('*Mixed' in the parser's reading) but carry NO minute window — AFG's blue is used for TWO different things on this page and only one of them is a sizing instrument: rows 203, 225, 226, 879-890 carry 'we only watch from minute X to Y' (a real excision), while 209/212/217/219 carry a plain prose note whose entire content is a MANGA-VS-ANIME DIVERGENCE ('the change that arose with respect to the manga is...', 'the change from the manga lies in the reward for victory'). A divergence caveat is not a claim of original content; under T28's faithfulness clause those are `divergence` annotations on a canon row. (c) ROW 886 is the one AFG row here with a real window (watch 3:34-9:16 and 17:26-to-the-end, excising 8m10s) — but the excised block is the episode's RECAP MONTAGE of Enies Lobby and Fish-Man Island, arcs already animated, which under T28's recap clause counts for NOTHING; the remainder is a straight adaptation of ch 907 p.7-16 with three named added beats. DELIVERED: 7 type confirmations, 7 anchors (stored END/START confirmed on all seven, with page-level chapters_adapted enrichment), 1 anchor repair proposed (ep 209 START 306 -> 307 under A10's <=5-page leading-partial clause; the 306 tail is 3 pages), 9 annotations with per-segment weights, 5 structure findings including a queued re-read of the whole Levely block 878-890 under the recap clause.",
+  "summary": "Batch 21 wave 2 (the STRONG type_source_disagreement tier after the AFG parser fix), One Piece rows 209, 210, 211, 212, 217, 219, 886. RESULT: ALL SEVEN STORED TYPES ARE CONFIRMED CANON and AFL is right on all seven; AFG is wrong on all seven, in TWO distinct ways. Settled on four instruments beyond AFL/AFG, three of them page-level: (1) opwiki.org's per-episode 'Umgesetzte Kapitel' field (209 = ch 306 S.17-19 + 307; 210 = 308 + 309; 211 = 310 + 311; 212 = 312 + 313 S.1-9; 217 = 313 S.11-19 + 314; 219 = 317 + 318 S.1-17; 886 = 907 S.7-16 — and, as a control, 213 and 215 read 'Unbekannt'); (2) onepiece.fandom's per-episode `chapter` field (211 = '310 p.2-19 and 311 p.2-19', 212 = '312 p.2-19 and 313 p.2-11', 219 = '317 p.2-21 and 318 p.2-17') PLUS the Long Ring Long Land Arc page's page-level {{Qref}} map and the chapter pages' own reverse index (ch 309 -> 'Episode 210 (p.2-17)'; ch 313 -> 'Episode 212 (p.2-11) / Episode 215 (p.8-9) / Episode 217 (p.12-19)'; ch 318 -> 'Episode 219 (p.2-17) / Episode 226 (p.18-19)'); (3) ja.wikipedia's live episode list, whose legend is '太字はアニメオリジナルストーリー' — it BOLDS 213, 214, 215, 216 and 220-226 and leaves 209, 210, 211, 212, 217, 218, 219 UNMARKED, i.e. the anime-original block is bracketed on both sides by rows ja-WP positively claims as manga story (the strongest possible control: the marker is applied to the immediate neighbours); (4) for 886, Anime News Network's contemporaneous per-episode review, which sizes the episode ('There's maybe twelve minutes of new story material to work with this week', 'even with the usual amount of space allocated to recapping an old arc'). WHO LIED AND HOW — AFG, twice over. (a) ROWS 210 AND 211 are painted RED with a struck-through title (AFG's 'skip this' style) while the SAME ROW's Chapters column prints '308, 309' and '310, 311' and the row carries NEITHER the '*Filler' label NOR the 'N/A' chapter cell that every genuine AFG filler row on this page carries (compare 213 '*Filler / N/A', 215 '*Filler / N/A', 220-224 '*Filler / N/A'). AFG contradicts itself inside one row; its own data column is right and its class is a styling defect (batch 21 wave 1 saw the same two rows and called them 'canon rows 210 and 211 painted red'). Content settles it beyond doubt: ep 210's Long Summary matches ch 308's Long Summary beat for beat (Long Coral currents, the smokescreen, the whirlpool cleared with Usopp's Impact Dial, Capote's Two-Fish Engine, the Fake Sign, Foxy disguised as an old woman, the fake finish line) and then ch 309 p.2-17 (Foxy explains the Noro Noro no Mi, takes Chopper, Zoro's scolding). (b) ROWS 209, 212, 217, 219 are painted BLUE ('*Mixed' in the parser's reading) but carry NO minute window — AFG's blue is used for TWO different things on this page and only one of them is a sizing instrument: rows 203, 225, 226, 879-890 carry 'we only watch from minute X to Y' (a real excision), while 209/212/217/219 carry a plain prose note whose entire content is a MANGA-VS-ANIME DIVERGENCE ('the change that arose with respect to the manga is...', 'the change from the manga lies in the reward for victory'). A divergence caveat is not a claim of original content; under T28's faithfulness clause those are `divergence` annotations on a canon row. (c) ROW 886 is the one AFG row here with a real window (watch 3:34-9:16 and 17:26-to-the-end, excising 8m10s) — but the excised block is the episode's RECAP MONTAGE of Enies Lobby and Fish-Man Island, arcs already animated, which under T28's recap clause counts for NOTHING; the remainder is a straight adaptation of ch 907 p.7-16 with three named added beats. DELIVERED: 7 type confirmations, 7 anchors (stored END/START confirmed on all seven, with page-level chapters_adapted enrichment), 1 anchor repair proposed (ep 209 START 306 -> 307 under A10's <=5-page leading-partial clause; the 306 tail is 3 pages), 8 annotations with per-segment weights (209/210 share one divergence entry), 5 structure findings including a queued re-read of the whole Levely block 878-890 under the recap clause.",
   "anchors": [
     {
       "episode": 209,
@@ -123,7 +123,9 @@
   "anchor_hostile": [],
   "annotations": [
     {
-      "episodes": [209],
+      "episodes": [
+        209
+      ],
       "kind": "partial",
       "chapters": "306 (p.17-19)",
       "note": "weight: sliver — because it is a THREE-page leading tail of ch 306 (the Davy Back Fight's first-event rules: three members per crew, a boat built from three barrels and two oars, one lap of the island, an Eternal Pose each) used as the episode's opening; ep 208 adapts ch 306 p.1-16, the bulk. The material is NEW here (ep 208 stops before it), not a duplicate, but at 3 pages it is under A10's <=5-page bar, which is why this verdict proposes moving ep 209's START to 307 and keeping these pages in chapters_adapted. Sources: OPwiki 'Episode 209 = Kapitel 306 (S. 17-19), Kapitel 307' against 'Episode 208 = Kapitel 305 (S. 6-19), Kapitel 306 (S. 1-16)'; the fandom arc page's {{Qref|name=c306|chap=306|ep=208|ep2=209}}.",
@@ -134,7 +136,10 @@
       ]
     },
     {
-      "episodes": [209, 210],
+      "episodes": [
+        209,
+        210
+      ],
       "kind": "divergence",
       "chapters": "307-308",
       "note": "weight: the SOURCE segment is significant — ch 307 (ep 209) and ch 308 (ep 210) ARE these episodes' plot, adapted in running order; what diverges is the size of the field. In the manga the Donut Race is 3-on-3 (Nami, Usopp, Robin vs Porche, Capote, Monda) with the other Straw Hats watching; in the anime 'all of the Straw Hats and most of Foxy's crew participates' (onepiece.fandom, Long Ring Long Land Arc page), so ep 209 eliminates Zoro and Chopper's boat and ep 210 breaks the anime-only 'Well Whatever' on the Long Cape — boats and eliminations that exist nowhere in the source. This is an EXPANSION of the source's own event, not a second plot: every named beat of ch 307 (the shore ambush by the Foxy Pirates, the crew fighting them off, Usopp's Impact Dial taking the lead, arriving at the Long Coral) and of ch 308 (the currents, the smokescreen, the whirlpool, the Two-Fish Engine, the Fake Sign, the old-woman disguise, the fake finish line, the Noro Noro reveal) is in the episodes in the chapter's own order. T28 faithfulness clause -> the rows stay CANON and this is an annotation. HONEST GAP: no source sizes the added boats' screen time; AFG, which prints a minute window on every row it really wants excised (203, 225, 226, 879-890), prints NONE on 209 and paints 210 red with no note at all.",
@@ -147,7 +152,9 @@
       ]
     },
     {
-      "episodes": [212],
+      "episodes": [
+        212
+      ],
       "kind": "divergence",
       "chapters": "313 (p.8-9)",
       "note": "weight: the source segment is significant (ch 312 entire + ch 313 p.2-11 = the Groggy Ring's finish, the referee's whistle, the victory), and the divergence is a SINGLE beat inside it: at ch 313 p.8-9 Luffy names Chopper as his prize and takes him back to the crew; in ep 212 he names Tonjit's horse Shelly, who never competed. The reason is structural — the anime-original Roller Race block (eps 213-216) needs Chopper on Foxy's side — and the source beat is not lost, it is DEFERRED to ep 215, where it is already annotated graft{313 p.8-9}. onepiece.fandom's ch-313 reverse index encodes exactly this: 'Episode 212 (p. 2-11) (Some top and bottom sections are included in p. 8-9)' and 'Episode 215 (p. 8-9) (Getting Chopper back sections)'; the anime's own Anime Notes say 'In the manga, Chopper is chosen instead of Shelly'; AFG's blue note on this row says the same thing and nothing else ('the change that occurs with respect to the manga is Luffy's choice ... (You can check this in manga 313, pp. 8-9)'). T28 faithfulness clause -> canon + divergence.",
@@ -159,7 +166,9 @@
       ]
     },
     {
-      "episodes": [217],
+      "episodes": [
+        217
+      ],
       "kind": "divergence",
       "chapters": "313-314",
       "note": "weight: the source segment is significant (ch 313 p.12-19 + ch 314 = the Combat round: the venue moved to the Sexy Foxy, the afro, the Noro Noro Beam, the delayed barrage, the slowed cannonballs, the face bombs — this is what the episode is FOR); the anime-original share is a SLIVER of bridging: the opening scene in which Foxy reclaims Chopper, Nami bargains for Robin and Chopper, and Foxy raises the stake to 500 crewmates. It exists only because the anime-only Roller Race (213-216) cost the crew Robin, a loss the source never had — AFG's own note on this row spells the mechanism out. A second, smaller divergence from the fandom's Anime Notes: 'In the manga Usopp's speech on \"Afro Power\" happens in the dressing room before Luffy put on the afro wig. In the anime this happens while Usopp and Luffy are going to the fight' — a rearrangement inside an adapted scene. T28: the original share is a stitching scene, not a story-carrying plot of its own, and AFG prints no excision window for this row -> canon + divergence. HONEST GAP: no source times the opening negotiation; it is one scene by every summary's structure.",
@@ -171,7 +180,9 @@
       ]
     },
     {
-      "episodes": [219],
+      "episodes": [
+        219
+      ],
       "kind": "divergence",
       "chapters": "318",
       "note": "weight: the source segment is significant (ch 317 entire + ch 318 p.2-17 = Luffy reflecting the Noro Noro Beam with a mirror shard, the Gum-Gum Flail, Foxy out of bounds, the failed shoulder throw, the Jolly Roger claimed and redrawn, the Foxy Pirates' departure, the visit to Tonjit and Shelly); the anime-original share is TWO short codas. (1) The prize: in ch 318 Luffy declines to take any crewmate and takes only the flag; in the anime he also collects 497 Foxy Pirates from the anime-only 500-crew bet and immediately dismisses them — the arc page tags this passage {{Qref|name=e219|ep=219}}, i.e. sourced to the EPISODE with no chapter, and AFG's blue note describes the same swap. (2) The Tonjit coda: ch 318 ends the subplot unresolved ('Tonjit tells them that it's okay and that he can wait'); the anime resolves it with his grandson arriving on a giant mole and digging a tunnel to the clan. Both are short closers grafted onto a faithful adaptation. T28 faithfulness clause -> canon + divergence.",
@@ -183,7 +194,9 @@
       ]
     },
     {
-      "episodes": [886],
+      "episodes": [
+        886
+      ],
       "kind": "partial",
       "chapters": "907 (p.7-16)",
       "note": "weight: significant — because these ten pages ARE the episode's plot and its arc-defining beat: Sterry brought before the Empty Throne and told never to sit on it, Charlos having Shirahoshi seized as a pet, Leo and Sai stopped by Rob Lucci and CP0, Neptune deciding to forsake Otohime's dream, and Donquixote Mjosgard clubbing Charlos and freeing her. The material is NEW in this episode, not a duplicate: OPwiki partitions ch 907 exactly, 'Episode 886 = Kapitel 907 (S. 7-16)' against 'Episode 887 = Kapitel 907 (S. 2-6, 16)' — 887 owns the Big Mom/Kaidou call, Garp and Rocks, and the Five Elders' visitor. ANN's contemporaneous review independently describes precisely this content as the episode's new material ('There's maybe twelve minutes of new story material to work with this week ... The Empty Throne is a killer piece of world-building ... the Mjosgard reveal is one of the most delightful payoffs in all of One Piece').",
@@ -195,7 +208,9 @@
       ]
     },
     {
-      "episodes": [886],
+      "episodes": [
+        886
+      ],
       "kind": "recap",
       "chapters": "Enies Lobby (already animated eps 264-336) and the Fish-Man Island / Otohime past (already animated in the Fish-Man Island arc)",
       "note": "weight: none (weightless, T28 recap clause). This is the whole of AFG's excision on this row: AFG says 'we watch from minute 3:34 to 9:16 and from 17:26 to the end', i.e. it skips 9:16-17:26, 8m10s. That block is the episode's recap montage. onepiece.fandom's Anime Notes: 'This episode gives a recap of CP9 and the Straw Hats' declaration of war against the World Government at Enies Lobby and also recaps some of the events of the fish-men's past from the Fish-Man Island Arc.' ANN's review, written the week it aired: 'even with the usual amount of space allocated to recapping an old arc, this episode manages to feel significantly more substantial than the preceding weeks ... This connects us to our recap for the week, highlighting the battle against Lucci and company back when they were still known as CP9 ... Along with the Enies Lobby recap, this episode gets sprinkled with flashbacks to Fishman Island' and 'There's maybe twelve minutes of new story material to work with this week'. Under T28 the recap progresses nothing and counts for NOTHING in the standing; the remainder (~12 min = ch 907 p.7-16 plus three small added beats) decides the type, and it is source adaptation -> CANON. RESIDUAL, stated rather than buried: no source I found says explicitly whether the montage is RE-SHOWN footage or newly drawn, which is the RECAP BOUNDARY test (Sean 2026-09-02, shippuden 388). Both the fandom and ANN call it a recap of arcs already animated, and the Levely block ran a weekly recap slot of this shape, so I read it as re-shown. If it is newly animated at 8 minutes, the row becomes MIXED and the anchor survives (a mixed row keeps its position).",
@@ -206,7 +221,9 @@
       ]
     },
     {
-      "episodes": [886],
+      "episodes": [
+        886
+      ],
       "kind": "divergence",
       "chapters": "907",
       "note": "weight: sliver — the anime's own additions to the adapted pages, all of them beats rather than scenes, listed exhaustively by onepiece.fandom's Anime Notes: 'The anime adds the following: Neptune wishing he could bring Otohime to Mary Geoise; More scenes of Neptune seething with rage as he watches Shirahoshi being threatened; Mjosgard ordering CP0 to leave', plus two swaps — 'In the manga, Mansherry rushed to Leo's side after Lucci threw him to the ground. In the anime, it is Kabu instead' and 'In the manga, Charlos did notice Mjosgard before the latter struck him in the face. This however is not shown in the anime.' Nothing here is a story-carrying original share; under T28's faithfulness clause these are annotations on a canon row. Note the contrast that makes this row different from its stored-mixed neighbours: the same Anime Notes field on ep 885 lists SEVEN added conversations plus four newly animated scenes from Oda's cover serial, and on ep 887 lists six additions including an extended Garp conversation and a new narration on the Rocks Pirates.",
@@ -233,7 +250,9 @@
   ],
   "type_corrections": [
     {
-      "episodes": [209],
+      "episodes": [
+        209
+      ],
       "type": "canon",
       "note": "CONFIRMATION — stored canon is right, AFL ('Manga Canon') is right, AFG's blue is the outlier. Chapter accounting: the episode adapts ch 306 p.17-19 (the first event's rules) and ch 307 entire (the Donut Race's start: the Foxy Pirates' shore ambush, the crew fighting them off, Usopp's Impact Dial taking the lead, the Long Coral). SEGMENT WEIGHTS — ch 307: significant, it is the episode's whole job; ch 306 p.17-19: sliver (3 pages, first-time material, annotated `partial`); anime-original: an EXPANSION of the source's own event (extra racing boats, Zoro and Chopper's boat eliminated), annotated `divergence`, no scene of its own. T28: mixed needs a story-carrying ORIGINAL share; enlarging the manga's own race is the faithfulness clause, not a second plot. WHAT AFG'S CLAIM ACTUALLY IS: its blue note reads 'The change that arose with respect to the manga is in the events, in the manga the last event is \"Combat\" while in the anime it is \"The Round-and-Round Roller Race\". (You can check this in manga 306, p. 17)' — an ARC-level divergence about the event list, correct as a fact and not a claim about original content in THIS episode; AFG prints no minute window here, and on this page a window is how AFG marks a segment it wants skipped. CONFIDENCE: high on the type; the un-sized item is the added boats' screen time, which no source measures.",
       "sources": [
@@ -245,7 +264,9 @@
       ]
     },
     {
-      "episodes": [210],
+      "episodes": [
+        210
+      ],
       "type": "canon",
       "note": "CONFIRMATION — stored canon is right, AFL is right, AFG is WRONG AND SELF-CONTRADICTORY. AFG paints row 210 red with a struck-through title (its skip style) while printing '308, 309' in the same row's Chapters column and attaching NEITHER the '*Filler' label NOR the 'N/A' chapter cell that every genuine filler row on that page carries (213, 215, 220-224 all read '*Filler' + 'N/A'). Chapter accounting: ch 308 entire + ch 309 p.2-17 — and the match is beat for beat with the source's own summaries (Nami slowing before the Long Coral, Monda failing the currents, Foxy's smokescreen, the whirlpool cleared with the Impact Dial, Capote's Two-Fish Engine, 'Boss Trick #18 the Fake Sign', Foxy disguised as a feeble old woman, the fake finish line, the Noro Noro no Mi revealed, Chopper claimed, Zoro's scolding). SEGMENT WEIGHTS — ch 308 + 309 p.2-17: significant (the entire episode); anime-original: the extra boats carried over from ep 209 (the 'Well Whatever' breaking on the Long Cape), a sliver, annotated `divergence`. onepiece.fandom's ch-309 page carries the reverse index '*Episode 210 (p. 2-17)' — a positive, chapter-side claim. ja-WP leaves the row unbolded three rows before it starts bolding 213-216. CONFIDENCE: high.",
       "sources": [
@@ -258,7 +279,9 @@
       ]
     },
     {
-      "episodes": [211],
+      "episodes": [
+        211
+      ],
       "type": "canon",
       "note": "CONFIRMATION — stored canon is right, AFL is right, AFG is WRONG in the same self-contradictory way as 210 (red + strikethrough, no '*Filler' label, and its own Chapters column printing '310, 311'). This row has the strongest positive evidence of the seven: onepiece.fandom's Episode 211 page carries an EXPLICIT infobox field `chapter = Chapter 310 p.2-19 and Chapter 311 p.2-19` — two chapters adapted end to end with no page dropped — and the same wiki writes `chapter = Filler` explicitly when a row is filler (ep 213 does), so this is a positive claim, not a default. OPwiki agrees ('Kapitel 310, Kapitel 311'), the arc page pins both chapters to ep 211, ja-WP leaves it unbolded. SEGMENT WEIGHTS — ch 310 + 311: significant, 100% of the episode (the Groggy Ring: the coin toss, the Groggy Monsters, the weapons, the referee's blindness, Zoro and Sanji's ten seconds of cooperation); no anime-original segment is named by any source. CONFIDENCE: high.",
       "sources": [
@@ -271,7 +294,9 @@
       ]
     },
     {
-      "episodes": [212],
+      "episodes": [
+        212
+      ],
       "type": "canon",
       "note": "CONFIRMATION — stored canon is right, AFL is right, AFG's blue is a divergence caveat mis-read as a type. Chapter accounting: ch 312 p.2-19 entire + ch 313 p.2-11 (the fandom's own episode field), i.e. the Groggy Ring's finish, the Monster Burger, Sanji and Zoro's counterattack, the goal, the whistle. SEGMENT WEIGHTS — ch 312 + 313 p.2-11: significant, the entire episode; anime-original: ONE beat, Luffy naming Tonjit's horse Shelly instead of Chopper (ch 313 p.8-9), annotated `divergence` — and the source beat is not dropped, it is deferred to ep 215 where it is already stored as graft{313 p.8-9}. WHAT AFG'S CLAIM ACTUALLY IS: 'The change that occurs with respect to the manga is Luffy's choice, in the manga he chooses Chopper instead in the anime he chooses Shelly, which makes no sense because Shelly was not in the game. (You can check this in manga 313, pp. 8-9)' — literally a description of the divergence this verdict annotates, with no minute window and no claim of an original plot. CONFIDENCE: high.",
       "sources": [
@@ -284,7 +309,9 @@
       ]
     },
     {
-      "episodes": [217],
+      "episodes": [
+        217
+      ],
       "type": "canon",
       "note": "CONFIRMATION — stored canon is right, AFL is right, AFG's blue is again a divergence caveat with no window. Chapter accounting: ch 313 p.12-19 + ch 314 (OPwiki 'Kapitel 313 (S. 11-19), Kapitel 314'; the fandom ch-313 reverse index '*Episode 217 (p. 12-19)'). SEGMENT WEIGHTS — ch 313 p.12-19 + 314: significant, the episode's job is the Combat round (the fight moved to the Sexy Foxy, the afro, the Noro Noro Beam and the delayed barrage, the slowed cannonballs, the face bombs); anime-original: a SLIVER of bridging at the top (Nami bargaining for Robin and Chopper, Foxy inflating the stake to 500 crewmates), needed only because the anime-only Roller Race block cost the crew Robin. T28: a stitching scene is not a story-carrying original share, and it is the anime's own consequence-management for eps 213-216, which are already typed filler. THE ONE THING TO WEIGH AGAINST THIS: the 500-crew stake does pay off in ep 219, so the bridge is load-bearing in the ANIME's continuity — but the episode's own plot is ch 313-314, which is the T28 question. CONFIDENCE: medium-high on the type (the bridge is one scene by every summary's structure, but no source times it); high on the anchor.",
       "sources": [
@@ -297,7 +324,9 @@
       ]
     },
     {
-      "episodes": [219],
+      "episodes": [
+        219
+      ],
       "type": "canon",
       "note": "CONFIRMATION — stored canon is right, AFL is right, AFG's blue is a divergence caveat with no window. Chapter accounting on THREE page-level sources that agree exactly: ch 317 p.2-21 + ch 318 p.2-17 (the fandom's episode field, the fandom's ch-318 reverse index '*Episode 219 (p. 2-17)', OPwiki 'Kapitel 317, Kapitel 318 (S. 1-17)'). SEGMENT WEIGHTS — ch 317 + 318 p.2-17: significant, essentially the whole episode (the mirror-shard reflection, the Gum-Gum Flail, Foxy knocked out of bounds, the failed shoulder throw, the flag taken and redrawn, the Foxy Pirates leaving, the return to Tonjit); anime-original: two short CODAS, the 497-crewmember claim-and-dismissal (arc page tags it {{Qref|name=e219|ep=219}} — episode, no chapter) and Tonjit's grandson arriving on a giant mole, both annotated `divergence`. T28: codas grafted onto a faithful adaptation do not make a row mixed. WHAT AFG'S CLAIM ACTUALLY IS: 'The change from the manga lies in the reward for victory... in the anime, Luffy wins 500 members of the Foxy Pirates... He then expels the 497 new members, returning everything to normal' — a description of exactly that coda. CONFIDENCE: high.",
       "sources": [
@@ -310,7 +339,9 @@
       ]
     },
     {
-      "episodes": [886],
+      "episodes": [
+        886
+      ],
       "type": "canon",
       "note": "CONFIRMATION — stored canon is right and AFL's lone 'Manga Canon' in a run of 'Mixed Canon/Filler' rows (881-885, 887-890) is CORRECT, not an accident. This is the one row in the bundle where AFG's blue carries a real sizing instrument, so it is decided on the recap clause rather than on AFG being sloppy. Chapter accounting: ch 907 p.7-16 (OPwiki), the majority of the chapter, page-partitioned against ep 887 which owns p.2-6 and p.16. SEGMENT WEIGHTS — (1) ch 907 p.7-16: SIGNIFICANT, it is the episode's entire forward plot and the arc's biggest beat (Sterry and the Empty Throne; Charlos seizing Shirahoshi; Lucci and CP0; Neptune forsaking Otohime's dream; Mjosgard's mace), and ANN independently sizes it at 'maybe twelve minutes of new story material'. (2) The recap montage of Enies Lobby + the fish-men's past: WEIGHT NONE under T28's recap clause — it re-tells arcs already animated and progresses nothing; it is exactly the 8m10s AFG excises (9:16-17:26). (3) Anime additions: SLIVER — three beats named by the fandom (Neptune wishing Otohime were with him; extra shots of him seething; Mjosgard ordering CP0 out) plus two swaps (Kabu for Mansherry at Leo's side; Charlos not noticing Mjosgard). T28 says the recap counts for nothing and the REMAINDER decides: the remainder is pure source adaptation -> canon. WHAT AFG'S CLASS IS: a viewing guide skipping footage the viewer has already seen — a legitimate viewing call and not a filler claim; on this page AFG applies the same treatment to every Levely episode. CONFIDENCE: medium-high. The single residual is the RECAP BOUNDARY test (Sean 2026-09-02): no source states whether the montage is recycled or newly drawn. Both the fandom and ANN call it a recap of arcs already animated, so I read it as re-shown; if Sean rules it newly animated at 8 minutes it becomes MIXED, and the anchor and continue survive unchanged.",
       "sources": [
@@ -329,7 +360,9 @@
     {
       "finding": "AFG's BLUE class is two different things and only one of them is a sizing instrument — test for the `minuto` span, not for the colour",
       "detail": "On the One Piece page a blue row is either (a) a real excision — the note contains 'we only watch from minute X to Y' wrapped in <span class=\"minuto\">, as on 203, 225, 226 and every Levely row 879-890 — or (b) a plain prose MANGA-VS-ANIME DIVERGENCE caveat with no window at all, as on 209 ('the change that arose with respect to the manga is in the events'), 212 ('the change that occurs ... is Luffy's choice'), 217 ('in this episode the \"Combat\" event takes place, which in the manga was the last one') and 219 ('the change from the manga lies in the reward for victory'). Class (b) is not a claim of original content — it is the site telling a reader watching alongside the manga what will differ, i.e. exactly what we record as a `divergence` annotation on a CANON row. A mechanical gate can separate them: blue + a `minuto` span = a sizing instrument worth researching; blue + no `minuto` span = a divergence note, and the row's type should not be flagged as contradicting AFL on that basis alone. That single test would have removed 4 of the 7 rows in this bundle from the STRONG tier.",
-      "sources": ["https://www.animefillerguide.com/anime/one-piece/"]
+      "sources": [
+        "https://www.animefillerguide.com/anime/one-piece/"
+      ]
     },
     {
       "finding": "AFG contradicts ITSELF on rows 210 and 211 — red 'skip' styling with a populated chapter column and no '*Filler' label",
@@ -363,7 +396,9 @@
     {
       "finding": "ja-WP's bold marker is a CONTROL here in the strongest possible configuration — it brackets the filler block on both sides",
       "detail": "The live 'ONE PIECEのアニメエピソード一覧' legend is '太字はアニメオリジナルストーリー' (bold = anime-original story). In this stretch it bolds 205, 206, 213, 214, 215, 216 and 220-226 and leaves 207, 208, 209, 210, 211, 212, 217, 218, 219 unmarked — so the four anime-original Davy Back games are marked while the rows on EITHER SIDE of them are not. Per the standing trap ('ja-WP UNDER-marks, never over-marks'), the unmarked rows adjacent to marked ones are a positive claim. The same list attaches <ref name=\"original\">一部原作のストーリーあり</ref> (= 'contains some of the manga's story') to ep 214 and ep 226 and to NONE of our seven — the marker for a filler row with a source sliver, which is exactly the shape already stored for 214. In the Levely block (878-891) ja-WP bolds nothing at all, so it is silence there, not evidence for or against 886's mixed/canon question.",
-      "sources": ["https://ja.wikipedia.org/wiki/ONE_PIECE%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"]
+      "sources": [
+        "https://ja.wikipedia.org/wiki/ONE_PIECE%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+      ]
     }
   ],
   "flags_for_sean": [
