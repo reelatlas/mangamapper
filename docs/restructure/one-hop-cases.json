@@ -479,6 +479,21 @@
         "backjump_continue_unruled"
       ],
       "source": "2026-09-03 (Sean, shippuden 112): END is this episode's last manga chapter (318 [317]) even 25 chapters behind ep 90's 343; the continue is where the reader goes next (343 — already read), never END + 1; the unanchored rows inside the crossing render honest holes (A18) until researched. Position-less is for content with NO position (no chapter number, another chapter space, re-shown pages, a sliver, a restaging), never for distance."
+    },
+    {
+      "ask": "an episode ends at ch 300 but chs 291-299 were never adapted — continue at 291, or 301 with a note?",
+      "expected": [
+        "C5",
+        "C1",
+        "C2"
+      ],
+      "terms": [
+        "covered-or-not",
+        "unseen",
+        "END + 1 is not a lock",
+        "backjump_continue_unnoted"
+      ],
+      "source": "2026-09-04 (Sean + Cursor): the continue is watch-along — is the stretch between this END and the frontier already covered? yes → the frontier; no → END + 1 (or the next known START, C2) with the never-adapted range NAMED (kind unseen); never the hole itself unless the next episode starts there; an unfinished END continues in that chapter (C1). The C3 twin (backjump_continue_unnoted) checks the note says already / never."
     }
   ]
 }
