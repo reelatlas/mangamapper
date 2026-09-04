@@ -6,8 +6,8 @@
 // (a) the work LABEL (I41 convention: chapters starts '<work>: …') and
 // (b) a note that no longer states Line A ('canon relative to …').
 //   npx tsx --env-file=.env.ingest scripts/ingest/research/batch22/apply-t26.ts [--dry-run]
-import { db, selectAll } from '../../lib/db';
-import { upsertAnnotation } from '../../lib/annotations';
+import { db, selectAll } from '../lib/db';
+import { upsertAnnotation } from '../lib/annotations';
 
 const DRY = process.argv.includes('--dry-run');
 const SIT = 'FILLER + side_source (T26, the adoption sitting — Sean 2026-09-05, research/batch22/T26-SITTING.md: a licence is not adoption)';

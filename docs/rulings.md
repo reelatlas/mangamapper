@@ -2,7 +2,7 @@
 
 > GENERATED from `scripts/ingest/lib/rulings/**` by `scripts/restructure/gen-rulings.ts` — do not edit by hand. A ruling is an INSTANCE of a rule (`docs/rules.md`); the map is the record, this is the index.
 
-- rulings: 2353 across 253 series/keys · by Sean: 859 · UNRECORDED reasons: 8 · with a retire condition: 93
+- rulings: 2379 across 253 series/keys · by Sean: 885 · UNRECORDED reasons: 8 · with a retire condition: 93
 
 ## Retire conditions (re-evaluate when…)
 
@@ -289,7 +289,7 @@
 | `T6` | {"37":"mixed","42":"mixed","44":"canon"} | Final Season: eps 37/42 mix anime-original plots with chs 141 / 155. Ep 44 adapts no chapter (reviewer recap vs every chapter synopsis 149-196); SEAN-RULED anime-only-canon 2026-08-24 on positive evidence: chs 169-171 are the cut Kyuu chapters, 172-176 land in ep 47, and the frame-up / rat-base / kiss-deferral content matches no chapter in 161-179 (the manga's ch-173 first kiss is relocated to the ep-48 finale). T4.3 (T26/T27, 2026-08-26): anime-only-canon → canon; the override lives as an adopted / side_source annotation (lib/rulings/standing-annotations.ts), mapping null by design. | Sean 2026-08-24 · scripts/ingest/research/batch14/out/beastars.json, scripts/ingest/research/batch15/out/beastars-ep44-followup.json | flips to mixed if the step-stool line is ever confirmed inside ch 166 |
 | `I27` | {"ids":[107660,114194,136880,187267],"ruledExtent":"AFL page = S1+S2 (24); FINAL SEASON Part 1 (Dec 2024, our 25-36) + Part 2 (Mar 2026, our 37-48) complete … | AFL-lag class: AFL page = S1+S2 (24); FINAL SEASON Part 1 (Dec 2024, our 25-36) + Part 2 (Mar 2026, our 37-48) complete the manga — flag #854. | session 2026-08-23 · ingest_flags #854 |  |
 
-### beelzebub (10)
+### beelzebub (22)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -303,6 +303,18 @@
 | `A1` | {"episode":17,"deletedAnchor":23} | retyped FILLER (A1): the ch 12 / 23 shares are slivers restaging pages ep 6 / ep 18 carry (wave 2, 2026-09-05: ep 15's ch-23 tableau is its own staging — 'eps 15, 18' corrected); the afg-tier anchor 23 [23] + its parity continue came out at the manual tier (P8) — the T6 filler pin holds the AFG writer's A1 gate against a re-mint | Sean 2026-09-04 · scripts/ingest/history/batch21-apply-wave3.ts, scripts/ingest/research/batch21/verify/w3-flips.md |  |
 | `A1` | {"episode":39,"deletedAnchor":83} | retyped FILLER (A1): chs 82-83 are slivers (ja-WP: 石矢魔ランド 初出はアニメ版); the afg-tier anchor 83 [82] + continue came out (P8); chs 82-83 stay on eps 38 / 40 / 41 | Sean 2026-09-04 · scripts/ingest/history/batch21-apply-wave3.ts, scripts/ingest/research/batch21/verify/w3-flips.md |  |
 | `A44` | {"pointer":"lib/rulings/anchor-suppressed.ts"} | wave 2-3: beelzebub 49, soul-eater 32, bleach 109 / 227 (unnumbered chapters), boruto 24 (another chapter space) — position-less entries; the map now UNIONS entries per series (toMergedList) | Sean 2026-09-04 · scripts/ingest/lib/rulings/anchor-suppressed.ts |  |
+| `A1` | {"episode":15,"deletedAnchor":23} | retyped FILLER (A1): the ch-23 beach tableau is ep 15's own staging with the reveal withheld — a sliver (T28); ch 23's load-bearing beat (the reveal) is ep 18's; the afg anchor 23 [23] came out at the manual tier (P8), the T6 filler pin holds the AFG writer's gate; Sean took filler over the mixed + rearranged fork (the run stays monotonic) | Sean 2026-09-05 · scripts/ingest/history/batch22-apply-wave2.ts, scripts/ingest/research/batch22/verify/w2-beelzebub-crumbs.md |  |
+| `R24` | {"episode":15,"noteFixed":"graft"} | verifier: 'ch 23's pages appear in ep 18 in full' overstated — ep 18 carries the household return (flashback), the fever and the entry; the tableau is ep 15's own staging | Sean 2026-09-05 · scripts/ingest/history/batch22-apply-wave2.ts, scripts/ingest/research/batch22/verify/w2-beelzebub-crumbs.md |  |
+| `A47` | {"episode":26,"partialChapters":"51 (the Kido summons — the expulsion warning; the classroom rumours, Azusa's classroom and the Rokkisei confrontations are e… | verifier: the 'pp 1-12 / 12-19' split was the MANGA's, not ep 26's, and Bandai 029 puts the classroom rumours + a Kido summons in ep 29 — no page numbers enter the record; END 51 stands on A47's unproven-tail convention (the share on ≥ 2 sources, size unstated) | Sean 2026-09-05 · scripts/ingest/history/batch22-apply-wave2.ts, scripts/ingest/research/batch22/verify/w2-beelzebub-crumbs.md |  |
+| `A24` | {"episodes":[16,51],"chaptersAdaptedClean":["21-22","114-115"]} | chapters_adapted kept as a chapter list — the A47 parsers read it; the prose lives in the partial annotation | Sean 2026-09-05 · scripts/ingest/history/batch22-apply-wave2.ts |  |
+| `A24` | {"episode":26,"anchorSkipped":"51 [50] confirmed as stored (afg tier)"} | no value moved — no write, no P8 flip needed | Sean 2026-09-05 · scripts/ingest/history/batch22-apply-wave2.ts, scripts/ingest/research/batch22/verify/w2-beelzebub-crumbs.md |  |
+| `R24` | {"episode":49,"chaptersFixed":"side_story","noteFixed":"side_source"} | verifier: 'between printed ch 88 and 89' is MangaDex's decimal placement (cite the chapter UUID — a third upload under '88.5' is different omake); the verdict still over-credited the novel — its VERIFIED contribution to what airs is nil beyond the attribution (Tojo = Ox King and Hilda-beside-him are the EXTRA's own closing panel) | Sean 2026-09-05 · scripts/ingest/history/batch22-apply-wave2.ts, scripts/ingest/research/batch22/verify/w2-beelzebub-49.md |  |
+| `A13` | {"episodes":[46,47],"repairedEnd":[101,105],"repairedStart":[98,102],"graft":115,"continues":[102,106]} | THE HOLE'S CAUSE (the verifier's diagnosis, confirmed on ch 115's pages): the stored afg END 115 on both rows was the ch-115 GRAFT — the Koma-origin flashback (pp 8-19) relocated forward — promoted to a position; ch 115's present frame (pp 2-5) is post-ch-114 and cannot sit there; ep 47's cast list opens Kunieda / Isafuyu before ch 102 p2. Repaired at the manual tier (P8) to the rows' own chapters (97-101 / 102-105) + graft{115} (46's one-lineage), continues to parity; the run 46 → 101 … 59 → 121 is then monotonic | Sean 2026-09-05 · scripts/ingest/history/batch22-apply-wave3.ts, scripts/ingest/research/batch22/verify/w3-beelzebub.md |  |
+| `A45` | {"episode":51,"retiredKind":"rearranged"} | wave 2's rearranged{114-115} (written to satisfy the display walk) lost its premise with the 46 / 47 repair and its wording was backwards — retired; the entry lives in retired-annotations.ts | Sean 2026-09-05 · scripts/ingest/history/batch22-apply-wave3.ts, scripts/ingest/research/batch22/verify/w3-beelzebub.md |  |
+| `P38` | {"episode":48,"droppedKind":"rearranged"} | the delivered rearranged{106-110}'s own note said 'NOT a back-jump… every page is new' — a record whose content is 'not rearranged', a gate-satisfier that goes stale with the 46 / 47 repair; dropped | Sean 2026-09-05 · scripts/ingest/history/batch22-apply-wave3.ts, scripts/ingest/research/batch22/verify/w3-beelzebub.md |  |
+| `A47` | {"episodes":[48,50],"endChoice":"48 END 110 / 50 START 110 as delivered"} | the ch-110 split is one-source (the fandom credits both rows); Sean took the delivered shape over 109 / 111 — parity 111 would make the reader skip ch 110; the partial on both rows records the unverified split | Sean 2026-09-05 · scripts/ingest/history/batch22-apply-wave3.ts, scripts/ingest/research/batch22/verify/w3-beelzebub.md |  |
+| `R24` | {"episodes":[58,50],"noteFixed":["graft","continue"]} | verifier: ep 58's graft note — Quetzalcoatl IS in chs 120 / 121 (seven names, not eight; ep 59's page count is 52 not 54); ep 50's C3 note — 'ch 115's OPENING pages already animated' → the Koma-origin flashback (pp 8-19); the opening is ep 51's own | Sean 2026-09-05 · scripts/ingest/history/batch22-apply-wave3.ts, scripts/ingest/research/batch22/verify/w3-beelzebub.md |  |
+| `A24` | {"episodes":[48,50,58],"chaptersAdaptedClean":["106-110","110-113","116-118, 123 (graft)"]} | chapters_adapted kept as chapter lists (the A47 parsers read the field); the prose lives in the partial / graft annotations | Sean 2026-09-05 · scripts/ingest/history/batch22-apply-wave3.ts |  |
 
 ### berserk (16)
 
@@ -609,7 +621,7 @@
 | `A43` | {"episodes":[29],"kind":"abridged","chapters":"108-109","asterisk_review":"pending (if unset)"} | 5 chapters with page skips — densest ep of the season | session 2026-08-23 · scripts/ingest/apply-research-batch-9.ts, docs/changelog.md §12.26, session scratchpad batch9/blue-lock.json |  |
 | `A43` | {"episodes":[30],"kind":"graft","chapters":"~112-113","asterisk_review":"pending (if unset)"} | anime-original pre-match buildup scenes added | session 2026-08-23 · scripts/ingest/apply-research-batch-9.ts, docs/changelog.md §12.26, session scratchpad batch9/blue-lock.json |  |
 
-### boruto-naruto-next-generations (26)
+### boruto-naruto-next-generations (30)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -639,6 +651,10 @@
 | `I17` | {"to":"naruto-shippuden","kind":"sequel"} | Boruto continues the Naruto story a generation on — sequel to Shippuden (the Naruto→Shippuden pattern). | session 2026-08-22 · docs/franchise-rulings.md |  |
 | `I41` | {"works":[{"label":"Naruto","anilistMangaId":30011,"note":"Naruto (1999-2014), ch 1-700 — the Naruto TV / Shippuden instrument; ep 24 adapts its epilogue ch … | Batch 21 wave 3 (verified R24), Sean ruled 2026-09-04 (Cursor's framing): one continuity, three instruments — Naruto → Naruto Gaiden → Boruto. Naruto TV and Shippuden share one manga and need no chain; Boruto's instrument is the Boruto manga, so ep 24 adapting Naruto ch 700 is the Rosario-14 shape: the same story in another book's numbers = chain_source, position-less in Boruto's 1-80 space (an anchor of 700 would pretend Boruto's chapters reach 700). The Gaiden is the extra named work (its own tankōbon, 700+1…+10, not inside 30011's 700). Novels stay off the chain. One annotation row per kind (the table's key is series + episode + kind), so ep 24's record names both works in one chapters field, first label checked. Follow-up: eps 19-23 / 39 (stored canon on Gaiden chapters) want chain_source annotations. | Sean 2026-09-04 · scripts/ingest/research/batch21/out/boruto-naruto-next-generations-w3.json, scripts/ingest/research/batch21/verify/w3-flips.md, scripts/ingest/research/batch21/WAVE3-RECOVERY.md |  |
 | `I41` | {"episode":24,"chainSourceChapters":"Naruto: ch 700; Naruto Gaiden: ch 700+5","chaptersNulled":["divergence"]} | Sean ruled the chain 2026-09-04 (Naruto → Naruto Gaiden → Boruto); the annotation table's key is (series, episode, kind), so one chain_source names both works, first label checked; the divergence's prose chapters nulled | Sean 2026-09-04 · scripts/ingest/history/batch21-apply-wave3.ts, scripts/ingest/research/batch21/verify/w3-flips.md, scripts/ingest/lib/rulings/source-chains.ts |  |
+| `I41` | {"episode":39,"kindOverride":"chain_source → side_story"} | Sean ruled 2026-09-05 (Cursor's line): the chain stays THREE works — AniList ids do not make one-shots instruments; the unnumbered one-shot 「満ちた月が照らす道」 printed at the back of Boruto vol 1 is an extra of THIS work → side_story + A44 [39] | Sean 2026-09-05 · scripts/ingest/history/batch22-apply-wave1.ts, scripts/ingest/research/batch22/verify/w1-boruto.md |  |
+| `T26` | {"episodes":[93,94,95],"skippedKinds":["side_source"]} | verifier w1-boruto: these rows are RULING-tier (standing-annotations.ts) — the per-episode novel map landed by editing the standing entry, never by an apply write the healer would revert | Sean 2026-09-05 · scripts/ingest/history/batch22-apply-wave1.ts, scripts/ingest/research/batch22/verify/w1-boruto.md |  |
+| `T26` | {"episodes":[93,94,95,39],"chaptersNulled":["abridged","divergence"]} | verifier: a novel's chapter map and prose in a divergence's chapters field are not chapter lists — nulled at write | Sean 2026-09-05 · scripts/ingest/history/batch22-apply-wave1.ts, scripts/ingest/research/batch22/verify/w1-boruto.md |  |
+| `R24` | {"episodes":[95,18],"noteFixed":["abridged","side_source"]} | verifier w1-boruto prepended: ep 95's kunai coda is the novel's ch 1 closing beat relocated + the Epilogue unadapted; ep 18's omake tie rests on AFG + the movie book (Narutopedia's index is silent) | Sean 2026-09-05 · scripts/ingest/history/batch22-apply-wave1.ts, scripts/ingest/research/batch22/verify/w1-boruto.md |  |
 
 ### btooom (1)
 
@@ -985,7 +1001,7 @@
 | `I17` | {"to":"dragon-ball-z","kind":"sequel"} | GT follows Z chronologically (anime-original continuation) — sequel to Z. | session 2026-08-22 · docs/franchise-rulings.md |  |
 | `N7` | 987 | B (medium): A Hero's Legacy = ep 65 epilogue special; community-practice based — re-open if evidence emerges. | Sean 2026-08-23 |  |
 
-### dragon-ball-super (14)
+### dragon-ball-super (16)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -1003,6 +1019,8 @@
 | `R21` | {"file":"scripts/ingest/research/batch20/out/dragon-ball-super-w5e.json"} | verdict folded as delivered on the CORRESPONDENCE instrument (I40 / A46): row annotations upserted (origin 'research') and every correspondence row written through upsertCorrespondence (duplicates across the four verdicts: first wins); no anchors, no continues — the file is refused if it carries an anchor | Sean 2026-08-28 · scripts/ingest/research/batch20/out/dragon-ball-super-w5e.json, scripts/ingest/history/apply-wave5.ts, §12.88 |  |
 | `R21` | {"file":"scripts/ingest/research/batch20/out/dragon-ball-super-w5f.json"} | verdict folded as delivered on the CORRESPONDENCE instrument (I40 / A46): row annotations upserted (origin 'research') and every correspondence row written through upsertCorrespondence (duplicates across the four verdicts: first wins); no anchors, no continues — the file is refused if it carries an anchor | Sean 2026-08-28 · scripts/ingest/research/batch20/out/dragon-ball-super-w5f.json, scripts/ingest/history/apply-wave5.ts, §12.88 |  |
 | `I40` | {"episodes":[6],"kind":"side_source","note":"Battle of Gods (the 2013 film 『ドラゴンボールZ 神と神』): the birthday-party sequence is the film's, not the manga's — the … | the one row fact lifted from the wave-5a verdict that the re-pass keeps (the blanket arc stamps are the arc's note, A46): ep 6 is the film's, not the manga's — the batch-19 film precedent | Sean 2026-08-28 · scripts/ingest/research/batch20/out/dragon-ball-super-w5a.json, scripts/ingest/research/batch20/verify/dragon-ball-super-w5a.md, scripts/ingest/history/apply-wave5.ts, §12.88 |  |
+| `T26` | {"episode":6,"labelled":"Battle of Gods","noteFixed":"side_source"} | the sitting: the 脚本 check FAILED (渡辺雄介; Toriyama 原作・ストーリー — Toei's staff page, ja-WP) → no adopted{author}; the row took the writer default (filler) pending T30's load-bearing test — ruled canon in wave 2 | Sean 2026-09-05 · scripts/ingest/history/batch22-apply-t26.ts, scripts/ingest/research/batch22/T26-SITTING.md |  |
+| `T30` | {"episode":6,"noteFixed":["divergence","side_source"],"correspondence":["6 ↔ 3 divergent","6 anime_only"]} | verifier CONFIRMED on ch 3's own pages (Viz's free chapter, descrambled): the party visit narrated in caption + dialogue, the King Vegeta flashback staged p5 — the stored note's 'the digest has nothing here' refuted; 'the flashback exists ONLY in ep 6' dropped (ep 7 has it too); the fandom's paraphrases not quoted as panel lines; the two correspondence rows are the T30 record that holds the standing under the T26 gate's parallel clause | Sean 2026-09-05 · scripts/ingest/history/batch22-apply-wave2.ts, scripts/ingest/research/batch22/verify/w2-dbs-6.md |  |
 
 ### dragon-ball-z (12)
 
@@ -1120,7 +1138,7 @@
 | `G3` | {"flagId":675,"why":"erased: MU latest_chapter 29 is the release-record field; the space is 44 + 5 Re chapters = 49 (wave 9, verified)."} | MU latest_chapter 29 is the release-record field; the space is 44 + 5 Re chapters = 49 (verified) | Sean 2026-09-02 · scripts/ingest/research/batch20/out/erased.json, scripts/ingest/history/apply-wave9.ts, §12.99 |  |
 | `T6` | {"map":"lib/rulings/episode-types.ts","episodes":[12],"note":"the erased ep-12 type reconsidered (WAVE9-RECOVERY §THE DECISIONS) — the T6 map entry is the ru… | pointer only: the value lives in the ruling map, asserted by the healer | Sean 2026-09-02 · scripts/ingest/history/apply-wave9.ts, scripts/ingest/research/batch20/WAVE9-RECOVERY.md, §12.99 |  |
 
-### eyeshield-21 (23)
+### eyeshield-21 (27)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -1147,6 +1165,10 @@
 | `A4` | {"episode":60,"confidence":"high","note":"END 123 [122] (the verifier closed the fork): ep 60's body is ch 122 page-verified (Kakei's one-on-one counter p10,… | confidence lifted to high: the verifier closed the fork on the pages (ch 122 page-verified + ch 123's skeleton at the cut, a third witness) | session 2026-08-27 · scripts/ingest/research/batch20/out/eyeshield-21-w3.json, scripts/ingest/research/batch20/verify/eyeshield-tmm-w3.md, scripts/ingest/history/apply-wave3.ts, §12.82 |  |
 | `A41` | {"episode":61,"confidence":"high","note":"123 [123] (the verifier): ep 61 opens at 18-17 with 7:08 left and its payload is ch 123's そして一年後 flashback (Mizumac… | confidence lifted to high: ep 61's payload is ch 123's flashback played after the comeback (rearranged {123}); the anime's stalemate is padding, END stays 123 | session 2026-08-27 · scripts/ingest/research/batch20/out/eyeshield-21-w3.json, scripts/ingest/research/batch20/verify/eyeshield-tmm-w3.md, scripts/ingest/history/apply-wave3.ts, §12.82 |  |
 | `P24` | {"episode":66,"kind":"partial"} | replaced by loose_parallel{132-133} (no page-level evidence; a framing line) | session 2026-09-04 · scripts/ingest/research/batch20/out/eyeshield-21-w16.json, scripts/ingest/history/apply-wave16.ts, §12.107 |  |
+| `R24` | {"episode":53,"noteFixed":"graft"} | verifier: add Kanagushi's habit-reading (ch 109 pp 7-9) as a third, unsized ch-109 element — re-staged in ep 54, not a sole adaptation; drop the A44 mention (a filler row is A1's alone, no ANCHOR_SUPPRESSED entry) | Sean 2026-09-05 · scripts/ingest/history/batch22-apply-wave3.ts, scripts/ingest/research/batch22/verify/w3-eyeshield.md |  |
+| `C7` | {"episode":53,"continueSkipped":109} | a FILLER row holds no anchor row — writeCuratedContinue would land nothing; ep 52's stored C3 continue 109 already carries the reader | Sean 2026-09-05 · scripts/ingest/history/batch22-apply-wave3.ts, scripts/ingest/research/batch22/verify/w3-eyeshield.md |  |
+| `A24` | {"episode":52,"anchorSkipped":"110 [110] confirmed as stored (manual)"} | no value moved — no write | Sean 2026-09-05 · scripts/ingest/history/batch22-apply-wave3.ts, scripts/ingest/research/batch22/verify/w3-eyeshield.md |  |
+| `A18` | {"episode":54,"queued":"END 111 → 109 + ep 57 own anchor (111 + ?115) + rearranged{111}"} | the verifier REFUTED ep 54's END 111 on the pages (batch 17's arc-boundary pin; ch 111 pp 6-19 = episode 57 on three witnesses) — QUEUED for batch 23 wave 1 with ep 57's read of ch 115, not repaired blind | Sean 2026-09-05 · scripts/ingest/research/batch22/verify/w3-eyeshield.md |  |
 
 ### f-zero-gp-legend (1)
 
@@ -2184,7 +2206,7 @@
 | `A10` | {"episode":127,"start_chapter":216} | 216-217 (span opens on a whole chapter — sliver and majority rules agree) | Sean 2026-08-23 · scripts/ingest/apply-start-chapters.ts, docs/changelog.md §12.27, batch 9 verdict (naruto) | RETIRED 2026-08-26 — batch 19 E3 (§12.67): lib/sliver.ts re-derived all 27 under A10 and every seed STANDS; the seeding comments became chapters_adapted on Sean's signature (start_without_span 0) |
 | `A10` | {"episode":132,"start_chapter":226} | 226-228 (span opens on a whole chapter — sliver and majority rules agree) | Sean 2026-08-23 · scripts/ingest/apply-start-chapters.ts, docs/changelog.md §12.27, batch 9 verdict (naruto) | RETIRED 2026-08-26 — batch 19 E3 (§12.67): lib/sliver.ts re-derived all 27 under A10 and every seed STANDS; the seeding comments became chapters_adapted on Sean's signature (start_without_span 0) |
 
-### naruto-shippuden (114)
+### naruto-shippuden (115)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -2302,6 +2324,7 @@
 | `T26` | {"episode":113,"chaptersNulled":["recap"]} | verifier: prose in a chapters field is not a chapter list | Sean 2026-09-04 · scripts/ingest/history/batch21-apply-wave3.ts, scripts/ingest/research/batch21/verify/w3-flips.md |  |
 | `A47` | {"episode":117,"partialChapters":"351 (opening pages only …)"} | the partial's '2-3 pages' was an inference, not a count — dropped; END 350 stands on A47's teaser clause (the R3 single-lineage leg was refuted by en-WP) | Sean 2026-09-04 · scripts/ingest/history/batch21-apply-wave3.ts, scripts/ingest/research/batch21/verify/w3-flips.md |  |
 | `T6` | {"pointer":"lib/rulings/episode-types.ts"} | waves 1-3: every type_correction (confirmations included) is a T6 entry — this batch pinned 84 rows across 17 series; the values live in the map | Sean 2026-09-04 · scripts/ingest/lib/rulings/episode-types.ts |  |
+| `I41` | {"episodes":[484,485,486,487,488,489,490,491,492,493,494,495,496,497,498,499,500],"labelled":["Sasuke Shinden: Book of Sunrise","Shikamaru Hiden","Konoha Hid… | the sitting (Line B — a licence is not adoption): the research-origin side_source rows keep their origin (P8) and gain the work label (I41) and a note that no longer states Line A (the 'canon relative to …' wording → 'FILLER + side_source') | Sean 2026-09-05 · scripts/ingest/history/batch22-apply-t26.ts, scripts/ingest/research/batch22/T26-SITTING.md |  |
 
 ### nisekoi (19)
 
@@ -2646,7 +2669,7 @@
 | `T28` | {"episode":119,"from":"abridged","chapters":null,"keepFrom":false} | batch 14: a blanket "recap-heavy episodes" note copied onto 119 / 154 / 177 / 189 — 119 is recap-heavy (mixed, anchor 197 stands); the retold chapters were not itemized. THE RECAP CLAUSE (T28): weightless in the standing; the remainder decides the type | session 2026-09-04 · scripts/ingest/history/apply-research-batch-14.ts, scripts/ingest/history/rekind-recaps.ts, §12.107 |  |
 | `T28` | {"episode":154,"from":"abridged","chapters":null,"keepFrom":false} | batch 14: the same blanket note — 154 is a recap (filler); the retold chapters were not itemized. THE RECAP CLAUSE (T28): weightless in the standing; the remainder decides the type | session 2026-09-04 · scripts/ingest/history/apply-research-batch-14.ts, scripts/ingest/history/rekind-recaps.ts, §12.107 |  |
 
-### record-of-ragnarok (15)
+### record-of-ragnarok (18)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -2665,6 +2688,9 @@
 | `A43` | {"episodes":[42],"kind":"graft","chapters":"B5, 84-85","note":"research-tier batch 12 (2026-08-23, agent-verified 2+ sources, full-record): Bonus ch 5 grafte… | Bonus ch 5 grafted; R10 setup deferred to S4 | session 2026-08-23 · scripts/ingest/apply-research-batch-12.ts, scratchpad batch12/record-of-ragnarok.json (session scratchpad, not on disk), docs/changelog.md §12.31 |  |
 | `R21` | {"file":"scripts/ingest/research/batch15/out/record-of-ragnarok.json","anchors":1,"zoneAcks":0} | batch-15 verdict applied as-curated | session 2026-08-24 · scripts/ingest/research/batch15/out/record-of-ragnarok.json |  |
 | `T6` | {"14":"canon","15":"canon","16":"canon","17":"canon"} | batch 22 wave 3 — the hole wave (verified R24, verify/w3-*.md; Sean ruled 2026-09-05): 14-16 CONFIRMED canon and anchored (24 [22], 26 [25], 29 [27]) on a page-exhaustive instrument (the fandom's page-partitioned adapted= fields, whose parts union to each chapter's own page count over chs 20-34; programming-cafe's 対応表 the independent lineage); ep 17's stored START 20 was a batch-12 ROUND-LEVEL anchor ('{20-30 (Round 4 complete)}') never refined to pages — a nine-chapter phantom back-reach repaired to 29 (ep 17 opens on ch 29 p.25, the frame ep 16 stops on). Pinned so the loose buckets cannot re-list them. The batch-12 map is round-grain on 12 / 17 / 22 / 27 / 33 / 38 (22's END 42 is likely 43) — QUEUED as a wave-4 ask. | Sean 2026-09-05 · scripts/ingest/research/batch22/WAVE3-RECOVERY.md, scripts/ingest/research/batch22/verify/w3-rok.md, scripts/ingest/research/batch22/verify/w3-beelzebub.md, scripts/ingest/research/batch22/verify/w3-eyeshield.md, scripts/ingest/research/batch22/verify/w3-sailor-moon.md, docs/changelog.md §12.120 |  |
+| `A13` | {"episode":17,"repairedStart":29,"chaptersAdapted":"29 (pp.25-50), 30, 32 (pp.6-8, 30-32), 33 (pp.27-60)","continue":31} | the stored START 20 was batch 12's ROUND-LEVEL span ('20-30 (Round 4 complete)', applied/batch-12.ts:147) — ep 17 opens on ch 29 p.25, the frame ep 16 stops on (the fandom's adapted= field + programming-cafe + frame continuity); END 30 / v8 stand; the continue note carries skip language (c3Ahead = [32, 33]) | Sean 2026-09-05 · scripts/ingest/history/batch22-apply-wave3.ts, scripts/ingest/research/batch22/verify/w3-rok.md |  |
+| `R24` | {"episode":17,"noteFixed":"rearranged"} | verifier: programming-cafe books ch 33 to eps 18 AND 19 (2-6,7) and ch 32 to 19 alone — not '19 alone' for both | Sean 2026-09-05 · scripts/ingest/history/batch22-apply-wave3.ts, scripts/ingest/research/batch22/verify/w3-rok.md |  |
+| `V1` | {"episodes":[14,15,16,17],"volumesFromVerdict":[6,7,7,8]} | the boundary table holds no row for chs 24-30 (one row, ch 85 → v21) — the verdict's two-sourced volumes landed with the fallback printed in the dry run | Sean 2026-09-05 · scripts/ingest/history/batch22-apply-wave3.ts |  |
 
 ### relife (13)
 

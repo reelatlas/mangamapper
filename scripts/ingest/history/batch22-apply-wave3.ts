@@ -7,14 +7,14 @@
 // continues (C7), research-origin annotations (same-kind upsert replaces).
 //   npx tsx --env-file=.env.ingest scripts/ingest/research/batch22/apply-wave3.ts [--dry-run]
 import { readFileSync } from 'node:fs';
-import { db, selectAll } from '../../lib/db';
-import { upsertAnnotation, type AnnotationKind } from '../../lib/annotations';
-import { writeCuratedContinue } from '../../lib/continues';
-import { volumeForChapter, type VolumeBound } from '../../lib/volumes';
-import { sliverEnd } from '../../lib/sliver';
+import { db, selectAll } from '../lib/db';
+import { upsertAnnotation, type AnnotationKind } from '../lib/annotations';
+import { writeCuratedContinue } from '../lib/continues';
+import { volumeForChapter, type VolumeBound } from '../lib/volumes';
+import { sliverEnd } from '../lib/sliver';
 
 const DRY = process.argv.includes('--dry-run');
-const OUT = 'scripts/ingest/research/batch22/out';
+const OUT = 'scripts/ingest/research/batch22/out' /* P34: moved to history 2026-09-05 — never run */;
 const B = '[batch 22 wave 3, verified R24, Sean ruled 2026-09-05 — WAVE3-RECOVERY.md]';
 const V = '(verifier, verify/w3-*.md)';
 const FILES = ['record-of-ragnarok-w3.json', 'beelzebub-w3.json', 'eyeshield-21-w3.json', 'sailor-moon-w3.json']; // fullmetal-alchemist-w3.json lands through standing-annotations.ts

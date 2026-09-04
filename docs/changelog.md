@@ -1154,6 +1154,36 @@
    19-23 / 39 (chain_source) and 18 / 93-95 (AFL's loose Mixed bucket),
    beelzebub 15 / 26-28 / 51, rurouni TV ep 95 (identity). Batch 22 opens on
    the boruto follow-up (lanes I + C) with the batch-21 tooling copied.
+121. ✅ **BATCH 22 CLOSED (P34, 2026-09-05) + CONSOLIDATE after §12.120.** The
+   batch that opened on the Boruto chain follow-up (§12.116) and became the
+   T26 ADOPTION SITTING (§12.117 — a licence is not adoption; the standing
+   gate, the tie loader, the label backfill) and its two follow-up waves (the
+   narrow wave §12.118 — the A18 START clause; the hole wave §12.120 — the
+   seven holes closed). Extracted: `lib/rulings/applied/batch-22.ts` — 25
+   RulingEntries, one per curated decision across the four one-shot scripts
+   (wave 1's kind override + skips + nulls + note fixes; the sitting's
+   research-origin label / note pass; wave 2's deletion, the reworded
+   partial, the clean chapters_adapted, the dbs-6 confirmation on the pages;
+   wave 3's 46 / 47 repair, the A45 on 51, the dropped 48 rearranged, the
+   48 / 50 END choice, RoK 17's round-level START, the verdict-volume
+   fallback, eyeshield 53's skipped continue, ep 54's queued refutation) —
+   ruleId'd and cited to the verify files; the scripts moved to
+   `scripts/ingest/history/batch22-apply-{wave1,t26,wave2,wave3}.ts` with
+   imports re-pointed (never run). The ledger-check refused the extraction's
+   first draft for quoting a retired phrase as 'the old wording' — P38 is
+   right: the register holds no exceptions for quotation. CAPTURE (P29):
+   research-agent.md ×6 (a round-level anchor is provenance, not position;
+   a graft promoted to a position — A13 from the other side; THE FORK IS NOT
+   A PREMISE; thetv.jp's off-by-one synopsis; the fandom adapted= closure
+   check; Sailor Moon's renewal space), research-batch skill ×1 (the fork
+   clause in the ask rule), memory (a rule-satisfier written under a wrong
+   diagnosis is still wrong). BATCH 23 SCAFFOLDED (tooling copied under P34;
+   PROTOCOL + wave-1 TARGETS written, NOT dispatched — Sean's go): RoK's
+   round-grain map (12, 18-41), eyeshield 54-57 (the refuted END + ep 57),
+   sailor-moon 73-77 (Act 18's home + the N35 shape for the 60-act renewal
+   space), beelzebub 59 (the stale finale note). Standard pass, no
+   enforcement site moved; every non-zero class unchanged since the deep of
+   §12.119; edges deployed (the applied file is in the lib hash); 194 tests.
 120. ✅ **BATCH 22 WAVE 3 — THE HOLE WAVE, APPLIED (2026-09-05; Sean ruled
    decisions 1-5 as verified; 48 / 50 as delivered; eyeshield 54 queued).**
    The seven verify:hole rows the A18 START clause surfaced (§12.118) each

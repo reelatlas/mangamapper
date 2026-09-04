@@ -9,15 +9,15 @@
 // the two dbs-6 correspondence rows (A46), the dbs-6 note repair.
 //   npx tsx --env-file=.env.ingest scripts/ingest/research/batch22/apply-wave2.ts [--dry-run]
 import { readFileSync } from 'node:fs';
-import { db, selectAll } from '../../lib/db';
-import { upsertAnnotation, type AnnotationKind } from '../../lib/annotations';
-import { writeCuratedContinue } from '../../lib/continues';
-import { upsertCorrespondence } from '../../lib/rulings/correspondence';
-import { volumeForChapter, type VolumeBound } from '../../lib/volumes';
-import { sliverEnd } from '../../lib/sliver';
+import { db, selectAll } from '../lib/db';
+import { upsertAnnotation, type AnnotationKind } from '../lib/annotations';
+import { writeCuratedContinue } from '../lib/continues';
+import { upsertCorrespondence } from '../lib/rulings/correspondence';
+import { volumeForChapter, type VolumeBound } from '../lib/volumes';
+import { sliverEnd } from '../lib/sliver';
 
 const DRY = process.argv.includes('--dry-run');
-const OUT = 'scripts/ingest/research/batch22/out';
+const OUT = 'scripts/ingest/research/batch22/out' /* P34: moved to history 2026-09-05 — never run */;
 const B = '[batch 22 wave 2, verified R24, Sean ruled 2026-09-05 — WAVE2-RECOVERY.md]';
 const V = '(verifier, verify/w2-*.md, 2026-09-05)';
 const FILES = ['beelzebub-w2a.json', 'beelzebub-w2b.json', 'dragon-ball-super-w2.json']; // fullmetal-alchemist-w2.json lands through standing-annotations.ts (ruling-tier rows); boruto-naruto-next-generations-w2.json is a confirmation (no writes)

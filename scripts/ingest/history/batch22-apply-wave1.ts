@@ -11,14 +11,14 @@
 // annotation kinds so the delete list can be curated.
 //   npx tsx --env-file=.env.ingest scripts/ingest/research/batch21/apply-wave1.ts [--dry-run]
 import { readFileSync, readdirSync } from 'node:fs';
-import { db, selectAll, startRun, finishRun } from '../../lib/db';
-import { upsertAnnotation, type AnnotationKind } from '../../lib/annotations';
-import { writeCuratedContinue } from '../../lib/continues';
-import { sliverEnd } from '../../lib/sliver';
-import { volumeForChapter, type VolumeBound } from '../../lib/volumes';
+import { db, selectAll, startRun, finishRun } from '../lib/db';
+import { upsertAnnotation, type AnnotationKind } from '../lib/annotations';
+import { writeCuratedContinue } from '../lib/continues';
+import { sliverEnd } from '../lib/sliver';
+import { volumeForChapter, type VolumeBound } from '../lib/volumes';
 
 const DRY = process.argv.includes('--dry-run');
-const OUT = 'scripts/ingest/research/batch22/out';
+const OUT = 'scripts/ingest/research/batch22/out' /* P34: moved to history 2026-09-05 — never run */;
 const B = 'batch 22 wave 1 (2026-09-04; the Boruto chain follow-up; Sean ruled)';
 const FILES = readdirSync(OUT).filter((f) => /-w1[ab]\.json$/.test(f)).sort();
 // annotations whose KIND the verdict replaced (old kind deleted; the new kind is in the verdict's annotations)
