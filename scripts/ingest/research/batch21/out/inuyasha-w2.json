@@ -1,0 +1,176 @@
+{
+  "series_id": "inuyasha",
+  "summary": "THREE target rows, TWO answers. (1) Ep 62 — AFL and the stored type (canon) are RIGHT and animefillerguide is the source that lied, in a way worth recording at the rule level: AFG's row 62 is blue-classed, but its note is NOT a mixed claim. Verbatim: '* The ending was changed, in the manga Tsubaki loses the battle and Naraku's insect comes out of her eye and takes the Shikon pearl (You can watch it in manga 198).' — with the chapter cell '197, 198'. There are only FOUR blue rows in AFG's whole InuYasha table (62, 79, 127, 128); rows 79/127/128 all begin with the literal word 'Mixed' and carry a minute range telling you what to watch ('21:05 to the end', '8:44 to 12:46', '22:31 to the end'). Row 62 has NO 'Mixed' wording and NO minute range — its blue is a read-the-note DIVERGENCE flag on a fully-adapted row, and the parser's class-to-type conversion is what turned it into a typing claim. Two independent sources beyond the two labels confirm canon. (a) inuyasha.fandom: Episode 62's infobox reads 'chapter = Chapter 197-198'; the reverse index agrees in the other direction (Chapter 197 'The Shikigami' / 式神 and Chapter 198 'The Curse Reflected' / 呪い返し both carry 'episode = Episode 62'); the page is NOT in Category:Filler episodes. (b) ja-Wikipedia's 犬夜叉 (アニメ) 各話 table, whose 原作 column is in 巻話 form, gives eps 60-62 one rowspan: '20巻4-10話' with NO TVオリジナル component — and that column demonstrably marks partials when they exist (79 = '23巻1話 / TVオリジナル', 83 = 'TVオリジナル / 23巻7-9話', 127 = 'TVオリジナル / 29巻9話'). Converted (v20 = ch 189-198, proved below), 20巻4-10話 = ch 192-198, which is exactly the stored anchors 192/194 · 195/196 · 197/198 for eps 60/61/62. (c) The licensor: Yomiuri TV's own 2000_story/04.html synopsis for 第62話 「底知れぬ椿の呪縛」 narrates ch 197-198 beat for beat (the three-tailed fox, the black Shikon jewel, Kagome's illusion world, the archery instructor with Kikyō's face asking 「おまえは誰だ？」, Kagome returning to herself and loosing an arrow). The divergence AFG flags is REAL and I confirm it on a second source — the fandom's Tsubaki page: 'In the manga, after Naraku takes the jewel causing her to lose her immortality, she isn't seen again' (cited to ep 62) vs 'In the anime, however, she managed to retrieve the Sacred Jewel used to control Kagome and made her escape' (leading into eps 63-65, already typed filler). Under T28's FAITHFULNESS CLAUSE an altered outcome of the source's own events is a `divergence` annotation on a CANON row, never a route to mixed; the substituted beat is the closing scene, and the material it sets up lives in the filler rows that follow, not in this one. (2) Eps 147/148 'The Tragic Love Song of Destiny' (めぐり逢う前の運命恋歌, one 1-hour special aired 2004-04-19, split in two on rerun/DVD) — the stored type (mixed, inherited from AFL's 'Mixed Canon/Filler') is WRONG; both rows are FILLER, and here animefillerguide (red, N/A) is right. Three independent readings agree: (a) inuyasha.fandom's infobox on BOTH pages reads 'chapter = (Anime Only)'; (b) the chapter->episode reverse index is empty — of 83 and 93 mainspace backlinks to Episode 147 / Episode 148, NOT ONE is a Chapter page (the same query returns Chapter 197 + Chapter 198 for Episode 62 and Chapter 219 for Episode 79, so the index is live and discriminating); (c) ja-WP's 原作 column gives 147-148 one rowspan of plain 'TVオリジナル' with no 巻話 component, sandwiched between 141-146 = '30巻4話-31巻5話' and 149-157 = '31巻5話-33巻8話'. What the special actually does is RE-TELL, newly drawn, the Kikyō / Onigumo / Naraku backstory already animated in eps 1 and 20-21 (ch 1-2 -> Episode 1; ch 65-71 -> Episodes 20-21, per the chapter pages' own episode fields) — and it rewrites it: the framing narrator-antagonists are anime-original characters, each with 'anime debut = 147' and an empty manga field on the fandom — Shako (シャコ, Sango's grandfather, the demon slayer who sends the jewel to Kikyō; a celebrity guest role for Takizawa Hideaki, redubbed by Isobe Hiroshi on DVD per ja-WP's own footnote), the Three-Eyed Spider (三ツ目蜘蛛, retconned into 'the true demon behind Naraku's creation'), and the Beni rouge Inuyasha gives Kikyō. Tsubaki cursing the young Kikyō — the special's causal spine — is likewise anime-only per the fandom's Tsubaki page. Under T27 that is ZERO standing in the source; under the RECAP CLAUSE the retold backstory is weightless and under the RECAP BOUNDARY the newly drawn retelling is anime production that weighs toward filler — both readings land in the same place because there is no first-time canon share anywhere in the two episodes. I ran the SOLE-ADAPTATION EXCEPTION and it does not arise: no source, in either direction, places a single manga page in these rows. AFL is the source that lied, by the mechanism the recap clause exists to stop — counting a re-told canon backstory as a canon share.",
+  "anchors": [
+    {
+      "episode": 62,
+      "end_chapter": 198,
+      "start_chapter": 197,
+      "chapters_adapted": "197-198",
+      "volume": 20,
+      "confidence": "high",
+      "note": "CONFIRMATION, not a change — identical to the stored afg-tier anchor (ep 62 -> 198 [197] {197-198}); apply is a no-op unless Sean wants it pinned at the manual tier alongside the canon type pin. Evidence: inuyasha.fandom Episode 62 infobox 'chapter = Chapter 197-198'; the reverse index (Chapter 197 and Chapter 198 both carry 'episode = Episode 62'); ja-WP's 原作 column '20巻4-10話' for eps 60-62; AFG's own chapter cell '197, 198'. A4: END = 198, the furthest mainline chapter adapted in running order, and ch 198 is the last chapter of volume 20 (ch 199 'The Stone Flower' opens v21 on the fandom's chapter page). A10: START = 197 — the episode opens directly in ch 197's fight, continuing ep 61 which ended at ch 196. The altered closing pages of ch 198 do NOT hold the END back: A47's exception is for a trailing scrap the NEXT anchored episode owns, and no later episode starts on 198 (ep 66 = ch 201-203), so nothing is deferred — the pages are replaced, not relocated. Chapter space (N35): the printed numbering, 1-558; ja-WP's 巻話 form converts on v20 = 189-198 / v21 = 199-208, verified at four boundaries against sources in the printed space (ch 197,198 = v20 and ch 199 = v21 on the fandom; 21巻1-2話 = ch 199-200 = ep 55 matches the fandom's 'episode = Episode 55' on Chapter 199 and Chapter 200; 21巻3-7話 = ch 201-205 = eps 66-67 matches Chapter 201/202 -> Episode 66 and Chapter 203 -> Episodes 66 and 67; 31巻5話 = ch 303 matches the stored ep 146 END and ep 149 START).",
+      "sources": [
+        "https://inuyasha.fandom.com/api.php?action=parse&page=Episode%2062&prop=wikitext&format=json",
+        "https://inuyasha.fandom.com/api.php?action=parse&page=Chapter%20197&prop=wikitext&format=json",
+        "https://inuyasha.fandom.com/api.php?action=parse&page=Chapter%20198&prop=wikitext&format=json",
+        "https://inuyasha.fandom.com/api.php?action=parse&page=Chapter%20199&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E7%8A%AC%E5%A4%9C%E5%8F%89_(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext&format=json",
+        "http://web.archive.org/web/2019id_/https://www.ytv.co.jp/inuyasha/story/2000_story/04.html",
+        "https://www.animefillerguide.com/anime/inuyasha/"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 62,
+      "continue_chapter": 201,
+      "kind": "parity",
+      "note": "VALUE UNCHANGED (stored: 201/parity) — this entry exists only to repair the stored REASON, which is wrong on its face. The stored note reads 'ep 66 starts ch 201; chs 199-200 not yet seen at this point (chronological next-unseen ...)'. Chapters 199-200 HAD been seen: they are ep 55's adaptation (inuyasha.fandom Chapter 199 'The Stone Flower' and Chapter 200 'Shattered Dream' both carry 'episode = Episode 55'; ja-WP gives 第55話 = '21巻1-2話'). The InuYasha anime plays vol 21 out of order — ep 55 = ch 199-200, ep 56 = ch 206-207 (ja-WP '21巻8-9話'), then eps 60-62 go BACK to ch 192-198, then eps 66-67 = ch 201-205. So the correct statement at ep 62 is C2 parity with the anime at ep 66's START (201) with NOTHING unseen behind it — not a C3 'skip on arrival'. The same defect sits one row group later: ep 67's stored continue says 'chs 206-207 not yet seen at this point' when ep 56 adapted them. Flagged for Sean rather than repaired wholesale — the healer owns these values, and only ep 62 is in this wave's ask.",
+      "sources": [
+        "https://inuyasha.fandom.com/api.php?action=parse&page=Chapter%20199&prop=wikitext&format=json",
+        "https://inuyasha.fandom.com/api.php?action=parse&page=Chapter%20200&prop=wikitext&format=json",
+        "https://inuyasha.fandom.com/api.php?action=parse&page=Chapter%20201&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E7%8A%AC%E5%A4%9C%E5%8F%89_(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "anchor_hostile": [
+    {
+      "episode": 147,
+      "why": "A1: the row is FILLER (see type_corrections) — no source, in either direction, places a manga page in it. inuyasha.fandom's Episode 147 infobox reads 'chapter = (Anime Only)'; the chapter->episode reverse index returns 83 mainspace backlinks to Episode 147 and not one of them is a Chapter page (the identical query returns Chapter 197 + Chapter 198 for Episode 62, so the index is live); ja-WP's 原作 column reads plain 'TVオリジナル'. Nothing is lost by declining an anchor: the material the special re-tells is already anchored elsewhere (ch 1-2 at ep 1, ch 65-71 at eps 20-21), and eps 146 -> 303 and 149 [303] -> 306 close around it with no gap. A44 independently — there is no position here to name.",
+      "sources": [
+        "https://inuyasha.fandom.com/api.php?action=parse&page=Episode%20147&prop=wikitext&format=json",
+        "https://inuyasha.fandom.com/api.php?action=query&list=backlinks&bltitle=Episode%20147&bllimit=500&blnamespace=0&format=json",
+        "https://inuyasha.fandom.com/api.php?action=query&list=backlinks&bltitle=Episode%2062&bllimit=500&blnamespace=0&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E7%8A%AC%E5%A4%9C%E5%8F%89_(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext&format=json",
+        "https://www.animefillerguide.com/anime/inuyasha/"
+      ]
+    },
+    {
+      "episode": 148,
+      "why": "A1: the row is FILLER (see type_corrections). inuyasha.fandom's Episode 148 infobox reads 'chapter = (Anime Only)'; the reverse index returns 93 mainspace backlinks to Episode 148 with no Chapter page among them; ja-WP's rowspan covers 147-148 as plain 'TVオリジナル'. Its closing beats (Naraku's betrayal, Kikyō's death, Inuyasha pinned to the Goshinboku) are ch 1-2's content, animated in ep 1 — a duplicate, not a first-time position — and its causal spine (Tsubaki's curse on the young Kikyō, the Three-Eyed Spider behind Onigumo's transformation, the destroyed Beni) is anime-original. A44 independently.",
+      "sources": [
+        "https://inuyasha.fandom.com/api.php?action=parse&page=Episode%20148&prop=wikitext&format=json",
+        "https://inuyasha.fandom.com/api.php?action=query&list=backlinks&bltitle=Episode%20148&bllimit=500&blnamespace=0&format=json",
+        "https://inuyasha.fandom.com/api.php?action=parse&page=Chapter%201&prop=wikitext&format=json",
+        "https://inuyasha.fandom.com/api.php?action=parse&page=Chapter%2065&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E7%8A%AC%E5%A4%9C%E5%8F%89_(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext&format=json",
+        "https://www.animefillerguide.com/anime/inuyasha/"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [
+        62
+      ],
+      "kind": "divergence",
+      "chapters": "198 (closing pages)",
+      "note": "weight: SLIVER — because it is an ALTERED OUTCOME of the source's own events, not an original plot, and it occupies the episode's closing scene only. What changes: in ch 198 Tsubaki is beaten by Kagome's reflected curse and one of Naraku's saimyōshō emerges from her eye and takes the defiled Shikon jewel, after which (fandom, Tsubaki page) 'it is not known what becomes of her'; the anime lets Tsubaki escape WITH the jewel while Naraku and Kagura watch and decide to leave it with her — the set-up for the anime-original eps 63-65, where the saimyōshō finally takes the jewel from her eye. Two sources: animefillerguide's row-62 note ('The ending was changed, in the manga Tsubaki loses the battle and Naraku's insect comes out of her eye and takes the Shikon pearl') and inuyasha.fandom's Tsubaki page ('In the manga, after Naraku takes the jewel ... she isn't seen again' [ep 62] / 'In the anime, however, she managed to retrieve the Sacred Jewel ... and made her escape' [ep 63]). Under T28's faithfulness clause this keeps the row CANON: alterations, cuts and substitutions of the source's own events are annotated, never weighed toward mixed. The rest of the episode is ch 197 + ch 198 to the reflected curse, weight SIGNIFICANT, and NEW (ep 61 ended at ch 196; no later episode revisits 197-198).",
+      "sources": [
+        "https://www.animefillerguide.com/anime/inuyasha/",
+        "https://inuyasha.fandom.com/api.php?action=parse&page=Tsubaki&prop=wikitext&format=json",
+        "https://inuyasha.fandom.com/api.php?action=parse&page=Chapter%20198&prop=wikitext&format=json",
+        "https://inuyasha.fandom.com/api.php?action=parse&page=Episode%2062&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [
+        62
+      ],
+      "kind": "unverified",
+      "chapters": "198 (closing pages)",
+      "note": "The LENGTH of the substituted ending could not be sized after a real search: no source states it in minutes or pages. AFG, which prints an explicit minute range on all three of its genuinely mixed InuYasha rows (79, 127, 128), prints NONE on row 62 — which is itself evidence that its editor saw a story difference to flag rather than an original block to skip — and the Yomiuri TV synopsis for 第62話 stops before the episode's end (「三尾の狐が襲いかかり…」, a next-week teaser close). By the fandom summary's structure the divergent material is the last of eleven paragraphs. The TYPE does not turn on the number (faithfulness clause), so this is a completeness gap, not a doubt: ch 197-198 are certainly the episode, and the anchor stands.",
+      "sources": [
+        "https://www.animefillerguide.com/anime/inuyasha/",
+        "http://web.archive.org/web/2019id_/https://www.ytv.co.jp/inuyasha/story/2000_story/04.html",
+        "https://inuyasha.fandom.com/api.php?action=parse&page=Episode%2062&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [
+        147,
+        148
+      ],
+      "kind": "recap",
+      "chapters": "1-2, 65-71 (re-told, all animated earlier)",
+      "note": "weight: SLIVER (weightless in the standing) — because every source beat the special dramatises is a RE-TELLING of material already adapted, not first-time coverage: Mistress Centipede, the Bone-Eater's Well, Naraku's impersonation, Kikyō's death and Inuyasha's sealing are ch 1-2, animated in ep 1 (fandom Chapter 1 / Chapter 2 both: 'episode = Episode 1'); Onigumo in the cave and his surrender to the demons are ch 65-71, animated in eps 20-21 (Chapter 65/66/67 -> Episode 20; Chapter 68 -> Episodes 20 and 21; Chapter 69/70/71 -> Episode 21; the fandom's Onigumo page sources his 'devour me' speech to Episode 21). The material is a DUPLICATE, not new. Two clauses, one answer: under the RECAP CLAUSE the retold share counts for nothing and the remainder decides; under the RECAP BOUNDARY (Sean, shippuden 388) this newly-drawn hour is not weightless recap at all but anime production that weighs toward filler. Either way the remainder is wholly original, so the rows are filler. This annotation carries no anchor by design (A1).",
+      "sources": [
+        "https://inuyasha.fandom.com/api.php?action=parse&page=Chapter%201&prop=wikitext&format=json",
+        "https://inuyasha.fandom.com/api.php?action=parse&page=Chapter%2065&prop=wikitext&format=json",
+        "https://inuyasha.fandom.com/api.php?action=parse&page=Chapter%2068&prop=wikitext&format=json",
+        "https://inuyasha.fandom.com/api.php?action=parse&page=Onigumo&prop=wikitext&format=json",
+        "https://inuyasha.fandom.com/api.php?action=parse&page=Episode%20147&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [
+        147,
+        148
+      ],
+      "kind": "divergence",
+      "chapters": "no source chapters — anime-original retelling",
+      "note": "weight: n/a (this segment has NO source pages) and it is the segment that decides the type. The special does not merely re-tell the backstory, it REWRITES it with characters and objects the manga does not contain — each carries 'anime debut = 147' and an empty manga field on inuyasha.fandom: Shako (シャコ), Sango and Kohaku's grandfather, who pulls the Shikon no Tama from Mistress Centipede's corpse and sends it to Kikyō (a celebrity guest role for Takizawa Hideaki, replaced by Isobe Hiroshi on DVD and streaming per ja-WP's own footnote — and the name シャコ is itself sourced to the Yomiuri TV story page); the Three-Eyed Spider (三ツ目蜘蛛), retconned into 'the true demon behind Naraku's creation'; and the Beni, the rouge Inuyasha inherits from Izayoi and gives Kikyō, which Naraku destroys. The causal spine — Tsubaki cursing the young Kikyō never to fall in love — is also anime-only (fandom, Tsubaki page trivia: 'She places a curse on Kikyō in the anime ... Yet Tsubaki herself had no knowledge of Naraku nor Onigumo'). Whole newly-invented sequences follow from these: the demon-slayer village prologue, Kikyō and Tsubaki as fellow trainees, the snow-leopard mission, the boat scene and kiss, and the 1981 coda of Kagome's birth. The Yomiuri TV synopsis for 「めぐり逢う前の運命恋歌」 confirms this is the episode's whole architecture, opening on the demon slayers and Shako's death.",
+      "sources": [
+        "https://inuyasha.fandom.com/api.php?action=parse&page=Shako&prop=wikitext&format=json",
+        "https://inuyasha.fandom.com/api.php?action=parse&page=Three-Eyed%20Spider&prop=wikitext&format=json",
+        "https://inuyasha.fandom.com/api.php?action=parse&page=Beni&prop=wikitext&format=json",
+        "https://inuyasha.fandom.com/api.php?action=parse&page=Tsubaki&prop=wikitext&format=json",
+        "http://web.archive.org/web/2019id_/https://www.ytv.co.jp/inuyasha/story/2000_story/08.html",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E7%8A%AC%E5%A4%9C%E5%8F%89_(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [
+    {
+      "episodes": [
+        62
+      ],
+      "type": "canon",
+      "confidence": "high",
+      "reason": "CONFIRMATION — the stored type is CORRECT and AFL is right; delivered as a type entry so Sean can pin it (T6) against the AFG class, exactly as he did for ep 79 in wave 1. The disagreement is an artefact: AFG's blue <span> on row 62 is not a 'Mixed' claim. AFG's InuYasha table has four blue rows in total — 79, 127, 128 each open with the word 'Mixed' and give a minute range ('21:05 to the end' / '8:44 to 12:46' / '22:31 to the end'), while 62 opens '* The ending was changed, in the manga Tsubaki loses the battle and Naraku's insect comes out of her eye and takes the Shikon pearl (You can watch it in manga 198)' and fills its chapter cell with '197, 198'. Segment 1 (weight: SIGNIFICANT): ch 197 in full and ch 198 up to Kagome reflecting the shikigami — Kagome's illusion of a world without Inuyasha, the Kikyō-faced instructor's 'who are you?', 'I am Kagome!', the curse broken — which is essentially the whole episode; the Yomiuri TV synopsis narrates exactly this and nothing else. Segment 2 (weight: SLIVER): the substituted closing beat, Tsubaki escaping with the jewel instead of losing it to Naraku's saimyōshō — an altered outcome of the source's own events, which T28's faithfulness clause annotates as `divergence` and never counts toward mixed. Two independent sources beyond AFL/AFG: inuyasha.fandom (Episode 62 'chapter = Chapter 197-198'; Chapter 197 and Chapter 198 both 'episode = Episode 62'; not in Category:Filler episodes) and ja-WP's 原作 column ('20巻4-10話' across eps 60-62, no TVオリジナル component, in a column that demonstrably marks partials elsewhere).",
+      "sources": [
+        "https://www.animefillerguide.com/anime/inuyasha/",
+        "https://www.animefillerlist.com/shows/inuyasha",
+        "https://inuyasha.fandom.com/api.php?action=parse&page=Episode%2062&prop=wikitext&format=json",
+        "https://inuyasha.fandom.com/api.php?action=parse&page=Chapter%20197&prop=wikitext&format=json",
+        "https://inuyasha.fandom.com/api.php?action=parse&page=Chapter%20198&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E7%8A%AC%E5%A4%9C%E5%8F%89_(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext&format=json",
+        "http://web.archive.org/web/2019id_/https://www.ytv.co.jp/inuyasha/story/2000_story/04.html"
+      ]
+    },
+    {
+      "episodes": [
+        147,
+        148
+      ],
+      "type": "filler",
+      "confidence": "high",
+      "reason": "CORRECTION: stored mixed -> filler. AFL's 'Mixed Canon/Filler' is the source that lied, by the mechanism the recap clause exists to stop — it counts a RE-TOLD canon backstory as a canon share. T28 accounting, per segment. Segment 1 (weight: SLIVER / weightless): the re-telling of the Kikyō-Onigumo-Naraku past, whose events are ch 1-2 (animated ep 1) and ch 65-71 (animated eps 20-21) — DUPLICATE material, no first-time pages, and under the RECAP BOUNDARY a newly-drawn retelling is anime production weighing toward filler rather than weightless recap. Segment 2 (weight: n/a — no source pages; this is the remainder, and it is most of the two episodes): anime-original invention that rewrites the backstory — Shako, the Three-Eyed Spider and the Beni all carry 'anime debut = 147' with an empty manga field on inuyasha.fandom, Tsubaki's curse on the young Kikyō is anime-only per the same wiki, and the demon-slayer prologue, the snow-leopard mission, the boat kiss and the 1981 coda have no manga counterpart. T27: zero standing in the source -> filler. Three independent readings agree and none dissents except AFL: (a) inuyasha.fandom infobox 'chapter = (Anime Only)' on BOTH pages; (b) the chapter->episode reverse index is empty for both episodes (83 / 93 mainspace backlinks, no Chapter page among them, while the same query returns Chapter 197+198 for Episode 62); (c) ja-WP's 原作 column, plain 'TVオリジナル' on the 147-148 rowspan, between positive 巻話 ranges on 141-146 and 149-157. ONE HONEST CAVEAT, stated rather than hidden: inuyasha.fandom's Category:Filler episodes (41 episode members) does NOT contain 147 or 148. I checked what that category actually tracks: its 41 members are exactly ja-WP's TVオリジナル set — 59, 63-65, 68, 72, 75-79, 83-84, 87, 89-101, 127-130, 133-140, 162-163 — MINUS our two rows, and it includes rows that are only partly original (79, 83, 84, 87, 127, 128 all carry a 巻話 component on ja-WP), so it is a 'contains filler' bucket rather than a clean type. The two special pages are also the thinnest in the run (Episode 147 carries two categories, Episode 148 one, where neighbouring pages carry several). An absent category is SILENCE, not a positive claim, and it is outweighed by three positive readings — including one from the same wiki, whose infobox on both pages says '(Anime Only)'. Consequence: A1 — neither row may carry an anchor, and neither does today.",
+      "sources": [
+        "https://www.animefillerlist.com/shows/inuyasha",
+        "https://www.animefillerguide.com/anime/inuyasha/",
+        "https://inuyasha.fandom.com/api.php?action=parse&page=Episode%20147&prop=wikitext&format=json",
+        "https://inuyasha.fandom.com/api.php?action=parse&page=Episode%20148&prop=wikitext&format=json",
+        "https://inuyasha.fandom.com/api.php?action=query&list=backlinks&bltitle=Episode%20147&bllimit=500&blnamespace=0&format=json",
+        "https://inuyasha.fandom.com/api.php?action=query&list=backlinks&bltitle=Episode%20148&bllimit=500&blnamespace=0&format=json",
+        "https://inuyasha.fandom.com/api.php?action=parse&page=Shako&prop=wikitext&format=json",
+        "https://inuyasha.fandom.com/api.php?action=parse&page=Three-Eyed%20Spider&prop=wikitext&format=json",
+        "https://inuyasha.fandom.com/api.php?action=parse&page=Beni&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E7%8A%AC%E5%A4%9C%E5%8F%89_(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext&format=json",
+        "http://web.archive.org/web/2019id_/https://www.ytv.co.jp/inuyasha/story/2000_story/08.html"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "ROW IDENTITY FIRST. animefillerlist's live inuyasha page holds 194 <tr> = 193 episode rows against our 193 — a clean 1:1 — and every reading was keyed by TITLE + AIR DATE, never index: 62 = \"Tsubaki's Unrelenting Evil Spell\" 2002-03-04, 147/148 = 'The Tragic Love Song of Destiny (Part 1/2)' both 2004-04-19, matching the context exactly, with 61/63 and 146/149 checked around them. animefillerguide's table interleaves arc-header rows, so it too was joined on number+title (its 62, 147, 148 titles match ours verbatim). ja-WP's 犬夜叉 (アニメ) 各話 table was parsed line-wise; its dates match (第62話 3月4日 2002, 第147/148話 4月19日 2004) and 147/148 share one rowspan because the hour special aired as a single programme — ja-WP's own footnote says 第133-4話, 第147-8話 and 第166-7話 were hour programmes split into two parts only for reruns and DVD, which is precisely why our catalog carries them as two rows. CHAPTER SPACE (N35): InuYasha's printed numbering, 1-558 / 56 volumes, one space throughout; no sourceShift applies. ja-WP's 原作 column is in 巻話 form and I converted it on v20 = ch 189-198, v21 = 199-208, v31 = 299-308, testing the conversion at four independent boundaries against sources that print absolute chapter numbers: fandom Chapter 197/198 = volume 20 and Chapter 199 = volume 21; ja-WP 第55話 '21巻1-2話' vs fandom Chapter 199 and Chapter 200 both 'episode = Episode 55'; ja-WP 第66-67話 '21巻3-7話' vs fandom Chapter 201/202 -> Episode 66 and Chapter 203 -> Episodes 66 and 67; ja-WP 第149-157話 '31巻5話-33巻8話' vs the stored ep 146 END 303 / ep 149 START 303. All four hold. THE AFG CLASS, as a general finding: on this series the blue class is used for TWO different things — a mixed-episode viewing guide (79, 127, 128: the word 'Mixed' plus a minute range plus a chapter that IS partially adapted) and a plain divergence flag on a fully adapted row (62: no 'Mixed', no minute range, both chapters in the cell). A class-to-type conversion cannot tell them apart; the note's wording can. STRUCTURE FINDING beyond the ask: the anime plays volume 21 out of order — ep 55 = ch 199-200, ep 56 = ch 206-207, eps 60-62 = ch 192-198 (a back-jump), eps 66-67 = ch 201-205 — and the stored C2 notes at eps 62 and 67 assert chapters were 'not yet seen at this point' that had in fact already been animated. The continue VALUES (201, 208) are right; only the reasons are wrong.",
+    "coverage_set_checked": "ep 54 {190-192}, ep 55 {199-200, ja-WP 21巻1-2話 + fandom Chapter 199/200 -> Episode 55}, ep 56 {206-207, ja-WP 21巻8-9話}, eps 57-58 {ch in vol 9, ja-WP 9巻1-7話 — a far back-jump}, ep 59 {TVオリジナル}, ep 60 {192-194}, ep 61 {195-196}, ep 62 {197-198}, eps 63-65 {TVオリジナル}, eps 66-67 {201-205}. Volume 20 is exhausted at ep 62 (ch 198 is its last chapter) and nothing after ep 62 revisits 197-198. Around the second target: ep 146 {301-303}, eps 147-148 {no source pages}, ep 149 {303-306} — the 147/148 special sits between two rows that close on ch 303 with no gap and no deferred pages."
+  },
+  "flags_for_sean": [
+    "PARSER / RULE FINDING, and the reason wave 2 exists: AFG's blue class is not a type. On InuYasha exactly four rows are blue — 79, 127 and 128 each begin with the literal word 'Mixed' and carry a minute range (they ARE part-canon rows), while 62 begins '* The ending was changed, in the manga ...' and fills its chapter cell with both chapters. The post-fix parser reads all four as mixed, which manufactured this row's disagreement out of nothing. If the class-to-type mapping gained a wording gate — blue types mixed only when the note says 'Mixed' or carries a minute range, otherwise it is a divergence flag on a canon row — the whole class of false STRONG contradictions would stop being generated. I checked only InuYasha's four blue rows; the same test is cheap to run catalog-wide.",
+    "AFL's per-row type on a FLASHBACK SPECIAL is unreliable in the same way every time: InuYasha 147/148 are 'Mixed Canon/Filler' on AFL purely because the hour re-tells canon backstory, with no manga page in either episode by three independent readings. ja-WP's own footnote names two sibling specials of the same shape — 第133-4話「殺生丸を愛した女」 (ja-WP: TVオリジナル; AFL: worth checking) and 第166-7話「二人の絆 四魂のかけらを使え!」 — so if you accept this correction, those two blocks are the natural next probe. I did NOT research them; this is a pointer, not a finding.",
+    "OUTSIDE THE ASK, a continue-reason defect the census can prove: ep 62's stored continue reads '201/parity ... chs 199-200 not yet seen at this point' and ep 67's reads '208/parity ... chs 206-207 not yet seen at this point'. Both are false — ep 55 adapted ch 199-200 and ep 56 adapted ch 206-207, five to eleven episodes EARLIER (fandom chapter pages + ja-WP 21巻1-2話 / 21巻8-9話). The VALUES are correct C2 parity; the healer's 'chronological next-unseen' wording is what is wrong, and it is wrong wherever an anime plays a volume out of order. I have delivered the ep-62 note as a continue_points entry with the value unchanged; ep 67 is left for you."
+  ]
+}

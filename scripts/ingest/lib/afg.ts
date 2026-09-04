@@ -14,6 +14,7 @@ export interface AfgEpisode {
   arc: string | null;
   canonStart: string | null; // "(2:05)" timestamps on mixed episodes
   chapters: number[];        // chapters this episode covers (empty = filler/none)
+  afgLabel?: 'mixed' | 'anime-canon' | 'filler' | null; // the NOTE inside the title cell on the newer format ('* Mixed …' / '* Anime Canon' / '* Filler') — the class alone cannot tell Mixed from Anime Canon (batch 21 wave 2, boruto: 171 blue rows were Anime Canon)
   // AFG's 3-way taxonomy via cell classes: red = filler, blue = mixed,
   // unstyled = canon. Only used where AFL is absent (expansion series) —
   // AFL stays the type authority everywhere it exists.
@@ -96,6 +97,9 @@ export function parseAfgPage(html: string): AfgPage {
         // no real title exists — junk stored as a title renders as a WRONG
         // title (Sean's Dorohedoro report 2026-08-23); normalize to pending
         const rawTitle = hasStart ? cells[2] : cells[1];
+        // the note text decides what a blue class MEANS (Mixed vs Anime Canon); read it before the title is cleaned
+        const noteText = String(rawTitle ?? '');
+        const afgLabel: AfgEpisode['afgLabel'] = /\*\s*(?:It\W?s a )?mixed\b/i.test(noteText) ? 'mixed' : /\*\s*anime\s+canon\b/i.test(noteText) ? 'anime-canon' : /\*\s*filler\b/i.test(noteText) ? 'filler' : null;
         // AFG appends its own "* Filler" marker INSIDE the title cell on
         // some pages — it is table annotation, not the episode's name
         // (Sean's eyeshield report 2026-08-25: 99 stored titles carried it
@@ -116,7 +120,10 @@ export function parseAfgPage(html: string): AfgPage {
           arc: currentArc,
           canonStart: hasStart ? (cells[1].replace(/[()]/g, '') || null) : null,
           chapters: parseChapters(chaptersCell ?? ''),
-          type: /\bred\b/.test(numberClass) ? 'filler' : /\bblue\b/.test(numberClass) ? 'mixed' : 'canon',
+          // red = filler; blue = the note decides (Mixed → mixed; Anime Canon → original content the community accepts — our standing
+          // against the SOURCE is filler, T27: no fourth type; no note → mixed, the classic meaning); unstyled = canon
+          type: /\bred\b/.test(numberClass) ? 'filler' : /\bblue\b/.test(numberClass) ? (afgLabel === 'anime-canon' ? 'filler' : 'mixed') : afgLabel === 'filler' ? 'filler' : 'canon',
+          afgLabel,
         });
       });
   });

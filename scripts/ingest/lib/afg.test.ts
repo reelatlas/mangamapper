@@ -89,3 +89,18 @@ describe('the newer AFG row format (batch 21, 2026-09-04 — real rows from the 
     ]); // the parser sorts by number
   });
 });
+
+describe('AFG blue is Mixed OR Anime Canon — the note decides (batch 21 wave 2, boruto)', () => {
+  it('maps blue + "* Anime Canon" to filler (our standing against the source; label kept), blue + "*Mixed" to mixed, unstyled to canon', () => {
+    const html = '<table><tr><th class="number">#</th><th class="title">Title</th><th class="chapter">Chapters</th></tr>' +
+      '<tr><td><b><span class="blue">40.</span></b></td><td>Team 7: The First Mission <span class="blue small"><b>* Anime Canon</b></span></td><td>N/A</td></tr>' +
+      '<tr><td><b><span class="blue">172.</span></b></td><td>A Signature of Fear <span class="blue small"><b>*Mixed, in this episode we watch from minute <span class="minuto">18:15 to the end.</span></b></span></td><td>N/A</td></tr>' +
+      '<tr><td><b>20.</b></td><td>The Boy With The Sharingan</td><td>702, 703, 704</td></tr></table>';
+    const eps = parseAfgPage(html).episodes;
+    expect(eps.map((e) => [e.number, e.type, e.afgLabel ?? null, e.title, e.chapters])).toEqual([
+      [20, 'canon', null, 'The Boy With The Sharingan', [702, 703, 704]],
+      [40, 'filler', 'anime-canon', 'Team 7: The First Mission', []],
+      [172, 'mixed', 'mixed', 'A Signature of Fear', []],
+    ]);
+  });
+});
