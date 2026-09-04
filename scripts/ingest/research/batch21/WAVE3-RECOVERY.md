@@ -50,3 +50,7 @@ Every weight-bearing claim re-read on the primaries; `lib/sliver.ts` run on the 
 4. **Beelzebub 34**: mixed (a continuous first-time ch-69 scene inside a mostly original episode) vs filler + graft{69} — the same T28 sizing fork as wave 2's seam rows; recommend mixed for consistency with bc 85 / db 34.
 5. **The Boruto chain** (I41, a ruling): add `boruto-naruto-next-generations` to source-chains.ts. Verifier's reading (recommended): TWO chain works — Naruto (AniList 30011, ch 1-700) and Naruto Gaiden (AniList 86171, printed 700+1…700+10) — so ep 24's record splits into chain_source{Naruto: ch 700} + chain_source{Naruto Gaiden: ch 700+5}; one work keeps it as delivered. Then eps 19-23 / 39 get chain_source annotations in a narrow follow-up. Until ruled, ep 24's chain_source lists as chain_source_unmapped.
 6. **Riding along**: beelzebub 15 / 26-28 / 51, boruto 18 / 93-95 (AFL's loose Mixed bucket), rurouni TV ep 95 (identity, from wave 2).
+
+
+## APPLIED 2026-09-04 (§12.113) — Sean ruled
+All shippuden as tabled (114 START 345 by A10, 117 END 350 by A47); beelzebub 34 mixed, 17 / 39 filler with anchors out; boruto 1 + 157 filler + graft (Sean: significance, not episode number; the coda is a status report), 127 filler, 24 mixed; THE CHAIN = Naruto → Naruto Gaiden → Boruto (three works, one row per kind names both). Holes 268 → 263; type_source_disagreement STRONG tier empty — the T4 lane is closed.

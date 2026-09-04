@@ -1048,6 +1048,60 @@
    asserted, 33 A44 rows, 0 removed; ruling_violation 0; 181 tests. Cycle:
    step 1 — plan wave 3 (shippuden 113-117 + the 4 STRONG rows) or close the
    T4 lane; the C5 queue (17 + 49) is a curation sitting, not research.
+113. ✅ **BATCH 21 WAVE 3 APPLIED — the ep-112 holes closed, the last STRONG
+   type rows, THE BORUTO CHAIN (2026-09-04; Sean ruled).** Three agents (Opus),
+   3/3 landed, verified (w3-flips.md, Fable). SHIPPUDEN 113-117: five anchors
+   344 [343] / 346 [345] / 347 [346] / 348 [348] / 350 [349], monotonic between
+   ep 90's 343 and ep 118's 351 — the A18 holes the ep-112 anchor opened all
+   close (verify:hole 268 → 263) and every stored pointer the block touches (ep
+   90, 112, 118) was confirmed, no repair; 113 mixed → canon under the recap
+   clause (the Part-I recap is already-animated material; the remainder is chs
+   343-344); 114's START ruled 345 by A10 as written (the verifier refuted the
+   agent's 'first-time exempts it' — a two-page flashback lead is a scrap;
+   partial{344 pp 16-17} carries the tie); 117's END held at 350 on A47's
+   teaser clause (the R3 single-lineage leg was refuted — en-WP credits 351 —
+   but the hold survives). Continues 113 → 344 (C1), 114 → 346 (C1), 117 → 351
+   (C2 = ep 118's START), all curated (C7). THE SLIVER-END WORDING TRAP: the
+   delivered chapters_adapted tails said 'flashback pages open ep 114' (113)
+   and 'replays the reversal' (114) — SCRAPPY words that made sliverEnd return
+   343 / 345, and the staged dry run had PRINTED those wrong values without the
+   stage catching it; the records are reworded at write (CHAPTERS_ADAPTED_FIX)
+   rather than value-overridden, so end_sliver_mismatch cannot re-list them.
+   BEELZEBUB 17 / 39 → filler (the ch 12 / 23 and 82-83 shares are slivers
+   restaging pages ep 6 / eps 15, 18 / eps 38-41 carry), their afg-tier anchors
+   + continues DELETED at the manual tier (P8; lossless; the T6 pins hold the
+   AFG writer's A1 gate); 34 → mixed (a continuous first-time ch-69 maid-cafe
+   scene inside a mostly original episode — the seam-episode standing ruled
+   with bc 85 / 88 and db 34), anchor 69 kept. AFG's Beelzebub page is the OLD
+   format (no class on these rows, '*Filler' in the title cell, chapters
+   printed = the fandom infobox copied). BORUTO 1 / 127 / 157 → filler, 24
+   mixed confirmed. Sean's two questions answered on the evidence: ep 1's
+   Kawaki flash-forward cold open is ch 1's first page-set, first-time, but a
+   tease never returned to — a sliver (graft{1}; ch 1 proper is eps 53-54's;
+   black-clover 3 the precedent; being episode 1 is not a rule factor); ep
+   157's Katasuke-report coda is ch 11's B-plot restaged with Ino for Ibiki, a
+   status report ep 148 skipped — a sliver (graft{11}); both filler by ruling.
+   THE BORUTO CHAIN (I41, Cursor's framing, verifier's reading): one continuity,
+   three instruments — Naruto (30011, ch 1-700) → Naruto Gaiden (86171, its own
+   tankōbon, 700+1…+10) → Boruto (87178, the instrument, 1-80); Naruto TV and
+   Shippuden share one manga and need no chain; ep 24 adapting ch 700 is the
+   Rosario-14 shape (chain_source, position-less in Boruto's space — A44 entry
+   [24], basis another chapter space); the annotation table's key is (series,
+   episode, kind), so ep 24's one chain_source names both works
+   ('Naruto: ch 700; Naruto Gaiden: ch 700+5'), first label checked;
+   chain_source_unmapped 0. Follow-ups queued: boruto eps 19-23 / 39 (stored
+   canon on Gaiden chapters, want chain_source), boruto 18 / 93-95 (AFL's loose
+   Mixed bucket), beelzebub 15 / 26-28 / 51. THE T4 LANE CLOSES:
+   type_source_disagreement's STRONG tier is EMPTY (only the weak / parked line
+   remains). PROCESS TRAP captured (research-batch skill): both wave-3 asks
+   stated a wrong premise ('AFG prints FILLER, red, no chapter') because the
+   plan step translated OUR parsed label into a page colour — quote the census
+   line verbatim. Census: ruling_violation 0; display 0 failing; A44 34 ruled
+   rows; T6 776 rows / 7 asserted; end_sliver_mismatch 1 / start_sliver_mismatch
+   1 = the standing signing rows (one-piece 195, tmm 38), unchanged. Edges
+   redeployed. Cycle: step 6 standard (no enforcement site moved) → step 1:
+   close batch 21 (P34 extraction) and plan the next block — the C5 curation
+   queue (17 + 49), the boruto chain follow-up, the standing sittings.
 109. ✅ **G59 THE MINT RULE (an /add-rule end to end, 2026-09-04; Sean ruled the
    lane, Cursor's naming fix: who may CREATE the grid, not an amendment of G57's
    who may DELETE).** When AFL has nothing for an entry, the grid is minted by

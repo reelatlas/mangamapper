@@ -237,6 +237,16 @@ export const ENTRIES: RulingEntry<number[]>[] = [
     ruledOn: '2026-09-03',
     cite: ['scripts/ingest/research/batch21/out/bleach-w2.json', 'scripts/ingest/research/batch21/WAVE2-RECOVERY.md'],
   },
+  {
+    seriesId: 'boruto-naruto-next-generations',
+    ruleId: 'A44',
+    value: [24],
+    reason:
+      "Batch 21 wave 3, Sean ruled 2026-09-04: ep 24 (MIXED, confirmed) adapts Naruto ch 700 + Naruto Gaiden 700+5 — ANOTHER CHAPTER SPACE on the series' chain (I41: chain_source), never convertible into Boruto's 1-80; the MU frontier / AFG writers must not mint a position here. Basis: another chapter space, not 'behind'.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-04',
+    cite: ['scripts/ingest/research/batch21/out/boruto-naruto-next-generations-w3.json', 'scripts/ingest/research/batch21/verify/w3-flips.md'],
+  },
 ];
 
 export const ANCHOR_SUPPRESSED: Record<string, number[]> = toMergedList(ENTRIES);

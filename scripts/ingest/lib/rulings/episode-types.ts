@@ -1380,6 +1380,37 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
     ruledOn: '2026-09-04',
     cite: ['scripts/ingest/research/batch21/out/rurouni-kenshin-w2.json', 'scripts/ingest/research/batch21/WAVE2-RECOVERY.md'],
   },
+  // ---- batch 21 wave 3 (2026-09-04)
+  {
+    seriesId: 'naruto-shippuden',
+    ruleId: 'T6',
+    value: { 113: 'canon', 114: 'canon', 115: 'mixed', 116: 'canon', 117: 'canon' },
+    reason:
+      'Batch 21 wave 3 (verified R24, w3-flips.md), Sean ruled 2026-09-04: 113 → canon under the RECAP CLAUSE (the Part-I recap is material the 2002 series already animated — weightless; the remainder is chs 343-344); 114 / 116 / 117 canon confirmed; 115 mixed confirmed (about two thirds the anime-only Tenzen Daikoku plot beside chs 346-347\'s Sasuke/Suigetsu thread). The five anchors 344 [343] / 346 [345] / 347 [346] / 348 [348] / 350 [349] close the A18 holes the ep-112 anchor opened; 114\'s START 345 by A10 (a two-page flashback lead), 117\'s END 350 by A47\'s teaser clause (T6; confirmations pinned so type_source_disagreement stops re-listing).',
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-04',
+    cite: ['scripts/ingest/research/batch21/WAVE3-RECOVERY.md', 'scripts/ingest/research/batch21/verify/w3-flips.md', 'scripts/ingest/research/batch21/out/naruto-shippuden-w3.json'],
+  },
+  {
+    seriesId: 'beelzebub',
+    ruleId: 'T6',
+    value: { 17: 'filler', 34: 'mixed', 39: 'filler' },
+    reason:
+      'Batch 21 wave 3 (verified R24, w3-flips.md), Sean ruled 2026-09-04: 17 → filler (the ch 12 / 23 shares are slivers restaging pages ep 6 / eps 15, 18 carry; the afg anchor 23 came out under A1, lossless); 34 → mixed (a continuous first-time ch-69 scene — the maid cafe — adapted nowhere else inside a mostly original episode; the seam-episode standing, ruled with bc 85 / 88 and db 34; anchor 69 kept); 39 → filler (chs 82-83 are slivers; ja-WP: 石矢魔ランド 初出はアニメ版; the afg anchor 83 came out under A1, lossless). AFL lied by block-typing \'Manga Canon 29-51\'; AFG\'s old-format page prints chapters with \'*Filler\' in the title cell (T6; confirmations pinned so type_source_disagreement stops re-listing).',
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-04',
+    cite: ['scripts/ingest/research/batch21/WAVE3-RECOVERY.md', 'scripts/ingest/research/batch21/verify/w3-flips.md', 'scripts/ingest/research/batch21/out/beelzebub-w3.json'],
+  },
+  {
+    seriesId: 'boruto-naruto-next-generations',
+    ruleId: 'T6',
+    value: { 1: 'filler', 24: 'mixed', 127: 'filler', 157: 'filler' },
+    reason:
+      'Batch 21 wave 3 (verified R24, w3-flips.md), Sean ruled 2026-09-04: 1 → filler + graft{1} (the Kawaki flash-forward cold open is Boruto ch 1\'s first page-set, first-time but a tease never returned to — a sliver; the remainder is the anime\'s Academy prequel; ch 1 proper is eps 53-54\'s — Sean: significance not episode number, black-clover 3 is the precedent); 24 mixed confirmed (adapts Naruto ch 700 + Naruto Gaiden 700+5 — another chapter space, chain_source per I41, position-less A44); 127 → filler (zero source content); 157 → filler + graft{11} (the Katasuke-report coda restaged with Ino for Ibiki is a status report ep 148 skipped — a sliver; the Amegakure investigation is anime-only). AFL\'s Mixed bucket is loose on this series (T6; confirmations pinned so type_source_disagreement stops re-listing).',
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-04',
+    cite: ['scripts/ingest/research/batch21/WAVE3-RECOVERY.md', 'scripts/ingest/research/batch21/verify/w3-flips.md', 'scripts/ingest/research/batch21/out/boruto-naruto-next-generations-w3.json'],
+  },
 ];
 
 export const EPISODE_TYPE_OVERRIDES: Record<string, EpisodeTypes> = ENTRIES.reduce<Record<string, EpisodeTypes>>((acc, e) => {

@@ -37,6 +37,7 @@ const CHAPTERS_ADAPTED_FIX: Record<string, string> = {
 };
 // annotation chapters rewritten at write (verifier): an inferred page count is not a count
 const ANNOTATION_CHAPTERS_FIX: Record<string, string> = {
+  'boruto-naruto-next-generations#24#chain_source': 'Naruto: ch 700; Naruto Gaiden: ch 700+5', // Sean ruled the chain 2026-09-04 (I41: Naruto → Naruto Gaiden → Boruto); one row per kind, both works named, first label checked
   'naruto-shippuden#117#partial': "351 (opening pages only: Sasuke's own partial cursed-seal transformation blocking Jūgo's first strike, and his line that he did not come to fight but to talk — ep 118 starts here and carries the rest)",
 };
 const END_OVERRIDE: Record<string, number> = {};

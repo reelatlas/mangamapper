@@ -44,6 +44,20 @@ export const ENTRIES: RulingEntry<SourceChain>[] = [
     ruledOn: '2026-09-04',
     cite: ['scripts/ingest/research/batch20/WAVE16-RECOVERY.md'],
   },
+  {
+    seriesId: 'boruto-naruto-next-generations',
+    ruleId: 'I41',
+    value: { works: [
+      { label: 'Naruto', anilistMangaId: 30011, note: 'Naruto (1999-2014), ch 1-700 — the Naruto TV / Shippuden instrument; ep 24 adapts its epilogue ch 700' },
+      { label: 'Naruto Gaiden', anilistMangaId: 86171, note: 'Naruto Gaiden: The Seventh Hokage and the Scarlet Spring (2015) — its own tankōbon, printed 700+1…700+10, not inside 30011\'s 700; eps 19-23 adapt it, ep 39 its second one-shot' },
+      { label: 'Boruto', anilistMangaId: 87178, note: 'Boruto: Naruto Next Generations (2016-), the entry\'s instrument — its chapter space is 1-80, never 700' },
+    ] },
+    reason:
+      "Batch 21 wave 3 (verified R24), Sean ruled 2026-09-04 (Cursor's framing): one continuity, three instruments — Naruto → Naruto Gaiden → Boruto. Naruto TV and Shippuden share one manga and need no chain; Boruto's instrument is the Boruto manga, so ep 24 adapting Naruto ch 700 is the Rosario-14 shape: the same story in another book's numbers = chain_source, position-less in Boruto's 1-80 space (an anchor of 700 would pretend Boruto's chapters reach 700). The Gaiden is the extra named work (its own tankōbon, 700+1…+10, not inside 30011's 700). Novels stay off the chain. One annotation row per kind (the table's key is series + episode + kind), so ep 24's record names both works in one chapters field, first label checked. Follow-up: eps 19-23 / 39 (stored canon on Gaiden chapters) want chain_source annotations.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-04',
+    cite: ['scripts/ingest/research/batch21/out/boruto-naruto-next-generations-w3.json', 'scripts/ingest/research/batch21/verify/w3-flips.md', 'scripts/ingest/research/batch21/WAVE3-RECOVERY.md'],
+  },
 ];
 
 export const SOURCE_CHAINS: Record<string, SourceChain> = toRecord(ENTRIES);
