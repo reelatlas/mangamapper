@@ -1089,6 +1089,116 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
     ruledOn: '2026-09-04',
     cite: ['scripts/ingest/research/batch20/out/saint-seiya-knights-of-the-zodiac-w16.json', 'scripts/ingest/research/batch20/verify/w16-anchors.md'],
   },
+  {
+    seriesId: 'black-clover',
+    ruleId: 'T6',
+    value: { 3: 'filler' },
+    reason:
+      "Batch 21 wave 1 (the STRONG AFL-vs-AFG contradictions settled by chapter accounting; verified R24), Sean ruled 2026-09-04: CONFIRMATION, NOT A CHANGE — stored type is already filler; recorded so the T4 flag can be closed with evidence. T27/T28: zero story-carrying source share. Segment weights: ch 1 p.1 = SLIVER (1 page, a retold prologue already carried by ep 2 per the wiki's Chapter 1 page; inside AFG's own skip zone, Start 4:30); ch 2 p.4-5 = SLIVER (2 pages, AFG's own window 06:37-09:07 = 2m30s of a ~16-minute body). Remainder ~13-14 minutes anime-original — the licensor's 第3話 synopsis is training + the send-off by the church family + the journey to the capital, and the manga skips those six months entirely (Chapter 2: 'Six months after receiving their grimoires, Asta and Yuno travel to a venue'). An origina",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-04',
+    cite: ['scripts/ingest/research/batch21/out/black-clover-w1.json', 'scripts/ingest/research/batch21/verify/w1-flips.md'],
+  },
+  {
+    seriesId: 'black-clover',
+    ruleId: 'T6',
+    value: { 68: 'filler' },
+    reason:
+      "Batch 21 wave 1 (the STRONG AFL-vs-AFG contradictions settled by chapter accounting; verified R24), Sean ruled 2026-09-04: CONFIRMATION, NOT A CHANGE — stored type is already filler and AFL is RIGHT here ('Filler'); recorded so the T4 flag can be closed with evidence. T27/T28: one source segment, ch 103 p.14-15, WEIGHT SLIVER — a ~30-second closing hook (AFG's own window 20:29→end) that is a DUPLICATE of ep 69's opening (Chapter 103 page: p.14-17 → eps 68 AND 69; ep 69 page: p.15-17; licensor's 第69話 synopsis opens on the same beat). Remainder ~19-20 minutes anime-original: the food-stall contest, Julius's Chrono Stasis gag. The licensor's 第68話 synopsis contains only the stalls and ends on teaser wording ('ついには……!?'). Sole-adaptation exception fails on both halves. AFG's blue 'Mixed' class is the flag's false pos",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-04',
+    cite: ['scripts/ingest/research/batch21/out/black-clover-w1.json', 'scripts/ingest/research/batch21/verify/w1-flips.md'],
+  },
+  {
+    seriesId: 'dragon-ball-z',
+    ruleId: 'T6',
+    value: { 43: 'mixed' },
+    reason:
+      "Batch 21 wave 1 (the STRONG AFL-vs-AFG contradictions settled by chapter accounting; verified R24), Sean ruled 2026-09-04: Stored filler (AFL: Filler). Flip to MIXED under T28's SOLE-ADAPTATION EXCEPTION, both halves stated explicitly. (1) The pages appear in NO other episode: Kanzenshuu's ch-246 page lists its corresponding DBZ episodes as exactly 039, 040, 042, 043 (plus Kai 019) and the four page ranges are disjoint — p.1-4 / p.5-8 / p.9 / p.10 + p.11-End; this row alone holds the chapter's last five pages of fourteen. (2) The beat is a major plot point of the source: Kewi/Cui reveals that Freeza heard about the Namekian Dragon Balls over Vegeta's scouter, has already left for Namek to wish for immortality and intends to exterminate the Namekians afterwards; Vegeta takes his scouter back and launches for Name",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-04',
+    cite: ['scripts/ingest/research/batch21/out/dragon-ball-z-w1.json', 'scripts/ingest/research/batch21/verify/w1-flips.md'],
+  },
+  {
+    seriesId: 'fairy-tail',
+    ruleId: 'T6',
+    value: { 246: 'mixed' },
+    reason:
+      "Batch 21 wave 1 (the STRONG AFL-vs-AFG contradictions settled by chapter accounting; verified R24), Sean ruled 2026-09-04: T28 + the SOLE-ADAPTATION EXCEPTION, both halves stated. Segment 1 (weight: n/a — no source pages): the Jellal / Meredy / Oración Seis / Rustyrose story, ~21 of ~22 minutes, entirely anime-original (fandom Differences: 'With the exception of Mard Geer appearing towards the end of the episode, all the scenes taken place in the episode were anime-only'; ja-WP bold = アニメオリジナルストーリー, the only such mark in eps 240-260). Segment 2 (weight: SIGNIFICANT): ch 380 pp.22-end, the episode's closing scene — Mard Geer Tartaros on his throne with the book of E.N.D. Half (a) of the exception: these pages appear in NO other episode — the coverage set is ep 245 {379, 380 pp.1-21}, ep 246 {380 pp.22-end}, ep 24",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-04',
+    cite: ['scripts/ingest/research/batch21/out/fairy-tail-w1.json', 'scripts/ingest/research/batch21/verify/w1-flips.md'],
+  },
+  {
+    seriesId: 'naruto-shippuden',
+    ruleId: 'T6',
+    value: { 179: 'mixed' },
+    reason:
+      "Batch 21 wave 1 (the STRONG AFL-vs-AFG contradictions settled by chapter accounting; verified R24), Sean ruled 2026-09-04: Stored filler (AFL). T28 sole-adaptation exception, both halves stated explicitly: (1) SOLE — the pages animated at 0:00-4:05 are ch 450's closing pages (the Fire Daimyo's emergency council: Koharu and Homura pressed by Danzo, Shikaku nominating Kakashi, Danzo's rebuttal, Danzo appointed Sixth Hokage) and they appear in NO other episode; ch 450's other threads are held by eps 175 (hero's welcome), 176 (Zetsu/Team Samui) and 178 (Taka; Tobi and Kisame), and the next canon episode 197 starts at ch 451 on both AFG and Narutopedia. (2) MAJOR PLOT POINT — the appointment of the Sixth Hokage is a reveal the entire following arc is built on and the political close of Pain's Assault; if this row sta",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-04',
+    cite: ['scripts/ingest/research/batch21/out/naruto-shippuden-w1.json', 'scripts/ingest/research/batch21/verify/w1-flips.md'],
+  },
+  {
+    seriesId: 'one-piece',
+    ruleId: 'T6',
+    value: { 93: 'mixed' },
+    reason:
+      "Batch 21 wave 1 (the STRONG AFL-vs-AFG contradictions settled by chapter accounting; verified R24), Sean ruled 2026-09-04: T28: source and non-source in one episode, with the source share substantial and story-carrying. SEGMENT 1 (significant): ch 158 p.2-3 and p.14-16 — the crew waiting at Nanohana and spotting Mr. 3's ship; the perfume shop, Vivi setting the destination (Yuba, and Koza) and the crew realising Luffy is missing. Sole adaptation — ep 94 plays p.4-13 and never restages these beats — roughly a third of the episode. SEGMENT 2 (anime-original): Luffy burning the Dance Powder and Kamonegi's explanation of it, Chopper's truck ride, and the early debuts of Koza and Matsuge (Matsuge debuts in ch 162 in the manga). WHO SAYS WHAT: AFL 'Filler' (wrong — it cannot see a bookended manga share); AFG plain-cano",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-04',
+    cite: ['scripts/ingest/research/batch21/out/one-piece-w1a.json', 'scripts/ingest/research/batch21/verify/w1-flips.md'],
+  },
+  {
+    seriesId: 'one-piece',
+    ruleId: 'T6',
+    value: { 203: 'mixed' },
+    reason:
+      "Batch 21 wave 1 (the STRONG AFL-vs-AFG contradictions settled by chapter accounting; verified R24), Sean ruled 2026-09-04: T28 + the sliver clause. SEGMENT 1 (significant): ch 303 p.16-18, ~6m23s of the episode (AFG's own timestamps 13:35-19:58, cross-checked on Crunchyroll and Netflix in the same note) — the division of the Skypiea gold, Nami's 80%, and Luffy's decision that the next crewmate is a shipwright, then a musician. It is a SCENE, it progresses the source's story (the Water 7 hinge), and this episode is its only adaptation anywhere in the run; by the clause's own definition that is significant, not a sliver — it is not a tease, not framing panels, not a page tie, and the anime never adapts it properly later. SEGMENT 2 (anime-original): the G-8 plot — sailing back into the fortress by the Marines' bell",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-04',
+    cite: ['scripts/ingest/research/batch21/out/one-piece-w1a.json', 'scripts/ingest/research/batch21/verify/w1-flips.md'],
+  },
+  {
+    seriesId: 'one-piece',
+    ruleId: 'T6',
+    value: { 51: 'filler', 55: 'filler', 214: 'filler', 216: 'filler', 225: 'filler' },
+    reason:
+      "Batch 21 wave 1 (the STRONG AFL-vs-AFG contradictions settled by chapter accounting; verified R24), Sean ruled 2026-09-04: CONFIRMATIONS — stored type is right and AFL is right on all five; this is the result, not an empty verdict. 51: an invented cooking contest against the anime-original Carmen; the tie is ch 98's tuna-stand panels, a sliver duplicated properly in ep 52 (ja-WP bold; OPwiki Unbekannt; AFG's '98' is the row-50/51 plateau). 55: the Calm Belt exposition of ch 101 restaged with Apis inside the Warship Island arc, the chapter's own story adapted in ep 61 (ja-WP bold; AFL filler; only AFG types it Mixed). 214: a Toei-invented Davy Back race; its two-page tie cannot even be placed (sources split between 214 and 215). 216: a Toei-invented Davy Back game; its only manga claim is single-source and contra",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-04',
+    cite: ['scripts/ingest/research/batch21/out/one-piece-w1a.json', 'scripts/ingest/research/batch21/verify/w1-flips.md'],
+  },
+  {
+    seriesId: 'one-piece',
+    ruleId: 'T6',
+    value: { 195: 'canon' },
+    reason:
+      "Batch 21 wave 1 (the STRONG AFL-vs-AFG contradictions settled by chapter accounting; verified R24), Sean ruled 2026-09-04: CONFIRMATION — stored canon is right, AFL is right, AFG's '*Mixed' is the outlier. The episode adapts ch 302 in full plus ch 303 p.2-3, 10-11, 14 (OPwiki), which AFG's own timestamp puts at 1:50-15:58 — about 74% of the body; ja-WP does not bold the row; OPwiki gives it no filler banner and no '(Filler)' arc qualifier, uniquely among the nine rows in this ask. The studio material is the closing ~5 minutes: a padded octopus-balloon descent and the substitution of the manga's sea-monkey tsunami with the Marine base that hooks the G-8 arc. T28's faithfulness clause governs: a studio-made closing scene inside an otherwise faithful adaptation is a `divergence` annotation and is never weighed towa",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-04',
+    cite: ['scripts/ingest/research/batch21/out/one-piece-w1a.json', 'scripts/ingest/research/batch21/verify/w1-flips.md'],
+  },
+  {
+    seriesId: 'one-piece',
+    ruleId: 'T6',
+    value: { 418: 'mixed', 419: 'mixed', 420: 'mixed' },
+    reason:
+      "Batch 21 wave 1 (the STRONG AFL-vs-AFG contradictions settled by chapter accounting; verified R24), Sean ruled 2026-09-04: T28. Stored filler; AFL labels them 'Anime Canon' (not a type — T27) and AFG maps them to ch 523-524. Chapter accounting settles it for MIXED on two independent grounds, both stated. (1) THE MATERIALITY BAR: ask what each episode's JOB is. Ep 418's job is to show where Nami and Franky landed; 419's, where Sanji and Chopper landed; 420's, where Usopp and Robin landed — which is precisely what ch 523 p.14-19 and ch 524 do. The source beat is the episode's premise and spine, padded with anime-original elaboration; that is the shape Sean already ruled MIXED on this series at eps 453-456 ('each episode's plot is the serial, padded with anime-original antics'), and it is why ep 421 — the same bloc",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-04',
+    cite: ['scripts/ingest/research/batch21/out/one-piece-w1b.json', 'scripts/ingest/research/batch21/verify/w1-flips.md'],
+  },
+  {
+    seriesId: 'one-piece',
+    ruleId: 'T6',
+    value: { 50: 'filler' },
+    reason:
+      "Batch 21 wave 1 (the STRONG AFL-vs-AFG contradictions settled by chapter accounting; verified R24), Sean ruled 2026-09-04: Sean ruled 2026-09-04 (batch 21 wave 1, verified w1-flips.md): ep 50 animates Act 3 of the Loguetown NOVELIZATION — a licensed add-on in the universe, not a continuation of the chain and not adopted canon (T26: a work outside the chain is canon only by an adopted{basis} ruling; 'same author' is the blanket credit the rule rejects) — FILLER stands with a side_source note naming the novel; re-evaluate if adoption evidence lands. graft{98} deleted (no source puts ch 98 here).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-04',
+    cite: ['scripts/ingest/research/batch21/out/one-piece-w1a.json', 'scripts/ingest/research/batch21/verify/w1-flips.md'],
+  },
 ];
 
 export const EPISODE_TYPE_OVERRIDES: Record<string, EpisodeTypes> = ENTRIES.reduce<Record<string, EpisodeTypes>>((acc, e) => {

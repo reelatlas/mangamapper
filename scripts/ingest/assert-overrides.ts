@@ -8,6 +8,7 @@
 // (renamed 2026-08-26 when air dates joined; G54 joined the same day).
 //   npx tsx --env-file=.env.ingest scripts/ingest/assert-overrides.ts [--dry-run]
 
+import { AFG_CHART_SUPPRESSED } from './lib/rulings/afg-chart-suppressed';
 import { db, selectAll } from './lib/db';
 import { EPISODE_TYPE_OVERRIDES } from './lib/resolve';
 import { AIR_DATE_OVERRIDES } from './lib/rulings/air-dates';
@@ -163,6 +164,17 @@ async function assertAnchorSuppression() {
     }
   }
   console.log(`[assert-overrides] anchor suppression (A44): ${Object.values(ANCHOR_SUPPRESSED).flat().length} ruled rows, ${removed} anchors removed${DRY ? ' — DRY RUN' : ''}`);
+  // G26 on the CHART lane (2026-09-04): a series whose AFG chart is suppressed must hold NO afg-tier anchors — the writer's gate only
+  // fires when the AFG sweep re-syncs the page (hash-gated), so the standing rows are asserted here (the eyeshield / T6 lesson)
+  {
+    let removed = 0;
+    for (const sid of Object.keys(AFG_CHART_SUPPRESSED)) {
+      const { data, error } = await db.from('chapter_anchors').delete().eq('series_id', sid).eq('source', 'afg').select('episode');
+      if (error) throw new Error(`chart suppression ${sid}: ${error.message}`);
+      removed += data?.length ?? 0;
+    }
+    console.log(`[assert-overrides] chart suppression (G26): ${Object.keys(AFG_CHART_SUPPRESSED).length} ruled series, ${removed} afg anchors removed`);
+  }
 }
 
 // P25: series.permanence mirrors the LOCKED map exactly

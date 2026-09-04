@@ -70,7 +70,7 @@ async function main() {
       // A47 needs the TRUE next episode's START — the next row in a non-contiguous verdict is not it (batch 21: one-piece 195's
       // END was 'normalized' against ep 203's START). Delivered next-episode row first, else the stored anchor for episode + 1.
       const next = list[i + 1];
-      let nextStart: number | null = null;
+      let nextStart: number | null;
       if (next && Number(next.episode) === Number(a.episode) + 1) nextStart = Number(next.start_chapter ?? next.end_chapter);
       else {
         const { data: st } = await db.from('chapter_anchors').select('start_chapter, chapter').eq('series_id', sid).eq('episode', Number(a.episode) + 1).maybeSingle();

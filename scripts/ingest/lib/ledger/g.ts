@@ -361,11 +361,11 @@ export const RULES: Rule[] = [
   },
   {
     id: 'G26',
-    aliases: ['CONTINUA_SUPPRESSED', 'source suppressions', 'Claymore precedent'],
+    aliases: ['CONTINUA_SUPPRESSED', 'source suppressions', 'Claymore precedent', 'chart lane suppression', 'AFG_CHART_SUPPRESSED', 'the ranma lesson', 'never a title join'],
     family: 'G',
     title: 'CONTINUA_SUPPRESSED: per-series source suppression',
     statement:
-      'Research may suppress the continua source for one series (a CONTINUA_SUPPRESSED entry with its reasoning) when same-episode precedence cannot stop a ruled-WRONG source value from landing on a DIFFERENT episode. The writer deletes the standing afg-continua anchor and stops; the suppression is outcome-checked by ruling_violation.',
+      'Research may suppress the continua source for one series (a CONTINUA_SUPPRESSED entry with its reasoning) when same-episode precedence cannot stop a ruled-WRONG source value from landing on a DIFFERENT episode. The writer deletes the standing afg-continua anchor and stops; the suppression is outcome-checked by ruling_violation. THE CHART LANE (Sean 2026-09-04, ranma): the same suppression applies to AFG\'s episode-chapter chart when a page cannot be joined to our numbering (its chapter column in production order) — AFG_CHART_SUPPRESSED; syncAnchors deletes the standing afg anchors and lands nothing; a title join is never the fix.',
     why: 'Claymore\'s continua named a frontier research had ruled wrong on another episode; kimi-ni-todoke and polar-opposites followed the precedent.',
     ruledBy: 'session',
     ruledOn: '2026-08-23',
@@ -373,10 +373,12 @@ export const RULES: Rule[] = [
     enforcement: [
       { path: 'scripts/ingest/lib/resolve.ts', symbol: 'CONTINUA_SUPPRESSED' },
       { path: 'scripts/ingest/lib/anchors.ts', symbol: 'applyContinua' },
+          { path: 'scripts/ingest/lib/rulings/afg-chart-suppressed.ts', symbol: 'AFG_CHART_SUPPRESSED' },
+      { path: 'scripts/ingest/lib/anchors.ts', symbol: 'syncAnchors' },
     ],
     layer: 'writer',
     auditClass: ['ruling_violation'],
-    witnesses: ['claymore', 'kimi-ni-todoke-from-me-to-you', 'polar-opposites'],
+    witnesses: ['claymore', 'kimi-ni-todoke-from-me-to-you', 'polar-opposites', 'ranma-1-2'],
     status: 'live',
     see: ['G22', 'A24', 'G37'],
   },

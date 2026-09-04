@@ -887,6 +887,54 @@
    0. Permanence 0 locked / 0 violations; no stale rulings. Cycle: step 1
    — Sean picks wave 8 (L-D ×8 of ~16, or a gap block; dai LAST; the T28
    six + claymore 26 still parked for his ruling).
+110. ✅ **BATCH 21 WAVE 1 APPLIED — the STRONG AFL-vs-AFG contradictions; THE AFG
+   PARSER FIX; the chart-lane suppression (2026-09-04; Sean ruled).** The new
+   T4 class's first wave (38 rows / 8 series, 7 agents, 2 verifiers-worth of
+   checks in one Fable pass over the Opus verdicts). THE FINDING THAT OUTRANKED
+   THE WAVE: the shippuden agent proved lib/afg.ts misread AFG's newer row
+   format — the type class sits on a <span> INSIDE the number cell (every row
+   typed canon), the '(04).' start cell failed hasStart (the TITLE cell was read
+   as chapters), and viewing-guide timestamps parsed as chapter ranges ('0:00
+   to 4:05' → ch 1-4). Fixed with a test from the real staged rows; afg-restage
+   re-parsed 65 / 266 pages (G44); edges deployed; the class now reads the
+   true picture (17 series STRONG — wave 2's list). RULED: **six flips filler →
+   MIXED + anchor** under the sole-adaptation exception, each verified at page
+   level — dragon-ball-z 43 → 246 (ch 246 p.10-end, Kanzenshuu's splits),
+   one-piece 93 → 158 (p.2-3, 14-16), 203 → 303 (p.16-18; reverses the
+   2026-08-25 A6 deletion, ruled before the exception existed), 418 / 419 / 420
+   → 523-524 (the 417-422 block page-partitions both chapters), fairy-tail 246
+   → 380 (Mard Geer's debut, p.22-end; overlap with ep 245's END is the honest
+   record — Sean: 'we can have overlap chapters through episodes'), naruto-
+   shippuden 179 → 450 (the Hokage appointment, newly drawn); **one-piece 50
+   stays FILLER + side_source{the Loguetown novelization}** (Sean: an add-on in
+   the universe, not the chain and not adopted canon — T26; graft{98} deleted);
+   26 rows CONFIRMED as stored (AFL right). **ranma-1-2: THE CHART LANE
+   SUPPRESSED** (G26 extended: AFG_CHART_SUPPRESSED + the syncAnchors gate +
+   assert-overrides deleting the standing afg anchors — 42 removed; AFG's page
+   prints its chapter column in Digital-Remaster production order, our index
+   join mis-aligned 41 rows; a title join REFUTED by the verifier: it would
+   re-mint the deleted ep-14 anchor). NEW CLASS from the sitting:
+   side_source_unadopted (a canon / mixed row tied only to a work outside the
+   chain with no adopted{basis} — 57 rows / 8 series, the verifier's catch; a
+   sitting, never a retype). CENSUS, every delta named: anchor_gap_research 1
+   → **2** (ranma 31-87 exposed by the suppression — honest; shy stands);
+   unverified_share 0 → **3** (one-piece 214 / 216 / 319 — the kind's first
+   rows, the verdicts could not size ch 313 / 435); type_source_disagreement
+   17 (wave 2); type_default_unclassified 28; side_source_unadopted 8;
+   ruling_violation 0; anchor_on_noncanon_row 0; display 218 / 0. T6 asserted
+   8 rows (+ the op-50 pin); apply: 9 anchors, 9 continues, 37 annotations, 5
+   annotation replacements. Traps → research-agent: AFG's class is a viewing
+   guide (its minute ranges are the first real T28 sizing instrument), its
+   chapter column a reading-position plateau; AFL's 'Anime Canon' bucket; the
+   ranma column order (never title-join); ja-WP's 一部原作 marker, the fandom's
+   explicit `chapter = Filler`, OPwiki's page map, ja-WP's InuYasha 原作 column,
+   TV Tokyo's archived synopses, Kanzenshuu's page splits; a novelization is
+   not canon by the author's credit. Apply-batch: A47 normalization needs the
+   TRUE next episode (one-piece 195 was moved against ep 203 by the file
+   order). Landing gate: flags_for_sean must be a list. Riding along: dbz 125's
+   date (AFL's block a week late — lane B), shippuden 176 / 178 / 181, one-piece
+   49 unanchored, ranma 158 (stored mixed, three sources say original).
+
 109. ✅ **G59 THE MINT RULE (an /add-rule end to end, 2026-09-04; Sean ruled the
    lane, Cursor's naming fix: who may CREATE the grid, not an amendment of G57's
    who may DELETE).** When AFL has nothing for an entry, the grid is minted by

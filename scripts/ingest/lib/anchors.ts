@@ -7,6 +7,7 @@ import { deriveAnchors, deriveBonusChapters, type AfgPage, type AfgContinua } fr
 import { db, fileFlagOnce, selectAll } from './db';
 import { upsertAnnotation } from './annotations';
 import { CONTINUA_SUPPRESSED, registerIds, translateEpisodeNumber } from './resolve';
+import { AFG_CHART_SUPPRESSED } from './rulings/afg-chart-suppressed';
 import { isAnchorSuppressed } from './rulings/anchor-suppressed';
 import { isParallelSeries } from './rulings/source-relations';
 import { toRuledChapter } from './rulings/chapter-spaces';
@@ -253,6 +254,12 @@ export async function syncAnchors(
   afgSlug: string,
   page: Pick<AfgPage, 'episodes'>,
 ): Promise<{ anchors: number; withheld: boolean }> {
+  // G26 on the CHART lane (2026-09-04, ranma): a ruled-unjoinable page is suppressed for the series — the standing afg anchors are
+  // this writer's to delete (G57), and nothing from the chart lands
+  if (AFG_CHART_SUPPRESSED[seriesId]) {
+    await db.from('chapter_anchors').delete().eq('series_id', seriesId).eq('source', 'afg');
+    return { anchors: 0, withheld: false };
+  }
   const anchors = deriveAnchors(page.episodes);
   if (!anchors.length) return { anchors: 0, withheld: false };
   // A46: no anchors on a parallel series (the ruling is the record; the healer removes standing rows)

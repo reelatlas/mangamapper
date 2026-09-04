@@ -201,7 +201,7 @@
 - `G20` AFG parse guards: strict cells, dividers, placeholders — aka `strict episode-cell parse`, `AFG page parse guards`, `no digit-mashing`
 - `G22` AFG continua: every page is a frontier source, gated — aka `AFG continua source`, `continua full-source ruling`, `full-source ruling`, `afg-continua`
 - `G23` Continua identity guard: the heading must name us — aka `continua identity guard`, `identity guard`
-- `G26` CONTINUA_SUPPRESSED: per-series source suppression — aka `CONTINUA_SUPPRESSED`, `source suppressions`, `Claymore precedent`
+- `G26` CONTINUA_SUPPRESSED: per-series source suppression — aka `CONTINUA_SUPPRESSED`, `source suppressions`, `Claymore precedent`, `chart lane suppression`, `AFG_CHART_SUPPRESSED`, `the ranma lesson`, `never a title join`
 - `G27` Continua END must agree with the page's own chart *(planned)* — aka `continua-vs-chart cross-check`, `continua chart cross-check`
 - `G28` After a parser change, restage from stored raw — aka `restage from raw`, `staging freshness`, `consolidate step-3 contract`
 - `G29` Validation tier is event-driven, never scheduled — aka `validation tier is event-driven`
@@ -2714,16 +2714,16 @@ The continua table's heading (entity-decoded, parenthetical year stripped, norma
 
 ### G26 · CONTINUA_SUPPRESSED: per-series source suppression
 
-Research may suppress the continua source for one series (a CONTINUA_SUPPRESSED entry with its reasoning) when same-episode precedence cannot stop a ruled-WRONG source value from landing on a DIFFERENT episode. The writer deletes the standing afg-continua anchor and stops; the suppression is outcome-checked by ruling_violation.
+Research may suppress the continua source for one series (a CONTINUA_SUPPRESSED entry with its reasoning) when same-episode precedence cannot stop a ruled-WRONG source value from landing on a DIFFERENT episode. The writer deletes the standing afg-continua anchor and stops; the suppression is outcome-checked by ruling_violation. THE CHART LANE (Sean 2026-09-04, ranma): the same suppression applies to AFG's episode-chapter chart when a page cannot be joined to our numbering (its chapter column in production order) — AFG_CHART_SUPPRESSED; syncAnchors deletes the standing afg anchors and lands nothing; a title join is never the fix.
 
 *Why:* Claymore's continua named a frontier research had ruled wrong on another episode; kimi-ni-todoke and polar-opposites followed the precedent.
 
 - ruled session 2026-08-23 (data-pipeline §12.22 "NEW RULE — source suppressions"; §12.52)
 - layer **writer**
-- enforced: [lib/resolve.ts#CONTINUA_SUPPRESSED](../scripts/ingest/lib/resolve.ts) · [lib/anchors.ts#applyContinua](../scripts/ingest/lib/anchors.ts)
+- enforced: [lib/resolve.ts#CONTINUA_SUPPRESSED](../scripts/ingest/lib/resolve.ts) · [lib/anchors.ts#applyContinua](../scripts/ingest/lib/anchors.ts) · [lib/rulings/afg-chart-suppressed.ts#AFG_CHART_SUPPRESSED](../scripts/ingest/lib/rulings/afg-chart-suppressed.ts) · [lib/anchors.ts#syncAnchors](../scripts/ingest/lib/anchors.ts)
 - audit: `ruling_violation`
-- witnesses: claymore, kimi-ni-todoke-from-me-to-you, polar-opposites
-- aliases: CONTINUA_SUPPRESSED, source suppressions, Claymore precedent
+- witnesses: claymore, kimi-ni-todoke-from-me-to-you, polar-opposites, ranma-1-2
+- aliases: CONTINUA_SUPPRESSED, source suppressions, Claymore precedent, chart lane suppression, AFG_CHART_SUPPRESSED, the ranma lesson, never a title join
 - see: G22, A24, G37
 
 ### G27 · Continua END must agree with the page's own chart *(planned)*
@@ -4208,6 +4208,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - AFG structural cross-check → `G30`
 - AFG structuring is evidence → `I20`
 - AFG title-marker rule → `T16`
+- AFG_CHART_SUPPRESSED → `G26`
 - afg-continua → `G22`
 - AFG-expansion typing → `T15`
 - AFG-expansion typing sweep → `T15`
@@ -4398,6 +4399,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - chapter-string coverage end → `N29`
 - chapterInRange → `N29`
 - chapters_adapted → `A30`
+- chart lane suppression → `G26`
 - check the gates are real → `P30`
 - checkpoint after every wave → `P13`
 - checkpoint lattice → `R14`
@@ -4845,6 +4847,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - Naruto/DragonBall baseline → `I16`
 - Naruto→Shippuden pattern → `I16`
 - needs_ruling → `I4`
+- never a title join → `G26`
 - never index-join → `R20`
 - never overload episodes.type → `T23`
 - never silently contradict stored data → `R12`
@@ -5195,6 +5198,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - the L-P queue → `A46`
 - the mint rule → `G59`
 - the Naruto bug → `I36`
+- the ranma lesson → `G26`
 - the reading chain map → `I41`
 - the reading edition → `N35`
 - the reference point (watch order) → `N32`

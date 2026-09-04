@@ -106,7 +106,7 @@ async function main() {
     rearranged_zone_unanchored: [], rearranged_zone_acknowledged: [],
     title_incomplete: [], airdate_incomplete: [], airdate_regression: [], airdate_withheld: [], episode_date_off_window: [], asterisk_unreviewed: [],
     fractional_unmodeled: [], annotation_invalid: [], annotation_retired_standing: [], afl_anime_canon_unruled: [], format_missing: [], episode_without_component: [], watch_order_kind_missing: [],
-    permanence_candidate: [], permanence_violation: [], mixed_fragment_only: [], run_stuck: [], unverified_share: [], sliver_only_anchor: [], chain_source_unmapped: [], side_source_on_chain: [], source_work_unlabelled: [], grid_unminted: [], type_source_disagreement: [], type_default_unclassified: [],
+    permanence_candidate: [], permanence_violation: [], mixed_fragment_only: [], run_stuck: [], unverified_share: [], sliver_only_anchor: [], chain_source_unmapped: [], side_source_on_chain: [], source_work_unlabelled: [], grid_unminted: [], type_source_disagreement: [], type_default_unclassified: [], side_source_unadopted: [],
     series_without_source_kind: [], no_source: [], no_instrument: [], ok_full: [], ok_no_volume: [], ok_loose: [], ok_parallel: [],
     source_relation_missing: [], parallel_has_anchor: [], arcs_not_partition: [], arc_row_conflict: [], correspondence_invalid: [], correspondence_incomplete: [],
     pending_airing_no_anchor: [], pending_finished_no_totals: [], pending_no_canon: [], pending_other: [],
@@ -167,6 +167,21 @@ async function main() {
       else if (weakD.length) weakOnly.push(`${l.series_id} ${weakD.length}`);
     }
     if (weakOnly.length) classes.type_source_disagreement.push(`(weak only, parked — AFL mixed vs AFG canon-with-chapters, granularity not contradiction): ${weakOnly.join(', ')}`);
+  }
+  // T26 (2026-09-04, batch 21 wave 1 — the one-piece 50 sitting): a canon / mixed row whose only source tie is a side_source
+  // (a work OUTSIDE the chain) is canon only by an `adopted` ruling — 57 standing rows carry none; a sitting, never a retype
+  {
+    const kindsByRow = new Map<string, Set<string>>();
+    for (const a of await selectAll<any>('episode_annotations', 'series_id, episode, kind')) { const k = `${a.series_id}#${a.episode}`; kindsByRow.set(k, (kindsByRow.get(k) ?? new Set()).add(a.kind)); }
+    const typeByRow2 = new Map<string, string>();
+    for (const e of await selectAll<any>('episodes', 'series_id, number, type')) typeByRow2.set(`${e.series_id}#${e.number}`, e.type);
+    const bySeries = new Map<string, number[]>();
+    for (const [k, kinds] of kindsByRow) {
+      if (!kinds.has('side_source') || kinds.has('adopted')) continue;
+      const t = typeByRow2.get(k); if (t !== 'canon' && t !== 'mixed') continue;
+      const [sid, ep] = k.split('#'); bySeries.set(sid, [...(bySeries.get(sid) ?? []), Number(ep)]);
+    }
+    for (const [sid, eps] of bySeries) classes.side_source_unadopted.push(`${sid}: ${eps.length} canon / mixed row(s) tied only to a work OUTSIDE the chain with no adopted{basis} record (T26) — eps ${eps.sort((a, b) => a - b).slice(0, 8).join(', ')}${eps.length > 8 ? '…' : ''}; a sitting: rule adoption (author / studio / community) or retype`);
   }
   // G59 / T4 (2026-09-04): wiki-minted rows carry the canon-tier DEFAULT type until AFL classifies the number or T6 rules it —
   // one line per series whose typing is still owed (Cursor: keep canon in the column, queue the provenance in the census)

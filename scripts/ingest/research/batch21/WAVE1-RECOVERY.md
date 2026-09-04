@@ -1,7 +1,7 @@
 # BATCH 21 — WAVE 1 RECOVERY RECORD (the STRONG AFL-vs-AFG type contradictions)
 
 Written 2026-09-04 after the landing. 9 verdicts (8 series; One Piece split), validate clean except the gate's
-known per-row "no anchor" false positive on shippuden, scan 0 items. Verifier (w1-flips.md) in flight; nothing applied.
+known per-row "no anchor" false positive on shippuden, scan 0 items. RULED + APPLIED 2026-09-04 (§12.110): six flips to mixed + anchors; op 50 filler + side_source; ranma's chart lane suppressed.
 
 ## THE FINDING THAT OUTRANKS THE WAVE — the AFG parser was misreading the newer page format
 The shippuden agent proved our stored AFG rows for that page were artifacts: the type class sits on a `<span>` INSIDE
