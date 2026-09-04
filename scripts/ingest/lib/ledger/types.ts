@@ -59,6 +59,15 @@ export type Rule = {
    *  architecture / STATE — and is red while one survives. Changelog, research outputs, history/ and generated docs keep
    *  the old words on purpose. Aliases are NOT this: they must keep resolving old citations. */
   retiredPhrases?: string[];
+  /**
+   * every date the record's STATEMENT was amended after it was ruled (YYYY-MM-DD, ascending) —
+   * stamped at amendment time beside retiredPhrases (P38). The eventual full re-evaluation
+   * (Sean 2026-09-05: old rulings re-read under every live rule at P25 lock time) is a
+   * mechanical worklist: every RulingEntry whose ruledOn predates its cited rule's last
+   * amendedOn was reasoned under text that has since moved. Started 2026-09-05; earlier
+   * amendments are reconstructed from docs/changelog.md as they are needed, not farmed.
+   */
+  amendedOn?: string[];
   family: Family;
   /** ≤ 60 chars — the family-strip line */
   title: string;

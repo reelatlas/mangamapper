@@ -851,6 +851,7 @@ export const RULES: Rule[] = [
     layer: 'writer',
     auditClass: ['chain_source_unmapped', 'side_source_on_chain', 'source_work_unlabelled'],
     witnesses: ['rosario-vampire', 'trigun', 'naruto-shippuden', 'gto-great-teacher-onizuka', 'cobra-the-animation'],
+    amendedOn: ['2026-09-05'],
     status: 'live',
     see: ['T26', 'T28', 'A12', 'A44', 'I40', 'I16'],
   },

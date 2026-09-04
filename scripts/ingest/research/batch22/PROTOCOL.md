@@ -35,3 +35,17 @@ chain_source or nothing, never an anchor, lane C. Files: `beelzebub-w2a.json`
 the wave: NO premise in an ask is evidence — the stored note is 'the standing
 claim to test', the pages decide (R3); a delivered canon on a side_source row
 without a weight-bearing manga share is overwritten by the writer (T26).
+
+Wave 3 = **the hole wave** (2026-09-05, Sean's go after the deep consolidate,
+§12.119). The A18 START clause (a START reaching back past the previous END is
+a regime boundary) turned seven interpolations into honest holes; each row
+wants its OWN exact START (A18: 'research: anchor it with its own start').
+Five agents, lane C: (1) beelzebub 48 / 50 (+ 58's short END) —
+`beelzebub-w3.json`; (2) eyeshield-21 53 — `eyeshield-21-w3.json`; (3)
+record-of-ragnarok 14-16 — `record-of-ragnarok-w3.json`; (4) sailor-moon 72 —
+`sailor-moon-w3.json`; (5) fma 13's T28 share sizing (ruled mixed on an
+estimate; size it with an instrument) — `fullmetal-alchemist-w3.json`. Rule of
+the wave: THE FORK IS NOT A PREMISE — a hole's far endpoint (the stored START
+that reaches back) may itself be the error; deliver whichever the pages prove,
+as an anchor + `rearranged` or as a repair with old → new. Every number in the
+row's own chapter space (say which space).

@@ -118,6 +118,7 @@ export const RULES: Rule[] = [
     layer: 'both',
     auditClass: ['continue_skip_unnoted', 'anchor_beyond_display_total', 'backjump_continue_unruled', 'backjump_continue_unnoted'],
     witnesses: ['welcome-to-demon-school-iruma-kun', 'zatch-bell', 'ranma-1-2', 'shugo-chara', 'hajime-no-ippo-the-fighting', 'naruto-shippuden'],
+    amendedOn: ['2026-09-04', '2026-09-05'],
     status: 'live',
     see: ['C1', 'C2', 'C3', 'C6', 'A4', 'A31', 'A43'],
   },
