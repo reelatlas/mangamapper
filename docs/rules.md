@@ -1116,14 +1116,14 @@ anime-only-canon = made for the anime but standing as canon; filler = outside bo
 
 ### T4 · Typing precedence: override > AFL > AFG (advisory)
 
-An episode's type comes from, in precedence: a research-ruled EPISODE_TYPE_OVERRIDES entry; else AFL's classification wherever an AFL page classifies that episode; else AFG's row-class taxonomy (red = filler, blue = mixed, unstyled = canon — AFG has no anime-canon class), used only for expansion series with no AFL page and to fill episode numbers AFL lacks. AFL and AFG labels are advisory starting principles, never verdicts: a label past the point where a source's own table stops classifying is not a typing, and 2+ independent sources with chapter accounting outrank a source label alone.
+An episode's type comes from, in precedence: a research-ruled EPISODE_TYPE_OVERRIDES entry; else AFL's classification wherever an AFL page classifies that episode; else AFG's row-class taxonomy (red = filler, blue = mixed, unstyled = canon — AFG has no anime-canon class), used only for expansion series with no AFL page and to fill episode numbers AFL lacks. AFL and AFG labels are advisory starting principles, never verdicts: a label past the point where a source's own table stops classifying is not a typing, and 2+ independent sources with chapter accounting outrank a source label alone. THE DISAGREEMENT CLASS (2026-09-04): where both sources classify a row — AFL minted its type and the series' AFG page carries the episode — a disagreement is LISTED (type_source_disagreement) for a sitting: never an auto-flip, T6-ruled rows skipped, AFG's three-way mapped onto ours first; witnesses come from the census and research with chapter accounting decides.
 
 *Why:* sket-dance 26/32 (AFL's table stops at ep 54 — its 'filler' beyond it is not a typing); fist-of-the-north-star's 8 corrections (hokuto.fandom + accounting over AFL alone); one-piece 737 (AFL anime-canon lost to an explicit chapter mapping). afg.ts's header still says 'AFL is the type authority' — the resolve.ts 2026-08-25 form stands (DRIFT-LIST §B).
 
 - ruled Sean 2026-08-25 (lib/resolve.ts batch-17 chunk-1 comment; CHUNK1-RECOVERY §11; data-pipeline §10 semantics row)
 - layer **writer**
-- enforced: [lib/resolve.ts#filterEpisodeRows](../scripts/ingest/lib/resolve.ts) · [lib/afl.ts#CLASS_TO_TYPE](../scripts/ingest/lib/afl.ts) · [afg-expansion.ts#main](../scripts/ingest/afg-expansion.ts) · [afg-extend.ts#main](../scripts/ingest/afg-extend.ts)
-- audit: `ruling_violation`
+- enforced: [lib/resolve.ts#filterEpisodeRows](../scripts/ingest/lib/resolve.ts) · [lib/afl.ts#CLASS_TO_TYPE](../scripts/ingest/lib/afl.ts) · [afg-expansion.ts#main](../scripts/ingest/afg-expansion.ts) · [afg-extend.ts#main](../scripts/ingest/afg-extend.ts) · [audit-ui-truth.ts#type_source_disagreement](../scripts/ingest/audit-ui-truth.ts)
+- audit: `ruling_violation`, `type_source_disagreement`
 - witnesses: sket-dance, fist-of-the-north-star, one-piece
 - aliases: typing precedence, AFL/AFG advisory, AFL is the type authority, fandom + accounting beats AFL, AFL label past table stop, override > AFL > AFG
 - see: T1, T2, T6, T15

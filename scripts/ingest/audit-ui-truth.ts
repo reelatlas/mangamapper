@@ -106,7 +106,7 @@ async function main() {
     rearranged_zone_unanchored: [], rearranged_zone_acknowledged: [],
     title_incomplete: [], airdate_incomplete: [], airdate_regression: [], airdate_withheld: [], episode_date_off_window: [], asterisk_unreviewed: [],
     fractional_unmodeled: [], annotation_invalid: [], annotation_retired_standing: [], afl_anime_canon_unruled: [], format_missing: [], episode_without_component: [], watch_order_kind_missing: [],
-    permanence_candidate: [], permanence_violation: [], mixed_fragment_only: [], run_stuck: [], unverified_share: [], sliver_only_anchor: [], chain_source_unmapped: [], side_source_on_chain: [], source_work_unlabelled: [], grid_unminted: [],
+    permanence_candidate: [], permanence_violation: [], mixed_fragment_only: [], run_stuck: [], unverified_share: [], sliver_only_anchor: [], chain_source_unmapped: [], side_source_on_chain: [], source_work_unlabelled: [], grid_unminted: [], type_source_disagreement: [],
     series_without_source_kind: [], no_source: [], no_instrument: [], ok_full: [], ok_no_volume: [], ok_loose: [], ok_parallel: [],
     source_relation_missing: [], parallel_has_anchor: [], arcs_not_partition: [], arc_row_conflict: [], correspondence_invalid: [], correspondence_incomplete: [],
     pending_airing_no_anchor: [], pending_finished_no_totals: [], pending_no_canon: [], pending_other: [],
@@ -132,6 +132,36 @@ async function main() {
       const single = /^\s*\d+\s*$/.test(ca.replace(/\([^)]*\)/g, ''));
       if (single && /\b(sliver|scrap|1 panel|one panel|p\.?\s*\d+ only|approx\. p)/i.test(ca) && ['canon', 'mixed'].includes(typeOf.get(`${a.series_id}#${a.episode}`) ?? ''))
         classes.sliver_only_anchor.push(`${a.series_id}: ep ${a.episode} → ch ${a.chapter} on a sliver-only record '${ca.slice(0, 50)}' — significance call (T28's sliver clause): significant → stands with the reason; weightless → no anchor, the remainder decides the type`);
+    }
+  }
+  // T4 (2026-09-04, the flag the record promised): where BOTH sources classify a row — AFL minted the row's type and the
+  // series' AFG page carries the same episode — a disagreement is LISTED for a sitting (never auto-flipped; T6-ruled rows skipped;
+  // AFG's three-way taxonomy already mapped onto ours by lib/afg.ts: red = filler, blue = mixed, unstyled = canon)
+  {
+    const afgLinks = await selectAll<any>('series_external_ids', 'series_id, external_id', (q) => q.eq('source', 'afg'));
+    const pages = new Map((await selectAll<any>('ingest_afg_pages', 'slug, raw')).map((p: any) => [p.slug, p.raw]));
+    const typeByRow = new Map<string, { type: string; minted_by: string | null }>();
+    for (const e of await selectAll<any>('episodes', 'series_id, number, type, minted_by')) typeByRow.set(`${e.series_id}#${e.number}`, { type: e.type, minted_by: e.minted_by });
+    for (const l of afgLinks) {
+      const raw: any = pages.get(l.external_id); if (!raw?.episodes?.length) continue;
+      const ruled = EPISODE_TYPE_OVERRIDES[l.series_id] ?? {};
+      const strongD: string[] = []; const weakD: string[] = [];
+      for (const a of raw.episodes as { number: number; type: string; chapters?: number[] }[]) {
+        const n = translateEpisodeNumber(l.series_id, a.number, 'afg'); if (n == null) continue;
+        if (ruled[n] != null) continue; // T6: ruled, not a source question
+        const row = typeByRow.get(`${l.series_id}#${n}`); if (!row || row.minted_by !== 'afl') continue; // only where AFL classified the row
+        // AFG's 'canon' is the ABSENCE of a row class (unstyled) — a signal only when the row also maps chapters (a positive claim);
+        // red (filler) and blue (mixed) are positive claims (T4: a label past where a source classifies is not a typing)
+        const afgClaims = a.type !== 'canon' || (a.chapters?.length ?? 0) > 0;
+        if (!afgClaims) continue;
+        if (row.type === a.type) continue;
+        // STRONG = the sources contradict (filler vs canon-with-chapters, canon vs a red/blue class, filler vs blue);
+        // WEAK = granularity (AFL mixed vs AFG unstyled-with-chapters — AFG maps chapters without denying an original share)
+        const strong = !(row.type === 'mixed' && a.type === 'canon');
+        (strong ? strongD : weakD).push(`${n}: afl ${row.type} / afg ${a.type}${a.type === 'canon' ? ` (ch ${a.chapters!.slice(0, 3).join(',')}${a.chapters!.length > 3 ? '…' : ''})` : ''}`);
+      }
+      const diffs = [...strongD, ...weakD];
+      if (diffs.length) classes.type_source_disagreement.push(`${l.series_id}: ${strongD.length} STRONG + ${weakD.length} weak — ${strongD.slice(0, 5).join(', ')}${strongD.length > 5 ? ', …' : ''}${weakD.length ? ` | weak: ${weakD.slice(0, 3).join(', ')}${weakD.length > 3 ? ', …' : ''}` : ''} (T4: a sitting, never an auto-flip; research with chapter accounting outranks both labels)`);
     }
   }
   // G59 (2026-09-04): an entry with anchors and NO episode rows must have a ruled minter — a wiki page (WIKI_PAGES) or a manual grid

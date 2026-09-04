@@ -77,7 +77,7 @@ export const RULES: Rule[] = [
     family: 'T',
     title: 'Typing precedence: override > AFL > AFG (advisory)',
     statement:
-      "An episode's type comes from, in precedence: a research-ruled EPISODE_TYPE_OVERRIDES entry; else AFL's classification wherever an AFL page classifies that episode; else AFG's row-class taxonomy (red = filler, blue = mixed, unstyled = canon — AFG has no anime-canon class), used only for expansion series with no AFL page and to fill episode numbers AFL lacks. AFL and AFG labels are advisory starting principles, never verdicts: a label past the point where a source's own table stops classifying is not a typing, and 2+ independent sources with chapter accounting outrank a source label alone.",
+      "An episode's type comes from, in precedence: a research-ruled EPISODE_TYPE_OVERRIDES entry; else AFL's classification wherever an AFL page classifies that episode; else AFG's row-class taxonomy (red = filler, blue = mixed, unstyled = canon — AFG has no anime-canon class), used only for expansion series with no AFL page and to fill episode numbers AFL lacks. AFL and AFG labels are advisory starting principles, never verdicts: a label past the point where a source's own table stops classifying is not a typing, and 2+ independent sources with chapter accounting outrank a source label alone. THE DISAGREEMENT CLASS (2026-09-04): where both sources classify a row — AFL minted its type and the series' AFG page carries the episode — a disagreement is LISTED (type_source_disagreement) for a sitting: never an auto-flip, T6-ruled rows skipped, AFG's three-way mapped onto ours first; witnesses come from the census and research with chapter accounting decides.",
     why:
       "sket-dance 26/32 (AFL's table stops at ep 54 — its 'filler' beyond it is not a typing); fist-of-the-north-star's 8 corrections (hokuto.fandom + accounting over AFL alone); one-piece 737 (AFL anime-canon lost to an explicit chapter mapping). afg.ts's header still says 'AFL is the type authority' — the resolve.ts 2026-08-25 form stands (DRIFT-LIST §B).",
     ruledBy: 'Sean',
@@ -88,9 +88,10 @@ export const RULES: Rule[] = [
       { path: 'scripts/ingest/lib/afl.ts', symbol: 'CLASS_TO_TYPE' },
       { path: 'scripts/ingest/afg-expansion.ts', symbol: 'main' },
       { path: 'scripts/ingest/afg-extend.ts', symbol: 'main' },
+          { path: 'scripts/ingest/audit-ui-truth.ts', symbol: 'type_source_disagreement' },
     ],
     layer: 'writer',
-    auditClass: ['ruling_violation'],
+    auditClass: ['ruling_violation', 'type_source_disagreement'],
     witnesses: ['sket-dance', 'fist-of-the-north-star', 'one-piece'],
     status: 'live',
     supersedes: ['T5'],

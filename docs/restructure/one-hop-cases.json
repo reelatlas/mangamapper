@@ -440,6 +440,18 @@
         "manual grid"
       ],
       "source": "2026-09-04: the mint rule — the wiki writer (finder or a ruled page) or the manual writer from a ruled grid; never a research apply script; A42 is only the display's lag fallback"
+    },
+    {
+      "ask": "AFL and animefillerguide type the same episode differently — does anything list it, and can it auto-flip?",
+      "expected": [
+        "T4"
+      ],
+      "terms": [
+        "disagreement",
+        "AFG",
+        "sitting"
+      ],
+      "source": "2026-09-04: type_source_disagreement — the flag T4 promised; only AFG's positive claims count (red / blue / canon-with-chapters), T6 rows skipped, STRONG (contradiction) vs weak (granularity); never an auto-flip"
     }
   ]
 }
