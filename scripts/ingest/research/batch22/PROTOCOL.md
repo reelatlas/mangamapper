@@ -19,3 +19,19 @@ Naruto Gaiden → Boruto; standings confirmed, anchors none (position-less by
 another chapter space); (2) eps 18 / 93-95, lane C — the untested members of
 AFL's loose Mixed bucket, settled by chapter accounting. Files:
 `<series>-w1a.json` (lane I) and `<series>-w1b.json` (lane C) in `out/`.
+
+Wave 2 = **the narrow wave** (2026-09-05, Sean's go after the T26 adoption
+sitting, §12.117 — research, not rulings). Five agents, five sized asks: (1)
+beelzebub 49 — the extra chapter vs the novel, beat by beat (T28; the novel no
+longer counts: a licence is not adoption), lane C; (2) beelzebub 15 / 16 /
+26-28 / 51 — the standing crumbs batch 21 flagged, lane C; (3) fma 37 / 13 —
+the Arakawa bonus-chapter share vs the novel segment, own verdict, lane C; (4)
+dbs 6 — T30's load-bearing test on the shared Battle of Gods arc, the pages of
+ch 1-4 decide what the digest carries, a correspondence row proposed with its
+alignment, NO adopted{author}, lane I; (5) boruto 106 — the ch-700 tie,
+chain_source or nothing, never an anchor, lane C. Files: `beelzebub-w2a.json`
+(49), `beelzebub-w2b.json` (the crumbs), `fullmetal-alchemist-w2.json`,
+`dragon-ball-super-w2.json`, `boruto-naruto-next-generations-w2.json`. Rule of
+the wave: NO premise in an ask is evidence — the stored note is 'the standing
+claim to test', the pages decide (R3); a delivered canon on a side_source row
+without a weight-bearing manga share is overwritten by the writer (T26).
