@@ -1154,6 +1154,72 @@
    19-23 / 39 (chain_source) and 18 / 93-95 (AFL's loose Mixed bucket),
    beelzebub 15 / 26-28 / 51, rurouni TV ep 95 (identity). Batch 22 opens on
    the boruto follow-up (lanes I + C) with the batch-21 tooling copied.
+120. ✅ **BATCH 22 WAVE 3 — THE HOLE WAVE, APPLIED (2026-09-05; Sean ruled
+   decisions 1-5 as verified; 48 / 50 as delivered; eyeshield 54 queued).**
+   The seven verify:hole rows the A18 START clause surfaced (§12.118) each
+   asked for their OWN exact START with THE FORK left open — and it resolved
+   three different ways, which is why it was never a premise. RECORD OF
+   RAGNAROK (the far endpoint was the error): 14 → 24 [22] + rearranged +
+   partial{25 pp 1-3} (A47 held the 3-page tail), 15 → 26 [25], 16 → 29 [27]
+   on a page-exhaustive instrument (the fandom's page-partitioned adapted=
+   fields union to each chapter's page count over chs 20-34 — the verifier
+   re-derived the closure and found a 6-page gap at ch 36: not a blanket
+   trust; programming-cafe's 対応表 the independent lineage, its 'ep 14 =
+   ch 21' an asserted claim REFUTED on content); ep 17's stored START 20 →
+   29: a batch-12 ROUND-LEVEL anchor ('{20-30 (Round 4 complete)}') never
+   refined to pages — ep 17 opens on ch 29 p.25, the frame ep 16 stops on;
+   continue 31 with skip language (c3Ahead = [32, 33]). RoK's boundary table
+   has no rows for chs 24-30 — the verdict's two-sourced volumes landed with
+   the fallback printed. BEELZEBUB (the NEAR endpoint was the error): 48 →
+   110 [106], 50 → 113 [110], 58 → 118 [116] (ch 123 a forward graft, END
+   stands; MU ends the entry at 121) — 102 → 115 runs forward, and the
+   hole's cause was eps 46 / 47's stored END 115: the ch-115 GRAFT (the
+   Koma-origin flashback, pp 8-19) promoted to a position on AFG-tier rows
+   (ep 47 START 115 with {102-105, 115} — an A13 breach), CONFIRMED ON CH
+   115's PAGES by the verifier (its present frame pp 2-5 is post-ch-114; ep
+   47's cast list opens Kunieda / Isafuyu before ch 102 p2) → 46 → 101 [98]
+   + graft{115, one-lineage}, 47 → 105 [102] + graft{115}, continues 102 /
+   106 (manual tier, P8); the run is now monotonic, so 48's delivered
+   rearranged was DROPPED (its own note said 'not a back-jump') and WAVE 2's
+   RULED ep-51 rearranged{114-115} RETIRED (A45 — its wording 'ch 115's
+   OPENING pages aired in 46/47' was backwards; the reorder lives on 46 / 47
+   as graft). Sean took 48's END 110 / 50's START 110 as delivered (the
+   ch-110 split is one-source; parity 111 would skip ch 110 for the reader).
+   EYESHIELD 21 (a third horn): 53 canon → FILLER + graft{109 + the
+   habit-reading mechanic} + divergence — anime-original (Sena sabotaged,
+   Hiruma abducted, a 14-0 lead the fandom's 2008-09 pages record as '14-42
+   anime / 0-42 manga'); ch 109 'Sting' is the whole Dokubari game in one
+   chapter and its beats are ep 54's; 52's END 110 and 54's START 109
+   confirmed on the pages. AND ep 54's END 111 REFUTED (batch 17's
+   arc-boundary pin; ch 111 pp 6-19 = EPISODE 57 on three witnesses) —
+   QUEUED with ep 57's own anchor, not repaired blind. SAILOR MOON (a
+   negative): 72 canon → FILLER + loose_parallel{17-18} (the Spectre Sisters
+   redemption; the fandom's own 'changes' line inverts the manga, where Petz
+   and Calaveras die); the parity healer stamped ep 71's continue 15 with a
+   C3 note (the ruled 15-17 re-tread). THE ASK'S SPACE LABEL WAS WRONG: every
+   stored sailor-moon record is the 60-act RENEWAL numbering (offset vs the
+   original: 1 for Acts 14-20, 2 for 23-24, 3 for 25-26); the Act-18
+   observation got STRONGER (ja-WP ちびうさ dates the brooch theft to R 27 =
+   our ep 73) — queued as a sized ask, with an N35 entry for the space. FMA
+   13: CONFIRMED MIXED ON AN INSTRUMENT — two independently timed subtitle
+   files (kitsunekko JA Netflix CC bound by its own next-episode cue; an EN
+   fansub) agree within 4.5 s over 26 blocks: Arakawa extras 56.6 % / the
+   2003-original act 43.4 %; AFG has no 2003 FMA page (its URL serves
+   Brotherhood); the stored note's Hughes-coffee coda is NOT in the episode
+   (no Armstrong cue in 751 cues) → note repairs + abridged. CENSUS: every
+   class count unchanged; display 218 / 0 with ALL SEVEN HOLES CLOSED
+   (beelzebub 2, eyeshield 1, RoK 3, sailor-moon 1 → 0); ruling_violation 0;
+   T6 821 rows, 2 asserted (53, 72); A45 22 keys, 1 removed (51's
+   rearranged); heal-anchor-volumes filled RoK 42 (ch 85 → v21, the table's
+   one row); edges deployed; 194 tests. TRAPS: a round-level anchor is a
+   provenance, not a position; a graft promoted to a position (A13 from the
+   other side); thetv.jp's page prints the previous episode's synopsis;
+   dual-language subtitle archives as a T28 instrument; MangaDex decimals
+   are not stable ids; the fandom's adapted= closure is the check. THE
+   QUEUE this wave opened (research): RoK's round-grain map (12 / 22 → 41
+   and likely END 43 / 27 → 52 / 33 / 38; eps 18-41 unanchored); eyeshield
+   54 → 109 + ep 57 (111 + ?115) + rearranged; sailor-moon 73 → Act 18 (+
+   N35); beelzebub 59's stale note / START 119.
 119. ✅ **DEEP CONSOLIDATE after §12.118 (2026-09-05; P21 — two enforcement
    sites had moved).** THE DEEP PROOF: the full display sweep under the A18
    START clause is exactly the seven named holes and nothing else (218 / 0

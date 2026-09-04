@@ -141,6 +141,16 @@ export const ENTRIES: RulingEntry<RetiredAnnotation>[] = [
     ruledBy: 'Sean', ruledOn: '2026-09-05',
     cite: ['scripts/ingest/research/batch22/T26-SITTING.md', 'scripts/ingest/research/batch20/out/cobra-the-animation.json'],
   },
+  // ---- batch 22 wave 3 — the hole wave (verified R24, verify/w3-*.md; Sean ruled 2026-09-05): a wave-2 record retired by the wave that found its premise
+  {
+    seriesId: 'beelzebub',
+    ruleId: 'A45',
+    value: { episodes: [51], kind: 'rearranged' },
+    reason:
+      "Wave 2 (2026-09-05) wrote rearranged{114-115} on ep 51 because the display walk refused the START repair (115 → 114) without a ruled reorder against ep 47's END 115. Wave 3's verifier read ch 115's pages: the material eps 46 / 47 carry is the Koma-origin FLASHBACK (pp 8-19) relocated forward — a graft — and ch 115's OPENING (pp 1-5, the present frame) is post-ch-114 and only ep 51 can carry it; so the record's wording ('ch 115's opening pages aired in eps 46/47') is backwards, and once 46 / 47 are repaired to their real ENDs (101 / 105 + graft{115}) the run 46 → 101 … 51 → 115 is monotonic and the rearranged has no premise. The reorder is real but lives on 46 / 47 as graft. Retired so no apply re-inserts it.",
+    ruledBy: 'Sean', ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/batch22/verify/w3-beelzebub.md', 'scripts/ingest/research/batch22/WAVE3-RECOVERY.md'],
+  },
 ];
 
 const key = (seriesId: string, episode: number, kind: string) => `${seriesId}#${episode}#${kind}`;

@@ -1501,6 +1501,51 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
     cite: ['scripts/ingest/research/batch22/WAVE2-RECOVERY.md', 'scripts/ingest/research/batch22/verify/w2-beelzebub-crumbs.md', 'scripts/ingest/research/batch22/verify/w2-beelzebub-49.md', 'scripts/ingest/research/batch22/verify/w2-fma.md', 'scripts/ingest/research/batch22/verify/w2-dbs-6.md', 'docs/changelog.md §12.118'],
     supersedes: "the T26 writer default of 2026-09-05 (filler) and, before it, the batch-19 canon + side_source under Line A; the stored note's 'the digest has nothing here' was refuted on the pages",
   },
+  // ---- batch 22 wave 3 — the hole wave (verified R24, verify/w3-*.md; Sean ruled 2026-09-05) — the seven verify:hole rows the A18 START clause surfaced, each given its own exact record or a filler ruling
+  {
+    seriesId: 'eyeshield-21',
+    ruleId: 'T6',
+    value: { 52: 'canon', 53: 'filler', 54: 'canon' },
+    reason:
+      "batch 22 wave 3 — the hole wave (verified R24, verify/w3-*.md; Sean ruled 2026-09-05): 53 canon (an import default) → FILLER + graft{109} + divergence — the episode is anime-original (Sena sabotaged, Hiruma abducted, Ishimaru at QB, a 14-0 Scorpions lead the fandom's 2008-09 pages record as '14-42 anime / 0-42 manga'); ch 109 'Sting' is the WHOLE Dokubari game in one chapter and its beats (the rouge, the red fingertips, Hiruma out-reading Kanagushi) are ep 54's on every list; the strongest mixed case (Kanagushi's habit-reading staged in 53) fails the sole-adaptation exception — it is re-staged in 54 against Hiruma's offense. Read on ch 108-111's pages (MangaDex) by author and verifier. 52 / 54 CONFIRMED (52's END 110 = ch 110 p21's closing spread; 54's START 109). Ep 54's END 111 is REFUTED (batch 17's arc-boundary pin; ch 111 pp 6-19 = ep 57) — QUEUED with ep 57's own anchor, not repaired blind.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/batch22/WAVE3-RECOVERY.md', 'scripts/ingest/research/batch22/verify/w3-rok.md', 'scripts/ingest/research/batch22/verify/w3-beelzebub.md', 'scripts/ingest/research/batch22/verify/w3-eyeshield.md', 'scripts/ingest/research/batch22/verify/w3-sailor-moon.md', 'docs/changelog.md §12.120'],
+    supersedes: "the AFL/AFG-import canon on 53 (AFG block-flags 51-54 '* Filler' incl. canon 52 / 54 — one lineage, weak alone)",
+  },
+  {
+    seriesId: 'sailor-moon',
+    ruleId: 'T6',
+    value: { 72: 'filler' },
+    reason:
+      "batch 22 wave 3 — the hole wave (verified R24, verify/w3-*.md; Sean ruled 2026-09-05): 72 canon → FILLER + loose_parallel{17-18} (renewal space) — the anime-original Spectre Sisters redemption (Koan / Berthier at Hikawa Shrine, Rubeus's Stick, the Rainbow Bridge fight, Sailor Planet Power's debut, Moon Crystal Power purifying Petz and Calaveras); no act, beat or page — the manga's Act 17 is Petz's virus operation and death, Act 18 Calaveras's broadcast and death; the fandom's own 'Changes from the Manga' line inverts it. Three independent lineages (fandom, en-WP, ja-WP); AFL row 72 'Manga Canon' is the knowing departure. THE SPACE: every stored sailor-moon record is the 60-act RENEWAL numbering (en-WP's chapter list = the stored volume boundaries; ep 199 → 59), not the original 52 — the wave's ask label was wrong.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/batch22/WAVE3-RECOVERY.md', 'scripts/ingest/research/batch22/verify/w3-rok.md', 'scripts/ingest/research/batch22/verify/w3-beelzebub.md', 'scripts/ingest/research/batch22/verify/w3-eyeshield.md', 'scripts/ingest/research/batch22/verify/w3-sailor-moon.md', 'docs/changelog.md §12.120'],
+    supersedes: "the AFL canon on 72",
+  },
+  {
+    seriesId: 'record-of-ragnarok',
+    ruleId: 'T6',
+    value: { 14: 'canon', 15: 'canon', 16: 'canon', 17: 'canon' },
+    reason:
+      "batch 22 wave 3 — the hole wave (verified R24, verify/w3-*.md; Sean ruled 2026-09-05): 14-16 CONFIRMED canon and anchored (24 [22], 26 [25], 29 [27]) on a page-exhaustive instrument (the fandom's page-partitioned adapted= fields, whose parts union to each chapter's own page count over chs 20-34; programming-cafe's 対応表 the independent lineage); ep 17's stored START 20 was a batch-12 ROUND-LEVEL anchor ('{20-30 (Round 4 complete)}') never refined to pages — a nine-chapter phantom back-reach repaired to 29 (ep 17 opens on ch 29 p.25, the frame ep 16 stops on). Pinned so the loose buckets cannot re-list them. The batch-12 map is round-grain on 12 / 17 / 22 / 27 / 33 / 38 (22's END 42 is likely 43) — QUEUED as a wave-4 ask.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/batch22/WAVE3-RECOVERY.md', 'scripts/ingest/research/batch22/verify/w3-rok.md', 'scripts/ingest/research/batch22/verify/w3-beelzebub.md', 'scripts/ingest/research/batch22/verify/w3-eyeshield.md', 'scripts/ingest/research/batch22/verify/w3-sailor-moon.md', 'docs/changelog.md §12.120'],
+    supersedes: "nothing (confirmations; the 17 START repair is an anchor write)",
+  },
+  {
+    seriesId: 'beelzebub',
+    ruleId: 'T6',
+    value: { 46: 'canon', 47: 'canon', 48: 'canon', 50: 'canon', 58: 'canon' },
+    reason:
+      "batch 22 wave 3 — the hole wave (verified R24, verify/w3-*.md; Sean ruled 2026-09-05): 48 / 50 / 58 CONFIRMED canon and given their own exact records (48 → 110 [106], 50 → 113 [110], 58 → 118 [116]; 102 → 115 runs forward with no regression); the A18 hole's real cause was eps 46 / 47's stored END 115 — the ch-115 GRAFT (the Koma-origin flashback, pp 8-19) promoted to a position on AFG-tier rows (ep 47 stored START 115 with {102-105, 115}: an A13 breach), CONFIRMED on ch 115's pages by the verifier (its present frame pp 2-5 is post-ch-114 and cannot sit there; ep 47's cast list opens Kunieda / Isafuyu before ch 102 p2) → 46 → END 101 [98], 47 → END 105 [102], both + graft{115} (manual tier, P8); with that the run is monotonic and wave 2's ruled ep-51 rearranged{114-115} is RETIRED (A45 — mis-stated: the reorder lives on 46 / 47 as graft). Sean took 48's END 110 / 50's START 110 as delivered (the ch-110 split is one-source; parity 111 would skip ch 110 for the reader). 46 / 47 pinned canon (unchanged types) so the T6 assert reads them.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/batch22/WAVE3-RECOVERY.md', 'scripts/ingest/research/batch22/verify/w3-rok.md', 'scripts/ingest/research/batch22/verify/w3-beelzebub.md', 'scripts/ingest/research/batch22/verify/w3-eyeshield.md', 'scripts/ingest/research/batch22/verify/w3-sailor-moon.md', 'docs/changelog.md §12.120'],
+    supersedes: "the afg-derived 46 / 47 END 115 (Line A of the display: a graft as a position) and wave 2's ep-51 rearranged",
+  },
 ];
 
 export const EPISODE_TYPE_OVERRIDES: Record<string, EpisodeTypes> = ENTRIES.reduce<Record<string, EpisodeTypes>>((acc, e) => {
