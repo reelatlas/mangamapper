@@ -51,4 +51,14 @@ export const toMergedRecord = <V extends Record<number, unknown>>(entries: Rulin
   return out;
 };
 
+// Per-episode LIST maps (ANCHOR_SUPPRESSED) UNION entries for the same series —
+// a later batch adds rows to a series already ruled (bleach 46 in wave 16,
+// 109 / 227 in batch 21 wave 2); toRecord's last-wins would silently drop the
+// earlier ruling (2026-09-03).
+export const toMergedList = (entries: RulingEntry<number[]>[]): Record<string, number[]> => {
+  const out: Record<string, number[]> = {};
+  for (const e of entries) out[e.seriesId] = [...new Set([...(out[e.seriesId] ?? []), ...e.value])].sort((a, b) => a - b);
+  return out;
+};
+
 export const toSet = (entries: RulingEntry<unknown>[]): Set<string> => new Set(entries.map((e) => e.seriesId));

@@ -30,8 +30,8 @@ const ANNOTATION_DELETE: { sid: string; episode: number; kind: AnnotationKind; w
 const CONTINUE_OVERRIDE: Record<string, { chapter: number; why: string }> = {};
 const START_OVERRIDE: Record<string, number> = {};
 const END_OVERRIDE: Record<string, number> = {};
-const ANCHOR_SKIP = new Set<string>(['naruto-shippuden#112']); // recommended: mixed + partial{317-318}, POSITION-LESS (A12 / A44 — a 56-episode back-jump never sets the position; the verifier: anchoring it turns eps 113-117 into NULL holes) — Sean's call // 'sid#ep' — a verifier-refuted anchor
-const CONTINUE_SKIP = new Set<string>(['naruto-shippuden#112']); // rides with the anchor
+const ANCHOR_SKIP = new Set<string>(); // 'sid#ep' — a verifier-refuted anchor. shippuden 112 WAS here as "position-less (A44)"; Sean ruled 2026-09-03 that behind is not a basis: END 318 [317] lands (A8), continue 343 curated (C5), 113-117 are the next narrow ask (verify:hole)
+const CONTINUE_SKIP = new Set<string>(); // shippuden 112's continue 343/parity rides WITH its anchor (C7 — the healer refuses the row while 113 is unanchored)
 const CONTINUE_NOTE_FIX: { sid: string; episode: number; chapter: number; note: string }[] = [
   { sid: 'naruto-shippuden', episode: 459, chapter: 681, note: 'C1: ep 459 stops inside ch 681 (Black Zetsu\'s account begins); ch 681 is finished by ep 462 — eps 460 / 461 are the anime\'s own Kaguya narration (filler, graft{681} frame only). Value 681 unchanged; the batch-12 wording ("ep 460 finishes it") was wrong. (verified w2-flips)' },
 ];

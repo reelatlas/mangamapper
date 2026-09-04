@@ -10,7 +10,7 @@
 // only by an LIS tie-break on chart values. Reason + cite required; the
 // healer removes any standing anchor on a suppressed row (the ruling IS the
 // A6 triage); a stored anchor on one is a ruling_violation.
-import { toRecord, type RulingEntry } from './types';
+import { toMergedList, type RulingEntry } from './types';
 
 export const ENTRIES: RulingEntry<number[]>[] = [
   {
@@ -203,9 +203,42 @@ export const ENTRIES: RulingEntry<number[]>[] = [
     ruledOn: '2026-09-04',
     cite: ['scripts/ingest/research/batch20/out/rosario-vampire-w16.json', 'scripts/ingest/research/batch20/verify/w16-types.md'],
   },
+  // ---- batch 21 wave 2 (2026-09-03; Sean ruled) — AFG's red class on rows that adapt UNNUMBERED chapters (its column
+  // cannot hold them): canon/mixed rows whose source share has no mainline chapter number — position-less, the
+  // side_story annotation carries the fact. Under the amended A44 the basis is 'no chapter number', never 'behind'.
+  {
+    seriesId: 'beelzebub',
+    ruleId: 'A44',
+    value: [49],
+    reason:
+      "Batch 21 wave 2, Sean ruled 2026-09-03: ep 49 (the New Year's special) adapts the UNNUMBERED extra chapter 「ベルベル☆西遊記〜天竺までぶっとばせ!!〜」 printed inside tankobon vol 10 plus the Beelzebub light novel 『大長編べるぜバブ ベルベル☆西遊記 魔王、孫悟空になる』 (side_source) — no mainline chapter number exists for either; the row is CANON as stored (AFL confirmed) and takes no position. AFG prints filler because its column cannot hold an unnumbered chapter.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-03',
+    cite: ['scripts/ingest/research/batch21/out/beelzebub-w2.json', 'scripts/ingest/research/batch21/WAVE2-RECOVERY.md'],
+  },
+  {
+    seriesId: 'soul-eater',
+    ruleId: 'A44',
+    value: [32],
+    reason:
+      "Batch 21 wave 2, Sean ruled 2026-09-03: ep 32 adapts Ohkubo's UNNUMBERED bonus chapter 「聖剣伝説」 ('Legend of the Holy Sword', 31 pages, printed at the back of tankobon vol 9) end to end — CANON as stored, no chapter number it could hold; side_story carries the fact. AFG's red class is its column's blindness to unnumbered chapters, not a filler claim.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-03',
+    cite: ['scripts/ingest/research/batch21/out/soul-eater-w2.json', 'scripts/ingest/research/batch21/WAVE2-RECOVERY.md'],
+  },
+  {
+    seriesId: 'bleach',
+    ruleId: 'A44',
+    value: [109, 227],
+    reason:
+      "Batch 21 wave 2, Sean ruled 2026-09-03 (joins the wave-16 entry for ep 46 — the map UNIONS entries per series): ep 109 (MIXED as stored) adapts the unnumbered prologue chapters 「0.side-A the sand」 / 「0.side-B the rotator」 (back of tankobon vol 23), ep 227 (CANON as stored) adapts 「0.8. a wonderful error」 (vol 12) plus 0.side-A / 0.side-B in full — none carries a mainline number, so neither row holds a position; side_story annotations carry the facts.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-03',
+    cite: ['scripts/ingest/research/batch21/out/bleach-w2.json', 'scripts/ingest/research/batch21/WAVE2-RECOVERY.md'],
+  },
 ];
 
-export const ANCHOR_SUPPRESSED: Record<string, number[]> = toRecord(ENTRIES);
+export const ANCHOR_SUPPRESSED: Record<string, number[]> = toMergedList(ENTRIES);
 
 /** A44: a row ruled position-less — every anchor writer refuses it; the healer removes standing anchors on it. */
 export const isAnchorSuppressed = (seriesId: string, episode: number): boolean => ANCHOR_SUPPRESSED[seriesId]?.includes(episode) ?? false;

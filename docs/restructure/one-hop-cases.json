@@ -465,6 +465,20 @@
         "type_default_unclassified"
       ],
       "source": "2026-09-04 (Sean + Cursor): canon is the canon-tier DEFAULT in the column (no fourth type — T27's lesson); the provenance is a census queue at series grain (type_default_unclassified) until AFL classifies or T6 rules; the per-row provenance column is the queued sidecar before the UI pass"
+    },
+    {
+      "ask": "an episode adapts chapters far behind the current frontier for the first time — anchor it, or position-less?",
+      "expected": [
+        "A8",
+        "A44",
+        "C5"
+      ],
+      "terms": [
+        "behind is not a basis",
+        "pages, not numbers",
+        "backjump_continue_unruled"
+      ],
+      "source": "2026-09-03 (Sean, shippuden 112): END is this episode's last manga chapter (318 [317]) even 25 chapters behind ep 90's 343; the continue is where the reader goes next (343 — already read), never END + 1; the unanchored rows inside the crossing render honest holes (A18) until researched. Position-less is for content with NO position (no chapter number, another chapter space, re-shown pages, a sliver, a restaging), never for distance."
     }
   ]
 }

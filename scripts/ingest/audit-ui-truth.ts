@@ -104,7 +104,7 @@ async function main() {
     anchor_volume_mismatch: [], row_minted_by_missing: [],
     anchor_nonmonotonic: [], anchor_start_offtrend: [], start_sliver_mismatch: [], start_without_span: [], end_sliver_mismatch: [], anchor_beyond_chapter_space: [], anchor_beyond_display_total: [], anchor_fractional_chapter: [], anchor_on_noncanon_row: [], continue_skip_unnoted: [], continue_provenance_missing: [], boundaries_degenerate: [], ruling_violation: [], repair_on_derivation_tier: [],
     mu_pin_unverified: [], mu_pin_flag_redundant: [], anchor_without_row: [], annotation_without_row: [],
-    rearranged_zone_unanchored: [], rearranged_zone_acknowledged: [],
+    rearranged_zone_unanchored: [], rearranged_zone_acknowledged: [], backjump_continue_unruled: [],
     title_incomplete: [], airdate_incomplete: [], airdate_regression: [], airdate_withheld: [], episode_date_off_window: [], asterisk_unreviewed: [],
     fractional_unmodeled: [], annotation_invalid: [], annotation_retired_standing: [], afl_anime_canon_unruled: [], format_missing: [], episode_without_component: [], watch_order_kind_missing: [],
     permanence_candidate: [], permanence_violation: [], mixed_fragment_only: [], run_stuck: [], unverified_share: [], sliver_only_anchor: [], chain_source_unmapped: [], side_source_on_chain: [], source_work_unlabelled: [], grid_unminted: [], type_source_disagreement: [], type_default_unclassified: [], side_source_unadopted: [],
@@ -678,6 +678,39 @@ async function main() {
         classes.rearranged_zone_acknowledged.push(
           `${sid}: ${eps.length} ep(s) research-acknowledged as zone-level-only (${[...new Set(eps)].sort((x, y) => x - y).slice(0, 12).join(', ')}${eps.length > 12 ? ', …' : ''}) — approximate render accepted`,
         );
+      }
+    }
+    // BACK-JUMP CONTINUE (A8 / A44 / C5, Sean 2026-09-03 — shippuden 112): a
+    // canon/mixed row whose END sits BELOW the running maximum of the rows
+    // before it is a first-time block adapted out of order — it anchors at
+    // its own END (behind is not a basis), and its continue is the coverage /
+    // parity value, never END + 1. The parity healer REFUSES such a row when
+    // its next canon/mixed neighbour is unanchored, so a null continue here
+    // is a curation queue (writeCuratedContinue, C7), never a healer miss.
+    {
+      const looseIds = new Set(series.filter((s: any) => s.mapping_mode === 'loose').map((s: any) => s.id));
+      for (const [sid, list] of bySeries) {
+        if (looseIds.has(sid)) continue;
+        const sorted = [...list].sort((x: any, y: any) => x.episode - y.episode);
+        // only the EXIT row of a jumped-back block is flagged: inside an
+        // advancing block the next row's start carries the reader (parity /
+        // END + 1 are the same number); at the exit — the next anchored row
+        // is back on the frontier, or there is none — END + 1 would send the
+        // reader through chapters already adapted (shippuden 112 → 343,
+        // Kakashi Gaiden 120 → 353 are the curated shape)
+        let envelope = -Infinity;
+        for (let i = 0; i < sorted.length; i++) {
+          const a = sorted[i];
+          const back = Number.isFinite(envelope) && a.chapter < envelope;
+          envelope = Math.max(envelope, a.chapter);
+          if (!back) continue;
+          const next = sorted[i + 1];
+          const exit = !next || next.chapter >= envelope || next.chapter < a.chapter;
+          if (!exit || a.continue_chapter != null) continue;
+          classes.backjump_continue_unruled.push(
+            `${sid}: ep ${a.episode}→ch${a.chapter} (${a.source}) exits a jumped-back block behind the frontier ${envelope}${next ? ` (ep ${next.episode} → ${next.chapter})` : ' (last anchored row)'} with NO continue — END + 1 would re-read adapted chapters; the continue is the coverage / parity value (C5), curated via writeCuratedContinue`,
+          );
+        }
       }
     }
     const spaceOf = new Map(series.map((s: any) => [s.id, Math.max(s.total_chapters ?? 0, s.latest_known_chapters ?? 0)]));

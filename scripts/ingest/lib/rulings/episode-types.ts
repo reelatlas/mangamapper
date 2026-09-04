@@ -1249,6 +1249,127 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
     ruledOn: '2026-09-04',
     cite: ['scripts/ingest/research/batch21/WAVE1-RECOVERY.md', 'scripts/ingest/research/batch21/verify/w1-flips.md'],
   },
+  // ---- batch 21 wave 2 (2026-09-03) — generated from the verdicts' type_corrections; behind-is-not-a-basis ruling (A44 amended)
+  {
+    seriesId: 'black-clover',
+    ruleId: 'T6',
+    value: { 67: 'canon', 85: 'mixed', 86: 'filler', 88: 'mixed' },
+    reason:
+      'Batch 21 wave 2 (verified R24, w2-flips.md), Sean ruled 2026-09-03 — settled by chapter accounting on two independent sources beyond AFL/AFG; confirmations are pinned so the type_source_disagreement class stops re-listing them (T6). 67 confirmed as stored (canon); 85 → mixed (the seam-episode standing, ruled once for bc 85/88, db 34, dbz 118, TPN 21/22: a page-verified source share beside a story-carrying original act is MIXED); 86 → filler (the Yami/Vangeance original episode — animateTimes \'オリジナル回\'; the ch-133 p.10 tag is a sliver duplicating ep 87; the afg anchor comes out under A1); 88 → mixed (the seam-episode standing, ruled once for bc 85/88, db 34, dbz 118, TPN 21/22: a page-verified source share beside a story-carrying original act is MIXED)',
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-03',
+    cite: ['scripts/ingest/research/batch21/WAVE2-RECOVERY.md', 'scripts/ingest/research/batch21/verify/w2-flips.md', 'scripts/ingest/research/batch21/out/black-clover-w2.json'],
+  },
+  {
+    seriesId: 'dragon-ball',
+    ruleId: 'T6',
+    value: { 34: 'mixed' },
+    reason:
+      'Batch 21 wave 2 (verified R24, w2-flips.md), Sean ruled 2026-09-03 — settled by chapter accounting on two independent sources beyond AFL/AFG; confirmations are pinned so the type_source_disagreement class stops re-listing them (T6). 34 → mixed (the seam-episode standing, ruled once for bc 85/88, db 34, dbz 118, TPN 21/22: a page-verified source share beside a story-carrying original act is MIXED)',
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-03',
+    cite: ['scripts/ingest/research/batch21/WAVE2-RECOVERY.md', 'scripts/ingest/research/batch21/verify/w2-flips.md', 'scripts/ingest/research/batch21/out/dragon-ball-w2.json'],
+  },
+  {
+    seriesId: 'dragon-ball-z',
+    ruleId: 'T6',
+    value: { 17: 'mixed', 118: 'mixed', 174: 'filler' },
+    reason:
+      'Batch 21 wave 2 (verified R24, w2-flips.md), Sean ruled 2026-09-03 — settled by chapter accounting on two independent sources beyond AFL/AFG; confirmations are pinned so the type_source_disagreement class stops re-listing them (T6). 17 confirmed as stored (mixed); 118 → mixed (the seam-episode standing, ruled once for bc 85/88, db 34, dbz 118, TPN 21/22: a page-verified source share beside a story-carrying original act is MIXED); 174 confirmed as stored (filler)',
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-03',
+    cite: ['scripts/ingest/research/batch21/WAVE2-RECOVERY.md', 'scripts/ingest/research/batch21/verify/w2-flips.md', 'scripts/ingest/research/batch21/out/dragon-ball-z-w2.json'],
+  },
+  {
+    seriesId: 'fairy-tail',
+    ruleId: 'T6',
+    value: { 69: 'mixed' },
+    reason:
+      'Batch 21 wave 2 (verified R24, w2-flips.md), Sean ruled 2026-09-03 — settled by chapter accounting on two independent sources beyond AFL/AFG; confirmations are pinned so the type_source_disagreement class stops re-listing them (T6). 69 → mixed (first-time ch 165 pages beside an original plot; anchor 165 lands)',
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-03',
+    cite: ['scripts/ingest/research/batch21/WAVE2-RECOVERY.md', 'scripts/ingest/research/batch21/verify/w2-flips.md', 'scripts/ingest/research/batch21/out/fairy-tail-w2.json'],
+  },
+  {
+    seriesId: 'inuyasha',
+    ruleId: 'T6',
+    value: { 62: 'canon', 147: 'filler', 148: 'filler' },
+    reason:
+      'Batch 21 wave 2 (verified R24, w2-flips.md), Sean ruled 2026-09-03 — settled by chapter accounting on two independent sources beyond AFL/AFG; confirmations are pinned so the type_source_disagreement class stops re-listing them (T6). 62 confirmed as stored (canon); 147 → filler (inuyasha.fandom \'chapter = (Anime Only)\', ja-WP TVオリジナル); 148 → filler (inuyasha.fandom \'chapter = (Anime Only)\', ja-WP TVオリジナル)',
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-03',
+    cite: ['scripts/ingest/research/batch21/WAVE2-RECOVERY.md', 'scripts/ingest/research/batch21/verify/w2-flips.md', 'scripts/ingest/research/batch21/out/inuyasha-w2.json'],
+  },
+  {
+    seriesId: 'my-hero-academia',
+    ruleId: 'T6',
+    value: { 39: 'filler' },
+    reason:
+      'Batch 21 wave 2 (verified R24, w2-flips.md), Sean ruled 2026-09-03 — settled by chapter accounting on two independent sources beyond AFL/AFG; confirmations are pinned so the type_source_disagreement class stops re-listing them (T6). 39 → filler confirmed (the 49.5 recap; graft sliver)',
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-03',
+    cite: ['scripts/ingest/research/batch21/WAVE2-RECOVERY.md', 'scripts/ingest/research/batch21/verify/w2-flips.md', 'scripts/ingest/research/batch21/out/my-hero-academia-w2.json'],
+  },
+  {
+    seriesId: 'naruto-shippuden',
+    ruleId: 'T6',
+    value: { 71: 'filler', 72: 'canon', 112: 'mixed', 176: 'filler', 178: 'filler', 181: 'filler', 417: 'mixed', 429: 'filler', 460: 'filler', 461: 'filler', 469: 'filler' },
+    reason:
+      'Batch 21 wave 2 (verified R24, w2-flips.md), Sean ruled 2026-09-03 — settled by chapter accounting on two independent sources beyond AFL/AFG; confirmations are pinned so the type_source_disagreement class stops re-listing them (T6). 71 confirmed as stored (filler); 72 confirmed as stored (canon); 112 → mixed (the sole first-time adaptation of chs 317-318\'s Akatsuki thread, ~5.5 min, the arc close; anchored 318 [317] under A8 — behind is not a basis — with continue 343 curated under C5); 176 confirmed as stored (filler); 178 confirmed as stored (filler); 181 confirmed as stored (filler); 417 → mixed (the sole adaptation of ch 666\'s closing third); 429 confirmed as stored (filler); 460 → filler (T28 sliver clause: the only source-tied material is Black Zetsu\'s ch-681 narration frame, a duplicate of pages eps 459 / 462 carry; the batch-15 manual anchor comes out under A1); 461 → filler (T28 sliver clause: the only source-tied material is Black Zetsu\'s ch-681 narration frame, a duplicate of pages eps 459 / 462 carry; the batch-15 manual anchor comes out under A1); 469 → filler (the Sukea caper, no source names a chapter)',
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-03',
+    cite: ['scripts/ingest/research/batch21/WAVE2-RECOVERY.md', 'scripts/ingest/research/batch21/verify/w2-flips.md', 'scripts/ingest/research/batch21/out/naruto-shippuden-w2a.json'],
+  },
+  {
+    seriesId: 'one-piece',
+    ruleId: 'T6',
+    value: { 209: 'canon', 210: 'canon', 211: 'canon', 212: 'canon', 217: 'canon', 219: 'canon', 886: 'canon' },
+    reason:
+      'Batch 21 wave 2 (verified R24, w2-flips.md), Sean ruled 2026-09-03 — settled by chapter accounting on two independent sources beyond AFL/AFG; confirmations are pinned so the type_source_disagreement class stops re-listing them (T6). 209 confirmed as stored (canon); 210 confirmed as stored (canon); 211 confirmed as stored (canon); 212 confirmed as stored (canon); 217 confirmed as stored (canon); 219 confirmed as stored (canon); 886 confirmed as stored (canon)',
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-03',
+    cite: ['scripts/ingest/research/batch21/WAVE2-RECOVERY.md', 'scripts/ingest/research/batch21/verify/w2-flips.md', 'scripts/ingest/research/batch21/out/one-piece-w2.json'],
+  },
+  {
+    seriesId: 'the-promised-neverland',
+    ruleId: 'T6',
+    value: { 20: 'filler', 21: 'mixed', 22: 'mixed' },
+    reason:
+      'Batch 21 wave 2 (verified R24, w2-flips.md), Sean ruled 2026-09-03 — settled by chapter accounting on two independent sources beyond AFL/AFG; confirmations are pinned so the type_source_disagreement class stops re-listing them (T6). 20 → filler confirmed; 21 → mixed (the seam-episode standing, ruled once for bc 85/88, db 34, dbz 118, TPN 21/22: a page-verified source share beside a story-carrying original act is MIXED); 22 → mixed (the seam-episode standing, ruled once for bc 85/88, db 34, dbz 118, TPN 21/22: a page-verified source share beside a story-carrying original act is MIXED)',
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-03',
+    cite: ['scripts/ingest/research/batch21/WAVE2-RECOVERY.md', 'scripts/ingest/research/batch21/verify/w2-flips.md', 'scripts/ingest/research/batch21/out/the-promised-neverland-w2.json'],
+  },
+  {
+    seriesId: 'beelzebub',
+    ruleId: 'T6',
+    value: { 49: 'canon' },
+    reason:
+      'Batch 21 wave 2, Sean ruled 2026-09-03 — CONFIRMED AS STORED by chapter accounting; pinned so type_source_disagreement stops re-listing rows whose AFG class is a column artefact (T6). 49 canon confirmed (the unnumbered vol-10 extra + the light novel, A44 position-less; AFG\'s filler is its column\'s blindness to unnumbered chapters). Eps 17 / 34 / 39 remain STRONG and unresearched',
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-03',
+    cite: ['scripts/ingest/research/batch21/out/beelzebub-w2.json', 'scripts/ingest/research/batch21/WAVE2-RECOVERY.md'],
+  },
+  {
+    seriesId: 'soul-eater',
+    ruleId: 'T6',
+    value: { 32: 'canon', 36: 'canon', 38: 'canon' },
+    reason:
+      'Batch 21 wave 2, Sean ruled 2026-09-03 — CONFIRMED AS STORED by chapter accounting; pinned so type_source_disagreement stops re-listing rows whose AFG class is a column artefact (T6). 32 canon confirmed (the unnumbered vol-9 bonus 「聖剣伝説」, A44 position-less); 36 / 38 canon confirmed with page-level divergence facts enriched',
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-03',
+    cite: ['scripts/ingest/research/batch21/out/soul-eater-w2.json', 'scripts/ingest/research/batch21/WAVE2-RECOVERY.md'],
+  },
+  {
+    seriesId: 'bleach',
+    ruleId: 'T6',
+    value: { 109: 'mixed', 227: 'canon' },
+    reason:
+      'Batch 21 wave 2, Sean ruled 2026-09-03 — CONFIRMED AS STORED by chapter accounting; pinned so type_source_disagreement stops re-listing rows whose AFG class is a column artefact (T6). 109 mixed / 227 canon confirmed (the unnumbered prologue chapters 0.side-A / 0.side-B / 0.8, A44 position-less)',
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-03',
+    cite: ['scripts/ingest/research/batch21/out/bleach-w2.json', 'scripts/ingest/research/batch21/WAVE2-RECOVERY.md'],
+  },
 ];
 
 export const EPISODE_TYPE_OVERRIDES: Record<string, EpisodeTypes> = ENTRIES.reduce<Record<string, EpisodeTypes>>((acc, e) => {

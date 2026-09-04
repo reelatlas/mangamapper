@@ -24,7 +24,7 @@
 - `A5` D4: the A1 gate at the AFG writers — aka `D4`, `A1/D4`, `A1 / D4 chart`, `A1 / D4 episode-type refusal`
 - `A6` An A1 hit is a triage fork, never an auto-delete — aka `A1 triage`, `Toriko deletion`, `Toriko deletion precedent`, `A1 outcome verification`
 - `A7` Proven zone-level-only knowledge is acknowledged, not open — aka `zone-acknowledged`, `zone-acknowledged marker`, `acknowledged approximation`
-- `A8` END = last mainline chapter in running order (honest record) — aka `END = running order`, `honest record`, `anchor = honest record`, `finale anchors to what it adapts`, `END definition`
+- `A8` END = last mainline chapter in running order (honest record) — aka `END = running order`, `honest record`, `anchor = honest record`, `finale anchors to what it adapts`, `END definition`, `pages, not numbers`, `behind is not a basis`
 - `A9` An END below its START is lifted to the max adapted chapter — aka `running-order END normalization`, `running-order END convention`, `Dagashi S1 normalization`
 - `A10` Sliver rule: START = first chapter animated — aka `sliver rule`, `START = first chapter animated`, `A1 + sliver rule`, `A-6`, `E3`, `batch-19 E3`, `start_sliver_mismatch`, `start_without_span`, `seeded starts`
 - `A11` Majority rule for START (superseded by the sliver rule) *(superseded)* — aka `majority rule`, `START majority rule`, `first FULL chapter rule`
@@ -416,7 +416,7 @@ Once research PROVES that only zone-level knowledge exists for a rearranged/graf
 
 ### A8 · END = last mainline chapter in running order (honest record)
 
-An anchor is an honest record of what ITS episode adapts. Its END (chapter_anchors.chapter) is the last mainline chapter the episode adapts in RUNNING ORDER — the last chapter it adapts as its main content, not the numerically largest chapter it touches. A finale anchors to what it adapts and is never inflated to the furthest chapter the series touched; a first-time out-of-order adaptation anchors truthfully at what it adapts, with the reorder annotated.
+An anchor is an honest record of what ITS episode adapts. Its END (chapter_anchors.chapter) is the last mainline chapter the episode adapts in RUNNING ORDER — the last chapter it adapts as its main content, not the numerically largest chapter it touches. A finale anchors to what it adapts and is never inflated to the furthest chapter the series touched; a first-time out-of-order adaptation anchors truthfully at what it adapts, with the reorder annotated. The running frontier is not a ceiling and not a floor (Sean 2026-09-03, shippuden 112 → END 318 [317] behind ep 90's 343): the position is where THIS episode is; where the reader goes next is the continue (C5).
 
 *Why:* kamisama-kiss ep 25 and sailor-moon-crystal ep 39 had finale anchors inflated to the series envelope; zatch-bell ep 51 legitimately anchors at ch 22 far below trend. The sket-dance "END = max(adapted)" note conflated this with A4 coverage.
 
@@ -424,9 +424,9 @@ An anchor is an honest record of what ITS episode adapts. Its END (chapter_ancho
 - layer **process**
 - enforced: [research/batch17/PROTOCOL.md](../scripts/ingest/research/batch17/PROTOCOL.md) · [.claude/agents/research-agent.md](../.claude/agents/research-agent.md)
 - **audit: none — automation backlog**
-- witnesses: kamisama-kiss, sailor-moon-crystal, zatch-bell, hajime-no-ippo-the-fighting
-- aliases: END = running order, honest record, anchor = honest record, finale anchors to what it adapts, END definition
-- see: A4, A9, A31, A19
+- witnesses: kamisama-kiss, sailor-moon-crystal, zatch-bell, hajime-no-ippo-the-fighting, naruto-shippuden, sailor-moon
+- aliases: END = running order, honest record, anchor = honest record, finale anchors to what it adapts, END definition, pages, not numbers, behind is not a basis
+- see: A4, A9, A31, A19, A44, A18, C5
 
 ### A9 · An END below its START is lifted to the max adapted chapter
 
@@ -892,17 +892,17 @@ Non-linear facts about an episode (divergence, partial, graft, rearranged, side_
 
 ### A44 · Position-less rows: a ruled row never takes an anchor
 
-A canon or mixed row whose source content cannot be a reading position — a cover-page side story running ahead of the main line, a side story with no chapter number, acts that sit behind an earlier anchor, a gag special — is ruled POSITION-LESS in ANCHOR_SUPPRESSED (reason + cite) and every anchor writer refuses it: the AFG chart (syncAnchors), the AFG continua (applyContinua) and the MU frontier (applyMuFrontier). The A1 type gate cannot hold these rows because they are legitimately canon/mixed. The healer removes any standing anchor on a suppressed row (the ruling entry IS the A6 triage); a stored anchor on one is a ruling_violation. POSITION FOLLOWS SIGNIFICANCE (Sean 2026-09-04, T28's sliver clause): a row whose only source material is a weightless sliver has no position of its own — no anchor, the display carries the previous position forward, the sliver is annotated with the episode that adapts the chapter properly. Relocation (this rule) and weight (T28) are separate axes: a weightless sliver never anchors wherever it sits; a significant beat anchors unless anchoring it would relocate the reader.
+A canon or mixed row whose source content cannot be a reading position — a cover-page side story running ahead of the main line, a side story with no chapter number, another chapter space, re-shown pages, a restaging whose END would fabricate coverage, a first-time sliver inside an original plot, a gag special — is ruled POSITION-LESS in ANCHOR_SUPPRESSED (reason + cite) and every anchor writer refuses it: the AFG chart (syncAnchors), the AFG continua (applyContinua) and the MU frontier (applyMuFrontier). The A1 type gate cannot hold these rows because they are legitimately canon/mixed. The healer removes any standing anchor on a suppressed row (the ruling entry IS the A6 triage); a stored anchor on one is a ruling_violation. POSITION FOLLOWS SIGNIFICANCE (Sean 2026-09-04, T28's sliver clause): a row whose only source material is a weightless sliver has no position of its own — no anchor, the display carries the previous position forward, the sliver is annotated with the episode that adapts the chapter properly. Relocation (this rule) and weight (T28) are separate axes: a weightless sliver never anchors wherever it sits; a significant beat anchors unless anchoring it would relocate the reader. BEHIND IS NOT A BASIS (Sean 2026-09-03, shippuden 112): a canon/mixed row whose source share is a first-time, significant adaptation anchors at ITS OWN END wherever the running frontier stands (A8 — pages, not numbers; the order may skip around as long as every anchor is the truth about its episode) — the `rearranged` annotation names the reorder, the unanchored canon/mixed rows inside the crossing render honest holes until each carries its own exact anchor (A18, `verify:hole` is their work-list), and the row's continue is the coverage / parity value (C5), never its END + 1. The 2026-08-26 clause 'acts that sit behind an earlier anchor' is retired: the one entry that rested on it (sailor-moon 167-168) was already superseded on 2026-08-27; the audit class `backjump_continue_unruled` lists back-jump rows whose continue is missing or defaulted.
 
 *Why:* Batch 18 wave 3 (2026-08-26): retyping one-piece 453-456 (Oda's cover-page serial) from filler to mixed would have silently re-created the ep-455 junk anchor Sean deleted under A6 in batch 17 — that deletion lived only in a history apply script, and AFG's chart prints the cover numbers (545-551) on all four rows; 453/454/456 stayed anchorless by an LIS tie-break on chart values, not by rule. Same exposure on gto 27 (a side story with no Lesson number), sailor-moon 167-168 (Acts behind ep 166), railgun 41.
 
 - ruled Sean 2026-08-26 (scripts/ingest/research/batch18/verify/one-piece.md (verifier finding 1))
 - layer **writer**
-- enforced: [lib/rulings/anchor-suppressed.ts#ANCHOR_SUPPRESSED](../scripts/ingest/lib/rulings/anchor-suppressed.ts) · [lib/anchors.ts#syncAnchors](../scripts/ingest/lib/anchors.ts) · [lib/anchors.ts#applyContinua](../scripts/ingest/lib/anchors.ts) · [lib/mu-frontier.ts#applyMuFrontier](../scripts/ingest/lib/mu-frontier.ts) · [assert-overrides.ts#assertAnchorSuppression](../scripts/ingest/assert-overrides.ts)
-- audit: `ruling_violation`
-- witnesses: one-piece, gto-great-teacher-onizuka, sailor-moon, a-certain-scientific-railgun
+- enforced: [lib/rulings/anchor-suppressed.ts#ANCHOR_SUPPRESSED](../scripts/ingest/lib/rulings/anchor-suppressed.ts) · [lib/anchors.ts#syncAnchors](../scripts/ingest/lib/anchors.ts) · [lib/anchors.ts#applyContinua](../scripts/ingest/lib/anchors.ts) · [lib/mu-frontier.ts#applyMuFrontier](../scripts/ingest/lib/mu-frontier.ts) · [assert-overrides.ts#assertAnchorSuppression](../scripts/ingest/assert-overrides.ts) · [audit-ui-truth.ts#classes.backjump_continue_unruled](../scripts/ingest/audit-ui-truth.ts)
+- audit: `ruling_violation`, `backjump_continue_unruled`
+- witnesses: one-piece, gto-great-teacher-onizuka, sailor-moon, a-certain-scientific-railgun, naruto-shippuden
 - aliases: anchor suppression, ANCHOR_SUPPRESSED, anchorless rows, position-less rows, cover-page serial rule, suppressed anchor
-- see: A1, A6, T28, T26, G26, G32
+- see: A1, A6, A8, A18, C5, T28, T26, G26, G32
 
 ### A45 · Retired annotations: a refuted fact is retired by ruling
 
@@ -1005,15 +1005,15 @@ Where research proves that no second source exists for a position, a medium-conf
 
 ### C5 · Continue-read is a regime choice governed by coverage
 
-The continue point is governed by COVERAGE and KNOWN FUTURE anime coverage, never by which episode a chapter appears in. Mid-chapter ending → the straddled chapter (C1). Skipped or out-of-order material the anime WILL cover in known later episodes → PARITY: continue at the next episode's start (C2), with the already-covered later chapters noted to skip on arrival (C3). Skips never covered, or an unknown future → continue = furthest-covered + 1 with the skip range noted (kind unseen). After the finale → coverage + 1 (kind post_series), which may sit exactly one chapter past the display total and never further. The agent delivers this continue point; the apply layer stamps the regime metadata. Every jump records its why in annotations and continue_note.
+The continue point is governed by COVERAGE and KNOWN FUTURE anime coverage, never by which episode a chapter appears in. Mid-chapter ending → the straddled chapter (C1). Skipped or out-of-order material the anime WILL cover in known later episodes → PARITY: continue at the next episode's start (C2), with the already-covered later chapters noted to skip on arrival (C3). Skips never covered, or an unknown future → continue = furthest-covered + 1 with the skip range noted (kind unseen). After the finale → coverage + 1 (kind post_series), which may sit exactly one chapter past the display total and never further. The agent delivers this continue point; the apply layer stamps the regime metadata. Every jump records its why in annotations and continue_note. A BACKWARD FIRST-TIME PASS (Sean 2026-09-03, shippuden 112: END 318, continue 343): the row's END is where the episode is; its continue is where the reader goes next — the coverage frontier / the next canon-mixed episode's start — never END + 1, and never a re-read of chapters already adapted; if the stretch ahead is only partly adapted, continue at the first unadapted chapter after the contiguous run and note what is already adapted further on. The parity healer refuses a row whose next canon/mixed neighbour is unanchored, so such a continue is CURATED (C7) in the same apply as the anchor; `backjump_continue_unruled` lists the ones left null or defaulted.
 
 *Why:* Three batches drifted on what "continue" meant until the regimes were written as one choice; the iruma ep-63 END-vs-max misread was the last casualty.
 
 - ruled Sean 2026-08-25 (data-pipeline §11 "THE POSITION & CONTINUE-READ LOGIC, AS ONE UNIT" item 3; batch-17 PROTOCOL "Rules that bind" bullet 4; DRIFT-LIST A-1)
 - layer **both**
-- enforced: [research/batch17/PROTOCOL.md](../scripts/ingest/research/batch17/PROTOCOL.md) · [heal-parity-continues.ts](../scripts/ingest/heal-parity-continues.ts) · [audit-ui-truth.ts#classes.anchor_beyond_display_total](../scripts/ingest/audit-ui-truth.ts)
-- audit: `continue_skip_unnoted`, `anchor_beyond_display_total`
-- witnesses: welcome-to-demon-school-iruma-kun, zatch-bell, ranma-1-2, shugo-chara, hajime-no-ippo-the-fighting
+- enforced: [research/batch17/PROTOCOL.md](../scripts/ingest/research/batch17/PROTOCOL.md) · [heal-parity-continues.ts](../scripts/ingest/heal-parity-continues.ts) · [audit-ui-truth.ts#classes.anchor_beyond_display_total](../scripts/ingest/audit-ui-truth.ts) · [audit-ui-truth.ts#classes.backjump_continue_unruled](../scripts/ingest/audit-ui-truth.ts) · [lib/continues.ts#writeCuratedContinue](../scripts/ingest/lib/continues.ts)
+- audit: `continue_skip_unnoted`, `anchor_beyond_display_total`, `backjump_continue_unruled`
+- witnesses: welcome-to-demon-school-iruma-kun, zatch-bell, ranma-1-2, shugo-chara, hajime-no-ippo-the-fighting, naruto-shippuden
 - aliases: continue-read regimes, regime choice, continue point (b17), continue point, C1 C2 C3, continue-read = a regime choice
 - see: C1, C2, C3, C6, A4, A31, A43
 
@@ -4326,6 +4326,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - batch-19 E2 → `G55`
 - batch-19 E3 → `A10`
 - batch-19 E4 → `I39`
+- behind is not a basis → `A8`
 - Berserk Memorial class → `I23`
 - best-available latest_known → `N27`
 - bestLatestKnown → `N27`
@@ -4914,6 +4915,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - ownership guard → `I21`
 - padded finale → `T11`
 - page discovery token agreement → `G43`
+- pages, not numbers → `A8`
 - parallel series → `I40`
 - parallel standing → `T30`
 - parallel telling → `I40`

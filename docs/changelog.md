@@ -935,6 +935,74 @@
    date (AFL's block a week late — lane B), shippuden 176 / 178 / 181, one-piece
    49 unanchored, ranma 158 (stored mixed, three sources say original).
 
+111. ✅ **BATCH 21 WAVE 2 APPLIED + BEHIND IS NOT A BASIS — A44 amended, C5 the
+   back-jump continue, the outcome class (2026-09-03; Sean ruled).** THE RULING:
+   "it doesn't matter if the order is all skipped around — orient the reader
+   truthfully to the episode": END is THIS episode's last manga chapter (A8),
+   the continue is where the reader goes next (C5: the coverage / parity value,
+   never END + 1, never a re-read), and a first-time significant block anchors
+   at its own END wherever the frontier stands. Shippuden 112 = the witness:
+   END 318 [317] behind ep 90's 343, continue 343 curated (eps 74-90 already
+   read 319-343). A44's 2026-08-26 clause 'acts that sit behind an earlier
+   anchor' RETIRED from the statement (the one entry that rested on it —
+   sailor-moon 167-168 — was already superseded 08-27 under 'pages, not
+   numbers'; the wave-2 verdict, the verifier and the session's own
+   recommendation had all leaned on the stale text). DEEP RESCAN of the 29
+   ANCHOR_SUPPRESSED rows under the amended predicate: every entry stands on a
+   surviving basis (no chapter number / another chapter space / a cover serial
+   running ahead / re-shown pages / a restaging / a sliver / a gag special);
+   akame 20-21's 'would skip never-adapted chapters' leg is no longer a basis
+   but its 'outline' (restaging) leg is — reason unchanged, noted here. Ledger:
+   A44 statement + witnesses; A8 gains the aliases 'pages, not numbers' /
+   'behind is not a basis' and the frontier-is-not-a-ceiling sentence; C5 gains
+   the backward-first-time-pass paragraph. NEW CLASS `backjump_continue_unruled`
+   (audit-ui-truth): a canon/mixed row that EXITS a jumped-back block (the next
+   anchored row is back on the frontier, or none) with no continue — END + 1
+   would re-read adapted chapters; 17 standing (bleach 158, shippuden 154 / 301,
+   conan 887 / 1193, naruto 108, hxh 43 / 55, ranma 30, kamisama 18, arms 47,
+   dagashi 21, hayate 21 / 49, sket 31, kowloon 13 + ayakashi 12 as finales) =
+   a curation queue for writeCuratedContinue (C7); the first draft flagged 177
+   because rows INSIDE an advancing block are fine (END + 1 = the next start).
+   The parity healer already refuses a row whose next canon/mixed neighbour is
+   unanchored, so 112's continue went through writeCuratedContinue in the apply
+   (apply-batch trap). The display cost accepted as the honest one: 113-117
+   render holes (A18, `verify:hole` 263 → 268) until the next narrow ask.
+   WAVE 2 APPLIED (19 anchors, 12 continues, 68 annotations, 3 deletions; 34
+   T6 rows across 9 series, confirmations pinned): shippuden 112 → mixed +
+   318 [317] + cont 343 + partial + rearranged; 417 → mixed + 666; 460 / 461 →
+   filler, the batch-15 manual 681 anchors DELETED (the ch-681 narration frame
+   is a sliver; ch 681 stays on 459 / 462 / 463; the batch-12 rearranged rows
+   for 460 / 461 deleted, 459's continue note rewritten); 469 → filler;
+   black-clover 85 / 88 → mixed (anchors confirmed at the manual tier), 86 →
+   filler with its afg anchor deleted; dragon-ball 34, dbz 118, TPN 21 / 22 →
+   mixed (the seam-episode standing ruled ONCE: a page-verified source share
+   beside a story-carrying original act is mixed); inuyasha 147 / 148 → filler;
+   fairy-tail 69 → mixed + 165; one-piece 209 START 307; mha 39's partial →
+   graft{49.5} sliver. Google's AI overview (Sean's cross-check, R3
+   instant-answer tier) agreed with 460 / 461's CONTENT split and disagreed only
+   on the label — the community 'any source frames = mixed' convention the
+   sliver clause was built against; on black-clover 88 it repeated AFL's
+   block-typed 'Manga Canon'. Post-apply: the four hostile-but-canon rows got
+   their A44 entries (beelzebub 49, soul-eater 32, bleach 109 / 227 — unnumbered
+   chapters; `ANCHOR_SUPPRESSED` now UNIONS entries per series via
+   `toMergedList`, since toRecord's last-wins would have dropped bleach 46) and
+   T6 confirmation pins (beelzebub 49, soul-eater 32 / 36 / 38, bleach 109 /
+   227); beelzebub 49's side_source chapters re-written with the I41 work label
+   through upsertAnnotation (the apply had landed it unlabelled — a write gate
+   is queued behind the 55-row backfill, since STANDING_ANNOTATIONS carries
+   unlabelled side_source entries the T26 healer re-inserts). CENSUS DELTAS:
+   type_source_disagreement 15 → 4 (beelzebub 17 / 34 / 39 and boruto 1 / 24 /
+   127 / 157 unresearched — the wave-3 list or close the lane; rurouni 95 = an
+   identity artefact: our row is an OVA, AFG's TV ep 95 never aired);
+   side_source_unadopted 8 → 9 / permanence_candidate 53 → 52 (beelzebub 49's
+   novel tie joins the T26 sitting); asterisk_unreviewed 175 → 177 (TPN's new
+   kinds await sign-off); verify holes 263 → 268 (shippuden 113-117);
+   ruling_violation 0; anchor_on_noncanon_row 0; display 0 failing; A44 33
+   ruled rows; 176 tests; edges deployed twice (ledger + maps). Cycle: step 6
+   done (this entry = the deep consolidate); step 7 capture in the traps
+   (research-agent: behind is not a basis + the 112 witness; apply-batch: a
+   back-jump anchor lands WITH its curated continue). Next: wave 3 = shippuden
+   113-117 (the five holes) + the 4 remaining STRONG rows, or close the lane.
 109. ✅ **G59 THE MINT RULE (an /add-rule end to end, 2026-09-04; Sean ruled the
    lane, Cursor's naming fix: who may CREATE the grid, not an amendment of G57's
    who may DELETE).** When AFL has nothing for an entry, the grid is minted by
