@@ -1,0 +1,287 @@
+{
+  "series_id": "beelzebub",
+  "summary": "THE PREMISE FAILED FIRST, AND THAT REFRAMES THE WHOLE ASK. The task says animefillerguide 'prints FILLER (red, no chapter)' on 17 / 34 / 39. It does not. Beelzebub's AFG page is an OLD-STYLE plain table (no class attributes, no minute notes): its filler rows carry the word '* Filler' inside the TITLE cell, and its chapter column reads 'N/A' on 11-14, 27-28, 49, 52-57, 60 — but on our three rows it prints CHAPTERS: 17 = '12, 23', 34 = '69', 39 = '82, 83', each with '*Filler' appended to the title. So AFG's positive claim here is not 'no chapter' but 'filler episode that nevertheless touches these chapters', and the wave-2 shape (AFG red because its column cannot hold an unnumbered extra, ep 49) does NOT recur: none of the three adapts an unnumbered extra, and the fandom's Category:Chapters holds 251 pages with no summer-homework, maid-cafe or amusement-park extra among them. ROW IDENTITY FIRST (R20). All three tables hold exactly 60 rows numbered 1-60 with no duplicate and no gap: ours, AFL's (with dates 2011-05-15 / 2011-09-18 / 2011-10-23, identical to our stored dates) and AFG's. ja-Wikipedia's 各話リスト runs バブ1-バブ60 with the A/B halves of 6, 13, 53, 55, 56, 57 inside one number, and its dates for バブ17 / バブ34 / バブ39 are 5月15日 / 9月18日 / 10月23日 — our dates. Every join below is on title+date; no index join was used. THE TWO SOURCES BEYOND THE TWO LABELS. (1) ja-Wikipedia's episode table declares an explicit legend — 'アニメ版オリジナルストーリーのサブタイトルは、太字で表記するものとする' (anime-original subtitles are set in bold) — and it bolds バブ17, バブ34 and バブ39 while leaving 16, 18-25, 29-33, 35-38 and 40-50 unbold. That is a DISCRIMINATING per-row control, not a blanket: the marker under-marks, never over-marks, and it distinguishes the three targets from their immediate neighbours on both sides. (2) The licensor's own per-episode synopses (Bandai Channel b-ch.com/titles/3113, the same text dアニメストア serves) describe what each episode is about, and (3) beelzebub.fandom's ARC pages carry a page-level manga synopsis footnoted chapter by chapter ('<ref>Beelzebub manga; Chapter 69</ref>', 'Chapter 83, pages 1-12'), which is what lets the source share be weighed rather than guessed. EP 17 -> FILLER (stored mixed). The episode is the Great Demon Lord's summer-homework set: a notebook that brings drawings to life, collecting delinquent 'specimens' with a giant flyswatter, and a carnivorous demon morning-glory that eats the school. Bandai Channel prints only that premise ('魔界の大魔王が、またまた思いつきでベル坊に夏休みの宿題をやらせようと宿題セット一式を送ってきた'), en-WP's summary is the same beats end to end, and NO manga chapter carries it: en-WP's chapter list has no 宿題 title anywhere in 1-240, and a fandom full-text search for 'homework' returns only anime episode pages. The two chapters AFG and the fandom name are SLIVERS by the sliver clause: ch 12's own pages (Hilda's demon cage and the shape sorter) are adapted in full by ep 6 (our stored ep 6 -> 12 {12}); ch 23's own pages (the Furuichi family's return, Baby Beel's summer cold, Tojo on the beach) are adapted by ep 15 and ep 18 (our stored ep 18 -> 27 START 23). Even the one beat ep 17 borrows — Alaindelon hauling a weeping Furuichi off his family holiday — is already animated in ep 16 (en-WP ep 16: 'Furuichi is dragged away from his tropical summer vacation against his will'). Neither tie is first-time and neither is a major plot point, so the sole-adaptation exception fails BOTH halves. Remainder = anime-original -> filler (T27/T28). EP 34 -> MIXED (stored canon). This one is genuinely two-sided and both labels are wrong. The manga DOES have the maid cafe: the fandom's Rokkisei-Arc page, citing '<ref>Beelzebub manga; Chapter 69</ref>', puts the festival day, Aoi and the Red Tail waiting for the boys, Furuichi holed up at the Saint Ishiyama Maid Cafe being waited on with Hilda beside him, and a Teimo Tech thug harassing one of the maid-cafe girls, all inside chapter 69 — and Bandai Channel's official synopsis for ep 34 opens on exactly that: '聖石矢魔学園祭当日、決戦を前に男鹿たち男子は危機感ゼロで好き勝手。古市に至っては山村のクラスが出展しているメイド喫茶に入り浸る始末'. Those pages are adapted HERE and nowhere else: ep 35 opens on the volleyball match itself (b-ch: '六騎聖とのバレーボール決戦、ついに開幕'), so its share of ch 69 is the chapter's pre-match tail. Weight: SIGNIFICANT. But the episode's own plot is not the manga's — Yamamura reporting that the Rokkisei's rival cafe is packed, Furuichi the 知将 opening 'メイド喫茶プレゼンテッドバイ古市', the Red Tails press-ganged into maid uniforms, Hilda remodelling the place and personally disciplining the Teimo guests in Shinjo's stead — is invented, which is why ja-WP bolds the row and AFG calls it filler. Source share + story-carrying original share in one episode = MIXED (T28). AFL's 'Manga Canon' comes from a blanket 29-51 bucket and is wrong; AFG's '*Filler' is a viewing-guide class that would falsely mark ch 69's cafe pages never-adapted. The stored anchor (END 69, START 69, {69}) and the stored parity continue are CONFIRMED unchanged — ch 69 straddles into ep 35. EP 39 -> FILLER (stored canon). Bandai Channel: '思いがけない形で男鹿たちの秘密を知って戸惑う葵。その浮かない顔を見かねた梓は…男鹿、葵を交えてのダブルデートを提案。そこで、遊園地に遊びにきた焔王と遭遇すると…' — Azusa proposes a double date, they meet En at an amusement park, and the plot is stopping his tantrum. There is no such scene anywhere in the manga: the fandom's Prince En Arc page tracks ch 82 and ch 83 page by page (ch 82 = En at Furuichi's house, the ice-cube fight, the crying fire, Furuichi's games, the Behemoth warning; ch 83 pages 1-12 = the car ride and the walk home, pages 13-18 = Hecadoth taking Aoi), and the decisive detail is a Japanese one: ja-Wikipedia's setting section says of 石矢魔ランド, the amusement park this episode is set in, '初出はアニメ版だが、後に原作にも登場' — the venue was INVENTED FOR THE ANIME and the manga borrowed it afterwards. That is a design travelling into the source, not events, which under T26 is evidence AGAINST adoption, not for it. The ch 82 / ch 83 ties are slivers: ch 82 is adapted by ep 38 (AFG 79-82; en-WP's ep 38 summary reaches the En/Baby Beel feud and En's love of games) and again by ep 40 (AFG 82-84, our stored ep 40 -> 84 START 83), and ep 39 merely restages the crying-fire gag on a roller coaster — en-WP's own wording is 'creating fire ONCE AGAIN' — and closes on En's warning about his private guards. ch 83's tie is En's stated wish to keep playing games and see an arcade, the opening of its car conversation, whose actual plot (Hecadoth) is ep 40's. Sole-adaptation exception fails both halves again. Remainder = anime-original -> filler. WHICH SOURCE LIED, AND HOW. animefillerlist, on 34 and 39: it prints one unbroken 'Manga Canon Episodes: 29-51' bucket and every row inside it inherits the label, which is how a wholly invented double date at an anime-invented amusement park comes out 'Manga Canon'. It is also wrong in the other direction on 17, where its 'Mixed Canon/Filler' credits two chapters that are slivers of material animated in eps 6, 15, 16 and 18. animefillerguide's CLASS is right on 17 and 39 and defensible-but-lossy on 34; its CHAPTER COLUMN is the defect that reached our data — it is a graft / reading-position listing, not an adaptation claim (it prints '82' on rows 38, 39, 40 AND 41), and our stored anchors on 17 ({12, 23}) and 39 ({82-83}) are derivation-tier artefacts of exactly that column. Both must go with the retypes (A1).",
+  "anchors": [
+    {
+      "episode": 34,
+      "end_chapter": 69,
+      "start_chapter": 69,
+      "chapters_adapted": "69 (the festival-opening and maid-cafe pages; ch 69's pre-match tail is ep 35's)",
+      "volume": 8,
+      "confidence": "medium",
+      "why": "CONFIRMED AS STORED — value unchanged (ep 34 -> END 69 [START 69] {69}), but the row's TYPE changes from canon to mixed, so the anchor is re-delivered with its own evidence rather than left resting on AFG's chapter column. A4: ch 69 is the furthest mainline chapter adapted in this episode and ep 33's END is 68 (stored, {64-68}), so nothing is skipped. A10: the START is 69 too — the episode opens ON ch 69's first pages (the festival day, the Ishiyama boys with 危機ゼロ before the decisive match, Furuichi holed up in the maid cafe run by Yamamura's class), which is Bandai Channel's own opening sentence and the fandom's Rokkisei-Arc text cited to Chapter 69. A47 does not hold the END back: ep 35 does START on ch 69, but ep 34's share of it is not a trailing scrap — it is the episode's opening and body, roughly the chapter's first two thirds (festival opens -> Red Tail waiting -> Furuichi at the cafe -> the Teimo Tech thugs cause trouble there), while ep 35 takes the tail (Oga and Miki meeting before the match, the teams walking out). No page-count or teaser wording anywhere credits ep 34 with a mere sliver of 69, so the END stands and the split is recorded in chapters_adapted with a `partial`. Medium, not high, because no source page-splits ch 69 explicitly; the split is inferred from two licensor synopses that divide the chapter's own scenes cleanly between the two episodes.",
+      "sources": [
+        "https://beelzebub.fandom.com/api.php?action=parse&page=Rokkisei%20Arc&prop=wikitext&format=json",
+        "https://beelzebub.fandom.com/api.php?action=parse&page=Saint%20Ishiyama%20Festival&prop=wikitext&format=json",
+        "https://beelzebub.fandom.com/api.php?action=parse&page=Maids%20Completely%20Rustling&prop=wikitext&format=json",
+        "https://www.b-ch.com/titles/3113/034",
+        "https://www.b-ch.com/titles/3113/035",
+        "https://en.wikipedia.org/wiki/List_of_Beelzebub_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Beelzebub_chapters"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 34,
+      "continue_chapter": 69,
+      "kind": "parity",
+      "confidence": "medium",
+      "why": "CONFIRMED AS STORED (69 / parity). C1 + C2: the episode ends inside ch 69 — it animates the chapter's festival-opening and maid-cafe pages and stops before the pre-match scenes — and the next canon row, ep 35, STARTS on ch 69 (stored ep 35 -> 73 [69] {69-73}). A reader continuing at 69 re-reads only the pages ep 34 already showed, which is the parity the healer enforces; there is no unseen range to name.",
+      "sources": [
+        "https://www.b-ch.com/titles/3113/034",
+        "https://www.b-ch.com/titles/3113/035",
+        "https://beelzebub.fandom.com/api.php?action=parse&page=Rokkisei%20Arc&prop=wikitext&format=json",
+        "https://beelzebub.fandom.com/api.php?action=parse&page=The%20Time%20to%20Start%20the%20Match&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "anchor_hostile": [
+    {
+      "episode": 17,
+      "why": "A1 FIRST — the row is filler under this verdict, and filler rows never carry anchors; the stored derivation-tier anchor (END 23, START 23, {12, 23}) must be deleted with the retype. A44 independently: the only source material in the episode is re-shown / restaged pages of chapters adapted in full elsewhere. ch 12's own content is ep 6's (stored ep 6 -> 12 {12}); ch 23's own content is split across ep 15 (Tojo on the beach) and ep 18 (Baby Beel's summer cold, the Zebul Spell fading — stored ep 18 -> 27 START 23); and the Alaindelon-abducts-Furuichi-from-his-holiday gag ep 17 replays was already animated in ep 16. No source states WHICH pages of 12 or 23 ep 17 uses — beelzebub.fandom's infobox says only 'Chapter 12 (some scenes)' / 'Chapter 23 (some scenes)' and AFG prints the bare numbers '12, 23' — so there is no first-time position to anchor even in principle. NOT 'behind an earlier anchor': that basis was retired 2026-09-03 and is not used here. Nothing is stranded by the deletion — ch 12 sits under ep 6 and ch 23 under eps 15 and 18, so the coverage set loses no chapter.",
+      "sources": [
+        "https://beelzebub.fandom.com/api.php?action=parse&page=What%20Do%20You%20Think%20of%20Demon%20World%20Homework%3F&prop=wikitext&format=json",
+        "https://beelzebub.fandom.com/api.php?action=parse&page=Playing%20of%20the%20Demon%20Lord%20Who%20Found%20Spare%20Time%20Unmanageable&prop=wikitext&format=json",
+        "https://beelzebub.fandom.com/api.php?action=parse&page=Entry!!%20(chapter)&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Beelzebub_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Beelzebub_chapters",
+        "https://ja.wikipedia.org/wiki/%E3%81%B9%E3%82%8B%E3%81%9C%E3%83%90%E3%83%96",
+        "https://animefillerguide.com/beelzebub/",
+        "https://www.b-ch.com/titles/3113/017"
+      ]
+    },
+    {
+      "episode": 39,
+      "why": "A1 FIRST — the row is filler under this verdict, so the stored derivation-tier anchor (END 83, START 82, {82-83}) must be deleted with the retype. A44 independently: the ch 82 material in the episode is a RESTAGING of a scene already animated in ep 38 (En's crybaby fire, moved to a roller coaster — en-WP: 'creating fire once again'), and the ch 83 material is the framing wish that opens its car conversation, with the chapter's real content (Hecadoth abducting Aoi) animated in ep 40 (stored ep 40 -> 84 [83] {82-84}). Neither is first-time coverage, so neither is a position. NOT 'behind an earlier anchor'. Nothing is stranded: ch 82 is covered by ep 38 (AFG 79-82) and ep 40, ch 83 by ep 40 as its START, so the line closes over ep 39 with no gap — ep 38 -> END 82, ep 40 -> END 84 START 83.",
+      "sources": [
+        "https://beelzebub.fandom.com/api.php?action=parse&page=The%20Older%20Brother%20Was%20a%20Crybaby&prop=wikitext&format=json",
+        "https://beelzebub.fandom.com/api.php?action=parse&page=Prince%20En%20Arc&prop=wikitext&format=json",
+        "https://beelzebub.fandom.com/api.php?action=parse&page=Behemoth's%20Pillar%20Division&prop=wikitext&format=json",
+        "https://beelzebub.fandom.com/api.php?action=parse&page=Crybaby%20Brothers%20(chapter)&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Beelzebub_episodes",
+        "https://ja.wikipedia.org/wiki/%E3%81%B9%E3%82%8B%E3%81%9C%E3%83%90%E3%83%96",
+        "https://animefillerguide.com/beelzebub/",
+        "https://www.b-ch.com/titles/3113/039",
+        "https://www.b-ch.com/titles/3113/038",
+        "https://www.b-ch.com/titles/3113/040"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [
+        17
+      ],
+      "kind": "graft",
+      "chapters": "12",
+      "note": "weight: SLIVER — because the chapter's own story is animated in full by another episode and nothing in ep 17 is first-time coverage of it. Ch 12 「ヒマをもてあました魔王の遊び」 is Hilda's demon-world cage and Baby Beel's shape sorter, and that is ep 6 「魔界のおもちゃ届きました」 (our stored ep 6 -> 12 {12}); beelzebub.fandom's chapter page for 12 lists 'episode = 6, 17' and ep 17's infobox qualifies the tie as 'Chapter 12 (some scenes)'. Material is a DUPLICATE, not new: the recognisable ch-12 element in ep 17 is the demon-world-object-runs-amok conceit and a Demon-World cold open, restaged with the Great Demon Lord in Hilda's place. No source names which panels, so no page split is claimed. Carries no type and no anchor; ch 12 is adapted properly by ep 6.",
+      "sources": [
+        "https://beelzebub.fandom.com/api.php?action=parse&page=Playing%20of%20the%20Demon%20Lord%20Who%20Found%20Spare%20Time%20Unmanageable&prop=wikitext&format=json",
+        "https://beelzebub.fandom.com/api.php?action=parse&page=What%20Do%20You%20Think%20of%20Demon%20World%20Homework%3F&prop=wikitext&format=json",
+        "https://animefillerguide.com/beelzebub/",
+        "https://en.wikipedia.org/wiki/List_of_Beelzebub_episodes"
+      ]
+    },
+    {
+      "episodes": [
+        17
+      ],
+      "kind": "graft",
+      "chapters": "23",
+      "note": "weight: SLIVER — because ch 23's own pages are animated by other episodes and ep 17 only replays a summer gag from the same stretch. Ch 23 「登場!!」 is the Furuichi family's return from holiday with Alaindelon in the living room, Baby Beel's summer cold, and Tojo idling on the beach; the anime animates the beach half in ep 15 and the summer-cold half in ep 18 (our stored ep 18 -> 27 START 23; en-WP ep 18: 'Beel gets a summer cold... the Zebel Spell on Oga's hand disappears'). What ep 17 shows of it is Alaindelon arriving with a weeping Furuichi torn from his family holiday — and that beat is itself already animated in ep 16 (en-WP ep 16: 'Furuichi is dragged away from his tropical summer vacation against his will'), so it is a DUPLICATE twice over. beelzebub.fandom's ch-23 page lists 'episode = 3, 15, 17, 18' and ep 17's infobox says 'Chapter 23 (some scenes)'. Sole-adaptation exception fails both halves: the pages appear in other episodes, and no major plot point of the source rests here. Carries no type and no anchor; ch 23 is adapted properly by eps 15 and 18.",
+      "sources": [
+        "https://beelzebub.fandom.com/api.php?action=parse&page=Entry!!%20(chapter)&prop=wikitext&format=json",
+        "https://beelzebub.fandom.com/api.php?action=parse&page=What%20Do%20You%20Think%20of%20Demon%20World%20Homework%3F&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Beelzebub_episodes",
+        "https://animefillerguide.com/beelzebub/"
+      ]
+    },
+    {
+      "episodes": [
+        34
+      ],
+      "kind": "partial",
+      "chapters": "69 (the festival-opening and maid-cafe pages; the pre-match tail is ep 35's)",
+      "note": "weight: SIGNIFICANT — because it is a scene, it is FIRST-TIME, and it is adapted in this episode and no other. The fandom's Rokkisei-Arc page footnotes the beats to '<ref>Beelzebub manga; Chapter 69</ref>': the festival begins, Teimo Tech thugs turn up, Aoi and the Red Tail wait in their PE kit for the late boys, Furuichi is found holed up at the Saint Ishiyama Maid Cafe with female students and Hilda around him, a Teimo thug harasses one of the cafe's girls, and the Rokkisei put the thugs down. Bandai Channel's official synopsis for ep 34 opens on the identical situation ('聖石矢魔学園祭当日…古市に至っては山村のクラスが出展しているメイド喫茶に入り浸る始末'). Ep 35 does not re-show any of it — b-ch's ep 35 text and en-WP's summary both start on the volleyball match — so ep 35's share of ch 69 is the chapter's pre-match tail. Material is NEW. This is the segment that makes the row mixed rather than filler and that carries the anchor; ch 69 straddles the episode boundary and ep 35 finishes it.",
+      "sources": [
+        "https://beelzebub.fandom.com/api.php?action=parse&page=Rokkisei%20Arc&prop=wikitext&format=json",
+        "https://beelzebub.fandom.com/api.php?action=parse&page=Saint%20Ishiyama%20Festival&prop=wikitext&format=json",
+        "https://www.b-ch.com/titles/3113/034",
+        "https://www.b-ch.com/titles/3113/035",
+        "https://en.wikipedia.org/wiki/List_of_Beelzebub_episodes"
+      ]
+    },
+    {
+      "episodes": [
+        34
+      ],
+      "kind": "divergence",
+      "chapters": "69",
+      "note": "weight: SIGNIFICANT (this is the ORIGINAL half, recorded so the mixed typing is auditable) — the episode's own plot is not in the manga. Bandai Channel: Yamamura arrives to report how packed the Rokkisei's rival cafe is, whereupon the 知将 Furuichi rises and 「メイド喫茶プレゼンテッドバイ古市」 opens for business; en-WP adds that Azusa and her friends obey Furuichi blindly, that he press-gangs the Red Tails into maid uniforms by calling it a preliminary battle against the Six Holy Knights' cafe, and that Hilda remodels the place and personally disciplines the rowdy Teimo High guests. In ch 69 the cafe is simply a place Furuichi is loitering, and it is Shinjo and the Rokkisei — not Hilda — who deal with the Teimo thug. ja-Wikipedia bolds バブ34 under its stated legend for anime-original subtitles while leaving 33 and 35-38 unbold, and animefillerguide appends '*Filler' to the row. Story-carrying original share + a significant source share in one episode = mixed under T28.",
+      "sources": [
+        "https://www.b-ch.com/titles/3113/034",
+        "https://en.wikipedia.org/wiki/List_of_Beelzebub_episodes",
+        "https://ja.wikipedia.org/wiki/%E3%81%B9%E3%82%8B%E3%81%9C%E3%83%90%E3%83%96",
+        "https://animefillerguide.com/beelzebub/",
+        "https://beelzebub.fandom.com/api.php?action=parse&page=Rokkisei%20Arc&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [
+        39
+      ],
+      "kind": "graft",
+      "chapters": "82",
+      "note": "weight: SLIVER — because every ch-82 element in the episode is a restaging or a repeat of material ep 38 already animated. Ch 82 「泣きむし兄弟」 is En at Furuichi's house: the ice cubes Baby Beel throws, En's crying fire, his wet nurses' panic, Furuichi's games, and his closing warning that Behemoth's men will come. AFG gives ep 38 '79-82' and en-WP's ep 38 summary reaches the En/Baby Beel feud and En's love of games; ep 40 then carries ch 82 again (AFG '82, 83, 84'). What ep 39 does with it is restage the crybaby-fire gag on an amusement-park roller coaster — en-WP's own words are 'creating fire ONCE AGAIN' — and end on En's warning about his private guards. Material is a DUPLICATE / restaging, not new pages. Sole-adaptation exception fails both halves: ch 82's pages sit in eps 38, 40 and 41 as well, and a setup line is not a death, a reveal or an arc close. Carries no type and no anchor; ch 82 is adapted properly by ep 38 and revisited by ep 40.",
+      "sources": [
+        "https://beelzebub.fandom.com/api.php?action=parse&page=Crybaby%20Brothers%20(chapter)&prop=wikitext&format=json",
+        "https://beelzebub.fandom.com/api.php?action=parse&page=Prince%20En%20Arc&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Beelzebub_episodes",
+        "https://animefillerguide.com/beelzebub/",
+        "https://www.b-ch.com/titles/3113/038",
+        "https://www.b-ch.com/titles/3113/039"
+      ]
+    },
+    {
+      "episodes": [
+        39
+      ],
+      "kind": "graft",
+      "chapters": "83",
+      "note": "weight: SLIVER — because only the framing wish that opens the chapter is used, and the chapter's actual plot is ep 40's. The fandom's Prince En Arc page splits ch 83 page-exactly: pages 1-12 are Furuichi and Alaindelon in the bed, the car ride in which En refuses to live among commoners and says he wants to keep playing the games Furuichi gave him and visit the arcade Furuichi told him about, and Oga walking Aoi home; pages 13-18 are Hecadoth's appearance with Aoi in his aura. Ep 39 takes only the wish — 'Before destroying humanity, Lord En wants to experience everything in the human world' — as the excuse for an anime-original outing, and ep 40 adapts the chapter proper (our stored ep 40 -> 84 [83] {82-84}; b-ch ep 40: ヘカドス appears, Aoi is taken). Material is a fragment, not new pages of a chapter no one else carries. Carries no type and no anchor; ch 83 is adapted properly by ep 40, which STARTS on it.",
+      "sources": [
+        "https://beelzebub.fandom.com/api.php?action=parse&page=Prince%20En%20Arc&prop=wikitext&format=json",
+        "https://beelzebub.fandom.com/api.php?action=parse&page=Behemoth's%20Pillar%20Division&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Beelzebub_episodes",
+        "https://animefillerguide.com/beelzebub/",
+        "https://www.b-ch.com/titles/3113/039",
+        "https://www.b-ch.com/titles/3113/040"
+      ]
+    },
+    {
+      "episodes": [
+        39
+      ],
+      "kind": "divergence",
+      "chapters": "82-83",
+      "note": "weight: SIGNIFICANT (the ORIGINAL body, recorded so the filler typing is auditable) — Azusa proposes a double date with Oga, Aoi and Furuichi to cheer Aoi up after she learns the truth; the group runs into En at 石矢魔ランド; the plot is preventing his tantrum from setting the park alight (Bandai Channel; en-WP adds the game centres and the roller coaster). None of this exists in ch 82-83, and the venue itself is an anime invention: ja-Wikipedia's setting section records 石矢魔ランド as '初出はアニメ版だが、後に原作にも登場' — first appearing in the anime, later appearing in the manga. Under T26 that is a DESIGN travelling into the source without its events, which is evidence AGAINST adoption, not for it, so no `adopted{basis}` is proposed. ja-Wikipedia bolds バブ39 under its anime-original legend while leaving 36-38 and 40-50 unbold; animefillerguide appends '*Filler'.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%81%B9%E3%82%8B%E3%81%9C%E3%83%90%E3%83%96",
+        "https://www.b-ch.com/titles/3113/039",
+        "https://en.wikipedia.org/wiki/List_of_Beelzebub_episodes",
+        "https://animefillerguide.com/beelzebub/",
+        "https://beelzebub.fandom.com/api.php?action=parse&page=Prince%20En%20Arc&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 17,
+      "field": "anchor",
+      "old": "ep 17 -> END 23 [START 23] {12, 23} v3 (afg) | continue 23/parity",
+      "new": "DELETE — no anchor, no continue; row becomes filler and is A44 position-less",
+      "why": "The anchor is a derivation-tier artefact of animefillerguide's chapter column, which on this page is a graft / reading-position listing rather than an adaptation claim (it prints '23' on row 15, '21, 22' on row 16, '12, 23' on row 17 and '23-27' on row 18 — the numbers do not ascend). With ep 17 retyped filler under T28, A1 forbids the anchor outright, and A44 refuses it independently because both cited chapters are animated in full elsewhere (ch 12 -> ep 6; ch 23 -> eps 15 and 18) and no source names which pages ep 17 uses. P8: the deletion has to be made at the manual tier or AFG's next re-derive restores it.",
+      "sources": [
+        "https://animefillerguide.com/beelzebub/",
+        "https://beelzebub.fandom.com/api.php?action=parse&page=What%20Do%20You%20Think%20of%20Demon%20World%20Homework%3F&prop=wikitext&format=json",
+        "https://en.wikipedia.org/wiki/List_of_Beelzebub_episodes",
+        "https://ja.wikipedia.org/wiki/%E3%81%B9%E3%82%8B%E3%81%9C%E3%83%90%E3%83%96",
+        "https://www.b-ch.com/titles/3113/017"
+      ]
+    },
+    {
+      "episode": 39,
+      "field": "anchor",
+      "old": "ep 39 -> END 83 [START 82] {82-83} v10 (afg) | continue 83/parity",
+      "new": "DELETE — no anchor, no continue; row becomes filler and is A44 position-less",
+      "why": "Same shape: AFG prints '82' on rows 38, 39, 40 and 41 — a four-row plateau, which is the signature of a reading-position column, not four episodes adapting ch 82. With ep 39 retyped filler, A1 forbids the anchor and A44 refuses it independently (a restaged crying-fire already animated in ep 38, plus ch 83's opening framing whose plot ep 40 adapts). The line closes with no gap: ep 38 -> END 82 and ep 40 -> END 84 START 83 are both stored. P8: manual tier, or the next AFG re-derive restores it.",
+      "sources": [
+        "https://animefillerguide.com/beelzebub/",
+        "https://en.wikipedia.org/wiki/List_of_Beelzebub_episodes",
+        "https://ja.wikipedia.org/wiki/%E3%81%B9%E3%82%8B%E3%81%9C%E3%83%90%E3%83%96",
+        "https://www.b-ch.com/titles/3113/039",
+        "https://beelzebub.fandom.com/api.php?action=parse&page=Prince%20En%20Arc&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "type_corrections": [
+    {
+      "stored_type": "mixed",
+      "type": "filler",
+      "why": "RETYPE mixed -> filler. Segment weights: (a) ch 12 — SLIVER, a duplicate of pages ep 6 adapts in full; (b) ch 23 — SLIVER, a duplicate of pages eps 15 and 18 adapt, and the one gag ep 17 replays (Alaindelon abducting Furuichi from his family holiday) is itself already animated in ep 16; (c) the remainder — SIGNIFICANT and wholly anime-original: the Great Demon Lord's demon-world summer-homework set, the notebook that brings drawings to life, the flyswatter 'specimen collection' of Ishiyama's delinquents, and the carnivorous demon morning-glory that swallows the school and the principal. Under T28 the remainder decides and the slivers carry no weight, so the row is filler (T27: zero standing in the source). Two sources beyond the two labels: ja-Wikipedia bolds バブ17 under its declared anime-original-subtitle legend while leaving 16 and 18-25 unbold, and Bandai Channel's licensor synopsis describes only the original premise. Third check: en-WP's chapter list has no 宿題 chapter in the manga's 240 and the fandom's 251 chapter pages hold no such extra, so the plot has no source anywhere in the chapter space. AFL's 'Mixed Canon/Filler' credited the two sliver chapters as a canon share; that is what was wrong.",
+      "confidence": "high",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%81%B9%E3%82%8B%E3%81%9C%E3%83%90%E3%83%96",
+        "https://www.b-ch.com/titles/3113/017",
+        "https://en.wikipedia.org/wiki/List_of_Beelzebub_episodes",
+        "https://en.wikipedia.org/wiki/List_of_Beelzebub_chapters",
+        "https://animefillerguide.com/beelzebub/",
+        "https://www.animefillerlist.com/shows/beelzebub",
+        "https://beelzebub.fandom.com/api.php?action=parse&page=What%20Do%20You%20Think%20of%20Demon%20World%20Homework%3F&prop=wikitext&format=json",
+        "https://beelzebub.fandom.com/api.php?action=parse&page=Playing%20of%20the%20Demon%20Lord%20Who%20Found%20Spare%20Time%20Unmanageable&prop=wikitext&format=json",
+        "https://beelzebub.fandom.com/api.php?action=parse&page=Entry!!%20(chapter)&prop=wikitext&format=json"
+      ],
+      "episodes": [
+        17
+      ],
+      "note": "RETYPE mixed -> filler. Segment weights: (a) ch 12 — SLIVER, a duplicate of pages ep 6 adapts in full; (b) ch 23 — SLIVER, a duplicate of pages eps 15 and 18 adapt, and the one gag ep 17 replays (Alaindelon abducting Furuichi from his family holiday) is itself already animated in ep 16; (c) the remainder — SIGNIFICANT and wholly anime-original: the Great Demon Lord's demon-world summer-homework set, the notebook that brings drawings to life, the flyswatter 'specimen collection' of Ishiyama's delinquents, and the carnivorous demon morning-glory that swallows the school and the principal. Under T28 the remainder decides and the slivers carry no weight, so the row is filler (T27: zero standing in the source). Two sources beyond the two labels: ja-Wikipedia bolds バブ17 under its declared anime-original-subtitle legend while leaving 16 and 18-25 unbold, and Bandai Channel's licensor synopsis describes only the original premise. Third check: en-WP's chapter list has no 宿題 chapter in the manga's 240 and the fandom's 251 chapter pages hold no such extra, so the plot has no source anywhere in the chapter space. AFL's 'Mixed Canon/Filler' credited the two sliver chapters as a canon share; that is what was wrong."
+    },
+    {
+      "stored_type": "canon",
+      "type": "mixed",
+      "why": "RETYPE canon -> mixed. Segment weights: (a) ch 69's festival-opening and maid-cafe pages — SIGNIFICANT: a scene, first-time, and adapted in this episode and no other (the fandom's Rokkisei-Arc page cites the festival day, Aoi and the Red Tail waiting, Furuichi at the Saint Ishiyama Maid Cafe with Hilda, and the Teimo Tech thug harassing a maid to '<ref>Beelzebub manga; Chapter 69</ref>', and Bandai Channel's official synopsis opens on exactly that situation; ep 35, which also holds ch 69, opens on the volleyball match and takes the chapter's pre-match tail); (b) the cafe-war plot — SIGNIFICANT and original: Yamamura reporting the Rokkisei's rival cafe, 「メイド喫茶プレゼンテッドバイ古市」, the Red Tails conscripted into maid uniforms, Hilda's remodel, and Hilda rather than Shinjo disciplining the Teimo guests. Source plus story-carrying original in one episode = mixed (T28). Not canon: ja-Wikipedia bolds バブ34 under its anime-original legend while leaving 33 and 35-38 unbold, and AFG appends '*Filler' — AFL's 'Manga Canon' is inherited from an unbroken 29-51 bucket. Not filler either: typing it filler would mark ch 69's cafe pages never-adapted, which is false. THE JUDGMENT CALL, stated plainly for Sean: the source share is a minority of the runtime (the manga gives the cafe roughly half a 19-page chapter; the anime gives it a full episode), so a reading that calls the row 'an original plot quoting a scene' would land on filler + graft{69}. I chose mixed because the borrowed material is a continuous multi-page scene that opens the episode and supplies its conflict, not a quoted fragment — and because no other episode carries those pages.",
+      "confidence": "medium",
+      "sources": [
+        "https://beelzebub.fandom.com/api.php?action=parse&page=Rokkisei%20Arc&prop=wikitext&format=json",
+        "https://beelzebub.fandom.com/api.php?action=parse&page=Saint%20Ishiyama%20Festival&prop=wikitext&format=json",
+        "https://beelzebub.fandom.com/api.php?action=parse&page=Maids%20Completely%20Rustling&prop=wikitext&format=json",
+        "https://beelzebub.fandom.com/api.php?action=parse&page=The%20Time%20to%20Start%20the%20Match&prop=wikitext&format=json",
+        "https://www.b-ch.com/titles/3113/034",
+        "https://www.b-ch.com/titles/3113/035",
+        "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=24122&partId=24122034",
+        "https://ja.wikipedia.org/wiki/%E3%81%B9%E3%82%8B%E3%81%9C%E3%83%90%E3%83%96",
+        "https://en.wikipedia.org/wiki/List_of_Beelzebub_episodes",
+        "https://animefillerguide.com/beelzebub/",
+        "https://www.animefillerlist.com/shows/beelzebub"
+      ],
+      "episodes": [
+        34
+      ],
+      "note": "RETYPE canon -> mixed. Segment weights: (a) ch 69's festival-opening and maid-cafe pages — SIGNIFICANT: a scene, first-time, and adapted in this episode and no other (the fandom's Rokkisei-Arc page cites the festival day, Aoi and the Red Tail waiting, Furuichi at the Saint Ishiyama Maid Cafe with Hilda, and the Teimo Tech thug harassing a maid to '<ref>Beelzebub manga; Chapter 69</ref>', and Bandai Channel's official synopsis opens on exactly that situation; ep 35, which also holds ch 69, opens on the volleyball match and takes the chapter's pre-match tail); (b) the cafe-war plot — SIGNIFICANT and original: Yamamura reporting the Rokkisei's rival cafe, 「メイド喫茶プレゼンテッドバイ古市」, the Red Tails conscripted into maid uniforms, Hilda's remodel, and Hilda rather than Shinjo disciplining the Teimo guests. Source plus story-carrying original in one episode = mixed (T28). Not canon: ja-Wikipedia bolds バブ34 under its anime-original legend while leaving 33 and 35-38 unbold, and AFG appends '*Filler' — AFL's 'Manga Canon' is inherited from an unbroken 29-51 bucket. Not filler either: typing it filler would mark ch 69's cafe pages never-adapted, which is false. THE JUDGMENT CALL, stated plainly for Sean: the source share is a minority of the runtime (the manga gives the cafe roughly half a 19-page chapter; the anime gives it a full episode), so a reading that calls the row 'an original plot quoting a scene' would land on filler + graft{69}. I chose mixed because the borrowed material is a continuous multi-page scene that opens the episode and supplies its conflict, not a quoted fragment — and because no other episode carries those pages."
+    },
+    {
+      "stored_type": "canon",
+      "type": "filler",
+      "why": "RETYPE canon -> filler. Segment weights: (a) ch 82 — SLIVER: a restaging of the crybaby-fire scene ep 38 already animated (en-WP: 'creating fire ONCE AGAIN'), plus En's closing warning about his private guards; ch 82 is carried by eps 38, 40 and 41 as well, so nothing here is first-time; (b) ch 83 — SLIVER: only the framing wish that opens its car conversation (En wants to keep playing games and see the human world), while the chapter's plot, Hecadoth abducting Aoi on pages 13-18, is ep 40's, which STARTS on ch 83; (c) the remainder — SIGNIFICANT and wholly anime-original: Azusa's double-date proposal and the outing to 石矢魔ランド with En in tow. Under T28 the remainder decides. Two sources beyond the two labels: ja-Wikipedia bolds バブ39 under its anime-original legend while leaving 36-38 and 40-50 unbold, and Bandai Channel's licensor synopsis describes only the double date and the amusement park. The decisive third fact: ja-Wikipedia records the episode's venue 石矢魔ランド as '初出はアニメ版だが、後に原作にも登場' — invented for the anime, borrowed by the manga later, which under T26 is a design without its events and therefore evidence against adoption. AFL's 'Manga Canon' is its 29-51 bucket applied to an episode with no manga behind it.",
+      "confidence": "high",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%81%B9%E3%82%8B%E3%81%9C%E3%83%90%E3%83%96",
+        "https://www.b-ch.com/titles/3113/039",
+        "https://www.b-ch.com/titles/3113/038",
+        "https://www.b-ch.com/titles/3113/040",
+        "https://en.wikipedia.org/wiki/List_of_Beelzebub_episodes",
+        "https://animefillerguide.com/beelzebub/",
+        "https://www.animefillerlist.com/shows/beelzebub",
+        "https://beelzebub.fandom.com/api.php?action=parse&page=The%20Older%20Brother%20Was%20a%20Crybaby&prop=wikitext&format=json",
+        "https://beelzebub.fandom.com/api.php?action=parse&page=Prince%20En%20Arc&prop=wikitext&format=json",
+        "https://beelzebub.fandom.com/api.php?action=parse&page=Crybaby%20Brothers%20(chapter)&prop=wikitext&format=json",
+        "https://beelzebub.fandom.com/api.php?action=parse&page=Behemoth's%20Pillar%20Division&prop=wikitext&format=json"
+      ],
+      "episodes": [
+        39
+      ],
+      "note": "RETYPE canon -> filler. Segment weights: (a) ch 82 — SLIVER: a restaging of the crybaby-fire scene ep 38 already animated (en-WP: 'creating fire ONCE AGAIN'), plus En's closing warning about his private guards; ch 82 is carried by eps 38, 40 and 41 as well, so nothing here is first-time; (b) ch 83 — SLIVER: only the framing wish that opens its car conversation (En wants to keep playing games and see the human world), while the chapter's plot, Hecadoth abducting Aoi on pages 13-18, is ep 40's, which STARTS on ch 83; (c) the remainder — SIGNIFICANT and wholly anime-original: Azusa's double-date proposal and the outing to 石矢魔ランド with En in tow. Under T28 the remainder decides. Two sources beyond the two labels: ja-Wikipedia bolds バブ39 under its anime-original legend while leaving 36-38 and 40-50 unbold, and Bandai Channel's licensor synopsis describes only the double date and the amusement park. The decisive third fact: ja-Wikipedia records the episode's venue 石矢魔ランド as '初出はアニメ版だが、後に原作にも登場' — invented for the anime, borrowed by the manga later, which under T26 is a design without its events and therefore evidence against adoption. AFL's 'Manga Canon' is its 29-51 bucket applied to an episode with no manga behind it."
+    }
+  ],
+  "structure": {
+    "notes": "PREMISE RE-READ LIVE AND REFUTED IN PART (R3 / 'a task premise is a claim'): animefillerguide's Beelzebub page does NOT print 'red, no chapter' on 17 / 34 / 39. It is an old-format plain table — no class attributes on any row, no minute-range notes — whose filler rows carry '* Filler' inside the TITLE cell. Its chapter column reads 'N/A' on rows 11-14, 27-28, 52-57 and 60 and 'SPECIAL' on row 49 (wave 2's case), but on our three targets it prints numbers: 17 = '12, 23', 34 = '69', 39 = '82, 83'. So the wave-2 shape (AFG red because its column cannot hold an unnumbered extra) is NOT what is happening here, and I checked for it explicitly: the fandom's Category:Chapters holds 251 pages and none is a summer-homework, maid-cafe or amusement-park extra, and en-WP's chapter list carries no such title in the manga's 240 numbered chapters. ROW IDENTITY (R20): ours 60 rows, AFL 60 rows numbered 1-60 with no duplicate or gap, AFG 60 rows numbered 1-60 with no duplicate or gap, ja-WP バブ1-バブ60 (the A/B halves of 6, 13, 53, 55, 56, 57 sit inside one number, matching our double-titled rows). Joined on title AND date throughout: AFL's dates for our three rows are 2011-05-15, 2011-09-18, 2011-10-23 and ja-WP's are 5月15日, 9月18日, 10月23日 — our stored values exactly. No index join was used. THE INSTRUMENT THAT SETTLED IT: ja-Wikipedia's 各話リスト declares its own legend — 'アニメ版オリジナルストーリーのサブタイトルは、太字で表記するものとする' — and the bold set is 11, 12, 13-A, 13-B, 14, 15, 17, 26, 27, 28, 34, 39, 51, 52, 53-A, 53-B, 54, 55-A, 55-B and on. It is discriminating (17 bold between unbold 16 and 18; 34 bold between unbold 33 and 35; 39 bold between unbold 38 and 40) and it is NOT the same lineage as AFL or AFG: it bolds 15, 26 and 51 which neither label calls filler, and it does not bold 49 which AFG does. One caution recorded: the same ja-WP article's prose says '第50話までは概ね原作を意識した…第51話 - 第57話および第60話（最終話）はアニメオリジナル回である', which read literally would make everything before 51 manga-based; that sentence is an arc-level generalisation contradicted by the same article's own per-row bolding and by both filler lists (11-14 and 27-28 are filler on all three), so the per-row marker is the finer instrument and is what I used. SIZING: this AFG page has no minute ranges, so the share was weighed from content instead — the fandom's ARC pages carry a page-level manga synopsis footnoted chapter by chapter ('<ref>Beelzebub manga; Chapter 69</ref>', 'Chapter 83, pages 1-12', 'Chapter 83, pages 13-18'), which is the strongest per-chapter instrument this wiki has and is far better than its episode pages (ep 39's Summary section is empty, ep 38's is empty). LICENSOR: the ytv official site is unusable (the story and archive pages are Flash/JS shells with no text, live or archived, and the Wayback captures of ytv.co.jp/beelze/next/ miss the weeks before all three targets), but Bandai Channel's per-episode synopses at b-ch.com/titles/3113/NNN are live and are the licensor's own text — dアニメストア serves the same wording, so treat those two as ONE source, which I have. WHICH SOURCE LIED: AFL on 34 and 39, by a blanket 'Manga Canon Episodes: 29-51' bucket that swallows two anime-original episodes; AFL on 17 in the other direction, by crediting two sliver chapters as a canon share. AFG's classes are right on 17 and 39; its CHAPTER COLUMN is the defect that reached our data — it plateaus ('82' on rows 38, 39, 40 and 41) and it runs backwards (row 15 = '23' before row 16 = '21, 22'), which is diagnostic of a reading-position listing, and our stored anchors on 17 and 39 are derivation-tier artefacts of it.",
+    "coverage_set_checked": "ep 33 -> END 68 {64-68} (stored) | ep 34 -> END 69 START 69 {69, the festival-opening and maid-cafe pages} MIXED, anchor confirmed, continue 69 parity | ep 35 -> END 73 START 69 {69-73} (stored; opens on the volleyball match, so it takes ch 69's pre-match tail) — ch 69 is therefore fully covered across 34+35 and no page of it is stranded by either verdict. ep 15 -> END 23 {23} (stored) | ep 16 = ch 21-22 (AFG; no stored anchor, out of scope) | ep 17 FILLER, anchor deleted, position-less | ep 18 -> END 27 START 23 {23-27} (stored) — ch 12 remains covered by ep 6 (stored -> 12 {12}) and ch 23 by eps 15 and 18, so deleting ep 17's anchor strands nothing. ep 38 -> ch 79-82 (AFG; no stored anchor, out of scope) | ep 39 FILLER, anchor deleted, position-less | ep 40 -> END 84 START 83 {82-84} (stored) — ch 82 remains covered by eps 38, 40 and 41 and ch 83 by ep 40 as its START, so deleting ep 39's anchor strands nothing and creates no back-jump. Chapter space checked against the stored volume table: ch 69 sits in v8 (62-70) — the stored anchor's volume 8 is correct; ch 82-83 sit in v10 (80-88) and ch 12 in v2 (8-16), ch 23 in v3 (17-25), all consistent with the printed tankobon numbering (no sourceShift on this series)."
+  },
+  "flags_for_sean": [
+    "THE ONE JUDGMENT CALL IN THIS VERDICT is ep 34, and it is a T28 sizing question you may want to answer differently. The manga's ch 69 really does contain the Saint Ishiyama maid cafe, Furuichi loitering in it, Hilda beside him and the Teimo Tech thug making trouble there — and no other episode animates those pages (ep 35 opens on the match). But the anime spends a whole episode on a cafe WAR the manga has no trace of, and swaps Hilda in for Shinjo at the resolution, so the source is a minority of the runtime. I delivered MIXED with the anchor confirmed (END 69, START 69, continue 69 parity). The defensible alternative is FILLER + graft{69} with the anchor deleted, which would leave ch 69 credited only to ep 35 and its cafe pages recorded as adapted nowhere. Confidence medium on that row alone; 17 and 39 are high and not close.",
+    "OUT OF SCOPE, three live candidates found in the same ja-Wikipedia table and not researched: (a) ep 15 「不良が水着に着替えました」 is BOLD (anime-original by the table's legend) yet is stored mixed with an anchor (END 23 START 23 {23}) and AFG lists '23' with NO filler mark — the one row in this neighbourhood where AFG's class and ja-WP's marker disagree; (b) ep 26 「アニキと呼んでもいいですか」 and eps 27-28 are bold on ja-WP while AFL calls 26 Manga Canon (27-28 it calls filler); (c) ep 16 is canon on every source with AFG chapters '21, 22' but has NO stored anchor at all — a plain census crumb between ep 15 (END 23) and ep 17. None is in this ask; each is a one-row job.",
+    "A PARSER OBSERVATION worth a gate, not a ruling: this AFG page is the OLD format — no class attributes anywhere, '* Filler' living inside the title cell, and chapter cells that are sometimes numbers, sometimes 'N/A' and once 'SPECIAL'. The wave-1/2 lesson ('BLUE means Mixed OR Anime Canon; read the note in the title cell') does not apply to it. On this page the only positive class signal IS the '*Filler' string, and the chapter column is provably a reading-position listing on its own evidence: it plateaus '82' across rows 38-41 and it runs BACKWARDS between rows 15 ('23') and 16 ('21, 22'). If the type_source_disagreement flag reads an AFG chapter cell as a positive adaptation claim, every old-format page will keep manufacturing strong-tier rows like these two.",
+    "TWO DERIVATION-TIER ANCHORS ARE PROPOSED FOR DELETION (17 and 39) and P8 applies: they must be removed at the manual tier or AFG's next re-derive will restore them, and a restored anchor on a filler row is an A1 violation the audit will re-list. The same is true of their parity continues (17 -> 23, 39 -> 83)."
+  ]
+}
