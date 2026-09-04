@@ -22,7 +22,13 @@ const OUT = 'scripts/ingest/research/batch21/out';
 const B = 'batch 21 wave 1 (2026-09-04; T4 contradictions by chapter accounting; Sean ruled)';
 const FILES = readdirSync(OUT).filter((f) => /-w1[ab]?\.json$/.test(f)).sort();
 // annotations whose KIND the verdict replaced (old kind deleted; the new kind is in the verdict's annotations)
-const ANNOTATION_DELETE: { sid: string; episode: number; kind: AnnotationKind; why: string }[] = [];
+const ANNOTATION_DELETE: { sid: string; episode: number; kind: AnnotationKind; why: string }[] = [
+  { sid: 'dragon-ball-z', episode: 43, kind: 'graft', why: 'retired in favour of partial{246 (p.10-14)} — the row is mixed with the anchor (verifier: Kanzenshuu ep 43 = ch 246 p.10-end)' },
+  { sid: 'inuyasha', episode: 79, kind: 'partial', why: 'replaced by graft{219 (p.1)} weight sliver (AFG\'s own note: "only adapts page 1")' },
+  { sid: 'slam-dunk', episode: 92, kind: 'partial', why: 'replaced by graft{194} weight sliver, a duplicate (AFG: "only watch from 19:14 to the end")' },
+  { sid: 'one-piece', episode: 50, kind: 'graft', why: 'no source puts ch 98 in ep 50 (verifier: ch 97/98 summaries have no goggles beat; OPwiki Unbekannt; AFG\'s 98 = the 49 → 52 plateau)' },
+  { sid: 'one-piece', episode: 203, kind: 'graft', why: 'replaced by partial{303 (p.16-18)} + rearranged — the row is mixed with the anchor (fandom infobox chapter = 303 p.16-18)' },
+];
 const CONTINUE_OVERRIDE: Record<string, { chapter: number; why: string }> = {};
 const START_OVERRIDE: Record<string, number> = {};
 const END_OVERRIDE: Record<string, number> = {};
@@ -32,6 +38,12 @@ const CONTINUE_SKIP = new Set<string>(); // verifier (w16-anchors): no anchor ro
 const FENCE_REPAIR: { sid: string; episode: number; set: Record<string, unknown>; why: string }[] = [];
 // rows the verifier HELD: the verdict's annotations for them are not applied (the stored record stands)
 const ROW_HOLD = new Set<string>();
+// per-annotation SKIPS (verifier w1-flips): fairy-tail 246's divergence carries non-chapter text in `chapters` (wrong kind) and its
+// `unverified` double-records a segment already weighed SIGNIFICANT (would park the row in unverified_share for a page count nobody needs)
+const ANNOTATION_SKIP = new Set<string>(['fairy-tail#246#divergence', 'fairy-tail#246#unverified']);
+// TYPE overrides at curation (the T6 entries are generated from type_corrections MINUS these): one-piece 50 stays FILLER — a
+// novelization is canon only by an `adopted` ruling (T26), which the verdict does not supply; its side_source note lands on the filler row
+const TYPE_SKIP = new Set<string>(['one-piece#50']);
 // T26 THE CHAIN (Sean 2026-09-04): a delivered kind rewritten at apply — the sequel manga is ON THE CHAIN (I41), so the row is canon material told out of order
 const KIND_OVERRIDE: Record<string, { kind: AnnotationKind; chapters: string; note: string }> = {};
 const EXTRA_ANNOTATIONS: { sid: string; episode: number; kind: AnnotationKind; chapters: string; note: string; deleteKind?: AnnotationKind }[] = [];
@@ -83,6 +95,7 @@ async function main() {
     const delivered = new Map<number, Set<string>>();
     for (const a of v.annotations ?? []) for (const ep of a.episodes as number[]) {
       if (ROW_HOLD.has(`${sid}#${ep}`)) { console.log(`  annotation ep ${ep} ${a.kind} HELD (verifier)`); continue; }
+      if (ANNOTATION_SKIP.has(`${sid}#${ep}#${a.kind}`)) { console.log(`  annotation ep ${ep} ${a.kind} SKIPPED (verifier)`); continue; }
       const fix = NOTE_FIX[`${sid}#${ep}#${a.kind}`];
       const ko = KIND_OVERRIDE[`${sid}#${ep}#${a.kind}`];
       if (ko) { delivered.set(ep, (delivered.get(ep) ?? new Set()).add(ko.kind)); console.log(`  annotation ep ${ep} ${a.kind} → ${ko.kind}{${ko.chapters.slice(0, 30)}} (KIND OVERRIDE: the chain)`); if (!DRY) await upsertAnnotation({ series_id: sid, episode: ep, kind: ko.kind, chapters: ko.chapters, note: `${ko.note} Original research note: ${String(a.note).slice(0, 400)} [${B}]`.slice(0, 1200), origin: 'research' }); annoN++; continue; }
@@ -101,7 +114,7 @@ async function main() {
       console.log(`  hostile ep ${h.episode}${cur ? ` — stored anchor ${cur.chapter} DELETED (A1 / A44)` : ' (no anchor stored)'}`);
       if (!DRY && cur) { const { error } = await db.from('chapter_anchors').delete().eq('series_id', sid).eq('episode', Number(h.episode)); if (error) throw new Error(error.message); }
     }
-    if (v.type_corrections?.length) console.log(`  types (T6 map, asserted by the healer): ${v.type_corrections.map((t: any) => `${t.episodes.join(',')} → ${t.type}`).join('; ')}`);
+    if (v.type_corrections?.length) console.log(`  types (T6 map, asserted by the healer): ${v.type_corrections.map((t: any) => `${t.episodes.join(',')} → ${t.type}${t.episodes.some((e: number) => TYPE_SKIP.has(`${sid}#${e}`)) ? ' (SKIPPED at curation)' : ''}`).join('; ')}`);
   }
   for (const x of EXTRA_ANNOTATIONS) {
     console.log(`  annotation ${x.sid} ep ${x.episode} ${x.kind}{${x.chapters.slice(0, 30)}}${x.deleteKind ? ` (replaces ${x.deleteKind})` : ''}`);
