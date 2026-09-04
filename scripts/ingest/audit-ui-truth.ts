@@ -24,6 +24,7 @@ import { EPISODE_TITLE_OVERRIDES } from './lib/rulings/episode-titles';
 import { continueUnprovenanced, curatedOverwritten } from './lib/continues';
 import { annotationWorkLabel, isChainWork } from './lib/rulings/source-chains';
 import { WIKI_PAGES } from './lib/rulings/wiki-pages';
+import { AFG_CHART_SUPPRESSED } from './lib/rulings/afg-chart-suppressed';
 import { MINTED_GRIDS } from './lib/rulings/minted-grids';
 import { ANCHOR_SUPPRESSED } from './lib/rulings/anchor-suppressed';
 import { deriveFormat } from './lib/format';
@@ -144,6 +145,7 @@ async function main() {
     for (const e of await selectAll<any>('episodes', 'series_id, number, type, minted_by')) typeByRow.set(`${e.series_id}#${e.number}`, { type: e.type, minted_by: e.minted_by });
     const weakOnly: string[] = [];
     for (const l of afgLinks) {
+      if (AFG_CHART_SUPPRESSED[l.series_id]) continue; // G26: a suppressed chart is not a witness
       const raw: any = pages.get(l.external_id); if (!raw?.episodes?.length) continue;
       const ruled = EPISODE_TYPE_OVERRIDES[l.series_id] ?? {};
       const strongD: string[] = []; const weakD: string[] = [];

@@ -21,3 +21,13 @@ and — when AFL is RIGHT — say so with the evidence: a confirmed stored type 
 result, not an empty verdict. Name which source lied and how. `unverified`
 where a chapter is certainly present but the share cannot be sized. Files:
 `<series>-w1.json` in `out/`.
+
+Wave 2 = **the STRONG tier as it reads AFTER the AFG parser fix** (2026-09-04:
+classes on `<span>`s, `(04).` start cells and timestamp notes are read
+correctly now; wave 1's rows are pinned in T6): 47 rows across 15 series, ≤ 8
+agents. Same ask as wave 1. Wave-1 lessons pinned: AFG's CLASS is a viewing
+guide and its chapter column a reading-position plateau — its minute-range
+NOTE is the sizing instrument; AFL's 'Anime Canon' bucket is not a type
+witness; the fandom's explicit `chapter = Filler` vs a missing field; ja-WP's
+一部原作 marker; a novelization is `side_source` on a filler row unless adopted.
+Files: `<series>-w2.json` (`-w2a` / `-w2b` where a series is split).

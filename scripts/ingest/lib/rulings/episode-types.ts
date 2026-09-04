@@ -1199,6 +1199,56 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
     ruledOn: '2026-09-04',
     cite: ['scripts/ingest/research/batch21/out/one-piece-w1a.json', 'scripts/ingest/research/batch21/verify/w1-flips.md'],
   },
+  {
+    seriesId: 'dragon-ball-z',
+    ruleId: 'T6',
+    value: { 39: 'filler', 40: 'filler', 42: 'filler', 125: 'filler', 274: 'filler' },
+    reason:
+      "Batch 21 wave 1 (verified R24), Sean ruled 2026-09-04 — CONFIRMED AS STORED by chapter accounting on two independent sources: animefillerguide's opposite claim on these rows was a viewing-guide class or a reading-position plateau (AFG's class is an opinion, its note is the evidence); pinned so the type_source_disagreement class stops re-listing a settled row (a confirmation is a result).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-04',
+    cite: ['scripts/ingest/research/batch21/WAVE1-RECOVERY.md', 'scripts/ingest/research/batch21/verify/w1-flips.md'],
+  },
+  {
+    seriesId: 'naruto-shippuden',
+    ruleId: 'T6',
+    value: { 180: 'filler' },
+    reason:
+      "Batch 21 wave 1 (verified R24), Sean ruled 2026-09-04 — CONFIRMED AS STORED by chapter accounting on two independent sources: animefillerguide's opposite claim on these rows was a viewing-guide class or a reading-position plateau (AFG's class is an opinion, its note is the evidence); pinned so the type_source_disagreement class stops re-listing a settled row (a confirmation is a result).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-04',
+    cite: ['scripts/ingest/research/batch21/WAVE1-RECOVERY.md', 'scripts/ingest/research/batch21/verify/w1-flips.md'],
+  },
+  {
+    seriesId: 'inuyasha',
+    ruleId: 'T6',
+    value: { 79: 'filler' },
+    reason:
+      "Batch 21 wave 1 (verified R24), Sean ruled 2026-09-04 — CONFIRMED AS STORED by chapter accounting on two independent sources: animefillerguide's opposite claim on these rows was a viewing-guide class or a reading-position plateau (AFG's class is an opinion, its note is the evidence); pinned so the type_source_disagreement class stops re-listing a settled row (a confirmation is a result).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-04',
+    cite: ['scripts/ingest/research/batch21/WAVE1-RECOVERY.md', 'scripts/ingest/research/batch21/verify/w1-flips.md'],
+  },
+  {
+    seriesId: 'slam-dunk',
+    ruleId: 'T6',
+    value: { 92: 'filler' },
+    reason:
+      "Batch 21 wave 1 (verified R24), Sean ruled 2026-09-04 — CONFIRMED AS STORED by chapter accounting on two independent sources: animefillerguide's opposite claim on these rows was a viewing-guide class or a reading-position plateau (AFG's class is an opinion, its note is the evidence); pinned so the type_source_disagreement class stops re-listing a settled row (a confirmation is a result).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-04',
+    cite: ['scripts/ingest/research/batch21/WAVE1-RECOVERY.md', 'scripts/ingest/research/batch21/verify/w1-flips.md'],
+  },
+  {
+    seriesId: 'one-piece',
+    ruleId: 'T6',
+    value: { 51: 'filler', 55: 'filler', 195: 'canon', 214: 'filler', 216: 'filler', 225: 'filler', 319: 'filler', 326: 'filler', 497: 'filler', 498: 'filler', 626: 'filler', 747: 'filler' },
+    reason:
+      "Batch 21 wave 1 (verified R24), Sean ruled 2026-09-04 — CONFIRMED AS STORED by chapter accounting on two independent sources: animefillerguide's opposite claim on these rows was a viewing-guide class or a reading-position plateau (AFG's class is an opinion, its note is the evidence); pinned so the type_source_disagreement class stops re-listing a settled row (a confirmation is a result).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-04',
+    cite: ['scripts/ingest/research/batch21/WAVE1-RECOVERY.md', 'scripts/ingest/research/batch21/verify/w1-flips.md'],
+  },
 ];
 
 export const EPISODE_TYPE_OVERRIDES: Record<string, EpisodeTypes> = ENTRIES.reduce<Record<string, EpisodeTypes>>((acc, e) => {

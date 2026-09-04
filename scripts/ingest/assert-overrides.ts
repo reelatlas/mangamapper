@@ -169,9 +169,11 @@ async function assertAnchorSuppression() {
   {
     let removed = 0;
     for (const sid of Object.keys(AFG_CHART_SUPPRESSED)) {
-      const { data, error } = await db.from('chapter_anchors').delete().eq('series_id', sid).eq('source', 'afg').select('episode');
+      const standing = await selectAll<{ episode: number }>('chapter_anchors', 'episode', (q) => q.eq('series_id', sid).eq('source', 'afg'));
+      if (!standing.length) continue;
+      const { error } = await db.from('chapter_anchors').delete().eq('series_id', sid).eq('source', 'afg');
       if (error) throw new Error(`chart suppression ${sid}: ${error.message}`);
-      removed += data?.length ?? 0;
+      removed += standing.length;
     }
     console.log(`[assert-overrides] chart suppression (G26): ${Object.keys(AFG_CHART_SUPPRESSED).length} ruled series, ${removed} afg anchors removed`);
   }
