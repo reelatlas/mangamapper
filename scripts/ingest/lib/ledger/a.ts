@@ -378,11 +378,11 @@ export const RULES: Rule[] = [
   },
   {
     id: 'A18',
-    aliases: ['reorder regime', 'formulas never bridge a reorder', 'MHA 107/113 report', 'reorder hole'],
+    aliases: ['reorder regime', 'formulas never bridge a reorder', 'MHA 107/113 report', 'reorder hole', 'the START clause', 'start reaches back'],
     family: 'A',
     title: 'Reorder regime: formulas never bridge a reorder',
     statement:
-      'Every anchor point is on-trend (at or above the running chapter maximum) or inside a jumped-back block. Interpolation, the prevEnd+1 start derivation and the successor cap operate only BETWEEN points of one regime (both on the monotonic envelope, or both inside the same jumped-back block and still advancing). Across a regime boundary an estimate renders null — an honest hole — and an exact end-only row shows its END. The verifier lists such rows as `hole` work-list lines, never failures; the row needs its own exact anchor.',
+      'Every anchor point is on-trend (at or above the running chapter maximum) or inside a jumped-back block. Interpolation, the prevEnd+1 start derivation and the successor cap operate only BETWEEN points of one regime (both on the monotonic envelope, or both inside the same jumped-back block and still advancing). Across a regime boundary an estimate renders null — an honest hole — and an exact end-only row shows its END. The verifier lists such rows as `hole` work-list lines, never failures; the row needs its own exact anchor. THE START CLAUSE (batch 22 wave 2, 2026-09-05 — beelzebub 51): a point whose own START reaches back past the previous point\'s END is a regime boundary even when its END re-touches the envelope (114-115 after ep 47 reached 115) — the unanchored canon / mixed rows between them are holes, never interpolations painted at the envelope and never dragged by the successor cap (the AoT-87 rule: a reorder never sets a neighbour\'s position); a START equal to the previous END is a shared chapter and bridges.',
     why: 'MHA aired My Villain Academia (218-240) after Endeavor Agency (241-252); eps 107 → 221 and 113 → 241 were plausible-but-wrong formula output.',
     ruledBy: 'Sean',
     ruledOn: '2026-08-23',

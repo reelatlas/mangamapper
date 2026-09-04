@@ -34,6 +34,11 @@ describe('sideSourceStandingProblem (T26, the adoption sitting)', () => {
     expect(sideSourceStandingProblem('mixed', ties(['side_source'], true))).toBeNull();
     expect(sideSourceStandingProblem('mixed', ties(['side_source', 'unverified']))).toBeNull();
   });
+  it('a PARALLEL series (I40): a correspondence row of any alignment is the T30 record and stands in for the tie — dbs 6 (the loader sets corresponded only on parallel series)', () => {
+    expect(sideSourceStandingProblem('canon', { kinds: ['side_source', 'divergence'], anchored: false, corresponded: true })).toBeNull(); // dbs 6 canon B + correspondence {3 divergent; anime_only}
+    expect(sideSourceStandingProblem('canon', { kinds: ['side_source', 'divergence'], anchored: false, corresponded: false })).not.toBeNull(); // the same row with no T30 record fires
+    expect(weightBearingTie({ kinds: [], anchored: false, corresponded: true })).toBe(true);
+  });
   it('filler + side_source is the one-piece 50 shape — allowed; a row with no side_source is out of scope', () => {
     expect(sideSourceStandingProblem('filler', ties(['side_source']))).toBeNull();
     expect(sideSourceStanding('filler', ties(['side_source']))).toBe('filler');

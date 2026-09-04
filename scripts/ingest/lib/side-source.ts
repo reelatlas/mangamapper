@@ -26,6 +26,8 @@
 // and the census lists a stored row that disagrees (side_source_unadopted →
 // ruling_violation).
 
+import { isParallelSeries } from './rulings/source-relations';
+
 /** annotation kinds that carry weight in the standing besides an anchor (T28) */
 export const WEIGHT_BEARING_KINDS = ['chain_source', 'side_story', 'unverified'] as const;
 
@@ -34,11 +36,21 @@ export type RowTies = {
   kinds: Iterable<string>;
   /** the row carries a chapter anchor (any source) */
   anchored: boolean;
+  /**
+   * ON A PARALLEL SERIES ONLY (I40 — the loader sets it, never a caller): the row
+   * carries a correspondence row (A46) of ANY alignment. On a parallel telling the
+   * standing is from-the-outline-or-not (T30) and the correspondence row IS the
+   * T30 record — alignment cannot separate B from D (the ToP-style B rows carry
+   * anime_only; five ruled-D rows carry correspondence rows too): the TYPE does,
+   * and that is T30's ruling, never this gate's. dbs 6, 2026-09-05 (wave 2).
+   */
+  corresponded?: boolean;
 };
 
 /** does the row have a weight-bearing tie to the SERIES' source (not counting an unadopted side_source)? */
 export const weightBearingTie = (t: RowTies): boolean => {
   if (t.anchored) return true;
+  if (t.corresponded) return true;
   for (const k of t.kinds) if ((WEIGHT_BEARING_KINDS as readonly string[]).includes(k)) return true;
   return false;
 };
@@ -60,12 +72,24 @@ export const sideSourceStandingProblem = (type: string | null | undefined, t: Ro
 /** the writer default: the standing the row may hold given its ties (T6 pins are applied AFTER this and win) */
 export const sideSourceStanding = (type: string, t: RowTies): string => (sideSourceStandingProblem(type, t) ? 'filler' : type);
 
-/** the ties of every row of a series, keyed by episode number — the loader every writer and healer shares */
+/** the ties of every row of a series, keyed by episode number — the loader every writer shares */
 export async function loadEpisodeTies(seriesId: string): Promise<Record<number, RowTies>> {
   const { selectAll } = await import('./db'); // lazy: the predicates above are pure and unit-tested without a DB
-  const out: Record<number, { kinds: Set<string>; anchored: boolean }> = {};
-  const at = (ep: number) => (out[ep] ??= { kinds: new Set(), anchored: false });
+  const out: Record<number, { kinds: Set<string>; anchored: boolean; corresponded: boolean }> = {};
+  const at = (ep: number) => (out[ep] ??= { kinds: new Set(), anchored: false, corresponded: false });
   for (const a of await selectAll<{ episode: number; kind: string }>('episode_annotations', 'episode, kind', (q) => q.eq('series_id', seriesId))) at(a.episode).kinds.add(a.kind);
   for (const a of await selectAll<{ episode: number }>('chapter_anchors', 'episode', (q) => q.eq('series_id', seriesId))) at(a.episode).anchored = true;
+  if (isParallelSeries(seriesId)) for (const c of await selectAll<{ episode: number | null }>('episode_correspondence', 'episode', (q) => q.eq('series_id', seriesId).not('episode', 'is', null))) if (c.episode != null) at(c.episode).corresponded = true;
+  return out;
+}
+
+/** the ties of EVERY row in the catalog, keyed `${series_id}#${episode}` — the one derivation the healer and the census share (P2) */
+export async function loadAllEpisodeTies(): Promise<Map<string, RowTies>> {
+  const { selectAll } = await import('./db');
+  const out = new Map<string, { kinds: Set<string>; anchored: boolean; corresponded: boolean }>();
+  const at = (k: string) => { let t = out.get(k); if (!t) { t = { kinds: new Set(), anchored: false, corresponded: false }; out.set(k, t); } return t; };
+  for (const a of await selectAll<{ series_id: string; episode: number; kind: string }>('episode_annotations', 'series_id, episode, kind')) at(`${a.series_id}#${a.episode}`).kinds.add(a.kind);
+  for (const a of await selectAll<{ series_id: string; episode: number }>('chapter_anchors', 'series_id, episode')) at(`${a.series_id}#${a.episode}`).anchored = true;
+  for (const c of await selectAll<{ series_id: string; episode: number | null }>('episode_correspondence', 'series_id, episode', (q) => q.not('episode', 'is', null))) if (c.episode != null && isParallelSeries(c.series_id)) at(`${c.series_id}#${c.episode}`).corresponded = true;
   return out;
 }

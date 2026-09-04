@@ -1396,7 +1396,7 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
     ruleId: 'T6',
     value: { 17: 'filler', 34: 'mixed', 39: 'filler' },
     reason:
-      'Batch 21 wave 3 (verified R24, w3-flips.md), Sean ruled 2026-09-04: 17 → filler (the ch 12 / 23 shares are slivers restaging pages ep 6 / eps 15, 18 carry; the afg anchor 23 came out under A1, lossless); 34 → mixed (a continuous first-time ch-69 scene — the maid cafe — adapted nowhere else inside a mostly original episode; the seam-episode standing, ruled with bc 85 / 88 and db 34; anchor 69 kept); 39 → filler (chs 82-83 are slivers; ja-WP: 石矢魔ランド 初出はアニメ版; the afg anchor 83 came out under A1, lossless). AFL lied by block-typing \'Manga Canon 29-51\'; AFG\'s old-format page prints chapters with \'*Filler\' in the title cell (T6; confirmations pinned so type_source_disagreement stops re-listing).',
+      'Batch 21 wave 3 (verified R24, w3-flips.md), Sean ruled 2026-09-04: 17 → filler (the ch 12 / 23 shares are slivers restaging pages ep 6 / ep 18 carries (the household beat; the ep-15 tableau is its own staging — wave 2, 2026-09-05); the afg anchor 23 came out under A1, lossless); 34 → mixed (a continuous first-time ch-69 scene — the maid cafe — adapted nowhere else inside a mostly original episode; the seam-episode standing, ruled with bc 85 / 88 and db 34; anchor 69 kept); 39 → filler (chs 82-83 are slivers; ja-WP: 石矢魔ランド 初出はアニメ版; the afg anchor 83 came out under A1, lossless). AFL lied by block-typing \'Manga Canon 29-51\'; AFG\'s old-format page prints chapters with \'*Filler\' in the title cell (T6; confirmations pinned so type_source_disagreement stops re-listing).',
     ruledBy: 'Sean',
     ruledOn: '2026-09-04',
     cite: ['scripts/ingest/research/batch21/WAVE3-RECOVERY.md', 'scripts/ingest/research/batch21/verify/w3-flips.md', 'scripts/ingest/research/batch21/out/beelzebub-w3.json'],
@@ -1466,6 +1466,40 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
     ruledOn: '2026-09-05',
     cite: ['scripts/ingest/research/batch22/T26-SITTING.md', 'docs/changelog.md §12.117'],
     supersedes: "the batch-18 pin 11-12 canon (Line A); 37 canon left standing on its manga share",
+  },
+  // ---- the batch-22 wave-2 narrow wave (verified R24 — verify/w2-*.md; Sean ruled 2026-09-05)
+  {
+    seriesId: 'beelzebub',
+    ruleId: 'T6',
+    value: { 15: 'filler', 16: 'canon', 26: 'mixed', 27: 'filler', 28: 'filler', 49: 'mixed', 51: 'mixed' },
+    reason:
+      "the batch-22 wave-2 narrow wave (verified R24 — verify/w2-*.md; Sean ruled 2026-09-05): 49 canon → MIXED — the vol-10 extra chapter (Tamura's own, unnumbered, 5 story pages read on two MangaDex uploads) is the episode's first act, first-time and sole (weight significant), and everything after it is outside the source (the novel confers no standing — T26; its documented plot never airs); the pin is UPDATED, never lifted (an unpinned row takes AFL's canon). 15 mixed → FILLER + graft{23}: the ch-23 beach tableau is ep 15's own staging with the reveal withheld (Tōjō '(imagination)'); ch 23's load-bearing beat is ep 18's — the afg anchor 23 [23] comes out at the manual tier (A1 / A44) and the pin holds the AFG writer's gate; THE FORK (mixed + rearranged if the tableau were read as a first-time climax) was Sean's and he took filler — the run stays monotonic. 16 canon CONFIRMED (ja-WP unbold, Bandai 016, en-WP) + the NEW anchor 22 [21]. 26 canon → MIXED: the second half (the fake secret technique, Azusa's abduction, the bald man) is in no chapter (Bandai 026, the arc page chs 48-76) beside the ch-51 Kido summons — END 51 stands on A47's unproven-tail convention (Bandai 029 puts the classroom rumours in ep 29; no page numbers enter the record). 51 canon → MIXED: ja-WP's own footnote sizes it (エピソードの半分はアニメオリジナル) beside the first-time Koma-chan origin (ch 114-115) — START repaired 115 → 114 (ch 114 `episode = 51` only; the flashback trio in ep 51's cast). 27 / 28 filler CONFIRMED (fandom N/A + Category:Filler; Bandai; ja-WP bold).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/batch22/WAVE2-RECOVERY.md', 'scripts/ingest/research/batch22/verify/w2-beelzebub-crumbs.md', 'scripts/ingest/research/batch22/verify/w2-beelzebub-49.md', 'scripts/ingest/research/batch22/verify/w2-fma.md', 'scripts/ingest/research/batch22/verify/w2-dbs-6.md', 'docs/changelog.md §12.118'],
+    supersedes: 'the batch-21 wave-2 pin 49 canon (CONFIRMED AS STORED by chapter accounting — right on the chapters, Line A on the standing) and the stored afg-derived 15 mixed / 26 canon / 51 canon',
+  },
+  {
+    seriesId: 'fullmetal-alchemist',
+    ruleId: 'T6',
+    value: { 13: 'mixed', 37: 'mixed' },
+    reason:
+      "the batch-22 wave-2 narrow wave (verified R24 — verify/w2-*.md; Sean ruled 2026-09-05): both canon → MIXED under T28 with the novel segment stripped of standing (T26). 37: segments 1-2 are Arakawa's own extras whole (Roy Mustang's Observation Diary, vol 6 prose; The Second Lieutenant Goes to Battle!, vol 7 — weight significant, sole adaptation; the stored side_story had named EP 13's extras: a transposition that entered at the batch-18 APPLY, `8f94d90`, when a verdict's comparison clause was transcribed as the row's fact — repaired in standing-annotations.ts); segment 3 = the Land of Sand bonus short (non-source) + the 2003-original Archer / Sheska / Reole thread (Archer is anime-exclusive, cameo ep 25; the novel is 2003-02-28) that sets up eps 38-41 — a substantial original share. 13: the two vol-3 / vol-4 gaiden (The Military Festival, Dog of the Military?) carry the title fight and the B-plot, but the premise (the Marcoh WAGER, replacing a barracks argument), the outcome (a DRAW on an Ishbal flashback, replacing Ed's defeat) and a full arc-launching act (Grand, Douglas / Sloth, Marcoh branded a deserter, Hughes' promotion, the bar scene) are the 2003 series' own and eps 14-15 run on them — Sean took the mixed reading over T28's faithfulness clause (the Marcoh thread is arc-launching, not connective). Both rows position-less (A44: unnumbered extras; MangaDex's 12.5 / 16.5 / 29.5 are sort keys).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/batch22/WAVE2-RECOVERY.md', 'scripts/ingest/research/batch22/verify/w2-beelzebub-crumbs.md', 'scripts/ingest/research/batch22/verify/w2-beelzebub-49.md', 'scripts/ingest/research/batch22/verify/w2-fma.md', 'scripts/ingest/research/batch22/verify/w2-dbs-6.md', 'docs/changelog.md §12.118'],
+    supersedes: 'the batch-18 pin 13 canon / 37 canon (the sitting of 2026-09-05 had held 37 out for exactly this T28 look)',
+  },
+  {
+    seriesId: 'dragon-ball-super',
+    ruleId: 'T30',
+    value: { 6: 'canon' },
+    reason:
+      "the batch-22 wave-2 narrow wave (verified R24 — verify/w2-*.md; Sean ruled 2026-09-05): ep 6 filler (the T26 writer default of 2026-09-05, a placeholder) → CANON, timeline B on the SHARED Battle of Gods arc (A46): the birthday-party visit is the film's own sequence (ja-WP 神と神 あらすじ), the manga's digest does not stage it but ch 3 NARRATES it — CONFIRMED ON THE PAGES by the verifier (Viz's free ch 3, descrambled): p1 Goku 'Bulma's birthday party is right now… this is bad', p2 the caption 'PLANET EARTH — A LUXURY CRUISE — BULMA'S BIRTHDAY PARTY VENUE' + Beerus 'I only came here to ask about the Super Saiyan God' + Gotenks '…because we wouldn't give you pudding?!', p3 Beerus 'Boo ate all of it', p5 the King Vegeta flashback STAGED, p6 Bulma's slap 'This is my birthday and you're ruining it!' — and the later beats depend on the VISIT, not the arrival (ch 2 ends with Beerus merely approaching Earth; ch 3's fight happens at the party, caused by the pudding, triggered by the slap; ch 4's ritual and Videl's reveal play on that ship). Negative control ep 4 (Pilaf, D) is referenced by nothing later. NO adopted{author} (the bar is 脚本; this film's 脚本 is 渡辺雄介); side_source{the film} stays; the correspondence rows {6 ↔ 3 divergent; 6 anime_only} are the T30 record that holds the standing under the T26 gate's parallel clause. A parallel canon row must be pinned (aflAnimeCanon = filler on a manga-kind series).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/batch22/WAVE2-RECOVERY.md', 'scripts/ingest/research/batch22/verify/w2-beelzebub-crumbs.md', 'scripts/ingest/research/batch22/verify/w2-beelzebub-49.md', 'scripts/ingest/research/batch22/verify/w2-fma.md', 'scripts/ingest/research/batch22/verify/w2-dbs-6.md', 'docs/changelog.md §12.118'],
+    supersedes: "the T26 writer default of 2026-09-05 (filler) and, before it, the batch-19 canon + side_source under Line A; the stored note's 'the digest has nothing here' was refuted on the pages",
   },
 ];
 

@@ -389,6 +389,7 @@ const W5_FOLDS: RulingEntry<VerdictFold>[] = ['dragon-ball-super-w5c.json', 'dra
   .map((file) => ({ ...fold(DBS, file, D2, W5, '§12.88'), reason: `verdict folded as delivered on the CORRESPONDENCE instrument (I40 / A46): row annotations upserted (origin 'research') and every correspondence row written through upsertCorrespondence (duplicates across the four verdicts: first wins); no anchors, no continues — the file is refused if it carries an anchor` }));
 
 const W5_ANNOTATION_ADDS: RulingEntry<AnnotationValue>[] = [
+  // SUPERSEDED 2026-09-05 (batch 22 wave 2, §12.118): the note's 'the digest has nothing here' was REFUTED on ch 3's own pages (the party visit is narrated, the King Vegeta flashback staged); the live research row's note was repaired by apply-wave2.ts and ep 6 is canon (T30 B, pinned). Kept verbatim as the record of what wave 5 ruled.
   { seriesId: DBS, ruleId: 'I40', value: { episodes: [6], kind: 'side_source', note: "Battle of Gods (the 2013 film 『ドラゴンボールZ 神と神』): the birthday-party sequence is the film's, not the manga's — the manga's four-chapter digest has nothing here (ch 3's episode index omits ep 6 and its summary carries none of it). The batch-19 film precedent (Resurrection 'F' rows 18-27)." }, reason: "the one row fact lifted from the wave-5a verdict that the re-pass keeps (the blanket arc stamps are the arc's note, A46): ep 6 is the film's, not the manga's — the batch-19 film precedent", ruledBy: 'Sean', ruledOn: D2, cite: [`${OUT}/dragon-ball-super-w5a.json`, `${VER}/dragon-ball-super-w5a.md`, W5, '§12.88'] },
 ];
 

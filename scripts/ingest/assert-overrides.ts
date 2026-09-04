@@ -24,7 +24,7 @@ import { arcsPartitionProblems, RULED_ARCS } from './lib/rulings/arcs';
 import { RULED_CORRESPONDENCE, upsertCorrespondence } from './lib/rulings/correspondence';
 import { SOURCE_RELATION_OVERRIDES } from './lib/rulings/source-relations';
 import { CHAPTER_SPACE_OVERRIDES } from './lib/rulings/chapter-spaces';
-import { sideSourceStandingProblem } from './lib/side-source';
+import { loadAllEpisodeTies, sideSourceStandingProblem } from './lib/side-source';
 
 const DRY = process.argv.includes('--dry-run');
 
@@ -104,19 +104,13 @@ async function assertStandings() {
 // ruling, and if it restores Line A the census (side_source_unadopted →
 // ruling_violation) says so. Runs AFTER the annotation maps and the T6 pins.
 async function assertSideSourceStandings() {
-  const kinds = new Map<string, Set<string>>();
-  for (const a of await selectAll<{ series_id: string; episode: number; kind: string }>('episode_annotations', 'series_id, episode, kind')) {
-    const k = `${a.series_id}#${a.episode}`;
-    if (!kinds.has(k)) kinds.set(k, new Set());
-    kinds.get(k)!.add(a.kind);
-  }
-  const anchored = new Set((await selectAll<{ series_id: string; episode: number }>('chapter_anchors', 'series_id, episode')).map((a) => `${a.series_id}#${a.episode}`));
+  const ties = await loadAllEpisodeTies(); // annotations + anchors + (parallel series) correspondence rows — the census reads the same derivation
   let n = 0, pinned = 0;
   for (const e of await selectAll<{ series_id: string; number: number; type: string }>('episodes', 'series_id, number, type', (q) => q.in('type', ['canon', 'mixed']))) {
     const k = `${e.series_id}#${e.number}`;
-    const t = kinds.get(k);
+    const t = ties.get(k);
     if (!t) continue;
-    const problem = sideSourceStandingProblem(e.type, { kinds: t, anchored: anchored.has(k) });
+    const problem = sideSourceStandingProblem(e.type, t);
     if (!problem) continue;
     const pin = EPISODE_TYPE_OVERRIDES[e.series_id]?.[e.number];
     if (pin && pin !== 'filler') { pinned++; console.log(`  ${e.series_id} ep${e.number}: ${problem} — held ${pin} by a T6 pin (the census lists it)`); continue; }

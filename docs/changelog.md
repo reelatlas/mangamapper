@@ -1154,6 +1154,74 @@
    19-23 / 39 (chain_source) and 18 / 93-95 (AFL's loose Mixed bucket),
    beelzebub 15 / 26-28 / 51, rurouni TV ep 95 (identity). Batch 22 opens on
    the boruto follow-up (lanes I + C) with the batch-21 tooling copied.
+118. ✅ **BATCH 22 WAVE 2 — THE NARROW WAVE, APPLIED (2026-09-05; Sean ruled
+   decisions 1-4 as verified, beelzebub 15 filler).** Five research agents
+   (Opus), four verifiers (fable, R24), every value held. THE ROWS: beelzebub
+   49 canon → MIXED (Tamura's vol-10 extra = the first act, five pages read on
+   two uploads, sole adaptation; the novel confers no standing — T26 — and its
+   documented plot never airs: the stored 'the novel supplies the plot' note
+   REFUTED on three independent accounts; the pin UPDATED, never lifted);
+   beelzebub 15 mixed → FILLER + graft{23} with its afg anchor DELETED at the
+   manual tier (the beach tableau is ep 15's own staging, the reveal is ep
+   18's — Sean took filler over the mixed + rearranged fork; the run stays
+   monotonic); 16 NEW anchor 22 [21] {21-22} v3 + continue 23; 26 canon → MIXED
+   + divergence + partial{51 — the Kido summons; NO page numbers: the verdict's
+   'pp 1-12' was the MANGA's split and Bandai 029 contradicted half of it,
+   END 51 stands on A47's unproven-tail convention}; 51 canon → MIXED, START
+   115 → 114 (manual) + continue 116 + divergence + partial{115}; 27 / 28
+   confirmed. fma 13 / 37 canon → MIXED (the novel segment stripped, T26; the
+   Arakawa extras whole beside a story-carrying 2003-original share) — and the
+   stored ep-37 side_story had named EP 13's extras: the transposition entered
+   at the BATCH-18 APPLY (8f94d90), a verdict's comparison clause transcribed
+   as the row's fact, then copied forward by the sitting as 'verified' — a
+   curation trap now in the apply-batch skill; both records repaired in
+   standing-annotations.ts, ep 13's side_story{The Military Festival vol 3,
+   Dog of the Military? vol 4, the Ambitious Alchemist omake (placement
+   unverified)} + divergence NEW. dbs 6 filler → CANON (T30 timeline B) — the
+   verifier reached ch 3's OWN pages (Viz's free chapter, descrambled) and
+   confirmed the stored note wrong / Cursor's claim right: the party visit is
+   NARRATED in caption and dialogue (p2 'BULMA'S BIRTHDAY PARTY VENUE', p3
+   'Boo ate all of it', p6 the slap) and the King Vegeta flashback STAGED (p5);
+   the later beats depend on the visit, not the arrival; NO adopted{author};
+   correspondence rows {6 ↔ 3 divergent; 6 anime_only}; the side_source note
+   repaired (research tier); arcs.ts's 'ep 6 is film-only' edited; pinned
+   (T30 — a parallel canon row re-derives to filler unpinned). boruto 106
+   CONFIRMED filler (the SMW 'Naruto ch 700' field = one unsummarised edit
+   three days after broadcast). TWO RULE ENFORCEMENT SITES CHANGED: (1) T26's
+   PARALLEL CLAUSE — lib/side-source.ts: on an I40 series a correspondence
+   row of ANY alignment is the T30 record and stands in for the weight-bearing
+   tie (the precondition check showed alignment cannot separate B from D:
+   10 canon + 4 mixed rows carry anime_only, five ruled-D rows carry
+   correspondence rows — the TYPE does, T30's ruling); the tie loader
+   (loadEpisodeTies / loadAllEpisodeTies) is now the ONE derivation the
+   writer, the healer and the census share. (2) A18's START CLAUSE —
+   src/lib/mapping.ts: the point model was END-only, so ep 51 (114-115 after
+   ep 47 reached 115) hid its interior and the display painted 48 / 50 at the
+   envelope and let the successor cap drag 50 to 114 (the display sweep
+   FAILED); a point whose own START reaches back past the previous END is
+   now a regime boundary — the rows between are honest holes (P6, A18), a
+   START equal to the previous END still bridges (shared chapters). The
+   clause surfaced SEVEN holes that had been interpolations: beelzebub 48 /
+   50 (52 END 110 → 54 START 109-shape on this series; AFG says 50 = 110-113 —
+   a back-jump block, research), eyeshield-21 53 (52 END 110 → 54 START 109),
+   record-of-ragnarok 14-16 (13 END 22 → 17 START 20), sailor-moon 72 (71 END
+   16 → 73 START 15 — Sean's 2026-08-24 ep-72 report, which the floor guard
+   had only stopped from being dragged down); each is a verify:hole
+   work-list line, none a failure. beelzebub 51 carries the A42 `rearranged`
+   naming the seam. CENSUS: every class count unchanged (ruling_violation 0,
+   side_source_unadopted 0, source_work_unlabelled 0, anchor_on_noncanon_row
+   0); display 218 / 0 failing (holes 265 → 272 lines, the seven above);
+   T6 / T30 pins 808 rows, 7 asserted, converged 0 on pass 2; edges deployed
+   three times (lib, then the ledger — the hash covers both); 194 tests.
+   TRAPS captured (P29): research-agent.md ×6 (a sibling adaptation's chapter
+   titles = our episode titles; a wiki field's provenance from page history;
+   MangaDex x.5 = sort keys, cite the UUID; Bandai Channel's HTML synopses;
+   Viz's free chapters as a page route; Google's overview misattaching chapter
+   ranges), apply-batch ×3 (a comparison clause is not the row's fact; a
+   superseded pin is updated, never lifted; a parallel retype lands with its
+   correspondence rows + pin and the arc note edited). NEXT: /consolidate deep
+   (two enforcement sites moved, P21); the seven holes + beelzebub 48 / 50 /
+   58 + fma 13's T28 call stand as the narrow queue.
 117. ✅ **THE T26 ADOPTION SITTING — RULED + APPLIED (2026-09-05; Sean ruled
    Line B, Cursor's review sharpened the mechanism three times).** THE FORK: two
    rulings collided on one shape — a canon / mixed row whose only source tie is

@@ -37,7 +37,7 @@ import { correspondenceCoverage, correspondenceProblem, type Alignment } from '.
 import { CHAPTER_SPACE_OVERRIDES } from './lib/rulings/chapter-spaces';
 import { pickManga } from './lib/resolve';
 import { annotationProblem } from './lib/annotations';
-import { sideSourceStandingProblem } from './lib/side-source';
+import { loadAllEpisodeTies, sideSourceStandingProblem } from './lib/side-source';
 import { REVIEWED_NUMBERED_SPECIALS } from './lib/rulings/reviewed-specials';
 
 async function main() {
@@ -178,14 +178,12 @@ async function main() {
   // (lib/side-source.ts) and the healer asserts (assert-overrides). A stored row
   // that still disagrees is a ruling_violation — listed per series here too.
   {
-    const kindsByRow = new Map<string, Set<string>>();
-    for (const a of await selectAll<any>('episode_annotations', 'series_id, episode, kind')) { const k = `${a.series_id}#${a.episode}`; kindsByRow.set(k, (kindsByRow.get(k) ?? new Set()).add(a.kind)); }
-    const anchoredRows = new Set((await selectAll<any>('chapter_anchors', 'series_id, episode')).map((a: any) => `${a.series_id}#${a.episode}`));
+    const ties = await loadAllEpisodeTies(); // the healer's derivation, verbatim (P2): annotations + anchors + (parallel) correspondence
     const typeByRow2 = new Map<string, string>();
     for (const e of await selectAll<any>('episodes', 'series_id, number, type')) typeByRow2.set(`${e.series_id}#${e.number}`, e.type);
     const bySeries = new Map<string, number[]>();
-    for (const [k, kinds] of kindsByRow) {
-      if (sideSourceStandingProblem(typeByRow2.get(k), { kinds, anchored: anchoredRows.has(k) }) == null) continue;
+    for (const [k, t] of ties) {
+      if (sideSourceStandingProblem(typeByRow2.get(k), t) == null) continue;
       const [sid, ep] = k.split('#'); bySeries.set(sid, [...(bySeries.get(sid) ?? []), Number(ep)]);
     }
     for (const [sid, eps] of bySeries) {

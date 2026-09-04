@@ -147,6 +147,27 @@ describe("inReorderCrossing — jumped-back adaptation order", () => {
     expect(canonEpToCh(series(eps), m, 2)).toBeNull();
   });
 
+  it("a successor whose START reaches back past the predecessor's END is a reorder even when its END re-touches the envelope (beelzebub 51, batch 22 wave 2)", () => {
+    // ep 47 reached 115; ep 51 = 114-115 (ch 115's opening aired first, in 46/47; ep 51 goes back to 114 — A42 rearranged);
+    // 48 and 50 are unanchored canon rows between them, 49 is mixed + off-source: they are holes (A18), never 115 / 114 painted by a formula
+    const eps = [episode(47, "115"), episode(48, null), episode(49, null, "mixed"), episode(50, null), episode(51, "114-115")];
+    const m = mapping([{ start: 47, end: 51, type: "canon" }], { episode: 51, volume: null, chapters: "114-115" });
+    const s = series(eps);
+    expect(inReorderCrossing(s, m, 48)).toBe(true);
+    expect(inReorderCrossing(s, m, 50)).toBe(true);
+    expect(canonEpToCh(s, m, 48)).toBeNull();
+    expect(canonEpStartCh(s, m, 50)).toBeNull();
+    expect(canonEpToCh(s, m, 51)).toBe(115); // the exact row resolves to its own point
+    expect(canonEpToCh(s, m, 47)).toBe(115); // the predecessor is untouched
+  });
+
+  it("a shared chapter (successor START = predecessor END) is bridgeable — two episodes may share a chapter", () => {
+    const eps = [episode(1, "10"), episode(2, null), episode(3, "10-12")];
+    const m = mapping([{ start: 1, end: 3, type: "canon" }], { episode: 3, volume: null, chapters: "10-12" });
+    expect(inReorderCrossing(series(eps), m, 2)).toBe(false);
+    expect(canonEpToCh(series(eps), m, 2)).toBe(11);
+  });
+
   it("does not flag a normal forward run", () => {
     const eps = [episode(1, "10"), episode(2, null), episode(3, "30")];
     const m = mapping([{ start: 1, end: 3, type: "canon" }], { episode: 3, volume: null, chapters: "30" });

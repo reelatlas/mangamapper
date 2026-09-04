@@ -132,13 +132,23 @@ interface AnchorPoint {
   // hold BETWEEN points of the same regime; across a boundary they paint
   // plausible-but-wrong numbers, so they return null there (honest unknown)
   onTrend: boolean;
+  // the row's OWN stated start when its record carries one (a span or an
+  // explicit start) — a START that reaches back past the previous point's END
+  // is a reorder even when the END re-touches the envelope (beelzebub 51:
+  // 114-115 after ep 47 reached 115 — batch 22 wave 2, 2026-09-05)
+  start?: number;
 }
 
 // two consecutive points can be bridged by a formula only when they share a
 // regime (both on the monotonic envelope, or both inside the same
-// jumped-back block and still advancing)
+// jumped-back block and still advancing) AND the later point does not START
+// behind the earlier one's END: a successor that reaches back past the
+// predecessor's end is a reorder, and reorders never set a neighbour's
+// position (the AoT-87 rule) — the rows between them are honest holes (A18),
+// never interpolations painted at the envelope. A start EQUAL to the previous
+// end is a shared chapter, and bridgeable.
 const bridgeable = (a: AnchorPoint, b: AnchorPoint): boolean =>
-  (a.onTrend && b.onTrend) || (!a.onTrend && !b.onTrend && b.ch >= a.ch);
+  ((a.onTrend && b.onTrend) || (!a.onTrend && !b.onTrend && b.ch >= a.ch)) && !(b.start != null && b.start < a.ch);
 
 const anchorPointsCache = new WeakMap<MappingSummary, AnchorPoint[]>();
 const anchorPoints = (anime: AnimeSeries, m: MappingSummary): AnchorPoint[] => {
@@ -148,7 +158,10 @@ const anchorPoints = (anime: AnimeSeries, m: MappingSummary): AnchorPoint[] => {
   for (const e of anime.episodes) {
     if (!e.mangaMapping) continue;
     const last = lastChapterNumber(e.mangaMapping.chapters);
-    if (last !== null) raw.push({ idx: epToCanonIdx(m, e.number), ch: last, onTrend: true });
+    if (last === null) continue;
+    // the row's own START: the record's stated start, else a span's first number (a bare single chapter states no start)
+    const own = e.mangaMapping.start ?? (/[-,]/.test(e.mangaMapping.chapters) ? parseInt(e.mangaMapping.chapters.split(/[-,]/)[0], 10) : NaN);
+    raw.push({ idx: epToCanonIdx(m, e.number), ch: last, onTrend: true, ...(own != null && !Number.isNaN(own) ? { start: own } : {}) });
   }
   if (m.latestKnown?.chapters) {
     const covered = lastChapterNumber(m.latestKnown.chapters);
@@ -163,7 +176,7 @@ const anchorPoints = (anime: AnimeSeries, m: MappingSummary): AnchorPoint[] => {
   const pts: AnchorPoint[] = [];
   for (const p of raw) {
     const prev = pts[pts.length - 1];
-    if (prev && p.idx === prev.idx) prev.ch = Math.max(prev.ch, p.ch);
+    if (prev && p.idx === prev.idx) { prev.ch = Math.max(prev.ch, p.ch); if (prev.start == null) prev.start = p.start; }
     else pts.push({ ...p });
   }
   let envelope = -Infinity;
