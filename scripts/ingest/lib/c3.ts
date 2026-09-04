@@ -21,3 +21,18 @@ export const c3Note = (existingNote: string | null, ahead: number[]): string => 
   const kept = String(existingNote ?? '').trim();
   return `${kept ? kept + ' | ' : ''}C3 (Sean 2026-08-25): this episode also covered ch ${ahead.join(', ')} ahead of the continue point — skip on arrival unless re-reading.`.slice(0, 600);
 };
+
+// THE C3 TWIN (Sean 2026-09-04, shippuden 112 — C5's back-jump paragraph):
+// C3 only sees a continue BELOW the row's own chapters. A row that EXITS a
+// jumped-back block has the opposite shape — its continue sits ABOVE its END,
+// and the chapters in between were either ALREADY adapted (112: 319-343 at
+// eps 74-90 → continue 343) or NEVER adapted (kind unseen → continue END + 1
+// / the next START, the range named). Either way the note must SAY which,
+// or the reader cannot tell a skip from a re-read. One predicate, consumed by
+// audit-ui-truth's backjump_continue_unnoted class (and by the healer when it
+// learns to fill the covered branch itself).
+export const backjumpRange = (end: number, continueChapter: number): [number, number] | null =>
+  Number.isInteger(end) && Number.isInteger(continueChapter) && continueChapter > end + 1 ? [end + 1, continueChapter - 1] : null;
+
+export const backjumpNoteOk = (note: string | null): boolean =>
+  /already|never adapted|not adapted|unseen|read (?:long )?ago|adapted (?:at|by|in) ep|first-time pass|backward/i.test(String(note ?? ''));

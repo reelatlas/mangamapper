@@ -2,7 +2,8 @@
 // 2026-08-26, batch 18 wave 3 — the one-piece cover-serial lesson). A canon
 // or mixed row whose source content cannot be a reading position — a
 // cover-page side story running ahead of the main line, a side story with no
-// chapter number, acts that sit behind an earlier anchor — must never take
+// chapter number, another chapter space, re-shown pages (NOT 'behind an
+// earlier anchor' — retired as a basis 2026-09-03, shippuden 112) — must never take
 // an anchor from ANY writer (AFG chart, AFG continua, MU frontier). The A1
 // type gate cannot hold these: the row is legitimately canon/mixed. Before
 // this map the one-piece ep-455 junk anchor (cover pages 545-551) was held

@@ -9,7 +9,7 @@
 //   npx tsx --env-file=.env.ingest scripts/ingest/audit-ui-truth.ts
 
 import { db, selectAll } from './lib/db';
-import { c3Ahead, hasSkipLanguage } from './lib/c3';
+import { backjumpNoteOk, backjumpRange, c3Ahead, hasSkipLanguage } from './lib/c3';
 import { COMMUNITY_COUNT_OVERRIDES, CONTINUA_SUPPRESSED, EPISODE_TYPE_OVERRIDES, SOURCE_NUMBERING_SHIFTS, translateEpisodeNumber } from './lib/resolve';
 import { AIRDATE_REGRESSION_THRESHOLD_DAYS, airdateOrderWalk } from './lib/airdate-order';
 import { offWindowRows, seriesDatesInvalid } from './lib/wiki-identity';
@@ -42,7 +42,7 @@ import { REVIEWED_NUMBERED_SPECIALS } from './lib/rulings/reviewed-specials';
 async function main() {
   const series = await selectAll<any>('series', 'id, afl_slug, anilist_id, source_type, source_relation, manga_status, status, start_date, end_date, aired_episodes, total_episodes, total_chapters, total_volumes, latest_known_chapters, manga_anilist_id, manga_start_chapter, mapping_mode, asterisk_review');
   const episodes = await selectAll<any>('episodes', 'series_id, number, type, title, air_date, format, minted_by');
-  const anchors = await selectAll<any>('chapter_anchors', 'series_id, episode, chapter, start_chapter, chapters_adapted, continue_chapter, continue_note, continue_source, volume, source');
+  const anchors = await selectAll<any>('chapter_anchors', 'series_id, episode, chapter, start_chapter, chapters_adapted, continue_chapter, continue_kind, continue_note, continue_source, volume, source');
   const comps = await selectAll<any>('series_components', 'series_id, episode_end, episode_start, anilist_id, kind, label');
   const bounds = await selectAll<any>('volume_boundaries', 'manga_anilist_id, volume, chapter_start, chapter_end');
   const arcRows = await selectAll<any>('series_arcs', 'series_id, ordinal, label, kind, ep_start, ep_end, ch_start, ch_end, origin');
@@ -104,7 +104,7 @@ async function main() {
     anchor_volume_mismatch: [], row_minted_by_missing: [],
     anchor_nonmonotonic: [], anchor_start_offtrend: [], start_sliver_mismatch: [], start_without_span: [], end_sliver_mismatch: [], anchor_beyond_chapter_space: [], anchor_beyond_display_total: [], anchor_fractional_chapter: [], anchor_on_noncanon_row: [], continue_skip_unnoted: [], continue_provenance_missing: [], boundaries_degenerate: [], ruling_violation: [], repair_on_derivation_tier: [],
     mu_pin_unverified: [], mu_pin_flag_redundant: [], anchor_without_row: [], annotation_without_row: [],
-    rearranged_zone_unanchored: [], rearranged_zone_acknowledged: [], backjump_continue_unruled: [],
+    rearranged_zone_unanchored: [], rearranged_zone_acknowledged: [], backjump_continue_unruled: [], backjump_continue_unnoted: [],
     title_incomplete: [], airdate_incomplete: [], airdate_regression: [], airdate_withheld: [], episode_date_off_window: [], asterisk_unreviewed: [],
     fractional_unmodeled: [], annotation_invalid: [], annotation_retired_standing: [], afl_anime_canon_unruled: [], format_missing: [], episode_without_component: [], watch_order_kind_missing: [],
     permanence_candidate: [], permanence_violation: [], mixed_fragment_only: [], run_stuck: [], unverified_share: [], sliver_only_anchor: [], chain_source_unmapped: [], side_source_on_chain: [], source_work_unlabelled: [], grid_unminted: [], type_source_disagreement: [], type_default_unclassified: [], side_source_unadopted: [],
@@ -377,9 +377,9 @@ async function main() {
     const wo = await selectAll<any>('watch_order_entries', 'series_id, position, kind, title');
     for (const w of wo) if (!w.kind) classes.watch_order_kind_missing.push(`${w.series_id} @${w.position}: "${String(w.title).slice(0, 40)}" has no kind`);
   }
-  // A44 anchor suppression (2026-08-26): a stored anchor on a row ruled
-  // position-less (cover-page serials, side stories without a chapter number,
-  // acts behind an earlier anchor) = a writer bypassed the A1 gate stack or
+  // A44 anchor suppression (2026-08-26; 'behind' retired as a basis 2026-09-03):
+  // a stored anchor on a row ruled position-less (cover-page serials, side
+  // stories without a chapter number, re-shown pages) = a writer bypassed the A1 gate stack or
   // the healer has not run.
   for (const [sid, eps] of Object.entries(ANCHOR_SUPPRESSED)) {
     for (const a of anchors) if (a.series_id === sid && eps.includes(a.episode)) classes.ruling_violation.push(`${sid}: ep ${a.episode} carries an anchor (${a.source} → ch ${a.chapter}) on a row ruled position-less (A44)`);
@@ -706,7 +706,18 @@ async function main() {
           if (!back) continue;
           const next = sorted[i + 1];
           const exit = !next || next.chapter >= envelope || next.chapter < a.chapter;
-          if (!exit || a.continue_chapter != null) continue;
+          if (!exit) continue;
+          if (a.continue_chapter != null) {
+            // the C3 twin: a continue ABOVE the END must say whether the
+            // stretch in between was already adapted or never (lib/c3.ts)
+            const range = backjumpRange(a.chapter, a.continue_chapter);
+            if (range && !backjumpNoteOk(a.continue_note ?? null)) {
+              classes.backjump_continue_unnoted.push(
+                `${sid}: ep ${a.episode}→ch${a.chapter} continue ${a.continue_chapter} (${a.continue_kind ?? 'no kind'}) — chs ${range[0]}${range[1] > range[0] ? `-${range[1]}` : ''} lie between END and the continue and the note does not say already / never adapted (C5; C3 cannot see this shape)`,
+              );
+            }
+            continue;
+          }
           classes.backjump_continue_unruled.push(
             `${sid}: ep ${a.episode}→ch${a.chapter} (${a.source}) exits a jumped-back block behind the frontier ${envelope}${next ? ` (ep ${next.episode} → ${next.chapter})` : ' (last anchored row)'} with NO continue — END + 1 would re-read adapted chapters; the continue is the coverage / parity value (C5), curated via writeCuratedContinue`,
           );

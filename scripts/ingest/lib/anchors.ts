@@ -350,8 +350,9 @@ export async function syncAnchors(
       const t = typeByEp.get(a.episode);
       return t === undefined || t === 'canon' || t === 'mixed';
     })
-    // A44 (2026-08-26): rows ruled POSITION-LESS (cover-page serials, side
-    // stories without a chapter number, acts behind an earlier anchor) never
+    // A44 (2026-08-26; 'behind' retired as a basis 2026-09-03): rows ruled
+    // POSITION-LESS (cover-page serials, side stories without a chapter
+    // number, re-shown pages, another chapter space) never
     // take a chart anchor — the type gate cannot hold them (they are mixed)
     .filter((a) => !isAnchorSuppressed(seriesId, a.episode))
     .filter((a) => !protectedEps.has(a.episode))

@@ -1003,6 +1003,51 @@
    (research-agent: behind is not a basis + the 112 witness; apply-batch: a
    back-jump anchor lands WITH its curated continue). Next: wave 3 = shippuden
    113-117 (the five holes) + the 4 remaining STRONG rows, or close the lane.
+112. ✅ **DEEP CONSOLIDATE after §12.111 — the leftover 'relocate' sentence,
+   C5 back to covered-or-not, the C3 twin, A12's scope, sailor-moon 167/168
+   (2026-09-04; Sean ruled, Cursor's catches).** Cursor read §12.111 and found
+   the contradiction the amendment left standing: A44 still said "a significant
+   beat anchors unless anchoring it would relocate the reader" — the retired
+   clause in other words — and T28 carried the same sentence ("Relocation is a
+   separate axis…"). Both rewritten: position and weight are separate axes; a
+   significant beat is withheld from the position only when it has NO position
+   at all (no chapter number, another chapter space, re-shown pages, a
+   restaging), never because it sits behind the frontier. Three code comments
+   (anchors.ts, anchor-suppressed.ts, audit-ui-truth.ts) and the sailor-moon
+   167/168 STANDING notes ("no anchor by design: Acts 38/44 sit behind ep
+   166's Act 49") — stale since the 2026-08-27 superseding entry anchored both
+   rows (167 → 44 [38], 168 → 49 [44]) and re-asserted by the T26 healer every
+   pass — rewritten to match the stored rows; a mechanical sweep (notes with
+   no-anchor language on ANCHORED rows) found no other. THE CONTINUE FORK,
+   resolved the way the ledger already said on 08-25: the sentence §12.111 had
+   added to C5 ("continue at the first unadapted chapter after the contiguous
+   run") contradicted C5's own unseen regime and is replaced by THE TEST — is
+   the stretch between this END and the frontier already covered? yes → the
+   frontier (112 → 343), the note says where it was adapted; no → END + 1 or
+   the next known START (C2 wins), the note NAMES the never-adapted range
+   (kind unseen); the continue is never the hole itself unless the next
+   episode starts there (sending a viewer back to fill a hole is a manga-order
+   catch-up, a different product). END + 1 IS NOT A LOCK (Sean): it means only
+   'this episode closed that chapter'; an unfinished END continues in that
+   chapter (C1), and a known next START outranks both. THE C3 TWIN: C3 sees
+   only a continue BELOW the row's own chapters; a block EXIT has the opposite
+   shape (continue above END) and nothing checked its note. lib/c3.ts gains
+   `backjumpRange` + `backjumpNoteOk` (5 unit tests; the 112 and Gaiden-120
+   shapes) and audit-ui-truth the sibling class `backjump_continue_unnoted`:
+   49 standing exits whose continue is right-shaped but whose note says
+   neither already nor never (conan ×12, reborn ×4, detective-school-q ×4,
+   zatch-bell ×3, fotns ×3, shippuden 120, mha 112, ippo 127 …) — with the 17
+   `backjump_continue_unruled` rows this is the C5 curation queue; AUDIT NOW,
+   HEALER LATER (Sean): the covered branch is computable from the union of
+   prior anchor spans, so the healer can fill it once the queue proves the
+   shape. A12 gains its scope sentence (an opener that PRECEDES on-trend
+   content; a row whose whole share is the block takes START = its first
+   chapter). research-agent carries the continue test. Deep rescan: the map,
+   the standing notes and the batch-21 protocol hold nothing else on the
+   retired clause. Edges redeployed (ledger + lib); heal: 373 standing rows
+   asserted, 33 A44 rows, 0 removed; ruling_violation 0; 181 tests. Cycle:
+   step 1 — plan wave 3 (shippuden 113-117 + the 4 STRONG rows) or close the
+   T4 lane; the C5 queue (17 + 49) is a curation sitting, not research.
 109. ✅ **G59 THE MINT RULE (an /add-rule end to end, 2026-09-04; Sean ruled the
    lane, Cursor's naming fix: who may CREATE the grid, not an amendment of G57's
    who may DELETE).** When AFL has nothing for an entry, the grid is minted by
