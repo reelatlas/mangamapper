@@ -97,7 +97,7 @@ export const RULES: Rule[] = [
   },
   {
     id: 'C5',
-    aliases: ['continue-read regimes', 'regime choice', 'continue point (b17)', 'continue point', 'C1 C2 C3', 'continue-read = a regime choice'],
+    aliases: ['continue-read regimes', 'regime choice', 'continue point (b17)', 'continue point', 'C1 C2 C3', 'continue-read = a regime choice', 'covered-or-not test', 'back-jump continue'],
     family: 'C',
     title: 'Continue-read is a regime choice governed by coverage',
     statement:

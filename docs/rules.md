@@ -68,7 +68,7 @@
 - `C2` C2: continue-read = anime parity — aka `C2 rule`, `anime parity`, `parity continue`, `continue-read = anime parity`, `C2 ANIME-PARITY continue rule`
 - `C3` C3: a parity continue below covered chapters notes the skip — aka `C3 rule`, `skip notes`, `skip-on-arrival note`, `C3 skip-note predicate`, `C3 clarification`
 - `C4` C4: single-source-final — aka `C4 rule`, `single-source-final`, `single-source final`, `do-not-demote`
-- `C5` Continue-read is a regime choice governed by coverage — aka `continue-read regimes`, `regime choice`, `continue point (b17)`, `continue point`, `C1 C2 C3`, `continue-read = a regime choice`
+- `C5` Continue-read is a regime choice governed by coverage — aka `continue-read regimes`, `regime choice`, `continue point (b17)`, `continue point`, `C1 C2 C3`, `continue-read = a regime choice`, `covered-or-not test`, `back-jump continue`
 - `C6` continue_kind vocabulary: parity \| unseen \| post_series — aka `continue_kind`, `continue_kind vocabulary`, `parity | unseen | post_series`
 - `C7` Curated continue metadata survives writers and healers — aka `parity-continue preservation`, `continue fields survive re-derive`, `curated continues`, `CURATED_CONTINUES`, `continue_source`, `continue provenance`, `continue_provenance_missing`, `curated continue overwritten`, `writeCuratedContinue`
 - `C8` AFG continue-from is reading guidance, not the frontier — aka `continue-from is guidance`, `continue-from-is-guidance`, `sanity band`, `40-chapter band`, `three-numbers model`
@@ -1014,7 +1014,7 @@ The continue point is governed by COVERAGE and KNOWN FUTURE anime coverage, neve
 - enforced: [research/batch17/PROTOCOL.md](../scripts/ingest/research/batch17/PROTOCOL.md) · [heal-parity-continues.ts](../scripts/ingest/heal-parity-continues.ts) · [audit-ui-truth.ts#classes.anchor_beyond_display_total](../scripts/ingest/audit-ui-truth.ts) · [audit-ui-truth.ts#classes.backjump_continue_unruled](../scripts/ingest/audit-ui-truth.ts) · [lib/c3.ts#backjumpNoteOk](../scripts/ingest/lib/c3.ts) · [lib/continues.ts#writeCuratedContinue](../scripts/ingest/lib/continues.ts)
 - audit: `continue_skip_unnoted`, `anchor_beyond_display_total`, `backjump_continue_unruled`, `backjump_continue_unnoted`
 - witnesses: welcome-to-demon-school-iruma-kun, zatch-bell, ranma-1-2, shugo-chara, hajime-no-ippo-the-fighting, naruto-shippuden
-- aliases: continue-read regimes, regime choice, continue point (b17), continue point, C1 C2 C3, continue-read = a regime choice
+- aliases: continue-read regimes, regime choice, continue point (b17), continue point, C1 C2 C3, continue-read = a regime choice, covered-or-not test, back-jump continue
 - see: C1, C2, C3, C6, A4, A31, A43
 
 ### C6 · continue_kind vocabulary: parity \| unseen \| post_series
@@ -4321,6 +4321,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - B vs D proxy → `T30`
 - b17 D3 → `T3`
 - b17 D3 form → `T3`
+- back-jump continue → `C5`
 - backwards-jumping successor → `A17`
 - base-type padding → `T17`
 - batch-19 E2 → `G55`
@@ -4471,6 +4472,7 @@ Any component that renders episode-level data consumes the HYDRATED series (getB
 - coverage gate → `A37`
 - coverage synthesis → `A38`
 - covered pin → `G56`
+- covered-or-not test → `C5`
 - crawl-delay → `G16`
 - cross-check only → `R4`
 - cross-check tier → `G41`

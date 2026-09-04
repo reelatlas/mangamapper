@@ -96,7 +96,7 @@ Read both, fully:
   not a number. BEHIND IS NOT A BASIS (Sean 2026-09-03, shippuden 112): a
   first-time SIGNIFICANT block anchors at its own END even 25 chapters behind
   the frontier — deliver the anchor + `rearranged`, and deliver the row's
-  CONTINUE as the parity / coverage value (`C5`), never END + 1. END = the furthest MAINLINE chapter adapted in running order
+  CONTINUE by `C5`'s covered-or-not test (the frontier when the stretch between is already adapted; else END + 1 / the next START with the unseen range named). END = the furthest MAINLINE chapter adapted in running order
   (`A4`); START = the first chapter animated under the sliver rule (`A10`: a
   leading partial of the preceding chapter counts unless ≤5 pages or
   sliver/teaser/cold-open/recap/flashback wording; `A12`: a relocated

@@ -684,7 +684,8 @@ async function main() {
     // canon/mixed row whose END sits BELOW the running maximum of the rows
     // before it is a first-time block adapted out of order — it anchors at
     // its own END (behind is not a basis), and its continue is the coverage /
-    // parity value, never END + 1. The parity healer REFUSES such a row when
+    // parity value by C5's covered-or-not test (END + 1 only when the stretch
+    // between is NOT already adapted). The parity healer REFUSES such a row when
     // its next canon/mixed neighbour is unanchored, so a null continue here
     // is a curation queue (writeCuratedContinue, C7), never a healer miss.
     {
