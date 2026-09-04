@@ -1,0 +1,276 @@
+{
+  "series_id": "beelzebub",
+  "summary": "THE CRUMBS RESOLVE INTO THREE SHAPES, and the licensor's own per-episode synopses are what separate them. ROW IDENTITY FIRST (R20). Our 60 rows, animefillerlist's 60, animefillerguide's 60 and ja-Wikipedia's バブ1-バブ60 (with the A/B halves of 6, 13, 53, 55, 56, 57 inside one number) all count the same way; every join below is on title + air date, never index. Stored dates for the six targets (2011-05-01, 2011-05-08, 2011-07-17, 2011-07-24, 2011-07-31, 2012-01-22) match ja-WP's 5月1日 / 5月8日 / 7月17日 / 7月24日 / 7月31日 / 1月22日 exactly, so no date repair is proposed. THE SOURCES USED. (1) Bandai Channel's licensor synopses at b-ch.com/titles/3113/NNN — a real per-episode primary; the text is in the served HTML even though the meta description is generic. (2) beelzebub.fandom via the MediaWiki API in BOTH directions: the episode infobox's `chapters` field, and — the antidote to it — the CHAPTER pages' own `episode` field plus the Saint Ishiyama Academy Arc page's PAGE-LEVEL citations ('Chapter 50, pages 1-17', 'Chapter 51, pages 1-12', 'Chapter 51, pages 12-19'). (3) ja-Wikipedia's 各話リスト, whose declared legend is 'アニメ版オリジナルストーリーのサブタイトルは、太字で表記するものとする' and whose per-row footnote on バブ51 sizes the split outright. (4) en-Wikipedia's List of Beelzebub episodes summaries. AFL and AFG are quoted as ONE lineage and never as a type witness. THE FANDOM'S OWN QUALIFIER IS A CONTENT WITNESS, not AFL's typing restated: it writes 'Chapter 23 (some scene)' on ep 15 and 'Chapter 12 (some scenes) / Chapter 23 (some scenes)' on ep 17, but plain unqualified numbers on eps 16, 18, 26, 29, 50 and 51. That distinction tracks the licensor synopses perfectly and is the instrument that separates a sliver from a share here.\n\nEP 15 -> FILLER (stored mixed; AFL 'Mixed Canon/Filler', AFG '23' with no filler mark, ja-WP BOLD). The episode is an anime-original hunt: Furuichi tells Oga about the last Tōhōshinki member, Himekawa researches where Tōjō works part-time and passes word to Furuichi, and Oga, Beel and Hilda head for the beach where Tōjō's 海の家 job is (Bandai Channel, verbatim). None of that is in the manga — Oga never goes looking for Tōjō at the beach; in chapter 23 Tōjō comes to HIM. What ep 15 quotes from ch 23 is the closing scene's furniture: that Tōjō lost his beach-house job, the tableau of beaten-up thugs he made by himself, his underlings Aizawa and Jinno, the yakisoba. The chapter's actual payload — 登場!!, Tōjō's face, his name and the Zebul-spell replica on his arm — is NOT in this episode: the fandom's cast list prints '[[Hidetora Tōjō]] (imagination)'. That is exactly T28's 'original plot that quotes a fragment... a transplanted beat, a restaged scene' -> FILLER + a mandatory graft. The sole-adaptation exception fails BOTH halves: ch 23's pages appear in ep 18 (stored ep 18 -> END 27 START 23, and the fandom's ch 24/25/26/27 pages all point back to ep 18) and in ep 17, and no major plot point of the source is uniquely carried here. So the stored anchor (END 23 START 23 {23}) comes out under A1 and independently under A44, and nothing is stranded: ch 23 stays anchored on ep 18.\n\nEP 16 -> CANON (CONFIRMED AS STORED) and NEWLY ANCHORED at END 22 [START 21] {21, 22}. This is the plain census crumb the flag described and the pages support it end to end. ch 21 「夏といえばコレでしょう」 (18 pp) is Furuichi at a southern resort, hauled through Alaindelon to a crowded public pool, meeting Chiaki and Nene, buying the 7-Up; ch 22 「なかなか男じゃない」 (19 pp) is the Takashima confrontation, the tickle and headbutt, the fake drowning call that empties the pool, and Furuichi tipping Oga into the water so Beel's crying electrocutes everyone, ending with Oga behind him demanding a word. Ep 16's own summary is those beats in that order and stops on that last one. The fandom's ch 21 and ch 22 pages each carry `episode = 16` AND NOTHING ELSE — a clean reverse index. Bandai Channel prints the same span ('南の島のリゾート地から... 市民プールへと転送された古市... 中学時代のイヤな先輩、高島たちが現れ... 知将（？）古市ついに動く…!?'). ja-WP leaves バブ16 UNBOLD (its discriminating positive claim, sitting between bolded 15 and 17), and the subtitle IS ch 22's own title. START 21 under A10 — the episode opens on ch 21 page 1 and ep 9's END is 20 (stored). END 22 complete; A47 does not apply because the next anchored episode (18) starts on 23, not 22.\n\nEP 26 -> MIXED (stored canon; AFL 'Manga Canon', ja-WP BOLD) and the anchor is CONFIRMED AS STORED. Both labels are half right, which is why the row was flagged. The manga share is real and load-bearing: ch 50 pp 1-17 is Kazuya turning up at Oga's house, calling him 'bro', being accepted as a disciple after relentless flattery, and explaining the Rokkisei on the train; ch 51 pp 1-12 is the classroom rumours and Aoi taking Oga to see Kido, who gives them authority over the other delinquents — and Kido's fandom character page prints `manga debut = Chapter 51` / `anime debut = Episode 26`, which is a direct chapter-to-episode tie independent of any filler list. Bandai's first sentence is that scene ('帝毛工業高校との争いごとがバレた男鹿と葵は、退学免除のかわりに石矢魔高校の生徒たちを取り締まるよう言われる'). But the episode's SECOND half is anime-original and story-carrying: Oga fakes a secret electric-shock technique to get Kazuya off his back, Kazuya then hears Azusa has been abducted and goes alone to save her ('そこへ梓が連れ去られたことを聞いた山村は一人で梓のもとへ向かう…！' — Bandai's closing line, i.e. the episode's climax), his 'powers' fail, and Kunieda arrives and reveals the bald man to be an acquaintance of her temple. The arc page's page-cited account of chs 50-53 contains no abduction and no fake technique; ch 51 pp 12-19 is instead Azusa's classroom, Shinjō and Sakaki confronting Oga and Aoi, and Furuichi meeting Miki — and that material is EP 29's (Sakaki's character page: `manga debut = Chapter 51`, `anime debut = Episode 29`). A substantial, story-carrying original share alongside a substantial source share is T28's definition of mixed.\n\nEPS 27 and 28 -> FILLER (CONFIRMED AS STORED), agreed by four independent readings. Ep 27 is Alaindelon bringing his daughter Angelica to the human world, a Yople alien escaping, and five girls becoming the '5 Fairies of Light' magical-girl team (Bandai: 'アンジェリカが子供の頃に父からもらった魔法のステッキ'); ep 28 is a body-measurement day at Ishiyama with Beel barricading himself in a locker and shredding Sadohara's car (Bandai: '身体測定が行われることになり、石矢魔高校特設クラスの測定係は男鹿と邦枝に'). Neither premise exists anywhere in the manga; the fandom gives both `chapters = N/A` AND `[[Category:Filler]]` (the only two of the six targets so categorised), ja-WP bolds both, and AFL/AFG both print Filler / N/A.\n\nEP 51 -> MIXED (stored canon; AFL 'Manga Canon'), anchor kept with a START repair 115 -> 114. ja-WP's per-row footnote sizes it for us: '葵がコマちゃんと出会うシーンなどは原作通りであるが、エピソードの半分はアニメオリジナルとなっている' — the Aoi-meets-Koma scene AND OTHERS follow the original, but half the episode is anime-original. Both halves check out on the pages. Source half: ch 114 「烈怒帝瑠大作戦」 opens with Saotome drilling Oga and Beel on Super Milk Time (with the Black Baby Beel / Izuma / Tōjō flashbacks) and then the Red Tail girls' scheme to get Aoi back — the chapter's title IS 'The Red Tail's Great Tactics' — and its fandom page carries `episode = 51` and nothing else, plus an 'Anime and Manga Differences' entry comparing ch 114's own panel (Black Beel cramming a cigarette into Zenjuro's nose) against the ep-51 frame that censors it, the same comparison the ep-51 page repeats. ch 115 「邦枝とあの子」 supplies the Koma-chan origin at the 魔二津 temple, which Bandai states outright ('その秘密は魔二津で出会った「自称・神様」の狛犬「コマちゃん」'). Original half: 聖マリアン女学院谷百合会, which ja-WP's own glossary flags as 'テレビアニメ第51話に登場した女子校で及び組織名' and notes that the subtitle and every school / organisation / member name is a マリア様がみてる parody; en-WP prints the same block ('St Marian's High School for Girls have declared a battle against the Red Tails... unknowingly defeated by Koma'). Source + a story-carrying original half = mixed under T28; the anchor survives because mixed rows carry anchors, and the START must move to 114 because ch 114 is animated from its opening (ep 50's END is 113, stored {110-113}, and ch 113's fandom page points only at ep 50).",
+  "anchors": [
+    {
+      "episode": 16,
+      "end_chapter": 22,
+      "start_chapter": 21,
+      "chapters_adapted": "21, 22",
+      "volume": 3,
+      "confidence": "high",
+      "why": "NEW ANCHOR on a row that had none (the census crumb the flag named). A4: ch 22 is the furthest mainline chapter adapted in running order in this episode, and it is adapted to its last page — ch 22 ends with Furuichi tipping Oga into the pool, Beel's crying electrocuting everyone, and an annoyed Oga standing behind him demanding a word, which is precisely where ep 16 stops ('he forces Beelzebub to cry in order to shock all the delinquents before facing Oga's wrath'). A10: the START is 21, not a leading partial of 20 — the episode OPENS on ch 21 page 1 (Furuichi by the pool at a southern resort, Alaindelon floating up behind him, the transfer to the crowded public pool), and ep 9's END is 20 (stored ep 9 -> 20 [15] {15-20}), so chs 21 and 22 are both first-time. A47 does not hold the END back: the next ANCHORED episode is 18 and it STARTS on ch 23, not on 22, so no tail of 22 belongs to a later row. Weight: SIGNIFICANT — the two chapters ARE the episode, beat for beat, with no original plot alongside them. Volume 3 agrees with the stored boundary table (v3 = 17-25). TWO INDEPENDENT REVERSE-INDEX READINGS: beelzebub.fandom's ch 21 page and ch 22 page each carry `episode = [[You're Not a Man at All, Eh|16]]` and no other episode; the fandom's ep-16 infobox lists Chapter 21 and Chapter 22 with NO '(some scene)' qualifier (contrast ep 15's 'Chapter 23 (some scene)'). Corroborated by the licensor: Bandai Channel's ep-16 synopsis covers ch 21's opening (the resort-to-public-pool transfer, meeting Nene and the Red Tail) and ch 22's body (Takashima from middle school, harassing the girls, '知将（？）古市ついに動く…!?'). ja-WP leaves バブ16 unbold under its anime-original legend and the subtitle なかなか男じゃないですか is ch 22's own title なかなか男じゃない. ONE HONEST GAP RECORDED, NOT ANNOTATED: ep 16's fandom cast list places Hidetora Tōjō between Aoi and Takashima, and no chapter of ch 21-22 has him — most likely a short studio cutaway carrying over ep 15's original beach thread. No source describes that scene, so it is reported here as an observation rather than written as a divergence annotation ('no source names it' is silence, not a finding); it is far too small to touch the typing either way.",
+      "sources": [
+        "https://beelzebub.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&redirects=1&titles=Chapter%2021",
+        "https://beelzebub.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&redirects=1&titles=Chapter%2022",
+        "https://beelzebub.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&redirects=1&titles=You%27re%20Not%20a%20Man%20at%20All%2C%20Eh",
+        "https://www.b-ch.com/titles/3113/016",
+        "https://ja.wikipedia.org/wiki/%E3%81%B9%E3%82%8B%E3%81%9C%E3%83%90%E3%83%96",
+        "https://en.wikipedia.org/wiki/List_of_Beelzebub_episodes"
+      ]
+    },
+    {
+      "episode": 26,
+      "end_chapter": 51,
+      "start_chapter": 50,
+      "chapters_adapted": "50, 51 (pp 1-12 — the classroom rumours and the Kido summons; ch 51 pp 12-19 are ep 29's)",
+      "volume": 6,
+      "confidence": "high",
+      "why": "CONFIRMED AS STORED — the value is unchanged (ep 26 -> END 51 [START 50] {50-51}), but the row's TYPE changes canon -> mixed, so the anchor is re-delivered with its own evidence instead of resting on AFG's chapter column. A4: ch 51 is the furthest mainline chapter adapted in running order. A10: START 50 — ep 25's END is 49 (stored {47-49}) and the fandom's ch 48 and ch 49 pages both point only at ep 25, so ch 50 is first-time and the episode opens on it (Kazuya accepted as a disciple after flattering Oga and Furuichi = ch 50 pp 1-17 on the arc page). A47 does NOT hold the END at 50 even though ep 29 also STARTS on ch 51: ep 26's share of ch 51 is pp 1-12 by the arc page's own page citation — twelve pages, far above the 5-page bar, and nothing in any source uses sliver / teaser / cold-open wording for it. Weight of the ch-51 share: SIGNIFICANT — the Kido summons is a scene that sets the arc's expulsion stakes, it is FIRST-TIME here, and Kido's own character page pins `manga debut = Chapter 51` against `anime debut = Episode 26`. Weight of the ch-50 share: SIGNIFICANT — the whole disciple premise the episode runs on. Volume 6 agrees with the stored table (v6 = 44-52). Two independent readings of the same split: (a) the fandom arc page's page-level citations ('Chapter 50, pages 1-17', 'Chapter 50, pages 17-19', 'Chapter 51, pages 1-12', 'Chapter 51, pages 12-19') read against Bandai's ep-26 vs ep-29 synopses, which divide those page ranges cleanly between the two episodes; (b) the two character pages, Kido (ch 51 / ep 26) and Sakaki (ch 51 / ep 29), which independently place the two halves of ch 51 in different episodes.",
+      "sources": [
+        "https://beelzebub.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&redirects=1&titles=Saint%20Ishiyama%20Academy%20Arc",
+        "https://beelzebub.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&redirects=1&titles=Kido",
+        "https://beelzebub.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&redirects=1&titles=Mitsuteru%20Sakaki",
+        "https://www.b-ch.com/titles/3113/026",
+        "https://www.b-ch.com/titles/3113/029",
+        "https://beelzebub.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&redirects=1&titles=May%20I%20Call%20You%20Aniki"
+      ]
+    },
+    {
+      "episode": 51,
+      "end_chapter": 115,
+      "start_chapter": 114,
+      "chapters_adapted": "114, 115 (the Koma-chan origin flashback and the chapter's close; ch 115's opening pages — Kunieda leaving the Red Tail — are eps 46/47's)",
+      "volume": 13,
+      "confidence": "high",
+      "why": "KEPT WITH A START REPAIR (115 -> 114); the END and chapters_adapted are confirmed as stored. A4: ch 115 is the furthest mainline chapter adapted in running order and the episode reaches its close — Koma warning Kunieda that he will be after the Red Tail members next, which is the hook the episode's own original half then plays out. A10: the START is 114, not 115. Ep 50's END is 113 (stored {110-113}) and the fandom's ch 112 and ch 113 pages both point only at ep 50, so ch 114 is first-time and unshared; ch 114's own fandom page carries `episode = [[Komainu-sama is Watching|51]]` and NO other episode, and the episode animates the chapter from its opening — Saotome drilling Oga and Beel on Super Milk Time with the Black Baby Beel / Izuma / Tōjō flashbacks (both the ch-114 page and the ep-51 page carry the same 'Anime and Manga Differences' note comparing ch 114's Black-Beel-crams-a-cigarette panel with the censored ep-51 frame) and then the Red Tail girls' 烈怒帝瑠大作戦 to win Aoi back, which is the chapter's own title. The stored START of 115 is a derivation-tier artefact: it is ep 47's END re-used as ep 51's START by the parity chain, and it contradicts the row's own stored chapters_adapted {114-115}. A47 does not hold the END back — eps 52-57 are filler and the next anchored episode (58) starts on ch 116 (fandom ch 116/117/118 pages all point at ep 58; AFG row 58 prints '116, 117, 118, 123'), so no tail of 115 belongs to a later row. Weight: SIGNIFICANT for both chapters and the ch-115 material is NEW, not a duplicate — eps 46 and 47 carry ch 115's OPENING pages (Kunieda leaving the Red Tail; ep 47's cast list opens Aoi, Isafuyu), while ep 51 carries the Koma-chan origin flashback that ja-WP names as 原作通り. Volume 13 agrees with the stored table (v13 = 107-115).",
+      "sources": [
+        "https://beelzebub.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&redirects=1&titles=Chapter%20114",
+        "https://beelzebub.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&redirects=1&titles=Chapter%20115",
+        "https://beelzebub.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&redirects=1&titles=Komainu-sama%20is%20Watching",
+        "https://www.b-ch.com/titles/3113/051",
+        "https://ja.wikipedia.org/wiki/%E3%81%B9%E3%82%8B%E3%81%9C%E3%83%90%E3%83%96",
+        "https://en.wikipedia.org/wiki/List_of_Beelzebub_episodes"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 16,
+      "continue_chapter": 23,
+      "kind": "parity",
+      "confidence": "high",
+      "why": "C2 parity, which here coincides with END + 1. Ep 16 finishes ch 22 on its last page, so nothing is left mid-chapter (C1 does not apply), and the next canon row, ep 18, STARTS on ch 23 (stored ep 18 -> END 27 [START 23]; the fandom's ch 24/25/26/27 pages all point back at ep 18). Ep 17 in between is filler (Sean's T6 ruling, 2026-09-04) and ep 15 is retyped filler by this verdict, so neither moves the position. C3 SKIP NOTE for the reader arriving at 23: fragments of ch 23 have already been glimpsed out of order — the Furuichi household's return with Alaindelon in ep 17, and Tōjō's beach-house dismissal with the tableau of beaten thugs in ep 15 — but neither episode animates the chapter's 登場 payload (Tōjō's face, his name, the Zebul-spell replica), so ch 23 should be read in full from page 1.",
+      "sources": [
+        "https://beelzebub.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&redirects=1&titles=Chapter%2022",
+        "https://beelzebub.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&redirects=1&titles=Entry!!%20(chapter)",
+        "https://beelzebub.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&redirects=1&titles=I%20Stopped%20Being%20a%20Gang%20Leader%20with%20a%20Child",
+        "https://www.b-ch.com/titles/3113/018"
+      ]
+    },
+    {
+      "episode": 51,
+      "continue_chapter": 116,
+      "kind": "parity",
+      "confidence": "medium",
+      "why": "ENRICHMENT, slightly outside the ask — the row had no stored continue and now carries a repaired anchor, so the census can prove it. C2 parity and END + 1 agree on 116: ep 51 finishes ch 115 (Koma's warning closes the chapter), eps 52-57 are all filler on every source, and the next canon row, ep 58, STARTS on ch 116 — beelzebub.fandom's ch 116 「石矢魔高校復活」, ch 117 「挨拶」 and ch 118 pages each carry `episode = [[Akumano Academy Has Opened|58]]`, and AFG's row 58 prints '116, 117, 118, 123'. There is no unseen range to name between 115 and 116. Medium rather than high only because ep 58's stored anchor (END 118, manual tier) records no START, so the parity target is read off the chapter pages rather than off our own row; ep 58 is outside this ask and is flagged rather than repaired.",
+      "sources": [
+        "https://beelzebub.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&redirects=1&titles=Chapter%20116",
+        "https://beelzebub.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&redirects=1&titles=Chapter%20117",
+        "https://beelzebub.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&redirects=1&titles=Chapter%20118",
+        "https://www.animefillerguide.com/anime/beelzebub/"
+      ]
+    }
+  ],
+  "anchor_hostile": [
+    {
+      "episode": 15,
+      "why": "A1 FIRST — the row is filler under this verdict and filler rows never carry anchors, so the stored derivation-tier anchor (END 23, START 23, {23}) must be deleted with the retype. A44 refuses it independently: the only source material in the episode is a restaged fragment of a chapter that is adapted properly elsewhere, so there is no first-time position to anchor. The evidence is page-level, not label-level. ch 23 「登場!!」 (19 pp) has three movements — the Furuichi household's return from holiday with Alaindelon (pp 1-c.6), Beel's summer cold and the ice bath at Oga's house (the middle), and Tōjō on the beach with 200 m of beaten thugs behind him, Aizawa and Jinno beside him, his beach-house job lost, his face, his name and the Zebul-spell replica revealed (the close). Ep 18 adapts the second and third movements — Bandai Channel's ep-18 text is '熱を出したベル坊... ゼブルスペルも消え... そこにいたのはベル坊を背負った…東条!?' — and it is the stored START of ch 23 (ep 18 -> END 27 [START 23]). What ep 15 uses is the third movement's furniture WITHOUT its payload: the beach-house job, the pile of beaten gang members, Aizawa, Jinno, the yakisoba — and the fandom's ep-15 cast list prints '[[Hidetora Tōjō]] (imagination)', i.e. the chapter's 登場 never happens in this episode. The fandom's own infobox qualifies it as 'Chapter 23 (some scene)', the qualifier it withholds from eps 16, 18, 26 and 51. THE SOLE-ADAPTATION EXCEPTION FAILS BOTH HALVES: the pages appear in other episodes (ep 18 in full, ep 17 as its own sliver, ep 3 lists ch 23 as well), and the beat carried here is not a major plot point of the source — the arc's real beat, Tōjō's entry, is ep 18's. NOT 'behind an earlier anchor': that basis was retired 2026-09-03 and is not used. Nothing is stranded by the deletion — ch 23 stays anchored on ep 18 and the ep-16 -> 23 parity continue delivered by this verdict lands the reader on it.",
+      "sources": [
+        "https://beelzebub.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&redirects=1&titles=The%20Delinquents%20Have%20Changed%20into%20Swimsuits",
+        "https://beelzebub.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&redirects=1&titles=Entry!!%20(chapter)",
+        "https://beelzebub.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&redirects=1&titles=I%20Stopped%20Being%20a%20Gang%20Leader%20with%20a%20Child",
+        "https://www.b-ch.com/titles/3113/015",
+        "https://www.b-ch.com/titles/3113/018",
+        "https://ja.wikipedia.org/wiki/%E3%81%B9%E3%82%8B%E3%81%9C%E3%83%90%E3%83%96",
+        "https://en.wikipedia.org/wiki/List_of_Beelzebub_episodes",
+        "https://www.animefillerguide.com/anime/beelzebub/"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [15],
+      "kind": "graft",
+      "chapters": "23",
+      "note": "weight: SLIVER — because the episode quotes ch 23's closing scene's furniture inside an anime-original plot and withholds the scene's actual payload. CH 23 IS ADAPTED PROPERLY BY EP 18, which animates Beel's summer cold, the fading Zebul Spell and Tōjō's entry, and which is ch 23's stored START (ep 18 -> END 27 [START 23]). What ep 15 borrows: Tōjō was fired from the 海の家 the night before, the tableau of gang members he beat single-handed, his underlings Aizawa and Jinno, the yakisoba. What it withholds: 登場 itself — the fandom's cast list marks Tōjō '(imagination)', so his face, name and Zebul-spell replica are not shown. The material is a TEASE rather than a duplicate (ep 18 shows the real scene later), which is exactly the sliver clause's 'a tease, a fragment, a one-off out-of-order beat'. It earns neither a type nor an anchor; the remainder of the episode — Himekawa investigating where Tōjō works, the trip to the beach, the yakisoba-stand mix-up, the letter of challenge routed through Aoi — is anime-original with no manga counterpart, so the row is filler.",
+      "sources": [
+        "https://beelzebub.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&redirects=1&titles=The%20Delinquents%20Have%20Changed%20into%20Swimsuits",
+        "https://beelzebub.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&redirects=1&titles=Entry!!%20(chapter)",
+        "https://www.b-ch.com/titles/3113/015",
+        "https://www.b-ch.com/titles/3113/018"
+      ]
+    },
+    {
+      "episodes": [26],
+      "kind": "divergence",
+      "chapters": "50, 51",
+      "note": "weight: SIGNIFICANT (this is the ORIGINAL half, recorded so the mixed typing is auditable) — the episode's second half is not in the manga. Bandai Channel's own closing sentence gives it the climax slot: '面倒になり、ベル坊の力を使って必殺技を与えたフリをする。そこへ梓が連れ去られたことを聞いた山村は一人で梓のもとへ向かう…！' — Oga fakes handing Kazuya a secret electric-shock technique to be rid of him, Kazuya then hears Azusa has been abducted by a bald man taken for a Teimō member and goes alone to rescue her, fails to land a blow, and Kunieda arrives and reveals the man to be an acquaintance of her family's temple. The fandom's Saint Ishiyama Academy Arc page, which cites the manga page by page across chs 48-76, contains no abduction, no bald man and no fake technique anywhere in that stretch: ch 51 pp 12-19 is Azusa's classroom, Shinjō and Sakaki confronting Oga and Aoi, and Furuichi meeting Miki. The smaller original beats (identical lunch boxes; Kunieda trying to learn cuteness from Azusa) are part of the same original half. ja-Wikipedia independently marks バブ26's subtitle BOLD under its declared legend 'アニメ版オリジナルストーリーのサブタイトルは、太字で表記するものとする'.",
+      "sources": [
+        "https://www.b-ch.com/titles/3113/026",
+        "https://beelzebub.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&redirects=1&titles=Saint%20Ishiyama%20Academy%20Arc",
+        "https://ja.wikipedia.org/wiki/%E3%81%B9%E3%82%8B%E3%81%9C%E3%83%90%E3%83%96",
+        "https://en.wikipedia.org/wiki/List_of_Beelzebub_episodes"
+      ]
+    },
+    {
+      "episodes": [26],
+      "kind": "partial",
+      "chapters": "51 (pp 1-12 — the classroom rumours and the Kido summons; pp 12-19 are ep 29's)",
+      "note": "weight: SIGNIFICANT — because it is a scene, it is FIRST-TIME in this episode, and it sets the arc's expulsion stakes. The fandom's arc page splits ch 51 page-exactly: 'Chapter 51, pages 1-12' is Furuichi noting who is absent, Aizawa on Tōjō's part-time jobs, Nene's Rokkisei rumours, and Aoi taking Oga to Kido, who tells them they rank above the other delinquents and makes them class representatives; 'Chapter 51, pages 12-19' is Azusa's classroom through Shinjō, Sakaki and Miki. Ep 26 has the first (Bandai: '退学免除のかわりに石矢魔高校の生徒たちを取り締まるよう言われる'; Kido's character page: manga debut ch 51 / anime debut ep 26); ep 29 has the second (Bandai: '情報収集に山村の教室へと出向く'; Sakaki's character page: manga debut ch 51 / anime debut ep 29). Twelve pages is far above A47's five-page bar and no source uses teaser wording for it, so ep 26's END advances to 51 and ep 29 legitimately STARTS on 51.",
+      "sources": [
+        "https://beelzebub.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&redirects=1&titles=Saint%20Ishiyama%20Academy%20Arc",
+        "https://beelzebub.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&redirects=1&titles=Kido",
+        "https://beelzebub.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&redirects=1&titles=Mitsuteru%20Sakaki",
+        "https://www.b-ch.com/titles/3113/029"
+      ]
+    },
+    {
+      "episodes": [51],
+      "kind": "divergence",
+      "chapters": "114, 115",
+      "note": "weight: SIGNIFICANT (this is the ORIGINAL half, recorded so the mixed typing is auditable) — ja-Wikipedia's per-row footnote on バブ51 sizes it outright: '葵がコマちゃんと出会うシーンなどは原作通りであるが、エピソードの半分はアニメオリジナルとなっている' ('the scene where Aoi meets Koma-chan and so on follows the original, but half of the episode is anime-original'). The original half is 聖マリアン女学院谷百合会 (St Marian's Girls' Academy Taniyurikai), which ja-WP's glossary flags as 'テレビアニメ第51話に登場した女子校で及び組織名' — a school and gang that exist only in ep 51 — and describes storming Aoi's family shrine on hearing of the Red Tail general meeting, only for every member to be routed by Koma-chan's groping (invisible to all but Aoi, so the Red Tail call it a 心霊現象). ja-WP adds that ep 51's subtitle and every school, organisation and member name in the block are マリア様がみてる parodies. en-Wikipedia prints the same content independently ('St Marian's High School for Girls have declared a battle against the Red Tails in order to overtake the Southern Kanto region... unknowingly defeated by Koma'), and Bandai Channel's synopsis builds its second half on it ('葵の家の神社を、レッドテイルの総会に貸すことに。まるで女子会!?なこの状況…はい、コマちゃんが黙っておりません！').",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%81%B9%E3%82%8B%E3%81%9C%E3%83%90%E3%83%96",
+        "https://en.wikipedia.org/wiki/List_of_Beelzebub_episodes",
+        "https://www.b-ch.com/titles/3113/051"
+      ]
+    },
+    {
+      "episodes": [51],
+      "kind": "partial",
+      "chapters": "115 (the Koma-chan origin flashback and the chapter's close; ch 115's opening pages are eps 46/47's)",
+      "note": "weight: SIGNIFICANT and the material is NEW, not a duplicate — this episode is the only one that animates the Koma-chan origin. ch 115 「邦枝とあの子」 opens with Kunieda leaving the Red Tail once Teimō is gone and confronting an unseen presence, then flashes back to Isafuyu leading her to the 魔二津 temple, Koma's lecherous questioning, Kunieda smashing the shrine to reveal a komainu and beating him, and closes on Koma warning that the Red Tail members are next. The opening pages were animated out of order earlier — the fandom's ch 115 page lists `episode = 46, 47, 51` and ep 47's cast list opens Aoi, Isafuyu — but the flashback and the closing warning are ep 51's alone, and it is the closing warning that the episode's own original half then plays out. Bandai Channel states the tie directly: 'その秘密は魔二津で出会った「自称・神様」の狛犬「コマちゃん」がその力を貸してくれているから'.",
+      "sources": [
+        "https://beelzebub.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&redirects=1&titles=Chapter%20115",
+        "https://beelzebub.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&redirects=1&titles=Komainu-sama%20is%20Watching",
+        "https://www.b-ch.com/titles/3113/051",
+        "https://ja.wikipedia.org/wiki/%E3%81%B9%E3%82%8B%E3%81%9C%E3%83%90%E3%83%96"
+      ]
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 15,
+      "field": "anchor",
+      "old": "ep 15 -> END 23 [START 23] {23} v3 (afg)",
+      "new": "DELETE — no anchor and no continue; the row becomes filler and is A44 position-less",
+      "why": "The anchor is a derivation-tier artefact of animefillerguide's chapter column, which on this OLD-FORMAT page is a reading-position listing rather than an adaptation claim: it prints '23' on row 15, then '21, 22' on row 16, then '12, 23' on row 17, then '23-27' on row 18 — the numbers run BACKWARDS across four consecutive rows, which no adaptation order can do. With ep 15 retyped filler under T28, A1 forbids the anchor outright, and A44 refuses it independently because the episode's only source material is a restaged tease of ch 23's closing scene whose payload (Tōjō's entry) is ep 18's. Nothing is stranded: ch 23 is the stored START of ep 18 (END 27 [23] {23-27}), and this verdict's ep-16 -> 23 parity continue lands the reader there. P8: the deletion must be made at the MANUAL tier or AFG's next re-derive restores it.",
+      "sources": [
+        "https://www.animefillerguide.com/anime/beelzebub/",
+        "https://beelzebub.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&redirects=1&titles=The%20Delinquents%20Have%20Changed%20into%20Swimsuits",
+        "https://beelzebub.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&redirects=1&titles=Entry!!%20(chapter)",
+        "https://www.b-ch.com/titles/3113/015",
+        "https://ja.wikipedia.org/wiki/%E3%81%B9%E3%82%8B%E3%81%9C%E3%83%90%E3%83%96"
+      ]
+    },
+    {
+      "episode": 51,
+      "field": "anchor.start_chapter",
+      "old": "115",
+      "new": "114",
+      "why": "The stored row is ep 51 -> END 115 [START 115] {114-115}: the START contradicts the row's OWN chapters_adapted, which already includes 114. The 115 is a derivation-tier artefact of the parity chain — it is ep 47's stored END (115) carried forward as ep 51's START — not a claim that the episode opens on ch 115. On the pages the episode opens on ch 114: beelzebub.fandom's ch 114 page carries `episode = 51` and no other episode; ch 114 「烈怒帝瑠大作戦」 opens with Zenjūrō Saotome drilling Oga and Beel on Super Milk Time (Black Baby Beel, Izuma and Tōjō in flashback) and both the ch-114 page and the ep-51 page carry the same 'Anime and Manga Differences' entry comparing ch 114's Black-Beel-crams-a-cigarette panel against the censored ep-51 frame; the chapter's title beat, the Red Tail's scheme to win Aoi back, is the middle of the episode on en-WP and Bandai alike; and ep 51's cast list reproduces ch 114's opening cast including the three flashback characters. A10 is satisfied — ep 50's END is 113 (stored {110-113}) and the fandom's ch 112 and ch 113 pages both point only at ep 50, so ch 114 is first-time and unshared. END and chapters_adapted are unchanged. P8: manual tier, or AFG's next re-derive restores 115.",
+      "sources": [
+        "https://beelzebub.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&redirects=1&titles=Chapter%20114",
+        "https://beelzebub.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&redirects=1&titles=Chapter%20113",
+        "https://beelzebub.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&redirects=1&titles=Komainu-sama%20is%20Watching",
+        "https://en.wikipedia.org/wiki/List_of_Beelzebub_episodes",
+        "https://www.b-ch.com/titles/3113/051"
+      ]
+    }
+  ],
+  "type_corrections": [
+    {
+      "episodes": [15],
+      "type": "filler",
+      "note": "STORED mixed -> PROPOSED filler. T28's materiality bar: the episode's own plot is anime-original and it quotes one restaged fragment of ch 23, so it is filler with a mandatory graft annotation. The plot, from the licensor: Furuichi tells Oga about Hidetora Tōjō, the last Tōhōshinki member; Himekawa, hoping the two will destroy each other, investigates where Tōjō works part-time and sends word through Furuichi; Oga, Beel and Hilda head for the beach where Tōjō's 海の家 job is; Oga and Furuichi are mistaken for yakisoba-stand part-timers; Tōjō turns out to have been fired the night before; Oga sends a letter of challenge through Aoi and arrives to find only a heap of thugs Tōjō beat alone. None of that sequence exists in the manga, where Oga never hunts for Tōjō — Tōjō comes to him in chs 23-27, which is ep 18. The ch-23 tie is a sliver (see the graft annotation) and the sole-adaptation exception fails both halves. THE THREE READINGS: (1) ja-Wikipedia bolds バブ15's subtitle under its declared legend 'アニメ版オリジナルストーリーのサブタイトルは、太字で表記するものとする', while leaving 16 and 18-25 unbold — a discriminating per-row control that under-marks rather than over-marks; (2) Bandai Channel's ep-15 synopsis is the original plot end to end with no manga counterpart; (3) beelzebub.fandom qualifies its chapter field as 'Chapter 23 (some scene)' — the same qualifier it uses on ep 17, which Sean ruled filler on 2026-09-04 for exactly this shape — and marks Tōjō '(imagination)' in the cast. AFL's 'Mixed Canon/Filler' and AFG's unmarked '23' are ONE lineage and are not treated as a type witness; AFG's chapter column here runs backwards across rows 15-18 and is a reading-position listing.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%81%B9%E3%82%8B%E3%81%9C%E3%83%90%E3%83%96",
+        "https://www.b-ch.com/titles/3113/015",
+        "https://beelzebub.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&redirects=1&titles=The%20Delinquents%20Have%20Changed%20into%20Swimsuits",
+        "https://beelzebub.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&redirects=1&titles=Entry!!%20(chapter)",
+        "https://en.wikipedia.org/wiki/List_of_Beelzebub_episodes"
+      ]
+    },
+    {
+      "episodes": [16],
+      "type": "canon",
+      "note": "CONFIRMED AS STORED (canon). Delivered as a confirmation so the type_source_disagreement class stops re-listing the row and so the new anchor rests on a stated type. The episode is a straight adaptation of ch 21 「夏といえばコレでしょう」 and ch 22 「なかなか男じゃない」 with no original plot alongside them: the fandom's ch 21 and ch 22 pages each carry `episode = 16` and no other episode; the ep-16 infobox lists both chapters WITHOUT the '(some scene)' qualifier it puts on eps 15 and 17; Bandai Channel's synopsis covers ch 21's opening and ch 22's body; ja-Wikipedia leaves バブ16 unbold under its anime-original legend, sitting between bolded バブ15 and バブ17, and the subtitle なかなか男じゃないですか is ch 22's own title. AFL 'Manga Canon' and AFG '21, 22' agree but are quoted as one lineage, not as the basis. The only thing in the episode with no chapter behind it is a brief Tōjō appearance in the fandom's cast list, unnamed by any source and far too small to weigh — recorded in the anchor's note, not annotated.",
+      "sources": [
+        "https://beelzebub.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&redirects=1&titles=Chapter%2021",
+        "https://beelzebub.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&redirects=1&titles=Chapter%2022",
+        "https://www.b-ch.com/titles/3113/016",
+        "https://ja.wikipedia.org/wiki/%E3%81%B9%E3%82%8B%E3%81%9C%E3%83%90%E3%83%96",
+        "https://en.wikipedia.org/wiki/List_of_Beelzebub_episodes"
+      ]
+    },
+    {
+      "episodes": [26],
+      "type": "mixed",
+      "note": "STORED canon -> PROPOSED mixed. Both labels on this row are half right, which is why it was flagged. THE SOURCE SHARE IS REAL AND SIGNIFICANT: ch 50 pp 1-17 (Kazuya turning up at Oga's house, calling him 'bro', being taken on as a disciple after relentless flattery, and explaining the Rokkisei on the train) and ch 51 pp 1-12 (the classroom rumours and Aoi taking Oga to Kido, who ranks them above the other delinquents) — the fandom's arc page cites both page ranges, Bandai's opening sentence is the Kido scene, and Kido's own character page pins manga debut ch 51 against anime debut ep 26. THE ORIGINAL SHARE IS ALSO SIGNIFICANT AND STORY-CARRYING: the fake secret technique and the Azusa abduction that Bandai gives the episode's climax slot, resolved by Kunieda revealing the bald man to be an acquaintance of her temple — beats the arc page's page-by-page account of chs 48-76 does not contain, and ja-Wikipedia independently bolds バブ26's subtitle under its anime-original legend. Source + a story-carrying original share in one episode is T28's definition of mixed; T28's faithfulness clause does not cover this, because the original material is not an alteration of an adapted chapter's events but a plot of its own with its own setup and payoff. AFL's 'Manga Canon' and AFG's '50, 51' are one lineage and cannot see the split; ja-WP's bold alone would be one source, so it is paired with the licensor text and the arc page's citations.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%81%B9%E3%82%8B%E3%81%9C%E3%83%90%E3%83%96",
+        "https://www.b-ch.com/titles/3113/026",
+        "https://beelzebub.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&redirects=1&titles=Saint%20Ishiyama%20Academy%20Arc",
+        "https://beelzebub.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&redirects=1&titles=Kido",
+        "https://en.wikipedia.org/wiki/List_of_Beelzebub_episodes"
+      ]
+    },
+    {
+      "episodes": [27],
+      "type": "filler",
+      "note": "CONFIRMED AS STORED (filler). Four readings agree and none of them is AFL. Bandai Channel: '古市の家にアランドロンの娘、アンジェリカがやってきた... 突然「ヨップル星人」が町へと飛び出した！... アンジェリカが子供の頃に父からもらった魔法のステッキのことを思い出す' — Alaindelon's daughter Angelica visits, a Yople alien escapes into the human world, and a demon wand turns its user into a magical girl; Hilda, Azusa, Honoka and Aoi join her as the '5 Fairies of Light' and corner the alien at an amusement park. beelzebub.fandom gives the episode `chapters = N/A` AND `[[Category:Filler]]` — one of only two rows in this ask so categorised. ja-Wikipedia bolds バブ27's subtitle under its anime-original legend. en-Wikipedia's summary is the same original premise. No chapter of the manga carries a magical-girl transformation or a Yople alien, and the fandom's chapter space has no such title. AFL 'Filler' / AFG '* Filler, N/A' agree but are quoted as one lineage.",
+      "sources": [
+        "https://www.b-ch.com/titles/3113/027",
+        "https://beelzebub.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&redirects=1&titles=Called%20a%20Magical%20Girl",
+        "https://ja.wikipedia.org/wiki/%E3%81%B9%E3%82%8B%E3%81%9C%E3%83%90%E3%83%96",
+        "https://en.wikipedia.org/wiki/List_of_Beelzebub_episodes"
+      ]
+    },
+    {
+      "episodes": [28],
+      "type": "filler",
+      "note": "CONFIRMED AS STORED (filler). Bandai Channel: '身体測定が行われることになり、石矢魔高校特設クラスの測定係は男鹿と邦枝に... 機嫌を損ねたベル坊がロッカー内にたてこもり!?' — a body-measurement day at the Ishiyama special class with Oga and Kunieda as measurement officers, Beel sulking in a locker, Oga and Furuichi hiding under a desk while the girls measure, and Beel finally wrecking Sadohara's car. beelzebub.fandom gives `chapters = N/A` AND `[[Category:Filler]]`. ja-Wikipedia bolds バブ28's subtitle under its anime-original legend. en-Wikipedia's summary is the same original premise. No manga chapter carries it. AFL 'Filler' / AFG '* Filler, N/A' agree but are quoted as one lineage.",
+      "sources": [
+        "https://www.b-ch.com/titles/3113/028",
+        "https://beelzebub.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&redirects=1&titles=Let%27s%20Try%20Doing%20Body%20Measurements",
+        "https://ja.wikipedia.org/wiki/%E3%81%B9%E3%82%8B%E3%81%9C%E3%83%90%E3%83%96",
+        "https://en.wikipedia.org/wiki/List_of_Beelzebub_episodes"
+      ]
+    },
+    {
+      "episodes": [51],
+      "type": "mixed",
+      "note": "STORED canon -> PROPOSED mixed, and this is the one row in the ask where a source states the split in words. ja-Wikipedia's footnote sitting on バブ51 reads '葵がコマちゃんと出会うシーンなどは原作通りであるが、エピソードの半分はアニメオリジナルとなっている' — the Aoi-meets-Koma-chan scene AND OTHERS follow the original, but half the episode is anime-original. Both halves are verified on the pages rather than taken on the footnote's word. SOURCE HALF (significant): ch 114 「烈怒帝瑠大作戦」 — Saotome drilling Oga and Beel on Super Milk Time with the Black Baby Beel / Izuma / Tōjō flashbacks, then the Red Tail girls' scheme to win Aoi back (the chapter's own title); ch 114's fandom page carries `episode = 51` and nothing else, and both it and the ep-51 page compare ch 114's Black-Beel-crams-a-cigarette panel with the censored ep-51 frame. Plus ch 115's Koma-chan origin at the 魔二津 temple, which Bandai states directly. ORIGINAL HALF (significant): 聖マリアン女学院谷百合会, which ja-WP's glossary flags as existing only in ep 51 and which en-Wikipedia describes independently ('St Marian's High School for Girls have declared a battle against the Red Tails... unknowingly defeated by Koma'). T28: source + a story-carrying original half = mixed, never canon; the recap and faithfulness clauses do not apply because the St Marian's block is neither re-shown footage nor an alteration of an adapted chapter's events. AFL's 'Manga Canon' and AFG's '114, 115' are one lineage and cannot see the split — and AFL prints 'Manga Canon' on ep 49 too, which Sean already ruled is the unnumbered vol-10 extra plus the light novel. The anchor survives the retype (mixed rows carry anchors) with a START repair to 114.",
+      "sources": [
+        "https://ja.wikipedia.org/wiki/%E3%81%B9%E3%82%8B%E3%81%9C%E3%83%90%E3%83%96",
+        "https://en.wikipedia.org/wiki/List_of_Beelzebub_episodes",
+        "https://www.b-ch.com/titles/3113/051",
+        "https://beelzebub.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&redirects=1&titles=Chapter%20114",
+        "https://beelzebub.fandom.com/api.php?action=query&prop=revisions&rvprop=content&rvslots=main&redirects=1&titles=Komainu-sama%20is%20Watching"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "No structural change proposed. The entry is one 60-episode season (AniList 9513) against one manga (AniList 40010, 252 chapters / 28 volumes) and the source_relation is ordinary adaptation, not parallel. Row identity holds: our 60 rows, AFL's 60, AFG's 60 and ja-WP's バブ1-バブ60 all number the same way, with the A/B halves of 6, 13, 53, 55, 56 and 57 counted inside one number by all four; no duplicate number and no gap; stored air dates for all six targets match ja-WP's exactly, so no date repair. All volume assignments in this verdict agree with the stored boundary table (ch 21-22 -> v3, ch 50-51 -> v6, ch 114-115 -> v13) and every chapter number is in the manga's own printed serialization space — no sourceShift applies to this series and no source used here numbers differently. One coverage observation worth recording: beelzebub.fandom's ch 115 page lists `episode = 46, 47, 51`, and AFG prints a lone '115' at the end of its otherwise contiguous rows 46 ('97, 98, 99, 100, 101, 115') and 47 ('102, 103, 104, 105, 115'), which matches ep 47's cast list opening on Aoi and Isafuyu — i.e. ch 115's opening pages were animated out of order well ahead of ep 51, and ep 51 carries the flashback and close. That is consistent with the stored eps 46/47 chapters_adapted and needs no repair, but it is why ep 51's ch-115 share is described as NEW rather than duplicate.",
+    "coverage_set_checked": "Yes — for every chapter this verdict touches, the fandom chapter pages' reverse `episode` index was read in both directions and cross-checked against AFG's row list. ch 21 -> ep 16 only. ch 22 -> ep 16 only. ch 23 -> eps 3, 15, 17, 18 (ep 18 is the full adaptation and the stored START; eps 15 and 17 are slivers; ep 3's listing is an early out-of-order glimpse, outside this ask). chs 24, 25, 26 -> ep 18; ch 27 -> eps 18, 19. chs 48, 49 -> ep 25. chs 50, 51 -> eps 26 and 29 (page-split 50 pp1-17 / 51 pp1-12 to ep 26; 51 pp12-19 onward to ep 29). chs 52, 53 -> ep 29 (53 also ep 30). chs 112, 113 -> ep 50. ch 114 -> ep 51 only. ch 115 -> eps 46, 47, 51. chs 116, 117, 118 -> ep 58. Deleting ep 15's anchor strands no chapter: ch 23 remains anchored on ep 18 (END 27 [START 23]).",
+    "confidence": "high"
+  },
+  "flags_for_sean": [
+    "THE EP-17 RULING'S REASON TEXT NEEDS ONE WORD CHANGED (not a data contradiction, but it should not be left standing). Sean's A1 ruling of 2026-09-04 on ep 17 records the reason 'the ch 12 / 23 shares are slivers restaging pages ep 6 / eps 15, 18 carry'. With ep 15 retyped filler by this verdict on the same sliver grounds, ch 23's pages are carried by ep 18 alone (plus ep 3's early out-of-order glimpse). The ruling's OUTCOME is unaffected — ep 17 stays filler and anchorless — but the phrase 'eps 15, 18' should become 'ep 18'.",
+    "TWO ROWS IN THE ASK CHANGE TYPE WHILE KEEPING THEIR ANCHOR (26 and 51). Under A1 that is legal — mixed rows carry anchors — but both anchors are currently AFG-tier, so if the retype is applied the T6 pin has to go in alongside the anchors at the manual tier (P8) or the next AFG re-derive will re-assert canon and, on ep 51, re-assert START 115 from the parity chain.",
+    "OUTSIDE THE ASK, EP 58's ANCHOR LOOKS SHORT. Ours is ep 58 -> END 118 (manual tier) with no START recorded. beelzebub.fandom's ch 116 「石矢魔高校復活」, ch 117 「挨拶」 and ch 118 pages each carry `episode = 58`, and AFG's row 58 prints '116, 117, 118, 123'. If ch 116 is ep 58's START, the ep-51 -> 116 continue this verdict delivers is exact parity; if the 123 in AFG's cell is real, ep 58 is a bigger reorder than our row shows. Not researched here — flagged for a later wave.",
+    "AFL IS UNUSABLE AS A TYPE WITNESS ON THIS SERIES AND THE EVIDENCE IS NOW THREE ROWS DEEP. It prints 'Manga Canon' on ep 49 (Sean already ruled: the unnumbered vol-10 extra plus the light novel), 'Manga Canon' on eps 26 and 51 (both half anime-original), and 'Mixed Canon/Filler' on ep 15 (a one-scene tease). AFG's old-format page is the same lineage plus a chapter column that runs BACKWARDS across rows 15-18 ('23' then '21, 22' then '12, 23' then '23-27'). Both are quoted in this verdict, neither is relied on.",
+    "ONE HONEST GAP ON EP 16, DELIBERATELY NOT ANNOTATED. The fandom's ep-16 cast list places Hidetora Tōjō between Aoi and Takashima, and neither ch 21 nor ch 22 has him. It is most likely a short studio cutaway continuing ep 15's original beach thread, but no source describes the scene, so it is recorded in the anchor's note rather than written as a divergence annotation. It is far too small to affect the canon typing."
+  ]
+}
