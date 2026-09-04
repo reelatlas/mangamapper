@@ -1,0 +1,305 @@
+{
+ "series_id": "boruto-naruto-next-generations",
+ "summary": "Lane I, batch 22 wave 1: the six chain rows of Boruto Part 1. ALL SIX STANDINGS CONFIRMED AS STORED (canon), none corrected. Eps 19-23 adapt Kishimoto's ten-chapter Naruto Gaiden 『七代目火影と緋色の花つ月』 complete and in order - 19 = 700+1 + the opening of 700+2, 20 = the rest of 700+2 + 700+3 + 700+4, 21 = 700+5 + 700+6, 22 = 700+7 + 700+8, 23 = 700+9 + 700+10 - every segment SIGNIFICANT under T28, with three restagings recorded as `divergence` under the faithfulness clause and one page-split recorded as `partial` across 19/20. Ep 39 adapts Kishimoto's unnumbered one-shot 『NARUTO外伝 ～満ちた月が照らす道～』 (WSJ 2016 #21/22, collected in Boruto vol 1) in full inside a two-scene present-day frame - frame weight SLIVER, remainder decides, canon. Six `chain_source` annotations delivered in the I41 convention, each starting with the work label; ANCHORS: [] on all six, delivered as anchor_hostile under A44 because the material lives in another chapter space and Boruto's own instrument (chs 1-80) does not begin until ep 53. NO row in the ask also adapts a Boruto-space chapter. Ep 39's 'ch 0' fork resolved in favour of naming the work and refusing the number, with the reasoning and the residual question flagged for Sean. One source conflict adjudicated: animefillerguide's extra 706 on ep 22 refused under R3 on TV Tokyo's own synopsis. No repairs proposed; two suppression/ruling asks flagged.",
+ "anchors": [],
+ "continue_points": [],
+ "anchor_hostile": [
+  {
+   "episode": 19,
+   "why": "The row's content is Naruto Gaiden ch 700+1 and the opening of 700+2 (printed 700+N, Viz's own citation space; Narutopedia flattens it to 701, 702). A44, and the basis is THE CHAPTER SPACE, not distance from an anchor: the material this row animates is not in the Boruto manga (AniList 87178, chs 1-80) that is this entry's instrument, so there is no number in that space to put in an anchor field. Boruto ch 1 opens at the Chūnin Exams and is anchored at ep 53 (ep53 -> END 1 START 1); nothing before ep 53 can hold a Boruto-space number, and none of these rows does. Narutopedia's own Semantic-MediaWiki export says so directly - Manga = Naruto on eps 19-24, not Manga = Boruto. The fact is carried by a `chain_source` annotation under I41 instead, and the reader's Boruto position is unchanged across the row (still pre-ch-1), so no continue point moves. This is the same treatment Sean already ruled for ep 24 (ANCHOR_SUPPRESSED [24], 2026-09-04); these rows want the same suppression entry - flagged.",
+   "sources": [
+    "https://naruto.fandom.com/api.php?action=parse&prop=wikitext&format=json&page=Sarada%20Uchiha%20(episode)",
+    "https://naruto.fandom.com/api.php?action=askargs&conditions=Anime::Boruto|Manga%20Chapter::%2B&printouts=Episode%20number|Manga%20Chapter|Manga&parameters=limit%3D300&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&prop=text&format=json&page=Sarada%20Uchiha%20(volume)",
+    "https://en.wikipedia.org/w/api.php?action=parse&prop=wikitext&format=json&page=Naruto%3A%20The%20Seventh%20Hokage%20and%20the%20Scarlet%20Spring",
+    "https://www.animefillerguide.com/anime/boruto/"
+   ]
+  },
+  {
+   "episode": 20,
+   "why": "The row's content is Naruto Gaiden ch 700+2 (remainder), 700+3 and 700+4 (Narutopedia flattens it to 702, 703, 704). A44, and the basis is THE CHAPTER SPACE, not distance from an anchor: the material this row animates is not in the Boruto manga (AniList 87178, chs 1-80) that is this entry's instrument, so there is no number in that space to put in an anchor field. Boruto ch 1 opens at the Chūnin Exams and is anchored at ep 53 (ep53 -> END 1 START 1); nothing before ep 53 can hold a Boruto-space number, and none of these rows does. Narutopedia's own Semantic-MediaWiki export says so directly - Manga = Naruto on eps 19-24, not Manga = Boruto. The fact is carried by a `chain_source` annotation under I41 instead, and the reader's Boruto position is unchanged across the row (still pre-ch-1), so no continue point moves. This is the same treatment Sean already ruled for ep 24 (ANCHOR_SUPPRESSED [24], 2026-09-04); these rows want the same suppression entry - flagged.",
+   "sources": [
+    "https://naruto.fandom.com/api.php?action=parse&prop=wikitext&format=json&page=The%20Boy%20with%20the%20Sharingan",
+    "https://naruto.fandom.com/api.php?action=askargs&conditions=Anime::Boruto|Manga%20Chapter::%2B&printouts=Episode%20number|Manga%20Chapter|Manga&parameters=limit%3D300&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&prop=text&format=json&page=Sarada%20Uchiha%20(volume)",
+    "https://en.wikipedia.org/w/api.php?action=parse&prop=wikitext&format=json&page=Naruto%3A%20The%20Seventh%20Hokage%20and%20the%20Scarlet%20Spring",
+    "https://www.animefillerguide.com/anime/boruto/"
+   ]
+  },
+  {
+   "episode": 21,
+   "why": "The row's content is Naruto Gaiden ch 700+5 and 700+6 (Narutopedia flattens it to 705, 706). A44, and the basis is THE CHAPTER SPACE, not distance from an anchor: the material this row animates is not in the Boruto manga (AniList 87178, chs 1-80) that is this entry's instrument, so there is no number in that space to put in an anchor field. Boruto ch 1 opens at the Chūnin Exams and is anchored at ep 53 (ep53 -> END 1 START 1); nothing before ep 53 can hold a Boruto-space number, and none of these rows does. Narutopedia's own Semantic-MediaWiki export says so directly - Manga = Naruto on eps 19-24, not Manga = Boruto. The fact is carried by a `chain_source` annotation under I41 instead, and the reader's Boruto position is unchanged across the row (still pre-ch-1), so no continue point moves. This is the same treatment Sean already ruled for ep 24 (ANCHOR_SUPPRESSED [24], 2026-09-04); these rows want the same suppression entry - flagged.",
+   "sources": [
+    "https://naruto.fandom.com/api.php?action=parse&prop=wikitext&format=json&page=Sasuke%20and%20Sarada",
+    "https://naruto.fandom.com/api.php?action=askargs&conditions=Anime::Boruto|Manga%20Chapter::%2B&printouts=Episode%20number|Manga%20Chapter|Manga&parameters=limit%3D300&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&prop=text&format=json&page=Sarada%20Uchiha%20(volume)",
+    "https://en.wikipedia.org/w/api.php?action=parse&prop=wikitext&format=json&page=Naruto%3A%20The%20Seventh%20Hokage%20and%20the%20Scarlet%20Spring",
+    "https://www.animefillerguide.com/anime/boruto/"
+   ]
+  },
+  {
+   "episode": 22,
+   "why": "The row's content is Naruto Gaiden ch 700+7 and 700+8 (Narutopedia flattens it to 707, 708; animefillerguide alone adds 706 - refused under R3, see the annotation). A44, and the basis is THE CHAPTER SPACE, not distance from an anchor: the material this row animates is not in the Boruto manga (AniList 87178, chs 1-80) that is this entry's instrument, so there is no number in that space to put in an anchor field. Boruto ch 1 opens at the Chūnin Exams and is anchored at ep 53 (ep53 -> END 1 START 1); nothing before ep 53 can hold a Boruto-space number, and none of these rows does. Narutopedia's own Semantic-MediaWiki export says so directly - Manga = Naruto on eps 19-24, not Manga = Boruto. The fact is carried by a `chain_source` annotation under I41 instead, and the reader's Boruto position is unchanged across the row (still pre-ch-1), so no continue point moves. This is the same treatment Sean already ruled for ep 24 (ANCHOR_SUPPRESSED [24], 2026-09-04); these rows want the same suppression entry - flagged.",
+   "sources": [
+    "https://naruto.fandom.com/api.php?action=parse&prop=wikitext&format=json&page=Connected%20Feelings",
+    "https://naruto.fandom.com/api.php?action=askargs&conditions=Anime::Boruto|Manga%20Chapter::%2B&printouts=Episode%20number|Manga%20Chapter|Manga&parameters=limit%3D300&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&prop=text&format=json&page=Sarada%20Uchiha%20(volume)",
+    "https://en.wikipedia.org/w/api.php?action=parse&prop=wikitext&format=json&page=Naruto%3A%20The%20Seventh%20Hokage%20and%20the%20Scarlet%20Spring",
+    "https://www.animefillerguide.com/anime/boruto/"
+   ]
+  },
+  {
+   "episode": 23,
+   "why": "The row's content is Naruto Gaiden ch 700+9 and 700+10 (Narutopedia flattens it to 709, 710), which closes the mini-series. A44, and the basis is THE CHAPTER SPACE, not distance from an anchor: the material this row animates is not in the Boruto manga (AniList 87178, chs 1-80) that is this entry's instrument, so there is no number in that space to put in an anchor field. Boruto ch 1 opens at the Chūnin Exams and is anchored at ep 53 (ep53 -> END 1 START 1); nothing before ep 53 can hold a Boruto-space number, and none of these rows does. Narutopedia's own Semantic-MediaWiki export says so directly - Manga = Naruto on eps 19-24, not Manga = Boruto. The fact is carried by a `chain_source` annotation under I41 instead, and the reader's Boruto position is unchanged across the row (still pre-ch-1), so no continue point moves. This is the same treatment Sean already ruled for ep 24 (ANCHOR_SUPPRESSED [24], 2026-09-04); these rows want the same suppression entry - flagged.",
+   "sources": [
+    "https://naruto.fandom.com/api.php?action=parse&prop=wikitext&format=json&page=Bonds%20Come%20in%20All%20Shapes",
+    "https://naruto.fandom.com/api.php?action=askargs&conditions=Anime::Boruto|Manga%20Chapter::%2B&printouts=Episode%20number|Manga%20Chapter|Manga&parameters=limit%3D300&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&prop=text&format=json&page=Sarada%20Uchiha%20(volume)",
+    "https://en.wikipedia.org/w/api.php?action=parse&prop=wikitext&format=json&page=Naruto%3A%20The%20Seventh%20Hokage%20and%20the%20Scarlet%20Spring",
+    "https://www.animefillerguide.com/anime/boruto/"
+   ]
+  },
+  {
+   "episode": 39,
+   "why": "The row's content is Kishimoto's unnumbered one-shot 『NARUTO外伝 ～満ちた月が照らす道～』. It is doubly position-less: it is a different WORK, and it carries NO NUMBER even in its own right - en-WP lists Boruto vol 1 as three numbered chapters plus this one-shot as an unnumbered extra. Narutopedia's 'ch 0' is a wiki slot for 'printed in Boruto vol 1 before ch 1'; writing 0 into an anchor field would be a fabricated Boruto-space position, and animefillerguide's own chapters cell refuses the number too, printing the work's title instead. A44, and the basis is THE CHAPTER SPACE, not distance from an anchor: the material this row animates is not in the Boruto manga (AniList 87178, chs 1-80) that is this entry's instrument, so there is no number in that space to put in an anchor field. Boruto ch 1 opens at the Chūnin Exams and is anchored at ep 53 (ep53 -> END 1 START 1); nothing before ep 53 can hold a Boruto-space number, and none of these rows does. Narutopedia's own Semantic-MediaWiki export says so directly - Manga = Naruto on eps 19-24, not Manga = Boruto. The fact is carried by a `chain_source` annotation under I41 instead, and the reader's Boruto position is unchanged across the row (still pre-ch-1), so no continue point moves. This is the same treatment Sean already ruled for ep 24 (ANCHOR_SUPPRESSED [24], 2026-09-04); these rows want the same suppression entry - flagged.",
+   "sources": [
+    "https://naruto.fandom.com/api.php?action=parse&prop=wikitext&format=json&page=The%20Path%20Lit%20by%20the%20Full%20Moon",
+    "https://naruto.fandom.com/api.php?action=askargs&conditions=Anime::Boruto|Manga%20Chapter::%2B&printouts=Episode%20number|Manga%20Chapter|Manga&parameters=limit%3D300&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&prop=text&format=json&page=Boruto%20Uzumaki!!%20(volume)",
+    "https://en.wikipedia.org/w/api.php?action=parse&prop=wikitext&format=json&page=List%20of%20Boruto%20chapters",
+    "https://www.animefillerguide.com/anime/boruto/"
+   ]
+  }
+ ],
+ "annotations": [
+  {
+   "episodes": [
+    19
+   ],
+   "kind": "chain_source",
+   "chapters": "Naruto Gaiden: ch 700+1, 700+2",
+   "note": "THE WORK: 『NARUTO -ナルト- 外伝 ～七代目火影と緋色の花つ月～』 (Naruto Gaiden: The Seventh Hokage and the Scarlet Spring), Kishimoto's own ten-chapter mini-series, serialised in Weekly Shonen Jump from the 2015 combined 22/23 issue to issue 32 (27 Apr - 6 Jul 2015) and collected in ONE tankōbon titled 「うちはサラダ」 (Shueisha 2015-08-04, ISBN 978-4-08-880468-2). ja-WP states the shape of the space exactly: 「全700話で、単行本は全72巻と外伝1巻」 - the Gaiden's volume is NOT one of Naruto's 72, and its ten chapters are printed 700+1 … 700+10 (Viz's own citation space: en-WP's article on the mini-series cites it as chapter=700+1, 700+2, 700+3, 700+4 …; Narutopedia's volume page heads the summaries 'Chapter 700+1' … 'Chapter 700+10'). Narutopedia's per-episode field flattens the same ten chapters onto Naruto's running count as 701-710 with volume=73 - that is a WIKI convention, not the printed space; its Semantic-MediaWiki export qualifies every one of these rows with Manga = Naruto (19 -> 701,702; 20 -> 702,703,704; 21 -> 705,706; 22 -> 707,708; 23 -> 709,710; 24 -> 700,705), i.e. the wiki itself says these are NOT Boruto chapters. THE CHAIN (I41, Sean 2026-09-04): Naruto -> Naruto Gaiden -> Boruto; this row sits on the SECOND work, so it is position-less in the entry's instrument (A44) and never carries an anchor. Nothing here touches the Boruto space: Boruto ch 1 opens at the Chūnin Exams and is anchored at ep 53. || SEGMENTS AND WEIGHTS (T28). Segment 1 - ch 700+1 「うちはサラダ」 (Sarada Uchiha): weight: SIGNIFICANT - because it IS this episode's plot, adapted essentially end to end. The chapter's beats in order (Narutopedia's 700+1 summary) and the episode's (Narutopedia ep-19 synopsis) match one for one: the classmates training with their fathers while Sarada has never met hers; Sarada questioning Sakura about Sasuke; Sakura's Cherry Blossom Impact flattening the house and her collapse; Shizune taking her to hospital; Sarada finding the family photo is a crop of the Taka photo with a bespectacled Karin in it. TV Tokyo's official synopsis is the same story (「母のサクラに話を聞いても何も答えてもらえず…父・サスケと写るメガネをかけた若い女性の写真を見たサラダは、ある疑惑に駆られ」). NEW, not a duplicate: nothing of 700+1 has been animated before. Segment 2 - ch 700+2 「写輪眼の少年…!!」 (The Boy with the Sharingan...!!), its OPENING SHARE: weight: SIGNIFICANT - because it is three story-carrying scenes, not a tease: Sarada at the hospital telling Shizune there is no record of her birth in any village hospital; the diner scene where Chōchō doubts her own parents and Mitsuki dismisses it, which is what sends Sarada after Sasuke; and the closing beat of Sasuke stepping out of his portal and being attacked by the hooded boy. NEW here; the REMAINDER of 700+2 (the hawk to Naruto, the Naruto/Kakashi consultation, the boy reporting to his 'father') is adapted by ep 20, so the chapter is page-split across two rows - annotated `partial` there and here. NO BORUTO-SPACE CHAPTER in this row.",
+   "sources": [
+    "https://naruto.fandom.com/api.php?action=parse&prop=wikitext&format=json&page=Sarada%20Uchiha%20(episode)",
+    "https://naruto.fandom.com/api.php?action=askargs&conditions=Anime::Boruto|Manga%20Chapter::%2B&printouts=Episode%20number|Manga%20Chapter|Manga&parameters=limit%3D300&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&prop=text&format=json&page=Sarada%20Uchiha%20(volume)",
+    "https://www.tv-tokyo.co.jp/anime/boruto/episodes/index_28.html",
+    "https://en.wikipedia.org/w/api.php?action=parse&prop=wikitext&format=json&page=Naruto%3A%20The%20Seventh%20Hokage%20and%20the%20Scarlet%20Spring",
+    "https://ja.wikipedia.org/w/api.php?action=parse&prop=wikitext&format=json&page=BORUTO-%E3%83%9C%E3%83%AB%E3%83%88-%20-NARUTO%20NEXT%20GENERATIONS-",
+    "https://ja.wikipedia.org/w/api.php?action=parse&prop=wikitext&format=json&page=NARUTO%20-%E3%83%8A%E3%83%AB%E3%83%88-",
+    "https://www.animefillerguide.com/anime/boruto/"
+   ]
+  },
+  {
+   "episodes": [
+    19
+   ],
+   "kind": "divergence",
+   "chapters": "Naruto Gaiden: ch 700+1",
+   "note": "THE FAITHFULNESS CLAUSE (T28) - recorded so the row is not read as a page-faithful pass, and it does NOT move the standing. In 700+1 Sarada's walk home shows Boruto 'playing an expansive game of hide-and-seek with his ever-busy father, the Seventh Hokage, coupled with being given a lecture by Shikadai Nara and his father' (Narutopedia's chapter summary). The anime restages that same beat as a different prank: Boruto vandalises the Hokage Rock, Naruto sends a shadow clone that chases him through the village, Sarada misdirects the clone, and Shikamaru pins Boruto with his shadow and lectures him before having Shikadai dispel the clone (Narutopedia ep-19 synopsis; TV Tokyo: 「“火影岩（ほかげいわ）”にイタズラし、父親に追い掛け回されるボルトを見てあきれるサラダ」). Function preserved (Sarada seeing a father who makes time for his child), staging changed - an alteration of the source's own events, which keeps the row CANON. The anime also lets the Academy's graduation framing arrive through Sarada and Chōchō's meal rather than through Shino's classroom announcement, because eps 1-18 have already played the Academy material. weight: NIL toward the type - this is a restaging, not original plot.",
+   "sources": [
+    "https://naruto.fandom.com/api.php?action=parse&prop=wikitext&format=json&page=Sarada%20Uchiha%20(episode)",
+    "https://naruto.fandom.com/api.php?action=parse&prop=text&format=json&page=Sarada%20Uchiha%20(volume)",
+    "https://www.tv-tokyo.co.jp/anime/boruto/episodes/index_28.html"
+   ]
+  },
+  {
+   "episodes": [
+    20
+   ],
+   "kind": "chain_source",
+   "chapters": "Naruto Gaiden: ch 700+2, 700+3, 700+4",
+   "note": "THE WORK: 『NARUTO -ナルト- 外伝 ～七代目火影と緋色の花つ月～』 (Naruto Gaiden: The Seventh Hokage and the Scarlet Spring), Kishimoto's own ten-chapter mini-series, serialised in Weekly Shonen Jump from the 2015 combined 22/23 issue to issue 32 (27 Apr - 6 Jul 2015) and collected in ONE tankōbon titled 「うちはサラダ」 (Shueisha 2015-08-04, ISBN 978-4-08-880468-2). ja-WP states the shape of the space exactly: 「全700話で、単行本は全72巻と外伝1巻」 - the Gaiden's volume is NOT one of Naruto's 72, and its ten chapters are printed 700+1 … 700+10 (Viz's own citation space: en-WP's article on the mini-series cites it as chapter=700+1, 700+2, 700+3, 700+4 …; Narutopedia's volume page heads the summaries 'Chapter 700+1' … 'Chapter 700+10'). Narutopedia's per-episode field flattens the same ten chapters onto Naruto's running count as 701-710 with volume=73 - that is a WIKI convention, not the printed space; its Semantic-MediaWiki export qualifies every one of these rows with Manga = Naruto (19 -> 701,702; 20 -> 702,703,704; 21 -> 705,706; 22 -> 707,708; 23 -> 709,710; 24 -> 700,705), i.e. the wiki itself says these are NOT Boruto chapters. THE CHAIN (I41, Sean 2026-09-04): Naruto -> Naruto Gaiden -> Boruto; this row sits on the SECOND work, so it is position-less in the entry's instrument (A44) and never carries an anchor. Nothing here touches the Boruto space: Boruto ch 1 opens at the Chūnin Exams and is anchored at ep 53. || SEGMENTS AND WEIGHTS (T28). Segment 1 - ch 700+2, its CLOSING SHARE: weight: SIGNIFICANT - the whole engine of the arc's next move: Sasuke's clash with the hooded boy and the Chidori through the kusarigama, the hawk reaching Naruto, Naruto and Kakashi concluding the boy is one of Orochimaru's experiments rather than an Uchiha survivor, Sarada overhearing that Naruto is going to meet Sasuke, and the boy reporting to the cloaked Shin who wants Sasuke dead for Itachi. NEW here; the chapter's opening share was in ep 19 (page-split, annotated `partial`). Segment 2 - ch 700+3 「邂逅①」 (A Chance Meeting 1): weight: SIGNIFICANT - adapted in full and it carries the episode's middle: Naruto's apology to Boruto via Shikamaru, Boruto handing over the lunchbox, Sarada and Chōchō setting off, the Sharingan spying creature, and Shin's ambush. Segment 3 - ch 700+4 「邂逅②」 (A Chance Meeting 2): weight: SIGNIFICANT - adapted in full and it carries the close: Naruto's rescue and Six Paths Sage Mode, Shin's Mangekyō and retreat, the journey with Naruto and his 'you are both your parents' talk, Sarada slipping ahead, her Sharingan awakening, and Sasuke drawing his sword on her. TV Tokyo's synopsis covers exactly this span (「サスケからナルトに、…写輪眼を持つ者の情報が届いた…ナルトがサスケと会うことを知り、あとを追いかける。ところがその途中、何者かに襲われ危機に陥る！」). NO BORUTO-SPACE CHAPTER in this row.",
+   "sources": [
+    "https://naruto.fandom.com/api.php?action=parse&prop=wikitext&format=json&page=The%20Boy%20with%20the%20Sharingan",
+    "https://naruto.fandom.com/api.php?action=askargs&conditions=Anime::Boruto|Manga%20Chapter::%2B&printouts=Episode%20number|Manga%20Chapter|Manga&parameters=limit%3D300&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&prop=text&format=json&page=Sarada%20Uchiha%20(volume)",
+    "https://www.tv-tokyo.co.jp/anime/boruto/episodes/index_28.html",
+    "https://en.wikipedia.org/w/api.php?action=parse&prop=wikitext&format=json&page=Naruto%3A%20The%20Seventh%20Hokage%20and%20the%20Scarlet%20Spring",
+    "https://ja.wikipedia.org/w/api.php?action=parse&prop=wikitext&format=json&page=BORUTO-%E3%83%9C%E3%83%AB%E3%83%88-%20-NARUTO%20NEXT%20GENERATIONS-",
+    "https://www.animefillerguide.com/anime/boruto/"
+   ]
+  },
+  {
+   "episodes": [
+    19,
+    20
+   ],
+   "kind": "partial",
+   "chapters": "Naruto Gaiden: ch 700+2",
+   "note": "PAGE SPLIT across two rows, recorded because a chapter number appearing twice is normal and must be visible. 700+2's opening (Shizune and the missing birth record; the diner with Chōchō and Mitsuki; Sasuke ambushed as he steps out of his portal) is the back half of ep 19; 700+2's remainder (the hawk, Naruto and Kakashi, Sarada overhearing the departure, the boy reporting to Shin) opens ep 20. Both Narutopedia's per-episode field and AFG's chapter column print 702 on BOTH rows, which is the same split seen from the other side. Neither share is a duplicate of the other; both are first-time animation. weight of each share: SIGNIFICANT (see the two chain_source notes) - this annotation records the boundary, not a re-use.",
+   "sources": [
+    "https://naruto.fandom.com/api.php?action=parse&prop=wikitext&format=json&page=Sarada%20Uchiha%20(episode)",
+    "https://naruto.fandom.com/api.php?action=parse&prop=wikitext&format=json&page=The%20Boy%20with%20the%20Sharingan",
+    "https://naruto.fandom.com/api.php?action=askargs&conditions=Anime::Boruto|Manga%20Chapter::%2B&printouts=Episode%20number|Manga%20Chapter|Manga&parameters=limit%3D300&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&prop=text&format=json&page=Sarada%20Uchiha%20(volume)",
+    "https://www.animefillerguide.com/anime/boruto/"
+   ]
+  },
+  {
+   "episodes": [
+    21
+   ],
+   "kind": "chain_source",
+   "chapters": "Naruto Gaiden: ch 700+5, 700+6",
+   "note": "THE WORK: 『NARUTO -ナルト- 外伝 ～七代目火影と緋色の花つ月～』 (Naruto Gaiden: The Seventh Hokage and the Scarlet Spring), Kishimoto's own ten-chapter mini-series, serialised in Weekly Shonen Jump from the 2015 combined 22/23 issue to issue 32 (27 Apr - 6 Jul 2015) and collected in ONE tankōbon titled 「うちはサラダ」 (Shueisha 2015-08-04, ISBN 978-4-08-880468-2). ja-WP states the shape of the space exactly: 「全700話で、単行本は全72巻と外伝1巻」 - the Gaiden's volume is NOT one of Naruto's 72, and its ten chapters are printed 700+1 … 700+10 (Viz's own citation space: en-WP's article on the mini-series cites it as chapter=700+1, 700+2, 700+3, 700+4 …; Narutopedia's volume page heads the summaries 'Chapter 700+1' … 'Chapter 700+10'). Narutopedia's per-episode field flattens the same ten chapters onto Naruto's running count as 701-710 with volume=73 - that is a WIKI convention, not the printed space; its Semantic-MediaWiki export qualifies every one of these rows with Manga = Naruto (19 -> 701,702; 20 -> 702,703,704; 21 -> 705,706; 22 -> 707,708; 23 -> 709,710; 24 -> 700,705), i.e. the wiki itself says these are NOT Boruto chapters. THE CHAIN (I41, Sean 2026-09-04): Naruto -> Naruto Gaiden -> Boruto; this row sits on the SECOND work, so it is position-less in the entry's instrument (A44) and never carries an anchor. Nothing here touches the Boruto space: Boruto ch 1 opens at the Chūnin Exams and is anchored at ep 53. || SEGMENTS AND WEIGHTS (T28). Segment 1 - ch 700+5 「未来は」 (The Future): weight: SIGNIFICANT - adapted in full and it is the episode's first half: Sasuke almost cutting down his own daughter, Sarada's 'is Sakura really my mother', Shizune telling Sakura where Sarada has gone, Sarada storming out, the recalled Kage meeting where Sasuke revealed a Kaguya-related enemy, and Shin's father proclaiming the rebirth of Akatsuki before the attack. Segment 2 - ch 700+6 「進化無き種」 (Unevolving Species): weight: SIGNIFICANT - adapted in full and it is the episode's second half and cliffhanger: the deflected weapons and the Rinnegan swap, the Fire Release with Shin used as a shield, the adult Shin naming himself Uchiha Shin, and the creature warping Sakura away to the base. TV Tokyo's ep-21 synopsis ends on exactly that (「一同は、互いに“うちはシン”と名乗る写輪眼の父子に襲われる！」) and its ep-22 synopsis opens by treating Sakura's abduction as already past (「シンの術によってサクラが連れ去られ、呆然とするサラダ」), which is what settles 700+6 wholly onto THIS row. DISSENT, named: animefillerguide repeats 706 on ep 22 as well (22 = '706, 707, 708'); Narutopedia's per-episode field and SMW export give ep 22 only 707, 708, and TV Tokyo's ep-22 wording is a recap of the abduction rather than a first showing. R3 - a trailing share credited by ONE source only is not carried; 700+6 stays here. DUPLICATE WATCH: 700+5's Kage-summit content is STAGED AGAIN, at length, in ep 24 (Narutopedia's ep-24 field is 700, 705; the stored I41 chain_source on ep 24 says 'Naruto: ch 700; Naruto Gaiden: ch 700+5'). Here it is the chapter's own flashback; there it is the summit played out. This row holds the first-time animation of 700+5's own pages. NO BORUTO-SPACE CHAPTER in this row.",
+   "sources": [
+    "https://naruto.fandom.com/api.php?action=parse&prop=wikitext&format=json&page=Sasuke%20and%20Sarada",
+    "https://naruto.fandom.com/api.php?action=parse&prop=wikitext&format=json&page=Connected%20Feelings",
+    "https://naruto.fandom.com/api.php?action=parse&prop=wikitext&format=json&page=Boruto%20and%20Sarada",
+    "https://naruto.fandom.com/api.php?action=askargs&conditions=Anime::Boruto|Manga%20Chapter::%2B&printouts=Episode%20number|Manga%20Chapter|Manga&parameters=limit%3D300&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&prop=text&format=json&page=Sarada%20Uchiha%20(volume)",
+    "https://www.tv-tokyo.co.jp/anime/boruto/episodes/index_28.html",
+    "https://en.wikipedia.org/w/api.php?action=parse&prop=wikitext&format=json&page=Naruto%3A%20The%20Seventh%20Hokage%20and%20the%20Scarlet%20Spring",
+    "https://www.animefillerguide.com/anime/boruto/"
+   ]
+  },
+  {
+   "episodes": [
+    21
+   ],
+   "kind": "divergence",
+   "chapters": "Naruto Gaiden: ch 700+6",
+   "note": "THE FAITHFULNESS CLAUSE (T28) - an alteration of the source's own events, which keeps the row CANON; recorded so the row is not read as page-faithful. In 700+6 the adult Shin turns Sasuke's own sword on Naruto, Naruto's chakra cloak drops, Sasuke shields Sarada with his body and is paralysed by the weapons, Sakura arrives and punches Shin into the ground, and she is caught up in the creature's warp with the two Shins (Narutopedia's 700+6 summary). Narutopedia's ep-21 synopsis gives a shorter, rearranged version: Naruto restrains both Shins with chakra arms, the creature warps the Shins out, then it reaches for Sarada and Sakura pushes her clear and is taken IN HER PLACE. Same outcome (Sakura in Shin's base, the arc's hinge), condensed staging. weight: NIL toward the type. CONFIDENCE: medium on the detail - the evidence is the wiki's episode summary read against the wiki's own chapter summary; TV Tokyo's synopsis states only that 「シンの術によってサクラが連れ去られ」 and does not adjudicate the staging. No source states the episode adds original PLOT here, and none is claimed.",
+   "sources": [
+    "https://naruto.fandom.com/api.php?action=parse&prop=wikitext&format=json&page=Sasuke%20and%20Sarada",
+    "https://naruto.fandom.com/api.php?action=parse&prop=text&format=json&page=Sarada%20Uchiha%20(volume)",
+    "https://www.tv-tokyo.co.jp/anime/boruto/episodes/index_28.html"
+   ]
+  },
+  {
+   "episodes": [
+    22
+   ],
+   "kind": "chain_source",
+   "chapters": "Naruto Gaiden: ch 700+7, 700+8",
+   "note": "THE WORK: 『NARUTO -ナルト- 外伝 ～七代目火影と緋色の花つ月～』 (Naruto Gaiden: The Seventh Hokage and the Scarlet Spring), Kishimoto's own ten-chapter mini-series, serialised in Weekly Shonen Jump from the 2015 combined 22/23 issue to issue 32 (27 Apr - 6 Jul 2015) and collected in ONE tankōbon titled 「うちはサラダ」 (Shueisha 2015-08-04, ISBN 978-4-08-880468-2). ja-WP states the shape of the space exactly: 「全700話で、単行本は全72巻と外伝1巻」 - the Gaiden's volume is NOT one of Naruto's 72, and its ten chapters are printed 700+1 … 700+10 (Viz's own citation space: en-WP's article on the mini-series cites it as chapter=700+1, 700+2, 700+3, 700+4 …; Narutopedia's volume page heads the summaries 'Chapter 700+1' … 'Chapter 700+10'). Narutopedia's per-episode field flattens the same ten chapters onto Naruto's running count as 701-710 with volume=73 - that is a WIKI convention, not the printed space; its Semantic-MediaWiki export qualifies every one of these rows with Manga = Naruto (19 -> 701,702; 20 -> 702,703,704; 21 -> 705,706; 22 -> 707,708; 23 -> 709,710; 24 -> 700,705), i.e. the wiki itself says these are NOT Boruto chapters. THE CHAIN (I41, Sean 2026-09-04): Naruto -> Naruto Gaiden -> Boruto; this row sits on the SECOND work, so it is position-less in the entry's instrument (A44) and never carries an anchor. Nothing here touches the Boruto space: Boruto ch 1 opens at the Chūnin Exams and is anchored at ep 53. || SEGMENTS AND WEIGHTS (T28). Segment 1 - ch 700+7 「遺伝子の奴隷」 (Genetic Slaves): weight: SIGNIFICANT - adapted in full and it is the episode's first half: Shin telling Sakura his 'children' are expendable clones and killing the injured one, Naruto failing to sense Sakura, Sasuke reading the Sharingan-studded arm as Orochimaru's work, Yamato outside the hideout, the meeting with Jūgo, Suigetsu and Orochimaru, Sarada recognising the men from the photo, and the DNA test on Karin's umbilical cord that reads as a match. Segment 2 - ch 700+8 「本物」 (The Real Thing): weight: SIGNIFICANT - adapted in full and it is the episode's second half and its emotional turn: Sarada renouncing Sakura and meaning to leave the village, Naruto's 'a family is the connection, not the blood' and his own memories of Iruka and Sasuke, Sarada choosing to go and save her mother, Sasuke's restored Rinnegan and Mangekyō, the Susanoo lifting the group out, and Shin finishing his surgery as Sakura squares up to him. TV Tokyo's synopsis is the same run (「…大蛇丸（オロチまる）の研究所を訪れる。…水月に頼んで、自分の母親のことを調べてもらうことにする」). 700+6 IS NOT CARRIED HERE - animefillerguide alone prints 706 on this row; Narutopedia's field and SMW export give 707, 708, and TV Tokyo's own synopsis opens by recapping Sakura's abduction as already past. R3: a single-source trailing share is not credited (see the ep-21 note). NO BORUTO-SPACE CHAPTER in this row.",
+   "sources": [
+    "https://naruto.fandom.com/api.php?action=parse&prop=wikitext&format=json&page=Connected%20Feelings",
+    "https://naruto.fandom.com/api.php?action=askargs&conditions=Anime::Boruto|Manga%20Chapter::%2B&printouts=Episode%20number|Manga%20Chapter|Manga&parameters=limit%3D300&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&prop=text&format=json&page=Sarada%20Uchiha%20(volume)",
+    "https://www.tv-tokyo.co.jp/anime/boruto/episodes/index_28.html",
+    "https://en.wikipedia.org/w/api.php?action=parse&prop=wikitext&format=json&page=Naruto%3A%20The%20Seventh%20Hokage%20and%20the%20Scarlet%20Spring",
+    "https://www.animefillerguide.com/anime/boruto/"
+   ]
+  },
+  {
+   "episodes": [
+    23
+   ],
+   "kind": "chain_source",
+   "chapters": "Naruto Gaiden: ch 700+9, 700+10",
+   "note": "THE WORK: 『NARUTO -ナルト- 外伝 ～七代目火影と緋色の花つ月～』 (Naruto Gaiden: The Seventh Hokage and the Scarlet Spring), Kishimoto's own ten-chapter mini-series, serialised in Weekly Shonen Jump from the 2015 combined 22/23 issue to issue 32 (27 Apr - 6 Jul 2015) and collected in ONE tankōbon titled 「うちはサラダ」 (Shueisha 2015-08-04, ISBN 978-4-08-880468-2). ja-WP states the shape of the space exactly: 「全700話で、単行本は全72巻と外伝1巻」 - the Gaiden's volume is NOT one of Naruto's 72, and its ten chapters are printed 700+1 … 700+10 (Viz's own citation space: en-WP's article on the mini-series cites it as chapter=700+1, 700+2, 700+3, 700+4 …; Narutopedia's volume page heads the summaries 'Chapter 700+1' … 'Chapter 700+10'). Narutopedia's per-episode field flattens the same ten chapters onto Naruto's running count as 701-710 with volume=73 - that is a WIKI convention, not the printed space; its Semantic-MediaWiki export qualifies every one of these rows with Manga = Naruto (19 -> 701,702; 20 -> 702,703,704; 21 -> 705,706; 22 -> 707,708; 23 -> 709,710; 24 -> 700,705), i.e. the wiki itself says these are NOT Boruto chapters. THE CHAIN (I41, Sean 2026-09-04): Naruto -> Naruto Gaiden -> Boruto; this row sits on the SECOND work, so it is position-less in the entry's instrument (A44) and never carries an anchor. Nothing here touches the Boruto space: Boruto ch 1 opens at the Chūnin Exams and is anchored at ep 53. || SEGMENTS AND WEIGHTS (T28). Segment 1 - ch 700+9 「私が守る」 (I'll Protect You): weight: SIGNIFICANT - adapted in full and it is the episode's first half: the flight in Sasuke's Susanoo with Sarada turning her parents over in her mind, Shin's scalpel arm and the giant shuriken intercepted by the Susanoo sword, Sarada seeing that there is love between her parents, the clones turning on their 'father' because his genes have weakened, and Sarada destroying the warping creature. Segment 2 - ch 700+10 「その眼に写るもの」 (What is Reflected in Those Eyes): weight: SIGNIFICANT - adapted in full and it is the arc's close: Sarada's punch scattering the clones, Naruto cowing the rest with a glimpse of Kurama, Sakura's 'I am truly your mother' and Sasuke's 'you are the proof of our connection', the clones placed in Kabuto's orphanage, Chōchō and the slimmed-down Chōji, Karin explaining the umbilical cord was Sakura's and Sarada's, the family dinner and Sasuke's departure, and Sarada telling Boruto at the Academy that she has decided to aim for Hokage. TV Tokyo's synopsis frames the episode as exactly this resolution (「サラダが始めた、出生の秘密を知る旅の結末は？」). The mini-series ENDS here: en-WP records the adaptation as 'The episodes aired between August 9, 2017, and September 6, 2017 (episodes 19-23)' - our six-chapter/five-episode account covers 700+1 through 700+10 with nothing of the Gaiden left over. NO BORUTO-SPACE CHAPTER in this row.",
+   "sources": [
+    "https://naruto.fandom.com/api.php?action=parse&prop=wikitext&format=json&page=Bonds%20Come%20in%20All%20Shapes",
+    "https://naruto.fandom.com/api.php?action=askargs&conditions=Anime::Boruto|Manga%20Chapter::%2B&printouts=Episode%20number|Manga%20Chapter|Manga&parameters=limit%3D300&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&prop=text&format=json&page=Sarada%20Uchiha%20(volume)",
+    "https://www.tv-tokyo.co.jp/anime/boruto/episodes/index_28.html",
+    "https://en.wikipedia.org/w/api.php?action=parse&prop=wikitext&format=json&page=Naruto%3A%20The%20Seventh%20Hokage%20and%20the%20Scarlet%20Spring",
+    "https://naruto.fandom.com/api.php?action=parse&prop=wikitext&format=json&page=Naruto%20Gaiden%3A%20The%20Seventh%20Hokage%20and%20the%20Scarlet%20Spring",
+    "https://www.animefillerguide.com/anime/boruto/"
+   ]
+  },
+  {
+   "episodes": [
+    23
+   ],
+   "kind": "divergence",
+   "chapters": "Naruto Gaiden: ch 700+9",
+   "note": "THE FAITHFULNESS CLAUSE (T28), recorded, standing unchanged. The manga's 700+9 has Sasuke crush Shin's bones, pull the scalpels from Sakura's arm and burn them with Amaterasu, after which the clones stab their father; the anime instead has Sasuke stabbed through a clone he refuses to cut, Sasuke swapping places with Sakura so she can land the punch, and Shin simply succumbing to his wounds while the clones turn on him (Narutopedia ep-23 synopsis vs its 700+9 summary). Condensation and re-choreography of the source's own events; no original plot is added and none is claimed by any source. weight: NIL toward the type.",
+   "sources": [
+    "https://naruto.fandom.com/api.php?action=parse&prop=wikitext&format=json&page=Bonds%20Come%20in%20All%20Shapes",
+    "https://naruto.fandom.com/api.php?action=parse&prop=text&format=json&page=Sarada%20Uchiha%20(volume)"
+   ]
+  },
+  {
+   "episodes": [
+    39
+   ],
+   "kind": "chain_source",
+   "chapters": "Naruto Gaiden: 「満ちた月が照らす道」 (unnumbered one-shot, collected in Boruto vol 1)",
+   "note": "THE WORK, and the label used: 『NARUTO -ナルト- 外伝 ～満ちた月が照らす道～』 (Naruto Gaiden: The Path Lit by the Full Moon), a ONE-SHOT written AND drawn by Masashi Kishimoto, published in Weekly Shonen Jump's 2016 combined issue 21/22 (on sale 25 April 2016) - en-WP: 'The monthly series was preceded by a one-shot, titled Naruto: The Path Lit by the Full Moon … written and illustrated by Kishimoto and published on April 25 of that same year' - and later collected in the Boruto manga's volume 1 (Shueisha 2016-08-04, ISBN 978-4-08-880756-0). IT CARRIES NO CHAPTER NUMBER. en-WP's 'List of Boruto chapters' prints volume 1 as a numbered list of THREE chapters (「うずまきボルト!!」, 「修業開始!!」, 「中忍試験開始!!」) followed by the one-shot as an UNNUMBERED extra line - exactly the shape the catalog's 'unnumbered extras and one-shots are FACTS, never numbers' convention describes. Narutopedia's 'Chapter 0' (its chapter page carries chapter=0, boruto=Yes, volume=1; its SMW export gives ep 39 Manga = Boruto, Manga Chapter = 0) is that wiki's slot for 'the thing printed in Boruto vol 1 before ch 1', not a number in the Boruto manga's own space, which runs 1-80 and whose ch 1 is anchored at ep 53. animefillerguide agrees by refusing to give it a number at all: its Chapters cell for ep 39 is the WORK'S TITLE, 'Naruto Gaiden: The Road Illuminated by the Full Moon'. WHY 'Naruto Gaiden' AND NOT 'Boruto': the work's own title is NARUTO外伝, and ja-WP names it that way in the sentence that states what this episode adapts - 「18話からは原作者の岸本斉史が執筆した『NARUTO -ナルト- 外伝〜七代目火影と緋色の花つ月〜』を原作とした「うちはサラダ編」、39話では同じく岸本が執筆した『NARUTO -ナルト- 外伝〜満ちた月が照らす道〜』」. Putting 'Boruto: ch 0' in the field would inject a number into the entry's own instrument space (A44 / N-family) and would read as a Boruto position; naming the Gaiden work and stating that it is unnumbered cannot. THE FORK IS FLAGGED FOR SEAN: I41's 'Naruto Gaiden' node is AniList 86171, i.e. the Scarlet Spring mini-series specifically, and this one-shot is not in that entry - so either the node widens to mean 'Kishimoto's post-Naruto 外伝 works' (two works) or a fourth node is added. Either way the chapters string must NOT become a number. || SEGMENTS AND WEIGHTS (T28). Segment 1 - the one-shot itself: weight: SIGNIFICANT - it is the whole body of the episode, adapted end to end and in order. Narutopedia's chapter summary and its episode synopsis run beat for beat: Mitsuki waking memoryless in Orochimaru's hideout and dropping the cup; Orochimaru telling the hooded figure this is the sixth time; Suigetsu's escort and his sudden test attack, broken by liquefying his arm; Orochimaru introducing himself as Mitsuki's parent and naming Log as the thief of his memories; the barrier, the Temporary Paralysis Technique, the armour that pins Orochimaru and the small snake that poisons Log; Log's mask coming off to reveal an older Mitsuki; both of them synthetic humans; the embryo, the key, Sage Transformation, Mitsuki taking the third option and walking out with both; and the photo of Boruto in the case with Orochimaru's 'if he finds a sun, he can be a moon'. TV Tokyo's official synopsis describes precisely this and nothing else (「ミツキはかつてすべての記憶を奪われ、自分が何者なのか、何をしたいのかもわからないまま、見知らぬ研究所で目覚めたことがあった――。…その中でミツキ自身が選んだこと。」). Segment 2 - the present-day frame (Sarada complaining to Mitsuki about Boruto's lateness and asking whether he ever acts of his own will, which cues the flashback; Boruto arriving at the end and the three leaving on a mission): weight: SLIVER - because it is a two-scene framing device of the anime's own making, it progresses nothing and it exists to justify the flashback's placement between the Graduation Exam and Genin Mission arcs. It is annotated as `divergence` below. The remainder decides the type, and the remainder is the one-shot: CANON. NO BORUTO-SPACE CHAPTER in this row - Narutopedia's 'ch 0' is not one (see above).",
+   "sources": [
+    "https://naruto.fandom.com/api.php?action=parse&prop=wikitext&format=json&page=The%20Path%20Lit%20by%20the%20Full%20Moon",
+    "https://naruto.fandom.com/api.php?action=parse&prop=wikitext&format=json&page=Naruto%20Gaiden%3A%20The%20Road%20Illuminated%20by%20the%20Full%20Moon",
+    "https://naruto.fandom.com/api.php?action=parse&prop=text&format=json&page=Boruto%20Uzumaki!!%20(volume)",
+    "https://naruto.fandom.com/api.php?action=askargs&conditions=Anime::Boruto|Manga%20Chapter::%2B&printouts=Episode%20number|Manga%20Chapter|Manga&parameters=limit%3D300&format=json",
+    "https://www.tv-tokyo.co.jp/anime/boruto/episodes/index_26.html",
+    "https://ja.wikipedia.org/w/api.php?action=parse&prop=wikitext&format=json&page=BORUTO-%E3%83%9C%E3%83%AB%E3%83%88-%20-NARUTO%20NEXT%20GENERATIONS-",
+    "https://en.wikipedia.org/w/api.php?action=parse&prop=wikitext&format=json&page=List%20of%20Boruto%20chapters",
+    "https://en.wikipedia.org/w/api.php?action=parse&prop=wikitext&format=json&page=Naruto",
+    "https://www.animefillerguide.com/anime/boruto/",
+    "https://www.animefillerlist.com/shows/boruto-naruto-next-generations"
+   ]
+  },
+  {
+   "episodes": [
+    39
+   ],
+   "kind": "divergence",
+   "chapters": "Naruto Gaiden: 「満ちた月が照らす道」 (unnumbered one-shot)",
+   "note": "TWO anime-side facts, neither of which moves the standing. (1) THE FRAME: the one-shot is told straight through from Mitsuki's waking; the episode wraps it in a present-day conversation between Sarada and Mitsuki about whether he ever acts of his own will, and closes by returning to the present for Boruto's arrival and a mission (Narutopedia ep-39 synopsis; the chapter has neither scene). weight: SLIVER, anime-original, story-carrying share ~nil - a cue and a button around a full adaptation (T28: the remainder decides; canon stands). (2) CENSORSHIP, not adaptation: Narutopedia's Trivia records that in the Japanese TV broadcast and the simulcast, Log's cigarette and left hand were redrawn or edited out of several shots and were restored on the DVD - ja-WP states the same policy series-wide (「奈良シカマルや三途アマドなど、成人でも喫煙描写は原作からカット又は改変されている」). Recorded so a later reader does not mistake a broadcast edit for a story change.",
+   "sources": [
+    "https://naruto.fandom.com/api.php?action=parse&prop=wikitext&format=json&page=The%20Path%20Lit%20by%20the%20Full%20Moon",
+    "https://naruto.fandom.com/api.php?action=parse&prop=wikitext&format=json&page=Naruto%20Gaiden%3A%20The%20Road%20Illuminated%20by%20the%20Full%20Moon",
+    "https://ja.wikipedia.org/w/api.php?action=parse&prop=wikitext&format=json&page=BORUTO-%E3%83%9C%E3%83%AB%E3%83%88-%20-NARUTO%20NEXT%20GENERATIONS-"
+   ]
+  }
+ ],
+ "repairs": [],
+ "type_corrections": [
+  {
+   "episodes": [
+    19,
+    20,
+    21,
+    22,
+    23
+   ],
+   "type": "canon",
+   "note": "CONFIRMED AS STORED - canon, on both legs, for all five rows. WHY, and the accounting: these five episodes adapt Kishimoto's ten-chapter Naruto Gaiden 『七代目火影と緋色の花つ月』 end to end and in order - 19 = 700+1 + the opening of 700+2; 20 = the rest of 700+2 + 700+3 + 700+4; 21 = 700+5 + 700+6; 22 = 700+7 + 700+8; 23 = 700+9 + 700+10. Every segment on every row is SIGNIFICANT under T28 (each is a full chapter or a multi-scene, story-carrying share; the per-segment weights are written out in the chain_source annotations), and NO source credits any of the five rows with an original plot: two chapters per weekly episode leaves no room for padding, AFL prints 'Manga Canon' on all five, animefillerguide gives all five a chapter list rather than a class label, and ja-WP groups them in 「うちはサラダ編」 with no アニメオリジナル marking. The only anime-side facts found are restagings and condensations of the source's own events (ep 19's Hokage-Rock prank in place of the manga's hide-and-seek; ep 21's re-choreographed warp; ep 23's re-choreographed Shin death), which the FAITHFULNESS CLAUSE keeps as `divergence` on a canon row. THE STANDING IS RELATIVE TO THE CHAIN, NOT THE INSTRUMENT (I41, Sean 2026-09-04): the adapted work is the SECOND link, so 'canon' here means 'adheres to a source on this series' ruled chain', and the rows stay position-less in Boruto's own 1-80 space (A44) - the annotation, not an anchor, is what carries the fact. R20: joined on title AND air date, never index - our five rows, AFL's, AFG's, Narutopedia's five episode pages and ja-WP's five table rows agree on both (19 うちはサラダ 2017-08-09; 20 写輪眼の少年 2017-08-16; 21 サスケとサラダ 2017-08-23; 22 つながる想い 2017-08-30; 23 つながりのカタチ 2017-09-06), and TV Tokyo's own back-number page carries the same five titles and dates.",
+   "sources": [
+    "https://naruto.fandom.com/api.php?action=parse&prop=wikitext&format=json&page=Sarada%20Uchiha%20(episode)",
+    "https://naruto.fandom.com/api.php?action=parse&prop=wikitext&format=json&page=The%20Boy%20with%20the%20Sharingan",
+    "https://naruto.fandom.com/api.php?action=parse&prop=wikitext&format=json&page=Sasuke%20and%20Sarada",
+    "https://naruto.fandom.com/api.php?action=parse&prop=wikitext&format=json&page=Connected%20Feelings",
+    "https://naruto.fandom.com/api.php?action=parse&prop=wikitext&format=json&page=Bonds%20Come%20in%20All%20Shapes",
+    "https://naruto.fandom.com/api.php?action=askargs&conditions=Anime::Boruto|Manga%20Chapter::%2B&printouts=Episode%20number|Manga%20Chapter|Manga&parameters=limit%3D300&format=json",
+    "https://naruto.fandom.com/api.php?action=parse&prop=text&format=json&page=Sarada%20Uchiha%20(volume)",
+    "https://www.tv-tokyo.co.jp/anime/boruto/episodes/index_28.html",
+    "https://ja.wikipedia.org/w/api.php?action=parse&prop=wikitext&format=json&page=BORUTO-%E3%83%9C%E3%83%AB%E3%83%88-%20-NARUTO%20NEXT%20GENERATIONS-",
+    "https://en.wikipedia.org/w/api.php?action=parse&prop=wikitext&format=json&page=Naruto%3A%20The%20Seventh%20Hokage%20and%20the%20Scarlet%20Spring",
+    "https://www.animefillerlist.com/shows/boruto-naruto-next-generations",
+    "https://www.animefillerguide.com/anime/boruto/"
+   ]
+  },
+  {
+   "episodes": [
+    39
+   ],
+   "type": "canon",
+   "note": "CONFIRMED AS STORED - canon. The episode is a full, in-order adaptation of Kishimoto's one-shot 『NARUTO -ナルト- 外伝 ～満ちた月が照らす道～』 (WSJ 2016 #21/22, 25 Apr 2016; collected in Boruto vol 1): Narutopedia's chapter summary and its episode synopsis match beat for beat from Mitsuki waking memoryless to the photo of Boruto in the embryo case, and TV Tokyo's official synopsis describes that story and nothing else. ja-WP names the work as the episode's 原作 in so many words (「39話では同じく岸本が執筆した『NARUTO -ナルト- 外伝〜満ちた月が照らす道〜』」), AFL prints 'Manga Canon', and animefillerguide prints the WORK'S TITLE in its chapters column instead of a number. T28: the only non-source material is the present-day frame with Sarada at the open and Boruto at the close - weight: SLIVER (a cue and a button, progressing nothing), so the remainder decides and the remainder is the one-shot in full. The standing is relative to the CHAIN (I41): canon, position-less in Boruto's 1-80 space (A44), annotation not anchor. R20: title 満ちた月が照らす道 and date 2017-12-27 agree across our row, AFL, AFG, Narutopedia, ja-WP's table and TV Tokyo's back-number page.",
+   "sources": [
+    "https://naruto.fandom.com/api.php?action=parse&prop=wikitext&format=json&page=The%20Path%20Lit%20by%20the%20Full%20Moon",
+    "https://naruto.fandom.com/api.php?action=parse&prop=wikitext&format=json&page=Naruto%20Gaiden%3A%20The%20Road%20Illuminated%20by%20the%20Full%20Moon",
+    "https://naruto.fandom.com/api.php?action=parse&prop=text&format=json&page=Boruto%20Uzumaki!!%20(volume)",
+    "https://naruto.fandom.com/api.php?action=askargs&conditions=Anime::Boruto|Manga%20Chapter::%2B&printouts=Episode%20number|Manga%20Chapter|Manga&parameters=limit%3D300&format=json",
+    "https://www.tv-tokyo.co.jp/anime/boruto/episodes/index_26.html",
+    "https://ja.wikipedia.org/w/api.php?action=parse&prop=wikitext&format=json&page=BORUTO-%E3%83%9C%E3%83%AB%E3%83%88-%20-NARUTO%20NEXT%20GENERATIONS-",
+    "https://en.wikipedia.org/w/api.php?action=parse&prop=wikitext&format=json&page=List%20of%20Boruto%20chapters",
+    "https://en.wikipedia.org/w/api.php?action=parse&prop=wikitext&format=json&page=Naruto",
+    "https://www.animefillerlist.com/shows/boruto-naruto-next-generations",
+    "https://www.animefillerguide.com/anime/boruto/"
+   ]
+  }
+ ],
+ "structure": {
+  "notes": "THE ARC TABLE (arc -> episodes -> chapters -> direction -> rule id). (1) Sarada Uchiha arc, eps 19-23 -> Naruto Gaiden 'The Seventh Hokage and the Scarlet Spring' ch 700+1 ... 700+10, one chapter space removed from the instrument -> adaptation, in order, no reorder, no skips -> canon + chain_source (I41), anchors none (A44), weights all SIGNIFICANT (T28). Per row: 19 = 700+1 + opening of 700+2; 20 = remainder of 700+2 + 700+3 + 700+4; 21 = 700+5 + 700+6; 22 = 700+7 + 700+8; 23 = 700+9 + 700+10. (2) The same arc's tail, ep 24 (NOT in this ask, stored mixed with the chain_source Sean ruled on 2026-09-04) -> Naruto ch 700 + Naruto Gaiden 700+5 -> a re-staging of 700+5's Kage summit plus the Naruto epilogue, inside an otherwise anime-original school episode -> unchanged. en-WP scopes the mini-series' adaptation to 'episodes 19-23'; Narutopedia's own arc page says 'covers episodes 19 to 24'. Both are consistent with our rows: 19-23 carry the chapters, 24 carries a re-staging. (3) Ep 39, standing alone between the Graduation Exam arc (33-38) and the Genin Mission arc (40-50) with no arc header on ja-WP -> Kishimoto's unnumbered one-shot 『NARUTO外伝 ～満ちた月が照らす道～』 (WSJ 2016 #21/22, collected in Boruto vol 1) -> full adaptation inside a two-scene present-day frame -> canon + chain_source + divergence, anchors none (A44), no number anywhere. || THREE CHAPTER SPACES ON ONE PAGE, and which one each source is speaking. (a) THE PRINTED GAIDEN SPACE is 700+1 ... 700+10 - Viz cites it that way (en-WP's article on the mini-series footnotes chapter=700+1, 700+2, 700+3, 700+4 to the Viz volume) and Narutopedia's own volume page heads its summaries 'Chapter 700+1' ... 'Chapter 700+10'; ja-WP records the tankōbon as a SEPARATE book (「全700話で、単行本は全 72巻と外伝1巻」, the Gaiden volume titled 「うちはサラダ」, 2015-08-04). (b) NARUTOPEDIA'S FLATTENING is 701-710 with volume=73, i.e. the Gaiden bolted onto Naruto's running count; its per-episode `chapters=` field and its SMW `Manga Chapter` property are ONE lineage (the template writes the property), and its `Manga` qualifier is what tells you which space each row is in - eps 19-24 are Manga = Naruto, ep 39 is Manga = Boruto ch 0, everything else in the run is Manga = Boruto with a real 1-80 number. (c) THE INSTRUMENT is Boruto 1-80. A conversion between (a)/(b) and (c) does not exist and must never be invented; that is the whole content of A44 on these rows. || AFG IS NOT A SECOND SOURCE FOR THE TYPES on this page (its class column is animefillerlist's, one lineage), but its chapters column here is NOT a verbatim copy of Narutopedia's: it prints 22 = '706, 707, 708' where Narutopedia gives 707, 708, and it prints ep 24 as '* Anime Canon | N/A' where Narutopedia gives 700, 705. The one disagreement that mattered - AFG's 706 on ep 22 - was settled against AFG by TV Tokyo's own ep-22 synopsis, which opens by recapping Sakura's abduction as already past (「シンの術によってサクラが連れ去られ、呆然とするサラダ」) rather than showing it. R3: one source's trailing share is not carried. || AFL'S 'MANGA CANON' DOES NOT SAY WHICH MANGA. All six rows read 'Manga Canon' on animefillerlist, and on five of them the manga is not the one this entry maps. This is the same imprecision the catalog already documented for licensed novels (Shippuden 484-500) seen from a new angle: the label is a viewing guide, and the tell that a row is off-instrument is Narutopedia's `Manga` qualifier / an empty Boruto chapter, not AFL's bucket. || ja-WP PROSE vs ja-WP TABLE, noted, not resolved (both are outside this ask): the article's prose says the Gaiden-based 「うちはサラダ編」 runs 「18話から」 while its own episode table opens うちはサラダ編 at ep 16 and AFG's arc header opens it at 17. The chapter-BEARING rows are 19-23 on every source, and ep 18's own ja-WP footnote points at a different work entirely (the movie's 入場者特典『秘伝・在の書』 manga 『ナルトが火影になった日』 as 原案), which is lane C's row this wave. || ROW IDENTITY (R20). Joined on title AND air date across our rows, AFL, AFG, Narutopedia, ja-WP's 各話リスト and TV Tokyo's back-number pages; all six agree on both fields, and all lists carry 293 Part-1 rows. No renumbering, no transposition, no date defect found in this range - every one of the six dates is a Wednesday, the slot the series held in 2017."
+ },
+ "flags_for_sean": [
+  "ANCHOR SUPPRESSION SHOULD EXTEND TO THESE ROWS. The context shows ANCHOR_SUPPRESSED (A44) = [24] only. Eps 19, 20, 21, 22, 23 and 39 are the same shape as 24 - content in another work's chapter space, no Boruto-space number to hold - so the suppression list wants [19,20,21,22,23,24,39]. Without it, a derivation-tier writer that reads Narutopedia's or AFG's chapter column could put 701-710 (or 0) into Boruto's 1-80 space, which is the exact failure A44 exists to prevent.",
+  "THE ep-39 LABEL FORK, stated as asked. I used the work label 'Naruto Gaiden' and named the one-shot instead of numbering it: chapters = \"Naruto Gaiden: 「満ちた月が照らす道」 (unnumbered one-shot, collected in Boruto vol 1)\". REASONS: (a) the work's own title is NARUTO外伝 and ja-WP names it that way in the sentence that states what ep 39 adapts; (b) en-WP's Boruto chapter list prints volume 1 as THREE numbered chapters plus this one-shot as an unnumbered extra - it has no number in print; (c) Narutopedia's 'ch 0' (and its SMW Manga = Boruto) is a wiki slot for 'printed in Boruto vol 1', and writing 0 into a chapters field on a Boruto row invites exactly the mis-read A44 forbids; (d) animefillerguide independently refuses the number, printing the work's TITLE in its chapters column. THE COST: I41's 'Naruto Gaiden' node is AniList 86171 = the Scarlet Spring mini-series specifically, and this one-shot is NOT in that entry (AniList has it nowhere as a standalone; it lives inside Boruto vol 1). So the label I used is one work broader than the ruled node. YOUR CALL: (i) widen the node to 'Naruto Gaiden' = Kishimoto's post-Naruto 外伝 works (Scarlet Spring 700+1..700+10 + the Full Moon one-shot), which is what ja-WP's own phrasing does; or (ii) add a fourth node for the one-shot; or (iii) file it under 'Boruto' as the wiki does - which I recommend against, because it would be the only Boruto-labelled chapters string in the catalog with no number in Boruto's space.",
+  "OUT OF ASK, adjacent and cheap to settle later: Narutopedia's SMW export also gives ep 106 (The Steam Ninja Scrolls: The S-Rank Mission!) Manga = Naruto, ch 700. Ep 106 is stored canon with a side_source annotation for the licensed novel 湯煙忍法帖, so a Naruto ch-700 tie on it is either a genuine short graft (the epilogue's framing) or a wiki slip. Either way it is a chain_source or nothing - never an anchor. Not researched this wave.",
+  "NO ROW IN THIS ASK ALSO ADAPTS A BORUTO-SPACE CHAPTER. Checked directly rather than assumed: Narutopedia's SMW export qualifies eps 19-24 as Manga = Naruto with no Boruto chapter at all, ep 39 as Manga = Boruto ch 0 (the un-numbered one-shot, not a serialised chapter), and the first real Boruto-space row in the run is ep 53 (ch 1) - consistent with the stored anchor ep53 -> 1 [1] and with the Boruto manga opening at the Chūnin Exams."
+ ]
+}
