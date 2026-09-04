@@ -1,0 +1,107 @@
+{
+  "series_id": "fairy-tail",
+  "summary": "ONE target row, and the premise itself needs correcting first: the task brief says 'AFL filler', but animefillerlist's live row 246 reads 'Anime Canon' (its own class for anime-original material it regards as canon) — the context file had it right. So the STRONG contradiction here is AFL 'Anime Canon' (i.e. anime-original, which is filler under T27 — there is no fourth type) against an AFG chart row that prints a bare '380' with no filler/mixed class at all, i.e. AFG asserts a plain manga-canon episode. Chapter accounting settles it, and both labels are partly wrong. fairytail.fandom's own episode infoboxes PAGE-PARTITION chapter 380 across two rows — ep 245 'Adapted = Chapter 379 / Adapted 2 = Chapter 380 (to page 21)', ep 246 'Adapted = Chapter 380 (from page 22)' — and ep 246's Manga & Anime Differences section says 'With the exception of Mard Geer appearing towards the end of the episode, all the scenes taken place in the episode were anime-only'. The wiki's Chapter 380 page independently carries relepisode = Episode 245 + Episode 246 and ends its summary on exactly that scene ('Elsewhere in the castle, a man named Mard Geer (the Underworld King of Tartaros) sits in a throne room holding E.N.D.'s book…'). ja-WP's 各話リスト bold-marks ep 246's subtitle 冥王 as アニメオリジナルストーリー — and it is the ONLY bolded row in the entire Tartaros block (240-260 checked row by row; 51 bolded rows in 328), so the marker is a sparing, well-controlled one. So the episode's BODY (Jellal / Meredy / Oración Seis / Rustyrose's visit to Cube) is 100% anime-original — AFG's bare '380' is the lie, and it is the familiar reading-position-header shape: AFG prints '379, 380' on row 245 and '380' again on row 246 without ever partitioning the chapter, which reads as 'ep 246 adapts ch 380' when the truth is 'ep 246 adapts the last pages of ch 380'. AFL is right that the story is anime-original and wrong to imply zero source standing. THE CALL: I propose filler → MIXED under the SOLE-ADAPTATION EXCEPTION, stating both halves explicitly. (a) The pages appear in NO other episode: the coverage set is ep 245 = 379 + 380 pp.1-21, ep 246 = 380 pp.22-end, ep 247 = 381-382 (fandom infobox 'Adapted=Chapter 381 / Adapted 2=Chapter 382'); Mard Geer is absent from ep 245's Characters in Order of Appearance list and the string 'Mard' does not occur on the ep-245 page at all. (b) The beat is a major plot point of the source — it is Mard Geer Tartaros's DEBUT: fairytail.fandom's character infobox reads 'manga debut = Chapter 380 / anime debut = Episode 246'; he is the Tartaros arc's principal antagonist, the Underworld King, and he is first seen holding the book of E.N.D. That is 'a reveal' in the rule's own sense, not a cameo or a transplanted beat, and the studio built the whole anime-original body toward it (Rustyrose's flashback ends on 'a shadow of a mysterious terrifying figure' and 'Tartaros doesn't consist of only the Nine Demon Gates, but also something even more terrifying within'), then titled the episode after him — 冥府の門編 冥王 / 'Underworld King'. Both halves hold, so the fragment is sole + load-bearing and the row is mixed. The counter-case is real and recorded in flags_for_sean (ja-WP calls the whole episode an anime-original STORY; the chapter NUMBER 380 is not stranded because ep 245's anchor already ends there), which is why the confidence is medium and why this is delivered as a REPAIR of Sean's 2026-08-25 A6 deletion rather than a silent override. Segment weights: (1) Jellal/Oración Seis/Rustyrose, ~21 of ~22 minutes, anime-original, no source pages; (2) ch 380 pp.22-end, the closing scene, weight SIGNIFICANT — sole adaptation of the arc antagonist's debut, the episode's namesake and climax. Anchor delivered on the mixed row per the exception's own 'MAY carry the anchor' clause: END 380, START 380, chapters_adapted '380 (p.22-end)', vol 45 — a 'pages, not numbers' position (new pages of a chapter whose NUMBER was already ep 245's END), so it advances the frontier by zero and cannot regress anything.",
+  "anchors": [
+    {
+      "episode": 246,
+      "end_chapter": 380,
+      "start_chapter": 380,
+      "chapters_adapted": "380 (p.22-end)",
+      "volume": 45,
+      "confidence": "medium",
+      "note": "Conditional on the type_correction below (A1 bars this anchor while the row is typed filler; Sean deleted it 2026-08-25 as an A6 junk anchor, and the repairs entry re-opens that ruling with the evidence). Position, not frontier: ch 380's NUMBER is already ep 245's END, so this anchor advances nothing — it is the 'pages, not numbers' shape (saint-seiya 29-30, TMM 27), first-time pages of an already-ended chapter, delivered so the row shows what it actually adapts instead of a dash. The page split is the wiki's own and is exact and non-overlapping: ep 245 'Chapter 380 (to page 21)', ep 246 'Chapter 380 (from page 22)'. START = END = 380 under A10 — there is no leading partial of ch 379 (the episode opens on the anime-original Oración Seis scene) and the ch-380 share sits at the END of the episode, not the start. Volume 45 = chs 379-386 per the stored boundary table, and the fandom's Chapter 380 page prints volume=#45 — the two agree, so no chapter-space question arises (N35: Fairy Tail's tankōbon numbering and every source here use one space). The exact page count of pp.22-end is not stated by any source I could read (MangaDex holds only 13 Spanish chapters of this title, so no page-level check was possible) — see the `unverified` annotation; what IS established is the scene identity, the sole adaptation and the debut.",
+      "sources": [
+        "https://fairytail.fandom.com/api.php?action=parse&page=Episode%20246&prop=wikitext&format=json",
+        "https://fairytail.fandom.com/api.php?action=parse&page=Chapter%20380&prop=wikitext&format=json",
+        "https://fairytail.fandom.com/api.php?action=parse&page=Episode%20245&prop=wikitext&format=json",
+        "https://fairytail.fandom.com/api.php?action=parse&page=Mard%20Geer%20Tartaros&prop=wikitext&format=json",
+        "https://www.animefillerguide.com/anime/fairy-tail/"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 246,
+      "continue_chapter": 381,
+      "kind": "parity",
+      "note": "C2 parity with the anime: ep 247 starts ch 381 (fandom infobox 'Adapted=Chapter 381 / Adapted 2=Chapter 382'; AFG row 247 = '381, 382'), and ep 246 finishes ch 380 to its last page, so nothing is skipped — continue at 381. Consequence for the row before it: ep 245's stored continue currently reads '381/parity … chs 380 not yet seen at this point', which is wrong on its face (ep 245's own chapters_adapted is {379-380} and it adapts 380 through page 21). Once ep 246 is anchored, the healer should land ep 245 on a C1 mid-chapter continue IN 380. I am not proposing that value here — the healer owns it — but the structure note records it so the census can prove it.",
+      "sources": [
+        "https://fairytail.fandom.com/api.php?action=parse&page=Episode%20247&prop=wikitext&format=json",
+        "https://www.animefillerguide.com/anime/fairy-tail/"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [246],
+      "kind": "partial",
+      "chapters": "380 (p.22-end)",
+      "note": "weight: SIGNIFICANT — because this is the sole animation of Mard Geer Tartaros's debut (fandom character infobox: manga debut = Chapter 380, anime debut = Episode 246), the reveal that closes ch 380, and it is the episode's climax and namesake (冥府の門編 冥王 / 'Underworld King'). The material is NEW, not a duplicate: ep 245 stops at ch 380 p.21 and does not contain Mard Geer (he is absent from its Characters in Order of Appearance list), and ep 247 resumes at ch 381 — no other episode carries these pages. The rest of ch 380 (Franmalth, Mirajane vs Seilah, Hell's Core destroyed, Seilah's limiter release) is adapted in full by ep 245. This annotation REPLACES the stored 'partial {380 (from p.22)}' fact with the page-split wording the wiki actually uses on both rows and with the weight the sliver clause now requires; the stored note's substance is unchanged and correct.",
+      "sources": [
+        "https://fairytail.fandom.com/api.php?action=parse&page=Episode%20246&prop=wikitext&format=json",
+        "https://fairytail.fandom.com/api.php?action=parse&page=Episode%20245&prop=wikitext&format=json",
+        "https://fairytail.fandom.com/api.php?action=parse&page=Mard%20Geer%20Tartaros&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [246],
+      "kind": "divergence",
+      "chapters": "no source chapters — anime-original body",
+      "note": "weight: n/a (this segment has NO source pages). About 21 of the episode's ~22 minutes are anime-original: Jellal recuperating after the Oración Seis fight, Meredy and Richard tending him, the Oración Seis debating Jellal's offer, Rustyrose's account of Grimoire Heart storming Cube and being beaten by Kyôka, Rustyrose's ultimatum to Meredy and Jellal's offer of Crime Sorcière. fairytail.fandom's Manga & Anime Differences: 'With the exception of Mard Geer appearing towards the end of the episode, all the scenes taken place in the episode were anime-only.' ja-WP bold-marks the subtitle 冥王 as アニメオリジナルストーリー. This is the segment that keeps the row out of plain `canon` — AFG's bare '380' would have made it canon.",
+      "sources": [
+        "https://fairytail.fandom.com/api.php?action=parse&page=Episode%20246&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/FAIRY_TAIL"
+      ]
+    },
+    {
+      "episodes": [246],
+      "kind": "unverified",
+      "chapters": "380 (p.22-end)",
+      "note": "The SIZE of the ch-380 tail could not be sized to a page count after a real search: no source states ch 380's total page length. fairytail.fandom's chapter template carries no page field; MangaDex's Fairy Tail entry holds only 13 chapters (Spanish, chs 1-12) so its aggregate/feed gives nothing at 380; the Kodansha volume-45 arithmetic (chs 379-386 in one tankōbon) implies a few pages but that is an inference, not a citation, and 'unquantified means small' is not a permitted reading. What IS verified: the pages exist (the wiki partitions the chapter at p.21/p.22 across two episode rows), the scene is identified (Mard Geer's throne monologue = the final paragraph of the wiki's Chapter 380 summary), and it is the only animation of them. The anchor stands; the row is a census queue for a page count.",
+      "sources": [
+        "https://fairytail.fandom.com/api.php?action=parse&page=Episode%20245&prop=wikitext&format=json",
+        "https://api.mangadex.org/manga/227e3f72-863f-46f9-bafe-c43104ca29ee/aggregate"
+      ]
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 246,
+      "field": "A6 ruling (2026-08-25 D2 deletion: \"A1 junk anchor (D4 triage): wiki — all scenes anime-only except Mard Geer's appearance = ch 380's last page; sliver, not position\") — scripts/ingest/lib/rulings/applied/batch-17.ts:115",
+      "old": "anchor deleted; row stays filler with a partial{380 (from p.22)} annotation",
+      "new": "row typed mixed (sole-adaptation exception) and the ch-380 anchor restored as a page position",
+      "why": "NOT a contradiction of the facts Sean ruled on — every fact in that ruling is confirmed here (all scenes anime-only except Mard Geer; ch 380's last pages). What has changed is the RULE that governs those facts. The ruling predates the sole-adaptation exception (Sean 2026-08-28), the aggregation clause, and the sliver clause (2026-09-04) with its requirement that a segment be weighed SIGNIFICANT or SLIVER and that the weight be reasoned, not assumed from size. Re-run under the current vocabulary, both halves of the exception hold — the pages are in no other episode (ep 245 stops at p.21 and lacks Mard Geer entirely; ep 247 = 381-382) and the beat is the arc antagonist's debut, a reveal, not 'a duplicate graft or a trivial first-time beat'. The exception's own text says such a row MAY carry the anchor. Sean re-rules; if he holds the 2026-08-25 line, the row stays filler and only the annotation refresh (page-split wording + weights) should land.",
+      "sources": [
+        "https://fairytail.fandom.com/api.php?action=parse&page=Episode%20246&prop=wikitext&format=json",
+        "https://fairytail.fandom.com/api.php?action=parse&page=Episode%20245&prop=wikitext&format=json",
+        "https://fairytail.fandom.com/api.php?action=parse&page=Mard%20Geer%20Tartaros&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "type_corrections": [
+    {
+      "episodes": [246],
+      "type": "mixed",
+      "confidence": "medium",
+      "reason": "T28 + the SOLE-ADAPTATION EXCEPTION, both halves stated. Segment 1 (weight: n/a — no source pages): the Jellal / Meredy / Oración Seis / Rustyrose story, ~21 of ~22 minutes, entirely anime-original (fandom Differences: 'With the exception of Mard Geer appearing towards the end of the episode, all the scenes taken place in the episode were anime-only'; ja-WP bold = アニメオリジナルストーリー, the only such mark in eps 240-260). Segment 2 (weight: SIGNIFICANT): ch 380 pp.22-end, the episode's closing scene — Mard Geer Tartaros on his throne with the book of E.N.D. Half (a) of the exception: these pages appear in NO other episode — the coverage set is ep 245 {379, 380 pp.1-21}, ep 246 {380 pp.22-end}, ep 247 {381-382}; the wiki page-partitions ch 380 exactly ('to page 21' / 'from page 22') and Mard Geer does not appear in ep 245 at all. Half (b): the beat is a major plot point of the source — the DEBUT of the Tartaros arc's principal antagonist and the first sight of E.N.D.'s book in his hands (fandom infobox: manga debut Chapter 380, anime debut Episode 246); it is 'a reveal' in the rule's own list, the episode's title beat, and the anime-original body is written as a prelude to it (Rustyrose's 'something even more terrifying within'). Sole + load-bearing → mixed, not filler. Stored type was filler; AFL says 'Anime Canon' (right about the body, wrong about the standing); AFG says plain '380' (wrong — its chapter column is a reading-position header, printing 380 on rows 245 AND 246 with no partition and no class).",
+      "sources": [
+        "https://fairytail.fandom.com/api.php?action=parse&page=Episode%20246&prop=wikitext&format=json",
+        "https://fairytail.fandom.com/api.php?action=parse&page=Chapter%20380&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/wiki/FAIRY_TAIL",
+        "https://www.animefillerlist.com/shows/fairy-tail",
+        "https://www.animefillerguide.com/anime/fairy-tail/"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "PREMISE CHECK (a task premise is a claim, not a fact): the wave brief says 'row 246: AFL filler; AFG maps ch 380'. AFL's live row 246 is 'Anime Canon', not 'Filler' — the context file's TARGET line ('246 [filler | AFL: anime canon]') is the accurate one. The contradiction is still STRONG, just of a different shape: AFL says anime-original, AFG's chart says plain manga canon with no class marker. Row identity: AFL's fairy-tail page holds 329 rows against our 328 (one extra, an OVA/special somewhere in the run) — so no index join was used anywhere; every AFL and AFG reading here was keyed by TITLE + AIR DATE (246 = 'Tartaros Chapter - Underworld King', 2015-08-15, matching the context exactly, with 243-248 checked around it). ja-WP's 各話リスト was parsed row-wise and yields 330 parsed rows including the two headers; its two bold conventions are distinct and both were honoured — a bold SUBTITLE = アニメオリジナルストーリー, a bold episode NUMBER = re-aired in 'フェアリーテイル ベスト!'; only the subtitle marker was read as a typing claim. Control on that marker: 51 of 328 subtitles are bolded and 246 is the ONLY one in eps 240-260 — ep 256 (our T6 mixed row, which adapts ch 398 p.12-end) is NOT bolded, confirming the marker under-marks rather than over-marks, exactly as the catalog says. Chapter space: one space throughout — the fandom's Chapter 380 page says volume #45, our stored boundary table says v45 = 379-386, AniList says 545 chapters / 63 volumes; no sourceShift applies to Fairy Tail. Sources beyond the two disagreeing labels: (1) fairytail.fandom via the MediaWiki API — episode 245/246/247 infoboxes + ep 246's Manga & Anime Differences + the Chapter 380 page's relepisode field + Mard Geer's debut fields; (2) ja-Wikipedia's FAIRY TAIL article, 各話リスト. Both were read as raw wikitext, never scraped HTML. A licensor synopsis was attempted and failed: TV Tokyo's fairytail2014 story pages are not in the Wayback CDX, and dアニメストア's per-episode page (workId=21722&partId=21722071) serves the title 第246話 冥府の門編 冥王 but no synopsis in its static HTML — no licensor text was used, and no fan blog was cited.",
+    "coverage_set_checked": "ep 244 {377-378}, ep 245 {379, 380 to p.21}, ep 246 {380 from p.22}, ep 247 {381-382}, ep 248 {383-384} — ch 380 is page-partitioned across exactly two rows with no overlap and no gap."
+  },
+  "flags_for_sean": [
+    "THE CALL, and it is yours: ep 246 is the cleanest sole-adaptation-exception candidate I have seen — the wiki partitions ch 380 at p.21/p.22 across two episode rows, and the tail pages are Mard Geer Tartaros's debut (manga debut Chapter 380 / anime debut Episode 246), the Tartaros arc's antagonist reveal, which the episode is titled after. Both halves of the test read affirmative, so I propose mixed + the anchor. THE COUNTER-CASE, in full: (i) ja-WP marks the whole episode アニメオリジナルストーリー — a whole-episode judgment, and it is the only such mark in the entire Tartaros block, so it is not noise; (ii) the harm the exception exists to prevent is absent here — ch 380's NUMBER is already ep 245's END, so typing 246 filler would NOT falsely mark the pages' chapter never-adapted (unlike FotNS 57, the rule's witness, where the chapter had no other anchor); (iii) the beat can be read as a cliffhanger TEASE, which the sliver clause names as a sliver shape. If (ii) is the decisive consideration for you, the row stays filler, the anchor stays deleted, and only the annotation refresh should land — the partial's page-split wording plus the explicit weights. I have written the verdict so that either ruling can be applied without re-research.",
+    "This verdict REPAIRS your 2026-08-25 A6 deletion (batch-17.ts:115) rather than overriding it — every fact you ruled on is confirmed; only the governing rule has changed (the sole-adaptation exception, 2026-08-28, and the sliver clause, 2026-09-04, postdate it). Two other batch-17 D4 deletions in the same commit have the same shape and may deserve the same re-run under the current vocabulary if you accept this one: black-clover 3 (ch 1 p.1 + ch 2 pp.4-5) and hunter-x-hunter 18 (the relocated Kurapika reveal, ch 7 pp.9-11) — I did NOT research them, this is only a pointer.",
+    "AFG's chapter column is the source that lied, and the mechanism is worth recording: it prints '379, 380' on row 245 and '380' on row 246 with no class marker on either, so a naive read makes ep 246 a plain manga-canon episode adapting a whole chapter. It is a reading-position header, not an adaptation claim — the same plateau shape the catalog already records for one-piece and toriko, here on a two-row chapter split. Note that AFG DOES mark other Fairy Tail rows (row 9 is struck through with '* Omake'), so the absence of a marker on 246 is a positive editorial claim, not an empty cell.",
+    "Ep 245's stored continue reads '381/parity — ep 247 starts ch 381; chs 380 not yet seen at this point' while its own chapters_adapted is {379-380}. That is self-contradictory today (it was generated when 246 had no anchor, so the healer's 'next anchored episode' was 247). Anchoring 246 fixes it structurally — ep 245 should heal to a C1 mid-chapter continue IN ch 380. I did not propose the value; the healer owns it. If you rule 246 stays filler, ep 245's continue text should still be corrected, because ch 380 IS seen at that point."
+  ]
+}

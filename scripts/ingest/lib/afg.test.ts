@@ -9,7 +9,7 @@
 // draft). Pure; no DB. Every row below is a verbatim staged sentence and the
 // continue-from AFG prints next to it (the G22 self-consistency witness).
 import { describe, expect, it } from 'vitest';
-import { parseContinua, stripParentheticals } from './afg';
+import { parseContinua, parseAfgPage, stripParentheticals } from './afg';
 
 const wrap = (sentence: string, cont: number | null) =>
   `<div class="continua-manga"><table><tr><td>Where to start Foo manga after the anime? ` +
@@ -70,5 +70,22 @@ describe('parseContinua — page parentheticals (G22)', () => {
   });
   it('stripParentheticals drops every parenthetical, nested-free', () => {
     expect(stripParentheticals('104 (p. 23-36), 105 and 108 (p. 1-19)').match(/\d+/g)).toEqual(['104', '105', '108']);
+  });
+});
+
+describe('the newer AFG row format (batch 21, 2026-09-04 — real rows from the staged pages)', () => {
+  const page = (rows: string) => `<table><tr><th class="number">#</th><th class="title">Title</th><th class="chapter">Chapters</th></tr>${rows}</table>`;
+  it('reads the type class from a span INSIDE the number cell, the (04). start cell, and never parses timestamps as chapters', () => {
+    const html = page(
+      '<tr><td><b><span class="blue">179.</span></b></td><td><b><span class="blue">(04).</span></b></td><td>Kakashi Hatake, The Jonin in Charge <b><span class="blue small">* Mixed, in this episode we only watch from minute <span class="minuto">0:00 to 4:05</span>, here is the meeting to choose the new Hokage.</span></b></td><td>450</td></tr>' +
+      '<tr><td><b><span class="blue">043.</span></b></td><td>The Dragon Balls are All Here! Piccolo-san Will Also Come Back to Life <span class="blue small"><b>*It’s a mixed episode; you only need to watch from minute <span class="minuto">6:43 to 7:54</span>.</b></span></td><td>246</td></tr>' +
+      '<tr><td><b>419.</b></td><td><b>(3:48)</b></td><td>The Crewmates’ Whereabouts</td><td>523, 524</td></tr>',
+    );
+    const eps = parseAfgPage(html).episodes;
+    expect(eps.map((e) => [e.number, e.type, e.title, e.chapters])).toEqual([
+      [43, 'mixed', 'The Dragon Balls are All Here! Piccolo-san Will Also Come Back to Life', [246]],
+      [179, 'mixed', 'Kakashi Hatake, The Jonin in Charge', [450]],
+      [419, 'canon', 'The Crewmates’ Whereabouts', [523, 524]],
+    ]); // the parser sorts by number
   });
 });

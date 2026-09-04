@@ -1,0 +1,127 @@
+{
+  "series_id": "naruto-shippuden",
+  "summary": "THE PREMISE FAILS FIRST (task-premise trap): animefillerguide does NOT map ep 179 to 'ch 1-4' or ep 180 to 'ch 1-2'. The live page prints 179 = BLUE (Mixed), chapters '450', note 'we only watch from minute 0:00 to 4:05, here is the meeting to choose the new Hokage'; 180 = BLUE (Mixed), chapters '451', note 'we only watch from minute 0:00 to 2:12'. Our stored '1-4' / '1-2' are a PARSER ARTIFACT (see structure): on this page format the sub-number cell is '(04).' and the row class sits on a <span> INSIDE the <td>, so scripts/ingest/lib/afg.ts reads the TITLE cell as the chapters cell and parseChapters turns the timestamp '0:00 to 4:05' into the range 0-4 -> [1,2,3,4] (and '0:00 to 2:12' -> [1,2]); every one of the 500 rows also types as 'canon' and every title parses empty. Those two rows are the ONLY two rows on the page whose AFG note contains a digit-'to'-digit timestamp, which is exactly why the audit surfaced exactly this pair as STRONG. So there was never an AFG chapter claim to contradict AFL; the real question — AFL 'filler' vs AFG 'Mixed with a timed manga window' — is still live and I settled it on chapter accounting.\n\nWHAT THE EPISODES ARE. Both sit inside the 21-episode Past Arc: The Locus of Konoha (176-196), whose present-day frame is Konoha's reconstruction after Pain and whose bulk is anime-original retrospectives. Neither episode is a RECAP in the T28 sense: ep 179's Part-I flashback is NEWLY ANIMATED and Narutopedia's Trivia lists seven ways it CONTRADICTS the 2002 series' ep 3 ('Sasuke and Sakura: Friends or Foes?', = manga ch 3) — Kakashi visits Naruto's flat at the START of the day, he hides behind the blackboard instead of watching Hiruzen's crystal ball, Sakura knocks Naruto over, and Naruto and Sasuke fight a full shadow-clone duel on the road that exists in neither the manga nor the 2002 anime; ep 180's flashback is a brand-new story (Inari kidnapped by Gato's ex-henchmen Zori and Waraji after Team 7 leaves the Land of Waves) with new characters (Akane) and its own credited cast. Per the RECAP BOUNDARY (Sean 2026-09-02, shippuden 388) newly drawn sequences with scenes the source lacks are anime PRODUCTION, not weightless recap — so in both rows the retrospective weighs as anime-original.\n\nEP 179 -> MIXED (type_correction; AFL wrong, AFG right). Its first ~4 minutes are a straight adaptation of ch 450's closing pages: the Fire Daimyo's council (Koharu and Homura pushed by Danzo, Shikaku nominating Kakashi, Danzo's counter-argument, the daimyo naming DANZO THE SIXTH HOKAGE) plus the Tsunade-coma report. Three independent legs: Narutopedia's ch-450 page summary ('Tsunade is also left in a coma..., forcing the Fire Daimyo to select a new Hokage... The daimyo accepts his reasoning and appoints Danzo as Sixth Hokage'), TV Tokyo's own 2010 back-number synopsis for 399-wa ('...at the Fire Daimyo's palace ... Danzo proposes that a new Hokage be selected in place of the fallen Tsunade'), and AFG's timed window. Under T28 the base call would be filler + graft (4 of ~20 minutes, a frame around an original plot), but the SOLE-ADAPTATION EXCEPTION applies and BOTH halves hold: (a) SOLE — ch 450's threads are partitioned across four episodes (175 = the hero's welcome, 176 = Zetsu reports to Tobi + Team Samui sets out, 178 = Taka's reunion + Tobi/Kisame, 179 = the daimyo council) and the next canon episode, 197, starts at ch 451 on both AFG and Narutopedia, so these pages are animated in NO other episode; (b) MAJOR PLOT POINT — the appointment of the Sixth Hokage is the reveal the whole Five Kage Summit arc rests on and the political close of Pain's Assault. Anchor delivered (450 / START 450, 'pages, not numbers': first-time pages are a real position even though ch 450 was already ep 175's END).\n\nEP 180 -> FILLER CONFIRMED (AFL right). Its ch-451 content is the 2:12 opening frame only — the reconstruction with Yamato's Wood Release and Naruto and Sakura meeting Tazuna and Inari, which is genuinely ch 451's first pages (Narutopedia ch 451 'Dealing with Sasuke!!': 'Konoha begins to rebuild. Naruto, Sakura, and Kakashi ... reunite with Inari and Tazuna, who came to repay the debt...'; TV Tokyo 400-wa says the same). It is SOLE for its panels but it is NOT a major plot point (no death, no reveal, no arc close — a transitional reunion), so the sole-adaptation exception does not fire and the fragment stays weightless: filler + partial{451}, weight SLIVER. No anchor (A1). AFG's 'Mixed' over-reads a two-minute framing scene against the T28 materiality bar; ja-WP marks both rows fully anime-original but does so for all 21 rows of the arc (a block marking, not a per-row measurement).",
+  "anchors": [
+    {
+      "episode": 179,
+      "end_chapter": 450,
+      "start_chapter": 450,
+      "chapters_adapted": "450 (closing pages: the Fire Daimyo's emergency council — Koharu and Homura press for a new Hokage, Shikaku nominates Kakashi, Danzo's counter-argument, Danzo appointed Sixth Hokage; plus Sakura's report that Tsunade will not wake soon)",
+      "volume": 48,
+      "confidence": "high",
+      "note": "A4/A10: the episode's only source content is ch 450's final pages, animated 0:00-4:05 (AFG's own timed window) and adapted in NO other episode — eps 175/176/178 carry ch 450's other threads and ep 197 starts at ch 451. START = END = 450 (one chapter, page-partitioned). 'Pages, not numbers' (Sean 2026-08-27): these are FIRST-TIME pages, so they are a real position even though ch 450 was already ep 175's END; the row does not advance the frontier and must not be read as doing so. Volume 48 per the stored boundary table (443-453) and Narutopedia's ch-450 infobox. Delivered together with the type_correction to mixed — an important pipeline interaction: while ep 179 is typed filler the AFG writer's A1 gate is what currently suppresses the parser's phantom 'ch 4' row, so if the type flips WITHOUT this manual anchor the next afg re-derive would write ep 179 -> ch 4 (curated rows win by precedence; this anchor is the guard).",
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=Kakashi%20Hatake,%20the%20J%C5%8Dnin%20in%20Charge&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=The%20Joyous%20Village!!&prop=wikitext&format=json",
+        "https://web.archive.org/web/20110122041021/http://www.tv-tokyo.co.jp/anime/naruto/episodes2010.html",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/",
+        "https://naruto.fandom.com/api.php?action=parse&page=The%20Sixth%20Hokage%20Danz%C5%8D&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 179,
+      "continue_chapter": 451,
+      "kind": "parity",
+      "note": "C2 parity with the anime: ch 450 is finished here (its four threads are complete across eps 175, 176, 178 and 179) and the anime's next source pages are ch 451's opening, animated as ep 180's 0:00-2:12 frame; ep 197 ('The Sixth Hokage Danzo') then adapts 451-453 properly. So resume at ch 451. WARNING for the apply layer: the healer sets parity to the NEXT ANCHORED row's START, and the next anchored row today is ep 199 (START 454) — that would silently skip 451-453, which eps 197-198 do adapt. Either anchor 197 (451-453) / 198 (453-455) in the same wave (AFG and Narutopedia agree on both) or pin this continue at the manual tier.",
+      "sources": [
+        "https://www.animefillerguide.com/anime/naruto-shippuden/",
+        "https://naruto.fandom.com/api.php?action=parse&page=Dealing%20with%20Sasuke!!&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=The%20Sixth%20Hokage%20Danz%C5%8D&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "anchor_hostile": [
+    {
+      "episode": 180,
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=Inari%27s%20Courage%20Put%20to%20the%20Test&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Dealing%20with%20Sasuke!!&prop=wikitext&format=json",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/"
+      ],
+      "why": "A1: the row stays FILLER, so it takes no anchor. Its only source content is ch 451's opening pages (the reconstruction and the Tazuna/Inari reunion) in a 2:12 frame — real, first-time, but weightless under T28's sliver clause; the chapter is adapted properly by ep 197 (451-453), which is where ch 451's position belongs."
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [
+        179
+      ],
+      "kind": "partial",
+      "chapters": "450 (closing pages: the daimyo's council; Danzo named Sixth Hokage)",
+      "note": "weight: SIGNIFICANT — because it is a complete scene with a resolution (the Sixth Hokage is chosen) that progresses the story, it is NEW material (no earlier or later episode animates these pages), and the next arc's whole premise depends on it; size (~4 of ~20 minutes) is not the test. Ch 450 is page-partitioned across four episodes rather than fragmented: ep 175 = Naruto's hero welcome, ep 176 = Zetsu reporting Pain's death to Tobi and Team Samui setting out, ep 178 = Taka's reunion plus the Tobi/Kisame exchange, ep 179 = the Fire Daimyo's council and the Tsunade-coma report. This is the segment that carries the row's mixed standing under T28's sole-adaptation exception.",
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=The%20Joyous%20Village!!&prop=wikitext&format=json",
+        "https://web.archive.org/web/20110122041021/http://www.tv-tokyo.co.jp/anime/naruto/episodes2010.html",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/",
+        "https://naruto.fandom.com/api.php?action=parse&page=Rookie%20Instructor%20Iruka&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [
+        179
+      ],
+      "kind": "loose_parallel",
+      "chapters": "3",
+      "note": "weight: SLIVER — because the episode's ~16-minute remainder is a RESTAGING, not an adaptation: it retells the day of Team 7's assignment (manga ch 3 'Uchiha Sasuke!!', the chapter the 2002 series adapted as its own ep 3) from Kakashi's vantage while CONTRADICTING both the manga's and the 2002 anime's staging, and it adds whole scenes neither has (Kakashi at Naruto's flat at the start of the day, Kakashi hidden behind the blackboard, Danzo eavesdropping on the elders, a Naruto-vs-Sasuke shadow-clone duel on the road witnessed from above). Newly drawn, so it is NOT weightless recap (the T28 recap boundary, shippuden 388) — it is anime-original production and it weighs toward filler; no pages are cited for position and the row takes no anchor for it (A44: restaged material already animated in the 2002 series' own chapter space).",
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=Kakashi%20Hatake,%20the%20J%C5%8Dnin%20in%20Charge&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Sasuke%20and%20Sakura:%20Friends%20or%20Foes%3F&prop=wikitext&format=json",
+        "https://web.archive.org/web/20110122041021/http://www.tv-tokyo.co.jp/anime/naruto/episodes2010.html"
+      ]
+    },
+    {
+      "episodes": [
+        180
+      ],
+      "kind": "partial",
+      "chapters": "451 (opening pages: Konoha's reconstruction and the Tazuna/Inari reunion)",
+      "note": "weight: SLIVER — because it is a two-minute framing scene (AFG's window 0:00-2:12 of a ~20-minute episode) with no resolution of its own: the shinobi rebuild, Yamato raises houses with Wood Release, and Naruto and Sakura run into Tazuna and Inari, who have come to help. The pages ARE new (no other episode animates the arrival) but the chapter's story-carrying beats — Naruto deflecting their questions about Sasuke, his reflection on bonds, Team Samui's letter and Danzo's kill order — are adapted elsewhere: ep 181's closing block (AFG 18:15-end, also ch 451) and ep 197 (451-453). The remainder of the episode (~18 minutes) is a wholly anime-original story with no manga or 2002-anime source (Inari kidnapped by Zori and Waraji, the Akane bullies, Naruto's lost ramen coupon), so the remainder decides the type: FILLER stands. The sole-adaptation exception does not fire — the pages are sole but the beat is not a major plot point (no death, no reveal, no arc close).",
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=Inari%27s%20Courage%20Put%20to%20the%20Test&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Dealing%20with%20Sasuke!!&prop=wikitext&format=json",
+        "https://web.archive.org/web/20110122041021/http://www.tv-tokyo.co.jp/anime/naruto/episodes2010.html",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/"
+      ]
+    }
+  ],
+  "repairs": [
+    {
+      "target": "chapter_anchors",
+      "series_id": "naruto-shippuden",
+      "episode": 175,
+      "field": "chapters_adapted",
+      "old": "449 (from the revival: Kakashi and Sakumo; Nagato's death; Konan deserts Akatsuki; the bouquet; Jiraiya's memorial), 450 (the hero's-welcome half only; the Zetsu/Team Samui/Tsunade-coma/Danzo-appointment half is deferred: Zetsu and Team Samui open ep 176, the Danzo appointment is adapted in the Five Kage Summit episodes), 426 (Ebisu's reflection on Naruto, reused)",
+      "new": "449 (from the revival: Kakashi and Sakumo; Nagato's death; Konan deserts Akatsuki; the bouquet; Jiraiya's memorial), 450 (the hero's-welcome half only; the Zetsu/Team Samui/Tsunade-coma/Danzo-appointment half is deferred: Zetsu and Team Samui open ep 176, Taka's reunion and the Tobi/Kisame exchange are in ep 178, and the Tsunade-coma report and the Fire Daimyo's council that appoints Danzo Sixth Hokage are adapted in ep 179 at 0:00-4:05), 426 (Ebisu's reflection on Naruto, reused)",
+      "confidence": "high",
+      "sources": [
+        "https://web.archive.org/web/20110122041021/http://www.tv-tokyo.co.jp/anime/naruto/episodes2010.html",
+        "https://naruto.fandom.com/api.php?action=parse&page=The%20Sixth%20Hokage%20Danz%C5%8D&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=The%20Joyous%20Village!!&prop=wikitext&format=json",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/"
+      ],
+      "why": "The stored note points the Danzo appointment at 'the Five Kage Summit episodes'. It is not there: ep 197 ('The Sixth Hokage Danzo') opens on ch 451 — Tokuma TELLING Anko that Danzo has already been appointed, then Danzo announcing himself to Team Samui — and both AFG and Narutopedia give 197 as 451-453. The daimyo's council itself is ep 179's cold open, per TV Tokyo's own 399-wa synopsis and Narutopedia's ch-450 summary. Note-only repair; ep 175's anchor values are unchanged."
+    }
+  ],
+  "type_corrections": [
+    {
+      "episodes": [
+        179
+      ],
+      "type": "mixed",
+      "note": "Stored filler (AFL). T28 sole-adaptation exception, both halves stated explicitly: (1) SOLE — the pages animated at 0:00-4:05 are ch 450's closing pages (the Fire Daimyo's emergency council: Koharu and Homura pressed by Danzo, Shikaku nominating Kakashi, Danzo's rebuttal, Danzo appointed Sixth Hokage) and they appear in NO other episode; ch 450's other threads are held by eps 175 (hero's welcome), 176 (Zetsu/Team Samui) and 178 (Taka; Tobi and Kisame), and the next canon episode 197 starts at ch 451 on both AFG and Narutopedia. (2) MAJOR PLOT POINT — the appointment of the Sixth Hokage is a reveal the entire following arc is built on and the political close of Pain's Assault; if this row stayed filler the catalog would mark those pages never-adapted, which is exactly the failure the exception exists to prevent. The remainder (~16 minutes) is anime-original PRODUCTION, not recap: newly drawn and contradicting the 2002 series' ep 3 on seven counts per Narutopedia's Trivia, with scenes no source has — under the recap boundary (shippuden 388) that weighs toward filler, and with a real canon share in the same episode the row is MIXED. WHO LIED: AFL types the whole 176-196 block filler and misses the frame; AFG is right that the row is Mixed but our stored 'ch 1-4' is a parser artifact, not an AFG claim (see structure); ja-WP bolds all 21 rows of the arc as fully anime-original — a block marking that over-generalises, refuted here by the licensor's own synopsis.",
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=Kakashi%20Hatake,%20the%20J%C5%8Dnin%20in%20Charge&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=The%20Joyous%20Village!!&prop=wikitext&format=json",
+        "https://web.archive.org/web/20110122041021/http://www.tv-tokyo.co.jp/anime/naruto/episodes2010.html",
+        "https://www.animefillerguide.com/anime/naruto-shippuden/",
+        "https://naruto.fandom.com/api.php?action=parse&page=Sasuke%20and%20Sakura:%20Friends%20or%20Foes%3F&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "AFG PARSE DEFECT (the headline; scripts/ingest/lib/afg.ts). The live naruto-shippuden page uses a four-column format whose row class is on a <span> INSIDE the <td> ('<td><b><span class=\"blue\">179.</span></b></td>') and whose second column is a sub-number rendered '(04).'. Two lines then misfire: (a) `const hasStart = /^\\(?[\\d:]+\\)?$/.test(cells[1] ?? '')` rejects '(04).' because of the trailing period, so hasStart is false and the CHAPTERS cell is read from cells[2] — the TITLE cell — instead of cells[3]; (b) `const numberClass = $(tr).find('td').first().attr('class') ?? ''` finds no class on the td, so every row types 'canon'. Running the real parser over the live HTML: 500 rows, ALL typed canon, ALL titles empty, and chapters non-empty on exactly two rows — 179 -> [1,2,3,4] and 180 -> [1,2], produced by parseChapters reading the timestamps '0:00 to 4:05' and '0:00 to 2:12' out of AFG's Mixed notes as ranges 0-4 and 0-2. Those are the only two rows in the whole page whose note contains digit-'to'-digit, which is precisely why the T4 audit surfaced exactly this pair as STRONG for this series. Correctly read, the page gives 176 Mixed/450, 177 Filler, 178 Mixed/449+450, 179 Mixed/450, 180 Mixed/451, 181 Mixed/451, 182-196 Filler, 197 canon/451-453, 198 canon/453-455, 199 canon/454-457. Two knock-ons: (i) open flag #842 ('anchors stale (sparse source page)') is this defect — the 31 surviving source='afg' anchors on eps 1-31 come from the OLD page format and would be deleted on the next re-derive, which now finds no chapters at all on those rows; (ii) the writer's A1 gate is currently the only thing suppressing a phantom ep-179 -> ch-4 anchor, so the type flip to mixed must land WITH the manual anchor in this verdict (curated rows win by precedence), or the parser must be fixed first.\nONE LINEAGE CONFIRMED: AFG's chapter column and Narutopedia's episode infobox agree token for token across this whole block (175 = 426/449/450 vs the stored manual record, 176 = 450, 178 = 449+450, 179 = 450, 180 = 451, 181 = 451, 197 = 451/452/453) — count them as ONE leg. The independent legs used here are (1) Narutopedia's CHAPTER pages (ch 450 'The Joyous Village!!', ch 451 'Dealing with Sasuke!!' — different pages, content claims), (2) TV Tokyo's own 2010 back-number synopses (archived 2011-01-22, Shift-JIS; 399-wa and 400-wa quoted in the notes), and (3) ja-Wikipedia's episode list.\nJA-WP'S MARKER IS A BLOCK MARKING HERE: its legend says a BOLD subtitle = an episode that is entirely anime-original, and it bolds all 21 rows 176-196 while leaving 175 and 197 unbolded. That is the arc's dominant character, not a per-row measurement — it bolds 176, 178 and 181 too, whose manga frames AFG times and Narutopedia maps. Read it as evidence about the arc, never as a denial of a timed frame. (Contrast the catalogued trap that ja-WP UNDER-marks: on this arc it OVER-marks.)\nROW IDENTITY: no offset. Our 179 = ja-WP 179 (通算 399) 担当上忍はたけカカシ 2010-09-30 = TV Tokyo 399-wa = Narutopedia 179 = AFG 179; our 180 = ja-WP 180 (通算 400) イナリ、試される勇気 2010-10-07 = TV Tokyo 400-wa = Narutopedia 180 = AFG 180. Joined on title + air date (R20), never index.\nARC SCOPE: Past Arc: The Locus of Konoha = eps 176-196 (Narutopedia arc page; ja-WP 過去篇〜木ノ葉の軌跡〜 第176話-第196話). Its present-day frame runs on manga chapters 449-451 while the retrospectives are anime-original; the Pain's Assault arc's chapter table (Narutopedia) gives 450 'The Joyous Village!!' (2009-06-22), 451 'Dealing with Sasuke!!' (2009-06-29), 452 'Under Pressure from Danzo!!', 453 'The Eve of the Five Kage Summit...!!', and the Five Kage Summit arc page states it covers ch 454-483 / eps 197-214."
+  },
+  "flags_for_sean": "1) PIPELINE, not typing: our AFG data for naruto-shippuden is currently garbage (500 rows all 'canon', all titles empty, chapters only on the two rows whose Mixed note holds a 'N:NN to M:MM' timestamp). The two-line fix is in scripts/ingest/lib/afg.ts (accept a trailing period in the hasStart test; read the row class from the first td's descendant span as well as the td). This is almost certainly a shared cause across batch 21 wave 1 — any other series on this AFG page format will show the same 'AFL filler vs AFG canon-with-chapters' shape with small, absurd chapter numbers. Worth checking the other seven series' STRONG rows for chapters <= 20 before treating them as source disagreements. 2) ORDER OF APPLICATION: ep 179's flip to mixed opens the AFG writer's A1 gate; apply the manual anchor (179 -> 450) in the SAME wave or the next afg re-derive writes ep 179 -> ch 4. 3) ADJACENT ROWS, same class, not researched to verdict depth and NOT proposed here: eps 176 (AFG Mixed 1:48-3:58, ch 450 — Zetsu reports Pain's death, Team Samui dispatched), 178 (AFG Mixed 18:02-end, ch 449+450 — Taka reunites, Tobi sends Kisame after the Eight-Tails) and 181 (AFG Mixed 18:15-end, ch 451 — the Inari/Tazuna conversation) are all stored filler with real, timed, first-time manga frames. Each needs the same sole-adaptation sitting; my instinct is that 176 and 178 are closer to the 179 shape than to 180's, but I did not do the accounting. 4) POSITION GAP: eps 197 and 198 carry no anchors although AFG and Narutopedia agree on 197 = 451-453 and 198 = 453-455; without them the parity continue I deliver for 179 (-> 451) will be healed to ep 199's START 454 and silently skip ch 451-453. 5) The ep-175 note repair is note-only; its anchor values stand."
+}

@@ -1,0 +1,345 @@
+{
+  "series_id": "one-piece",
+  "summary": "Nine STRONG type contradictions settled by chapter accounting on onepiece.fandom (episode `chapter=` fields AND the independent {{Qref|chap=|page=|ep=}} reverse index on character/location pages) plus ja-WP's episode list, whose bold = アニメオリジナルストーリー and whose <ref name=\"original\"> reads 一部原作のストーリーあり ('contains part of the manga's story') — i.e. ja-WP carries its own filler / mixed marker. SIX rows CONFIRM the stored filler (319, 326, 497, 498, 626, 747): each is an anime-original body carrying a SLIVER of the source. For 326 / 626 / 747 the sliver is provably SOLE (ep 337 starts ch 442 at p.4; ep 625 stops before ch 699's night watch and ep 628 opens on the morning paper; ep 751 skips ch 802's hail scene), but the beat is a trivial one (the crew lounging on the new Sunny; a night watch; a comic hail squall) — first half of the T28 sole-adaptation exception YES, second half (a major plot point: a death, a reveal, an arc close) NO, so the rows stay filler with the tie annotated. 497/498 dramatise ch 585's time-passage montage (Garp's beatings, Makino's visits, the treehouse) — sole (ep 496 stops at 585 p.14, ep 500 resumes at the Bluejam capture) but a montage summary, not a major plot point: filler. THREE rows are WRONG: 418, 419, 420 — the 'Crewmates' Whereabouts' block — are typed filler while they hold the ONLY animation of ch 523 p.14-19 and of ch 524 p.2-3 / 6-7 / 8-9 / 13-14. Ep 417 ends at 523 p.13 and ep 422 opens at 525, so ch 523's tail and most of ch 524 exist nowhere else; ja-WP does not bold 418-421; the wiki's own Canon page does not list a 'Whereabouts' filler arc; and ep 421 — the same shape, the same chapter — is already stored MIXED with the ch 524 anchor. Each episode's JOB is the source's beat (where each scattered Straw Hat landed, the reveal that closes the Amazon Lily Arc), padded with invented material — the ruled 453-456 shape. → mixed + three page-partitioned anchors (418 → 523, 419 → 524 [523], 420 → 524, with `rearranged` on the un-cross-cut of ch 524's parallel strands). WHO LIED: AFL, on both sides — its 'Anime Canon' bucket carries 418/419/420 (rows that adapt numbered chapters) AND 497/498/499 (rows that adapt nothing but a montage), so it is not a type witness at all; T27 forbids the fourth type. AFG's chapter column is the known reading-position plateau (435 on 317/318/319 behind ep 316's END; 442 ahead of ep 325; 585 behind ep 496) — right on 418-420 only by accident of where the plateau fell.",
+  "anchors": [
+    {
+      "episode": 418,
+      "end_chapter": 523,
+      "start_chapter": 523,
+      "chapters_adapted": "523 (p.14-17)",
+      "volume": 54,
+      "confidence": "high",
+      "note": "A4/A10. The episode animates ch 523's crewmate-whereabouts pages: p.14-15 Nami landing on Weatheria and Haredas's Wind Knots, p.16-17 Franky landing on Karakuri Island (the dog-weapon Taroimo, Kitton, the Super Dance, Vegapunk's birthplace). The fandom's episode infobox says `chapter = Chapter 523 p.14-17`; the INDEPENDENT Qref reverse index agrees page for page — Haredas {{Qref|chap=523|page=14-15|ep=418}}, Kitton {{Qref|chap=523|page=16-17|ep=418}}, Weatheria {{Qref|chap=523|page=14-15|ep=418}}, Karakuri Island {{Qref|chap=523|ep=418}}. SOLE: ep 417's field is `522 p.15-19 and 523 p.2-13`, so 523 p.14-19 is animated nowhere else in the run, and ep 422 opens at 525 p.2. weight: significant — these pages are the episode's premise and its two story spines (where Nami and Franky spent the timeskip), not a quoted fragment; the remaining ~18 minutes (the cyclone, the Karakuri hospital) are invented elaboration, which is why the row is mixed and not canon. No A47 hold: END 523 does not ADVANCE (ep 417's END is already 523); the opening Kuma-scattering flashback is re-shown ch 513 footage and is never cited.",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_418&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Chapter_523&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_417&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Haredas&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Weatheria&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Karakuri%20Island&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=ONE%20PIECE%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 419,
+      "end_chapter": 524,
+      "start_chapter": 523,
+      "chapters_adapted": "523 (p.18-19), 524 (p.8-9, 13-14)",
+      "volume": 54,
+      "confidence": "high",
+      "note": "A4. Three source segments: ch 523 p.18-19 (Sanji lands on Momoiro Island and is chased by the okama — Momoiro Island {{Qref|chap=523|page=18-19|ep=419}}), ch 524 p.8-9 (Chopper on Torino Kingdom, the giant birds and Shanba's 'tanuki stew' — Torino Kingdom {{Qref|chap=524|page=8-9|ep=419}}, Shanba {{Qref|chap=524|ep=419}}), and ch 524 p.13-14 (the episode's cold open on Momonga's ship: Hancock demanding 100-kilo meals and feeding Luffy). The fandom infobox states exactly `523 p.18-19 and 524 p.8-9, 13-14`. SOLE on every page: ep 417 stops at 523 p.13, ep 420 takes 524 p.2-3 and 6-7, ep 421 takes the rest of 524, ep 422 starts at 525. weight: significant — two crewmates' whereabouts (the source's own reveal) plus the manga's Impel-Down-bound framing scene; the Elizabeth / Kamabakka material around them is invented. A47 does NOT hold the END at 523: the ch 524 share is not a trailing scrap — p.13-14 is the episode's OPENING scene — and the next anchored row (420) starts EARLIER in 524, not on a straddle.",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_419&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Chapter_524&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Chapter_523&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Momoiro%20Island&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Torino%20Kingdom&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Shanba&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=ONE%20PIECE%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 420,
+      "end_chapter": 524,
+      "start_chapter": 524,
+      "chapters_adapted": "524 (p.2-3, 6-7)",
+      "volume": 54,
+      "confidence": "medium",
+      "note": "A4. Two source segments, both ch 524: Usopp's landing on the Boin Archipelago and his rescue from the giant beetle and the man-eating plant by Heracles (Boin Archipelago {{Qref|chap=524|ep=420}}, Heracles {{Qref|name=Intro|chap=524|ep=420|Heracles made his debut saving Usopp}}), and Robin's landing at Tequila Wolf and enslavement on the 700-year bridge (Tequila Wolf {{Qref|chap=524|page=6-7|ep=420}}, Tequila Wolf Chief {{Qref|chap=524|page=6-7|ep=420}}). The Robin pages are cited page-exact; the Usopp pages are p.2-3 by position — ch 524's own long summary opens on Usopp/Heracles and the wiki's page cites elsewhere in the chapter (Chopper p.8-9, Hancock p.13-14) partition consistently around it — so the page numbers, not the chapter, are the medium part. SOLE: no other episode animates these pages (417 → 522-523, 419 → 523 p.18-19 + 524 p.8-9/13-14, 421 → the Brook, Zoro/Perona, Marineford and Garp/Ace pages, 422 → 525). weight: significant — again the source's own whereabouts reveal is the episode's premise; Soran and the Tequila Wolf officers' plot are invented. NOTE the fandom episode infobox carries NO `chapter =` field on this row — silence, not absence: genuinely filler One Piece rows carry `chapter = Filler` (eps 317, 318, 499, 627 all do).",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_420&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Chapter_524&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Boin%20Archipelago&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Tequila%20Wolf&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Chief%20(Tequila%20Wolf)&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Heracles&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=ONE%20PIECE%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 417,
+      "continue_chapter": 523,
+      "kind": "parity",
+      "note": "OUT OF ASK, consequence of the 418 anchor (C1): ep 417 stops mid-ch-523 (p.13) and ep 418 opens at 523 p.14 — resume INSIDE 523. The stored value is 524/parity with the note 'chs 523 not yet seen at this point', which was the artefact of typing 418-420 filler: it told a reader ch 523's tail was unread when the anime shows it in the very next episode.",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_417&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_418&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 418,
+      "continue_chapter": 523,
+      "kind": "parity",
+      "note": "C1: ep 418 ends on ch 523 p.17 and ep 419 opens on 523 p.18 — resume INSIDE 523.",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_418&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_419&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 419,
+      "continue_chapter": 524,
+      "kind": "parity",
+      "note": "C2 parity at the next row's START: ep 419 finishes ch 523 (p.19) and has already shown ch 524 p.8-9 and p.13-14 out of order; ep 420 starts at 524 p.2. Resume at 524 and expect the Chopper (p.8-9) and Hancock-meal (p.13-14) pages to be already seen (C3 skip).",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_419&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_420&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Chapter_524&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 420,
+      "continue_chapter": 524,
+      "kind": "parity",
+      "note": "C1/C2: ep 420 shows 524 p.2-3 and 6-7; ep 421 plays the remaining strands of the same chapter (Brook p.4-5, Zoro/Perona p.10-12, Marineford / the Warlords / Garp-Ace p.15-19). Resume INSIDE 524.",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_420&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_421&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Chapter_524&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "anchor_hostile": [
+    {
+      "episode": 319,
+      "why": "A1 — the row is filler (stored type confirmed). The only source tie is unsized: ja-WP marks ep 319 anime-original WITH 一部原作のストーリーあり, but no source names a page. Delivered as `unverified{435}` instead of a number; ch 435 already carries position at eps 316 (END 435) and 320.",
+      "sources": [
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=ONE%20PIECE%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_319&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 326,
+      "why": "A1 — filler. Its ch 442 p.2-3 share is a sliver (the crew lounging on the new Sunny) and ch 442 carries position at ep 337 (442 p.4-19); the T28 sole-adaptation exception fails its second half.",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_326&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_337&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 497,
+      "why": "A1 — filler. The tie is ch 585's time-passage montage, a summary page, not a positioned scene; ch 585 carries position at eps 496 (585 p.2-14) and 500.",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_496&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Chapter_585&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 498,
+      "why": "A1 — filler. Same ch 585 montage; the fandom's own Anime Notes call it 'this filler episode'.",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_498&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Chapter_585&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 626,
+      "why": "A1 — filler (first episode of the Caesar Retrieval filler arc, named as filler on the wiki's Canon page). Its ch 699 p.14-15 share is a night-watch beat; ch 699 carries position at eps 625 and 628.",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Canon&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_626&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 747,
+      "why": "A1 — filler (first episode of the Silver Mine filler arc, named as filler on the wiki's Canon page). Its ch 802 p.3-5 share is a comic hail squall; ch 802 carries position at eps 751 and 752.",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Canon&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_747&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [
+        319
+      ],
+      "kind": "unverified",
+      "chapters": "435",
+      "note": "weight: sliver — because no source sizes it and the largest candidate is a single montage panel. ja-WP's episode list bolds ep 319 (アニメオリジナルストーリー) AND attaches <ref name=\"original\">一部原作のストーリーあり</ref> — 'contains part of the manga's story' — so manga material is certainly present, but neither ja-WP nor onepiece.fandom (episode page is a stub; Anime Notes empty; no `chapter =` field) names a page. The candidate is ch 435's narrated five-day interval while the Thousand Sunny is built, whose montage panels include Sanji leaving a market pulling a cart of food — ep 319 is Sanji resupplying in Water 7 with Chimney and the old cook Banban, and its cast list is ch 435's montage cast (Usopp practising his apology, Zoro sword-shopping, Nami/Robin shopping, Paulie/Tilestone/Lulu/Iceburg). That panel, if it is the tie, is a DUPLICATE: ch 435 is animated at ep 316 (END 435) and ep 320. The gap: no source states which scene. Type unaffected — the remainder (Banban, the Aqua Laguna salt) is wholly anime-original.",
+      "sources": [
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=ONE%20PIECE%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_319&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Chapter_435&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_320&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [
+        326
+      ],
+      "kind": "graft",
+      "chapters": "442 (p.2-3)",
+      "note": "weight: sliver — because it is two pages of ambient business (Luffy and Usopp putting the shark in the fish tank, Robin/Franky/Sanji in the tank room, Nami's bath, Chopper's chair, Zoro in the crow's nest) opening a 24-minute anime-original episode. NEW, not a duplicate: ep 337's field is `Chapter 442 p.4-19`, so p.2-3 is animated only here — but the T28 sole-adaptation exception needs BOTH halves and the second fails: this is a trivial first-time beat, not a death, a reveal or an arc close. Confirms the stored graft{442}; the row stays filler (first episode of the Ice Hunter Arc, which the wiki's Canon page lists among 'Toei's most significant filler materials'). Note ja-WP does NOT attach its 一部原作 ref here — its bold is arc-level at block edges.",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_326&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_337&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Chapter_442&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Canon&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=ONE%20PIECE%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [
+        326
+      ],
+      "kind": "recap",
+      "chapters": "438-439",
+      "note": "weight: none (weightless, T28 recap clause). The episode opens by re-telling the Water 7 departure already animated at eps 323-324: Franky accepting the invitation, Usopp's return, the Coup de Burst dodging Garp's cannonball (ch 439's own summary: 'The Straw Hat Pirates escape Garp's attack. They name their new ship Thousand Sunny'), and the toast. Re-shown material progresses nothing; the remainder of the episode decides the type, and the remainder is the Accino Family / Lovely Land original plot.",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_326&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Chapter_439&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_324&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [
+        418
+      ],
+      "kind": "partial",
+      "chapters": "523 (p.14-17)",
+      "note": "weight: significant — because these four pages ARE the episode's plot: the source's own reveal of where Nami and Franky landed after Kuma scattered the crew (Weatheria; Karakuri Island, Vegapunk's birthplace), both load-bearing for the two-year timeskip. NEW and SOLE — ep 417 covers 522 p.15-19 + 523 p.2-13 and no other episode touches 523 p.14-17. Supersedes the batch-17 blanket partial{523-524} on 418/419/420 with the per-episode page split.",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_418&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_417&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Haredas&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Kitton&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Chapter_523&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [
+        419
+      ],
+      "kind": "partial",
+      "chapters": "523 (p.18-19), 524 (p.8-9, 13-14)",
+      "note": "weight: significant — because the source segments carry the episode's two strands (Sanji on Momoiro Island; Chopper on Torino Kingdom) and its framing scene (Hancock's 100-kilo meals on Momonga's ship). NEW and SOLE on every page. A separate small tie: onepiece.fandom's Tibany page also cites {{Qref|cover=544|ep=419}} for Sanji's okama conversion — i.e. the episode brushes Oda's Straw Hat's Separation Serial cover 544, the same cover-page serial Sean ruled side_story on eps 453-456; direction unresolved (the cover ran in 2009 alongside the episode), so no side_story annotation is claimed here.",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_419&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Chapter_524&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Momoiro%20Island&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Torino%20Kingdom&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Tibany&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [
+        419,
+        420
+      ],
+      "kind": "rearranged",
+      "chapters": "524",
+      "note": "The anime UN-CROSS-CUTS ch 524: Oda alternates the scattered crewmates page by page (Usopp p.2-3, Brook p.4-5, Robin p.6-7, Chopper p.8-9, Zoro/Perona p.10-12, Hancock p.13-14, Marineford/Warlords/Garp-Ace p.15-19); Toei re-pairs them one couple per episode — 419 takes p.8-9 + 13-14, 420 goes BACK to p.2-3 and 6-7, 421 takes p.4-5, 10-12 and 15-19. Ep 420's START is therefore a back-jump inside a chapter ep 419 already entered. The partition is exact — every page of 524 is claimed once across 419/420/421 — which is what makes the page-level anchors trustworthy.",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Chapter_524&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_419&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_420&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_421&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [
+        420
+      ],
+      "kind": "partial",
+      "chapters": "524 (p.2-3, 6-7)",
+      "note": "weight: significant — because the two source segments are the episode's plot: Usopp's landing on the Boin Archipelago and rescue by Heracles, and Robin's landing at Tequila Wolf and enslavement on the 700-year bridge, both the source's own whereabouts reveal and animated nowhere else. The Soran subplot and the officers' torture are invented around them. The Robin pages are cited page-exact by two wiki pages; the Usopp pages are positional (p.2-3).",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_420&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Chapter_524&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Boin%20Archipelago&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Tequila%20Wolf&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Chief%20(Tequila%20Wolf)&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [
+        497,
+        498
+      ],
+      "kind": "divergence",
+      "chapters": "585",
+      "note": "weight: sliver — because the source content is ch 585's time-passage MONTAGE (p.15-17), a page of summary vignettes, not a scene: 'from day to day they kept getting stronger, fighting pirates, ... Makino and Woop Slap would occasionally come by and drop off new clothes ... Garp would visit and beat them senseless. They built their own treehouse and lived in it.' Ep 497 dramatises the Garp beating, the Makino/Woop Slap visit and the treehouse build; ep 498 dramatises the hunting-and-eating vignette and Sabo's father approaching Bluejam. It is SOLE (ep 496's field is `Chapter 585 p.2-14`; ep 500 opens on an anime-original storm and then plays ch 585's Bluejam capture, p.18-19) — but the T28 sole-adaptation exception fails its second half: a montage of happy days is not a death, a reveal or an arc close. The episodes' own plots (Garp's ambush and the flight, the hideout design, the Danpa hunt, the anime-only Haki user Naguri who claims to have fought Roger) are invented; the fandom's Anime Notes on 497 flag the reasons for the hideout as anime-supplied and on 498 say outright 'this filler episode'. Kind kept as stored (divergence); the note is refined — the batch-17 note called ch 585 a one-panel ELLIPSIS, but the manga does depict these beats.",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_497&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_498&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Chapter_585&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_496&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_500&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=ONE%20PIECE%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [
+        626
+      ],
+      "kind": "graft",
+      "chapters": "699 (p.14-15)",
+      "note": "weight: sliver — because it is the two-page night-watch beat of ch 699 ('As the night goes on, most of the crew sleep while others — Usopp, Chopper, Franky, Sanji, Kin'emon — stay up looking after the Sunny'), used as the cold open before Breed and the Sea Lapahns take over the episode. The fandom's infobox states `chapter = Chapter 699 (p. 14-15)`; ja-WP bolds ep 626 with the 一部原作のストーリーあり ref. NEW, not a duplicate — ep 625 stops at the daytime breather and ep 628 resumes at the morning newspaper — but a trivial first-time beat, so the sole-adaptation exception does not fire and the row stays filler (Caesar Retrieval Arc, named as filler on the wiki's Canon page). Confirms the stored graft{699}.",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_626&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Chapter_699&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_625&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_628&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Canon&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=ONE%20PIECE%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [
+        747
+      ],
+      "kind": "graft",
+      "chapters": "802 (p.3-5)",
+      "note": "weight: sliver — because it is ch 802's opening hail squall (the Going Luffy-senpai holed by hailstones, the Barto Club having no navigator, Gambia phoning his grandmother who answers with advice about gum and warts, Zoro asking why Bartolomeo will not raise a barrier and being told it is a sin to defy nature), replayed almost line for line and then extended with an invented Luffy scene blowing the hail away. ja-WP bolds ep 747 with the 一部原作のストーリーあり ref. NEW, not a duplicate — ep 751 opens on an anime-original Shanks/crew-history montage and then plays ch 802 from the Kizaru/Weevil briefing to the arrival at Zou, never re-showing the hail — but a comic travel beat, not a major plot point, so the row stays filler (Silver Mine Arc, named as filler on the wiki's Canon page). Confirms the stored graft{802}.",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_747&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Chapter_802&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_751&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Canon&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=ONE%20PIECE%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "repairs": [],
+  "type_corrections": [
+    {
+      "episodes": [
+        418,
+        419,
+        420
+      ],
+      "type": "mixed",
+      "note": "T28. Stored filler; AFL labels them 'Anime Canon' (not a type — T27) and AFG maps them to ch 523-524. Chapter accounting settles it for MIXED on two independent grounds, both stated. (1) THE MATERIALITY BAR: ask what each episode's JOB is. Ep 418's job is to show where Nami and Franky landed; 419's, where Sanji and Chopper landed; 420's, where Usopp and Robin landed — which is precisely what ch 523 p.14-19 and ch 524 do. The source beat is the episode's premise and spine, padded with anime-original elaboration; that is the shape Sean already ruled MIXED on this series at eps 453-456 ('each episode's plot is the serial, padded with anime-original antics'), and it is why ep 421 — the same block, the same chapter, the same construction — is already stored mixed with the ch 524 anchor. (2) THE SOLE-ADAPTATION EXCEPTION, both halves: FIRST, the pages appear in NO other episode — ep 417's field is '522 p.15-19 and 523 p.2-13' and ep 422's is '525 p.2-19 and 526 p.3-6', so ch 523 p.14-19 and ch 524 p.2-3/6-9/13-14 are animated only in 418/419/420; SECOND, the beat is a major plot point of the source — the reveal of where Kuma scattered the Straw Hats, the beat the last chapter of the Amazon Lily Arc exists to deliver and on which the entire two-year timeskip is built. Leaving the rows filler would falsely mark those pages never adapted; the stored continue on ep 417 already shows the damage ('chs 523 not yet seen at this point'). EVIDENCE BEYOND THE TWO DISAGREEING LABELS: (a) onepiece.fandom episode infoboxes — 418 `523 p.14-17`, 419 `523 p.18-19 and 524 p.8-9, 13-14` (420 has no field, which on this wiki is silence: real filler rows carry `chapter = Filler`, as eps 317, 318, 499 and 627 do); (b) the wiki's independent Qref reverse index on character and location pages — Haredas 523 p.14-15 ep 418, Kitton 523 p.16-17 ep 418, Momoiro Island 523 p.18-19 ep 419, Torino Kingdom 524 p.8-9 ep 419, Tequila Wolf and its Chief 524 p.6-7 ep 420, Heracles 524 ep 420 — a different edit lineage from the infoboxes, agreeing page for page; (c) ja-WP's episode list does NOT bold 418-421 (bold = アニメオリジナルストーリー; it bolds 317/318/319, 326, 498/499, 626-628 and 747/748 in the same table); (d) the wiki's Canon page lists Toei's filler arcs and there is no 'Crewmates' Whereabouts' arc among them, while Ice Hunter, Caesar Retrieval and Silver Mine are all there. SEGMENT WEIGHTS: 418 — ch 523 p.14-17 SIGNIFICANT (the episode's two spines) + anime-original expansion (the Weatheria cyclone, the Karakuri hospital / tea personality gag) + a re-shown ch 513 Kuma flashback (weightless). 419 — ch 523 p.18-19 and ch 524 p.8-9 SIGNIFICANT + ch 524 p.13-14 SIGNIFICANT (the manga's own framing scene) + invented Kamabakka and Torino material. 420 — ch 524 p.2-3 and p.6-7 SIGNIFICANT + the invented Soran subplot and the Tequila Wolf officers' plot. None of the three is canon: the original share is large in every one.",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_418&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_419&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_420&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_417&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode_422&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Chapter_523&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Chapter_524&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Tequila%20Wolf&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Torino%20Kingdom&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Canon&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=ONE%20PIECE%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "ROW IDENTITY: all nine rows join to onepiece.fandom `Episode N` and to ja-WP's 話数 column on TITLE and JP AIR DATE with no offset (319 = サンジ衝撃！謎の爺さんと激ウマ料理 / 2007-07-22; 326 = 謎の海賊ご一行！サニー号と危険な罠 / 2007-10-14; 418-420 = 仲間達の行方… / 2009-09-20, -09-27, -10-04; 497/498 = 2011-05-08, -05-15; 626 = 2013-12-22; 747 = 2016-06-26). One Piece is a single continuous count with no recap/special rows in this range, so no row-count identity risk. SOURCE SEMANTICS ESTABLISHED THIS WAVE (durable): (1) ja-WP's ONE PIECEのアニメエピソード一覧 uses BOLD for アニメオリジナルストーリー and attaches <ref name=\"original\">一部原作のストーリーあり</ref> to exactly 13 rows across the whole run — 51, 55, 61, 101, 143, 203, 214, 226, 319, 498, 626, 628, 747 — i.e. ja-WP maintains its own filler-with-a-graft marker, and eight of those 13 already carry a graft/divergence annotation in our catalog (51 graft{98}, 55 graft{101}, 203 graft{303}, 214 divergence{313} …). That ref is a first-class cross-check for the T28 sliver question on this series. (2) ja-WP's bold is ARC-LEVEL at block edges: it bolds ep 628, which our catalog stores mixed with a real ch 699-700 anchor, and it withholds the 一部原作 ref from ep 326 although the fandom cites ch 442 p.2-3 — so read the bold as 'inside an anime-original block', not as 'adapts nothing'. (3) onepiece.fandom writes `chapter = Filler` on genuinely filler episodes (317, 318, 499, 627) and a page-exact `chapter = Chapter N p.a-b` on adapting ones (417, 418, 419, 422, 337, 493-496); a MISSING field (420, 497, 500, 625, 628, 746, 748, 751, 752) is silence, never a negative. (4) the wiki's Qref reverse index ({{Qref|chap=|page=|ep=}} on character, location, technique pages) is an independent per-page chapter→episode index and is the strongest instrument on this series where episode infoboxes are missing or stub-thin.",
+    "order_only": []
+  },
+  "flags_for_sean": [
+    "TYPES — the one block that moves: 418, 419, 420 filler → MIXED. This RE-OPENS the A6 rulings of 2026-08-25 that nulled their anchors as 'AFG reading-position plateau on a noncanon row'. That ruling is still correct about the AFG value (it was a plateau); what changed is the row's standing, and with the type corrected A1 no longer forbids an anchor. The anchors I propose are NOT the AFG numbers restored — they are page-level values from the fandom infoboxes and the Qref index (418 → 523 [523] {523 p.14-17}; 419 → 524 [523] {523 p.18-19, 524 p.8-9, 13-14}; 420 → 524 [524] {524 p.2-3, 6-7}). If you keep the rows filler, the anchors must go with them and the sole-adaptation pages stay unrepresented.",
+    "The consistency argument is the strongest single fact: ep 421 is ALREADY stored mixed with the ch 524 anchor, and it is the fourth episode of the same four-episode block, built the same way (a couple of crewmates' manga landing pages + a Momonga's-ship framing scene from the same chapter + invented padding). 421 has a bigger source share (ch 524 p.4-5, 10-12, 15-19 — Brook, Zoro/Perona, the Marineford gathering, the Warlords' meeting, Garp and Ace), which is presumably why AFL called only 421 'Mixed', but the difference is degree, not kind.",
+    "AFL is not a type witness on this series' edge rows: its 'Anime Canon' bucket holds 418/419/420 (which adapt numbered chapters) AND 497/498/499 (which adapt a montage page at most). T27 forbids the fourth type; whichever way we map it, one of those two groups is mis-typed. AFG's chapter column is the documented reading-position plateau and is right on 418-420 only by accident.",
+    "The batch-17 blanket annotation `eps 418,419,420 partial {523-524}` is superseded by three per-episode, page-specific partials plus a `rearranged` on 419/420 (the un-cross-cut of ch 524's alternating strands). If the type_correction is refused, the per-episode partials are still an improvement on the blanket one.",
+    "Consequence outside the ask: ep 417's stored continue (524/parity, note 'chs 523 not yet seen at this point') becomes 523 (C1) once ep 418 carries ch 523 p.14-17. I have delivered it as a continue_point on 417 and flagged it here rather than leaving the seam inconsistent.",
+    "ep 497 is the only row where a second source dissents from my verdict: ja-WP does NOT bold it (496, 497 and 500 are all unbolded; 498 and 499 are bolded). I read that as ja-WP under-marking the first episode of the block — the fandom's Anime Notes for 497 describe its content as anime-supplied, ep 496's field stops at ch 585 p.14, and the only manga material available to 497 is the same montage page 498/499 also work from, which fails the sole-adaptation exception's second half. Confidence medium on 497 specifically; high on the other five confirmations.",
+    "ep 419 brushes Oda's Straw Hat's Separation Serial: onepiece.fandom's Tibany page cites {{Qref|cover=544|ep=419}} for Sanji's temporary okama conversion. That is the same cover-page serial you ruled side_story + mixed on eps 453-456 (covers 543-560). I did NOT claim a side_story annotation — cover 544 ran in 2009 contemporaneously with the episode and the direction of influence is unresolved — but it is a loose end if you ever revisit the serial's coverage set.",
+    "ep 319 is delivered as `unverified{435}` rather than a graft with a page: ja-WP asserts manga content is present (一部原作のストーリーあり) and AFG names ch 435, but no source names a scene, and the best candidate (Sanji's provisioning panel in ch 435's five-day montage) is already animated at eps 316/320. It is a census queue item, not a gap."
+  ]
+}

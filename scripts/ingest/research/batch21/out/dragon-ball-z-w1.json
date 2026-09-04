@@ -1,0 +1,161 @@
+{
+  "series_id": "dragon-ball-z",
+  "summary": "Batch 21 wave 1, the STRONG type_source_disagreement tier: six DBZ rows stored filler (AFL: Filler) where animefillerguide's row makes a positive chapter claim. Settled by CHAPTER ACCOUNTING on four sources beyond AFL/AFG: Kanzenshuu's episode guide 'Corresponding' field (page-level segment list, in episode order), Kanzenshuu's chapter pages (the reverse index + the chapter's page count), dragonball.fandom's episode summaries + 'Differences from the manga' + chapter-page 'episode=' reverse index, and ja-WP's episode list (the star marker = anime-original episode). RESULT: AFL is RIGHT on five of six. Eps 39, 40, 42, 125 and 274 stay FILLER — each carries a real but weightless first-time fragment of one chapter inside a wholly anime-original plot (39: ch 246 p.1-4, the day-7 shipboard interlude; 40: p.5-8, Vegeta's pod reaching Planet Freeza No. 79 and going into the medical machine; 42: p.9, one page, Vegeta stepping out of the healing pod; 125: ch 336 p.14, the closing 'three years have passed' shot; 274: ch 506 p.8-9, the closing discovery of the cocoons). ONE row flips: ep 43 -> MIXED under T28's SOLE-ADAPTATION EXCEPTION, stated in both halves — (i) the pages appear in NO other episode (Kanzenshuu's ch-246 reverse index is exactly eps 39/40/42/43 with DISJOINT page ranges; ep 43 alone holds p.10 and p.11-End, the chapter's last five pages) and (ii) the beat is a major plot point of the source: Kewi/Cui tells Vegeta that Freeza learned of the Dragon Balls, is already bound for Namek for immortality and will then wipe out the Namekians, and Vegeta takes back his scouter and blasts off for Namek — the reveal that starts the Namek race, and dragonball.fandom's own 'Major Events' for the row says exactly that. Plain T28 materiality FAILS for ep 43 (3m25s of a ~19min episode whose own plot is the Fake-Namek illusion); the exception is what carries it, and with it the anchor 43 -> 246 [246] that closes a real hole (ep 38 ends 245, ep 44 starts 247, so ch 246 is currently marked never-adapted although all 14 of its pages are animated). WHO LIED: AFG. Its blue class is a VIEWING-GUIDE label ('it is a mixed episode; you only need to watch from 21:34 to the end') — a claim that manga content is present, not a T27 standing; it prints it on a one-page graft (125) exactly as on ep 44's genuine 8-minute half. On ep 274 it prints no class at all and maps 506, a plain reading-position PLATEAU across 273/274/275 that silently renders a filler episode as a canon row. The 'four consecutive filler rows all mapped to ONE chapter' smell is NOT AFG padding a filler block: ch 246 really is sliced across eps 39/40/42/43 (Kanzenshuu page splits; ja-WP leaves all four UNMARKED while marking the neighbouring ep 41 as anime-original; the fandom chapter page lists the same four) — the batch-17 finding stands, the defect was A1, not the chapter number. Two side findings: our stored air date for ep 125 (1992-02-05) is AFL's, and ja-WP + Kanzenshuu + en-WP all say 1992-01-29 — AFL runs one week late across two whole blocks (eps 73-97 and 122-134, 38 rows), each starting after a New Year holiday skip and re-syncing at the next two-week gap; and the Dragon Universe wiki's empty 'manga' field is NOT an absence claim (it is empty on ep 44 too, a mixed row carrying 14 pages of ch 247), which weakens one leg batch 17 leaned on.",
+  "anchors": [
+    {
+      "episode": 43,
+      "start_chapter": 246,
+      "end_chapter": 246,
+      "chapters_adapted": "246 (p.10-14)",
+      "volume": 21,
+      "confidence": "medium",
+      "note": "Delivered WITH the type_correction to mixed (A1: it cannot stand on a filler row) and under T28's sole-adaptation exception, both halves stated. Kanzenshuu's ep-43 Corresponding field is an ordered segment list: 'Partial Filler (Sumisawa) | Chapter 246 (Page 10) | Half Filler (Sumisawa) | Chapter 246 (Pages 11-End)'; Kanzenshuu's ch-246 page gives the chapter as Title + pages 01-14, so p.10-End = the last five pages. dragonball.fandom's ep-43 summary carries both scenes in that order (the doctor examining Vegeta's armour, 'Freeza is no longer planet side, Cui is waiting', Vegeta walking off without his scouter = p.10; then the full Cui confrontation and the launch for Namek = p.11-14) and its Major Events line reads 'Vegeta hears about Frieza's desire to gather the Dragon Balls on Namek and races to the planet'. AFG's timecodes for the row (6:43-7:54 and 16:58-19:12) fall exactly on those two scenes. END 246 = the furthest mainline chapter adapted in running order (A4) and it is complete here (p.11-End); START 246 = the only chapter in the episode. Order is clean: ep 38 -> 245, ep 43 -> 246, ep 44 -> 247. Volume 21 agrees with the stored boundary table (v21 = 241-252). NOTE this contradicts the standing A6 ruling of 2026-08-25 ('sliver graft, not an adaptation') — see repairs and flags: that ruling predates the sole-adaptation exception (2026-08-28), and batch 17's own verdict flagged this exact fork.",
+      "sources": [
+        "https://www.kanzenshuu.com/episode/dbz/eps-043/",
+        "https://www.kanzenshuu.com/manga/db/chp-246/",
+        "https://dragonball.fandom.com/wiki/A_Friendly_Surprise",
+        "https://dragonball.fandom.com/wiki/The_Return_of_Vegeta",
+        "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%ABZ",
+        "https://www.animefillerguide.com/anime/dragon-ball-z/"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 43,
+      "kind": "parity",
+      "continue_chapter": 247,
+      "note": "C1 does not apply: ep 43 finishes ch 246 (Kanzenshuu 'Pages 11-End'), and ep 44 starts ch 247 (Kanzenshuu: ch 247 pages 1-14, second half of the episode). Parity with the anime at a clean chapter boundary — read on from 247. Ep 38's stored continue (247/parity, 'ch 246 not yet seen at this point') remains correct AT EP 38 but its note is now only true of ch 246's later pages: p.1-4 are shown in ep 39, p.5-8 in ep 40, p.9 in ep 42 — all on filler rows.",
+      "sources": [
+        "https://www.kanzenshuu.com/episode/dbz/eps-043/",
+        "https://www.kanzenshuu.com/episode/dbz/eps-044/"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [39],
+      "kind": "graft",
+      "chapters": "246 (p.1-4)",
+      "note": "weight: SLIVER — because the segment progresses nothing: it is ch 246's opening interlude (day 7 of the 30-day voyage, Gohan/Kuririn's image training, Bulma's 'where did that Vegeta run off to'), with no decision, reveal or outcome, and the episode's own plot (the Mirror Spaceship and its orphan crew) is wholly anime-original — dragonball.fandom's own Differences list says 'Bulma, Gohan and Krillin's encounter with the Mirror Spaceship is exclusive to the anime'. NEW material, not a duplicate: Kanzenshuu's ch-246 reverse index gives p.1-4 to this episode alone. Size is not the test (the sliver clause): AFG's viewing window 3:25-9:45 spans the whole opening act, and the anime-original hospital / Chi-Chi scenes are interleaved inside it, so the true source share is smaller than that window. Sole but NOT a major plot point, so the sole-adaptation exception does not fire — filler stands (AFL confirmed; ja-WP leaves the row unmarked while marking ep 41 as anime-original, i.e. it agrees source content is present).",
+      "sources": [
+        "https://www.kanzenshuu.com/episode/dbz/eps-039/",
+        "https://www.kanzenshuu.com/manga/db/chp-246/",
+        "https://dragonball.fandom.com/wiki/Friends_or_Foes%3F_(uncut)"
+      ]
+    },
+    {
+      "episodes": [40],
+      "kind": "graft",
+      "chapters": "246 (p.5-8)",
+      "note": "weight: SLIVER — a single ~1m27s cutaway near the end of the episode (AFG: 18:45-20:12): Vegeta's pod reaches Planet Freeza No. 79, the soldiers find him on life support and rush him to the medical room, and he is put in the healing pod. NEW material (Kanzenshuu gives p.5-8 to this episode alone), and it is one slice of a three-episode trickle (arrival 40 / recovery 42 / departure 43) rather than a beat this episode's plot rests on — the episode's job is the Mirror Spaceship children and the meteor swarm, all anime-original. Sole pages but not a death / reveal / arc close, so the sole-adaptation exception does not fire — filler stands.",
+      "sources": [
+        "https://www.kanzenshuu.com/episode/dbz/eps-040/",
+        "https://dragonball.fandom.com/wiki/Held_Captive",
+        "https://www.animefillerguide.com/anime/dragon-ball-z/"
+      ]
+    },
+    {
+      "episodes": [42],
+      "kind": "graft",
+      "chapters": "246 (p.9)",
+      "note": "weight: SLIVER — ONE manga page (Kanzenshuu: 'Chapter 246 (Page 9)'), the closing scene from AFG's 20:47-to-the-end: the attendant drains the pod, Vegeta steps out healed, is told his tail could not be restored. NEW (p.9 is in no other episode) but a one-page beat; the whole rest of the episode is the Fake-Namek Dragon Ball hunt plus Goku's anime-original hospital escape. TRAP RECORDED: the episode's Japanese title is the chapter's title verbatim — ja-WP 'Wakusei Freeza NO.79 Fukkatsu no Vegeta!!' vs ch 246 'Vegeta Fukkatsu!!' — a title match here is a floor of one page, never coverage. Filler stands.",
+      "sources": [
+        "https://www.kanzenshuu.com/episode/dbz/eps-042/",
+        "https://dragonball.fandom.com/wiki/The_Search_Continues",
+        "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%ABZ"
+      ]
+    },
+    {
+      "episodes": [43],
+      "kind": "partial",
+      "chapters": "246 (p.10-14)",
+      "note": "weight: SIGNIFICANT — the episode adapts ch 246's last five pages: the doctor's report that Freeza has left and Kewi wants him (p.10), then Kewi's revelation that Freeza learned of the Namekian Dragon Balls through Vegeta's own scouter, is already headed there for immortality and will then wipe out the Namekians, and Vegeta seizing his scouter and launching for Namek (p.11-End). NEW and SOLE (Kanzenshuu's ch-246 reverse index: eps 39/40/42/43 only, disjoint page ranges) and a major plot point of the source — the reveal that sets up the Namek race. The rest of the episode (the ice cave, the illusion reveal, Raiti/Zaacro) is anime-original, so the row is mixed, not canon. Replaces the batch-17 graft{246} record on this row (see repairs).",
+      "sources": [
+        "https://www.kanzenshuu.com/episode/dbz/eps-043/",
+        "https://www.kanzenshuu.com/manga/db/chp-246/",
+        "https://dragonball.fandom.com/wiki/A_Friendly_Surprise"
+      ]
+    },
+    {
+      "episodes": [125],
+      "kind": "graft",
+      "chapters": "336 (p.14)",
+      "note": "weight: SLIVER — ONE page, the very last of ch 336 (Kanzenshuu's chapter page: Title + pages 01-14; ep 123 holds p.1-13, this row holds p.14). AFG's own window is 21:34-to-the-end (well under a minute) and dragonball.fandom's Differences section states it outright: 'With the exception of the final scene where Goku, Gohan and Piccolo take off, the entire events of this episode were exclusive to the anime.' The page is sole to this row but it is a time-skip link, not a death / reveal / arc close, and the episode's job is the driving-licence comedy — filler stands, and ja-WP marks the row with its anime-original star. END 336 is already carried by ep 123.",
+      "sources": [
+        "https://www.kanzenshuu.com/episode/dbz/eps-125/",
+        "https://www.kanzenshuu.com/manga/db/chp-336/",
+        "https://dragonball.fandom.com/wiki/Goku%27s_Ordeal",
+        "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%ABZ"
+      ]
+    },
+    {
+      "episodes": [274],
+      "kind": "graft",
+      "chapters": "506 (p.8-9)",
+      "note": "weight: SLIVER, and a DUPLICATE at both edges — Kanzenshuu gives ep 273 ch 506 p.2-8 and ep 275 ch 506 p.9-End, so this row's two pages are shared with the neighbours on both sides: the sole half of the sole-adaptation exception fails outright. Content is the closing beat only — dragonball.fandom: 'With the exception of the final moments where Goku and Vegeta find their friends trapped in pods, the entire events of this episode were exclusive to the anime' — while the episode's plot (the intestine worms, Buu's toilet, the thought-form Gohan/Gotenks/Piccolo that turn into cakes) is anime-original, and ja-WP marks the row with its anime-original star. Filler stands; AFG prints no filler class here at all and maps 506 as a reading-position plateau across 273/274/275.",
+      "sources": [
+        "https://www.kanzenshuu.com/episode/dbz/eps-274/",
+        "https://www.kanzenshuu.com/manga/db/chp-506/",
+        "https://dragonball.fandom.com/wiki/Mind_Trap",
+        "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%ABZ"
+      ]
+    }
+  ],
+  "type_corrections": [
+    {
+      "episodes": [43],
+      "type": "mixed",
+      "note": "Stored filler (AFL: Filler). Flip to MIXED under T28's SOLE-ADAPTATION EXCEPTION, both halves stated explicitly. (1) The pages appear in NO other episode: Kanzenshuu's ch-246 page lists its corresponding DBZ episodes as exactly 039, 040, 042, 043 (plus Kai 019) and the four page ranges are disjoint — p.1-4 / p.5-8 / p.9 / p.10 + p.11-End; this row alone holds the chapter's last five pages of fourteen. (2) The beat is a major plot point of the source: Kewi/Cui reveals that Freeza heard about the Namekian Dragon Balls over Vegeta's scouter, has already left for Namek to wish for immortality and intends to exterminate the Namekians afterwards; Vegeta takes his scouter back and launches for Namek. dragonball.fandom's Major Events line for the row is 'Vegeta hears about Frieza's desire to gather the Dragon Balls on Namek and races to the planet' — the reveal that starts the arc's three-way race. SEGMENT WEIGHTS: source segments p.10 (~1m11s, AFG 6:43-7:54) and p.11-14 (~2m14s, AFG 16:58-19:12) = SIGNIFICANT (a reveal + a decision, adapted faithfully per the fandom summary); the remainder — the glacial cave, the snowball chase, the last Dragon Ball, Raiti and Zaacro's transformation, Chi-Chi finding Goku — is anime-original, roughly 16 of ~19.5 minutes. Plain T28 materiality therefore FAILS (the source share is not a substantial part of THIS episode's plot); the exception is what flips it, and it is the FotNS-57 shape exactly: without it, ch 246 is falsely marked never-adapted even though all fourteen pages are animated (ep 38 ends 245, ep 44 starts 247). This contradicts the standing A6 ruling of 2026-08-25 ('Kanzenshuu page-level splits prove a sliver graft ... not an adaptation'), which predates the exception (Sean, 2026-08-28); batch 17's own verdict flagged this exact fork ('The alternative reading is a type correction to mixed with END 246. If you take that fork, ep 43 becomes the row that carries ch 246 and the graft annotation should be trimmed to eps 39/40/42'). Presented as a repair, not a silent override — see flags.",
+      "sources": [
+        "https://www.kanzenshuu.com/episode/dbz/eps-043/",
+        "https://www.kanzenshuu.com/manga/db/chp-246/",
+        "https://dragonball.fandom.com/wiki/A_Friendly_Surprise",
+        "https://dragonball.fandom.com/wiki/The_Return_of_Vegeta",
+        "https://www.animefillerguide.com/anime/dragon-ball-z/"
+      ]
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 125,
+      "field": "air_date",
+      "old": "1992-02-05",
+      "new": "1992-01-29",
+      "why": "The stored value is AFL's, and AFL runs one week late across a whole block here. Kanzenshuu gives ep 125 as 29 January 1992 (7:00-7:30PM, Wednesday, Fuji TV), ja-WP's episode list gives 1月29日, and en-WP's 'Dragon Ball Z season 4' Episode list block for EpisodeNumber 125 gives {{Start date|1992|1|29}}. Three independent sources against AFL. Structural corroboration: DBZ was pre-empted for New Year (ep 121 = 1991-12-18, ep 122 = 1992-01-08) and again in April (ep 134 = 1992-04-01, ep 135 = 1992-04-15); AFL's dates for 122-134 sit exactly one week late between those two gaps.",
+      "sources": [
+        "https://www.kanzenshuu.com/episode/dbz/eps-125/",
+        "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%ABZ",
+        "https://en.wikipedia.org/wiki/Dragon_Ball_Z_season_4"
+      ]
+    },
+    {
+      "episode": 43,
+      "field": "annotation:graft{246}",
+      "old": "graft {246} (eps 39,40,42,43, batch 17): \"Fake-Namek filler block: ch 246 ('Vegeta Revived!!') is trickled through it as healing-tank cutaways - Kanzenshuu gives p.1-4 to ep 39, p.5-8 to ep 40, p.9 to ep 42, p.10 and p.11-End to ep 43; ep 41 is a pure 'Filler Episode'. Ep 38 ends at ch 245 and ep 44 starts at ch 247, so ch 246 is honestly pending across the block rather than anchored to any one episode.\"",
+      "new": "Retire the graft record on ep 43 (A45) and replace it with partial{246 (p.10-14)}; keep graft on 39/40/42 with the per-episode page ranges and weights delivered above. Only valid if the ep-43 type_correction is taken.",
+      "why": "The stored note is one record covering four rows and it mischaracterises ep 43: the p.10-End segment is NOT a 'healing-tank cutaway' (that is eps 40 and 42) but the Kewi confrontation and Vegeta's launch for Namek — the chapter's climax. Its closing clause ('ch 246 is honestly pending across the block rather than anchored to any one episode') becomes false once ep 43 carries END 246. 'graft' also means 'scenes from elsewhere in the source woven in', which is wrong for a row adapting its own chapter's final pages in order — 'partial' is the correct kind. If Sean declines the flip, the record should still be re-split per episode with the page ranges and the corrected characterisation.",
+      "sources": [
+        "https://www.kanzenshuu.com/episode/dbz/eps-043/",
+        "https://dragonball.fandom.com/wiki/A_Friendly_Surprise",
+        "scripts/ingest/research/batch17/out2/dragon-ball-z-a1.json"
+      ]
+    }
+  ],
+  "structure": [
+    "SOURCE IDENTITY / row identity: all six rows join three ways — Kanzenshuu episode number + premiere date, ja-WP subtitle + date, dragonball.fandom infobox Number + Airdate. Our numbering is the Japanese broadcast numbering (291 rows) and every source agrees on it; no index joins were used.",
+    "KANZENSHUU'S 'Corresponding' FIELD IS AN ORDERED SEGMENT LIST, not a label plus a chapter: ep 39 reads 'Chapter 246 (Pages 1-4)' THEN 'Mostly Filler', matching an episode that opens on the manga; ep 40 reads 'Mostly Filler' THEN 'Chapter 246 (Pages 5-8)', matching a manga scene at the end. Both orders check out against dragonball.fandom's scene-by-scene summaries. Its chapter pages carry the page count in the 'Page Breakdown' block (ch 246 = Title + pages 01-14; ch 336 = Title + pages 01-14; ch 506 = pages 01-13), which is what turns a segment into a share.",
+    "AFG's CLASS IS A VIEWING GUIDE, NOT A TYPING. Its blue rows print prose like 'It's a mixed episode; you only need to watch the final part, from minute 21:34 to the end. On Crunchyroll, it runs from 21:48 to the end.' That is a claim that SOME manga content is present — true of all six rows — and it is printed identically on a one-page graft (125) and on ep 44's genuine half-episode of ch 247. Its chapter column remains a reading-position conversion (it plateaus: 273 -> 506, 274 -> 506, 275 -> 506,507). Two further AFG facts worth carrying: ep 41 is 'red / Filler / N/A' (agreeing with Kanzenshuu's 'Filler Episode' and ja-WP's star), and ep 274 carries NO class at all — the one row in the six where AFG's presentation is simply wrong rather than merely mislabelled.",
+    "ja-WP's star marker is usable here as the CONTROL shape: it marks 41, 124, 125 and 274 as anime-original episodes and leaves 39, 40, 42, 43 unmarked in the middle of the same filler run. Read as the positive claim (it under-marks, never over-marks), that is an independent statement that those four rows contain source material and that 125 and 274 effectively do not — exactly what Kanzenshuu's page splits say.",
+    "TITLE-vs-CONTENT trap in the wild: ep 42's Japanese title is 'Wakusei Freeza NO.79 Fukkatsu no Vegeta!!' — ch 246's own title 'Vegeta Fukkatsu!!' — while the episode adapts ONE page of it (p.9). A title match is a floor, never coverage.",
+    "AFL's DATE COLUMN HAS TWO SHIFTED BLOCKS on this series: eps 73-97 and eps 122-134 are each one week LATE against ja-WP, with Kanzenshuu agreeing with ja-WP at both edges (72 = 1990-12-19, 73 = 1991-01-09, 97 = 1991-06-26, 98 = 1991-07-10; 121 = 1991-12-18, 122 = 1992-01-08, 134 = 1992-04-01, 135 = 1992-04-15). Each block begins right after a New Year pre-emption and re-syncs at the next two-week gap — AFL fills the skipped week and catches up at the following one. 38 rows; ep 125 (in this ask) is confirmed defective, the rest are a sweep for lane B.",
+    "The Dragon Universe wiki (dragonballuniverse.fandom, a genuinely separate wiki — sitename 'Dragon Universe Wiki') has an EMPTY 'manga =' field on eps 39, 40, 42, 43, 274 — and ALSO on ep 44, a stored/AFL MIXED row that adapts fourteen pages of ch 247. Its blank is therefore not an absence claim, which retires one leg batch 17 used ('its field is blank for the genuinely chapterless eps'). Its dates also copy AFL's shifted 1992-02-05 for ep 125. Cross-check tier only."
+  ],
+  "flags_for_sean": [
+    "THE ONE FORK: ep 43 -> mixed + anchor 246 [246]. It contradicts your 2026-08-25 A6 ruling on this row ('Kanzenshuu page-level splits prove a sliver graft ... not an adaptation'), which was made three days BEFORE the sole-adaptation exception (2026-08-28) existed; batch 17's own verdict named the fork and chose the sliver side under the then-current <=5-page rule. What changed is the rule, not the evidence. Both halves hold: the pages are in no other episode, and the beat is the Namek arc's inciting reveal. If you decline, ch 246 stays a hole in the coverage record between ep 38 (245) and ep 44 (247) although all fourteen of its pages are animated — the exact failure mode the exception was written for; in that case take the second repair's fallback (re-split the batch-17 graft record per episode with page ranges, corrected characterisation, and no anchor).",
+    "AFL is CONFIRMED RIGHT on eps 39, 40, 42, 125, 274 — five rows closed as correctly typed filler with per-segment page ranges and weights recorded. The type_source_disagreement flag on this series is an AFG artefact: its blue class means 'contains manga content', not 'mixed' in our sense.",
+    "OUT OF ASK, lane B: AFL's air dates run one week late for eps 73-97 and 122-134 (38 rows) with ja-WP + Kanzenshuu + en-WP agreeing against it. Ep 125's repair is in this verdict; the other 37 rows need a sweep of what is stored — if they came from AFL they are all one week late, and each block is an ATOMIC repair (the seam regresses otherwise).",
+    "The ep-100 mixed ruling (T6, 2026-08-25) is untouched and consistent with everything read here: Kanzenshuu gives it ch 323 p.1-11 in altered form, an order of magnitude more than any row in this wave."
+  ]
+}

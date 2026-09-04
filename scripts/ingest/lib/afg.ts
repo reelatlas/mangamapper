@@ -32,6 +32,7 @@ export interface AfgPage {
 export function parseChapters(cell: string): number[] {
   const out: number[] = [];
   for (const token of cell.split(/,\s+|;\s*/)) {
+    if (/\d:\d/.test(token)) continue; // a timestamp ('0:00 to 4:05') is a viewing guide, never a chapter range
     const clean = token.replace(/(\d),(\d{3})\b/g, '$1$2').trim();
     const m = clean.match(/(\d+(?:\.\d+)?)\s*(?:-|–|to)\s*(\d+(?:\.\d+)?)/);
     if (m) {
@@ -88,7 +89,9 @@ export function parseAfgPage(html: string): AfgPage {
         if (!numMatch) return;
         const number = Number(numMatch[1]);
         if (number <= 0) return;
-        const hasStart = /^\(?[\d:]+\)?$/.test(cells[1] ?? '');
+        // '(3:48)' / '(04).' — AFG's newer format appends a period to the start cell (batch 21: the shippuden page read its
+        // TITLE cell as the chapters cell and parsed the viewing-guide timestamps 0:00 to 4:05 as chapters 1-4)
+        const hasStart = /^\(?[\d:]+\)?\.?$/.test(cells[1] ?? '');
         // AFG's newer page formats emit placeholder cells like "(01)." where
         // no real title exists — junk stored as a title renders as a WRONG
         // title (Sean's Dorohedoro report 2026-08-23); normalize to pending
@@ -98,10 +101,15 @@ export function parseAfgPage(html: string): AfgPage {
         // (Sean's eyeshield report 2026-08-25: 99 stored titles carried it
         // verbatim while the flag itself was never mapped). Strip it; the
         // type signal comes from the row class below.
-        const rawClean = rawTitle?.replace(/\s*\*\s*Filler\s*$/i, '');
+        // the '* Mixed, in this episode we only watch from minute …' viewing-guide note also lives INSIDE the title cell on the
+        // newer format (a <span class="blue small">) — strip from the first '*' note onward; it is table annotation, not the name
+        const rawClean = rawTitle?.replace(/\s*\*\s*Filler\s*$/i, '').replace(/\s*\*\s*(?:It\W?s a )?(?:Mixed|Filler)\b[\s\S]*$/i, '').replace(/\s*\*\s*[\s\S]*$/, '').trim();
         const titleCell = rawClean && /^\(?\d{1,4}\)?\.?$/.test(rawClean.trim()) ? '' : rawClean;
         const chaptersCell = hasStart ? cells[3] : cells[2];
-        const numberClass = $(tr).find('td').first().attr('class') ?? '';
+        // the row class ('blue' = mixed, 'red' = filler) sits on the first <td> in the classic format and on a <span> INSIDE it
+        // in the newer one (batch 21: every shippuden / dragon-ball-z row typed canon because the td itself carried no class)
+        const firstTd = $(tr).find('td').first();
+        const numberClass = [firstTd.attr('class') ?? '', ...firstTd.find('[class]').map((_k, el) => $(el).attr('class') ?? '').get()].join(' ');
         episodes.push({
           number,
           title: titleCell ?? '',

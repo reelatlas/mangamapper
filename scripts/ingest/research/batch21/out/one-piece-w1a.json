@@ -1,0 +1,479 @@
+{
+ "series_id": "one-piece",
+ "summary": "Batch 21 wave 1, One Piece rows 50, 51, 55, 93, 195, 203, 214, 216, 225 — the STRONG tier of type_source_disagreement. Settled by chapter accounting on THREE instruments beyond AFL/AFG, two of them page-level: (1) opwiki.org (the German OPwiki) carries an 'Umgesetzte Kapitel' field with PAGE RANGES per episode — validated against onepiece.fandom's own chapter-page 'Anime Episodes' splits (ch 318: fandom 'Episode 219 (p.2-17) / Episode 226 (p.18-19)' == OPwiki '219 = 317,318' and '226 = 318 (S.18-19)'); (2) ja.wikipedia's LIVE episode list, whose legend is '太字はアニメオリジナルストーリー' (bold = anime-original story) with a footnote '一部原作のストーリーあり' (= 'contains some of the manga's story') that functions as a per-row MIXED marker, plus a unique ep-50 footnote '小説版でのエピソード。' (= 'an episode from the NOVEL version'); (3) onepiece.fandom episode + chapter + character pages for content matching. RESULT: three retypes (50 filler -> canon + side_source(Loguetown novel); 93 filler -> mixed; 203 filler -> mixed), six stored types CONFIRMED with evidence (51, 55, 214, 216, 225 filler; 195 canon), two new anchors (93 -> 158, 203 -> 303) both page-level and both requiring a named repair of a prior ruling, one anchor confirmation-with-enrichment (195), and a mandatory tie annotation added where none was stored (225 = ch 303 p.19, the sole animation of Admiral Aokiji's introduction page). WHO LIED AND HOW: AFL's 'Anime Canon' class on 50/51/214/216 is not a source claim about chapters at all — it is AFL's own fourth bucket, and on 214/216 it sits on two episodes of a Toei-invented Davy Back game block; AFG's Chapters column prints '98' on rows 50 and 51 as a READING-POSITION PLATEAU between ep 49 (ch 97) and ep 52 (ch 98-99) while typing both rows plain canon, which is flatly wrong (ja-WP bolds both; OPwiki records 'Umgesetzte Kapitel: Unbekannt' for both). PREMISE FAILURE (task said 'AFG canon' for 214/216/225): the live AFG rows for 214 and 216 are RED (*Filler) with a chapter printed, and 225/195/203/55 are BLUE (*Mixed) — AFG does not type 214/216 canon, so on those two rows there is no type contradiction at all, only a chapter column on a filler row. NEW INSTRUMENT: AFG's One Piece page carries per-row minute ranges for the manga segment of every blue row (55 = 2:50-7:30, 195 = 1:50-15:58, 203 = 13:35-19:58, 225 = 02:05-03:09, 226 = 14:57-to-the-end) — a real T28 SIZING instrument, the first we have found; its type column remains untrustworthy (it also paints canon rows 210 and 211 red).",
+ "anchors": [
+  {
+   "episode": 93,
+   "end_chapter": 158,
+   "start_chapter": 158,
+   "chapters_adapted": "158 (p.2-3, 14-16)",
+   "volume": 18,
+   "confidence": "medium",
+   "note": "NEW anchor on a row this verdict retypes filler -> mixed. Ep 93 「いざ砂漠の国へ！雨を呼ぶ粉と反乱軍」 interleaves ch 158 'Landing in Arabasta' with an anime-original Nanohana detour. OPwiki gives the page split exactly: ep 93 = 'Kapitel 158 (S. 2-3, 14-16)', ep 94 = 'Kapitel 157 (S. 12-17), Kapitel 158 (S. 4-13)' — an un-cross-cut, not a leading or trailing sliver: ep 93 owns the chapter's OPENING (the crew waiting for Luffy and spotting Mr. 3's ship) and its CLOSING crew scene (Vivi and Nami in the perfume shop, Vivi explaining that they must reach Yuba to talk to Koza, Usopp noticing the captain is missing), while ep 94 owns the middle (Ace at the Spice Bean, Smoker, Luffy's rocket). The content match is independent of OPwiki: onepiece.fandom's ch-158 Long Summary ('The crew is waiting for Luffy to get back, when they spot Mr. 3's ship... Meanwhile Vivi and Nami are trying out different perfumes... Vivi then explains that they need to get to Yuba so that she may talk with Koza') is paragraph 1 and paragraph 6 of onepiece.fandom's ep-93 Long Summary, and those beats appear in NO other episode. A4: END = 158, the furthest mainline chapter adapted. A47 does NOT hold the END back: the exception is for a <=5-page TAIL the next episode owns, and ep 94 does not own p.14-16 — ep 93 is their sole adaptation. A10 START = 158 (the episode opens on p.2-3, no teaser wording). C1: the continue lands IN 158, which is also parity with ep 94's START. The volume is right: v18 = ch 156-166.",
+   "sources": [
+    "https://opwiki.org/wiki/Episode_093",
+    "https://opwiki.org/wiki/Episode_094",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Episode%2093&prop=wikitext&format=json",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Chapter%20158&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/wiki/ONE_PIECE%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7",
+    "https://www.animefillerguide.com/anime/one-piece/"
+   ]
+  },
+  {
+   "episode": 203,
+   "end_chapter": 303,
+   "start_chapter": 303,
+   "chapters_adapted": "303 (p.16-18)",
+   "volume": 32,
+   "confidence": "medium",
+   "note": "NEW anchor on a row this verdict retypes filler -> mixed, and it REVERSES a standing ruling (A6, Sean 2026-08-25, 'A1 junk anchor (D4 triage): AFG reading-position plateau on a noncanon row') — see the matching repairs entry; do not apply the anchor unless the retype is accepted. Both of that ruling's premises fail on re-reading the live sources: (a) AFG's '303' on row 203 is NOT a plateau — AFG prints N/A on rows 196-202 and 204-206 and prints 303 only on 203, with its own note and a minute range ('Mixed: In this episode, we only watch from minute 13:35 to 19:58... Here, the Straw Hat crew discusses the distribution of the gold obtained in Skypiea and how they should use it. In the manga, this also happens, but they are neither captured nor have they lost the gold'); (b) the row is not content-free — OPwiki gives 'Umgesetzte Kapitel: Kapitel 303 (S. 16-18)', and ch 303's own Long Summary on onepiece.fandom (Nami claiming 80%, the Merry's damage, Luffy deciding the next crewmate will be a shipwright and then a musician) is the last third of onepiece.fandom's ep-203 Long Summary beat for beat. PAGES, NOT NUMBERS: ch 303's number is already ep 195's END, but p.16-18 air for the first time here and in no other episode (the chapter is split four ways — ep 195: p.2-3, 10-11, 14; ep 203: p.16-18; ep 207: p.4-9, 13; ep 225: p.19), so this is a real position and the row carries `rearranged`. END = START = 303; the continue stays in 303, which is also parity with ep 207's START. v32 = ch 296-305.",
+   "sources": [
+    "https://opwiki.org/wiki/Episode_203",
+    "https://opwiki.org/wiki/Episode_207",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Episode%20203&prop=wikitext&format=json",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Chapter%20303&prop=wikitext&format=json",
+    "https://www.animefillerguide.com/anime/one-piece/",
+    "https://ja.wikipedia.org/wiki/ONE_PIECE%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 195,
+   "end_chapter": 303,
+   "start_chapter": 302,
+   "chapters_adapted": "302, 303 (p.2-3, 10-11, 14)",
+   "volume": 32,
+   "confidence": "high",
+   "note": "CONFIRMATION + enrichment, not a change: the stored afg-tier anchor (END 303, START 302, '302-303', v32) is CORRECT and the stored type canon is CORRECT. The only delta is the page split in chapters_adapted, which matters because three other episodes carry the rest of ch 303 (203 = p.16-18, 207 = p.4-9 and 13, 225 = p.19). OPwiki: ep 195 = 'Kapitel 302, Kapitel 303 (S. 2-3, 10-11, 14)' and — alone among the nine rows in this ask — ep 195's OPwiki page carries NO filler banner and its Arc line reads 'Skypia Arc' with no '(Filler)' qualifier. ja-WP does not bold ep 195 (= not an anime-original story) and gives it no '一部原作のストーリーあり' footnote. AFG types the row Mixed but its own timestamp shows why that is the wrong call under T28: the manga runs 'from minute 1:50 to 15:58' of a ~19-minute body, i.e. ~74% of the episode, and what follows is the studio's substitution of the manga's own landing beat (see the divergence annotation).",
+   "sources": [
+    "https://opwiki.org/wiki/Episode_195",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Episode%20195&prop=wikitext&format=json",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Chapter%20302&prop=wikitext&format=json",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Chapter%20303&prop=wikitext&format=json",
+    "https://www.animefillerguide.com/anime/one-piece/",
+    "https://ja.wikipedia.org/wiki/ONE_PIECE%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  }
+ ],
+ "continue_points": [
+  {
+   "episode": 94,
+   "continue_chapter": 158,
+   "kind": "parity",
+   "note": "After ep 93 (mixed) the reader is INSIDE ch 158 having seen only p.2-3 and p.14-16; ep 94 starts on ch 158 p.4. C1 + C2 parity: continue at 158 and re-read the two crew pages already animated — they cost nothing and the middle of the chapter (Ace at the Spice Bean, Smoker, Luffy's rocket) is what ep 94 plays next. This matches the stored parity convention already recorded on the neighbouring rows.",
+   "sources": [
+    "https://opwiki.org/wiki/Episode_093",
+    "https://opwiki.org/wiki/Episode_094",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Chapter%20158&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episode": 204,
+   "continue_chapter": 303,
+   "kind": "parity",
+   "note": "Only if the ep-203 retype is accepted. After ep 203 the reader is inside ch 303 having seen p.2-3, 10-11, 14 (ep 195) and p.16-18 (ep 203); ep 207 STARTS on ch 303 (p.4-9, 13) and ch 303 p.19 does not air until ep 225. C1/C2: continue at 303. This is identical to the value the stored ep-195 continue already carries ('parity with anime... ep 203 starts ch 303'), so nothing regresses.",
+   "sources": [
+    "https://opwiki.org/wiki/Episode_203",
+    "https://opwiki.org/wiki/Episode_207",
+    "https://opwiki.org/wiki/Episode_225"
+   ]
+  }
+ ],
+ "anchor_hostile": [
+  {
+   "episode": 50,
+   "why": "A1/T26 — retyped canon + side_source, and side_source rows carry no mapping by design. Ep 50 adapts no manga chapter: OPwiki records 'Umgesetzte Kapitel: Unbekannt', and ja-WP bolds the row (anime-original story) with the footnote '小説版でのエピソード。' — an episode from the NOVEL version. AFG's '98' on this row is a reading-position plateau (ep 49 = 97, ep 52 = 98, 99), and AFG types the row plain canon, which no other source supports. Sean's A6 null of the AFG anchor stands and is reinforced, only the REASON changes (not 'noncanon row' but 'a different licensed work, which takes no chapter position').",
+   "sources": [
+    "https://opwiki.org/wiki/Episode_050",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Episode%2050&prop=wikitext&format=json",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Daddy%20Masterson&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/wiki/ONE_PIECE%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7",
+    "https://www.animefillerguide.com/anime/one-piece/"
+   ]
+  },
+  {
+   "episode": 51,
+   "why": "A1 — filler row (stored type CONFIRMED). The ch-98 tie is real but is a sliver: the anime expands one manga panel (Sanji buying the blue-finned elephant tuna) into a whole cooking contest against the anime-original Carmen, and closes on a restaged version of Luffy returning to the execution platform. onepiece.fandom's Loguetown Arc 'Anime and Manga Differences' states the shape exactly: 'In the manga, Sanji merely buys the tuna at a regular stand. In the anime, he finds a large group of people exclaiming over the fish on a beach. The man who caught it (and mans the stand in the manga) gives all of the explanations present in the manga. When Sanji offers to buy the fish, the man refuses, saying that it will be the prize for a cooking contest.' Ch 98 is adapted properly in ep 52 (OPwiki: ep 52 = 'Kapitel 098, Kapitel 099'), so the fragment is a duplicate in position terms and takes no anchor. AFG's '98' here is the same plateau as on row 50.",
+   "sources": [
+    "https://opwiki.org/wiki/Episode_051",
+    "https://opwiki.org/wiki/Episode_052",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Loguetown%20Arc&prop=wikitext&format=json",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Chapter%2098&prop=wikitext&format=json",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Carmen&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/wiki/ONE_PIECE%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 55,
+   "why": "A1 — filler row (stored type CONFIRMED, AFL right, AFG's Mixed wrong). The ch-101 tie is a restaged, out-of-order fragment inside the anime-original Warship Island arc: AFG's own note on its blue row says what is actually shared — 'In this episode, we only watch from minute 2:50 to 7:30. Here, Nami explains what the Calm Belt is. This happens in the manga, but Apis, an anime-exclusive character, does not appear.' The 4m40s window is mostly invented action (Apis falling overboard, Luffy catching her, the nostril-hair sneeze that launches the Merry clear of the Calm Belt); what comes from ch 101 is Nami's Calm Belt exposition. ch 101's spine — Reverse Mountain, the broken rudder, Luffy's balloon, entering the Grand Line — is adapted in ep 61, which already holds the ch-101 anchor. Sole-adaptation exception TESTED AND FAILED on its second half: the pages are indeed adapted nowhere else (half one holds), but a scenic Calm Belt encounter is not a major plot point of the source in the rule's sense (no death, no reveal, no arc close).",
+   "sources": [
+    "https://opwiki.org/wiki/Episode_055",
+    "https://opwiki.org/wiki/Episode_061",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Episode%2055&prop=wikitext&format=json",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Chapter%20101&prop=wikitext&format=json",
+    "https://www.animefillerguide.com/anime/one-piece/",
+    "https://ja.wikipedia.org/wiki/ONE_PIECE%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episode": 214,
+   "why": "A1 — filler row (stored type CONFIRMED). The episode is one of the three Davy Back games Toei invented after the Groggy Ring; ja-WP bolds it as an anime-original story. Its manga tie cannot be placed: ja-WP's footnote '一部原作のストーリーあり' and OPwiki ('Kapitel 313 (S. 8-9)') credit the Chopper-return pages to ep 214, while onepiece.fandom's ch-313 'Anime Episodes' section credits the same pages to ep 215 ('Episode 215 (p. 8-9) (Getting Chopper back sections)') and OPwiki records ep 215 as 'Unbekannt'. Two sources each way, and the beat is at most two pages inside a wholly invented race either way — no anchor under A1/A44. NOTE the premise correction: the live AFG row for 214 is RED '*Filler' with '313' in the chapter column, so AFG does NOT claim canon here.",
+   "sources": [
+    "https://opwiki.org/wiki/Episode_214",
+    "https://opwiki.org/wiki/Episode_215",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Chapter%20313&prop=wikitext&format=json",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Episode%20215&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/wiki/ONE_PIECE%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7",
+    "https://www.animefillerguide.com/anime/one-piece/"
+   ]
+  },
+  {
+   "episode": 216,
+   "why": "A1 — filler row (stored type CONFIRMED). Ep 216 is the third invented Davy Back game (だるまさんがころんだ / Red Light, Green Light) and the anime's invented forfeit (Foxy taking Robin, where the manga's Foxy never wins Robin). R3 fails on its only manga claim: OPwiki alone records 'Kapitel 313 (S. 10)', onepiece.fandom's ch-313 'Anime Episodes' list does not mention ep 216 at all (it names only 212, 215 and 217), and ja-WP bolds ep 216 WITHOUT the '一部原作のストーリーあり' footnote it gives 214 — i.e. ja-WP positively says there is no manga story in this one. Single-source, one page, contradicted: no anchor. Premise correction as on 214: AFG's live row is RED '*Filler' with '313', not a canon claim.",
+   "sources": [
+    "https://opwiki.org/wiki/Episode_216",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Chapter%20313&prop=wikitext&format=json",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Episode%20216&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/wiki/ONE_PIECE%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7",
+    "https://www.animefillerguide.com/anime/one-piece/"
+   ]
+  },
+  {
+   "episode": 225,
+   "why": "A1 + A44 — filler row (stored type CONFIRMED, AFL right) and position-less twice over. The tie is real and newly annotated by this verdict: ep 225's cold open is ch 303's LAST PAGE (Marine HQ, the Five Elders, a figure riding a bicycle across the sea holding Luffy's wanted poster = Admiral Aokiji's introduction). OPwiki: 'Kapitel 303 (S. 19)'; AFG's blue note sizes it to the second — 'Mixed, in this episode we only watch from minute 02:05 to 03:09' = 64 seconds of a ~19-minute body; and onepiece.fandom's ep-225 Long Summary opens on that scene in the same words its ch-303 Long Summary closes on. Weight: SLIVER — it is literally the source's own teaser page, replayed as a cold open. Sole-adaptation exception TESTED: half one holds (p.19 is in no other episode; ep 195 stops at p.14 and ep 207 takes p.4-9 and 13), half two is where I land it as filler — the page is a one-panel tease, and Aokiji's actual arrival scene is ch 318 p.18-19, which the catalog already carries as ep 226 (mixed, ~5 minutes per AFG: '14:57 to the end'). Even under the opposite reading the row would take no anchor: ch 303 sits far behind ep 219's END of 318, so an anchor here would render a false back-jump (the code-black hazard).",
+   "sources": [
+    "https://opwiki.org/wiki/Episode_225",
+    "https://opwiki.org/wiki/Episode_226",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Episode%20225&prop=wikitext&format=json",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Chapter%20303&prop=wikitext&format=json",
+    "https://www.animefillerguide.com/anime/one-piece/",
+    "https://ja.wikipedia.org/wiki/ONE_PIECE%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  }
+ ],
+ "annotations": [
+  {
+   "episodes": [
+    50
+   ],
+   "kind": "side_source",
+   "chapters": "One Piece: Loguetown Arc novel (Shueisha, 2000-07-17), Act 3 「ダディ・マスターソン ～狙撃の誇り～」",
+   "note": "weight: significant — because the novel's act IS the episode, start to finish (Usopp's goggle quarrel with Carol, the noon duel, Yasopp's story, the weather-vane shot). Not a manga chapter and not a studio invention: the licensed novelization (Shueisha, ISBN 4-08-703096-2, novelist 浜崎達也, '原作 尾田栄一郎') went on sale 2000-07-17, four months BEFORE the episode aired (2000-11-29), and its Act 3 is titled after Daddy Masterson. onepiece.fandom's ep-50 Anime Notes: 'This episode is an adaptation from events seen in the Loguetown novel'; its Daddy Masterson page gives his first appearance as '[[Loguetown Arc (novel)]]; [[Episode 50]]' and notes 'Daddy and Carol appear for the first time in the Loguetown Novel that features Oda's original design for the characters'. ja-WP's live episode list footnotes ep 50 uniquely: '小説版でのエピソード。' Same shape as Shippuden 452-457 / Black Clover 55-56 / FMA-2003 11-12.",
+   "sources": [
+    "https://www.shueisha.co.jp/books/items/contents.html?isbn=4-08-703096-2",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Loguetown%20Arc%20(Novel)&prop=wikitext&format=json",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Episode%2050&prop=wikitext&format=json",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Daddy%20Masterson&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/wiki/ONE_PIECE%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7",
+    "https://opwiki.org/wiki/Episode_050"
+   ]
+  },
+  {
+   "episodes": [
+    51
+   ],
+   "kind": "graft",
+   "chapters": "98",
+   "note": "weight: sliver — because the only source material is a handful of ch-98 panels quoted inside an anime-original plot: the blue-finned elephant tuna and the fisherman's explanation of it (in the manga Sanji simply buys the fish at a stand; in the anime the same man gives 'all of the explanations present in the manga' and then makes the fish the prize of an invented cooking contest), plus the closing restaging of Luffy back at the execution platform with Buggy and Smoker on his trail. The material is a DUPLICATE in position terms: ch 98 is adapted properly in ep 52 (OPwiki: ep 52 = 'Kapitel 098, Kapitel 099'). Carmen, Leo, José, Sapi and Eccoli are all categorised Non-Canon on onepiece.fandom with first appearance Episode 51 — note that they are NOT novel characters, so this episode does not share ep 50's side_source shape. REPLACES the stored joint annotation on eps 50+51 (see repairs).",
+   "sources": [
+    "https://onepiece.fandom.com/api.php?action=parse&page=Loguetown%20Arc&prop=wikitext&format=json",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Chapter%2098&prop=wikitext&format=json",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Carmen&prop=wikitext&format=json",
+    "https://opwiki.org/wiki/Episode_051",
+    "https://opwiki.org/wiki/Episode_052",
+    "https://ja.wikipedia.org/wiki/ONE_PIECE%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episodes": [
+    55
+   ],
+   "kind": "graft",
+   "chapters": "101 (p.5-10)",
+   "note": "weight: sliver — because what is adapted is Nami's Calm Belt exposition from ch 101, restaged out of order inside the anime-original Warship Island arc with Apis (an anime-exclusive character) in the manga's beat and an invented escape (the Sea King's sneeze). AFG's own note: 'we only watch from minute 2:50 to 7:30... Here, Nami explains what the Calm Belt is. This happens in the manga, but Apis, an anime-exclusive character, does not appear.' OPwiki gives the pages: ep 54 = 'Kapitel 101 (S. 5)', ep 55 = 'Kapitel 101 (S. 5-10)'. The chapter's own story — Reverse Mountain and the entry into the Grand Line — is adapted in ep 61, which holds the ch-101 anchor. The stored annotation is confirmed; only the page range and the weight are added.",
+   "sources": [
+    "https://opwiki.org/wiki/Episode_054",
+    "https://opwiki.org/wiki/Episode_055",
+    "https://opwiki.org/wiki/Episode_061",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Chapter%20101&prop=wikitext&format=json",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Episode%2055&prop=wikitext&format=json",
+    "https://www.animefillerguide.com/anime/one-piece/"
+   ]
+  },
+  {
+   "episodes": [
+    93
+   ],
+   "kind": "partial",
+   "chapters": "158 (p.2-3, 14-16)",
+   "note": "weight: significant — because these pages are a story-carrying scene and this episode is their SOLE adaptation: the crew waiting at Nanohana and spotting Mr. 3's ship (p.2-3) and the perfume-shop scene in which Vivi sets the arc's destination — reach Yuba, talk Koza out of the rebellion — followed by Usopp noticing the captain has vanished (p.14-16). NEW material, not a duplicate: ep 94 plays p.4-13 (Ace, Smoker, Luffy's rocket) and never restages the crew's Yuba decision. Roughly a third of the episode; the remainder (Luffy burning the Dance Powder with Kamonegi, Chopper's truck ride, the early introduction of Koza and Matsuge — Matsuge debuts in ch 162 in the manga) is anime-original, hence mixed under T28.",
+   "sources": [
+    "https://opwiki.org/wiki/Episode_093",
+    "https://opwiki.org/wiki/Episode_094",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Episode%2093&prop=wikitext&format=json",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Chapter%20158&prop=wikitext&format=json",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Chapter%20162&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/wiki/ONE_PIECE%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episodes": [
+    93
+   ],
+   "kind": "rearranged",
+   "chapters": "158",
+   "note": "Ch 158 is un-cross-cut across two episodes: ep 93 takes the chapter's opening (p.2-3) and its late crew scene (p.14-16), ep 94 takes the middle (p.4-13) together with ch 157 p.12-17. The page partition is exact and comes from OPwiki's per-episode 'Umgesetzte Kapitel' fields, which partition each shared chapter exactly once across rows (the bleach 152-159 shape).",
+   "sources": [
+    "https://opwiki.org/wiki/Episode_093",
+    "https://opwiki.org/wiki/Episode_094"
+   ]
+  },
+  {
+   "episodes": [
+    195
+   ],
+   "kind": "divergence",
+   "chapters": "303",
+   "note": "The studio replaces the source's own landing beat and hooks the next (anime-original) arc: in ch 303 the Merry lands in the Blue Sea and is met by a tsunami of sea monkeys; in ep 195 it lands inside the fortified waters of a Marine base, which starts the 11-episode G-8 arc (196-206). AFG states the substitution ('In the manga, the Going Merry falls directly into the middle of the Blue Sea, but in the anime, the Going Merry gets trapped in the closed and heavily fortified waters of a marine base') and sizes it: the manga runs 1:50-15:58, so the studio material is the closing ~5 minutes (plus the padded octopus-balloon descent). T28 faithfulness clause: a studio-made closing scene inside an otherwise faithful adaptation is a divergence, NEVER weighed toward mixed (the FotNS-130 Buron shape). Also note the omissions inside ch 303 — p.4-9, 13 (Doflamingo punishing Bellamy) go to ep 207 and p.16-19 to eps 203 and 225.",
+   "sources": [
+    "https://www.animefillerguide.com/anime/one-piece/",
+    "https://opwiki.org/wiki/Episode_195",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Episode%20195&prop=wikitext&format=json",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Chapter%20303&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episodes": [
+    203
+   ],
+   "kind": "partial",
+   "chapters": "303 (p.16-18)",
+   "note": "weight: significant — because the pages are a full scene of the source, this episode is their sole adaptation, and they progress the story: the crew's division of the Skypiea gold, Nami claiming 80%, the realisation that the Merry needs a proper yard, and Luffy's decision that the next crewmate will be a shipwright (and then a musician) — the hinge into the Water 7 saga. AFG sizes it: 'we only watch from minute 13:35 to 19:58' ≈ 6m23s, about a third of the episode (part of that window is a recycled Merry flashback montage — Usopp joining, Nami leaving Cocoyasi, Reverse Mountain, Skypiea — which is recap and carries no weight). The scene is RESTAGED in the G-8 situation the manga does not have (AFG: 'In the manga, this also happens, but they are neither captured nor have they lost the gold'), which is why the row is mixed and not canon. Upgrades the stored graft{303}.",
+   "sources": [
+    "https://opwiki.org/wiki/Episode_203",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Episode%20203&prop=wikitext&format=json",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Chapter%20303&prop=wikitext&format=json",
+    "https://www.animefillerguide.com/anime/one-piece/",
+    "https://ja.wikipedia.org/wiki/ONE_PIECE%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episodes": [
+    203
+   ],
+   "kind": "rearranged",
+   "chapters": "303",
+   "note": "Ch 303 is split across four episodes out of page order: ep 195 (p.2-3, 10-11, 14), ep 203 (p.16-18), ep 207 (p.4-9, 13), ep 225 (p.19). p.1, 12 and 15 are unaccounted for in any source's map. The anchor on 203 is therefore a first-time-pages position on a chapter number already used as an END, per the catalog's 'pages, not numbers' line.",
+   "sources": [
+    "https://opwiki.org/wiki/Episode_195",
+    "https://opwiki.org/wiki/Episode_203",
+    "https://opwiki.org/wiki/Episode_207",
+    "https://opwiki.org/wiki/Episode_225"
+   ]
+  },
+  {
+   "episodes": [
+    214
+   ],
+   "kind": "unverified",
+   "chapters": "313",
+   "note": "weight: sliver — and unplaceable. Two sources put ch 313 p.8-9 (Luffy calling Chopper back to the crew) in ep 214: OPwiki's 'Umgesetzte Kapitel: Kapitel 313 (S. 8-9)' and ja-WP's per-row footnote '一部原作のストーリーあり'. Two put the same pages in ep 215: onepiece.fandom's ch-313 'Anime Episodes' section ('Episode 215 (p. 8-9) (Getting Chopper back sections)'), which is where the stored graft annotation already sits, and onepiece.fandom's own ep-215 Long Summary ('Luffy wins the final round of the roller coaster race... He then brings Chopper back to the Straw Hat crew'); OPwiki records ep 215 as 'Unbekannt'. The share cannot be sized (both episodes' fandom Long Summaries for 214 are empty stubs), the type is filler under either assignment, and the stored divergence{313} — Toei's three added games — remains the substantive annotation for this row.",
+   "sources": [
+    "https://opwiki.org/wiki/Episode_214",
+    "https://opwiki.org/wiki/Episode_215",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Chapter%20313&prop=wikitext&format=json",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Episode%20215&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/wiki/ONE_PIECE%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episodes": [
+    216
+   ],
+   "kind": "unverified",
+   "chapters": "313 (p.10)",
+   "note": "weight: sliver — and single-source, so it does not carry. Only OPwiki records 'Kapitel 313 (S. 10)' for ep 216; onepiece.fandom's ch-313 'Anime Episodes' list names 212, 215 and 217 and not 216, and ja-WP bolds ep 216 WITHOUT the '一部原作のストーリーあり' footnote it does give ep 214 — a positive claim that this episode carries none of the manga's story. Recorded as unverified rather than as a graft; the row's substantive annotation stays divergence{313}. (R3 + the A47 existence-clause habit: one source's page credit, contradicted by a second source's silence and a third's positive negative, is not a fact.)",
+   "sources": [
+    "https://opwiki.org/wiki/Episode_216",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Chapter%20313&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/wiki/ONE_PIECE%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episodes": [
+    225
+   ],
+   "kind": "graft",
+   "chapters": "303 (p.19)",
+   "note": "weight: sliver — because it is 64 seconds (AFG: 'we only watch from minute 02:05 to 03:09') of the source's own single teaser page, replayed as this episode's cold open. NEW annotation: this row carried no tie at all before. The page is ch 303's last: Marine HQ reports that 'he' is missing, the Five Elders react, and a figure rides a bicycle across the sea holding Luffy's wanted poster — the introduction of Admiral Aokiji. It is NEW material (not a duplicate): ep 195 stops at p.14, ep 207 takes p.4-9 and 13, ep 203 takes p.16-18, so ep 225 is the sole animation of p.19. The rest of the episode opens the anime-original Foxy's Return arc, and Aokiji's real arrival scene (ch 318 p.18-19) is ep 226.",
+   "sources": [
+    "https://opwiki.org/wiki/Episode_225",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Episode%20225&prop=wikitext&format=json",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Chapter%20303&prop=wikitext&format=json",
+    "https://www.animefillerguide.com/anime/one-piece/"
+   ]
+  }
+ ],
+ "repairs": [
+  {
+   "episode": 50,
+   "field": "annotation",
+   "old": "eps 50,51 graft {98} — 'Both episodes are anime-original bodies drawn from the Loguetown light novel (Hamazaki, 2000): ep 50 = Act 3 ...'",
+   "new": "ep 50: side_source {Loguetown Arc novel, Act 3} (no chapter tie); ep 51: graft {98} (no novel claim)",
+   "why": "The batch-17 joint annotation is right about ep 50 and wrong in two ways. (a) It gives ep 50 a ch-98 tie that no source supports: OPwiki records 'Umgesetzte Kapitel: Unbekannt', ja-WP marks the row an anime-original story sourced from the novel, and AFG's '98' is a plateau it also prints on row 51 between ep 49 (97) and ep 52 (98, 99). (b) It extends the novel claim to ep 51, which the Japanese sources separate cleanly: ja-WP footnotes ep 50 '小説版でのエピソード。' and ep 51 with the generic anime-original footnote, and Carmen — ep 51's antagonist — is categorised on onepiece.fandom as a Non-Canon character whose first appearance is Episode 51, not the novel. Ep 51 does have a manga tie, but it is ch 98's tuna-stand panels, which is a different fact.",
+   "sources": [
+    "https://opwiki.org/wiki/Episode_050",
+    "https://opwiki.org/wiki/Episode_051",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Episode%2050&prop=wikitext&format=json",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Carmen&prop=wikitext&format=json",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Daddy%20Masterson&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/wiki/ONE_PIECE%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7",
+    "https://www.animefillerguide.com/anime/one-piece/"
+   ]
+  },
+  {
+   "episode": 203,
+   "field": "ruling A6 (anchor suppression)",
+   "old": "A6 (Sean 2026-08-25) {\"episode\":203} — 'A1 junk anchor (D4 triage): AFG reading-position plateau on a noncanon row'",
+   "new": "restore a manual-tier anchor: END 303, START 303, chapters_adapted '303 (p.16-18)', v32 — conditional on the filler->mixed retype in this verdict",
+   "why": "Both premises of the 2026-08-25 triage fail against the live sources. NOT A PLATEAU: AFG prints N/A on every other G-8 row (196-202, 204-206) and prints 303 only on 203, with a note and a minute range attached. NOT A NONCANON ROW: OPwiki gives 'Kapitel 303 (S. 16-18)' and ja-WP marks the row '一部原作のストーリーあり' (contains some of the manga's story); the pages are the crew's gold-division scene and Luffy's shipwright decision, roughly a third of the episode, adapted in no other episode. If Sean keeps the row filler, the A6 suppression stands unchanged and only the annotation upgrade applies — the anchor must not be applied on a filler row (A1).",
+   "sources": [
+    "https://www.animefillerguide.com/anime/one-piece/",
+    "https://opwiki.org/wiki/Episode_203",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Episode%20203&prop=wikitext&format=json",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Chapter%20303&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/wiki/ONE_PIECE%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  }
+ ],
+ "type_corrections": [
+  {
+   "episodes": [
+    50
+   ],
+   "type": "canon",
+   "note": "T26 + the batch-18 licensed-novel distinction: a second LICENSED work is `side_source` on a CANON row (Black Clover 55-56; Shippuden 452-457; FMA 2003 eps 11-12), not filler. Ep 50 animates Act 3 of ONE PIECE ローグタウン編 (Shueisha Jump j-Books, on sale 2000-07-17, novelist 浜崎達也, credited '原作 尾田栄一郎'), which predates the broadcast (2000-11-29) by four months; Daddy Masterson and Carol were DESIGNED BY ODA for that novel (onepiece.fandom: 'Daddy and Carol appear for the first time in the Loguetown Novel that features Oda's original design for the characters'), ep 50's Anime Notes call the episode 'an adaptation from events seen in the Loguetown novel', and ja-WP's live list footnotes the row '小説版でのエピソード。'. Zero manga chapters (OPwiki: Unbekannt) — so the row is canon + side_source and carries no mapping (A1). CONFIDENCE: medium, and this is the wave's ruling fork: if Sean holds that a NOVELIZATION of the same arc is not a 'different licensed work' in T26's sense, the row stays FILLER and the side_source annotation becomes the tie note instead. Either way the ch-98 graft must go (see repairs). AFL's label here was 'Anime Canon' — closer to the truth than our stored filler, but by its own fourth-bucket convention, not by evidence.",
+   "sources": [
+    "https://www.shueisha.co.jp/books/items/contents.html?isbn=4-08-703096-2",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Loguetown%20Arc%20(Novel)&prop=wikitext&format=json",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Episode%2050&prop=wikitext&format=json",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Daddy%20Masterson&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/wiki/ONE_PIECE%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7",
+    "https://opwiki.org/wiki/Episode_050"
+   ]
+  },
+  {
+   "episodes": [
+    93
+   ],
+   "type": "mixed",
+   "note": "T28: source and non-source in one episode, with the source share substantial and story-carrying. SEGMENT 1 (significant): ch 158 p.2-3 and p.14-16 — the crew waiting at Nanohana and spotting Mr. 3's ship; the perfume shop, Vivi setting the destination (Yuba, and Koza) and the crew realising Luffy is missing. Sole adaptation — ep 94 plays p.4-13 and never restages these beats — roughly a third of the episode. SEGMENT 2 (anime-original): Luffy burning the Dance Powder and Kamonegi's explanation of it, Chopper's truck ride, and the early debuts of Koza and Matsuge (Matsuge debuts in ch 162 in the manga). WHO SAYS WHAT: AFL 'Filler' (wrong — it cannot see a bookended manga share); AFG plain-canon with '158' (also wrong, the other way); ja-WP does NOT bold ep 93, i.e. it does not classify it as an anime-original story; OPwiki flags the arc banner but records the exact pages. Mixed is the reading that reconciles all four. Stored filler + partial{158} understated it — the annotation was right, the type was not.",
+   "sources": [
+    "https://opwiki.org/wiki/Episode_093",
+    "https://opwiki.org/wiki/Episode_094",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Episode%2093&prop=wikitext&format=json",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Chapter%20158&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/wiki/ONE_PIECE%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7",
+    "https://www.animefillerguide.com/anime/one-piece/"
+   ]
+  },
+  {
+   "episodes": [
+    203
+   ],
+   "type": "mixed",
+   "note": "T28 + the sliver clause. SEGMENT 1 (significant): ch 303 p.16-18, ~6m23s of the episode (AFG's own timestamps 13:35-19:58, cross-checked on Crunchyroll and Netflix in the same note) — the division of the Skypiea gold, Nami's 80%, and Luffy's decision that the next crewmate is a shipwright, then a musician. It is a SCENE, it progresses the source's story (the Water 7 hinge), and this episode is its only adaptation anywhere in the run; by the clause's own definition that is significant, not a sliver — it is not a tease, not framing panels, not a page tie, and the anime never adapts it properly later. SEGMENT 2 (anime-original): the G-8 plot — sailing back into the fortress by the Marines' bells, Robin's empty-dock plan, disguising the Merry as a Navy ship. SEGMENT 3 (weightless): the recycled Merry flashback montage inside segment 1 is recap. WHO SAYS WHAT: AFL 'Filler'; ja-WP bolds the row AND footnotes it '一部原作のストーリーあり' (an anime-original story that contains some of the manga's story — ja-WP's own mixed marker); AFG '*Mixed' with the timestamps; OPwiki 'Kapitel 303 (S. 16-18)'. CONFIDENCE: medium — the competing reading is that a manga scene re-staged inside an original plot stays filler + graft (T28's 'transplanted beat'), which is how the row is stored. The reason I moved it: the catalog already types ep 226 MIXED for exactly this shape and a smaller one (ch 318 p.18-19, AFG '14:57 to the end'), so leaving 203 filler is an internal inconsistency, not a stricter standard. See flags_for_sean.",
+   "sources": [
+    "https://opwiki.org/wiki/Episode_203",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Episode%20203&prop=wikitext&format=json",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Chapter%20303&prop=wikitext&format=json",
+    "https://www.animefillerguide.com/anime/one-piece/",
+    "https://ja.wikipedia.org/wiki/ONE_PIECE%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  },
+  {
+   "episodes": [
+    51,
+    55,
+    214,
+    216,
+    225
+   ],
+   "type": "filler",
+   "note": "CONFIRMATIONS — stored type is right and AFL is right on all five; this is the result, not an empty verdict. 51: an invented cooking contest against the anime-original Carmen; the tie is ch 98's tuna-stand panels, a sliver duplicated properly in ep 52 (ja-WP bold; OPwiki Unbekannt; AFG's '98' is the row-50/51 plateau). 55: the Calm Belt exposition of ch 101 restaged with Apis inside the Warship Island arc, the chapter's own story adapted in ep 61 (ja-WP bold; AFL filler; only AFG types it Mixed). 214: a Toei-invented Davy Back race; its two-page tie cannot even be placed (sources split between 214 and 215). 216: a Toei-invented Davy Back game; its only manga claim is single-source and contradicted. 225: an anime-original arc opener whose 64-second cold open replays ch 303's teaser page. In every case the remainder of the episode is anime-original and the source segment is a sliver, so the remainder decides (T27/T28).",
+   "sources": [
+    "https://opwiki.org/wiki/Episode_051",
+    "https://opwiki.org/wiki/Episode_055",
+    "https://opwiki.org/wiki/Episode_214",
+    "https://opwiki.org/wiki/Episode_216",
+    "https://opwiki.org/wiki/Episode_225",
+    "https://ja.wikipedia.org/wiki/ONE_PIECE%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7",
+    "https://www.animefillerguide.com/anime/one-piece/",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Chapter%20313&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episodes": [
+    195
+   ],
+   "type": "canon",
+   "note": "CONFIRMATION — stored canon is right, AFL is right, AFG's '*Mixed' is the outlier. The episode adapts ch 302 in full plus ch 303 p.2-3, 10-11, 14 (OPwiki), which AFG's own timestamp puts at 1:50-15:58 — about 74% of the body; ja-WP does not bold the row; OPwiki gives it no filler banner and no '(Filler)' arc qualifier, uniquely among the nine rows in this ask. The studio material is the closing ~5 minutes: a padded octopus-balloon descent and the substitution of the manga's sea-monkey tsunami with the Marine base that hooks the G-8 arc. T28's faithfulness clause governs: a studio-made closing scene inside an otherwise faithful adaptation is a `divergence` annotation and is never weighed toward mixed.",
+   "sources": [
+    "https://opwiki.org/wiki/Episode_195",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Episode%20195&prop=wikitext&format=json",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Chapter%20302&prop=wikitext&format=json",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Chapter%20303&prop=wikitext&format=json",
+    "https://www.animefillerguide.com/anime/one-piece/",
+    "https://ja.wikipedia.org/wiki/ONE_PIECE%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7"
+   ]
+  }
+ ],
+ "structure": [
+  {
+   "finding": "OPwiki (opwiki.org) is a second One Piece wiki with a PAGE-LEVEL per-episode chapter map",
+   "detail": "Every episode page carries an infobox field 'Umgesetzte Kapitel' listing chapters with page ranges ('Kapitel 303 (S. 16-18)'), or 'Unbekannt' when the episode adapts nothing. It is a genuinely different wiki from onepiece.fandom (different host, different MediaWiki install — its api.php is broken, so scrape /wiki/Episode_NNN with zero-padded three-digit numbers), and its maps validate against onepiece.fandom's own chapter-page 'Anime Episodes' sections where those exist: ch 318 reads 'Episode 219 (p. 2-17) / Episode 226 (p. 18-19)' on the fandom and '219 = 317, 318' / '226 = 318 (S. 18-19)' on OPwiki. CAVEAT: its infobox banner 'Arc: X (Filler)' is ARC-level, not a per-episode content claim — it banners ep 93 and ep 203 as filler while listing the very pages they adapt. Its episode-to-page assignment can also be one row out (ch 313 p.8-9 on ep 214 where the fandom says ep 215).",
+   "sources": [
+    "https://opwiki.org/wiki/Episode_093",
+    "https://opwiki.org/wiki/Episode_203",
+    "https://opwiki.org/wiki/Episode_219",
+    "https://opwiki.org/wiki/Episode_226",
+    "https://onepiece.fandom.com/api.php?action=parse&page=Chapter%20318&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "finding": "ja.wikipedia's LIVE One Piece episode list carries a per-row MIXED marker — and the onepiece.fandom/ja mirror of it is stale",
+   "detail": "Legend: '太字はアニメオリジナルストーリー' (bold = anime-original story). A bolded row that also carries <ref name=\"original\">一部原作のストーリーあり</ref> = 'contains some of the manga's story' — i.e. ja-WP separates pure filler from mixed per row. In this wave: 51, 55, 203, 214 and 226 carry the footnote; 213, 215, 216, 220-225 are bold without it; 93, 195, 217-219, 227-228 are not bold at all; ep 50 carries a unique footnote of its own, '小説版でのエピソード。' The onepiece.fandom/ja page 'ONE PIECE (アニメ) のエピソード一覧' is a COPY of an older revision of this table — it has no footnotes, does not bold ep 50, and its 原作 column is block rowspans ('第34巻、オリジナル' over 225-228). Use ja.wikipedia, not the mirror, and never read the mirror's rowspan block as a per-row claim. Consistent with the known trap, the marker UNDER-marks: it leaves ep 225 unmarked although two sources place ch 303 p.19 in it.",
+   "sources": [
+    "https://ja.wikipedia.org/wiki/ONE_PIECE%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7",
+    "https://onepiece.fandom.com/ja/api.php?action=parse&pageid=352&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "finding": "AFG's One Piece page is a TIMESTAMP source, not just a chapter column — and its type column is wrong in both directions",
+   "detail": "Rows carry CSS classes: red = '*Filler', blue = '*Mixed' (with a prose note and minute ranges for the JP broadcast, Crunchyroll and Netflix), plain = canon. The minute ranges are the first real T28 sizing instrument we have found for this series: 55 = 2:50-7:30, 195 = 1:50-15:58, 203 = 13:35-19:58, 225 = 02:05-03:09, 226 = 14:57-to-the-end. But the type column lies both ways on this page: rows 50 and 51 are plain CANON with chapter '98' although both are anime-original (ja-WP bolds both, OPwiki records no chapters), and rows 210 and 211 are RED although both are ordinary manga adaptations that the catalog anchors at ch 308-309 and 310-311. Use the timestamps and the notes; never the class.",
+   "sources": [
+    "https://www.animefillerguide.com/anime/one-piece/"
+   ]
+  },
+  {
+   "finding": "Ch 303 is split across FOUR episodes and three pages are unaccounted for",
+   "detail": "ep 195 = p.2-3, 10-11, 14; ep 203 = p.16-18; ep 207 = p.4-9, 13; ep 225 = p.19. No source in this wave accounts for p.1 (the title page), p.12 or p.15. Nothing in the verdict depends on them, but a census that reconstructs page coverage for this chapter should expect a hole.",
+   "sources": [
+    "https://opwiki.org/wiki/Episode_195",
+    "https://opwiki.org/wiki/Episode_203",
+    "https://opwiki.org/wiki/Episode_207",
+    "https://opwiki.org/wiki/Episode_225"
+   ]
+  },
+  {
+   "finding": "Two adjacent-row consistency issues OUTSIDE the ask, queued not repaired",
+   "detail": "(1) ep 49 「三代鬼徹と雪走」 is stored CANON with no anchor at all, although OPwiki gives it 'Kapitel 097 (S. 5-18)' and AFG gives it '97'; the run jumps ep 48 -> ep 52. (2) the stored ep-48 anchor reads END 98 {96-98}, but OPwiki puts ch 98's first pages in ep 52 ('ep 48 = Kapitel 096 (S. 11-14), Kapitel 097 (S. 1-4, 19)'; 'ep 52 = Kapitel 098, Kapitel 099') while AFG prints '96, 97, 98' for ep 48 — the two disagree, and ep 48's END may be one chapter long. Neither row is in this ask and neither is settled here; both want a wave of their own with the same three instruments.",
+   "sources": [
+    "https://opwiki.org/wiki/Episode_048",
+    "https://opwiki.org/wiki/Episode_049",
+    "https://opwiki.org/wiki/Episode_052",
+    "https://www.animefillerguide.com/anime/one-piece/"
+   ]
+  }
+ ],
+ "flags_for_sean": "THREE FORKS, all named rather than buried.\n\n(1) EP 50 AND THE ONE PIECE NOVELS — the wave's biggest call. I retyped ep 50 filler -> canon + side_source because the batch-18 distinction says a second LICENSED work is side_source on a canon row, and ep 50 animates Act 3 of the Shueisha Loguetown novel (on sale 2000-07-17, four months before the broadcast; Daddy and Carol designed by Oda FOR the novel; ja-WP's own footnote '小説版でのエピソード。'). The counter-argument, which I cannot dismiss: Shippuden 452-457 and Black Clover 55-56 adapt novels that tell NEW stories in the franchise, whereas the Loguetown book is a NOVELIZATION of the very arc the anime is adapting, with added acts — if a novelization is not a 'different licensed work' in T26's sense, ep 50 stays filler and the side_source annotation becomes a plain tie note. Whichever way you rule, the ch-98 graft on ep 50 must go: no source supports it. AND THE SCOPE QUESTION: One Piece has a whole Jump j-Books novel line (Ganzack, Loguetown, the film novelizations, and the modern Ace/Law/Heroines novels); ruling ep 50 side_source invites a sweep for other novel-derived episodes. I found no second one in this range — ep 51 is NOT novel-derived (Carmen is categorised anime-original with debut ep 51; ja-WP gives 51 the generic original footnote, not the novel one).\n\n(2) EP 203 vs EP 226 — the mixed/filler line for 'a manga scene at the end of an anime-original episode'. The catalog already types ep 226 MIXED (with an anchor at ch 318) for ch 318 p.18-19, which AFG sizes at ~5 minutes ('14:57 to the end'). Ep 203 is the same shape and LARGER: ch 303 p.16-18 at 6m23s ('13:35 to 19:58'), sole adaptation, and the beat is Luffy's shipwright decision. I moved 203 to mixed for consistency, which means reversing your A6 anchor null on that row (repairs entry, with the two failed premises spelled out — it was never a plateau and never content-free). If you prefer the stricter line — a manga scene RESTAGED inside an original plot stays filler + graft, T28's 'transplanted beat' — then hold 203 filler AND consider whether ep 226 should come DOWN to filler + graft for the same reason. What I would not do is leave them different; that is the only genuinely incoherent pair I found.\n\n(3) EP 225 AND THE SOLE-ADAPTATION EXCEPTION — I tested it and landed on filler. Half one holds: ch 303 p.19, Aokiji's introduction page, is animated in this episode and nowhere else. Half two is the judgement: it is a 64-second cold open of the source's own teaser page, and Aokiji's real arrival (ch 318 p.18-19) is ep 226, so nothing is lost by leaving 225 filler — the tie is now annotated where before this verdict the row carried no tie at all. If you read 'an Admiral's first appearance' as the reveal the exception is written for, the row becomes mixed — but it still takes NO anchor: ch 303 sits fifteen chapters behind ep 219's END of 318 and an anchor there would render a false back-jump (A44, the code-black hazard).\n\nPREMISE CORRECTION for the wave's flag definition: the task listed 214, 216 and 225 as 'AFG canon'. On the live page 214 and 216 are RED '*Filler' rows that merely print '313' in the chapter column, and 225 is BLUE '*Mixed'. On 214/216 there is no type contradiction at all — the flag fired on a non-null chapter cell on a filler row, which for this series is normal and correct behaviour by AFG."
+}

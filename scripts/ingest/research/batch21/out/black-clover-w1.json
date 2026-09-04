@@ -1,0 +1,103 @@
+{
+  "series_id": "black-clover",
+  "summary": "Both target rows are CONFIRMED FILLER — the stored type is right on 3 and on 68, and neither row takes an anchor (A1 + A44: every page it touches sits behind or inside a neighbour's anchor). Ep 3 'To the Royal Capital of the Clover Kingdom!' is a wholly anime-original departure-and-journey episode (training, Nash's despair, the farewell dinner, Lily's flashback, days on the road) — the manga jumps from ch 1's close straight to the exam venue 'six months after receiving their grimoires' (blackclover.fandom's Chapter 2 summary), and the licensor's own synopsis for 第3話 is the departure and the journey ('家族のように過ごしてきた教会の人々に見送られ、ふたりの少年は、魔法帝になる夢を胸に、王都へと旅立つ！'). Its two source segments are slivers: ch 1 p.1 (the demon / First Wizard King cold open — content the wiki's Chapter 1 page credits to ep 2 as Lily's storybook reading, and which sits inside AFG's own skip zone, its Start column reading 4:30) and ch 2 p.4-5 (Orsi and Lily question Drouot's choice; Drouot admits he wanted the Magic Knights to inspect Asta's grimoire) — 2 manga pages, AFG's own watch-window 06:37-09:07 = 2m30s of a ~16-minute body. Ep 68 'Battle to the Death?! Yami VS Jack' is the anime-original food-stall contest end to end (the licensor's 第68話 synopsis is nothing but the stalls, ending on teaser wording 'ついには……!?'); its single source segment is the closing shot, ch 103 p.14-15 (Asta hears about a beautiful woman and notices her) — and that beat is a DUPLICATE: the wiki's Chapter 103 page credits p.14-17 to eps 68 AND 69, ep 69's page credits p.15-17, and the licensor's 第69話 synopsis opens on exactly that beat. The T28 sole-adaptation exception is unavailable on every segment (each fails the 'major plot point' half; two also fail the 'no other episode' half). WHO LIED: animefillerguide — its blue 'Mixed' class on both rows is refuted by AFG's own note (a 2m30s window; a ~30s closing tail), and its Chapters column ('1, 2' / '103') is the known reading-position conversion, not a share claim. animefillerlist did not lie: it is exactly right on 68 ('Filler'), and on 3 it prints 'Anime Canon' — a FOURTH TYPE our T27 does not have and which claims no source adaptation, so the stored filler is its correct translation, not a contradiction. The third trap is blackclover.fandom's episode infobox |chapter= field ('Chapter 1 / Chapter 2', 'Chapter 103'), which prints a chapter with no share; only the inline {{Ref|ch=|p=|ep=}} refs and the chapter pages' reverse index size it.",
+  "anchors": [],
+  "continue_points": [],
+  "anchor_hostile": [
+    {
+      "episode": 3,
+      "why": "A1 + A44, and Sean already ruled it (A6, 2026-08-25: 'A1 junk anchor — annotation, not position'); this verdict CONFIRMS that ruling on fresh evidence. The row is filler and its two source fragments are position-less: ch 1 p.1 sits behind ep 2's anchor (ep1→1, ep2→1; blackclover.fandom's Chapter 1 page credits p.1-7 to ep 2) and ch 2 p.4-5 sits inside ep 4's anchor (ep4→2 {2}; the Chapter 2 page assigns the whole p.2-9 block to eps 3 AND 4). Nothing here moves position in either direction: ch 1 is already an END at eps 1-2 and ch 2 is the END at ep 4. Segment weights: ch 1 p.1 = sliver (1 page, a retold prologue, inside AFG's own skip zone — Start column 4:30); ch 2 p.4-5 = sliver (2 pages, AFG's window 06:37-09:07 = 2m30s of a ~16-minute body). The remaining ~13-14 minutes are anime-original.",
+      "sources": [
+        "https://blackclover.fandom.com/api.php?action=parse&page=Episode%203&prop=wikitext",
+        "https://blackclover.fandom.com/api.php?action=parse&page=Chapter%202&prop=wikitext",
+        "https://blackclover.fandom.com/api.php?action=parse&page=Drouot&prop=wikitext",
+        "https://web.archive.org/web/2018/http://bclover.jp/story/detail.php?id=1000320",
+        "https://www.animefillerguide.com/black-clover/"
+      ]
+    },
+    {
+      "episode": 68,
+      "why": "A1 + A44, and Sean already ruled it (A6, 2026-08-25: 'ch 103 p.14-15 sliver — annotation, not position'); CONFIRMED here. The row is filler and its one source fragment is both DUPLICATE and position-less: ch 103 is already the END at ep 67 (ep67→103 [102]) and the START at ep 69 (ep69→104 [103]), and blackclover.fandom's Chapter 103 page credits p.14-17 to eps 68 AND 69 while ep 69's page credits p.15-17 to itself. This is A47's twin shape — a trailing scrap of chapter X in front of the episode that owns X; the tail stays in the note, not in a number. Segment weight: sliver (AFG's own window is 20:29→end, and AFG puts the neighbouring ep 67's content end at 20:46, so the tail is on the order of half a minute of a ~20-minute body).",
+      "sources": [
+        "https://blackclover.fandom.com/api.php?action=parse&page=Episode%2068&prop=wikitext",
+        "https://blackclover.fandom.com/api.php?action=parse&page=Chapter%20103&prop=wikitext",
+        "https://blackclover.fandom.com/api.php?action=parse&page=Episode%2069&prop=wikitext",
+        "https://web.archive.org/web/20190301/http://bclover.jp/story/detail.php?id=1000505",
+        "https://web.archive.org/web/20190301/http://bclover.jp/story/detail.php?id=1000515"
+      ]
+    }
+  ],
+  "annotations": [
+    {
+      "episodes": [
+        3
+      ],
+      "kind": "partial",
+      "chapters": "1 (p.1), 2 (p.4-5)",
+      "note": "CONFIRMS and enriches the stored batch-17 annotation (same chapters/pages) with the T28 sliver-clause weights. SEGMENT 1 — ch 1 p.1, the cold open: a city under attack by the demon, the First Wizard King defeats it (blackclover.fandom Episode 3, {{Ref|ch=1|p=1|ep=3}}). WEIGHT: SLIVER — because it is one page of framing whose CONTENT is a DUPLICATE: the wiki's own Chapter 1 page credits ch 1 p.1-7 to EP 2 (Lily reading the boys the story of the mage who defeated the demon), and animefillerguide's Start column puts ep 3's content start at 4:30, i.e. it treats everything before that (the prologue) as already-seen. Ch 1 is adapted properly by eps 1 and 2 (stored anchors ep1→1, ep2→1). SEGMENT 2 — ch 2 p.4-5: Father Orsi and Sister Lily visit Drouot to question his sending Asta to the exam; Drouot admits he wanted the Magic Knights to inspect the five-leaf grimoire (Episode 3 {{Ref|ch=2|p=4-5|ep=3}}, corroborated on the Drouot and Orsi Orfai character pages). WEIGHT: SLIVER — because it is a 2-page transplanted aside inside an otherwise original plot: animefillerguide's own watch-window for the row is 06:37-09:07 (2m30s of a ~16-minute body, ~15%), and the episode's job is the anime-original departure from Hage and the multi-day journey. The material is NEW here (no other episode is credited with p.4-5 by the character pages) but the T28 sole-adaptation exception FAILS: (a) the 'no other episode' half is doubtful — the Chapter 2 page assigns the whole p.2-9 block to eps 3 AND 4 — and (b) the 'major plot point' half plainly fails: an exam-permission conversation is not a death, a reveal or an arc close. Ch 2 is adapted properly by ep 4 (stored ep4→2 {2}). Remainder (~13-14 min): anime-original — Asta's training, Nash's 'orphans can't have dreams' scene, the farewell tato dinner, Lily's flashback, the journey; the manga has none of it (Chapter 2 opens 'Six months after receiving their grimoires, Asta and Yuno travel to a venue')."
+    },
+    {
+      "episodes": [
+        68
+      ],
+      "kind": "partial",
+      "chapters": "103 (p.14-15)",
+      "note": "CONFIRMS and enriches the stored batch-17 annotation with the T28 sliver-clause weight. SEGMENT — ch 103 p.14-15, the episode's closing shot: thrown aside by Yami and Jack, Asta hears passers-by talking about a beautiful woman, looks, and wonders where he knows her from (blackclover.fandom Episode 68, {{Ref|ch=103|p=14-15|ep=68}}). WEIGHT: SLIVER — because it is a ~30-second hook at the very end (AFG's window is 20:29→end; AFG places ep 67's content end at 20:46) and it is a DUPLICATE, not new: the wiki's Chapter 103 page credits p.14-17 to eps 68 AND 69, ep 69's page credits p.15-17 to itself, and the licensor's 第69話 synopsis opens on exactly this beat ('次にアスタが通りかかったのは、男性たちの視線を釘付けにするひとりの美女が佇む場所だった'). Ch 103 is adapted properly by ep 67 (p.1-14, stored ep67→103) and ep 69 (p.15-17, stored ep69 START 103). T28's sole-adaptation exception is therefore unavailable on both halves. Remainder (~19-20 min): anime-original — the Yami-vs-Jack grilled-squid/meat stall contest, Dead-or-Alive, arm wrestling, Finral's teleport, Julius's Chrono Stasis and the unzipped pants; ch 103's own summary contains none of it, the licensor's 第68話 synopsis is the stall contest end to end, and AFG's note says the showdown 'never occurs in the manga'."
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 67,
+      "field": "continue_note",
+      "old": "parity with anime (Sean C2 2026-08-24): ep 68 starts ch 103; ch 103 straddles the episode boundary — ep 68 finishes it",
+      "new": "parity with anime (C2): ep 69 starts ch 103; ch 103 straddles the episode boundary — ep 69 finishes it (ep 68 is filler and shows only ch 103 p.14-15, a duplicate of ep 69's opening beat)",
+      "why": "Stale text, not a value change — the continue_chapter 103 is correct and unchanged. NOTE: the context file prints this note truncated at '— ep 68 finishes it (', so `old` reproduces only the visible portion; the apply layer should match on the stored string. The note names ep 68 as the row that finishes ch 103; ep 68 is filler, carries no anchor (Sean's A6 deletion, 2026-08-25) and shows only the p.14-15 tail, which ep 69 re-stages. Under C2 the parity target is the next CANON row's START, which is ep 69 (stored ep69→104 [103]). Cosmetic but user-visible.",
+      "sources": [
+        "https://blackclover.fandom.com/api.php?action=parse&page=Chapter%20103&prop=wikitext",
+        "https://blackclover.fandom.com/api.php?action=parse&page=Episode%2069&prop=wikitext",
+        "https://web.archive.org/web/20190301/http://bclover.jp/story/detail.php?id=1000515"
+      ]
+    }
+  ],
+  "type_corrections": [
+    {
+      "episodes": [
+        3
+      ],
+      "type": "filler",
+      "note": "CONFIRMATION, NOT A CHANGE — stored type is already filler; recorded so the T4 flag can be closed with evidence. T27/T28: zero story-carrying source share. Segment weights: ch 1 p.1 = SLIVER (1 page, a retold prologue already carried by ep 2 per the wiki's Chapter 1 page; inside AFG's own skip zone, Start 4:30); ch 2 p.4-5 = SLIVER (2 pages, AFG's own window 06:37-09:07 = 2m30s of a ~16-minute body). Remainder ~13-14 minutes anime-original — the licensor's 第3話 synopsis is training + the send-off by the church family + the journey to the capital, and the manga skips those six months entirely (Chapter 2: 'Six months after receiving their grimoires, Asta and Yuno travel to a venue'). An original plot that quotes two fragments is filler under T28; the sole-adaptation exception fails (neither fragment is a major plot point of the source, and the Chapter 2 page shares p.2-9 with ep 4). AFL's 'Anime Canon' is a fourth-type label T27 does not have and asserts no adaptation; it is NOT an adoption basis either — ep 3 has no Tabata involvement (screenplay Kazuyuki Fudeyasu), unlike the ruled adopted{author} block at 130-157. AFG's blue 'Mixed' is the flag's false positive, refuted by AFG's own timestamps.",
+      "sources": [
+        "https://blackclover.fandom.com/api.php?action=parse&page=Episode%203&prop=wikitext",
+        "https://blackclover.fandom.com/api.php?action=parse&page=Chapter%202&prop=wikitext",
+        "https://web.archive.org/web/2018/http://bclover.jp/story/detail.php?id=1000320",
+        "https://www.animefillerguide.com/black-clover/",
+        "https://www.animefillerlist.com/shows/black-clover"
+      ]
+    },
+    {
+      "episodes": [
+        68
+      ],
+      "type": "filler",
+      "note": "CONFIRMATION, NOT A CHANGE — stored type is already filler and AFL is RIGHT here ('Filler'); recorded so the T4 flag can be closed with evidence. T27/T28: one source segment, ch 103 p.14-15, WEIGHT SLIVER — a ~30-second closing hook (AFG's own window 20:29→end) that is a DUPLICATE of ep 69's opening (Chapter 103 page: p.14-17 → eps 68 AND 69; ep 69 page: p.15-17; licensor's 第69話 synopsis opens on the same beat). Remainder ~19-20 minutes anime-original: the food-stall contest, Julius's Chrono Stasis gag. The licensor's 第68話 synopsis contains only the stalls and ends on teaser wording ('ついには……!?'). Sole-adaptation exception fails on both halves. AFG's blue 'Mixed' class is the flag's false positive — its own note calls the showdown anime-original.",
+      "sources": [
+        "https://blackclover.fandom.com/api.php?action=parse&page=Episode%2068&prop=wikitext",
+        "https://blackclover.fandom.com/api.php?action=parse&page=Chapter%20103&prop=wikitext",
+        "https://web.archive.org/web/20190301/http://bclover.jp/story/detail.php?id=1000505",
+        "https://web.archive.org/web/20190301/http://bclover.jp/story/detail.php?id=1000515",
+        "https://www.animefillerlist.com/shows/black-clover"
+      ]
+    }
+  ],
+  "structure": {
+    "row_identity": "Row-count identity checked FIRST (R20): animefillerlist prints 170 numbered rows, animefillerguide 170 numbered rows, our catalog 170 episodes — no recap/special offset. Joined by TITLE, not index: AFL 3 'To the Royal Capital!' / AFG 003 'To the Royal Capital of the Clover Kingdom!' / fandom Episode 3 / ja-WP ページ3「クローバー王国、王都へ！」 (2017-10-17); AFL 68 'Battle to the Death?! Yami vs. Jack' / AFG 068 'Battle to the Death?! Yami VS Jack' / fandom Episode 68 / licensor 第68話「死闘!? ヤミVSジャック」 (2019-01-29). All four agree on both rows.",
+    "per_segment_table": "episode | segment | what it is | new or duplicate | WEIGHT + reason\nEP 3 (~16-minute body; AFG Start 4:30)\n  seg 1 | ch 1 p.1 | cold open: a city attacked by the demon, the First Wizard King defeats it | DUPLICATE — the wiki's Chapter 1 page credits ch 1 p.1-7 to EP 2 (Lily's storybook retelling); AFG's Start column excludes it from ep 3's content | SLIVER — one page of framing, retold material of a chapter adapted in full by eps 1-2\n  seg 2 | ch 2 p.4-5 | Orsi and Lily question Drouot's choice; Drouot admits he wanted the Magic Knights to inspect the five-leaf grimoire | NEW as staged (character pages credit p.4-5 to ep 3 only) but the Chapter 2 page assigns the whole p.2-9 block to eps 3 AND 4 | SLIVER — 2 pages, AFG's own window 06:37-09:07 (2m30s, ~15%), a transplanted aside inside an original plot; not a major plot point, so the sole-adaptation exception is unavailable\n  remainder | ~13-14 min | training, Nash's despair, the farewell tato dinner, Lily's flashback, the multi-day journey to the capital | anime-original (licensor synopsis; the manga skips six months) | the remainder decides: FILLER\nEP 68 (~20-minute body)\n  seg 1 | ch 103 p.14-15 | closing shot: Asta hears about a beautiful woman and notices Charlotte | DUPLICATE — Chapter 103 page credits p.14-17 to eps 68 AND 69; ep 69 page credits p.15-17; the licensor's 第69話 synopsis opens on the same beat | SLIVER — ~30s tail (AFG window 20:29→end); A47's twin shape, the tail belongs to the episode that starts ch 103 (ep 69)\n  remainder | ~19-20 min | Yami vs Jack stall contest, Dead-or-Alive, arm wrestling, Finral's teleport, Julius's Chrono Stasis | anime-original (licensor synopsis; ch 103's own summary has none of it; AFG's own note says so) | the remainder decides: FILLER",
+    "sources_used": "Beyond AFL and AFG (the two disagreeing labels): (1) blackclover.fandom, read via api.php action=parse — TWO independent page classes that corroborate each other, the episode pages' inline {{Ref|ch=|p=|ep=}} refs and the CHAPTER pages' reverse index (Chapter 1 / 2 / 102 / 103 / 104), plus the Drouot and Orsi Orfai character pages; (2) the licensor's own per-episode 各話あらすじ on bclover.jp/story/detail.php, recovered from the Wayback Machine (the live host now serves the 2nd-Season site and detail.php returns 500) — ids 1000320 (第3話), 1000504 (第67話), 1000505 (第68話), 1000515 (第69話). ja-WP's 各話リスト was checked and carries staff columns only — no chapter column and no アニメオリジナル marker for this series, so it is silence, not evidence, on both rows."
+  },
+  "flags_for_sean": [
+    "TRAP FOR THE FLAG (T4 type_source_disagreement, STRONG tier): on this series the disagreement is manufactured by VOCABULARY, not by facts. AFL's fourth label 'Anime Canon' (ep 3) asserts no source adaptation, and AFG's blue 'Mixed' class is a WATCH-WINDOW instrument — AFG's own note on both rows gives a window of 2m30s (ep 3) and a closing tail (ep 68). Reading AFG's Chapters column ('1, 2' / '103') as an adaptation claim is the known reading-position trap. Both rows are honest filler; the flag can be closed as a false positive with the evidence above.",
+    "OPTIONAL annotation refinement on ep 3, NOT taken here: the ch 1 p.1 segment could be split out as kind 'recap' {1} (retold material of a chapter already covered — the wiki's Chapter 1 page credits p.1-7 to ep 2, and AFG's Start column places it before ep 3's content), leaving 'partial' {2 (p.4-5)}. I kept the stored single 'partial' because I could not establish from a primary whether ep 3's prologue is RE-SHOWN footage or a newly drawn sequence, and the shippuden-388 recap boundary makes that distinction load-bearing for the kind. Either way the segment is weightless and the row stays filler.",
+    "Ep 67's stored continue NOTE names ep 68 as the row that finishes ch 103 (a repair is proposed); the VALUE 103 is correct and unchanged. It is stale text from 2026-08-24, before ep 68's anchor was deleted under A6.",
+    "Confidence HIGH on both rows: four sources agree on the content (fandom episode pages, fandom chapter pages, the licensor's 各話あらすじ, and AFG's own timestamps), and AFL agrees on 68. The only MEDIUM element is the exact minute-share of ep 68's tail — 'from 20:29 to the end' is AFG's phrasing and I sized it from AFG's own 20:46 content-end on ep 67; nothing in the ruling depends on it, since the beat is a duplicate of ep 69's opening in any case."
+  ]
+}
