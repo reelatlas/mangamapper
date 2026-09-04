@@ -31,7 +31,11 @@ const START_OVERRIDE: Record<string, number> = {};
 // independently, A47 advances). The stored text must not re-trip end_sliver_mismatch, so the record is reworded, not overridden.
 const CHAPTERS_ADAPTED_FIX: Record<string, string> = {};
 // annotation chapters rewritten at write (verifier): an inferred page count is not a count
-const ANNOTATION_CHAPTERS_FIX: Record<string, string> = {};
+const ANNOTATION_CHAPTERS_FIX: Record<string, string> = {
+  // RECOMMENDED RULING (verifier w1-boruto, finding 2): the one-shot is its own AniList work (87175, ONE_SHOT, sequel to Scarlet Spring) — a chain node with a colon-free label, not a 'Naruto Gaiden' sub-item. Remove if Sean keeps one Gaiden label.
+  'boruto-naruto-next-generations#39#chain_source': 'The Path Lit by the Full Moon: the unnumbered one-shot 「満ちた月が照らす道」 (Kishimoto, 2016; collected at the back of Boruto vol 1), adapted in full',
+  'boruto-naruto-next-generations#39#divergence': 'The Path Lit by the Full Moon: the one-shot',
+};
 const END_OVERRIDE: Record<string, number> = {};
 const ANCHOR_SKIP = new Set<string>(); // 'sid#ep' — a verifier-refuted anchor. shippuden 112 WAS here as "position-less (A44)"; Sean ruled 2026-09-03 that behind is not a basis: END 318 [317] lands (A8), continue 343 curated (C5), 113-117 are the next narrow ask (verify:hole)
 const CONTINUE_SKIP = new Set<string>(); // shippuden 112's continue 343/parity rides WITH its anchor (C7 — the healer refuses the row while 113 is unanchored)
@@ -45,14 +49,20 @@ const FENCE_REPAIR: { sid: string; episode: number; set: Record<string, unknown>
 const ROW_HOLD = new Set<string>();
 // per-annotation SKIPS (verifier w1-flips): fairy-tail 246's divergence carries non-chapter text in `chapters` (wrong kind) and its
 // `unverified` double-records a segment already weighed SIGNIFICANT (would park the row in unverified_share for a page count nobody needs)
-const ANNOTATION_SKIP = new Set<string>(); // verifier w2-flips: a misused kind; an unplaced chapter attribution
+const ANNOTATION_SKIP = new Set<string>(['boruto-naruto-next-generations#93#side_source', 'boruto-naruto-next-generations#94#side_source', 'boruto-naruto-next-generations#95#side_source']); // verifier w1-boruto: these rows are RULING-tier (standing-annotations.ts, origin 'ruling') — the T26 healer re-upserts them every run, so a research apply would be reverted; the novel map lands by EDITING the ruling entry (on Sean's go)
 // verifier: prose in a divergence's chapters field is not a chapter list — nulled at write
-const CHAPTERS_NULL = new Set<string>();
+const CHAPTERS_NULL = new Set<string>(['boruto-naruto-next-generations#93#abridged', 'boruto-naruto-next-generations#94#abridged', 'boruto-naruto-next-generations#95#abridged']); // verifier: a novel's chapter map is not a manga chapter list
 // T26 THE CHAIN (Sean 2026-09-04): a delivered kind rewritten at apply — the sequel manga is ON THE CHAIN (I41), so the row is canon material told out of order
-const KIND_OVERRIDE: Record<string, { kind: AnnotationKind; chapters: string; note: string }> = {};
+const KIND_OVERRIDE: Record<string, { kind: AnnotationKind; chapters: string; note: string }> = {
+  // RECOMMENDED RULING (rule ep 18 with ep 39): the omake is a Kishimoto MANGA in the continuity with its own AniList id (87402) — on the chain as its own node, chain_source, not a foreign licensed side work. Remove if Sean keeps it side_source.
+  'boruto-naruto-next-generations#18#side_source': { kind: 'chain_source', chapters: 'The Day Naruto Became Hokage: the unnumbered special extra 『BORUTO -NARUTO THE MOVIE- 特別番外編 ナルトが火影になった日』 (Kishimoto, 2015; printed in 秘伝・在の書), adapted as the first half', note: "weight: SIGNIFICANT — the omake is the episode's first half end to end (the day of Naruto's inauguration: the sleeping-Naruto gag, Konohamaru's shadow clone at the ceremony); the second half is anime-original. On the ruled chain as its own node (Sean 2026-09-04), so chain_source: canon material told out of order, position-less (no chapter number; A44)." },
+};
 const EXTRA_ANNOTATIONS: { sid: string; episode: number; kind: AnnotationKind; chapters: string; note: string; deleteKind?: AnnotationKind }[] = [];
 // note fixes from the verifier (prepended to the annotation note of that row + kind)
-const NOTE_FIX: Record<string, string> = {};
+const NOTE_FIX: Record<string, string> = {
+  'boruto-naruto-next-generations#95#abridged': "verifier w1-boruto: ep 95's coda (Naruto gifts Boruto the kunai set) is the novel's ch 1 CLOSING beat relocated, and the novel's Epilogue is unadapted (missing from the delivered list). ",
+  'boruto-naruto-next-generations#18#side_source': "verifier w1-boruto: Narutopedia's index is SILENT on the omake — only AFG names it ('OMAKE: The Day Naruto Became Hokage'); the tie rests on AFG + the movie book's own contents. ",
+};
 
 async function main() {
   const runId = DRY ? 0 : await startRun('resolve');
