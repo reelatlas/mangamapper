@@ -81,6 +81,7 @@ async function main() {
     if (unaccounted.length) problems.push(`canon/mixed target rows with neither an anchor nor an anchor_hostile entry: ${unaccounted.join(',')} (say why in summary if deliberate)`);
     const raw = readFileSync(OUT + f, 'utf8');
     if (/anime-only-canon|anime_only_canon/i.test(raw)) problems.push("mentions the retired type 'anime-only-canon'");
+    if (v.flags_for_sean != null && !Array.isArray(v.flags_for_sean)) problems.push('flags_for_sean is not a list (shape)');
     const sum = String(v.summary ?? '').toLowerCase();
     // "no anchor-hostile rows" / "no anchor_hostile" is a count of the OTHER list, not a claim about anchors — strip it before the contradiction test;
     // likewise a parenthetical rule citation "(A1, no anchor)" is the stated A1 reason the protocol asks for
