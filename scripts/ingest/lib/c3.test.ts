@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { backjumpNoteOk, backjumpRange, c3Ahead, hasSkipLanguage } from './c3';
+import { backjumpCoverage, backjumpNote, backjumpNoteOk, backjumpRange, c3Ahead, hasSkipLanguage } from './c3';
 
 describe('C3 (a continue below the row\'s own chapters)', () => {
   it('lists the covered chapters ahead of the continue, ignoring page facts', () => {
@@ -28,5 +28,27 @@ describe('the C3 twin (a back-jump exit whose continue sits above its END)', () 
   it('refuses a note that names neither', () => {
     expect(backjumpNoteOk('parity with anime (Sean C2 2026-08-24): ep 121 starts ch 353')).toBe(false);
     expect(backjumpNoteOk(null)).toBe(false);
+  });
+});
+
+describe('C5 back-jump coverage note', () => {
+  const rows = [
+    { episode: 90, chapters: [340, 341, 342, 343] },
+    { episode: 74, chapters: [319, 320] },
+    { episode: 113, chapters: [343, 344] },
+    { episode: 130, chapters: [330] },
+  ];
+  it('classifies the stretch as before / after / unseen', () => {
+    const cov = backjumpCoverage(112, 318, 343, rows);
+    expect(cov.before).toEqual([[319, 320], [340, 342]]);
+    expect(cov.after).toEqual([[330, 330]]);
+    expect(cov.unseen).toEqual([[321, 329], [331, 339]]);
+  });
+  it('writes a note the twin predicate accepts', () => {
+    const note = backjumpNote(backjumpCoverage(112, 318, 343, rows), 'C2 parity');
+    expect(backjumpNoteOk(note)).toBe(true);
+    expect(note).toContain('already adapted');
+    expect(note).toContain('not adapted by any anchored row');
+    expect(note).toContain('(eps 74-90)');
   });
 });
