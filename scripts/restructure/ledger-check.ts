@@ -101,8 +101,11 @@ function checkCitations(ids: Map<string, Rule>) {
 // P38 — retired wording must not survive in any LIVE scope. Rule titles and
 // statements are read from the loaded records (never the raw ledger files,
 // which carry the phrase inside the retiredPhrases literal); everything else
-// is grepped as text. Excluded on purpose: docs/changelog.md, generated docs,
-// scripts/ingest/research (verdicts + pinned protocols), scripts/ingest/history.
+// is grepped as text — INCLUDING lib/rulings/ string values (entry reasons,
+// standing-annotation notes): that is live prose, and it is where a retired
+// clause actually sits after the record is fixed. Excluded on purpose:
+// docs/changelog.md, generated docs, scripts/ingest/research (verdicts +
+// pinned protocols), scripts/ingest/history, the .claude/worktrees checkout.
 function checkRetiredPhrases() {
   const phrases: { id: string; phrase: string }[] = [];
   for (const r of ALL_RULES) for (const p of r.retiredPhrases ?? []) phrases.push({ id: r.id, phrase: p });

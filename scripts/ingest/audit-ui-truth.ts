@@ -733,7 +733,9 @@ async function main() {
     // NEXT row and stays out.
     {
       const anchoredRows = new Set(anchors.map((a: any) => `${a.series_id}#${a.episode}`));
-      const BANNED = [/no anchor by design/i, /this row takes no anchor/i, /position-less by ruling/i, /\banchor_hostile\b/i, /never anchors/i];
+      // 'position-less' / 'anchor_hostile' are NOT in the set (Cursor 2026-09-04): mixed rows use those words
+      // about a sliver while correctly holding an END. The class LISTS; it never rewrites a note.
+      const BANNED = [/no anchor by design/i, /this row takes no anchor/i, /no anchor by ruling/i, /never anchors/i];
       for (const a of annos as any[]) {
         if (!anchoredRows.has(`${a.series_id}#${a.episode}`)) continue;
         const hit = BANNED.find((r) => r.test(String(a.note ?? '')));

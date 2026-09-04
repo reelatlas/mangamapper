@@ -1125,7 +1125,12 @@
    note asserting no-anchor language from a SMALL banned set ('no anchor by
    design', 'this row takes no anchor', 'position-less by ruling',
    'anchor_hostile', 'never anchors') on a row that carries an anchor — 0
-   standing; 'takes no anchor' alone matched notes about the NEXT row (fotns
+   standing; SAME DAY (Cursor's two lines): the set narrowed to phrases that
+   say THE ROW has no anchor ('no anchor by design', 'this row takes no
+   anchor', 'no anchor by ruling', 'never anchors') — 'position-less' and
+   'anchor_hostile' dropped, mixed rows use them about a sliver while holding
+   an END; and the retired-phrase scope stated explicitly to include
+   lib/rulings/ string values (reasons, standing notes), live prose; 'takes no anchor' alone matched notes about the NEXT row (fotns
    108, shippuden 179) and stays out: an outcome class, not note parsing. (3)
    Protocol, not a second grep: add-rule step 7 says fill retiredPhrases before
    the commit; consolidate deep says ledger-check is the gate and P23's
