@@ -46,6 +46,15 @@ export const ENTRIES: RulingEntry<string>[] = [
     cite: ['docs/restructure/DRIFT-LIST.md A-10'],
     supersedes: 'fan re-edit of One Piece, not an official series — excluded pending Sean confirmation',
   },
+  {
+    seriesId: 'sh%C5%8Dnan-pure-love-gang',
+    ruleId: 'I11',
+    value: "provenance corruption — a percent-encoded Drupal alias whose index title is another show's; shounan-junai-gumi exists by its ruled grid (G59 C) and does not need this page (Sean 2026-09-05)",
+    reason: "The AFL index slug for Shounan Junai Gumi is a percent-encoded alias (the macron in Shōnan) whose index title is Accelerator's; the series row carried it as afl_slug without a registry entry (the I2 class's first finding). Sean 2026-09-05 (Cursor-relayed): null the row's afl_slug and do NOT register it — the series already has a ruled manual grid. The disposition keeps backfill and the match ladder off the slug for good (I11), so a later title match can never re-adopt the page over the ruled grid (I44).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['docs/changelog.md §12.125'],
+  },
 ];
 
 /** audit-titles.ts consumer shape: afl slug → source_map note */

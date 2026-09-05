@@ -264,19 +264,24 @@ export const RULES: Rule[] = [
     family: 'I',
     title: 'Alias-corruption victims are excluded, not repaired',
     statement:
-      'A staged AFL show whose served page title disagrees (titlesAgree) with the AFL shows-index title for its slug is an alias-corruption victim: its staging and canonical rows are purged and the slug is excluded in source_map with a note, so sweeps skip it until a deliberate re-audit restores it when AFL fixes the alias.',
+      'A staged AFL show whose served page title disagrees (titlesAgree) with the AFL shows-index title for its slug is an alias-corruption victim: the WRITER refuses to stage it (G8 — stageAfl's title / alias mismatch files parse_integrity and holds; the flag is the listing), the slug's disposition is a ruling when Sean excludes it (I11, lib/rulings/title-exclusions.ts, asserted by assert-overrides#assertDispositions), and canonical rows are NEVER purged (P40) — a series that exists by another path (canon-tier, AFG, a ruled grid) keeps existing under its id; refix.ts re-stages the page when AFL fixes the alias. Amended 2026-09-05 after INCIDENT-2026-09-05: the old purge clause is what deleted six series.',
     why: 'chrono-crusade served another show under its slug (2026-08-22); publishing the wrong series under a stable id is worse than a gap.',
     ruledBy: 'session',
     ruledOn: '2026-08-22',
     origin: 'data-pipeline §9 AFL alias corruption; audit-titles.ts',
     enforcement: [
-      { path: 'scripts/ingest/audit-titles.ts', symbol: 'exclude' },
+      { path: 'scripts/ingest/lib/resolve.ts', symbol: 'stageAfl' },
+      { path: 'scripts/ingest/assert-overrides.ts', symbol: 'assertDispositions' },
+      { path: 'scripts/ingest/refix.ts' },
+      { path: 'scripts/ingest/history/audit-titles-RETIRED-2026-09-05.ts' },
       { path: 'scripts/ingest/lib/resolve.ts', symbol: 'titlesAgree' }],
     layer: 'writer',
-    auditClass: ['titles:corrupt'],
+    auditClass: [],
     witnesses: ['chrono-crusade'],
+    retiredPhrases: ['its staging and canonical rows are purged'],
+    amendedOn: ['2026-09-05'],
     status: 'live',
-    see: ['I11', 'alias defense'],
+    see: ['I11', 'alias defense', 'P40', 'G8'],
   },
 
   // ───────────────────────── franchise structure (principles) ─────────────────────────

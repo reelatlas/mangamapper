@@ -282,7 +282,7 @@
 - `R30` Verdicts cite the rule ids they applied (planned) *(planned)* — aka `rules_applied`, `rules_applied[]`, `verdict cites rule ids`
 - `R31` The PROTOCOL is pinned for an in-flight batch (planned) *(planned)* — aka `PROTOCOL pin`, `protocol pinned`, `pinned protocol`
 
-**P — Process & pipeline** (35)
+**P — Process & pipeline** (36)
 - `P1` The data cycle, seven steps run in order — aka `the data cycle`, `data cycle`, `the cycle`
 - `P2` Rules live in shared lib code, never inline at a call site — aka `invariant 1`, `hard invariant 1`, `rules live in lib`, `every-writer rule`
 - `P3` Any lib/ change → rebuild and deploy all four edge functions — aka `invariant 2`, `hard invariant 2`, `lib → four edges`, `lib → edges`, `missed edge deploy`
@@ -318,6 +318,7 @@
 - `P37` Episode-level display reads only the hydrated series — aka `metadata contract`, `card-hydration rule`, `hydration contract`, `hydrated series only`
 - `P38` Retired wording is a ledger field the gate greps — aka `retired phrases`, `retiredPhrases`, `retired wording`, `retired-phrase register`, `stale clause check`, `note-vs-row check`
 - `P39` Visibility: list only series with classified types — aka `visibility`, `series visibility`, `staged`, `staged series`, `series_staged`, `PUBLISHED`, `deriveVisibility`, `assertVisibility`, `hidden until classified`, `staged on seed`, `public by classifier`
+- `P40` No script deletes a series; a deletion is a ledger entry — aka `no script deletes a series`, `series deletion`, `the tombstone ledger`, `series_ledger`, `series_deleted_unruled`, `RULED_DELETIONS`, `the fixture index is not an authority`, `audit-titles retired`, `assertDispositions`, `the event-script trap`, `read it, dry-run it, or do not run it`, `INCIDENT-2026-09-05`, `the audit-titles incident`
 
 ## A — Anchors & position
 
@@ -4232,6 +4233,20 @@ series.visibility ∈ public | staged is DERIVED (lib/rulings/visibility.ts#deri
 - aliases: visibility, series visibility, staged, staged series, series_staged, PUBLISHED, deriveVisibility, assertVisibility, hidden until classified, staged on seed, public by classifier
 - see: P6, I42, G52, I44, G59, T6, P37
 
+### P40 · No script deletes a series; a deletion is a ledger entry
+
+A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape migration under Sean's explicit authorization — and by no audit, healer or puller: an exclusion is a source_map disposition (I11) and its staging row, never canonical, and a slug that equals a series id is a LISTING for a ruling. Every series creation and deletion is recorded in `series_ledger` (id, created_at, deleted_at, note) by database triggers the application cannot skip — evidence a cascade cannot erase — and the census class series_deleted_unruled lists any deletion no ruling names (lib/rulings/deleted-series.ts). The AFL fixture index (scripts/ingest/fixtures/afl-shows-index.html) is a matcher fixture, never an authority (G44 / G51): alias-corrupt pages are refused at the writer (G8, stageAfl's title / alias mismatch → parse_integrity), so the flag is the corrupt-page listing and no script re-judges it. The manual exclusions (lib/rulings/title-exclusions.ts) are asserted by a standard healer (assert-overrides#assertDispositions), never by an event script someone must remember to run; audit-titles.ts is retired to history/. An EVENT roster script runs only on its trigger, after it has been read, dry-run first where it has one — and a script with no dry-run is never assumed to have one (afg-expansion has none).
+
+*Why:* INCIDENT-2026-09-05 (scripts/ingest/research/discovery/INCIDENT-2026-09-05.md): to apply one slug exclusion the session ran audit-titles.ts without reading it; its exclude() judged 27 staged pages corrupt against a STALE fixture index (every verdict false) and deleted the `series` row whose id equalled each slug — six series gone through every cascade (chrono-crusade, kinnikuman, orient, kakegurui, city-hunter, elemental-gelade), four living series' pages excluded and unstaged, 31 source_map rows flipped, 24 flags dismissed, and the cascades erased the evidence with the data. No point-in-time recovery existed. Recovered the same day through the existing writers (option A, Sean's decision), with residues only where a value lived in a DB column no map records (mapping_mode, asterisk_review). Cursor's fix list (2026-09-05): audit-titles must not delete canonical; the fixture index is not an authority; tombstone + census class; event scripts are read, dry-run, or not run; move the script off the live roster — all five landed here.
+
+- ruled Sean 2026-09-05 (scripts/ingest/research/discovery/INCIDENT-2026-09-05.md §The durable fix; Sean 2026-09-05 ('lets start the recovery' with Cursor's fix list); changelog §12.126)
+- layer **both**
+- enforced: [supabase/migrations/20260905150000_series_ledger.sql](../supabase/migrations/20260905150000_series_ledger.sql) · [lib/rulings/deleted-series.ts#RULED_DELETIONS](../scripts/ingest/lib/rulings/deleted-series.ts) · [audit-ui-truth.ts#series_deleted_unruled](../scripts/ingest/audit-ui-truth.ts) · [assert-overrides.ts#assertDispositions](../scripts/ingest/assert-overrides.ts) · [lib/rulings/title-exclusions.ts#MANUAL_EXCLUDE](../scripts/ingest/lib/rulings/title-exclusions.ts) · [history/audit-titles-RETIRED-2026-09-05.ts](../scripts/ingest/history/audit-titles-RETIRED-2026-09-05.ts) · [rebuild.ts](../scripts/ingest/rebuild.ts) · [.claude/skills/apply-batch/SKILL.md](../.claude/skills/apply-batch/SKILL.md) · [.claude/skills/discover/SKILL.md](../.claude/skills/discover/SKILL.md) · [.claude/skills/consolidate/SKILL.md](../.claude/skills/consolidate/SKILL.md)
+- audit: `series_deleted_unruled`
+- witnesses: chrono-crusade, kinnikuman, orient, kakegurui, city-hunter, elemental-gelade
+- aliases: no script deletes a series, series deletion, the tombstone ledger, series_ledger, series_deleted_unruled, RULED_DELETIONS, the fixture index is not an authority, audit-titles retired, assertDispositions, the event-script trap, read it, dry-run it, or do not run it, INCIDENT-2026-09-05, the audit-titles incident
+- see: G57, I11, I1, G8, G44, G51, P5, P9, P20, P34
+
 ## Alias index
 
 - * Filler marker → `T16`
@@ -4401,12 +4416,14 @@ series.visibility ∈ public | staged is DERIVED (lib/rulings/visibility.ts#deri
 - artifacts are the handoff → `P11`
 - as-stored rendering → `A19`
 - assert-type-overrides → `T6`
+- assertDispositions → `P40`
 - assertFranchises → `I43`
 - assertVisibility → `P39`
 - asterisk model → `A43`
 - asterisk review workflow → `A43`
 - audit-afg-structure → `G30`
 - audit-discovery → `I42`
+- audit-titles retired → `P40`
 - audits verify outcomes → `P5`
 - author-declaration discriminator → `T9`
 - authoritative sources write canonical → `G5`
@@ -4837,6 +4854,7 @@ series.visibility ∈ public | staged is DERIVED (lib/rulings/visibility.ts#deri
 - identity-first, flag-first → `I3`
 - in-flow extras stay in → `I19`
 - in-flow movies/OVAs → `I19`
+- INCIDENT-2026-09-05 → `P40`
 - index-join rule → `R20`
 - ingest_fractionals → `G46`
 - Initial D rule → `N4`
@@ -4990,6 +5008,7 @@ series.visibility ∈ public | staged is DERIVED (lib/rulings/visibility.ts#deri
 - no one-offs (sources) → `G50`
 - no one-offs, ever → `P9`
 - no randomized intervals → `G16`
+- no script deletes a series → `P40`
 - no silent TODO → `P28`
 - non-main entries carry the why → `N33`
 - non-monotonic display ruling → `A19`
@@ -5095,6 +5114,7 @@ series.visibility ∈ public | staged is DERIVED (lib/rulings/visibility.ts#deri
 - Queue 3 LN ruling → `T24`
 - re-use is true data → `A31`
 - re-use never anchors → `A31`
+- read it, dry-run it, or do not run it → `P40`
 - read, don't skim → `P15`
 - reading chain → `T26`
 - rearranged zones → `A3`
@@ -5164,6 +5184,7 @@ series.visibility ∈ public | staged is DERIVED (lib/rulings/visibility.ts#deri
 - ruled wiki page → `G59`
 - RULED_ARCS → `A46`
 - RULED_CORRESPONDENCE → `A46`
+- RULED_DELETIONS → `P40`
 - RULED_LABELS → `N31`
 - RULED_STRUCTURE → `I39`
 - ruledChapterSpace → `N35`
@@ -5209,10 +5230,13 @@ series.visibility ∈ public | staged is DERIVED (lib/rulings/visibility.ts#deri
 - seed is a fact only → `I10`
 - seeded starts → `A10`
 - seiya +1 space witness → `V11`
+- series deletion → `P40`
 - series visibility → `P39`
 - series window → `G55`
 - series_arcs → `A46`
+- series_deleted_unruled → `P40`
 - series_external_ids → `I2`
+- series_ledger → `P40`
 - series_relations vocabulary → `I17`
 - series_scopes → `I36`
 - series_staged → `P39`
@@ -5340,6 +5364,7 @@ series.visibility ∈ public | staged is DERIVED (lib/rulings/visibility.ts#deri
 - the adoption sitting → `T26`
 - the ambiguity rule → `I4`
 - the apply discipline → `P15`
+- the audit-titles incident → `P40`
 - the candidate rule → `I42`
 - the capture table → `P29`
 - the chain → `T26`
@@ -5349,6 +5374,8 @@ series.visibility ∈ public | staged is DERIVED (lib/rulings/visibility.ts#deri
 - the data cycle → `P1`
 - the DBS relation → `I40`
 - the discover sitting → `I42`
+- the event-script trap → `P40`
+- the fixture index is not an authority → `P40`
 - the flag rule → `G1`
 - the FotNS-57 test → `T28`
 - the four crons → `G47`
@@ -5375,6 +5402,7 @@ series.visibility ∈ public | staged is DERIVED (lib/rulings/visibility.ts#deri
 - the START clause → `A18`
 - the story test → `T30`
 - the timelines model → `T30`
+- the tombstone ledger → `P40`
 - the umbrella → `I43`
 - the unverified share → `T28`
 - the verifier → `P19`
@@ -5482,6 +5510,6 @@ series.visibility ∈ public | staged is DERIVED (lib/rulings/visibility.ts#deri
 
 ## Scoreboard
 
-- rules: 285 (live 270, planned 8, superseded 7)
+- rules: 286 (live 271, planned 8, superseded 7)
 - live data rules with no audit class (the automation backlog): 82
-- by layer: writer 149 · display 23 · both 28 · process 85
+- by layer: writer 149 · display 23 · both 29 · process 85

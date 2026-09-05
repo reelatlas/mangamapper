@@ -87,6 +87,7 @@ ruled), add it to `lib/rulings/index.ts`, move the script to
 
 ## Traps this pipeline has actually hit
 
+- **An EVENT roster script runs only on its trigger, after you have READ it, with `--dry-run` first where it has one — and a script with no dry-run is never assumed to have one** (INCIDENT-2026-09-05, `P40`): `audit-titles.ts` was run to apply one exclusion and deleted six series through a cascade against a stale fixture index; `afg-expansion.ts` has no dry-run and created a series when the flag was passed. Never run a script for its side effect; find the ruling map its job belongs to.
 - **Repairs on derivation-tier rows get wiped** (`P8`): a repaired value on
   `mu` / `afg` / `afg-continua` is deleted by that source's next re-derive.
   Flip the row to `manual`. Batches 15/16 forgot — 14 rows carry a

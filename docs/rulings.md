@@ -2,7 +2,7 @@
 
 > GENERATED from `scripts/ingest/lib/rulings/**` by `scripts/restructure/gen-rulings.ts` — do not edit by hand. A ruling is an INSTANCE of a rule (`docs/rules.md`); the map is the record, this is the index.
 
-- rulings: 2491 across 290 series/keys · by Sean: 996 · UNRECORDED reasons: 8 · with a retire condition: 94
+- rulings: 2492 across 291 series/keys · by Sean: 997 · UNRECORDED reasons: 8 · with a retire condition: 94
 
 ## Retire conditions (re-evaluate when…)
 
@@ -3128,6 +3128,12 @@
 | `A40` | {"mapping_mode":"loose"} | 71% filler, manga stories cherry-picked non-linearly across 358 eps — no chapter mapping meaningful (animefillerlist + Wikipedia) | Sean 2026-08-24 · scripts/ingest/apply-research-batch.ts |  |
 | `G3` | {"flags":"open → confirmed","verdict":"research-tier verdict: loose adaptation — no chapter mapping is meaningful; mapping_mode=loose; Sean sign-off 2026-08-… | open ingest_flags closed with verdict: research-tier verdict: loose adaptation — no chapter mapping is meaningful; mapping_mode=loose; Sean sign-off 2026-08-24 | Sean 2026-08-24 · scripts/ingest/apply-research-batch.ts |  |
 | `T6` | {"180":"filler","357":"filler"} | Batch 18 wave 3 (2026-08-26): ja-WP's アニメエピソード一覧 ● index (原作に沿った内容, segment grain, matched stored typing 10/10 on neighbours) gives no ● to either row; 357 is the anime's originally-planned finale (studio ending, no adoption) → filler. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/sgt-frog.json |  |
+
+### sh%C5%8Dnan-pure-love-gang (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I11` | provenance corruption — a percent-encoded Drupal alias whose index title is another show's; shounan-junai-gumi exists by its ruled grid (G59 C) and does not … | The AFL index slug for Shounan Junai Gumi is a percent-encoded alias (the macron in Shōnan) whose index title is Accelerator's; the series row carried it as afl_slug without a registry entry (the I2 class's first finding). Sean 2026-09-05 (Cursor-relayed): null the row's afl_slug and do NOT register it — the series already has a ruled manual grid. The disposition keeps backfill and the match ladder off the slug for good (I11), so a later title match can never re-adopt the page over the ruled grid (I44). | Sean 2026-09-05 · docs/changelog.md §12.125 |  |
 
 ### shaman-king (1)
 

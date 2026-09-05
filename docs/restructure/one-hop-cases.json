@@ -544,6 +544,19 @@
         "visibility"
       ],
       "source": "discovery step 3, 2026-09-05"
+    },
+    {
+      "ask": "an audit script excluded a corrupt AFL slug and six series vanished — which rule forbids that, and where is the evidence a cascade cannot erase?",
+      "expected": [
+        "P40",
+        "I11",
+        "G57"
+      ],
+      "terms": [
+        "deletes",
+        "ledger"
+      ],
+      "source": "INCIDENT-2026-09-05"
     }
   ]
 }

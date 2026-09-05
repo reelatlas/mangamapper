@@ -22,6 +22,7 @@ import { retiredBySeries, RETIRED_ANNOTATIONS } from './lib/rulings/retired-anno
 import { LOCKED } from './lib/rulings/permanence';
 import { FRANCHISES, FRANCHISE_OF, franchiseMapProblems } from './lib/rulings/franchises';
 import { deriveVisibility } from './lib/rulings/visibility';
+import { MANUAL_EXCLUDE } from './lib/rulings/title-exclusions';
 import { arcsPartitionProblems, RULED_ARCS } from './lib/rulings/arcs';
 import { RULED_CORRESPONDENCE, upsertCorrespondence } from './lib/rulings/correspondence';
 import { SOURCE_RELATION_OVERRIDES } from './lib/rulings/source-relations';
@@ -278,6 +279,26 @@ async function assertVisibility() {
   console.log(`[assert-overrides] visibility (P39): ${staged} staged, ${n} asserted${DRY ? ' — DRY RUN' : ''}`);
 }
 
+// P40 / I11: the manual exclusions (lib/rulings/title-exclusions.ts) are
+// source_map dispositions asserted here — a disposition and its note, NEVER a
+// canonical delete (the incident of 2026-09-05: audit-titles' exclude() also
+// deleted the series whose id equalled the slug, through every cascade).
+async function assertDispositions() {
+  let n = 0;
+  const cur = new Map((await selectAll<{ afl_slug: string; disposition: string; note: string | null }>('source_map', 'afl_slug, disposition, note', (q) => q.in('afl_slug', Object.keys(MANUAL_EXCLUDE)))).map((r) => [r.afl_slug, r]));
+  for (const [slug, note] of Object.entries(MANUAL_EXCLUDE)) {
+    const c = cur.get(slug);
+    if (c && c.disposition === 'excluded' && c.note === note) continue;
+    n++;
+    console.log(`  ${slug}: ${c ? `${c.disposition}` : 'no row'} → excluded (I11 ruling)`);
+    if (!DRY) {
+      const { error } = await db.from('source_map').upsert({ afl_slug: slug, anilist_id: null, match_method: 'manual', confidence: 1, verified: true, disposition: 'excluded', note, updated_at: new Date().toISOString() });
+      if (error) throw new Error(`${slug}: ${error.message}`);
+    }
+  }
+  console.log(`[assert-overrides] dispositions (I11 / P40): ${Object.keys(MANUAL_EXCLUDE).length} ruled exclusions, ${n} asserted${DRY ? ' — DRY RUN' : ''}`);
+}
+
 // A46: series_arcs mirrors RULED_ARCS (origin 'ruling'); a parallel series'
 // arcs must partition 1..N — a map that does not is refused, never half-written.
 async function assertArcs() {
@@ -372,6 +393,7 @@ async function main() {
   await assertPermanence();
   await assertFranchises();
   await assertVisibility();
+  await assertDispositions();
   await assertMap('types (T6)', EPISODE_TYPE_OVERRIDES, 'type');
   await assertRetiredAnnotations();
   await assertStandingAnnotations();

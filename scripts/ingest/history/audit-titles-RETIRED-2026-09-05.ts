@@ -1,3 +1,8 @@
+// RETIRED 2026-09-05 (P40) — NEVER RUN. This script's exclude() deleted the `series` row whose id equalled a slug it
+// judged corrupt against a STALE fixture index; on 2026-09-05 it deleted six series through every cascade
+// (research/discovery/INCIDENT-2026-09-05.md). Its two jobs moved: the manual exclusions are asserted by
+// assert-overrides#assertDispositions (a disposition and its note, never a delete); alias-corrupt pages are
+// refused at the writer (G8, stageAfl's title / alias mismatch → parse_integrity) — the flag is the listing.
 // Full staging audit against the AFL index (the ground truth for what each
 // slug should be): staged title vs index anchor title. Confirmed mismatches
 // are alias-corruption victims — purge staging + canonical, exclude with a
@@ -7,10 +12,10 @@
 //   npx tsx --env-file=.env.ingest scripts/ingest/audit-titles.ts
 
 import { readFileSync } from 'node:fs';
-import { parseShowsIndex } from './lib/afl';
-import { db, selectAll, startRun, finishRun } from './lib/db';
-import { titlesAgree } from './lib/resolve';
-import { MANUAL_EXCLUDE } from './lib/rulings/title-exclusions';
+import { parseShowsIndex } from '../lib/afl';
+import { db, selectAll, startRun, finishRun } from '../lib/db';
+import { titlesAgree } from '../lib/resolve';
+import { MANUAL_EXCLUDE } from '../lib/rulings/title-exclusions';
 
 // Content exclusions per Sean's rulings that slug patterns couldn't catch
 // live in lib/rulings/title-exclusions.ts (restructure T2.1); MANUAL_EXCLUDE

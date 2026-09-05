@@ -56,7 +56,6 @@ export const HEAL: RosterEntry[] = [
   { file: 'anilist-restage.ts', when: 'event', trigger: 'any change to MEDIA_FIELDS in lib/anilist.ts', note: 'refetch + hash-gated restage of every series/component media so staging carries the current query shape (G44 analogue; T4.1 added relation countryOfOrigin)' },
   { file: 'rederive-anchors.ts', when: 'event', trigger: 'any change to lib/afg deriveAnchors or lib/anchors syncAnchors', note: 're-derive AFG anchors from staging (A20/A24)' },
   { file: 'refix.ts', when: 'event', trigger: 'parse_integrity flags after an AFL page change', note: 'no-conditional re-scrape of held slugs' },
-  { file: 'audit-titles.ts', when: 'event', trigger: 'title_incomplete rows; NOTE reads the static fixture index (T0 finding)', note: 'staged titles vs AFL index; MANUAL_EXCLUDE rulings (I11)' },
   { file: 'rebuild.ts', when: 'event', trigger: 'CANONICAL-SHAPE MIGRATION ONLY — wipes canonical; not idempotent; Sean-authorized', note: 'full re-resolve from staging' },
 ];
 

@@ -41,6 +41,7 @@ import { loadAllEpisodeTies, sideSourceStandingProblem } from './lib/side-source
 import { REVIEWED_NUMBERED_SPECIALS } from './lib/rulings/reviewed-specials';
 import { FRANCHISES, FRANCHISE_OF, OWN_IP } from './lib/rulings/franchises';
 import { deriveVisibility } from './lib/rulings/visibility';
+import { RULED_DELETIONS } from './lib/rulings/deleted-series';
 
 async function main() {
   const series = await selectAll<any>('series', 'id, afl_slug, anilist_id, source_type, source_relation, manga_status, status, start_date, end_date, aired_episodes, total_episodes, total_chapters, total_volumes, latest_known_chapters, manga_anilist_id, manga_start_chapter, mapping_mode, asterisk_review, franchise_id, visibility, mal_id');
@@ -110,7 +111,7 @@ async function main() {
     rearranged_zone_unanchored: [], rearranged_zone_acknowledged: [], backjump_continue_unruled: [], backjump_continue_unnoted: [], annotation_contradicts_row: [],
     title_incomplete: [], airdate_incomplete: [], airdate_regression: [], airdate_withheld: [], episode_date_off_window: [], asterisk_unreviewed: [],
     fractional_unmodeled: [], annotation_invalid: [], annotation_retired_standing: [], afl_anime_canon_unruled: [], format_missing: [], episode_without_component: [], watch_order_kind_missing: [],
-    permanence_candidate: [], permanence_violation: [], series_without_franchise: [], identity_registry_gap: [], adoption_held: [], series_staged: [], mixed_fragment_only: [], run_stuck: [], unverified_share: [], sliver_only_anchor: [], chain_source_unmapped: [], side_source_on_chain: [], source_work_unlabelled: [], grid_unminted: [], type_source_disagreement: [], type_default_unclassified: [], side_source_unadopted: [],
+    permanence_candidate: [], permanence_violation: [], series_without_franchise: [], identity_registry_gap: [], adoption_held: [], series_staged: [], series_deleted_unruled: [], mixed_fragment_only: [], run_stuck: [], unverified_share: [], sliver_only_anchor: [], chain_source_unmapped: [], side_source_on_chain: [], source_work_unlabelled: [], grid_unminted: [], type_source_disagreement: [], type_default_unclassified: [], side_source_unadopted: [],
     series_without_source_kind: [], no_source: [], no_instrument: [], ok_full: [], ok_no_volume: [], ok_loose: [], ok_parallel: [],
     source_relation_missing: [], parallel_has_anchor: [], arcs_not_partition: [], arc_row_conflict: [], correspondence_invalid: [], correspondence_incomplete: [],
     pending_airing_no_anchor: [], pending_finished_no_totals: [], pending_no_canon: [], pending_other: [],
@@ -1131,6 +1132,13 @@ async function main() {
       hitsBy.get(e.series_id)!.push(`${e.number} [${[...kinds].join('+')}]`);
     }
     for (const [sid, rows] of hitsBy) classes.mixed_fragment_only.push(`${sid}: ${rows.length} mixed row(s) with only fragment ties and no anchor — ${rows.join(', ')} — T28: a fragment keeps mixed ONLY if it is the SOLE adaptation of a load-bearing source beat (the FotNS-57 test, 2026-08-28); otherwise filler + annotation — triage each`);
+  }
+  // P40 — the tombstone ledger (series_ledger, kept by DB triggers): a deletion no ruling names is listed until
+  // it is ruled (lib/rulings/deleted-series.ts) or the id is re-created; a cascade cannot erase this evidence
+  {
+    const alive = new Set(series.map((s: any) => s.id));
+    for (const l of await selectAll<any>('series_ledger', 'id, deleted_at, note', (q) => q.not('deleted_at', 'is', null)))
+      if (!alive.has(l.id) && !RULED_DELETIONS.has(l.id)) classes.series_deleted_unruled.push(`${l.id}: deleted ${String(l.deleted_at).slice(0, 16)} with no ruling (P40) — ${l.note ?? ''}`);
   }
   // I2 — the identity registry as an OUTCOME (audit added 2026-09-05, discovery step 3): every series' anilist / mal / afl
   // ids are registered and agree with the row; a registered afl / afg slug has a staged page; a registration never points

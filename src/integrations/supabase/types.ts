@@ -891,6 +891,27 @@ export type Database = {
           },
         ]
       }
+      series_ledger: {
+        Row: {
+          created_at: string
+          deleted_at: string | null
+          id: string
+          note: string | null
+        }
+        Insert: {
+          created_at?: string
+          deleted_at?: string | null
+          id: string
+          note?: string | null
+        }
+        Update: {
+          created_at?: string
+          deleted_at?: string | null
+          id?: string
+          note?: string | null
+        }
+        Relationships: []
+      }
       series_relations: {
         Row: {
           from_series: string

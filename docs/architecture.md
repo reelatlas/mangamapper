@@ -276,7 +276,7 @@ anchor included). This forced own-slug identity (§3) and the permanent
 page-identity defenses in `stageAfl`. The shows whose slugs were stolen
 (Kakegurui, Blue Period, Bakemonogatari, Pokémon generations, City Hunter,
 Zeta/ZZ Gundam…) are unreachable on AFL until it is fixed; the periodic
-re-audit (`audit-titles.ts`, runbook) restores them when AFL does.
+`refix.ts` restores them when AFL does (`audit-titles.ts` was retired 2026-09-05 under `P40` — it deleted series).
 
 Rules: `G8` alias defense · `I14` alias-corruption victims excluded · `I1`
 our slug is identity.

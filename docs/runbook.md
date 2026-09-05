@@ -42,7 +42,7 @@ generated bundles) are architecture — see `docs/architecture.md` §5.
 Event triggers (not scheduled): `mu-backfill` on new-series ingestion;
 `volumes-backfill` on the volumes-staleness flag; the stitcher on flags after
 refreshes (weekly manual or watcher until AniList stabilizes);
-`audit-titles` re-audit (monthly manual); new-show discovery from AFL's
+the alias-corrupt pages hold at the writer (`G8`, parse_integrity flags — `audit-titles` was RETIRED 2026-09-05, `P40`; the manual exclusions are asserted by `assert-overrides#assertDispositions`); new-show discovery from AFL's
 index (`backfill.ts`, occasional — the hourly function refreshes known pages
 only).
 

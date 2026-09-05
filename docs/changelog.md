@@ -1154,6 +1154,29 @@
    19-23 / 39 (chain_source) and 18 / 93-95 (AFL's loose Mixed bucket),
    beelzebub 15 / 26-28 / 51, rurouni TV ep 95 (identity). Batch 22 opens on
    the boruto follow-up (lanes I + C) with the batch-21 tooling copied.
+126. ✅ **P40 — NO SCRIPT DELETES A SERIES; A DELETION IS A LEDGER ENTRY (the
+    durable fix after INCIDENT-2026-09-05; Sean 2026-09-05, Cursor's five-point
+    list).** Migration 20260905150000_series_ledger.sql: `series_ledger` (id,
+    created_at, deleted_at, note) kept by AFTER INSERT / AFTER DELETE triggers
+    on `series` (security definer, so no writer can skip them), backfilled with
+    the 345 living series; the census class `series_deleted_unruled` lists any
+    ledger deletion no ruling names (lib/rulings/deleted-series.ts, empty today
+    — the incident's six predate the ledger and were re-created).
+    audit-titles.ts RETIRED to history/audit-titles-RETIRED-2026-09-05.ts and
+    off the roster: its exclude() deleted canonical series against a STALE
+    fixture index; its two jobs moved — the manual exclusions
+    (lib/rulings/title-exclusions.ts, now carrying Shounan's ruling too: 5
+    entries) are asserted by the standard healer
+    assert-overrides#assertDispositions (a disposition and its note, never a
+    delete; 0 asserted on the first run — all already excluded), and
+    alias-corrupt pages are refused at the writer (G8, stageAfl's title / alias
+    mismatch → parse_integrity: the flag IS the listing). CLAUDE.md hard
+    invariant 9; the event-script trap in apply-batch, discover and consolidate
+    (read it, dry-run it, or do not run it; a script with no dry-run —
+    afg-expansion — is never assumed to have one); the runbook and architecture
+    mentions updated; a one-hop case; I14's enforcement re-pointed. Census:
+    series_deleted_unruled 0 · ledger 345 = series 345 · ruling_violation 0 ·
+    identity_registry_gap 0 · edges deployed · 220 tests.
 125. ⚠✅ **THE FIRST DISCOVERY MINT (Sean's go) — then INCIDENT 2026-09-05
     (audit-titles.ts deleted six series) — RECOVERED the same day (option A,
     Sean's decision; scripts/ingest/research/discovery/INCIDENT-2026-09-05.md is

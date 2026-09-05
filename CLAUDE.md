@@ -47,6 +47,10 @@ Each is a ledger record — cite the id.
    source's next re-derive.
 8. **`P9` No one-offs, no hacks, no escape hatches that become permanent.**
    If a fix would only work for one series, it is the wrong fix.
+9. **`P40` No script deletes a series row.** Only `rebuild.ts` under Sean's
+   authorization; an exclusion is a disposition, never a delete; the tombstone
+   ledger records every deletion. An EVENT roster script runs only on its
+   trigger, after you have read it, dry-run first — never for a side effect.
 
 ## Where things are — the router
 
