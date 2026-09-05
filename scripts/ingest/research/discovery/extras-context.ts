@@ -102,6 +102,7 @@ async function main() {
         '| ep | date | type | title | anchor (start–chapter · adapted · continue) |', '|---|---|---|---|---|',
         ...around.map((e) => { const a = anchors.get(e.number); return `| ${e.number}${pos != null && e.number === Math.floor(pos) ? ' ◀ the work sits after this row' : ''} | ${e.air_date ?? ''} | ${e.type ?? ''} | ${(e.title ?? '').replace(/\|/g, '/')} | ${a ? `${a.start_chapter ?? '?'}–${a.chapter ?? '?'} · ${a.chapters_adapted ?? ''} · ${a.continue_chapter ?? ''}` : ''} |`; }),
         '', `Owner's run: ${eps.length} rows${eps.length ? ` (ep ${eps[0].number} ${eps[0].air_date ?? '?'} → ep ${eps[eps.length - 1].number} ${eps[eps.length - 1].air_date ?? '?'})` : ''}.`,
+        (() => { const last = [...anchors.values()].filter((x) => x.chapter != null).sort((x, y) => y.episode - x.episode)[0]; return last ? `The run's HONEST TERMINAL (the last anchored row): ep ${last.episode} → END ch ${last.chapter}${last.continue_chapter != null ? ` · continue ${last.continue_chapter}` : ''} — rows after it carry no chapter; a work continuing the run starts after ch ${last.chapter}.` : 'The run carries no chapter anchors (a novel owner, or an unanchored run) — the position rests on dates and content.'; })(),
       ];
       const file = `${o}__${c.anilistId}.md`;
       writeFileSync(join(OUT, file), lines.join('\n') + '\n');

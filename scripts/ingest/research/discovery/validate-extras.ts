@@ -17,9 +17,10 @@ type PerWork = { series_id: string; anilist_id: number; title: string; summary: 
 type Triage = { series_id: string; summary: string; works: { anilist_id: number; title: string; adapts_chapters: string; chapters: string | null; why: string; sources: string[] }[]; flags_for_sean: string[] };
 
 const chapters = (c: Chap[]) => c.map((x) => (x.end != null && x.end !== x.start ? `${x.start ?? '?'}-${x.end}` : String(x.start ?? x.note ?? '?'))).join(', ');
-/** a novel owner's chapters are volume-local (T25 light_novel): the ruling stores the volume beside the chapter string, the numeric chapter only when it is one */
-const firstChapter = (c: Chap[]): number | null => { const s = c[0]?.start; return typeof s === 'number' ? s : null; };
-const volumeOf = (c: Chap[]): number | null => { for (const x of c) { if (typeof x.volume === 'number') return x.volume; const m = String(x.start ?? '').match(/vol\s*(\d+)/i) ?? String(x.note ?? '').match(/vol(?:ume)?\s*(\d+)/i); if (m) return Number(m[1]); } return null; };
+/** the ruling's `chapter` is the END — the last numbered unit adapted (A4's convention; the Abyss / Mugen Train verifiers) — never the first listed unit (KonoSuba leads with an unnumbered epilogue scene) */
+const endChapter = (c: Chap[]): number | null => { for (const x of [...c].reverse()) { const e = x.end ?? x.start; if (typeof e === 'number') return e; } return null; };
+/** a novel owner's chapters are volume-local (T25 light_novel): the volume of the END unit, from its `volume` field or a "vol N" in its start / note — searched from the END backwards */
+const volumeOf = (c: Chap[]): number | null => { for (const x of [...c].reverse()) { if (typeof x.volume === 'number') return x.volume; const m = String(x.start ?? '').match(/vol\s*(\d+)/i) ?? String(x.end ?? '').match(/vol\s*(\d+)/i) ?? String(x.note ?? '').match(/vol(?:ume)?\s*(\d+)/i); if (m) return Number(m[1]); } return null; };
 const esc = (s: string) => s.replace(/\|/g, '/').replace(/\n/g, ' ');
 
 async function main() {
@@ -46,15 +47,18 @@ async function main() {
       perWork.push({ file: f, v: p });
     }
   }
-  console.log(`[validate-extras] ${files.length} verdict file(s): ${perWork.length} per-work, ${triage.length} triage · ${problems.length} problem(s)${problems.length ? '\n  ' + problems.join('\n  ') : ''}`);
+  // the ledger note is short by design (RelatedWorkRuling.note; the Slam Dunk verifier: a 1,480-char `why` sliced at 400 lost its conclusion) — over-cap
+  // fields are WARNINGS: the entry is written by hand at curation, never truncated silently
+  const warnings = perWork.filter(({ v }) => (v.position?.why ?? '').length > 400 || (v.summary ?? '').length > 900).map(({ file, v }) => `${file}: position.why ${(v.position?.why ?? '').length} chars / summary ${(v.summary ?? '').length} chars — over the 400 / 900 ledger caps: write the note and reason by hand (lead with the conclusion and the caveat)`);
+  console.log(`[validate-extras] ${files.length} verdict file(s): ${perWork.length} per-work, ${triage.length} triage · ${problems.length} problem(s)${problems.length ? '\n  ' + problems.join('\n  ') : ''}${warnings.length ? `\n  ${warnings.length} over-cap note(s) (hand-curate):\n  ` + warnings.join('\n  ') : ''}`);
   if (process.argv.includes('--entries')) {
     const today = new Date().toISOString().slice(0, 10);
     console.log('\n// ---- proposed RelatedWorkRuling entries (from the verdicts; Sean rules — paste after his ruling) ----');
     for (const { file, v } of perWork) {
       const pos = v.position?.verdict === 'corrected' && v.position.proposed != null ? `, position: ${v.position.proposed}` : '';
       const vol = volumeOf(v.chapters_adapted ?? []);
-      const ch = (v.chapters_adapted ?? []).length ? `, chapter: ${firstChapter(v.chapters_adapted)}${vol != null ? `, volume: ${vol}` : ''}, chaptersAdapted: ${JSON.stringify(chapters(v.chapters_adapted))}` : '';
-      console.log(`  { seriesId: '${v.series_id}', ruleId: 'I45', value: { anilistId: ${v.anilist_id}, standing: '${v.standing}'${ch}${pos}, note: ${JSON.stringify((v.recap ? 'recap; ' : '') + (v.adopted ? `adopted{${v.adopted.basis}}: ${v.adopted.note}; ` : '') + v.position.why).slice(0, 400)} },\n    reason: ${JSON.stringify(`${v.summary} (${v.confidence}; verdict ${file})`).slice(0, 900)},\n    ruledBy: 'Sean', ruledOn: '${today}', cite: ${JSON.stringify([`scripts/ingest/research/discovery/out/${file}`, ...(v.sources ?? []).slice(0, 4)])} },`);
+      const ch = (v.chapters_adapted ?? []).length ? `, chapter: ${endChapter(v.chapters_adapted)}${vol != null ? `, volume: ${vol}` : ''}, chaptersAdapted: ${JSON.stringify(chapters(v.chapters_adapted))}` : '';
+      console.log(`  { seriesId: '${v.series_id}', ruleId: 'I45', value: { anilistId: ${v.anilist_id}, standing: '${v.standing}'${ch}${pos}, note: ${(v.position?.why ?? '').length > 400 ? '/* OVER CAP — write by hand: the conclusion + the caveat */' : JSON.stringify((v.recap ? 'recap; ' : '') + (v.adopted ? `adopted{${v.adopted.basis}}: ${v.adopted.note}; ` : '') + v.position.why)} },\n    reason: ${(v.summary ?? '').length > 900 ? '/* OVER CAP — write by hand from the summary */' : JSON.stringify(`${v.summary} (${v.confidence}; verdict ${file})`)},\n    ruledBy: 'Sean', ruledOn: '${today}', cite: ${JSON.stringify([`scripts/ingest/research/discovery/out/${file}`, ...(v.sources ?? []).slice(0, 4)])} },`);
     }
     for (const { file, v } of triage) for (const w of v.works) if (w.adapts_chapters === 'no') console.log(`  { seriesId: '${v.series_id}', ruleId: 'I45', value: { anilistId: ${w.anilist_id}, standing: 'filler', note: ${JSON.stringify(`original (triage): ${w.why}`).slice(0, 300)} },\n    reason: ${JSON.stringify(`Owner triage (${file}): ${w.title} adapts no chapters of the instrument — ${w.why}`).slice(0, 600)},\n    ruledBy: 'Sean', ruledOn: '${today}', cite: ${JSON.stringify([`scripts/ingest/research/discovery/out/${file}`, ...(w.sources ?? []).slice(0, 3)])} },`);
     return;

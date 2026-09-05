@@ -48,7 +48,10 @@ async function main() {
   const counters = { fetched: 0, unchanged: 0, changed: 0, flagged: 0 };
   try {
     const input = await loadDiscoveryInput();
-    const cands = haloCandidates(input).filter((c) => LEDGER_BUCKETS.has(c.bucket) && c.proposal !== 'unstaged');
+    // date-ascending, so works sharing a slot take it in air-date order (freePosition steps 0.01 per later work) — the KonoSuba S2 OVA (2017)
+    // before Legend of Crimson (2019). A stored row keeps its position; a cluster's ORDER is a ruling (RelatedWorkRuling.position) once verdicts land
+    const dateOf = (id: number) => { const m = input.staged.get(id) as { startDate?: { year?: number | null; month?: number | null; day?: number | null } | null } | undefined; return isoDate(m?.startDate) ?? '9999'; };
+    const cands = haloCandidates(input).filter((c) => LEDGER_BUCKETS.has(c.bucket) && c.proposal !== 'unstaged').sort((x, y) => dateOf(x.anilistId).localeCompare(dateOf(y.anilistId)));
     const episodes = await selectAll<{ series_id: string; number: number; air_date: string | null }>('episodes', 'series_id, number, air_date');
     const epsBy = new Map<string, { number: number; air_date: string | null }[]>();
     for (const e of episodes) epsBy.set(e.series_id, [...(epsBy.get(e.series_id) ?? []), e]);

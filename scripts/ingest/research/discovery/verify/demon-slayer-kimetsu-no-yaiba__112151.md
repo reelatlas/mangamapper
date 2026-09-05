@@ -1,0 +1,89 @@
+# Verification — demon-slayer-kimetsu-no-yaiba × AniList 112151 "Demon Slayer -Kimetsu no Yaiba- The Movie: Mugen Train" (related-works wave 1)
+
+- Verdict under review: `scripts/ingest/research/discovery/out/demon-slayer-kimetsu-no-yaiba__112151.json`
+- Context the author had: `scratchpad/extras-w1/demon-slayer-kimetsu-no-yaiba__112151.md`
+- Contract: `scripts/ingest/research/discovery/PROTOCOL-extras.md` (PER WORK shape)
+- Verifier: Fable 5.1 (R24 — a different model than authored). 2026-09-05.
+- Method: every one of the verdict's 21 sources re-fetched — the 14 fandom pages via the MediaWiki API (`action=parse&prop=wikitext`, never HTML) plus Episode 29-32 and Chapter 69 which the verdict cites only in aggregate; ja-Wikipedia's film article via its API, plus the ja-WP anime article (鬼滅の刃 (アニメ)) and the ja-WP manga article (鬼滅の刃) as independent checks; MangaUpdates via its API; AV Watch, the two Aniplex of America story pages, animatetimes and Cinemarche as raw HTML → text. AniList not queried (disabled today; its facts are in the context). No DB access; no repo file touched except this report.
+
+## Conclusion: SOUND WITH NOTES
+
+Standing `canon`, chapters 54-66 with ch 54 page-split against our ep 26, `recap: false`, position 26.5 confirmed, no repairs, confidence `high` — every value reproduces from the primary sources, and the structural claim that carries the verdict's weight (our rows 28-33 ARE the theatrical feature in six parts; row 27 is a wholly original TV episode) is stated verbatim by the official ufotable / Aniplex / Shueisha statement, by both ja-WP articles, by the fandom film infobox and by animatetimes. The findings below are one wrong gloss inside the row note (it would ship into the ruling note if copied), two citation-precision defects, and disclosure gaps. Nothing changes the standing, the span or the position.
+
+## Recap baseline
+
+### demon-slayer-kimetsu-no-yaiba
+
+| row | stored | verdict | verifier |
+|---|---|---|---|
+| Mugen Train (112151) @ 26.5 | PENDING · kind movie · chapter — · chapters_adapted — · position 26.5 (date-derived) · origin halo · no ruling (`related-works.ts` ENTRIES is empty; no 112151 anywhere in `lib/rulings/`) | canon · [54-66] (ch 54 from p. 5; 55-66 in full) · recap false · position 26.5 confirmed · adopted null · repairs [] · confidence high | SOUND on standing, span, recap, position, repairs, confidence. Row note misplaces Rengoku's bento into ep 26's pages (finding 1); the 約70カット number is attributed to a ja-WP page that does not carry it (finding 2); MU is called "per-work" when it segments by TV season (finding 3). Fix the wording at curation |
+| ep 26 (touched by the seam, not by the verdict) | canon · START 53 · END 54 · adapted 51-54 · continue blank | untouched — the film's first source page is ch 54 p. 5; flag 3 proposes a CONDITIONAL A47 hold (END 53 + partial{54 pp 1-4}) only once rows 28-33 anchor | consistent with A47's text ("a tail of at most 5 pages … when the next anchored episode STARTS on X … Without a next anchored episode the tail stands"): fandom Episode_26 `chapters` = 51 (p. 12-19), 52, 53 (p. 5-21), **54 (p. 1-4)**; MU S1 end "Vol 7, Chap 54 Page 4". Not actionable today, exactly as the verdict says. The blank continue is a pre-existing gap outside this ask |
+| ep 27 | filler · no anchor | filler confirmed, anime-original, no anchor (A1); a prequel to the film's events ("during Chapter 53") | SOUND: fandom "Episode 27 is entirely anime-original. In the manga, it appears to take place during the events of Chapter 53" (no `chapters` field); ja-WP film article アニメオリジナルエピソード; AV Watch's official statement 完全新作エピソード; cast = Slasher, Fuku, Tomi, Tatsu (all studio characters). The Aniplex of America ep-1 synopsis is consistent but does not itself say "original" — two of the three legs bear the weight, which is enough |
+| ep 28, ep 29 | canon · no anchor (grid shows empty anchors; rows 30-33 are outside the context grid — stored values unseen by me) | flag 2 (outside the ask): 28 = 54 (p. 5-19), 55 (p. 1-4, 14-19); 29 = 55 (p. 5-13), 56, 57 (p. 1-11, 15-19); 30 = 57 (p. 11-14), 58, 59; 31 = 60, 61, 62 (p. 1-2); 32 = 62 (p. 3-19), 63, 64 (p. 1-2); 33 = 64 (p. 3-18), 65, 66; 34 = 67-70 | every field reproduces verbatim from fandom Episode_28 … Episode_34. Two shapes correctly foreseen (ch 55 un-cross-cut across 28/29 → START back-jump + `rearranged`; 2-page tails on 31 and 32 → A47). This is episode-row work for the work-list, not this ruling |
+
+## Findings, ranked by damage
+
+### 1. Row note: "S1 ep 26 already animated pp. 1-4 — the arrival at the station and Rengoku's bento" — the bento is NOT in ep 26's share (low damage; a false description that would ship into the ruling note if copied verbatim)
+
+- File: `out/demon-slayer-kimetsu-no-yaiba__112151.json`, `chapters_adapted[0].note`.
+- Evidence: fandom Episode_26's plot ends with the headbutt, the station police, hiding the swords, the chase onto the moving train and "Onboard the train with them are the Flame Hashira and Lower Rank One" — the words "Delicious", "bento", "Umai" occur nowhere on the page (Kyojuro is in the cast list only as that closing glimpse). Episode_28's plot OPENS on it: "they hear someone continually yelling, 'Delicious!'. The three realize it is Kyojuro himself, happily enjoying bento boxes". Chapter_54's summary puts the bento after the boarding — i.e. in the p. 5+ share the wiki and MU give to ep 28 / the film.
+- The numbers are unaffected (if anything the bento being p. 5+ is more evidence that the film starts there). Fix the gloss: "pp. 1-4 — the station, Inosuke's headbutt, the police, boarding; the bento scene is p. 5 onward and the film's".
+
+### 2. "ja-WP and the official ufotable/Aniplex/Shueisha statement quoted by AV Watch both say … roughly 70 newly added cuts" — the cited ja-WP page does not carry the number (low damage; citation precision)
+
+- The URL in `sources` is the ja-WP FILM article (劇場版「鬼滅の刃」無限列車編). Its sentence, verbatim: 「劇場版本編は第2話から第7話として分割され、新規カットおよび予告編、BGMなどを追加した上で放送される。」— 新規カット, no count. "約70カット" occurs zero times in that article (grep of the full wikitext).
+- The number IS on ja-WP — in the ANIME article, 鬼滅の刃 (アニメ) §無限列車編: 「第2話から第7話では劇場アニメ本編を分割し、約70カットの新規映像および予告編、新規オープニング・エンディング映像・主題歌、BGMなどを追加している」— which is not in the sources list. `position.why` attributes the count to AV Watch alone and is correct.
+- Fix: add `https://ja.wikipedia.org/w/api.php?action=parse&page=鬼滅の刃_(アニメ)&prop=wikitext` to sources (it is also an independent third statement of the split), or attribute the count to AV Watch only.
+
+### 3. "MangaUpdates' per-work coverage segments" — MU segments by TV SEASON; the film has no MU segment of its own (low damage; precision)
+
+- Fetched `anime.start`, verbatim: `Vol 1, Chap 1 (S1) / Vol 7, Chap 54 Page 5 (S2) / Vol 12, Chap 98 (S3) / Vol 15, Chap 128 (S4) / Vol 16, Chap 140 (Infinity Castle Movie 1)`; `anime.end`: `Vol 7, Chap 54 Page 4 (S1) / Vol 11, Chap 97 (S2) / Vol 15, Chap 127 (S3) / Vol 16, Chap 139 (S4) / Vol 18, Chap 156 (Infinity Castle Movie 1)`. "Mugen Train" appears nowhere in the record. MU's "S2" is the 18-episode TV season (無限列車編 + 遊郭編).
+- The seam transfers to the film only through the identity the verdict proves elsewhere (rows 28-33 = the film). That is sound — but the ruling note should say it: "MU's S2 (TV) start = ch 54 p. 5; MU has no segment for the film; the page rides on TV ep 2 = the film's first reel".
+
+### 4. The film's page-level START is a TV-cut fact transferred, not a film-level citation (cosmetic; disclosure)
+
+- Every page-level source (fandom Episode_28's field, MU's S2 string) describes the TV cut. The fandom film page has NO chapters / adapted-from field (infobox: `episodes = 28 - 33` only); ja-WP gives volumes (第7巻および第8巻), no chapters or pages. The CHAPTER 54 is beyond doubt (arc page 54-66; film infobox → ep 28 → 54; ja-WP vol 7; MU). Only "from p. 5" is inherited. If the film's opening reel restages the station beat, that is re-shown material (T28: weightless) and the value stands either way. Label it "(TV-cut pages; the film carries no page-level source of its own)".
+
+### 5. Wiki-internal wrinkles at the END that the verdict cites past without mention (cosmetic; R3 disclosure)
+
+- Chapter_66's infobox reads `anime episode = 33, 34` (the verdict cites this page but not the "34"); the Mugen Train Arc page lists the arc's episodes as "The Movie – Mugen Train / 27 - 34" while bounding its chapters at 54-66. Both are the wiki's TV-cut bookkeeping: Episode_34's plot opens by RE-SHOWING ch 66's aftermath (Tanjiro remembering, the trio crying, the Kakushi arriving) before its own ch 67 material (Muzan as Toshikuni, Akaza punished, the sword destroyed, the Butterfly Mansion, the Rengoku estate — all ch 67 per its summary). Neither moves the film's end: Episode_33's plot tail carries every ch 66 beat through Kagaya's "not one of the 200 passengers was killed … his demise does not sadden him"; ja-WP's film synopsis ends on the same line. The ruling note should carry one clause so the next reader does not rediscover the "34".
+
+### 6. Wording overreach and shape (cosmetic)
+
+- Summary: "our rows 27-33 are not a sequel to the film, they ARE the film" — then, in the same sentence, row 27 "is a wholly new anime-original episode". `position.why` has the precise form ("rows 27-33 are the film plus one original episode"; "rows 28-33 ARE the film"); the curator should copy that, not the summary's.
+- "it is the one episode Crunchyroll's Infinity Castle marathon omitted" — the wiki says only "this episode was omitted"; it does not say it was the ONLY one. Drop "the one".
+- `summary` is ~14 sentences against the protocol's "3-6"; `position.why` is ~500 words. Content is right; the ruling `note` is short by design.
+
+## Checked and found sound
+
+- **Span 54-66, two independent instruments agreeing (R3; `high` earned).** Fandom: Episode_28 `54 (p. 5-19), 55 (p. 1-4, 14-19)` … Episode_33 `64 (p. 3-18), 65, 66`; film infobox `episodes = 28 - 33`; Mugen Train Arc `chapters = 54 - 66`; Chapter_54 `anime episode = 26, 28`; Chapter_67 `arc = Entertainment District Arc`, `anime episode = 34`; Episode_34 `67, 68, 69, 70`. ja-WP film article, verbatim: 「テレビアニメ版の『竈門炭治郎 立志編』の続編として、原作コミックスの第7巻および第8巻に収録されている無限列車での戦いを描く」; its synopsis ends 「煉獄の死は鎹鴉によって直ちに他の柱たちや産屋敷耀哉に伝えられ、耀哉は「寂しくはないよ。私ももう長くは生きられない。…」とつぶやくのだった」— ch 66's last beat, exactly as quoted. MU: S1 ends "Chap 54 Page 4", S2 starts "Chap 54 Page 5". The fandom film Plot ends "The Hashira and the entire Demon Slayer Corps are informed of his death". Volume pages: vol 7 = ch 53-61, vol 8 = ch 62-70 — "vols 7-8" is right.
+- **The film does NOT run into ch 67.** Ch 67 = Muzan/Akaza, Butterfly Mansion, Rengoku estate — Episode_34's content per both pages; three synopses of the film (fandom, ja-WP, animatetimes' arc framing) stop at the crows / Ubuyashiki. The verdict's arc-variance note is right: animatetimes frames the manga arc as 「こんばんは煉獄さん」(ch 54) to 「前へ進もう少しずつでも構わないから」— Chapter_69's title (前へ進もう少しずつで構わないから, `anime episode = 34`); animatetimes' "15話" is its own miscount (54-69 is 16), immaterial.
+- **Rows 28-33 = the film; row 27 original — the official statement reproduces verbatim.** AV Watch (Impress, 2021-09-25), quoting ufotable・アニプレックス・集英社's 制作意図: 「第1話は、煉󠄁獄杏寿郎が鬼殺隊本部を旅立ち無限列車へと向かう道中の任務を描いた完全新作エピソード。第2話～第7話は、無限列車での任務を、約70カットの新作追加映像と新規追加BGM、完全新作予告編、新主題歌映像と共に描きます。」 Independent: ja-WP anime article 「劇場アニメ…をテレビシリーズ用に全7話で再編集した作品」; animatetimes 「第1話は新作エピソードであったため、TVアニメ無限列車編は第2話～第7話の6話構成で原作エピソードが描かれます」; the fandom lead "rebroadcast in episodic format as the first 7 episodes of the anime's second season, including a recut and extra bonus content". The ja-WP anime episode list's dates (第一話 10月10日 … 第七話 11月28日; 遊郭編 第一話「音柱・宇髄天元」) match our rows 27-33 and 34.
+- **Standing `canon` under T28.** The film's job is ch 54-66 (13 chapters, ~250 printed pages) in 117 minutes. The original share is (a) the grave-visit prologue — ja-WP's art section names it (「冒頭の墓参りのシーン」) but no source sizes it; (b) studio beats inside adapted chapters, all on the wiki's Anime Notes: ep 28 (second demon; Tanjiro's dream first), ep 29 (river not backyard; snowfield not forest; the log-basket line), ep 31 (extended Enmu sequence; Enmu's last lunge), ep 32 (Blazing Universe absent from the manga; Akaza's extra wounds; Akaza waits), ep 33 (the clash shown, Inosuke leaps); animatetimes independently confirms the added demon (「鬼の数も一体足されています」). Faithfulness clause: noted, never weighed. Not remotely mixed. No `adopted`, no `side_source` — correct: the film adapts the instrument itself.
+- **`recap: false`.** A first-run adaptation, no compilation footage in any synopsis; kind `movie` stands. Title, date (fandom `October 16, 2020`; ja-WP 2020年10月16日; AniList 2020-10-16) and 117 min all match the stored row — `repairs: []` is right.
+- **Position 26.5 confirmed, on pages.** Ep 26's field ends `54 (p. 1-4)`, MU's S1 ends "Page 4", the film's first source page is p. 5 (Episode_28 / MU S2); ja-WP and fandom both call the film S1's 続編 / "sequel to the first season"; nothing in the run sits between. On the TV path the same position is right (the film precedes its own re-telling). The verdict's "one path, never both" is the correct reading of what the ledger will render.
+- **A1 / A44 / T26 / T27 / N4 / N8.** No anchor proposed on any row in the verdict's values; the flags propose anchors only on canon rows 28-33 and explicitly none on row 27 (filler); no numbering for the film; standing vocabulary is `canon`; no retired type anywhere.
+- **Scope.** Chapters are in the owner's instrument (AniList manga 87216) in the printed numbering; no S2 / franchise value leaks into any delivered field.
+- **Flags 3-5 reproduce.** A47's text (a tail ≤ 5 pp when the next anchored episode starts on X; without one the tail stands) supports flag 3 exactly. Special One-Shot: `pages = 19`, `issue = 44, 2020`, `anime episode =` (empty), "Kyojuro Rengoku is sent to his first mission", the Flute Demon; Rengoku Volume 0: `pages = 84`, `jp release = October 16th, 2020`, "distributed among individuals who attended the screenings". Episode_28's cast list indeed omits both Ubuyashikis (the verdict's gap flag is honest and correctly weak).
+- **Citation quality.** Primaries: the fandom API, ja-WP's API, MU's API, AV Watch (trade press quoting the official statement verbatim), Aniplex of America's own story pages. animatetimes (trade press) and Cinemarche (a film-review blog, self-described 映画感想レビュー＆考察サイト) are correctly held at cross-check tier — Cinemarche's tubercular-boy claim reproduces (「テレビアニメ版では…結核を患った少年が…落下する場面が追加されています…劇場版では触れられていませんでした」). No content farm, no AI summary anywhere.
+
+## Notes for the sitting (outside the verdict's reach; not defects)
+
+- **Flag 1 is the substantive point, and it is right.** The TV re-cut (AniList's ALTERNATIVE edge) is NOT a ledger row — the owner's 7 halo rows are 4 same-instrument films (112151, 178788, 195200, 195201) + 3 crossovers (`EXTRAS-SITTING.md` line 271/281) — it is already IN the run as rows 27-33. So "this work = rows 28-33" has no home in `RelatedWorkRuling` (anilistId / standing / chapter / volume / chaptersAdapted / position / note) except the note. Until a relation field exists, land the verdict's proposed sentence in `note`; if Sean adds a field, this is its first witness.
+- **Curation shape.** `RelatedWorkRuling` stores one `chapter`, `volume`, and `chaptersAdapted` as a string: suggested chapter 66 (the END, A4 convention), volume 8, chaptersAdapted "54-66 (ch 54 from p. 5 — pp. 1-4 are ep 26's; 55-66 in full)", with findings 1-3 and 5 folded into the note.
+- **Flag 2 and flag 3 move together**, as the verdict says: the 28-33 anchors are episode-row work (the work-list), and the ep 26 A47 hold (END 53 + partial{54 pp 1-4}) becomes true only once row 28 is anchored at START 54. Ep 26's blank `continue` in the grid is a separate pre-existing gap.
+- **The 63.5 cluster.** The other three same-instrument films (178788 · 2025; 195200; 195201) all derive after ep 63 (last aired 2024-06-30) — the same shape as made-in-abyss' 13.5 note; order that cluster by chapter, not by date. Not this verdict's problem.
+
+## Evidence index (all fetched 2026-09-05)
+
+- `https://kimetsu-no-yaiba.fandom.com/api.php?action=parse&pageid=7333&prop=wikitext&format=json` (the film page: infobox `episodes = 28 - 33`, no chapters field, Plot)
+- `…page=Mugen_Train_Arc`, `…page=Episode_26` … `…page=Episode_34` (all nine), `…page=Chapter_54`, `…page=Chapter_66`, `…page=Chapter_67`, `…page=Chapter_69`, `…page=Volume_7`, `…page=Volume_8`, `…page=Rengoku_Volume_0`, `…page=Special_One-Shot`
+- `https://ja.wikipedia.org/w/api.php?action=parse&page=劇場版「鬼滅の刃」無限列車編&prop=wikitext` (lead; あらすじ; 色彩・美術・撮影 「冒頭の墓参りのシーン」; テレビアニメ版)
+- `https://ja.wikipedia.org/w/api.php?action=parse&page=鬼滅の刃_(アニメ)&prop=wikitext` (§無限列車編 — the 約70カット sentence; the episode list with dates)
+- `https://ja.wikipedia.org/w/api.php?action=parse&page=鬼滅の刃&prop=wikitext` (§無限列車編（7巻 - 8巻）— volumes only)
+- `https://api.mangaupdates.com/v1/series/36271319846` (`anime.start` / `anime.end` strings; no film segment)
+- `https://av.watch.impress.co.jp/docs/news/1353526.html` (the official 制作意図 statement, verbatim)
+- `https://demonslayer-anime.com/mugentrainarc/story/?id=ep1`, `…?id=ep2` (Aniplex of America synopses)
+- `https://www.animatetimes.com/news/details.php?id=1634044259` (cross-check: arc framing 54 → 「前へ進もう…」; the added demon; 第2話～第7話の6話構成)
+- `https://cinemarche.net/column/kimetu-zensyuutyuu31-yakushiji/` (cross-check: TV-only additions)
+- Repo: `docs/rules.md` (T28, T26, T27, N8, I45, A47), `scripts/ingest/lib/rulings/related-works.ts` (ENTRIES empty; `RelatedWorkRuling`), `scripts/ingest/research/discovery/EXTRAS-SITTING.md` (lines 241, 271, 281)
