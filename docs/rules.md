@@ -2114,17 +2114,18 @@ A source entry whose AniList format is MOVIE/OVA/SPECIAL/MUSIC, or an unresolved
 
 ### I14 · Alias-corruption victims are excluded, not repaired
 
-A staged AFL show whose served page title disagrees (titlesAgree) with the AFL shows-index title for its slug is an alias-corruption victim: its staging and canonical rows are purged and the slug is excluded in source_map with a note, so sweeps skip it until a deliberate re-audit restores it when AFL fixes the alias.
+A staged AFL show whose served page title disagrees (titlesAgree) with the AFL shows-index title for its slug is an alias-corruption victim: the WRITER refuses to stage it (G8 — the stageAfl title / alias mismatch files parse_integrity and holds; the flag is the listing), the disposition of the slug is a ruling when Sean excludes it (I11, lib/rulings/title-exclusions.ts, asserted by assert-overrides#assertDispositions), and canonical rows are NEVER purged (P40) — a series that exists by another path (canon-tier, AFG, a ruled grid) keeps existing under its id; refix.ts re-stages the page when AFL fixes the alias. Amended 2026-09-05 after INCIDENT-2026-09-05: the old purge clause is what deleted six series.
 
 *Why:* chrono-crusade served another show under its slug (2026-08-22); publishing the wrong series under a stable id is worse than a gap.
 
 - ruled session 2026-08-22 (data-pipeline §9 AFL alias corruption; audit-titles.ts)
 - layer **writer**
-- enforced: [audit-titles.ts#exclude](../scripts/ingest/audit-titles.ts) · [lib/resolve.ts#titlesAgree](../scripts/ingest/lib/resolve.ts)
-- audit: `titles:corrupt`
+- enforced: [lib/resolve.ts#stageAfl](../scripts/ingest/lib/resolve.ts) · [assert-overrides.ts#assertDispositions](../scripts/ingest/assert-overrides.ts) · [refix.ts](../scripts/ingest/refix.ts) · [history/audit-titles-RETIRED-2026-09-05.ts](../scripts/ingest/history/audit-titles-RETIRED-2026-09-05.ts) · [lib/resolve.ts#titlesAgree](../scripts/ingest/lib/resolve.ts)
+- **audit: none — automation backlog**
 - witnesses: chrono-crusade
 - aliases: alias-corruption exclusion, stolen slug
-- see: I11, alias defense
+- retired wording (P38): “its staging and canonical rows are purged”
+- see: I11, alias defense, P40, G8
 
 ### I15 · One continuous story = ONE series
 
@@ -5511,5 +5512,5 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 ## Scoreboard
 
 - rules: 286 (live 271, planned 8, superseded 7)
-- live data rules with no audit class (the automation backlog): 82
+- live data rules with no audit class (the automation backlog): 83
 - by layer: writer 149 · display 23 · both 29 · process 85

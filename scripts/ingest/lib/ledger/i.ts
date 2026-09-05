@@ -264,7 +264,7 @@ export const RULES: Rule[] = [
     family: 'I',
     title: 'Alias-corruption victims are excluded, not repaired',
     statement:
-      'A staged AFL show whose served page title disagrees (titlesAgree) with the AFL shows-index title for its slug is an alias-corruption victim: the WRITER refuses to stage it (G8 — stageAfl's title / alias mismatch files parse_integrity and holds; the flag is the listing), the slug's disposition is a ruling when Sean excludes it (I11, lib/rulings/title-exclusions.ts, asserted by assert-overrides#assertDispositions), and canonical rows are NEVER purged (P40) — a series that exists by another path (canon-tier, AFG, a ruled grid) keeps existing under its id; refix.ts re-stages the page when AFL fixes the alias. Amended 2026-09-05 after INCIDENT-2026-09-05: the old purge clause is what deleted six series.',
+      "A staged AFL show whose served page title disagrees (titlesAgree) with the AFL shows-index title for its slug is an alias-corruption victim: the WRITER refuses to stage it (G8 — the stageAfl title / alias mismatch files parse_integrity and holds; the flag is the listing), the disposition of the slug is a ruling when Sean excludes it (I11, lib/rulings/title-exclusions.ts, asserted by assert-overrides#assertDispositions), and canonical rows are NEVER purged (P40) — a series that exists by another path (canon-tier, AFG, a ruled grid) keeps existing under its id; refix.ts re-stages the page when AFL fixes the alias. Amended 2026-09-05 after INCIDENT-2026-09-05: the old purge clause is what deleted six series.",
     why: 'chrono-crusade served another show under its slug (2026-08-22); publishing the wrong series under a stable id is worse than a gap.',
     ruledBy: 'session',
     ruledOn: '2026-08-22',
