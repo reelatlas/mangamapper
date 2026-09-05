@@ -11,6 +11,7 @@
 import { haloCandidates, loadDiscoveryInput, IGNORED_RELATIONS, type Candidate } from '../../lib/discovery';
 import { FRANCHISE_OF } from '../../lib/rulings/franchises';
 import { loadLatestRankings, seedCandidates } from '../../lib/rankings';
+import { relatedWorkRuling } from '../../lib/rulings/related-works';
 
 const arg = (k: string): string | null => { const i = process.argv.indexOf(k); return i > 0 ? process.argv[i + 1] : null; };
 const scope = (arg('--scope') ?? 'sequel').split(',');
@@ -18,8 +19,6 @@ const airing = process.argv.includes('--airing');
 const owner = arg('--owner');
 const summary = process.argv.includes('--summary');
 const limit = Number(arg('--limit') ?? (summary ? 100000 : 400));
-/** promotional specials the halo lists — a music video is ignored by rule (I45); a PV / trailer is Sean's call, so the summary names them */
-const PROMO = /\b(?:PV|trailer|promo(?:tion(?:al)?)?|teaser|CM)\b/i;
 
 async function main() {
   const input = await loadDiscoveryInput();
@@ -44,12 +43,13 @@ async function main() {
       const date = new Date().toISOString().slice(0, 10);
       const year = (c: Candidate) => (input.staged.get(c.anilistId) as { startDate?: { year?: number | null } } | undefined)?.startDate?.year ?? null;
       const groupOf = (c: Candidate) => [...new Set([...c.owners].map((x) => (FRANCHISE_OF[x] ? `franchise ${FRANCHISE_OF[x]}` : x)))].sort().join(' + ');
-      const buckets = ['same_instrument', 'other_instrument', 'unknown', 'recap', 'original', 'crossover', 'unstaged'];
+      const buckets = ['same_instrument', 'other_instrument', 'unknown', 'recap', 'original', 'crossover', 'promo', 'unstaged'];
       const RULE: Record<string, string> = {
         same_instrument: "adapts the series' own instrument — standing PENDING (research: standing + chapters)",
         other_instrument: 'adapts another work under its own source — a series candidate (a run; step 2, the film mint) or a one-shot tie-in',
         unknown: 'a source naming no instrument node (a franchise tag with no chapters behind it, a novel film without its edge, a VN / game source) — HELD',
         recap: 'filler by rule; kind recap; never a numbered row (N8)', original: 'filler by T25 (source ORIGINAL)', crossover: 'filler; listed, not fetched (CHARACTER-only)',
+        promo: 'a promotional entry (trailer / PV / teaser / CM) — ignored like a music video: listed, never a row (I45 amended)',
         unstaged: 'not fetched yet — the next discovery-stage run',
       };
       const tot = new Map<string, number>(); for (const c of ex) tot.set(c.proposal, (tot.get(c.proposal) ?? 0) + 1);
@@ -78,8 +78,8 @@ async function main() {
         const adapts = (c.signals.find((x) => x.startsWith('adapts ')) ?? 'adapts ?').replace(/^adapts /, '');
         console.log(`| ${groupOf(c)} | ${c.title.replace(/\|/g, '/')} (${c.anilistId} · ${c.format ?? '?'} · ${year(c) ?? '?'}) | ${adapts.replace(/\|/g, '/')} | ${c.signals.some((x) => x.includes('one-shot tie-in')) ? 'one-shot tie-in' : 'a run — series candidate'} |`);
       }
-      const promo = ex.filter((c) => PROMO.test(c.title));
-      console.log(`\n**PV / trailer suspects** (${promo.length}) — I45 lists everything but music videos today; ignoring these is Sean's call\n`);
+      const promo = ex.filter((c) => c.proposal === 'promo');
+      console.log(`\n**Promotional entries** (${promo.length}) — ignored like music videos (I45 amended, Sean ruled (e) 2026-09-05): listed, never a ledger row\n`);
       for (const c of promo.sort((a, b) => b.popularity - a.popularity)) console.log(`- ${groupOf(c)}: ${c.title} (${c.anilistId} · ${c.format ?? '?'} · ${year(c) ?? '?'}) — bucket ${c.proposal}`);
       return;
     }
@@ -91,9 +91,10 @@ async function main() {
       for (const c of list.sort((a, b) => b.popularity - a.popularity)) {
         const m = input.staged.get(c.anilistId) as { startDate?: { year?: number | null } } | undefined;
         const b = c.proposal;
-        const standing = b === 'recap' || b === 'original' || b === 'crossover' ? 'filler (rule)' : b === 'unstaged' ? '—' : 'pending';
+        const ruled = [...c.owners].map((o) => relatedWorkRuling(o, c.anilistId)?.standing).find(Boolean);
+        const standing = ruled ? `${ruled} (ruled)` : b === 'recap' || b === 'original' || b === 'crossover' ? 'filler (rule)' : b === 'unstaged' || b === 'promo' ? '—' : 'pending';
         const adapts = c.signals.find((x) => x.startsWith('adapts '));
-        const proposed = b === 'same_instrument' ? `${adapts ?? 'adapts the instrument'} — research standing + chapters; surface when ruled` : b === 'other_instrument' ? `${adapts ?? 'adapts another work'} — ${c.signals.some((x) => x.includes('one-shot tie-in')) ? 'a one-shot tie-in; research' : 'a series candidate (seed) + a related work'}` : b === 'recap' ? 'ledger row, kind recap — surface only by label' : b === 'original' ? 'ledger row — optional viewing; surface only by label' : b === 'crossover' ? 'ledger row (unfetched) — listed' : b === 'unknown' ? 'HOLD: source with no manga edge' : 'stage first';
+        const proposed = b === 'promo' ? 'ignored (promotional) — listed only' : b === 'same_instrument' ? `${adapts ?? 'adapts the instrument'} — research standing + chapters; surface when ruled` : b === 'other_instrument' ? `${adapts ?? 'adapts another work'} — ${c.signals.some((x) => x.includes('one-shot tie-in')) ? 'a one-shot tie-in; research' : 'a series candidate (seed) + a related work'}` : b === 'recap' ? 'ledger row, kind recap — surface only by label' : b === 'original' ? 'ledger row — optional viewing; surface only by label' : b === 'crossover' ? 'ledger row (unfetched) — listed' : b === 'unknown' ? 'HOLD: source with no manga edge' : 'stage first';
         console.log(`| ${c.anilistId} | ${c.title.replace(/\|/g, '/')} | ${c.format ?? '?'} · ${m?.startDate?.year ?? '?'} | ${[...c.relations].join('/')} | **${b}** | ${standing} | ${proposed} | |`);
       }
       console.log('');

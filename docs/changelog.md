@@ -1154,6 +1154,59 @@
    19-23 / 39 (chain_source) and 18 / 93-95 (AFL's loose Mixed bucket),
    beelzebub 15 / 26-28 / 51, rurouni TV ep 95 (identity). Batch 22 opens on
    the boruto follow-up (lanes I + C) with the batch-21 tooling copied.
+129. ✅ **THE EXTRAS RULINGS (Sean 2026-09-05 — all six as recommended, Cursor's
+    build order) — I46 + THE PROMO BUCKET + THE RULING LAYER BUILT AND APPLIED.**
+    (a) Surfacing: the filler-by-rule buckets stay LEDGER-ONLY; the wiki-list
+    label rule opens with N31 at the STATUS design pass; the wiki↔halo adoption
+    landed NOW as **I46 — ONE ROW PER WORK**: a wiki / ruled row that names a
+    staged related work ADOPTS its AniList identity (lib/related-works.ts
+    `titleMatch` / `matchRelatedTitle` / `pickAdoption`: equal cores after a
+    trailing parenthetical, or containment of a name-length core; FAILS CLOSED
+    — two rows fitting one work, or two works fitting one row with nothing to
+    separate them, stay listed; an EXACT title beats containing ones, then the
+    row's year), the halo writer removes its own duplicate (G57), census
+    `related_work_duplicate` (4 → 0). Five adoptions: MHA World Heroes'
+    Mission @113.1, To LOVE-Ru Darkness OVA @12.2, Cardcaptor Sakura: The
+    Movie @35.1 (exactness over The Sealed Card), Yu Yu Hakusho All or Nothing
+    @112.8, Golden Kamuy Sapporo Beer @49.4 — each wiki row keeps its position,
+    label and note; identity is the only field written. (e) PROMO: a trailer /
+    PV / teaser / commercial is never a related work — I45 AMENDED (P38, the
+    music-video-only clause retired): `extraBucket` → 'promo' by title (the edge
+    title reaches the bucket, so an unfetched CHARACTER-only PV is promo too),
+    never fetched by stageHalo, listed as `extra_promo` (5: Bleach 20th trailer,
+    Bakemonogatari PV, Evangelion x KATE CM, Jongtama PV, Jongtama x Gintama
+    promo); the writer removed its three stored rows. (b)/(c) THE RULING LAYER:
+    `lib/rulings/related-works.ts` (RelatedWorkRuling — anilistId, standing,
+    chapter / volume / chaptersAdapted, position, note; RELATED_WORK_RULINGS;
+    `relatedWorkStanding`: a ruling beats the rule) read by the writer (the
+    standing, the adaptation fields, a ruled position MOVES the row) and the
+    census (`related_work_violation` checks the ruled chapter too); empty until
+    verdicts land (R1). `lib/anilist.ts#mangaByIds` (MANGA nodes by id) and
+    MEDIA_FIELDS now stage a relation node's start year (the direction test:
+    a run that began after the work is a comicalization, never a source — the
+    next staging carries it). (d) `research/discovery/other-instrument-picks.ts`
+    — the input list for step 2 with the run's facts (format / status /
+    chapters / volumes / popularity from the staged edges; AniList's API was
+    DISABLED for stability during the sitting, so the read degrades to the
+    staged facts and says so, P6) and a proposed pick under Sean's threshold (a
+    run of a volume / 8+ chapters / releasing → MINT; a one-shot → tie-in; 2
+    chapters → hold): MINT 41 · tie-in 9 · hold 3. Two derivation gaps found and
+    queued: SOURCE_CHAINS works carry no AniList ids, so a chain work
+    (Prisma Illya 2wei / 3rei, JoJo Stardust Crusaders, Haruhi's per-volume
+    novel nodes) reads as ANOTHER run — register chain-work ids before those
+    mint; a comicalization of the film (GitS Arise, BSD Dead Apple) reads as a
+    run the film adapts until node start years are staged. (f) confirmed —
+    undated pairs listed, never slotted; the weekly candidate restage queued;
+    UI NOTE for the design pass: the undated / announced works are the page's
+    UPCOMING SCHEDULE — surfacing them is that pass's call. CENSUS:
+    related_work_duplicate 0 · related_work_violation 0 · related_work_stale 0 ·
+    extra_promo 5 · ledger rows 741 → 733 (518 pending) · same 149 · other 49 ·
+    crossover 87 · every other class unchanged · verify-series-display 219 / 0.
+    Five bundles deployed; 240 tests; 289 rules. NEXT: the extras research
+    protocol + context generator → wave 1 (films-first, (b)) on Sean's go; the
+    owner triage (c) another week; step 2 (films as entries) fed by the signed
+    (d) picks; batch 23 wave 1 parked.
+
 128. ✅ **THE EXTRAS SITTING, STEP 1 — I45, THE RELATED-WORKS LEDGER (2026-09-05;
     Sean ruled with Cursor: watch-order is the LEDGER of every related work;
     the three layers; the films ruling on I13). The ledger is data now —

@@ -15,6 +15,23 @@ npx tsx --env-file=.env.ingest scripts/ingest/research/discovery/count-ledger.ts
 npx tsx --env-file=.env.ingest scripts/ingest/audit-discovery.ts                                           # the census classes (extra_*, related_work_stale / _violation)
 ```
 
+## 0. RULED 2026-09-05 (afternoon) — all six as recommended, Cursor's build order
+
+| decision | Sean's ruling | landed (§12.129) |
+|---|---|---|
+| (a) surfacing | filler-by-rule buckets ledger-only; the wiki-list label rule when N31 opens; the wiki↔halo adoption rule NOW | I46 (one row per work): 5 adoptions, 5 halo duplicates removed, `related_work_duplicate` 0 |
+| (b) 150 same-instrument | build the standing map first, then films-first research waves (6-8) | the ruling layer `lib/rulings/related-works.ts` (empty until verdicts); protocol + contexts next; wave 1 on Sean's go |
+| (c) 291 held | triage per owner, top 10 first; yes → (b), no → filler with a reason | the same map; the triage protocol a different week |
+| (d) 50 other-instrument | Sean picks the run-shaped ones as step-2 mint input; the 5 one-shot tie-ins stay extras with (b) | `other-instrument-picks.ts` (appendix B): MINT 41 · tie-in 9 · hold 3 — awaiting the signature |
+| (e) 5 promotional | promo bucket, ignored like music videos, census lists them, the rows dropped | I45 amended; `extra_promo` 5; three stored rows removed |
+| (f) 127 undated | listed, no position, until AniList has a date; the weekly restage queued (not a ruling); NOTE the UI upcoming-schedule idea | confirmed; sidecars in STATE (restage; the UI note); node start years staged from now on |
+
+Gaps found while executing (queued in STATE, not rulings): SOURCE_CHAINS works carry no AniList ids
+(a chain work reads as another run: Prisma Illya 2wei / 3rei, JoJo Stardust Crusaders, Haruhi's
+per-volume nodes); a comicalization of a film reads as the run it adapts until node start years
+are staged (GitS Arise Sleepless Eye, BSD Dead Apple). AniList's API was disabled for stability
+during the sitting — every read degrades to staged facts and says so.
+
 ## 1. What Sean ruled (2026-09-05, with Cursor) — implemented
 
 - Watch-order is the LEDGER of every related work: recap, compilation, special,
@@ -401,3 +418,65 @@ undated works (no derivable position — listed, never slotted): 102
 - neon-genesis-evangelion: Evangelion x KATE CM (125785 · SPECIAL · ?) — bucket crossover
 - code-geass-lelouch-of-the-rebellion: Jongtama PV (139044 · SPECIAL · ?) — bucket crossover
 - gintama: Jongtama x Gintama Collab Kettei Promotion Anime (207475 · ONA · ?) — bucket crossover
+
+## Appendix B — the (d) picks (generated; regenerate with other-instrument-picks.ts when AniList is back for start dates)
+
+### Other-instrument picks — 49 works adapting 48 runs (AniList UNAVAILABLE (Error: AniList 403: {) — staged edge facts only (format / status / chapters / volumes / popularity as staged; no start dates, so a run that began AFTER the work — a comicalization — cannot be flagged yet); re-run when the API is back)
+
+| owner | work (anilist · format · year) | adapts (anilist) | run: format · status · ch/vol · pop | ours? | proposed | slug · franchise (if minted) | decision |
+|---|---|---|---|---|---|---|---|
+| jujutsu-kaisen | JUJUTSU KAISEN 0 (131573 · MOVIE · 2021) | Jujutsu Kaisen 0: Tokyo Toritsu Jujutsu Koutou Senmon Gakkou (105469) | MANGA · FINISHED · 4/1 · 71509 | — | MINT (step 2): a one-row staged series, this work as its anime | jujutsu-kaisen-0-tokyo-toritsu-jujutsu-koutou-senmon-gakkou · jujutsu-kaisen | |
+| my-hero-academia | My Hero Academia: Heroes Rising (108553 · MOVIE · 2019) | Deku & Bakugo: Rising (114207) | MANGA · FINISHED · 2/? · 1847 | — | hold — below the threshold (no volume, < 8 chapters, finished) |  | |
+| the-melancholy-of-haruhi-suzumiya | The Disappearance of Haruhi Suzumiya (7311 · MOVIE · 2010) | Suzumiya Haruhi no Shoushitsu (145592) | NOVEL · FINISHED · 8/1 · 1133 | — | MINT (step 2): a one-row staged series, this work as its anime | suzumiya-haruhi-no-shoushitsu · the-melancholy-of-haruhi-suzumiya | |
+| dragon-ball | Dragon Ball Super: Broly (101302 · MOVIE · 2018) | Dragon Ball Minus: Hanatareta Unmei no Kodomo (97900) | ONE_SHOT · FINISHED · 1/? · 918 | — | tie-in — never a series; research with (b) |  | |
+| sword-art-online | Sword Art Online the Movie -Progressive- Aria of a Starless Night (124140 · MOVIE · 2021) | Sword Art Online: Progressive (73921) | NOVEL · RELEASING · ?/? · 6430 | — | MINT (step 2): a one-row staged series, this work as its anime (size unverified — AniList down) | sword-art-online-progressive · sword-art-online | |
+| attack-on-titan | Attack on Titan: Lost Girls (99634 · OVA · 2017) | Shingeki no Kyojin: LOST GIRLS (93313) | NOVEL · FINISHED · 3/1 · 2871 | — | MINT (step 2): a one-row staged series, this work as its anime | shingeki-no-kyojin-lost-girls · attack-on-titan | |
+| bungo-stray-dogs | Bungo Stray Dogs: DEAD APPLE (98384 · MOVIE · 2018) | Bungou Stray Dogs: Dead Apple (104030) | MANGA · FINISHED · 15/4 · 3469 | — | MINT (step 2): a one-row staged series, this work as its anime | bungou-stray-dogs-dead-apple · bungo-stray-dogs | |
+| kurokos-basketball | Kuroko's Basketball: Last Game (21377 · MOVIE · 2017) | Kuroko no Basket: Extra Game (85604) | MANGA · FINISHED · 9/2 · 4449 | — | MINT (step 2): a one-row staged series, this work as its anime | kuroko-no-basket-extra-game · kurokos-basketball | |
+| naruto | Road to Ninja: Naruto the Movie (13667 · MOVIE · 2012) | NARUTO: Road to Ninja (70549) | ONE_SHOT · FINISHED · 1/? · 2933 | — | tie-in — never a series; research with (b) |  | |
+| hunter-x-hunter | Hunter x Hunter: Phantom Rouge (13271 · MOVIE · 2013) | HUNTER×HUNTER: Kurapika Tsuioku-hen (75996) | MANGA · FINISHED · 2/? · 7958 | — | hold — below the threshold (no volume, < 8 chapters, finished) |  | |
+| tokyo-ghoul | Tokyo Ghoul: [JACK] (21132 · OVA · 2015) | Tokyo Ghoul: Jack (85522) | MANGA · FINISHED · 7/1 · 10119 | — | MINT (step 2): a one-row staged series, this work as its anime | tokyo-ghoul-jack · tokyo-ghoul | |
+| one-piece | ONE PIECE FAN LETTER (182469 · SPECIAL · 2024) | ONE PIECE novel Mugiwara Stories (128291) | NOVEL · FINISHED · 9/1 · 629 | — | MINT (step 2): a one-row staged series, this work as its anime | one-piece-novel-mugiwara-stories · one-piece | |
+| jojos-bizarre-adventure | Thus Spoke Rohan Kishibe (21778 · OVA · 2017) | Kishibe Rohan wa Ugokanai (103029) | MANGA · RELEASING · ?/? · 6967 | — | MINT (step 2): a one-row staged series, this work as its anime (size unverified — AniList down) | kishibe-rohan-wa-ugokanai · jojos-bizarre-adventure | |
+| jojos-bizarre-adventure | Thus Spoke Rohan Kishibe (21778 · OVA · 2017) | Kishibe Rohan wa Ugokanai Episode 2: Mutsukabezaka (33920) | ONE_SHOT · FINISHED · 1/? · 1200 | — | tie-in — never a series; research with (b) |  | |
+| jojos-bizarre-adventure | Thus Spoke Rohan Kishibe (21778 · OVA · 2017) | Kishibe Rohan wa Ugokanai Episode 16: Zangeshitsu (105925) | ONE_SHOT · FINISHED · 1/? · 1092 | — | tie-in — never a series; research with (b) |  | |
+| jojos-bizarre-adventure | Thus Spoke Rohan Kishibe (21778 · OVA · 2017) | Kishibe Rohan wa Ugokanai Episode 9: The Run (101237) | ONE_SHOT · FINISHED · 1/? · 1062 | — | tie-in — never a series; research with (b) |  | |
+| jojos-bizarre-adventure | Thus Spoke Rohan Kishibe (21778 · OVA · 2017) | Kishibe Rohan wa Ugokanai Episode 5: Fugou Mura (73903) | ONE_SHOT · FINISHED · 1/? · 1027 | — | tie-in — never a series; research with (b) |  | |
+| tokyo-ghoul | Tokyo Ghoul: [PINTO] (21326 · OVA · 2015) | Tokyo Ghoul: Hibi (87233) | NOVEL · FINISHED · 6/1 · 3310 | — | MINT (step 2): a one-row staged series, this work as its anime | tokyo-ghoul-hibi · tokyo-ghoul | |
+| fate | Fate/strange Fake -Whispers of Dawn- (154966 · SPECIAL · 2023) | Fate/strange Fake (50006) | NOVEL · RELEASING · ?/10 · 4575 | — | MINT (step 2): a one-row staged series, this work as its anime | fate-strange-fake · fate | |
+| blue-lock | BLUE LOCK THE MOVIE -EPISODE NAGI- (163147 · MOVIE · 2024) | Blue Lock: EPISODE Nagi (146203) | MANGA · FINISHED · 36/8 · 9563 | — | MINT (step 2): a one-row staged series, this work as its anime | blue-lock-episode-nagi · blue-lock | |
+| jojos-bizarre-adventure | JoJo's Bizarre Adventure (666 · OVA · 1993) | JoJo no Kimyou na Bouken: Stardust Crusaders (30872) | MANGA · FINISHED · 152/16 · 35523 | — | MINT (step 2): a one-row staged series, this work as its anime | jojo-no-kimyou-na-bouken-stardust-crusaders · jojos-bizarre-adventure | |
+| dragon-ball | Dragon Ball: Episode of Bardock (12231 · SPECIAL · 2011) | Dragon Ball: Episode of Bardock (56373) | MANGA · FINISHED · 3/1 · 2017 | — | MINT (step 2): a one-row staged series, this work as its anime | dragon-ball-episode-of-bardock · dragon-ball | |
+| fate | Fate/kaleid liner Prisma☆Illya: Vow in the Snow (97757 · MOVIE · 2017) | Fate/kaleid liner Prisma☆Illya 3rei!! (66131) | MANGA · RELEASING · ?/? · 4416 | — | MINT (step 2): a one-row staged series, this work as its anime (size unverified — AniList down) | fate-kaleid-liner-prisma-illya-3rei · fate | |
+| naruto | Boruto: Naruto the Movie - The Day Naruto Became Hokage (21579 · SPECIAL · 2016) | BORUTO: NARUTO THE MOVIE Tokubetsu Bangai-hen - Naruto ga Hokage ni Natta Hi (87402) | ONE_SHOT · FINISHED · 1/? · 1910 | — | tie-in — never a series; research with (b) |  | |
+| fullmetal-alchemist | Fullmetal Alchemist: Brotherhood OVA Collection (6421 · OVA · 2009) | Hagane no Renkinjutsushi: 20th ANNIVERSARY BOOK (188032) | MANGA · FINISHED · 10/1 · 306 | — | MINT (step 2): a one-row staged series, this work as its anime | hagane-no-renkinjutsushi-20th-anniversary-book · fullmetal-alchemist | |
+| jojos-bizarre-adventure | JoJo's Bizarre Adventure (2000) (665 · OVA · 2000) | JoJo no Kimyou na Bouken: Stardust Crusaders (30872) | MANGA · FINISHED · 152/16 · 35523 | — | MINT (step 2): a one-row staged series, this work as its anime | jojo-no-kimyou-na-bouken-stardust-crusaders · jojos-bizarre-adventure | |
+| mobile-suit-gundam | Mobile Suit Gundam UC (6336 · OVA · 2010) | Kidou Senshi Gundam Unicorn (35177) | NOVEL · FINISHED · 31/11 · 353 | — | MINT (step 2): a one-row staged series, this work as its anime | kidou-senshi-gundam-unicorn · mobile-suit-gundam | |
+| mobile-suit-gundam | Mobile Suit Gundam: The Origin (10937 · OVA · 2015) | Kidou Senshi Gundam: The Origin (30214) | MANGA · FINISHED · 112/24 · 7722 | — | MINT (step 2): a one-row staged series, this work as its anime | kidou-senshi-gundam-the-origin · mobile-suit-gundam | |
+| blue-exorcist | Ao no Exorcist: Kyoto Fujouou-hen OVA (97891 · OVA · 2017) | Ao no Exorcist: Weekend Hero (58103) | NOVEL · FINISHED · 5/1 · 428 | — | MINT (step 2): a one-row staged series, this work as its anime | ao-no-exorcist-weekend-hero · blue-exorcist | |
+| saint-seiya-knights-of-the-zodiac | Saint Seiya: The Lost Canvas (6171 · OVA · 2009) | Saint Seiya: THE LOST CANVAS - Meiou Shinwa (31047) | MANGA · FINISHED · 224/25 · 4231 | — | MINT (step 2): a one-row staged series, this work as its anime | saint-seiya-the-lost-canvas-meiou-shinwa · saint-seiya-knights-of-the-zodiac | |
+| one-piece | ONE PIECE FILM: STRONG WORLD - EPISODE:0 (8740 · OVA · 2010) | ONE PIECE: STRONG WORLD (47152) | ONE_SHOT · FINISHED · 1/? · 3848 | — | tie-in — never a series; research with (b) |  | |
+| durarara | Durarara!! X2: My Heart is in the Pattern of a Hot Pot (21068 · SPECIAL · 2015) | Durarara!! Gaiden!? (85836) | NOVEL · FINISHED · 10/1 · 333 | — | MINT (step 2): a one-row staged series, this work as its anime | durarara-gaiden · durarara | |
+| ghost-in-the-shell-stand-alone-complex + ghost-in-the-shell-arise-alternative-architecture | Ghost in the Shell: Arise - Border:1 Ghost Pain (17187 · MOVIE · 2013) | Koukaku Kidoutai: Arise - Nemuranai Me no Otoko Sleepless Eye (78321) | MANGA · FINISHED · 42/7 · 551 | — | MINT (step 2): a one-row staged series, this work as its anime | koukaku-kidoutai-arise-nemuranai-me-no-otoko-sleepless-eye · ghost-in-the-shell-stand-alone-complex | |
+| one-piece | ONE PIECE HEROINES (197178 · SPECIAL · 2026) | ONE PIECE novel HEROINES (113686) | NOVEL · FINISHED · 10/2 · 987 | — | MINT (step 2): a one-row staged series, this work as its anime | one-piece-novel-heroines · one-piece | |
+| fate | Fate/kaleid liner Prisma☆Illya: Licht Nameless Girl (118743 · MOVIE · 2021) | Fate/kaleid liner Prisma☆Illya 3rei!! (66131) | MANGA · RELEASING · ?/? · 4416 | — | MINT (step 2): a one-row staged series, this work as its anime (size unverified — AniList down) | fate-kaleid-liner-prisma-illya-3rei · fate | |
+| to-love-ru | To LOVE-Ru: Multiplication - Mae kara Ushiro kara (100659 · OVA · 2017) | To LOVE-Ru Bangai-hen: Multiplication - Mae kara Ushiro kara (121848) | MANGA · FINISHED · 2/? · 617 | — | hold — below the threshold (no volume, < 8 chapters, finished) |  | |
+| one-piece | One Piece: Romance Dawn Story (5252 · OVA · 2008) | Romance Dawn (35114) | ONE_SHOT · FINISHED · 1/? · 2953 | — | tie-in — never a series; research with (b) |  | |
+| durarara | Durarara!! X2 The Second Arc: Onoroke Chakapoko (21331 · SPECIAL · 2015) | Durarara!! Gaiden!? (85836) | NOVEL · FINISHED · 10/1 · 333 | — | MINT (step 2): a one-row staged series, this work as its anime | durarara-gaiden · durarara | |
+| fate | Fate/kaleid liner Prisma☆Illya 2wei! OVA (20862 · OVA · 2015) | Fate/kaleid liner Prisma☆Illya 2wei! (85136) | MANGA · FINISHED · 34/5 · 3469 | — | MINT (step 2): a one-row staged series, this work as its anime | fate-kaleid-liner-prisma-illya-2wei · fate | |
+| dragon-ball | Dragon Ball: Yo! Son Goku and His Friends Return!! (5152 · SPECIAL · 2008) | Dragon Ball: Heya! Son Goku and His Friends Return!! (46110) | MANGA · FINISHED · 2/1 · 832 | — | MINT (step 2): a one-row staged series, this work as its anime | dragon-ball-heya-son-goku-and-his-friends-return · dragon-ball | |
+| full-metal-panic | Full Metal Panic! The Second Raid: A Relatively Leisurely Day in the Life of a Fleet Captain (1015 · OVA · 2006) | Full Metal Panic! Sigma (30895) | MANGA · FINISHED · 90/19 · 2646 | — | MINT (step 2): a one-row staged series, this work as its anime | full-metal-panic-sigma · full-metal-panic | |
+| blood-blockade-battlefront | Blood Blockade Battlefront & Beyond OVA (101695 · OVA · 2018) | Kekkai Sensen: Back 2 Back (86771) | MANGA · FINISHED · 32/10 · 2363 | — | MINT (step 2): a one-row staged series, this work as its anime | kekkai-sensen-back-2-back · blood-blockade-battlefront | |
+| sailor-moon | Sailor Moon S Movie: Hearts in Ice (997 · MOVIE · 1994) | Bishoujo Senshi Sailor Moon: Short Stories (38552) | MANGA · FINISHED · 10/2 · 1729 | — | MINT (step 2): a one-row staged series, this work as its anime | bishoujo-senshi-sailor-moon-short-stories · sailor-moon | |
+| mobile-suit-gundam | Mobile Suit Gundam Thunderbolt: December Sky (21893 · MOVIE · 2016) | Kidou Senshi Gundam Thunderbolt (67683) | MANGA · FINISHED · 230/27 · 1815 | — | MINT (step 2): a one-row staged series, this work as its anime | kidou-senshi-gundam-thunderbolt · mobile-suit-gundam | |
+| fate | Fate/kaleid liner Prisma☆Illya 3rei!! Short Anime (87488 · SPECIAL · 2016) | Fate/kaleid liner Prisma☆Illya 3rei!! (66131) | MANGA · RELEASING · ?/? · 4416 | — | MINT (step 2): a one-row staged series, this work as its anime (size unverified — AniList down) | fate-kaleid-liner-prisma-illya-3rei · fate | |
+| x | Tokyo BABYLON (1043 · OVA · 1992) | Tokyo BABYLON (30133) | MANGA · FINISHED · 18/7 · 8483 | — | MINT (step 2): a one-row staged series, this work as its anime | tokyo-babylon · x | |
+| assassination-classroom | Koro-sensei Q! (21864 · MOVIE · 2016) | Koro-sensei Q! (86949) | MANGA · FINISHED · 40/5 · 1233 | — | MINT (step 2): a one-row staged series, this work as its anime | koro-sensei-q · assassination-classroom | |
+| bleach | BLEACH Colorful!: Gotei Juusan Yatai Daisakusen! (100719 · OVA · 2008) | Tsurezure Nichijou Ekotoba Colourful Bleach (104300) | MANGA · FINISHED · 37/1 · 1196 | — | MINT (step 2): a one-row staged series, this work as its anime | tsurezure-nichijou-ekotoba-colourful-bleach · bleach | |
+| sailor-moon | Sailor Moon SuperS Plus: Ami's First Love (1278 · SPECIAL · 1995) | Bishoujo Senshi Sailor Moon: Short Stories (38552) | MANGA · FINISHED · 10/2 · 1729 | — | MINT (step 2): a one-row staged series, this work as its anime | bishoujo-senshi-sailor-moon-short-stories · sailor-moon | |
+| detective-conan | Case Closed: Conan and Kid and Crystal Mother (2514 · OVA · 2004) | Magic Kaito (31804) | MANGA · RELEASING · ?/? · 2881 | — | MINT (step 2): a one-row staged series, this work as its anime (size unverified — AniList down) | magic-kaito · detective-conan | |
+| code-geass-lelouch-of-the-rebellion | Code Geass: Oz the Reflection Picture Drama (17277 · OVA · 2013) | Code Geass: Soubou no Oz (72381) | MANGA · FINISHED · 24/5 · 634 | — | MINT (step 2): a one-row staged series, this work as its anime | code-geass-soubou-no-oz · code-geass-lelouch-of-the-rebellion | |
+| yowamushi-pedal | Yowamushi Pedal: SPARE BIKE (21806 · MOVIE · 2016) | Yowamushi Pedal: Spare Bike (99139) | MANGA · RELEASING · ?/? · 321 | — | MINT (step 2): a one-row staged series, this work as its anime (size unverified — AniList down) | yowamushi-pedal-spare-bike · yowamushi-pedal | |
+| detective-conan | Meitantei Conan: Keisatsu Gakkou-hen - Wild Police Story CASE. Furuya Rei (166060 · SPECIAL · 2023) | Meitantei Conan: Keisatsu Gakkou-hen - Wild Police Story (112094) | MANGA · FINISHED · 13/2 · 957 | — | MINT (step 2): a one-row staged series, this work as its anime | meitantei-conan-keisatsu-gakkou-hen-wild-police-story · detective-conan | |
+
+proposed: MINT 41 · tie-in 9 · already ours 0 · hold 3

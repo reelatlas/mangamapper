@@ -10,6 +10,8 @@
 //   extra_recap / extra_original / extra_crossover   filler by rule (listed for the surfacing decision; capped)
 //   extra_unknown                a source naming no instrument node — held for Sean
 //   extra_unstaged               a related work whose media is not staged yet — run discovery-stage
+//   extra_promo                  a promotional entry (trailer / PV / teaser / CM) — ignored like a music video: listed here, never a ledger row (I45 amended)
+//   related_work_duplicate       I46: a halo row and a wiki / ruled row name the same work, or a wiki / ruled row without an identity matches a staged work — sync-related-works adopts + removes
 //   related_work_stale           a ledger row (origin halo) whose AniList edge no longer reaches the series (P24 — a listing)
 //   related_work_violation       a ledger row whose standing / kind disagrees with the derivation (the healer must run)
 //   discovery_new_since_sitting  TV-shaped candidates first staged / structurally changed after the last sitting, or never staged — THE TRIGGER TO SIT
@@ -21,7 +23,8 @@ import { candidateLine, discoveryClasses, haloCandidates, loadDiscoveryInput } f
 import { lastSitting, SITTINGS } from './lib/rulings/discovery';
 import { loadLatestRankings, seedCandidates, seedLine } from './lib/rankings';
 import { selectAll } from './lib/db';
-import { extraKind, extraStanding, type ExtraBucket } from './lib/related-works';
+import { type ExtraBucket, extraKind, matchRelatedTitle, pickAdoption, relatedWorkStanding } from './lib/related-works';
+import { relatedWorkRuling } from './lib/rulings/related-works';
 
 async function main() {
   const input = await loadDiscoveryInput();
@@ -42,19 +45,38 @@ async function main() {
   // I45 — the related-works buckets and the ledger's outcome
   const extras = cands.filter((c) => c.bucket === 'extra' || c.bucket === 'recap' || c.bucket === 'crossover');
   const byBucket = (b: string) => extras.filter((c) => c.proposal === b && !c.ruling).map(candidateLine);
-  const ledger = await selectAll<any>('watch_order_entries', 'series_id, position, anilist_id, origin, standing, kind, title', (q) => q.eq('origin', 'halo'));
+  const allRows = await selectAll<any>('watch_order_entries', 'series_id, position, anilist_id, origin, standing, kind, title, air_date, chapter');
+  const ledger = allRows.filter((r: any) => r.origin === 'halo');
+  const others = allRows.filter((r: any) => r.origin !== 'halo');
   const reach = new Map<string, typeof extras[number]>();
   for (const c of extras) for (const o of c.owners) reach.set(`${o}#${c.anilistId}`, c);
-  const stale: string[] = [], violation: string[] = [];
+  const stale: string[] = [], violation: string[] = [], duplicate: string[] = [];
+  // I46 — one row per work: a halo row beside a wiki / ruled row naming the same work; a wiki / ruled row with no identity that a staged work matches
+  for (const l of ledger) for (const o of others) if (o.series_id === l.series_id && o.anilist_id == null && matchRelatedTitle(String(l.title), String(o.title))) duplicate.push(`${l.series_id}: halo @${l.position} "${String(l.title).slice(0, 40)}" duplicates the ${o.origin ?? 'wiki'} row @${o.position} "${String(o.title).slice(0, 40)}" — run sync-related-works (adopt + remove)`);
+  const yearOf = (c: typeof extras[number]) => (input.staged.get(c.anilistId) as { startDate?: { year?: number | null } | null } | undefined)?.startDate?.year ?? null;
+  for (const o of others) {
+    if (o.anilist_id != null) continue;
+    const here = extras.filter((c) => c.owners.has(o.series_id) && c.proposal !== 'promo');
+    for (const c of here) {
+      const pick = pickAdoption({ title: c.title, year: yearOf(c) }, [o], here.filter((x) => x !== c).map((x) => ({ title: x.title, year: yearOf(x) })));
+      if (!pick) continue;
+      duplicate.push('ambiguous' in pick
+        ? `${o.series_id}: ${o.origin ?? 'wiki'} row @${o.position} "${String(o.title).slice(0, 40)}" has no identity — anilist ${c.anilistId} ${c.title} fits but ${pick.ambiguous} (I46 fails closed: a ruling names the identity)`
+        : `${o.series_id}: ${o.origin ?? 'wiki'} row @${o.position} "${String(o.title).slice(0, 40)}" has no identity — anilist ${c.anilistId} ${c.title} fits (${pick.reason}; adoption pending: run sync-related-works)`);
+    }
+  }
   for (const l of ledger) {
     const c = reach.get(`${l.series_id}#${l.anilist_id}`);
     if (!c) { stale.push(`${l.series_id} @${l.position}: "${String(l.title).slice(0, 40)}" (anilist ${l.anilist_id}) — no AniList edge reaches the series any more (P24: a listing)`); continue; }
     const b = c.proposal as ExtraBucket;
-    const wantStanding = extraStanding(b), wantKind = extraKind(c.format, b);
+    if (b === 'promo') { stale.push(`${l.series_id} @${l.position}: "${String(l.title).slice(0, 40)}" — promotional (I45 amended: never a row) — run sync-related-works`); continue; }
+    const ruling = relatedWorkRuling(l.series_id, Number(l.anilist_id));
+    const wantStanding = relatedWorkStanding(b, ruling), wantKind = extraKind(c.format, b);
+    if (ruling?.chapter != null && Number(l.chapter) !== ruling.chapter) violation.push(`${l.series_id} @${l.position}: chapter ${l.chapter} ≠ ruled ${ruling.chapter} (I45 ruling layer) — run sync-related-works`);
     if ((l.standing ?? null) !== wantStanding && wantStanding != null) violation.push(`${l.series_id} @${l.position}: standing '${l.standing}' ≠ rule '${wantStanding}' (${b}) — run sync-related-works`);
     if ((l.kind ?? null) !== wantKind) violation.push(`${l.series_id} @${l.position}: kind '${l.kind}' ≠ derived '${wantKind}' — run sync-related-works`);
   }
-  console.log(`[audit-discovery] related works (I45): ${extras.length} listed · same_instrument ${byBucket('same_instrument').length} · other_instrument ${byBucket('other_instrument').length} · recap ${byBucket('recap').length} · original ${byBucket('original').length} · crossover ${byBucket('crossover').length} · unknown ${byBucket('unknown').length} · unstaged ${byBucket('unstaged').length} · ledger rows ${ledger.length} (${ledger.filter((l: any) => l.standing == null).length} standing pending)`);
+  console.log(`[audit-discovery] related works (I45): ${extras.length} listed · same_instrument ${byBucket('same_instrument').length} · other_instrument ${byBucket('other_instrument').length} · recap ${byBucket('recap').length} · original ${byBucket('original').length} · crossover ${byBucket('crossover').length} · promo ${byBucket('promo').length} · unknown ${byBucket('unknown').length} · unstaged ${byBucket('unstaged').length} · ledger rows ${ledger.length} (${ledger.filter((l: any) => l.standing == null).length} standing pending)`);
   const lines: Record<string, string[]> = {
     halo_sequel_unclaimed: classes.halo_sequel_unclaimed.map(candidateLine),
     halo_series_unclaimed: classes.halo_series_unclaimed.map(candidateLine),
@@ -65,8 +87,10 @@ async function main() {
     extra_recap: byBucket('recap'),
     extra_original: byBucket('original'),
     extra_crossover: byBucket('crossover'),
+    extra_promo: byBucket('promo'),
     related_work_stale: stale,
     related_work_violation: violation,
+    related_work_duplicate: duplicate,
     discovery_new_since_sitting: classes.discovery_new_since_sitting.map(candidateLine),
     discovery_ruled_unbuilt: classes.discovery_ruled_unbuilt.map((r) => `anilist ${r.anilistId}: ruled series${r.ruling.slug ? ` as ${r.ruling.slug}` : ''} but no series owns it — the seed writer has not run (I42)${r.candidate ? ` · ${r.candidate.title}` : ''}`),
     discovery_ruling_stale: classes.discovery_ruling_stale.map((r) => `anilist ${r.anilistId}: ${r.why} (P24 — re-rule or retire the entry)`),

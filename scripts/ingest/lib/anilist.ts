@@ -47,6 +47,7 @@ const MEDIA_FIELDS = `
   externalLinks { site type language url }
   relations { edges { relationType node {
     id type format status popularity chapters volumes countryOfOrigin
+    startDate { year }
     title { romaji native }
   } } }
 `;
@@ -131,6 +132,16 @@ export async function mediaByIds(ids: number[]): Promise<AniListMedia[]> {
       `query ($ids: [Int]) { Page(perPage: 50) { media(id_in: $ids, type: ANIME) { ${MEDIA_FIELDS} } } }`,
       { ids: chunk },
     );
+    out.push(...data.Page.media);
+  }
+  return out;
+}
+
+/** MANGA-type nodes by id (the manga-first subset: chapters / volumes / status + their ADAPTATION anime edges) — the other-instrument picks read (I13 films ruling, step 2) and step 3's manga watch table */
+export async function mangaByIds(ids: number[]): Promise<unknown[]> {
+  const out: unknown[] = [];
+  for (let i = 0; i < ids.length; i += 50) {
+    const data = await gql<{ Page: { media: unknown[] } }>(`query ($ids: [Int]) { Page(perPage: 50) { media(id_in: $ids, type: MANGA) { ${MANGA_LIST_FIELDS} } } }`, { ids: ids.slice(i, i + 50) });
     out.push(...data.Page.media);
   }
   return out;

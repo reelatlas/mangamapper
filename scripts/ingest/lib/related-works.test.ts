@@ -1,6 +1,6 @@
 // I45 — the related-works derivation, pure
 import { describe, expect, it } from 'vitest';
-import { adaptedNodes, deriveWatchPosition, extraBucket, extraKind, extraStanding, freePosition, ownerInstrumentIds, type ExtraMedia } from './related-works';
+import { adaptedNodes, deriveWatchPosition, extraBucket, extraKind, extraStanding, freePosition, ledgerWorthy, matchRelatedTitle, ownerInstrumentIds, pickAdoption, relatedWorkStanding, titleMatch, type ExtraMedia } from './related-works';
 
 const media = (o: Partial<ExtraMedia> & { id: number }): ExtraMedia => ({ title: { romaji: 'x', english: null }, format: 'MOVIE', status: 'FINISHED', source: 'MANGA', relations: { edges: [] }, ...o });
 const manga = (id: number) => ({ relationType: 'ADAPTATION', node: { id, type: 'MANGA', format: 'MANGA', popularity: 100, title: { romaji: `m${id}` } } });
@@ -40,6 +40,46 @@ describe('extraBucket (I45)', () => {
     expect(extraBucket(['SIDE_STORY'], road, owner)).toBe('other_instrument');
     expect(adaptedNodes(road).map((n) => n.id)).toEqual([70549]);
     expect(adaptedNodes(media({ id: 10, source: 'ORIGINAL', relations: { edges: [manga(30011)] } }))).toEqual([]);
+  });
+  it('I45 amended (e): a trailer / PV / teaser / commercial is promo — never a row, whatever its edges; an unfetched CHARACTER-only PV is promo by its edge title', () => {
+    expect(extraBucket(['SIDE_STORY'], media({ id: 182561, title: { romaji: 'BLEACH 20th Anime Anniversary Official Trailer' }, relations: { edges: [manga(30011)] } }), owner)).toBe('promo');
+    expect(extraBucket(['CHARACTER'], null, owner, 'Jongtama PV')).toBe('promo');
+    expect(extraBucket(['SIDE_STORY'], media({ id: 125785, title: { romaji: 'Evangelion x KATE CM' } }), owner)).toBe('promo');
+    expect(extraBucket(['CHARACTER'], null, owner, 'Some Crossover Special')).toBe('crossover');
+    expect(extraKind('SPECIAL', 'promo')).toBeNull();
+    expect(ledgerWorthy('promo')).toBe(false); expect(ledgerWorthy('unstaged')).toBe(false); expect(ledgerWorthy('unknown')).toBe(true);
+  });
+  it('I46: a stored row of another origin names the same work — equal cores after the trailing parenthetical, or containment of a name-length core', () => {
+    expect(matchRelatedTitle("My Hero Academia: World Heroes' Mission", "My Hero Academia: World Heroes' Mission (film, 2021-08-06)")).toBe(true);
+    expect(matchRelatedTitle('To LOVE-Ru Darkness OVA', 'To LOVE-Ru Darkness OVA (2012)')).toBe(true);
+    expect(matchRelatedTitle('Cardcaptor Sakura: The Movie', 'Cardcaptor Sakura the Movie')).toBe(true);
+    expect(matchRelatedTitle('Naruto OVA', 'OVA')).toBe(false); // a three-letter core matches nothing
+    expect(matchRelatedTitle('One Piece Film: Red', 'One Piece Film: Gold')).toBe(false);
+    expect(matchRelatedTitle('More', 'My Hero Academia: More Stories')).toBe(false); // MHA 171 "More" must not swallow a longer title
+  });
+  it('I46 pickAdoption fails closed and separates by exactness, then by year', () => {
+    const ccs = { position: 35.1, title: 'Cardcaptor Sakura: The Movie (1999)', air_date: '1999-08-21' };
+    const movie1 = { title: 'Cardcaptor Sakura: The Movie', year: 1999 }, movie2 = { title: 'Cardcaptor Sakura the Movie 2: The Sealed Card', year: 2000 };
+    expect(titleMatch(movie1.title, ccs.title)).toBe('equal'); expect(titleMatch(movie2.title, ccs.title)).toBe('contains');
+    expect(pickAdoption(movie1, [ccs], [movie2])).toMatchObject({ row: ccs, reason: expect.stringContaining('exact title') });
+    expect(pickAdoption(movie2, [ccs], [movie1])).toBeNull(); // the exact one adopts on its turn
+    // two containing fits: the row's year decides, else ambiguous
+    const row = { position: 5.5, title: 'Kuroko Basketball OVA', air_date: '2013-08-09' }; // two works only CONTAIN the row's core
+    const a = { title: 'Kuroko Basketball OVA: Tip Off', year: 2013 }, b = { title: 'Kuroko Basketball OVA 2: Once More', year: 2014 };
+    expect(titleMatch(a.title, row.title)).toBe('contains'); expect(titleMatch(b.title, row.title)).toBe('contains');
+    expect(pickAdoption(a, [row], [b])).toMatchObject({ reason: expect.stringContaining('2013') });
+    expect(pickAdoption(b, [row], [a])).toBeNull();
+    expect(pickAdoption(a, [{ ...row, air_date: null }], [b])).toMatchObject({ ambiguous: expect.stringContaining('no date') });
+    // dates a year apart or more never adopt; two rows fitting one work is ambiguous
+    expect(pickAdoption({ title: 'X OVA Special', year: 2001 }, [{ position: 1.5, title: 'X OVA Special (2011)', air_date: '2011-01-01' }], [])).toMatchObject({ ambiguous: expect.stringContaining('dates disagree') });
+    expect(pickAdoption(movie1, [ccs, { ...ccs, position: 36.1 }], [])).toMatchObject({ ambiguous: expect.stringContaining('2 stored rows') });
+    expect(pickAdoption({ title: 'Nothing Like It', year: null }, [ccs], [])).toBeNull();
+  });
+  it('the ruling layer beats the rule: a researched standing lands; without one the rule (or pending) stands', () => {
+    expect(relatedWorkStanding('same_instrument', { standing: 'canon' })).toBe('canon');
+    expect(relatedWorkStanding('original', { standing: 'mixed' })).toBe('mixed');
+    expect(relatedWorkStanding('same_instrument', null)).toBeNull();
+    expect(relatedWorkStanding('recap', undefined)).toBe('filler');
   });
   it('a manga owner ignores its own novel edges — the registered manga and the chain works are its instrument', () => {
     const ids = ownerInstrumentIds({ sourceType: 'manga', mangaId: 30011, chainWorkIds: [87178], ownedMedia: [media({ id: 20, relations: { edges: [novel(87232), manga(30011)] } })] });

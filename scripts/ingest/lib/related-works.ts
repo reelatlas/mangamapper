@@ -19,7 +19,7 @@
 // PROPOSAL; a ruling (watch-order-labels.ts, by AniList id) overrides it.
 import { pickMangaNode } from './rulings/source-relations';
 
-export type ExtraBucket = 'recap' | 'original' | 'same_instrument' | 'other_instrument' | 'crossover' | 'unknown';
+export type ExtraBucket = 'recap' | 'original' | 'same_instrument' | 'other_instrument' | 'crossover' | 'unknown' | 'promo';
 export type Standing = 'canon' | 'mixed' | 'filler';
 
 export type ExtraMedia = {
@@ -34,6 +34,59 @@ export type ExtraMedia = {
 };
 
 const RECAP_TITLE = /\b(recap|summary|digest|compilation|special edition|re-?cut)\b|総集編|ダイジェスト/i;
+/** I45 (amended 2026-09-05, Sean's ruling (e)): a promotional entry — a trailer, PV, teaser, commercial, promotion — is never a related work; like a music video it is listed by the census (extra_promo) and never a ledger row. AniList gives no format for these (SPECIAL / ONA), the title is the signal */
+export const PROMO = /\b(?:PV|trailer|promo(?:tion(?:al)?)?|teaser|CM)\b/i;
+
+/** a title reduced to its comparable core: lower-case, no diacritics, a trailing parenthetical dropped ("(film, 2021-08-06)"), punctuation collapsed */
+export const normTitle = (t: string): string => t.toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g, '').replace(/\s*\([^)]*\)\s*$/, '').replace(/[^a-z0-9]+/g, ' ').trim();
+
+/** I46 — one row per work: does a stored row of another origin (a wiki fractional row, a ruling row) name this related work? equality of the cores, or containment when the shorter core is long enough to be a name (never "ova" against everything) */
+export function matchRelatedTitle(candidateTitle: string, rowTitle: string): boolean {
+  return titleMatch(candidateTitle, rowTitle) != null;
+}
+
+/** the strength of a title match: the cores are EQUAL, or one CONTAINS the other (a name-length core only) — an equal match beats a containing one when two works fit a row */
+export function titleMatch(candidateTitle: string, rowTitle: string): 'equal' | 'contains' | null {
+  const a = normTitle(candidateTitle), b = normTitle(rowTitle);
+  if (!a || !b) return null;
+  if (a === b) return 'equal';
+  const [short, long] = a.length <= b.length ? [a, b] : [b, a];
+  return short.length >= 10 && long.includes(short) ? 'contains' : null;
+}
+
+export type AdoptionPick<T> = { row: T; reason: string } | { row: T; ambiguous: string } | null;
+
+/**
+ * I46 — which stored row of another origin adopts this work's identity, if any. Fails closed: two rows fitting one work,
+ * or two works fitting one row with nothing to separate them, is AMBIGUOUS (listed, never adopted). What separates them,
+ * in order: an EQUAL title beats containing ones (Cardcaptor Sakura: The Movie vs ... The Movie 2: The Sealed Card); the
+ * row's YEAR when exactly one of the fitting works shares it. Dates a year apart or more never adopt.
+ */
+export function pickAdoption<T extends { title: string; air_date?: string | null }>(
+  work: { title: string; year: number | null },
+  pool: T[],
+  siblings: { title: string; year: number | null }[],
+): AdoptionPick<T> {
+  const fits = pool.filter((r) => titleMatch(work.title, r.title) != null);
+  if (!fits.length) return null;
+  if (fits.length > 1) return { row: fits[0], ambiguous: `the title fits ${fits.length} stored rows (@${fits.map((r) => (r as { position?: number }).position ?? '?').join(', @')})` };
+  const row = fits[0];
+  const rowYear = row.air_date ? Number(String(row.air_date).slice(0, 4)) : null;
+  const mine = titleMatch(work.title, row.title);
+  const rivals = siblings.filter((x) => titleMatch(x.title, row.title) != null).map((x) => ({ ...x, strength: titleMatch(x.title, row.title) }));
+  if (rivals.length) {
+    if (mine === 'equal' && rivals.every((r) => r.strength === 'contains')) return { row, reason: `exact title (${rivals.length} other work${rivals.length > 1 ? 's' : ''} only contain it)` };
+    if (rivals.some((r) => r.strength === 'equal') && mine === 'contains') return null; // the exact one adopts on its turn
+    if (rowYear != null) {
+      const sameYear = [work, ...rivals].filter((x) => x.year === rowYear);
+      if (sameYear.length === 1 && sameYear[0] === work) return { row, reason: `the row's year ${rowYear} picks this work of ${rivals.length + 1} that fit` };
+      if (sameYear.length === 1) return null; // a rival shares the year — its turn
+    }
+    return { row, ambiguous: `also fits ${rivals.map((r) => r.title).join(' / ')}${rowYear == null ? ' and the row has no date' : ''}` };
+  }
+  if (rowYear != null && work.year != null && Math.abs(rowYear - work.year) > 1) return { row, ambiguous: `dates disagree (row ${rowYear}, work ${work.year})` };
+  return { row, reason: mine === 'equal' ? 'exact title' : 'title' };
+}
 
 /** the node formats an AniList `source` names as its instrument (T25: the unit a standing is measured against) — a novelization of a manga-sourced film is a downstream adaptation, never its source */
 export const SOURCE_FORMATS: Record<string, readonly string[]> = {
@@ -71,13 +124,14 @@ export function ownerInstrumentIds(owner: { sourceType: string | null; mangaId: 
 }
 
 /** the bucket, from the relation kinds that reached the work and its own media (null media = unstaged) */
-export function extraBucket(relations: Iterable<string>, media: ExtraMedia | null, owner: { mangaId: number | null; chainWorkIds?: Iterable<number>; instrumentIds?: Iterable<number> }): ExtraBucket | 'unstaged' {
+export function extraBucket(relations: Iterable<string>, media: ExtraMedia | null, owner: { mangaId: number | null; chainWorkIds?: Iterable<number>; instrumentIds?: Iterable<number> }, edgeTitle?: string | null): ExtraBucket | 'unstaged' {
   const rels = new Set(relations);
+  const title = media ? `${media.title.english ?? ''} ${media.title.romaji ?? ''}` : (edgeTitle ?? ''); // an unfetched work is known by its edge title only
+  if (PROMO.test(title)) return 'promo'; // never a related work, whatever its edges (I45 amended)
   if (rels.has('SUMMARY') || rels.has('COMPILATION')) return 'recap';
   const story = [...rels].filter((r) => r !== 'CHARACTER');
   if (!story.length && rels.has('CHARACTER')) return 'crossover';
   if (!media) return 'unstaged';
-  const title = `${media.title.english ?? ''} ${media.title.romaji ?? ''}`;
   if (RECAP_TITLE.test(title)) return 'recap';
   if (media.source === 'ORIGINAL') return 'original';
   const nodes = adaptedNodes(media);
@@ -100,6 +154,7 @@ export function extraStanding(bucket: ExtraBucket | 'unstaged'): Standing | null
 
 /** the format axis of a related work (T29's vocabulary for watch-order entries) */
 export function extraKind(format: string | null, bucket: ExtraBucket | 'unstaged'): string | null {
+  if (bucket === 'promo') return null; // never a row
   if (bucket === 'recap') return 'recap';
   if (format === 'MOVIE') return 'movie';
   if (format === 'OVA') return 'ova';
@@ -127,3 +182,9 @@ export function freePosition(derived: number, taken: Set<number>): number {
   for (let i = 0; i < 50 && taken.has(Number(p.toFixed(2))); i++) p = Number((p + 0.01).toFixed(2));
   return Number(p.toFixed(2));
 }
+
+/** buckets that own a ledger row — a promo is listed by the census only; an unstaged work has no media yet */
+export const ledgerWorthy = (bucket: ExtraBucket | 'unstaged'): boolean => bucket !== 'promo' && bucket !== 'unstaged';
+
+/** the standing the ledger writes: a RULING (lib/rulings/related-works.ts — researched, Sean-signed) beats the rule; null = still pending the sitting */
+export const relatedWorkStanding = (bucket: ExtraBucket | 'unstaged', ruling: { standing?: Standing | null } | null | undefined): Standing | null => ruling?.standing ?? extraStanding(bucket);
