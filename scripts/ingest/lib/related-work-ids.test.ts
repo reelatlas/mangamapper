@@ -25,7 +25,7 @@ describe('the related-work identity registry (I46)', () => {
   it('an id registered to another work is a conflict, never overwritten; a registry entry with no row is an orphan listing', () => {
     const rows = [{ series_id: 'chainsaw-man', position: 12.5, anilist_id: 171627, origin: 'halo', title: 'Reze Arc' }];
     const p = identityProblems(rows, reg([['anilist:171627', 999], ['wiki:gone@1.5', 998]]), new Map());
-    expect(p.conflict).toHaveLength(1); expect(p.conflict[0]).toMatch(/registered to some-other-series/);
+    expect(p.conflict).toHaveLength(1); expect(p.conflict[0]).toMatch(/registered to work 999/);
     expect(p.orphan).toHaveLength(1); expect(p.orphan[0]).toMatch(/no stored row/);
   });
 });
