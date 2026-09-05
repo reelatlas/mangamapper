@@ -36,7 +36,7 @@ the rulings). Never point Sean at a file for either.
 - The proposal NEVER writes. Presence in OVERRIDE_CHAINS means nothing; same
   manga is no signal (four ruled I16 splits share one).
 
-- `recap.ts --scope extras` — the related-works table (I45): every recap / special / OVA / film of an owned
+- `recap.ts --scope extras --limit 2000` (`--summary` for the sitting's load tables: bucket totals, the load per owner, the same-instrument and other-instrument lists, PV / trailer suspects; the decision record lives in research/discovery/EXTRAS-SITTING.md) — the related-works table (I45): every recap / special / OVA / film of an owned
   series by franchise, its bucket (a rule decided it), the standing that implies, and the decision column:
   surface by label (N31), research standing + chapters (same-instrument), a series candidate (other-instrument),
   or hold. The ledger rows already exist (sync-related-works, standard heal); a sitting decides surfacing.

@@ -6,6 +6,8 @@
 // default-disposed rows in one summary line after it. Paste the output into
 // the chat message — never point Sean at a file for the baseline.
 //   npx tsx --env-file=.env.ingest scripts/ingest/research/discovery/recap.ts [--scope sequel,series|extras|all|seed] [--airing] [--owner <series-id>] [--limit N]
+//   --scope extras --summary [--top N]: the sitting's LOAD tables instead of the per-work rows — bucket totals, the load per owner,
+//   the same-instrument list (the sitting's load), the other-instrument list (series candidates vs one-shot tie-ins), PV / trailer suspects
 import { haloCandidates, loadDiscoveryInput, IGNORED_RELATIONS, type Candidate } from '../../lib/discovery';
 import { FRANCHISE_OF } from '../../lib/rulings/franchises';
 import { loadLatestRankings, seedCandidates } from '../../lib/rankings';
@@ -14,7 +16,10 @@ const arg = (k: string): string | null => { const i = process.argv.indexOf(k); r
 const scope = (arg('--scope') ?? 'sequel').split(',');
 const airing = process.argv.includes('--airing');
 const owner = arg('--owner');
-const limit = Number(arg('--limit') ?? 400);
+const summary = process.argv.includes('--summary');
+const limit = Number(arg('--limit') ?? (summary ? 100000 : 400));
+/** promotional specials the halo lists — a music video is ignored by rule (I45); a PV / trailer is Sean's call, so the summary names them */
+const PROMO = /\b(?:PV|trailer|promo(?:tion(?:al)?)?|teaser|CM)\b/i;
 
 async function main() {
   const input = await loadDiscoveryInput();
@@ -34,6 +39,50 @@ async function main() {
     const ex = haloCandidates(input).filter((c) => c.bucket === 'extra' || c.bucket === 'recap' || c.bucket === 'crossover').filter((c) => !owner || c.owners.has(owner)).slice(0, limit);
     const groups = new Map<string, typeof ex>();
     for (const c of ex) { const k = [...new Set([...c.owners].map((x) => (FRANCHISE_OF[x] ? `franchise ${FRANCHISE_OF[x]}` : x)))].sort().join(' + '); groups.set(k, [...(groups.get(k) ?? []), c]); }
+    if (summary) {
+      // the sitting's load tables (Sean 2026-09-05: the checkpoint is a generated table in chat — never an ad-hoc script over a file)
+      const date = new Date().toISOString().slice(0, 10);
+      const year = (c: Candidate) => (input.staged.get(c.anilistId) as { startDate?: { year?: number | null } } | undefined)?.startDate?.year ?? null;
+      const groupOf = (c: Candidate) => [...new Set([...c.owners].map((x) => (FRANCHISE_OF[x] ? `franchise ${FRANCHISE_OF[x]}` : x)))].sort().join(' + ');
+      const buckets = ['same_instrument', 'other_instrument', 'unknown', 'recap', 'original', 'crossover', 'unstaged'];
+      const RULE: Record<string, string> = {
+        same_instrument: "adapts the series' own instrument — standing PENDING (research: standing + chapters)",
+        other_instrument: 'adapts another work under its own source — a series candidate (a run; step 2, the film mint) or a one-shot tie-in',
+        unknown: 'a source naming no instrument node (a franchise tag with no chapters behind it, a novel film without its edge, a VN / game source) — HELD',
+        recap: 'filler by rule; kind recap; never a numbered row (N8)', original: 'filler by T25 (source ORIGINAL)', crossover: 'filler; listed, not fetched (CHARACTER-only)',
+        unstaged: 'not fetched yet — the next discovery-stage run',
+      };
+      const tot = new Map<string, number>(); for (const c of ex) tot.set(c.proposal, (tot.get(c.proposal) ?? 0) + 1);
+      console.log(`### Related-works sitting summary — ${ex.length} works (generated ${date})\n`);
+      console.log('| bucket | works | rule |'); console.log('|---|---|---|');
+      for (const b of buckets) console.log(`| ${b} | ${tot.get(b) ?? 0} | ${RULE[b]} |`);
+      console.log(`\nundated works (no derivable position — listed, never slotted): ${ex.filter((c) => year(c) == null).length}\n`);
+      const per = new Map<string, Map<string, number>>();
+      for (const c of ex) { const g = groupOf(c); const m = per.get(g) ?? new Map<string, number>(); m.set(c.proposal, (m.get(c.proposal) ?? 0) + 1); per.set(g, m); }
+      const load = (m: Map<string, number>) => (m.get('same_instrument') ?? 0) + (m.get('other_instrument') ?? 0) + (m.get('unknown') ?? 0);
+      const ranked = [...per.entries()].sort((a, b) => load(b[1]) - load(a[1]));
+      const top = Number(arg('--top') ?? 30);
+      console.log(`**The load per owner** (top ${top} by same + other + held; ${ranked.length} owners)\n`);
+      console.log('| owner | total | same | other | held | recap | original | crossover | unstaged |'); console.log('|---|---|---|---|---|---|---|---|---|');
+      const line = (name: string, m: Map<string, number>) => `| ${name} | ${[...m.values()].reduce((x, y) => x + y, 0)} | ${buckets.map((b) => m.get(b) ?? 0).join(' | ')} |`;
+      for (const [g, m] of ranked.slice(0, top)) console.log(line(g, m));
+      const rest = new Map<string, number>(); for (const [, m] of ranked.slice(top)) for (const [b, n] of m) rest.set(b, (rest.get(b) ?? 0) + n);
+      if (ranked.length > top) console.log(line(`${ranked.length - top} more owners`, rest));
+      const same = new Map<string, Candidate[]>(); for (const c of ex) if (c.proposal === 'same_instrument') { const g = groupOf(c); same.set(g, [...(same.get(g) ?? []), c]); }
+      console.log(`\n**Same-instrument works — the sitting's load** (${ex.filter((c) => c.proposal === 'same_instrument').length})\n`);
+      console.log('| owner | n | works (anilist id · format · year) |'); console.log('|---|---|---|');
+      for (const [g, list] of [...same.entries()].sort((a, b) => b[1].length - a[1].length)) console.log(`| ${g} | ${list.length} | ${list.sort((a, b) => b.popularity - a.popularity).map((c) => `${c.title.replace(/\|/g, '/')} (${c.anilistId} · ${c.format ?? '?'} · ${year(c) ?? '?'})`).join('; ')} |`);
+      console.log(`\n**Other-instrument works** (${ex.filter((c) => c.proposal === 'other_instrument').length}) — a run is a series candidate (step 2, the film mint); a one-shot is a tie-in\n`);
+      console.log('| owner | work | adapts | shape |'); console.log('|---|---|---|---|');
+      for (const c of ex.filter((x) => x.proposal === 'other_instrument').sort((a, b) => b.popularity - a.popularity)) {
+        const adapts = (c.signals.find((x) => x.startsWith('adapts ')) ?? 'adapts ?').replace(/^adapts /, '');
+        console.log(`| ${groupOf(c)} | ${c.title.replace(/\|/g, '/')} (${c.anilistId} · ${c.format ?? '?'} · ${year(c) ?? '?'}) | ${adapts.replace(/\|/g, '/')} | ${c.signals.some((x) => x.includes('one-shot tie-in')) ? 'one-shot tie-in' : 'a run — series candidate'} |`);
+      }
+      const promo = ex.filter((c) => PROMO.test(c.title));
+      console.log(`\n**PV / trailer suspects** (${promo.length}) — I45 lists everything but music videos today; ignoring these is Sean's call\n`);
+      for (const c of promo.sort((a, b) => b.popularity - a.popularity)) console.log(`- ${groupOf(c)}: ${c.title} (${c.anilistId} · ${c.format ?? '?'} · ${year(c) ?? '?'}) — bucket ${c.proposal}`);
+      return;
+    }
     console.log(`### Related-works sitting recap — ${ex.length} works over ${groups.size} franchises / owners (generated ${new Date().toISOString().slice(0, 10)})\n`);
     for (const [g, list] of [...groups.entries()].sort((a, b) => b[1].length - a[1].length)) {
       console.log(`**${g}** (${list.length})\n`);

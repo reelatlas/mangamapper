@@ -1225,6 +1225,15 @@
     for the 150 same-instrument works and the 291 held, the 50 other-
     instrument series candidates, and the PV question — then step 2 (films as
     entries) and step 3 (the manga watch table). Batch 23 wave 1 stays parked.
+    EVENING ADDENDUM (the pause): `recap.ts --scope extras --summary` prints the
+    sitting's load tables (bucket totals, the load per owner, the same- and
+    other-instrument lists, PV / trailer suspects — the ad-hoc script that first
+    produced them is gone, P9); the decision record
+    research/discovery/EXTRAS-SITTING.md carries facts, a proposal and a capture
+    path per decision (a)-(f) plus the resume sequence; 5 promotional entries
+    named (Bleach 20th trailer, Bakemonogatari PV, Evangelion x KATE CM, Jongtama
+    PV, Jongtama x Gintama promo); the candidate-media freshness gap (staged
+    candidates are never re-fetched) logged as a sidecar in STATE.
 
 127. ✅ **DISCOVERY BUILD, STEP 4 — G60, THE RANKINGS READER (2026-09-05; go-list
     row 6; PROPOSAL.md v2.2 §3). The seed engine: which IPs should exist at
