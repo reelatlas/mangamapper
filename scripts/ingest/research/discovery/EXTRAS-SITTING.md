@@ -35,6 +35,14 @@ under the franchise base; 66 works). The (d) declarations: 27 entries in `lib/ru
 Arc, Infinity Castle (Part 1), Dawn of the Deep Soul, Tanya the Movie, Goblin's Crown, The First Slam
 Dunk. Wave 2 = the owner triage, a separate wave the same day. No mint this sitting.
 
+**Third pass (afternoon — wave 1 applied, the registry, wave 2; §12.131).** Wave 1's eight verdicts verified (all
+SOUND WITH NOTES) and ruled: two standings corrected to MIXED (Legend of Crimson, Tanya), Slam Dunk MIXED with the
+author's credit in the note (never an adoption), two clusters re-ordered by ruling (KonoSuba 20.52; Made in Abyss
+13.5 / 13.51 / 13.52). Sean's identity concern → the related-work IDENTITY REGISTRY (`related_work_external_ids`):
+an external id maps into the WORK once, a collision is refused and listed, the wiki key survives a re-created row;
+identity-first adoption found six title-hidden duplicates. Wave 2 (the owner triage, ten owners, 111 works)
+dispatched.
+
 Gaps found while executing (queued in STATE, not rulings): SOURCE_CHAINS works carry no AniList ids
 (a chain work reads as another run: Prisma Illya 2wei / 3rei, JoJo Stardust Crusaders, Haruhi's
 per-volume nodes); a comicalization of a film reads as the run it adapts until node start years

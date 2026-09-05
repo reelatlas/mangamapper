@@ -9,6 +9,7 @@
 //   npx tsx --env-file=.env.ingest scripts/ingest/sync-watch-order.ts
 
 import { db, selectAll, startRun, finishRun } from './lib/db';
+import { loadRelatedWorkRegistry, lookupRelatedWork, wikiKey } from './lib/related-work-ids';
 import { RULED_LABELS, RULED_RECORDS } from './lib/rulings/watch-order-labels';
 
 // RULED_LABELS (series_id → position → surfaced label; AUTHORITATIVE both
@@ -39,6 +40,12 @@ async function main() {
     const startBy = new Map(al.map((r) => { const d = r.raw?.startDate; return [r.anilist_id, d?.year ? `${d.year}-${String(d.month ?? 1).padStart(2, '0')}-${String(d.day ?? 1).padStart(2, '0')}` : null]; }));
     const kindByDate = new Map<string, string>();
     for (const c of orderOnly) { const d = c.anilist_id != null ? startBy.get(c.anilist_id) : null; if (d && c.kind) kindByDate.set(`${c.series_id}|${d}`, c.kind); }
+    // I46 (amended): identity outlives the row — the registry holds the AniList id an adoption attached to this wiki key, so a re-created
+    // row carries it again; a halo row still holding that id (the adoption not yet run) blocks the write until sync-related-works resolves it
+    const registry = await loadRelatedWorkRegistry();
+    const heldBy = new Map<string, number>(); // `${series}#${anilist}` → the position that holds it
+    for (const r of await selectAll<{ series_id: string; position: number; anilist_id: number | null }>('watch_order_entries', 'series_id, position, anilist_id', (q) => q.not('anilist_id', 'is', null))) heldBy.set(`${r.series_id}#${r.anilist_id}`, Number(r.position));
+    let identities = 0;
     let n = 0;
     for (const f of fr) {
       const label = RULED_LABELS[f.series_id]?.[Number(f.position)] ?? null;
@@ -57,6 +64,11 @@ async function main() {
         origin: 'wiki', // I45 / G57: this writer's rows; sync-related-works owns origin 'halo'
       };
       row.display_label = label; // the code map is the ruling source — absent = unsurfaced
+      const known = lookupRelatedWork(registry, 'wiki', wikiKey(f.series_id, f.position));
+      if (known) { // the wiki key is owner-scoped by construction
+        const holder = heldBy.get(`${f.series_id}#${known.anilist_id}`);
+        if (holder == null || holder === Number(f.position)) { row.anilist_id = known.anilist_id; identities++; }
+      }
       const { error } = await db.from('watch_order_entries').upsert(row, { onConflict: 'series_id,position' });
       if (error) throw new Error(`${f.series_id}@${f.position}: ${error.message}`);
       n++;
@@ -75,7 +87,7 @@ async function main() {
       }
     }
     const labeled = fr.filter((f) => RULED_LABELS[f.series_id]?.[Number(f.position)] != null).length;
-    console.log(`watch_order_entries: ${n} synced (${labeled} labeled/surfaced), ${dropped} dropped`);
+    console.log(`watch_order_entries: ${n} synced (${labeled} labeled/surfaced, ${identities} identities from the registry), ${dropped} dropped`);
     await finishRun(runId, 'ok', { fetched: 0, unchanged: 0, changed: n, flagged: 0 }, 'watch-order sync');
   } catch (e) {
     await finishRun(runId, 'error', { fetched: 0, unchanged: 0, changed: 0, flagged: 0 }, String(e).slice(0, 200));

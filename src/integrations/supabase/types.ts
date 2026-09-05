@@ -622,6 +622,30 @@ export type Database = {
         }
         Relationships: []
       }
+      related_work_external_ids: {
+        Row: {
+          anilist_id: number
+          created_at: string
+          external_id: string
+          registered_by: string
+          source: string
+        }
+        Insert: {
+          anilist_id: number
+          created_at?: string
+          external_id: string
+          registered_by: string
+          source: string
+        }
+        Update: {
+          anilist_id?: number
+          created_at?: string
+          external_id?: string
+          registered_by?: string
+          source?: string
+        }
+        Relationships: []
+      }
       series: {
         Row: {
           afl_slug: string | null

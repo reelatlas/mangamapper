@@ -21,6 +21,7 @@ import { haloCandidates, loadDiscoveryInput } from './lib/discovery';
 import { adaptedNodes, deriveWatchPosition, extraKind, freePosition, isoDate, pickAdoption, relatedWorkStanding, type ExtraBucket } from './lib/related-works';
 import { relatedWorkRuling } from './lib/rulings/related-works';
 import { RULED_POSITION_BY_ANILIST } from './lib/rulings/watch-order-labels';
+import { loadRelatedWorkRegistry, lookupRelatedWork, registerRelatedWorkIds, wikiKey } from './lib/related-work-ids';
 
 const DRY = process.argv.includes('--dry-run');
 const LEDGER_BUCKETS = new Set(['extra', 'recap', 'crossover']);
@@ -64,6 +65,25 @@ async function main() {
     for (const c of cands) for (const sid of c.owners) titlesBy.set(sid, [...(titlesBy.get(sid) ?? []), { id: c.anilistId, title: c.title, year: yearOf(input.staged.get(c.anilistId) ? isoDate((input.staged.get(c.anilistId) as { startDate?: { year?: number | null } | null }).startDate) : null) }]);
     const takenBy = new Map<string, Set<number>>();
     for (const e of existing) takenBy.set(e.series_id, new Set([...(takenBy.get(e.series_id) ?? []), Number(e.position)]));
+    // I46 (amended): THE IDENTITY REGISTRY — every id this writer knows maps into (series, anilist_id) once; only what the registry lacks is written
+    const registry = await loadRelatedWorkRegistry();
+    let registeredIds = 0; const collisions: string[] = [];
+    const malOf = (id: number) => (input.staged.get(id) as { idMal?: number | null } | undefined)?.idMal ?? null;
+    const register = async (sid: string, anilistId: number, ids: Record<string, string | number | null | undefined>, by: 'halo' | 'adoption') => {
+      const missing: Record<string, string | number> = {};
+      for (const [source, v] of Object.entries(ids)) if (v != null && v !== '' && !lookupRelatedWork(registry, source, v)) missing[source] = v;
+      if (!Object.keys(missing).length) return;
+      if (DRY) { registeredIds += Object.keys(missing).length; return; }
+      const r = await registerRelatedWorkIds({ anilist_id: anilistId }, missing, by);
+      registeredIds += r.registered; collisions.push(...r.collisions);
+      for (const [source, v] of Object.entries(missing)) if (!r.collisions.some((c) => c.startsWith(`${source}:${v} `))) registry.set(`${source}:${v}`, { anilist_id: anilistId, registered_by: by });
+    };
+    // the backfill and the standing check: every stored row that carries an identity is registered (a halo row: anilist + mal; an adopted wiki / ruled row: those and its wiki key)
+    for (const r of existing) {
+      if (r.anilist_id == null) continue;
+      if (r.origin === 'halo') await register(r.series_id, r.anilist_id, { anilist: r.anilist_id, mal: malOf(r.anilist_id) }, 'halo');
+      else await register(r.series_id, r.anilist_id, { anilist: r.anilist_id, mal: malOf(r.anilist_id), wiki: wikiKey(r.series_id, r.position) }, 'adoption');
+    }
     let inserted = 0, updated = 0, unpositioned = 0, held = 0, adopted = 0, dropped = 0, ambiguous = 0;
     const remove = async (r: Row, why: string) => {
       dropped++;
@@ -111,6 +131,7 @@ async function main() {
               if (error) throw new Error(`${sid}@${twin.position}: ${error.message}`);
             }
             twin.anilist_id = c.anilistId; byKey.set(key, twin); unkeyed.set(sid, pool.filter((r) => r !== twin));
+            await register(sid, c.anilistId, { anilist: c.anilistId, mal: malOf(c.anilistId), wiki: wikiKey(sid, twin.position) }, 'adoption'); // the join lives in the registry — it survives the row
             continue;
           }
         }
@@ -145,6 +166,7 @@ async function main() {
         if (DRY) { if (inserted + updated <= 25) console.log(`  ${cur ? 'update' : 'insert'} ${sid} @${position} ${c.title} [${row.kind} ${standing ?? 'pending'}] ${bucket}`); continue; }
         const { error } = await db.from('watch_order_entries').upsert({ ...row, display_label: cur ? undefined : null }, { onConflict: 'series_id,position' });
         if (error) throw new Error(`${key}: ${error.message}`);
+        await register(sid, c.anilistId, { anilist: c.anilistId, mal: malOf(c.anilistId) }, 'halo');
       }
     }
     // a halo row whose work the derivation now attributes ELSEWHERE (an alternative adaptation collapsed to the franchise base, I43) is ours to remove —
@@ -155,8 +177,9 @@ async function main() {
       const owners = ownersOf.get(r.anilist_id);
       if (owners && !owners.has(r.series_id)) await remove(r, `re-attributed by rule to ${[...owners].join(', ')} (an alternative adaptation sits once, under the franchise base — I16 / I43)`);
     }
-    counters.changed = inserted + updated + adopted + dropped; counters.flagged = unpositioned + ambiguous;
-    console.log(`[sync-related-works] ${cands.length} staged related works → ${inserted} inserted, ${updated} updated, ${counters.unchanged} unchanged, ${adopted} identities adopted by wiki / ruled rows (I46), ${dropped} halo rows removed (duplicates / promotional / moved), ${ambiguous} ambiguous matches left to the census, ${held} standing pending (the sitting), ${unpositioned} without a derivable position${DRY ? ' — DRY RUN' : ''}`);
+    if (collisions.length) console.log(`  ${collisions.length} identity collision(s) refused (I46):\n    ${collisions.join('\n    ')}`);
+    counters.changed = inserted + updated + adopted + dropped + registeredIds; counters.flagged = unpositioned + ambiguous + collisions.length;
+    console.log(`[sync-related-works] ${cands.length} staged related works → ${inserted} inserted, ${updated} updated, ${counters.unchanged} unchanged, ${adopted} identities adopted by wiki / ruled rows (I46), ${dropped} halo rows removed (duplicates / promotional / moved), ${ambiguous} ambiguous matches left to the census, ${held} standing pending (the sitting), ${unpositioned} without a derivable position, ${registeredIds} identities registered${DRY ? ' — DRY RUN' : ''}`);
     await finishRun(runId, 'ok', counters, `related-works ledger: ${inserted} inserted, ${updated} updated, ${adopted} adopted, ${dropped} removed${DRY ? ' (dry run)' : ''}`);
   } catch (err) {
     await finishRun(runId, 'error', counters, String(err).slice(0, 200));

@@ -1154,6 +1154,54 @@
    19-23 / 39 (chain_source) and 18 / 93-95 (AFL's loose Mixed bucket),
    beelzebub 15 / 26-28 / 51, rurouni TV ep 95 (identity). Batch 22 opens on
    the boruto follow-up (lanes I + C) with the batch-21 tooling copied.
+131. ✅ **WAVE 1 APPLIED · THE IDENTITY REGISTRY FOR RELATED WORKS · WAVE 2
+    DISPATCHED (2026-09-05, afternoon — Sean's identity concern).** WAVE 1: eight
+    verdicts (research-agent, Opus) + eight adversarial reviews (verdict-verifier,
+    Fable; `research/discovery/verify/`), all SOUND WITH NOTES, no value refuted;
+    Sean ruled: Mugen Train canon 54-66 (this work IS our rows 28-33) · Infinity
+    Castle Part 1 canon 140-157 (no Part 1 row; a label question) · Reze Arc canon
+    39-52 (the cold open plays ch 38's last pages as A10 scraps, START 39) ·
+    Legend of Crimson MIXED (the post-Railgun act is an original climax — T28's
+    recap boundary) LN vol 5 ch 1-6 @20.52 behind the S2 OVA · Dawn of the Deep
+    Soul canon 26-38 @13.52 behind the two compilations (13.5 / 13.51 ruled) ·
+    Tanya MIXED (the Commonwealth thread and the Tiegenhoff act are anime-only per
+    ja-WP's timeline; ch 5 NOT adapted — no source states a relocation) ·
+    Goblin's Crown canon LN vol 5 ch 1-7 (volume + a chapter string, never a bare
+    chapter 1) · The First Slam Dunk MIXED 223-276 with Inoue 原作・脚本・監督 as a
+    CREDIT in the note, never an adoption (T26's adoptions put material into the
+    source line; a screenplay that exists only as the film does not — now in
+    PROTOCOL-extras.md). Ten `RelatedWorkRuling` entries (`lib/rulings/
+    related-works.ts`); 486 standings still pending. THE WRITER: ruled moves run
+    in a PRE-PASS so a cluster swap never overwrites an identity (the key is
+    series + position); an occupied ruled slot is refused and listed; a derived
+    position re-derives every run (identity is the AniList id, position an
+    attribute); the dry run frees slots. THE REGISTRY (I46 amended; Sean: "build
+    it now if it is best practice"): `related_work_external_ids` (migrations
+    20260905200000 / 201000) — an external id maps INTO the WORK (its AniList
+    id) once; a different work already holding it is a collision, refused and
+    listed, never overwritten; ownership is what the ledger rows say (a work
+    sits under several owners — Battle of Gods under DBZ and Super — the first
+    schema keyed the owner pair and 39 false collisions taught the lesson in
+    minutes); `lib/related-work-ids.ts` (registerRelatedWorkIds mirrors
+    registerIds; identityProblems is the pure outcome check, 3 tests);
+    sync-related-works registers anilist + mal for every row and the WIKI KEY
+    (series@position) for every adoption, so the join survives the wiki writer
+    re-creating its row; sync-watch-order restores a row's AniList id from the
+    registry (11 today), guarded against a halo row still holding it; census
+    classes related_work_identity_gap / _conflict / _orphan (0 / 0 / 0). The
+    identity-first adoption also caught six duplicates the titles had hidden
+    (Shin Kyoto-hen = New Kyoto Arc; Ishin Shishi e no Requiem = Rurouni
+    Kenshin The Movie; Bonds Beyond Time; The Sealed Card; Vampire Shahal;
+    Walking Alone): adoption keys on the label map's ruled id before any title.
+    Ledger 699 rows. WAVE 2 DISPATCHED: the owner triage, ten research-agent
+    tasks (detective-conan 22 · one-piece 20 · dragon-ball-z 18 · kinnikuman 9
+    · the-prince-of-tennis 8 · ranma-1-2 8 · mobile-suit-gundam 8 ·
+    attack-on-titan 6 · naruto 6 · a-certain-scientific-railgun 6 = 111 of the
+    263 held works), the TRIAGE shape, one JSON per owner. Queued: KonoSuba's S1
+    date lineage; Goblin Slayer ep 10; Made in Abyss S2 (an unclaimed sequel — a
+    second ruling entry under it when minted); the 63.5 / 13.5 clusters re-order
+    by chapter once their rulings land.
+
 130. ✅ **THE EXTRAS RULINGS, SECOND PASS (Sean 2026-09-05 afternoon, with Cursor) —
     THE ALTERNATIVE BUCKET, THE CHAINS, THE (d) DECLARATIONS, WAVE 1 LAUNCHED.**
     Sean's corrections: pull the 1995 Ghost in the Shell from wave 1 (an I16

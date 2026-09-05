@@ -2,7 +2,7 @@
 
 > GENERATED from `scripts/ingest/lib/rulings/**` by `scripts/restructure/gen-rulings.ts` — do not edit by hand. A ruling is an INSTANCE of a rule (`docs/rules.md`); the map is the record, this is the index.
 
-- rulings: 2536 across 323 series/keys · by Sean: 1035 · UNRECORDED reasons: 9 · with a retire condition: 96
+- rulings: 2546 across 325 series/keys · by Sean: 1045 · UNRECORDED reasons: 9 · with a retire condition: 96
 
 ## Retire conditions (re-evaluate when…)
 
@@ -1049,6 +1049,12 @@
 | `G59` | {"page":"Cells at Work! Code Black","note":"the series article's own 13-row table; the finder's 'List of Cells at Work! episodes' is the franchise list with … | Batch 20 wave 9 (out/cells-at-work-code-black.json, verified R24): the entry held ZERO rows — AFL staged an empty page; ja-WP 各話リスト, en-WP 'Cells at Work! Code Black' and syobocal TID 5849 agree on every date and title (the 13-row map already carries anchors + a reorder zone, A42). Sean ruled 2026-09-04 (G59): the wiki writer mints the grid from the ruled page. | Sean 2026-09-04 · scripts/ingest/research/batch20/out/cells-at-work-code-black.json, scripts/ingest/research/batch20/verify/cells-at-work-code-black.md |  |
 | `I43` | {"franchise":"cells-at-work"} | Cells at Work! and CODE BLACK (a spin-off manga in the same body-as-workplace universe); one IP. | Sean 2026-09-05 · signed by Sean 2026-09-05 ("Sign the 39 / 97 franchise table"), the 2026-09-05 franchise bootstrap (connected components of series_relations ∪ AniList story / PARENT / SAME_UNIVERSE edges between owned entries; scripts/ingest/research/discovery/PROPOSAL.md §2) |  |
 
+### chainsaw-man (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I45` | {"anilistId":171627,"standing":"canon","chapter":52,"volume":6,"chaptersAdapted":"39-52 (the Bomb Girl arc entire; the post-credits scene is ch 52's own clos… | Wave 1 (verified SOUND WITH NOTES): fandom arc page + all 14 chapter pages + en-WP's volume list (vol 5 = 35-43, vol 6 = 44-52) put the film at ch 39 → 52; the official continuity quote (坂田将吾: 地続き, the next day). The verifier found the cold open also plays ch 38's waking / punch pages (23-25), first-time but scraps under A10 — START stays 39, the note names the tail. Sean 2026-09-05: canon, 12.5. | Sean 2026-09-05 · scripts/ingest/research/discovery/out/chainsaw-man__171627.json, scripts/ingest/research/discovery/verify/chainsaw-man__171627.md |  |
+
 ### chrono-crusade (12)
 
 | rule | value | reason | ruled | retires when |
@@ -1197,7 +1203,7 @@
 |---|---|---|---|---|
 | `G53` | {"35":"2007-06-12"} | Batch 19 wave 2 lane B3 (ja-WP + en-WP / syoboi / fandom, 2+ sources per row; the contradictions verified R24; Sean ruled B3-7): ep 35: syoboi TID 945 Count 35 = 2007-06-13 00:56 (NTV), i.e. the Tuesday 2007-06-12 24:56 broadcast; en-WP Death Note (2006 TV series) episode table gives ep 35 'Malice' = 2007 | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/death-note.json, https://cal.syoboi.jp/tid/945, https://en.wikipedia.org/wiki/Death_Note_(2006_TV_series) |  |
 
-### demon-slayer-kimetsu-no-yaiba (5)
+### demon-slayer-kimetsu-no-yaiba (7)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -1206,6 +1212,8 @@
 | `A3` | {"episode":44,"chapter":97,"volume":null,"source":"manual"} | Entertainment District end: anime stopped at ch 97; S3E1 picked up 98-99 | session 2026-08-23 · scripts/ingest/apply-research-batch-5.ts |  |
 | `A3` | {"episode":55,"chapter":127,"volume":null,"source":"manual"} | Swordsmith Village end = ch 127; Hashira Training starts 128 | session 2026-08-23 · scripts/ingest/apply-research-batch-5.ts |  |
 | `T6` | {"27":"filler"} | Batch 18 wave 3 (2026-08-26): a new TV episode (Rengoku's road to the train), 'entirely anime-original… takes place during ch 53' (fandom; ja-WP) → filler + loose_parallel{53-54}. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/demon-slayer-kimetsu-no-yaiba.json |  |
+| `I45` | {"anilistId":112151,"standing":"canon","chapter":66,"volume":8,"chaptersAdapted":"54 (from p. 5 — pp. 1-4 are ep 26's) to 66, vols 7-8","note":"This work IS … | Wave 1 (research-agent, verified R24 SOUND WITH NOTES): a straight, in-order adaptation of the owner's manga, ch 54 p. 5 to the end of ch 66 — MangaUpdates' S1 / S2 page pins and the Kimetsu Wiki's page-partitioned episode fields agree; ja-WP: vols 7-8. The verifier corrected the note (the bento is p. 5 onward, the film's; the 70-cut figure is AV Watch's / ja-WP's anime article; MU segments by TV season). Sean 2026-09-05: canon, 26.5. | Sean 2026-09-05 · scripts/ingest/research/discovery/out/demon-slayer-kimetsu-no-yaiba__112151.json, scripts/ingest/research/discovery/verify/demon-slayer-kimetsu-no-yaiba__112151.md |  |
+| `I45` | {"anilistId":178788,"standing":"canon","chapter":157,"volume":18,"chaptersAdapted":"140-157 (157 pp. 1-6, partial); the ch 139 opening is re-shown from ep 63… | Wave 1 (verified SOUND WITH NOTES): the Kimetsu Wiki's film infobox prints 140-157 (p. 1-6) and MangaUpdates pins Vol 16 Chap 140 → Vol 18 Chap 156 (MU names the last chapter adapted in full; the straddle into 157 rests on the wiki and en-WP's plot). Realsound's inventory of the studio additions is all flourish (T28 faithfulness clause). Sean 2026-09-05: canon, 63.5; no Part 1 row; related-work coverage does not feed the series frontier until ruled. | Sean 2026-09-05 · scripts/ingest/research/discovery/out/demon-slayer-kimetsu-no-yaiba__178788.json, scripts/ingest/research/discovery/verify/demon-slayer-kimetsu-no-yaiba__178788.md |  |
 
 ### detective-conan (3)
 
@@ -1747,6 +1755,12 @@
 | `T6` | {"4":"canon"} | Batch 18 wave 3 (2026-08-26): AFL's lone 'anime canon' in a 12-for-12 linear adaptation is a mislabel — ep 4 = 写真 (ch 9) + 寺院 (ch 10), fandom both directions + ja-WP titles + MangaDex → canon (research anchor later; MangaDex's EN feed omits ch 11 — off by one from there). | Sean 2026-08-26 · scripts/ingest/research/batch18/out/girls-last-tour.json |  |
 | `G3` | {"flagId":782,"why":"girls-last-tour: G55 namesake contamination — \"List of Girls episodes\" is HBO's Girls (wave 9)."} | G55 namesake contamination — "List of Girls episodes" is HBO's Girls | Sean 2026-09-02 · scripts/ingest/research/batch20/out/girls-last-tour.json, scripts/ingest/history/apply-wave9.ts, §12.99 |  |
 | `G3` | {"flagId":823,"why":"girls-last-tour: the same HBO namesake page bleeding titles (wave 9)."} | the same HBO namesake page bleeding titles (G55) | Sean 2026-09-02 · scripts/ingest/research/batch20/out/girls-last-tour.json, scripts/ingest/history/apply-wave9.ts, §12.99 |  |
+
+### goblin-slayer (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I45` | {"anilistId":108623,"standing":"canon","chapter":null,"volume":5,"chaptersAdapted":"LN vol 5 ch 1-7 (the whole volume; the interlude 待っている人たちのお話 omitted — is… | Wave 1 (verified SOUND WITH NOTES): the Goblin Slayer Wiki (an adaptation of the fifth light novel; the title is vol 5 ch 6's), ANN's review (volume 5, condensed) and SB Creative's vol-5 blurb matching the licensor's synopsis; the Movie Notes list only cuts and reorders (T28). The verifier's apply guidance: volume 5 with a chapter string, never a bare chapter 1 (the owner has no chapter space). Sean 2026-09-05: canon, 12.5. | Sean 2026-09-05 · scripts/ingest/research/discovery/out/goblin-slayer__108623.json, scripts/ingest/research/discovery/verify/goblin-slayer__108623.md |  |
 
 ### golden-kamuy (23)
 
@@ -2297,11 +2311,12 @@
 | `G59` | {"page":"KonoSuba: An Explosion on This Wonderful World!","note":"the series article's own 12-row table; the finder returned 'List of KonoSuba episodes' — th… | The seeded series (I42 witness #3) has no AFL / AFG page; the finder matched the franchise's episode list, which the offset lock refused. en-WP 'KonoSuba: An Explosion on This Wonderful World!' #Episodes: 12 rows numbered 1-12, first 'The Crimson-Eyed Wizards' 2023-04-06 — the one component 1-12. Sean's mint go 2026-09-05. | Sean 2026-09-05 · docs/changelog.md §12.125, https://en.wikipedia.org/wiki/KonoSuba:_An_Explosion_on_This_Wonderful_World! |  |
 | `I43` | {"franchise":"konosuba"} | The seeded spin-off (anilist 150075) belongs to the konosuba IP; ruled with the seed. | Sean 2026-09-05 · scripts/ingest/research/discovery/PROPOSAL.md §9 row 4 |  |
 
-### konosuba-gods-blessing-on-this-wonderful-world (1)
+### konosuba-gods-blessing-on-this-wonderful-world (2)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `I43` | {"franchise":"konosuba","title":"KonoSuba","base":true} | KonoSuba (2016-2024, three seasons) and the Megumin spin-off An Explosion on This Wonderful World! (2023, seeded 2026-09-05) — one IP. | Sean 2026-09-05 · scripts/ingest/research/discovery/PROPOSAL.md §9 row 4 |  |
+| `I45` | {"anilistId":102976,"standing":"mixed","chapter":null,"volume":5,"chaptersAdapted":"LN vol 5 ch 1-6 (the ch 1-2 trek and vol 5's Epilogue are cut — both land… | Wave 1 (verified SOUND WITH NOTES, standing corrected to MIXED): the owner's instrument is Akatsuki's light novel; the film adapts vol 5 ch 1-6 (fandom LN range + manga map ch 43-53; ja-WP 第2期の後・原作第5巻; the licensor's STORY page and the Sneaker Bunko blurb tell the same story) with two holes S3 ep 1 fills. Every source agrees the post-Railgun act is anime-original and the film's dramatic peak — the Shippuden-388 shape Sean ruled mixed. Position after the S2 OVA per the fandom's navigation (ep 20 → OVA 2 → Movie → ep 21). | Sean 2026-09-05 · scripts/ingest/research/discovery/out/konosuba-gods-blessing-on-this-wonderful-world__102976.json, scripts/ingest/research/discovery/verify/konosuba-gods-blessing-on-this-wonderful-world__102976.md |  |
 
 ### kowloon-generic-romance (6)
 
@@ -2336,11 +2351,14 @@
 |---|---|---|---|---|
 | `I27` | {"ids":[13663,20995],"extras":[{"id":21852,"after":20995}],"ruledExtent":"AFL numbers the two 2nd-season specials as 25-26 (dropped by SOURCE_NUMBERING_SHIFT… | AFL numbers the two 2nd-season specials as 25-26 (dropped by SOURCE_NUMBERING_SHIFTS); the '2nd Specials' entry (21852, eps 13-14 of 2nd, adapts chs 43-47) holds an order-only position after 20995 — batch 14 (2026-08-23 s2). | session 2026-08-23 · docs/data-pipeline.md §12 batch 14 |  |
 
-### made-in-abyss (1)
+### made-in-abyss (4)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `R21` | {"file":"scripts/ingest/research/batch20/out/made-in-abyss.json","report":"scripts/ingest/research/batch20/verify/made-in-abyss.md"} | verdict folded as delivered — the repair 25 → 26 rides the anchor write: anchors re-land at the MANUAL tier (P8: the mu/afg pins they replace would re-derive), continues through writeCuratedContinue (C7), annotations origin 'research'; the curated deviations are the sibling entries of this wave | Sean 2026-09-02 · scripts/ingest/research/batch20/out/made-in-abyss.json, scripts/ingest/research/batch20/verify/made-in-abyss.md, scripts/ingest/history/apply-wave8.ts, §12.96 |  |
+| `I45` | {"anilistId":101343,"position":13.5,"note":"Journey's Dawn (compilation of S1 eps 1-8, 2019-01-04) — filler by rule (N8); ruled first in the 13.5 cluster: th… | Sean 2026-09-05 (wave 1, the Made in Abyss cluster): the writer had slotted the feature at 13.5 and the two recap films behind it in iteration order; the sourced order is Journey's Dawn, Wandering Twilight, then Dawn of the Deep Soul. Identity is the AniList id; the position is the ruled order. | Sean 2026-09-05 · scripts/ingest/research/discovery/out/made-in-abyss__100643.json, scripts/ingest/research/discovery/verify/made-in-abyss__100643.md |  |
+| `I45` | {"anilistId":101344,"position":13.51,"note":"Wandering Twilight (compilation of S1 eps 9-13 with new footage, 2019-01-18) — filler by rule (N8); second in th… | Sean 2026-09-05 (wave 1, the Made in Abyss cluster): ruled second, after Journey's Dawn and before the feature (ja-WP: both compilations carry 新規カット; the Series Continuity page lists a new Movie-2 scene — N8 keeps them recap / filler). | Sean 2026-09-05 · scripts/ingest/research/discovery/out/made-in-abyss__100643.json, scripts/ingest/research/discovery/verify/made-in-abyss__100643.md |  |
+| `I45` | {"anilistId":100643,"standing":"canon","chapter":38,"volume":5,"chaptersAdapted":"26 (pp. 12-16 — pp. 1-11 are ep 13's) to 38 (ch 27-38 in full; ch 37 pp. 17… | Wave 1 (verified SOUND WITH NOTES): three independent instruments (the Made in Abyss Wiki's film page refs 026 → 038, MangaUpdates' Vol 4 Chap 26 → Vol 5 Chap 38 segment, ja-WP 第4巻の途中から第5巻) agree; the ch 26 page split against ep 13 was verified in batch 20 wave 6; the seven movie-only beats are slivers (T28). Sean 2026-09-05: canon, ruled third in the 13.5 cluster. | Sean 2026-09-05 · scripts/ingest/research/discovery/out/made-in-abyss__100643.json, scripts/ingest/research/discovery/verify/made-in-abyss__100643.md |  |
 
 ### magi-adventure-of-sinbad (1)
 
@@ -3237,12 +3255,13 @@
 | `I17` | {"to":"rurouni-kenshin","kind":"remake"} | Rurouni Kenshin: 2 separate series; 2023 remakes 1996. | session 2026-08-22 · docs/franchise-rulings.md "Rurouni Kenshin" |  |
 | `I43` | {"franchise":"rurouni-kenshin"} | Rurouni Kenshin 1996 and the 2023 remake; ruled 2 series; one IP. | Sean 2026-09-05 · signed by Sean 2026-09-05 ("Sign the 39 / 97 franchise table"), the 2026-09-05 franchise bootstrap (connected components of series_relations ∪ AniList story / PARENT / SAME_UNIVERSE edges between owned entries; scripts/ingest/research/discovery/PROPOSAL.md §2), docs/franchise-rulings.md "Final rulings" Rurouni Kenshin |  |
 
-### saga-of-tanya-the-evil (2)
+### saga-of-tanya-the-evil (3)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `G53` | {"5":"2017-02-03","6":"2017-02-10"} | Batch 19 wave 2 lane B3 (ja-WP + en-WP / syoboi / fandom, 2+ sources per row; the contradictions verified R24; Sean ruled B3-7): ep 5: Episode 5 is 'My First Battalion' (はじまりの大隊), aired 2017-02-03 (Fri 22:00, AT-X). ja-WP 各話リスト 第伍話 = 2月3日; en-WP episode list ep 5 = February 3, 2017; AniList airing schedu \| ep 6: Episode 6 is 'Beginning of Madness' (狂気の幕開け), aired 2017-02-10. ja-WP 第陸話 = 2月10日; en-WP ep 6 = February 10, 2017; AniList = 2017-02-10. Same transposition as ep 5 - swap | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/saga-of-tanya-the-evil.json, https://anilist.co/anime/21613, https://en.wikipedia.org/wiki/List_of_Saga_of_Tanya_the_Evil_episodes, https://ja.wikipedia.org/wiki/%E5%B9%BC%E5%A5%B3%E6%88%A6%E8%A8%98_(%E3%82%A2%E3%83%8B%E3%83%A1), scripts/ingest/research/batch19/verify/b3-contradictions.md |  |
 | `G53` | {"5":"My First Battalion","6":"Beginning of Madness"} | Rows 5 and 6 held each other's title AND date (AFL-inherited): ja-WP 各話リスト 第伍話 はじまりの大隊 2月3日 / 第陸話 狂気の幕開け 2月10日; en-WP agrees. The dates move under AIR_DATE_OVERRIDES; the titles travel with them. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/saga-of-tanya-the-evil.json, scripts/ingest/research/batch19/verify/b3-contradictions.md |  |
+| `I45` | {"anilistId":100878,"standing":"mixed","chapter":null,"volume":4,"chaptersAdapted":"LN vol 4: ch 1-3 in substance (ch 3's Tiegenhoff substantially altered), … | Wave 1 (verified SOUND WITH NOTES, standing corrected to MIXED): ja-WP's 作中の年表 (原作 4巻 / 劇場版 rows), the fandom's vol 4 chapter pages and a reader's dated scene index of the printed volume agree on ch 1-3 + ch 4's outcome + ch 6's first scene; the same timeline marks the film's Mary clashes アニメのみ and the novel's ch 5 clash unadapted — no source states a relocation. Sean 2026-09-05: mixed; ch 5 not adapted; 12.5. | Sean 2026-09-05 · scripts/ingest/research/discovery/out/saga-of-tanya-the-evil__100878.json, scripts/ingest/research/discovery/verify/saga-of-tanya-the-evil__100878.md |  |
 
 ### sailor-moon (12)
 
@@ -3425,7 +3444,7 @@
 | `A18` | reorder regime (batch 17, Sean's END=max ruling 2026-08-25, verifier-confirmed): the adaptation is deliberately NON-LINEAR — near-exhaustive as a set through… | Sean's END=max ruling (the sparse-frontier alternative rejected; per the C2/A4 architecture): the adaptation is deliberately NON-LINEAR — near-exhaustive as a set through ch 157 (only 68/106/139/151 skipped) then cherry-picking, with episodes freely pairing early and late chapters (ep 28 = ch 102 alone, ep 74 = 182+196) — verified by fandom forward+reverse links, ja-WP subtitle splices, and en-WP summaries | Sean 2026-08-25 · scripts/ingest/research/batch17/out/sket-dance.json, scripts/ingest/apply-research-batch-17.ts, §12.45, CHUNK1-RECOVERY.md §11 |  |
 | `T6` | {"26":"canon","32":"canon","77":"mixed"} | AFL's table STOPS at ep 54, so its filler labels there are not typings (T4): ep 26 adapts ch 180 in full (ja-WP subtitle = the chapter title), ep 32 adapts chs 18+45 → canon. Ep 77: the finale adapts ch 167 with an anime-original bookend → mixed. | Sean 2026-08-25 · scripts/ingest/research/batch17/out/sket-dance.json |  |
 
-### slam-dunk (6)
+### slam-dunk (7)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -3435,6 +3454,7 @@
 | `C5` | {"episode":96,"continue_chapter":198,"kind":"post_series","note":"C5 post-series: coverage is ch 197 (ep 96), so resume at ch 198 '新幹線' (vol 23 = 198-206). C… | C5 post-series: coverage is ch 197 (ep 96), so resume at ch 198 '新幹線' (vol 23 = 198-206). Chs 198-276 — vols 23-31, the whole Nationals arc — are never adapted by this TV series; the 2022 film THE FIRST SLAM DUNK (a separate entry) covers ch 223-276, so 198-222 has no animation anywhere. Ep 101's coda is an original send-off echoing ch 197's last splash page; ch 198 opens after the team has left. | session 2026-08-27 · scripts/ingest/research/batch20/out/slam-dunk.json, scripts/ingest/research/batch20/verify/slam-dunk.md, scripts/ingest/history/apply-wave1.ts, §12.78 |  |
 | `T28` | {"episodes":[101],"kind":"loose_parallel","chapters":"197 (closing splash page)","note":"T28 tie on a filler row (verifier-corrected): ep 101's closing tag —… | T28 tie on a filler row (verifier-corrected): ep 101's closing tag — Shohoku boarding the shinkansen for Hiroshima WITH Kainan (Bandai Channel: 海南大付属高校と共に…広島へと乗りこむ) — is an original send-off echoing ch 197's last page (a single 'Sakuragi invades the nationals' splash, '3 days later'); ch 198 '新幹線' opens in the empty Shohoku gym after the team has left and has no station, no boarding, no Kainan. Position-less (A1/A44); the continue 198 stands. | Sean 2026-08-27 · scripts/ingest/research/batch20/out/slam-dunk.json, scripts/ingest/research/batch20/verify/slam-dunk.md, scripts/ingest/history/apply-wave1.ts, §12.78 |  |
 | `T28` | {"episode":92,"deletedKind":"partial"} | replaced by graft{194} weight sliver, a duplicate (AFG: 'only watch from 19:14 to the end') | Sean 2026-09-04 · scripts/ingest/history/batch21-apply-wave1.ts, scripts/ingest/research/batch21/verify/w1-flips.md |  |
+| `I45` | {"anilistId":128207,"standing":"mixed","chapter":276,"volume":31,"chaptersAdapted":"223-276 (the Sannoh match, abridged; 276 partial — the Shohoku-side epilo… | Wave 1 (verified SOUND WITH NOTES): MangaUpdates' own segment (Vol 25 Chap 223 → Vol 31 Chap 276, abridged with an original epilogue), en-WP and ja-WP (Ryota takes top credit; original flashbacks and a new epilogue) and the fandom agree; the TV run's terminal 197 is the stored G56 anchor. Sean 2026-09-05: mixed — a substantial source share beside a substantial original share; the author's film credit is recorded in the note, not as adopted{author} (T26's adoptions put material into the source line; this screenplay exists only as the film). The verdict's ep-94 flag was wrong (stored canon, anchored 196) and is struck. | Sean 2026-09-05 · scripts/ingest/research/discovery/out/slam-dunk__128207.json, scripts/ingest/research/discovery/verify/slam-dunk__128207.md |  |
 
 ### solo-leveling (4)
 
