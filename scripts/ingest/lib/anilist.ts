@@ -99,6 +99,30 @@ export interface AniListMedia {
   };
 }
 
+// A ranked PAGE of media (G60 — the discovery reader): the list registry in
+// lib/rankings.ts owns the argument strings; this is the one query. ANIME
+// pages carry MEDIA_FIELDS (the same payload the catalog stages); MANGA pages
+// carry the manga-first subset with their ADAPTATION anime edges.
+const MANGA_LIST_FIELDS = `
+  id idMal
+  title { romaji english native }
+  format status source countryOfOrigin
+  startDate { year month day }
+  chapters volumes
+  averageScore popularity favourites trending
+  genres isAdult
+  relations { edges { relationType node {
+    id type format status episodes popularity countryOfOrigin
+    startDate { year }
+    title { romaji english native }
+  } } }
+`;
+export async function pageMedia(args: string, page: number, perPage = 50, kind: 'ANIME' | 'MANGA' = 'ANIME'): Promise<unknown[]> {
+  const fields = kind === 'ANIME' ? MEDIA_FIELDS : MANGA_LIST_FIELDS;
+  const data = await gql<{ Page: { media: unknown[] } }>(`query { Page(page: ${page}, perPage: ${perPage}) { media(${args}) { ${fields} } } }`, {});
+  return data.Page.media;
+}
+
 export async function mediaByIds(ids: number[]): Promise<AniListMedia[]> {
   const out: AniListMedia[] = [];
   for (let i = 0; i < ids.length; i += 50) {

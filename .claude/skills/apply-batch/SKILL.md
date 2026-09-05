@@ -103,7 +103,7 @@ ruled), add it to `lib/rulings/index.ts`, move the script to
 - **Historical apply scripts revert later rulings** (`P34`): three in
   `history/` would (fotbs span, AoT ep 87, dr-stone row 95). Never run one.
 - **A missed edge deploy ships silent drift** (`P3`): any `lib/` change in
-  the apply → rebuild + deploy all four; `npm run system:census` proves the
+  the apply → rebuild + deploy every bundle; `npm run system:census` proves the
   bundles are current.
 - **A one-shot migration must be keyed PER ROW, never on a sentinel value** (`N22`, batch 20 wave 2): the saint-seiya −1 migration was guarded on v8's end, so rows applied afterwards in the old space (batch 17's 43-72) were never touched and nothing tripped for two days. Stamp a marker on every migrated row and select on its ABSENCE; prove the outcome with a census class (`anchor_volume_mismatch`: stored volume vs the boundary table's volume for the chapter).
 - **File-driven apply + a curated overlay beats hand-copied maps at scale** (117 anchors in wave 2): the verdict JSON is the record set, the overlay (`ANCHOR_OVERRIDE` / `CONTINUE_OVERRIDE` / `*_REJECT` / `*_DROP`) is the ruling — every deviation from the file is a keyed entry with its reason, and the dry run prints "(overlay)" beside each one.

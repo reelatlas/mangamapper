@@ -41,8 +41,8 @@ Two modes:
 ## 2. Lib → edges (`P3`)
 
 If step 0's edge-hash line was red or any `scripts/ingest/lib/` file
-changed: `npx tsx scripts/ingest/build-functions.ts`, deploy ALL FOUR
-(refresh-afl/afg/anilist/mu). The hash proves the bundles are current; the
+changed: `npx tsx scripts/ingest/build-functions.ts`, deploy EVERY bundle
+(refresh-afl/afg/anilist/mu/discovery — every file under `_src`). The hash proves the bundles are current; the
 deploy is your step.
 
 ## 3. Staging freshness

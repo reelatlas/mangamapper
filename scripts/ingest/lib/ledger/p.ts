@@ -60,11 +60,11 @@ export const RULES: Rule[] = [
   },
   {
     id: 'P3',
-    aliases: ['invariant 2', 'hard invariant 2', 'lib → four edges', 'lib → edges', 'missed edge deploy'],
+    aliases: ['invariant 2', 'hard invariant 2', 'lib → four edges', 'lib → edges', 'missed edge deploy', 'every bundle', 'lib → five edges', 'all four edges'],
     family: 'P',
-    title: 'Any lib/ change → rebuild and deploy all four edge functions',
+    title: 'Any lib/ change → rebuild and deploy every edge bundle',
     statement:
-      'If anything under scripts/ingest/lib/ changed since the last deploy, run build-functions.ts and deploy refresh-afl, refresh-afg, refresh-anilist and refresh-mu — all four, never a subset. The crons must run the same code as the scripts. The supabase/functions/*/index.ts bundles are generated and never hand-edited.',
+      'If anything under scripts/ingest/lib/ changed since the last deploy, run build-functions.ts and deploy EVERY bundle under supabase/functions/_src — five since 2026-09-05 (refresh-afl, refresh-afg, refresh-anilist, refresh-mu, refresh-discovery), never a subset; system-census derives the list from the directory, never from a magic count. The crons must run the same code as the scripts. The supabase/functions/*/index.ts bundles are generated and never hand-edited.',
     why: 'Forgetting this has shipped silent drift: the crons kept running a lib the scripts had already moved past. CHUNK1-RECOVERY §12 records the D4 gate going live "in all four edges" as the closing check.',
     ruledBy: 'Sean',
     ruledOn: '2026-08-23',
@@ -75,6 +75,8 @@ export const RULES: Rule[] = [
       { path: '.claude/skills/apply-batch/SKILL.md', symbol: 'A missed edge deploy ships silent drift' },
     ],
     layer: 'process',
+    retiredPhrases: ['all four, never a subset'],
+    amendedOn: ['2026-09-05'],
     status: 'live',
     see: ['P2', 'P4'],
   },

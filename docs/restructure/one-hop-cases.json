@@ -557,6 +557,19 @@
         "ledger"
       ],
       "source": "INCIDENT-2026-09-05"
+    },
+    {
+      "ask": "which anime should we add that no source charts — is there a list, and does popularity decide anything?",
+      "expected": [
+        "G60",
+        "I42",
+        "R4"
+      ],
+      "terms": [
+        "rankings",
+        "queue"
+      ],
+      "source": "discovery step 4, 2026-09-05"
     }
   ]
 }

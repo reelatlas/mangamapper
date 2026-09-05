@@ -31,9 +31,10 @@ Each is a ledger record — cite the id.
 1. **`P2` Rules live in shared lib code** (`scripts/ingest/lib/`) consumed
    identically by scripts and edge functions. Never inline a rule at a call
    site.
-2. **`P3` Any `lib/` change → rebuild and deploy ALL FOUR edge functions**
-   (`build-functions.ts`, then deploy refresh-afl/afg/anilist/mu). Crons must
-   run the same code as scripts.
+2. **`P3` Any `lib/` change → rebuild and deploy EVERY edge bundle**
+   (`build-functions.ts`, then deploy refresh-afl/afg/anilist/mu/discovery —
+   every file under `supabase/functions/_src`). Crons must run the same code
+   as scripts.
 3. **`P5` Audits verify OUTCOMES, not intentions.** A misbehaving writer must
    surface as data (`audit-ui-truth.ts`). If a rule can be checked
    mechanically, it MUST be.

@@ -1154,6 +1154,46 @@
    19-23 / 39 (chain_source) and 18 / 93-95 (AFL's loose Mixed bucket),
    beelzebub 15 / 26-28 / 51, rurouni TV ep 95 (identity). Batch 22 opens on
    the boruto follow-up (lanes I + C) with the batch-21 tooling copied.
+127. ✅ **DISCOVERY BUILD, STEP 4 — G60, THE RANKINGS READER (2026-09-05; go-list
+    row 6; PROPOSAL.md v2.2 §3). The seed engine: which IPs should exist at
+    all.** Migration 20260905160000: `ingest_anilist_rankings` (list, snapshot,
+    rank, anilist_id, raw — greedy staging kept as history, G51; service-role
+    only) + the weekly pg_cron row for the FIFTH BUNDLE `refresh-discovery` (Sun
+    10:30 UTC: the eight ranked lists, then the halo staging, budgeted, G58).
+    lib/rankings.ts: LISTS (airing / upcoming manga-sourced TV / ONA, airing /
+    upcoming novel-sourced, all-time popularity top 500 manga + top 200 novel,
+    trending, MANGA-FIRST top 300 via their ADAPTATION edges — ~28 requests a
+    week, adult excluded at the query), snapshotRankings, productFitScore
+    (popularity × still-publishing source 1.5 × far-more-to-read 1.25 × airing
+    1.2 / announced 1.1 — documented, re-tunable), seedCandidates (the latest
+    snapshot per list → unowned, un-haloed, series-shaped, not ORIGINAL,
+    collapsed to chain heads, scored; every seed is a new IP — a relation to the
+    catalog makes it the halo's row); lib/anilist.ts#pageMedia (the one page
+    query; manga lists carry their adaptation edges); lib/discovery.ts#stageHalo
+    (the halo loop lifted from discovery-stage.ts so the script and the bundle
+    share it); discovery-stage.ts --rankings; 5 tests. audit-discovery:
+    `seed_candidate` (capped listing; a per-list header: rows / owned / halo);
+    recap.ts --scope seed (the franchise-shaped sitting table). system-census
+    derives the bundle list from `_src` (never a magic four); P3 AMENDED (P38:
+    'all four, never a subset' retired — every bundle, five today) with
+    CLAUDE.md invariant 2, the add-rule / consolidate / apply-batch skills and
+    the runbook updated; the runbook's freshness map + cadence table carry the
+    new row; architecture §1's AniList row names the reader; a one-hop case.
+    FIRST SNAPSHOT (discovery-stage --rankings): 8 lists · 1356 rows · 28
+    requests; the halo staging picked up its last 4 stragglers (263 / 263
+    TV-shaped staged). seed_candidate 534: airing-manga 56 rows (owned 3, halo
+    5) · upcoming-manga 100 (4 / 25) · popular-manga 500 (294 / 11) ·
+    popular-novel 200 (66 / 10) · airing-novel 50 (1 / 1) · upcoming-novel 50 (0
+    / 6) · trending 100 (39 / 8) · manga-first 300 (its candidates arrive
+    through edges). Top of the queue: Horimiya (popular #31, trending #73),
+    Bunny Girl Senpai, Violet Evergarden, Tower of God (source still
+    publishing), Mushoku Tensei, Wotakoi, Quintuplets, Bocchi, Banana Fish.
+    Nothing minted, nothing ruled: the queue is the sitting's input (/discover);
+    a seed lands STAGED (P39). Edges: five bundles deployed (lib-hash current in
+    every bundle); 225 tests; system census OK. NEXT = step 6, the
+    research-batch variant (TYPE + anchors in one ask) when the first seeded
+    wave is planned; the first full /discover sitting on Sean's go; batch 23
+    wave 1 stays parked.
 126. ✅ **P40 — NO SCRIPT DELETES A SERIES; A DELETION IS A LEDGER ENTRY (the
     durable fix after INCIDENT-2026-09-05; Sean 2026-09-05, Cursor's five-point
     list).** Migration 20260905150000_series_ledger.sql: `series_ledger` (id,

@@ -186,7 +186,7 @@
 - `I43` The franchise umbrella: ruled membership, never a merge — aka `franchise`, `franchises`, `the franchise umbrella`, `franchise umbrella`, `the umbrella`, `IP`, `franchise layer`, `franchise membership`, `FRANCHISES`, `FRANCHISE_OF`, `OWN_IP`, `series_without_franchise`, `franchise_id`, `assertFranchises`, `list by franchise`, `continuity`, `the franchise bootstrap`, `franchise sitting`, `the signing table`, `own IP`, `franchise of one`
 - `I44` Adoption: a page attaches to an existing series by identity — aka `adoption`, `the adoption gate`, `adoption gate`, `identity-first`, `identity first`, `adoptByIdentity`, `adoption_held`, `a page adopts a series`, `AFL attaches later`, `seed first, AFL attaches later`, `the ID COLLISION lesson`
 
-**G — Gates & freshness (sources)** (49)
+**G — Gates & freshness (sources)** (50)
 - `G1` The flag rule: nothing suspicious auto-applies — aka `flag rule`, `the flag rule`, `the confirm queue`, `nothing suspicious ever auto-applies`
 - `G3` Recurring conditions flag once; only Sean dismisses — aka `fileFlagOnce`, `once-per-open-kind`
 - `G4` Permanent conditions leave the open queue *(planned)* — aka `dismissed_permanent`, `permanent-flag disposition`, `A-8`
@@ -236,6 +236,7 @@
 - `G57` Row provenance: a writer deletes only rows it minted — aka `row provenance`, `minted_by`, `a writer deletes only rows it minted`, `row_minted_by_missing`, `the 5D 145 lesson`, `no delete-then-insert`
 - `G58` Budgeted edges: structural hash, deferral, closed run row — aka `budgeted edge`, `structural hash`, `volatile fields`, `edge wall clock`, `run_stuck`, `deferred not skipped`, `the refresh-anilist lesson`, `aniListHash`, `time budget`
 - `G59` The mint rule: who creates the grid when AFL has nothing — aka `the mint rule`, `who mints the grid`, `grid minting`, `ruled wiki page`, `WIKI_PAGES`, `MINTED_GRIDS`, `manual grid`, `grid_unminted`, `AFL has nothing`
+- `G60` Rankings are a reader: a ranked queue, never authority — aka `rankings`, `the rankings reader`, `AniList rankings`, `ingest_anilist_rankings`, `seed_candidate`, `the seed queue`, `seed engine`, `product fit`, `productFitScore`, `the score`, `refresh-discovery`, `the fifth bundle`, `weekly discovery`, `LISTS`, `snapshotRankings`, `seedCandidates`, `manga-first`, `popularity is a sort key`, `rank is a sort key`, `top 500`
 
 **V — Volumes & boundaries** (11)
 - `V1` Monotonic starts, or the row is not data — aka `monotonic-start gate`, `MONOTONIC-START rule`, `monotonic boundaries`, `monotonic starts`, `Sailor Moon v3 report`, `Sailor Moon "v3: chs 10-3"`
@@ -285,7 +286,7 @@
 **P — Process & pipeline** (36)
 - `P1` The data cycle, seven steps run in order — aka `the data cycle`, `data cycle`, `the cycle`
 - `P2` Rules live in shared lib code, never inline at a call site — aka `invariant 1`, `hard invariant 1`, `rules live in lib`, `every-writer rule`
-- `P3` Any lib/ change → rebuild and deploy all four edge functions — aka `invariant 2`, `hard invariant 2`, `lib → four edges`, `lib → edges`, `missed edge deploy`
+- `P3` Any lib/ change → rebuild and deploy every edge bundle — aka `invariant 2`, `hard invariant 2`, `lib → four edges`, `lib → edges`, `missed edge deploy`, `every bundle`, `lib → five edges`, `all four edges`
 - `P4` Edge bundles carry the lib content hash — aka `edge hash`, `lib-hash stamp`, `T2.6`
 - `P5` Audits verify OUTCOMES; mechanical checks are mandatory — aka `invariant 3`, `hard invariant 3`, `audits verify outcomes`, `outcome-check pattern`, `script before model`
 - `P6` Incomplete data degrades gracefully — never NaN — aka `invariant 4`, `hard invariant 4`, `graceful degradation`
@@ -3204,6 +3205,20 @@ When AFL has nothing for an entry (no page, an empty page, a page held sparse), 
 - aliases: the mint rule, who mints the grid, grid minting, ruled wiki page, WIKI_PAGES, MINTED_GRIDS, manual grid, grid_unminted, AFL has nothing
 - see: G57, G55, A42, N13, P2, P9
 
+### G60 · Rankings are a reader: a ranked queue, never authority
+
+AniList's ranked lists are a READER of an existing source, never a fifth source (G50 applies where it applies — a staging table, a rule record, inline upkeep, a freshness-map row — and no new website). Eight lists (lib/rankings.ts#LISTS: airing / upcoming manga-sourced TV / ONA, airing / upcoming novel-sourced, all-time popularity top 500 manga and top 200 novel, trending, and MANGA-FIRST — the most popular manga and their ADAPTATION anime) are SNAPSHOT into ingest_anilist_rankings as greedy staging (G51), one snapshot per list per run, kept as history so a title climbing is itself a signal; the weekly bundle refresh-discovery (pg_cron, Sunday 10:30 UTC; budgeted, G58; a deferred list leads the next run) and discovery-stage.ts --rankings are its two forms, both the same lib. The census reads the LATEST snapshot of every list into ONE queue, seed_candidate: media no series owns (I21) and no halo edge reaches (a related title is the halo's row, I42), series-shaped, not source ORIGINAL (no instrument, T25), collapsed to its chain head (a later season of an unowned chain names its prequel as the head), scored by PRODUCT FIT — popularity × a still-publishing source (×1.5) × far more to read than adapted (×1.25) × airing (×1.2) or announced (×1.1) — a documented, re-tunable derivation, and franchise-shaped (every seed is a new IP; anything with a relation to the catalog belongs to the halo). A rank is the SORT KEY of the queue: never standing, never chapter math, never a mint — promotion is a `series` ruling and the seed writer at a /discover sitting (the recap's --scope seed table), and a seeded series lands STAGED (P39).
+
+*Why:* Measured 2026-09-05 (PROPOSAL.md §0): the catalog held 3 of the 56 manga-sourced shows airing that week, 1 of 29 announced for the next season, and 293 of the top 500 manga-sourced TV / ONA — existence itself was borrowed from AFL's page list. Sean's value proposition: no cohesive source of truth exists; mangaMapper seeds first and the classifiers attach later (I44). Cursor's framing kept: top 500 is the third engine, not the first — the airing list is the product edge and it is small; the halo (I42) comes first because it is free. The product-fit score is the correction to raw popularity: Tower of God (600+ chapters, one season adapted) outranks Horimiya (finished at 122, mostly adapted) for a reading-continuation product. The fifth bundle was chosen over a mode knob because invoke_edge_refresh posts an empty body to a named function — one function, one job, one budget (P3 amended to 'every bundle').
+
+- ruled Sean 2026-09-05 (scripts/ingest/research/discovery/PROPOSAL.md v2.2 §3 (the seed engine) and §9 row 6; Sean's go 2026-09-05 ('Step 4 can start'); the AniList schema introspected 2026-09-05)
+- layer **writer**
+- enforced: [supabase/migrations/20260905160000_anilist_rankings.sql](../supabase/migrations/20260905160000_anilist_rankings.sql) · [lib/rankings.ts#LISTS](../scripts/ingest/lib/rankings.ts) · [lib/rankings.ts#snapshotRankings](../scripts/ingest/lib/rankings.ts) · [lib/rankings.ts#seedCandidates](../scripts/ingest/lib/rankings.ts) · [lib/rankings.ts#productFitScore](../scripts/ingest/lib/rankings.ts) · [lib/anilist.ts#pageMedia](../scripts/ingest/lib/anilist.ts) · [supabase/functions/_src/refresh-discovery.ts](../supabase/functions/_src/refresh-discovery.ts) · [discovery-stage.ts](../scripts/ingest/discovery-stage.ts) · [audit-discovery.ts#seed_candidate](../scripts/ingest/audit-discovery.ts) · [research/discovery/recap.ts](../scripts/ingest/research/discovery/recap.ts)
+- audit: `seed_candidate`
+- witnesses: trigun-stampede, konosuba-an-explosion-on-this-wonderful-world, kakegurui
+- aliases: rankings, the rankings reader, AniList rankings, ingest_anilist_rankings, seed_candidate, the seed queue, seed engine, product fit, productFitScore, the score, refresh-discovery, the fifth bundle, weekly discovery, LISTS, snapshotRankings, seedCandidates, manga-first, popularity is a sort key, rank is a sort key, top 500
+- see: I42, I43, I44, P39, G51, G47, G58, G50, R4, I21, T25, P3
+
 ## V — Volumes & boundaries
 
 ### V1 · Monotonic starts, or the row is not data
@@ -3794,9 +3809,9 @@ Every rule is implemented once in scripts/ingest/lib/ and consumed identically b
 - aliases: invariant 1, hard invariant 1, rules live in lib, every-writer rule
 - see: P3, P5, P17
 
-### P3 · Any lib/ change → rebuild and deploy all four edge functions
+### P3 · Any lib/ change → rebuild and deploy every edge bundle
 
-If anything under scripts/ingest/lib/ changed since the last deploy, run build-functions.ts and deploy refresh-afl, refresh-afg, refresh-anilist and refresh-mu — all four, never a subset. The crons must run the same code as the scripts. The supabase/functions/*/index.ts bundles are generated and never hand-edited.
+If anything under scripts/ingest/lib/ changed since the last deploy, run build-functions.ts and deploy EVERY bundle under supabase/functions/_src — five since 2026-09-05 (refresh-afl, refresh-afg, refresh-anilist, refresh-mu, refresh-discovery), never a subset; system-census derives the list from the directory, never from a magic count. The crons must run the same code as the scripts. The supabase/functions/*/index.ts bundles are generated and never hand-edited.
 
 *Why:* Forgetting this has shipped silent drift: the crons kept running a lib the scripts had already moved past. CHUNK1-RECOVERY §12 records the D4 gate going live "in all four edges" as the closing check.
 
@@ -3804,7 +3819,8 @@ If anything under scripts/ingest/lib/ changed since the last deploy, run build-f
 - layer **process**
 - enforced: [build-functions.ts](../scripts/ingest/build-functions.ts) · [.claude/skills/consolidate/SKILL.md#Lib → edges](../.claude/skills/consolidate/SKILL.md) · [.claude/skills/apply-batch/SKILL.md#A missed edge deploy ships silent drift](../.claude/skills/apply-batch/SKILL.md)
 - **audit: none — automation backlog**
-- aliases: invariant 2, hard invariant 2, lib → four edges, lib → edges, missed edge deploy
+- aliases: invariant 2, hard invariant 2, lib → four edges, lib → edges, missed edge deploy, every bundle, lib → five edges, all four edges
+- retired wording (P38): “all four, never a subset”
 - see: P2, P4
 
 ### P4 · Edge bundles carry the lib content hash
@@ -4355,6 +4371,7 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - alias-corruption exclusion → `I14`
 - aligned divergent anime_only manga_only → `A46`
 - alignment gate → `N16`
+- all four edges → `P3`
 - ALTERNATIVE edge → `I40`
 - ambiguity rule → `I4`
 - anchor = honest record → `A8`
@@ -4380,6 +4397,7 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - anchorsReachEnd → `A37`
 - AniFiller seed → `I10`
 - AniList naming authority → `I7`
+- AniList rankings → `G60`
 - aniListHash → `G58`
 - anime only retired → `T27`
 - anime parity → `C2`
@@ -4699,6 +4717,7 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - Evangelion ending class → `T12`
 - Evangelion/Madoka class → `T21`
 - event-driven validation tier → `V8`
+- every bundle → `P3`
 - every census delta explained → `P17`
 - every deletion listed → `P24`
 - every-writer rule → `P2`
@@ -4857,6 +4876,7 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - in-flow movies/OVAs → `I19`
 - INCIDENT-2026-09-05 → `P40`
 - index-join rule → `R20`
+- ingest_anilist_rankings → `G60`
 - ingest_fractionals → `G46`
 - Initial D rule → `N4`
 - inline upkeep → `G49`
@@ -4893,12 +4913,14 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - legend by count → `T18`
 - legend-by-count → `T18`
 - lib → edges → `P3`
+- lib → five edges → `P3`
 - lib → four edges → `P3`
 - lib-hash stamp → `P4`
 - licence is not adoption → `T26`
 - licensed canon side story → `T9`
 - light-novel instrument → `T24`
 - list by franchise → `I43`
+- LISTS → `G60`
 - LN class → `T24`
 - LN instrument ruling → `T24`
 - LN volume-space instrument → `T24`
@@ -4921,6 +4943,7 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - manga_status 'anime_only' → `T22`
 - manga_status vocabulary → `T22`
 - MANGA_STATUS_MAP → `T22`
+- manga-first → `G60`
 - manga-status cross-check → `G41`
 - MangaDex bridge → `I6`
 - MangaDex-bridge-only identity → `I6`
@@ -5095,6 +5118,7 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - pin-episode redundancy → `A26`
 - pinned protocol → `R31`
 - planComponents → `I39`
+- popularity is a sort key → `G60`
 - position-less rows → `A44`
 - post-adjustment whole-series verification → `P19`
 - predecessor floor → `A17`
@@ -5104,6 +5128,8 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - principle 8 → `P36`
 - printed numbering → `N35`
 - priority of authority → `G5`
+- product fit → `G60`
+- productFitScore → `G60`
 - propagated scalar → `N35`
 - PROTOCOL pin → `R31`
 - protocol pinned → `R31`
@@ -5113,6 +5139,8 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - published-volume stand-in completeness → `V4`
 - publishedVolumes → `V4`
 - Queue 3 LN ruling → `T24`
+- rank is a sort key → `G60`
+- rankings → `G60`
 - re-use is true data → `A31`
 - re-use never anchors → `A31`
 - read it, dry-run it, or do not run it → `P40`
@@ -5124,6 +5152,7 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - recap rule → `N8`
 - reconcile-structure → `I33`
 - refresh cadence → `G47`
+- refresh-discovery → `G60`
 - refreshStitchedVolatile → `I34`
 - refused_episode_type → `G36`
 - refused_scope_consumed → `G35`
@@ -5226,9 +5255,12 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - section envelope → `A36`
 - section header envelope → `A36`
 - sections never arcs → `T19`
+- seed engine → `G60`
 - seed first → `I42`
 - seed first, AFL attaches later → `I44`
 - seed is a fact only → `I10`
+- seed_candidate → `G60`
+- seedCandidates → `G60`
 - seeded starts → `A10`
 - seiya +1 space witness → `V11`
 - series deletion → `P40`
@@ -5268,6 +5300,7 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - sliverEnd → `A47`
 - slivers are not mixed → `T28`
 - small-sample rule → `R28`
+- snapshotRankings → `G60`
 - sole adaptation → `T28`
 - sole-adaptation exception → `T28`
 - source chain → `I41`
@@ -5376,6 +5409,7 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - the DBS relation → `I40`
 - the discover sitting → `I42`
 - the event-script trap → `P40`
+- the fifth bundle → `G60`
 - the fixture index is not an authority → `P40`
 - the flag rule → `G1`
 - the FotNS-57 test → `T28`
@@ -5391,11 +5425,14 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - the Naruto bug → `I36`
 - the parallel clause → `T26`
 - the proposal never writes → `I42`
+- the rankings reader → `G60`
 - the ranma lesson → `G26`
 - the reading chain map → `I41`
 - the reading edition → `N35`
 - the reference point (watch order) → `N32`
 - the refresh-anilist lesson → `G58`
+- the score → `G60`
+- the seed queue → `G60`
 - the signing table → `I43`
 - the sitting recap → `I42`
 - the sliver clause → `T28`
@@ -5420,6 +5457,7 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - titles:excluded → `I11`
 - Tokyo Ghoul 144/143 rule → `N22`
 - Tokyo Ghoul rule → `N22`
+- top 500 → `G60`
 - Toriko deletion → `A6`
 - Toriko deletion precedent → `A6`
 - toRuledChapter → `N35`
@@ -5483,6 +5521,7 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - wave cap → `P12`
 - wave cap 6-8 → `P12`
 - we are the seed → `I42`
+- weekly discovery → `G60`
 - weight not kind → `T26`
 - weight-bearing tie → `T26`
 - weightless sliver → `T28`
@@ -5511,6 +5550,6 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 
 ## Scoreboard
 
-- rules: 286 (live 271, planned 8, superseded 7)
+- rules: 287 (live 272, planned 8, superseded 7)
 - live data rules with no audit class (the automation backlog): 83
-- by layer: writer 149 · display 23 · both 29 · process 85
+- by layer: writer 150 · display 23 · both 29 · process 85

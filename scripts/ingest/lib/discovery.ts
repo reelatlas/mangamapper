@@ -310,3 +310,44 @@ export async function loadDiscoveryInput(): Promise<DiscoveryInput> {
   }
   return { owned, staged, changedAt, ownerTitles, ownerManga, rulings: DISCOVERY_RULINGS, openEnded: OPEN_ENDED };
 }
+
+/**
+ * STAGE THE HALO (I42): fetch and stage every unowned TV-shaped story relation of an owned entry,
+ * walking SEQUEL chains through what was just staged, under a per-run budget (G58: a deferral is
+ * data — an unstaged candidate leads the next run). Staging only — never a series, never a
+ * component. Shared by discovery-stage.ts (the event script) and the refresh-discovery bundle.
+ */
+export async function stageHalo(opts: { budget?: number; rounds?: number; timeBudgetMs?: number; dryRun?: boolean; log?: (line: string) => void } = {}): Promise<{ staged: number; deferred: number; tv: number; tvStaged: number; extras: number; ignored: number; missing: number[]; requests: number }> {
+  const { mediaByIds } = await import('./anilist');
+  const { stageAniList } = await import('./resolve');
+  const log = opts.log ?? (() => {});
+  const BUDGET = opts.budget ?? 250, ROUNDS = opts.rounds ?? 3, t0 = Date.now();
+  const input = await loadDiscoveryInput();
+  let staged = 0, deferred = 0, requests = 0;
+  const missing: number[] = [];
+  for (let round = 1; round <= ROUNDS; round++) {
+    if (opts.timeBudgetMs && Date.now() - t0 > opts.timeBudgetMs) break;
+    const cands = haloCandidates(input);
+    const want = cands.filter((c) => !c.staged && (c.bucket === 'sequel' || c.bucket === 'series')).sort((a, b) => b.popularity - a.popularity);
+    if (!want.length) { log(`[stage-halo] round ${round}: nothing unstaged — the halo is staged`); break; }
+    const take = want.slice(0, Math.max(0, BUDGET - staged));
+    deferred = want.length - take.length;
+    log(`[stage-halo] round ${round}: ${want.length} TV-shaped candidates unstaged, staging ${take.length}${deferred ? ` (${deferred} deferred to the next run — budget ${BUDGET})` : ''}${opts.dryRun ? ' — DRY RUN' : ''}`);
+    for (const c of take.slice(0, 12)) log(`   ${[...c.owners].join(',')}: anilist ${c.anilistId} ${c.title} [${c.format ?? '?'} ${c.status ?? '?'}] pop ${c.popularity} ← ${[...c.relations].join('/')}${c.hop > 1 ? ` (hop ${c.hop})` : ''}`);
+    if (take.length > 12) log(`   …+${take.length - 12} more`);
+    if (opts.dryRun || !take.length) break;
+    const media = await mediaByIds(take.map((c) => c.anilistId));
+    requests += Math.ceil(take.length / 50);
+    for (const m of media) {
+      await stageAniList(m);
+      input.staged.set(m.id, m as unknown as MediaLike);
+      input.changedAt.set(m.id, new Date().toISOString());
+      staged++;
+    }
+    for (const c of take) if (!media.some((m) => m.id === c.anilistId)) missing.push(c.anilistId);
+    if (staged >= BUDGET) { log(`[stage-halo] budget ${BUDGET} reached — the rest leads the next run`); break; }
+  }
+  const after = haloCandidates(input);
+  const tv = after.filter((c) => c.bucket === 'sequel' || c.bucket === 'series');
+  return { staged, deferred, tv: tv.length, tvStaged: tv.filter((c) => c.staged).length, extras: after.filter((c) => c.bucket === 'extra').length, ignored: after.filter((c) => c.bucket === 'ignored').length, missing, requests };
+}

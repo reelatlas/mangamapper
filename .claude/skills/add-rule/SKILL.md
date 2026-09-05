@@ -35,10 +35,10 @@ If you cannot name a witness, the rule is a hunch — go research first
 - Fail closed: unknown → refuse + flag, never default.
 - Every catalog read through `selectAll` (`P32`).
 
-## 3. Rebuild and deploy ALL FOUR edge functions (`P3`)
+## 3. Rebuild and deploy EVERY edge bundle (`P3`)
 
-`npx tsx scripts/ingest/build-functions.ts`, then deploy refresh-afl /
-refresh-afg / refresh-anilist / refresh-mu. `npm run system:census` proves
+`npx tsx scripts/ingest/build-functions.ts`, then deploy every function under
+`supabase/functions/_src` (refresh-afl / afg / anilist / mu / discovery). `npm run system:census` proves
 the bundles carry the current lib-hash (`P4`); it cannot prove they were
 deployed — that is your step, do it now, not later.
 

@@ -351,6 +351,33 @@ export type Database = {
         }
         Relationships: []
       }
+      ingest_anilist_rankings: {
+        Row: {
+          anilist_id: number
+          fetched_at: string
+          list: string
+          rank: number
+          raw: Json
+          snapshot: string
+        }
+        Insert: {
+          anilist_id: number
+          fetched_at?: string
+          list: string
+          rank: number
+          raw: Json
+          snapshot: string
+        }
+        Update: {
+          anilist_id?: number
+          fetched_at?: string
+          list?: string
+          rank?: number
+          raw?: Json
+          snapshot?: string
+        }
+        Relationships: []
+      }
       ingest_flags: {
         Row: {
           created_at: string

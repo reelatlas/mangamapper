@@ -5,9 +5,10 @@
 // column for Sean; a table per franchise (I43) where the owner has one, else per owner, the
 // default-disposed rows in one summary line after it. Paste the output into
 // the chat message — never point Sean at a file for the baseline.
-//   npx tsx --env-file=.env.ingest scripts/ingest/research/discovery/recap.ts [--scope sequel,series|extra|all] [--airing] [--owner <series-id>] [--limit N]
+//   npx tsx --env-file=.env.ingest scripts/ingest/research/discovery/recap.ts [--scope sequel,series|extra|all|seed] [--airing] [--owner <series-id>] [--limit N]
 import { haloCandidates, loadDiscoveryInput, IGNORED_RELATIONS, type Candidate } from '../../lib/discovery';
 import { FRANCHISE_OF } from '../../lib/rulings/franchises';
+import { loadLatestRankings, seedCandidates } from '../../lib/rankings';
 
 const arg = (k: string): string | null => { const i = process.argv.indexOf(k); return i > 0 ? process.argv[i + 1] : null; };
 const scope = (arg('--scope') ?? 'sequel').split(',');
@@ -17,6 +18,16 @@ const limit = Number(arg('--limit') ?? 400);
 
 async function main() {
   const input = await loadDiscoveryInput();
+  if (scope.includes('seed')) {
+    // G60 — the seed table: new IPs from the ranked lists, franchise-shaped (none has a franchise: a relation to the catalog would make it the halo's)
+    const all = haloCandidates(input);
+    const seeds = seedCandidates(await loadLatestRankings(), new Set(input.owned.keys()), new Set(all.map((c) => c.anilistId))).slice(0, limit);
+    console.log(`### Seed sitting recap — ${seeds.length} new IPs from the latest ranked snapshots (generated ${new Date().toISOString().slice(0, 10)})\n`);
+    console.log('| anilist | title | format · status · year | lists · ranks | score (factors) | source · manga | proposed | decision |');
+    console.log('|---|---|---|---|---|---|---|---|');
+    for (const s of seeds) console.log(`| ${s.anilistId} | ${s.title.replace(/\|/g, '/')} | ${s.format ?? '?'} · ${s.status ?? '?'} · ${s.year ?? ''} | ${s.lists.map((l) => `${l.list} #${l.rank}`).join(', ')} | ${s.score}${s.factors.length ? ` (${s.factors.join('; ')})` : ''} | ${s.source ?? '?'} · ${s.manga ? `${s.manga.id} ${s.manga.status ?? ''}${s.manga.chapters ? ` ${s.manga.chapters} ch` : ''}` : 'no manga edge'} | **new IP, series**${s.headId ? ` (head = prequel ${s.headId})` : ''}${s.viaManga ? ' (via manga-first)' : ''} | |`);
+    return;
+  }
   let cands = haloCandidates(input).filter((c) => c.bucket !== 'ignored');
   if (!scope.includes('all')) cands = cands.filter((c) => scope.includes(c.bucket));
   if (airing) cands = cands.filter((c) => c.status === 'RELEASING' || c.status === 'NOT_YET_RELEASED');
