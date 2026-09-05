@@ -209,6 +209,15 @@ A canonical series is an aggregate we own, with explicit provenance:
   from a head entry; refresh never touches stitched structure.
 - `series_relations` keeps AniList's relation vocabulary verbatim for future
   linking and recommendations.
+- **Franchises (`I43`, 2026-09-05)** — the top of the hierarchy: `franchises`
+  (our slug, title, base series) + `series.franchise_id` (NULL = a franchise
+  of one). Membership is a ruling (`lib/rulings/franchises.ts`, one entry per
+  member; `franchise: null` rules a series its own IP despite an AniList
+  edge), mirrored by `assert-overrides#assertFranchises`; never a merge, never
+  auto-membership from AniList; sub-groupings (continuities as a DAG of
+  `sequel` + `side_story`, remakes as cross-links, seasons as components) are
+  derived, never stored. The app reads `franchise_id`; the grouping UI is the
+  UI pass.
 - **Discovery (`I42`, 2026-09-05)** — the catalog no longer waits for a
   source to say a season or a series exists: every unowned AniList entry a
   story relation reaches from an owned entry is a LISTED candidate, derived

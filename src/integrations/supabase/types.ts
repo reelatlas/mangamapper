@@ -229,6 +229,41 @@ export type Database = {
           },
         ]
       }
+      franchises: {
+        Row: {
+          base_series_id: string | null
+          created_at: string
+          id: string
+          note: string | null
+          title: string
+          title_native: string | null
+        }
+        Insert: {
+          base_series_id?: string | null
+          created_at?: string
+          id: string
+          note?: string | null
+          title: string
+          title_native?: string | null
+        }
+        Update: {
+          base_series_id?: string | null
+          created_at?: string
+          id?: string
+          note?: string | null
+          title?: string
+          title_native?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "franchises_base_series_id_fkey"
+            columns: ["base_series_id"]
+            isOneToOne: false
+            referencedRelation: "series"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       ingest_afg_pages: {
         Row: {
           changed_at: string
@@ -576,6 +611,7 @@ export type Database = {
           external_links: Json
           favourites: number | null
           format: string | null
+          franchise_id: string | null
           genres: string[]
           id: string
           is_adult: boolean
@@ -626,6 +662,7 @@ export type Database = {
           external_links?: Json
           favourites?: number | null
           format?: string | null
+          franchise_id?: string | null
           genres?: string[]
           id: string
           is_adult?: boolean
@@ -676,6 +713,7 @@ export type Database = {
           external_links?: Json
           favourites?: number | null
           format?: string | null
+          franchise_id?: string | null
           genres?: string[]
           id?: string
           is_adult?: boolean
@@ -711,7 +749,15 @@ export type Database = {
           trending?: number | null
           updated_at?: string
         }
-        Relationships: []
+        Relationships: [
+          {
+            foreignKeyName: "series_franchise_id_fkey"
+            columns: ["franchise_id"]
+            isOneToOne: false
+            referencedRelation: "franchises"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       series_arcs: {
         Row: {

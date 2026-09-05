@@ -140,7 +140,7 @@
 - `N34` Episode totals derive, then floor, then cap — aka `episode totals derivation`
 - `N35` Ruled chapter space: a proven numbering beats AniList totals — aka `ruled chapter space`, `chapter space override`, `CHAPTER_SPACE_OVERRIDES`, `ruledChapterSpace`, `totals re-base`, `propagated scalar`, `the 260-that-is-255 class`, `sourceShifts`, `source chapter shift`, `chapter shift`, `toRuledChapter`, `printed numbering`, `the reading edition`
 
-**I — Identity, franchise & structure** (42)
+**I — Identity, franchise & structure** (43)
 - `I1` Our slug is the identity — aka `identity`, `our slug is identity`, `canonical identity is ours`, `own-slug identity`
 - `I2` Identity registry: every external id maps INTO our id — aka `identity registry`, `registerIds`, `ID COLLISION`, `series_external_ids`
 - `I3` AFG↔canonical registration by evidence strength — aka `registration tiers`, `AFG match tiers`, `identity-first, flag-first`
@@ -183,6 +183,7 @@
 - `I40` Source relation: adaptation or parallel telling — aka `source relation`, `source_relation`, `parallel telling`, `parallel tellings`, `parallel series`, `SOURCE_RELATION_OVERRIDES`, `MANGA_LINK_OVERRIDES`, `pickMangaNode`, `ruled manga link`, `the DBS relation`, `dual adaptation`, `ALTERNATIVE edge`, `two realizations of one outline`, `source_relation_missing`
 - `I41` The source chain: the named manga sequence of one story — aka `source chain`, `chain map`, `SOURCE_CHAINS`, `named manga sequence`, `chain work`, `the reading chain map`, `I41`, `the label gate`, `I41 write gate`, `work label`
 - `I42` Discovery: unowned story relations are listed candidates — aka `discovery`, `the halo`, `halo`, `the candidate rule`, `candidate rule`, `halo_sequel_unclaimed`, `halo_series_unclaimed`, `halo_extra_standing`, `discovery_new_since_sitting`, `discovery_ruled_unbuilt`, `discovery_ruling_stale`, `DISCOVERY_RULINGS`, `OPEN_ENDED`, `open-ended I15`, `declared open-ended`, `parts are components`, `title continuity`, `the proposal never writes`, `we are the seed`, `seed first`, `discovery-stage`, `audit-discovery`, `the sitting recap`, `/discover`, `the discover sitting`
+- `I43` The franchise umbrella: ruled membership, never a merge — aka `franchise`, `franchises`, `the franchise umbrella`, `franchise umbrella`, `the umbrella`, `IP`, `franchise layer`, `franchise membership`, `FRANCHISES`, `FRANCHISE_OF`, `OWN_IP`, `series_without_franchise`, `franchise_id`, `assertFranchises`, `list by franchise`, `continuity`, `the franchise bootstrap`, `franchise sitting`, `the signing table`, `own IP`, `franchise of one`
 
 **G — Gates & freshness (sources)** (49)
 - `G1` The flag rule: nothing suspicious auto-applies — aka `flag rule`, `the flag rule`, `the confirm queue`, `nothing suspicious ever auto-applies`
@@ -2138,7 +2139,7 @@ One continuous story is ONE canonical series even when AniList models it as seve
 
 ### I16 · Narrative shifts, remakes and spin-offs are separate series
 
-A major narrative shift (Naruto → Shippuden, Dragon Ball → Z → GT), a remake or recut (DB Kai retells Z; HxH 2011) and a spin-off or side story are SEPARATE canonical series linked through series_relations — even when a source numbers the story continuously or markets it as one run. A franchise umbrella above series is IA-phase work, not a merge.
+A major narrative shift (Naruto → Shippuden, Dragon Ball → Z → GT), a remake or recut (DB Kai retells Z; HxH 2011) and a spin-off or side story are SEPARATE canonical series linked through series_relations — even when a source numbers the story continuously or markets it as one run. A franchise umbrella above series (I43) groups them for IA and discovery and is never a merge.
 
 *Why:* Tokyo Ghoul :re, Bleach TYBW and Cardcaptor Sakura Clear Card stay separate (Sean 2026-08-24) although AFG runs each story as one continuous page — we do not mirror a source's presentation.
 
@@ -2148,6 +2149,7 @@ A major narrative shift (Naruto → Shippuden, Dragon Ball → Z → GT), a rema
 - audit: `integrity_double_claimed`
 - witnesses: naruto, naruto-shippuden, dragon-ball-z-kai, tokyo-ghoul, tokyo-ghoul-re, bleach, bleach-thousand-year-blood-war, cardcaptor-sakura, cardcaptor-sakura-clear-card
 - aliases: Naruto→Shippuden pattern, Naruto/DragonBall baseline, major narrative shifts = separate series, remakes are separate
+- retired wording (P38): “A franchise umbrella above series is IA-phase work, not a merge”
 - see: I15, I17, I21
 
 ### I17 · Relation kinds and direction
@@ -2503,6 +2505,20 @@ Every unowned AniList ANIME entry that a story relation (SEQUEL / PREQUEL / SIDE
 - witnesses: the-rising-of-the-shield-hero, re-zero-starting-life-in-another-world, the-apothecary-diaries, jojos-bizarre-adventure, fairy-tail
 - aliases: discovery, the halo, halo, the candidate rule, candidate rule, halo_sequel_unclaimed, halo_series_unclaimed, halo_extra_standing, discovery_new_since_sitting, discovery_ruled_unbuilt, discovery_ruling_stale, DISCOVERY_RULINGS, OPEN_ENDED, open-ended I15, declared open-ended, parts are components, title continuity, the proposal never writes, we are the seed, seed first, discovery-stage, audit-discovery, the sitting recap, /discover, the discover sitting
 - see: I15, I16, I13, I18, I19, I21, I2, I27, I38, I39, G59, G52, G58, G51, P6, P30, P5, P24
+
+### I43 · The franchise umbrella: ruled membership, never a merge
+
+A FRANCHISE is the top of the hierarchy — the IP that groups canonical series for IA (a browse page lists by IP; a series page says 'part of Naruto') and for discovery (a candidate is proposed into the IP its owner belongs to, I42) — and it is NEVER a merge: I15 / I16 boundaries stand, and a franchise carries no chapter number, no standing, no totals and no lock (P25 locks series, never franchises). Shape: `franchises` (id = OUR slug, I1; title; title_native; note; base_series_id = the entry point) + `series.franchise_id` (nullable — NULL is a franchise of one: the series is its own IP). Membership is a RULING: lib/rulings/franchises.ts holds one entry per member with reason + cite, and `franchise: null` rules a series its OWN IP despite an AniList edge (fire-force beside soul-eater, witch-watch beside sket-dance — a shared-universe cameo is not the IP by name); assert-overrides#assertFranchises mirrors the map (rows upserted, memberships asserted, a stored value the map does not state nulled, a stored franchise row the map does not state removed — converges in one run, and refuses a map with integrity problems whole). NEVER auto-membership from AniList: PARENT / SAME_UNIVERSE / OTHER / CHARACTER edges are bootstrap evidence only — the 20 CHARACTER-only pairs (dragon-ball-z ~ one-piece, gintama ~ sket-dance, assassination-classroom ~ bobobo) must never merge. One series → one franchise (a crossover is ruled to a host or to NULL; no join table until a real case needs two). Sub-groupings are DERIVED, never stored: a continuity is a connected component of `sequel` + `side_story` relations inside the franchise, kept as a DAG (GT and Super are both sequels of Z — a fork renders as branches, never one strip); `remake` / `alternative` are cross-links between continuities; seasons and in-flow extras are components (I19 / I39); standalone extras stay I13. Census: series_without_franchise (a series with any series_relations row and no membership ruling) and ruling_violation (stored ≠ map). The app reads `franchise_id` (assemble.ts SERIES_COLS → AnimeSeries.franchiseId); the grouping UI itself is the UI pass; the discovery recap already groups by it.
+
+*Why:* Sean 2026-09-05: the umbrella is for discovery AND for IA — 'if I ever want my UI to be able to display a list by franchise rather than series entries it could be incredibly helpful to have those groupings classified in the data'. The bootstrap (connected components of series_relations ∪ AniList story / PARENT / SAME_UNIVERSE edges between owned entries) proposed 38 groups over 96 series and was right where the graph is dense (Yu-Gi-Oh's nine came out as one group) and wrong exactly where Cursor predicted: Digimon (2 of 5 owned; 02 / Tamers / Frontier are AFL slugs held by flags), Fate (a spin-off of a spin-off), and every shared-cast crossover — so the graph is the PROPOSAL and membership is the ruling, the permanence pattern (a map Sean signs, a column the healer mirrors, a class that catches drift). Two OTHER-edge pairs were ruled apart at the bootstrap (fire-force, witch-watch) and Burn the Witch is the one membership resting on universe rather than story — Sean rules it at the sitting. I16 had parked the umbrella as 'IA-phase work' on 2026-08-22 so nobody used it to merge Tokyo Ghoul and :re; this record is that phase, with the merge still forbidden (I21).
+
+- ruled Sean 2026-09-05 (scripts/ingest/research/discovery/PROPOSAL.md v2.2 §2 (the franchise layer) and §9 go-list row 7; Sean's go 2026-09-05; the bootstrap probe in the design session)
+- layer **both**
+- enforced: [lib/rulings/franchises.ts#FRANCHISES](../scripts/ingest/lib/rulings/franchises.ts) · [lib/rulings/franchises.ts#FRANCHISE_OF](../scripts/ingest/lib/rulings/franchises.ts) · [lib/rulings/franchises.ts#franchiseMapProblems](../scripts/ingest/lib/rulings/franchises.ts) · [assert-overrides.ts#assertFranchises](../scripts/ingest/assert-overrides.ts) · [audit-ui-truth.ts#series_without_franchise](../scripts/ingest/audit-ui-truth.ts) · [supabase/migrations/20260905120000_franchises.sql](../supabase/migrations/20260905120000_franchises.sql) · [src/data/catalog/assemble.ts#SERIES_COLS](../src/data/catalog/assemble.ts) · [research/discovery/recap.ts](../scripts/ingest/research/discovery/recap.ts) · [research/discovery/franchise-recap.ts](../scripts/ingest/research/discovery/franchise-recap.ts)
+- audit: `series_without_franchise`, `ruling_violation`
+- witnesses: yu-gi-oh, dragon-ball, fate-stay-night, digimon-digital-monsters, bleach, fire-force, tokyo-ghoul
+- aliases: franchise, franchises, the franchise umbrella, franchise umbrella, the umbrella, IP, franchise layer, franchise membership, FRANCHISES, FRANCHISE_OF, OWN_IP, series_without_franchise, franchise_id, assertFranchises, list by franchise, continuity, the franchise bootstrap, franchise sitting, the signing table, own IP, franchise of one
+- see: I15, I16, I17, I21, I42, I19, I39, I13, I1, P25, P24, P30, P38
 
 ## G — Gates & freshness (sources)
 
@@ -4348,6 +4364,7 @@ When a clause of a rule is amended or retired, the EXACT replaced strings go in 
 - artifacts are the handoff → `P11`
 - as-stored rendering → `A19`
 - assert-type-overrides → `T6`
+- assertFranchises → `I43`
 - asterisk model → `A43`
 - asterisk review workflow → `A43`
 - audit-afg-structure → `G30`
@@ -4494,6 +4511,7 @@ When a clause of a rule is amended or retired, the EXACT replaced strings go in 
 - continue-read regimes → `C5`
 - continue-reading points → `C9`
 - continues in X → `I37`
+- continuity → `I43`
 - contradiction scan → `R25`
 - corresponded → `T26`
 - correspondence → `A46`
@@ -4685,8 +4703,18 @@ When a clause of a rule is amended or retired, the EXACT replaced strings go in 
 - fractional wiki labels prove a shared space → `N10`
 - fragment is an annotation → `T28`
 - frame check after T4.0 → `P36`
+- franchise → `I43`
 - franchise baseline → `I15`
 - franchise evaluation → `I18`
+- franchise layer → `I43`
+- franchise membership → `I43`
+- franchise of one → `I43`
+- franchise sitting → `I43`
+- franchise umbrella → `I43`
+- franchise_id → `I43`
+- FRANCHISE_OF → `I43`
+- franchises → `I43`
+- FRANCHISES → `I43`
 - freshness map → `G47`
 - from the outline or not → `T30`
 - frontend gate → `P27`
@@ -4779,6 +4807,7 @@ When a clause of a rule is amended or retired, the EXACT replaced strings go in 
 - invariant 6 → `A1`
 - invariant 7 → `P8`
 - invariant 8 → `P9`
+- IP → `I43`
 - Ippo finale lesson → `A4`
 - Ippo v61 lesson → `V4`
 - Ippo v61 partial-boundary principle → `V2`
@@ -4808,6 +4837,7 @@ When a clause of a rule is amended or retired, the EXACT replaced strings go in 
 - licence is not adoption → `T26`
 - licensed canon side story → `T9`
 - light-novel instrument → `T24`
+- list by franchise → `I43`
 - LN class → `T24`
 - LN instrument ruling → `T24`
 - LN volume-space instrument → `T24`
@@ -4967,6 +4997,8 @@ When a clause of a rule is amended or retired, the EXACT replaced strings go in 
 - overlap rule → `T7`
 - override > AFL > AFG → `T4`
 - overrides are annotations → `T26`
+- own IP → `I43`
+- OWN_IP → `I43`
 - own-slug identity → `I1`
 - owned tail → `A47`
 - ownedAnilistIds → `I21`
@@ -5137,6 +5169,7 @@ When a clause of a rule is amended or retired, the EXACT replaced strings go in 
 - series_external_ids → `I2`
 - series_relations vocabulary → `I17`
 - series_scopes → `I36`
+- series_without_franchise → `I43`
 - series_without_source_kind → `T25`
 - series-window gate → `G55`
 - settled reorders → `A41`
@@ -5268,6 +5301,8 @@ When a clause of a rule is amended or retired, the EXACT replaced strings go in 
 - the flag rule → `G1`
 - the FotNS-57 test → `T28`
 - the four crons → `G47`
+- the franchise bootstrap → `I43`
+- the franchise umbrella → `I43`
 - the governing rule → `P11`
 - the halo → `I42`
 - the L-P queue → `A46`
@@ -5281,12 +5316,14 @@ When a clause of a rule is amended or retired, the EXACT replaced strings go in 
 - the reading edition → `N35`
 - the reference point (watch order) → `N32`
 - the refresh-anilist lesson → `G58`
+- the signing table → `I43`
 - the sitting recap → `I42`
 - the sliver clause → `T28`
 - the standing goal → `P30`
 - the START clause → `A18`
 - the story test → `T30`
 - the timelines model → `T30`
+- the umbrella → `I43`
 - the unverified share → `T28`
 - the verifier → `P19`
 - three rosters → `P33`
@@ -5392,6 +5429,6 @@ When a clause of a rule is amended or retired, the EXACT replaced strings go in 
 
 ## Scoreboard
 
-- rules: 282 (live 267, planned 8, superseded 7)
+- rules: 283 (live 268, planned 8, superseded 7)
 - live data rules with no audit class (the automation backlog): 83
-- by layer: writer 148 · display 23 · both 26 · process 85
+- by layer: writer 148 · display 23 · both 27 · process 85

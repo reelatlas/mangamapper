@@ -134,6 +134,10 @@ export interface AnimeSeries {
   // Star, Sgt. Frog — research-tier verdicts); card shows an honest state
   // instead of mapping_pending
   mappingMode?: 'chapter' | 'loose';
+  // I43 — the franchise umbrella this series belongs to (our slug); null = a
+  // franchise of one. The browse page groups by it at the UI pass; it never
+  // changes standing, position or 'one story = one series'.
+  franchiseId?: string | null;
   // real print-volume boundaries (Wikipedia-derived) — every chapter→volume
   // readout prefers these; the ratio estimate is only the boundary-less
   // fallback (estimated rows must never contradict curated neighbors)

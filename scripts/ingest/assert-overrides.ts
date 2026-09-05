@@ -20,6 +20,7 @@ import { upsertAnnotation } from './lib/annotations';
 import { ANCHOR_SUPPRESSED } from './lib/rulings/anchor-suppressed';
 import { retiredBySeries, RETIRED_ANNOTATIONS } from './lib/rulings/retired-annotations';
 import { LOCKED } from './lib/rulings/permanence';
+import { FRANCHISES, FRANCHISE_OF, franchiseMapProblems } from './lib/rulings/franchises';
 import { arcsPartitionProblems, RULED_ARCS } from './lib/rulings/arcs';
 import { RULED_CORRESPONDENCE, upsertCorrespondence } from './lib/rulings/correspondence';
 import { SOURCE_RELATION_OVERRIDES } from './lib/rulings/source-relations';
@@ -224,6 +225,36 @@ async function assertPermanence() {
   console.log(`[assert-overrides] permanence (P25): ${LOCKED.size} locked, ${n} asserted${DRY ? ' — DRY RUN' : ''}`);
 }
 
+// I43: `franchises` rows + series.franchise_id mirror the ruling map (the
+// permanence pattern): rows upserted, memberships asserted, a stored value the
+// map does not state nulled, a stored franchise row the map does not state
+// removed — converges in one run. A map with integrity problems is refused
+// whole (fail closed), never half-mirrored.
+async function assertFranchises() {
+  const problems = franchiseMapProblems();
+  if (problems.length) { console.log(`  franchises map REFUSED (I43): ${problems.join('; ')}`); return; }
+  let asserted = 0, stale = 0;
+  const rows = Object.entries(FRANCHISES).map(([id, f]) => ({ id, title: f.title, title_native: f.titleNative ?? null, note: f.note ?? null, base_series_id: f.base }));
+  if (!DRY && rows.length) {
+    const { error } = await db.from('franchises').upsert(rows, { onConflict: 'id' });
+    if (error) throw new Error(`franchises upsert: ${error.message}`);
+  }
+  for (const r of await selectAll<{ id: string; franchise_id: string | null }>('series', 'id, franchise_id')) {
+    const want = FRANCHISE_OF[r.id] ?? null;
+    if ((r.franchise_id ?? null) === want) continue;
+    asserted++;
+    console.log(`  ${r.id}: franchise_id ${r.franchise_id ?? 'null'} → ${want ?? 'null'}`);
+    if (!DRY) { const { error } = await db.from('series').update({ franchise_id: want }).eq('id', r.id); if (error) throw new Error(`${r.id}: ${error.message}`); }
+  }
+  for (const f of await selectAll<{ id: string }>('franchises', 'id')) {
+    if (FRANCHISES[f.id]) continue;
+    stale++;
+    console.log(`  franchise '${f.id}': stored but not in the map → removed (stale, P24)`);
+    if (!DRY) { const { error } = await db.from('franchises').delete().eq('id', f.id); if (error) throw new Error(`franchise ${f.id}: ${error.message}`); }
+  }
+  console.log(`[assert-overrides] franchises (I43): ${rows.length} franchises, ${Object.keys(FRANCHISE_OF).length} memberships, ${asserted} asserted, ${stale} stale rows removed${DRY ? ' — DRY RUN' : ''}`);
+}
+
 // A46: series_arcs mirrors RULED_ARCS (origin 'ruling'); a parallel series'
 // arcs must partition 1..N — a map that does not is refused, never half-written.
 async function assertArcs() {
@@ -316,6 +347,7 @@ async function main() {
   await assertCorrespondence();
   await assertAnchorSuppression();
   await assertPermanence();
+  await assertFranchises();
   await assertMap('types (T6)', EPISODE_TYPE_OVERRIDES, 'type');
   await assertRetiredAnnotations();
   await assertStandingAnnotations();

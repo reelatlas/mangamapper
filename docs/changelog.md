@@ -1154,6 +1154,39 @@
    19-23 / 39 (chain_source) and 18 / 93-95 (AFL's loose Mixed bucket),
    beelzebub 15 / 26-28 / 51, rurouni TV ep 95 (identity). Batch 22 opens on
    the boruto follow-up (lanes I + C) with the batch-21 tooling copied.
+123. ✅ **DISCOVERY BUILD, STEP 2 — I43, THE FRANCHISE UMBRELLA (2026-09-05;
+    go-list row 7; PROPOSAL.md v2.2 §2).** The top of the hierarchy, for IA (a
+    browse page can list by IP) and for discovery (a candidate is proposed into
+    its owner's IP) — never a merge: I15 / I16 stand, no chapter number, no
+    standing, no totals, no lock. Migration 20260905120000_franchises.sql
+    (`franchises`: id = OUR slug, title, title_native, note, base_series_id;
+    `series.franchise_id` nullable — NULL is a franchise of one; public read)
+    pushed, types regenerated. `lib/rulings/franchises.ts`: membership is a
+    RULING — 93 entries over 37 franchises from the bootstrap (connected
+    components of series_relations ∪ AniList story / PARENT / SAME_UNIVERSE
+    edges between owned entries: 38 groups / 96 series), one title and one base
+    per franchise, `franchise: null` for two OTHER-edge pairs ruled their OWN IP
+    (fire-force beside soul-eater, witch-watch beside sket-dance — a
+    shared-universe cameo is not the IP by name); Burn the Witch is the one
+    membership resting on universe rather than story; `franchiseMapProblems()`
+    fails the map closed. All 2026-09-05 entries are session-ruled until Sean
+    signs the table (research/discovery/franchise-recap.ts, generated; --compact
+    = one row per franchise). `assert-overrides#assertFranchises` mirrors the
+    map (rows upserted, memberships asserted, unstated values nulled, unstated
+    rows removed) — 93 asserted on the first run, 0 on the second (converges).
+    Census: `series_without_franchise` (a series with a series_relations row and
+    no ruling) = 0; ruling_violation (stored ≠ map; a stored franchise row the
+    map lacks) = 0; every other class unchanged; verify 218 / 0. The app reads
+    `franchise_id` (assemble.ts SERIES_COLS → AnimeSeries.franchiseId; the
+    grouping UI is the UI pass); the discovery recap groups by franchise. I16
+    amended (P38: 'IA-phase work' retired; the umbrella is I43); I43 witnesses
+    yu-gi-oh (nine entries under one IP), dragon-ball, fate-stay-night,
+    digimon-digital-monsters (2 of 5 owned), bleach, fire-force (ruled out),
+    tokyo-ghoul (the :re umbrella Sean foresaw 2026-08-24). Edges rebuilt +
+    deployed; 214 tests; system census OK. Sub-groupings stay DERIVED (a
+    continuity = sequel + side_story components inside the franchise, as a DAG —
+    GT and Super both sequel Z). NEXT = step 3 (identity-first resolveSeries +
+    the adoption gate + `lib/seed.ts` + the I2 class + the three witnesses).
 122. ✅ **DISCOVERY BUILD, STEP 1 — I42, THE CANDIDATE RULE (2026-09-05; Sean's
     go on PROPOSAL.md v2.2 §9; the design commit 73cb597).** The catalog no
     longer waits for AFL to say a season exists: every unowned AniList entry a

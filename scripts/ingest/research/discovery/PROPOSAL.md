@@ -263,7 +263,7 @@ the honest shell IS the edge (P6), and §1.7 keeps a shell from lying.
    178 + 55 the day it lands. Rule: "an unowned story relation of an owned entry
    is a listed candidate, never silently absent." Witnesses:
    the-rising-of-the-shield-hero (S2), re-zero, the-apothecary-diaries (S3).
-2. **Franchise layer** — migration (`franchises`, `series.franchise_id`, types
+2. **Franchise layer — BUILT 2026-09-05 (I43, §12.123):** migration (`franchises`, `series.franchise_id`, types
    regen), the ruling map seeded from the bootstrap proposal + franchise-rulings.md
    in one sitting, the healer, `series_without_franchise`, assemble.ts exposes
    it (the grouping UI itself is the UI pass). I16 amended.
@@ -398,3 +398,4 @@ writer with the adoption gate. Batch 23 wave 1 stays parked behind all of it.
 ## 10. Build log
 
 - **Step 1 BUILT 2026-09-05 — I42 (the candidate rule), changelog §12.122.** `lib/discovery.ts` + 15 tests · `lib/rulings/discovery.ts` (3 declared open-ended I15 rulings: JoJo, Monogatari, Gintama; no candidate rulings yet; the SITTINGS log) · `discovery-stage.ts` (PULL, event) staged 242 candidate media in 3 rounds · `audit-discovery.ts` (CENSUS, standard; ledger-check scans it) · `research/discovery/recap.ts` (the sitting recap). First census on the staged halo: candidates 1090 (276 staged) — sequel 91 · series 176 · extra 667 · ignored 156; TV-shaped unruled 267, of which 56 RELEASING / NOT_YET_RELEASED; proposals component 61 · series 179 · ambiguous 27; discovery_new_since_sitting 267 (no sitting logged yet); ruled_unbuilt 0; ruling_stale 0. Two build-time corrections: a bare number is an ordinal only as the whole, short remainder ("100 Years Quest" had read as a season count); owner titles compare with and without AniList's "(TV)" / "(2024)" disambiguator. The real 100 Years Quest id is 139095 (139274 is Gundam: Suisei no Majo).
+- **Step 2 BUILT 2026-09-05 — I43 (the franchise umbrella), changelog §12.123.** Migration pushed + types regenerated · `lib/rulings/franchises.ts` (93 memberships / 37 franchises from the bootstrap; fire-force + witch-watch ruled their own IP; Burn the Witch the one universe-based membership; `franchiseMapProblems()` fails closed) + 5 tests · `assertFranchises` (93 asserted, then 0 — converges) · `series_without_franchise` 0, ruling_violation 0, no other class moved · the app reads `franchise_id` · the discovery recap groups by franchise · `franchise-recap.ts --compact` is the signing table (session-ruled until Sean signs) · I16 amended under P38.

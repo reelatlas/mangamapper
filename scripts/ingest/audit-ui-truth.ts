@@ -39,9 +39,10 @@ import { pickManga } from './lib/resolve';
 import { annotationProblem } from './lib/annotations';
 import { loadAllEpisodeTies, sideSourceStandingProblem } from './lib/side-source';
 import { REVIEWED_NUMBERED_SPECIALS } from './lib/rulings/reviewed-specials';
+import { FRANCHISES, FRANCHISE_OF, OWN_IP } from './lib/rulings/franchises';
 
 async function main() {
-  const series = await selectAll<any>('series', 'id, afl_slug, anilist_id, source_type, source_relation, manga_status, status, start_date, end_date, aired_episodes, total_episodes, total_chapters, total_volumes, latest_known_chapters, manga_anilist_id, manga_start_chapter, mapping_mode, asterisk_review');
+  const series = await selectAll<any>('series', 'id, afl_slug, anilist_id, source_type, source_relation, manga_status, status, start_date, end_date, aired_episodes, total_episodes, total_chapters, total_volumes, latest_known_chapters, manga_anilist_id, manga_start_chapter, mapping_mode, asterisk_review, franchise_id');
   const episodes = await selectAll<any>('episodes', 'series_id, number, type, title, air_date, format, minted_by');
   const anchors = await selectAll<any>('chapter_anchors', 'series_id, episode, chapter, start_chapter, chapters_adapted, continue_chapter, continue_kind, continue_note, continue_source, volume, source');
   const comps = await selectAll<any>('series_components', 'series_id, episode_end, episode_start, anilist_id, kind, label');
@@ -108,7 +109,7 @@ async function main() {
     rearranged_zone_unanchored: [], rearranged_zone_acknowledged: [], backjump_continue_unruled: [], backjump_continue_unnoted: [], annotation_contradicts_row: [],
     title_incomplete: [], airdate_incomplete: [], airdate_regression: [], airdate_withheld: [], episode_date_off_window: [], asterisk_unreviewed: [],
     fractional_unmodeled: [], annotation_invalid: [], annotation_retired_standing: [], afl_anime_canon_unruled: [], format_missing: [], episode_without_component: [], watch_order_kind_missing: [],
-    permanence_candidate: [], permanence_violation: [], mixed_fragment_only: [], run_stuck: [], unverified_share: [], sliver_only_anchor: [], chain_source_unmapped: [], side_source_on_chain: [], source_work_unlabelled: [], grid_unminted: [], type_source_disagreement: [], type_default_unclassified: [], side_source_unadopted: [],
+    permanence_candidate: [], permanence_violation: [], series_without_franchise: [], mixed_fragment_only: [], run_stuck: [], unverified_share: [], sliver_only_anchor: [], chain_source_unmapped: [], side_source_on_chain: [], source_work_unlabelled: [], grid_unminted: [], type_source_disagreement: [], type_default_unclassified: [], side_source_unadopted: [],
     series_without_source_kind: [], no_source: [], no_instrument: [], ok_full: [], ok_no_volume: [], ok_loose: [], ok_parallel: [],
     source_relation_missing: [], parallel_has_anchor: [], arcs_not_partition: [], arc_row_conflict: [], correspondence_invalid: [], correspondence_incomplete: [],
     pending_airing_no_anchor: [], pending_finished_no_totals: [], pending_no_canon: [], pending_other: [],
@@ -1129,6 +1130,22 @@ async function main() {
       hitsBy.get(e.series_id)!.push(`${e.number} [${[...kinds].join('+')}]`);
     }
     for (const [sid, rows] of hitsBy) classes.mixed_fragment_only.push(`${sid}: ${rows.length} mixed row(s) with only fragment ties and no anchor — ${rows.join(', ')} — T28: a fragment keeps mixed ONLY if it is the SOLE adaptation of a load-bearing source beat (the FotNS-57 test, 2026-08-28); otherwise filler + annotation — triage each`);
+  }
+  // I43 — the franchise umbrella: a stored franchise_id the map does not state (or a stored franchise row
+  // the map does not state) is a ruling_violation (run assert-overrides); a series with any series_relations
+  // row and no membership ruling is owed one — a membership or `franchise: null` (its own IP)
+  {
+    const related = new Map<string, Set<string>>();
+    for (const r of await selectAll<any>('series_relations', 'from_series, to_series')) {
+      related.set(r.from_series, new Set([...(related.get(r.from_series) ?? []), r.to_series]));
+      related.set(r.to_series, new Set([...(related.get(r.to_series) ?? []), r.from_series]));
+    }
+    for (const row of series) {
+      const want = FRANCHISE_OF[row.id] ?? null;
+      if ((row.franchise_id ?? null) !== want) classes.ruling_violation.push(`${row.id}: franchise_id '${row.franchise_id ?? 'null'}' ≠ ruled '${want ?? 'null'}' (I43) — run assert-overrides`);
+      if (want == null && !OWN_IP.has(row.id) && related.has(row.id)) classes.series_without_franchise.push(`${row.id}: related to ${[...related.get(row.id)!].join(', ')} (series_relations) and no franchise ruling (I43) — rule a membership or franchise: null (its own IP)`);
+    }
+    for (const f of await selectAll<any>('franchises', 'id')) if (!FRANCHISES[f.id]) classes.ruling_violation.push(`franchise '${f.id}' stored but not in lib/rulings/franchises.ts (I43) — run assert-overrides`);
   }
   // P25 permanence (2026-08-26): the mechanical half of the lock criteria —
   // finished series (source finished too where an instrument exists) whose
