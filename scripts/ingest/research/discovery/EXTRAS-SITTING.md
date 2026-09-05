@@ -20,8 +20,8 @@ npx tsx --env-file=.env.ingest scripts/ingest/audit-discovery.ts                
 | decision | Sean's ruling | landed (§12.129) |
 |---|---|---|
 | (a) surfacing | filler-by-rule buckets ledger-only; the wiki-list label rule when N31 opens; the wiki↔halo adoption rule NOW | I46 (one row per work): 5 adoptions, 5 halo duplicates removed, `related_work_duplicate` 0 |
-| (b) 150 same-instrument | build the standing map first, then films-first research waves (6-8) | the ruling layer `lib/rulings/related-works.ts` (empty until verdicts); protocol + contexts next; wave 1 on Sean's go |
-| (c) 291 held | triage per owner, top 10 first; yes → (b), no → filler with a reason | the same map; the triage protocol a different week |
+| (b) 150 same-instrument | build the standing map first, then films-first research waves (6-8) | the ruling layer `lib/rulings/related-works.ts` (empty until verdicts); `PROTOCOL-extras.md` + `extras-context.ts` written and proven; wave 1 (8 films) on Sean's go |
+| (c) 291 held | triage per owner, top 10 first; yes → (b), no → filler with a reason | the same map; the TRIAGE shape is in `PROTOCOL-extras.md`, contexts via `extras-context.ts --targets triage` (one per owner) — a different week |
 | (d) 50 other-instrument | Sean picks the run-shaped ones as step-2 mint input; the 5 one-shot tie-ins stay extras with (b) | `other-instrument-picks.ts` (appendix B): MINT 41 · tie-in 9 · hold 3 — awaiting the signature |
 | (e) 5 promotional | promo bucket, ignored like music videos, census lists them, the rows dropped | I45 amended; `extra_promo` 5; three stored rows removed |
 | (f) 127 undated | listed, no position, until AniList has a date; the weekly restage queued (not a ruling); NOTE the UI upcoming-schedule idea | confirmed; sidecars in STATE (restage; the UI note); node start years staged from now on |
