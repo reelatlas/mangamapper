@@ -67,11 +67,19 @@ async function main() {
     let inserted = 0, updated = 0, unpositioned = 0, held = 0, adopted = 0, dropped = 0, ambiguous = 0;
     const remove = async (r: Row, why: string) => {
       dropped++;
+      takenBy.get(r.series_id)?.delete(Number(r.position)); // the slot frees in the dry run too, so the dry run shows the real re-insert
       if (DRY) { console.log(`  remove ${r.series_id} @${r.position} ${r.title} — ${why}`); return; }
       const { error } = await db.from('watch_order_entries').delete().eq('series_id', r.series_id).eq('position', r.position);
       if (error) throw new Error(`${r.series_id}@${r.position}: ${error.message}`);
-      takenBy.get(r.series_id)?.delete(Number(r.position));
     };
+    // PRE-PASS — a ruled position moves a row: every mover is removed FIRST, then re-inserted at its ruled slot below. Two movers can swap
+    // slots (Made in Abyss: the recap films ahead of the feature) — inserting over an occupied slot would overwrite that row's identity
+    // (the key is series + position), so the slot must be free before the insert; a ruled slot still held by a NON-moving row is refused
+    for (const r of existing) {
+      if (r.origin !== 'halo' || r.anilist_id == null) continue;
+      const ruled = relatedWorkRuling(r.series_id, r.anilist_id)?.position ?? RULED_POSITION_BY_ANILIST[r.series_id]?.[r.anilist_id];
+      if (ruled != null && Number(r.position) !== ruled) { await remove(r, `moves to the ruled position ${ruled} (identity ${r.anilist_id} keeps every field)`); byKey.delete(`${r.series_id}#${r.anilist_id}`); }
+    }
     for (const c of cands) {
       const m = input.staged.get(c.anilistId);
       const bucket = c.proposal as ExtraBucket;
@@ -115,9 +123,13 @@ async function main() {
         // (Sean 2026-09-05, the identity concern): a row moves when its ruled position changes, or when its unruled BASE SLOT changes (the
         // grid grew — a sequel season minted after the work's date; the air date corrected). Inside one slot a stored row keeps its 0.01
         // order (a wrong intra-slot order is a ruling, never a re-sort); a new arrival takes the next free step in air-date order.
-        if (cur && ruling?.position != null && Number(cur.position) !== ruling.position) { await remove(cur, `moved to the ruled position ${ruling.position}`); byKey.delete(key); cur = undefined; }
-        else if (cur && ruling?.position == null && derived != null && Math.floor(Number(cur.position)) !== Math.floor(derived)) { await remove(cur, `re-derived: the base slot moved ${Math.floor(Number(cur.position))} → ${Math.floor(derived)} (the grid changed)`); byKey.delete(key); cur = undefined; }
-        const position = cur ? Number(cur.position) : ruling?.position ?? freePosition(derived!, takenBy.get(sid) ?? new Set());
+        if (cur && ruling?.position == null && derived != null && Math.floor(Number(cur.position)) !== Math.floor(derived)) { await remove(cur, `re-derived: the base slot moved ${Math.floor(Number(cur.position))} → ${Math.floor(derived)} (the grid changed)`); byKey.delete(key); cur = undefined; }
+        const position = cur ? Number(cur.position) : ruledPos ?? freePosition(derived!, takenBy.get(sid) ?? new Set());
+        if (!cur && ruledPos != null && takenBy.get(sid)?.has(ruledPos)) { // the ruled slot is another (non-moving) row's — never overwrite an identity
+          ambiguous++;
+          if (DRY) console.log(`  refused ${sid} @${ruledPos} for ${c.title}: the ruled slot is held by another row — rule that row too (listed by the census)`);
+          continue;
+        }
         const standing = relatedWorkStanding(bucket, ruling);
         if (standing == null) held++;
         const row = {

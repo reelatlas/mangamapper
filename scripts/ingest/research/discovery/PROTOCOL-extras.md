@@ -36,7 +36,12 @@ filler) and PENDING where only research can: the work adapts the owner's own ins
   is this work's job?"); `filler` = zero standing in the instrument: an original story, a
   recap with nothing new, a promotional short. A film the author wrote that the source
   LATER adopted (Battle of Gods → the DBS manga) is `filler` here with an `adopted` note —
-  the adoption is the SERIES' fact (`T26`), never this row's standing.
+  the adoption is the SERIES' fact (`T26`), never this row's standing. The author's credit on a
+  film (Inoue 原作・脚本・監督 on The First Slam Dunk) is a CREDIT in the note, never an
+  adoption: T26's adoptions put material INTO the source line (Toriyama's film became DBS
+  chapters; Kishimoto's omake is a drawn page); a screenplay that exists only as the film does
+  not. A substantial source share beside a substantial original share is `mixed` (Sean
+  2026-09-05).
 - **A recap is filler** (`N8`) even when it re-cuts canon episodes; say `recap: true` and
   name what it compiles. New footage with source content inside a recap → `mixed`, and
   say which chapters.
