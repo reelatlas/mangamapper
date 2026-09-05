@@ -2,7 +2,7 @@
 
 > GENERATED from `scripts/ingest/lib/rulings/**` by `scripts/restructure/gen-rulings.ts` — do not edit by hand. A ruling is an INSTANCE of a rule (`docs/rules.md`); the map is the record, this is the index.
 
-- rulings: 2492 across 291 series/keys · by Sean: 997 · UNRECORDED reasons: 8 · with a retire condition: 94
+- rulings: 2502 across 292 series/keys · by Sean: 1003 · UNRECORDED reasons: 9 · with a retire condition: 94
 
 ## Retire conditions (re-evaluate when…)
 
@@ -659,7 +659,7 @@
 | `I17` | {"to":"bleach","kind":"sequel"} | Bleach→TYBW: the same holding as Tokyo Ghoul :re (Sean 2026-08-24, Naruto→Shippuden pattern) — TYBW is a separate entry, linked sequel; enforced structurally by the ownership guard and the ruled-splits skip. | Sean 2026-08-24 · docs/franchise-rulings.md "Tokyo Ghoul :re stays a SEPARATE entry" |  |
 | `I43` | {"franchise":"bleach"} | Bleach — TYBW is the ruled separate sequel (Sean 2026-08-24, the Naruto → Shippuden pattern); BURN THE WITCH is Kubo's same-universe spin-off (AniList OTHER edge; the Reverse London setting is part of the Bleach world) — proposed IN as a member so the browse page keeps Kubo's world together. Sean rules the Burn the Witch membership at the sitting. | Sean 2026-09-05 · signed by Sean 2026-09-05 ("Sign the 39 / 97 franchise table"), the 2026-09-05 franchise bootstrap (connected components of series_relations ∪ AniList story / PARENT / SAME_UNIVERSE edges between owned entries; scripts/ingest/research/discovery/PROPOSAL.md §2), docs/franchise-rulings.md "Rulings 2026-08-24" (TYBW separate) |  |
 
-### blood-blockade-battlefront (10)
+### blood-blockade-battlefront (11)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -673,6 +673,7 @@
 | `A43` | {"episodes":[14,15,16,17,18,19,20,21,22],"kind":"rearranged","chapters":"21-22, 7, 15, 10, 26a+B2B 2-3, 23-24, 17, 18, 25","note":"research-tier batch 11 (20… | faithful but heavily shuffled | session 2026-08-23 · scripts/ingest/apply-research-batch-11.ts, scratchpad batch11/blood-blockade-battlefront.json (session scratchpad, not on disk), docs/changelog.md §12.30 |  |
 | `A43` | {"episodes":[18],"kind":"graft","chapters":"26 (first half) + Back 2 Back 2-3","note":"research-tier batch 11 (2026-08-23, agent-verified 2+ sources, full-re… | splices main + sequel; 26 re-adapted in ep 23 | session 2026-08-23 · scripts/ingest/apply-research-batch-11.ts, scratchpad batch11/blood-blockade-battlefront.json (session scratchpad, not on disk), docs/changelog.md §12.30 |  |
 | `A40` | {"table":"series","mapping_mode":"loose"} | pervasive anime-original White/Black thread woven through every S1 episode + heavy S2 shuffle → loose (research-ruled); anchors stored regardless as borrow-maps. | session 2026-08-23 · scripts/ingest/apply-research-batch-11.ts, scratchpad batch11/blood-blockade-battlefront.json (session scratchpad, not on disk), docs/changelog.md §12.30 |  |
+| `A40` | loose | Borrows chapters out of any order (the A40 witness with Ouran): anchors are maps, not a curve (Sean 2026-08-23). | Sean 2026-08-23 · docs/changelog.md §12.29-31 (2026-08-23, the MU-pin verification session), docs/rules.md A40 |  |
 
 ### blue-exorcist (8)
 
@@ -877,11 +878,12 @@
 | `T6` | {"17":"filler"} | Batch 20 wave 16 (the mixed_fragment_only queue under T28's sliver clause; verified R24), Sean ruled 2026-09-04: T28 sliver clause: the row adapts no source scene. The San Francisco battle, Viede's and Carv's deaths and Rosette's stigmata are anime constructs — the fandom places Viede's death at the Eden crusade (v7-v8) and Gurio in the anime only, and ja-WP records the sanctified Rosette as anime-only. The v4 Pursuers thread it echoes (Acts 23-24) is set in Chicago and inverts the alliance, and is never adapted. Same shape as eps 15 and 16 on the identical {22-26} tie. loose_parallel{22-26} kept; A1 forbids an anchor. | Sean 2026-09-04 · scripts/ingest/research/batch20/out/chrono-crusade-w16.json, scripts/ingest/research/batch20/verify/w16-types.md, scripts/ingest/research/batch20/verify/w16-anchors.md |  |
 | `R3` | {"episode":21,"kind":"graft","note":"Verifier: keep the extent-unverified qualifier — Act 22 \"Sinner\" was read by nobody (MangaDex node 404)."} | keep the extent-unverified qualifier — Act 22 "Sinner" was read by nobody (MangaDex node 404) | session 2026-09-04 · scripts/ingest/research/batch20/out/chrono-crusade-w16.json, scripts/ingest/research/batch20/verify/w16-types.md, scripts/ingest/history/apply-wave16.ts, §12.107 |  |
 
-### city-hunter (1)
+### city-hunter (2)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `G54` | [13,14] | SPLIT EVIDENCE, HELD (the verifier's call): ja-WP pairs 13 = 6月29日 オレの敵は美女 / 14 = 7月6日 16歳 while en-WP, the fandom and TVmaze (one lineage) pair the titles the other way round — and WEBザテレビジョン (thetv.jp/program/0000854667/) independently numbers 第13話「16歳結婚宣言!」/ 第14話「オレの敵は美女?」 with 1, 11, 12, 15, 16 matching official numbering: exactly a broadcast-order swap. Stored dates stand (13 = 1987-07-06, 14 = 1987-06-29 regresses); the G53 repair is NOT taken. A 1987 newspaper listing / the Yomiuri TV archive would decide it. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/city-hunter.json, scripts/ingest/research/batch19/verify/b3-contradictions.md, https://thetv.jp/program/0000854667/ |  |
+| `A40` | loose | Stored 'loose' before INCIDENT-2026-09-05 (ok_loose listed it), lost with the row; restored by this entry on Sean's ruling (2026-09-05: 'restore by an A40 map entry'). The original reason was never recorded; the series stays STAGED (P39). | Sean 2026-09-05 · scripts/ingest/research/discovery/INCIDENT-2026-09-05.md §Residues |  |
 
 ### clannad (4)
 
@@ -1219,6 +1221,12 @@
 |---|---|---|---|---|
 | `R21` | {"file":"scripts/ingest/research/batch14/out/edens-zero.json","anchors":50} | batch-14 verdict applied as-curated | session 2026-08-23 · scripts/ingest/research/batch14/out/edens-zero.json |  |
 | `R21` | {"file":"scripts/ingest/research/batch15/out/edens-zero.json","anchors":1,"zoneAcks":0} | batch-15 verdict applied as-curated | session 2026-08-24 · scripts/ingest/research/batch15/out/edens-zero.json |  |
+
+### elemental-gelade (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `A40` | loose | Stored 'loose' before INCIDENT-2026-09-05 (ok_loose listed it), lost with the row; restored by this entry on Sean's ruling (2026-09-05). The original reason was never recorded; the series stays STAGED (P39). | Sean 2026-09-05 · scripts/ingest/research/discovery/INCIDENT-2026-09-05.md §Residues |  |
 
 ### emma-a-victorian-romance (4)
 
@@ -2689,7 +2697,7 @@
 | `A11` | {"episode":34,"start_chapter":115} | 114 p.18 tail + 115-118 → majority 115 (majority rule decided this value; sliver rule may differ) | Sean 2026-08-23 · scripts/ingest/apply-start-chapters.ts, docs/changelog.md §12.27, batch 9 verdict (oshi-no-ko) | RETIRED 2026-08-26 — batch 19 E3 (§12.67): lib/sliver.ts re-derived all 27 under A10 and every seed STANDS; the seeding comments became chapters_adapted on Sean's signature (start_without_span 0) |
 | `A10` | {"episode":35,"start_chapter":119} | covers 119-127 (span opens on a whole chapter — sliver and majority rules agree) | Sean 2026-08-23 · scripts/ingest/apply-start-chapters.ts, docs/changelog.md §12.27, batch 9 verdict (oshi-no-ko) | RETIRED 2026-08-26 — batch 19 E3 (§12.67): lib/sliver.ts re-derived all 27 under A10 and every seed STANDS; the seeding comments became chapters_adapted on Sean's signature (start_without_span 0) |
 
-### ouran-high-school-host-club (13)
+### ouran-high-school-host-club (14)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -2706,8 +2714,9 @@
 | `A43` | {"episodes":[24],"kind":"rearranged","chapters":"33","note":"research-tier batch 10 (2026-08-23, agent-verified 2+ sources, full-record): aired after the Kas… | aired after the Kasanoda chapters it precedes | session 2026-08-23 · scripts/ingest/apply-research-batch-10.ts, scratchpad batch10/ouran-high-school-host-club.json (session scratchpad, not on disk), docs/changelog.md §12.29 |  |
 | `A43` | {"episodes":[25,26],"kind":"divergence","chapters":"anime-original (parallels 25-26)","note":"research-tier batch 10 (2026-08-23, agent-verified 2+ sources, … | Ouran Fair + Éclair are anime-only; Éclair does not exist in the manga | session 2026-08-23 · scripts/ingest/apply-research-batch-10.ts, scratchpad batch10/ouran-high-school-host-club.json (session scratchpad, not on disk), docs/changelog.md §12.29 |  |
 | `A40` | {"table":"series","mapping_mode":"loose"} | pervasive volume-jumping from ep 10 + anime-original finale → loose (sgt-frog class); the MU pin (ch 37) becomes the continue point, not an end anchor. Research-ruled. | session 2026-08-23 · scripts/ingest/apply-research-batch-10.ts, scratchpad batch10/ouran-high-school-host-club.json (session scratchpad, not on disk), docs/changelog.md §12.29 |  |
+| `A40` | loose | Volume-jumping from ep 10 and an anime-original finale — the anchors are a borrow-map, not a curve; MU pin → continue point 37 (Sean 2026-08-23). | Sean 2026-08-23 · docs/changelog.md §12.29-31 (2026-08-23, the MU-pin verification session) |  |
 
-### outlaw-star (8)
+### outlaw-star (9)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -2719,6 +2728,7 @@
 | `A40` | {"mapping_mode":"loose"} | parallel telling: anime finished ~11 months before the manga; episodic vs manga's direct Leyline drive (Wikipedia + anime-planet) | Sean 2026-08-24 · scripts/ingest/apply-research-batch.ts |  |
 | `G3` | {"flags":"open → confirmed","verdict":"research-tier verdict: loose adaptation — no chapter mapping is meaningful; mapping_mode=loose; Sean sign-off 2026-08-… | open ingest_flags closed with verdict: research-tier verdict: loose adaptation — no chapter mapping is meaningful; mapping_mode=loose; Sean sign-off 2026-08-24 | Sean 2026-08-24 · scripts/ingest/apply-research-batch.ts |  |
 | `T6` | {"1":"canon","2":"canon","3":"canon","4":"canon","5":"canon","6":"canon","7":"canon","8":"canon","9":"canon","10":"canon","11":"canon","12":"canon","13":"can… | Batch 18 (2026-08-26), verified R24, SEAN RULED the SERIES a studio original (SOURCE_TYPE_OVERRIDES): Sunrise's official page credits 原作 矢立肇・伊東岳彦 on the anime and Yatate (Sunrise's pseudonym) sits in the manga's own vol-1 index — a co-primary media-mix, the manga a sibling telling, not the source (A40/G3 already ruled no chapter mapping meaningful). With the anime as its own source every story episode is canon, including AFL's plain 'Filler' rows 13/14/16/18/19/20 (ep 19 = Ito's own screenplay; none are recaps — Sunrise's episode list). Eps 1-2's overlap with manga vol 1 is a divergence annotation, not a mapping. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/outlaw-star.json, scripts/ingest/research/batch18/verify/outlaw-star.md, https://www.sunrise-world.net/titles/pickup_094.php, https://ja.wikipedia.org/wiki/星方武侠アウトロースター |  |
+| `A40` | loose | A sibling telling with no comparison instrument — the research-tier 'loose' verdict of the parallel re-pass (A40's own Outlaw Star clause; T25 original since T4.1, so no instrument renders either way). Stored 'loose' before this map existed; the entry keeps the stored ruling rather than flipping it silently (2026-09-05). | session 2026-08-28 · docs/rules.md A40 (Outlaw Star), I40 (the second candidate resolved) |  |
 
 ### owarimonogatari (1)
 
@@ -2946,7 +2956,7 @@
 |---|---|---|---|---|
 | `I27` | {"ids":[99263,111321,111322,173780],"ruledExtent":"AFL's page charts S1 only (25 eps); AniList's SEQUEL chain S2 (111321, 13) → S3 (111322, 12) → S4 (173780,… | The first discovery promotion (the-rising-of-the-shield-hero, the I42 witness): the catalog stopped at AFL's S1 page for three finished seasons. A component, not a series — same title, season ordinals, one continuous story (I15); the finalize gate needs only the chain to COVER AFL's 25 (I25's ruled clause). Sean's go 2026-09-05 (PROPOSAL.md §9 row 4). | Sean 2026-09-05 · scripts/ingest/research/discovery/PROPOSAL.md §9 row 4, docs/changelog.md §12.124 | S5 (anilist 199185) is dated — add it to ids |
 
-### rosario-vampire (44)
+### rosario-vampire (45)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -2994,6 +3004,7 @@
 | `C5` | {"episode":13,"continue_chapter":20,"kind":"post_series","note":"C5 post-series (S1's end): coverage reaches ch 19 (ep 7), so resume at ch 20; chs 6, 7, 11 a… | C5 post-series (S1's end): coverage reaches ch 19 (ep 7), so resume at ch 20; chs 6, 7, 11 and 17 were never adapted in S1 (Capu2, a separate entry, reaches back for some). Sean 2026-08-27: curated under the C2-backwards reading, not a healer flip. | Sean 2026-08-27 · scripts/ingest/history/apply-wave3.ts, §12.82, scripts/ingest/research/batch20/WAVE3-RECOVERY.md |  |
 | `P24` | {"episode":14,"kind":"graft"} | replaced by side_source{Season II ch 1 + 3} + recap + divergence (the side_source itself re-kinded chain_source at apply — see KIND_OVERRIDE) | session 2026-09-04 · scripts/ingest/research/batch20/out/rosario-vampire-w16.json, scripts/ingest/history/apply-wave16.ts, §12.107 |  |
 | `T26` | {"episode":14,"from":"side_source","to":"chain_source","chapters":"Season II: ch 1 'A Brand-New Season', ch 3 'Superglue Girl'","note":"T26 THE CHAIN / I41 (… | Rosario + Vampire Season II is the sequel manga on the series' reading chain (I41) — its ch 1 + 3 carry the episode's spine, so the material is CANON told out of order: the row is MIXED, POSITION-LESS (A44); weight significant (in the chain work). Whether Capu2 should be its own entry with Season II as its instrument is queued for the identity pass | Sean 2026-09-04 · scripts/ingest/research/batch20/out/rosario-vampire-w16.json, scripts/ingest/research/batch20/verify/w16-anchors.md, scripts/ingest/history/apply-wave16.ts, §12.107 |  |
+| `A40` | loose | The ep-26 ch-19 MU pin REJECTED (Wikipedia's series-summary line stamped onto the last episode — ch 19 aired as ep 7); the adaptation borrows out of order — loose (Sean 2026-08-23). | Sean 2026-08-23 · docs/changelog.md §12.29-31 (2026-08-23, the MU-pin verification session) |  |
 
 ### rurouni-kenshin (23)
 
@@ -3120,7 +3131,7 @@
 |---|---|---|---|---|
 | `I17` | {"to":"nanatsu-no-taizai","kind":"sequel"} | Seven Deadly Sins main = ONE series; Four Knights of the Apocalypse is a separate sequel series. | session 2026-08-22 · docs/franchise-rulings.md "Seven Deadly Sins" |  |
 
-### sgt-frog (4)
+### sgt-frog (5)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -3128,6 +3139,7 @@
 | `A40` | {"mapping_mode":"loose"} | 71% filler, manga stories cherry-picked non-linearly across 358 eps — no chapter mapping meaningful (animefillerlist + Wikipedia) | Sean 2026-08-24 · scripts/ingest/apply-research-batch.ts |  |
 | `G3` | {"flags":"open → confirmed","verdict":"research-tier verdict: loose adaptation — no chapter mapping is meaningful; mapping_mode=loose; Sean sign-off 2026-08-… | open ingest_flags closed with verdict: research-tier verdict: loose adaptation — no chapter mapping is meaningful; mapping_mode=loose; Sean sign-off 2026-08-24 | Sean 2026-08-24 · scripts/ingest/apply-research-batch.ts |  |
 | `T6` | {"180":"filler","357":"filler"} | Batch 18 wave 3 (2026-08-26): ja-WP's アニメエピソード一覧 ● index (原作に沿った内容, segment grain, matched stored typing 10/10 on neighbours) gives no ● to either row; 357 is the anime's originally-planned finale (studio ending, no adoption) → filler. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/sgt-frog.json |  |
+| `A40` | loose | A parallel telling where no chapter mapping is meaningful (research-tier verdict; src/types/anime.ts mappingMode gloss names Sgt. Frog) — the card shows an honest state instead of mapping_pending. | session 2026-08-23 · src/types/anime.ts (mappingMode) |  |
 
 ### sh%C5%8Dnan-pure-love-gang (1)
 
@@ -3506,7 +3518,7 @@
 |---|---|---|---|---|
 | `I27` | {"ids":[101280,108511,116742,156822,182205],"extras":[{"id":161802,"after":101280},{"id":139498,"after":116742},{"id":182206,"after":156822}],"ruledExtent":"… | AFL-lag class: AFL page = S1 (24); S2 (2021, two parts, our 25-48) + S3 (2024, our 49-72) + S4 (airing 2026, our 73-96) — docs §12.19e structure gap, MU out-of-space flag #728. Visions of Coleus OVA (161802), Scarlet Bond (139498) and Tears of the Azure Sea (182206) are anime-original, order-only at their batch-14 placements. | session 2026-08-23 · docs/data-pipeline.md §12.19e, ingest_flags #728 |  |
 
-### to-love-ru (27)
+### to-love-ru (28)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -3537,6 +3549,7 @@
 | `A40` | {"table":"series","mapping_mode":"loose"} | the 2008 series is heavily anime-original with reordering and Motto airs 3 segments/ep in mostly random order — anchors are borrow-maps (anchor = max touched), so loose. | session 2026-08-23 · scripts/ingest/apply-research-batch-12.ts, scratchpad batch12/to-love-ru.json (session scratchpad, not on disk), docs/changelog.md §12.31 |  |
 | `N7` | 5667 | B (medium): OVA 27-32 bridges to Motto; community-practice based — re-open if evidence emerges. | Sean 2026-08-23 |  |
 | `I43` | {"franchise":"to-love-ru","title":"To Love Ru","base":true} | To Love Ru and Darkness (the sequel manga's adaptation); one IP. | Sean 2026-09-05 · signed by Sean 2026-09-05 ("Sign the 39 / 97 franchise table"), the 2026-09-05 franchise bootstrap (connected components of series_relations ∪ AniList story / PARENT / SAME_UNIVERSE edges between owned entries; scripts/ingest/research/discovery/PROPOSAL.md §2) |  |
+| `A40` | loose | The 2008 series is loose (pin 44 → 162 = the manga end; full Motto segment maps + a never-adapted sweep) — an episodic borrow-map (Sean 2026-08-23). | Sean 2026-08-23 · docs/changelog.md §12.29-31 (2026-08-23, the MU-pin verification session) |  |
 
 ### to-love-ru-darkness (6)
 
@@ -3729,13 +3742,14 @@
 | `G3` | {"flag":687,"resolution":"uq-holder: no edition fork — MU says 28 volumes complete and its Vol 14 / Chap 134 matches Kodansha's vol-14 TOC; latest_chapter 13… | ingest_flags #687 dismissed with the verdict's finding (G3: only Sean dismisses): uq-holder: no edition fork — MU says 28 volumes complete and its Vol 14 / Chap 134 matches Kodansha's vol-14 TOC; latest_chapter 130 is a release-record artifact (wave 8 verdict). | Sean 2026-09-02 · scripts/ingest/history/apply-wave8.ts, §12.96 |  |
 | `I43` | {"franchise":"negima"} | Negima! and UQ Holder! (Akamatsu's sequel set decades later); one IP. | Sean 2026-09-05 · signed by Sean 2026-09-05 ("Sign the 39 / 97 franchise table"), the 2026-09-05 franchise bootstrap (connected components of series_relations ∪ AniList story / PARENT / SAME_UNIVERSE edges between owned entries; scripts/ingest/research/discovery/PROPOSAL.md §2) |  |
 
-### urusei-yatsura (3)
+### urusei-yatsura (4)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `A40` | {"mapping_mode":"loose"} | researched loose verdict: episodic, out-of-order, source pool ≈ vols 1-29; final arc = the 1988 film. | session 2026-08-23 · scripts/ingest/apply-research-batch-6.ts |  |
 | `N8` | {"position":193.5,"disposition":"excluded_recap"} | RECAP (rebroadcast of ep 44 + countdown) — recap rule (Monogatari precedent) excludes from count AND watch order; Sean sign-off 2026-08-23 | Sean 2026-08-23 · scripts/ingest/apply-research-batch-7.ts, docs/changelog.md §12.23 |  |
 | `N3` | {"cap":194,"note":"MAL/AniList count the farewell RECAP special (rebroadcast of ep 44 + countdown) as #194; Wikipedia holds it at 193.5 unnumbered — recap ru… | MAL/AniList count the farewell recap special (a rebroadcast of ep 44 plus a countdown) as #194 while Wikipedia holds it at 193.5 unnumbered; under the recap rule (N8, Monogatari precedent) it is excluded and the finale is 194. | session 2026-08-23 |  |
+| `A40` | loose | UNRECORDED — stored 'loose' before the map existed (the 2026-09-05 backfill of this map from the ok_loose census listing); the 1981 episodic adaptation borrows chapters out of order. Reason to be written at the next sitting that touches it. | session 2026-09-05 · scripts/ingest/research/discovery/INCIDENT-2026-09-05.md |  |
 
 ### vampire-knight (1)
 
@@ -3752,7 +3766,7 @@
 | `A3` | {"episode":36,"chapter":78,"volume":null,"source":"manual"} | S2 cour 1 end: adapts 77-78 (animefillerguide single-source, medium confidence) | session 2026-08-23 · scripts/ingest/apply-research-batch-5.ts |  |
 | `T6` | {"5":"filler"} | Batch 18 wave 3 (2026-08-26): only the Ylva cutaway is manga (vol-3 gaiden ch 21.5, transplanted ~5 volumes early); fandom: 'the entirety of this episode excluding the scenes with Ylva is anime original' → filler + graft (T28). | Sean 2026-08-26 · scripts/ingest/research/batch18/out/vinland-saga.json |  |
 
-### we-never-learn-bokuben (10)
+### we-never-learn-bokuben (11)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -3766,6 +3780,7 @@
 | `A43` | {"episodes":[24,25,26],"kind":"rearranged","chapters":"64-68","note":"research-tier batch 12 (2026-08-23, agent-verified 2+ sources, full-record): festival a… | festival arc moved to close the season | session 2026-08-23 · scripts/ingest/apply-research-batch-12.ts, scratchpad batch12/we-never-learn-bokuben.json (session scratchpad, not on disk), docs/changelog.md §12.31 |  |
 | `A43` | {"episodes":[26],"kind":"graft","chapters":"149","note":"research-tier batch 12 (2026-08-23, agent-verified 2+ sources, full-record): vol-17 route scene graf… | vol-17 route scene grafted into the ending | session 2026-08-23 · scripts/ingest/apply-research-batch-12.ts, scratchpad batch12/we-never-learn-bokuben.json (session scratchpad, not on disk), docs/changelog.md §12.31 |  |
 | `A40` | {"table":"series","mapping_mode":"loose"} | heavy skipping and vol 9-11 material aired before the festival arc; anchors are high-water marks, not a monotone map — loose. | session 2026-08-23 · scripts/ingest/apply-research-batch-12.ts, scratchpad batch12/we-never-learn-bokuben.json (session scratchpad, not on disk), docs/changelog.md §12.31 |  |
+| `A40` | loose | Pin 26 → 69 verified and promoted as loose (2026-08-23): the adaptation reorders chapters freely. | session 2026-08-23 · docs/changelog.md §12.29-31 (2026-08-23, the MU-pin verification session) |  |
 
 ### welcome-to-demon-school-iruma-kun (33)
 

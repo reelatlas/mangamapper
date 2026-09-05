@@ -23,6 +23,7 @@ import { LOCKED } from './lib/rulings/permanence';
 import { FRANCHISES, FRANCHISE_OF, franchiseMapProblems } from './lib/rulings/franchises';
 import { deriveVisibility } from './lib/rulings/visibility';
 import { MANUAL_EXCLUDE } from './lib/rulings/title-exclusions';
+import { mappingModeFor, MAPPING_MODES } from './lib/rulings/mapping-modes';
 import { arcsPartitionProblems, RULED_ARCS } from './lib/rulings/arcs';
 import { RULED_CORRESPONDENCE, upsertCorrespondence } from './lib/rulings/correspondence';
 import { SOURCE_RELATION_OVERRIDES } from './lib/rulings/source-relations';
@@ -299,6 +300,20 @@ async function assertDispositions() {
   console.log(`[assert-overrides] dispositions (I11 / P40): ${Object.keys(MANUAL_EXCLUDE).length} ruled exclusions, ${n} asserted${DRY ? ' — DRY RUN' : ''}`);
 }
 
+// A40: series.mapping_mode mirrors the ruling map (loose by entry, else chapter) —
+// the column had no home before 2026-09-05 and an incident lost two values.
+async function assertMappingModes() {
+  let n = 0;
+  for (const r of await selectAll<{ id: string; mapping_mode: string | null }>('series', 'id, mapping_mode')) {
+    const want = mappingModeFor(r.id);
+    if ((r.mapping_mode ?? 'chapter') === want) continue;
+    n++;
+    console.log(`  ${r.id}: mapping_mode ${r.mapping_mode ?? 'null'} → ${want}`);
+    if (!DRY) { const { error } = await db.from('series').update({ mapping_mode: want }).eq('id', r.id); if (error) throw new Error(`${r.id}: ${error.message}`); }
+  }
+  console.log(`[assert-overrides] mapping modes (A40): ${Object.keys(MAPPING_MODES).length} ruled loose, ${n} asserted${DRY ? ' — DRY RUN' : ''}`);
+}
+
 // A46: series_arcs mirrors RULED_ARCS (origin 'ruling'); a parallel series'
 // arcs must partition 1..N — a map that does not is refused, never half-written.
 async function assertArcs() {
@@ -394,6 +409,7 @@ async function main() {
   await assertFranchises();
   await assertVisibility();
   await assertDispositions();
+  await assertMappingModes();
   await assertMap('types (T6)', EPISODE_TYPE_OVERRIDES, 'type');
   await assertRetiredAnnotations();
   await assertStandingAnnotations();

@@ -848,8 +848,8 @@ A series ruled mapping_mode = loose (volume-jumping, anime-original finale, genu
 
 - ruled Sean 2026-08-23 (data-pipeline §12.29-31 (ouran, blood-blockade, "LOOSE series skip monotonicity entirely"))
 - layer **both**
-- enforced: [audit-ui-truth.ts#classes.ok_loose](../scripts/ingest/audit-ui-truth.ts) · [verify-series-display.ts#verifySeries](../scripts/ingest/verify-series-display.ts)
-- audit: `ok_loose`
+- enforced: [lib/rulings/mapping-modes.ts#MAPPING_MODES](../scripts/ingest/lib/rulings/mapping-modes.ts) · [assert-overrides.ts#assertMappingModes](../scripts/ingest/assert-overrides.ts) · [audit-ui-truth.ts#classes.ok_loose](../scripts/ingest/audit-ui-truth.ts) · [verify-series-display.ts#verifySeries](../scripts/ingest/verify-series-display.ts)
+- audit: `ok_loose`, `ruling_violation`
 - witnesses: ouran-high-school-host-club, blood-blockade-battlefront, to-love-ru, rosario-vampire
 - aliases: loose exemption, loose ruling, borrow-maps render as stored, mapping_mode loose
 - see: A19, A1, A7

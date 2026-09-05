@@ -42,6 +42,7 @@ import { REVIEWED_NUMBERED_SPECIALS } from './lib/rulings/reviewed-specials';
 import { FRANCHISES, FRANCHISE_OF, OWN_IP } from './lib/rulings/franchises';
 import { deriveVisibility } from './lib/rulings/visibility';
 import { RULED_DELETIONS } from './lib/rulings/deleted-series';
+import { mappingModeFor } from './lib/rulings/mapping-modes';
 
 async function main() {
   const series = await selectAll<any>('series', 'id, afl_slug, anilist_id, source_type, source_relation, manga_status, status, start_date, end_date, aired_episodes, total_episodes, total_chapters, total_volumes, latest_known_chapters, manga_anilist_id, manga_start_chapter, mapping_mode, asterisk_review, franchise_id, visibility, mal_id');
@@ -1133,6 +1134,8 @@ async function main() {
     }
     for (const [sid, rows] of hitsBy) classes.mixed_fragment_only.push(`${sid}: ${rows.length} mixed row(s) with only fragment ties and no anchor — ${rows.join(', ')} — T28: a fragment keeps mixed ONLY if it is the SOLE adaptation of a load-bearing source beat (the FotNS-57 test, 2026-08-28); otherwise filler + annotation — triage each`);
   }
+  // A40 — mapping_mode mirrors its ruling map (2026-09-05: the column had no home; an incident lost two values)
+  for (const row of series) if ((row.mapping_mode ?? 'chapter') !== mappingModeFor(row.id)) classes.ruling_violation.push(`${row.id}: mapping_mode '${row.mapping_mode}' ≠ ruled '${mappingModeFor(row.id)}' (A40) — run assert-overrides`);
   // P40 — the tombstone ledger (series_ledger, kept by DB triggers): a deletion no ruling names is listed until
   // it is ruled (lib/rulings/deleted-series.ts) or the id is re-created; a cascade cannot erase this evidence
   {
