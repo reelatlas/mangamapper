@@ -32,6 +32,27 @@ export const ENTRIES: RulingEntry<WikiPage>[] = [
     ruledOn: '2026-09-04',
     cite: ['scripts/ingest/research/batch20/out/cells-at-work-code-black.json', 'scripts/ingest/research/batch20/verify/cells-at-work-code-black.md'],
   },
+  // ── the first seeded series (discovery step 3, Sean's mint go 2026-09-05) ──
+  {
+    seriesId: 'trigun-stampede',
+    ruleId: 'G59',
+    value: { page: 'Trigun Stampede', note: "the series article carries the 24-row table in OVERALL numbering (Stampede 1-12, Stargaze 13-24 — 'Trigun Stargaze' redirects to it); the finder returned nothing for the all-caps AniList title" },
+    reason:
+      "The seeded series (I42 witness #2) has no AFL / AFG page; the wiki finder found no list page for 'TRIGUN STAMPEDE' (the article is title-cased) and the main-article fallback could not lock. en-WP 'Trigun Stampede' #Episodes: 24 rows numbered 1-24 across both seasons, first 'Noman's Land' 2023-01-07 — matching the two components 1-12 / 13-24 (component lock, overall numbering). Sean's mint go 2026-09-05.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['docs/changelog.md §12.125', 'https://en.wikipedia.org/wiki/Trigun_Stampede'],
+  },
+  {
+    seriesId: 'konosuba-an-explosion-on-this-wonderful-world',
+    ruleId: 'G59',
+    value: { page: 'KonoSuba: An Explosion on This Wonderful World!', note: "the series article's own 12-row table; the finder returned 'List of KonoSuba episodes' — the franchise list (the code-black shape: a franchise-numbered list wins over the show's own table) and the writer correctly refused to lock it" },
+    reason:
+      "The seeded series (I42 witness #3) has no AFL / AFG page; the finder matched the franchise's episode list, which the offset lock refused. en-WP 'KonoSuba: An Explosion on This Wonderful World!' #Episodes: 12 rows numbered 1-12, first 'The Crimson-Eyed Wizards' 2023-04-06 — the one component 1-12. Sean's mint go 2026-09-05.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['docs/changelog.md §12.125', 'https://en.wikipedia.org/wiki/KonoSuba:_An_Explosion_on_This_Wonderful_World!'],
+  },
 ];
 
 export const WIKI_PAGES: Record<string, WikiPage> = toRecord(ENTRIES);
