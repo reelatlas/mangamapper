@@ -56,7 +56,7 @@ async function main() {
   for (const c of extras) for (const o of c.owners) reach.set(`${o}#${c.anilistId}`, c);
   const stale: string[] = [], violation: string[] = [], duplicate: string[] = [];
   // I46 — one row per work: a halo row beside a wiki / ruled row naming the same work; a wiki / ruled row with no identity that a staged work matches
-  for (const l of ledger) for (const o of others) if (o.series_id === l.series_id && o.anilist_id == null && matchRelatedTitle(String(l.title), String(o.title))) duplicate.push(`${l.series_id}: halo @${l.position} "${String(l.title).slice(0, 40)}" duplicates the ${o.origin ?? 'wiki'} row @${o.position} "${String(o.title).slice(0, 40)}" — run sync-related-works (adopt + remove)`);
+  for (const l of ledger) for (const o of others) if (o.series_id === l.series_id && o.anilist_id == null && (RULED_POSITION_BY_ANILIST[l.series_id]?.[Number(l.anilist_id)] === Number(o.position) || matchRelatedTitle(String(l.title), String(o.title)))) duplicate.push(`${l.series_id}: halo @${l.position} "${String(l.title).slice(0, 40)}" duplicates the ${o.origin ?? 'wiki'} row @${o.position} "${String(o.title).slice(0, 40)}" — run sync-related-works (adopt + remove)`);
   const yearOf = (c: typeof extras[number]) => (input.staged.get(c.anilistId) as { startDate?: { year?: number | null } | null } | undefined)?.startDate?.year ?? null;
   for (const o of others) {
     if (o.anilist_id != null) continue;

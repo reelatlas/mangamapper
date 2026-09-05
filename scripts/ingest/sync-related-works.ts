@@ -85,7 +85,11 @@ async function main() {
         // it fails closed (two fits with nothing to separate them → listed by the census as related_work_duplicate, never adopted)
         if (!cur || cur.origin === 'halo') {
           const pool = unkeyed.get(sid) ?? [];
-          const pick = pickAdoption({ title: c.title, year: yearOf(date) }, pool, (titlesBy.get(sid) ?? []).filter((t) => t.id !== c.anilistId));
+          // identity FIRST (I46 / I44): a wiki row sitting at the position the label map rules for this AniList id IS this work, whatever its
+          // title says ("Shin Kyoto-hen" vs "New Kyoto Arc"); the title match is the fallback, and it fails closed
+          const labelPos = RULED_POSITION_BY_ANILIST[sid]?.[c.anilistId];
+          const byRule = labelPos != null ? pool.find((r) => Number(r.position) === labelPos) : undefined;
+          const pick = byRule ? { row: byRule, reason: `the label map rules this AniList id at @${labelPos} (identity, not a title match)` } : pickAdoption({ title: c.title, year: yearOf(date) }, pool, (titlesBy.get(sid) ?? []).filter((t) => t.id !== c.anilistId));
           if (pick && 'ambiguous' in pick) {
             ambiguous++;
             if (DRY) console.log(`  ambiguous ${sid} @${pick.row.position} "${pick.row.title}" ↔ ${c.title}: ${pick.ambiguous} — not adopted, listed by the census`);
