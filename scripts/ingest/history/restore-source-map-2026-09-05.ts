@@ -9,8 +9,8 @@
 // with anilist NULL (the ladder re-runs); Shounan → excluded (Sean 2026-09-05,
 // intended); the four manual exclusions → unchanged. Idempotent; --dry-run
 // prints every change. One-shot: moves to history/ when the recovery closes.
-//   npx tsx --env-file=.env.ingest scripts/ingest/research/discovery/restore-source-map.ts [--dry-run]
-import { db, selectAll } from '../../lib/db';
+//   npx tsx --env-file=.env.ingest scripts/ingest/history/restore-source-map-2026-09-05.ts [--dry-run]
+import { db, selectAll } from '../lib/db';
 
 const DRY = process.argv.includes('--dry-run');
 const INCIDENT = 'restored after INCIDENT 2026-09-05 (audit-titles flipped it against a stale fixture index — a false corruption verdict)';

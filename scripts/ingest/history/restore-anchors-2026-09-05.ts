@@ -7,15 +7,15 @@
 // A move the normalizer makes is printed, never hidden; a row the gates refuse
 // is listed, never forced; residue is a research ask. --dry-run prints every
 // write. One-shot: moves to history/ when the recovery closes (P34).
-//   npx tsx --env-file=.env.ingest scripts/ingest/research/discovery/restore-anchors.ts [--dry-run]
+//   npx tsx --env-file=.env.ingest scripts/ingest/history/restore-anchors-2026-09-05.ts [--dry-run]
 import { readFileSync } from 'node:fs';
-import { db, selectAll } from '../../lib/db';
-import { upsertAnnotation, type AnnotationKind } from '../../lib/annotations';
-import { isAnnotationRetired } from '../../lib/rulings/retired-annotations';
-import { isAnchorSuppressed } from '../../lib/rulings/anchor-suppressed';
-import { writeCuratedContinue } from '../../lib/continues';
-import { volumeForChapter, type VolumeBound } from '../../lib/volumes';
-import { sliverEnd } from '../../lib/sliver';
+import { db, selectAll } from '../lib/db';
+import { upsertAnnotation, type AnnotationKind } from '../lib/annotations';
+import { isAnnotationRetired } from '../lib/rulings/retired-annotations';
+import { isAnchorSuppressed } from '../lib/rulings/anchor-suppressed';
+import { writeCuratedContinue } from '../lib/continues';
+import { volumeForChapter, type VolumeBound } from '../lib/volumes';
+import { sliverEnd } from '../lib/sliver';
 
 const DRY = process.argv.includes('--dry-run');
 const TAG = '[restored 2026-09-05 after INCIDENT-2026-09-05 from the verdict file]';

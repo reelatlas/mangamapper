@@ -1154,6 +1154,63 @@
    19-23 / 39 (chain_source) and 18 / 93-95 (AFL's loose Mixed bucket),
    beelzebub 15 / 26-28 / 51, rurouni TV ep 95 (identity). Batch 22 opens on
    the boruto follow-up (lanes I + C) with the batch-21 tooling copied.
+125. ⚠✅ **THE FIRST DISCOVERY MINT (Sean's go) — then INCIDENT 2026-09-05
+    (audit-titles.ts deleted six series) — RECOVERED the same day (option A,
+    Sean's decision; scripts/ingest/research/discovery/INCIDENT-2026-09-05.md is
+    the record).** MINTED, intact throughout: trigun-stampede (151040 + Stargaze
+    163144, staged, franchise trigun) and
+    konosuba-an-explosion-on-this-wonderful-world (150075, staged, franchise
+    konosuba) through the seed writer; the-rising-of-the-shield-hero S2-S4
+    through `stitch --only rising-shield-hero` (62 eps vs AFL 25; S5 when
+    dated); rows 24 + 12 via two G59-B ruled wiki pages ('Trigun Stampede' holds
+    all 24 in overall numbering; the KonoSuba spin-off's own article — the
+    finder had returned the franchise list) and 37 via Shield Hero's season
+    pages; the 39 / 97 franchise table SIGNED (ruledBy Sean); Shounan's afl_slug
+    nulled and its percent-encoded slug excluded (Sean). THE INCIDENT: to apply
+    that exclusion the session ran `audit-titles.ts` (an EVENT roster entry;
+    NOTE: reads a STALE fixture index) without reading it — its exclude()
+    deletes the `series` row whose id equals any slug it judges corrupt, and all
+    27 verdicts were false: six series deleted with cascades (chrono-crusade,
+    kinnikuman, orient, kakegurui, city-hunter, elemental-gelade), four living
+    series' AFL pages excluded + unstaged, 31 source_map rows flipped, 24 flags
+    dismissed. No PITR (daily physical backups only, the last before batch 22's
+    waves); staging, rulings maps and research files intact. RECOVERY (every
+    step dry-run, then census-checked): source_map restored BY RULE
+    (history/restore-source-map-2026-09-05.ts: active 303 · excluded 44 — the
+    pre-incident counts); kakegurui recreated by `afg-expansion --only
+    kakegurui` (AFG-typed rows, 17 AFG anchors, public); the five others by the
+    seed writer under RESTORATION `series` rulings pinning old ids + chains;
+    rows from Wikipedia (orient's ruled page; the finder — kinnikuman's
+    franchise list component-locked on the first 137); `npm run heal`
+    re-attached T6 (821 ruled rows), G53, A44 / A45, standing annotations,
+    franchises, visibility (chrono + kinnikuman public by pins; orient /
+    city-hunter / elemental-gelade staged); the research tier replayed from the
+    verdict files in batch order with the applied overlays
+    (history/restore-anchors-2026-09-05.ts: 85 anchors, 0 A47-moved, 0 refused;
+    12 curated continues with C5's covered-or-not wording; 103 annotations, zone
+    kinds expanded to spans as batch 17 did — verify's kinnikuman refusal caught
+    the list reading); AFL pages re-fetched (`backfill --only`, new; `refix`)
+    and held on parse_integrity as before — AFL's live index is alias-corrupt
+    for those slugs. New tooling that stays: `backfill --only slug,…`,
+    `afg-expansion --only <slug>` (note: it has NO dry-run; the session learned
+    that by running it), the I2 class exempts alias-held pages (the flag is
+    their listing). CENSUS after: ruling_violation 0 · 219 verified / 0 failing
+    · identity_registry_gap 1 → 0 · discovery_ruled_unbuilt 2 → 0 ·
+    series_staged 5 · type_default_unclassified 28 → 34 (the six default-typed
+    grids) · halo_sequel_unclaimed 91 → 88 · anchor_gap_research 2 → 4,
+    mu_pin_unverified 0 → 2, frontier_tail_null 7 → 9 (the seeds' and restored
+    series' queues) · title_incomplete 21 → 20 (kakegurui's titles from AFG) ·
+    pending_finished_no_totals +1 (a novel source). RESIDUES for Sean (DB-only
+    values no map records): city-hunter + elemental-gelade were mapping_mode
+    'loose' (both staged; restore by ruling and give mapping_mode a map);
+    elemental-gelade's asterisk_review note; kakegurui's AFG end-frontier anchor
+    (frontier_tail_null lists it); the four alias-held pages until AFL fixes its
+    index. THE DURABLE FIX follows as /add-rule: no script deletes a series row
+    (exclude() flips dispositions only); the fixture index is not an authority;
+    a tombstone ledger + `series_deleted_unruled`; the event-script trap in
+    every skill. Batch 23 and go-list step 4 waited for ruling_violation 0 and a
+    completed heal — both hold now. (Commit 221b099 carried the code; this entry
+    and the history move landed in the follow-up commit.)
 124. ✅ **DISCOVERY BUILD, STEP 3 — I44 ADOPTION, THE SEED WRITER (G52 rostered),
     P39 VISIBILITY, THE /discover SKILL (2026-09-05; go-list rows 2, 4, 5).
     MECHANISM BUILT; THE FIRST MINT AWAITS SEAN'S GO ON THE DRY-RUN RECAP.** I44
