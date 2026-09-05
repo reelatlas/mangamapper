@@ -22,6 +22,10 @@ export type RelatedWorkRuling = {
   position?: number;
   /** a short note the ledger row carries after the bucket note */
   note?: string;
+  /** REPAIRS (P8): the row's title / air date / kind are rewritten from AniList's staging on every run — a ruled value here beats the source (a wrong AniList date, a mis-titled entry, a compilation AniList files as a special); the census lists a row that disagrees */
+  title?: string;
+  airDate?: string | null;
+  kind?: 'movie' | 'ova' | 'special' | 'recap';
 };
 
 export const ENTRIES: RulingEntry<RelatedWorkRuling>[] = [

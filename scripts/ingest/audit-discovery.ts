@@ -82,7 +82,9 @@ async function main() {
     const b = c.proposal as ExtraBucket;
     if (b === 'promo') { stale.push(`${l.series_id} @${l.position}: "${String(l.title).slice(0, 40)}" — promotional (I45 amended: never a row) — run sync-related-works`); continue; }
     const ruling = relatedWorkRuling(l.series_id, Number(l.anilist_id));
-    const wantStanding = relatedWorkStanding(b, ruling), wantKind = extraKind(c.format, b);
+    const wantStanding = relatedWorkStanding(b, ruling), wantKind = ruling?.kind ?? extraKind(c.format, b);
+    if (ruling?.title != null && l.title !== ruling.title) violation.push(`${l.series_id} @${l.position}: title ≠ ruled '${ruling.title}' (P8 repair) — run sync-related-works`);
+    if (ruling?.airDate !== undefined && (l.air_date ?? null) !== ruling.airDate) violation.push(`${l.series_id} @${l.position}: air_date ${l.air_date} ≠ ruled ${ruling.airDate} (P8 repair) — run sync-related-works`);
     if (ruling?.chapter != null && Number(l.chapter) !== ruling.chapter) violation.push(`${l.series_id} @${l.position}: chapter ${l.chapter} ≠ ruled ${ruling.chapter} (I45 ruling layer) — run sync-related-works`);
     const labelPos = RULED_POSITION_BY_ANILIST[l.series_id]?.[Number(l.anilist_id)]; // the label map's ruled position by AniList id (the wiki-numbering layer) pins a row too
     if (ruling?.position != null && Number(l.position) !== ruling.position) violation.push(`${l.series_id} @${l.position}: position ≠ ruled ${ruling.position} (I45 ruling layer) — run sync-related-works`);

@@ -137,8 +137,9 @@ async function main() {
         }
         if (cur && cur.origin !== 'halo') { counters.unchanged++; continue; } // a wiki / ruled row models this work — never overwritten here
         const ruling = relatedWorkRuling(sid, c.anilistId);
+        const airDate = ruling?.airDate !== undefined ? ruling.airDate : date; // a ruled date (P8) beats AniList's
         const ruledPos = ruling?.position ?? RULED_POSITION_BY_ANILIST[sid]?.[c.anilistId];
-        const derived = ruledPos ?? deriveWatchPosition(date, epsBy.get(sid) ?? []);
+        const derived = ruledPos ?? deriveWatchPosition(airDate, epsBy.get(sid) ?? []);
         if (derived == null && !cur) { unpositioned++; continue; } // no date, no ruling — listed by the census, never a guessed slot
         // IDENTITY is (series, anilist_id); POSITION is an attribute — ruled, else DERIVED, and a derived position re-derives on every run
         // (Sean 2026-09-05, the identity concern): a row moves when its ruled position changes, or when its unruled BASE SLOT changes (the
@@ -155,7 +156,7 @@ async function main() {
         if (standing == null) held++;
         const row = {
           series_id: sid, position, anilist_id: c.anilistId, origin: 'halo', relation: [...c.relations].join('/'),
-          kind: extraKind(c.format, bucket), standing, title: c.title, air_date: date,
+          kind: ruling?.kind ?? extraKind(c.format, bucket), standing, title: ruling?.title ?? c.title, air_date: airDate,
           chapter: ruling?.chapter ?? null, volume: ruling?.volume ?? null, chapters_adapted: ruling?.chaptersAdapted ?? null,
           note: `${bucketNote(bucket, adaptedNodes(m ?? null))} · position ${ruling?.position != null ? 'ruled (I45 ruling layer)' : ruledPos != null ? 'ruled' : 'derived from the air date (a proposal)'}${ruling?.standing ? ' · standing ruled (I45 ruling layer)' : ''}${ruling?.note ? ` · ${ruling.note}` : ''} · I45 halo`,
         };
