@@ -49,8 +49,8 @@ describe('bucketOf', () => {
     for (const r of ['PREQUEL', 'SIDE_STORY', 'SPIN_OFF', 'ALTERNATIVE', 'PARENT', 'SAME_UNIVERSE', 'OTHER']) expect(bucketOf(new Set([r]), 'TV'), r).toBe('series');
     expect(bucketOf(new Set(['SIDE_STORY']), 'MOVIE')).toBe('extra');
     expect(bucketOf(new Set(['SEQUEL']), 'OVA')).toBe('extra');
-    expect(bucketOf(new Set(['SUMMARY']), 'TV')).toBe('extra');
-    expect(bucketOf(new Set(['CHARACTER']), 'TV')).toBe('ignored');
+    expect(bucketOf(new Set(['SUMMARY']), 'TV')).toBe('recap'); // I45: a recap is a bucket, not noise
+    expect(bucketOf(new Set(['CHARACTER']), 'TV')).toBe('crossover'); // I45: listed, not fetched
     expect(bucketOf(new Set(['OTHER']), 'MUSIC')).toBe('ignored');
     expect(bucketOf(new Set(['CHARACTER', 'SEQUEL']), 'TV')).toBe('sequel'); // a noise edge beside a story edge does not hide it
   });
@@ -97,13 +97,13 @@ describe('haloCandidates — the witnesses', () => {
     expect(c.signals.join(' ')).toMatch(/new subtitle/);
     expect(c.signals.join(' ')).toMatch(/not staged/);
   });
-  it('Trigun Stampede (ALTERNATIVE × TV) and Konosuba Explosion (SPIN_OFF × TV) → series; the movie is an extra; CHARACTER and MUSIC are ignored', () => {
+  it('Trigun Stampede (ALTERNATIVE × TV) and Konosuba Explosion (SPIN_OFF × TV) → series; the movie is an extra (unstaged); CHARACTER is a crossover; MUSIC is ignored', () => {
     const cands = haloCandidates(base());
     expect(by(cands, 151040).proposal).toBe('series');
     expect(by(cands, 150075).proposal).toBe('series');
     expect(by(cands, 5391).bucket).toBe('extra');
-    expect(by(cands, 5391).proposal).toBe('standalone');
-    expect(by(cands, 999).bucket).toBe('ignored');
+    expect(by(cands, 5391).proposal).toBe('unstaged'); // I45: the bucket needs the full media
+    expect(by(cands, 999).bucket).toBe('crossover');
     expect(by(cands, 998).bucket).toBe('ignored');
   });
   it('same manga + a new subtitle is AMBIGUOUS (Shippuden / TYBW went series, arc-titled seasons are components) — same manga is no signal', () => {
@@ -140,6 +140,6 @@ describe('haloCandidates — the witnesses', () => {
     const inp2 = { ...inp, changedAt: new Map([[139095, '2026-09-01T00:00:00Z'], [111321, '2026-09-01T00:00:00Z'], [150075, '2026-09-01T00:00:00Z'], [151040, '2026-09-01T00:00:00Z'], [190327, '2026-09-01T00:00:00Z']]) };
     const after = discoveryClasses(haloCandidates(inp2), inp2, '2026-09-02');
     expect(after.discovery_new_since_sitting).toEqual([]);
-    expect(before.halo_extra_standing.map((c) => c.anilistId)).toEqual([5391]);
+    expect(before.halo_extra_standing.map((c) => c.anilistId).sort()).toEqual([5391, 999]); // extras + crossovers are listed (I45)
   });
 });

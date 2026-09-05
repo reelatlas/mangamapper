@@ -1088,40 +1088,52 @@ export type Database = {
       watch_order_entries: {
         Row: {
           air_date: string | null
+          anilist_id: number | null
           chapter: number | null
           chapters_adapted: string | null
           created_at: string
           display_label: string | null
           kind: string | null
           note: string | null
+          origin: string
           position: number
+          relation: string | null
           series_id: string
+          standing: string | null
           title: string
           volume: number | null
         }
         Insert: {
           air_date?: string | null
+          anilist_id?: number | null
           chapter?: number | null
           chapters_adapted?: string | null
           created_at?: string
           display_label?: string | null
           kind?: string | null
           note?: string | null
+          origin?: string
           position: number
+          relation?: string | null
           series_id: string
+          standing?: string | null
           title: string
           volume?: number | null
         }
         Update: {
           air_date?: string | null
+          anilist_id?: number | null
           chapter?: number | null
           chapters_adapted?: string | null
           created_at?: string
           display_label?: string | null
           kind?: string | null
           note?: string | null
+          origin?: string
           position?: number
+          relation?: string | null
           series_id?: string
+          standing?: string | null
           title?: string
           volume?: number | null
         }

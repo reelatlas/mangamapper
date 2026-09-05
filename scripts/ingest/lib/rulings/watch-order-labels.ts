@@ -394,3 +394,6 @@ for (const e of ENTRIES) {
   if (e.value.label != null) (RULED_LABELS[e.seriesId] ??= {})[e.value.position] = e.value.label;
   if (e.value.record) (RULED_RECORDS[e.seriesId] ??= {})[e.value.position] = e.value.record;
 }
+/** I45: a ruled position for a related work by its AniList id (overrides the derived air-date position) */
+export const RULED_POSITION_BY_ANILIST: Record<string, Record<number, number>> = {};
+for (const e of ENTRIES) if (e.value.record?.anilistId != null) (RULED_POSITION_BY_ANILIST[e.seriesId] ??= {})[e.value.record.anilistId] = e.value.position;

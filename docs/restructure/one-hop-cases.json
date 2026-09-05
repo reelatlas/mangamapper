@@ -570,6 +570,20 @@
         "queue"
       ],
       "source": "discovery step 4, 2026-09-05"
+    },
+    {
+      "ask": "a viewer wants to know which Naruto movies are canon and where the recap specials sit — where does that live, and does it change the episode count?",
+      "expected": [
+        "I45",
+        "N4",
+        "N8",
+        "N31"
+      ],
+      "terms": [
+        "related",
+        "ledger"
+      ],
+      "source": "the extras sitting, 2026-09-05"
     }
   ]
 }

@@ -44,6 +44,7 @@ export const HEAL: RosterEntry[] = [
   { file: 'heal-stuck-runs.ts', when: 'standard', note: "ingest runs left 'running' past the edge wall clock are marked killed (G58) — run_stuck reads as backlog, never as a live run" },
   { file: 'assert-overrides.ts', when: 'standard', note: 'EPISODE_TYPE_OVERRIDES (T6) + AIR_DATE_OVERRIDES (G53) + the air-date order gate (G54) asserted over standing rows' },
   { file: 'sync-watch-order.ts', when: 'standard', note: 'order-only fractionals → watch_order_entries (N31); kind from the matching order-only component (T29)' },
+  { file: 'sync-related-works.ts', when: 'standard', note: 'THE RELATED-WORKS LEDGER (I45): every staged recap / special / OVA / film of an owned series → a watch_order_entries row (origin halo; standing by rule or pending; derived position; never surfaced, never deleted here)' },
   { file: 'heal-structure.ts', when: 'standard', note: 'series_components re-planned for RULED_STRUCTURE series — numbered extras + span overrides through the one planner (I39); before heal-format' },
   { file: 'heal-format.ts', when: 'standard', note: 'episodes.format from the containing component kind + FORMAT_OVERRIDES (T29); null = format_missing queue' },
   { file: 'relations.ts', when: 'standard', note: 'series_relations from AniList edges + ruled overrides (I16)' },

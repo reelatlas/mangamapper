@@ -5,7 +5,7 @@
 // column for Sean; a table per franchise (I43) where the owner has one, else per owner, the
 // default-disposed rows in one summary line after it. Paste the output into
 // the chat message — never point Sean at a file for the baseline.
-//   npx tsx --env-file=.env.ingest scripts/ingest/research/discovery/recap.ts [--scope sequel,series|extra|all|seed] [--airing] [--owner <series-id>] [--limit N]
+//   npx tsx --env-file=.env.ingest scripts/ingest/research/discovery/recap.ts [--scope sequel,series|extras|all|seed] [--airing] [--owner <series-id>] [--limit N]
 import { haloCandidates, loadDiscoveryInput, IGNORED_RELATIONS, type Candidate } from '../../lib/discovery';
 import { FRANCHISE_OF } from '../../lib/rulings/franchises';
 import { loadLatestRankings, seedCandidates } from '../../lib/rankings';
@@ -26,6 +26,28 @@ async function main() {
     console.log('| anilist | title | format · status · year | lists · ranks | score (factors) | source · manga | proposed | decision |');
     console.log('|---|---|---|---|---|---|---|---|');
     for (const s of seeds) console.log(`| ${s.anilistId} | ${s.title.replace(/\|/g, '/')} | ${s.format ?? '?'} · ${s.status ?? '?'} · ${s.year ?? ''} | ${s.lists.map((l) => `${l.list} #${l.rank}`).join(', ')} | ${s.score}${s.factors.length ? ` (${s.factors.join('; ')})` : ''} | ${s.source ?? '?'} · ${s.manga ? `${s.manga.id} ${s.manga.status ?? ''}${s.manga.chapters ? ` ${s.manga.chapters} ch` : ''}` : 'no manga edge'} | **new IP, series**${s.headId ? ` (head = prequel ${s.headId})` : ''}${s.viaManga ? ' (via manga-first)' : ''} | |`);
+    return;
+  }
+  if (scope.includes('extras')) {
+    // I45 — the related-works sitting table: every recap / special / OVA / film of an owned series, by franchise, with the bucket a rule
+    // decided, the standing it implies, the derived position, and the decision column (surface? research? a series?)
+    const ex = haloCandidates(input).filter((c) => c.bucket === 'extra' || c.bucket === 'recap' || c.bucket === 'crossover').filter((c) => !owner || c.owners.has(owner)).slice(0, limit);
+    const groups = new Map<string, typeof ex>();
+    for (const c of ex) { const k = [...new Set([...c.owners].map((x) => (FRANCHISE_OF[x] ? `franchise ${FRANCHISE_OF[x]}` : x)))].sort().join(' + '); groups.set(k, [...(groups.get(k) ?? []), c]); }
+    console.log(`### Related-works sitting recap — ${ex.length} works over ${groups.size} franchises / owners (generated ${new Date().toISOString().slice(0, 10)})\n`);
+    for (const [g, list] of [...groups.entries()].sort((a, b) => b[1].length - a[1].length)) {
+      console.log(`**${g}** (${list.length})\n`);
+      console.log('| anilist | title | format · date | relation | bucket (rule) | standing | proposed | decision |');
+      console.log('|---|---|---|---|---|---|---|---|');
+      for (const c of list.sort((a, b) => b.popularity - a.popularity)) {
+        const m = input.staged.get(c.anilistId) as { startDate?: { year?: number | null } } | undefined;
+        const b = c.proposal;
+        const standing = b === 'recap' || b === 'original' || b === 'crossover' ? 'filler (rule)' : b === 'unstaged' ? '—' : 'pending';
+        const proposed = b === 'same_instrument' ? 'research standing + chapters; surface when ruled' : b === 'other_instrument' ? 'a series candidate (seed) + a related work' : b === 'recap' ? 'ledger row, kind recap — surface only by label' : b === 'original' ? 'ledger row — optional viewing; surface only by label' : b === 'crossover' ? 'ledger row (unfetched) — listed' : b === 'unknown' ? 'HOLD: source with no manga edge' : 'stage first';
+        console.log(`| ${c.anilistId} | ${c.title.replace(/\|/g, '/')} | ${c.format ?? '?'} · ${m?.startDate?.year ?? '?'} | ${[...c.relations].join('/')} | **${b}** | ${standing} | ${proposed} | |`);
+      }
+      console.log('');
+    }
     return;
   }
   let cands = haloCandidates(input).filter((c) => c.bucket !== 'ignored');

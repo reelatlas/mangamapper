@@ -108,6 +108,7 @@ async function allWatchOrder(seriesId: string): Promise<WatchOrderRow[]> {
     .from('watch_order_entries')
     .select('position, title, air_date, kind, display_label, chapter, volume, chapters_adapted')
     .eq('series_id', seriesId)
+    .not('display_label', 'is', null) // N31 / I45: only RULED (labeled) entries reach the page; the related-works ledger stays data-side
     .order('position');
   if (error) throw error;
   return (data ?? []) as WatchOrderRow[];

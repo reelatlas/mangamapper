@@ -617,7 +617,7 @@ export const RULES: Rule[] = [
     family: 'N',
     title: 'Watch-order entries: canonical, surfaced only by ruling',
     statement:
-      'Order-only specials / OVAs / movies live as app-readable rows in watch_order_entries (position, title, air date, kind, chapter/volume/chapters_adapted, note), mirrored idempotently from ingest_fractionals by sync-watch-order. An entry RENDERS in the episode table only when a per-series ruling sets display_label (RULED_LABELS); the +N label format is a PER-SERIES ruling, not a global convention. Surfacing is PARKED — every entry stays data-ready with display_label null.',
+      'Order-only specials / OVAs / movies live as app-readable rows in watch_order_entries (position, title, air date, kind, chapter/volume/chapters_adapted, note), mirrored idempotently from ingest_fractionals by sync-watch-order (origin wiki), and — since 2026-09-05 (I45) — every other related work of a series with origin halo from sync-related-works, each writer deleting only its own origin (G57). An entry RENDERS in the episode table only when a per-series ruling sets display_label (RULED_LABELS); the +N label format is a PER-SERIES ruling, not a global convention. Surfacing is PARKED — every entry stays data-ready with display_label null.',
     why: "MHA's post-finale specials ran a brief live trial 2026-08-24; Sean parked surfacing until the specials/OVAs/movies STATUS design pass.",
     ruledBy: 'Sean',
     ruledOn: '2026-08-24',
@@ -629,6 +629,7 @@ export const RULES: Rule[] = [
     layer: 'both',
     auditClass: [],
     witnesses: ['my-hero-academia'],
+    amendedOn: ['2026-09-05'],
     status: 'live',
     see: ['N4', 'N9', 'N32', 'N33'],
   },

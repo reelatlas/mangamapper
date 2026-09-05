@@ -54,6 +54,7 @@ async function main() {
         chapter: rec?.chapter ?? null,
         volume: rec?.volume ?? null,
         chapters_adapted: rec?.chapters_adapted ?? null,
+        origin: 'wiki', // I45 / G57: this writer's rows; sync-related-works owns origin 'halo'
       };
       row.display_label = label; // the code map is the ruling source — absent = unsurfaced
       const { error } = await db.from('watch_order_entries').upsert(row, { onConflict: 'series_id,position' });
@@ -61,10 +62,13 @@ async function main() {
       n++;
     }
     // entries whose fractional record vanished (re-dispositioned) drop out
+    // G57 / I45: this writer deletes ONLY its own rows (origin 'wiki'); the related-works ledger (origin 'halo') and
+    // ruled rows are never touched here — before 2026-09-05 this loop deleted every row it had not derived
     const keep = new Set(fr.map((f) => `${f.series_id}|${f.position}`));
-    const existing = await selectAll<{ series_id: string; position: number }>('watch_order_entries', 'series_id, position');
+    const existing = await selectAll<{ series_id: string; position: number; origin: string | null }>('watch_order_entries', 'series_id, position, origin');
     let dropped = 0;
     for (const e of existing) {
+      if ((e.origin ?? 'wiki') !== 'wiki') continue;
       if (!keep.has(`${e.series_id}|${e.position}`)) {
         await db.from('watch_order_entries').delete().eq('series_id', e.series_id).eq('position', e.position);
         dropped++;

@@ -32,14 +32,17 @@
 
 import { pickMangaNode } from './rulings/source-relations';
 import type { DiscoveryRuling } from './rulings/discovery';
+import { extraBucket, type ExtraBucket } from './related-works';
 
 export const SERIES_FORMATS = new Set(['TV', 'TV_SHORT', 'ONA']);
 export const EXTRA_FORMATS = new Set(['MOVIE', 'OVA', 'SPECIAL']);
 export const SERIES_RELATIONS = new Set(['PREQUEL', 'SIDE_STORY', 'SPIN_OFF', 'ALTERNATIVE', 'PARENT', 'SAME_UNIVERSE', 'OTHER']);
-export const IGNORED_RELATIONS = new Set(['CHARACTER', 'COMPILATION', 'CONTAINS', 'SOURCE', 'ADAPTATION']);
+export const RECAP_RELATIONS = new Set(['SUMMARY', 'COMPILATION']);
+export const IGNORED_RELATIONS = new Set(['CONTAINS', 'SOURCE', 'ADAPTATION']);
 
-export type Bucket = 'sequel' | 'series' | 'extra' | 'ignored';
-export type Proposal = 'component' | 'series' | 'ambiguous' | 'standalone' | 'ignored';
+/** I45 (2026-09-05): every related work is LISTED — recap and crossover are buckets, not noise; only MUSIC is ignored */
+export type Bucket = 'sequel' | 'series' | 'extra' | 'recap' | 'crossover' | 'ignored';
+export type Proposal = 'component' | 'series' | 'ambiguous' | 'standalone' | 'ignored' | ExtraBucket | 'unstaged';
 export type Continuity = 'ordinal' | 'subtitle' | 'unrelated';
 
 export type EdgeNode = {
@@ -98,6 +101,8 @@ export type DiscoveryInput = {
   ownerManga: Map<string, number | null>;
   rulings: Record<number, DiscoveryRuling>;
   openEnded: Set<string>;
+  /** our series id → the manga ids on its reading chain (I41) — a chain work counts as the owner's own instrument */
+  chainWorks?: Map<string, number[]>;
 };
 
 const norm = (s: string): string =>
@@ -144,13 +149,14 @@ const seriesShaped = (format: string | null | undefined): boolean => format == n
 /** bucket from what reached the candidate and what it is */
 export function bucketOf(relations: Set<string>, format: string | null | undefined): Bucket {
   if (format === 'MUSIC') return 'ignored';
-  const story = [...relations].filter((r) => !IGNORED_RELATIONS.has(r));
-  if (!story.length) return 'ignored';
+  if ([...relations].some((r) => RECAP_RELATIONS.has(r))) return 'recap'; // a recap / compilation, whatever its format (N8: never a numbered row)
+  const story = [...relations].filter((r) => !IGNORED_RELATIONS.has(r) && r !== 'CHARACTER');
+  if (!story.length) return relations.has('CHARACTER') ? 'crossover' : 'ignored';
   if (format != null && EXTRA_FORMATS.has(format)) return 'extra';
   if (!seriesShaped(format)) return 'ignored'; // MANGA / NOVEL / ONE_SHOT nodes never come here (type ANIME only), but fail closed
   if (story.includes('SEQUEL')) return 'sequel';
   if (story.some((r) => SERIES_RELATIONS.has(r))) return 'series';
-  return 'extra'; // SUMMARY × TV: a recap series
+  return 'extra';
 }
 
 /** the derivation — pure; the loader below feeds it from staging */
@@ -217,7 +223,15 @@ export function haloCandidates(input: DiscoveryInput): Candidate[] {
     if (c.format == null) s.push('format unknown');
     if (c.hop > 1) s.push(`hop ${c.hop} via ${c.via}`);
     if (c.bucket === 'ignored') { c.proposal = 'ignored'; c.signals = s; continue; }
-    if (c.bucket === 'extra') { c.proposal = 'standalone'; s.push(`I13 standalone by default (${[...c.relations].join('/')})`); c.signals = s; continue; }
+    if (c.bucket === 'extra' || c.bucket === 'recap' || c.bucket === 'crossover') {
+      // I45: the related-works bucket from the full media — recap / original / same_instrument / other_instrument / crossover / unknown
+      const ownerIds = [...c.owners];
+      const ownerManga = ownerIds.map((o) => input.ownerManga.get(o) ?? null).find((m) => m != null) ?? null;
+      const b = extraBucket(c.relations, (input.staged.get(c.anilistId) as never) ?? null, { mangaId: ownerManga, chainWorkIds: ownerIds.flatMap((o) => input.chainWorks?.get(o) ?? []) });
+      c.proposal = b;
+      s.push(b === 'unstaged' ? 'not staged — run discovery-stage' : `related work: ${b}${b === 'same_instrument' ? ' (the sitting: standing + chapters)' : b === 'other_instrument' ? ' (a series candidate too)' : b === 'unknown' ? ' (hold for Sean)' : ' (filler by rule)'}`);
+      c.signals = s; continue;
+    }
     if (c.bucket === 'series') { c.proposal = 'series'; s.push(`relation ${[...c.relations].filter((r) => !IGNORED_RELATIONS.has(r)).join('/')}`); c.signals = s; continue; }
     // the sequel bucket — the precedence
     const open = [...c.owners].filter((o) => input.openEnded.has(o));
@@ -257,7 +271,7 @@ export function discoveryClasses(cands: Candidate[], input: DiscoveryInput, last
   const out: DiscoveryClasses = {
     halo_sequel_unclaimed: unruled.filter((c) => c.bucket === 'sequel'),
     halo_series_unclaimed: unruled.filter((c) => c.bucket === 'series'),
-    halo_extra_standing: unruled.filter((c) => c.bucket === 'extra'),
+    halo_extra_standing: unruled.filter((c) => c.bucket === 'extra' || c.bucket === 'recap' || c.bucket === 'crossover'),
     discovery_new_since_sitting: unruled.filter((c) => (c.bucket === 'sequel' || c.bucket === 'series') && (c.changedAt == null || lastSitting == null || c.changedAt > lastSitting)),
     discovery_ruled_unbuilt: [],
     discovery_ruling_stale: [],
@@ -308,7 +322,10 @@ export async function loadDiscoveryInput(): Promise<DiscoveryInput> {
     for (const t of [m.title.romaji, m.title.english, ...(m.synonyms ?? [])]) if (t) list.push(t);
     ownerTitles.set(owner, list);
   }
-  return { owned, staged, changedAt, ownerTitles, ownerManga, rulings: DISCOVERY_RULINGS, openEnded: OPEN_ENDED };
+  const { SOURCE_CHAINS } = await import('./rulings/source-chains');
+  const chainWorks = new Map<string, number[]>();
+  for (const [sid, chain] of Object.entries(SOURCE_CHAINS as Record<string, { works?: { anilistId?: number | null }[] }>)) chainWorks.set(sid, (chain.works ?? []).map((w) => w.anilistId).filter((n): n is number => n != null));
+  return { owned, staged, changedAt, ownerTitles, ownerManga, rulings: DISCOVERY_RULINGS, openEnded: OPEN_ENDED, chainWorks };
 }
 
 /**
@@ -328,7 +345,7 @@ export async function stageHalo(opts: { budget?: number; rounds?: number; timeBu
   for (let round = 1; round <= ROUNDS; round++) {
     if (opts.timeBudgetMs && Date.now() - t0 > opts.timeBudgetMs) break;
     const cands = haloCandidates(input);
-    const want = cands.filter((c) => !c.staged && (c.bucket === 'sequel' || c.bucket === 'series')).sort((a, b) => b.popularity - a.popularity);
+    const want = cands.filter((c) => !c.staged && (c.bucket === 'sequel' || c.bucket === 'series' || c.bucket === 'extra' || c.bucket === 'recap')).sort((a, b) => b.popularity - a.popularity); // I45: extras and recaps are staged too; crossovers are listed, not fetched
     if (!want.length) { log(`[stage-halo] round ${round}: nothing unstaged — the halo is staged`); break; }
     const take = want.slice(0, Math.max(0, BUDGET - staged));
     deferred = want.length - take.length;
