@@ -12,11 +12,14 @@ const arg = (k: string): string | null => { const i = process.argv.indexOf(k); r
 const DIR = arg('--dir') ?? 'scripts/ingest/research/discovery/out';
 const STANDINGS = new Set(['canon', 'mixed', 'filler']); const CONF = new Set(['high', 'medium', 'low']); const YNU = new Set(['yes', 'no', 'unclear']);
 
-type Chap = { start: number; end?: number | null; note?: string };
+type Chap = { start: number | string | null; end?: number | string | null; note?: string; volume?: number | null };
 type PerWork = { series_id: string; anilist_id: number; title: string; summary: string; standing: string; confidence: string; chapters_adapted: Chap[]; recap: boolean; position: { stored: number | null; verdict: string; proposed: number | null; why: string }; adopted: { basis: string; note: string } | null; repairs: unknown[]; sources: string[]; flags_for_sean: string[] };
 type Triage = { series_id: string; summary: string; works: { anilist_id: number; title: string; adapts_chapters: string; chapters: string | null; why: string; sources: string[] }[]; flags_for_sean: string[] };
 
-const chapters = (c: Chap[]) => c.map((x) => (x.end != null && x.end !== x.start ? `${x.start}-${x.end}` : String(x.start))).join(', ');
+const chapters = (c: Chap[]) => c.map((x) => (x.end != null && x.end !== x.start ? `${x.start ?? '?'}-${x.end}` : String(x.start ?? x.note ?? '?'))).join(', ');
+/** a novel owner's chapters are volume-local (T25 light_novel): the ruling stores the volume beside the chapter string, the numeric chapter only when it is one */
+const firstChapter = (c: Chap[]): number | null => { const s = c[0]?.start; return typeof s === 'number' ? s : null; };
+const volumeOf = (c: Chap[]): number | null => { for (const x of c) { if (typeof x.volume === 'number') return x.volume; const m = String(x.start ?? '').match(/vol\s*(\d+)/i) ?? String(x.note ?? '').match(/vol(?:ume)?\s*(\d+)/i); if (m) return Number(m[1]); } return null; };
 const esc = (s: string) => s.replace(/\|/g, '/').replace(/\n/g, ' ');
 
 async function main() {
@@ -49,7 +52,8 @@ async function main() {
     console.log('\n// ---- proposed RelatedWorkRuling entries (from the verdicts; Sean rules — paste after his ruling) ----');
     for (const { file, v } of perWork) {
       const pos = v.position?.verdict === 'corrected' && v.position.proposed != null ? `, position: ${v.position.proposed}` : '';
-      const ch = (v.chapters_adapted ?? []).length ? `, chapter: ${v.chapters_adapted[0].start}, chaptersAdapted: '${chapters(v.chapters_adapted)}'` : '';
+      const vol = volumeOf(v.chapters_adapted ?? []);
+      const ch = (v.chapters_adapted ?? []).length ? `, chapter: ${firstChapter(v.chapters_adapted)}${vol != null ? `, volume: ${vol}` : ''}, chaptersAdapted: ${JSON.stringify(chapters(v.chapters_adapted))}` : '';
       console.log(`  { seriesId: '${v.series_id}', ruleId: 'I45', value: { anilistId: ${v.anilist_id}, standing: '${v.standing}'${ch}${pos}, note: ${JSON.stringify((v.recap ? 'recap; ' : '') + (v.adopted ? `adopted{${v.adopted.basis}}: ${v.adopted.note}; ` : '') + v.position.why).slice(0, 400)} },\n    reason: ${JSON.stringify(`${v.summary} (${v.confidence}; verdict ${file})`).slice(0, 900)},\n    ruledBy: 'Sean', ruledOn: '${today}', cite: ${JSON.stringify([`scripts/ingest/research/discovery/out/${file}`, ...(v.sources ?? []).slice(0, 4)])} },`);
     }
     for (const { file, v } of triage) for (const w of v.works) if (w.adapts_chapters === 'no') console.log(`  { seriesId: '${v.series_id}', ruleId: 'I45', value: { anilistId: ${w.anilist_id}, standing: 'filler', note: ${JSON.stringify(`original (triage): ${w.why}`).slice(0, 300)} },\n    reason: ${JSON.stringify(`Owner triage (${file}): ${w.title} adapts no chapters of the instrument — ${w.why}`).slice(0, 600)},\n    ruledBy: 'Sean', ruledOn: '${today}', cite: ${JSON.stringify([`scripts/ingest/research/discovery/out/${file}`, ...(w.sources ?? []).slice(0, 3)])} },`);

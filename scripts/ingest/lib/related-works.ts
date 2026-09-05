@@ -23,6 +23,29 @@ export type ExtraBucket = 'recap' | 'original' | 'same_instrument' | 'other_inst
 
 /** the relations that put a related work IN an owner's run — AniList's OTHER is how it labels an entry's own specials and shorts (Shippuden's Sunny Side Battle, Railgun S's bathhouse special), so it counts; ALTERNATIVE and SAME_UNIVERSE are a different telling or a different work (I16) */
 export const IN_RUN_RELATIONS = new Set(['SEQUEL', 'PREQUEL', 'SIDE_STORY', 'SPIN_OFF', 'PARENT', 'OTHER', 'SUMMARY', 'COMPILATION']);
+/** the STRONG in-run relations — OTHER is weak: it owns a work only when nothing stronger reaches it and no ALTERNATIVE edge does (Prisma Illya's OTHER edge to the Heaven's Feel films must not out-rank Fate's ALTERNATIVE) */
+export const STRONG_IN_RUN_RELATIONS = new Set(['SEQUEL', 'PREQUEL', 'SIDE_STORY', 'SPIN_OFF', 'SUMMARY', 'COMPILATION']); // PARENT is the owner's ANCESTOR (a spin-off's edge to the main line), never a work in the owner's run
+
+/**
+ * who owns a related work (I45 / I16), in precedence: (1) the owners that reached it by a STRONG in-run relation (SEQUEL / PREQUEL /
+ * SIDE_STORY / SPIN_OFF / SUMMARY / COMPILATION — Sailor Moon Eternal continues Crystal even though the 1990s series calls it ALTERNATIVE);
+ * (2) else an owner that is its own franchise BASE (or has no franchise) and reached it by ALTERNATIVE / SAME_UNIVERSE says "a different
+ * telling of me": an alternative adaptation under that base (the 1995 Ghost in the Shell beside SAC); (3) else the owners that reached it by
+ * OTHER (Shippuden's own specials); (4) else every owner. PARENT is never a claim (the owner is the child). Where AniList's labels still
+ * mis-attribute (Fate/Zero's SEQUEL to three rival stay-night adaptations) a 'related_work' ruling names the owner and the bucket.
+ */
+export function relatedWorkOwners(ownerRelations: Map<string, Set<string>>, baseOf: (owner: string) => string = (o) => o): { owners: Set<string>; alternative: boolean } {
+  const baseAlt = new Set<string>(); const strong = new Set<string>(); const other = new Set<string>();
+  for (const [o, rels] of ownerRelations) {
+    if ([...rels].some((r) => STRONG_IN_RUN_RELATIONS.has(r))) strong.add(o);
+    else if ((rels.has('ALTERNATIVE') || rels.has('SAME_UNIVERSE')) && baseOf(o) === o) baseAlt.add(o);
+    else if (rels.has('OTHER')) other.add(o);
+  }
+  if (strong.size) return { owners: strong, alternative: false };
+  if (baseAlt.size) return { owners: baseAlt, alternative: true };
+  if (other.size) return { owners: other, alternative: false };
+  return { owners: new Set(ownerRelations.keys()), alternative: false };
+}
 export type Standing = 'canon' | 'mixed' | 'filler';
 
 export type ExtraMedia = {

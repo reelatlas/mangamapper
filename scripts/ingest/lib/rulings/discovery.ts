@@ -29,7 +29,7 @@ import type { RulingEntry } from './types';
 
 export type OpenEnded = { openEnded: true };
 
-export type DiscoveryDisposition = 'series' | 'excluded' | 'deferred';
+export type DiscoveryDisposition = 'series' | 'excluded' | 'deferred' | 'related_work';
 export type DiscoveryRuling = {
   disposition: DiscoveryDisposition;
   /** disposition 'series': the slug the seed writer mints (I1); else slugified from the title */
@@ -42,6 +42,9 @@ export type DiscoveryRuling = {
   chain?: number[];
   /** a RESTORATION: the series existed and was deleted by the named incident; the ruling recreates it under its old id (never a discovery proposal) */
   restoration?: string;
+  /** disposition 'related_work' (I45 / I16): AniList's relation labels mis-attribute the work — it is a related work of THIS owner, in this bucket (an alternative adaptation under the franchise base, say), whatever the edges claim */
+  owner?: string;
+  bucket?: 'alternative' | 'same_instrument' | 'other_instrument' | 'unknown' | 'original' | 'recap';
 };
 
 const FR = 'docs/franchise-rulings.md';
@@ -423,6 +426,50 @@ export const CANDIDATE_ENTRIES: RulingEntry<DiscoveryRuling>[] = [
     ruledOn: '2026-09-05',
     cite: ['scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d)'],
   },
+  // ---- related-work attributions (Sean 2026-09-05, via Cursor: "Heaven's Feel → Fate before any research"): AniList reaches the Fate/stay night film
+  // adaptations from Fate/Zero by SEQUEL (three rival tellings cannot all be a prequel's run) and from Prisma Illya by PARENT (a spin-off's ancestor);
+  // the base, Fate/stay night, says ALTERNATIVE — the true claim. One row each, under the base, an alternative adaptation (VN-sourced: held, never a mint)
+  {
+    seriesId: 'anilist:20791',
+    ruleId: 'I45',
+    value: { disposition: 'related_work', owner: 'fate-stay-night', bucket: 'alternative' },
+    reason:
+      "Fate/stay night [Heaven's Feel] I. presage flower: an alternative adaptation of the Fate/stay night visual novel (I16), attributed to the franchise base — Fate/Zero's SEQUEL edge is chronology (it points at all three stay-night adaptations) and Prisma Illya's PARENT edge names an ancestor, not a work in its run. Sean 2026-09-05: Heaven's Feel belongs to Fate, never to a Prisma Illya extras verdict. No instrument (a VN): held, never a mint.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/EXTRAS-SITTING.md §0'],
+  },
+  {
+    seriesId: 'anilist:21718',
+    ruleId: 'I45',
+    value: { disposition: 'related_work', owner: 'fate-stay-night', bucket: 'alternative' },
+    reason:
+      "Fate/stay night [Heaven's Feel] II. lost butterfly: an alternative adaptation of the Fate/stay night visual novel (I16), attributed to the franchise base — Fate/Zero's SEQUEL edge is chronology (it points at all three stay-night adaptations) and Prisma Illya's PARENT edge names an ancestor, not a work in its run. Sean 2026-09-05: Heaven's Feel belongs to Fate, never to a Prisma Illya extras verdict. No instrument (a VN): held, never a mint.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/EXTRAS-SITTING.md §0'],
+  },
+  {
+    seriesId: 'anilist:21719',
+    ruleId: 'I45',
+    value: { disposition: 'related_work', owner: 'fate-stay-night', bucket: 'alternative' },
+    reason:
+      "Fate/stay night [Heaven's Feel] III. spring song: an alternative adaptation of the Fate/stay night visual novel (I16), attributed to the franchise base — Fate/Zero's SEQUEL edge is chronology (it points at all three stay-night adaptations) and Prisma Illya's PARENT edge names an ancestor, not a work in its run. Sean 2026-09-05: Heaven's Feel belongs to Fate, never to a Prisma Illya extras verdict. No instrument (a VN): held, never a mint.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/EXTRAS-SITTING.md §0'],
+  },
+  {
+    seriesId: 'anilist:6922',
+    ruleId: 'I45',
+    value: { disposition: 'related_work', owner: 'fate-stay-night', bucket: 'alternative' },
+    reason:
+      "Fate/stay night: Unlimited Blade Works (Movie, 2010): an alternative adaptation of the Fate/stay night visual novel (I16), attributed to the franchise base — Fate/Zero's SEQUEL edge is chronology (it points at all three stay-night adaptations) and Prisma Illya's PARENT edge names an ancestor, not a work in its run. Sean 2026-09-05: Heaven's Feel belongs to Fate, never to a Prisma Illya extras verdict. No instrument (a VN): held, never a mint.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/EXTRAS-SITTING.md §0'],
+  },
+
 ];
 
 /** the rulings index reads ENTRIES (lib/rulings/index.ts) */

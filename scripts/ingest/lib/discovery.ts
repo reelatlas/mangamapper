@@ -32,7 +32,7 @@
 
 import { pickMangaNode } from './rulings/source-relations';
 import type { DiscoveryRuling } from './rulings/discovery';
-import { adaptedNodes, extraBucket, IN_RUN_RELATIONS, ownerInstrumentIds, PROMO, type ExtraBucket } from './related-works';
+import { adaptedNodes, extraBucket, ownerInstrumentIds, PROMO, relatedWorkOwners, type ExtraBucket } from './related-works';
 
 export const SERIES_FORMATS = new Set(['TV', 'TV_SHORT', 'ONA']);
 export const EXTRA_FORMATS = new Set(['MOVIE', 'OVA', 'SPECIAL']);
@@ -238,14 +238,16 @@ export function haloCandidates(input: DiscoveryInput): Candidate[] {
       // I16 / I45 (Sean 2026-09-05): a work NO owner reached by an in-run relation is an ALTERNATIVE ADAPTATION — a different telling of the
       // same source (the 1995 Ghost in the Shell beside SAC, the Heaven's Feel films beside every Fate entry) — never in a run: attributed
       // ONCE, to the franchise base (I43), and a series candidate when it adapts an instrument (step 2), held when the source has none
-      const inRun = [...c.relations].some((r) => IN_RUN_RELATIONS.has(r));
-      if (!inRun && !c.relations.has('CHARACTER') && !PROMO.test(c.title)) { // a promotional entry is promo first, whatever reached it
-        const bases = new Set([...c.owners].map((o) => input.franchiseBase?.get(o) ?? o));
-        c.owners = bases;
+      const attribution = c.ruling?.disposition === 'related_work' && c.ruling.owner ? c.ruling : null; // a ruling beats the labels (Heaven's Feel → Fate)
+      const who = attribution ? { owners: new Set([attribution.owner!]), alternative: attribution.bucket === 'alternative' } : relatedWorkOwners(c.ownerRelations, (o) => input.franchiseBase?.get(o) ?? o); // strong in-run owners > the base's ALTERNATIVE > OTHER-only owners
+      if (!who.alternative && !c.relations.has('CHARACTER')) c.owners = who.owners; // a chronology link (a sibling's SEQUEL / PARENT / OTHER) beside a stronger claim does not own
+      if (who.alternative && !c.relations.has('CHARACTER') && !PROMO.test(c.title)) { // a promotional entry is promo first, whatever reached it
+        c.owners = who.owners; // the base(s) that claimed it
         const media = (input.staged.get(c.anilistId) as never) ?? null;
         const adapts = adaptedNodes(media);
         const staged = input.staged.get(c.anilistId);
         c.proposal = staged ? 'alternative' : 'unstaged';
+        if (attribution) s.push(`attributed to ${attribution.owner} by ruling (I45)`);
         if (staged) {
           if (adapts.length) s.push(`adapts ${adapts.map((n) => `${n.title ?? n.id} (${n.format ?? '?'})`).join(', ')}`);
           s.push(`alternative adaptation (I16) — reached only by ${[...c.relations].join('/')}: not in the run; ${adapts.length ? 'a series candidate (step 2, the mint)' : `source ${(staged as { source?: string | null }).source ?? 'unknown'} names no instrument — held`}`);
@@ -310,6 +312,7 @@ export function discoveryClasses(cands: Candidate[], input: DiscoveryInput, last
     const id = Number(idStr);
     const owned = input.owned.has(id);
     const cand = byId.get(id) ?? null;
+    if (ruling.disposition === 'related_work') continue; // an attribution: the candidate is a related work, never a series to build
     if (ruling.disposition === 'series') {
       if (!owned) out.discovery_ruled_unbuilt.push({ anilistId: id, ruling, candidate: cand });
       continue;

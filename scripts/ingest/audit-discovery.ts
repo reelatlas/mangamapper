@@ -45,7 +45,7 @@ async function main() {
   console.log(`[audit-discovery] rankings (G60): ${rankings.length ? [...perList.entries()].map(([l, p]) => `${l} ${p.rows} rows (owned ${p.owned}, halo ${p.halo})`).join(' · ') : 'no snapshot yet — run discovery-stage --rankings'} → seed_candidate ${seeds.length}`);
   // I45 — the related-works buckets and the ledger's outcome
   const extras = cands.filter((c) => c.bucket === 'extra' || c.bucket === 'recap' || c.bucket === 'crossover');
-  const byBucket = (b: string) => extras.filter((c) => c.proposal === b && !c.ruling).map(candidateLine);
+  const byBucket = (b: string) => extras.filter((c) => c.proposal === b && (!c.ruling || c.ruling.disposition === 'related_work')).map(candidateLine);
   const allRows = await selectAll<any>('watch_order_entries', 'series_id, position, anilist_id, origin, standing, kind, title, air_date, chapter');
   const ledger = allRows.filter((r: any) => r.origin === 'halo');
   const others = allRows.filter((r: any) => r.origin !== 'halo');

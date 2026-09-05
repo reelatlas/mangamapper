@@ -1,6 +1,6 @@
 // I45 — the related-works derivation, pure
 import { describe, expect, it } from 'vitest';
-import { adaptedNodes, deriveWatchPosition, extraBucket, extraKind, extraStanding, freePosition, ledgerWorthy, matchRelatedTitle, ownerInstrumentIds, pickAdoption, relatedWorkStanding, titleMatch, type ExtraMedia } from './related-works';
+import { adaptedNodes, deriveWatchPosition, extraBucket, extraKind, extraStanding, freePosition, ledgerWorthy, matchRelatedTitle, ownerInstrumentIds, pickAdoption, relatedWorkOwners, relatedWorkStanding, titleMatch, type ExtraMedia } from './related-works';
 
 const media = (o: Partial<ExtraMedia> & { id: number }): ExtraMedia => ({ title: { romaji: 'x', english: null }, format: 'MOVIE', status: 'FINISHED', source: 'MANGA', relations: { edges: [] }, ...o });
 const manga = (id: number) => ({ relationType: 'ADAPTATION', node: { id, type: 'MANGA', format: 'MANGA', popularity: 100, title: { romaji: `m${id}` } } });
@@ -74,6 +74,15 @@ describe('extraBucket (I45)', () => {
     expect(pickAdoption({ title: 'X OVA Special', year: 2001 }, [{ position: 1.5, title: 'X OVA Special (2011)', air_date: '2011-01-01' }], [])).toMatchObject({ ambiguous: expect.stringContaining('dates disagree') });
     expect(pickAdoption(movie1, [ccs, { ...ccs, position: 36.1 }], [])).toMatchObject({ ambiguous: expect.stringContaining('2 stored rows') });
     expect(pickAdoption({ title: 'Nothing Like It', year: null }, [ccs], [])).toBeNull();
+  });
+  it('relatedWorkOwners: strong in-run owners win (Sailor Moon Eternal continues Crystal despite the 1990s ALTERNATIVE); PARENT never claims; the base\'s ALTERNATIVE alone makes an alternative adaptation (GitS 1995); OTHER alone owns (Shippuden\'s own specials); a member\'s ALTERNATIVE with no base claim stays its row (UBW\'s special)', () => {
+    const m = (o: Record<string, string[]>) => new Map(Object.entries(o).map(([k, v]) => [k, new Set(v)]));
+    const smBase = (o: string) => (o.startsWith('sailor-moon') ? 'sailor-moon' : o);
+    expect(relatedWorkOwners(m({ 'sailor-moon': ['ALTERNATIVE'], 'sailor-moon-crystal': ['SEQUEL'] }), smBase)).toEqual({ owners: new Set(['sailor-moon-crystal']), alternative: false });
+    expect(relatedWorkOwners(m({ 'fate-stay-night': ['ALTERNATIVE'], 'fate-kaleid-liner-prisma-illya': ['PARENT'] }), (o) => (o.startsWith('fate') ? 'fate-stay-night' : o))).toEqual({ owners: new Set(['fate-stay-night']), alternative: true });
+    expect(relatedWorkOwners(m({ 'gits-sac': ['ALTERNATIVE'], 'gits-arise': ['ALTERNATIVE'] }), (o) => (o === 'gits-arise' ? 'gits-sac' : o))).toEqual({ owners: new Set(['gits-sac']), alternative: true });
+    expect(relatedWorkOwners(m({ 'naruto-shippuden': ['OTHER'] }))).toEqual({ owners: new Set(['naruto-shippuden']), alternative: false });
+    expect(relatedWorkOwners(m({ 'fate-stay-night-unlimited-blade-works': ['ALTERNATIVE'] }), (o) => (o.startsWith('fate') ? 'fate-stay-night' : o))).toEqual({ owners: new Set(['fate-stay-night-unlimited-blade-works']), alternative: false });
   });
   it('the ruling layer beats the rule: a researched standing lands; without one the rule (or pending) stands', () => {
     expect(relatedWorkStanding('same_instrument', { standing: 'canon' })).toBe('canon');

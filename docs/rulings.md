@@ -2,7 +2,7 @@
 
 > GENERATED from `scripts/ingest/lib/rulings/**` by `scripts/restructure/gen-rulings.ts` — do not edit by hand. A ruling is an INSTANCE of a rule (`docs/rules.md`); the map is the record, this is the index.
 
-- rulings: 2532 across 319 series/keys · by Sean: 1031 · UNRECORDED reasons: 9 · with a retire condition: 96
+- rulings: 2536 across 323 series/keys · by Sean: 1035 · UNRECORDED reasons: 9 · with a retire condition: 96
 
 ## Retire conditions (re-evaluate when…)
 
@@ -278,6 +278,12 @@
 |---|---|---|---|---|
 | `I13` | {"disposition":"series","slug":"one-piece-novel-heroines","franchise":"one-piece"} | Decision (d) of the extras sitting (Sean 2026-09-05): ONE PIECE HEROINES (SPECIAL 2026) adapts ONE PIECE novel HEROINES (AniList manga 113686: NOVEL · FINISHED · 10/2 · 987) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of one-piece. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
 
+### anilist:20791 (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I45` | {"disposition":"related_work","owner":"fate-stay-night","bucket":"alternative"} | Fate/stay night [Heaven's Feel] I. presage flower: an alternative adaptation of the Fate/stay night visual novel (I16), attributed to the franchise base — Fate/Zero's SEQUEL edge is chronology (it points at all three stay-night adaptations) and Prisma Illya's PARENT edge names an ancestor, not a work in its run. Sean 2026-09-05: Heaven's Feel belongs to Fate, never to a Prisma Illya extras verdict. No instrument (a VN): held, never a mint. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 |  |
+
 ### anilist:21068 (1)
 
 | rule | value | reason | ruled | retires when |
@@ -301,6 +307,18 @@
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `I13` | {"disposition":"series","slug":"kurokos-basketball-extra-game","franchise":"kurokos-basketball"} | Decision (d) of the extras sitting (Sean 2026-09-05): Kuroko's Basketball: Last Game (MOVIE 2017) adapts Kuroko no Basket: Extra Game (AniList manga 85604: MANGA · FINISHED · 9/2 · 4449) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of kurokos-basketball. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
+
+### anilist:21718 (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I45` | {"disposition":"related_work","owner":"fate-stay-night","bucket":"alternative"} | Fate/stay night [Heaven's Feel] II. lost butterfly: an alternative adaptation of the Fate/stay night visual novel (I16), attributed to the franchise base — Fate/Zero's SEQUEL edge is chronology (it points at all three stay-night adaptations) and Prisma Illya's PARENT edge names an ancestor, not a work in its run. Sean 2026-09-05: Heaven's Feel belongs to Fate, never to a Prisma Illya extras verdict. No instrument (a VN): held, never a mint. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 |  |
+
+### anilist:21719 (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I45` | {"disposition":"related_work","owner":"fate-stay-night","bucket":"alternative"} | Fate/stay night [Heaven's Feel] III. spring song: an alternative adaptation of the Fate/stay night visual novel (I16), attributed to the franchise base — Fate/Zero's SEQUEL edge is chronology (it points at all three stay-night adaptations) and Prisma Illya's PARENT edge names an ancestor, not a work in its run. Sean 2026-09-05: Heaven's Feel belongs to Fate, never to a Prisma Illya extras verdict. No instrument (a VN): held, never a mint. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 |  |
 
 ### anilist:21778 (1)
 
@@ -361,6 +379,12 @@
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `I13` | {"disposition":"series","slug":"mobile-suit-gundam-unicorn","franchise":"mobile-suit-gundam"} | Decision (d) of the extras sitting (Sean 2026-09-05): Mobile Suit Gundam UC (OVA 2010) adapts Kidou Senshi Gundam Unicorn (AniList manga 35177: NOVEL · FINISHED · 31/11 · 353) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of mobile-suit-gundam. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
+
+### anilist:6922 (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I45` | {"disposition":"related_work","owner":"fate-stay-night","bucket":"alternative"} | Fate/stay night: Unlimited Blade Works (Movie, 2010): an alternative adaptation of the Fate/stay night visual novel (I16), attributed to the franchise base — Fate/Zero's SEQUEL edge is chronology (it points at all three stay-night adaptations) and Prisma Illya's PARENT edge names an ancestor, not a work in its run. Sean 2026-09-05: Heaven's Feel belongs to Fate, never to a Prisma Illya extras verdict. No instrument (a VN): held, never a mint. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 |  |
 
 ### anilist:97891 (1)
 
