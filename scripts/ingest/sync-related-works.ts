@@ -13,11 +13,24 @@
 //   npx tsx --env-file=.env.ingest scripts/ingest/sync-related-works.ts [--dry-run]
 import { db, finishRun, selectAll, startRun } from './lib/db';
 import { haloCandidates, loadDiscoveryInput } from './lib/discovery';
-import { deriveWatchPosition, extraKind, extraStanding, freePosition, isoDate, type ExtraBucket } from './lib/related-works';
+import { adaptedNodes, deriveWatchPosition, extraKind, extraStanding, freePosition, isoDate, type ExtraBucket } from './lib/related-works';
 import { RULED_POSITION_BY_ANILIST } from './lib/rulings/watch-order-labels';
 
 const DRY = process.argv.includes('--dry-run');
 const LEDGER_BUCKETS = new Set(['extra', 'recap', 'crossover']);
+
+/** the ledger note for a bucket — the rule that decided the standing, or what the sitting still owes (no date: the note is compared on every run) */
+function bucketNote(bucket: ExtraBucket, adapts: { title: string | null; format: string | null }[]): string {
+  const works = adapts.map((n) => `${n.title ?? '?'} (${n.format ?? '?'})`).join(', ');
+  switch (bucket) {
+    case 'recap': return 'recap / compilation (filler by rule, N8: never a numbered row)';
+    case 'original': return 'original side story (source ORIGINAL — filler by T25)';
+    case 'crossover': return 'crossover by shared characters only (filler)';
+    case 'same_instrument': return `adapts the series' own instrument: ${works} — standing and chapters pending the sitting / research`;
+    case 'other_instrument': return `adapts another work: ${works} — ${adapts.some((n) => n.format === 'MANGA' || n.format === 'NOVEL') ? 'a series candidate too (the KonoSuba-Explosion shape)' : 'a one-shot tie-in'}`;
+    default: return 'a source with no named instrument (AniList names no chapters — a franchise tag, a novel film without its edge, a visual-novel or game source) — held for Sean';
+  }
+}
 
 async function main() {
   const runId = await startRun('resolve');
@@ -49,9 +62,9 @@ async function main() {
         const row = {
           series_id: sid, position, anilist_id: c.anilistId, origin: 'halo', relation: [...c.relations].join('/'),
           kind: extraKind(c.format, bucket), standing, title: c.title, air_date: date,
-          note: `${bucket === 'recap' ? 'recap / compilation (filler by rule, N8: never a numbered row)' : bucket === 'original' ? 'original side story (source ORIGINAL — filler by T25)' : bucket === 'crossover' ? 'crossover by shared characters only (filler)' : bucket === 'same_instrument' ? "adapts the series' own instrument — standing and chapters pending the sitting / research" : bucket === 'other_instrument' ? 'adapts another instrument — a series candidate too (the KonoSuba-Explosion shape)' : 'an instrument source with no manga edge — held for Sean'} · position ${ruledPos != null ? 'ruled' : 'derived from the air date (a proposal)'} · I45 halo ${new Date().toISOString().slice(0, 10)}`,
+          note: `${bucketNote(bucket, adaptedNodes(m ?? null))} · position ${ruledPos != null ? 'ruled' : 'derived from the air date (a proposal)'} · I45 halo`,
         };
-        const same = cur && cur.origin === 'halo' && cur.standing === standing && cur.kind === row.kind && cur.title === row.title && cur.air_date === row.air_date && cur.relation === row.relation;
+        const same = cur && cur.origin === 'halo' && cur.standing === standing && cur.kind === row.kind && cur.title === row.title && cur.air_date === row.air_date && cur.relation === row.relation && cur.note === row.note;
         if (same) { counters.unchanged++; continue; }
         if (cur && cur.origin !== 'halo') { counters.unchanged++; continue; } // a wiki / ruled row already models this work — never overwritten here
         if (cur) updated++; else { inserted++; takenBy.set(sid, new Set([...(takenBy.get(sid) ?? []), position])); }

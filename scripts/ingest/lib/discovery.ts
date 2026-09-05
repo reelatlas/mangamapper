@@ -32,7 +32,7 @@
 
 import { pickMangaNode } from './rulings/source-relations';
 import type { DiscoveryRuling } from './rulings/discovery';
-import { extraBucket, type ExtraBucket } from './related-works';
+import { adaptedNodes, extraBucket, ownerInstrumentIds, type ExtraBucket } from './related-works';
 
 export const SERIES_FORMATS = new Set(['TV', 'TV_SHORT', 'ONA']);
 export const EXTRA_FORMATS = new Set(['MOVIE', 'OVA', 'SPECIAL']);
@@ -103,6 +103,8 @@ export type DiscoveryInput = {
   openEnded: Set<string>;
   /** our series id → the manga ids on its reading chain (I41) — a chain work counts as the owner's own instrument */
   chainWorks?: Map<string, number[]>;
+  /** our series id → its instrument node ids on AniList (ownerInstrumentIds: the registered manga, chain works, a novel owner's NOVEL nodes) */
+  ownerInstruments?: Map<string, Set<number>>;
 };
 
 const norm = (s: string): string =>
@@ -227,9 +229,12 @@ export function haloCandidates(input: DiscoveryInput): Candidate[] {
       // I45: the related-works bucket from the full media — recap / original / same_instrument / other_instrument / crossover / unknown
       const ownerIds = [...c.owners];
       const ownerManga = ownerIds.map((o) => input.ownerManga.get(o) ?? null).find((m) => m != null) ?? null;
-      const b = extraBucket(c.relations, (input.staged.get(c.anilistId) as never) ?? null, { mangaId: ownerManga, chainWorkIds: ownerIds.flatMap((o) => input.chainWorks?.get(o) ?? []) });
+      const media = (input.staged.get(c.anilistId) as never) ?? null;
+      const b = extraBucket(c.relations, media, { mangaId: ownerManga, chainWorkIds: ownerIds.flatMap((o) => input.chainWorks?.get(o) ?? []), instrumentIds: ownerIds.flatMap((o) => [...(input.ownerInstruments?.get(o) ?? [])]) });
       c.proposal = b;
-      s.push(b === 'unstaged' ? 'not staged — run discovery-stage' : `related work: ${b}${b === 'same_instrument' ? ' (the sitting: standing + chapters)' : b === 'other_instrument' ? ' (a series candidate too)' : b === 'unknown' ? ' (hold for Sean)' : ' (filler by rule)'}`);
+      const adapts = adaptedNodes(media);
+      if (adapts.length) s.push(`adapts ${adapts.map((n) => `${n.title ?? n.id} (${n.format ?? '?'})`).join(', ')}`);
+      s.push(b === 'unstaged' ? 'not staged — run discovery-stage' : `related work: ${b}${b === 'same_instrument' ? ' (the sitting: standing + chapters)' : b === 'other_instrument' ? (adapts.some((n) => n.format === 'MANGA' || n.format === 'NOVEL') ? ' (a series candidate too)' : ' (a one-shot tie-in)') : b === 'unknown' ? ' (hold for Sean)' : ' (filler by rule)'}`);
       c.signals = s; continue;
     }
     if (c.bucket === 'series') { c.proposal = 'series'; s.push(`relation ${[...c.relations].filter((r) => !IGNORED_RELATIONS.has(r)).join('/')}`); c.signals = s; continue; }
@@ -302,7 +307,7 @@ export function candidateLine(c: Candidate): string {
 export async function loadDiscoveryInput(): Promise<DiscoveryInput> {
   const { selectAll } = await import('./db'); // lazy: the derivation above is pure and unit-tested without a DB
   const { DISCOVERY_RULINGS, OPEN_ENDED } = await import('./rulings/discovery');
-  const series = await selectAll<{ id: string; anilist_id: number | null; manga_anilist_id: number | null }>('series', 'id, anilist_id, manga_anilist_id');
+  const series = await selectAll<{ id: string; anilist_id: number | null; manga_anilist_id: number | null; source_type: string | null }>('series', 'id, anilist_id, manga_anilist_id, source_type');
   const comps = await selectAll<{ series_id: string; anilist_id: number }>('series_components', 'series_id, anilist_id');
   const owned = new Map<number, string>();
   const ownerManga = new Map<string, number | null>();
@@ -325,7 +330,12 @@ export async function loadDiscoveryInput(): Promise<DiscoveryInput> {
   const { SOURCE_CHAINS } = await import('./rulings/source-chains');
   const chainWorks = new Map<string, number[]>();
   for (const [sid, chain] of Object.entries(SOURCE_CHAINS as Record<string, { works?: { anilistId?: number | null }[] }>)) chainWorks.set(sid, (chain.works ?? []).map((w) => w.anilistId).filter((n): n is number => n != null));
-  return { owned, staged, changedAt, ownerTitles, ownerManga, rulings: DISCOVERY_RULINGS, openEnded: OPEN_ENDED, chainWorks };
+  // T25 / I45: every owner's instrument node set — a novel owner's NOVEL nodes come from the edges of its own owned entries
+  const ownedBy = new Map<string, number[]>();
+  for (const [id, owner] of owned) ownedBy.set(owner, [...(ownedBy.get(owner) ?? []), id]);
+  const ownerInstruments = new Map<string, Set<number>>();
+  for (const s of series) ownerInstruments.set(s.id, ownerInstrumentIds({ sourceType: s.source_type, mangaId: s.manga_anilist_id, chainWorkIds: chainWorks.get(s.id), ownedMedia: (ownedBy.get(s.id) ?? []).map((id) => staged.get(id) as never).filter(Boolean) }));
+  return { owned, staged, changedAt, ownerTitles, ownerManga, rulings: DISCOVERY_RULINGS, openEnded: OPEN_ENDED, chainWorks, ownerInstruments };
 }
 
 /**

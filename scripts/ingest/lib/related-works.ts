@@ -13,7 +13,7 @@
 //   same_instrument  — adapts the owner's own manga (I38 pick) or a chain work (I41) → standing PENDING: the sitting / research decides (canon or mixed, with its chapters)
 //   other_instrument — adapts another instrument                         → standing pending; also a series candidate (the KonoSuba-Explosion shape)
 //   crossover        — reached by a CHARACTER edge only                  → filler (listed, not fetched by default)
-//   unknown          — an instrument source with no manga edge, or an unregistered source → held for Sean
+//   unknown          — a source naming no instrument node, or an unregistered source → held for Sean
 // The POSITION is derived from the work's air date against the series' episode
 // dates (after the last episode that aired before it; 0.5 before ep 1) — a
 // PROPOSAL; a ruling (watch-order-labels.ts, by AniList id) overrides it.
@@ -34,10 +34,44 @@ export type ExtraMedia = {
 };
 
 const RECAP_TITLE = /\b(recap|summary|digest|compilation|special edition|re-?cut)\b|総集編|ダイジェスト/i;
-const INSTRUMENT_SOURCES = new Set(['MANGA', 'ONE_SHOT', 'DOUJINSHI', 'LIGHT_NOVEL', 'WEB_NOVEL', 'NOVEL']);
+
+/** the node formats an AniList `source` names as its instrument (T25: the unit a standing is measured against) — a novelization of a manga-sourced film is a downstream adaptation, never its source */
+export const SOURCE_FORMATS: Record<string, readonly string[]> = {
+  MANGA: ['MANGA', 'ONE_SHOT'], ONE_SHOT: ['ONE_SHOT', 'MANGA'], DOUJINSHI: ['MANGA', 'ONE_SHOT'],
+  LIGHT_NOVEL: ['NOVEL'], NOVEL: ['NOVEL'], WEB_NOVEL: ['NOVEL'],
+};
+/** our T25 source_type values whose instrument node is NOVEL-format on AniList (a series row registers no manga id for them) */
+export const NOVEL_SOURCE_TYPES = new Set(['light_novel', 'novel', 'web_novel']);
+
+export type AdaptedNode = { id: number; format: string | null; title: string | null };
+
+/** the works a media adapts under its OWN source: ADAPTATION edges to MANGA-type nodes whose format the source names — [] when the source is ORIGINAL, unknown, or names nothing (an edge to a novelization is not a source) */
+export function adaptedNodes(media: ExtraMedia | null): AdaptedNode[] {
+  const formats = media?.source ? SOURCE_FORMATS[media.source] : undefined;
+  if (!media || !formats) return [];
+  return (media.relations?.edges ?? [])
+    .filter((e) => e.relationType === 'ADAPTATION' && e.node.type === 'MANGA' && formats.includes(e.node.format ?? ''))
+    .sort((a, b) => (b.node.popularity ?? 0) - (a.node.popularity ?? 0))
+    .map((e) => ({ id: e.node.id, format: e.node.format ?? null, title: e.node.title?.romaji ?? null }));
+}
+
+/**
+ * the owner's INSTRUMENT node set on AniList: the registered manga (I38's pick / MANGA_LINK_OVERRIDES) and every chain work (I41);
+ * a novel-instrument series (T25 light_novel / novel / web_novel) registers no manga id — its instrument is the NOVEL-format node(s)
+ * its OWN anime entries adapt (AniList splits some novels per volume; the union over every owned entry is the set). A manga owner's
+ * novel edges (novelizations, side novels) are never its instrument.
+ */
+export function ownerInstrumentIds(owner: { sourceType: string | null; mangaId: number | null; chainWorkIds?: Iterable<number>; ownedMedia?: Iterable<ExtraMedia> }): Set<number> {
+  const ids = new Set<number>(owner.chainWorkIds ?? []);
+  if (owner.mangaId != null) ids.add(owner.mangaId);
+  if (owner.sourceType && NOVEL_SOURCE_TYPES.has(owner.sourceType)) {
+    for (const m of owner.ownedMedia ?? []) for (const e of m.relations?.edges ?? []) if (e.relationType === 'ADAPTATION' && e.node.type === 'MANGA' && e.node.format === 'NOVEL') ids.add(e.node.id);
+  }
+  return ids;
+}
 
 /** the bucket, from the relation kinds that reached the work and its own media (null media = unstaged) */
-export function extraBucket(relations: Iterable<string>, media: ExtraMedia | null, owner: { mangaId: number | null; chainWorkIds?: Iterable<number> }): ExtraBucket | 'unstaged' {
+export function extraBucket(relations: Iterable<string>, media: ExtraMedia | null, owner: { mangaId: number | null; chainWorkIds?: Iterable<number>; instrumentIds?: Iterable<number> }): ExtraBucket | 'unstaged' {
   const rels = new Set(relations);
   if (rels.has('SUMMARY') || rels.has('COMPILATION')) return 'recap';
   const story = [...rels].filter((r) => r !== 'CHARACTER');
@@ -46,15 +80,16 @@ export function extraBucket(relations: Iterable<string>, media: ExtraMedia | nul
   const title = `${media.title.english ?? ''} ${media.title.romaji ?? ''}`;
   if (RECAP_TITLE.test(title)) return 'recap';
   if (media.source === 'ORIGINAL') return 'original';
-  const manga = pickMangaNode((media.relations?.edges ?? []) as never) as { id: number } | null;
-  if (manga) {
-    const chain = new Set(owner.chainWorkIds ?? []);
-    if (owner.mangaId != null && (manga.id === owner.mangaId || chain.has(manga.id))) return 'same_instrument';
-    return 'other_instrument';
+  const nodes = adaptedNodes(media);
+  if (nodes.length) {
+    const own = new Set<number>([...(owner.chainWorkIds ?? []), ...(owner.instrumentIds ?? [])]);
+    if (owner.mangaId != null) own.add(owner.mangaId);
+    return nodes.some((n) => own.has(n.id)) ? 'same_instrument' : 'other_instrument';
   }
-  if (media.source && INSTRUMENT_SOURCES.has(media.source)) return 'unknown'; // an instrument source with no manga edge — hold for Sean
-  if (media.source == null) return 'unknown';
-  return 'original'; // VISUAL_NOVEL / VIDEO_GAME / GAME / LIVE_ACTION / OTHER…: no chapter instrument (T25) — no position exists
+  // a source that is not ORIGINAL and names no instrument node is HELD: AniList's franchise tag with no chapters behind it (most
+  // franchise films), a novel film whose edge is missing, a visual-novel / game source AniList has no node for (the Heaven's Feel
+  // films adapt their VN — a rule cannot call that filler; T25 gives the owner no unit, so the sitting / research decides)
+  return 'unknown';
 }
 
 /** the standing a RULE can decide; null = the sitting / research decides (never a guess) */

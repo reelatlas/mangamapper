@@ -1154,6 +1154,78 @@
    19-23 / 39 (chain_source) and 18 / 93-95 (AFL's loose Mixed bucket),
    beelzebub 15 / 26-28 / 51, rurouni TV ep 95 (identity). Batch 22 opens on
    the boruto follow-up (lanes I + C) with the batch-21 tooling copied.
+128. ✅ **THE EXTRAS SITTING, STEP 1 — I45, THE RELATED-WORKS LEDGER (2026-09-05;
+    Sean ruled with Cursor: watch-order is the LEDGER of every related work;
+    the three layers; the films ruling on I13). The ledger is data now —
+    unsurfaced — and the sitting STOPS for Sean.** Migration 20260905170000:
+    `watch_order_entries` + anilist_id / relation / origin ('wiki' | 'ruling' |
+    'halo') / standing (canon | mixed | filler), unique (series_id, anilist_id).
+    lib/related-works.ts (pure, 11 tests): `extraBucket` — recap (SUMMARY /
+    COMPILATION or a recap title) · crossover (CHARACTER-only) · original
+    (source ORIGINAL — filler by T25) · same_instrument / other_instrument by
+    INSTRUMENT SETS: `adaptedNodes` = the ADAPTATION edges whose node format
+    the extra's OWN source names (a novelization is never a source — MHA's
+    films carry NOVEL edges and stay held), `ownerInstrumentIds` = the
+    registered manga + chain works, and for a novel owner (T25 light_novel /
+    novel / web_novel — a series row registers no manga id for them) the NOVEL
+    nodes its own anime adapts · unknown (a source naming no instrument node:
+    AniList's franchise tag with no chapters behind it, a novel film without
+    its edge, a visual-novel / game source — HELD, never called filler);
+    `extraStanding` (a rule decides only recap / original / crossover = filler;
+    the rest pending); `extraKind` (T29's format axis); `deriveWatchPosition`
+    (after the last episode aired before the work; 0.5 before ep 1; null
+    without a date) + `freePosition`. lib/discovery.ts: recap + crossover
+    buckets, extras proposals via extraBucket with an 'adapts …' signal,
+    stageHalo fetches extras + recaps, loadDiscoveryInput carries
+    ownerInstruments. `sync-related-works.ts` (HEAL standard, after
+    sync-watch-order): origin-'halo' rows keyed (series, anilist_id) — kind,
+    standing by rule, position ruled (RULED_POSITION_BY_ANILIST) or derived,
+    note naming the bucket and the adapted work (compared on every run, no
+    date stamp); never touches display_label; never deletes; skips rows owned
+    by another origin. `sync-watch-order.ts` writes origin 'wiki' and deletes
+    ONLY its own origin (Cursor's must-fix: it deleted every non-fractional row
+    before). supabaseSource.allWatchOrder: display_label not null (N31 —
+    surfacing is parked since 2026-08-24; zero labeled rows before and after,
+    the page renders exactly what it did). audit-discovery: the extra_*
+    classes + related_work_stale / _violation with a bucket header; recap.ts
+    --scope extras (default --limit 400; the sitting runs 2000). Ledger: I45
+    added (retired phrase 'an instrument source with no manga edge'); I13
+    AMENDED — the films ruling (retired 're-evaluate with the watch-order
+    concept'; the Kizumonogatari exclusion reworded); I19 / I42 / N31 amended.
+    THE NUMBERS: extras staged 696 media (641 extras); 794 related works over
+    180 owners / 877 owner pairs → 741 ledger rows (127 pairs without a
+    derivable air date: listed, never a guessed slot); standing 215 filler by
+    rule / 526 pending; kinds movie 296 · ova 181 · special 197 · recap 67;
+    buckets same_instrument 150 · other_instrument 50 · held 291 (207 of them
+    AniList's manga franchise tag or no source, with no edge — the DBZ / One
+    Piece / Conan film shelves; research, not a rule) · recap 64 · original 141
+    · crossover 90 · unstaged 8; 4 pairs already on a wiki watch-order list.
+    The instrument sets moved 18 works out of held: KonoSuba Legend of Crimson
+    + its two OVAs, Tanya the Movie, Goblin's Crown, DanMachi Arrow of the Orion
+    + the hot-spring OVA, Overlord Sacred Kingdom + Ple Ple Pleiades, the
+    Villainess movie + OVA, DxD NEW OVA → same_instrument; SAO Progressive,
+    Fate/strange Fake, Durarara Gaiden ×2, Haruhi's Disappearance, AoT Lost
+    Girls, Tokyo Ghoul Hibi, Gundam UC → other_instrument (series candidates).
+    CENSUS: related_work_violation 0 · related_work_stale 0 · ruling_violation 0
+    · watch_order_kind_missing 3 (the three pre-existing wiki rows, unchanged)
+    · verify-series-display 219 / 0 failing · every UI-truth class unchanged.
+    Explained deltas: halo_sequel_unclaimed 88 → 104 and
+    discovery_new_since_sitting 20 — staged films now carry SEQUEL chains
+    (KonoSuba 3 / 4 via Legend of Crimson, Made in Abyss S2 via Dawn of the
+    Deep Soul, Goblin Slayer II, Tanya S2, DanMachi V / VI, Undead Unluck S2,
+    the Kinnikuman and Yowamushi chains); seed_candidate 534 → 527 (those IPs
+    are the halo's rows now — by design, a relation to the catalog makes a
+    seed the halo's row); run_stuck 1 (afl #1044, killed 03:40 — heal-stuck-
+    runs marked it). Edges: all FIVE bundles deployed (lib-hash aafcffcf).
+    Research reads (research/discovery/, not rostered): count-ledger.ts,
+    extras-breakdown.ts, extras-novel-detail.ts. FINDING for Sean: PV /
+    trailer specials reach the ledger (BLEACH 20th Anime Anniversary Official
+    Trailer, Bakemonogatari PV) — rule them out like music videos, or leave
+    them ledger-only. STOP: Sean rules surfacing per bucket, the research plan
+    for the 150 same-instrument works and the 291 held, the 50 other-
+    instrument series candidates, and the PV question — then step 2 (films as
+    entries) and step 3 (the manga watch table). Batch 23 wave 1 stays parked.
+
 127. ✅ **DISCOVERY BUILD, STEP 4 — G60, THE RANKINGS READER (2026-09-05; go-list
     row 6; PROPOSAL.md v2.2 §3). The seed engine: which IPs should exist at
     all.** Migration 20260905160000: `ingest_anilist_rankings` (list, snapshot,

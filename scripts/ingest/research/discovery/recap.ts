@@ -43,7 +43,8 @@ async function main() {
         const m = input.staged.get(c.anilistId) as { startDate?: { year?: number | null } } | undefined;
         const b = c.proposal;
         const standing = b === 'recap' || b === 'original' || b === 'crossover' ? 'filler (rule)' : b === 'unstaged' ? '—' : 'pending';
-        const proposed = b === 'same_instrument' ? 'research standing + chapters; surface when ruled' : b === 'other_instrument' ? 'a series candidate (seed) + a related work' : b === 'recap' ? 'ledger row, kind recap — surface only by label' : b === 'original' ? 'ledger row — optional viewing; surface only by label' : b === 'crossover' ? 'ledger row (unfetched) — listed' : b === 'unknown' ? 'HOLD: source with no manga edge' : 'stage first';
+        const adapts = c.signals.find((x) => x.startsWith('adapts '));
+        const proposed = b === 'same_instrument' ? `${adapts ?? 'adapts the instrument'} — research standing + chapters; surface when ruled` : b === 'other_instrument' ? `${adapts ?? 'adapts another work'} — ${c.signals.some((x) => x.includes('one-shot tie-in')) ? 'a one-shot tie-in; research' : 'a series candidate (seed) + a related work'}` : b === 'recap' ? 'ledger row, kind recap — surface only by label' : b === 'original' ? 'ledger row — optional viewing; surface only by label' : b === 'crossover' ? 'ledger row (unfetched) — listed' : b === 'unknown' ? 'HOLD: source with no manga edge' : 'stage first';
         console.log(`| ${c.anilistId} | ${c.title.replace(/\|/g, '/')} | ${c.format ?? '?'} · ${m?.startDate?.year ?? '?'} | ${[...c.relations].join('/')} | **${b}** | ${standing} | ${proposed} | |`);
       }
       console.log('');

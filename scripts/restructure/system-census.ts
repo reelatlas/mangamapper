@@ -67,14 +67,14 @@ for (const [label, script, out] of [['rules.md', 'scripts/restructure/gen-docs.t
 // 7. edge bundles carry the current lib hash (T2.6)
 {
   const hash = libHash();
-  const fns = ['refresh-afl', 'refresh-afg', 'refresh-anilist', 'refresh-mu'];
+  const fns = readdirSync(join(ROOT, 'supabase/functions/_src')).filter((f) => f.endsWith('.ts')).map((f) => f.replace(/\.ts$/, '')); // P3: every bundle, derived — never a magic four
   const bad = fns.filter((f) => {
     const p = join(ROOT, 'supabase/functions', f, 'index.ts');
     if (!existsSync(p)) return true;
     const head = readFileSync(p, 'utf8').slice(0, 400);
     return !head.includes(`lib-hash: ${hash}`);
   });
-  console.log(`  ${bad.length ? 'FAIL' : 'ok  '} edge bundles: lib-hash ${hash.slice(0, 12)}… ${bad.length ? `STALE in ${bad.join(', ')} — run build-functions + deploy all four (P3)` : 'current in all four'}`);
+  console.log(`  ${bad.length ? 'FAIL' : 'ok  '} edge bundles: lib-hash ${hash.slice(0, 12)}… ${bad.length ? `STALE in ${bad.join(', ')} — run build-functions + deploy every bundle (P3)` : 'current in every bundle'}`);
   if (bad.length) fails.push('edge bundles');
 }
 

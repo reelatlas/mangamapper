@@ -419,7 +419,7 @@
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
-| `I11` | film trilogy — movies out of v1 scope (Sean 2026-08-22), re-evaluate with watch-order | The Golden Age Arc is a film trilogy, not a series — movies are out of v1 scope (Sean 2026-08-22); re-evaluate with the watch-order concept. | Sean 2026-08-22 | the watch-order / movies design pass re-evaluates film collections |
+| `I11` | film trilogy — movies out of v1 scope (Sean 2026-08-22), re-evaluate with watch-order | The Golden Age Arc is a film trilogy, not a series — movies are out of v1 scope (Sean 2026-08-22); re-evaluate under the films ruling (I13, amended 2026-09-05). | Sean 2026-08-22 | the watch-order / movies design pass re-evaluates film collections |
 
 ### berserk-the-golden-age-arc-memorial-edition (1)
 
@@ -1053,7 +1053,7 @@
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
-| `I11` | six-part film series — movies out of v1 scope (Sean 2026-08-22), re-evaluate with watch-order | Digimon Adventure tri. is a six-part film series — movies are out of v1 scope (Sean 2026-08-22); re-evaluate with the watch-order concept. | Sean 2026-08-22 | the watch-order / movies design pass re-evaluates film collections |
+| `I11` | six-part film series — movies out of v1 scope (Sean 2026-08-22), re-evaluate with watch-order | Digimon Adventure tri. is a six-part film series — movies are out of v1 scope (Sean 2026-08-22); re-evaluate under the films ruling (I13, amended 2026-09-05). | Sean 2026-08-22 | the watch-order / movies design pass re-evaluates film collections |
 
 ### digimon-digital-monsters (2)
 
@@ -2083,7 +2083,7 @@
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
-| `I11` | film trilogy — movies out of v1 scope (Sean 2026-08-22), re-evaluate with watch-order | Kizumonogatari is a film trilogy — movies are out of v1 scope (Sean 2026-08-22); the films sit inside monogatari-series as order-only extras (override chain), so the AFL page is not a series of its own. Re-evaluate with the watch-order concept. | Sean 2026-08-22 | the watch-order / movies design pass re-evaluates film collections |
+| `I11` | film trilogy — movies out of v1 scope (Sean 2026-08-22), re-evaluate with watch-order | Kizumonogatari is a film trilogy — movies are out of v1 scope (Sean 2026-08-22); the films sit inside monogatari-series as order-only extras (override chain), so the AFL page is not a series of its own. re-evaluate under the films ruling (I13, amended 2026-09-05). | Sean 2026-08-22 | the watch-order / movies design pass re-evaluates film collections |
 
 ### komi-cant-communicate (10)
 

@@ -1,9 +1,11 @@
 // I45 — the related-works derivation, pure
 import { describe, expect, it } from 'vitest';
-import { deriveWatchPosition, extraBucket, extraKind, extraStanding, freePosition, type ExtraMedia } from './related-works';
+import { adaptedNodes, deriveWatchPosition, extraBucket, extraKind, extraStanding, freePosition, ownerInstrumentIds, type ExtraMedia } from './related-works';
 
 const media = (o: Partial<ExtraMedia> & { id: number }): ExtraMedia => ({ title: { romaji: 'x', english: null }, format: 'MOVIE', status: 'FINISHED', source: 'MANGA', relations: { edges: [] }, ...o });
 const manga = (id: number) => ({ relationType: 'ADAPTATION', node: { id, type: 'MANGA', format: 'MANGA', popularity: 100, title: { romaji: `m${id}` } } });
+const novel = (id: number) => ({ relationType: 'ADAPTATION', node: { id, type: 'MANGA', format: 'NOVEL', popularity: 50, title: { romaji: `n${id}` } } });
+const oneShot = (id: number) => ({ relationType: 'ADAPTATION', node: { id, type: 'MANGA', format: 'ONE_SHOT', popularity: 10, title: { romaji: `o${id}` } } });
 
 describe('extraBucket (I45)', () => {
   const owner = { mangaId: 30011, chainWorkIds: [87178] };
@@ -21,9 +23,27 @@ describe('extraBucket (I45)', () => {
     expect(extraBucket(['SIDE_STORY'], media({ id: 4, relations: { edges: [manga(87178)] } }), owner)).toBe('same_instrument');
     expect(extraBucket(['SIDE_STORY'], media({ id: 5, relations: { edges: [manga(99999)] } }), owner)).toBe('other_instrument');
   });
-  it('an instrument source with no manga edge is unknown (held for Sean); a game source is original (no instrument)', () => {
+  it('any non-original source with no manga edge is unknown (held for Sean): a novel film, a visual-novel or game film', () => {
     expect(extraBucket(['SIDE_STORY'], media({ id: 6, source: 'LIGHT_NOVEL' }), owner)).toBe('unknown');
-    expect(extraBucket(['SIDE_STORY'], media({ id: 7, source: 'VIDEO_GAME' }), owner)).toBe('original');
+    expect(extraBucket(['SIDE_STORY'], media({ id: 7, source: 'VISUAL_NOVEL' }), owner)).toBe('unknown');
+  });
+  it('T25 instrument sets: a novel owner registers no manga id — its NOVEL node comes from its own anime (KonoSuba: Legend of Crimson is same_instrument; SAO Progressive is another novel)', () => {
+    const ids = ownerInstrumentIds({ sourceType: 'light_novel', mangaId: null, ownedMedia: [media({ id: 21202, relations: { edges: [novel(86238)] } })] });
+    expect([...ids]).toEqual([86238]);
+    const konosuba = { mangaId: null, instrumentIds: ids };
+    expect(extraBucket(['SEQUEL'], media({ id: 102976, source: 'LIGHT_NOVEL', relations: { edges: [novel(86238)] } }), konosuba)).toBe('same_instrument');
+    expect(extraBucket(['SIDE_STORY'], media({ id: 8, source: 'LIGHT_NOVEL', relations: { edges: [novel(73921)] } }), konosuba)).toBe('other_instrument');
+  });
+  it('a novelization is not a source: a manga-sourced film whose only edge is a NOVEL node is held (MHA: Two Heroes); a one-shot tie-in under a manga source is other_instrument (Road to Ninja)', () => {
+    expect(extraBucket(['SIDE_STORY'], media({ id: 100723, source: 'MANGA', relations: { edges: [novel(141517)] } }), owner)).toBe('unknown');
+    const road = media({ id: 9, source: 'MANGA', relations: { edges: [oneShot(70549), novel(132777)] } });
+    expect(extraBucket(['SIDE_STORY'], road, owner)).toBe('other_instrument');
+    expect(adaptedNodes(road).map((n) => n.id)).toEqual([70549]);
+    expect(adaptedNodes(media({ id: 10, source: 'ORIGINAL', relations: { edges: [manga(30011)] } }))).toEqual([]);
+  });
+  it('a manga owner ignores its own novel edges — the registered manga and the chain works are its instrument', () => {
+    const ids = ownerInstrumentIds({ sourceType: 'manga', mangaId: 30011, chainWorkIds: [87178], ownedMedia: [media({ id: 20, relations: { edges: [novel(87232), manga(30011)] } })] });
+    expect([...ids].sort((a, b) => a - b)).toEqual([30011, 87178]);
   });
 });
 

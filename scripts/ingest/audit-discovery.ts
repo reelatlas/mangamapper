@@ -8,7 +8,7 @@
 //   extra_same_instrument        I45: a recap / special / OVA / film that adapts the owner's OWN instrument — the sitting's load (standing + chapters)
 //   extra_other_instrument       adapts another instrument — a related work AND a series candidate
 //   extra_recap / extra_original / extra_crossover   filler by rule (listed for the surfacing decision; capped)
-//   extra_unknown                an instrument source with no manga edge — held for Sean
+//   extra_unknown                a source naming no instrument node — held for Sean
 //   extra_unstaged               a related work whose media is not staged yet — run discovery-stage
 //   related_work_stale           a ledger row (origin halo) whose AniList edge no longer reaches the series (P24 — a listing)
 //   related_work_violation       a ledger row whose standing / kind disagrees with the derivation (the healer must run)
