@@ -1,0 +1,91 @@
+{
+  "series_id": "a-certain-scientific-railgun",
+  "summary": "All six held works of a-certain-scientific-railgun are anime-side productions: two disc-bundled OVAs, one visual-book short, and three bundles of the MMR (Motto Marutto Railgun) chibi-parody bonus shorts. NONE of them adapts a chapter of the Kamachi/Fuyukawa Railgun manga (printed numbering 1-170 + four unnumbered specials). The Toaru Majutsu no Index Wiki carries an explicit 'Adapted From' field on every one of these pages: the two OVAs and the 13' short read 'anime original ... not based on any pre-existing material', and all six MMR shorts list only ANIME episodes (Railgun S1/S/T, Index, Index-tan, Tobidase Ippou-san) as what they parody. Japanese Wikipedia's Railgun (anime) article independently calls #EX an オリジナルエピソード, #13' an オリジナル短編エピソード, the S bathhouse short a 外伝エピソード bundled with the visual book, and the whole MMR line 新作おまけアニメ (newly-made bonus anime). Kadokawa's own product page for the Railgun S OFFICIAL VISUAL BOOK says it ships 完全新作アニメ ('a completely new anime') as its appendix, 前回同様 ('same as last time' — i.e. the 2010 13' DVD too), and the official Railgun S / T sites list the MMR discs as 新作おまけアニメーション. Two independent negative cross-checks agree: no chapter in the wiki's full 1-170 title list matches any of these stories, and a full backlink sweep of the three OVA/short pages returns no Railgun manga chapter page at all (the only manga hit is a trivia line in the SPIN-OFF Astral Buddy ch 15). Verdict: 6 x no, 0 x yes, 0 x unclear — the whole shelf is original, filler by ruling.",
+  "works": [
+    {
+      "anilist_id": 9047,
+      "title": "Toaru Kagaku no Railgun: Misaka-san wa Ima Chuumoku no Mato Desukara",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "Anime-original OVA (#EX 御坂さんはいま注目の的ですから). The Index Wiki's 'Adapted From' field reads verbatim 'This is an anime original video animation, as such this not based on any pre-existing material'; ja-WP calls it 'オリジナルエピソード' set after the Level Upper incident (第1期第12話終了以後). Its story (the 'Someone's Watching' urban legend, the ex-Nagatenjouki power-development director Jounan Asako) has no counterpart in the manga: no chapter among 1-170 carries it, and a full backlink sweep of the OVA page returns no Railgun manga chapter. Note: the wiki's own trivia claims 'the events of the OVA are referred to in the manga' citing ch 43 (交渉, released 2011-08-27, i.e. AFTER the OVA) — ch 43's own page does NOT corroborate that (its Referbacks cite ch 37, Index LN vol 5 and Railgun SS2), so that is a single-source unverified referback, not an adaptation, and it would in any case be a T26 incorporation question for the SERIES, never a chapter this OVA adapts.",
+      "sources": [
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20OVA&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%81%A8%E3%81%82%E3%82%8B%E7%A7%91%E5%AD%A6%E3%81%AE%E8%B6%85%E9%9B%BB%E7%A3%81%E7%A0%B2%20(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext&format=json",
+        "https://toaru-project.com/railgun/goods/bddvd/ova.html",
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20Manga%20Chapter%20043&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 8023,
+      "title": "Toaru Kagaku no Railgun: Motto Marutto Railgun",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "The two S1 MMR bonus discs (MMR I, 超電磁DISC1 with BD/DVD vol 1, 2010-01-29; MMR II, 超電磁DISC2 with vol 5, 2010-05-28) — chibi outtake/parody skits. The Index Wiki's 'Adapted From' on both pages lists ONLY anime episodes as what they parody (MMR I: Railgun eps 1, 2, 4, 8 + Index eps 2, 11 + Index-tan ep 1; MMR II: Railgun eps 4, 8, 9, 10, 11, 12, 13, 14, 23 + MMR I). ja-WP calls the whole MMR line '新作おまけアニメ' (newly-made bonus anime) carried on the first-press bonus discs, and the official Railgun site's vol-5 page lists '新作おまけアニメ' on 「スペシャルディスク2」. No manga chapter is named anywhere on either page.",
+      "sources": [
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Motto%20Marutto%20Railgun%20Episode%2001&prop=wikitext&format=json",
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Motto%20Marutto%20Railgun%20Episode%2002&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%81%A8%E3%81%82%E3%82%8B%E7%A7%91%E5%AD%A6%E3%81%AE%E8%B6%85%E9%9B%BB%E7%A3%81%E7%A0%B2%20(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext&format=json",
+        "https://toaru-project.com/railgun/goods/bddvd/05.html"
+      ]
+    },
+    {
+      "anilist_id": 9063,
+      "title": "Toaru Kagaku no Railgun: Entenka no Satsuei Model mo Raku ja Arimasen wa ne.",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "Anime-original 4-5 minute short (numbered #13' by both wikis), bundled on the DVD attached to the Railgun OFFICIAL VISUAL BOOK. The Index Wiki: 'This is an anime-original short, and as such, is not based on any pre-existing material'; ja-WP: '第1期第13話と並行したオリジナル短編エピソード' (an original short episode running parallel to S1 ep 13 — itself an anime-original virtual-reality beach episode). Kadokawa's product page for the sister volume (the Railgun S visual book) describes the format as shipping '完全新作アニメ' 前回同様 ('a completely new anime, same as last time'), i.e. this one too. No chapter among 1-170 carries the oil / photo-shoot skit.",
+      "sources": [
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20Episode%2013%27&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%81%A8%E3%81%82%E3%82%8B%E7%A7%91%E5%AD%A6%E3%81%AE%E8%B6%85%E9%9B%BB%E7%A3%81%E7%A0%B2%20(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext&format=json",
+        "https://www.kadokawa.co.jp/product/201007000200/"
+      ]
+    },
+    {
+      "anilist_id": 19697,
+      "title": "A Certain Scientific Railgun S Specials",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "The two Railgun S MMR bonus discs (MMR III with BD/DVD vol 1, 2013-07-24; MMR IV with vol 5, 2013-11-27) — the same chibi parody format. The Index Wiki's 'Adapted From' lists only anime episodes (MMR III: Railgun S eps 2-6 + Index-tan ep 4; MMR IV: Railgun S eps 6, 14, 17, 22). The official Railgun S site's own vol-1 and vol-5 pages print the bonus as 「新作おまけアニメーションDISC『MMR III（もっとまるっと超電磁砲III）』」 / 「MMR IV」 — a licensor statement that these are newly produced bonus animation, and ja-WP repeats it as 新作おまけアニメ. Parodying an episode that itself adapts the Sisters arc is not adapting the chapter.",
+      "sources": [
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Motto%20Marutto%20Railgun%20Episode%2003&prop=wikitext&format=json",
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Motto%20Marutto%20Railgun%20Episode%2004&prop=wikitext&format=json",
+        "https://toaru-project.com/railgun_s/goods/bddvd/01.html",
+        "https://toaru-project.com/railgun_s/goods/bddvd/05.html"
+      ]
+    },
+    {
+      "anilist_id": 20686,
+      "title": "A Certain Scientific Railgun S: All the Important Things I Learned in a Bathhouse",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "Anime-original short (#特典 大事なことはぜんぶ銭湯に教わった) on the Blu-ray attached to the Railgun S OFFICIAL VISUAL BOOK. The Index Wiki: 'This is an anime original video animation, as such it is not based on any pre-existing material'; ja-WP describes it as a 外伝エピソード about the girls saving a failing public bath, released 2014-03-27 with the visual book; Kadokawa's own product copy says the book ships '完全新作アニメ' as its appendix. Konori Mii's Big Spider backstory tie and the Musashino Milk gag have no chapter counterpart — nothing in the 1-170 title list matches, and a full backlink sweep of the S OVA page returns no Railgun manga chapter.",
+      "sources": [
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20S%20OVA&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%81%A8%E3%81%82%E3%82%8B%E7%A7%91%E5%AD%A6%E3%81%AE%E8%B6%85%E9%9B%BB%E7%A3%81%E7%A0%B2%20(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext&format=json",
+        "https://www.kadokawa.co.jp/product/312031400000/"
+      ]
+    },
+    {
+      "anilist_id": 122041,
+      "title": "Toaru Kagaku no Railgun T: Motto Marutto Railgun",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "The two Railgun T MMR bonus features (MMR V on BD/DVD Vol.1, 2020-04-30; MMR VI on Vol.5, 2020-10-09). The Index Wiki's 'Adapted From' lists only anime material (MMR V: Railgun T eps 1-7 + Railgun S eps 16, 24 + the Accelerator short Tobidase Ippou-san + MMR IV; MMR VI: Railgun T eps 1, 7, 8, 9, 13-19, 21, 22 + MMR III/IV/V). The official Railgun T site's Vol.1 page lists under ＜映像特典＞ 「新作おまけアニメ「MMR Ⅴ」（もっとまるっと超電磁砲Ⅴ）」; ja-WP records the same for the 第3期 discs. No manga chapter is claimed anywhere.",
+      "sources": [
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Motto%20Marutto%20Railgun%20Episode%2005&prop=wikitext&format=json",
+        "https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Motto%20Marutto%20Railgun%20Episode%2006&prop=wikitext&format=json",
+        "https://toaru-project.com/railgun_t/bd/",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%81%A8%E3%81%82%E3%82%8B%E7%A7%91%E5%AD%A6%E3%81%AE%E8%B6%85%E9%9B%BB%E7%A3%81%E7%A0%B2%20(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "flags_for_sean": [
+    "DATE — anilist 9047 (OVA #EX): stored/AniList 2010-09-26 is not supported by anything I could find. The official Railgun site's own BD/DVD page and ja-WP both give the disc release as 2010-10-29; syobocal gives the first TV airing as AT-X 2011-01-02 25:00 (with #13' in the same slot). Proposed new value 2010-10-29 (disc release, the regime AniList uses for the other five). Sources: https://toaru-project.com/railgun/goods/bddvd/ova.html · https://cal.syoboi.jp/tid/2097/time",
+    "DATE — anilist 20686 (Bathhouse): stored/AniList 2014-03-25 vs 2014-03-27 on all three of Kadokawa's product page (発売日 2014年03月27日), ja-WP and the Index Wiki. Proposed new value 2014-03-27. Source: https://www.kadokawa.co.jp/product/312031400000/",
+    "DATE (minor, do not repair without a ruling) — anilist 9063 (#13'): AniList/Index Wiki/ja-WP prose all say 2010-07-24, but Kadokawa's own product page gives 発売日 2010年07月27日 for the visual book that carries the DVD (ja-WP's own book list cites the 27th while its prose says the 24th). Likely a street-date vs nominal-発売日 split; the stored value matches the majority.",
+    "POSITION (out of triage scope, noted because all six become filler-by-ruling and position is then the only viewing fact) — the three MMR entries each BUNDLE two discs released months apart, so one fraction cannot serve both halves, and the stored date-derived fractions land before content the later disc parodies: 8023 @17.5 but MMR II parodies S1 ep 23; 19697 @39.5 but MMR IV parodies Railgun S ep 22 (global 46); 122041 @60.5 but MMR VI parodies Railgun T ep 22 (global 70). Spoiler-safe alternatives are the season finales: 24.5 / 48.5 / 73.5.",
+    "POSITION — anilist 9063 (#13') is stored @24.51 (release order) but ja-WP states it runs 第1期第13話と並行した (parallel to S1 ep 13) and both wikis number it 13'; anilist 9047 (#EX) is stored @24.5 but ja-WP sets it 第1期第12話終了以後 (after S1 ep 12), while its own trivia references ep 13. Release-order 24.5/24.51 is defensible (S1 eps 14-24 are anime-original arcs, so nothing is spoiled); flagging the in-story fork rather than proposing a change.",
+    "T26 WATCH (not a triage finding) — the Index Wiki's OVA page asserts 'the events of the OVA are referred to in the manga, suggesting that at least the general events that took place in it are canon', citing Railgun ch 43. I read ch 43 (交渉, released 2011-08-27): its own Referbacks list cites ch 37, Index LN vol 5 and Railgun SS2, NOT the OVA, and Watanabe (the character shared with the OVA) debuted in manga ch 1. So the claim is single-source and uncorroborated — it is NOT an adoption basis as it stands. The only other manga-side link to any of these six works, across a full backlink sweep, is a trivia line in the SPIN-OFF Astral Buddy ch 15 naming Oua University from the OVA.",
+    "NOT IN THE SHELF but adjacent — 「とある科学の超電磁砲」スペシャルセレクションですのっ! (2020-03-06 / 03-13, two TOKYO MX/BS11/MBS broadcast parts) is a re-broadcast of OVA #EX split in half plus an MMR 傑作選 (highlight reel); a pure recap if it ever enters the ledger. Source: https://cal.syoboi.jp/tid/2097/time"
+  ]
+}

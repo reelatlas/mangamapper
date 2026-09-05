@@ -1,0 +1,89 @@
+{
+  "series_id": "naruto",
+  "summary": "All six held works of naruto (the 2002-07 series) are anime-side productions and NONE adapts a chapter of Kishimoto's manga (printed space 1-700). The three Part I theatrical films are original screenplays with their own writers — Katsuyuki Sumisawa (1), Hirotsugu Kawasaki + Yuka Miyata (2), Toshiyuki Tsuru (3) — and Japanese Wikipedia puts every guest of all three under an explicit === オリジナルキャラクター === heading, with 岸本斉史 appearing only in the Infobox Film 原作 slot (the franchise-creator credit, not a chapter claim; en-WP flags Kishimoto's real story involvement when it exists, on Road to Ninja, and says nothing of the sort for films 1-3). The two specials are Jump Festa shorts that ja-WP introduces with 「ジャンプフェスタ2003と2004および2009では、オリジナルアニメが公開された」, both written by Sumisawa and directed by Hayato Date. The sixth work is the bonus DVD packed with the PS2 game Narutimate Hero 3, dramatising the game's own Jonin-vs-Genin crystal tournament and showing characters who are dead in the manga alive. The decisive cross-check was Narutopedia's per-character Debut infobox, read as a reverse index: Koyuki Kazahana, Temujin, Hikaru Tsuki, Shibuki, Suien and Kaede Yoshino all carry Movie / OVA / Anime / Novel debut rows and NO Manga row, while the control (Zabuza Momochi) reads 'Manga: Naruto Chapter #10' — plus full-text searches for Gelel / Land of Snow / Land of the Moon / Hero Water / Akagahara that return no chapter page. The ani-manga film comics and Masatoshi Kusakabe's JUMP j-BOOKS novels are adaptations OF these works (en-WP: Shueisha published 'light novel adaptations of the first seven Naruto and Naruto Shippuden films ... and the first Naruto OVA'), never their source. Result: 6 no, 0 yes, 0 unclear — the whole naruto shelf is originals.",
+  "works": [
+    {
+      "anilist_id": 442,
+      "title": "Naruto the Movie: Ninja Clash in the Land of Snow",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "Original screenplay: ja-WP credits 監督 岡村天斎 / 脚本 隅沢克之, with 岸本斉史 listed only in the Infobox Film 原作 slot (the franchise-creator credit every Naruto film carries), and heads the ENTIRE guest cast list === オリジナルキャラクター === (Fujikaze Yukie / Kazahana Koyuki, Sandayu Asama, director Makino, Doto's team). Narutopedia's article names the same writer/director and its 'Print Versions' block lists only an ani-manga (2004-12-03) and a Kusakabe light novel — both adaptations OF the film. Reverse index: Narutopedia's Debut infobox gives Koyuki Kazahana 'Movie: Naruto the Movie: Ninja Clash in the Land of Snow' and NO Manga row (control: Zabuza Momochi reads 'Manga: Naruto Chapter #10'), and a Narutopedia full-text search for 'Land of Snow' returns no chapter page. Note Narutopedia's [[Anime::Naruto: Original]] tag means the original TV series (Shippuden pages read [[Anime::Naruto: Shippuden]]) — it is NOT a typing claim.",
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=Naruto%20the%20Movie%3A%20Ninja%20Clash%20in%20the%20Land%20of%20Snow&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&pageid=716216&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Koyuki%20Kazahana&prop=text&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Zabuza%20Momochi&prop=text&format=json"
+      ]
+    },
+    {
+      "anilist_id": 936,
+      "title": "Naruto the Movie: Legend of the Stone of Gelel",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "Original screenplay: ja-WP credits 監督・脚本 川崎博嗣 with 宮田由佳 (no 原作 episode cited) and files Haido, Temujin, Fugai, Kamira, Ranke, Emina, Kahiko and the ferret Nerugui under === オリジナルキャラクター ===, noting their names are riffs on Jekyll & Hyde / Carmilla / Frankenstein. Narutopedia's article gives the same credits and lists only an ani-manga (2006-03-03) and Kusakabe's light novel (2005-08-22) as print versions — adaptations OF the film. Reverse index: Temujin's Narutopedia Debut infobox reads 'Movie: Naruto the Movie: Legend of the Stone of Gelel', Appears in: Movie, with NO Manga row (control: Zabuza = 'Manga: Naruto Chapter #10'); a Narutopedia full-text search for 'Gelel' returns eleven Gelel pages and not one manga chapter.",
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=Naruto%20the%20Movie%3A%20Legend%20of%20the%20Stone%20of%20Gelel&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&pageid=715275&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Temujin&prop=text&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Zabuza%20Momochi&prop=text&format=json"
+      ]
+    },
+    {
+      "anilist_id": 2144,
+      "title": "Naruto the Movie: Guardians of the Crescent Moon Kingdom",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "Original screenplay: ja-WP credits 監督・脚本 都留稔幸 (one man, no source episode) and heads the Land of the Moon cast === オリジナルキャラクター === (Tsuki Michiru, Tsuki Hikaru, Amayo, Tsuki Kakeru, Shabadaba, Ishidate, Karenbana, Kongo). Narutopedia's article agrees on writer/director, cites TV Tokyo for the DVD date, and lists only an ani-manga (2007-04-04) and a Kusakabe light novel (2006-08-07) — adaptations OF the film. Reverse index: Hikaru Tsuki's Narutopedia Debut infobox reads 'Movie: ... Guardians of the Crescent Moon Kingdom' plus a Game row, Appears in: Game, Movie — NO Manga row (control: Zabuza = 'Manga: Naruto Chapter #10'); 'Land of the Moon' full-text search returns no chapter page.",
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=Naruto%20the%20Movie%3A%20Guardians%20of%20the%20Crescent%20Moon%20Kingdom&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&pageid=521967&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Hikaru%20Tsuki&prop=text&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Zabuza%20Momochi&prop=text&format=json"
+      ]
+    },
+    {
+      "anilist_id": 594,
+      "title": "Naruto: The Lost Story - Mission: Protect the Waterfall Village",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "A 40-minute Jump Festa short, not an adaptation. ja-WP files it in NARUTO -ナルト- (アニメ) under == ジャンプフェスタ == whose opening sentence is 「ジャンプフェスタ2003と2004および2009では、オリジナルアニメが公開された」 — original anime; staff 監督 伊達勇登 / 脚本 隅沢克之; screened at Jump Festa 2004 (ja-WP ジャンプフェスタ: held 2003-12-20/21, matching the stored date) and re-screened on the 2004 Jump Festa Anime Tour. Narutopedia's page carries the same 40-min Takigakure/Hero-Water plot and lists a Kusakabe j-BOOKS novel (2003-12-15) and a 2005 ani-manga — tie-in prose and a film comic, never Kishimoto's manga (en-WP: Shueisha's Kusakabe novels are 'light novel adaptations of the ... films ... and the first Naruto OVA'). Reverse index: Shibuki's Narutopedia Debut infobox reads Anime (Episode #198) / Novel / OVA and Suien's reads Novel / OVA — NEITHER has a Manga row (control: Zabuza = 'Manga: Naruto Chapter #10'); 'Hero Water' full-text search returns no chapter page.",
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=Mission%3A%20Protect%20the%20Waterfall%20Village!&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&pageid=684529&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&pageid=816381&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Shibuki&prop=text&format=json",
+        "https://en.wikipedia.org/w/api.php?action=parse&pageid=53360399&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 761,
+      "title": "NARUTO: Akaki Yotsuba no Clover wo Sagase",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "A 13-minute Jump Festa short under the same ja-WP == ジャンプフェスタ == heading whose lead sentence is 「…オリジナルアニメが公開された」; staff 監督 伊達勇登 / 脚本 隅沢克之; ja-WP's plot (Konohamaru hunting the crimson four-leaf clover in Akagahara for Kaede) matches Narutopedia's. Reverse index: Kaede Yoshino's Narutopedia Debut infobox reads 'OVA: Find the Four-Leaf Red Clover!' only — no Manga row (control: Zabuza = 'Manga: Naruto Chapter #10'); an 'Akagahara' full-text search returns no chapter page. The short only NAMES a manga fact in passing (Akagahara is described as a former Chunin Exam site) — a reference, not adapted pages.",
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&page=Find%20the%20Four-Leaf%20Red%20Clover!&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&pageid=684529&prop=wikitext&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Kaede%20Yoshino&prop=text&format=json",
+        "https://naruto.fandom.com/api.php?action=parse&page=Zabuza%20Momochi&prop=text&format=json"
+      ]
+    },
+    {
+      "anilist_id": 1074,
+      "title": "NARUTO: Narutimate Hero 3: Tsui ni Gekitotsu! Jounin VS Genin!! Musabetsu Dairansen Taikai Kaisai!!",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "A game bonus video, not an adaptation of anything. en-WP's Naruto (TV series) OVA list: 'Fifth Hokage Tsunade creates a competition between Jonin ... and Genin ... Released on a bonus disk with the Japanese edition of the Naruto: Ultimate Ninja 3 video game for the PlayStation 2' (ja-WP dates that PS2 game 2005-12-22, matching the stored date, and records a 初回封入特典 first-print bonus). Narutopedia's page dramatises the game's own crystal-collecting Ultimate Contest mode ('This OVA was portrayed in Ultimate Ninja 3') and notes it shows characters who are DEAD in the manga alive — Hiruzen Sarutobi, Hayate Gekko, Haku, Zabuza, the Sound Four, Kimimaro, Tobirama Senju — which no chapter of the manga can contain. AniList's own source tag for this entry is VIDEO_GAME, consistent with both readings.",
+      "sources": [
+        "https://naruto.fandom.com/api.php?action=parse&pageid=19701&prop=wikitext&format=json",
+        "https://en.wikipedia.org/w/api.php?action=parse&pageid=74871410&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&pageid=688144&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "flags_for_sean": [
+    "DATE, anilist 761 (Akaki Yotsuba no Clover): stored 2003-05-24 disagrees with Narutopedia's 2002-12-20 and with ja-WP's NARUTO (アニメ) statement 「ジャンプフェスタ2003で公開」 — Jump Festa 2003 was held 2002-12-21/22 (ja-WP ジャンプフェスタ). The same ja-WP ジャンプフェスタ article, however, lists this short under 2003年開催「ジャンプ・スーパーアニメツアー2003」, so a 2003 tour screening is also documented. Two candidate regimes (Dec-2002 premiere vs a 2003 tour date); NOT resolved here and NO repair proposed — outside this triage's ask. en-WP dates it 2002.",
+    "POSITION, incidental and NOT researched (flagging only because the sources I had to read state settings; each needs the per-work pass): Narutopedia places film 1 'right after episode 101' / 'in between episodes 101 and 102' vs stored 97.5, and ja-WP places it 綱手捜索編終了後・サスケ奪還編開始前; film 2 'between the Mizuki Tracking (eps 142-147) and Bikōchū Search (eps 148-151) Missions' vs stored 145.5 (which sits inside the Mizuki arc); film 3 'after Naruto episode 196 ... between the Third Great Beast Arc and the Konoha Plans Recapture Mission' vs stored 195.5; the Waterfall Village special 'Set in-between the Search for Tsunade and the Sasuke Recovery Mission' vs stored 63.5, which looks materially early (63.5 is mid-Chunin-Exams). The Narutimate Hero 3 OVA has no in-universe position at all (dead characters alive) — stored 165.5 is arbitrary.",
+    "All six are 'no' — under the protocol they become originals, filler by ruling, with the citations on each entry; none joins the per-work programme."
+  ]
+}

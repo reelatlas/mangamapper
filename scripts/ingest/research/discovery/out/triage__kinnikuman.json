@@ -1,0 +1,132 @@
+{
+  "series_id": "kinnikuman",
+  "summary": "The shelf is the 1983-86 Toei line: one Nippon TV special, the seven Toei Manga Matsuri films and a 16mm traffic-safety PSA. THREE of the nine adapt Yudetamago's Kinnikuman manga. The TV Special animates the Planet Rakka / Uchu Nobushi story (printed ch 86-89) that the TV broadcast skipped; Movie 2 is built on the Bibimba / Horumon Yaki / Shishkeba Boo story (printed ch 82-83) with an original Black Corps second half; Movie 4 expands the 8-page Kinnikuman special one-shot ロビン・メモ!!の巻 — a real Yudetamago Kinnikuman chapter, but an UNNUMBERED 読切 that carries no mainline number. The other six are originals: films 1, 3, 5 and 6 (ja-WP calls film 3 原作をベースとしていない完全オリジナル in so many words, and film 6 a scrapped TV-special plot by 寺田憲史), film 7 which transplants a DIFFERENT Yudetamago one-shot wholesale (デスゲーム, WJ 1980 #16), and the traffic-safety PSA. The pattern that matters: the manga's 第2次怪獣退治編 (printed ch 80-89) was CUT from the TV run — ja-WP's own arc list says アニメ版ではカットされている（宇宙野武士編は…アニメスペシャルとして放映）and its season-1 episode list jumps 世界遠征編 (eps 19-26) straight to 第21回超人オリンピック編 (ep 27) — so the TV Special and Movie 2 are the SOLE adaptations of that block. All chapter numbers here are the ORIGINAL 1979-87 run's printed numbering (ja-WP: 全387話, 36 volumes); the 2011 continuation restarts at 新シリーズ第1話 and is a different space — see the flags. AniList's source tag is noise on this shelf: MANGA on three pure originals and null on Movie 2, the one film with a real chapter tie.",
+  "works": [
+    {
+      "anilist_id": 3273,
+      "title": "Kinnikuman (1984)",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "NO — original screenplay (山崎晴哉), film 1 of the Toei Manga Matsuri line. ja-WP: the premise is the ANIME's own Kinnikuman Land episode (アニメで語られたキン肉マンランド建設のエピソードが題材); the villains are only design MOTIFS from vol-2 manga kaijū (the Roots Island pair 「南からの使者の巻」「伝説の救世主の巻」 = printed ch 26-27, plus 「プロレス大決戦の巻」) with 大幅なデザインのアレンジ. The Kinnikuman Wiki says they 'bear little resemblance to their manga counterparts'. Designs and names, no events.",
+      "sources": [
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Movie_1&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%82%AD%E3%83%B3%E8%82%89%E3%83%9E%E3%83%B3%20%E5%A5%AA%E3%82%8F%E3%82%8C%E3%81%9F%E3%83%81%E3%83%A3%E3%83%B3%E3%83%94%E3%82%AA%E3%83%B3%E3%83%99%E3%83%AB%E3%83%88&prop=wikitext&format=json",
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=List_of_Story_Arcs&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 3274,
+      "title": "Kinnikuman: Daiabare! Segi Choujin",
+      "adapts_chapters": "yes",
+      "chapters": "printed ch 82-83 of the ORIGINAL 1979-87 run (vol 7; the Bibimba / Horumon Yaki / Shishkeba Boo half of the 2nd Kaiju Extermination arc, ch 80-89). The Black Emperor / Black Corps second half is anime-original — the T28 share is the per-work question.",
+      "why": "YES. ja-WP: 原作における超人オリンピック ザ・ビッグファイト前にキン肉星に帰国した際の話をベースにしている, and 'every guest but the Black Corps appears in the original' (ブラック軍団以外は原作にも登場している). The Kinnikuman Wiki's Chapter 82 page carries anime=Movie 2 and its arc page maps ch 80-89 to 'TV Special & Movie 2'; ch 82 is Bibimba's assassination attempt, the wounded leg and Meat's cape, ch 83 is Horumon Yaki offering her hand to Shishkeba Boo and the challenge — both are in the film's first half.",
+      "sources": [
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%82%AD%E3%83%B3%E8%82%89%E3%83%9E%E3%83%B3%20%E5%A4%A7%E6%9A%B4%E3%82%8C%21%E6%AD%A3%E7%BE%A9%E8%B6%85%E4%BA%BA&prop=wikitext&format=json",
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Chapter_82&prop=wikitext&format=json",
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Chapter_83&prop=wikitext&format=json",
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=2nd_Kaiju_Extermination_Arc&prop=wikitext&format=json",
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=List_of_Story_Arcs&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 3280,
+      "title": "Kinnikuman: Kessen! Shichinin no Seigi Choujin vs. Uchuu Nobushi",
+      "adapts_chapters": "yes",
+      "chapters": "printed ch 86-89 of the ORIGINAL 1979-87 run (vol 7; the Planet Rakka / Uchū Nobushi half of the 2nd Kaiju Extermination arc — Beansman recruiting the seven chojin through the Space Bandits' defeat)",
+      "why": "YES. ja-WP (キン肉マン): the 第2次怪獣退治編 is 第80話-第89話 and アニメ版ではカットされている（宇宙野武士編は内容を改変した上でアニメスペシャルとして放映）; ja-WP (テレビアニメ) says the same — レギュラー放送ではカットされたラッカ星防衛編をアニメ化したもの, reset from before the 21st Chojin Olympics to after, with the seven swapped for the Idol Chojin. The Kinnikuman Wiki's Beansman and Space Bandits pages cite ch 86/87/88/89 beat by beat and call the special 'the anime adaptation of his arc'.",
+      "sources": [
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%82%AD%E3%83%B3%E8%82%89%E3%83%9E%E3%83%B3%20%28%E3%83%86%E3%83%AC%E3%83%93%E3%82%A2%E3%83%8B%E3%83%A1%29&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%82%AD%E3%83%B3%E8%82%89%E3%83%9E%E3%83%B3&prop=wikitext&format=json",
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Beansman&prop=wikitext&format=json",
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Space_Bandits&prop=wikitext&format=json",
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Chapter_86&prop=wikitext&format=json",
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Chapter_89&prop=wikitext&format=json",
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=TV_Special&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 3276,
+      "title": "Kinnikuman: Gyakushuu! Uchuu Kakure Choujin",
+      "adapts_chapters": "yes",
+      "chapters": "the Kinnikuman special one-shot 「キン肉マン スペシャル編 ロビン・メモ!!の巻」 — 8 colour pages, WSJ special edition 『キン肉マン熱闘スペシャル』 1984-08-25. UNNUMBERED: ja-WP's collection table puts it in 『キン肉マン熱闘スペシャル』, 『お〜い!!マンガだよ〜ん』 and 『マッスル・リターンズ』 and NOT in the numbered run (nor in JC vol 37) — the 番外編 shape, no mainline number to carry.",
+      "why": "YES, but to an unnumbered special. ja-WP: 原作の短編読み切り『ロビン・メモの巻』を基にして、膨らました作品; ja-WP's Yudetamago one-shot list says it from the other side (この読み切りを原作としてストーリーを膨らませ…劇場版アニメ『逆襲!宇宙かくれ超人』が制作された). The Kinnikuman Wiki: 'It is based on the Kinnikuman special chapter Robin Memo', and its chapter page gives the 8 pages, the magazine and the plot the film expands (Robin kidnapped along with the notebook of the Justice Chojin's weak points).",
+      "sources": [
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%82%AD%E3%83%B3%E8%82%89%E3%83%9E%E3%83%B3%20%E9%80%86%E8%A5%B2%21%E5%AE%87%E5%AE%99%E3%81%8B%E3%81%8F%E3%82%8C%E8%B6%85%E4%BA%BA&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%82%86%E3%81%A7%E3%81%9F%E3%81%BE%E3%81%94%E3%81%AE%E8%AA%AD%E3%81%BF%E5%88%87%E3%82%8A%E4%BD%9C%E5%93%81%E4%B8%80%E8%A6%A7&prop=wikitext&format=json",
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Movie_4&prop=wikitext&format=json",
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Robin%27s_Notebook&prop=wikitext&format=json",
+        "https://kinnikuman.fandom.com/ja/api.php?action=parse&page=%E3%82%AD%E3%83%B3%E8%82%89%E3%83%9E%E3%83%B3_%E9%80%86%E8%A5%B2%21%E5%AE%87%E5%AE%99%E3%81%8B%E3%81%8F%E3%82%8C%E8%B6%85%E4%BA%BA&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%82%AD%E3%83%B3%E8%82%89%E3%83%9E%E3%83%B3&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 3275,
+      "title": "Kinnikuman: Seigi Choujin vs. Kodai Choujin",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "NO — ja-WP says it outright: 時系列は「黄金のマスク編」の後だが、前作と異なり原作をベースとしていない完全オリジナルの展開となっている ('unlike the previous film, a completely original development, not based on the source'). Every guest on the Kinnikuman Wiki's New Characters list is new (Satan King, the eight Kodai Chojin, Kōichi, and the anime-original Kinkotsu-Obaba).",
+      "sources": [
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%82%AD%E3%83%B3%E8%82%89%E3%83%9E%E3%83%B3%20%E6%AD%A3%E7%BE%A9%E8%B6%85%E4%BA%BAvs%E5%8F%A4%E4%BB%A3%E8%B6%85%E4%BA%BA&prop=wikitext&format=json",
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Movie_3&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 3278,
+      "title": "Kinnikuman: New York Kikiippatsu!",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "NO — an original screenplay by 寺田憲史: ja-WP says he had written it as the plot of a SCRAPPED TV special and the producer had him rework it into the film, and that it contradicts the manga's own setting (原作設定ならば悪魔将軍の正体は…ゴールドマンだが、今作では…「悪」の存在として描かれている). Only new guests (Big Apple, the Subway Boss, Inspector Ukon); the Kinnikuman Wiki's plot has no manga counterpart.",
+      "sources": [
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%82%AD%E3%83%B3%E8%82%89%E3%83%9E%E3%83%B3%20%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%A8%E3%83%BC%E3%82%AF%E5%8D%B1%E6%A9%9F%E4%B8%80%E9%AB%AA%21&prop=wikitext&format=json",
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Movie_6&prop=wikitext&format=json",
+        "https://kinnikuman.fandom.com/ja/api.php?action=parse&page=%E3%82%AD%E3%83%B3%E8%82%89%E3%83%9E%E3%83%B3_%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%A8%E3%83%BC%E3%82%AF%E5%8D%B1%E6%A9%9F%E4%B8%80%E9%AB%AA%21&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 3277,
+      "title": "Kinnikuman: Haresugata! Seigi Choujin",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "NO — an Edo-period time-slip built out of jidaigeki parodies (水戸黄門, 旗本退屈男) with an all-new cast: Shuten Doji and his Shitennō, the Tokugawa doppelgangers of the Kinniku family, and the anime-original Kinkotsu-Obaba. No manga story has this premise, and ja-WP names a manga basis on films 2, 4 and 7 while naming none here (nor does either Kinnikuman Wiki).",
+      "sources": [
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%82%AD%E3%83%B3%E8%82%89%E3%83%9E%E3%83%B3%20%E6%99%B4%E3%82%8C%E5%A7%BF%21%E6%AD%A3%E7%BE%A9%E8%B6%85%E4%BA%BA&prop=wikitext&format=json",
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Movie_5&prop=wikitext&format=json",
+        "https://kinnikuman.fandom.com/ja/api.php?action=parse&page=%E3%82%AD%E3%83%B3%E8%82%89%E3%83%9E%E3%83%B3_%E6%99%B4%E3%82%8C%E5%A7%BF%21%E6%AD%A3%E7%BE%A9%E8%B6%85%E4%BA%BA&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 3279,
+      "title": "Kinnikuman: Seigi Choujin vs. Senshi Choujin",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "NO Kinnikuman chapter — it transplants a DIFFERENT Yudetamago work. ja-WP: 基本ストーリーはゆでたまごの読み切り漫画『デスゲーム』を基にしている, and the one-shot list says この筋書きはそのまま…劇場版アニメ『正義超人vs戦士超人』に転用された (デスゲーム = WJ 1980 #16, 43 mono pages, a Bruce Lee 死亡遊戯 homage: a hostage, an island tower of seven floors, a treasure). The Kinnikuman Wiki agrees ('loosely based on Yudetamago's manga, Death Game'). ja-WP also calls the film パラレル・ワールド to the manga (Neptuneman alive, recast as a Senshi Chojin).",
+      "sources": [
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%82%AD%E3%83%B3%E8%82%89%E3%83%9E%E3%83%B3%20%E6%AD%A3%E7%BE%A9%E8%B6%85%E4%BA%BAvs%E6%88%A6%E5%A3%AB%E8%B6%85%E4%BA%BA&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%82%86%E3%81%A7%E3%81%9F%E3%81%BE%E3%81%94%E3%81%AE%E8%AA%AD%E3%81%BF%E5%88%87%E3%82%8A%E4%BD%9C%E5%93%81%E4%B8%80%E8%A6%A7&prop=wikitext&format=json",
+        "https://kinnikuman.fandom.com/api.php?action=parse&page=Movie_7&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 147810,
+      "title": "Kinnikuman no Koutsuu Anzen",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "NO — an original 15-minute 16mm traffic-safety education film (安全教育アニメ; ja-WP lists it in that genre's table). Osaka City Board of Education's AV-materials catalogue prints the whole scenario: 交通事故超人 hands rule-breaking children invitations to 交通地獄ランド, Kinnikuman and Terryman fight them, and it closes with Kinnikuman in a policeman's uniform directing children's traffic. The ja Kinnikuman Wiki has the same plot (悪魔超人 in league with Kinkotsuman and Iwao; 1986; a bonus disc on the Complete DVD-BOX). A PSA scenario with no manga counterpart.",
+      "sources": [
+        "https://www.manabi.city.osaka.lg.jp/yoyaku/ShichokakuDetailInfo.html?mcon_code=2067&searchmode=2&janru=260",
+        "https://kinnikuman.fandom.com/ja/api.php?action=parse&page=%E3%82%AD%E3%83%B3%E8%82%89%E3%83%9E%E3%83%B3%E3%81%AE%E4%BA%A4%E9%80%9A%E5%AE%89%E5%85%A8&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%AE%89%E5%85%A8%E6%95%99%E8%82%B2%E3%82%A2%E3%83%8B%E3%83%A1&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "flags_for_sean": [
+    "CHAPTER SPACE — say which space, always. The chapters above are the ORIGINAL run's PRINTED numbers: WSJ 1979 #22 - 1987 #21, ja-WP 話数=全387話（36巻まで）, arcs 1-27 / 28-51 / 52-79 / 80-89 / 90-121 / 122-159 / 160-208 / 209-273 / 274-387. The 2011 continuation RESTARTS its count (完璧超人始祖編 = 新シリーズ第1話-第208話, オメガ・ケンタウリ = 209-316, current = 317-), with volumes resuming at 38. So new-series ch 89 is a Perfect Origin chapter, not the Planet Rakka one — a ruling that writes a bare '89' beside a Perfect-Origin-era owner would collide. The context's 'latest known 912' is almost certainly AniList's CUMULATIVE count (387 + the continuation's ~525), not a printed number.",
+    "OWNER PREMISE — the task brief says the owner is the 2024 Perfect Origin Arc series, but the context's own facts say otherwise: episodes 137 / 137 and stored positions 64.5-137.5, which is the 1983-86 TV series (the 2024 series has 12 + 11). The triage answer is unaffected (the question is about the manga), but which series the ruling lands against decides which chapter space its numbers are read in — see the space flag.",
+    "DATE REPAIR — TV Special (anilist 3280): stored 1984-07-04 is a month/day transposition. ja-WP gives 1984年4月7日 twice (the キン肉マン (テレビアニメ) special infobox and the body: 『土曜トップスペシャル』土曜 19:30-20:54) and a third time in the 土曜トップスペシャル article's programme list; 1984-04-07 is a Saturday (the slot), 1984-07-04 a Wednesday. The Kinnikuman Wiki says April 6 1984 — same month, one day off (a Friday). Proposed: 1984-04-07.",
+    "Movie 4's tie is to an UNNUMBERED special (the 番外編 / 読切 shape): 「キン肉マン スペシャル編 ロビン・メモ!!の巻」, 8 colour pages, WSJ special edition 『キン肉マン熱闘スペシャル』 1984-08-25, collected only in 『お〜い!!マンガだよ〜ん』 and 『マッスル・リターンズ』 (NOT in JC vol 37, which holds four other one-shots). It joins the per-work programme, but there is no mainline number to carry — deliver side_story NAMING the piece, never a number. (The Kinnikuman Wiki's trivia dates its content after the Golden Mask arc: the weak points it lists include Brocken Jr.'s shoulder from the Mister Khamen fight.)",
+    "SOLE ADAPTATION — printed ch 80-89 reached the screen only through these two works (ja-WP's manga arc list: アニメ版ではカットされている; its episode list has no 2nd-Kaiju block). Worth carrying into the per-work stage for the TV Special (86-89) and Movie 2 (82-83): nothing else in the catalogue covers those pages.",
+    "POSITION (incidental — decision (b), NOT researched): the Kinnikuman Wiki's own prev/next links and the works' stated settings disagree with four stored positions. Movie 2 @76.5 (wiki next = Episode 66A → 65.5; set between the 7 Devil Chojin and Golden Mask arcs); TV Special @64.5 (wiki prev 47B / next 48A → 47.5; ja-WP: reset to after the 21st Chojin Olympics); traffic PSA @119.5 (the wiki's episode list dates it 1986-03-16, i.e. after ep 124 → 124.5; the stored value follows AniList's 1986-01-01 placeholder); Movie 4 @100.5 is air-date-derived while ja-WP says 時系列は夢の超人タッグ編終了後と明言されている (→ 119.5). Movies 1 @65.5, 3 @86.5, 5 @117.5 and 6 @124.5 sit where the wikis put them.",
+    "Movie 7 is an other_instrument case (decision (d)): it adapts Yudetamago's own separate one-shot デスゲーム (WJ 1980 #16), not Kinnikuman — an I41 chain question at most, never side_source of this instrument and never adoption. Filler against the owner's instrument either way.",
+    "Source independence: kinnikuman.fandom.com (en) and kinnikuman.fandom.com/ja are two different wikis, but the ja Fandom's 概要 paragraphs for films 2, 4 and the TV Special are near-verbatim ja-Wikipedia — I counted ja Fandom as ONE lineage with ja-WP and leaned on the EN wiki's chapter/character pages for the independent reading. Toei Animation's lineup site carries only the TV series (全137話), no film pages; the Toei/Bandai-Channel film synopses add nothing on sources."
+  ]
+}

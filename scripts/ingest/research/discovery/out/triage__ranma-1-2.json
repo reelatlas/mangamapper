@@ -1,0 +1,138 @@
+{
+  "series_id": "ranma-1-2",
+  "summary": "The owner row is the 2024 remake, but all 8 held works belong to the 1989-96 line; that does not change the question, because both animate the same instrument — Takahashi's Ranma 1/2 manga, 407 chapters, and the catalog's space is the continuous 1-407 numbering (the Japanese tankobon number chapters WITHIN each volume, so ja-Wikipedia states coverage as 'vol N, story M' and the Ranma Wiki states it as a continuous chapter number; the two agree at every boundary I checked, so the conversion below is proved, not inferred). Verdict: 3 yes, 5 no, 0 unclear. The OVA line exists precisely to animate manga stories the TV run skipped, and ja-WP's OVA list prints a chapter note for each one (OVA Vol.1 = 22kan 7-10wa, Vol.3 = 23kan 7wa, Vol.4 = 25kan 3-9wa, SPECIAL = 25kan 10wa - 26kan 11wa) while marking exactly three of the eleven OVAs 'OVA original' — which en-Wikipedia states independently as 'All but three are based on stories originally in the manga'. The films are the inverse of AniList's tags: the two films AniList tags source MANGA (418, 792) are what ja-WP calls kanzen original story, and the one it tags source null (1010, the 25-minute third film) is the only film that adapts the manga — vol 29 stories 1-2 = printed chapters 301-302, the Phoenix Sword arc. The three remaining works are kikaku video (promotional tapes): two music-video collections and one clip-show compilation of already-broadcast TV episodes; no source credits any manga story to them.",
+  "works": [
+    {
+      "anilist_id": 1007,
+      "title": "Ranma ½ (OVA)",
+      "adapts_chapters": "yes",
+      "chapters": "230-233 (OVA 1, vol 22 stories 7-10, Reversal Jewel arc); 241 (OVA 3, vol 23 story 7, The Violence of Cooking); 259-265 (OVA 4, vol 25 stories 3-9, Hinako Ninomiya's debut) — OVAs 2, 5 and 6 are anime-original",
+      "why": "This entry is the six 1993-94 OVAs (Kitty/Pony Canyon 'OVA Vol.1-6'): the stored AniList start 1993-10-21 is OVA Vol.1 and Kitsu's AniList mapping for 1007 gives 6 episodes, 1993-10-21 to 1994-08-19, which is exactly OVA Vol.1 (Shampoo Hyohen) through Vol.6 (Michi o Tsugu Mono - Kohen) in ja-WP's and en-WP's identical OVA lists. ja-WP's OVA list: Vol.1 = 'gensaku comics 22kan 7-10wa', Vol.2 = 'OVA original', Vol.3 = '23kan 7wa', Vol.4 = '25kan 3-9wa', Vol.5 and Vol.6 = 'OVA original'. The Ranma Wiki's episode infoboxes carry the same stories as continuous chapters (manga = 230/231/232/233; None; 241; 259-265; None; None) and its chapter pages are a reverse index: 230, 231, 232, 233 each name 'Shampoo's Sudden Switch' in their anime field (all four are tankobon vol 22 — 22kan 7wa = 230), 241 names 'Akane vs. Ranma!' (vol 23, and the page's Japanese scan is filed as Vol23Chapter7.png), and all seven of 259-265 name 'Stormy Weather Comes to School!' (all tankobon vol 25; I read each page, not a range). en-WP corroborates the shape run-wide: 'All but three [of the 11 OVAs] are based on stories originally in the manga.' One single-source detail for the per-work stage, not counted here: the Ranma Wiki's trivia says OVA 4 opens with the bullies-harass-Gosunkugi scene lifted from a different story, chapter 245 (One-Punch, vol 23) — ja-WP credits only 25kan 3-9wa and ch 245's own page carries no anime field.",
+      "sources": [
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%82%89%E3%82%93%E3%81%BE1/2&prop=wikitext&format=json&formatversion=2",
+        "https://en.wikipedia.org/w/api.php?action=parse&page=List%20of%20Ranma%20%C2%BD%20episodes&prop=wikitext&format=json&formatversion=2",
+        "https://ranma.fandom.com/api.php?action=parse&page=Shampoo%27s%20Sudden%20Switch%20-%20The%20Curse%20of%20the%20Contrary%20Jewel&prop=wikitext&format=json",
+        "https://ranma.fandom.com/api.php?action=parse&page=Tendo%20Family%20Christmas%20Scramble&prop=wikitext&format=json",
+        "https://ranma.fandom.com/api.php?action=parse&page=Akane%20vs.%20Ranma%21%20I%27ll%20Be%20the%20One%20to%20Inherit%20Mother%27s%20Recipes%21&prop=wikitext&format=json",
+        "https://ranma.fandom.com/api.php?action=parse&page=Stormy%20Weather%20Comes%20to%20School%21%20Growing%20Up%20With%20Miss%20Hinako&prop=wikitext&format=json",
+        "https://ranma.fandom.com/api.php?action=parse&page=The%20One%20to%20Carry%20On%20Part%20One&prop=wikitext&format=json",
+        "https://ranma.fandom.com/api.php?action=parse&page=The%20One%20to%20Carry%20On%20Part%20Two&prop=wikitext&format=json",
+        "https://ranma.fandom.com/api.php?action=parse&page=Chapter%20230&prop=wikitext&format=json",
+        "https://ranma.fandom.com/api.php?action=parse&page=Chapter%20233&prop=wikitext&format=json",
+        "https://ranma.fandom.com/api.php?action=parse&page=Chapter%20241&prop=wikitext&format=json",
+        "https://ranma.fandom.com/api.php?action=parse&page=Chapter%20259&prop=wikitext&format=json",
+        "https://ranma.fandom.com/api.php?action=parse&page=Chapter%20265&prop=wikitext&format=json",
+        "https://ranma.fandom.com/api.php?action=parse&page=Chapter%20245&prop=wikitext&format=json",
+        "https://kitsu.io/api/edge/mappings?filter%5BexternalSite%5D=anilist%2Fanime&filter%5BexternalId%5D=1007&include=item"
+      ]
+    },
+    {
+      "anilist_id": 418,
+      "title": "Ranma ½: Big Trouble in Nekonron, China",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "Original screenplay. ja-WP's third-film article states it plainly about films 1 and 2: 'kanzen original story datta zen 2-saku to wa kotonari' — unlike the previous two films, which were completely original stories — and ja-WP's gekijo-anime list prints a gensaku chapter note ONLY on film 3, none on this one. The film's own ja-WP article credits gen'an (original concept) Shigeru Yanagawa with a screenplay by Yanagawa / Iuchi / Yamaguchi and lists Kirin, Lychee, Ebiten, Daikokusei and Daihakusei under 'original characters'. The Ranma Wiki's film page says the same in English: 'It features an original, standalone story.' Kirin and the Seven Lucky Gods of martial arts appear in no chapter of the manga.",
+      "sources": [
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%82%89%E3%82%93%E3%81%BE1/2%20%E8%B6%85%E7%84%A1%E5%B7%AE%E5%88%A5%E6%B1%BA%E6%88%A6!%20%E4%B9%B1%E9%A6%AC%E3%83%81%E3%83%BC%E3%83%A0VS%E4%BC%9D%E8%AA%AC%E3%81%AE%E9%B3%B3%E5%87%B0&prop=wikitext&format=json&formatversion=2",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%82%89%E3%82%93%E3%81%BE1/2%20%E4%B8%AD%E5%9B%BD%E5%AF%9D%E5%B4%91%E5%B4%99%E5%A4%A7%E6%B1%BA%E6%88%A6!%20%E6%8E%9F%E3%82%84%E3%81%B6%E3%82%8A%E3%81%AE%E6%BF%80%E9%97%98%E7%AF%87!!&prop=wikitext&format=json&formatversion=2",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%82%89%E3%82%93%E3%81%BE1/2&prop=wikitext&format=json&formatversion=2",
+        "https://ranma.fandom.com/api.php?action=parse&page=Big%20Trouble%20in%20Nekonron%2C%20China&prop=wikitext&format=json",
+        "https://en.wikipedia.org/w/api.php?action=parse&page=List%20of%20Ranma%20%C2%BD%20episodes&prop=wikitext&format=json&formatversion=2"
+      ]
+    },
+    {
+      "anilist_id": 792,
+      "title": "Ranma ½: Nihao My Concubine",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "Original screenplay (Ryota Yamaguchi). Same two witnesses: ja-WP's third-film article groups it with film 1 as 'kanzen original story', and ja-WP's own article for this film lists Toma, Wantan, Sartre and Tristan under 'original characters' with no gensaku statement anywhere; ja-WP's gekijo-anime list gives it no chapter note. The Ranma Wiki's film page: 'The film features an original story.' The Togenkyo island, its male-turning spring and the bride-napping plot exist in no chapter of the manga.",
+      "sources": [
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%82%89%E3%82%93%E3%81%BE1/2%20%E8%B6%85%E7%84%A1%E5%B7%AE%E5%88%A5%E6%B1%BA%E6%88%A6!%20%E4%B9%B1%E9%A6%AC%E3%83%81%E3%83%BC%E3%83%A0VS%E4%BC%9D%E8%AA%AC%E3%81%AE%E9%B3%B3%E5%87%B0&prop=wikitext&format=json&formatversion=2",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%82%89%E3%82%93%E3%81%BE1/2%20%E6%B1%BA%E6%88%A6%E6%A1%83%E5%B9%BB%E9%83%B7!%20%E8%8A%B1%E5%AB%81%E3%82%92%E5%A5%AA%E3%82%8A%E3%82%82%E3%81%A9%E3%81%9B!!&prop=wikitext&format=json&formatversion=2",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%82%89%E3%82%93%E3%81%BE1/2&prop=wikitext&format=json&formatversion=2",
+        "https://ranma.fandom.com/api.php?action=parse&page=Nihao%2C%20My%20Concubine&prop=wikitext&format=json",
+        "https://en.wikipedia.org/w/api.php?action=parse&page=List%20of%20Ranma%20%C2%BD%20episodes&prop=wikitext&format=json&formatversion=2"
+      ]
+    },
+    {
+      "anilist_id": 1008,
+      "title": "Ranma 1/2 Special",
+      "adapts_chapters": "yes",
+      "chapters": "266-278 (vol 25 story 10 through vol 26 story 11) — the Ryugenzawa / Shinnosuke / Yamata-no-Orochi arc; the Ranma Wiki splits it Part One = 266-268, Part Two = 269-278",
+      "why": "The entry is the two-part 'Ranma 1/2 SPECIAL Yomigaeru Kioku' (Jokan 1994-12-16, Gekan 1995-02-17; Kitsu's AniList mapping for 1008 gives 2 episodes over exactly those dates). ja-WP's OVA list gives the block as 'gensaku comics 25kan 10wa - 26kan 11wa' (the second part marked 'same as above'). The Ranma Wiki's two episode pages carry manga = 266/267/268 and 269...278 and call both 'an adaption of the Ryugenzawa Arc', and its chapter pages close the range from the other side: 266 and 267 (tankobon vol 25) name Part One, 268 (vol 26) names Part One, and every one of 269-278 (vol 26) names Part Two — I read all thirteen pages — while 279 (vol 27) carries no anime field at all. The conversion checks out on both edges — 25kan 10wa = 266 and 26kan 11wa = 278 — because vol 25 runs 257-267 and vol 26 runs 268-278. This is the arc the TV run never reached (the 1989-92 series stops at the vol 22 Nodoka story).",
+      "sources": [
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%82%89%E3%82%93%E3%81%BE1/2&prop=wikitext&format=json&formatversion=2",
+        "https://en.wikipedia.org/w/api.php?action=parse&page=List%20of%20Ranma%20%C2%BD%20episodes&prop=wikitext&format=json&formatversion=2",
+        "https://ranma.fandom.com/api.php?action=parse&page=Reawakening%20Memories%20Part%20One&prop=wikitext&format=json",
+        "https://ranma.fandom.com/api.php?action=parse&page=Reawakening%20Memories%20Part%20Two&prop=wikitext&format=json",
+        "https://ranma.fandom.com/api.php?action=parse&page=Chapter%20266&prop=wikitext&format=json",
+        "https://ranma.fandom.com/api.php?action=parse&page=Chapter%20267&prop=wikitext&format=json",
+        "https://ranma.fandom.com/api.php?action=parse&page=Chapter%20268&prop=wikitext&format=json",
+        "https://ranma.fandom.com/api.php?action=parse&page=Chapter%20269&prop=wikitext&format=json",
+        "https://ranma.fandom.com/api.php?action=parse&page=Chapter%20278&prop=wikitext&format=json",
+        "https://ranma.fandom.com/api.php?action=parse&page=Chapter%20279&prop=wikitext&format=json",
+        "https://kitsu.io/api/edge/mappings?filter%5BexternalSite%5D=anilist%2Fanime&filter%5BexternalId%5D=1008&include=item"
+      ]
+    },
+    {
+      "anilist_id": 1010,
+      "title": "Ranma ½: One Flew Over the Kuno's Nest",
+      "adapts_chapters": "yes",
+      "chapters": "301-302 (vol 29 stories 1-2) — the Phoenix Sword arc: Kuno buys the phoenix egg, it hatches on his head, Ranma has to beat it",
+      "why": "The 25-minute third film (Cho Musabetsu Kessen! Ranma Team VS Densetsu no Hoo, 1994-08-20). ja-WP's gekijo-anime list prints 'gensaku comics 29kan 1, 2wa' for this film and no chapter note for the other two, and the film's own ja-WP article says it is 'based on the episode about the phoenix chick collected in volume 29 of the manga', adding that Ryoga, Ukyo and Shampoo — absent from the manga version — are worked into the story and that the phoenix's behaviour was changed (in the manga it attacks only Ranma). Independently, the Ranma Wiki's film page carries manga = Chapter 301, Chapter 302, and both chapter pages (kanji 'Kyofu no Hoo-ken' / 'Fumetsu no Hoo-ken', tankobon vol 29, scans filed Vol29Chapter1.png / Vol29Chapter2.png) name the film in their anime field. TRAP WORTH RECORDING: AniList tags this film source null and tags the two ORIGINAL films source MANGA — the tag is wrong in both directions here.",
+      "sources": [
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%82%89%E3%82%93%E3%81%BE1/2&prop=wikitext&format=json&formatversion=2",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%82%89%E3%82%93%E3%81%BE1/2%20%E8%B6%85%E7%84%A1%E5%B7%AE%E5%88%A5%E6%B1%BA%E6%88%A6!%20%E4%B9%B1%E9%A6%AC%E3%83%81%E3%83%BC%E3%83%A0VS%E4%BC%9D%E8%AA%AC%E3%81%AE%E9%B3%B3%E5%87%B0&prop=wikitext&format=json&formatversion=2",
+        "https://ranma.fandom.com/api.php?action=parse&page=Team%20Ranma%20vs.%20the%20Legendary%20Phoenix&prop=wikitext&format=json",
+        "https://ranma.fandom.com/api.php?action=parse&page=Chapter%20301&prop=wikitext&format=json",
+        "https://ranma.fandom.com/api.php?action=parse&page=Chapter%20302&prop=wikitext&format=json",
+        "https://en.wikipedia.org/w/api.php?action=parse&page=List%20of%20Ranma%20%C2%BD%20episodes&prop=wikitext&format=json&formatversion=2"
+      ]
+    },
+    {
+      "anilist_id": 6713,
+      "title": "Ranma 1/2: Nettou Uta Gassen",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "A two-part music video (1990-11-07 and 1990-11-21, with a combined LD on 1990-12-21), made from the character-song album 'Ranma-teki Kikaku Onban Ranma 1/2 Nettou Utagassen' (1990-04-21). ja-WP lists all three under 'kikaku video' — promotional tapes, separate from the OVA line — and labels each one 'music video'; furinkan.com's Ranma Perfect Edition specials page (archived) says it 'was comprised of original music videos developed for the Hot Songs Contest album'. The framing (the cast staging a singing contest at a TV station) is anime-original; no source credits a manga story, and unlike every OVA and film 3, ja-WP gives it no gensaku chapter note. Tower Records' catalogue record of the 2002-06-19 DVD reissue (PCBA-51045, 46 minutes) confirms the artifact.",
+      "sources": [
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%82%89%E3%82%93%E3%81%BE1/2&prop=wikitext&format=json&formatversion=2",
+        "http://web.archive.org/web/20200216153825/http://furinkan.com:80/ranma/anime/specials.html",
+        "https://tower.jp/item/888070",
+        "https://kitsu.io/api/edge/mappings?filter%5BexternalSite%5D=anilist%2Fanime&filter%5BexternalId%5D=6713&include=item"
+      ]
+    },
+    {
+      "anilist_id": 10825,
+      "title": "Ranma 1/2: Battle ga Ippai 29-nin no Korinai Yatsura",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "A clip-show compilation, not an adaptation. ja-WP lists it under 'kikaku video' as 'Ranma 1/2 Special Video Battle ga Ippai 29-nin no Korinai Yatsura (1995-03-03) - TV anime compilation including newly recorded material'; furinkan.com's specials page (archived) says it 'contained clips from twenty-nine of Ranma's most memorable opponents from the television series' and was distributed through the Kitty Animation Circle fan club. Clips of already-broadcast episodes carry no first-time source content, and no source names a chapter. One honest gap: no source I found describes WHAT the 'newly recorded' material is (ja-WP uses the same 'shinroku o fukumu' phrase for the 1992 Tendo-ke no Oyobidenai Yatsura tape, which furinkan describes as new animation of Nabiki around the house — i.e. framing, not story), so the per-work sitting should treat it as a recap unless the tape itself says otherwise.",
+      "sources": [
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%82%89%E3%82%93%E3%81%BE1/2&prop=wikitext&format=json&formatversion=2",
+        "http://web.archive.org/web/20200216153825/http://furinkan.com:80/ranma/anime/specials.html",
+        "https://kitsu.io/api/edge/mappings?filter%5BexternalSite%5D=anilist%2Fanime&filter%5BexternalId%5D=10825&include=item"
+      ]
+    },
+    {
+      "anilist_id": 10824,
+      "title": "Ranma 1/2: DoCo Music Video",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "A music-video compilation with no story. ja-WP lists 'Ranma 1/2 DoCo Music Video (1995-08-19)' under 'kikaku video' with no gensaku note; furinkan.com's specials page (archived) describes it as 'a collection of the opening and ending OAV themes performed by DoCo' plus 'an interview with the cast during their recording of the Tunnel of Lost Love OAV'. Tower Records' catalogue record confirms the artifact: VHS, released 1995-08-19, label Pony Canyon, catalogue number PCVE-10333, credited to Rumiko Takahashi with Junji Nishimura. Nothing in it is manga material.",
+      "sources": [
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%82%89%E3%82%93%E3%81%BE1/2&prop=wikitext&format=json&formatversion=2",
+        "http://web.archive.org/web/20200216153825/http://furinkan.com:80/ranma/anime/specials.html",
+        "https://tower.jp/item/2290944",
+        "https://kitsu.io/api/edge/mappings?filter%5BexternalSite%5D=anilist%2Fanime&filter%5BexternalId%5D=10824&include=item"
+      ]
+    }
+  ],
+  "flags_for_sean": [
+    "THE SHELF IS PARTIAL. Two Ranma works that DO adapt the instrument are not among the 8 held works: AniList 1011 'Ranma 1/2 Super' (3 OVAs, 1995-09-21 to 1996-01-19) adapts vol 27 stories 9-10 = printed 287-288 (Cursed Cave of Broken Loves), vol 29 story 8 = printed 308 (Jaaku no Oni) and vol 31 stories 9-10 = printed 331-332 (Doll of Vengeance) — ja-WP's OVA list plus the Ranma Wiki's episode infoboxes and the chapter pages' anime fields, the same two-source shape as the works above; and AniList 5493 (It's a Rumic World Ranma 1/2 ~ Akumu! Shunminko, 2008) adapts vol 34 story 10 = printed 365 (ja-WP; en-WP: 'based on the Nightmare! Incense of Deep Sleep manga story from volume 34'; the Ranma Wiki: manga = Chapter 365). Also outside the 8: AniList 10819 (Tendo-ke no Oyobidenai Yatsura!, 1992-08-30) is a Nabiki-narrated clip compilation — a recap. Worth checking whether these three are in the related-works ledger at all before the per-work programme runs.",
+    "CHAPTER SPACE. Ranma 1/2's tankobon do not print global chapter numbers — chapters are numbered within each volume, which is why ja-WP writes coverage as '25kan 3-9wa'. The 1-407 continuous numbering our catalog uses (and the Ranma Wiki uses) is a convention. I converted ja-WP's volume+story form into it and the two agree at eight independent boundaries (22kan 7-10wa = 230-233; 23kan 7wa = 241, page scan filed Vol23Chapter7.png; 25kan 3-9wa = 259-265; 25kan 10wa = 266; 26kan 11wa = 278; 27kan 9,10wa = 287-288; 29kan 1,2wa = 301-302, scans Vol29Chapter1/2.png; 29kan 8wa = 308; 31kan 9,10wa = 331-332; 34kan 10wa = 365, scan Vol34Chapter10.png). Ch 407 is the final chapter on the Ranma Wiki, matching the stored total of 407, so the wiki's space IS ours. Note the wiki also prints a Viz volume beside the tankobon one, 2 lower throughout the range I checked (tankobon vols 22-38) — do not read a Viz volume as the tankobon volume.",
+    "POSSIBLE TITLE REPAIR on anilist 1010: en-WP cites the Viz VHS jacket (ISBN 1-56931-059-9) for the Viz title 'Ranma 1/2: One GREW Over the Kuno's Nest' (a pun on the phoenix growing), while the stored/AniList title reads 'One Flew Over the Kuno's Nest'. Not researched further — flagging, not proposing.",
+    "POSITION NOTE (outside the triage ask): Viz packaged the third film as 'OVA number 9' inside its 12-part OVA set, and ja-WP records that some media count it as the ninth OVA; the Japanese DVD box also ships it with the 11 OVAs. The stored positions put 418 at 118.5 and 792 at 153.5 (during the TV run) and everything else after ep 161 — the per-work stage should decide whether 1010 belongs in the OVA block by story order (vol 29) rather than by its 1994 theatrical date.",
+    "SOURCE TIERS on the three kikaku videos: the two-source bar there rests on ja-WP's classification list plus furinkan.com's archived Perfect Edition specials page (a long-running fan reference — and the origin of the AniList/Kitsu description text, so treat those two as one lineage), with Tower Records catalogue records for the artifacts. No licensor synopsis survives for any of them."
+  ]
+}

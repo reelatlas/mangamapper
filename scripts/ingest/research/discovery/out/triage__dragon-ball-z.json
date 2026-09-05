@@ -1,0 +1,232 @@
+{
+ "series_id": "dragon-ball-z",
+ "summary": "18 no / 0 yes / 0 unclear. All 18 held works are ORIGINALS: none of them adapts a chapter of Toriyama's Dragon Ball manga (the owner's instrument, AniList manga 30042, 519 chapters). The shelf is 13 Toei Anime Fair / Manga Matsuri features (1989-1995), one TV special (Bardock), two game-derived OVAs (the 1993 Saiyajin Zetsumetsu Keikaku 'strategy video' and its 2010 Raging Blast 2 remake), one Terebikko interactive VHS (Atsumare! Goku World) and one Universal Studios Japan 4-D attraction short (2016). The pattern is uniform and citable at the licensor: Toei Animation's own lineup entries credit 脚本 (screenplay) to 小山高生 (Takao Koyama) on every film, with 原作 鳥山明 as the franchise-creator line — the T26 shape of a credit that is not an adoption. Toriyama's real input was character DESIGNS (Bardock's crew, Androids 13/14/15, Bojack, Tapion) and one setting idea (Lord Slug's whistling weakness, which ja-WP says 原作には登場せず — does not appear in the manga); designs and ideas are not chapters. Shueisha's own DRAGON BALL大全集6 (1995) prints a placement GUESS for each film and flags where each contradicts the manga, and carries Toriyama's own line that he considers the movies stories in 'a different dimension' from the manga's main story (quoted from 大全集6 by the Dragon Ball Wiki's List of Dragon Ball films, which adds that he 'had little to do with the movies past some of the character designs'); several films actually ran AHEAD of the manga (Lord Slug's false Super Saiyan ten days before ch 317; Tree of Might's Kaio-ken x10 eight months before ch 312; The Return of Cooler's Dende-as-Guardian hint seven months early). Note what is NOT in this set: Dragon Ball Z: The History of Trunks (AniList 985), the one DBZ-era special that IS manga-derived (the 番外編 'TRUNKS THE STORY -たったひとりの戦士-'). It was not among the 18 held works.",
+ "works": [
+  {
+   "anilist_id": 905,
+   "title": "Dragon Ball Z: Fusion Reborn",
+   "adapts_chapters": "no",
+   "chapters": null,
+   "why": "Original screenplay: Toei's own lineup entry credits 脚本 小山高生 (Takao Koyama) with 原作 鳥山明 as the franchise-creator line (a credit, not a chapter claim). Janemba, the Other World cleansing machine and the Goku/Vegeta fusion into Gogeta have no counterpart anywhere in Toriyama's manga; DRAGON BALL大全集6's BATTLE STORIES note (quoted by ja-WP) can only GUESS where it would sit ('魔人ブウ戦のさなかの出来事と推測できる') — the mark of a story placed beside the manga, not taken from it.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Dragon_Ball_Z%3A_Fusion_Reborn&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%ABZ%20%E5%BE%A9%E6%B4%BB%E3%81%AE%E3%83%95%E3%83%A5%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%21%21%E6%82%9F%E7%A9%BA%E3%81%A8%E3%83%99%E3%82%B8%E3%83%BC%E3%82%BF&prop=wikitext&format=json&formatversion=2",
+    "https://lineup.toei-anim.co.jp/lineup/archive/json.php?category=movie&id=movie_doragonball_fusion",
+    "https://dragonball.fandom.com/api.php?action=parse&page=List_of_Dragon_Ball_films&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "anilist_id": 901,
+   "title": "Dragon Ball Z: Broly - The Legendary Super Saiyan",
+   "adapts_chapters": "no",
+   "chapters": null,
+   "why": "Original screenplay (Toei: 脚本 小山高生; 原作 鳥山明 = the franchise credit). Paragus, Broly and New Planet Vegeta are film originals — Toriyama's only input was character design (ja-WP / 大全集 document design work, never story). 大全集6 places it inside the Cell arc but flags the contradiction that the cast is calmly flower-viewing; no manga chapter is animated.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Dragon_Ball_Z%3A_Broly_-_The_Legendary_Super_Saiyan&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%ABZ%20%E7%87%83%E3%81%88%E3%81%A4%E3%81%8D%E3%82%8D%21%21%E7%86%B1%E6%88%A6%E3%83%BB%E7%83%88%E6%88%A6%E3%83%BB%E8%B6%85%E6%BF%80%E6%88%A6&prop=wikitext&format=json&formatversion=2",
+    "https://lineup.toei-anim.co.jp/lineup/archive/json.php?category=movie&id=movie_dragonballz_nessen",
+    "https://en.wikipedia.org/w/api.php?action=parse&page=List%20of%20Dragon%20Ball%20films&prop=wikitext&format=json&formatversion=2"
+   ]
+  },
+  {
+   "anilist_id": 898,
+   "title": "Dragon Ball Z: Cooler's Revenge",
+   "adapts_chapters": "no",
+   "chapters": null,
+   "why": "Original screenplay (Toei: 脚本 小山高生). Cooler and his Armored Squadron are film originals. The only manga-derived material is the pre-title flashback restaging Freeza's destruction of Planet Vegeta and Kakarot's escape pod — backstory the TV series had already animated, and the film immediately contradicts it (Cooler's ship spares the pod). The Dragon Ball Wiki also notes the film ignores the manga's then-current Mecha-Freeza / King Cold chapters, i.e. it runs alongside the manga rather than adapting it.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Dragon_Ball_Z%3A_Cooler%27s_Revenge&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%ABZ%20%E3%81%A8%E3%81%B3%E3%81%A3%E3%81%8D%E3%82%8A%E3%81%AE%E6%9C%80%E5%BC%B7%E5%AF%BE%E6%9C%80%E5%BC%B7&prop=wikitext&format=json&formatversion=2",
+    "https://lineup.toei-anim.co.jp/lineup/archive/json.php?category=movie&id=movie_dragonballz_saikyou"
+   ]
+  },
+  {
+   "anilist_id": 906,
+   "title": "Dragon Ball Z: Wrath of the Dragon",
+   "adapts_chapters": "no",
+   "chapters": null,
+   "why": "Original screenplay (Toei: 脚本 小山高生). Tapion, Minosha, Hoi and Hirudegarn are film originals; ja-WP/大全集6 record that Toriyama drew the Tapion and Minosha DESIGNS (with his note about the name 'Tapioca') — designs, never chapters. 大全集6 can only infer the film sits after the Buu fight.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Dragon_Ball_Z%3A_Wrath_of_the_Dragon&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%ABZ%20%E9%BE%8D%E6%8B%B3%E7%88%86%E7%99%BA%21%21%E6%82%9F%E7%A9%BA%E3%81%8C%E3%82%84%E3%82%89%E3%81%AD%E3%81%B0%E8%AA%B0%E3%81%8C%E3%82%84%E3%82%8B&prop=wikitext&format=json&formatversion=2",
+    "https://lineup.toei-anim.co.jp/lineup/archive/json.php?category=movie&id=movie_doragonball_ryuken"
+   ]
+  },
+  {
+   "anilist_id": 903,
+   "title": "Dragon Ball Z: Broly - Second Coming",
+   "adapts_chapters": "no",
+   "chapters": null,
+   "why": "Original screenplay (ja-WP and en-WP both credit 脚本 小山高生 / Takao Koyama; the Dragon Ball Wiki agrees). A sequel to a film-original villain: Broly's crash-landing, the Goten/Trunks dragon-ball hunt and Videl's involvement exist only in the film. 大全集6 places it just before the 25th Tenkaichi Budokai, again by inference. (Toei's lineup site has no page for this one; the three wiki sources agree.)",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Dragon_Ball_Z%3A_Broly_-_Second_Coming&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%ABZ%20%E5%8D%B1%E9%99%BA%E3%81%AA%E3%81%B5%E3%81%9F%E3%82%8A%21%E8%B6%85%E6%88%A6%E5%A3%AB%E3%81%AF%E3%81%AD%E3%82%80%E3%82%8C%E3%81%AA%E3%81%84&prop=wikitext&format=json&formatversion=2",
+    "https://en.wikipedia.org/w/api.php?action=parse&page=Dragon%20Ball%20Z%3A%20Broly%20%E2%80%93%20Second%20Coming&prop=wikitext&format=json&formatversion=2"
+   ]
+  },
+  {
+   "anilist_id": 899,
+   "title": "Dragon Ball Z: The Return of Cooler",
+   "adapts_chapters": "no",
+   "chapters": null,
+   "why": "Original screenplay (Toei: 脚本 小山高生). Meta-Cooler and the Big Gete Star are film originals. Direction of travel is the opposite of adaptation: the Dragon Ball Wiki records that this film hinted Dende would become Guardian SEVEN MONTHS before the manga chapter that revealed it — the film precedes the manga's own material.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Dragon_Ball_Z%3A_The_Return_of_Cooler&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%ABZ%20%E6%BF%80%E7%AA%81%21%21100%E5%84%84%E3%83%91%E3%83%AF%E3%83%BC%E3%81%AE%E6%88%A6%E5%A3%AB%E3%81%9F%E3%81%A1&prop=wikitext&format=json&formatversion=2",
+    "https://lineup.toei-anim.co.jp/lineup/archive/json.php?category=movie&id=movie_dragonballz_gekitotu"
+   ]
+  },
+  {
+   "anilist_id": 902,
+   "title": "Dragon Ball Z: Bojack Unbound",
+   "adapts_chapters": "no",
+   "chapters": null,
+   "why": "Original screenplay (Toei: 脚本 小山高生). Bojack and the Galaxy Soldiers are film originals (ja-WP/大全集6 quote animator Naoki Yamamuro on sending Bojack's rough DESIGN to Toriyama). Its setting — the Money family's tournament after the Cell Games — exists in no manga chapter.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Dragon_Ball_Z%3A_Bojack_Unbound&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%ABZ%20%E9%8A%80%E6%B2%B3%E3%82%AE%E3%83%AA%E3%82%AE%E3%83%AA%21%21%E3%81%B6%E3%81%A3%E3%81%A1%E3%81%8E%E3%82%8A%E3%81%AE%E5%87%84%E3%81%84%E5%A5%B4&prop=wikitext&format=json&formatversion=2",
+    "https://lineup.toei-anim.co.jp/lineup/archive/json.php?category=movie&id=movie_dragonball_ginga"
+   ]
+  },
+  {
+   "anilist_id": 904,
+   "title": "Dragon Ball Z: Bio-Broly",
+   "adapts_chapters": "no",
+   "chapters": null,
+   "why": "Original screenplay (Toei: 脚本 小山高生). Jaguar Badda, the bio-warriors and Bio-Broly are film originals; 大全集6's own line is 「劇場版ならではの物語」 ('a story only the theatrical version has'). No manga chapter is involved.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Dragon_Ball_Z%3A_Bio-Broly&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%ABZ%20%E8%B6%85%E6%88%A6%E5%A3%AB%E6%92%83%E7%A0%B4%21%21%E5%8B%9D%E3%81%A4%E3%81%AE%E3%81%AF%E3%82%AA%E3%83%AC%E3%81%A0&prop=wikitext&format=json&formatversion=2",
+    "https://lineup.toei-anim.co.jp/lineup/archive/json.php?category=movie&id=movie_doragonballz_tyousensi"
+   ]
+  },
+  {
+   "anilist_id": 896,
+   "title": "Dragon Ball Z: The Tree of Might",
+   "adapts_chapters": "no",
+   "chapters": null,
+   "why": "Original screenplay (Toei's official credits: 監督 西尾大介 / 脚本 小山高生; ja-WP and en-WP agree — the Dragon Ball Wiki's infobox disagrees, see flags). Turles, his Crusher Corps and the Shinseiju are film originals. The Dragon Ball Wiki's own trivia shows the film RAN AHEAD of the manga (Kaio-ken x10 appears here eight months before manga chapter 312).",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Dragon_Ball_Z%3A_The_Tree_of_Might&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%ABZ%20%E5%9C%B0%E7%90%83%E3%81%BE%E3%82%8B%E3%81%94%E3%81%A8%E8%B6%85%E6%B1%BA%E6%88%A6&prop=wikitext&format=json&formatversion=2",
+    "https://lineup.toei-anim.co.jp/lineup/archive/json.php?category=movie&id=movie_dragonball_tyoukessen",
+    "https://en.wikipedia.org/w/api.php?action=parse&page=Dragon%20Ball%20Z%3A%20The%20Tree%20of%20Might&prop=wikitext&format=json&formatversion=2"
+   ]
+  },
+  {
+   "anilist_id": 900,
+   "title": "Dragon Ball Z: Super Android 13!",
+   "adapts_chapters": "no",
+   "chapters": null,
+   "why": "Original screenplay (Toei: 脚本 小山高生). The Dragon Ball Wiki states outright that Androids 13, 14 and 15 'are not featured in the Dragon Ball manga'; ja-WP/大全集6 record only that Toriyama DESIGNED them (14's and 15's names were swapped from his sheets) and calls the film 「平行世界的な出来事」 — a parallel-world event.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Dragon_Ball_Z%3A_Super_Android_13%21&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%ABZ%20%E6%A5%B5%E9%99%90%E3%83%90%E3%83%88%E3%83%AB%21%21%E4%B8%89%E5%A4%A7%E8%B6%85%E3%82%B5%E3%82%A4%E3%83%A4%E4%BA%BA&prop=wikitext&format=json&formatversion=2",
+    "https://lineup.toei-anim.co.jp/lineup/archive/json.php?category=movie&id=movie_dragonball_saiya"
+   ]
+  },
+  {
+   "anilist_id": 894,
+   "title": "Dragon Ball Z: Dead Zone",
+   "adapts_chapters": "no",
+   "chapters": null,
+   "why": "Original screenplay (Toei: 監督 西尾大介 / 脚本 小山高生). Garlic Jr. and his Spice Boys are film originals — so much so that the anime later revived him for its OWN filler arc (eps 108-116, ja-WP: 「TVシリーズでのオリジナルストーリー『魔凶星編』」). 大全集6 can only place the film between Goku's marriage and Raditz's arrival, and notes it contradicts the manga (Gohan and Krillin are already acquainted here; in the manga they first meet at Raditz's attack).",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Dragon_Ball_Z%3A_Dead_Zone&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%ABZ%20%281989%E5%B9%B4%E3%81%AE%E6%98%A0%E7%94%BB%29&prop=wikitext&format=json&formatversion=2",
+    "https://lineup.toei-anim.co.jp/lineup/archive/json.php?category=movie&id=movie_dragonball_oranogohan"
+   ]
+  },
+  {
+   "anilist_id": 897,
+   "title": "Dragon Ball Z: Lord Slug",
+   "adapts_chapters": "no",
+   "chapters": null,
+   "why": "Original screenplay (Toei: 脚本 小山高生). Slug and his demon clan are film originals, and ja-WP states the film's key premise — 「ナメック星人は口笛が弱点」 — 「原作には登場せず、原作者の鳥山明が本作のために提案したアイデア」 (does NOT appear in the manga; Toriyama proposed the idea FOR THIS FILM). The 'false Super Saiyan' also predates the manga's real transformation (chapter 317, ten days later). Toriyama contributing an idea to a screenplay is a credit, never an adaptation of chapters.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Dragon_Ball_Z%3A_Lord_Slug&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%ABZ%20%E8%B6%85%E3%82%B5%E3%82%A4%E3%83%A4%E4%BA%BA%E3%81%A0%E5%AD%AB%E6%82%9F%E7%A9%BA&prop=wikitext&format=json&formatversion=2",
+    "https://lineup.toei-anim.co.jp/lineup/archive/json.php?category=movie&id=movie_dragonballz_goku",
+    "https://en.wikipedia.org/w/api.php?action=parse&page=Dragon%20Ball%20Z%3A%20Lord%20Slug&prop=wikitext&format=json&formatversion=2"
+   ]
+  },
+  {
+   "anilist_id": 986,
+   "title": "Dragon Ball Z: Bardock – The Father of Goku",
+   "adapts_chapters": "no",
+   "chapters": null,
+   "why": "Anime-original TV special, stated as such: ja-WP calls it 「劇場版作品以外のTV放送用特番のアニメ版オリジナルストーリーとして制作された初の作品」 (the first Dragon Ball work made as an ANIME-ORIGINAL story for a TV special); writers Takao Koyama + Katsuyuki Sumisawa (en-WP, ja-WP, Dragon Ball Wiki all agree). Toriyama's contribution was the character DESIGNS for Bardock and his crew, worked up from Katsuyoshi Nakatsuru's roughs (ja-WP citing 『鳥山明アニメデザイン集』). It aired 1990-10-17, ahead of the manga's own Freeza-fight material — the Dragon Ball Wiki notes Bardock's vision shows first-form Freeza because Toei did not yet know how the manga would go. Everything manga-shaped about it flows the OTHER way afterwards: it inspired the 2011 spin-off manga Dragon Ball: Episode of Bardock (Naho Ooishi) and Toyotarō's Dragon Ball Super chapter 'Bardock, Father of Goku' — both other chapter spaces, both derivatives.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Dragon_Ball_Z%3A_Bardock_-_The_Father_of_Goku&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%ABZ%20%E3%81%9F%E3%81%A3%E3%81%9F%E3%81%B2%E3%81%A8%E3%82%8A%E3%81%AE%E6%9C%80%E7%B5%82%E6%B1%BA%E6%88%A6%E3%80%9C%E3%83%95%E3%83%AA%E3%83%BC%E3%82%B6%E3%81%AB%E6%8C%91%E3%82%93%E3%81%A0Z%E6%88%A6%E5%A3%AB%20%E5%AD%AB%E6%82%9F%E7%A9%BA%E3%81%AE%E7%88%B6%E3%80%9C&prop=wikitext&format=json&formatversion=2",
+    "https://en.wikipedia.org/w/api.php?action=parse&page=Dragon%20Ball%20Z%3A%20Bardock%20%E2%80%93%20The%20Father%20of%20Goku&prop=wikitext&format=json&formatversion=2"
+   ]
+  },
+  {
+   "anilist_id": 895,
+   "title": "Dragon Ball Z: The World's Strongest",
+   "adapts_chapters": "no",
+   "chapters": null,
+   "why": "Original screenplay (Toei: 監督 西尾大介 / 脚本 小山高生). Dr. Wheelo, Dr. Kochin and the Bio-Men are film originals — ja-WP records that the henchmen's names are Nagoya-speciality puns coined by screenwriter Koyama himself. 大全集6's placement note even flags the contradiction that Gohan is on Earth when the manga has him fighting on Namek.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Dragon_Ball_Z%3A_The_World%27s_Strongest&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%ABZ%20%E3%81%93%E3%81%AE%E4%B8%96%E3%81%A7%E4%B8%80%E7%95%AA%E5%BC%B7%E3%81%84%E3%83%A4%E3%83%84&prop=wikitext&format=json&formatversion=2",
+    "https://lineup.toei-anim.co.jp/lineup/archive/json.php?category=movie&id=movie_dragonballz_konoyodeitiban"
+   ]
+  },
+  {
+   "anilist_id": 10017,
+   "title": "Dragon Ball: Plan to Eradicate the Super Saiyans",
+   "adapts_chapters": "no",
+   "chapters": null,
+   "why": "A 2010 remake of the 1993 OVA — 「OVAアニメーションをベースに完全新規製作したリメイク作」 (ja-WP), bundled as an in-game movie with DRAGON BALL RAGING BLAST 2 (2010-11-11) and later on a Saikyō Jump bonus DVD (Dragon Ball Wiki). Its story descends from the Famicom RPG via the OVA: Dr. Lychee, Hatchiyack, Destron Gas and the Ghost Warriors are game/OVA originals with no manga counterpart.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Dragon_Ball%3A_Plan_to_Eradicate_the_Saiyans&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%ABZ%E5%A4%96%E4%BC%9D%20%E3%82%B5%E3%82%A4%E3%83%A4%E4%BA%BA%E7%B5%B6%E6%BB%85%E8%A8%88%E7%94%BB&prop=wikitext&format=json&formatversion=2"
+   ]
+  },
+  {
+   "anilist_id": 984,
+   "title": "Dragon Ball Z: Plan to Eradicate the Saiyans",
+   "adapts_chapters": "no",
+   "chapters": null,
+   "why": "Game-derived, not manga-derived: ja-WP describes the OVA as 「ゲームのストーリーを基に作られたアニメーション」 — an animation built on the story of the Famicom RPG 『ドラゴンボールZ外伝 サイヤ人絶滅計画』 (Bandai / Tose, 1993-08-06) — sold as a two-volume 攻略ビデオ (上巻 1993-07-23, 下巻 1993-08-25) that is 「実質的に『ドラゴンボールZ』のOVA」. Staff: 原作 鳥山明 (franchise credit), 脚本 小山高生. Dr. Lychee / Hatchiyack / Destron Gas appear in no chapter of the manga.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Dragon_Ball%3A_Plan_to_Eradicate_the_Saiyans&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%ABZ%E5%A4%96%E4%BC%9D%20%E3%82%B5%E3%82%A4%E3%83%A4%E4%BA%BA%E7%B5%B6%E6%BB%85%E8%A8%88%E7%94%BB&prop=wikitext&format=json&formatversion=2",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%ABZ&prop=wikitext&format=json&formatversion=2"
+   ]
+  },
+  {
+   "anilist_id": 6714,
+   "title": "Dragon Ball Z: Atsumare! Goku's World",
+   "adapts_chapters": "no",
+   "chapters": null,
+   "why": "A Terebikko interactive VHS (Bandai, 1992) whose animation ja-WP's 関連アニメ section calls flatly 「オリジナルアニメ」. The Dragon Ball Wiki's plot is an original time-travel story — Bulma's time machine, a series-history quiz for the viewer, ending in an encounter with Perfect Cell that contradicts the manga (kid Gohan meets Cell; a punch from Goku drives Cell off). The series-history material is quiz content and revisited already-animated events — recap-shaped framing, not first-time coverage of any chapter. Both sources are brief, but neither hints at chapter adaptation and no source anywhere claims one.",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Dragon_Ball_Z%3A_Atsumare%21_Gok%C5%AB_W%C4%81rudo&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%ABZ&prop=wikitext&format=json&formatversion=2"
+   ]
+  },
+  {
+   "anilist_id": 102431,
+   "title": "Dragon Ball Z: The Real 4-D",
+   "adapts_chapters": "no",
+   "chapters": null,
+   "why": "An 11-minute full-CG attraction film for Universal Studios Japan's 'Universal Jump Summer' (run 2016-07-01 to 09-04; ja-WP's ドラゴンボールZ article documents it with USJ's own press release, and the Dragon Ball Wiki cites Kanzenshuu's report). The story is original and explicitly so — a hooded figure (Pilaf) wishes Freeza revived with power beyond Goku's, and Goku, Vegeta, Piccolo and Krillin finish him with a Spirit Bomb. No chapter of Toriyama's manga contains it (the manga-side revival of Freeza is the separate Dragon Ball Super manga, another chapter space).",
+   "sources": [
+    "https://dragonball.fandom.com/api.php?action=parse&page=Dragon_Ball_Z%3A_The_Real_4-D&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%ABZ&prop=wikitext&format=json&formatversion=2"
+   ]
+  }
+ ],
+ "flags_for_sean": [
+  "DATE DEFECT — AniList 897 (Lord Slug) carries 1991-03-19; the true JP release is 1991-03-09. Four independent sources agree: Toei Animation's own lineup entry (1991年3月9日公開, https://lineup.toei-anim.co.jp/lineup/archive/json.php?category=movie&id=movie_dragonballz_goku), ja-WP (公開 = 1991年3月9日), en-WP ({{Film date|1991|03|9|Japan}}) and the Dragon Ball Wiki (|released = March 9, 1991). If the ledger row stores the AniList date, propose old 1991-03-19 → new 1991-03-09.",
+  "THE SHELF'S ONLY 'YES' IS OUTSIDE THIS SET — Dragon Ball Z: The History of Trunks (AniList 985, 1993-02-24) is the DBZ-era special that DOES adapt a manga unit: ja-WP says it is built 「原作漫画の番外編『TRUNKS THE STORY -たったひとりの戦士-』をベースに、大幅にオリジナルシーンを加えた形」 (based on the manga's 番外編, with large original additions) — i.e. a mixed-shaped candidate whose source unit is an UNNUMBERED extra (a 番外編, so a side_story FACT to name, never a mainline chapter number). It is not in the 18; check why (already ruled? already carries chapters?) and route it to the per-work programme if still pending. Source: https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%ABZ%20%E7%B5%B6%E6%9C%9B%E3%81%B8%E3%81%AE%E5%8F%8D%E6%8A%97!!%E6%AE%8B%E3%81%95%E3%82%8C%E3%81%9F%E8%B6%85%E6%88%A6%E5%A3%AB%E3%83%BB%E6%82%9F%E9%A3%AF%E3%81%A8%E3%83%88%E3%83%A9%E3%83%B3%E3%82%AF%E3%82%B9&prop=wikitext&format=json",
+  "TRAP FOR THE NEXT AGENT — 'the movie has a manga' on this franchise means FILM ANIMATION COMICS (フィルムコミック): Shueisha screenshot-comics of the films and TV specials, published from 1992, and per the Dragon Ball Wiki 'to date all movies and TV specials have been adapted in this form'. They are adaptations OF the work (the protocol's reverse-direction trap), never a chapter tie and never in the manga's chapter space. Source: https://dragonball.fandom.com/api.php?action=parse&page=Film_Animation_Comics&prop=wikitext&format=json",
+  "SOURCE-QUALITY NOTE — the Dragon Ball Wiki's staff infobox is unreliable on this shelf: for The Tree of Might (896) it prints director Kazuhisa Takenouchi / writer Keiji Terui, while Toei's own lineup entry, ja-WP and en-WP all credit 監督 西尾大介 (Daisuke Nishio) / 脚本 小山高生 (Takao Koyama). It does not change the verdict (both candidates are studio screenwriters, not Toriyama), but do not cite the fandom's credit fields alone.",
+  "IDENTITY NOTES on three non-film rows: (a) AniList 6714 Atsumare! Goku World's date 1992-01-01 is a year placeholder — ja-WP gives only 1992年発売, and the work is a Terebikko interactive VHS (a Bandai game as much as an OVA); (b) AniList 984 Plan to Eradicate the Saiyans is TWO VHS volumes (上巻 1993-07-23, 下巻 1993-08-25) — AniList's single date is volume 1's; (c) AniList 10017's 2010-11-11 is the JP release date of DRAGON BALL RAGING BLAST 2, the game the remake shipped inside.",
+  "FOR THE LATER POSITION PASS (not researched here, but the evidence is in hand): Shueisha's DRAGON BALL大全集6 (1995) 「DBZ THE MOVIE BATTLE STORIES」 prints an in-story placement guess for every film, quoted per-film on ja-WP — e.g. Dead Zone between Goku's marriage and Raditz; Tree of Might around Goku's arrival on Namek; Cooler's Revenge in the three-year Trunks/Androids gap; Return of Cooler between the Cell Games announcement and the Games; Super Android 13! between Dr. Gero's death and Perfect Cell; Bojack a few months after the Cell Games; Broly - Second Coming just before the 25th Budokai; Bio-Broly after it; Fusion Reborn mid-Buu; Wrath of the Dragon post-Buu. Several notes flag contradictions with the manga in the same breath, and 大全集7 lists only Dead Zone and Cooler's Revenge in the main timeline (Dragon Ball Wiki, List of Dragon Ball films) — so a Daizenshuu placement is a guide for the fraction, never a canon claim.",
+  "NO ADOPTION ANYWHERE ON THIS SHELF (T26): unlike Battle of Gods / Resurrection 'F' (where Toriyama's 原作・脚本 material entered the Dragon Ball Super manga), nothing from these 18 was written into Toriyama's manga. Character designs (Bardock, 13/14/15, Bojack, Tapion) and a screenplay idea (Lord Slug) are credits, not adoption acts — no `adopted{basis}` is available on any of these rows."
+ ]
+}

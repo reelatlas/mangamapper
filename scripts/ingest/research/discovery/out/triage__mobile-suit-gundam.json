@@ -1,0 +1,111 @@
+{
+  "series_id": "mobile-suit-gundam",
+  "summary": "THE OWNER IS AN ORIGINAL ANIME (T25). Mobile Suit Gundam (1979) credits 原作 = 矢立肇・富野喜幸 — Sunrise's collective pen name plus its own director; Tomino's Asahi Sonorama novels (from 1979-11-30), Nakane Masaaki's novelization, 岡崎優's parallel 冒険王 manga, 近藤和久's 0079 and THE ORIGIN all adapt the anime rather than source it (ja-WP 機動戦士ガンダム, 関連作品). There is therefore NO chapter instrument for a held work to adapt, and all 8 works come back 'no'. Six are plainly original productions: two anniversary promo shorts (ALL THAT GUNDAM 1989, GUNDAM PERFECT MISSION 2009), a model-kit OVA (Gunpla Builders Beginning G — comicalized afterwards, the reverse direction), SD Gundam's first parody shorts, Otomo's CG short Mission to the Rise, and The Impression of First GUNDAM, which is a three-screen DIGEST of the 1979 series and should be re-kinded recap (N8). Cucuruz Doan's Island remakes TV EPISODE 15, not the same-titled MSD manga — Yasuhiko explicitly disclaimed that manga in Gundam Ace. Twilight Axis - Remain of the Red is the only held work with a real novel run behind it (the Twilight AXIS web novel), but that is a DIFFERENT run: decision (d) other_instrument, not a 'yes' here.",
+  "works": [
+    {
+      "anilist_id": 139273,
+      "title": "Mobile Suit Gundam: Cucuruz Doan's Island",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "Remake of TV EPISODE 15 of the 1979 series (script Yoshihisa Araki), not a manga — ja-WP: 「第15話「ククルス・ドアンの島」のリメイク作品」; wiki infobox adapted from=Cucuruz Doan's Island. Yasuhiko denied adapting the MSD manga (Gundam Ace 12/2021); the 2022 Kadokawa novel novelizes the film.",
+      "sources": [
+        "https://gundam.fandom.com/api.php?action=parse&page=Mobile%20Suit%20Gundam%3A%20Cucuruz%20Doan%27s%20Island&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E6%A9%9F%E5%8B%95%E6%88%A6%E5%A3%AB%E3%82%AC%E3%83%B3%E3%83%80%E3%83%A0%20%E3%82%AF%E3%82%AF%E3%83%AB%E3%82%B9%E3%83%BB%E3%83%89%E3%82%A2%E3%83%B3%E3%81%AE%E5%B3%B6&prop=wikitext&format=json",
+        "https://gundam.fandom.com/api.php?action=parse&page=Cucuruz%20Doan%27s%20Island&prop=wikitext&format=json",
+        "https://gundam.fandom.com/api.php?action=parse&page=Mobile%20Suit%20Gundam%3A%20Cucuruz%20Doan%27s%20Island%20(Novel)&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 7113,
+      "title": "30th GUNDAM PERFECT MISSION",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "Original ~3-minute promotional short (PV) for the TV series' 30th anniversary: the franchise's Gundams escort a Core Fighter from Earth to space, set to 哀戦士. ja-WP: 30周年を記念して制作されたプロモーションビデオ(PV). No manga or novel run behind it.",
+      "sources": [
+        "https://gundam.fandom.com/api.php?action=parse&page=30th%20Gundam%20Perfect%20Mission&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=GUNDAM%20PERFECT%20MISSION&prop=wikitext&format=json",
+        "https://cdn.animenewsnetwork.com/encyclopedia/api.xml?anime=15758"
+      ]
+    },
+    {
+      "anilist_id": 5270,
+      "title": "ALL THAT GUNDAM",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "Original ~1-minute 10th-anniversary short: newly drawn footage of every Gundam set to Kenji Kawai's music plus a 夜明けのShooting Star clip cut from 0080, distributed free to buyers of all six 0080 VHS/LD volumes and teasing 0080. No manga or novel.",
+      "sources": [
+        "https://gundam.fandom.com/api.php?action=parse&page=All%20That%20Gundam&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E6%A9%9F%E5%8B%95%E6%88%A6%E5%A3%AB%E3%82%AC%E3%83%B3%E3%83%80%E3%83%A00080%20%E3%83%9D%E3%82%B1%E3%83%83%E3%83%88%E3%81%AE%E4%B8%AD%E3%81%AE%E6%88%A6%E4%BA%89&prop=wikitext&format=json",
+        "https://cdn.animenewsnetwork.com/encyclopedia/api.xml?anime=17657"
+      ]
+    },
+    {
+      "anilist_id": 104557,
+      "title": "Mobile Suit Gundam: Twilight Axis - Remain of the Red",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "NOT the owner's instrument. Compilation film (赤き残影) of the 6-part 2017 ONA; the ONA's basis is a SEPARATE run — the Twilight AXIS web novel (矢立文庫, 中村浩二郎 / Ark Performance, 全10章・全20回) — and the Gundam Wiki says the anime preceded the novel. Route to decision (d).",
+      "sources": [
+        "https://gundam.fandom.com/api.php?action=parse&page=Mobile%20Suit%20Gundam%20Twilight%20Axis%20-%20Red%20Trace&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E6%A9%9F%E5%8B%95%E6%88%A6%E5%A3%AB%E3%82%AC%E3%83%B3%E3%83%80%E3%83%A0%20Twilight%20AXIS&prop=wikitext&format=json",
+        "https://gundam.fandom.com/api.php?action=parse&page=Mobile%20Suit%20Gundam%20Twilight%20Axis&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 2302,
+      "title": "Kidou Senshi SD Gundam",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "Original gag shorts — SD Gundam's first animation (3 parts; script Hiroyuki Hoshiyama, dir Osamu Sekita), parodying the ANIME's own One Year War beats. ja-WP: SD Gundam spread through ガシャポン / BB戦士 / カードダス / toys, not a manga. No run adapted.",
+      "sources": [
+        "https://gundam.fandom.com/api.php?action=parse&page=Mobile%20Suit%20SD%20Gundam%20Mk%20I&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E6%A9%9F%E5%8B%95%E6%88%A6%E5%A3%ABSD%E3%82%AC%E3%83%B3%E3%83%80%E3%83%A0&prop=wikitext&format=json",
+        "https://cdn.animenewsnetwork.com/encyclopedia/api.xml?anime=2458"
+      ]
+    },
+    {
+      "anilist_id": 9040,
+      "title": "Mokei Senshi Gunpla Builders Beginning G",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "Original 3-part model-kit OVA for Gunpla's 30th anniversary (2010; 黒田洋介 / 松尾衡). The comic runs the OTHER way — ja-WP: 「アニメ版の内容を元にストーリーを膨らませたコミカライズ版が『ケロケロエース』で連載された」 (plus 漫画 ガンプラビルダーズA, 角川 2010-2011). No source run.",
+      "sources": [
+        "https://gundam.fandom.com/api.php?action=parse&page=Model%20Suit%20Gunpla%20Builders%20Beginning%20G&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E6%A8%A1%E5%9E%8B%E6%88%A6%E5%A3%AB%E3%82%AC%E3%83%B3%E3%83%97%E3%83%A9%E3%83%93%E3%83%AB%E3%83%80%E3%83%BC%E3%82%BA%20%E3%83%93%E3%82%AE%E3%83%8B%E3%83%B3%E3%82%B0G&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%82%AC%E3%83%B3%E3%83%80%E3%83%A0%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA%E4%B8%80%E8%A6%A7&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 4540,
+      "title": "Gundam: Mission To The Rise",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "Original ~3-minute full-CG short by Katsuhiro Otomo, screened 1998-08-01 at the ガンダムビッグバン宣言 20th-anniversary event. ja-WP: オリジナル短編CG映像作品 set in 従来のシリーズとは設定の異なる大友克洋監督によるオリジナル世界. No manga or novel run.",
+      "sources": [
+        "https://gundam.fandom.com/api.php?action=parse&page=Gundam%3A%20Mission%20To%20The%20Rise&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=GUNDAM%20Mission%20to%20the%20Rise&prop=wikitext&format=json",
+        "http://gundamania.com/other/bigbang/bigbang.html",
+        "https://animeanime.jp/article/2019/04/27/45176.html"
+      ]
+    },
+    {
+      "anilist_id": 19977,
+      "title": "The Impression of First GUNDAM",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "A RECAP, not an adaptation — a multi-screen digest of the 1979 anime screened at the same 1998-08-01 ガンダムビッグバン宣言 event. Eyewitness report: 「ファースト ガンダム・マルチビジョン ダイジェスト」, three 280-inch screens, partly re-recorded 6ch audio, some 劇場版 footage. Re-kind to recap.",
+      "sources": [
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=GUNDAM%20Mission%20to%20the%20Rise&prop=wikitext&format=json",
+        "http://gundamania.com/other/bigbang/bigbang.html",
+        "https://animeanime.jp/article/2019/04/27/45176.html"
+      ]
+    }
+  ],
+  "flags_for_sean": [
+    "OWNER (T25): mobile-suit-gundam is an ORIGINAL Sunrise/Tomino anime — 原作 矢立肇・富野喜幸, no manga or novel source; Tomino's Asahi Sonorama novels (1979-11-30 →), 岡崎優's 冒険王 manga, 近藤和久's 0079 and THE ORIGIN all adapt the anime. No held work CAN adapt 'the owner's instrument' because there is none; every entry says what the work actually derives from instead.",
+    "SEMANTICS: I read adapts_chapters as the protocol defines it (the OWNER's chapters), so all 8 are 'no'. On the broad reading of the ask ('a manga or novel run AT ALL') exactly one flips: 104557 Twilight Axis - Remain of the Red, whose ONA rests on the Twilight AXIS web novel (矢立文庫, 全10章・全20回, 2016-11-07 – 2017-12-28; also a 3-vol 月刊ヤングマガジン manga 2017-2019). One-line edit if the broad reading was meant — but the protocol routes a different run to decision (d) other_instrument, not to the per-work programme.",
+    "KIND REPAIR (19977 The Impression of First GUNDAM): stored kind 'special' → 'recap'. It is a re-edit of the 1979 series' own footage (incl. 劇場版 cuts) across three 280-inch screens with a partly re-recorded 6ch mix — N8 recap, nothing new in the source line. Evidence tier: ja-WP names it as co-screened at the event; the contemporaneous eyewitness after-report (gundamania.com, Shift-JIS, quoted in the note) is what describes the content. No official page survives; AniDB/AniList's 'selected scenes re-edited for three giant projections' is the same lineage as the context, cross-check only.",
+    "TITLE / DATE to check at curation: 104557 is stored as 'Remain of the Red'; the Gundam Wiki and the official site render 赤き残影 as 'Red Trace' (same work — the compilation film of the 6-part ONA) and date it 2017-11-17 vs AniList's 2017-11-18. AniList's 1989-01-01 (ALL THAT GUNDAM) and 2009-01-01 (PERFECT MISSION) are year-only placeholders — All That Gundam was a buy-all-six bonus for 0080, which ran 1989-03-25 to 1989-08-25, so January cannot be right. 2302 has a date fork not researched further: ANN/AniList/Gundam Wiki 1988-03-12, ja-WP 1988年5月25日 (逆襲のシャア併映, advance screening of parts 1-2).",
+    "OUTSIDE THE ASK (position, for the per-work pass): 139273 Cucuruz Doan's Island remakes episode 15 and is set between Jaburo and Odessa, i.e. mid-run; the stored position is @43.62, after the 43-episode run. Worth reconsidering when the film is ruled."
+  ]
+}

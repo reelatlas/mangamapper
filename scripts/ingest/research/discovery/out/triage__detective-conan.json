@@ -1,0 +1,299 @@
+{
+  "series_id": "detective-conan",
+  "summary": "Of the 22 held works, ZERO adapt a chapter of Aoyama's Detective Conan manga — the shelf is entirely original material, and two independent sources say so for every entry. The shape is a rule, not a coincidence: Detective Conan's manga cases are animated as TV episodes, while the film / OVA / tie-in shelf is written by the anime's own screenwriters. ja-WP's OVA list states it outright for the Shonen Sunday 応募者全員サービス line — 「…第1作目・第4作目、…第12作目…以外は、全てオリジナルエピソードである」 — and DCW's OVA infobox carries a `manga` field that is FILLED on exactly those exceptions and absent on all the rest, so its absence is a positive reading rather than silence. The MAGIC FILE / BONUS FILE discs are 「劇場版とリンクするストーリーを収録したオリジナルDVDシリーズ」 (pre-/post-stories for that year's film); the two Suntory IMAX 3D shorts are event-only Kid heists; both Lupin crossovers are 前川淳 screenplays with the two franchises' creators credited as 原作; film 29 is a 大倉崇裕 original (ja-WP states the rule for the whole film line: 「ストーリー自体は劇場版独自のもの」); and the 2026 Precure crossover special is marked `TV Original` by DCW and アニメオリジナル by ja-WP's 原作 column. TWO works DO adapt a chapter — but of a DIFFERENT Aoyama run, so they are `no` here and `other_instrument` for decision (d): OVA 1 expands Magic Kaito vol 3's 「刃vs.快斗!」 and OVA 12 adapts the 1988 one-shot 「えくすかりばあ」 (青山剛昌短編集). A negative check backs every row: ja-WP's complete manga-episode list — every case of the manga with its anime episode number — contains no case matching any of these 22 titles, and its アニメ column never names an OVA or a film.",
+  "works": [
+    {
+      "anilist_id": 6115,
+      "title": "Lupin the 3rd Vs Detective Conan",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "Original crossover TV special (NTV 55th / ytv 50th anniversary, 金曜特別ロードショー 2009-03-27): ja-WP's infobox gives 原作=モンキー・パンチ、青山剛昌 (the two franchises' creator credits) and 脚本=前川淳 (Atsushi Maekawa); DCW's page prints the same screenplay credit and notes it is 'officially a Lupin III TV Special'. ja-WP's Conan article files it under スペシャルエピソード with no 原作 story. ja-WP's complete manga-episode list (every case of Aoyama's manga with its anime episode number) carries no case of this title and its アニメ column never names an OVA — no manga chapter is credited to any OVA (no ルパン entry anywhere in it).",
+      "sources": [
+        "https://www.detectiveconanworld.com/wiki/api.php?action=parse&page=Lupin_III_vs._Detective_Conan&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%AB%E3%83%91%E3%83%B3%E4%B8%89%E4%B8%96VS%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3_(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E6%BC%AB%E7%94%BB%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 18429,
+      "title": "Lupin the 3rd Vs Detective Conan: The Movie",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "Original crossover feature (2013-12-07), the sequel to the 2009 special: ja-WP's Infobox Film gives 原作=モンキー・パンチ／青山剛昌 and 脚本=前川淳; DCW's page gives the same director/screenplay pair and describes it as the second crossover between the two franchises, commemorating five anniversaries. Neither wiki names a Conan manga case. ja-WP's complete manga-episode list (every case of Aoyama's manga with its anime episode number) carries no case of this title and its アニメ column never names an OVA — no manga chapter is credited to any OVA.",
+      "sources": [
+        "https://www.detectiveconanworld.com/wiki/api.php?action=parse&page=Lupin_III_vs._Detective_Conan:_The_Movie&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%AB%E3%83%91%E3%83%B3%E4%B8%89%E4%B8%96VS%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3_THE_MOVIE&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E6%BC%AB%E7%94%BB%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 1369,
+      "title": "Case Closed: Conan vs. Kid vs. Yaiba",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "OVA 1 (2000-10-11). It DOES adapt a chapter — but of a DIFFERENT Aoyama run. DCW's infobox names the source 'Magic Kaito Volume 3: Chapter 5' and its 'Manga to anime changes' section says outright: 'This OVA was a greatly expanded version of an \"extra\" chapter from the third volume of Magic Kaito. The original manga version of the story featured no characters from the Detective Conan cast, as it had been written and published before even the first chapter of Conan.' ja-WP agrees: 「原作は『まじっく快斗』第3巻に掲載された「刃vs.快斗!」。本作は、コナンのキャラクターが登場するオリジナルストーリーとなっている」. Zero Detective Conan chapters: ja-WP's complete manga-episode list (every case of Aoyama's manga with its anime episode number) carries no case of this title and its アニメ column never names an OVA — no manga chapter is credited to any OVA. Other_instrument = Magic Kaito (decision (d)).",
+      "sources": [
+        "https://www.detectiveconanworld.com/wiki/api.php?action=parse&page=Conan_vs._Kid_vs._Yaiba_-_The_Grand_Battle_for_the_Treasure_Sword!!&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AEOVA%E4%B8%80%E8%A6%A7&prop=wikitext&format=json",
+        "https://www.detectiveconanworld.com/wiki/api.php?action=parse&page=OVAs&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E6%BC%AB%E7%94%BB%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 2512,
+      "title": "Case Closed: 16 Suspects",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "OVA 2 「16人の容疑者!?」 — an anime-original episode. DCW's OVA infobox carries NO `manga` field for it (the field is present and filled on OVAs 1, 4 and 12, which do have a source, so its absence here is a positive reading, not silence), and the screenplay is credited to the anime's own writer 古内一成 (Kazunari Kouchi). ja-WP's OVA list states the 応募者全員サービス line outright: 「応募者全員サービスは、『まじっく快斗』を原作とした第1作目・第4作目、『えくすかりばあ』を原作とした第12作目…以外は、全てオリジナルエピソードである」 (all of them are original episodes except #1/#4, whose source is Magic Kaito, and #12, whose source is Excalibur). Shiratori's Karuizawa villa wine case with the whole regular cast as suspects; ja-WP's own note says the Heiji/Kazuha–Eri Kisaki meeting it depicts exists in NO manga, TV or film episode — this OVA is its only occurrence, which is only possible for original material. ja-WP's complete manga-episode list (every case of Aoyama's manga with its anime episode number) carries no case of this title and its アニメ column never names an OVA — no manga chapter is credited to any OVA.",
+      "sources": [
+        "https://www.detectiveconanworld.com/wiki/api.php?action=parse&page=16_Suspects!%3F&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AEOVA%E4%B8%80%E8%A6%A7&prop=wikitext&format=json",
+        "https://www.detectiveconanworld.com/wiki/api.php?action=parse&page=OVAs&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E6%BC%AB%E7%94%BB%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 2513,
+      "title": "Case Closed: Conan and Heiji and the Vanished Boy",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "OVA 3 「コナンと平次と消えた少年」 — an anime-original episode. DCW's OVA infobox carries NO `manga` field for it (the field is present and filled on OVAs 1, 4 and 12, which do have a source, so its absence here is a positive reading, not silence), and the screenplay is credited to the anime's own writer 古内一成 (Kazunari Kouchi). ja-WP's OVA list states the 応募者全員サービス line outright: 「応募者全員サービスは、『まじっく快斗』を原作とした第1作目・第4作目、『えくすかりばあ』を原作とした第12作目…以外は、全てオリジナルエピソードである」 (all of them are original episodes except #1/#4, whose source is Magic Kaito, and #12, whose source is Excalibur). Osaka missing-child story, a pre-story for movie 7 Crossroad in the Ancient Capital (DCW footnotes field). ja-WP's complete manga-episode list (every case of Aoyama's manga with its anime episode number) carries no case of this title and its アニメ column never names an OVA — no manga chapter is credited to any OVA.",
+      "sources": [
+        "https://www.detectiveconanworld.com/wiki/api.php?action=parse&page=Conan,_Heiji,_and_the_Vanished_Boy&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AEOVA%E4%B8%80%E8%A6%A7&prop=wikitext&format=json",
+        "https://www.detectiveconanworld.com/wiki/api.php?action=parse&page=OVAs&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E6%BC%AB%E7%94%BB%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 2515,
+      "title": "Case Closed: The Target is Kogoro! The Detective Boys' Secret Investigation",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "OVA 5 「標的は小五郎!! 少年探偵団マル秘調査」 — an anime-original episode. DCW's OVA infobox carries NO `manga` field for it (the field is present and filled on OVAs 1, 4 and 12, which do have a source, so its absence here is a positive reading, not silence), and the screenplay is credited to the anime's own writer 古内一成 (Kazunari Kouchi). ja-WP's OVA list states the 応募者全員サービス line outright: 「応募者全員サービスは、『まじっく快斗』を原作とした第1作目・第4作目、『えくすかりばあ』を原作とした第12作目…以外は、全てオリジナルエピソードである」 (all of them are original episodes except #1/#4, whose source is Magic Kaito, and #12, whose source is Excalibur). The Detective Boys shadow Kogoro for a school assignment. ja-WP's complete manga-episode list (every case of Aoyama's manga with its anime episode number) carries no case of this title and its アニメ column never names an OVA — no manga chapter is credited to any OVA.",
+      "sources": [
+        "https://www.detectiveconanworld.com/wiki/api.php?action=parse&page=The_Target_is_Kogoro!!_The_Detective_Boys'_Secret_Report&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AEOVA%E4%B8%80%E8%A6%A7&prop=wikitext&format=json",
+        "https://www.detectiveconanworld.com/wiki/api.php?action=parse&page=OVAs&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E6%BC%AB%E7%94%BB%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 1368,
+      "title": "Meitantei Conan: Kieta Daiya wo Oe! Conan & Heiji vs Kid!",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "OVA 6 「消えたダイヤを追え! コナン・平次vsキッド!」 — an anime-original episode. DCW's OVA infobox carries NO `manga` field for it (the field is present and filled on OVAs 1, 4 and 12, which do have a source, so its absence here is a positive reading, not silence), and the screenplay is credited to the anime's own writer 古内一成 (Kazunari Kouchi). ja-WP's OVA list states the 応募者全員サービス line outright: 「応募者全員サービスは、『まじっく快斗』を原作とした第1作目・第4作目、『えくすかりばあ』を原作とした第12作目…以外は、全てオリジナルエピソードである」 (all of them are original episodes except #1/#4, whose source is Magic Kaito, and #12, whose source is Excalibur). A wrong-number diamond-thief chase; ja-WP's blanket exempts only OVAs 1 and 4 as Magic Kaito adaptations, and this one is not among them despite the Kid guest appearance. ja-WP's complete manga-episode list (every case of Aoyama's manga with its anime episode number) carries no case of this title and its アニメ column never names an OVA — no manga chapter is credited to any OVA.",
+      "sources": [
+        "https://www.detectiveconanworld.com/wiki/api.php?action=parse&page=Follow_the_Vanished_Diamond!_Conan_%26_Heiji_vs._Kid!&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AEOVA%E4%B8%80%E8%A6%A7&prop=wikitext&format=json",
+        "https://www.detectiveconanworld.com/wiki/api.php?action=parse&page=OVAs&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E6%BC%AB%E7%94%BB%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 2597,
+      "title": "Case Closed: A Challenge from Agasa! Agasa vs. Conan and the Detective Boys",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "OVA 7 「阿笠からの挑戦状! 阿笠vsコナン&少年探偵団」 — an anime-original episode. DCW's OVA infobox carries NO `manga` field for it (the field is present and filled on OVAs 1, 4 and 12, which do have a source, so its absence here is a positive reading, not silence), and the screenplay is credited to the anime's own writer 古内一成 (Kazunari Kouchi). ja-WP's OVA list states the 応募者全員サービス line outright: 「応募者全員サービスは、『まじっく快斗』を原作とした第1作目・第4作目、『えくすかりばあ』を原作とした第12作目…以外は、全てオリジナルエピソードである」 (all of them are original episodes except #1/#4, whose source is Magic Kaito, and #12, whose source is Excalibur). Agasa's staged-then-real kidnapping puzzle. ja-WP's complete manga-episode list (every case of Aoyama's manga with its anime episode number) carries no case of this title and its アニメ column never names an OVA — no manga chapter is credited to any OVA.",
+      "sources": [
+        "https://www.detectiveconanworld.com/wiki/api.php?action=parse&page=A_Challenge_from_Agasa!_Agasa_vs._Conan_and_the_Detective_Boys&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AEOVA%E4%B8%80%E8%A6%A7&prop=wikitext&format=json",
+        "https://www.detectiveconanworld.com/wiki/api.php?action=parse&page=OVAs&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E6%BC%AB%E7%94%BB%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 6198,
+      "title": "Case Closed: High School Girl Detective Sonoko Suzuki's Case Files",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "OVA 8 「女子高生探偵 鈴木園子の事件簿」 — an anime-original episode. DCW's OVA infobox carries NO `manga` field for it (the field is present and filled on OVAs 1, 4 and 12, which do have a source, so its absence here is a positive reading, not silence), and the screenplay is credited to the anime's own writer 古内一成 (Kazunari Kouchi). ja-WP's OVA list states the 応募者全員サービス line outright: 「応募者全員サービスは、『まじっく快斗』を原作とした第1作目・第4作目、『えくすかりばあ』を原作とした第12作目…以外は、全てオリジナルエピソードである」 (all of them are original episodes except #1/#4, whose source is Magic Kaito, and #12, whose source is Excalibur). Sonoko's fictional play-within-the-OVA, a framing device with no manga counterpart. ja-WP's complete manga-episode list (every case of Aoyama's manga with its anime episode number) carries no case of this title and its アニメ column never names an OVA — no manga chapter is credited to any OVA.",
+      "sources": [
+        "https://www.detectiveconanworld.com/wiki/api.php?action=parse&page=The_Casebook_of_Female_High-School_Detective_Sonoko_Suzuki&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AEOVA%E4%B8%80%E8%A6%A7&prop=wikitext&format=json",
+        "https://www.detectiveconanworld.com/wiki/api.php?action=parse&page=OVAs&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E6%BC%AB%E7%94%BB%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 6438,
+      "title": "Case Closed: The Stranger in 10 Years...",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "OVA 9 「10年後の異邦人」 — an anime-original episode. DCW's OVA infobox carries NO `manga` field for it (the field is present and filled on OVAs 1, 4 and 12, which do have a source, so its absence here is a positive reading, not silence), and the screenplay is credited to the anime's own writer 古内一成 (Kazunari Kouchi). ja-WP's OVA list states the 応募者全員サービス line outright: 「応募者全員サービスは、『まじっく快斗』を原作とした第1作目・第4作目、『えくすかりばあ』を原作とした第12作目…以外は、全てオリジナルエピソードである」 (all of them are original episodes except #1/#4, whose source is Magic Kaito, and #12, whose source is Excalibur). An explicit what-if set ten years on with the cast aged up and the Black Organization plot unresolved — a premise the manga's own continuity never takes. ja-WP's complete manga-episode list (every case of Aoyama's manga with its anime episode number) carries no case of this title and its アニメ column never names an OVA — no manga chapter is credited to any OVA.",
+      "sources": [
+        "https://www.detectiveconanworld.com/wiki/api.php?action=parse&page=The_Stranger_from_Ten_Years_Later&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AEOVA%E4%B8%80%E8%A6%A7&prop=wikitext&format=json",
+        "https://www.detectiveconanworld.com/wiki/api.php?action=parse&page=OVAs&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E6%BC%AB%E7%94%BB%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 8609,
+      "title": "Case Closed: Kid in Trap Island",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "OVA 10 「KID in TRAP ISLAND」 — an anime-original episode. DCW's OVA infobox carries NO `manga` field for it (the field is present and filled on OVAs 1, 4 and 12, which do have a source, so its absence here is a positive reading, not silence), and the screenplay is credited to the anime's own writer 古内一成 (Kazunari Kouchi). ja-WP's OVA list states the 応募者全員サービス line outright: 「応募者全員サービスは、『まじっく快斗』を原作とした第1作目・第4作目、『えくすかりばあ』を原作とした第12作目…以外は、全てオリジナルエピソードである」 (all of them are original episodes except #1/#4, whose source is Magic Kaito, and #12, whose source is Excalibur). Kid crash-lands on Koyakejima and is mistaken for Shinichi by the Detective Boys. ja-WP's complete manga-episode list (every case of Aoyama's manga with its anime episode number) carries no case of this title and its アニメ column never names an OVA — no manga chapter is credited to any OVA.",
+      "sources": [
+        "https://www.detectiveconanworld.com/wiki/api.php?action=parse&page=Kid_in_Trap_Island&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AEOVA%E4%B8%80%E8%A6%A7&prop=wikitext&format=json",
+        "https://www.detectiveconanworld.com/wiki/api.php?action=parse&page=OVAs&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E6%BC%AB%E7%94%BB%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 10703,
+      "title": "Case Closed: A Secret Order from London",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "OVA 11 「ロンドンからのマル秘指令!」 — an anime-original episode. DCW's OVA infobox carries NO `manga` field for it (the field is present and filled on OVAs 1, 4 and 12, which do have a source, so its absence here is a positive reading, not silence), and the screenplay is credited to the anime's own writer 古内一成 (Kazunari Kouchi). ja-WP's OVA list states the 応募者全員サービス line outright: 「応募者全員サービスは、『まじっく快斗』を原作とした第1作目・第4作目、『えくすかりばあ』を原作とした第12作目…以外は、全てオリジナルエピソードである」 (all of them are original episodes except #1/#4, whose source is Magic Kaito, and #12, whose source is Excalibur). A side story that runs BESIDE the manga's London arc (Haibara and Ayumi stay in Japan while the others are in London) — it depicts what the source does not, rather than adapting it; DCW's footnotes field calls it a 'London Arc side story'. ja-WP's complete manga-episode list (every case of Aoyama's manga with its anime episode number) carries no case of this title and its アニメ column never names an OVA — no manga chapter is credited to any OVA.",
+      "sources": [
+        "https://www.detectiveconanworld.com/wiki/api.php?action=parse&page=A_Secret_Order_From_London&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AEOVA%E4%B8%80%E8%A6%A7&prop=wikitext&format=json",
+        "https://www.detectiveconanworld.com/wiki/api.php?action=parse&page=OVAs&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E6%BC%AB%E7%94%BB%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 13839,
+      "title": "Case Closed: The Miracle of Excalibur",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "OVA 12 (2012). Like OVA 1 it adapts a DIFFERENT Aoyama run, not Detective Conan: DCW's infobox names 'Gosho Aoyama's Collection of Short Stories: Excalibur' and ja-WP's OVA list exempts 第12作目 from its 'all original' sentence as 『えくすかりばあ』を原作とした. ja-WP's article on 「えくすかりばあ」 identifies it as a 28-page one-shot Aoyama published in 週刊少年サンデー 昭和63年(1988)8月増刊号, collected in 『青山剛昌短編集』, and says of the OVA 「原作は『えくすかりばあ』だが、本作はコナンの登場人物を加えたオリジナルストーリーになっている」. Zero Detective Conan chapters: ja-WP's complete manga-episode list (every case of Aoyama's manga with its anime episode number) carries no case of this title and its アニメ column never names an OVA — no manga chapter is credited to any OVA. Other_instrument = the 1988 one-shot 「えくすかりばあ」 (青山剛昌短編集), decision (d).",
+      "sources": [
+        "https://www.detectiveconanworld.com/wiki/api.php?action=parse&page=The_Miracle_of_Excalibur&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%81%88%E3%81%8F%E3%81%99%E3%81%8B%E3%82%8A%E3%81%B0%E3%81%82&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AEOVA%E4%B8%80%E8%A6%A7&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E6%BC%AB%E7%94%BB%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 5348,
+      "title": "Case Closed Magic File 2: Kudou Shinichi - The Case of the Mysterious Wall and the Black Lab",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "MAGIC FILE 2 「工藤新一 謎の壁と黒ラブ事件」 (2008-04-19) — an anime-original short made for the 7-Eleven movie tie-in disc. DCW's infobox carries no `manga` field and credits the screenplay to the anime's own writers (古内一成 on this line); ja-WP describes the MAGIC FILE / BONUS FILE line as 「劇場版とリンクするストーリーを収録したオリジナルDVDシリーズ」 whose stories link to that year's film, and its per-title table gives 脚本 but no 原作. A 14-year-old Shinichi alibi case that plants the 'Amazing Grace' motif for movie 12 Full Score of Fear (DCW footnotes: 'Full Score of Fear pre-story'). ja-WP's complete manga-episode list (every case of Aoyama's manga with its anime episode number) carries no case of this title and its アニメ column never names an OVA — no manga chapter is credited to any OVA.",
+      "sources": [
+        "https://www.detectiveconanworld.com/wiki/api.php?action=parse&page=Magic_File_2:_Shinichi_Kudo,_The_Case_of_the_Mysterious_Wall_and_the_Black_Lab&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AEOVA%E4%B8%80%E8%A6%A7&prop=wikitext&format=json",
+        "https://www.detectiveconanworld.com/wiki/api.php?action=parse&page=OVAs&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E6%BC%AB%E7%94%BB%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 6231,
+      "title": "Case Closed Magic File 3: Shinichi and Ran - Memories of Mahjong Tiles and Tanabata",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "MAGIC FILE 3 「新一と蘭・麻雀牌と七夕の思い出」 (2009-04-18) — an anime-original short made for the 7-Eleven movie tie-in disc. DCW's infobox carries no `manga` field and credits the screenplay to the anime's own writers (古内一成 on this line); ja-WP describes the MAGIC FILE / BONUS FILE line as 「劇場版とリンクするストーリーを収録したオリジナルDVDシリーズ」 whose stories link to that year's film, and its per-title table gives 脚本 but no 原作. A mahjong-tile / Tanabata memory piece seeding movie 13 The Raven Chaser (DCW footnotes: 'The Raven Chaser pre-story'); the only 麻雀 case in the manga list is an unrelated early locked-room poisoning. ja-WP's complete manga-episode list (every case of Aoyama's manga with its anime episode number) carries no case of this title and its アニメ column never names an OVA — no manga chapter is credited to any OVA.",
+      "sources": [
+        "https://www.detectiveconanworld.com/wiki/api.php?action=parse&page=Magic_File_3:_Shinichi_and_Ran,_Memories_of_Mahjong_Tiles_and_Tanabata&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AEOVA%E4%B8%80%E8%A6%A7&prop=wikitext&format=json",
+        "https://www.detectiveconanworld.com/wiki/api.php?action=parse&page=OVAs&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E6%BC%AB%E7%94%BB%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 8331,
+      "title": "Case Closed Magic File 4: Osaka Okonomiyaki Odyssey",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "MAGIC FILE 4 「大阪お好み焼きオデッセイ」 (2010-04-17) — an anime-original short made for the 7-Eleven movie tie-in disc. DCW's infobox carries no `manga` field and credits the screenplay to the anime's own writers (古内一成 on this line); ja-WP describes the MAGIC FILE / BONUS FILE line as 「劇場版とリンクするストーリーを収録したオリジナルDVDシリーズ」 whose stories link to that year's film, and its per-title table gives 脚本 but no 原作. A post-story to movie 14 The Lost Ship in the Sky (DCW footnotes), i.e. It continues a FILM's timeline, which the manga has no chapters for. ja-WP's complete manga-episode list (every case of Aoyama's manga with its anime episode number) carries no case of this title and its アニメ column never names an OVA — no manga chapter is credited to any OVA.",
+      "sources": [
+        "https://www.detectiveconanworld.com/wiki/api.php?action=parse&page=Magic_File_4:_The_Osaka_Okonomiyaki_Odyssey&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AEOVA%E4%B8%80%E8%A6%A7&prop=wikitext&format=json",
+        "https://www.detectiveconanworld.com/wiki/api.php?action=parse&page=OVAs&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E6%BC%AB%E7%94%BB%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 10531,
+      "title": "Case Closed Magic File 5: Niigata - Tokyo Omiyage Capriccio",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "MAGIC FILE 5 「新潟〜東京 おみやげ狂騒曲」 (2011-04-16) — an anime-original short made for the 7-Eleven movie tie-in disc. DCW's infobox carries no `manga` field and credits the screenplay to the anime's own writers (古内一成 on this line); ja-WP describes the MAGIC FILE / BONUS FILE line as 「劇場版とリンクするストーリーを収録したオリジナルDVDシリーズ」 whose stories link to that year's film, and its per-title table gives 脚本 but no 原作. A post-story to movie 15 Quarter of Silence (DCW footnotes). ja-WP's complete manga-episode list (every case of Aoyama's manga with its anime episode number) carries no case of this title and its アニメ column never names an OVA — no manga chapter is credited to any OVA.",
+      "sources": [
+        "https://www.detectiveconanworld.com/wiki/api.php?action=parse&page=Magic_File_5:_Niigata~Tokyo_Souvenir_Capriccio&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AEOVA%E4%B8%80%E8%A6%A7&prop=wikitext&format=json",
+        "https://www.detectiveconanworld.com/wiki/api.php?action=parse&page=OVAs&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E6%BC%AB%E7%94%BB%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 13837,
+      "title": "Case Closed Magic File 6: Fantasista Flower",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "BONUS FILE 1 「ファンタジスタの花」 (2012-04-14) — 'Magic File 6' is a fan label; both wikis call it BONUS FILE 1 and DCW redirects Magic File 6 → Bonus File 1 — an anime-original short made for the 7-Eleven movie tie-in disc. DCW's infobox carries no `manga` field and credits the screenplay to the anime's own writers (古内一成 on this line); ja-WP describes the MAGIC FILE / BONUS FILE line as 「劇場版とリンクするストーリーを収録したオリジナルDVDシリーズ」 whose stories link to that year's film, and its per-title table gives 脚本 but no 原作. A middle-school soccer story, pre-story to movie 16 The Eleventh Striker (DCW footnotes); ja-WP says of the line 「「BONUS FILE」はオリジナルストーリーと、特典として上映フィルムのプレゼント応募券が同封されている」. ja-WP's complete manga-episode list (every case of Aoyama's manga with its anime episode number) carries no case of this title and its アニメ column never names an OVA — no manga chapter is credited to any OVA.",
+      "sources": [
+        "https://www.detectiveconanworld.com/wiki/api.php?action=parse&page=Bonus_File_1:_Flower_of_Fantasista&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AEOVA%E4%B8%80%E8%A6%A7&prop=wikitext&format=json",
+        "https://www.detectiveconanworld.com/wiki/api.php?action=parse&page=OVAs&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E6%BC%AB%E7%94%BB%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 9785,
+      "title": "Meitantei Conan: Conan vs. Kid - SHARK & JEWEL",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "A 2005 event 3D short screened exclusively at the サントリーアイマックスシアター (Tempozan, Osaka) as a special item of Yomiuri TV's 「天保山10デイズわくわく宝島」 event — ja-WP's Conan anime article lists both under §3Dアニメ as event screenings with no 原作 story credit. DCW's page credits an original screenplay to the anime's own writer 古内一成 (Kazunari Kouchi) and summarises a Kid heist at a museum built around 3D chase set-pieces. No manga case of this name exists: ja-WP's complete manga-episode list (every case of Aoyama's manga with its anime episode number) carries no case of this title and its アニメ column never names an OVA — no manga chapter is credited to any OVA (a grep of the full list for SHARK / 狙撃者 returns nothing).",
+      "sources": [
+        "https://www.detectiveconanworld.com/wiki/api.php?action=parse&page=Conan_vs._Kid:_Shark_%26_Jewel&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3_(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E6%BC%AB%E7%94%BB%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 9786,
+      "title": "Meitantei Conan: Conan vs. Kid - Shikkoku no Sniper",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "A 2006 event 3D short screened exclusively at the サントリーアイマックスシアター (Tempozan, Osaka) as a special item of Yomiuri TV's 「天保山10デイズわくわく宝島」 event — ja-WP's Conan anime article lists both under §3Dアニメ as event screenings with no 原作 story credit. DCW's page credits an original screenplay to the anime's own writer 古内一成 (Kazunari Kouchi) and summarises an August 15 jewel-museum heist with a sniper; DCW notes no official home release exists (lost media). No manga case of this name exists: ja-WP's complete manga-episode list (every case of Aoyama's manga with its anime episode number) carries no case of this title and its アニメ column never names an OVA — no manga chapter is credited to any OVA (a grep of the full list for SHARK / 狙撃者 returns nothing).",
+      "sources": [
+        "https://www.detectiveconanworld.com/wiki/api.php?action=parse&page=Conan_vs._Kid:_The_Pitch-Black_Sniper&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3_(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E6%BC%AB%E7%94%BB%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 198369,
+      "title": "Detective Conan: Fallen Angel of the Highway",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "Theatrical film 29 「名探偵コナン ハイウェイの堕天使」 (2026-04-10) — an original screenplay by 大倉崇裕 (Takahiro Okura, his fifth Conan film) directed by 蓮井隆弘; ja-WP's Infobox Film gives 原作=青山剛昌, which on this series is the CREATOR credit, not a story source, and the same article states the rule for the whole film line: 「ストーリー自体は劇場版独自のものだが、まれに原作やテレビアニメ版との明確な繋がりを示す描写があり…」 ('the story itself is the film's own'). The official site's STAFF・CAST page prints 「Original Comic★原作：青山剛昌」 with Aoyama's own comment pitching an original Kanagawa bike-action story — no manga case is named. DCW's page carries no manga source; its only manga mention is a trivia line about Hagiwara's and Matsuda's death DATES differing between manga and anime. ja-WP's complete manga-episode list (every case of Aoyama's manga with its anime episode number) carries no case of this title and its アニメ column never names an OVA — no manga chapter is credited to any OVA (no 堕天使 entry).",
+      "sources": [
+        "https://www.detectiveconanworld.com/wiki/api.php?action=parse&page=Fallen_Angel_of_the_Highway&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3_%E3%83%8F%E3%82%A4%E3%82%A6%E3%82%A7%E3%82%A4%E3%81%AE%E5%A0%95%E5%A4%A9%E4%BD%BF&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3_(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext&format=json",
+        "https://www.conan-movie.jp/2026/atm/staffcast.html"
+      ]
+    },
+    {
+      "anilist_id": 212994,
+      "title": "Detective Conan: The Gold-Star Answer",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "TV special 「はなまるな真実(アンサー)」 (2026-06-06), a 30th-anniversary crossover with 『名探偵プリキュア!』 — DCW's infobox states it flatly: `manga = TV Original` (and `Filler case number = #465`), screenplay 大和屋暁. ja-WP's anime-episode table prints アニメオリジナル in its 原作 column for the ten-row block that contains this row (rows 1195-1203, the 特別編 row among them). The licensor's own page (ytv 事件ファイル) tags it 「#特別編」 — no episode number — and its synopsis is the Precure-crossover jewel-robbery plot. ja-WP's complete manga-episode list (every case of Aoyama's manga with its anime episode number) carries no case of this title and its アニメ column never names an OVA — no manga chapter is credited to any OVA.",
+      "sources": [
+        "https://www.detectiveconanworld.com/wiki/api.php?action=parse&page=The_Gold-Star_Answer&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7&prop=wikitext&format=json",
+        "https://www.ytv.co.jp/conan/archive/k20260606.html",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E6%BC%AB%E7%94%BB%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "flags_for_sean": [
+    "OTHER_INSTRUMENT (decision (d)), two works. OVA 1 'Conan vs. Kid vs. Yaiba' (AniList 1369) is an expanded adaptation of MAGIC KAITO vol 3 「刃vs.快斗!」 — DCW: 'the original manga version of the story featured no characters from the Detective Conan cast, as it had been written and published before even the first chapter of Conan'; OVA 12 'The Miracle of Excalibur' (13839) adapts 「えくすかりばあ」, a 28-page 1988 one-shot in 週刊少年サンデー増刊 collected in 『青山剛昌短編集』. Both are FILLER against the Detective Conan instrument. Magic Kaito is the one worth a ruling: it is the Kaitou Kid source and an I41 chain candidate for this franchise; the Excalibur one-shot is an unrelated baseball story with Conan characters grafted on.",
+    "A SIBLING IS MISSING FROM THE HELD SET. OVA 4 「コナンとキッドとクリスタル・マザー」 (2004-03-03) is the OTHER Magic Kaito adaptation (DCW: `manga = Magic Kaito Volume 4: Chapter 1`; ja-WP's exemption sentence names 第1作目・第4作目) and it is NOT among the 22 works handed to me. Check whether the ledger holds it at all — if it surfaces later it is the same 'no / other_instrument = Magic Kaito' verdict as OVA 1.",
+    "TITLE REPAIR CANDIDATE — AniList 13837 'Case Closed Magic File 6: Fantasista Flower'. Both wikis call it BONUS FILE 1 「ファンタジスタの花」; DCW's page IS 'Bonus File 1: Flower of Fantasista' and 'Magic File 6' is only a redirect to it. ja-WP's OVA list puts it under a separate BONUS FILE heading, not MAGIC FILE.",
+    "ANILIST DATES DISAGREE WITH BOTH WIKIS ON SIX OVAs, and the cause is structural: the 応募者全員サービス OVAs were mail-order items with an APPLICATION WINDOW, not a broadcast date (e.g. OVA 12 was available 2012-04-11 → 2012-06-06). DCW and ja-WP use the window's OPEN. Stored/AniList vs DCW: 2512 2002-01-30 vs 2002-01-16 · 2597 2007-03-13 vs 2007-03-14 · 6198 2008-01-01 (a placeholder) vs 2008-03-12 · 6438 2009-06-17 vs 2009-04-15 · 10703 2011-05-30 vs 2011-04-13 · 13839 2012-05-24 vs 2012-04-11. The other sixteen agree to the day. If the ledger's position is date-derived, six positions move — this is a date-regime fork for Sean, not a per-work repair.",
+    "POSITION CONFIRMED for 'The Gold-Star Answer' (212994) @1202.5. The licensor gives it NO episode number — ytv's 事件ファイル page tags it 「#特別編」 while 2026-05-30 is 「#1202」 and 2026-06-13 is 「#1203」 — and ja-WP's episode table prints 話数 = 特別編 in exactly that slot. It is correctly a related work, not an episode row. WARNING for whoever touches this row: DCW's infobox says `int-episode = 1262`, which is the INTERNATIONAL count (it splits hour specials and runs ~50 ahead of our JP row space, which is at 1212) — never key a Conan row by it.",
+    "THE MAGIC FILE / BONUS FILE DISCS BUNDLE OLD TV EPISODES. Each disc pairs the new OVA with previously aired episodes as PPV extras, and MAGIC FILE 1 (2007) is nothing BUT old episodes — DCW: 'No new material in this Magic File, which only contained episodes 132-134, 196, 266-268, and 291-293' (ja-WP excludes it from its OVA table for that reason). Magic File 1 is not in the held set, which is right. But if a ledger row is ever the DISC rather than the new short, its bundled content is a duplicate of TV rows — a recap (N8), never new adaptation.",
+    "THE WIDER SHELF HOLDS ONE GENUINE 'YES' THAT IS NOT IN THIS SET. 「逃亡者・毛利小五郎」 (NOTTV web anime, April 2014, made for movie 18's release) is the FIRST animation of the manga's 「逃亡者」 — ja-WP's manga-episode list gives it as entry 173, a 番外 (unnumbered extra) in volume 57 with the footnote 「2007年1月に掲載された原作からしばらくの間アニメ化されなかったが、7年を経た2014年4月に…NOTTVにて「逃亡者・毛利小五郎」のタイトルで配信（初アニメ化）された」. If it ever surfaces as a related work it is canon — and, being a 番外 with no File number, it is a `side_story` FACT naming the vol-57 extra, never a numbered anchor. Also absent from this held set: films 1-28, the numbered TV specials, the vs Wooo web shorts, the planetarium works and the 小学館図鑑 appendix OVAs — worth checking whether they are held elsewhere.",
+    "TRAP CONFIRMED FOR THE CATALOG: on Detective Conan, AniList's `source: MANGA` is pure franchise tagging. It sits on eleven of these works (including 'Kid in Trap Island', which AniList's own synopsis calls 'an entirely new story produced specifically for the DVD') and is ABSENT from the two works that actually do adapt a chapter of something (OVA 1 and both Lupin crossovers read `source: null`). The tag is anti-correlated with the truth here."
+  ]
+}

@@ -1,0 +1,249 @@
+{
+  "series_id": "one-piece",
+  "summary": "Of the 20 held works, 16 adapt no chapter of Oda's manga, 2 do, and 2 cannot be judged because they do not exist yet. The pattern is uniform: the theatrical FILM entries (Strong World, Stampede, Red) are screen-original stories - Oda's 原作 credit on them is the standing franchise credit, his real involvement being story plot (Strong World), 監修/character design (Stampede) and 総合プロデューサー (Red), with the screenplays by Uesaka, Tomioka/Otsuka and Kuroiwa; the four hour-long TV specials (2000-2005) and the four theatrical featurettes (Jango, Soccer, Baseball, Trap Coaster) are anime-original one-offs, the baseball short's 原案 being a GBA game; and Glorious Island, Film Gold episode 0 711 ver., Heart of Gold, Tongari Island and Cry heart are prologue/park/merchandise promos. The two exceptions carry real pages: Episode of Luffy - Hand Island Adventure re-animates ch 1 (pp. 4-47) and ch 2 as Luffy's and Koby's flashbacks inside an otherwise original plot (ja-WP says so in as many words), and 3D2Y opens on a newly drawn retelling of the Marineford climax (Ace's death, ch 574) and closes on the Sabaody reunion (chs 598-602) around an anime-original middle. Both blocks are chapters the TV run already animated, so their per-work verdicts turn on the recap boundary and T28, not on new position - the one possible exception is the wiki's claim that Luffy's under-eye scar (ch 1) is animated for the first time in Episode of Luffy. God Valley (2027) and Baad (2029) were announced on 2026-08-23 with no story information whatsoever in the official ONE PIECE.com release; the wiki's uncited 'adapts the God Valley Incident' line and the news repeats of it are not evidence, so both stay unclear. Nothing on this shelf adapts a chapter the TV run has not already covered.",
+  "works": [
+    {
+      "anilist_id": 141902,
+      "title": "One Piece Film: Red",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "Original screenplay by Tsutomu Kuroiwa (ja-WP infobox: 脚本 黒岩勉, 監督 谷口悟朗); Oda is credited 原作 (the standing franchise credit carried by every One Piece film) and 総合プロデューサー, and Uta is a 映画オリジナルキャラクター. No manga counterpart: the One Piece Wiki states the film's events are 'not canon' and would only notionally sit after Wano. The Oda tie-ins are pages made FOR the film, not chapters it adapts - the three one-page 'Uta's Special 1-Page Manga' instalments in WSJ 2022 #35/#36-37/#38, and the giveaway volumes 巻四十億〝RED〟 / 巻4／4〝UTA〟 / 巻四十億一〝アンコール〟, which the wiki records as settei, lyrics and script material with 'no chapters'.",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=One%20Piece%20Film:%20Red&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=ONE%20PIECE%20FILM%20RED&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Volume%204000000001&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 105143,
+      "title": "One Piece: Stampede",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "Original screenplay by Atsuhiro Tomioka and director Takashi Otsuka; ja-WP: 原作者の尾田栄一郎は監修として制作に参加し、原作キャラクターの衣装やオリジナルキャラクターのデザインを手掛けている - Oda supervised and designed the film-original characters (Douglas Bullet, Buena Festa). No manga counterpart; the wiki's own notes treat the film as outside continuity ('non-canon story error' wording on Shu's rank). Direction of travel is the reverse of adaptation in one place: Roger's post-credits line about his son later appeared in the manga five months after release (ch 968 p. 5) - a film-first beat, not an adapted page.",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=One%20Piece:%20Stampede&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=ONE%20PIECE%20STAMPEDE&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 4155,
+      "title": "One Piece Film: Strong World",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "An original story Oda himself wrote (ja-WP: 尾田自身がストーリーを書き下ろし製作総指揮も務めた; fandom: 'the film is an original story written by Eiichiro Oda himself'), set between Thriller Bark and Sabaody with a film-original cast (Shiki's crew, Merveille). The companion 'Chapter 0' (巻零, WSJ 2009 #53) is an Oda one-shot published alongside the film, NOT a chapter this film adapts: its content - Roger vs Shiki at Edd War, 20+ years earlier - was animated separately as the OVA 'Strong World: Episode 0' (ja-WP staff line: 原作 - 尾田栄一郎（ONE PIECE 巻零『STRONG WORLD』より）), which is a different work and is not among the 20 held here.",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=One%20Piece%20Film:%20Strong%20World&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=ONE%20PIECE%20FILM%20STRONG%20WORLD&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 20835,
+      "title": "One Piece 3D2Y: Overcome Ace’s Death! Luffy’s Vow to his Friends",
+      "adapts_chapters": "yes",
+      "chapters": "Prologue: a newly drawn retelling of the Marineford climax - Luffy reaching the scaffold, Akainu's attack, Ace dying in Luffy's arms (Marineford Arc, chs 550-580; the death itself is ch 574 'Portgas D. Ace Dies'), plus the Ace/Luffy childhood material of the Post-War Arc (chs 581-597). Close: the Straw Hats' reunion at Sabaody and departure for Fish-Man Island (Return to Sabaody Arc, chs 598-602). The frame is ch 597's own premise ('3D2Y' - Luffy training with Rayleigh on Rusukaina). NOTE: no source prints chapter numbers for the special; these are the chapters of the beats the two sources name, and all of them were already animated (eps 483-484 and 516-522).",
+      "why": "The body is anime-original (Byrnndi World, a villain Oda drew for it; the licensor calls the whole thing 完全新作エピソード and says the two years were 'never shown in the manga or the anime'), but BOTH the wiki and ja-WP state the special re-animates manga material at either end: One Piece Wiki Anime Notes - 'The special includes completely remade scenes of Ace and Luffy from the Marineford Arc... These remade scenes more closely resemble the manga'; ja-WP - 冒頭のマリンフォード頂上戦争・ルフィと仲間達とのエピソード・終盤の麦わらの一味が再集結する場面も新たに書き直されている. So it does carry the instrument's pages, as newly drawn duplicates of chapters the TV run already adapted.",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=3D2Y&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=ONE%20PIECE%20%E2%80%9C3D2Y%E2%80%9D%20%E3%82%A8%E3%83%BC%E3%82%B9%E3%81%AE%E6%AD%BB%E3%82%92%E8%B6%8A%E3%81%88%E3%81%A6!%20%E3%83%AB%E3%83%95%E3%82%A3%E4%BB%B2%E9%96%93%E3%81%A8%E3%81%AE%E8%AA%93%E3%81%84&prop=wikitext&format=json",
+        "https://one-piece.com/tvspecial/o2507/index.html",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Chapter%20574&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 21831,
+      "title": "One Piece: Heart of Gold",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "A film tie-in TV special, original: Toei's own press release calls it 映画へつながる完全新作SP and the licensor's page says the story is self-contained (この物語で完結しているエピソード); 脚本 黒岩勉 (the Film Gold writer), 監督 長峯達也, with Oda drawing the guest characters' designs. Cast (Myskina Olga, Mad Treasure, Alchemi, Pure Gold) is entirely film/special-original.",
+      "sources": [
+        "https://one-piece.com/tvspecial/o2527/index.html",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Heart%20of%20Gold&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=ONE%20PIECE%20FILM%20GOLD&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 16239,
+      "title": "One Piece: Episode of Luffy - Hand Island Adventure",
+      "adapts_chapters": "yes",
+      "chapters": "ch 1 (pp. 4-47) and ch 2 (pp. 4, 8, 9-10, 13-22) - the Romance Dawn material, re-animated as Luffy's flashback (Shanks at Foosha Village, the Gomu Gomu no Mi, Higuma, Shanks losing his arm) and Koby's flashback (Alvida). The rest - Hand Island, Diego, Regis, Bilic - is anime-original.",
+      "why": "Two independent sources agree and one gives page-level detail. The One Piece Wiki episode infobox prints chapter = Chapter 1 (p. 4-47) / Chapter 2 (p. 4, 8, 9-10, 13-22); ja-WP states 原作を元にしたストーリーが展開されるこれまでの「エピソード」シリーズとは異なり、完全新作ストーリーを中心に構成されている。物語の中ではルフィやコビーの回想という形で、原作第1話・第2話の赤髪海賊団やアルビダ一味とのシーンがリメイクされている - i.e. an original story whose flashbacks REMAKE chapters 1 and 2. The wiki also notes that the origin of Luffy's under-eye scar is animated here 'for the first time in the anime', which would be first-time coverage of a ch 1 page rather than a duplicate.",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode%20of%20Luffy&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=ONE%20PIECE%20%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E3%82%AA%E3%83%96%E3%83%AB%E3%83%95%E3%82%A3%20%E3%80%9C%E3%83%8F%E3%83%B3%E3%83%89%E3%82%A2%E3%82%A4%E3%83%A9%E3%83%B3%E3%83%89%E3%81%AE%E5%86%92%E9%99%BA%E3%80%9C&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 2386,
+      "title": "ONE PIECE: Yume no Soccer Ou!",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "A 5m30s featurette screened with movie 3 (Chopper's Kingdom), original: a Grand Line Cup penalty shootout between Luffy's team and a villain all-stars team, ending as Luffy's dream, with Oda himself appearing as the original character Odacchi (ja-WP: 同時公開されたショート映画... 原作者の尾田栄一郎がオリジナルキャラクター「オダッチ」として出演する). No manga counterpart.",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Dream%20Soccer%20King&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=ONE%20PIECE%20%E7%8F%8D%E7%8D%A3%E5%B3%B6%E3%81%AE%E3%83%81%E3%83%A7%E3%83%83%E3%83%91%E3%83%BC%E7%8E%8B%E5%9B%BD&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 16468,
+      "title": "ONE PIECE FILM: Z - GLORIOUS ISLAND",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "A two-part smartphone (NOTTV) short that leads into the opening of Film Z: ja-WP calls it 短編オリジナルエピソード... 原作者・尾田栄一郎描き下ろしの、映画冒頭に繋がるプロローグストーリー. Content is a day at sea (pool, a sea-horse beast, Franky's imaginary feast) - the wiki's own infobox field reads chapter = Film Z Prologue, i.e. no manga chapter.",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Glorious%20Island&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=ONE%20PIECE%20FILM%20Z&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 2385,
+      "title": "One Piece: Django's Dance Carnival",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "A 5-minute featurette screened with movie 2 (Clockwork Island), original: Jango hypnotises Mirror Ball Island into dancing (ja-WP: 同時公開された短編映画。上映時間5分。パラパラの振り付けのダンスが描かれる; 脚本 橋本裕志). The wiki notes it was 'likely inspired by' the manga cover story Jango's Dance Paradise - an inspiration, not an adaptation, and the short shares none of that cover story's events.",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Jango's%20Dance%20Carnival&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=ONE%20PIECE%20%E3%81%AD%E3%81%98%E3%81%BE%E3%81%8D%E5%B3%B6%E3%81%AE%E5%86%92%E9%99%BA&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 1094,
+      "title": "One Piece: Umi no Heso no Daibouken-hen",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "TV Special 1 (2000-12-20), an hour-long anime-original one-off: the crew descends into the 'Ocean's Navel' and meets Hamu, Meroie and the ghost-pirate Joke - a cast that exists nowhere in the manga. ja-WP files it under 番外編 / 番外編スペシャル outside the numbered episode run (TVSP1, 脚本 橋本裕志) and does not carry its own 一部原作のストーリーあり marker, the note it applies run-wide to episodes that do contain manga material.",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode%20Special%201&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=ONE%20PIECE%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=ONE%20PIECE%20(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 21880,
+      "title": "ONE PIECE FILM: GOLD - episode 0 711ver.",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "A 7-Eleven campaign short (viewable by buying two doughnuts, 2016-07-02): ONE PIECE.com calls it セブン-イレブン限定のオリジナルアニメ「ワンピース フィルム ゴールド ～episode 0～ 711ver.」 and describes its content - Usopp's 'Yokozuna Kintaro Show' and a sumo bout between Luffy and Franky on the Sunny on the way to Gran Tesoro. The wiki's summary matches (barbecue, volleyball, sumo). Note the name: 'episode 0' here is a film prequel short, unrelated to the manga's Chapter 0 (巻零).",
+      "sources": [
+        "https://one-piece.com/news/detail/20160627_4011",
+        "https://onepiece.fandom.com/api.php?action=parse&page=One%20Piece%20Film:%20Gold%20Episode%200&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=ONE%20PIECE%20FILM%20GOLD&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 2490,
+      "title": "ONE PIECE: Mezase! Kaizoku Yakyuu Ou",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "A 5m32s featurette screened with movie 5 (The Cursed Holy Sword): a baseball game between the Straw Hats and the Arlong crew. ja-WP states its 原案 is the Game Boy Advance game ONE PIECE ゴーイングベースボール, not the manga (同時上映のショート映画...同時期に発売されたGBA用ゲームソフト『ONE PIECE ゴーイングベースボール』が原案となっている).",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Take%20Aim!%20The%20Pirate%20Baseball%20King&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=ONE%20PIECE%20%E5%91%AA%E3%82%8F%E3%82%8C%E3%81%9F%E8%81%96%E5%89%A3&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 1238,
+      "title": "One Piece Special: Protect! The Last Great Performance",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "TV Special 3 (2003-12-14). ja-WP lists it inside the section headed アニメオリジナルストーリー ('TVスペシャル3「守れ! 最後の大舞台」') - an explicit anime-original claim - and the whole cast (Randolph, Governor, Suita, Jotto, Lego) is flagged Non-Canon on the wiki. No manga counterpart.",
+      "sources": [
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=ONE%20PIECE%20(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode%20Special%203&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 1237,
+      "title": "One Piece Special: Open Upon the Great Sea! A Father's Huge, HUGE Dream!",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "TV Special 2 (2003-04-06), anime-original: Amanda, Milia, Holy, Zap and the Bayan Pirates appear nowhere in the manga and are tagged Non-Canon on the wiki, whose infobox field for this special reads chapter = Anime Special. ja-WP files it under 番外編 (TVSP2, 脚本 菅良幸), outside the numbered run and without the 一部原作のストーリーあり marker.",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode%20Special%202&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=ONE%20PIECE%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 2020,
+      "title": "One Piece Special: The Detective Memoirs of Chief Straw Hat Luffy",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "TV Special 4 (2005-12-18), the first of the ワンピース時代劇 specials: an alternate-reality Edo-period 'Grand Jipangu' where Luffy is an okappiki policeman. ja-WP: 海賊世界から全くかけ離れた「グランドジパング」という架空の世界を舞台にした時代劇風のストーリー...番外編として放送された, and the wiki says outright that 'the special cannot be placed in the anime series timeline'. It re-uses manga characters in invented roles; it adapts no chapter.",
+      "sources": [
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%AF%E3%83%B3%E3%83%94%E3%83%BC%E3%82%B9%E6%99%82%E4%BB%A3%E5%8A%87&prop=wikitext&format=json",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Episode%20Special%204&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 12001,
+      "title": "ONE PIECE 3D: Gekisou! Trap Coaster",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "A 12-minute stereoscopic-3D theatre short shown at five leisure venues from 2011-12-01. The press release (ITmedia, from Toei's announcement) describes it as 今回だけのオリジナルストーリー - an original story made only for this screening - in which Marine Captain Trap attacks the Sunny with a tower of traps. Trap, the Trap Tower and the Giant Nine are short-original; ja-WP lists it as an イベント上映作品 (3D theatre short).",
+      "sources": [
+        "https://www.itmedia.co.jp/lifestyle/articles/1111/11/news124.html",
+        "https://onepiece.fandom.com/api.php?action=parse&page=ONE%20PIECE%203D!%20Trap%20Coaster&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=ONE%20PIECE%20(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 215855,
+      "title": "ONE PIECE FILM: GOD VALLEY",
+      "adapts_chapters": "unclear",
+      "chapters": null,
+      "why": "UNRELEASED (announced 2026-08-23 for summer 2027). The official announcement on ONE PIECE.com carries NO story information at all - only the two titles, the dates, the 30th-anniversary framing and the note that Oda drew the BAAD title logo; no director, writer or synopsis. The One Piece Wiki asserts 'The movie is set to adapt the story of the God Valley Incident' and 'the third movie to adapt from the manga' with no citation, and ANN's article supplies the God Valley Incident as the reporter's own context, not as a Toei statement. If it does adapt that flashback the chapters would be 1095-1096 and 1159-1166 (the wiki's own duration field), but nothing official supports that yet - keep held until a synopsis or staff announcement.",
+      "sources": [
+        "https://one-piece.com/news/81811/index.html",
+        "https://onepiece.fandom.com/api.php?action=parse&page=One%20Piece%20Film:%20God%20Valley&prop=wikitext&format=json",
+        "https://www.animenewsnetwork.com/news/2026-08-23/one-piece-announces-2-new-anime-films/.240878",
+        "https://onepiece.fandom.com/api.php?action=parse&page=God%20Valley%20Incident&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 215856,
+      "title": "ONE PIECE FILM: BAAD",
+      "adapts_chapters": "unclear",
+      "chapters": null,
+      "why": "UNRELEASED (announced 2026-08-23 for 2029, marking the TV anime's 30th anniversary). Nothing is known but the title - the ONE PIECE.com announcement gives no story, staff or premise (only that the title image is Oda's own handwriting), and both the wiki article and ANN's report are title-and-date only. No basis for yes or no; keep held.",
+      "sources": [
+        "https://one-piece.com/news/81811/index.html",
+        "https://onepiece.fandom.com/api.php?action=parse&page=One%20Piece%20Film:%20Baad&prop=wikitext&format=json",
+        "https://www.animenewsnetwork.com/news/2026-08-23/one-piece-announces-2-new-anime-films/.240878"
+      ]
+    },
+    {
+      "anilist_id": 107110,
+      "title": "ONE PIECE: Cry heart",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "Not an anime work adapting pages: three ~5-minute stop-motion PROMOTIONAL VIDEOS made by Banpresto for its 'Cry heart' crane-game figure line and posted to YouTube (ONE PIECE.com: 新フィギュアブランド「Cry heart」...ストップモーションアニメ(プロモーション映像)を作成). They RE-ENACT with figures three scenes the TV run had long since animated - Chopper and Dr Hiriluk's meeting and parting, incl. Hiriluk's cherry blossoms (Drum Island Arc, chs 130-154); Luffy, Ace and Sabo's childhood promise (the ASL flashback of the Post-War Arc, chs 581-597); and Ace's death (ch 574). A restaging of already-animated pages by a toy maker, filler by the protocol's 'promotional short' clause and position-less - but the re-enacted scenes are named here so the fact is not lost.",
+      "sources": [
+        "https://one-piece.com/news/o20140217_395/index.html",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Cry%20heart&prop=wikitext&format=json",
+        "https://www.animenewsnetwork.com/news/2014-01-19/one-piece-chopper-stars-in-5-minute-stop-motion-cry-heart-short"
+      ]
+    },
+    {
+      "anilist_id": 126649,
+      "title": "The Great Tongari Island Treasure Hunting Adventure",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "The Tokyo One Piece Tower park-exclusive short 東京ワンピースタワー トンガリ島の大秘宝 (MAL 38419 carries AniList's English title as a synonym): an original story set on Tongari Island, the park's own invented New World island, in which Law appears to betray the crew and Luffy and Law fight Kizaru until the island's Den Den Mushi amplify their Haki. Tongari Island, Tongari Den Den Mushi and the plot are park-original; the Takarush tie-in it is named after was a real-world puzzle hunt at the tower (2016-11-01 to 2017), not a manga story. No manga counterpart.",
+      "sources": [
+        "https://onepiece.fandom.com/api.php?action=parse&page=The%20Great%20Treasure%20of%20Tongari%20Island&prop=wikitext&format=json",
+        "https://myanimelist.net/anime/38419/Tokyo_One_Piece_Tower__Tongari_Shima_no_Dai_Hihou",
+        "https://www.takarush.jp/promo/onepiece/",
+        "https://onepiece.fandom.com/api.php?action=parse&page=Tokyo%20One%20Piece%20Tower&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "flags_for_sean": [
+    "3D2Y's 'yes' is a routing call, not a standing: the source content is a newly drawn PROLOGUE and CODA over chapters already adapted (eps 483-484, 516-522), and the licensor calls the special 完全新作エピソード. Under T28's recap boundary the per-work verdict is most likely filler with recap/graft annotations naming chs 574 and 598-602 - it should not take an anchor.",
+    "Episode of Luffy is the only held work with a page-level manga field (ch 1 pp. 4-47, ch 2 pp. 4, 8, 9-10, 13-22). Its per-work verdict needs the T28 share test (original Hand Island plot vs two flashbacks), and one claim needs checking on pages: the wiki says the origin of Luffy's under-eye scar is animated here 'for the first time in the anime', which would be first-time coverage of a ch 1 page rather than a duplicate of ep 4.",
+    "God Valley (215855) and Baad (215856) are UNRELEASED films with placeholder AniList dates (2027-01-01 / 2029-01-01) against the announced 'summer 2027' and '2029'. Recommend they stay held rather than being ruled now; the wiki's 'set to adapt the God Valley Incident' synopsis is uncited and the official announcement has no story text.",
+    "Identity question on 126649: AniList's title/date ('The Great Tongari Island Treasure Hunting Adventure', 2016-11-01) are the Takarush treasure-hunt EVENT's name and start date. The work is the Tokyo One Piece Tower theatre film 東京ワンピースタワー トンガリ島の大秘宝; MAL keeps 2016-11-01 but the One Piece Wiki dates the film's debut to 2018-04-21 (installed in the renamed Battle Theater). Worth settling title/date/kind before it is surfaced.",
+    "Cry heart (107110) is arguably not a work for this shelf at all: three ~5-minute Banpresto stop-motion promos for crane-game figures, published on YouTube, re-enacting scenes with articulated figures. Filler by the 'promotional short' rule whatever else is decided.",
+    "Naming trap for the ledger: the One Piece Wiki page titled 'One Piece Film: Gold Episode 0: 711 ver.' is the 7-Eleven ARTBOOK; the anime work behind AniList 21880 is the short 'One Piece Film: Gold Episode 0'. Separately, 'episode 0' in that title has nothing to do with the manga's Chapter 0 (巻零).",
+    "Out of scope but adjacent: Chapter 0 (巻零, the Strong World giveaway) IS an Oda one-shot with real story content, and the work that adapts it is the OVA 'One Piece Film Strong World: Episode 0' - not among these 20. If that OVA sits elsewhere in the ledger it is a side_story fact (an unnumbered extra), never a mainline chapter number.",
+    "Also out of scope: One Piece 4D, the earlier Tokyo One Piece Tower theatre film, condenses the Fish-Man Island, Punk Hazard and Dressrosa arcs with new animation. If it is ever staged as a related work it belongs in the same class as the 'Episode of' re-adaptations, not with the originals."
+  ]
+}

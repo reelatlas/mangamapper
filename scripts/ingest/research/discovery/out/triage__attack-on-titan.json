@@ -1,0 +1,92 @@
+{
+  "series_id": "attack-on-titan",
+  "summary": "None of the six held works adapts a chapter of Isayama's Attack on Titan manga; the shelf is two clean groups plus one spin-off. FOUR of the six entries (19391, 108942, 120257, 139754) are the SAME work split four ways on AniList: the Flash chibi gag shorts 「進撃の巨人」ちみキャラ劇場 (chibi designs by Yuupon, direction/script Kenshirou Morii + Soushi Kinutani, Studio Moriken), included as 映像特典 on every BD/DVD volume of S1, S3 and The Final Season — the official product pages list them volume by volume, and the segment content (a Colossal Titan swallowing the cast at the end of each 'Day') is original comedy with no manga counterpart. The biggest finding is an IDENTITY one: AniList/MAL 19391 'Attack on Titan Picture Drama' is not a picture drama at all — it is the SEASON 1 chibi theatre 「進撃の巨人」ちみキャラ劇場“とんでけ! 訓練兵団” (9 videos, BD vols 1-9, 2013-07-17 → 2014-03-19, 25 'Day' segments), confirmed by MAL's and Kitsu's own Japanese title for that id and by the official S1 product pages, which list the chibi theatre as the only 映像特典 on all nine volumes. 'Attack on Skytree' is 進撃の巨塔, a ~7-minute ORIGINAL-story promotional anime projected onto the Tokyo Skytree observation-deck windows for the 2017-04-10 → 2017-07-14 collaboration (an invented 'Sky Survey Corps' defending 'Wall Skytree' from a 350m Colossal Titan) — both the anime's own site and the venue's event site call it オリジナルストーリー. 'No Regrets' adapts a DIFFERENT run — the spin-off manga 進撃の巨人 悔いなき選択 (Gun Snark story / Hikaru Suruga art, ARIA 2013-2014), itself from the BD visual novel — so it is decision (d), other_instrument, and I stopped there. Result: 6 works, 6 'no', 0 'yes', 0 'unclear'.",
+  "works": [
+    {
+      "anilist_id": 20811,
+      "title": "Attack on Titan: No Regrets",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "OTHER INSTRUMENT — decision (d), not a mainline adaptation. The two OVA parts (bundled with the LIMITED editions of manga vols 15 and 16, 2014-12-09 / 2015-04-09) animate the spin-off manga 進撃の巨人リヴァイ外伝「悔いなき選択」 — story 砂阿久雁 (Gun Snark), art 駿河ヒカル (Hikaru Suruga), serialized in Kodansha's ARIA from the Jan 2014 issue to the Aug 2014 issue (2 vols; 8 chapters + prologue + 5 side stories) — which is itself the manga version of the 'A Choice with No Regrets' visual novel bundled with the S1 Blu-rays. The AoT Wiki's OVA page states it outright ('Both episodes are anime adaptations of the spin-off manga Attack on Titan: No Regrets ... and based in turn on the visual novel') and its Manga chapters field names the spin-off's OWN chapters (Prologue, The Wings Of Freedom), not Isayama's; ja-WP files it under 外伝 and says アニメ化 as an OAD 前後編. Levi and Erwin's first meeting is not told in Isayama's mainline run at all, so there is nothing here to map to it. NOTE for the standing sitting: Isayama's credit on the visual novel is 監修 (supervision), a blanket credit, not an adopted{author} act.",
+      "sources": [
+        "https://attackontitan.fandom.com/api.php?action=parse&page=A%20Choice%20with%20No%20Regrets%3A%20Part%20One&prop=wikitext&format=json",
+        "https://attackontitan.fandom.com/api.php?action=parse&page=Attack%20on%20Titan%3A%20No%20Regrets&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E9%80%B2%E6%92%83%E3%81%AE%E5%B7%A8%E4%BA%BA&prop=wikitext&format=json",
+        "https://shingeki.tv/season1/products/bd_06.php"
+      ]
+    },
+    {
+      "anilist_id": 108942,
+      "title": "Shingeki no Kyojin: Chimi Kyara Gekijou - Rivai-han",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "ORIGINAL — the Flash chibi gag shorts ｢進撃の巨人｣ちみキャラ劇場“とんでけ！新生リヴァイ班”, carried as 映像特典 on the Season 3 Blu-ray/DVD volumes; this AniList entry is vols 1-4 (2018-10-17, 2018-12-19, 2019-01-30, 2019-02-27 — the stored date matches vol 1 exactly), which ja-WP's per-volume table numbers as segments #38-#49, the same span AniList's own description gives. ja-WP describes the series as 'ちみ絵師・ゆーぽんデザインの2頭身キャラによるFlashアニメ' with 脚本 credited to 森井ケンシロウ / 衣谷ソーシ and no 原作 credit; the official Season 3 product pages list it as a video bonus beside PVs and an Anime Expo travelogue. AniList's and MAL's 'Source: Manga' here is the franchise tag — I checked the one AoT chibi 4-koma that does exist, hounori's 寸劇の巨人 / Spoof on Titan, and its gags are different material with its own separate continuity on the wiki; the shorts animate no chapter of any run.",
+      "sources": [
+        "https://shingeki.tv/season3/product/season3_1.php",
+        "https://shingeki.tv/season3/product/season3_5.php",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E9%80%B2%E6%92%83%E3%81%AE%E5%B7%A8%E4%BA%BA%20(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext&format=json",
+        "https://attackontitan.fandom.com/api.php?action=parse&page=Chibi%20Theater%3A%20Fly%2C%20Cadets%2C%20Fly!&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 19391,
+      "title": "Attack on Titan Picture Drama",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "ORIGINAL — and MIS-TITLED: this entry is not a picture drama, it is the SEASON 1 chibi theatre 「進撃の巨人」ちみキャラ劇場“とんでけ! 訓練兵団” (MAL 19391 and Kitsu 7889 both carry exactly that Japanese title for this id, 9 videos, 2013-07-17 → 2014-03-19 — the same nine dates as the S1 BD/DVD volumes, and the stored date matches vol 1). The official S1 product pages list ｢進撃の巨人｣ちみキャラ劇場“とんでけ！訓練兵団” as the ONLY 映像特典 on every one of the nine volumes — there is no separate picture-drama bonus anywhere in the S1 line-up (vol 2's extra is a ニセ予告 drama CD, vols 3 and 6 carry the visual novels). The AoT Wiki page and its 25 'Day' segment pages show pure original comedy: Day 1 is Eren stuck in the school fence and the three of them swallowed by the Colossal Titan; Day 25 is a gag graduation ceremony. It parodies remembered scenes; it adapts no chapter.",
+      "sources": [
+        "https://shingeki.tv/season1/products/bd_01.php",
+        "https://shingeki.tv/season1/products/bd_09.php",
+        "https://attackontitan.fandom.com/api.php?action=parse&page=Chibi%20Theater%3A%20Fly%2C%20Cadets%2C%20Fly!&prop=wikitext&format=json",
+        "https://attackontitan.fandom.com/api.php?action=parse&page=Day%201&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E9%80%B2%E6%92%83%E3%81%AE%E5%B7%A8%E4%BA%BA%20(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext&format=json",
+        "https://myanimelist.net/anime/19391"
+      ]
+    },
+    {
+      "anilist_id": 120257,
+      "title": "Shingeki no Kyojin: Chimi Kyara Gekijou - Rivai-han Part 2",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "ORIGINAL — the same ちみキャラ劇場“とんでけ！新生リヴァイ班” shorts, continued on Season 3 Blu-ray/DVD vols 5, 6 and 7 (2019-07-24, 2019-08-21, 2019-09-18 — the stored date matches vol 5), which ja-WP's table numbers as segments #50-#59; AniList's own description says three videos of three stories each. The official vol 5 and vol 7 product pages list the shorts as 映像特典; the staff line is unchanged (森井ケンシロウ / 衣谷ソーシ, designs ゆーぽん) and carries no 原作 credit. MAL folds all seven S3 volumes into one entry (39477) rather than splitting Part 2, so this id has no MAL twin — the tie is by release date and volume, which is exact.",
+      "sources": [
+        "https://shingeki.tv/season3/product/season3_5.php",
+        "https://shingeki.tv/season3/product/season3_7.php",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E9%80%B2%E6%92%83%E3%81%AE%E5%B7%A8%E4%BA%BA%20(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "anilist_id": 139754,
+      "title": "Attack On Titan: The Final Season Specials",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "ORIGINAL — the same chibi theatre, one video on each of The Final Season Blu-ray/DVD vols 1 and 2 (2021-07-07 and 2021-08-04; the stored date matches vol 1). The official product pages list 【映像特典】「進撃の巨人」ちみキャラ劇場 beside the making-of and the PV/CM reel, and the TBS/MBS official store (animaru.jp) reproduces the same 映像特典 block independently. Kitsu counts 16 segments across the two videos (AniList: 8 stories each, chibi shorts #60-75), continuing the Season 3 run. ja-WP's 映像特典 section documents only the S1 and S3 chibi tables, so it is silent on this block rather than contradicting it — the two product listings carry it.",
+      "sources": [
+        "https://shingeki.tv/final/product/final_1/",
+        "https://shingeki.tv/final/product/final_2/",
+        "https://animaru.jp/anmr/product/P2100324",
+        "https://myanimelist.net/anime/49627"
+      ]
+    },
+    {
+      "anilist_id": 110640,
+      "title": "Attack on Skytree",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "ORIGINAL PROMOTIONAL SHORT — 進撃の巨塔 ~attack on SKYTREE~, made for the Tokyo Skytree collaboration event that ran 2017-04-10 → 2017-07-14. The venue's own event site (archived) advertises 'オリジナルアニメーション＠展望デッキフロア350' and gives the invented premise verbatim: a 350m-class Colossal Titan appears at Wall-SKYTREE and the 天空調査兵団 (Sky Survey Corps) begins its operation to retake the tower; the anime's official site calls it オリジナルストーリーのアニメ上映 at launch and 新セリフとりおろしのオリジナルストーリーアニメ near the close. None of that scenario, and no such unit, exists in Isayama's manga — there is no chapter to name. The Attack on Titan Wiki has no article on it at all (checked by search, opensearch and allpages), so the two official sites carry this one.",
+      "sources": [
+        "https://shingeki.tv/news/archives/2761",
+        "https://shingeki.tv/news/archives/3109",
+        "http://web.archive.org/web/20170427015101/http://www.tokyo-skytree.jp:80/event/special/shingeki2017/"
+      ]
+    }
+  ],
+  "flags_for_sean": [
+    "IDENTITY (19391) — 'Attack on Titan Picture Drama' is a wrong title inherited from MAL: the entry is the Season 1 chibi theatre 「進撃の巨人」ちみキャラ劇場“とんでけ! 訓練兵団” (9 videos, BD/DVD vols 1-9, 2013-07-17 → 2014-03-19, 25 'Day' segments). MAL 19391 and Kitsu 7889 both print that Japanese title for this same id, and the official S1 product pages list the chibi theatre as the only 映像特典 on all nine volumes. Title repair candidate; kind 'special' stays right.",
+    "POSITION (19391) — consequence of the identity finding: the stored 14.5 is not a scene position. The shorts run alongside the WHOLE of Season 1 (vol 1 shipped 2013-07-17, vol 9 on 2014-03-19) and the last segment is the 104th's graduation, so if the ledger wants one fraction the S1 finale (25.5) is the honest one. Out of triage scope — raising it because the identity change moved it.",
+    "ONE WORK, FOUR ENTRIES — 19391 (S1, segments #1-25), 108942 (S3 vols 1-4, #38-49), 120257 (S3 vols 5-7, #50-59) and 139754 (Final Season vols 1-2, #60-75) are the same continuing chibi-theatre series. Segments #26-#37 (the Season 2 block) are held by neither of these ids: either AniList carries a fifth entry not on this shelf or the S2 block was never given one. Worth a completeness check before the shelf is closed.",
+    "DATE REPAIR CANDIDATE (110640 Attack on Skytree) — stored 2017-04-17; the Tokyo Skytree event site (archived) gives 開催時期 2017年4月10日（月）～7月14日（金） and shingeki.tv's launch news is dated 2017.04.10 with '2017年4月10日(月)～7月14日(金)にて開催'. MAL and Kitsu also carry Apr 10. Proposed: 2017-04-17 → 2017-04-10 (the event/screening opening).",
+    "DECISION (d) QUEUE (20811 No Regrets) — other_instrument: the spin-off run 進撃の巨人 悔いなき選択 (2 vols; 8 chapters + prologue + 5 side stories, ARIA Jan-Aug 2014), from the BD visual novel. If it is typed under T26 it is filler + side_source{進撃の巨人 悔いなき選択} unless an adopted{basis} act is cited — I found no such act; Isayama's involvement is 監修 (supervision) on the visual novel, the blanket shape T26 rejects.",
+    "SOURCE HYGIENE — three small traps for whoever writes these rows. (1) AniList/MAL 'Source: Manga' sits on every chibi entry and on Attack on Skytree; it is the franchise tag, and I confirmed no manga counterpart exists (hounori's 寸劇の巨人 / Spoof on Titan is a different 4-koma with different gags and its own continuity). (2) ja-WP calls the S3 shorts 『ちみキャラ劇場 4コマ!調査兵団リヴァイ班』 while the licensor prints “とんでけ！新生リヴァイ班” — use the licensor's title. (3) ja-WP's Final Season BD table gives vol 1 = 2021年5月19日 and vol 2 = 2021年7月21日, which are the ANNOUNCED dates; the official product pages give 2021-07-07 and 2021-08-04, and our stored 2021-07-07 is already correct — do not 'repair' it from ja-WP."
+  ]
+}

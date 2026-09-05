@@ -1,0 +1,120 @@
+{
+  "series_id": "the-prince-of-tennis",
+  "summary": "Of the 8 held works, exactly ONE adapts Konomi's manga: the Zenkoku Taikai-hen OVA (AniList 995, 13 episodes, 2006-03-24 to 2007-03-23), which resumes the manga where the TV run abandoned it and animates the National Tournament from Genius 248 to Genius 305 (vols 29-35) plus first-time coverage of the skipped pre-Nationals chapters Genius 237-247. Everything else on the shelf is an original screenplay or a compilation: both 2005 theatrical works (Futari no Samurai, Atobe kara no Okurimono), the 2011 10th-anniversary film, the 2002 Jump Festa short (A Day of the Survival Mountain), the 2002 New Year special (a recap of eps 1-12 plus an original hanetsuki game), and the 2010 Pair Puri DVD picture dramas. Houkago no Ouji-sama (2014) DOES adapt a manga, but a different run: the 放課後の王子様 4-koma spin-off (Konomi 原案・監修, art by Kenichi Sakura, Jump SQ) — an other_instrument question, not the owner's Genius space. The pattern is clean and self-documenting: princeoftennis.fandom carries a 'Manga Chapter Equivalents' section on every one of the 13 OVA episode pages and on NONE of the film / special pages, and the official tenipuri.jp DVD synopses (Wayback) match the manga's own chapter titles beat for beat (OVA #13 = 氷の世界 = Genius 299; OVA #7's 'priority seat' penalty = シルバーシート = Genius 239).",
+  "works": [
+    {
+      "anilist_id": 995,
+      "title": "Tennis no Ouji-sama: Zenkoku Taikai-hen",
+      "adapts_chapters": "yes",
+      "chapters": "Genius 248-305 in running order (vols 29-35), plus first-time coverage of Genius 237-247 (vols 27-29) folded in as interludes: ep 5 (240), ep 7 (237-239, the summer-vacation / Inui-juice / 'Silver Seat' gag), ep 8 (242, 245-247 Kintaro's 'Wild' chapters, 248). Per-episode from the wiki's 'Manga Chapter Equivalents' fields: ep1 248-253 | ep2 253-259 (+245) | ep3 259-264 | ep4 264-268 | ep5 268-269 (+240) | ep6 269-272 | ep7 237-239 | ep8 272-273 (+242, 247, 248) | ep9 274-278 | ep10 278-282 | ep11 282-289 | ep12 289-296 | ep13 296-305. The Semifinal OVA (a separate AniList entry) starts at 305/306, so 305 is this work's terminal chapter.",
+      "why": "A genuine adaptation, not a spin-off: en-WP states the TV series 'was followed by a three original video animation (OVA) series which adapted the \"National Tournament\" arc'; ja-WP says the OVA 「原作の展開を踏襲した」 (follows the original's developments) and that the story continues straight on from the TV series. Every one of the 13 episode pages on princeoftennis.fandom carries a 'Manga Chapter Equivalents' list, and those numbers check out against two independent instruments: (a) en-WP's chapter list, where the cited Genius titles are the episodes' own content (299 「氷の世界」 World of Ice = ep 13's Ryoma vs Atobe; 294 「全国一のダブルスペア」 = ep 12's Golden Pair; 283-286 手塚国光九州編 = ep 11's Kyushu flashback; 239 「迫り来る悪夢シルバーシート！！」 = ep 7's priority-seat penalty), and (b) the official tenipuri.jp DVD pages (Wayback), whose per-episode synopses describe exactly those beats (vol 1: Rokkaku vs Higa, 縮地法, Oji hospitalised, Ryoma's return, Oishi's proposal = Genius 248-253; vol 7: the doubles' ultimate synchro play + 氷の世界 = Genius 289-305). MangaUpdates' coverage segment for this entry reads 'Vol 42, Chap 379 (Including OVA)' — i.e. MU credits the manga's completion to the anime only once the OVAs are counted. Chapter space verified as the printed Genius numbering: ja-WP's tankobon titles sit inside en-WP's volume boundaries at every checked seam (vol 28 「氷帝狂詩曲」 = Genius 242; vol 29 「全国開幕!!」 = 251; vol 31 「奇策!? 菊丸のシングルス」 = 265; vol 33 「手塚国光九州編」 = 283).",
+      "sources": [
+        "https://princeoftennis.fandom.com/api.php?action=parse&page=Return%20of%20the%20Prince&prop=wikitext",
+        "https://princeoftennis.fandom.com/api.php?action=parse&page=Deathmatch%20-%20King%20vs%20Prince&prop=wikitext",
+        "https://princeoftennis.fandom.com/api.php?action=parse&page=The%20Prince%20of%20Beach%20Volleyball%3F!&prop=wikitext",
+        "https://princeoftennis.fandom.com/api.php?action=parse&page=Fudoumine%20vs.%20Shitenhouji%20Battle&prop=wikitext",
+        "https://web.archive.org/web/20071021113402/http://www.tenipuri.jp/dvd02/01.html",
+        "https://web.archive.org/web/20071014005247/http://www.tenipuri.jp/dvd02/07.html",
+        "https://en.wikipedia.org/w/api.php?action=parse&page=List%20of%20The%20Prince%20of%20Tennis%20chapters&prop=wikitext",
+        "https://en.wikipedia.org/w/api.php?action=parse&page=The%20Prince%20of%20Tennis&prop=wikitext",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%86%E3%83%8B%E3%82%B9%E3%81%AE%E7%8E%8B%E5%AD%90%E6%A7%98%20(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext",
+        "https://api.mangaupdates.com/v1/series/50288253485"
+      ]
+    },
+    {
+      "anilist_id": 815,
+      "title": "Tennis no Ouji-sama: Futari no Samurai - The First Game",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "Original screenplay (脚本: 前川淳 / Jun Maekawa, per ja-WP and en-WP's film infobox). The whole plot — a cruise-ship exhibition run by the millionaire Sakurafubuki Hikomaro as an illegal gambling scheme — exists nowhere in the manga, and its second lead is a film-original character: the wiki's Ryoga Echizen page says he is 'not mentioned in The Prince of Tennis, first appearing in The Two Samurai: The First Game … despite never appearing in the manga', and his only manga field is 'Golden Age 50', i.e. the SEQUEL's chapter space, where Konomi later imported him. AniList's 'source: MANGA' and en-WP's 'based on the manga series' are franchise attributions, not chapter claims (protocol trap). princeoftennis.fandom carries no 'Manga Chapter Equivalents' section on this page, a field it maintains on all 13 OVA episode pages.",
+      "sources": [
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%86%E3%83%8B%E3%82%B9%E3%81%AE%E7%8E%8B%E5%AD%90%E6%A7%98%20(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext",
+        "https://en.wikipedia.org/w/api.php?action=parse&page=The%20Prince%20of%20Tennis%3A%20Futari%20no%20Samurai&prop=wikitext",
+        "https://princeoftennis.fandom.com/api.php?action=parse&page=The%20Prince%20of%20Tennis%20-%20The%20Two%20Samurai%3A%20The%20First%20Game&prop=wikitext",
+        "https://princeoftennis.fandom.com/api.php?action=parse&page=Ryoga%20Echizen&prop=wikitext"
+      ]
+    },
+    {
+      "anilist_id": 814,
+      "title": "Tennis no Ouji-sama: Atobe Kara no Okurimono - Kimi ni Sasageru Tenipuri Matsuri",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "Original 29-minute short co-screened with Futari no Samurai; 脚本 志茂文彦 (Fumihiko Shimo) per ja-WP, whose synopsis is one line: 「跡部が各校のテニス部を集めて大規模な学園祭風のパーティーを開く」 — Atobe throws a school-festival-style party for every school's tennis club. The fandom page describes the same invented event (the 'Super Tennis Festival' carnival with haunted houses, variety acts and an inter-school obstacle race) — no such event and no such chapter exists in the 379-Genius run, and the page carries no 'Manga Chapter Equivalents' section. en-WP calls it 'another short film spun off from the series'.",
+      "sources": [
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%86%E3%83%8B%E3%82%B9%E3%81%AE%E7%8E%8B%E5%AD%90%E6%A7%98%20(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext",
+        "https://princeoftennis.fandom.com/api.php?action=parse&page=Atobe's%20Gift&prop=wikitext",
+        "https://en.wikipedia.org/w/api.php?action=parse&page=The%20Prince%20of%20Tennis%3A%20Futari%20no%20Samurai&prop=wikitext"
+      ]
+    },
+    {
+      "anilist_id": 1190,
+      "title": "Tennis no Ouji-sama: A Day of the Survival Mountain - Kyoufu no Kyouka Training!",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "An event short, not an adaptation. ja-WP files it under ジャンプフェスタ: 『テニスの王子様 A DAY OF THE SURVIVAL MOUNTAIN 〜恐怖の強化トレーニング！〜』, 脚本 十川誠志 (Masashi Sogo), later included on the 2004-02-25 DVD 『テニスの王子様 DVD FAN DISC EXTRA Remix -Dream Session-』 (which is the stored date). Production I.G's own work-list entry gives 'Events: Jump Super Anime Tour (October 2002) and Jump Festival 2003 / Format: 1 x 34' / Original Story: Takeshi Konomi' — a creator credit, not a chapter. The fandom's plot (the regulars' mountain training turns into a showdown with Sasabe's S.K.B tennis club, capped by a new Inui juice) has no counterpart in the manga, and the page carries no 'Manga Chapter Equivalents' section.",
+      "sources": [
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%86%E3%83%8B%E3%82%B9%E3%81%AE%E7%8E%8B%E5%AD%90%E6%A7%98%20(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext",
+        "https://www.productionig.com/contents/works/07_/000129.html",
+        "https://princeoftennis.fandom.com/api.php?action=parse&page=A%20Day%20on%20Survival%20Mountain&prop=wikitext",
+        "https://en.wikipedia.org/w/api.php?action=parse&page=List%20of%20The%20Prince%20of%20Tennis%20episodes&prop=wikitext"
+      ]
+    },
+    {
+      "anilist_id": 10731,
+      "title": "Tennis no Ouji-sama: Eikokushiki Teikyuu Shiro Kessen!",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "The 10th-anniversary film (劇場版 テニスの王子様 英国式庭球城決戦!, 2011-09-03), 脚本 広田光毅 (Koki Hirota) per ja-WP — an original story with original antagonists. The fandom's plot (a Japanese junior selection travels to Wimbledon and is attacked by the banned street-tennis gang 'Clack', led by Keith, with ex-member Xiu) turns entirely on characters who exist only in the film; the original manga had finished in 2008 at Genius 379 with no England arc, and the film's cast page lists Keith / Xiu / Peter as film-only guests (ja-WP's ゲストキャラクター（第2弾）). No 'Manga Chapter Equivalents' section on the wiki page. NOTE: en-WP's prose date 'August 14, 2011' is an outlier — ja-WP, the film's own site and the stored value all say 2011-09-03.",
+      "sources": [
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%86%E3%83%8B%E3%82%B9%E3%81%AE%E7%8E%8B%E5%AD%90%E6%A7%98%20(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext",
+        "https://princeoftennis.fandom.com/api.php?action=parse&page=The%20Prince%20of%20Tennis%3A%20Eikoku-shiki%20Teiky%C5%AB-j%C5%8D%20Kessen!&prop=wikitext",
+        "https://en.wikipedia.org/w/api.php?action=parse&page=The%20Prince%20of%20Tennis&prop=wikitext"
+      ]
+    },
+    {
+      "anilist_id": 5996,
+      "title": "Tennis no Ouji-sama: Hagiota no Ouji-sama",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "The New Year special of 2002-01-01. ja-WP's TV episode list carries it as row 12.5 「新年正月スペシャル 羽子板の王子様」, 脚本 志茂文彦 — the stored position 12.5 matches the licensor-side numbering exactly. Its content is a clip recap of episodes 1-12 wrapped around an original New Year hanetsuki (羽子板) game among the regulars (fandom: 'a recap of the first episodes 1 to 12. However, there is a curious tournament with the regular players'). A recap re-shows chapters already animated and adds no new source material; the framing game has no chapter counterpart. TITLE NOTE: AniList's 'Hagiota' is a misromanisation of 羽子板 = hagoita (the battledore paddle) — see repairs in flags.",
+      "sources": [
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%86%E3%83%8B%E3%82%B9%E3%81%AE%E7%8E%8B%E5%AD%90%E6%A7%98%20(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext",
+        "https://princeoftennis.fandom.com/api.php?action=parse&page=New%20Years%20Special&prop=wikitext"
+      ]
+    },
+    {
+      "anilist_id": 10862,
+      "title": "Tennis no Ouji-sama: TV Anime-ban Pairpuri DVD",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "A DVD line, not an adaptation. ja-WP's ペアプリDVD section describes each of the 8 volumes as: one excerpted TV episode per title character with newly recorded narration, one re-cut chibi episode from the TV series, a 90-second character profile, and 一話 新作ピクチャードラマ — a NEWLY WRITTEN picture drama (脚本 竹内利光). The fandom's PairPuri~arc page summarises the same 8 shorts as 'a picture drama series of 8 short stories inspired by the popular series' and their plots are gags (Koharu concussed by stray balls; the Fuji brothers' cosplay shopping; Oishi and Kikumaru playing two different games called KaiPara) with no chapter counterpart. Their titles do not match any short manga in the Pair Puri books either: the books' manga contents are 「Private no Oujisama」/「放課後の王子様 ペアプリ version」/「Hanipuri Theater」, and the books themselves are New-Prince-of-Tennis-era databooks paired with that sequel's volumes.",
+      "sources": [
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%86%E3%83%8B%E3%82%B9%E3%81%AE%E7%8E%8B%E5%AD%90%E6%A7%98%20(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext",
+        "https://princeoftennis.fandom.com/api.php?action=parse&page=PairPuri~arc&prop=wikitext",
+        "https://princeoftennis.fandom.com/api.php?action=parse&page=List%20of%20The%20Prince%20of%20Tennis%20Pair%20Puri%20Volumes&prop=wikitext",
+        "https://princeoftennis.fandom.com/api.php?action=parse&page=Pair%20Puri%20Volume%201&prop=wikitext"
+      ]
+    },
+    {
+      "anilist_id": 20942,
+      "title": "Houkago no Ouji-sama",
+      "adapts_chapters": "no",
+      "chapters": null,
+      "why": "It adapts a manga — but a DIFFERENT run, so 'no' against this owner's instrument. ja-WP: the 2014-10-29 OVA series 『新テニスの王子様 OVA vs Genius10』 carries 「映像特典として4コマアニメ『放課後の王子様』も収録」 — the 4-koma anime Houkago no Ouji-sama is the disc's video bonus. Its source is the spin-off 『放課後の王子様』: a 4-koma parody/tribute serialised in Jump SQ since the December 2008 issue, 原案・監修 許斐剛 with art by 佐倉ケンイチ (Kenichi Sakura), 9 volumes as of 2025 — its own chapter space (the fandom's list runs Chapter 001-157+), not Genius 1-379. The fandom states plainly: 'A flash anime adaption was aired alongside the New Prince of Tennis OVA series'. Zero Genius chapters. Route to decision (d), other_instrument.",
+      "sources": [
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%86%E3%83%8B%E3%82%B9%E3%81%AE%E7%8E%8B%E5%AD%90%E6%A7%98%20(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%86%E3%83%8B%E3%82%B9%E3%81%AE%E7%8E%8B%E5%AD%90%E6%A7%98&prop=wikitext",
+        "https://princeoftennis.fandom.com/api.php?action=parse&page=List%20of%20The%20Prince%20of%20After%20School%20Chapters&prop=wikitext"
+      ]
+    }
+  ],
+  "flags_for_sean": [
+    "COUNTS: yes 1 (anilist 995) · no 7 · unclear 0. Only the Zenkoku Taikai-hen OVA joins the per-work programme.",
+    "STRUCTURE — the OVA block is where this series' manga actually finishes, and most of it is NOT on the shelf. The TV run's manga content stops with the Kanto final (fandom's episode list marks every arc from ep 129 on as filler; en-WP's ep 128 summary — Rikkai loses, Yukimura's surgery succeeds — is Genius ~234-236 territory), leaving Genius 237-379 unanimated by the TV series. Three OVA series close it: Zenkoku Taikai-hen (13 eps, Genius 237-305 — held, id 995), Zenkoku Taikai-hen Semifinal (6 eps, from Genius 305/306 — SEPARATE AniList entry, not in this triage), Zenkoku Taikai-hen Final (7 eps, through the manga's end; MU's coverage segment 'Vol 42, Chap 379 (Including OVA)'). Plus ANOTHER STORY I (4 eps, 2009) and ANOTHER STORY II (4 eps, 2011). If the ledger does not hold Semifinal / Final, ~74 chapters of first-time adaptation (306-379) are invisible to the catalog.",
+    "OTHER_INSTRUMENT (decision d) — anilist 20942 Houkago no Ouji-sama adapts 『放課後の王子様』 (Jump SQ, 原案・監修 許斐剛 / 漫画 佐倉ケンイチ, 9 vols), a distinct chapter space. Same family: anilist 10862's Pair Puri books are New-Prince-of-Tennis-era databooks, and the picture dramas on those DVDs are newly written, so 10862 is a plain no, not an other_instrument case.",
+    "REPAIR (title, anilist 5996): stored 'Tennis no Ouji-sama: Hagiota no Ouji-sama' → the Japanese title is 「羽子板の王子様」 (新年正月スペシャル), romanised Hagoita no Ouji-sama; 'Hagiota' is an AniList typo. Evidence: ja.wikipedia's TV episode list row 12.5 (脚本 志茂文彦, 2002年1月1日). Stored position 12.5 is independently confirmed by that same row — no position change.",
+    "DATE NOTE (anilist 1190, no repair proposed): the stored 2004-02-25 is the DVD FAN DISC release; the short itself premiered at the Jump Super Anime Tour in October 2002 and Jump Festa 2003 (Production I.G; ja-WP writes 「ジャンプフェスティバル2002」). If the ledger wants premiere dates rather than home-video dates, this row is the one that differs.",
+    "T26 NOTE, not an adoption: the 2005 film's original character Ryoga Echizen was later drawn into the SEQUEL manga by Konomi (the wiki's manga field for him is 'Golden Age 50'). That is a character import into a different run, not the film's events entering the owner's Genius line — the film stays an original.",
+    "PER-WORK PASS (995): eps 1-6 and 9-13 are dense, page-ordered adaptation; eps 5, 7 and 8 fold in the pre-Nationals chapters the TV run skipped (237-242, 245-248) and are the rows where a page-level read is still owed — the chapter-title test passes (ep 7's 'priority seat' penalty = Genius 239 「迫り来る悪夢シルバーシート！！」), but the exact split between 237-239 and the episode's own gag framing has not been read on pages."
+  ]
+}
