@@ -2,7 +2,7 @@
 
 > GENERATED from `scripts/ingest/lib/rulings/**` by `scripts/restructure/gen-rulings.ts` — do not edit by hand. A ruling is an INSTANCE of a rule (`docs/rules.md`); the map is the record, this is the index.
 
-- rulings: 2486 across 285 series/keys · by Sean: 991 · UNRECORDED reasons: 8 · with a retire condition: 94
+- rulings: 2491 across 290 series/keys · by Sean: 996 · UNRECORDED reasons: 8 · with a retire condition: 94
 
 ## Retire conditions (re-evaluate when…)
 
@@ -174,6 +174,24 @@
 |---|---|---|---|---|
 | `V9` | {"rows":[{"volume":6,"chapter_start":56,"chapter_end":66},{"volume":7,"chapter_start":67,"chapter_end":77}]} | stored v6 "56-77" merges v6+v7 (v7 row missing); Coamix MangaHot + en-WP + fr-WP chapter lists all agree v6 = 56-66, v7 = 67-77 | Sean 2026-08-25 · scripts/ingest/research/batch17/out/angel-heart.json, scripts/ingest/apply-research-batch-17.ts, §12.47 |  |
 
+### anilist:1250 (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `G52` | {"disposition":"series","slug":"elemental-gelade","chain":[1250],"restoration":"INCIDENT-2026-09-05"} | elemental-gelade (26 eps, 2005): default-typed rows, no rulings — deleted by the incident; recreated under its old id, chain [1250]; stays STAGED (P39, Sean 2026-09-05). | Sean 2026-09-05 · scripts/ingest/research/discovery/INCIDENT-2026-09-05.md (Sean 2026-09-05: option A — targeted rebuild through the existing writers) |  |
+
+### anilist:128034 (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `G52` | {"disposition":"series","slug":"orient","chain":[128034,146637],"restoration":"INCIDENT-2026-09-05"} | orient (ORIENT 12 + Awajishima Gekitou-hen 12, 2022): a G52 entry with a ruled wiki page (G59 B) and two research anchors (batch 20 w8) — deleted by the incident; recreated under its old id, chain [128034, 146637] (both cours, as the ruled page numbers them 1-24). | Sean 2026-09-05 · scripts/ingest/research/discovery/INCIDENT-2026-09-05.md (Sean 2026-09-05: option A — targeted rebuild through the existing writers) |  |
+
+### anilist:1470 (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `G52` | {"disposition":"series","slug":"city-hunter","chain":[1470],"restoration":"INCIDENT-2026-09-05"} | city-hunter (51 eps, 1987): default-typed rows and a G54 air-date-order ruling — deleted by the incident; recreated under its old id, chain [1470] WITHOUT City Hunter 2 (1471, never a component); stays STAGED (P39: no classifier, Sean 2026-09-05). | Sean 2026-09-05 · scripts/ingest/research/discovery/INCIDENT-2026-09-05.md (Sean 2026-09-05: option A — targeted rebuild through the existing writers) |  |
+
 ### anilist:150075 (1)
 
 | rule | value | reason | ruled | retires when |
@@ -185,6 +203,18 @@
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `I42` | {"disposition":"series","slug":"trigun-stampede","relation":{"to":"trigun","kind":"alternative"},"franchise":"trigun"} | TRIGUN STAMPEDE (2023, 12 eps) and its sequel TRIGUN STARGAZE (163144, Winter 2026, 12 eps) — a CG re-adaptation of Nightow's Trigun / Trigun Maximum (manga 30703 / 30704, the same instrument the trigun entry maps), divergent from the 1998 series: an ALTERNATIVE telling (I17), so a separate series under the trigun franchise (I43), never a component of the 1998 entry. Discovery witness #2. The seed writer walks the SEQUEL chain, so Stargaze rides as component 2 (same continuous story — the new title is the studio's, not a narrative shift). | Sean 2026-09-05 · scripts/ingest/research/discovery/PROPOSAL.md §9 row 4 (the three witness promotions; Sean: "ok yes lets proceed", 2026-09-05) |  |
+
+### anilist:3272 (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `G52` | {"disposition":"series","slug":"kinnikuman","chain":[3272],"restoration":"INCIDENT-2026-09-05"} | kinnikuman (137 eps, 1983): 137 rows (19 filler by T6 pins), G53 air dates, A45 retirements, research anchors (batches 17 / 19 / 20 ×2) — deleted by the incident; recreated under its old id, chain [3272] WITHOUT the 1991 sequel 3281 (never a component), rows via the wiki writer, anchors replayed. | Sean 2026-09-05 · scripts/ingest/research/discovery/INCIDENT-2026-09-05.md (Sean 2026-09-05: option A — targeted rebuild through the existing writers) |  |
+
+### anilist:60 (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `G52` | {"disposition":"series","slug":"chrono-crusade","chain":[60],"restoration":"INCIDENT-2026-09-05"} | chrono-crusade (Chrno Crusade, 24 eps, 2003): a G52 canon-tier entry with T6 pins, standing annotations, A44 suppressions and research anchors (batches 17 / 18 / 19 / 20-w16) — deleted by the incident; recreated under its old id, chain [60], rows via the wiki writer, anchors replayed from the verdict files. | Sean 2026-09-05 · scripts/ingest/research/discovery/INCIDENT-2026-09-05.md (Sean 2026-09-05: option A — targeted rebuild through the existing writers) |  |
 
 ### another (1)
 

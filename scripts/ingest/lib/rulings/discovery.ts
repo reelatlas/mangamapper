@@ -40,6 +40,8 @@ export type DiscoveryRuling = {
   franchise?: string;
   /** disposition 'series': pin the component chain (AniList ids in order) when the SEQUEL walk is ambiguous or must stop short; else the writer walks */
   chain?: number[];
+  /** a RESTORATION: the series existed and was deleted by the named incident; the ruling recreates it under its old id (never a discovery proposal) */
+  restoration?: string;
 };
 
 const FR = 'docs/franchise-rulings.md';
@@ -99,6 +101,56 @@ export const CANDIDATE_ENTRIES: RulingEntry<DiscoveryRuling>[] = [
     ruledBy: 'Sean',
     ruledOn: '2026-09-05',
     cite: [GO],
+  },
+  // ── RESTORATIONS after INCIDENT 2026-09-05 (audit-titles.ts deleted six series; Sean chose the targeted rebuild) ──
+  // The seed writer is the one series-creation path (G52 rostered form); a restoration pins the OLD id and the
+  // chain the series had, so every ruling keyed by that id (T6 pins, G53 dates, A44 / A45, standing annotations,
+  // ruled wiki pages) re-attaches on the next heal. kakegurui is NOT here: its AFG page types its rows, so
+  // afg-expansion --only kakegurui recreates it as the AFG-only writer did.
+  {
+    seriesId: 'anilist:60',
+    ruleId: 'G52',
+    value: { disposition: 'series', slug: 'chrono-crusade', chain: [60], restoration: 'INCIDENT-2026-09-05' },
+    reason: 'chrono-crusade (Chrno Crusade, 24 eps, 2003): a G52 canon-tier entry with T6 pins, standing annotations, A44 suppressions and research anchors (batches 17 / 18 / 19 / 20-w16) — deleted by the incident; recreated under its old id, chain [60], rows via the wiki writer, anchors replayed from the verdict files.',
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/INCIDENT-2026-09-05.md (Sean 2026-09-05: option A — targeted rebuild through the existing writers)'],
+  },
+  {
+    seriesId: 'anilist:3272',
+    ruleId: 'G52',
+    value: { disposition: 'series', slug: 'kinnikuman', chain: [3272], restoration: 'INCIDENT-2026-09-05' },
+    reason: 'kinnikuman (137 eps, 1983): 137 rows (19 filler by T6 pins), G53 air dates, A45 retirements, research anchors (batches 17 / 19 / 20 ×2) — deleted by the incident; recreated under its old id, chain [3272] WITHOUT the 1991 sequel 3281 (never a component), rows via the wiki writer, anchors replayed.',
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/INCIDENT-2026-09-05.md (Sean 2026-09-05: option A — targeted rebuild through the existing writers)'],
+  },
+  {
+    seriesId: 'anilist:128034',
+    ruleId: 'G52',
+    value: { disposition: 'series', slug: 'orient', chain: [128034, 146637], restoration: 'INCIDENT-2026-09-05' },
+    reason: 'orient (ORIENT 12 + Awajishima Gekitou-hen 12, 2022): a G52 entry with a ruled wiki page (G59 B) and two research anchors (batch 20 w8) — deleted by the incident; recreated under its old id, chain [128034, 146637] (both cours, as the ruled page numbers them 1-24).',
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/INCIDENT-2026-09-05.md (Sean 2026-09-05: option A — targeted rebuild through the existing writers)'],
+  },
+  {
+    seriesId: 'anilist:1470',
+    ruleId: 'G52',
+    value: { disposition: 'series', slug: 'city-hunter', chain: [1470], restoration: 'INCIDENT-2026-09-05' },
+    reason: 'city-hunter (51 eps, 1987): default-typed rows and a G54 air-date-order ruling — deleted by the incident; recreated under its old id, chain [1470] WITHOUT City Hunter 2 (1471, never a component); stays STAGED (P39: no classifier, Sean 2026-09-05).',
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/INCIDENT-2026-09-05.md (Sean 2026-09-05: option A — targeted rebuild through the existing writers)'],
+  },
+  {
+    seriesId: 'anilist:1250',
+    ruleId: 'G52',
+    value: { disposition: 'series', slug: 'elemental-gelade', chain: [1250], restoration: 'INCIDENT-2026-09-05' },
+    reason: 'elemental-gelade (26 eps, 2005): default-typed rows, no rulings — deleted by the incident; recreated under its old id, chain [1250]; stays STAGED (P39, Sean 2026-09-05).',
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/INCIDENT-2026-09-05.md (Sean 2026-09-05: option A — targeted rebuild through the existing writers)'],
   },
 ];
 

@@ -1,7 +1,7 @@
 // Full AFL-spine backfill: every show on animefillerlist.com → staging →
 // match → AniList enrichment → canonical. ~70 min at the mandatory 10s crawl
 // delay. Resumable: shows staged within RESUME_WINDOW_MS are not re-fetched.
-//   npx tsx --env-file=.env.ingest scripts/ingest/backfill.ts
+//   npx tsx --env-file=.env.ingest scripts/ingest/backfill.ts [--only slug,slug]
 
 import { AFL_BASE, parseShowPage, parseShowsIndex } from './lib/afl';
 import { politeFetch } from './lib/http';
@@ -31,7 +31,10 @@ async function main() {
     const skip = new Set(
       dispositions.filter((d) => d.disposition !== 'active').map((d) => d.afl_slug),
     );
-    const shows = allShows.filter((s) => !skip.has(s.slug));
+    // --only a,b,c: fetch + resolve ONLY these slugs (a recovery / event run — the same loop, the same gates), never a partial sweep by accident
+    const onlyArg = process.argv.indexOf('--only') > 0 ? process.argv[process.argv.indexOf('--only') + 1] : null;
+    const ONLY = onlyArg ? new Set(onlyArg.split(',')) : null;
+    const shows = allShows.filter((s) => !skip.has(s.slug) && (!ONLY || ONLY.has(s.slug)));
     console.log(`[index] ${allShows.length} shows, ${shows.length} active (${skip.size} excluded/duplicate)`);
 
     for (const [i, show] of shows.entries()) {

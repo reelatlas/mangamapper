@@ -11,7 +11,7 @@
 // Oshi no Ko…) now pass with proper season components instead of tripping
 // the ±12 gate. All standard guards still apply: exact-match-or-flag,
 // sparse guard, alignment ±2 with airing-lag allowance, scopes, registry.
-//   npx tsx --env-file=.env.ingest scripts/ingest/afg-expansion.ts
+//   npx tsx --env-file=.env.ingest scripts/ingest/afg-expansion.ts [--dry-run] [--only <afg-slug>]
 
 import { AFG_BASE, parseAfgPage } from './lib/afg';
 import { politeFetch } from './lib/http';
@@ -59,7 +59,10 @@ async function main() {
       if (taken.has(p.slug) || taken.has(slugify(raw.title))) return false;
       return raw.episodes.length >= 6 || raw.episodes.length === 0;
     });
-    console.log(`[expansion] ${targets.length} AFG-only candidates (incl. registration-tier refetches)`);
+    // --only <slug>: one AFG page (a recovery / event run); the open AFG-only backlog is its own sitting
+    const ONLY = process.argv.indexOf('--only') > 0 ? process.argv[process.argv.indexOf('--only') + 1] : null;
+    if (ONLY) targets.splice(0, targets.length, ...targets.filter((p: any) => p.slug === ONLY));
+    console.log(`[expansion] ${targets.length} AFG-only candidates${ONLY ? ` (--only ${ONLY})` : ''} (incl. registration-tier refetches)`);
 
     const owned = await ownedAnilistIds();
 

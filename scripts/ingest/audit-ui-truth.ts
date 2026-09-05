@@ -1141,13 +1141,15 @@ async function main() {
     for (const e of ext) { const m = reg.get(e.series_id) ?? new Map<string, string>(); m.set(e.source, String(e.external_id)); reg.set(e.series_id, m); }
     const aflStaged = new Set((await selectAll<any>('ingest_afl_shows', 'slug')).map((r: any) => r.slug));
     const afgStaged = new Set((await selectAll<any>('ingest_afg_pages', 'slug')).map((r: any) => r.slug));
+    const integrityHeld = new Set((await selectAll<any>('ingest_flags', 'series_key', (q) => q.eq('kind', 'parse_integrity').eq('status', 'open'))).map((r: any) => r.series_key));
     const known = new Set(series.map((s: any) => s.id));
     for (const row of series) {
       const m = reg.get(row.id) ?? new Map<string, string>();
       if (row.anilist_id != null && m.get('anilist') !== String(row.anilist_id)) classes.identity_registry_gap.push(`${row.id}: anilist ${row.anilist_id} on the row, registry says ${m.get('anilist') ?? 'nothing'} (I2)`);
       if (row.mal_id != null && m.has('mal') && m.get('mal') !== String(row.mal_id)) classes.identity_registry_gap.push(`${row.id}: mal ${row.mal_id} on the row, registry says ${m.get('mal')} (I2)`);
       if (row.afl_slug && m.get('afl') !== row.afl_slug) classes.identity_registry_gap.push(`${row.id}: afl_slug ${row.afl_slug} on the row, registry says ${m.get('afl') ?? 'nothing'} (I2)`);
-      if (m.get('afl') && !aflStaged.has(m.get('afl')!)) classes.identity_registry_gap.push(`${row.id}: registered afl ${m.get('afl')} has no staged AFL page (I2)`);
+      // a registered page AFL itself refuses to serve (an open parse_integrity hold: alias corruption at AFL's end) is the flag's listing, not a registry gap — the registration is right, the page is AFL's fault
+      if (m.get('afl') && !aflStaged.has(m.get('afl')!) && !integrityHeld.has(m.get('afl')!)) classes.identity_registry_gap.push(`${row.id}: registered afl ${m.get('afl')} has no staged AFL page and no open parse_integrity hold (I2)`);
       if (m.get('afg') && !afgStaged.has(m.get('afg')!)) classes.identity_registry_gap.push(`${row.id}: registered afg ${m.get('afg')} has no staged AFG page (I2)`);
       const want = deriveVisibility(row.id, { afl: m.has('afl'), afg: m.has('afg') });
       if ((row.visibility ?? 'public') !== want) classes.ruling_violation.push(`${row.id}: visibility '${row.visibility ?? 'null'}' ≠ derived '${want}' (P39) — run assert-overrides`);
