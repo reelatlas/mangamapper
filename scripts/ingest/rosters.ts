@@ -28,6 +28,7 @@ export const PULL: RosterEntry[] = [
   { file: 'minted-by-backfill.ts', when: 'event', trigger: 'row_minted_by_missing census rows (G57: an unstamped episode row — nobody may delete it until its minter is inferred from the writers\' reach)', note: 'row provenance backfill by reach: afl → afg → stitch → wiki → anilist; --restamp re-infers every row' },
   { file: 'wiki-episodes-backfill.ts', when: 'event', trigger: 'title_incomplete / airdate_incomplete census rows, or a ruled extension', note: 'Wikipedia episode titles/dates under evidence-locked offsets (G41)' },
   { file: 'afg-expansion.ts', when: 'event', trigger: 'audit-afg-structure reports unregistered AFG-only pages', note: 'creates canonical series from AFG-only pages behind exact-match-or-flag (I30/I31)' },
+  { file: 'discovery-stage.ts', when: 'event', trigger: 'before a /discover sitting, or when discovery_new_since_sitting lists unstaged candidates (I42)', note: 'stages the HALO — every unowned TV-shaped story relation of an owned entry, SEQUEL chains walked transitively, budgeted (G58); writes staging only, never a series or a component' },
 ];
 
 export const HEAL: RosterEntry[] = [
@@ -62,6 +63,7 @@ export const CENSUS: RosterEntry[] = [
   { file: 'audit-ui-truth.ts', when: 'standard', note: 'THE census: every rule class (P5); ruling_violation must be 0 (P18)' },
   { file: 'verify-series-display.ts', when: 'standard', args: ['--all'], note: 'whole-series render through the app path (P19)' },
   { file: 'audit-afg-structure.ts', when: 'standard', note: 'AFG page ↔ canonical structure cross-check; --register by hand (I3–I5)' },
+  { file: 'audit-discovery.ts', when: 'standard', note: 'the DISCOVERY census (I42): the halo buckets, the proposals (never written), the sitting trigger, stale rulings' },
   { file: 'wiki-title-verify.ts', when: 'event', trigger: 'before declaring a wiki numbering shift', note: 'title alignment at offsets −1/0/+1' },
 ];
 

@@ -506,6 +506,19 @@
         "never in aliases"
       ],
       "source": "2026-09-04 (Sean + Cursor): exact replaced strings into the record's retiredPhrases at amendment time; ledger-check greps live scopes (statements, comments, skills, agents, runbook/architecture/STATE) and is red while one survives; changelog / research outputs / history / generated docs keep the old words; aliases are for resolving old citations, not this; meaning-equivalence stays judgment"
+    },
+    {
+      "ask": "AniList already lists Frieren S3 as announced but AFL has no page — where does it show up, and who decides whether it is a season of frieren or a new series?",
+      "expected": [
+        "I42",
+        "I15",
+        "I16"
+      ],
+      "terms": [
+        "candidate",
+        "announced"
+      ],
+      "source": "discovery design + build 2026-09-05 (PROPOSAL.md v2.2)"
     }
   ]
 }

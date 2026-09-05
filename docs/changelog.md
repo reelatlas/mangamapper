@@ -1154,6 +1154,40 @@
    19-23 / 39 (chain_source) and 18 / 93-95 (AFL's loose Mixed bucket),
    beelzebub 15 / 26-28 / 51, rurouni TV ep 95 (identity). Batch 22 opens on
    the boruto follow-up (lanes I + C) with the batch-21 tooling copied.
+122. ✅ **DISCOVERY BUILD, STEP 1 — I42, THE CANDIDATE RULE (2026-09-05; Sean's
+    go on PROPOSAL.md v2.2 §9; the design commit 73cb597).** The catalog no
+    longer waits for AFL to say a season exists: every unowned AniList entry a
+    story relation reaches from an owned entry is a LISTED candidate, derived
+    from staging and the discovery ruling map, with a PROPOSAL that never
+    writes. Built through /add-rule: `lib/discovery.ts` (pure — buckets sequel /
+    series / extra / ignored; proposal precedence = a ruling for the id > a
+    DECLARED open-ended I15 owner > title continuity (an ordinal → component) /
+    a different manga (→ series) / else ambiguous; same manga is no signal;
+    OVERRIDE_CHAINS presence means nothing) + 15 tests;
+    `lib/rulings/discovery.ts` (OPEN_ENDED declarations for
+    jojos-bizarre-adventure / monogatari-series / gintama; candidate rulings
+    keyed `anilist:<id>` — none yet; the SITTINGS log); `discovery-stage.ts`
+    (PULL roster, event: stages the halo under a budget, SEQUEL chains walked
+    transitively — 242 media staged in 3 rounds); `audit-discovery.ts` (CENSUS
+    roster, standard; ledger-check's auditClasses() scans it);
+    `research/discovery/recap.ts` (the sitting recap, generated: stored →
+    proposed → decision, a table per owner). I15 amended (the declared
+    open-ended property; amendedOn). One-hop case added. Edges rebuilt +
+    deployed twice (the ledger sits under the lib hash). First census on the
+    staged halo: candidates 1090 (276 staged) — sequel 91 · series 176 · extra
+    667 · ignored 156; TV-shaped unruled 267, of which 56 RELEASING /
+    NOT_YET_RELEASED; proposals component 61 · series 179 · ambiguous 27;
+    `discovery_new_since_sitting` 267 (no sitting logged yet);
+    `discovery_ruled_unbuilt` 0; `discovery_ruling_stale` 0; every pre-existing
+    class unchanged (ruling_violation 0; verify 218 / 0 failing); 209 tests.
+    Build-time corrections: a bare number is an ordinal only as the whole short
+    remainder (the first live run read '100 Years Quest' as a season count — the
+    counter-witness caught the bug in its own rule); owner titles compare with
+    and without AniList's '(TV)' / '(2024)' suffix; 100YQ's id is 139095. NOT
+    done on purpose: no series or component minted — the mint is an event step
+    from /discover after the dry-run recap, and /discover + the seed writer are
+    go-list steps 3 and 6; the first sitting waits for the franchise layer (step
+    2) so its recap can group by IP.
 121. ✅ **BATCH 22 CLOSED (P34, 2026-09-05) + CONSOLIDATE after §12.120.** The
    batch that opened on the Boruto chain follow-up (§12.116) and became the
    T26 ADOPTION SITTING (§12.117 — a licence is not adoption; the standing

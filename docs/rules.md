@@ -140,7 +140,7 @@
 - `N34` Episode totals derive, then floor, then cap — aka `episode totals derivation`
 - `N35` Ruled chapter space: a proven numbering beats AniList totals — aka `ruled chapter space`, `chapter space override`, `CHAPTER_SPACE_OVERRIDES`, `ruledChapterSpace`, `totals re-base`, `propagated scalar`, `the 260-that-is-255 class`, `sourceShifts`, `source chapter shift`, `chapter shift`, `toRuledChapter`, `printed numbering`, `the reading edition`
 
-**I — Identity, franchise & structure** (41)
+**I — Identity, franchise & structure** (42)
 - `I1` Our slug is the identity — aka `identity`, `our slug is identity`, `canonical identity is ours`, `own-slug identity`
 - `I2` Identity registry: every external id maps INTO our id — aka `identity registry`, `registerIds`, `ID COLLISION`, `series_external_ids`
 - `I3` AFG↔canonical registration by evidence strength — aka `registration tiers`, `AFG match tiers`, `identity-first, flag-first`
@@ -182,6 +182,7 @@
 - `I39` Ruled structure: numbered extras and span overrides — aka `ruled structure`, `RULED_STRUCTURE`, `numbered extras`, `span override`, `heal-structure`, `planComponents`, `E4`, `batch-19 E4`, `structure rows`
 - `I40` Source relation: adaptation or parallel telling — aka `source relation`, `source_relation`, `parallel telling`, `parallel tellings`, `parallel series`, `SOURCE_RELATION_OVERRIDES`, `MANGA_LINK_OVERRIDES`, `pickMangaNode`, `ruled manga link`, `the DBS relation`, `dual adaptation`, `ALTERNATIVE edge`, `two realizations of one outline`, `source_relation_missing`
 - `I41` The source chain: the named manga sequence of one story — aka `source chain`, `chain map`, `SOURCE_CHAINS`, `named manga sequence`, `chain work`, `the reading chain map`, `I41`, `the label gate`, `I41 write gate`, `work label`
+- `I42` Discovery: unowned story relations are listed candidates — aka `discovery`, `the halo`, `halo`, `the candidate rule`, `candidate rule`, `halo_sequel_unclaimed`, `halo_series_unclaimed`, `halo_extra_standing`, `discovery_new_since_sitting`, `discovery_ruled_unbuilt`, `discovery_ruling_stale`, `DISCOVERY_RULINGS`, `OPEN_ENDED`, `open-ended I15`, `declared open-ended`, `parts are components`, `title continuity`, `the proposal never writes`, `we are the seed`, `seed first`, `discovery-stage`, `audit-discovery`, `the sitting recap`, `/discover`, `the discover sitting`
 
 **G — Gates & freshness (sources)** (49)
 - `G1` The flag rule: nothing suspicious auto-applies — aka `flag rule`, `the flag rule`, `the confirm queue`, `nothing suspicious ever auto-applies`
@@ -2123,13 +2124,13 @@ A staged AFL show whose served page title disagrees (titlesAgree) with the AFL s
 
 ### I15 · One continuous story = ONE series
 
-One continuous story is ONE canonical series even when AniList models it as several season entries. series_components records every AniList entry the series is built from, in season order with episode ranges in the series' continuous numbering; the aggregate is ours, the provenance explicit.
+One continuous story is ONE canonical series even when AniList models it as several season entries. series_components records every AniList entry the series is built from, in season order with episode ranges in the series' continuous numbering; the aggregate is ours, the provenance explicit. An I15 ruling may be DECLARED OPEN-ENDED (lib/rulings/discovery.ts#OPEN_ENDED — every new part joins as a component whatever its title: JoJo, Monogatari, Gintama); the discovery proposals (I42) read that declaration, never OVERRIDE_CHAINS presence.
 
 *Why:* Gintama, Fairy Tail, Sailor Moon 90s and JoJo are single stories that AniList and AFL split by run; the app must not.
 
 - ruled Sean 2026-08-22 (data-pipeline §8 / docs/franchise-rulings.md intro)
 - layer **writer**
-- enforced: [stitch.ts#OVERRIDE_CHAINS](../scripts/ingest/stitch.ts) · [lib/chain.ts#writeComponents](../scripts/ingest/lib/chain.ts)
+- enforced: [lib/rulings/discovery.ts#OPEN_ENDED](../scripts/ingest/lib/rulings/discovery.ts) · [stitch.ts#OVERRIDE_CHAINS](../scripts/ingest/stitch.ts) · [lib/chain.ts#writeComponents](../scripts/ingest/lib/chain.ts)
 - **audit: none — automation backlog**
 - witnesses: jojos-bizarre-adventure-tv, monogatari-series, sword-art-online
 - aliases: franchise baseline, one story = one series, one continuous story = ONE series
@@ -2488,6 +2489,20 @@ A franchise's READING CHAIN is the ordered sequence of named MANGA works (instru
 - witnesses: rosario-vampire, trigun, naruto-shippuden, gto-great-teacher-onizuka, cobra-the-animation
 - aliases: source chain, chain map, SOURCE_CHAINS, named manga sequence, chain work, the reading chain map, I41, the label gate, I41 write gate, work label
 - see: T26, T28, A12, A44, I40, I16
+
+### I42 · Discovery: unowned story relations are listed candidates
+
+Every unowned AniList ANIME entry that a story relation (SEQUEL / PREQUEL / SIDE_STORY / SPIN_OFF / ALTERNATIVE / PARENT / SAME_UNIVERSE / SUMMARY / OTHER) reaches from an entry the catalog owns (series.anilist_id or a component — the I21 set) is a LISTED CANDIDATE, derived from staging (the owned entries' relation edges, SEQUEL chains walked transitively through the candidate media discovery-stage.ts has staged) and the discovery ruling map — never from a source's page: the catalog used to stop where AFL's page stopped. Buckets by relation × format: halo_sequel_unclaimed (SEQUEL × TV / TV_SHORT / ONA, or an unknown format — the component-or-series question), halo_series_unclaimed (the other story relations × TV-shaped — a separate-series candidate), halo_extra_standing (story relations × MOVIE / OVA / SPECIAL, and SUMMARY × TV — I13 standalone by default, a capped listing, never a work-list); CHARACTER / COMPILATION / CONTAINS / SOURCE / ADAPTATION edges and MUSIC are noise by rule. Every candidate carries a PROPOSAL, and a proposal NEVER WRITES: (1) a ruling for the id itself (lib/rulings/discovery.ts — series / excluded / deferred; a component promotion is an OVERRIDE_CHAINS ruled extension, I27, and an announced season lands as a null-span component; an extra is RULED_STRUCTURE, I39, or a watch-order ruling, N7) is not a proposal; (2) an owner whose I15 ruling is DECLARED OPEN-ENDED (OPEN_ENDED — every new part joins as a component whatever its title: JoJo, Monogatari, Gintama) proposes `component`; (3) otherwise the signals — a season ORDINAL after an owner title → `component`; a DIFFERENT manga (I38's pick on the candidate's own staged edges) → `series`; a new subtitle or an unrelated title on the same or an unknown manga → `ambiguous`. Same manga is NO signal (naruto / naruto-shippuden, bleach / thousand-year-blood-war, ranking-of-kings / treasure-chest, dragon-ball-z / kai are ruled I16 splits on one manga each), and presence in OVERRIDE_CHAINS means NOTHING (that map is the declared CURRENT chain and holds tokyo-ghoul, cardcaptor-sakura and bleach-thousand-year-blood-war — ruled splits whose next sequel is a fork). Sean rules at a sitting (/discover: derive FROM DISK → the generated recap in chat, stored state first then the proposal with its signals → rule → dry-run → apply); discovery_new_since_sitting (a TV-shaped candidate first staged or structurally changed after the last logged sitting, or never staged) is the trigger to sit; discovery_ruled_unbuilt lists a `series` ruling whose entry is still unowned (the seed writer has not run) and discovery_ruling_stale a ruling the catalog contradicts (P24 — a listing, never an auto-delete). The MINT is an event step from /discover after the dry-run recap: no standard heal creates a series or a component, and discovery never creates an anchor (A1 / A44) or a row (G59).
+
+*Why:* Measured 2026-09-05 (scripts/ingest/research/discovery/PROPOSAL.md §0, zero fetches): 1058 unowned entries sat one hop from the catalog — 178 TV-shaped story relations, 55 announced or airing — and the catalog held 3 of the 56 manga-sourced shows airing that week: existence itself was borrowed from AFL. Shield Hero S2 finished in 2022 and was invisible; Re:Zero S3, DanMachi III, Apothecary Diaries S3, Black Clover S2, Dandadan S3, Frieren S3 and Oshi no Ko's final season likewise. Sean's value proposition (2026-09-05): no cohesive single source of truth for anime ↔ manga correspondence exists; mangaMapper seeds first, AFL / AFG attach later, every source id becomes OUR id (I2). Cursor's row-3 fix (2026-09-05): the first draft keyed 'any sequel → component' off OVERRIDE_CHAINS presence — refuted by that map's own members and by the precedence pair JoJo Steel Ball Run (190327: every JoJo component carries a new subtitle, so only the declared property proposes it right) vs Fairy Tail 100 Years Quest (139095: no declaration, a new subtitle, a different manga 103255 vs 30598 → `series`, correctly). The first live census run then caught the bare-number ordinal reading '100 Years Quest' as a season count — fixed before this record (a bare number is an ordinal only as the whole, short remainder). The three-valued proposal exists because one shape rules both ways: Shippuden / TYBW went `series`, arc-titled Demon Slayer seasons are components — so the honest proposal names the shape and Sean rules it.
+
+- ruled Sean 2026-09-05 (scripts/ingest/research/discovery/PROPOSAL.md v2.2 (§0 measured state, §1.5 the precedence, §4 promotion, §6 build order step 1, §9 process integration); Sean's go 2026-09-05 ('ok yes lets proceed'); commit 73cb597 (the sitting's opening save point))
+- layer **process**
+- enforced: [lib/discovery.ts#haloCandidates](../scripts/ingest/lib/discovery.ts) · [lib/discovery.ts#titleContinuity](../scripts/ingest/lib/discovery.ts) · [lib/discovery.ts#discoveryClasses](../scripts/ingest/lib/discovery.ts) · [lib/rulings/discovery.ts#DISCOVERY_RULINGS](../scripts/ingest/lib/rulings/discovery.ts) · [lib/rulings/discovery.ts#OPEN_ENDED](../scripts/ingest/lib/rulings/discovery.ts) · [lib/rulings/discovery.ts#SITTINGS](../scripts/ingest/lib/rulings/discovery.ts) · [discovery-stage.ts](../scripts/ingest/discovery-stage.ts) · [audit-discovery.ts#halo_sequel_unclaimed](../scripts/ingest/audit-discovery.ts) · [research/discovery/recap.ts](../scripts/ingest/research/discovery/recap.ts)
+- audit: `halo_sequel_unclaimed`, `halo_series_unclaimed`, `halo_extra_standing`, `discovery_new_since_sitting`, `discovery_ruled_unbuilt`, `discovery_ruling_stale`
+- witnesses: the-rising-of-the-shield-hero, re-zero-starting-life-in-another-world, the-apothecary-diaries, jojos-bizarre-adventure, fairy-tail
+- aliases: discovery, the halo, halo, the candidate rule, candidate rule, halo_sequel_unclaimed, halo_series_unclaimed, halo_extra_standing, discovery_new_since_sitting, discovery_ruled_unbuilt, discovery_ruling_stale, DISCOVERY_RULINGS, OPEN_ENDED, open-ended I15, declared open-ended, parts are components, title continuity, the proposal never writes, we are the seed, seed first, discovery-stage, audit-discovery, the sitting recap, /discover, the discover sitting
+- see: I15, I16, I13, I18, I19, I21, I2, I27, I38, I39, G59, G52, G58, G51, P6, P30, P5, P24
 
 ## G — Gates & freshness (sources)
 
@@ -4174,6 +4189,7 @@ When a clause of a rule is amended or retired, the EXACT replaced strings go in 
 
 - * Filler marker → `T16`
 - /add-rule → `P31`
+- /discover → `I42`
 - ±12 alignment → `N16`
 - ±2 gate → `I25`
 - ±2/lag finalize gate → `I25`
@@ -4335,6 +4351,7 @@ When a clause of a rule is amended or retired, the EXACT replaced strings go in 
 - asterisk model → `A43`
 - asterisk review workflow → `A43`
 - audit-afg-structure → `G30`
+- audit-discovery → `I42`
 - audits verify outcomes → `P5`
 - author-declaration discriminator → `T9`
 - authoritative sources write canonical → `G5`
@@ -4384,6 +4401,7 @@ When a clause of a rule is amended or retired, the EXACT replaced strings go in 
 - C4 rule → `C4`
 - cameo rule → `A2`
 - cameo/sliver borrowings → `A2`
+- candidate rule → `I42`
 - canon mixed filler only → `T27`
 - canon sliver → `T28`
 - canon-default → `T17`
@@ -4524,6 +4542,7 @@ When a clause of a rule is amended or retired, the EXACT replaced strings go in 
 - Dagashi S1 normalization → `A9`
 - data cycle → `P1`
 - DBS standing → `T30`
+- declared open-ended → `I42`
 - declared shifts only → `N21`
 - dedup guard → `I30`
 - deep rescan notes rule → `P23`
@@ -4540,6 +4559,12 @@ When a clause of a rule is amended or retired, the EXACT replaced strings go in 
 - derived-tier monotonicity → `A20`
 - direction of travel → `P30`
 - disagreement handling → `R17`
+- discovery → `I42`
+- discovery_new_since_sitting → `I42`
+- discovery_ruled_unbuilt → `I42`
+- discovery_ruling_stale → `I42`
+- DISCOVERY_RULINGS → `I42`
+- discovery-stage → `I42`
 - discredited sources → `R4`
 - dismissed_permanent → `G4`
 - display anchors at starts → `A13`
@@ -4688,6 +4713,10 @@ When a clause of a rule is amended or retired, the EXACT replaced strings go in 
 - GTO 20/21 lesson → `A3`
 - GTO lesson → `A3`
 - Haikyu ep-85 lesson → `N14`
+- halo → `I42`
+- halo_extra_standing → `I42`
+- halo_sequel_unclaimed → `I42`
+- halo_series_unclaimed → `I42`
 - hard invariant 1 → `P2`
 - hard invariant 2 → `P3`
 - hard invariant 3 → `P5`
@@ -4918,6 +4947,8 @@ When a clause of a rule is amended or retired, the EXACT replaced strings go in 
 - only ending → `T10`
 - only-ending class → `T10`
 - only-tie → `T26`
+- OPEN_ENDED → `I42`
+- open-ended I15 → `I42`
 - order-only components never count → `N4`
 - orphan anchor → `A42`
 - orphan records → `A42`
@@ -4954,6 +4985,7 @@ When a clause of a rule is amended or retired, the EXACT replaced strings go in 
 - parse_integrity (AFL) → `G6`
 - partial boundary tables never stand in as totals → `V4`
 - partial knowledge renders as partial → `A36`
+- parts are components → `I42`
 - per-source numbering spaces → `N12`
 - per-task scratchpad → `R22`
 - permanence locks → `P25`
@@ -5096,6 +5128,7 @@ When a clause of a rule is amended or retired, the EXACT replaced strings go in 
 - section envelope → `A36`
 - section header envelope → `A36`
 - sections never arcs → `T19`
+- seed first → `I42`
 - seed is a fact only → `I10`
 - seeded starts → `A10`
 - seiya +1 space witness → `V11`
@@ -5223,6 +5256,7 @@ When a clause of a rule is amended or retired, the EXACT replaced strings go in 
 - the adoption sitting → `T26`
 - the ambiguity rule → `I4`
 - the apply discipline → `P15`
+- the candidate rule → `I42`
 - the capture table → `P29`
 - the chain → `T26`
 - the confirm queue → `G1`
@@ -5230,20 +5264,24 @@ When a clause of a rule is amended or retired, the EXACT replaced strings go in 
 - the cycle → `P1`
 - the data cycle → `P1`
 - the DBS relation → `I40`
+- the discover sitting → `I42`
 - the flag rule → `G1`
 - the FotNS-57 test → `T28`
 - the four crons → `G47`
 - the governing rule → `P11`
+- the halo → `I42`
 - the L-P queue → `A46`
 - the label gate → `I41`
 - the mint rule → `G59`
 - the Naruto bug → `I36`
 - the parallel clause → `T26`
+- the proposal never writes → `I42`
 - the ranma lesson → `G26`
 - the reading chain map → `I41`
 - the reading edition → `N35`
 - the reference point (watch order) → `N32`
 - the refresh-anilist lesson → `G58`
+- the sitting recap → `I42`
 - the sliver clause → `T28`
 - the standing goal → `P30`
 - the START clause → `A18`
@@ -5257,6 +5295,7 @@ When a clause of a rule is amended or retired, the EXACT replaced strings go in 
 - ties escalate to research → `R2`
 - time budget → `G58`
 - timeline D → `T30`
+- title continuity → `I42`
 - title-alignment verification → `N21`
 - title-join rule → `R20`
 - title-token overlap gate → `V5`
@@ -5324,6 +5363,7 @@ When a clause of a rule is amended or retired, the EXACT replaced strings go in 
 - watch-order v2 unit rendering → `N32`
 - wave cap → `P12`
 - wave cap 6-8 → `P12`
+- we are the seed → `I42`
 - weight not kind → `T26`
 - weight-bearing tie → `T26`
 - weightless sliver → `T28`
@@ -5352,6 +5392,6 @@ When a clause of a rule is amended or retired, the EXACT replaced strings go in 
 
 ## Scoreboard
 
-- rules: 281 (live 266, planned 8, superseded 7)
+- rules: 282 (live 267, planned 8, superseded 7)
 - live data rules with no audit class (the automation backlog): 83
-- by layer: writer 148 · display 23 · both 26 · process 84
+- by layer: writer 148 · display 23 · both 26 · process 85

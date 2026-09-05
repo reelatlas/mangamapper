@@ -68,6 +68,7 @@ import { ENTRIES as E44 } from './applied/batch-20-waves-1-8';
 import { ENTRIES as E45 } from './applied/batch-20-waves-9-16';
 import { ENTRIES as E49 } from './applied/batch-21';
 import { ENTRIES as E50 } from './applied/batch-22';
+import { ENTRIES as E51 } from './discovery';
 
-export const ALL_RULINGS: RulingEntry[] = [...EAIR, ...ETIT, ...EORD, ...EWIN, ...ESTRUCT, ...ERET, ...ESRC, ...ESTAND, ...EANCH, ...EFMT, ...EPERM, ...E0, ...E1, ...E2, ...E3, ...E4, ...E5, ...E6, ...E7, ...E8, ...E9, ...E10, ...E11, ...E12, ...E13, ...E14, ...E15, ...E16, ...E17, ...E18, ...E19, ...E20, ...E21, ...E22, ...E23, ...E24, ...E25, ...E26, ...E27, ...E28, ...E29, ...E30, ...E31, ...E32, ...E33, ...E34, ...E35, ...E36, ...E37, ...E38, ...E39, ...E40, ...E41, ...E42, ...E43, ...E44, ...E45, ...E46, ...E47, ...E48, ...E49, ...E50];
+export const ALL_RULINGS: RulingEntry[] = [...EAIR, ...ETIT, ...EORD, ...EWIN, ...ESTRUCT, ...ERET, ...ESRC, ...ESTAND, ...EANCH, ...EFMT, ...EPERM, ...E0, ...E1, ...E2, ...E3, ...E4, ...E5, ...E6, ...E7, ...E8, ...E9, ...E10, ...E11, ...E12, ...E13, ...E14, ...E15, ...E16, ...E17, ...E18, ...E19, ...E20, ...E21, ...E22, ...E23, ...E24, ...E25, ...E26, ...E27, ...E28, ...E29, ...E30, ...E31, ...E32, ...E33, ...E34, ...E35, ...E36, ...E37, ...E38, ...E39, ...E40, ...E41, ...E42, ...E43, ...E44, ...E45, ...E46, ...E47, ...E48, ...E49, ...E50, ...E51];
 

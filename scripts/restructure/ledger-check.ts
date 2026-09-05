@@ -20,11 +20,11 @@ const warns: string[] = [];
 // ---- the set of audit classes that actually exist
 function auditClasses(): Set<string> {
   const set = new Set<string>();
-  for (const f of ['scripts/ingest/audit-ui-truth.ts', 'scripts/ingest/audit-manga-coverage.ts']) {
+  for (const f of ['scripts/ingest/audit-ui-truth.ts', 'scripts/ingest/audit-manga-coverage.ts', 'scripts/ingest/audit-discovery.ts']) {
     const src = readFileSync(join(ROOT, f), 'utf8');
     for (const m of src.matchAll(/classes\.([a-z_]+)/g)) set.add(m[1]);
     // object-literal keys of the `classes` map (some are only reached via classes[`mu_${result}`])
-    const lit = src.match(/const classes[^=]*=\s*\{([\s\S]*?)\n\s*\};/);
+    const lit = src.match(/const (?:classes|lines)[^=]*=\s*\{([\s\S]*?)\n\s*\};/);
     if (lit) for (const m of lit[1].matchAll(/^\s*([a-z_]+):/gm)) set.add(m[1]);
   }
   // audit-afg-structure reports by named arrays → afg:<snake_case>

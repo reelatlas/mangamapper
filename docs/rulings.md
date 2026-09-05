@@ -2,7 +2,7 @@
 
 > GENERATED from `scripts/ingest/lib/rulings/**` by `scripts/restructure/gen-rulings.ts` — do not edit by hand. A ruling is an INSTANCE of a rule (`docs/rules.md`); the map is the record, this is the index.
 
-- rulings: 2379 across 253 series/keys · by Sean: 885 · UNRECORDED reasons: 8 · with a retire condition: 93
+- rulings: 2382 across 253 series/keys · by Sean: 887 · UNRECORDED reasons: 8 · with a retire condition: 93
 
 ## Retire conditions (re-evaluate when…)
 
@@ -1401,13 +1401,14 @@
 | `N11` | {"drop":[53],"shifts":[]} | Queue-2 Group C demotion: Solid State Society is a FILM (movies are order-only unless community-numbered); AFL numbers it as 53, so the row drops — trailing, no shift. | Sean 2026-08-23 |  |
 | `T29` | {"position":52.5,"record":{"kind":"special","anilistId":1566}} | AniList 1566 format=SPECIAL, 108 min, 2006-09-01; our stored component kind for 1566 is also [special]. DISAGREEMENT: en-WP calls it 'a 2006 Japanese anime science fiction television film' and Sean's stored order-only ruling reasons from the movies rule ('is a FILM'). Kept as `special` so the AniList format and the stored component kind are not contradicted — see flags. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/1566, https://en.wikipedia.org/wiki/Ghost_in_the_Shell:_Stand_Alone_Complex_%E2%80%93_Solid_State_Society |  |
 
-### gintama (3)
+### gintama (4)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `A4` | {"episode":369,"field":"end_chapter"} | stored 704 counts the Jump GIGA chapters (699-704) that only THE FINAL movie adapts; the semi-final ep 369 adapts L693-696 (fandom fwd+reverse) — a finale anchors to what it adapts | session 2026-08-24 · scripts/ingest/research/batch17/out/gintama.json, scripts/ingest/apply-research-batch-17.ts, §12.42 |  |
 | `A18` | reorder regime (batch 17): Gintama adapts Lessons far out of publication order across its whole run — S1 shuffles vols 1-34 (ep 25 = L100 pulled ~60 chapters… | verdict-documented jumps: S1 shuffles vols 1-34 (ep 25 = L100 pulled ~60 chapters forward); Gintama' opens on post-timeskip L324-326 then rewinds; Gintama° interleaves the skipped L384-465 backlog; Porori-hen (329-341) is pure backlog slotted between Rakuyou and Silver Soul | session 2026-08-24 · scripts/ingest/research/batch17/out/gintama.json, scripts/ingest/research/batch17/out2/gintama-holes.json, scripts/ingest/apply-research-batch-17.ts, §12.42 |  |
 | `N7` | 126819 | A (high): Semi-Final 368-369, canon prelude to the finale film. | Sean 2026-08-23 |  |
+| `I15` | {"openEnded":true} | The 2026-08-22 franchise pass (clear consensus): Gintama = ONE series (~369 eps; AniList's title-per-run entries = seasons) — a new run joins as a component whatever its title. | session 2026-08-22 · docs/franchise-rulings.md "Final rulings" Gintama |  |
 
 ### girls-last-tour (3)
 
@@ -1745,11 +1746,12 @@
 |---|---|---|---|---|
 | `I17` | {"to":"it-wrong-try-pick-girls-dungeon","kind":"side_story"} | DanMachi main = ONE series; Sword Oratoria is the same events from another POV — side_story. | session 2026-08-22 · docs/franchise-rulings.md "DanMachi" |  |
 
-### jojos-bizarre-adventure (1)
+### jojos-bizarre-adventure (2)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `G53` | {"35":"2014-05-30","45":"2014-08-08"} | Batch 19 wave 2 lane B3 (ja-WP + en-WP / syoboi / fandom, 2+ sources per row; the contradictions verified R24; Sean ruled B3-7): ep 35: Ep 35 = Stardust Crusaders ep 9 'Yellow Temperance' / 黄の節制, first broadcast Tokyo MX 2014-05-30 24:30 (listed as 5月31日 / May 31 on ja-WP and en-WP, i.e. 2014-05-30 in thi \| ep 45: Ep 45 = SC ep 19 'Death Thirteen, Part 1' / 死神13 その1, first broadcast 2014-08-08 24:30 (ja-WP 8月9日, en-WP August 9 => 2014-08-08 stored convention). Stored 2014-08-28 is | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/jojos-bizarre-adventure.json, https://en.wikipedia.org/wiki/JoJo%27s_Bizarre_Adventure:_Stardust_Crusaders, https://ja.wikipedia.org/wiki/%E3%82%B8%E3%83%A7%E3%82%B8%E3%83%A7%E3%81%AE%E5%A5%87%E5%A6%99%E3%81%AA%E5%86%92%E9%99%BA_(%E3%83%86%E3%83%AC%E3%83%93%E3%82%A2%E3%83%8B%E3%83%A1) |  |
+| `I15` | {"openEnded":true} | Sean 2026-08-22: JoJo's Bizarre Adventure = ONE series, parts as clearly-labeled components. Every part carries its own subtitle (Stardust Crusaders, Diamond wa Kudakenai, Ougon no Kaze, Stone Ocean), so title continuity alone would propose each new part as a separate series — the declared open-ended property is what proposes Steel Ball Run (190327) as a component. OVERRIDE_CHAINS presence carries no such meaning (I42). | Sean 2026-08-22 · docs/franchise-rulings.md "Ruled by Sean 2026-08-22" item 1, scripts/ingest/research/discovery/PROPOSAL.md §1.5 |  |
 
 ### jojos-bizarre-adventure-tv (1)
 
@@ -2066,13 +2068,14 @@
 | `A3` | {"episode":37,"chapter":101,"volume":null,"source":"manual"} | S3 completes the manga (ch 101, vol 16) | session 2026-08-23 · scripts/ingest/apply-research-batch-5.ts |  |
 | `A43` | {"episodes":[12],"kind":"rearranged","chapters":"S1 pulls ch ~56 material early","asterisk_review":"pending (if unset)"} | endpoint ch 50 firm; interior S1 order differs from the manga. cbr + mangashed | session 2026-08-23 · scripts/ingest/apply-research-batch-5.ts |  |
 
-### monogatari-series (3)
+### monogatari-series (4)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `N3` | {"cap":100,"note":"community numbering excludes the 3 Second Season recaps (Sean 2026-08-24)"} | AniList's Second Season count includes 3 recaps the community numbering excludes (the recap rule, N8) — 100 episodes. | Sean 2026-08-24 |  |
 | `I24` | {"title":"Monogatari Series","ids":[5081,11597,15689,17074,20593,20918,21262,21520,21745,100815],"extras":[{"id":9260,"after":21520},{"id":21399,"after":2152… | Assisted-batch explicit chain under the franchise identity title (not the head season). Sean ruled Monogatari ONE series (unheld 2026-08-22) and that the Kizumonogatari films (9260, 21399, 21400) belong INSIDE Monogatari — in-flow order-only extras after Owarimonogatari (21520). | Sean 2026-08-22 |  |
 | `N7` | 100815 | A (high): Zoku Owarimonogatari = 97-102 under the one-series numbering (Sean: Monogatari is ONE series). | Sean 2026-08-23 |  |
+| `I15` | {"openEnded":true} | Sean 2026-08-22 (unheld with JoJo): Monogatari = ONE series with novel-season components (First / Second / Final / Off & Monster); a new novel season joins as a component whatever its title. | Sean 2026-08-22 · docs/franchise-rulings.md "Final rulings" Monogatari, scripts/ingest/lib/rulings/override-chains.ts monogatari-series |  |
 
 ### monogatari-series-second-season (1)
 

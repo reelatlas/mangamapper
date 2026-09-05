@@ -209,6 +209,19 @@ A canonical series is an aggregate we own, with explicit provenance:
   from a head entry; refresh never touches stitched structure.
 - `series_relations` keeps AniList's relation vocabulary verbatim for future
   linking and recommendations.
+- **Discovery (`I42`, 2026-09-05)** — the catalog no longer waits for a
+  source to say a season or a series exists: every unowned AniList entry a
+  story relation reaches from an owned entry is a LISTED candidate, derived
+  from staging (`lib/discovery.ts`; `discovery-stage.ts` stages the candidate
+  media so the signals can read a different manga; `audit-discovery.ts` is
+  the census file) and the discovery ruling map (`lib/rulings/discovery.ts`:
+  declared open-ended `I15` rulings, candidate dispositions, the sitting
+  log). A candidate carries a PROPOSAL — component / series / ambiguous /
+  standalone — that never writes; Sean rules at a sitting whose recap is
+  generated (`research/discovery/recap.ts`). Promotion reuses the machine:
+  a component is an `OVERRIDE_CHAINS` ruled extension, a series is the seed
+  writer (planned, `PROPOSAL.md` §4), an extra is `I39` / `N7`. The design:
+  `scripts/ingest/research/discovery/PROPOSAL.md`.
 - `series_scopes` records which range of a shared manga each series owns;
   an adjoining sibling scope is a continuation handoff.
 - `series_external_ids` keys every source id to our slug; `afl_slug` is a
