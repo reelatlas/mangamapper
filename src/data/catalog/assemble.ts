@@ -44,10 +44,12 @@ export type SeriesRow = {
   mapping_mode: 'chapter' | 'loose';
   /** I43 — the franchise umbrella (null = a franchise of one) */
   franchise_id?: string | null;
+  /** P39 — 'staged' = hidden from list and search until its rows are classified */
+  visibility?: 'public' | 'staged';
 };
 
 export const SERIES_COLS =
-  'id, title, title_native, cover_url, status, source_type, source_relation, manga_status, manga_anilist_id, aired_episodes, total_episodes, total_volumes, total_chapters, manga_start_volume, manga_start_chapter, popularity, genres, synopsis_html, external_links, search_text, latest_known_chapters, mapping_mode, franchise_id';
+  'id, title, title_native, cover_url, status, source_type, source_relation, manga_status, manga_anilist_id, aired_episodes, total_episodes, total_volumes, total_chapters, manga_start_volume, manga_start_chapter, popularity, genres, synopsis_html, external_links, search_text, latest_known_chapters, mapping_mode, franchise_id, visibility';
 
 export type EpisodeRow = { number: number; title: string; type: string; air_date: string | null; format?: string | null };
 export type AnchorRow = { episode: number; volume: number | null; chapter: number; start_chapter: number | null };
@@ -216,6 +218,7 @@ export const toAnimeSeries = (
   // audit). The EFFECTIVE total for tail math lives in buildMapping.
   mappingMode: row.mapping_mode,
   franchiseId: row.franchise_id ?? null,
+  visibility: row.visibility ?? 'public',
   totalChapters:
     row.total_chapters != null &&
     row.latest_known_chapters != null &&

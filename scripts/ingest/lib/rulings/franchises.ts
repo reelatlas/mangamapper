@@ -896,6 +896,43 @@ export const ENTRIES: RulingEntry<FranchiseMembership>[] = [
     ruledOn: '2026-09-05',
     cite: [BOOT],
   },
+  // ── the first franchises created by a discovery sitting, not the bootstrap (2026-09-05, witnesses #2 / #3) ──
+  {
+    seriesId: 'trigun',
+    ruleId: 'I43',
+    value: { franchise: 'trigun', title: 'Trigun', base: true },
+    reason: 'Trigun (1998) and TRIGUN STAMPEDE (2023, with Stargaze 2026; seeded 2026-09-05 as an alternative telling of the same manga) — one IP.',
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/PROPOSAL.md §9 row 4'],
+  },
+  {
+    seriesId: 'trigun-stampede',
+    ruleId: 'I43',
+    value: { franchise: 'trigun' },
+    reason: 'The seeded alternative telling (anilist 151040 + 163144) belongs to the trigun IP; the membership is ruled with the seed so the row lands in its franchise at creation.',
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/PROPOSAL.md §9 row 4'],
+  },
+  {
+    seriesId: 'konosuba-gods-blessing-on-this-wonderful-world',
+    ruleId: 'I43',
+    value: { franchise: 'konosuba', title: 'KonoSuba', base: true },
+    reason: "KonoSuba (2016-2024, three seasons) and the Megumin spin-off An Explosion on This Wonderful World! (2023, seeded 2026-09-05) — one IP.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/PROPOSAL.md §9 row 4'],
+  },
+  {
+    seriesId: 'konosuba-an-explosion-on-this-wonderful-world',
+    ruleId: 'I43',
+    value: { franchise: 'konosuba' },
+    reason: 'The seeded spin-off (anilist 150075) belongs to the konosuba IP; ruled with the seed.',
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/PROPOSAL.md §9 row 4'],
+  },
 ];
 
 export type Franchise = { title: string; titleNative?: string; note?: string; base: string | null; members: string[] };

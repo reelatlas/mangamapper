@@ -140,7 +140,7 @@
 - `N34` Episode totals derive, then floor, then cap — aka `episode totals derivation`
 - `N35` Ruled chapter space: a proven numbering beats AniList totals — aka `ruled chapter space`, `chapter space override`, `CHAPTER_SPACE_OVERRIDES`, `ruledChapterSpace`, `totals re-base`, `propagated scalar`, `the 260-that-is-255 class`, `sourceShifts`, `source chapter shift`, `chapter shift`, `toRuledChapter`, `printed numbering`, `the reading edition`
 
-**I — Identity, franchise & structure** (43)
+**I — Identity, franchise & structure** (44)
 - `I1` Our slug is the identity — aka `identity`, `our slug is identity`, `canonical identity is ours`, `own-slug identity`
 - `I2` Identity registry: every external id maps INTO our id — aka `identity registry`, `registerIds`, `ID COLLISION`, `series_external_ids`
 - `I3` AFG↔canonical registration by evidence strength — aka `registration tiers`, `AFG match tiers`, `identity-first, flag-first`
@@ -184,6 +184,7 @@
 - `I41` The source chain: the named manga sequence of one story — aka `source chain`, `chain map`, `SOURCE_CHAINS`, `named manga sequence`, `chain work`, `the reading chain map`, `I41`, `the label gate`, `I41 write gate`, `work label`
 - `I42` Discovery: unowned story relations are listed candidates — aka `discovery`, `the halo`, `halo`, `the candidate rule`, `candidate rule`, `halo_sequel_unclaimed`, `halo_series_unclaimed`, `halo_extra_standing`, `discovery_new_since_sitting`, `discovery_ruled_unbuilt`, `discovery_ruling_stale`, `DISCOVERY_RULINGS`, `OPEN_ENDED`, `open-ended I15`, `declared open-ended`, `parts are components`, `title continuity`, `the proposal never writes`, `we are the seed`, `seed first`, `discovery-stage`, `audit-discovery`, `the sitting recap`, `/discover`, `the discover sitting`
 - `I43` The franchise umbrella: ruled membership, never a merge — aka `franchise`, `franchises`, `the franchise umbrella`, `franchise umbrella`, `the umbrella`, `IP`, `franchise layer`, `franchise membership`, `FRANCHISES`, `FRANCHISE_OF`, `OWN_IP`, `series_without_franchise`, `franchise_id`, `assertFranchises`, `list by franchise`, `continuity`, `the franchise bootstrap`, `franchise sitting`, `the signing table`, `own IP`, `franchise of one`
+- `I44` Adoption: a page attaches to an existing series by identity — aka `adoption`, `the adoption gate`, `adoption gate`, `identity-first`, `identity first`, `adoptByIdentity`, `adoption_held`, `a page adopts a series`, `AFL attaches later`, `seed first, AFL attaches later`, `the ID COLLISION lesson`
 
 **G — Gates & freshness (sources)** (49)
 - `G1` The flag rule: nothing suspicious auto-applies — aka `flag rule`, `the flag rule`, `the confirm queue`, `nothing suspicious ever auto-applies`
@@ -281,7 +282,7 @@
 - `R30` Verdicts cite the rule ids they applied (planned) *(planned)* — aka `rules_applied`, `rules_applied[]`, `verdict cites rule ids`
 - `R31` The PROTOCOL is pinned for an in-flight batch (planned) *(planned)* — aka `PROTOCOL pin`, `protocol pinned`, `pinned protocol`
 
-**P — Process & pipeline** (34)
+**P — Process & pipeline** (35)
 - `P1` The data cycle, seven steps run in order — aka `the data cycle`, `data cycle`, `the cycle`
 - `P2` Rules live in shared lib code, never inline at a call site — aka `invariant 1`, `hard invariant 1`, `rules live in lib`, `every-writer rule`
 - `P3` Any lib/ change → rebuild and deploy all four edge functions — aka `invariant 2`, `hard invariant 2`, `lib → four edges`, `lib → edges`, `missed edge deploy`
@@ -316,6 +317,7 @@
 - `P36` Cross-model check the frames, not just the data — aka `cross-model check the frames`, `frame check after T4.0`, `principle 8`
 - `P37` Episode-level display reads only the hydrated series — aka `metadata contract`, `card-hydration rule`, `hydration contract`, `hydrated series only`
 - `P38` Retired wording is a ledger field the gate greps — aka `retired phrases`, `retiredPhrases`, `retired wording`, `retired-phrase register`, `stale clause check`, `note-vs-row check`
+- `P39` Visibility: list only series with classified types — aka `visibility`, `series visibility`, `staged`, `staged series`, `series_staged`, `PUBLISHED`, `deriveVisibility`, `assertVisibility`, `hidden until classified`, `staged on seed`, `public by classifier`
 
 ## A — Anchors & position
 
@@ -1966,8 +1968,8 @@ Every external id (anilist, mal, afl, afg, mu) maps into series.id through serie
 
 - ruled Sean 2026-08-22 (data-pipeline §6 Identity / §10 row Identity registry)
 - layer **writer**
-- enforced: [lib/resolve.ts#registerIds](../scripts/ingest/lib/resolve.ts)
-- **audit: none — automation backlog**
+- enforced: [lib/adoption.ts#adoptByIdentity](../scripts/ingest/lib/adoption.ts) · [audit-ui-truth.ts#identity_registry_gap](../scripts/ingest/audit-ui-truth.ts) · [lib/resolve.ts#registerIds](../scripts/ingest/lib/resolve.ts)
+- audit: `identity_registry_gap`
 - aliases: identity registry, registerIds, ID COLLISION, series_external_ids
 - see: I1, I3, I4, I5, inline upkeep
 
@@ -2500,7 +2502,7 @@ Every unowned AniList ANIME entry that a story relation (SEQUEL / PREQUEL / SIDE
 
 - ruled Sean 2026-09-05 (scripts/ingest/research/discovery/PROPOSAL.md v2.2 (§0 measured state, §1.5 the precedence, §4 promotion, §6 build order step 1, §9 process integration); Sean's go 2026-09-05 ('ok yes lets proceed'); commit 73cb597 (the sitting's opening save point))
 - layer **process**
-- enforced: [lib/discovery.ts#haloCandidates](../scripts/ingest/lib/discovery.ts) · [lib/discovery.ts#titleContinuity](../scripts/ingest/lib/discovery.ts) · [lib/discovery.ts#discoveryClasses](../scripts/ingest/lib/discovery.ts) · [lib/rulings/discovery.ts#DISCOVERY_RULINGS](../scripts/ingest/lib/rulings/discovery.ts) · [lib/rulings/discovery.ts#OPEN_ENDED](../scripts/ingest/lib/rulings/discovery.ts) · [lib/rulings/discovery.ts#SITTINGS](../scripts/ingest/lib/rulings/discovery.ts) · [discovery-stage.ts](../scripts/ingest/discovery-stage.ts) · [audit-discovery.ts#halo_sequel_unclaimed](../scripts/ingest/audit-discovery.ts) · [research/discovery/recap.ts](../scripts/ingest/research/discovery/recap.ts)
+- enforced: [lib/discovery.ts#haloCandidates](../scripts/ingest/lib/discovery.ts) · [lib/discovery.ts#titleContinuity](../scripts/ingest/lib/discovery.ts) · [lib/discovery.ts#discoveryClasses](../scripts/ingest/lib/discovery.ts) · [lib/rulings/discovery.ts#DISCOVERY_RULINGS](../scripts/ingest/lib/rulings/discovery.ts) · [lib/rulings/discovery.ts#OPEN_ENDED](../scripts/ingest/lib/rulings/discovery.ts) · [lib/rulings/discovery.ts#SITTINGS](../scripts/ingest/lib/rulings/discovery.ts) · [discovery-stage.ts](../scripts/ingest/discovery-stage.ts) · [audit-discovery.ts#halo_sequel_unclaimed](../scripts/ingest/audit-discovery.ts) · [research/discovery/recap.ts](../scripts/ingest/research/discovery/recap.ts) · [lib/seed.ts#seedSeries](../scripts/ingest/lib/seed.ts) · [seed.ts](../scripts/ingest/seed.ts)
 - audit: `halo_sequel_unclaimed`, `halo_series_unclaimed`, `halo_extra_standing`, `discovery_new_since_sitting`, `discovery_ruled_unbuilt`, `discovery_ruling_stale`
 - witnesses: the-rising-of-the-shield-hero, re-zero-starting-life-in-another-world, the-apothecary-diaries, jojos-bizarre-adventure, fairy-tail
 - aliases: discovery, the halo, halo, the candidate rule, candidate rule, halo_sequel_unclaimed, halo_series_unclaimed, halo_extra_standing, discovery_new_since_sitting, discovery_ruled_unbuilt, discovery_ruling_stale, DISCOVERY_RULINGS, OPEN_ENDED, open-ended I15, declared open-ended, parts are components, title continuity, the proposal never writes, we are the seed, seed first, discovery-stage, audit-discovery, the sitting recap, /discover, the discover sitting
@@ -2519,6 +2521,20 @@ A FRANCHISE is the top of the hierarchy — the IP that groups canonical series 
 - witnesses: yu-gi-oh, dragon-ball, fate-stay-night, digimon-digital-monsters, bleach, fire-force, tokyo-ghoul
 - aliases: franchise, franchises, the franchise umbrella, franchise umbrella, the umbrella, IP, franchise layer, franchise membership, FRANCHISES, FRANCHISE_OF, OWN_IP, series_without_franchise, franchise_id, assertFranchises, list by franchise, continuity, the franchise bootstrap, franchise sitting, the signing table, own IP, franchise of one
 - see: I15, I16, I17, I21, I42, I19, I39, I13, I1, P25, P24, P30, P38
+
+### I44 · Adoption: a page attaches to an existing series by identity
+
+A source page for a series the catalog already holds ATTACHES to that series — it never mints a second one. resolveSeries looks the page's AniList id up in the identity registry (I2) BEFORE any slug is minted: a series that already owns the id and carries no afl_slug (seeded — I42 / G52 — or AFG-only) is ADOPTED behind the gate; the page's slug becomes its afl_slug, the afl id is registered, AFL's rows upsert with minted_by 'afl' re-stamping the wiki rows in place (G57: the source that carries a number owns it), and AFL's types take over under T4 precedence — everything AFL does not carry survives. THE GATE needs TWO signals (I3's rule for AFG registration): the identity match AND span agreement — AFL's classified max within ±2 of the series' episode max, or within ±2 of a component boundary (AFL charting S1 of a series held as S1 + S2 is lag, I26); a series with no rows adopts on identity alone. Anything else is HELD — the flag `adoption_held` (its own kind), the census class adoption_held — for a ruling, and a series' rows are never overwritten on a title match alone. A second AFL page for a series another page already registered is I12's duplicate question (match_ambiguous), never a second series. AFG already adopts through audit-afg-structure --register (I3); this is the AFL side of the same rule.
+
+*Why:* Discovery step 3 (2026-09-05): before this, resolveSeries found a series by afl_slug ONLY and otherwise slugified a new one, so an AFL page arriving for a seeded or AFG-only series threw ID COLLISION in registerIds and would have broken the hourly cron for that slug — every seeded show AFL later charted. Both Cursor's notes and the first design draft assumed the attach path existed (PROPOSAL.md v2 §1.1 found it did not). The span gate is Cursor's closing note: an id match is not proof the page is the same show — the ladder's title tiers have matched namesakes before (G55). The ingest_flags kind check was widened in the same migration: it still listed the five original kinds, so airdate_withheld and source_kind_unknown could never insert either.
+
+- ruled Sean 2026-09-05 (scripts/ingest/research/discovery/PROPOSAL.md v2.2 §1.1 (the blocker) and §9 go-list; Sean's go 2026-09-05; Cursor's closing note on adoption)
+- layer **writer**
+- enforced: [lib/adoption.ts#adoptionVerdict](../scripts/ingest/lib/adoption.ts) · [lib/adoption.ts#adoptByIdentity](../scripts/ingest/lib/adoption.ts) · [lib/resolve.ts#adoptByIdentity](../scripts/ingest/lib/resolve.ts) · [audit-ui-truth.ts#adoption_held](../scripts/ingest/audit-ui-truth.ts) · [supabase/migrations/20260905130000_flag_kinds_visibility.sql](../supabase/migrations/20260905130000_flag_kinds_visibility.sql)
+- audit: `adoption_held`, `identity_registry_gap`
+- witnesses: the-rising-of-the-shield-hero, trigun, konosuba-gods-blessing-on-this-wonderful-world
+- aliases: adoption, the adoption gate, adoption gate, identity-first, identity first, adoptByIdentity, adoption_held, a page adopts a series, AFL attaches later, seed first, AFL attaches later, the ID COLLISION lesson
+- see: I2, I3, I12, I26, G55, G57, T4, I42, G52, P39
 
 ## G — Gates & freshness (sources)
 
@@ -3075,16 +3091,17 @@ A staging table stores every pull's complete raw payload — including raw HTML 
 
 ### G52 · Canon-tier creation: chartless manga shows still enter
 
-A manga-sourced show with no per-episode chart anywhere (~0% filler, so AFL never built a page and AFG has no filler chart) still enters the catalog: AniList supplies structure and totals through the ownership-guarded chain walk, episode typing defaults to canon through the spans-gap rule (no episode rows are fabricated), AFG's continua table supplies the end-frontier anchor where present, and MU picks the series up on its universal cycle. Anime-original holds have no manga side and are deferred.
+A manga-sourced show with no per-episode chart anywhere (~0% filler, so AFL never built a page and AFG has no filler chart) still enters the catalog: AniList supplies structure and totals through the ownership-guarded chain walk, episode typing defaults to canon through the spans-gap rule (no episode rows are fabricated), AFG's continua table supplies the end-frontier anchor where present, and MU picks the series up on its universal cycle. Anime-original holds have no manga side and are deferred. Since 2026-09-05 the creation path is THE SEED WRITER (lib/seed.ts#seedSeries, scripts/ingest/seed.ts — run from /discover after the dry-run recap, never from a standard heal): a `series` ruling in lib/rulings/discovery.ts is the durable provenance (I42), the walk / aggregate / planner are the ones every chain writer uses, and a seeded series lands STAGED (P39) until a classifier registers or a ruling publishes it.
 
-*Why:* Ruled YES 2026-08-23 (§12.19c2) for SHY, Cells at Work ×2, Ranking of Kings, Chrono Crusade, Orient, Shaman King 2001; confirmed a standing rule 2026-08-25 (DRIFT-LIST A-9). ENFORCEMENT UNCERTAIN: canon-tier.ts exists as a re-runnable ruling record with a fixed TARGETS list — whether it is the rostered creation path for NEW chartless shows is for the system census to find, never rebuilt from the log.
+*Why:* Ruled YES 2026-08-23 (§12.19c2) for SHY, Cells at Work ×2, Ranking of Kings, Chrono Crusade, Orient, Shaman King 2001; confirmed a standing rule 2026-08-25 (DRIFT-LIST A-9). The 2026-08-23 script (history/canon-tier.ts) was a fixed TARGETS list; the seed writer is its rostered form (2026-09-05, discovery step 3).
 
 - ruled Sean 2026-08-23 (data-pipeline §12.19c2; docs/restructure/DRIFT-LIST.md §A A-9)
 - layer **writer**
-- enforced: [history/canon-tier.ts](../scripts/ingest/history/canon-tier.ts)
+- enforced: [lib/seed.ts#seedSeries](../scripts/ingest/lib/seed.ts) · [seed.ts](../scripts/ingest/seed.ts) · [history/canon-tier.ts](../scripts/ingest/history/canon-tier.ts)
 - audit: `pending_no_canon`, `title_incomplete`
 - witnesses: shy, cells-at-work, ranking-of-kings, chrono-crusade, orient, shaman-king-2001
 - aliases: canon-tier creation, canon-tier, A-9
+- retired wording (P38): “whether it is the rostered creation path for NEW chartless shows is for the system census to find”
 - see: G11, G12, G22, G39, base-type padding, ownership guard
 
 ### G53 · Ruled air dates: AIR_DATE_OVERRIDES, applied at every write
@@ -4201,6 +4218,20 @@ When a clause of a rule is amended or retired, the EXACT replaced strings go in 
 - aliases: retired phrases, retiredPhrases, retired wording, retired-phrase register, stale clause check, note-vs-row check
 - see: P21, P23, P29, P31, A44, T28, C5
 
+### P39 · Visibility: list only series with classified types
+
+series.visibility ∈ public | staged is DERIVED (lib/rulings/visibility.ts#deriveVisibility), never hand-set: PUBLIC when a CLASSIFIER typed the rows — an afl or afg registration, a T6 pin on the series (EPISODE_TYPE_OVERRIDES: research / Sean typed it), a ruled manual grid (MINTED_GRIDS, G59 path C) — or a PUBLISHED ruling names the series (the per-row provenance column rendering a default row as an honest dash is the eventual case); else STAGED — reachable by id (the honest dash renders), absent from the app's list and search (supabaseSource#list / #search filter on it). A seeded series (I42 / G52) is therefore staged at creation; an adoption (I44) publishes it on the next assert. assert-overrides#assertVisibility mirrors the derivation; a stored value that disagrees is a ruling_violation; series_staged lists what is hidden. P6's 'hidden' is a sanctioned degrade — a wiki-minted grid typed by the canon-tier default is an honest census queue (type_default_unclassified) but a claim on a browse page.
+
+*Why:* Discovery step 3 (2026-09-05): the app's list() reads every series row, so the first seeded series would have been public the moment it existed with default-typed rows — Cursor: 'a staged visibility column is required, not optional'; PROPOSAL.md v2.2 §1.7 / §9 row 5. The first live run staged six existing entries: four typed by ruling (cardcaptor-sakura-clear-card, ranking-of-kings-the-treasure-chest-of-courage, kinnikuman — T6 pins; shounan-junai-gumi — a ruled grid), which is why pins and grids count as classifiers, and two carrying all-canon defaults with no classifier at all (elemental-gelade, city-hunter — AFL index slugs whose pages never staged), which stay staged as the honest outcome; the witness seeds derive staged at creation.
+
+- ruled Sean 2026-09-05 (scripts/ingest/research/discovery/PROPOSAL.md v2.2 §1.7 and §9 go-list row 5; Sean's go 2026-09-05)
+- layer **both**
+- enforced: [lib/rulings/visibility.ts#deriveVisibility](../scripts/ingest/lib/rulings/visibility.ts) · [lib/rulings/visibility.ts#PUBLISHED](../scripts/ingest/lib/rulings/visibility.ts) · [assert-overrides.ts#assertVisibility](../scripts/ingest/assert-overrides.ts) · [audit-ui-truth.ts#series_staged](../scripts/ingest/audit-ui-truth.ts) · [src/data/catalog/supabaseSource.ts](../src/data/catalog/supabaseSource.ts) · [lib/seed.ts#seedSeries](../scripts/ingest/lib/seed.ts) · [supabase/migrations/20260905130000_flag_kinds_visibility.sql](../supabase/migrations/20260905130000_flag_kinds_visibility.sql)
+- audit: `series_staged`, `ruling_violation`
+- witnesses: elemental-gelade, city-hunter, cardcaptor-sakura-clear-card, shounan-junai-gumi, kinnikuman
+- aliases: visibility, series visibility, staged, staged series, series_staged, PUBLISHED, deriveVisibility, assertVisibility, hidden until classified, staged on seed, public by classifier
+- see: P6, I42, G52, I44, G59, T6, P37
+
 ## Alias index
 
 - * Filler marker → `T16`
@@ -4217,6 +4248,7 @@ When a clause of a rule is amended or retired, the EXACT replaced strings go in 
 - 40-chapter band → `C8`
 - 6–8 wave cap → `P12`
 - a licence is not adoption → `T26`
+- a page adopts a series → `I44`
 - a wave is the unit of loss → `P12`
 - a writer deletes only rows it minted → `G57`
 - A-11 → `G54`
@@ -4243,9 +4275,13 @@ When a clause of a rule is amended or retired, the EXACT replaced strings go in 
 - acknowledged approximation → `A7`
 - add-rule → `P31`
 - add-rule sequence → `P31`
+- adoptByIdentity → `I44`
 - adopted → `T26`
 - adopted annotation → `T26`
 - adopted basis → `T26`
+- adoption → `I44`
+- adoption gate → `I44`
+- adoption_held → `I44`
 - AFG "* Filler" title-marker rule → `T16`
 - AFG alignment gate → `N16`
 - AFG as story-flow reference → `I20`
@@ -4267,6 +4303,7 @@ When a clause of a rule is amended or retired, the EXACT replaced strings go in 
 - afg-extend → `I29`
 - AFL alias corruption → `G8`
 - AFL anime_canon mapping → `T27`
+- AFL attaches later → `I44`
 - AFL class map → `T1`
 - AFL has nothing → `G59`
 - AFL is the type authority → `T4`
@@ -4365,6 +4402,7 @@ When a clause of a rule is amended or retired, the EXACT replaced strings go in 
 - as-stored rendering → `A19`
 - assert-type-overrides → `T6`
 - assertFranchises → `I43`
+- assertVisibility → `P39`
 - asterisk model → `A43`
 - asterisk review workflow → `A43`
 - audit-afg-structure → `G30`
@@ -4575,6 +4613,7 @@ When a clause of a rule is amended or retired, the EXACT replaced strings go in 
 - derive guard → `A15`
 - derived start fallback → `A15`
 - derived-tier monotonicity → `A20`
+- deriveVisibility → `P39`
 - direction of travel → `P30`
 - disagreement handling → `R17`
 - discovery → `I42`
@@ -4768,6 +4807,7 @@ When a clause of a rule is amended or retired, the EXACT replaced strings go in 
 - held dispatch → `P13`
 - held verdict files → `P16`
 - HELD_FILES → `P16`
+- hidden until classified → `P39`
 - high/medium → `R16`
 - hikaru ep-75 wipe → `P8`
 - hikaru lesson → `P8`
@@ -4789,9 +4829,11 @@ When a clause of a rule is amended or retired, the EXACT replaced strings go in 
 - id/title stable → `I28`
 - id/title/afl_slug never change → `I28`
 - identity → `I1`
+- identity first → `I44`
 - identity gate → `G55`
 - identity guard → `G23`
 - identity registry → `I2`
+- identity-first → `I44`
 - identity-first, flag-first → `I3`
 - in-flow extras stay in → `I19`
 - in-flow movies/OVAs → `I19`
@@ -5046,6 +5088,8 @@ When a clause of a rule is amended or retired, the EXACT replaced strings go in 
 - PROTOCOL pin → `R31`
 - protocol pinned → `R31`
 - protocol preamble → `R21`
+- public by classifier → `P39`
+- PUBLISHED → `P39`
 - published-volume stand-in completeness → `V4`
 - publishedVolumes → `V4`
 - Queue 3 LN ruling → `T24`
@@ -5161,14 +5205,17 @@ When a clause of a rule is amended or retired, the EXACT replaced strings go in 
 - section header envelope → `A36`
 - sections never arcs → `T19`
 - seed first → `I42`
+- seed first, AFL attaches later → `I44`
 - seed is a fact only → `I10`
 - seeded starts → `A10`
 - seiya +1 space witness → `V11`
+- series visibility → `P39`
 - series window → `G55`
 - series_arcs → `A46`
 - series_external_ids → `I2`
 - series_relations vocabulary → `I17`
 - series_scopes → `I36`
+- series_staged → `P39`
 - series_without_franchise → `I43`
 - series_without_source_kind → `T25`
 - series-window gate → `G55`
@@ -5231,6 +5278,9 @@ When a clause of a rule is amended or retired, the EXACT replaced strings go in 
 - sparse-classification hold → `G12`
 - spike filter → `A20`
 - spinoff/bonus labeling → `N30`
+- staged → `P39`
+- staged on seed → `P39`
+- staged series → `P39`
 - staging freshness → `G28`
 - staging hashes make re-runs no-ops → `G9`
 - staging is greedy → `G51`
@@ -5286,6 +5336,7 @@ When a clause of a rule is amended or retired, the EXACT replaced strings go in 
 - the 260-that-is-255 class → `N35`
 - the 5D 145 lesson → `G57`
 - the A10 twin → `A47`
+- the adoption gate → `I44`
 - the adoption sitting → `T26`
 - the ambiguity rule → `I4`
 - the apply discipline → `P15`
@@ -5305,6 +5356,7 @@ When a clause of a rule is amended or retired, the EXACT replaced strings go in 
 - the franchise umbrella → `I43`
 - the governing rule → `P11`
 - the halo → `I42`
+- the ID COLLISION lesson → `I44`
 - the L-P queue → `A46`
 - the label gate → `I41`
 - the mint rule → `G59`
@@ -5383,6 +5435,7 @@ When a clause of a rule is amended or retired, the EXACT replaced strings go in 
 - verify pass → `R23`
 - verify pool → `R23`
 - verify-after-adjust ruling → `P19`
+- visibility → `P39`
 - visual novel source → `T25`
 - volatile fields → `G58`
 - volume = END's volume → `V10`
@@ -5429,6 +5482,6 @@ When a clause of a rule is amended or retired, the EXACT replaced strings go in 
 
 ## Scoreboard
 
-- rules: 283 (live 268, planned 8, superseded 7)
-- live data rules with no audit class (the automation backlog): 83
-- by layer: writer 148 · display 23 · both 27 · process 85
+- rules: 285 (live 270, planned 8, superseded 7)
+- live data rules with no audit class (the automation backlog): 82
+- by layer: writer 149 · display 23 · both 28 · process 85

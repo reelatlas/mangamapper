@@ -218,6 +218,21 @@ A canonical series is an aggregate we own, with explicit provenance:
   `sequel` + `side_story`, remakes as cross-links, seasons as components) are
   derived, never stored. The app reads `franchise_id`; the grouping UI is the
   UI pass.
+- **Adoption (`I44`, 2026-09-05)** — a source page for a series the catalog
+  already holds attaches to it by identity, never mints a second one:
+  `resolveSeries` reads the registry before slugifying, and the page adopts a
+  seeded / AFG-only series behind the span gate (`lib/adoption.ts`; a held
+  adoption is the `adoption_held` flag and class).
+- **The seed writer (`G52` rostered, 2026-09-05)** — `lib/seed.ts` creates a
+  series from a `series` ruling in `lib/rulings/discovery.ts`: identity, the
+  chain walk under the ownership guard, aggregate, components through the
+  planner, the franchise; STAGED at creation (`P39`); no rows (G59's writers),
+  no anchors. `scripts/ingest/seed.ts` runs it — from `/discover` only, after
+  the dry-run recap (the I42 mint rule).
+- **Visibility (`P39`, 2026-09-05)** — `series.visibility` is derived: public
+  when a classifier typed the rows (an AFL / AFG registration, a T6 pin, a
+  ruled grid) or a PUBLISHED ruling; else staged — reachable by id, absent
+  from list and search. Mirrored by the healer; `series_staged` lists it.
 - **Discovery (`I42`, 2026-09-05)** — the catalog no longer waits for a
   source to say a season or a series exists: every unowned AniList entry a
   story relation reaches from an owned entry is a LISTED candidate, derived

@@ -40,9 +40,10 @@ import { annotationProblem } from './lib/annotations';
 import { loadAllEpisodeTies, sideSourceStandingProblem } from './lib/side-source';
 import { REVIEWED_NUMBERED_SPECIALS } from './lib/rulings/reviewed-specials';
 import { FRANCHISES, FRANCHISE_OF, OWN_IP } from './lib/rulings/franchises';
+import { deriveVisibility } from './lib/rulings/visibility';
 
 async function main() {
-  const series = await selectAll<any>('series', 'id, afl_slug, anilist_id, source_type, source_relation, manga_status, status, start_date, end_date, aired_episodes, total_episodes, total_chapters, total_volumes, latest_known_chapters, manga_anilist_id, manga_start_chapter, mapping_mode, asterisk_review, franchise_id');
+  const series = await selectAll<any>('series', 'id, afl_slug, anilist_id, source_type, source_relation, manga_status, status, start_date, end_date, aired_episodes, total_episodes, total_chapters, total_volumes, latest_known_chapters, manga_anilist_id, manga_start_chapter, mapping_mode, asterisk_review, franchise_id, visibility, mal_id');
   const episodes = await selectAll<any>('episodes', 'series_id, number, type, title, air_date, format, minted_by');
   const anchors = await selectAll<any>('chapter_anchors', 'series_id, episode, chapter, start_chapter, chapters_adapted, continue_chapter, continue_kind, continue_note, continue_source, volume, source');
   const comps = await selectAll<any>('series_components', 'series_id, episode_end, episode_start, anilist_id, kind, label');
@@ -109,7 +110,7 @@ async function main() {
     rearranged_zone_unanchored: [], rearranged_zone_acknowledged: [], backjump_continue_unruled: [], backjump_continue_unnoted: [], annotation_contradicts_row: [],
     title_incomplete: [], airdate_incomplete: [], airdate_regression: [], airdate_withheld: [], episode_date_off_window: [], asterisk_unreviewed: [],
     fractional_unmodeled: [], annotation_invalid: [], annotation_retired_standing: [], afl_anime_canon_unruled: [], format_missing: [], episode_without_component: [], watch_order_kind_missing: [],
-    permanence_candidate: [], permanence_violation: [], series_without_franchise: [], mixed_fragment_only: [], run_stuck: [], unverified_share: [], sliver_only_anchor: [], chain_source_unmapped: [], side_source_on_chain: [], source_work_unlabelled: [], grid_unminted: [], type_source_disagreement: [], type_default_unclassified: [], side_source_unadopted: [],
+    permanence_candidate: [], permanence_violation: [], series_without_franchise: [], identity_registry_gap: [], adoption_held: [], series_staged: [], mixed_fragment_only: [], run_stuck: [], unverified_share: [], sliver_only_anchor: [], chain_source_unmapped: [], side_source_on_chain: [], source_work_unlabelled: [], grid_unminted: [], type_source_disagreement: [], type_default_unclassified: [], side_source_unadopted: [],
     series_without_source_kind: [], no_source: [], no_instrument: [], ok_full: [], ok_no_volume: [], ok_loose: [], ok_parallel: [],
     source_relation_missing: [], parallel_has_anchor: [], arcs_not_partition: [], arc_row_conflict: [], correspondence_invalid: [], correspondence_incomplete: [],
     pending_airing_no_anchor: [], pending_finished_no_totals: [], pending_no_canon: [], pending_other: [],
@@ -1131,6 +1132,31 @@ async function main() {
     }
     for (const [sid, rows] of hitsBy) classes.mixed_fragment_only.push(`${sid}: ${rows.length} mixed row(s) with only fragment ties and no anchor — ${rows.join(', ')} — T28: a fragment keeps mixed ONLY if it is the SOLE adaptation of a load-bearing source beat (the FotNS-57 test, 2026-08-28); otherwise filler + annotation — triage each`);
   }
+  // I2 — the identity registry as an OUTCOME (audit added 2026-09-05, discovery step 3): every series' anilist / mal / afl
+  // ids are registered and agree with the row; a registered afl / afg slug has a staged page; a registration never points
+  // at a series that does not exist. I44 — an AFL page the adoption gate held. P39 — visibility mirrors its derivation.
+  {
+    const ext = await selectAll<any>('series_external_ids', 'series_id, source, external_id');
+    const reg = new Map<string, Map<string, string>>();
+    for (const e of ext) { const m = reg.get(e.series_id) ?? new Map<string, string>(); m.set(e.source, String(e.external_id)); reg.set(e.series_id, m); }
+    const aflStaged = new Set((await selectAll<any>('ingest_afl_shows', 'slug')).map((r: any) => r.slug));
+    const afgStaged = new Set((await selectAll<any>('ingest_afg_pages', 'slug')).map((r: any) => r.slug));
+    const known = new Set(series.map((s: any) => s.id));
+    for (const row of series) {
+      const m = reg.get(row.id) ?? new Map<string, string>();
+      if (row.anilist_id != null && m.get('anilist') !== String(row.anilist_id)) classes.identity_registry_gap.push(`${row.id}: anilist ${row.anilist_id} on the row, registry says ${m.get('anilist') ?? 'nothing'} (I2)`);
+      if (row.mal_id != null && m.has('mal') && m.get('mal') !== String(row.mal_id)) classes.identity_registry_gap.push(`${row.id}: mal ${row.mal_id} on the row, registry says ${m.get('mal')} (I2)`);
+      if (row.afl_slug && m.get('afl') !== row.afl_slug) classes.identity_registry_gap.push(`${row.id}: afl_slug ${row.afl_slug} on the row, registry says ${m.get('afl') ?? 'nothing'} (I2)`);
+      if (m.get('afl') && !aflStaged.has(m.get('afl')!)) classes.identity_registry_gap.push(`${row.id}: registered afl ${m.get('afl')} has no staged AFL page (I2)`);
+      if (m.get('afg') && !afgStaged.has(m.get('afg')!)) classes.identity_registry_gap.push(`${row.id}: registered afg ${m.get('afg')} has no staged AFG page (I2)`);
+      const want = deriveVisibility(row.id, { afl: m.has('afl'), afg: m.has('afg') });
+      if ((row.visibility ?? 'public') !== want) classes.ruling_violation.push(`${row.id}: visibility '${row.visibility ?? 'null'}' ≠ derived '${want}' (P39) — run assert-overrides`);
+      if (want === 'staged') classes.series_staged.push(`${row.id}: STAGED — no AFL / AFG classifier and no PUBLISHED ruling (P39); hidden from list and search until its rows are classified`);
+    }
+    for (const e of ext) if (!known.has(e.series_id)) classes.identity_registry_gap.push(`registry ${e.source}:${e.external_id} → ${e.series_id}, which is not a series (I2)`);
+    for (const f of await selectAll<any>('ingest_flags', 'series_key, detail', (q) => q.eq('kind', 'adoption_held').eq('status', 'open')))
+      classes.adoption_held.push(`${f.detail?.seriesId ?? '?'}: AFL page ${f.series_key} HELD by the adoption gate (I44) — ${f.detail?.problem ?? ''}`);
+  }
   // I43 — the franchise umbrella: a stored franchise_id the map does not state (or a stored franchise row
   // the map does not state) is a ruling_violation (run assert-overrides); a series with any series_relations
   // row and no membership ruling is owed one — a membership or `franchise: null` (its own IP)
@@ -1155,7 +1181,7 @@ async function main() {
   // lib/rulings/permanence.ts). A LOCKED series failing any of it =
   // permanence_violation — data drifted under a lock (P5).
   {
-    const OPEN_CLASSES = ['integrity_eps_beyond_total', 'integrity_total_beyond_eps', 'integrity_double_claimed', 'integrity_degenerate_span', 'special_numbered_unreviewed', 'anchor_gap_research', 'frontier_tail_null', 'anchor_nonmonotonic', 'anchor_start_offtrend', 'anchor_volume_mismatch', 'row_minted_by_missing', 'source_relation_missing', 'parallel_has_anchor', 'arcs_not_partition', 'arc_row_conflict', 'correspondence_invalid', 'correspondence_incomplete', 'anchor_beyond_chapter_space', 'anchor_beyond_display_total', 'anchor_fractional_chapter', 'anchor_on_noncanon_row', 'continue_skip_unnoted', 'continue_provenance_missing', 'boundaries_degenerate', 'boundaries_wrong_page', 'boundaries_beyond_total', 'ruling_violation', 'repair_on_derivation_tier', 'mu_pin_unverified', 'rearranged_zone_unanchored', 'title_incomplete', 'airdate_incomplete', 'airdate_regression', 'airdate_withheld', 'asterisk_unreviewed', 'fractional_unmodeled', 'annotation_invalid', 'afl_anime_canon_unruled', 'format_missing', 'episode_without_component', 'watch_order_kind_missing', 'series_without_source_kind', 'pending_airing_no_anchor', 'pending_finished_no_totals', 'pending_no_canon', 'pending_other'];
+    const OPEN_CLASSES = ['integrity_eps_beyond_total', 'integrity_total_beyond_eps', 'integrity_double_claimed', 'integrity_degenerate_span', 'special_numbered_unreviewed', 'anchor_gap_research', 'frontier_tail_null', 'anchor_nonmonotonic', 'anchor_start_offtrend', 'anchor_volume_mismatch', 'row_minted_by_missing', 'source_relation_missing', 'parallel_has_anchor', 'arcs_not_partition', 'arc_row_conflict', 'correspondence_invalid', 'correspondence_incomplete', 'anchor_beyond_chapter_space', 'anchor_beyond_display_total', 'anchor_fractional_chapter', 'anchor_on_noncanon_row', 'continue_skip_unnoted', 'continue_provenance_missing', 'boundaries_degenerate', 'boundaries_wrong_page', 'boundaries_beyond_total', 'ruling_violation', 'repair_on_derivation_tier', 'mu_pin_unverified', 'rearranged_zone_unanchored', 'title_incomplete', 'airdate_incomplete', 'airdate_regression', 'airdate_withheld', 'asterisk_unreviewed', 'fractional_unmodeled', 'annotation_invalid', 'afl_anime_canon_unruled', 'format_missing', 'episode_without_component', 'watch_order_kind_missing', 'series_without_source_kind', 'pending_airing_no_anchor', 'pending_finished_no_totals', 'pending_no_canon', 'pending_other', 'identity_registry_gap', 'adoption_held'];
     const openBy = new Map<string, Set<string>>();
     const ids = new Set(series.map((s: any) => s.id));
     for (const c of OPEN_CLASSES) for (const line of classes[c] ?? []) {

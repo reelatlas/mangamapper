@@ -21,6 +21,7 @@ import { ANCHOR_SUPPRESSED } from './lib/rulings/anchor-suppressed';
 import { retiredBySeries, RETIRED_ANNOTATIONS } from './lib/rulings/retired-annotations';
 import { LOCKED } from './lib/rulings/permanence';
 import { FRANCHISES, FRANCHISE_OF, franchiseMapProblems } from './lib/rulings/franchises';
+import { deriveVisibility } from './lib/rulings/visibility';
 import { arcsPartitionProblems, RULED_ARCS } from './lib/rulings/arcs';
 import { RULED_CORRESPONDENCE, upsertCorrespondence } from './lib/rulings/correspondence';
 import { SOURCE_RELATION_OVERRIDES } from './lib/rulings/source-relations';
@@ -255,6 +256,28 @@ async function assertFranchises() {
   console.log(`[assert-overrides] franchises (I43): ${rows.length} franchises, ${Object.keys(FRANCHISE_OF).length} memberships, ${asserted} asserted, ${stale} stale rows removed${DRY ? ' — DRY RUN' : ''}`);
 }
 
+// P39: series.visibility mirrors the derivation (public ⇔ an afl / afg
+// registration or a PUBLISHED ruling; else staged) — a seeded series stays
+// hidden from list and search until a classifier lands or a ruling publishes it.
+async function assertVisibility() {
+  const has = new Map<string, { afl: boolean; afg: boolean }>();
+  for (const e of await selectAll<{ series_id: string; source: string }>('series_external_ids', 'series_id, source', (q) => q.in('source', ['afl', 'afg']))) {
+    const h = has.get(e.series_id) ?? { afl: false, afg: false };
+    if (e.source === 'afl') h.afl = true; else h.afg = true;
+    has.set(e.series_id, h);
+  }
+  let n = 0, staged = 0;
+  for (const r of await selectAll<{ id: string; visibility: string | null }>('series', 'id, visibility')) {
+    const want = deriveVisibility(r.id, has.get(r.id) ?? { afl: false, afg: false });
+    if (want === 'staged') staged++;
+    if ((r.visibility ?? 'public') === want) continue;
+    n++;
+    console.log(`  ${r.id}: visibility ${r.visibility ?? 'null'} → ${want}`);
+    if (!DRY) { const { error } = await db.from('series').update({ visibility: want }).eq('id', r.id); if (error) throw new Error(`${r.id}: ${error.message}`); }
+  }
+  console.log(`[assert-overrides] visibility (P39): ${staged} staged, ${n} asserted${DRY ? ' — DRY RUN' : ''}`);
+}
+
 // A46: series_arcs mirrors RULED_ARCS (origin 'ruling'); a parallel series'
 // arcs must partition 1..N — a map that does not is refused, never half-written.
 async function assertArcs() {
@@ -348,6 +371,7 @@ async function main() {
   await assertAnchorSuppression();
   await assertPermanence();
   await assertFranchises();
+  await assertVisibility();
   await assertMap('types (T6)', EPISODE_TYPE_OVERRIDES, 'type');
   await assertRetiredAnnotations();
   await assertStandingAnnotations();

@@ -138,6 +138,9 @@ export interface AnimeSeries {
   // franchise of one. The browse page groups by it at the UI pass; it never
   // changes standing, position or 'one story = one series'.
   franchiseId?: string | null;
+  // P39 — a seeded series is 'staged' (reachable by id, absent from list and
+  // search) until its episode types come from a classifier or a ruling
+  visibility?: 'public' | 'staged';
   // real print-volume boundaries (Wikipedia-derived) — every chapter→volume
   // readout prefers these; the ratio estimate is only the boundary-less
   // fallback (estimated rows must never contradict curated neighbors)

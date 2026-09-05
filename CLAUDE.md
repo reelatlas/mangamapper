@@ -107,8 +107,11 @@ forever; a learning with no durable home is re-learned at full price.
   point. `/consolidate deep` adds a full-catalog rescan.
 - `/research-batch` — fan out research under the batch protocol.
 - `/apply-batch` — curate verdicts, apply, verify, commit.
-- `/add-rule` — (T3.1, planned) gate → four edges → audit class → heal →
-  census deltas → ledger record.
+- `/add-rule` — gate → edges → audit class → heal → census deltas → ledger
+  record (proven T3.1).
+- `/discover` — the discovery sitting (`I42`): stage the halo, the generated
+  recap in chat, Sean rules, maps, the dry-run recap, then the mint — the ONLY
+  path that creates a series or a component from a discovery ruling.
 
 ## Model policy
 

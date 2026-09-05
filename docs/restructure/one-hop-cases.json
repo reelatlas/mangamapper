@@ -519,6 +519,31 @@
         "announced"
       ],
       "source": "discovery design + build 2026-09-05 (PROPOSAL.md v2.2)"
+    },
+    {
+      "ask": "AFL just published a page for a show we seeded from AniList last month — does the refresh mint a second series, and what decides whether the page attaches?",
+      "expected": [
+        "I44",
+        "I2",
+        "I3"
+      ],
+      "terms": [
+        "adoption",
+        "identity"
+      ],
+      "source": "discovery step 3, 2026-09-05"
+    },
+    {
+      "ask": "a seeded series shows up in the browse list with every episode typed canon by default — why is that wrong and what hides it?",
+      "expected": [
+        "P39",
+        "G59"
+      ],
+      "terms": [
+        "staged",
+        "visibility"
+      ],
+      "source": "discovery step 3, 2026-09-05"
     }
   ]
 }

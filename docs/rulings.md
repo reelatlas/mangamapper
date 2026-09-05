@@ -2,7 +2,7 @@
 
 > GENERATED from `scripts/ingest/lib/rulings/**` by `scripts/restructure/gen-rulings.ts` — do not edit by hand. A ruling is an INSTANCE of a rule (`docs/rules.md`); the map is the record, this is the index.
 
-- rulings: 2477 across 279 series/keys · by Sean: 887 · UNRECORDED reasons: 8 · with a retire condition: 93
+- rulings: 2484 across 285 series/keys · by Sean: 894 · UNRECORDED reasons: 8 · with a retire condition: 94
 
 ## Retire conditions (re-evaluate when…)
 
@@ -37,6 +37,7 @@
 - **RETIRED 2026-08-27 — taxonomy v2 IS the three standings (T4.0, 2026-08-26); the only-ending class stays filler + divergence + asterisk (T13), re-affirmed in episode-types.ts (x, 2026-08-25/26)** — x (T10)
 - **RETIRED — stitched 2026-08-23 (§12.34: Kingdom S5/S6 → 155); the record is history** — kingdom (I33)
 - **RETIRED — stitched 2026-08-23 (§12.34: Rent-a-Girlfriend S4/S5 → 60); the record is history** — rent-a-girlfriend (I33)
+- **S5 (anilist 199185) is dated — add it to ids** — rising-shield-hero (I27)
 - **T24 build lands (planned)** — * (T24)
 - **T28 the sliver clause ruled (§12.106)** — * (T28)
 - **Zoku-hen (204688) airs — chain gains an id** — kingdom (I27)
@@ -172,6 +173,18 @@
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `V9` | {"rows":[{"volume":6,"chapter_start":56,"chapter_end":66},{"volume":7,"chapter_start":67,"chapter_end":77}]} | stored v6 "56-77" merges v6+v7 (v7 row missing); Coamix MangaHot + en-WP + fr-WP chapter lists all agree v6 = 56-66, v7 = 67-77 | Sean 2026-08-25 · scripts/ingest/research/batch17/out/angel-heart.json, scripts/ingest/apply-research-batch-17.ts, §12.47 |  |
+
+### anilist:150075 (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I42` | {"disposition":"series","slug":"konosuba-an-explosion-on-this-wonderful-world","relation":{"to":"konosuba-gods-blessing-on-this-wonderful-world","kind":"spin… | KONOSUBA -An Explosion on This Wonderful World! (2023, 12 eps): Megumin's prequel spin-off light novel (AniList 100147) — own story, shared universe: SPIN_OFF (I17), a separate series under the konosuba franchise (I43). Discovery witness #3. | Sean 2026-09-05 · scripts/ingest/research/discovery/PROPOSAL.md §9 row 4 (the three witness promotions; Sean: "ok yes lets proceed", 2026-09-05) |  |
+
+### anilist:151040 (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I42` | {"disposition":"series","slug":"trigun-stampede","relation":{"to":"trigun","kind":"alternative"},"franchise":"trigun"} | TRIGUN STAMPEDE (2023, 12 eps) and its sequel TRIGUN STARGAZE (163144, Winter 2026, 12 eps) — a CG re-adaptation of Nightow's Trigun / Trigun Maximum (manga 30703 / 30704, the same instrument the trigun entry maps), divergent from the 1998 series: an ALTERNATIVE telling (I17), so a separate series under the trigun franchise (I43), never a component of the 1998 entry. Discovery witness #2. The seed writer walks the SEQUEL chain, so Stargaze rides as component 2 (same continuous story — the new title is the studio's, not a narrative shift). | Sean 2026-09-05 · scripts/ingest/research/discovery/PROPOSAL.md §9 row 4 (the three witness promotions; Sean: "ok yes lets proceed", 2026-09-05) |  |
 
 ### another (1)
 
@@ -2049,6 +2062,18 @@
 | `A43` | {"episodes":[13,14,15],"kind":"rearranged","chapters":"56, 59-60, 75-85","asterisk_review":"pending (if unset)"} | S2 openers = non-linear backfill (+omake 85.5) — never interpolate linearly | session 2026-08-23 · scripts/ingest/apply-research-batch-9.ts, docs/changelog.md §12.26, session scratchpad batch9/komi-cant-communicate.json |  |
 | `A43` | {"episodes":[22,23,24],"kind":"rearranged","chapters":"114-129 with gaps","asterisk_review":"pending (if unset)"} | ch 115 deferred to ep 24; 123/125 skipped; omake 128.5 in ep 23 | session 2026-08-23 · scripts/ingest/apply-research-batch-9.ts, docs/changelog.md §12.26, session scratchpad batch9/komi-cant-communicate.json |  |
 
+### konosuba-an-explosion-on-this-wonderful-world (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I43` | {"franchise":"konosuba"} | The seeded spin-off (anilist 150075) belongs to the konosuba IP; ruled with the seed. | Sean 2026-09-05 · scripts/ingest/research/discovery/PROPOSAL.md §9 row 4 |  |
+
+### konosuba-gods-blessing-on-this-wonderful-world (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I43` | {"franchise":"konosuba","title":"KonoSuba","base":true} | KonoSuba (2016-2024, three seasons) and the Megumin spin-off An Explosion on This Wonderful World! (2023, seeded 2026-09-05) — one IP. | Sean 2026-09-05 · scripts/ingest/research/discovery/PROPOSAL.md §9 row 4 |  |
+
 ### kowloon-generic-romance (6)
 
 | rule | value | reason | ruled | retires when |
@@ -2884,6 +2909,12 @@
 |---|---|---|---|---|
 | `I27` | {"ids":[113813,124410,154745,179344,199029],"ruledExtent":"AFL page = S1-S3 (36); S4 (ONA, Jul 2025, our 37-48) + S5 (ONA, Apr 2026, our 49-60) aired — flag … | AFL-lag class: AFL page = S1-S3 (36); S4 (ONA, Jul 2025, our 37-48) + S5 (ONA, Apr 2026, our 49-60) aired — flag #839. | session 2026-08-23 · ingest_flags #839 |  |
 
+### rising-shield-hero (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I27` | {"ids":[99263,111321,111322,173780],"ruledExtent":"AFL's page charts S1 only (25 eps); AniList's SEQUEL chain S2 (111321, 13) → S3 (111322, 12) → S4 (173780,… | The first discovery promotion (the-rising-of-the-shield-hero, the I42 witness): the catalog stopped at AFL's S1 page for three finished seasons. A component, not a series — same title, season ordinals, one continuous story (I15); the finalize gate needs only the chain to COVER AFL's 25 (I25's ruled clause). Sean's go 2026-09-05 (PROPOSAL.md §9 row 4). | Sean 2026-09-05 · scripts/ingest/research/discovery/PROPOSAL.md §9 row 4, docs/changelog.md §12.124 | S5 (anilist 199185) is dated — add it to ids |
+
 ### rosario-vampire (44)
 
 | rule | value | reason | ruled | retires when |
@@ -3608,7 +3639,7 @@
 | `T28` | {"episodes":[147],"kind":"loose_parallel","chapters":"255, 257, 264 (and the skipped 245)","note":"T28 tie on a filler row: the studio ending restages three … | T28 tie on a filler row: the studio ending restages three manga beats without adapting their pages — Midora sparing Ichiryu (255), the Meteor Spice fallout and the IGO's emergency food relief (255/257), Toriko and Komatsu setting out for the Gourmet World (264 opens the Billion Bird arc). Ch 245 (Starjun's Bloom, Meteor Spice with Toriko collapsed) was never animated at all. | session 2026-08-27 · scripts/ingest/research/batch20/out/toriko.json, scripts/ingest/research/batch20/verify/toriko.md, scripts/ingest/history/apply-wave1.ts, §12.78 |  |
 | `G3` | {"flag":695,"resolution":"RESOLVED (batch 20 wave 1, verified R24): ONE reading edition (Gourmet 1-396, 43 vols) shared by AniList, toriko.fandom, MU ('43 Vo… | ingest_flags #695 dismissed with the verdict's finding (G3: only Sean dismisses): RESOLVED (batch 20 wave 1, verified R24): ONE reading edition (Gourmet 1-396, 43 vols) shared by AniList, toriko.fandom, MU ('43 Volumes (Complete)', coverage in the same space) and our anchors; MU's latest_chapter 2 is the chapter of its latest-DATED release rows (a colored re-release of ch 1-2), not an edition and not a purge (595 release rows exist). | Sean 2026-08-27 · scripts/ingest/history/apply-wave1.ts, §12.78 |  |
 
-### trigun (11)
+### trigun (12)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -3623,6 +3654,13 @@
 | `I41` | {"works":[{"label":"Trigun","anilistMangaId":30703,"note":"Trigun (1995-97), the entry's instrument"},{"label":"Trigun Maximum","anilistMangaId":null,"note":… | Sean ruled 2026-09-04 (the wave-16 sitting): ep 18 adapts Trigun Maximum ch 1 'HERO REBORN' + ch 2 'LINA' — the continuation manga, canon to the series told out of order: the standing `side_source` becomes `chain_source`{Trigun Maximum: ch 1, 2} (the row stays mixed, position-less). The novel / game / parallel boundary keeps naruto-shippuden 452-457 + 484-500 (the Itachi / Sasuke / Shikamaru / Konoha Hiden novels) OFF the chain as side_source — FILLER unless an adopted{basis} act is cited (the T26 adoption sitting, 2026-09-05). | Sean 2026-09-04 · scripts/ingest/research/batch20/WAVE16-RECOVERY.md |  |
 | `T26` | {"episode":18,"from":"side_source","to":"chain_source","chapters":"Trigun Maximum: ch 1 'HERO REBORN', ch 2 'LINA' (TM vol 1)","note":"T26 THE CHAIN / I41 (S… | Trigun Maximum is the continuation manga on the series' reading chain (I41) — its own numbering, never convertible into Trigun's; the standing side_source becomes chain_source (canon told out of order; the row stays mixed, position-less) | Sean 2026-09-04 · scripts/ingest/research/batch20/out/trigun-w16.json, scripts/ingest/history/apply-wave16.ts, §12.107 |  |
 | `T28` | {"episode":6,"kind":"partial","note":"Verifier: the steamer-arrival / plant-supplies beat of ch 4 is shown only here (ep 7 restages the party); a trivial fir… | the steamer-arrival / plant-supplies beat of ch 4 is shown only here (ep 7 restages the party); a trivial first-time beat — weight sliver, filler stands | session 2026-09-04 · scripts/ingest/research/batch20/out/trigun-w16.json, scripts/ingest/research/batch20/verify/w16-types.md, scripts/ingest/history/apply-wave16.ts, §12.107 |  |
+| `I43` | {"franchise":"trigun","title":"Trigun","base":true} | Trigun (1998) and TRIGUN STAMPEDE (2023, with Stargaze 2026; seeded 2026-09-05 as an alternative telling of the same manga) — one IP. | Sean 2026-09-05 · scripts/ingest/research/discovery/PROPOSAL.md §9 row 4 |  |
+
+### trigun-stampede (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I43` | {"franchise":"trigun"} | The seeded alternative telling (anilist 151040 + 163144) belongs to the trigun IP; the membership is ruled with the seed so the row lands in its franchise at creation. | Sean 2026-09-05 · scripts/ingest/research/discovery/PROPOSAL.md §9 row 4 |  |
 
 ### tsugumomo (3)
 

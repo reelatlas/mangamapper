@@ -1154,6 +1154,61 @@
    19-23 / 39 (chain_source) and 18 / 93-95 (AFL's loose Mixed bucket),
    beelzebub 15 / 26-28 / 51, rurouni TV ep 95 (identity). Batch 22 opens on
    the boruto follow-up (lanes I + C) with the batch-21 tooling copied.
+124. ✅ **DISCOVERY BUILD, STEP 3 — I44 ADOPTION, THE SEED WRITER (G52 rostered),
+    P39 VISIBILITY, THE /discover SKILL (2026-09-05; go-list rows 2, 4, 5).
+    MECHANISM BUILT; THE FIRST MINT AWAITS SEAN'S GO ON THE DRY-RUN RECAP.** I44
+    — identity first: resolveSeries looks the page's AniList id up in the
+    registry before minting a slug; a series that owns it with no afl_slug
+    (seeded / AFG-only) is ADOPTED behind the span gate (lib/adoption.ts: AFL's
+    classified max within ±2 of our max or of a component boundary; a series
+    with no rows adopts on identity alone), else HELD (flag kind
+    `adoption_held`, its census class); a second page for a registered series is
+    I12's duplicate question. Before this an AFL page for a seeded series threw
+    ID COLLISION. Migration 20260905130000: the ingest_flags kind check widened
+    (it still listed the five original kinds — airdate_withheld and
+    source_kind_unknown could never insert), `series.visibility` (public |
+    staged, default public), types regenerated. The SEED WRITER — lib/seed.ts
+    (planSeed = the dry run: the walk under I21, the slug under I1, aggregate,
+    the franchise membership check — a held plan is a ruling question;
+    seedSeries = the write: a STAGED series row, identity, components through
+    the planner; no rows, no anchors; relations from relations.ts on the next
+    heal) + scripts/ingest/seed.ts (HEAL roster, EVENT: from /discover only,
+    after the dry-run recap); G52 amended (the seed writer is canon-tier's
+    rostered form; P38 retired its 'enforcement uncertain' clause); I42 gains
+    the writer as an enforcement site; `DiscoveryRuling.chain` pins a walk. P39
+    — visibility derived (lib/rulings/visibility.ts): PUBLIC when a classifier
+    typed the rows (an afl / afg registration, a T6 pin, a ruled grid) or a
+    PUBLISHED ruling; else STAGED — reachable by id, absent from list and search
+    (supabaseSource filters); assert-overrides#assertVisibility mirrors it;
+    series_staged lists what is hidden. The first live run staged six existing
+    entries: four typed by ruling (clear-card, treasure-chest, kinnikuman — T6
+    pins; shounan-junai-gumi — a ruled grid) were the reason pins and grids
+    count; elemental-gelade and city-hunter (all-canon defaults, AFL index slugs
+    whose pages never staged) stay STAGED — the honest outcome, and Sean's to
+    publish by ruling. I2 gains its outcome class identity_registry_gap (1:
+    shounan-junai-gumi's row carries the percent-encoded afl_slug the registry
+    never held — listed for a ruling). The /discover skill
+    (.claude/skills/discover/SKILL.md; CLAUDE.md workflows): stage → the
+    generated recap in chat → Sean rules → maps → the dry-run recap → STOP →
+    seed.ts / stitch.ts --only <slug> (new: one ruled extension at a time, the
+    open count_mismatch candidates untouched) → wiki rows → heal → census → save
+    point. The first sitting's rulings written (SITTINGS logged;
+    discovery_new_since_sitting 267 → 3): the-rising-of-the-shield-hero's
+    OVERRIDE_CHAINS extension S2 → S4 (S5 joins when dated — the standing
+    practice: an undated member flips the series to upcoming); `series` rulings
+    for TRIGUN STAMPEDE (151040 + Stargaze 163144, alternative → trigun,
+    franchise trigun) and KONOSUBA Explosion (150075, spin_off → konosuba,
+    franchise konosuba); the trigun and konosuba franchises (39 franchises / 97
+    memberships). DRY RUNS (nothing minted): seed.ts — CREATE trigun-stampede
+    (chain Stampede → Stargaze, 24 eps, manga 30703, staged) and
+    konosuba-an-explosion-on-this-wonderful-world (12 eps, light_novel, staged);
+    stitch.ts --only rising-shield-hero — EXTEND 4 seasons, 62 eps vs AFL 25.
+    Census: discovery_ruled_unbuilt 2 (the two seeds, expected until the mint),
+    halo_series_unclaimed 176 → 174, series_staged 2, identity_registry_gap 1,
+    ruling_violation 0, no other class moved; verify 218 / 0; 217 tests; edges
+    deployed; system census OK. NEXT = Sean's go on the dry-run recap → apply
+    (seed, stitch --only, wiki rows, heal, census); then go-list step 4
+    (rankings + refresh-discovery).
 123. ✅ **DISCOVERY BUILD, STEP 2 — I43, THE FRANCHISE UMBRELLA (2026-09-05;
     go-list row 7; PROPOSAL.md v2.2 §2).** The top of the hierarchy, for IA (a
     browse page can list by IP) and for discovery (a candidate is proposed into

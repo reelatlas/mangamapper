@@ -50,6 +50,7 @@ export const HEAL: RosterEntry[] = [
   { file: 'cleanup-flags.ts', when: 'standard', note: 'dismiss exact-duplicate open flags (G3)' },
   { file: 'reconcile-structure.ts', when: 'event', trigger: 'integrity_eps_beyond_total / late-airing entries', note: 'episodes outrunning components → chain walk + rebuild (I33)' },
   { file: 'stitch.ts', when: 'event', trigger: 'count_mismatch candidates or a ruled extension', note: 'the stitcher (I24–I27)' },
+  { file: 'seed.ts', when: 'event', trigger: 'from /discover ONLY, after the dry-run recap (I42 mint rule; discovery_ruled_unbuilt lists what it would create)', note: 'THE SEED WRITER (G52 rostered form): a `series` ruling → a staged series row + identity + components; no rows, no anchors' },
   { file: 'afg-extend.ts', when: 'event', trigger: 'AFG page outruns our structure (audit-afg-structure)', note: 'merge-never-replace extension (I28/I29)' },
   { file: 'afg-restage.ts', when: 'event', trigger: 'any lib/afg.ts parser change', note: 're-parse stored raw_html, no refetch (G44)' },
   { file: 'anilist-restage.ts', when: 'event', trigger: 'any change to MEDIA_FIELDS in lib/anilist.ts', note: 'refetch + hash-gated restage of every series/component media so staging carries the current query shape (G44 analogue; T4.1 added relation countryOfOrigin)' },

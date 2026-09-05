@@ -335,6 +335,21 @@ export const ENTRIES: RulingEntry<OverrideChain>[] = [
     ruledOn: '2026-08-23',
     cite: ['docs/data-pipeline.md §12.19e', 'ingest_flags #728'],
   },
+  // ── Discovery witness #1 (I42 / I27, Sean's go 2026-09-05) ────────────────
+  {
+    seriesId: 'rising-shield-hero',
+    ruleId: 'I27',
+    value: {
+      ids: [99263, 111321, 111322, 173780],
+      ruledExtent: "AFL's page charts S1 only (25 eps); AniList's SEQUEL chain S2 (111321, 13) → S3 (111322, 12) → S4 (173780, 12) is the same continuous story — season ordinals on the base title (I42 title continuity). S5 (199185) is announced for 2027 with no count and joins when it has dates, the standing practice (Kingdom S6 Part 2, Rent-a-Girlfriend S6): an undated member would flip the series to 'upcoming'. Rows for 26-62 via the wiki writer (G59 A); types default until AFL charts them.",
+    },
+    reason:
+      "The first discovery promotion (the-rising-of-the-shield-hero, the I42 witness): the catalog stopped at AFL's S1 page for three finished seasons. A component, not a series — same title, season ordinals, one continuous story (I15); the finalize gate needs only the chain to COVER AFL's 25 (I25's ruled clause). Sean's go 2026-09-05 (PROPOSAL.md §9 row 4).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/PROPOSAL.md §9 row 4', 'docs/changelog.md §12.124'],
+    retiresWhen: 'S5 (anilist 199185) is dated — add it to ids',
+  },
 ];
 
 /** stitch.ts consumer shape: afl_slug → chain */

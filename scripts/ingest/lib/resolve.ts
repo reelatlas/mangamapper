@@ -3,6 +3,7 @@
 // Resolution rules live in docs/data-pipeline.md §2.
 
 import { db, fileFlag, fileFlagOnce, selectAll } from './db';
+import { adoptByIdentity } from './adoption';
 import { contentHash } from './hash';
 import { aniListStructural } from './anilist';
 import { slugify } from './slug';
@@ -491,6 +492,14 @@ export async function resolveSeries(runId: number, slug: string): Promise<{ epis
     await fileFlagOnce(runId, slug, 'resolve', 'parse_integrity', { empty: true });
     return { episodes: 0, flagged: true };
   }
+
+  // I44 IDENTITY FIRST (2026-09-05, discovery step 3): a series that already OWNS
+  // this AniList id in the registry (seeded / AFG-only — no afl_slug yet) is found
+  // BEFORE any slug is minted, and the page ADOPTS it behind the span gate
+  // (lib/adoption.ts); a held adoption writes nothing. Before this the slug-only
+  // lookup below minted a second series and registerIds threw ID COLLISION.
+  const adoption = await adoptByIdentity(runId, slug, map.anilist_id, page.episodes.reduce((m, e) => Math.max(m, e.number), 0));
+  if (adoption === 'held') return { episodes: 0, flagged: true };
 
   // A STITCHED series (multiple components) is owned by the stitcher — a
   // plain resolve would collapse it back to one season. Refresh only the

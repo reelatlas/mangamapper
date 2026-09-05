@@ -12,7 +12,7 @@
 // to COVER AFL's numbering (the ruling covers the excess). Episode rows
 // MERGE (AFL's range rewritten, rows beyond it — Wikipedia/AFG fills —
 // survive; §10 AFL-range merge rule), id/title stay stable (structure only).
-//   npx tsx --env-file=.env.ingest scripts/ingest/stitch.ts [--dry-run]
+//   npx tsx --env-file=.env.ingest scripts/ingest/stitch.ts [--dry-run] [--only <afl-slug>]
 
 import { db, selectAll, startRun, finishRun, fileFlagOnce } from './lib/db';
 import { type AniListMedia } from './lib/anilist';
@@ -32,6 +32,9 @@ import { OVERRIDE_CHAINS } from './lib/rulings/override-chains';
 // extraction — a future hold is a ruling, declared in lib/rulings.
 
 const DRY_RUN = process.argv.includes('--dry-run');
+// --only <afl-slug>: apply ONE candidate (a ruled extension from a /discover sitting) and leave the
+// open count_mismatch candidates for their own run — the I42 mint rule applies per ruling
+const ONLY = process.argv.indexOf('--only') > 0 ? process.argv[process.argv.indexOf('--only') + 1] : null;
 
 // A ruled extension is "unchanged" when the series already carries exactly
 // the ruled component sequence (seasons + extras in order) — aired-count
@@ -87,6 +90,7 @@ async function main() {
       }
       candidates.push({ id: null, slug, afl: 0, anilist: 0 });
     }
+    if (ONLY) { const n = candidates.length; candidates.splice(0, candidates.length, ...candidates.filter((c) => c.slug === ONLY)); console.log(`[stitch] --only ${ONLY}: ${candidates.length} of ${n} candidates`); }
     console.log(`[stitch] ${candidates.length} candidates${DRY_RUN ? ' (dry run)' : ''}`);
 
     for (const cand of candidates) {

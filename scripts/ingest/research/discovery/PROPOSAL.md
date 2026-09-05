@@ -92,11 +92,14 @@ size, and (b) is the one that makes "we become the source of truth" true.
    decision. The census prints the proposal beside the row with its signals;
    Sean rules (I15 / I16 are rulings, I18 says even a source's page boundary is
    a hypothesis). The heuristic never writes.
-6. **Announced seasons are already modelled.** A NOT_YET_RELEASED sequel ruled
-   `component` lands NOW as a null-span, order-only component (the census already
-   requires unaired components to hold a null span); rows arrive when the wiki
-   list exists. That is the honest "Season 3 announced, not yet mapped" signal —
-   the first product use of the halo, with no new table.
+6. **Announced seasons — corrected at build time (step 3).** An announced, UNDATED
+   season does NOT join as a component: aggregate would flip the series to
+   'upcoming', and the standing practice (Kingdom S6 Part 2, Rent-a-Girlfriend
+   S6) is that a season joins when it has dates. The honest "Season 5 announced"
+   signal is the halo listing itself (`halo_sequel_unclaimed`, status
+   NOT_YET_RELEASED) — the first product use of the halo, with no new table; a
+   dated season lands as a component and its rows arrive when the wiki list
+   exists.
 7. **Type provenance becomes a precondition for PUBLISHING seeded series.**
    Wiki-minted grids default to canon (G59) and sit in `type_default_unclassified`;
    at 200+ seeded series that default renders as a claim. The queued per-row
@@ -267,7 +270,7 @@ the honest shell IS the edge (P6), and §1.7 keeps a shell from lying.
    regen), the ruling map seeded from the bootstrap proposal + franchise-rulings.md
    in one sitting, the healer, `series_without_franchise`, assemble.ts exposes
    it (the grouping UI itself is the UI pass). I16 amended.
-3. **Adoption + the seed writer** — identity-first `resolveSeries` (§1.1),
+3. **Adoption + the seed writer — BUILT 2026-09-05 (I44, G52 rostered, P39, /discover; §12.124; the first mint awaits Sean's go on the dry-run recap):** identity-first `resolveSeries` (§1.1),
    `lib/seed.ts`, the first three promotions Sean picks as witnesses (a component:
    Shield Hero S2; an alternative series: Trigun Stampede; a spin-off: Konosuba
    Explosion), edges deployed (lib changed).
@@ -399,3 +402,4 @@ writer with the adoption gate. Batch 23 wave 1 stays parked behind all of it.
 
 - **Step 1 BUILT 2026-09-05 — I42 (the candidate rule), changelog §12.122.** `lib/discovery.ts` + 15 tests · `lib/rulings/discovery.ts` (3 declared open-ended I15 rulings: JoJo, Monogatari, Gintama; no candidate rulings yet; the SITTINGS log) · `discovery-stage.ts` (PULL, event) staged 242 candidate media in 3 rounds · `audit-discovery.ts` (CENSUS, standard; ledger-check scans it) · `research/discovery/recap.ts` (the sitting recap). First census on the staged halo: candidates 1090 (276 staged) — sequel 91 · series 176 · extra 667 · ignored 156; TV-shaped unruled 267, of which 56 RELEASING / NOT_YET_RELEASED; proposals component 61 · series 179 · ambiguous 27; discovery_new_since_sitting 267 (no sitting logged yet); ruled_unbuilt 0; ruling_stale 0. Two build-time corrections: a bare number is an ordinal only as the whole, short remainder ("100 Years Quest" had read as a season count); owner titles compare with and without AniList's "(TV)" / "(2024)" disambiguator. The real 100 Years Quest id is 139095 (139274 is Gundam: Suisei no Majo).
 - **Step 2 BUILT 2026-09-05 — I43 (the franchise umbrella), changelog §12.123.** Migration pushed + types regenerated · `lib/rulings/franchises.ts` (93 memberships / 37 franchises from the bootstrap; fire-force + witch-watch ruled their own IP; Burn the Witch the one universe-based membership; `franchiseMapProblems()` fails closed) + 5 tests · `assertFranchises` (93 asserted, then 0 — converges) · `series_without_franchise` 0, ruling_violation 0, no other class moved · the app reads `franchise_id` · the discovery recap groups by franchise · `franchise-recap.ts --compact` is the signing table (session-ruled until Sean signs) · I16 amended under P38.
+- **Step 3 BUILT 2026-09-05 — I44 adoption + the seed writer (G52) + P39 visibility + the /discover skill, changelog §12.124.** Mechanism only: the three witness rulings are WRITTEN (Shield Hero S2-S4 as an OVERRIDE_CHAINS extension; trigun-stampede and konosuba-explosion as `series` rulings with their franchises) and the dry runs are clean, but NOTHING is minted until Sean's go on the dry-run recap (the mint rule). Findings on the way: the flags kind check was never widened (fixed); six existing entries derived staged on the first visibility run — four by ruling (pins / a grid now count as classifiers), two honestly (elemental-gelade, city-hunter: default-typed, no classifier — Sean's to publish); shounan-junai-gumi's percent-encoded afl_slug was never registered (identity_registry_gap 1); stitch.ts gained `--only <slug>` so a ruled extension applies alone; an undated announced season joins when dated (the standing practice) — §1.6 is corrected accordingly.

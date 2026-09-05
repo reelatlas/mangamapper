@@ -646,6 +646,7 @@ export type Database = {
           total_volumes: number | null
           trending: number | null
           updated_at: string
+          visibility: string
         }
         Insert: {
           afl_slug?: string | null
@@ -697,6 +698,7 @@ export type Database = {
           total_volumes?: number | null
           trending?: number | null
           updated_at?: string
+          visibility?: string
         }
         Update: {
           afl_slug?: string | null
@@ -748,6 +750,7 @@ export type Database = {
           total_volumes?: number | null
           trending?: number | null
           updated_at?: string
+          visibility?: string
         }
         Relationships: [
           {

@@ -698,4 +698,31 @@ export const RULES: Rule[] = [
     status: 'live',
     see: ['P21', 'P23', 'P29', 'P31', 'A44', 'T28', 'C5'],
   },
+  {
+    id: 'P39',
+    aliases: ['visibility', 'series visibility', 'staged', 'staged series', 'series_staged', 'PUBLISHED', 'deriveVisibility', 'assertVisibility', 'hidden until classified', 'staged on seed', 'public by classifier'],
+    family: 'P',
+    title: 'Visibility: list only series with classified types',
+    statement:
+      "series.visibility ∈ public | staged is DERIVED (lib/rulings/visibility.ts#deriveVisibility), never hand-set: PUBLIC when a CLASSIFIER typed the rows — an afl or afg registration, a T6 pin on the series (EPISODE_TYPE_OVERRIDES: research / Sean typed it), a ruled manual grid (MINTED_GRIDS, G59 path C) — or a PUBLISHED ruling names the series (the per-row provenance column rendering a default row as an honest dash is the eventual case); else STAGED — reachable by id (the honest dash renders), absent from the app's list and search (supabaseSource#list / #search filter on it). A seeded series (I42 / G52) is therefore staged at creation; an adoption (I44) publishes it on the next assert. assert-overrides#assertVisibility mirrors the derivation; a stored value that disagrees is a ruling_violation; series_staged lists what is hidden. P6's 'hidden' is a sanctioned degrade — a wiki-minted grid typed by the canon-tier default is an honest census queue (type_default_unclassified) but a claim on a browse page.",
+    why:
+      "Discovery step 3 (2026-09-05): the app's list() reads every series row, so the first seeded series would have been public the moment it existed with default-typed rows — Cursor: 'a staged visibility column is required, not optional'; PROPOSAL.md v2.2 §1.7 / §9 row 5. The first live run staged six existing entries: four typed by ruling (cardcaptor-sakura-clear-card, ranking-of-kings-the-treasure-chest-of-courage, kinnikuman — T6 pins; shounan-junai-gumi — a ruled grid), which is why pins and grids count as classifiers, and two carrying all-canon defaults with no classifier at all (elemental-gelade, city-hunter — AFL index slugs whose pages never staged), which stay staged as the honest outcome; the witness seeds derive staged at creation.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    origin: "scripts/ingest/research/discovery/PROPOSAL.md v2.2 §1.7 and §9 go-list row 5; Sean's go 2026-09-05",
+    enforcement: [
+      { path: 'scripts/ingest/lib/rulings/visibility.ts', symbol: 'deriveVisibility' },
+      { path: 'scripts/ingest/lib/rulings/visibility.ts', symbol: 'PUBLISHED' },
+      { path: 'scripts/ingest/assert-overrides.ts', symbol: 'assertVisibility' },
+      { path: 'scripts/ingest/audit-ui-truth.ts', symbol: 'series_staged' },
+      { path: 'src/data/catalog/supabaseSource.ts' },
+      { path: 'scripts/ingest/lib/seed.ts', symbol: 'seedSeries' },
+      { path: 'supabase/migrations/20260905130000_flag_kinds_visibility.sql' },
+    ],
+    layer: 'both',
+    auditClass: ['series_staged', 'ruling_violation'],
+    witnesses: ['elemental-gelade', 'city-hunter', 'cardcaptor-sakura-clear-card', 'shounan-junai-gumi', 'kinnikuman'],
+    status: 'live',
+    see: ['P6', 'I42', 'G52', 'I44', 'G59', 'T6', 'P37'],
+  },
 ];

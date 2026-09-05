@@ -71,7 +71,7 @@ export async function finishRun(id: number, status: 'ok' | 'error', counters: Ru
   if (error) throw new Error(`finishRun(${id}): ${error.message}`);
 }
 
-export type FlagKind = 'parse_integrity' | 'taxonomy_conflict' | 'match_ambiguous' | 'count_mismatch' | 'large_diff' | 'airdate_withheld' | 'source_kind_unknown';
+export type FlagKind = 'parse_integrity' | 'taxonomy_conflict' | 'match_ambiguous' | 'count_mismatch' | 'large_diff' | 'airdate_withheld' | 'source_kind_unknown' | 'adoption_held';
 
 // The confirm queue: a flag records the anomaly AND the proposed data so it
 // can be ruled on later without re-scraping. Callers hold the change.

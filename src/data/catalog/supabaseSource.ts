@@ -135,7 +135,7 @@ async function continuationStart(row: SeriesRow): Promise<number | null> {
 
 export const supabaseCatalogSource: CatalogSource = {
   async list(options: ListOptions = {}) {
-    let q = supabase.from('series').select(SERIES_COLS);
+    let q = supabase.from('series').select(SERIES_COLS).eq('visibility', 'public'); // P39: staged seeds never list
     if (options.status && options.status !== 'all') q = q.eq('status', options.status);
     q =
       options.sortBy === 'release_date'
@@ -155,6 +155,7 @@ export const supabaseCatalogSource: CatalogSource = {
     const { data, error } = await supabase
       .from('series')
       .select(SERIES_COLS)
+      .eq('visibility', 'public') // P39
       .ilike('search_text', pattern)
       .order('popularity', { ascending: false })
       .limit(50);

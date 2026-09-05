@@ -38,6 +38,8 @@ export type DiscoveryRuling = {
   relation?: { to: string; kind: 'sequel' | 'prequel' | 'side_story' | 'spin_off' | 'remake' | 'alternative' };
   /** disposition 'series': the franchise the membership sitting records (the franchises map is the one home; this is the pointer) */
   franchise?: string;
+  /** disposition 'series': pin the component chain (AniList ids in order) when the SEQUEL walk is ambiguous or must stop short; else the writer walks */
+  chain?: number[];
 };
 
 const FR = 'docs/franchise-rulings.md';
@@ -75,8 +77,30 @@ export const OPEN_ENDED_ENTRIES: RulingEntry<OpenEnded>[] = [
   },
 ];
 
-/** the first sitting writes these — none before it */
-export const CANDIDATE_ENTRIES: RulingEntry<DiscoveryRuling>[] = [];
+const GO = 'scripts/ingest/research/discovery/PROPOSAL.md §9 row 4 (the three witness promotions; Sean: "ok yes lets proceed", 2026-09-05)';
+
+export const CANDIDATE_ENTRIES: RulingEntry<DiscoveryRuling>[] = [
+  {
+    seriesId: 'anilist:151040',
+    ruleId: 'I42',
+    value: { disposition: 'series', slug: 'trigun-stampede', relation: { to: 'trigun', kind: 'alternative' }, franchise: 'trigun' },
+    reason:
+      "TRIGUN STAMPEDE (2023, 12 eps) and its sequel TRIGUN STARGAZE (163144, Winter 2026, 12 eps) — a CG re-adaptation of Nightow's Trigun / Trigun Maximum (manga 30703 / 30704, the same instrument the trigun entry maps), divergent from the 1998 series: an ALTERNATIVE telling (I17), so a separate series under the trigun franchise (I43), never a component of the 1998 entry. Discovery witness #2. The seed writer walks the SEQUEL chain, so Stargaze rides as component 2 (same continuous story — the new title is the studio's, not a narrative shift).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: [GO],
+  },
+  {
+    seriesId: 'anilist:150075',
+    ruleId: 'I42',
+    value: { disposition: 'series', slug: 'konosuba-an-explosion-on-this-wonderful-world', relation: { to: 'konosuba-gods-blessing-on-this-wonderful-world', kind: 'spin_off' }, franchise: 'konosuba' },
+    reason:
+      "KONOSUBA -An Explosion on This Wonderful World! (2023, 12 eps): Megumin's prequel spin-off light novel (AniList 100147) — own story, shared universe: SPIN_OFF (I17), a separate series under the konosuba franchise (I43). Discovery witness #3.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: [GO],
+  },
+];
 
 /** the rulings index reads ENTRIES (lib/rulings/index.ts) */
 export const ENTRIES: RulingEntry<OpenEnded | DiscoveryRuling>[] = [...OPEN_ENDED_ENTRIES, ...CANDIDATE_ENTRIES];
@@ -93,6 +117,8 @@ export const DISCOVERY_RULINGS: Record<number, DiscoveryRuling> = Object.fromEnt
 );
 
 /** the sitting log — the last entry's date is what discovery_new_since_sitting reads */
-export const SITTINGS: { on: string; scope: string; note: string }[] = [];
+export const SITTINGS: { on: string; scope: string; note: string }[] = [
+  { on: '2026-09-05T06:34:00Z', scope: 'the three witness promotions (go-list row 4): shield hero S2-S4 as an OVERRIDE_CHAINS ruled extension; trigun stampede + konosuba explosion as series rulings', note: 'the first sitting; the rest of the 267 TV-shaped candidates wait for /discover; the halo was staged 2026-09-05 before this timestamp' },
+];
 
 export const lastSitting = (): string | null => (SITTINGS.length ? [...SITTINGS].map((s) => s.on).sort().at(-1)! : null);
