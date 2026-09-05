@@ -15,7 +15,7 @@ const slugify = (t: string) => t.toLowerCase().normalize('NFKD').replace(/[̀-ͯ
 
 async function main() {
   const input = await loadDiscoveryInput();
-  const works = haloCandidates(input).filter((c) => c.proposal === 'other_instrument');
+  const works = haloCandidates(input).filter((c) => c.proposal === 'other_instrument' || c.proposal === 'alternative'); // an alternative adaptation that adapts an instrument is the same shape (GitS 1995)
   const ownedInstrument = new Map<number, string>();
   for (const [sid, ids] of input.ownerInstruments ?? []) for (const id of ids) ownedInstrument.set(id, sid);
   const nodeIds = [...new Set(works.flatMap((c) => adaptedNodes((input.staged.get(c.anilistId) as never) ?? null).map((n) => n.id)))];
@@ -41,11 +41,26 @@ async function main() {
       const isRun = n && (n.format === 'MANGA' || n.format === 'NOVEL') && (counted ? (n.volumes ?? 0) >= 1 || (n.chapters ?? 0) >= 8 || n.status === 'RELEASING' : true); // uncounted (API down): a MANGA / NOVEL run is proposed, the count is checked at the mint
       const workYear = media?.startDate?.year ?? null, runYear = n?.startDate?.year ?? null;
       const downstream = workYear != null && runYear != null && runYear > workYear; // the run began after the work: a comicalization / novelization, never the work's source
-      const proposed = downstream ? `NOT a source — the run began ${runYear}, after the work (${workYear}): a comicalization / novelization; the work is held (research)` : ours ? `no mint — the run is ${ours}'s instrument (a same-instrument row there)` : a.format === 'ONE_SHOT' ? 'tie-in — never a series; research with (b)' : isRun ? `MINT (step 2): a one-row staged series, this work as its anime${counted ? '' : ' (size unverified — AniList down)'}` : n ? 'hold — below the threshold (no volume, < 8 chapters, finished)' : 'hold — node not found';
+      const alt = c.proposal === 'alternative';
+      // an alternative telling of the OWNER's own instrument (GitS 1995 beside SAC, Hellsing Ultimate, the Madoka / AoT / JJK compilation films) is not a
+      // mechanical mint: a retelling is a series of its own (Sean ruled GitS 1995 a mint candidate), a compilation is a recap — research or Sean decides
+      const ownTelling = alt && [...c.owners].some((o) => (input.ownerInstruments?.get(o) ?? new Set()).has(a.id));
+      const proposed = ownTelling ? `alternative telling of ${[...c.owners].join('+')}'s own instrument — a retelling (a mint, Sean's call) or a compilation (a recap): research decides` : downstream ? `NOT a source — the run began ${runYear}, after the work (${workYear}): a comicalization / novelization; the work is held (research)` : ours ? `no mint — the run is ${ours}'s instrument (a same-instrument row there)` : a.format === 'ONE_SHOT' ? 'tie-in — never a series; research with (b)' : isRun ? `MINT (step 2): ${alt ? 'an alternative adaptation (I16) — ' : ''}a one-row staged series, this work as its anime${counted ? '' : ' (size unverified — AniList down)'}` : n ? 'hold — below the threshold (no volume, < 8 chapters, finished)' : 'hold — node not found';
       const title = n?.title.english ?? n?.title.romaji ?? a.title ?? String(a.id);
       const slug = isRun && !ours ? `${slugify(title)} · ${groups[0]}` : '';
       rows.push({ pop: c.popularity, line: `| ${groups.join(' + ')} | ${c.title.replace(/\|/g, '/')} (${c.anilistId} · ${c.format ?? '?'} · ${media?.startDate?.year ?? '?'}) | ${(a.title ?? '').replace(/\|/g, '/')} (${a.id}) | ${run} | ${ours ?? '—'} | ${proposed} | ${slug} | |` });
     }
+  }
+  if (process.argv.includes('--declare')) {
+    // the signed picks as CANDIDATE_ENTRIES (lib/rulings/discovery.ts) — declarations; the MINT is step 2's writer, run from /discover
+    console.log('\n// ---- decision (d) declarations (Sean signed 2026-09-05; the mint is step 2) ----');
+    for (const r of rows.filter((x) => x.line.includes('| MINT'))) {
+      const m = r.line.match(/^\| (.+?) \| (.+?) \((\d+) · (\w+) · (\S+)\) \| (.+?) \((\d+)\) \| (.+?) \| .+? \| (.+?) \| (\S+) · (\S+) \|/);
+      if (!m) continue;
+      const [, group, work, animeId, format, year, run, runId, facts, , slug, franchise] = m;
+      console.log(`  { seriesId: 'anilist:${animeId}', ruleId: 'I13', value: { disposition: 'series', slug: '${slug}', franchise: '${franchise}' },\n    reason: "Decision (d) of the extras sitting (Sean 2026-09-05): ${work.replace(/"/g, "'")} (${format} ${year}) adapts ${run.replace(/"/g, "'")} (AniList manga ${runId}: ${facts}) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of ${group}. Mint: step 2's writer, from /discover.",\n    ruledBy: 'Sean', ruledOn: '2026-09-05', cite: ['scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d)'] },`);
+    }
+    return;
   }
   for (const r of rows.sort((x, y) => y.pop - x.pop)) console.log(r.line);
   const mint = rows.filter((r) => r.line.includes('| MINT')).length, tie = rows.filter((r) => r.line.includes('tie-in —')).length, ours = rows.filter((r) => r.line.includes('no mint —')).length, hold = rows.filter((r) => r.line.includes('| hold')).length;

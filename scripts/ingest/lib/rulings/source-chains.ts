@@ -85,6 +85,56 @@ export const ENTRIES: RulingEntry<SourceChain>[] = [
     ruledOn: '2026-09-05',
     cite: ['scripts/ingest/research/batch22/T26-SITTING.md', 'scripts/ingest/research/batch20/out/cobra-the-animation.json', 'scripts/ingest/research/batch20/WAVE7-RECOVERY.md'],
   },
+  {
+    seriesId: 'fate-kaleid-liner-prisma-illya',
+    ruleId: 'I41',
+    value: { works: [
+      { label: 'Prisma Illya', anilistMangaId: 33526, note: 'Fate/kaleid liner Prisma☆Illya (2007-08, 2 vols) — the entry\'s instrument; S1' },
+      { label: '2wei!', anilistMangaId: 85136, note: 'Fate/kaleid liner Prisma☆Illya 2wei! (2009-12, 5 vols) — 2wei! + 2wei Herz! adapt it' },
+      { label: '3rei!!', anilistMangaId: 66131, note: 'Fate/kaleid liner Prisma☆Illya 3rei!! (2012-, releasing) — the 3rei!! season, Vow in the Snow, Licht' },
+    ] },
+    reason:
+      "Sean 2026-09-05 (the extras rulings, decision (d) via Cursor): 2wei / 3rei are SEASONS of fate-kaleid-liner-prisma-illya (I15 open-ended; the D2 split pending), not other-instrument works and not mints — register the chain's AniList ids so a film adapting 3rei reads as the owner's own instrument (same_instrument), never a series candidate. Ids from the owned entries' ADAPTATION edges (Undoukai DE Dance → 33526; 2wei Herz! → 85136; 3rei!! → 66131).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/EXTRAS-SITTING.md §0'],
+  },
+  {
+    seriesId: 'jojos-bizarre-adventure',
+    ruleId: 'I41',
+    value: { works: [
+      { label: 'Phantom Blood', anilistMangaId: 31517, note: 'Part 1 — the entry\'s registered instrument' },
+      { label: 'Battle Tendency', anilistMangaId: 31630, note: 'Part 2 (Sentou Chouryuu)' },
+      { label: 'Stardust Crusaders', anilistMangaId: 30872, note: 'Part 3 — the 1993 / 2000 OVAs adapt it too (alternative tellings of a chain work, not other-instrument)' },
+      { label: 'Diamond Is Unbreakable', anilistMangaId: 33006, note: 'Part 4' },
+      { label: 'Golden Wind', anilistMangaId: 33008, note: 'Part 5 (Ougon no Kaze)' },
+      { label: 'Stone Ocean', anilistMangaId: 33009, note: 'Part 6' },
+    ] },
+    reason:
+      "Source-derived 2026-09-05 (the same shape as Prisma Illya, Sean's decision (d) ruling): AniList splits JoJo into one manga node per part and each owned component adapts its own part — the chain is the parts in order (I15 open-ended; Steel Ball Run stays a halo candidate until owned). Without the ids the 1993 / 2000 Stardust Crusaders OVAs read as another run (other_instrument) and were proposed as mints; with them they are alternative tellings of the owner's own instrument. Ids from the owned entries' ADAPTATION edges.",
+    ruledBy: 'source-derived',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/EXTRAS-SITTING.md §0'],
+    retiresWhen: 'Sean re-rules the JoJo chain (the D2 per-part split) — then the works are re-labelled to his split',
+  },
+  {
+    seriesId: 'the-melancholy-of-haruhi-suzumiya',
+    ruleId: 'I41',
+    value: { works: [
+      { label: 'Yuuutsu', anilistMangaId: 33083, note: 'The Melancholy of Haruhi Suzumiya (vol 1) — the entry\'s instrument; AniList lists the novel per volume' },
+      { label: 'Tameiki', anilistMangaId: 145590, note: 'The Sigh (vol 2)' },
+      { label: 'Taikutsu', anilistMangaId: 145591, note: 'The Boredom (vol 3)' },
+      { label: 'Shoushitsu', anilistMangaId: 145592, note: 'The Disappearance (vol 4) — the 2010 film adapts it whole' },
+      { label: 'Bousou', anilistMangaId: 145593, note: 'The Rampage (vol 5)' },
+      { label: 'Douyou', anilistMangaId: 145594, note: 'The Wavering (vol 6)' },
+    ] },
+    reason:
+      "Source-derived 2026-09-05 (decision (d) of the extras sitting): AniList splits the Haruhi novel into one node per volume; the 2009 TV run adapts five of them and the Disappearance film adapts the fourth alone, so without the chain the film read as another run (other_instrument) and was proposed as a mint. The volumes are one novel — the owner's own instrument (I41); the film is same_instrument.",
+    ruledBy: 'source-derived',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/EXTRAS-SITTING.md §0'],
+    retiresWhen: 'Sean rules the Haruhi chain himself',
+  },
 ];
 
 export const SOURCE_CHAINS: Record<string, SourceChain> = toRecord(ENTRIES);

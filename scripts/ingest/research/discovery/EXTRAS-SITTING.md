@@ -26,6 +26,15 @@ npx tsx --env-file=.env.ingest scripts/ingest/audit-discovery.ts                
 | (e) 5 promotional | promo bucket, ignored like music videos, census lists them, the rows dropped | I45 amended; `extra_promo` 5; three stored rows removed |
 | (f) 127 undated | listed, no position, until AniList has a date; the weekly restage queued (not a ruling); NOTE the UI upcoming-schedule idea | confirmed; sidecars in STATE (restage; the UI note); node start years staged from now on |
 
+**Second pass (afternoon, Sean with Cursor — §12.130).** GitS 1995 pulled from wave 1 (an I16 alternative,
+a mint candidate — declared with Sean's reason); Heaven's Feel attributed to Fate's base, never to Prisma
+Illya; Prisma Illya 2wei / 3rei registered as chain works (with JoJo's parts and Haruhi's volumes); the
+mechanism behind both: the ALTERNATIVE bucket (a work no owner reached by an in-run relation sits once,
+under the franchise base; 66 works). The (d) declarations: 27 entries in `lib/rulings/discovery.ts`
+(the caveated seven held; one series per run). Wave 1 dispatched: Mugen Train, Legend of Crimson, Reze
+Arc, Infinity Castle (Part 1), Dawn of the Deep Soul, Tanya the Movie, Goblin's Crown, The First Slam
+Dunk. Wave 2 = the owner triage, a separate wave the same day. No mint this sitting.
+
 Gaps found while executing (queued in STATE, not rulings): SOURCE_CHAINS works carry no AniList ids
 (a chain work reads as another run: Prisma Illya 2wei / 3rei, JoJo Stardust Crusaders, Haruhi's
 per-volume nodes); a comicalization of a film reads as the run it adapts until node start years

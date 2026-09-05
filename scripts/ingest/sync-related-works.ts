@@ -34,6 +34,7 @@ function bucketNote(bucket: ExtraBucket, adapts: { title: string | null; format:
     case 'recap': return 'recap / compilation (filler by rule, N8: never a numbered row)';
     case 'original': return 'original side story (source ORIGINAL — filler by T25)';
     case 'crossover': return 'crossover by shared characters only (filler)';
+    case 'alternative': return `an alternative adaptation (I16) — a different telling of the same source, not in this run${works ? `; adapts ${works} — a series candidate (step 2)` : '; no instrument named — held'}`;
     case 'same_instrument': return `adapts the series' own instrument: ${works} — standing and chapters pending the sitting / research`;
     case 'other_instrument': return `adapts another work: ${works} — ${adapts.some((n) => n.format === 'MANGA' || n.format === 'NOVEL') ? 'a series candidate too (the KonoSuba-Explosion shape)' : 'a one-shot tie-in'}`;
     default: return 'a source with no named instrument (AniList names no chapters — a franchise tag, a novel film without its edge, a visual-novel or game source) — held for Sean';
@@ -122,6 +123,14 @@ async function main() {
         const { error } = await db.from('watch_order_entries').upsert({ ...row, display_label: cur ? undefined : null }, { onConflict: 'series_id,position' });
         if (error) throw new Error(`${key}: ${error.message}`);
       }
+    }
+    // a halo row whose work the derivation now attributes ELSEWHERE (an alternative adaptation collapsed to the franchise base, I43) is ours to remove —
+    // the edge did not vanish (that is P24's listing, related_work_stale); the RULE moved the row
+    const ownersOf = new Map<number, Set<string>>(); for (const c of cands) ownersOf.set(c.anilistId, c.owners);
+    for (const r of existing) {
+      if (r.origin !== 'halo' || r.anilist_id == null) continue;
+      const owners = ownersOf.get(r.anilist_id);
+      if (owners && !owners.has(r.series_id)) await remove(r, `re-attributed by rule to ${[...owners].join(', ')} (an alternative adaptation sits once, under the franchise base — I16 / I43)`);
     }
     counters.changed = inserted + updated + adopted + dropped; counters.flagged = unpositioned + ambiguous;
     console.log(`[sync-related-works] ${cands.length} staged related works → ${inserted} inserted, ${updated} updated, ${counters.unchanged} unchanged, ${adopted} identities adopted by wiki / ruled rows (I46), ${dropped} halo rows removed (duplicates / promotional / moved), ${ambiguous} ambiguous matches left to the census, ${held} standing pending (the sitting), ${unpositioned} without a derivable position${DRY ? ' — DRY RUN' : ''}`);

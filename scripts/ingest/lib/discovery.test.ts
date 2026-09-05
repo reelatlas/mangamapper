@@ -5,7 +5,8 @@ import { describe, expect, it } from 'vitest';
 import { bucketOf, discoveryClasses, haloCandidates, titleContinuity, type DiscoveryInput, type MediaLike } from './discovery';
 
 type Edge = { relationType: string; node: { id: number; type: string; format: string | null; status?: string; popularity?: number; title: { romaji: string; english?: string | null } } };
-const media = (id: number, romaji: string, opts: { english?: string | null; format?: string | null; status?: string; popularity?: number; edges?: Edge[]; synonyms?: string[] } = {}): MediaLike => ({
+const media = (id: number, romaji: string, opts: { english?: string | null; format?: string | null; status?: string; popularity?: number; edges?: Edge[]; synonyms?: string[]; source?: string | null } = {}): MediaLike => ({
+  source: opts.source ?? null,
   id, title: { romaji, english: opts.english ?? null }, synonyms: opts.synonyms ?? [], format: opts.format === undefined ? 'TV' : opts.format, status: opts.status ?? 'FINISHED', popularity: opts.popularity ?? 1000, relations: { edges: opts.edges ?? [] },
 });
 const anime = (relationType: string, id: number, romaji: string, format: string | null = 'TV', status = 'FINISHED', popularity = 500): Edge => ({ relationType, node: { id, type: 'ANIME', format, status, popularity, title: { romaji } } });
@@ -72,6 +73,21 @@ describe('haloCandidates — the witnesses', () => {
   });
   const by = (cands: ReturnType<typeof haloCandidates>, id: number) => cands.find((c) => c.anilistId === id)!;
 
+  it('I16 / I45: a MOVIE reached only by ALTERNATIVE edges is an alternative adaptation — one row under the franchise base, never same_instrument (GitS 1995 beside SAC; Heaven\'s Feel beside every Fate entry)', () => {
+    const sac = media(467, 'Koukaku Kidoutai: Stand Alone Complex', { edges: [anime('ALTERNATIVE', 43, 'Koukaku Kidoutai', 'MOVIE', 'FINISHED', 175840), manga(30036)] });
+    const arise = media(17187, 'Koukaku Kidoutai: Arise', { edges: [anime('ALTERNATIVE', 43, 'Koukaku Kidoutai', 'MOVIE', 'FINISHED', 175840)] });
+    const film = media(43, 'Koukaku Kidoutai', { english: 'Ghost in the Shell', format: 'MOVIE', source: 'MANGA', edges: [manga(30036)] });
+    const cands = haloCandidates(input({
+      owned: new Map([[467, 'gits-sac'], [17187, 'gits-arise']]), staged: new Map([[467, sac], [17187, arise], [43, film]]),
+      ownerTitles: new Map(), ownerManga: new Map([['gits-sac', 30036], ['gits-arise', 30036]]), openEnded: new Set(),
+      franchiseBase: new Map([['gits-sac', 'gits-sac'], ['gits-arise', 'gits-sac']]),
+    } as never));
+    const c = by(cands, 43);
+    expect(c.bucket).toBe('extra');
+    expect(c.proposal).toBe('alternative');
+    expect([...c.owners]).toEqual(['gits-sac']); // once, under the base — not under arise too
+    expect(c.signals.join(' ')).toMatch(/series candidate/);
+  });
   it('Shield Hero S2: a SEQUEL with a season ordinal → component (the "we waited on AFL" witness)', () => {
     const c = by(haloCandidates(base()), 111321);
     expect(c.bucket).toBe('sequel');

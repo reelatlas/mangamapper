@@ -1154,6 +1154,60 @@
    19-23 / 39 (chain_source) and 18 / 93-95 (AFL's loose Mixed bucket),
    beelzebub 15 / 26-28 / 51, rurouni TV ep 95 (identity). Batch 22 opens on
    the boruto follow-up (lanes I + C) with the batch-21 tooling copied.
+130. ✅ **THE EXTRAS RULINGS, SECOND PASS (Sean 2026-09-05 afternoon, with Cursor) —
+    THE ALTERNATIVE BUCKET, THE CHAINS, THE (d) DECLARATIONS, WAVE 1 LAUNCHED.**
+    Sean's corrections: pull the 1995 Ghost in the Shell from wave 1 (an I16
+    alternative of Shirow, not in-flow of SAC — a mint candidate, step 2); Prisma
+    Illya 2wei / 3rei are seasons of the owned series, register the chain ids;
+    Heaven's Feel belongs to Fate, never to a Prisma Illya extras verdict; wave 1
+    only this go (eight films), the owner triage a SEPARATE wave the same day
+    (a wave is one task shape, P12 — "another week" was pacing, not a rule);
+    no mint this sitting, signed picks are declarations; re-run the picks when
+    AniList is up, never guess years; Infinity Castle Part 1 is dated, Part 2
+    stays listed. THE MECHANISM (P9: both corrections had one root): a work NO
+    owner reached by an in-run relation (SEQUEL / PREQUEL / SIDE_STORY /
+    SPIN_OFF / PARENT / OTHER / SUMMARY / COMPILATION — OTHER is AniList's label
+    for an entry's own specials, Shippuden's Sunny Side Battle) is an
+    ALTERNATIVE ADAPTATION: `extraBucket` 'alternative', attributed ONCE to the
+    franchise base (I43, `franchiseBase` in the input; Candidate.ownerRelations
+    per owner), never in a run, a series candidate when it adapts an instrument
+    (the picks read), held when the source has none; the writer removes its own
+    rows the rule re-attributed (the Heaven's Feel films sat under five Fate
+    owners → one row under fate-stay-night); `extra_alternative` 66; I45 amended
+    (the clause). A promotional title stays promo whatever reached it. CHAINS
+    (I41): `chainWorks` had read `anilistId` where the field is `anilistMangaId`
+    — every chain looked empty since the extras sitting began (fixed); Prisma
+    Illya (Sean: 33526 → 2wei 85136 → 3rei 66131), JoJo (source-derived: the six
+    part nodes; Steel Ball Run stays a halo candidate) and Haruhi (the six volume
+    nodes) registered — Vow in the Snow / Licht, the 1993 / 2000 OVAs and the
+    Disappearance film read as the owner's own instrument now. DECLARATIONS —
+    decision (d), Sean signed: 27 `CANDIDATE_ENTRIES` under I13 (the 26
+    run-shaped other-instrument works after the caveats — Haruhi, Dead Apple,
+    GitS Arise, FMA 20th, FMP Sigma, Bardock, Yo! Son Goku held — plus GitS 1995
+    with Sean's reason; slugs per I1 from the English title; one series per run:
+    Durarara Gaiden and Sailor Moon Short Stories reach us through two works
+    each); `discovery_ruled_unbuilt` 27 until step 2's one-row film mint exists
+    (the mint runs from `/discover`, never here). `other-instrument-picks.ts
+    --declare` prints the entries; an alternative telling of the OWNER's own
+    instrument (Hellsing Ultimate, the Madoka / AoT / JJK compilation films) is
+    research, never a mechanical mint. RESEARCH: `PROTOCOL-extras.md` (PER WORK
+    + TRIAGE shapes) · `extras-context.ts` (contexts by ids / films / ovas /
+    triage) · `validate-extras.ts` (the landing: shape checks, the stored-first
+    recap table, `--entries` proposes the RelatedWorkRuling entries — Sean rules,
+    the map decides, P10). WAVE 1 DISPATCHED (eight research-agent tasks on
+    Opus, films first, popularity order, GitS swapped for THE FIRST SLAM DUNK):
+    Mugen Train · Legend of Crimson · Reze Arc · Infinity Castle (Part 1) · Dawn
+    of the Deep Soul · Tanya the Movie · Goblin's Crown · The First Slam Dunk;
+    AniList's API disabled, the agents work from fandom / ja.wikipedia /
+    official sources. CENSUS after the pass: ledger rows 728 (523 pending) ·
+    same 124 · other 15 (26 of the 49 are ruled) · alternative 66 · held 266 ·
+    recap 63 · original 133 · crossover 87 · promo 5 · duplicate / violation /
+    stale 0 · every UI-truth class unchanged · verify-series-display 219 / 0 ·
+    five bundles deployed · 241 tests · 289 rules. NEXT: wave 1 lands → validate
+    → verifier → Sean rules → entries → sync → census; then wave 2 = the owner
+    triage (`--targets triage --limit 10`, 128 of 266 held works); step 2's film
+    mint writer after the two waves.
+
 129. ✅ **THE EXTRAS RULINGS (Sean 2026-09-05 — all six as recommended, Cursor's
     build order) — I46 + THE PROMO BUCKET + THE RULING LAYER BUILT AND APPLIED.**
     (a) Surfacing: the filler-by-rule buckets stay LEDGER-ONLY; the wiki-list

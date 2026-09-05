@@ -152,6 +152,277 @@ export const CANDIDATE_ENTRIES: RulingEntry<DiscoveryRuling>[] = [
     ruledOn: '2026-09-05',
     cite: ['scripts/ingest/research/discovery/INCIDENT-2026-09-05.md (Sean 2026-09-05: option A — targeted rebuild through the existing writers)'],
   },
+  // ---- decision (d) of the extras sitting (Sean signed 2026-09-05): DECLARATIONS — the run-shaped other-instrument works as step 2's mint input (the one-row film mint from /discover; never minted here)
+  {
+    seriesId: 'anilist:43',
+    ruleId: 'I13',
+    value: { disposition: 'series', slug: 'ghost-in-the-shell-1995', relation: { to: 'ghost-in-the-shell-stand-alone-complex', kind: 'alternative' }, franchise: 'ghost-in-the-shell' },
+    reason:
+      "Sean 2026-09-05 (the extras rulings, via Cursor): the 1995 Ghost in the Shell film is an I16 alternative of Shirow's manga, not in-flow of Stand Alone Complex — 'before ep 1' was a watch-order opinion; an unowned instrumented film is a mint candidate under the films ruling (I13, step 2), never extras research on SAC. Pulled from wave 1; its halo row stays SAC's alternative-adaptation related work (I45).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d)'],
+  },
+  {
+    seriesId: 'anilist:131573',
+    ruleId: 'I13',
+    value: { disposition: 'series', slug: 'jujutsu-kaisen-0', franchise: 'jujutsu-kaisen' },
+    reason:
+      "Decision (d) of the extras sitting (Sean 2026-09-05): JUJUTSU KAISEN 0 (MOVIE 2021) adapts Jujutsu Kaisen 0: Tokyo Toritsu Jujutsu Koutou Senmon Gakkou (AniList manga 105469: MANGA · FINISHED · 4/1 · 71509) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of jujutsu-kaisen. Mint: step 2's writer, from /discover. Slug per I1 from the English title.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d)'],
+  },
+  {
+    seriesId: 'anilist:124140',
+    ruleId: 'I13',
+    value: { disposition: 'series', slug: 'sword-art-online-progressive', franchise: 'sword-art-online' },
+    reason:
+      "Decision (d) of the extras sitting (Sean 2026-09-05): Sword Art Online the Movie -Progressive- Aria of a Starless Night (MOVIE 2021) adapts Sword Art Online: Progressive (AniList manga 73921: NOVEL · RELEASING · ?/? · 6430) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of sword-art-online. Mint: step 2's writer, from /discover. Slug per I1 from the English title.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d)'],
+  },
+  {
+    seriesId: 'anilist:99634',
+    ruleId: 'I13',
+    value: { disposition: 'series', slug: 'attack-on-titan-lost-girls', franchise: 'attack-on-titan' },
+    reason:
+      "Decision (d) of the extras sitting (Sean 2026-09-05): Attack on Titan: Lost Girls (OVA 2017) adapts Shingeki no Kyojin: LOST GIRLS (AniList manga 93313: NOVEL · FINISHED · 3/1 · 2871) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of attack-on-titan. Mint: step 2's writer, from /discover. Slug per I1 from the English title.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d)'],
+  },
+  {
+    seriesId: 'anilist:21377',
+    ruleId: 'I13',
+    value: { disposition: 'series', slug: 'kurokos-basketball-extra-game', franchise: 'kurokos-basketball' },
+    reason:
+      "Decision (d) of the extras sitting (Sean 2026-09-05): Kuroko's Basketball: Last Game (MOVIE 2017) adapts Kuroko no Basket: Extra Game (AniList manga 85604: MANGA · FINISHED · 9/2 · 4449) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of kurokos-basketball. Mint: step 2's writer, from /discover. Slug per I1 from the English title.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d)'],
+  },
+  {
+    seriesId: 'anilist:21132',
+    ruleId: 'I13',
+    value: { disposition: 'series', slug: 'tokyo-ghoul-jack', franchise: 'tokyo-ghoul' },
+    reason:
+      "Decision (d) of the extras sitting (Sean 2026-09-05): Tokyo Ghoul: [JACK] (OVA 2015) adapts Tokyo Ghoul: Jack (AniList manga 85522: MANGA · FINISHED · 7/1 · 10119) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of tokyo-ghoul. Mint: step 2's writer, from /discover. Slug per I1 from the English title.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d)'],
+  },
+  {
+    seriesId: 'anilist:182469',
+    ruleId: 'I13',
+    value: { disposition: 'series', slug: 'one-piece-novel-mugiwara-stories', franchise: 'one-piece' },
+    reason:
+      "Decision (d) of the extras sitting (Sean 2026-09-05): ONE PIECE FAN LETTER (SPECIAL 2024) adapts ONE PIECE novel Mugiwara Stories (AniList manga 128291: NOVEL · FINISHED · 9/1 · 629) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of one-piece. Mint: step 2's writer, from /discover. Slug per I1 from the English title.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d)'],
+  },
+  {
+    seriesId: 'anilist:21778',
+    ruleId: 'I13',
+    value: { disposition: 'series', slug: 'thus-spoke-rohan-kishibe', franchise: 'jojos-bizarre-adventure' },
+    reason:
+      "Decision (d) of the extras sitting (Sean 2026-09-05): Thus Spoke Rohan Kishibe (OVA 2017) adapts Kishibe Rohan wa Ugokanai (AniList manga 103029: MANGA · RELEASING · ?/? · 6967) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of jojos-bizarre-adventure. Mint: step 2's writer, from /discover. Slug per I1 from the English title.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d)'],
+  },
+  {
+    seriesId: 'anilist:21326',
+    ruleId: 'I13',
+    value: { disposition: 'series', slug: 'tokyo-ghoul-hibi', franchise: 'tokyo-ghoul' },
+    reason:
+      "Decision (d) of the extras sitting (Sean 2026-09-05): Tokyo Ghoul: [PINTO] (OVA 2015) adapts Tokyo Ghoul: Hibi (AniList manga 87233: NOVEL · FINISHED · 6/1 · 3310) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of tokyo-ghoul. Mint: step 2's writer, from /discover. Slug per I1 from the English title.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d)'],
+  },
+  {
+    seriesId: 'anilist:154966',
+    ruleId: 'I13',
+    value: { disposition: 'series', slug: 'fate-strange-fake', franchise: 'fate' },
+    reason:
+      "Decision (d) of the extras sitting (Sean 2026-09-05): Fate/strange Fake -Whispers of Dawn- (SPECIAL 2023) adapts Fate/strange Fake (AniList manga 50006: NOVEL · RELEASING · ?/10 · 4575) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of fate. Mint: step 2's writer, from /discover. Slug per I1 from the English title.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d)'],
+  },
+  {
+    seriesId: 'anilist:163147',
+    ruleId: 'I13',
+    value: { disposition: 'series', slug: 'blue-lock-episode-nagi', franchise: 'blue-lock' },
+    reason:
+      "Decision (d) of the extras sitting (Sean 2026-09-05): BLUE LOCK THE MOVIE -EPISODE NAGI- (MOVIE 2024) adapts Blue Lock: EPISODE Nagi (AniList manga 146203: MANGA · FINISHED · 36/8 · 9563) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of blue-lock. Mint: step 2's writer, from /discover. Slug per I1 from the English title.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d)'],
+  },
+  {
+    seriesId: 'anilist:6336',
+    ruleId: 'I13',
+    value: { disposition: 'series', slug: 'mobile-suit-gundam-unicorn', franchise: 'mobile-suit-gundam' },
+    reason:
+      "Decision (d) of the extras sitting (Sean 2026-09-05): Mobile Suit Gundam UC (OVA 2010) adapts Kidou Senshi Gundam Unicorn (AniList manga 35177: NOVEL · FINISHED · 31/11 · 353) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of mobile-suit-gundam. Mint: step 2's writer, from /discover. Slug per I1 from the English title.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d)'],
+  },
+  {
+    seriesId: 'anilist:10937',
+    ruleId: 'I13',
+    value: { disposition: 'series', slug: 'mobile-suit-gundam-the-origin', franchise: 'mobile-suit-gundam' },
+    reason:
+      "Decision (d) of the extras sitting (Sean 2026-09-05): Mobile Suit Gundam: The Origin (OVA 2015) adapts Kidou Senshi Gundam: The Origin (AniList manga 30214: MANGA · FINISHED · 112/24 · 7722) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of mobile-suit-gundam. Mint: step 2's writer, from /discover. Slug per I1 from the English title.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d)'],
+  },
+  {
+    seriesId: 'anilist:97891',
+    ruleId: 'I13',
+    value: { disposition: 'series', slug: 'blue-exorcist-weekend-hero', franchise: 'blue-exorcist' },
+    reason:
+      "Decision (d) of the extras sitting (Sean 2026-09-05): Ao no Exorcist: Kyoto Fujouou-hen OVA (OVA 2017) adapts Ao no Exorcist: Weekend Hero (AniList manga 58103: NOVEL · FINISHED · 5/1 · 428) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of blue-exorcist. Mint: step 2's writer, from /discover. Slug per I1 from the English title.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d)'],
+  },
+  {
+    seriesId: 'anilist:6171',
+    ruleId: 'I13',
+    value: { disposition: 'series', slug: 'saint-seiya-the-lost-canvas', franchise: 'saint-seiya-knights-of-the-zodiac' },
+    reason:
+      "Decision (d) of the extras sitting (Sean 2026-09-05): Saint Seiya: The Lost Canvas (OVA 2009) adapts Saint Seiya: THE LOST CANVAS - Meiou Shinwa (AniList manga 31047: MANGA · FINISHED · 224/25 · 4231) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of saint-seiya-knights-of-the-zodiac. Mint: step 2's writer, from /discover. Slug per I1 from the English title.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d)'],
+  },
+  {
+    seriesId: 'anilist:21068',
+    ruleId: 'I13',
+    value: { disposition: 'series', slug: 'durarara-gaiden', franchise: 'durarara' },
+    reason:
+      "Decision (d) of the extras sitting (Sean 2026-09-05): Durarara!! X2: My Heart is in the Pattern of a Hot Pot (SPECIAL 2015) adapts Durarara!! Gaiden!? (AniList manga 85836: NOVEL · FINISHED · 10/1 · 333) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of durarara. Mint: step 2's writer, from /discover. Slug per I1 from the English title.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d)'],
+  },
+  {
+    seriesId: 'anilist:197178',
+    ruleId: 'I13',
+    value: { disposition: 'series', slug: 'one-piece-novel-heroines', franchise: 'one-piece' },
+    reason:
+      "Decision (d) of the extras sitting (Sean 2026-09-05): ONE PIECE HEROINES (SPECIAL 2026) adapts ONE PIECE novel HEROINES (AniList manga 113686: NOVEL · FINISHED · 10/2 · 987) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of one-piece. Mint: step 2's writer, from /discover. Slug per I1 from the English title.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d)'],
+  },
+  {
+    seriesId: 'anilist:101695',
+    ruleId: 'I13',
+    value: { disposition: 'series', slug: 'blood-blockade-battlefront-back-2-back', franchise: 'blood-blockade-battlefront' },
+    reason:
+      "Decision (d) of the extras sitting (Sean 2026-09-05): Blood Blockade Battlefront & Beyond OVA (OVA 2018) adapts Kekkai Sensen: Back 2 Back (AniList manga 86771: MANGA · FINISHED · 32/10 · 2363) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of blood-blockade-battlefront. Mint: step 2's writer, from /discover. Slug per I1 from the English title.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d)'],
+  },
+  {
+    seriesId: 'anilist:997',
+    ruleId: 'I13',
+    value: { disposition: 'series', slug: 'sailor-moon-short-stories', franchise: 'sailor-moon' },
+    reason:
+      "Decision (d) of the extras sitting (Sean 2026-09-05): Sailor Moon S Movie: Hearts in Ice (MOVIE 1994) adapts Bishoujo Senshi Sailor Moon: Short Stories (AniList manga 38552: MANGA · FINISHED · 10/2 · 1729) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of sailor-moon. Mint: step 2's writer, from /discover. Slug per I1 from the English title.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d)'],
+  },
+  {
+    seriesId: 'anilist:21893',
+    ruleId: 'I13',
+    value: { disposition: 'series', slug: 'mobile-suit-gundam-thunderbolt', franchise: 'mobile-suit-gundam' },
+    reason:
+      "Decision (d) of the extras sitting (Sean 2026-09-05): Mobile Suit Gundam Thunderbolt: December Sky (MOVIE 2016) adapts Kidou Senshi Gundam Thunderbolt (AniList manga 67683: MANGA · FINISHED · 230/27 · 1815) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of mobile-suit-gundam. Mint: step 2's writer, from /discover. Slug per I1 from the English title.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d)'],
+  },
+  {
+    seriesId: 'anilist:1043',
+    ruleId: 'I13',
+    value: { disposition: 'series', slug: 'tokyo-babylon', franchise: 'x' },
+    reason:
+      "Decision (d) of the extras sitting (Sean 2026-09-05): Tokyo BABYLON (OVA 1992) adapts Tokyo BABYLON (AniList manga 30133: MANGA · FINISHED · 18/7 · 8483) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of x. Mint: step 2's writer, from /discover. Slug per I1 from the English title.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d)'],
+  },
+  {
+    seriesId: 'anilist:21864',
+    ruleId: 'I13',
+    value: { disposition: 'series', slug: 'koro-sensei-q', franchise: 'assassination-classroom' },
+    reason:
+      "Decision (d) of the extras sitting (Sean 2026-09-05): Koro-sensei Q! (MOVIE 2016) adapts Koro-sensei Q! (AniList manga 86949: MANGA · FINISHED · 40/5 · 1233) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of assassination-classroom. Mint: step 2's writer, from /discover. Slug per I1 from the English title.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d)'],
+  },
+  {
+    seriesId: 'anilist:100719',
+    ruleId: 'I13',
+    value: { disposition: 'series', slug: 'colourful-bleach', franchise: 'bleach' },
+    reason:
+      "Decision (d) of the extras sitting (Sean 2026-09-05): BLEACH Colorful!: Gotei Juusan Yatai Daisakusen! (OVA 2008) adapts Tsurezure Nichijou Ekotoba Colourful Bleach (AniList manga 104300: MANGA · FINISHED · 37/1 · 1196) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of bleach. Mint: step 2's writer, from /discover. Slug per I1 from the English title.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d)'],
+  },
+  {
+    seriesId: 'anilist:2514',
+    ruleId: 'I13',
+    value: { disposition: 'series', slug: 'magic-kaito', franchise: 'detective-conan' },
+    reason:
+      "Decision (d) of the extras sitting (Sean 2026-09-05): Case Closed: Conan and Kid and Crystal Mother (OVA 2004) adapts Magic Kaito (AniList manga 31804: MANGA · RELEASING · ?/? · 2881) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of detective-conan. Mint: step 2's writer, from /discover. Slug per I1 from the English title.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d)'],
+  },
+  {
+    seriesId: 'anilist:17277',
+    ruleId: 'I13',
+    value: { disposition: 'series', slug: 'code-geass-oz-the-reflection', franchise: 'code-geass-lelouch-of-the-rebellion' },
+    reason:
+      "Decision (d) of the extras sitting (Sean 2026-09-05): Code Geass: Oz the Reflection Picture Drama (OVA 2013) adapts Code Geass: Soubou no Oz (AniList manga 72381: MANGA · FINISHED · 24/5 · 634) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of code-geass-lelouch-of-the-rebellion. Mint: step 2's writer, from /discover. Slug per I1 from the English title.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d)'],
+  },
+  {
+    seriesId: 'anilist:21806',
+    ruleId: 'I13',
+    value: { disposition: 'series', slug: 'yowamushi-pedal-spare-bike', franchise: 'yowamushi-pedal' },
+    reason:
+      "Decision (d) of the extras sitting (Sean 2026-09-05): Yowamushi Pedal: SPARE BIKE (MOVIE 2016) adapts Yowamushi Pedal: Spare Bike (AniList manga 99139: MANGA · RELEASING · ?/? · 321) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of yowamushi-pedal. Mint: step 2's writer, from /discover. Slug per I1 from the English title.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d)'],
+  },
+  {
+    seriesId: 'anilist:166060',
+    ruleId: 'I13',
+    value: { disposition: 'series', slug: 'detective-conan-wild-police-story', franchise: 'detective-conan' },
+    reason:
+      "Decision (d) of the extras sitting (Sean 2026-09-05): Meitantei Conan: Keisatsu Gakkou-hen - Wild Police Story CASE. Furuya Rei (SPECIAL 2023) adapts Meitantei Conan: Keisatsu Gakkou-hen - Wild Police Story (AniList manga 112094: MANGA · FINISHED · 13/2 · 957) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of detective-conan. Mint: step 2's writer, from /discover. Slug per I1 from the English title.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d)'],
+  },
 ];
 
 /** the rulings index reads ENTRIES (lib/rulings/index.ts) */

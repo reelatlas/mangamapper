@@ -43,12 +43,13 @@ async function main() {
       const date = new Date().toISOString().slice(0, 10);
       const year = (c: Candidate) => (input.staged.get(c.anilistId) as { startDate?: { year?: number | null } } | undefined)?.startDate?.year ?? null;
       const groupOf = (c: Candidate) => [...new Set([...c.owners].map((x) => (FRANCHISE_OF[x] ? `franchise ${FRANCHISE_OF[x]}` : x)))].sort().join(' + ');
-      const buckets = ['same_instrument', 'other_instrument', 'unknown', 'recap', 'original', 'crossover', 'promo', 'unstaged'];
+      const buckets = ['same_instrument', 'other_instrument', 'alternative', 'unknown', 'recap', 'original', 'crossover', 'promo', 'unstaged'];
       const RULE: Record<string, string> = {
         same_instrument: "adapts the series' own instrument — standing PENDING (research: standing + chapters)",
         other_instrument: 'adapts another work under its own source — a series candidate (a run; step 2, the film mint) or a one-shot tie-in',
         unknown: 'a source naming no instrument node (a franchise tag with no chapters behind it, a novel film without its edge, a VN / game source) — HELD',
         recap: 'filler by rule; kind recap; never a numbered row (N8)', original: 'filler by T25 (source ORIGINAL)', crossover: 'filler; listed, not fetched (CHARACTER-only)',
+        alternative: 'an alternative adaptation (I16): reached only by ALTERNATIVE / OTHER edges — one row under the franchise base, not in the run; a series candidate when it adapts an instrument (step 2)',
         promo: 'a promotional entry (trailer / PV / teaser / CM) — ignored like a music video: listed, never a row (I45 amended)',
         unstaged: 'not fetched yet — the next discovery-stage run',
       };
@@ -92,9 +93,9 @@ async function main() {
         const m = input.staged.get(c.anilistId) as { startDate?: { year?: number | null } } | undefined;
         const b = c.proposal;
         const ruled = [...c.owners].map((o) => relatedWorkRuling(o, c.anilistId)?.standing).find(Boolean);
-        const standing = ruled ? `${ruled} (ruled)` : b === 'recap' || b === 'original' || b === 'crossover' ? 'filler (rule)' : b === 'unstaged' || b === 'promo' ? '—' : 'pending';
+        const standing = ruled ? `${ruled} (ruled)` : b === 'recap' || b === 'original' || b === 'crossover' ? 'filler (rule)' : b === 'unstaged' || b === 'promo' || b === 'alternative' ? '—' : 'pending';
         const adapts = c.signals.find((x) => x.startsWith('adapts '));
-        const proposed = b === 'promo' ? 'ignored (promotional) — listed only' : b === 'same_instrument' ? `${adapts ?? 'adapts the instrument'} — research standing + chapters; surface when ruled` : b === 'other_instrument' ? `${adapts ?? 'adapts another work'} — ${c.signals.some((x) => x.includes('one-shot tie-in')) ? 'a one-shot tie-in; research' : 'a series candidate (seed) + a related work'}` : b === 'recap' ? 'ledger row, kind recap — surface only by label' : b === 'original' ? 'ledger row — optional viewing; surface only by label' : b === 'crossover' ? 'ledger row (unfetched) — listed' : b === 'unknown' ? 'HOLD: source with no manga edge' : 'stage first';
+        const proposed = b === 'promo' ? 'ignored (promotional) — listed only' : b === 'alternative' ? `${adapts ?? 'no instrument named'} — an alternative adaptation (I16): ${adapts ? 'a series candidate (step 2)' : 'held'}` : b === 'same_instrument' ? `${adapts ?? 'adapts the instrument'} — research standing + chapters; surface when ruled` : b === 'other_instrument' ? `${adapts ?? 'adapts another work'} — ${c.signals.some((x) => x.includes('one-shot tie-in')) ? 'a one-shot tie-in; research' : 'a series candidate (seed) + a related work'}` : b === 'recap' ? 'ledger row, kind recap — surface only by label' : b === 'original' ? 'ledger row — optional viewing; surface only by label' : b === 'crossover' ? 'ledger row (unfetched) — listed' : b === 'unknown' ? 'HOLD: source with no manga edge' : 'stage first';
         console.log(`| ${c.anilistId} | ${c.title.replace(/\|/g, '/')} | ${c.format ?? '?'} · ${m?.startDate?.year ?? '?'} | ${[...c.relations].join('/')} | **${b}** | ${standing} | ${proposed} | |`);
       }
       console.log('');

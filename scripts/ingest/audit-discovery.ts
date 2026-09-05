@@ -11,6 +11,7 @@
 //   extra_unknown                a source naming no instrument node — held for Sean
 //   extra_unstaged               a related work whose media is not staged yet — run discovery-stage
 //   extra_promo                  a promotional entry (trailer / PV / teaser / CM) — ignored like a music video: listed here, never a ledger row (I45 amended)
+//   extra_alternative            I16 / I45: a work reached only by ALTERNATIVE / OTHER edges — a different telling of the same source, one row under the franchise base; a series candidate when it adapts an instrument
 //   related_work_duplicate       I46: a halo row and a wiki / ruled row name the same work, or a wiki / ruled row without an identity matches a staged work — sync-related-works adopts + removes
 //   related_work_stale           a ledger row (origin halo) whose AniList edge no longer reaches the series (P24 — a listing)
 //   related_work_violation       a ledger row whose standing / kind disagrees with the derivation (the healer must run)
@@ -67,7 +68,7 @@ async function main() {
   }
   for (const l of ledger) {
     const c = reach.get(`${l.series_id}#${l.anilist_id}`);
-    if (!c) { stale.push(`${l.series_id} @${l.position}: "${String(l.title).slice(0, 40)}" (anilist ${l.anilist_id}) — no AniList edge reaches the series any more (P24: a listing)`); continue; }
+    if (!c) { const elsewhere = extras.find((x) => x.anilistId === l.anilist_id); stale.push(elsewhere ? `${l.series_id} @${l.position}: "${String(l.title).slice(0, 40)}" — re-attributed by rule to ${[...elsewhere.owners].join(', ')} (${elsewhere.proposal}) — run sync-related-works` : `${l.series_id} @${l.position}: "${String(l.title).slice(0, 40)}" (anilist ${l.anilist_id}) — no AniList edge reaches the series any more (P24: a listing)`); continue; }
     const b = c.proposal as ExtraBucket;
     if (b === 'promo') { stale.push(`${l.series_id} @${l.position}: "${String(l.title).slice(0, 40)}" — promotional (I45 amended: never a row) — run sync-related-works`); continue; }
     const ruling = relatedWorkRuling(l.series_id, Number(l.anilist_id));
@@ -76,7 +77,7 @@ async function main() {
     if ((l.standing ?? null) !== wantStanding && wantStanding != null) violation.push(`${l.series_id} @${l.position}: standing '${l.standing}' ≠ rule '${wantStanding}' (${b}) — run sync-related-works`);
     if ((l.kind ?? null) !== wantKind) violation.push(`${l.series_id} @${l.position}: kind '${l.kind}' ≠ derived '${wantKind}' — run sync-related-works`);
   }
-  console.log(`[audit-discovery] related works (I45): ${extras.length} listed · same_instrument ${byBucket('same_instrument').length} · other_instrument ${byBucket('other_instrument').length} · recap ${byBucket('recap').length} · original ${byBucket('original').length} · crossover ${byBucket('crossover').length} · promo ${byBucket('promo').length} · unknown ${byBucket('unknown').length} · unstaged ${byBucket('unstaged').length} · ledger rows ${ledger.length} (${ledger.filter((l: any) => l.standing == null).length} standing pending)`);
+  console.log(`[audit-discovery] related works (I45): ${extras.length} listed · same_instrument ${byBucket('same_instrument').length} · other_instrument ${byBucket('other_instrument').length} · recap ${byBucket('recap').length} · original ${byBucket('original').length} · crossover ${byBucket('crossover').length} · promo ${byBucket('promo').length} · alternative ${byBucket('alternative').length} · unknown ${byBucket('unknown').length} · unstaged ${byBucket('unstaged').length} · ledger rows ${ledger.length} (${ledger.filter((l: any) => l.standing == null).length} standing pending)`);
   const lines: Record<string, string[]> = {
     halo_sequel_unclaimed: classes.halo_sequel_unclaimed.map(candidateLine),
     halo_series_unclaimed: classes.halo_series_unclaimed.map(candidateLine),
@@ -88,6 +89,7 @@ async function main() {
     extra_original: byBucket('original'),
     extra_crossover: byBucket('crossover'),
     extra_promo: byBucket('promo'),
+    extra_alternative: byBucket('alternative'),
     related_work_stale: stale,
     related_work_violation: violation,
     related_work_duplicate: duplicate,

@@ -19,7 +19,10 @@
 // PROPOSAL; a ruling (watch-order-labels.ts, by AniList id) overrides it.
 import { pickMangaNode } from './rulings/source-relations';
 
-export type ExtraBucket = 'recap' | 'original' | 'same_instrument' | 'other_instrument' | 'crossover' | 'unknown' | 'promo';
+export type ExtraBucket = 'recap' | 'original' | 'same_instrument' | 'other_instrument' | 'crossover' | 'unknown' | 'promo' | 'alternative';
+
+/** the relations that put a related work IN an owner's run — AniList's OTHER is how it labels an entry's own specials and shorts (Shippuden's Sunny Side Battle, Railgun S's bathhouse special), so it counts; ALTERNATIVE and SAME_UNIVERSE are a different telling or a different work (I16) */
+export const IN_RUN_RELATIONS = new Set(['SEQUEL', 'PREQUEL', 'SIDE_STORY', 'SPIN_OFF', 'PARENT', 'OTHER', 'SUMMARY', 'COMPILATION']);
 export type Standing = 'canon' | 'mixed' | 'filler';
 
 export type ExtraMedia = {

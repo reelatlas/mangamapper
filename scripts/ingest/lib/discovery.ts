@@ -32,7 +32,7 @@
 
 import { pickMangaNode } from './rulings/source-relations';
 import type { DiscoveryRuling } from './rulings/discovery';
-import { adaptedNodes, extraBucket, ownerInstrumentIds, PROMO, type ExtraBucket } from './related-works';
+import { adaptedNodes, extraBucket, IN_RUN_RELATIONS, ownerInstrumentIds, PROMO, type ExtraBucket } from './related-works';
 
 export const SERIES_FORMATS = new Set(['TV', 'TV_SHORT', 'ONA']);
 export const EXTRA_FORMATS = new Set(['MOVIE', 'OVA', 'SPECIAL']);
@@ -56,6 +56,8 @@ export type EdgeNode = {
 export type MediaLike = {
   id: number;
   title: { romaji: string | null; english: string | null; native?: string | null };
+  /** AniList's source tag (ORIGINAL / MANGA / LIGHT_NOVEL / …) — the extras derivation reads it (I45) */
+  source?: string | null;
   synonyms?: string[];
   format: string | null;
   status: string | null;
@@ -73,6 +75,8 @@ export type Candidate = {
   relations: Set<string>;
   /** every owned series it hangs off */
   owners: Set<string>;
+  /** owner → the relation kinds by which THAT owner reached it (an ALTERNATIVE-only owner is a different telling, I16) */
+  ownerRelations: Map<string, Set<string>>;
   /** the entry whose edge found it first, and how many SEQUEL hops from an owned entry */
   via: number;
   hop: number;
@@ -105,6 +109,8 @@ export type DiscoveryInput = {
   chainWorks?: Map<string, number[]>;
   /** our series id → its instrument node ids on AniList (ownerInstrumentIds: the registered manga, chain works, a novel owner's NOVEL nodes) */
   ownerInstruments?: Map<string, Set<number>>;
+  /** our series id → the BASE series of its franchise (I43) — an alternative adaptation is attributed once, to the base, never to every member */
+  franchiseBase?: Map<string, string>;
 };
 
 const norm = (s: string): string =>
@@ -176,6 +182,7 @@ export function haloCandidates(input: DiscoveryInput): Candidate[] {
         popularity: staged?.popularity ?? node.popularity ?? 0,
         relations: new Set(),
         owners: new Set(),
+        ownerRelations: new Map(),
         via,
         hop,
         bucket: 'ignored',
@@ -190,6 +197,7 @@ export function haloCandidates(input: DiscoveryInput): Candidate[] {
     }
     c.relations.add(relation);
     c.owners.add(owner);
+    (c.ownerRelations.get(owner) ?? c.ownerRelations.set(owner, new Set()).get(owner)!).add(relation);
     if (hop < c.hop) { c.hop = hop; c.via = via; }
     return c;
   };
@@ -214,7 +222,7 @@ export function haloCandidates(input: DiscoveryInput): Candidate[] {
       if (e.relationType !== 'SEQUEL' || e.node.type !== 'ANIME' || input.owned.has(e.node.id)) continue;
       const owners = [...c.owners];
       const next = at(e.node, 'SEQUEL', owners[0], c.anilistId, c.hop + 1);
-      for (const o of owners) next.owners.add(o);
+      for (const o of owners) { next.owners.add(o); (next.ownerRelations.get(o) ?? next.ownerRelations.set(o, new Set()).get(o)!).add('SEQUEL'); }
       if (!seen.has(next.anilistId)) { seen.add(next.anilistId); queue.push(next); }
     }
   }
@@ -227,6 +235,23 @@ export function haloCandidates(input: DiscoveryInput): Candidate[] {
     if (c.bucket === 'ignored') { c.proposal = 'ignored'; c.signals = s; continue; }
     if (c.bucket === 'extra' || c.bucket === 'recap' || c.bucket === 'crossover') {
       // I45: the related-works bucket from the full media — recap / original / same_instrument / other_instrument / crossover / unknown
+      // I16 / I45 (Sean 2026-09-05): a work NO owner reached by an in-run relation is an ALTERNATIVE ADAPTATION — a different telling of the
+      // same source (the 1995 Ghost in the Shell beside SAC, the Heaven's Feel films beside every Fate entry) — never in a run: attributed
+      // ONCE, to the franchise base (I43), and a series candidate when it adapts an instrument (step 2), held when the source has none
+      const inRun = [...c.relations].some((r) => IN_RUN_RELATIONS.has(r));
+      if (!inRun && !c.relations.has('CHARACTER') && !PROMO.test(c.title)) { // a promotional entry is promo first, whatever reached it
+        const bases = new Set([...c.owners].map((o) => input.franchiseBase?.get(o) ?? o));
+        c.owners = bases;
+        const media = (input.staged.get(c.anilistId) as never) ?? null;
+        const adapts = adaptedNodes(media);
+        const staged = input.staged.get(c.anilistId);
+        c.proposal = staged ? 'alternative' : 'unstaged';
+        if (staged) {
+          if (adapts.length) s.push(`adapts ${adapts.map((n) => `${n.title ?? n.id} (${n.format ?? '?'})`).join(', ')}`);
+          s.push(`alternative adaptation (I16) — reached only by ${[...c.relations].join('/')}: not in the run; ${adapts.length ? 'a series candidate (step 2, the mint)' : `source ${(staged as { source?: string | null }).source ?? 'unknown'} names no instrument — held`}`);
+        } else s.push('not staged — run discovery-stage');
+        c.signals = s; continue;
+      }
       const ownerIds = [...c.owners];
       const ownerManga = ownerIds.map((o) => input.ownerManga.get(o) ?? null).find((m) => m != null) ?? null;
       const media = (input.staged.get(c.anilistId) as never) ?? null;
@@ -329,13 +354,18 @@ export async function loadDiscoveryInput(): Promise<DiscoveryInput> {
   }
   const { SOURCE_CHAINS } = await import('./rulings/source-chains');
   const chainWorks = new Map<string, number[]>();
-  for (const [sid, chain] of Object.entries(SOURCE_CHAINS as Record<string, { works?: { anilistId?: number | null }[] }>)) chainWorks.set(sid, (chain.works ?? []).map((w) => w.anilistId).filter((n): n is number => n != null));
+  for (const [sid, chain] of Object.entries(SOURCE_CHAINS as Record<string, { works?: { anilistMangaId?: number | null }[] }>)) chainWorks.set(sid, (chain.works ?? []).map((w) => w.anilistMangaId).filter((n): n is number => n != null)); // I41: the chain's field is anilistMangaId (read as anilistId until 2026-09-05 — every chain looked empty)
   // T25 / I45: every owner's instrument node set — a novel owner's NOVEL nodes come from the edges of its own owned entries
   const ownedBy = new Map<string, number[]>();
   for (const [id, owner] of owned) ownedBy.set(owner, [...(ownedBy.get(owner) ?? []), id]);
+  const { ENTRIES: FRANCHISE_ENTRIES, FRANCHISE_OF } = await import('./rulings/franchises');
+  const baseOf = new Map<string, string>();
+  for (const e of FRANCHISE_ENTRIES as { seriesId: string; value: { franchise: string | null; base?: true } }[]) if (e.value.base && e.value.franchise) baseOf.set(e.value.franchise, e.seriesId);
+  const franchiseBase = new Map<string, string>();
+  for (const s of series) { const f = (FRANCHISE_OF as Record<string, string | null | undefined>)[s.id]; const b = f ? baseOf.get(f) : undefined; if (b) franchiseBase.set(s.id, b); }
   const ownerInstruments = new Map<string, Set<number>>();
   for (const s of series) ownerInstruments.set(s.id, ownerInstrumentIds({ sourceType: s.source_type, mangaId: s.manga_anilist_id, chainWorkIds: chainWorks.get(s.id), ownedMedia: (ownedBy.get(s.id) ?? []).map((id) => staged.get(id) as never).filter(Boolean) }));
-  return { owned, staged, changedAt, ownerTitles, ownerManga, rulings: DISCOVERY_RULINGS, openEnded: OPEN_ENDED, chainWorks, ownerInstruments };
+  return { owned, staged, changedAt, ownerTitles, ownerManga, rulings: DISCOVERY_RULINGS, openEnded: OPEN_ENDED, chainWorks, ownerInstruments, franchiseBase };
 }
 
 /**
