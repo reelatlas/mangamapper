@@ -1,0 +1,54 @@
+{
+  "series_id": "konosuba-gods-blessing-on-this-wonderful-world",
+  "anilist_id": 102976,
+  "title": "KONOSUBA -God's blessing on this wonderful world!- Legend of Crimson",
+  "summary": "A 90-minute theatrical feature (J.C.Staff, 2019-08-30) that is a straight continuation of the TV run and adapts the owner's own instrument — Natsume Akatsuki's light novel — specifically volume 5, 爆裂紅魔にレッツ＆ゴー!! (Crimson Magic Clan, Let's & Go!!), the Crimson Demon Village arc. It opens on the beat vol 4 ENDS on (the Epilogue's last scene: Yunyun bursting in with 「私、カズマさんの子供が欲しい!!」) — our ep 20 adapted vol 4 ch 5 through that epilogue but REPLACED that scene (Yunyun just challenges Megumin), so the film animates it for the first time, relocated to the Guild — and then runs vol 5 ch 1 through ch 6 『欲しいのは最強の魔法使い』, the Explosion-upgrade scene it closes on. Two licensor primaries make the vol-5 identification without any wiki: the film's official STORY page and Kadokawa/Sneaker Bunko's blurb for LN vol 5 describe the same story and quote the same line. Two things it does NOT cover: the day-long trek from Arcanletia (the campfire talk and the Tranquility Girl, vol 5 ch 1-2) and vol 5's Epilogue (the first princess's letter) are cut — both are adapted later, in S3 ep 1 (a separately owned run), so the film's coverage of vol 5 has a hole in ch 1-2 and stops before the epilogue. The one substantial studio addition is the last act: in the novel (and in the manga that follows it) Sylvia dies outright from Komekko's Railgun, while the film has her resurrect as a Mage-Killer/Beldia/Hans amalgam, kills and resurrects Kazuma, and finishes her with Yunyun and Megumin's combined attack — roughly the film's last sixth, by beat count, with the same outcome as the novel; the Red Prison school visit is likewise an anime-original expansion of a village-tour scene the novel has. Under T28's faithfulness clause that is a divergence inside an adaptation whose job is unambiguously vol 5, not a story-carrying original plot, so the standing is canon, not mixed.",
+  "standing": "canon",
+  "confidence": "high",
+  "chapters_adapted": [
+    {
+      "start": null,
+      "end": null,
+      "note": "vol 4 (鈍ら四重奏 ～ナマクラカルテット～), the EPILOGUE's closing scene only — Yunyun bursts into the mansion and asks Kazuma to father her child, the line the novel ends on. UNNUMBERED unit, a fact not a chapter number. Weight: SIGNIFICANT — it is the film's inciting incident and it is animated here for the first time: our ep 20 covered vol 4 ch 5 → the epilogue but changed the reunion, and the fandom's ep 20 page says her part of the epilogue 'was moved to the first movie'. The film relocates it from 'right after the return from Arcanletia' to the Guild some time later (a rearrangement, not new material)."
+    },
+    {
+      "start": 1,
+      "end": 6,
+      "note": "vol 5 (爆裂紅魔にレッツ＆ゴー!!), ch 1-6 in that volume's own printed numbering — ch 1 この由々しい手紙に決断を！ (the chief's letter and Arue's prank) through ch 6 『欲しいのは最強の魔法使い』 (Kazuma putting the skill points into Explosion), the beat the film ends on. Weight: SIGNIFICANT — this is the film's whole body. TWO GAPS INSIDE THE SPAN: (a) the day-long trek from Arcanletia in ch 1-2 (the campfire conversation, the Tranquility Girl / 安楽少女) is cut — S3 ep 1 adapts it later; (b) vol 5's EPILOGUE (the letter from the first princess, which leads into vol 6 六花の王女) is NOT in the film — soneyu's difference article says it was 完全にカット, and the wiki's own manga map puts it in manga ch 54, the chapter S3 ep 1 adapts. Note: the fandom's movie page states the range as 'the Epilogue in Volume 4 thru the Prologue to the Epilogue in Volume 5'; its tail is refuted by the two sources above, and I make no claim about vol 5's PROLOGUE — no source describes its content and the manga chapter map credits no chapter with it (an honest gap)."
+    }
+  ],
+  "recap": false,
+  "position": {
+    "stored": 20.5,
+    "verdict": "confirmed",
+    "proposed": 20.5,
+    "why": "Directly after our ep 20 (S2 ep 10, 2017-03-16), which is the end of the owner's 20-row run. Four independent lines agree: (1) content — ep 20 ends with the party home in Axel after Arcanletia and the film opens on the very next beat of the novel, vol 4's epilogue tail; (2) ja-WP's lede: 時系列上ではテレビアニメ第2期の後であり、原作第5巻『爆裂紅魔にレッツ&ゴー!!』に位置する; (3) the film adapts vol 5 and S2 finished exactly at vol 4 (soneyu: 「アニメ2期でちょうど4巻まで進んだので、その続き」); (4) S3 ep 1 (2024-04-10, a separately owned run) opens with callbacks that presuppose the film — Kazuma's Sylvia nightmares and Megumin recalling the Explosion upgrade — and the wiki's own navigation reads Movie → Episode 21. The film must be watched after our ep 20 and before S3 ep 1."
+  },
+  "adopted": null,
+  "repairs": [],
+  "sources": [
+    "https://konosuba.fandom.com/api.php?action=parse&page=Konosuba_Movie&prop=wikitext&format=json",
+    "https://konosuba.fandom.com/api.php?action=parse&page=Konosuba_Light_Novel_Volume_5&prop=wikitext&format=json",
+    "https://konosuba.fandom.com/api.php?action=parse&page=Konosuba_Light_Novel_Volume_4/Synopsis&prop=wikitext&format=json",
+    "https://konosuba.fandom.com/api.php?action=parse&page=Konosuba_Episode_20&prop=wikitext&format=json",
+    "https://konosuba.fandom.com/api.php?action=parse&page=Konosuba_Episode_21&prop=wikitext&format=json",
+    "https://konosuba.fandom.com/api.php?action=parse&page=Konosuba_Chapter_53&prop=wikitext&format=json",
+    "https://konosuba.fandom.com/api.php?action=parse&page=Konosuba_Chapter_54&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E6%98%A0%E7%94%BB%20%E3%81%93%E3%81%AE%E7%B4%A0%E6%99%B4%E3%82%89%E3%81%97%E3%81%84%E4%B8%96%E7%95%8C%E3%81%AB%E7%A5%9D%E7%A6%8F%E3%82%92!%E7%B4%85%E4%BC%9D%E8%AA%AC&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%81%93%E3%81%AE%E7%B4%A0%E6%99%B4%E3%82%89%E3%81%97%E3%81%84%E4%B8%96%E7%95%8C%E3%81%AB%E7%A5%9D%E7%A6%8F%E3%82%92!%20(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext&format=json",
+    "https://konosuba.com/legend_of_crimson/story/",
+    "https://konosuba.com/legend_of_crimson/books/",
+    "https://sneakerbunko.jp/product/konosuba/321312000158.html",
+    "https://en.wikipedia.org/wiki/KonoSuba:_God%27s_Blessing_on_This_Wonderful_World!_Legend_of_Crimson",
+    "https://web.archive.org/web/20200323033209/https://soneyu.com/eigakonosuba-2/",
+    "https://matcha-rabit.hatenablog.com/entry/%E3%81%93%E3%81%AE%E3%81%99%E3%81%B0%E7%B4%85%E4%BC%9D%E8%AA%AC%E6%84%9F%E6%83%B3"
+  ],
+  "flags_for_sean": [
+    "THE ONE JUDGMENT CALL — canon vs mixed. The film's last act after the Railgun shot (Sylvia resurrecting as a Mage-Killer/Beldia/Hans amalgam, Wiz and Vanir joining, Kazuma absorbed, killed and resurrected, the Yunyun + Megumin finisher) has NO source: LN vol 5 ends the fight with Komekko's Railgun, corroborated by the manga's ch 53 summary ('the blast punches through Sylvia... everybody looks on in surprise at her sudden demise') and by two independent JP difference articles. I size it at roughly one sixth of a 90-minute film by beat count (I could find no timestamped source — no minute range is claimed), it produces the same outcome as the novel, and the film's job is unambiguously vol 5, so I ruled it a T28 faithfulness-clause divergence and kept the row canon. If you read a ~15-minute newly-animated original climax as a story-carrying original share (the shippuden-388 shape), the row is mixed with the same chapters — the fork is sizing, not evidence.",
+    "The ruling type wants scalars: I would encode this as volume 5, chapter 6 (the END inside the volume), chaptersAdapted = 'vol 5, ch 1-6 (skips the ch 1-2 trek; not the Epilogue) + vol 4's Epilogue (closing scene)'. The vol-4 epilogue entry carries null start/end on purpose — a prologue/epilogue is an unnumbered unit and I will not mint a number for it.",
+    "The owner's run stops at S2, so the film's coverage of vol 5 leaves TWO holes that only the separately-owned S3 fills: vol 5 ch 1-2's trek (S3 ep 1's campfire + Tranquility Girl) and vol 5's Epilogue (S3 ep 1's Iris letter, manga ch 54). If the ledger ever derives a continue-read from this row, the honest continue after the film is vol 5's Epilogue — and the ch 1-2 trek is a C3-style skip the reader has NOT seen.",
+    "ORDERING AT 20.5: the S2 OVA この素晴らしい芸術に祝福を！ (BD bonus, first broadcast 2019-06-20 per ja-WP) also sits after ep 20 and before the film — the wiki's navigation is ep 20 → OVA 2 → Movie → ep 21. If that OVA is in the halo at 20.x too, the film should sort after it.",
+    "BY-CATCH, OUTSIDE MY ASK — an owner-grid date. My context prints ep 1 as 2016-01-13; ja-WP's episode list gives S1 ep 1 as 2016年1月14日 (the MX Wednesday 24:30 slot read post-midnight), and every S1 row there is a Thursday. Our eps 16-20 all match ja-WP exactly (2/16, 2/23, 3/2, 3/9, 3/16), so the S1 rows may carry a −1 lineage the S2 rows do not. I only saw ep 1 and eps 16-20 — worth a sweep of S1's ten rows before anyone repairs anything.",
+    "Source independence note for the verifier: en-WP's 'the light novel's fifth volume served as the inspiration' and ja-WP's 原作第5巻 sentence cite the SAME soneyu blog, so those two are one lineage on that specific sentence. The vol-5 identification does not rest on them: the film's official STORY page and Kadokawa/Sneaker Bunko's blurb for LN vol 5 tell the same story and quote the same line (「私、カズマさんの子供が欲しい」 + 紅魔の里 facing 滅亡の危機), and the fandom's chapter-level map is a third, separate reading."
+  ]
+}

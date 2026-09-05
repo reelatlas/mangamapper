@@ -1,0 +1,50 @@
+{
+  "series_id": "chainsaw-man",
+  "anilist_id": 171627,
+  "title": "Chainsaw Man – The Movie: Reze Arc",
+  "summary": "A 100-minute MAPPA theatrical sequel to the 12-episode TV series that adapts the owner's own instrument (Fujimoto's Chainsaw Man manga, printed chapter numbering) end to end: the complete Bomb Girl arc / レゼ篇, chapters 39-52 — the fandom's arc page and navibox give the arc as ch 39-52 (vols 5-6) and every one of those chapter pages carries the film in its `episode` field, while en-Wikipedia states the film 'adapts events covered by the original manga's fifth and sixth volumes' and its plot runs from Makima's movie-marathon date (ch 39) to Makima killing Reze in the alley (ch 52). The film's post-credits scene — Denji waiting at the café with a bouquet, Power arriving, Denji eating the flowers — is ch 52's own closing pages, not a teaser for ch 53, so coverage stops cleanly at the end of vol 6 and the manga continues at ch 53 (vol 7, International Assassins arc). The seam with S1 is contiguous with no gap: ep 12's END is ch 38 (fandom: ep 12 = ch 35 p.6-19, 36, 37, 38 p.2-22) and the Bomb Girl arc starts at the very next chapter; Aki's VA on the official site confirms the film is 「テレビアニメのストーリーの最後から地続き」, the events 'from the next day onward'. The one wrinkle: the film does open on material S1 already animated — two reviews describe a cold open of Denji's sealed-door dream in his apartment (Pochita heard, not seen) before the IRIS OUT title sequence, and that dream is chapter 38's closing pages, which ep 12's post-credits stinger already animated (en-WP's and the fandom's ep-12 summaries both describe it). Those are RE-SHOWN pages, so they are recorded as a restaged cold open and deliberately kept out of chapters_adapted rather than allowed to become a phantom START of 38. Nothing in the film is anime-original at a story-carrying scale (additions are expansions of adapted scenes, e.g. Reze's insert song 「ジェーンは教会で眠った」, which is ch 43's own chapter title), so the standing is plain canon under T28, not mixed.",
+  "standing": "canon",
+  "confidence": "high",
+  "chapters_adapted": [
+    {
+      "start": 39,
+      "end": 52,
+      "note": "the complete Bomb Girl arc (レゼ篇) in printed numbering: vol 5 ch 39 'Tearjerker' through vol 6 ch 52 'Lost Love, Flower, Chainsaw'; the post-credits café/bouquet scene is ch 52's closing pages, so the manga continues at ch 53 (vol 7). Adapted end to end — no chapter of the arc is skipped by any source read; compression of the Aki/Angel Devil subplot is `abridged`-style faithfulness, not original material"
+    }
+  ],
+  "recap": false,
+  "position": {
+    "stored": 12.5,
+    "verdict": "confirmed",
+    "proposed": 12.5,
+    "why": "directly after ep 12, the S1 finale. The film is a direct sequel to the 12-episode TV series (AniList PREQUEL edge; en-WP 'a direct sequel to the first season') and adapts ch 39-52, the chapters immediately after ep 12's END of ch 38 — contiguous, no gap, no arc-level overlap. The official site's staff comment from Aki's VA Shogo Sakata says the film is 「テレビアニメのストーリーの最後から地続きなので、翌日からの出来事なんです」 ('directly continuous from the end of the TV anime's story — the events from the next day onward'). Nothing sits between: the S2 TV series チェンソーマン 刺客篇 (Assassins Arc) was announced 2025-12-21 and takes up ch 53+. 12.5 stands"
+  },
+  "adopted": null,
+  "repairs": [],
+  "sources": [
+    "https://chainsaw-man.fandom.com/api.php?action=parse&page=Chainsaw%20Man%20%E2%80%93%20The%20Movie:%20Reze%20Arc&prop=wikitext&format=json",
+    "https://chainsaw-man.fandom.com/api.php?action=parse&page=Bomb%20Girl%20arc&prop=wikitext&format=json",
+    "https://chainsaw-man.fandom.com/api.php?action=parse&page=Template:Bomb%20Girl%20Arc%20Navibox&prop=wikitext&format=json",
+    "https://chainsaw-man.fandom.com/api.php?action=parse&page=Chapter%2038&prop=wikitext&format=json",
+    "https://chainsaw-man.fandom.com/api.php?action=parse&page=Chapter%2052&prop=wikitext&format=json",
+    "https://chainsaw-man.fandom.com/api.php?action=parse&page=Episode%2012&prop=wikitext&format=json",
+    "https://chainsaw-man.fandom.com/api.php?action=compare&fromrev=35743&torev=39360&format=json",
+    "https://chainsaw-man.fandom.com/api.php?action=compare&fromrev=35710&torev=39365&format=json",
+    "https://en.wikipedia.org/wiki/Chainsaw_Man_%E2%80%93_The_Movie:_Reze_Arc",
+    "https://en.wikipedia.org/wiki/List_of_Chainsaw_Man_chapters",
+    "https://en.wikipedia.org/wiki/List_of_Chainsaw_Man_episodes",
+    "https://chainsawman.dog/movie_reze/staffcast/",
+    "https://chainsawman.dog/movie_reze/story/",
+    "https://kaijuunited.com/2025/10/26/chainsaw-man-the-movie-reze-arc-review/",
+    "https://thatshelf.com/chainsaw-man-the-movie-reze-arc-review-anime-series-hits-the-big-screen/"
+  ],
+  "flags_for_sean": [
+    "THE ASK'S SEAM QUESTION, answered: the Bomb Girl arc sits IMMEDIATELY after the chapter S1 ended on — ep 12's END is ch 38 and the arc runs 39-52 (fandom Katana Man arc = ch 23-38 / eps 8-12; Bomb Girl arc = ch 39-52 / the film). No gap, no arc-level overlap, no skipped chapters between the two works.",
+    "YES, the film opens on material S1 already adapted, but as a RESTAGING, not coverage: two independent reviews put a cold open of Denji's sealed-door dream in his apartment before the IRIS OUT title sequence (kaijuunited: 'The story picks up following the end of the Katana Man arc, with Denji's motif dream in his apartment. Then, the audience is treated to a catchy intro sequence, IRIS OUT'; That Shelf: 'Reze Arc picks up almost immediately after the conclusion of the first season' / 'Pochita (heard, but not seen in an introductory dream sequence)'). That dream is ch 38's closing pages, and ep 12 already animated it (en-WP ep 12: 'Denji dreams of seeing a door in an alley, but Pochita's voice tells him not to open it'; the fandom's ep-12 summary the same). Re-shown pages are never coverage and never a position, and A47 keeps ch 38 as ep 12's END, so 38 is deliberately ABSENT from chapters_adapted — do not let it become a START of 38.",
+    "UNVERIFIED, named honestly: ch 38 is 25 pages and the fandom credits ep 12 with only p.2-22, so the very last page(s) — Denji waking and Power, blood-drunk, punching him across the room — may be first-time material in the film. No source I read describes that beat in the film (the reviews stop at the dream). If it matters later, the settling instrument is the film's first two minutes against ch 38 p.23-25.",
+    "PROVENANCE on the fandom's ch-38 tag (do not read it as a coverage claim): Chapter 38 now carries `episode = Episode 12 + the Movie` and `arc = Katana Man arc + Bomb Girl arc`, but the Movie link was added 2025-09-18T21:13Z by WitheredFreddy1993 inside a batch that stamped the film onto chs 38-52 as the film opened (an arc-scope edit, not an observation), and the `arc` half was added 2025-10-29 by Mojo72400 with the summary 'The ending counts as part of the Bomb Girl Arc' — an arc-boundary judgment. Single-lineage, single-source.",
+    "TOUCHES ep 12's ROW (outside this ask, no change proposed): until 2025-09-18 the same wiki carried `Chapter 52 (p.5)` on Episode 12 and `Episode 12 (partially)` on Chapter 52 — the finale's stinger shows Reze walking the alley toward the café with the town-mouse/country-mouse line over it. The editor removed both with 'The ending scene was more of a teaser when I rewatched it', which matches our own teaser/sliver class exactly: position-less, never an anchor, and ch 52 belongs to the film, which adapts it in full. Ep 12's END 38 stands.",
+    "ENRICHMENT AVAILABLE for the owner's grid (not applied here): the context shows ep 12 as '?-38' with no START and no continue. The fandom gives ep 12 = ch 35 (p.6-19), 36, 37, 38 (p.2-22) → START 35 (page-split with ep 11, whose stored anchor is 31-35). With this film taking 39-52, the series' post-film continue is ch 53 (vol 7, International Assassins arc) — where the announced S2, チェンソーマン 刺客篇, picks up.",
+    "ELSEWHERE ON THIS OWNER'S SHELF, if held: 'Chainsaw Man – The Compilation' (an S1 recap film, released 2025-09-05) is a recap → filler by rule; the 'Chainsaw Days' shorts released alongside it are described by the fandom as adapting the omake printed at the end of volumes 1-5 — omake serialized inside the source ARE the source (the GTO shape), so those are a canon/side_story question, not side_source. Neither is this work."
+  ]
+}

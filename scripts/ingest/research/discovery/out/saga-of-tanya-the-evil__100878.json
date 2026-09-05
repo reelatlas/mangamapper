@@ -1,0 +1,69 @@
+{
+  "series_id": "saga-of-tanya-the-evil",
+  "anilist_id": 100878,
+  "title": "Saga of Tanya the Evil - the Movie -",
+  "summary": "A 98-minute all-new sequel film (ja-WP: 完全新作アニメーション — no recycled footage, no recap) that adapts the second half of Carlo Zen's light-novel volume 4, Dabit deus his quoque finem: the 203rd's long-range reconnaissance that triggers the Federation's declaration of war (ch 1 長距離偵察任務), the Moskva raid (ch 2 親善訪問) and the relief and defence of Tiegenhoff (ch 3 完璧な勝利), closing on the opening of ch 6 (ドアノッカー作戦) — Zettour's call handing Tanya the newly formed Salamander Kampfgruppe. ja-WP's per-event 作中の年表 prints 原作 = 4巻 / アニメ = 劇場版 on exactly those beats, and a scene-by-scene reader's index of the printed volume says it 《おおむねアニメ劇場版に対応しています》 while 《第四章から第六章までのほとんどの部分はカットされています》. Chapter 5 (ドードーバード航空戦) is cut and its content — Mary Sue's single duel with Tanya in the novel — is RELOCATED into the film's Moskva raid and Tiegenhoff battle, where a Commonwealth multinational volunteer mage force the novel's Tiegenhoff does not have joins the assault; KADOKAWA's WebNewtype interview with sound director Iwanami names that duel the film's climax (scored with no music at all). Nothing in the film advances a plot the novel lacks — the changes are cuts, compressions and relocations of the source's own events plus one new supporting character (Vivi) — so under T28's faithfulness clause the standing is canon with divergence / rearranged / abridged annotations, not mixed; the novel volume predates the film by four years (2015 vs 2019), so there is no adoption or incorporation question.",
+  "standing": "canon",
+  "confidence": "high",
+  "chapters_adapted": [
+    {
+      "start": "vol 4, ch 1",
+      "end": "vol 4, ch 3",
+      "note": "the film's spine, in order and essentially in full: ch 1 長距離偵察任務 (the 203rd recalled from the southern continent, the cross-border recon of 1926-03-15, the Federation's declaration of war, the strike on the railway guns), ch 2 親善訪問 (the general staff's debate, the 1926-03-16 Moskva raid, Loria's infatuation), ch 3 完璧な勝利 (the 03-26 Tiegenhoff relief order, the relief of the 3rd/32nd Divisions, the eight-division Federation assault, the rout). ja-WP's 作中の年表 prints 原作 4巻 / アニメ 劇場版 on all three date rows; the fandom's per-chapter vol-4 summary and the reader's printed-volume index give the same three chapters. DIVERGENCE inside ch 3: the Commonwealth's multinational volunteer mage force, its bombers, Warrant Officer Vivi and Major Hofen's death are the studio's; the 48-hour defence is the anime's extension of the novel's same battle (ja-WP marks that row アニメのみ)."
+    },
+    {
+      "start": "vol 4, ch 4",
+      "end": "vol 4, ch 4",
+      "note": "IN PART — ch 4 再編's outcome only: Tanya asks the general staff for a rear posting and is given two months of combat-lessons research with the battalion. The chapter's court-martial over the Moskva raid (1926-04-10) is CUT (ja-WP prints アニメ --- on that row) and the film restages the request as a written petition (ja-WP: アニメのみ). Mary Sue's Commonwealth training thread from the same chapter is carried, expanded across the film."
+    },
+    {
+      "start": "vol 4, ch 5",
+      "end": "vol 4, ch 5",
+      "note": "PARTIAL / RELOCATED — the Dodobird air battle itself is NOT in the film. Ch 5 ドードーバード航空戦 (1926-04-28/29, the Dodobird Strait) is cut as an episode; its load-bearing beat, Mary Sue's only engagement with Tanya in the novel (she is shot down, recognises her father's submachine gun, swears revenge), is split and transplanted into the film's Moskva raid (first clash) and Tiegenhoff battle (the climactic duel, Drake carrying her off). ja-WP prints アニメ --- on the Dodobird rows and アニメのみ on both film clashes. Recorded as a relocation of source content, not as an original plot — it is why the standing stays canon rather than mixed, and it keeps the catalog from marking the confrontation never-adapted."
+    },
+    {
+      "start": "vol 4, ch 6",
+      "end": "vol 4, ch 6",
+      "note": "IN PART — the OPENING of ch 6 ドアノッカー作戦 only, as the film's epilogue: 1926-06-25, Tanya's promotion to Lt. Col., her report 「今大戦における部隊運用と作戦機動」 accepted, and Zettour's call ordering her to command the newly formed Salamander Kampfgruppe (ja-WP: both rows 原作 4巻 / アニメ 劇場版). The rest of ch 6 — the 07-01 formation ceremony, the horse-trading with Zettour, Lergen's protest, Operation Lakeside — is not in the film; S2 ep 1 サラマンダー戦闘団 picks it up."
+    },
+    {
+      "start": "vol 1 (interlude)",
+      "end": "vol 1 (interlude)",
+      "note": "the framing device: WTN reporter Andrew interviewing the aged Dr. Schugel (ja-WP's 作中の年表 dates it 1967-06-23 and assigns it 原作 1巻 / アニメ 劇場版; the fandom's film summary opens on the same scene). A novel interlude, not a numbered mainline chapter of vol 4 — recorded as a fact, not as a position."
+    }
+  ],
+  "recap": false,
+  "position": {
+    "stored": 12.5,
+    "verdict": "confirmed",
+    "proposed": 12.5,
+    "why": "The film is a direct sequel to the 12-episode TV run (same staff and cast — official movie site STAFF&CAST; AniList PREQUEL → the TV series) and it opens where S1 stopped: S1 ep 12 「勝利の使い方」 carries the title of novel vol 3 ch 4 (How to use victory), and the film starts with the return from the southern continent that opens vol 4 ch 1. Season 2 begins AFTER the film, not over it: the Youjo Senki II official site's INTRODUCTION reads 「統一暦1926年、秋。ターニャ・フォン・デグレチャフ中佐は、新編されるサラマンダー戦闘団の指揮官に任じられ」 — the rank and the appointment the film's epilogue delivers — and S2 ep 1 is titled サラマンダー戦闘団 with ep 2 「奇妙な友情」 = vol 5 ch 2's title. So the work sits after ep 12 and before S2: 12.5 stands. (The short 砂漠のパスタ大作戦 shares this gap and must sit BEFORE the film — see flags.)"
+  },
+  "adopted": null,
+  "repairs": [],
+  "sources": [
+    "https://ja.wikipedia.org/wiki/%E5%B9%BC%E5%A5%B3%E6%88%A6%E8%A8%98",
+    "https://ja.wikipedia.org/wiki/%E5%B9%BC%E5%A5%B3%E6%88%A6%E8%A8%98_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+    "https://youjo-senki.fandom.com/wiki/Dabit_deus_his_quoque_finem",
+    "https://youjo-senki.fandom.com/wiki/The_Saga_of_Tanya_the_Evil:_The_Movie",
+    "https://youjo-senki.fandom.com/wiki/Battle_of_Tiegenhoff",
+    "https://youjo-senki.fandom.com/wiki/The_Russy_Invasion_of_the_Empire_(1926)",
+    "https://youjo-senki.fandom.com/wiki/The_Finest_Hour",
+    "https://youjo-senki.fandom.com/wiki/Abyssus_abyssum_invocat",
+    "https://web.archive.org/web/20210619130832/http://youjo-senki.jp/th/",
+    "https://youjo-senki.jp/",
+    "https://youjo-senki.jp/story.html",
+    "https://webnewtype.com/report/staff/184546.html",
+    "https://reiherbahnhof.hatenablog.com/entry/2019/03/20/080920",
+    "https://web.archive.org/web/20251107114408/https://natalie.mu/comic/news/433448"
+  ],
+  "flags_for_sean": [
+    "STANDING FORK (T28), my call is canon — the evidence both ways, so you can rule mixed on the same facts. FOR CANON: the film's job is vol 4's Federation-war opening and the birth of the Salamander Kampfgruppe, and every thread in it resolves into the novel's own plot (chs 1-3 in order and in full, ch 4's outcome, ch 6's opening); the climactic Tanya-vs-Mary duel is ch 5's confrontation relocated, and the faithfulness clause (Sean 2026-09-02) keeps cuts, reorders and restagings of the source's own events CANON with divergence / rearranged / abridged. FOR MIXED: ja-WP's chronology marks four film rows 原作 --- / アニメのみ (the 48-hour Tiegenhoff defence, both Mary clashes, the staging of the transfer request), the Commonwealth multinational mage force at Tiegenhoff is entirely the studio's, and the duel alone runs about 11 minutes of a 98-minute film with the whole Tiegenhoff act roughly the last third. I weighed it as relocation + expansion of source events, not an original story-carrying plot, which is why canon.",
+    "LEDGER FIELDS — the owner is a LIGHT NOVEL with no numeric chapter space in the catalog (context: chapter space '?'), and the novel's printed chapters are per-volume (第一章…第六章). Suggested record: volume 4, chapter null, chaptersAdapted 'vol 4, ch 1-3; ch 4 (in part), ch 6 (opening); ch 5 relocated' — never a bare integer, which would read as a series-wide chapter number the series does not have.",
+    "SIBLING WORK, POSITION ORDER: Youjo Senki: Sabaku no Pasta Daisakusen (砂漠のパスタ大作戦, first shown 2021-06-19 on the ABEMA special, AT-X 2021-06-27) is the film's 前日譚 — Comic Natalie: '2017年に放送されたTVシリーズ第1期と、2019年に公開された劇場版をつなぐストーリー'; ja-WP's episode table carries it as 閑話 with the note 劇場版の前日譚. Its air-date-derived position (2021) would park it AFTER the film — in watch order it belongs between ep 12 and this film, i.e. both works live in the 12.x gap with the short first.",
+    "OWNER COVERAGE GAP (structure finding): S1 ends INSIDE novel vol 3 — ep 12 「勝利の使い方」 is vol 3 ch 4's title, and ja-WP's chronology maps ep 12 to vol 3 events (1925-08-22). Vol 3 ch 5 内政 and ch 6 南方戦役 (the southern campaign with Romel against de Lugo) are NOT adapted by the TV run; ja-WP prints アニメ --- on every southern-continent row, including for the film. The film's desert prologue depicts the campaign's CLOSE without adapting a nameable scene of vol 3 ch 6 — an honest gap: I could not pin a chapter to that prologue on any source, and the 砂漠のパスタ大作戦 short covers part of the same desert period.",
+    "SEASON 2 IS AIRING and continues from the film into vol 5+ (ep 2 「奇妙な友情」 = vol 5 ch 2 ‘Strange friendship’; ep 4 「鉄槌作戦」 and eps 5-9's アンドロメダ計画 / Ildoa material are vol 6-7). If Youjo Senki II is minted as its own entry, this film is the bridge between the two entries and its chapters (vol 4 chs 1-3) are adapted NOWHERE ELSE in the franchise's anime — typing it filler would falsely mark those chapters never-adapted.",
+    "NOT AN ADOPTION (T26): Carlo Zen wrote two 書き下ろし小説 for the theatrical run (『ロバ大作戦』 week 1, 『積み木遊び』 week 3, ticket-holder bonuses per the official movie site) and Tojo Chika drew two bonus comics. Those are franchise extras, not an act adopting the film's original material into the novel line — and the novel volume the film adapts was published in 2015, four years before the film, so there is no incorporation question at all. adopted = null.",
+    "SOURCE TIERING for the verifier: the chapter map rests on TWO independent instruments — ja-WP's 作中の年表 (a per-event table with 原作 volume / アニメ columns, read via api.php action=parse) and the youjo-senki.fandom per-chapter summaries of vol 4 (whose chapter TITLES match the printed 第一章…第六章 titles). The hatenablog entry is a reader's scene-by-scene index of the printed volume: it supplies the Japanese chapter titles and the sentence 《第四章から第六章までのほとんどの部分はカットされています》 — corroboration tier, quoted raw, never load-bearing on its own. The fandom's vol 3/4 summaries credit a Reddit poster (u/MSG_Johnny2), so fandom + that Reddit thread are ONE lineage. AniList was NOT queried (403 today); its facts come from the context file."
+  ]
+}

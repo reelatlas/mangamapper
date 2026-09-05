@@ -1,0 +1,47 @@
+{
+  "series_id": "demon-slayer-kimetsu-no-yaiba",
+  "anilist_id": 178788,
+  "title": "Demon Slayer: Kimetsu no Yaiba Infinity Castle",
+  "summary": "The first of three theatrical films adapting the Infinity Castle arc (JP 2025-07-18, 155 min, ufotable; JP title 劇場版「鬼滅の刃」無限城編 第一章 猗窩座再来 / 'Part 1: Akaza Returns'). It is a straight, continuous adaptation of the owner's own manga: it picks up exactly where TV ep 63 stopped (ch 139) and runs from ch 140 「決戦の火蓋を切る」 — the first chapter the fandom's own chapter pages file under the Infinity Castle Arc — through Akaza's death and a few pages into ch 157. Two independent sources agree on the span: the Kimetsu no Yaiba Wiki prints 'Chapter 140-157 (p. 1-6)' in the film infobox and again in the anime overview's films table, and MangaUpdates' per-work coverage segment reads start 'Vol 16, Chap 140 (Infinity Castle Movie 1)' / end 'Vol 18, Chap 156 (Infinity Castle Movie 1)' — MU's pin naming the last chapter adapted IN FULL, i.e. the same straddle into 157. en-WP's plot independently ends the film on ch 157's opening beats (Koyuki leading Hakuji to Hell, Tanjiro and Giyu collapsing, the Kasugai crows' announcement, Kokushibo and Doma reacting to Akaza's death). The only surprise is the opening: Realsound's rundown of the film's anime-original touches confirms the film opens on a studio-invented scene of Gyomei visiting the Corps graves (an homage to the Mugen Train film's Kagaya/Amane grave visit) while recalling the Kagaya conversation the TV series already animated in ep 63 from ch 139 — decorative framing over already-adapted source, so it carries no first-time coverage and does not move the start. Every other original touch the same article inventories is a flourish (character beats during the fall, unnamed slayers holding the line, Murata's 'thin' Water Breathing, Giyu's mark rendered red instead of the manga's blue); it states outright that the story's skeleton and dialogue follow the source. Under T28 that is canon with faithfulness-clause divergences, not mixed.",
+  "standing": "canon",
+  "confidence": "high",
+  "chapters_adapted": [
+    {
+      "start": 140,
+      "end": 157,
+      "note": "vols 16-18, continuous: ch 140 (the fall into the Infinity Castle) through Shinobu vs Doma (141-143), Zenitsu vs Kaigaku (144-146) and Tanjiro/Giyu vs Akaza (147-156), stopping a few pages into ch 157 「舞い戻る魂」 on the aftermath of Akaza's death. 156 is the last chapter adapted in full (MU's segment pin); the fandom splits the tail as 157 pp. 1-6 (page split single-source). The film interleaves the three fights the manga tells largely in sequence — a rearrangement, not a coverage change. NOT counted here: the ch 139 Gyomei/Kagaya conversation restaged inside the film's anime-original grave-visit prologue — ep 63 already adapted 137-139, so it is re-shown material with no position."
+    }
+  ],
+  "recap": false,
+  "position": {
+    "stored": 63.5,
+    "verdict": "confirmed",
+    "proposed": 63.5,
+    "why": "Exactly right, and provable on chapters rather than on air date alone: ep 63 'The Hashira Unite' (S4 finale) adapts ch 137-139 (fandom Episode 63 infobox; MU's S4 segment end 'Vol 16, Chap 139 (S4)' — which also corroborates our stored ep 63 END anchor of 139), and the film's first frame of source is ch 140. ja-WP calls it the sequel to the 2024 柱稽古編 TV series and AniList's PREQUEL edge points at Hashira Geiko-hen; the Shueisha novelization's own synopsis frames the story as beginning with Muzan at the Ubuyashiki estate and the drop into the castle. Nothing in the run comes between ep 63 and the film."
+  },
+  "adopted": null,
+  "repairs": [],
+  "sources": [
+    "https://kimetsu-no-yaiba.fandom.com/api.php?action=parse&page=Demon%20Slayer%3A%20Kimetsu%20no%20Yaiba%20%E2%80%93%20Infinity%20Castle&prop=wikitext&format=json",
+    "https://kimetsu-no-yaiba.fandom.com/api.php?action=parse&page=Kimetsu%20no%20Yaiba%20(Anime)&prop=wikitext&format=json",
+    "https://kimetsu-no-yaiba.fandom.com/api.php?action=parse&page=Episode_63&prop=wikitext&format=json",
+    "https://kimetsu-no-yaiba.fandom.com/api.php?action=parse&page=Chapter_140&prop=wikitext&format=json",
+    "https://kimetsu-no-yaiba.fandom.com/api.php?action=parse&page=Chapter_156&prop=wikitext&format=json",
+    "https://kimetsu-no-yaiba.fandom.com/api.php?action=parse&page=Chapter_157&prop=wikitext&format=json",
+    "https://api.mangaupdates.com/v1/series/36271319846",
+    "https://en.wikipedia.org/wiki/Demon_Slayer:_Kimetsu_no_Yaiba_%E2%80%93_The_Movie:_Infinity_Castle",
+    "https://ja.wikipedia.org/wiki/%E5%8A%87%E5%A0%B4%E7%89%88%E3%80%8C%E9%AC%BC%E6%BB%85%E3%81%AE%E5%88%83%E3%80%8D%E7%84%A1%E9%99%90%E5%9F%8E%E7%B7%A8_%E7%AC%AC%E4%B8%80%E7%AB%A0_%E7%8C%97%E7%AA%A9%E5%BA%A7%E5%86%8D%E6%9D%A5",
+    "https://kimetsu.com/anime/mugenjyohen_movie/",
+    "https://eiga.com/movie/102014/",
+    "https://j-books.shueisha.co.jp/books/kimetsunoyaiba_mugenjyohen_01.html",
+    "https://realsound.jp/movie/2025/08/post-2109622.html",
+    "https://realsound.jp/movie/2025/08/post-2109622_2.html"
+  ],
+  "flags_for_sean": [
+    "LABEL (not a data error, a disambiguation): AniList 178788's title is the TRILOGY name; the work is Part 1, 劇場版「鬼滅の刃」無限城編 第一章 猗窩座再来 / 'Infinity Castle Part 1: Akaza Returns' (official site og:title; en-WP releases it as 'Demon Slayer: Kimetsu no Yaiba – The Movie: Infinity Castle'). Parts 2 and 3 are separate AniList works that will sit at the same point in the run, so a display label carrying '第一章 / Part 1' is worth minting. Stored kind (movie) and date (2025-07-18, confirmed by ja-WP and eiga.com, 155 min) are correct — no repair.",
+    "ORDERING: three works will share position 63.5 once Parts 2 and 3 are ruled (both undated as of today). Part 2 must sort after Part 1 and will start INSIDE ch 157 (the film stops a few pages in). The ledger needs an intra-position order key, or 63.5 / 63.6 / 63.7, before Part 2 is entered — otherwise the trilogy renders in arbitrary order.",
+    "FRONTIER: this is a related work that carries the series' coverage PAST the TV run's end — the run stops at ch 139 (ep 63) and the film reaches 157. If 'max adapted' and the continue-read are derived from episode anchors only, 18 adapted chapters go invisible and a reader is told to continue at 140 when the film has already shown them through mid-157. Sean's call on whether related-work coverage feeds the frontier; the honest post-film continue is 'in ch 157'.",
+    "PAGE SPLIT is single-source: only the fandom quantifies the tail as ch 157 pp. 1-6. MU's segment (end 156) and en-WP's plot (ch 157's opening beats) agree the film stops a few pages into 157 but neither counts pages. The chapter-level claim is high confidence; treat 'pp. 1-6' as indicative.",
+    "The fandom's per-CHAPTER pages still carry an empty 'anime episode' field for 140-157 (they have not been back-filled with the film) — silence, not a claim that these chapters are unadapted."
+  ]
+}

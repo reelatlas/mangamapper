@@ -1,0 +1,52 @@
+{
+  "series_id": "made-in-abyss",
+  "anilist_id": 100643,
+  "title": "Made in Abyss: Dawn of the Deep Soul",
+  "summary": "A 105-minute完全新作 (fully new, non-compilation) theatrical film, 2020-01-17, that adapts Tsukushi's manga straight through: it resumes inside chapter 26 where S1 ep 13 stopped and runs to the end of chapter 38, i.e. the back of volume 4 plus the whole of volume 5 (the Ido Front / Bondrewd arc: the burning of the Garden, Prushka, the Cartridges, Bondrewd's Blessed form, Prushka becoming Riko's White Whistle). Three independent sources give the same span: the Made in Abyss Wiki's film page lists 'Adapted From' ch 26-38 and cites nearly every synopsis paragraph to a chapter and page range ({{Ref|m|031|14-18}} etc.); MangaUpdates' coverage string carries a segment of its own, 'Vol 4, Chap 26 (Movie 3)' → 'Vol 5, Chap 38 (Movie 3)'; ja-Wikipedia says the film depicts the confrontation with Bondrewd 第4巻の途中から第5巻 ('from partway through volume 4 through volume 5'). The wiki's reverse index closes the case: chapters 27-38 are marked 'Adapted To' the film and NO episode of either season — the film is their sole adaptation — while ch 39 is marked to S2 eps 1-2 only. Departures from the manga are seven small movie-only beats (the pillar descent, Reg zooming in on the collapsed delvers, etc.) and one omission (ch 37 pp 17-18, the papier-mâché whistles, later animated as the OVA 'Together with Papa'): faithfulness-clause divergences, nowhere near the T28 bar for mixed. THE SECOND SEASON PICKS UP DIRECTLY FROM THE FILM'S END: MangaUpdates' next segment starts at 'Vol 6, Chap 39 (S2)', the wiki's S2 ep 1 page lists Dawn of the Deep Soul as its previous episode and 'Adapted From' ch 39 (plus the out-of-order Ganja prologue, ch 48), and the official S2 site's introduction recaps the film's ending (Prushka becoming Riko's white whistle) before 一同は深界六層「還らずの都」へと進む — 還らずの都 is literally ch 39's title. So the film is the only bridge between our ep 13 and season 2, and position 13.5 is exactly right.",
+  "standing": "canon",
+  "confidence": "high",
+  "chapters_adapted": [
+    {
+      "start": 26,
+      "end": 26,
+      "note": "vol 4, 16 pp — the film's opening. S1 ep 13 animated ch 26 pp 1-11 (fandom ep-13 refs 026:1-7, 026:8-11; matches our stored ep-13 anchor 'ch 26 pp 1-11 of 16'); the film restages the departure from Nanachi's Hideout and carries the chapter to its end (pp 12-16: the Garden of the Flowers of Fortitude, Lyza's supposed grave, the Umbra Hand sighting). MangaUpdates pins the film's START here ('Vol 4, Chap 26 (Movie 3)')."
+    },
+    {
+      "start": 27,
+      "end": 38,
+      "note": "vols 4-5 in full — the Ido Front arc (the burning of the Garden of the Flowers of Fortitude, Ido Front, Prushka and Meinya, Reg's arm, the Stingerhead ambush, the Zoaholic/Umbra Hands reveal, the Cartridges, Prushka's cartridge and her Life-reverberating Stone, the departure for the 6th layer). The wiki's per-chapter 'Adapted To' fields name Movie 3 and nothing else for every one of ch 27-38: the film is the sole adaptation of these twelve chapters. Ends on ch 38 pp 15-17 (Bondrewd sees the group off reciting the White Whistle poem); ch 38 is the last chapter of vol 5."
+    }
+  ],
+  "recap": false,
+  "position": {
+    "stored": 13.5,
+    "verdict": "confirmed",
+    "proposed": 13.5,
+    "why": "The film starts exactly where our ep 13 stops (inside ch 26 — ep 13 ends on p 11 of 16, the film carries ch 26 to its end) and stops at ch 38; the second TV season, The Golden City of the Scorching Sun, resumes at ch 39 with no gap and no overlap. Sources for the S2 continuation: MangaUpdates' coverage string reads '… / Vol 5, Chap 38 (Movie 3) / Vol 10, Chap 60 (S2)' with S2's start pinned at 'Vol 6, Chap 39 (S2)'; the fandom's ch 39 page lists 'Adapted To: S2 ep 1, S2 ep 2' (and no film), while S2 ep 1's infobox names Dawn of the Deep Soul as its previous episode; the official S2 site's introduction (miabyss.com/2nd_intro.html) recaps the film's ending — Prushka becoming Riko's white whistle — and then 一同は深界六層「還らずの都」へと進む, 還らずの都 being ch 39's own title. Chapters 27-38 are adapted by no episode of either season, so a viewer who skips the film loses the entire Bondrewd arc. Directly after ep 13 (13.5) is therefore both the date-derived and the story-derived position."
+  },
+  "adopted": null,
+  "repairs": [],
+  "sources": [
+    "https://madeinabyss.fandom.com/api.php?action=parse&page=Made_in_Abyss_Movie_3:_Dawn_of_the_Deep_Soul&prop=wikitext&format=json",
+    "https://madeinabyss.fandom.com/api.php?action=parse&page=Made_in_Abyss_Chapter_026&prop=wikitext&format=json",
+    "https://madeinabyss.fandom.com/api.php?action=parse&page=Made_in_Abyss_Chapter_038&prop=wikitext&format=json",
+    "https://madeinabyss.fandom.com/api.php?action=parse&page=Made_in_Abyss_Chapter_039&prop=wikitext&format=json",
+    "https://madeinabyss.fandom.com/api.php?action=parse&page=Made_in_Abyss_Episode_13&prop=wikitext&format=json",
+    "https://madeinabyss.fandom.com/api.php?action=parse&page=Made_in_Abyss_Season_2_Episode_01&prop=wikitext&format=json",
+    "https://madeinabyss.fandom.com/api.php?action=parse&page=Story_Arcs&prop=wikitext&format=json",
+    "https://madeinabyss.fandom.com/api.php?action=parse&page=Series_Continuity&prop=wikitext&format=json",
+    "https://api.mangaupdates.com/v1/series/22899415114",
+    "https://www.mangaupdates.com/series/aippxsa/made-in-abyss",
+    "https://ja.wikipedia.org/wiki/%E3%83%A1%E3%82%A4%E3%83%89%E3%82%A4%E3%83%B3%E3%82%A2%E3%83%93%E3%82%B9_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+    "https://miabyss.com/movie/intro.html",
+    "https://miabyss.com/2nd_intro.html",
+    "https://api.mangadex.org/manga/80422e14-b9ad-4fda-970f-de370d5fa4e5/aggregate?translatedLanguage[]=en"
+  ],
+  "flags_for_sean": [
+    "POSITION COLLISION AT 13.5 — the two compilation films sit here too by air date. Journey's Dawn (2019-01-04) re-cuts S1 eps 1 through ep 7's A-part and Wandering Twilight (2019-01-18) re-cuts ep 7's B-part through ep 13 (ja-WP メイドインアビス (アニメ) §劇場版総集編); both are recaps of already-watched episodes, both aired after the S1 finale, so a date-derived halo puts all three at 13.5. Only Dawn of the Deep Soul carries story past ep 13. If all three surface, the tiebreak should sort Dawn of the Deep Soul LAST at 13.5 (and the two recaps are arguably better placed at 7.5 / 13.5 by what they compile, or hidden as N8 recaps).",
+    "CH 26 IS SHARED, AND THE WIKI DISAGREES WITH ITSELF BY ONE CHAPTER — the fandom's Story Arcs table calls the Ido Front Arc ch 27-38 (an arc boundary, which puts ch 26 in the preceding Poison and Soul Liberation Arc), while the film's own page lists 'Adapted From' ch 26-38 and cites ch 26 in its opening paragraph. MangaUpdates pins the film's start at ch 26, and our stored ep-13 anchor ends inside ch 26 (pp 1-11 of 16), so 26-38 with ch 26 as a page-split is the honest span. A Google AI summary repeats the arc table's '27-38' — cross-check only, and it is the arc, not the film's coverage.",
+    "UNNUMBERED EXTRA AT THE SEAM (N35) — between ch 38 and ch 39, at the head of volume 6, the books print an unnumbered 5-page side story, 'How Are You? Somewhere 1 - Reg' (ハウアーユードコカ レグ), which MangaDex sorts as '38.5' (a scanlator sort key, not a printed number). It is not adapted by the film and carries no 'Adapted To' entry; it does not affect the 26-38 span or the ch 38 → ch 39 seam.",
+    "CHAPTER-SPACE CHECK PASSED — MangaDex's volume aggregate (vol 4 = ch 25-32, vol 5 = ch 33-38, vol 6 = 38.5 + 39-42…), the fandom's per-chapter volume fields and MangaUpdates' 'Vol 4, Chap 26' / 'Vol 5, Chap 38' / 'Vol 6, Chap 39' all agree, and they agree with our stored ep-13 anchor's numbering. No source shift to apply; the numbers above are the printed space.",
+    "TITLE COLLISION, NOT AN ADAPTATION SIGNAL — our S1 ep 13 is titled 挑む者たち 'The Challengers', which is also the title of ch 38 (the film's last chapter). The episode adapts ch 23-26; the title was borrowed forwards. Do not let a title join move ep 13 or the film."
+  ]
+}

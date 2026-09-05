@@ -1,0 +1,47 @@
+{
+  "series_id": "goblin-slayer",
+  "anilist_id": 108623,
+  "title": "GOBLIN SLAYER -GOBLIN'S CROWN-",
+  "summary": "A 60-minute theatrical 'new episode' (WHITE FOX, dir. Takaharu Ozaki, script Hideyuki Kurata, distributed by Shogate, 2020-02-01) that adapts ONE volume of the owner's instrument — Kumo Kagyu's GA Bunko light novel — namely volume 5 (ゴブリンスレイヤー5, 2017-05-15), the Noble Fencer / Goblin Paladin story. Three independent sources identify the volume: the Goblin Slayer wiki's film page ('It is an adaptation of the fifth light novel', and the film's title is the title of vol 5's chapter 6), ANN's review ('volume 5 of the novel series, which this OVA is based on … Condensing an entire book of content into 60 minutes of footage'), and the near-verbatim match between SB Creative's own volume-5 blurb and the licensor's official film synopsis (Sony Pictures / dAnime / Crunchyroll) down to the 「取り戻す…、失った物、全てを！」 line. Coverage runs the volume end to end: the film opens on vol 5 ch 1's snowy prologue (the Noble Fencer's party beating goblins before their disaster) and closes on ch 7's New Year's party with Goblin Slayer alone on watch. The one identifiable omission is the interlude 「待っている人たちのお話」 (Of Those Who Were Waiting) — cut from the film and issued instead as a Kagyu-written theatre-exclusive drama CD, per the official theatrical page. Everything else the sources describe as changed is compression, reordering and omission of the novel's own events (T28 faithfulness clause), not original story: no anime-original plot share was found, so the row is canon, not mixed. The anime line never touches volume 5 anywhere else — season 1 stops at vol 2 and GOBLIN SLAYER II opens on vol 6 — so this film is the sole animated coverage of that volume.",
+  "standing": "canon",
+  "confidence": "high",
+  "chapters_adapted": [
+    {
+      "start": 1,
+      "end": 7,
+      "note": "LIGHT NOVEL vol 5, ch 1-7 — the complete volume (ch 1 'Tutorial' → ch 7 'After Session - a New Dawn'); chapter numbers in this instrument are VOLUME-LOCAL and meaningless without 'vol 5'. Beat-level ties: ch 1 the snowy prologue (the film's opening scene), ch 2 the village attack, ch 3 the arrow surgery + the branded Noble Fencer on the altar, ch 4 her captivity (recast as brief flashbacks), ch 5 the disguised infiltration, ch 6 the Goblin Paladin duel and the avalanche (= the film's title), ch 7 the New Year's party and Goblin Slayer's watch (the closing scene). The interlude 'Of Those Who Were Waiting' is NOT in the film: the licensor released it as the Kagyu-written theatre-bonus drama CD 『待っている人たちのお話』 (Cow Girl / Guild Girl / Witch / Spearman) — consistent with the wiki's note that Cow Girl appears only at the finale's party. Whether the second interlude (the gods) is animated is unverified and immaterial."
+    }
+  ],
+  "recap": false,
+  "position": {
+    "stored": 12.5,
+    "verdict": "confirmed",
+    "proposed": 12.5,
+    "why": "Correct in BOTH release order and story order. Per the fandom wiki's per-episode 'Adapted' fields, corroborated by ja-WP's episode summaries and titles: season 1 (our rows 1-12) adapts LN vol 1 ch 1-13 and vol 2 ch 1-11 (plus one vol 4 ch 1 scene in ep 5) and ends on vol 1 ch 13 'The Fate of an Adventurer' = our ep 12; the film adapts vol 5; GOBLIN SLAYER II (eps 13-24, a separate entry) opens on vol 6 ch 1 and runs vols 6-8 — every S2 Japanese episode title is a vol 6/7/8 chapter title (ep 13 ありふれた春の一日 = v6 ch 1; ep 24 祈りよ、天に届いているか = v8 ch 10). Nothing in S2 re-adapts vol 5, and S2 ep 1 already presupposes it (the letter from Noble Fencer 'now styled as Female Merchant'). Chronology agrees: the film is the winter / New Year story between S1's material and S2's spring opening. NOTE the anime never adapts vol 3 and adapts only ch 1 of vol 4 — a source gap on either side of the film, not a reason to move it."
+  },
+  "adopted": null,
+  "repairs": [],
+  "sources": [
+    "https://goblin-slayer.fandom.com/api.php?action=parse&page=Goblin%20Slayer:%20Goblin's%20Crown&prop=wikitext&format=json",
+    "https://goblin-slayer.fandom.com/api.php?action=parse&page=Light%20Novel%20Volume%205&prop=wikitext&format=json",
+    "https://goblin-slayer.fandom.com/api.php?action=parse&page=Goblin%20Slayer%20Episode%2012&prop=wikitext&format=json",
+    "https://goblin-slayer.fandom.com/api.php?action=parse&page=Goblin%20Slayer%20Episode%2013&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%82%B4%E3%83%96%E3%83%AA%E3%83%B3%E3%82%B9%E3%83%AC%E3%82%A4%E3%83%A4%E3%83%BC&prop=wikitext&format=json",
+    "https://www.sbcr.jp/product/4797391589/",
+    "https://www.sonypictures.jp/he/11180076",
+    "https://goblinslayer.jp/1st/news/607/",
+    "https://web.archive.org/web/20200206125516/http://goblinslayer.jp/special/crown/",
+    "https://eiga.com/movie/91005/",
+    "https://www.animenewsnetwork.com/review/goblin-slayer/goblin-crown/.156052",
+    "https://www.animekansou.com/goblinscrown.html"
+  ],
+  "flags_for_sean": [
+    "CHAPTER SPACE: the owner's instrument is a light novel whose chapters restart at 1 in every volume — '1-7' is only meaningful as 'vol 5, ch 1-7'. The ledger row needs the volume alongside the chapter numbers, or the pair will read as ch 1-7 of the series. goblin-slayer currently stores no anchors at all, so this verdict is the first chapter statement in that space.",
+    "SOURCE GAP IN THE OWNER'S RUN (outside the ask, but it shapes any future continue-read): the TV run adapts LN vols 1-2 only (plus vol 4 ch 1 in ep 5); vol 3 is never adapted and vol 4 is adapted only in that one scene. This film is the anime line's SOLE coverage of vol 5, and GOBLIN SLAYER II starts at vol 6 — so between our ep 12 and the film there is an unadapted stretch (vol 3, most of vol 4).",
+    "KIND: stored 'movie' confirmed — theatrical release 2020-02-01, distributor Shogate, Eirin PG12, box office ¥105M (Kinema Junpo via ja-WP). Note that several Japanese databases file it as an OVA (ja-WP's episode-list table, anime.eiga.com 「形態 OVA」, Anime! Anime!'s 「劇場版OVA」) and ANN's reviewer calls it an OVA; no repair — AniList MOVIE and the theatrical run carry it.",
+    "RUNTIME: 60 min per the licensor (Sony Pictures 約60分) and eiga.com (2020年製作／60分／PG12), matching AniList. ANN's US release listing's 85 min is the disc runtime with extras.",
+    "RELATED WORKS THIS FILM SPAWNED (for the extras shelf, if it grows): the premium BD carries a Kagyu-written 50-page sequel novella 『ニュープレイ・リビルド・ニュープレイヤーキャラクター』 (an explicit 後日譚 of the film), and the theatrical run gave away three Kagyu drama CDs (one of them the cut vol-5 interlude) plus a Kagyu short novel 『ある冒険者のいさおしのお話』. None of these is in the numbered novel line.",
+    "S1 RECAP SPECIAL, not in our rows: ja-WP lists 特別編「冒険記録用紙」 aired 2018-12-16 between our eps 10 and 11 — 「牛飼娘の目線で第1話から第10話までをまとめた総集編」. If it reaches the related-works shelf it is a recap (filler, N8) with nothing new.",
+    "MINOR, no repair: the fandom wiki gives S1 ep 12's airdate as December 29, 2018 while our row (and ja-WP) hold 2018-12-30 — an AT-X-vs-MX lineage difference; our stored value matches ja-WP and I did not sweep the run."
+  ]
+}
