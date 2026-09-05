@@ -107,8 +107,12 @@ async function main() {
         const ruledPos = ruling?.position ?? RULED_POSITION_BY_ANILIST[sid]?.[c.anilistId];
         const derived = ruledPos ?? deriveWatchPosition(date, epsBy.get(sid) ?? []);
         if (derived == null && !cur) { unpositioned++; continue; } // no date, no ruling — listed by the census, never a guessed slot
-        // a ruled position moves an existing row (the key is series + position, so the old row goes first); otherwise a row keeps its position
+        // IDENTITY is (series, anilist_id); POSITION is an attribute — ruled, else DERIVED, and a derived position re-derives on every run
+        // (Sean 2026-09-05, the identity concern): a row moves when its ruled position changes, or when its unruled BASE SLOT changes (the
+        // grid grew — a sequel season minted after the work's date; the air date corrected). Inside one slot a stored row keeps its 0.01
+        // order (a wrong intra-slot order is a ruling, never a re-sort); a new arrival takes the next free step in air-date order.
         if (cur && ruling?.position != null && Number(cur.position) !== ruling.position) { await remove(cur, `moved to the ruled position ${ruling.position}`); byKey.delete(key); cur = undefined; }
+        else if (cur && ruling?.position == null && derived != null && Math.floor(Number(cur.position)) !== Math.floor(derived)) { await remove(cur, `re-derived: the base slot moved ${Math.floor(Number(cur.position))} → ${Math.floor(derived)} (the grid changed)`); byKey.delete(key); cur = undefined; }
         const position = cur ? Number(cur.position) : ruling?.position ?? freePosition(derived!, takenBy.get(sid) ?? new Set());
         const standing = relatedWorkStanding(bucket, ruling);
         if (standing == null) held++;

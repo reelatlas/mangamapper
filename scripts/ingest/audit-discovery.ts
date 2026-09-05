@@ -24,8 +24,9 @@ import { candidateLine, discoveryClasses, haloCandidates, loadDiscoveryInput } f
 import { lastSitting, SITTINGS } from './lib/rulings/discovery';
 import { loadLatestRankings, seedCandidates, seedLine } from './lib/rankings';
 import { selectAll } from './lib/db';
-import { type ExtraBucket, extraKind, matchRelatedTitle, pickAdoption, relatedWorkStanding } from './lib/related-works';
+import { deriveWatchPosition, type ExtraBucket, extraKind, isoDate, matchRelatedTitle, pickAdoption, relatedWorkStanding } from './lib/related-works';
 import { relatedWorkRuling } from './lib/rulings/related-works';
+import { RULED_POSITION_BY_ANILIST } from './lib/rulings/watch-order-labels';
 
 async function main() {
   const input = await loadDiscoveryInput();
@@ -47,6 +48,8 @@ async function main() {
   const extras = cands.filter((c) => c.bucket === 'extra' || c.bucket === 'recap' || c.bucket === 'crossover');
   const byBucket = (b: string) => extras.filter((c) => c.proposal === b && (!c.ruling || c.ruling.disposition === 'related_work')).map(candidateLine);
   const allRows = await selectAll<any>('watch_order_entries', 'series_id, position, anilist_id, origin, standing, kind, title, air_date, chapter');
+  const epsBy = new Map<string, { number: number; air_date: string | null }[]>();
+  for (const e of await selectAll<{ series_id: string; number: number; air_date: string | null }>('episodes', 'series_id, number, air_date')) epsBy.set(e.series_id, [...(epsBy.get(e.series_id) ?? []), e]);
   const ledger = allRows.filter((r: any) => r.origin === 'halo');
   const others = allRows.filter((r: any) => r.origin !== 'halo');
   const reach = new Map<string, typeof extras[number]>();
@@ -74,6 +77,14 @@ async function main() {
     const ruling = relatedWorkRuling(l.series_id, Number(l.anilist_id));
     const wantStanding = relatedWorkStanding(b, ruling), wantKind = extraKind(c.format, b);
     if (ruling?.chapter != null && Number(l.chapter) !== ruling.chapter) violation.push(`${l.series_id} @${l.position}: chapter ${l.chapter} ≠ ruled ${ruling.chapter} (I45 ruling layer) — run sync-related-works`);
+    const labelPos = RULED_POSITION_BY_ANILIST[l.series_id]?.[Number(l.anilist_id)]; // the label map's ruled position by AniList id (the wiki-numbering layer) pins a row too
+    if (ruling?.position != null && Number(l.position) !== ruling.position) violation.push(`${l.series_id} @${l.position}: position ≠ ruled ${ruling.position} (I45 ruling layer) — run sync-related-works`);
+    else if (ruling?.position == null && labelPos != null && Number(l.position) !== labelPos) violation.push(`${l.series_id} @${l.position}: position ≠ ruled ${labelPos} (watch-order-labels, by AniList id) — run sync-related-works`);
+    else if (ruling?.position == null && labelPos == null) {
+      const m = input.staged.get(Number(l.anilist_id)) as { startDate?: { year?: number | null; month?: number | null; day?: number | null } | null } | undefined;
+      const derived = deriveWatchPosition(isoDate(m?.startDate), epsBy.get(l.series_id) ?? []);
+      if (derived != null && Math.floor(derived) !== Math.floor(Number(l.position))) violation.push(`${l.series_id} @${l.position}: derived base slot is ${Math.floor(derived)} (the grid changed; position is an attribute, identity is the AniList id) — run sync-related-works`);
+    }
     if ((l.standing ?? null) !== wantStanding && wantStanding != null) violation.push(`${l.series_id} @${l.position}: standing '${l.standing}' ≠ rule '${wantStanding}' (${b}) — run sync-related-works`);
     if ((l.kind ?? null) !== wantKind) violation.push(`${l.series_id} @${l.position}: kind '${l.kind}' ≠ derived '${wantKind}' — run sync-related-works`);
   }
