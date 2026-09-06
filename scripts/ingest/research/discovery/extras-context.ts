@@ -32,7 +32,7 @@ async function main() {
   const input = await loadDiscoveryInput();
   const all = haloCandidates(input).filter((c) => c.bucket === 'extra' || c.bucket === 'recap' || c.bucket === 'crossover');
   const series = new Map((await selectAll<Series>('series', 'id, title, title_english, source_type, manga_anilist_id, latest_known_chapters, total_chapters, max_adapted_chapter, manga_status, total_episodes, aired_episodes')).map((s) => [s.id, s]));
-  const rows = await selectAll<Row & { series_id: string; anilist_id: number | null }>('watch_order_entries', 'series_id, anilist_id, position, standing, kind, note, chapter, chapters_adapted, display_label, origin');
+  const rows = await selectAll<Row & { series_id: string; anilist_id: number | null; title: string | null }>('watch_order_entries', 'series_id, anilist_id, position, standing, kind, note, chapter, chapters_adapted, display_label, origin, title');
   const rowOf = new Map(rows.filter((r) => r.anilist_id != null).map((r) => [`${r.series_id}#${r.anilist_id}`, r]));
   const year = (c: Candidate) => (input.staged.get(c.anilistId) as Media | undefined)?.startDate?.year ?? null;
 
@@ -99,6 +99,11 @@ async function main() {
         m?.description ? `- AniList synopsis: "${strip(m.description)}"` : '- AniList synopsis: none', '',
         `## STORED LEDGER ROW (watch_order_entries, origin ${row?.origin ?? '—'})`,
         row ? `- position ${row.position} · kind ${row.kind ?? '?'} · standing ${row.standing ?? 'PENDING'} · chapter ${row.chapter ?? '—'} · chapters_adapted ${row.chapters_adapted ?? '—'} · label ${row.display_label ?? '(unsurfaced)'}\n- note: ${row.note ?? ''}` : '- no row: the work has no air date on AniList, so no position was derived (listed, never slotted)', '',
+        // P29 (the Noragami verifier, 2026-09-06): a proposed position must SEE the slots the owner's other rows hold — the writer refuses a ruled
+        // move onto a held slot (planRuledMoves), so a story-slot proposal that collides is a cluster ruling, never a lone value
+        `## THE OWNER'S OTHER LEDGER ROWS (the slots held today — a proposed position that collides is a CLUSTER ruling)`,
+        ...(rows.filter((r) => r.series_id === o && r.anilist_id !== c.anilistId).sort((a, b) => a.position - b.position).map((r) => `- @${r.position} · ${r.kind ?? '?'} · ${r.standing ?? 'PENDING'} · anilist ${r.anilist_id ?? '—'} · ${String(r.title ?? '').slice(0, 60)}`)),
+        '',
         `## EXISTING RULING (lib/rulings/related-works.ts)`, ruling ? `- ${JSON.stringify(ruling)}` : '- none — this verdict creates it', '',
         `## THE GRID AROUND THE POSITION (our episode rows; anchors are the instrument's chapters)`,
         '| ep | date | type | title | anchor (start–chapter · adapted · continue) |', '|---|---|---|---|---|',
