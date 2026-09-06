@@ -1154,6 +1154,49 @@
    19-23 / 39 (chain_source) and 18 / 93-95 (AFL's loose Mixed bucket),
    beelzebub 15 / 26-28 / 51, rurouni TV ep 95 (identity). Batch 22 opens on
    the boruto follow-up (lanes I + C) with the batch-21 tooling copied.
+141. ✅ **EXTRAS WAVE 5 APPLIED (Sean ruled 2026-09-06 with Cursor: as recommended, Magus' Bride → 9.5, DBS canon).**
+    Eight works, ten owner rows, all verified SOUND WITH NOTES (research-agent Opus → verdict-verifier Fable, the
+    structure Sean keeps; out/ + verify/ committed): one-punch-man OVA 21416 FILLER @12.5 (six ONE-原案 originals;
+    the slot on the bundle's LAST member, #06 after the Boros invasion) · DanMachi Arrow of the Orion 101166 FILLER,
+    the 13.x CLUSTER ruled whole in date order (the hot-springs OVA 21660 → 13.5, the film → 13.51; the author's own
+    「1期と2期の間」; the verdict's STORY-page quote struck — the line is not on the licensor's page) · 7DS Prisoners
+    of the Sky 99540 FILLER @52.5 (the giveaway manga separated by DIRECTION — the film's 前日譚 drawn FOR it — never
+    by 'uncollected', the verifier's correction; the Kaguya shape decided the other way for a reason) · Gintama THE
+    VERY FINAL 114129 CANON 699-704 vol 77 @369.5 (rows 368-369 ARE THE SEMI-FINAL, component 126819 — the task's
+    121097 was wrong; nothing minted) with the 369.5x cluster ruled in date order (Baragaki 369.51, Ikkoku 369.52,
+    Kintama 369.53, Yoshiwara 369.54 — the four rows had stood in insertion order) · Overlord The Sacred Kingdom
+    133845 CANON @46.5, a midquel between S4 eps 7 / 8 — chapter NULL, volume 13, 'LN vols 12-13 ch 1-7 + エピローグ'
+    (the proposer's chapter 7 was a number in a space the novel owner does not have) · Noragami OVA 20494 CANON
+    ch 25 vol 7 @19.5 with the PARTS string (ch 24's body + ch 25's possession half + 拾遺集 ch 2 as a side_story
+    fact — row 19 carries the other halves) and the Aragoto OVA 119941 → 19.51 · Magus' Bride Those Awaiting a
+    Star 21688 FILLER @9.5 — SEAN'S FORK (Cursor's line): the OAD's frame (Chise at 15 with Ruth, contracted TV
+    ep 8) collides with the release slot 0.5 and 8.5 is refuted (ep 9 opens on Elias' two-week seclusion); 9.5 is
+    the first slot the run does not contradict — the Kinnikuman date-slot class; the frame is in the note and
+    'earliest the frame permits' is NOT minted as a convention (P9) · Battle of Gods 14837 under three owners: DBZ
+    FILLER @288.5 and Kai FILLER @165.5 (one story point — the ch 517 / 518 gap; ja-WP's 改 slot converted by TITLE,
+    R20; the task's 'Kai ends at 98' refuted), DBS CANON @0.5 — SEAN'S FORK: the parallel owner (I40 / T30), chapter 4
+    vol 1 with the string saying CORRESPONDENCE (the film adapts no page; the manga digests the film; a bare 'vol 1 ·
+    ch 4' would render as adaptation). The ledger writer: 12 moves + 4 in-place updates, 0 refusals — every cluster
+    ruled whole, because without the sibling moves planRuledMoves refuses Noragami 19.5 and Gintama 369.5 (E14);
+    idempotent after (a second dry run: 0). audit-discovery: every related_work_* violation class 0;
+    related_work_unruled 378 → 368; related_work_cluster_disorder 47 → 45 (the danmachi and gintama clusters). Edges
+    rebuilt + all five deployed (P3). CAPTURES: PROTOCOL-extras.md's stale Battle-of-Gods sentence rewritten (the
+    parallel-owner case — T30 standing, A46 correspondence fields that say so, no adopted record; the 脚本 credit a
+    credit); apply-tennis-anchors.ts' episode read routed through selectAll (P32 — system:census caught it). QUEUED
+    (never silent): Noragami's 拾遺集 as a SHELF ruling (Kodansha files it as 『ノラガミ』の番外編 by the same author —
+    touches TV ep 4); Gintama Lesson 691 (skipped by the SEMI-FINAL) + ep 367's ch 687 half; DanMachi ep 1's date
+    (stored 2015-04-03 vs ja-WP 4月4日 土曜 1:05); Magus' Bride's second trilogy wiki row @24.1 (two AniList ids —
+    identity); the 7DS shelf (Cursed by Light 128740, Grudge of Edinburgh); the same-class Dragon Ball rows
+    (Resurrection 'F' 20778 under all three owners; Yo! Son Goku 5152, Age 776, at DBZ 291.53); a parallel-owner
+    clause for related works + the writer / census gap for chapter fields on a parallel owner; the wiki's Noragami
+    OVA 4 volume label; Overlord's 「カッツェ平野の幽霊船」 (I41 if the chain wants it); a research-agent trap — a line
+    attributed to a licensor page must be grep-verifiable in the fetched page (the DanMachi STORY-page quote).
+    CENSUS (vs the rows-pass capture, every delta explained — P17): related_work_unruled 378 → 368 (the ten
+    rows ruled); related_work_cluster_disorder 47 → 45 (danmachi 13.x, gintama 369.5x); extra_same_instrument 129 → 128
+    and discovery_ruled_unbuilt 0 → 1 — both the Tennis declaration (anilist 995, disposition 'series', committed after
+    that capture): the candidate leaves the extras bucket and waits for the seed — the next sitting; ruling_violation 0;
+    219 series verified, 0 failing; every violation-kind class 0; 281 tests.
+
 140. ✅ **THE ROWS PASS — eight ruled grids for the seeded OVA runs (G59 path C; Sean signed 2026-09-06).**
     The seven seeded runs the wiki finder could not serve (Unicorn's list page holds the OVA and the TV
     re-cut together; Lost Girls and No Regrets carry the franchise's fractional OVA ordinals; Thunderbolt's

@@ -1304,6 +1304,167 @@ export const ENTRIES: RulingEntry<RelatedWorkRuling>[] = [
     ruledOn: '2026-09-05',
     cite: ['scripts/ingest/research/discovery/out/the-prince-of-tennis__4053.json', 'scripts/ingest/research/discovery/verify/the-prince-of-tennis__4053.md'],
   },
+  // ---- WAVE 5 (One-Punch Man, DanMachi, Seven Deadly Sins, Gintama, Overlord, Noragami, Magus' Bride, Battle of Gods under three owners), Sean ruled 2026-09-06 with Cursor: as recommended except Magus' Bride → 9.5 (the frame collides with the release slot — the Kinnikuman date-slot class; the frame is recorded in the note, 'earliest the frame permits' is NOT a convention), DBS canon (I40 / T30); three CLUSTERS ruled whole in date order (E13 / E14 — without the sibling moves the writer refuses the ruled slot): gintama 369.5x, danmachi 13.5x, noragami 19.5x
+  {
+    seriesId: 'one-punch-man',
+    ruleId: 'I45',
+    value: { anilistId: 21416, standing: 'filler', position: 12.5, note: "FILLER — six OVAs shipped one per S1 BD / DVD volume (2015-12-24 → 2016-05-27), 「ONE原案による完全オリジナルストーリー」 on every disc page (ja-WP; ANN: ONE wrote all six; 脚本 鈴木智尋); no chapter of the instrument carries any of them (the 45-bonus-chapter sweep; ch 30-51 read) and the six named characters are OVA-only; the source-adjacent frames are replays (Sonic's ch-15 defeat, the ch-7 apartment door) — weightless (T28). Position 12.5 on the bundle's LAST member: #06 opens after the Boros invasion ep 12 closes; the members' own windows run 2.5 → 12.5 (one id, one row — I46; the windows are a note). ONE 原案 = a credit (T26); Swim's drawn design cameo is 'designs without the events'." },
+    reason:
+      "Wave 5 (research-agent, verified R24 SOUND WITH NOTES): the licensor's six volume pages, ja-WP's BD table, ANN 2015-11-15 and en-WP's writer column agree on six originals; the verifier corrected the door frame to ch 7, struck the 'disc order IS the story order' sentence (content windows instead: #01 2.5, #02 5.5+, #03 4.5-5.5, #04 7.5-9.5, #05 9.5+, #06 12.5) and strengthened adopted: null with the wiki's Swim design cameo. Sean 2026-09-06: filler, 12.5.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-06',
+    cite: ['scripts/ingest/research/discovery/out/one-punch-man__21416.json', 'scripts/ingest/research/discovery/verify/one-punch-man__21416.md'],
+  },
+  {
+    seriesId: 'is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon',
+    ruleId: 'I45',
+    value: { anilistId: 101166, standing: 'filler', position: 13.51, note: "FILLER — an anime-original story by the author (ja-WP 「原作者書き下ろし脚本だが、原作小説にはないアニメオリジナルストーリー」; Natalie / ANN 2018-02-18); no novel carries it — the three Ōmori giveaway novellas are DOWNSTREAM of the film (a 前日譚 and two side stories that presuppose it). Set between S1 and S2 by the author himself (Comic Natalie 2019-02-22: 「1期と2期の間、原作では5巻と6巻の間」; vol 5 = our eps 10-13, vol 6 opens S2). Position 13.51 — the 13.x CLUSTER ruled in date order: the hot-springs OVA 21660 (2016-12-07) first at 13.5 (ABEMA's 時系列 list; the fandom's nav ep 13 → OVA → II ep 1), this film (2019-02-15) second. Ōmori's 原作・脚本 = a credit (T26)." },
+    reason:
+      "Wave 5 (verified SOUND WITH NOTES): standing, [] and adopted null hold on ja-WP, the trade press and the author's interview; the task's 'set after S2' premise refuted. The verifier struck the STORY-page quote (the 完全オリジナル line is not on the licensor's page — the Natalie feature lede carries it) and refused the delivered 13.5 (it would freeze the film ahead of the OVA and silence related_work_cluster_disorder). Sean 2026-09-06: filler; the cluster ruled whole (OVA 13.5, film 13.51). Queued: ep 1's date (stored 2015-04-03 vs ja-WP 4月4日 土曜 1:05).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-06',
+    cite: ['scripts/ingest/research/discovery/out/is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon__101166.json', 'scripts/ingest/research/discovery/verify/is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon__101166.md'],
+  },
+  {
+    seriesId: 'is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon',
+    ruleId: 'I45',
+    value: { anilistId: 21660, position: 13.5, note: "First of the 13.x cluster in date order (the film 101166 follows at 13.51): the S1 hot-springs OVA (2016-12-07) is the climb back from the 18th floor after the Black Goliath — ABEMA's 時系列 list and the fandom's navigation (ep 13 → OVA → II ep 1). Standing pending: its own verdict is a later wave." },
+    reason:
+      "Sean 2026-09-06 (wave 5, the danmachi cluster): the writer had the film at 13.5 and this OVA behind it at 13.51 in insertion order — related_work_cluster_disorder's witness; the sourced order is OVA then film. Identity is the AniList id; the position is the ruled order (the Made in Abyss shape).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-06',
+    cite: ['scripts/ingest/research/discovery/verify/is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon__101166.md'],
+  },
+  {
+    seriesId: 'the-seven-deadly-sins',
+    ruleId: 'I45',
+    value: { anilistId: 99540, standing: 'filler', position: 52.5, note: "FILLER — the film adapts no page of the instrument: its story exists only as the film (+ its novelisation). Suzuki's giveaway manga 『天空の囚われ人』 (46 pp, 2018-08-18) is the film's 前日譚 and backstory, drawn FOR it (the licensor's word), staged nowhere in it; 「幻を求めて」 ran in WSM 2018 No. 34 and the owner's wiki files it as Extra Chapter 21 — the manga's own uncollected extra (the Kaguya shape), which the film does not adapt: the DIRECTION, not the venue, decides. Position 52.5: released 2018-08-18 between the S2 finale (ep 52, 2018-06-30) and S3 ep 1 (2019-10-09), set after S2 (ANN; the full roster incl. Escanor and Merlin; AniList's PARENT edge = S2). Suzuki's 原作 credit = a credit (T26)." },
+    reason:
+      "Wave 5 (verified SOUND WITH NOTES): filler, [], 52.5 and adopted null reproduce on the official site (story / novelty / staffcast), Aniplex, マガポケ, ja-WP, en-WP and the fandom; the verifier replaced the verdict's 'never collected / no mainline number' discriminator (false for 「幻を求めて」, WSM 2018 No. 34) with the direction sentence in the note and dropped 'vol 34/35' (「真昼の決闘」 is vol 34). Sean 2026-09-06: filler, 52.5. Queued: the 7DS shelf (Cursed by Light 128740, Grudge of Edinburgh).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-06',
+    cite: ['scripts/ingest/research/discovery/out/the-seven-deadly-sins__99540.json', 'scripts/ingest/research/discovery/verify/the-seven-deadly-sins__99540.md'],
+  },
+  {
+    seriesId: 'gintama',
+    ruleId: 'I45',
+    value: { anilistId: 114129, standing: 'canon', chapter: 704, volume: 77, chaptersAdapted: "699-704 (the whole Jump GIGA + 銀魂公式アプリ 完結編; vol 77 = 696-704, the film opens three chapters in); abridged — 289 pp in 104 min; the ten-minute Dragon Ball-parody prologue re-tells 687-698 as a recap, not coverage", position: 369.5, note: "CANON — after ep 369 (corrected from the air-date slot 367.5): rows 368-369 ARE Gintama: THE SEMI-FINAL (AniList 126819, component 9), the film's 前日譚 adapting 687-698 though streamed a week after the film. The film adapts Lessons 699-704 (the GIGA / app 完結編, vol 77's back half): faithful to the panel (every flashback redrawn, Takasugi's eye = flourish — T28); the parody prologue is a recap, the post-credit 銀八先生 short the one original. END 704 = the manga's last chapter on four lineages; START 699 medium-high (the fandom's three page families + the plot; ja-WP's anime article says 696 against its own film article). First of the 369.5x cluster (date order). Sorachi's 原作／原案・原画・voice credits = credits (T26)." },
+    reason:
+      "Wave 5 (verified SOUND WITH NOTES): 699-704 / vol 77 on the fandom's film + Lesson pages, MU ('Vol 77, Chap 704 (The Final Movie)'), ja-WP ×2 and en-WP's volume list; canon under T28's recap and faithfulness clauses; the story slot on four sources (the wiki's previous = Episode 369; the ep 368 / 369 pages; ja-WP's 前日譚; en-WP 'bridges the gap'). The verifier: the task's SEMI-FINAL id 121097 is wrong (126819, already component 9 — nothing to mint); 369.5 was held by the unruled Yoshiwara row, so the whole cluster is ruled here (E13 / E14). Sean 2026-09-06: canon, 369.5. Queued: Lesson 691 (skipped by the SEMI-FINAL); ep 367's ch 687 half.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-06',
+    cite: ['scripts/ingest/research/discovery/out/gintama__114129.json', 'scripts/ingest/research/discovery/verify/gintama__114129.md'],
+  },
+  {
+    seriesId: 'gintama',
+    ruleId: 'I45',
+    value: { anilistId: 169000, position: 369.51, note: "Gintama on Theater 2D: Baragaki-hen (2023-11-10) — a compilation of the Baragaki arc — filler by rule (N8 recap). Ruled into the 369.5x cluster in date order behind THE VERY FINAL (369.5): Baragaki 369.51, Ikkoku 369.52, Kintama 369.53, Yoshiwara 369.54." },
+    reason:
+      "Sean 2026-09-06 (wave 5, the gintama cluster): the four halo rows stood in insertion order (2026 → 2024-06 → 2023-11 → 2024-11) at 369.5-369.53 — related_work_cluster_disorder's witness, and 369.5 was the slot THE VERY FINAL's ruling needed; date order ruled explicitly (E13), the film first as the story slot. Identity is the AniList id; the position is the ruled order.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-06',
+    cite: ['scripts/ingest/research/discovery/verify/gintama__114129.md'],
+  },
+  {
+    seriesId: 'gintama',
+    ruleId: 'I45',
+    value: { anilistId: 175573, position: 369.52, note: "Gintama on Theater 2D: Ikkoku Keisei-hen (2024-06-21) — a compilation of the Ikkoku Keisei arc — filler by rule (N8 recap). Ruled into the 369.5x cluster in date order behind THE VERY FINAL (369.5): Baragaki 369.51, Ikkoku 369.52, Kintama 369.53, Yoshiwara 369.54." },
+    reason:
+      "Sean 2026-09-06 (wave 5, the gintama cluster): the four halo rows stood in insertion order (2026 → 2024-06 → 2023-11 → 2024-11) at 369.5-369.53 — related_work_cluster_disorder's witness, and 369.5 was the slot THE VERY FINAL's ruling needed; date order ruled explicitly (E13), the film first as the story slot. Identity is the AniList id; the position is the ruled order.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-06',
+    cite: ['scripts/ingest/research/discovery/verify/gintama__114129.md'],
+  },
+  {
+    seriesId: 'gintama',
+    ruleId: 'I45',
+    value: { anilistId: 178436, position: 369.53, note: "Gintama on Theater 2D: Kintama-hen (2024-11-22) — a compilation of the Kintama arc — filler by rule (N8 recap). Ruled into the 369.5x cluster in date order behind THE VERY FINAL (369.5): Baragaki 369.51, Ikkoku 369.52, Kintama 369.53, Yoshiwara 369.54." },
+    reason:
+      "Sean 2026-09-06 (wave 5, the gintama cluster): the four halo rows stood in insertion order (2026 → 2024-06 → 2023-11 → 2024-11) at 369.5-369.53 — related_work_cluster_disorder's witness, and 369.5 was the slot THE VERY FINAL's ruling needed; date order ruled explicitly (E13), the film first as the story slot. Identity is the AniList id; the position is the ruled order.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-06',
+    cite: ['scripts/ingest/research/discovery/verify/gintama__114129.md'],
+  },
+  {
+    seriesId: 'gintama',
+    ruleId: 'I45',
+    value: { anilistId: 197474, position: 369.54, note: "Gintama the Movie 2026: Yoshiwara in Flames (2026-02-13) — the 2026 film (the alternative bucket); standing pending — its own verdict is a later wave. Ruled into the 369.5x cluster in date order behind THE VERY FINAL (369.5): Baragaki 369.51, Ikkoku 369.52, Kintama 369.53, Yoshiwara 369.54." },
+    reason:
+      "Sean 2026-09-06 (wave 5, the gintama cluster): the four halo rows stood in insertion order (2026 → 2024-06 → 2023-11 → 2024-11) at 369.5-369.53 — related_work_cluster_disorder's witness, and 369.5 was the slot THE VERY FINAL's ruling needed; date order ruled explicitly (E13), the film first as the story slot. Identity is the AniList id; the position is the ruled order.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-06',
+    cite: ['scripts/ingest/research/discovery/verify/gintama__114129.md'],
+  },
+  {
+    seriesId: 'overlord',
+    ruleId: 'I45',
+    value: { anilistId: 133845, standing: 'canon', chapter: null, volume: 13, chaptersAdapted: "LN vols 12-13 ch 1-7 + エピローグ (vol 12 『聖王国の聖騎士 上』 = ch 1-3 entire; vol 13 『下』 = ch 4-7 + the epilogue; the vol-13 幕間 is the only unadapted unit) — the ARC's own 1-7 numbering, not a series chapter space", position: 46.5, note: "CANON — a MIDQUEL: watch between S4 ep 7 (row 46, 霜の竜王, vol 11's close) and ep 8 (row 47, which opens on the film's outcome as past news) — ja-WP 「第4期第7話と第8話の間」, the fandom's film page, director Itō at NYCC 2024, and the content seam. The film is vols 12-13 entire (984 pp in 135 min: omission, compression, the Prart → Kalinsha relocation — no anime-original scene named by any source; T28). Chapter null: the owner's instrument is Maruyama's novel with arc-local 章 numbering (the novel-owner shape: KonoSuba 102976, Haruhi 108623) — volume 13 is the END unit. Maruyama's 原作 credit = a credit (T26); nothing entered the novel line." },
+    reason:
+      "Wave 5 (verified SOUND WITH NOTES): the units on the fandom's Volume 12 / 13 pages and a Japanese per-chapter 感想 printing the headers; the position on ja-WP (a 2022 insertion, provenance traced), the fandom, the director and the seam (row 46 ends on Demiurge's report, row 47 opens after it); nothing weighs against 46.5 (no licensor packaging or marathon places the film elsewhere). The verifier: the proposer's chapter: 7 is a number in a space this owner does not have and '1-3, 4-7' drops the load-bearing volumes — hand-written; 'vol 11's epilogue' → 'vol 11's close'. Sean 2026-09-06 (Cursor): canon, chapter null, volume 13, 46.5. Queued: 「カッツェ平野の幽霊船」 (a Maruyama side story no anime adapts — I41 if the chain wants it).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-06',
+    cite: ['scripts/ingest/research/discovery/out/overlord__133845.json', 'scripts/ingest/research/discovery/verify/overlord__133845.md'],
+  },
+  {
+    seriesId: 'noragami',
+    ruleId: 'I45',
+    value: { anilistId: 20494, standing: 'canon', chapter: 25, volume: 7, chaptersAdapted: "24 (the hanami — the chapter's body; Aragoto ep 7 = row 19 has only its closing beat) + 25 (the 神憑り possession half — Aragoto ep 7 has the Divine Council half) + ノラガミ拾遺集 ch 2 「神器の心中を問う事」 (the author's unnumbered 番外編, 拾遺集 第壱巻 2013-11-15 — a side_story fact, not in the 1-109 space)", position: 19.5, note: "CANON — after Aragoto ep 7 (row 19), the episode that reaches vol 7's chs 24-25 and skips exactly the picnic and the possession: the OADs are the SOLE adaptation of those PARTS. 7.5 was OAD 1's ship date (vol 10 LE, 2014-02-17); OAD 2 shipped with vol 11 LE (2014-07-17) after S1 ended — release slots that would spoil the Bishamonten arc. OAD 1 = ch 25 (Kodansha 「原作第25話神憑りのお話」; original share unsized), OAD 2 = ch 24 + 拾遺集 ch 2 (ja-WP; the wiki). No licensor numbering (ja-WP's OAD table unnumbered; both seasons' BD 収録話 = TV only). First of the 19.5x cluster; the Aragoto OADs 119941 follow at 19.51. Adachitoka's 原作 credit = a credit (T26)." },
+    reason:
+      "Wave 5 (verified SOUND WITH NOTES): the chapter equations on Kodansha's own LE copy, ja-WP's 沿革 and the wiki's OVA / chapter / arc pages, MU's two coverage strings; canon under T28's faithfulness clause; the position on content (row 19 = where the run reaches chs 24-25 and Hiyori enters high school). The verifier: 19.5 was held by the Aragoto-OVA row (the writer would refuse) → the cluster ruled whole; '24, 25' overstated coverage → the parts string; the 拾遺集 shelf question (Kodansha files it as 『ノラガミ』の番外編 by the same author) is Sean's, queued with TV ep 4. Sean 2026-09-06: canon, 19.5.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-06',
+    cite: ['scripts/ingest/research/discovery/out/noragami__20494.json', 'scripts/ingest/research/discovery/verify/noragami__20494.md'],
+  },
+  {
+    seriesId: 'noragami',
+    ruleId: 'I45',
+    value: { anilistId: 119941, position: 19.51, note: "Second of the 19.5x cluster (the S1 OADs 20494 first at 19.5, story order): the Aragoto OADs (2015-11-17 / 2016-03-17) keep the slot their air date derived, as the ruled order. Standing pending — its own verdict is a later wave (the verifier: 拾遺集 ch 6 + mainline ch 41 is past the run's terminal 39, so 25.5 may be its story slot)." },
+    reason:
+      "Sean 2026-09-06 (wave 5, the noragami cluster): 19.5 was this row's by air-date derivation and the S1 OADs' by content; the writer refuses a ruled slot held by a non-mover (E14), so the pair is ruled explicitly in story order (E13). Identity is the AniList id; the position is the ruled order.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-06',
+    cite: ['scripts/ingest/research/discovery/verify/noragami__20494.md'],
+  },
+  {
+    seriesId: 'the-ancient-magus-bride',
+    ruleId: 'I45',
+    value: { anilistId: 21688, standing: 'filler', position: 9.5, note: "FILLER — 「ヤマザキコレ原案による完全オリジナルアニメーション」 (Mag Garden's OVA site; ja-WP; lisani; ANN; Shochiku): Chise's childhood, never drawn; the Chika beat restages vol 1's own fact (weightless). Three parts 2016-08-13 → 2017-09-08 with 特装版 vols 6-8; the row keeps the theatrical date. POSITION 9.5 (Sean): the OAD's own 'now' is its frame — Chise at 15 in Elias' house with Ruth already her familiar (contracted in TV ep 8), and the licensor's synopsis places the frame after her arrival — so 0.5 (release order) shows Ruth before he exists; 8.5 is refuted (ep 9 opens on Elias' two-week seclusion since ep 8); 9.5 is the first slot the run does not contradict (Elias is back by ep 9's end; ep 10 opens at home). An inference (medium) — no licensor order exists. Yamazaki's 原案 = a credit; adopted null at medium (断片集 1 第2片 unread)." },
+    reason:
+      "Wave 5 (verified SOUND WITH NOTES on the standing, REFUTED on the delivered 8.5): the original-story claim on five lineages; the verifier found ep 9's seclusion clause (the fandom's Chapter = 13, 14; en-WP) and named 9.5 as the earliest slot the frame permits, 0.5 as release order only. Sean 2026-09-06 (Cursor's line): 9.5 — the setting collides with the release slot, the Kinnikuman date-slot class; the frame is recorded in the note and 'earliest the frame permits' is NOT a convention (P9 — a per-work judgment). Queued: the second trilogy's wiki row @24.1 (two AniList ids — identity).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-06',
+    cite: ['scripts/ingest/research/discovery/out/the-ancient-magus-bride__21688.json', 'scripts/ingest/research/discovery/verify/the-ancient-magus-bride__21688.md'],
+  },
+  {
+    seriesId: 'dragon-ball-z',
+    ruleId: 'I45',
+    value: { anilistId: 14837, standing: 'filler', position: 288.5, note: "FILLER — official continuity (Toei: 「スピンオフでも番外編でもない…正史」) but no page of the manga is in it: set in the ten-year gap between ch 517 and 518 (Toei 2012-07-17; WSJ #33 via ANN; ja-WP's 年代記 ref) — after ep 288 (遅いぜ悟空！みんなでパーティ!!, 1996-01-10, the barbecue) and before ep 289 (悟空おじいちゃん！私がパンよ!!, the ten-years-later Budokai), ja-WP's own Z slot, rows joined by title + date (R20); our anchors agree (287 → 517, 288 filler, 289 → 517-518). Release order (291.5) would show Uub and Goku's departure before a film set six years earlier. No adopted{author} on the 脚本 basis (渡辺雄介; Sean 2026-09-05); nothing entered this manga (closed 1995) — the DBS manga's ch 1-4 incorporation is correspondence on THAT owner." },
+    reason:
+      "Wave 5 (verified SOUND WITH NOTES, one work under three owners — verify/dragon-ball__14837.md): the placement sources reproduce verbatim (Toei's 2012-07-17 release, ANN / WSJ #33, ja-WP 神と神's three-owner slot, the wiki); the DBS standing was a genuine fork the verdict delivered honestly — the verifier and the sitting read CANON as the ruled model (I40 / T30 outrank the protocol's adaptation-owner example, whose adopted-note premise the 2026-09-05 sitting removed) and required the chapter string to say correspondence (a bare 'vol 1 · ch 4' would render as adaptation). Sean 2026-09-06: DBS canon; DBZ 288.5 and Kai 165.5 as one story point. Queued (same class, next wave): Resurrection 'F' 20778 under all three owners; Yo! Son Goku 5152 (Age 776) at DBZ 291.53; the protocol's stale Battle-of-Gods sentence; a parallel-owner clause; the writer / census gap for chapter fields on a parallel owner.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-06',
+    cite: ['scripts/ingest/research/discovery/out/dragon-ball-z__14837.json', 'scripts/ingest/research/discovery/verify/dragon-ball__14837.md'],
+  },
+  {
+    seriesId: 'dragon-ball-z-kai',
+    ruleId: 'I45',
+    value: { anilistId: 14837, standing: 'filler', position: 165.5, note: "FILLER — the same story point as DBZ 288.5: ja-WP's 改 slot 「第157話と第158話の間」 converted by TITLE, never by number (R20) — JP 157 やっぱり最強孫悟空!! 魔人ブウ消滅 = our row 164, JP 158 そして10年後… = our row 166; row 165 (Peace Returns!, international-only, = DBZ 287B-288) is the last row before the ten-year skip → 165.5. Our space is the international numbering (167 rows; eight rows never aired in Japan — batch 19's list); the task's 'Kai ends at 98' premise is refuted (98 is only the 2009-11 run's end; the air-date slot 98.5 sat inside a three-year broadcast gap). No adopted{author} (脚本 渡辺雄介); nothing entered the manga." },
+    reason:
+      "Wave 5 (verified SOUND WITH NOTES, one work under three owners — verify/dragon-ball__14837.md): the placement sources reproduce verbatim (Toei's 2012-07-17 release, ANN / WSJ #33, ja-WP 神と神's three-owner slot, the wiki); the DBS standing was a genuine fork the verdict delivered honestly — the verifier and the sitting read CANON as the ruled model (I40 / T30 outrank the protocol's adaptation-owner example, whose adopted-note premise the 2026-09-05 sitting removed) and required the chapter string to say correspondence (a bare 'vol 1 · ch 4' would render as adaptation). Sean 2026-09-06: DBS canon; DBZ 288.5 and Kai 165.5 as one story point. Queued (same class, next wave): Resurrection 'F' 20778 under all three owners; Yo! Son Goku 5152 (Age 776) at DBZ 291.53; the protocol's stale Battle-of-Gods sentence; a parallel-owner clause; the writer / census gap for chapter fields on a parallel owner.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-06',
+    cite: ['scripts/ingest/research/discovery/out/dragon-ball-z-kai__14837.json', 'scripts/ingest/research/discovery/verify/dragon-ball__14837.md'],
+  },
+  {
+    seriesId: 'dragon-ball-super',
+    ruleId: 'I45',
+    value: { anilistId: 14837, standing: 'canon', chapter: 4, volume: 1, chaptersAdapted: "1-4 (CORRESPONDENCE, never adaptation — the DBS manga's 65-page digest of the film, V-Jump 2015年8月号-11月号, vol 1 『第6宇宙の戦士たち』; the film precedes the pages by 27 months; A46 / T30)", position: 0.5, note: "CANON on the parallel owner (I40 / T30: from the outline or not — the film is the opening arc's FIRST telling; eps 1-14 re-compose it 「リメイク・再構成」 and manga ch 1-4 digest it). Position 0.5 — before ep 1 in release order (film 2013-03-30; ch 1 2015-06-20; ep 1 2015-07-05) and in story order alike; the Mugen Train shape (112151 @26.5): a viewer takes the film OR rows 1-14 OR the digest, not all three. The chapter fields are the T30 correspondence record (the arcs.ts Battle of Gods ruling, eps 1-14 ↔ ch 1-4), never a claim that the film adapts pages. No adopted{author} (脚本 渡辺雄介; Sean 2026-09-05); the manga's incorporation of the film IS the correspondence, not an adoption stacked on it (the RoF shape)." },
+    reason:
+      "Wave 5 (verified SOUND WITH NOTES, one work under three owners — verify/dragon-ball__14837.md): the placement sources reproduce verbatim (Toei's 2012-07-17 release, ANN / WSJ #33, ja-WP 神と神's three-owner slot, the wiki); the DBS standing was a genuine fork the verdict delivered honestly — the verifier and the sitting read CANON as the ruled model (I40 / T30 outrank the protocol's adaptation-owner example, whose adopted-note premise the 2026-09-05 sitting removed) and required the chapter string to say correspondence (a bare 'vol 1 · ch 4' would render as adaptation). Sean 2026-09-06: DBS canon; DBZ 288.5 and Kai 165.5 as one story point. Queued (same class, next wave): Resurrection 'F' 20778 under all three owners; Yo! Son Goku 5152 (Age 776) at DBZ 291.53; the protocol's stale Battle-of-Gods sentence; a parallel-owner clause; the writer / census gap for chapter fields on a parallel owner.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-06',
+    cite: ['scripts/ingest/research/discovery/out/dragon-ball-super__14837.json', 'scripts/ingest/research/discovery/verify/dragon-ball__14837.md'],
+  },
 ];
 
 /** series id → anilist id → the ruling */

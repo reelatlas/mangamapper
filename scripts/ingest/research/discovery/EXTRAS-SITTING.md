@@ -352,6 +352,17 @@ caught a pre-existing healer bug (ruled pairs keyed by AFL slug). Queue: G59 pat
 and Weekend Hero's numbering; the seeded series' research (types + anchors); the watch-order writer's namesake gate; the
 finder's page choice for seeded series (a namesake page must never be a seeded series' list).
 
+## 8. WAVE 5 — applied (2026-09-06; §12.141)
+
+Eight works, ten owner rows, verified 8 / 8 SOUND WITH NOTES; Sean ruled with Cursor: as recommended, except Magus' Bride
+→ 9.5 (the frame collides with the release slot — the Kinnikuman date-slot class; the frame in the note, no 'earliest the
+frame permits' convention) and DBS canon (the parallel owner, I40 / T30; chapter fields say CORRESPONDENCE). Three
+CLUSTERS ruled whole in date order because the writer refuses a ruled slot held by a non-mover (E14): gintama 369.5x
+(THE VERY FINAL first as the story slot, then Baragaki / Ikkoku / Kintama / Yoshiwara), danmachi 13.5x (OVA 21660, then
+the film), noragami 19.5x (the S1 OADs, then the Aragoto OADs). Overlord lands the novel-owner shape (chapter null,
+volume 13, the units in the string). 12 moves + 4 updates, 0 refusals; related_work_unruled 378 → 368; every
+violation class 0. The protocol's Battle-of-Gods sentence rewritten for the parallel owner. The queue is in §12.141.
+
 ## Appendix — the generated summary (2026-09-05; regenerate before use)
 
 ### Related-works sitting summary — 794 works (generated 2026-09-05)
