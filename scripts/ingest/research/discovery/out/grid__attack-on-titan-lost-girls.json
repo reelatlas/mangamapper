@@ -1,0 +1,121 @@
+{
+  "series_id": "attack-on-titan-lost-girls",
+  "anilist_id": 99634,
+  "expected_episodes": 3,
+  "rows": [
+    {
+      "number": 1,
+      "title": "Wall Sina, Goodbye: Part 1",
+      "title_native": "Wall Sina,Goodbye ―前編―",
+      "air_date": "2017-12-08",
+      "note": "Shipped as the DVD bundled with the LIMITED EDITION of Attack on Titan manga vol 24 (『ＤＶＤ付き 進撃の巨人（２４）限定版』, ISBN 978-4-06-397047-0). Kodansha's own product page prints 発売日 2017年12月08日 and 「Wall Sina, Goodbye（アニ外伝）」をWIT STUDIOが前後編で完全アニメ化！／※本限定版には前編を収録しています。 Franchise OAD ordinal #16.5A (the fandom's OVA 6; Crunchyroll's 'Attack on Titan OADs' Episode 6). Official English on Crunchyroll/Funimation: 'Lost Girls: Wall Sina, Goodbye: Part 1'."
+    },
+    {
+      "number": 2,
+      "title": "Wall Sina, Goodbye: Part 2",
+      "title_native": "Wall Sina,Goodbye ―後編―",
+      "air_date": "2018-04-09",
+      "note": "DVD bundled with the LIMITED EDITION of manga vol 25 (ISBN 978-4-06-397048-7); Kodansha's page prints 発売日 2018年04月09日 and 「進撃の巨人」のスピンオフ小説「ＬＯＳＴ ＧＩＲＬＳ」をアニメーション化 (that page does not itself say 後編 — ja-WP's OAD table, the licensor's OAD Archive listing and dアニメストア's two-episode work page all place 後編 on vol 25). Franchise OAD ordinal #16.5B (OVA 7; Crunchyroll Episode 7). Official English: 'Lost Girls: Wall Sina, Goodbye: Part 2'."
+    },
+    {
+      "number": 3,
+      "title": "Lost in the Cruel World",
+      "title_native": "Lost in the cruel world",
+      "air_date": "2018-08-09",
+      "note": "DVD bundled with the LIMITED EDITION of manga vol 26 (ISBN 978-4-06-397049-4); Kodansha's page prints 発売日 2018年08月09日 and 「Lost in the cruel world（ミカサ外伝）」をWIT STUDIOが完全アニメ化! This OAD has NO franchise number at all — shingeki.tv and aot-portal.com both list it as '#???' (the fandom cites the title card for the same). Official English: 'Lost Girls: Lost in the Cruel World'."
+    }
+  ],
+  "numbering_basis": "Release order of THIS entry's three OADs, 1-3 (2017-12-08 → 2018-04-09 → 2018-08-09). No Japanese source numbers the run itself: the licensor's own OAD Archive listing (shingeki.tv 商品情報 and the official portal aot-portal.com) and dアニメストア label them with the FRANCHISE OVA ordinal #16.5A / #16.5B / #??? — the third has no number, its title card reads '???'. The Attack on Titan Wiki calls them OVA 6 / 7 / 8 and Crunchyroll's 'Attack on Titan OADs' collection numbers them Episodes 6 / 7 / 8. en-WP's 'Attack on Titan: Lost Girls' episode table prints 16.5A / 16.5B / ??? in its EpisodeNumber column but carries 1 / 2 / 3 in EpisodeNumber2 — that release-order column is the one that matches our numbering. Dates are the first Japanese release of each row = the manga limited edition's ship date (the disc bundle), per the protocol.",
+  "sources": [
+    {
+      "url": "https://www.kodansha.co.jp/comic/products/0000048308",
+      "what": "Kodansha product page — 『ＤＶＤ付き 進撃の巨人（２４）限定版』: 発売日 2017年12月08日, ISBN 9784063970470, description names 「Wall Sina, Goodbye（アニ外伝）」 and states 本限定版には前編を収録しています (row 1's disc + date)",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://www.kodansha.co.jp/comic/products/0000048309",
+      "what": "Kodansha product page — 『ＤＶＤ付き 進撃の巨人（２５）限定版』: 発売日 2018年04月09日, ISBN 9784063970487, 「ＬＯＳＴ ＧＩＲＬＳ」をアニメーション化 (row 2's disc + date)",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://www.kodansha.co.jp/comic/products/0000048310",
+      "what": "Kodansha product page — 『ＤＶＤ付き 進撃の巨人（２６）限定版』: 発売日 2018年08月09日, ISBN 9784063970494, 「Lost in the cruel world（ミカサ外伝）」をWIT STUDIOが完全アニメ化 (row 3's disc + date)",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://shingeki.tv/final/product/oad/",
+      "what": "TVアニメ「進撃の巨人」official site — 進撃の巨人 OAD Archive Blu-ray 収録話 list: '#16.5A Wall Sina,Goodbye―前編― / #16.5B Wall Sina,Goodbye―後編― / #??? Lost in the cruel world' (Japanese titles + the franchise ordinals we must NOT use as our numbers)",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://shingeki.tv/news/archives/6720",
+      "what": "Official site news 2021-12-13 announcing the OAD Archive Blu-ray — 収録話数：8話 listing 'Lost girls Wall Sina,Goodbye（前編） / Lost girls Wall Sina,Goodbye（後編） / Lost girls Lost in the cruel world', and confirming the three were broadcast on NHK",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://aot-portal.com/en/bd_dvd/oad-archive/",
+      "what": "Attack on Titan Official Portal Site (English) — the same OAD Archive STORY list with #16.5A / #16.5B / #??? and the identical Japanese titles; independent page from shingeki.tv",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://ja.wikipedia.org/w/api.php?action=parse&page=%E9%80%B2%E6%92%83%E3%81%AE%E5%B7%A8%E4%BA%BA%20(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext&format=json",
+      "what": "ja-WP 進撃の巨人 (アニメ) — the === OAD === table's 'LOST GIRLS' block: #16.5A 第24巻限定版 2017年12月8日 / #16.5B 第25巻限定版 2018年4月9日 / #??? 第26巻限定版 8月9日",
+      "tier": "ja-WP"
+    },
+    {
+      "url": "https://ja.wikipedia.org/w/api.php?action=parse&page=%E9%80%B2%E6%92%83%E3%81%AE%E5%B7%A8%E4%BA%BA&prop=wikitext&format=json",
+      "what": "ja-WP 進撃の巨人 — the tankōbon table: vols 24 / 25 / 26 dated 2017年12月8日 / 2018年4月9日 / 2018年8月9日, each with 限定版 ISBN and the remark 「LOST GIRLS」のアニメーションを収録したDVD (independent corroboration of all three ship dates)",
+      "tier": "ja-WP"
+    },
+    {
+      "url": "https://en.wikipedia.org/w/api.php?action=parse&page=Attack%20on%20Titan%3A%20Lost%20Girls&prop=wikitext&format=json",
+      "what": "en-WP 'Attack on Titan: Lost Girls' — the Episodes table (EpisodeNumber 16.5A/16.5B/???, EpisodeNumber2 1/2/3, titles 'Wall Sina, Goodbye: Part One / Part Two / Lost in the Cruel World') and the lead+infobox dates December 8, 2017 → August 9, 2018. NOTE its table cell for row 1 says December 9 — see flags",
+      "tier": "en-WP"
+    },
+    {
+      "url": "https://web.archive.org/web/20220619085303/https://www.crunchyroll.com/attack-on-titan/episode-6-lost-girls-wall-sina-goodbye-part-1-822656",
+      "what": "Crunchyroll (NA licensee) archived episode page — 'Attack on Titan OADs Episode 6, Lost Girls: Wall Sina, Goodbye: Part 1' (official English title, and CR's franchise-ordinal numbering)",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://web.archive.org/web/20221018142648/https://www.crunchyroll.com/attack-on-titan/episode-7-lost-girls-wall-sina-goodbye-part-2-822658",
+      "what": "Crunchyroll archived episode page — 'Attack on Titan OADs Episode 7, Lost Girls: Wall Sina, Goodbye: Part 2'",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://web.archive.org/web/20221018142650/https://www.crunchyroll.com/attack-on-titan/episode-8-lost-girls-lost-in-the-cruel-world-822660",
+      "what": "Crunchyroll archived episode page — 'Attack on Titan OADs Episode 8, Lost Girls: Lost in the Cruel World'",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=25148",
+      "what": "dアニメストア 進撃の巨人 OAD Wall Sina,Goodbye (全2話) — episodes listed as #16.5A / #16.5B with 【Wall Sina,Goodbye ―前編―】/【―後編―】 synopses; a separate work entry exists for 進撃の巨人 OAD Lost in the c… (shows the platform also uses the franchise ordinal, never 1-3)",
+      "tier": "cross-check"
+    },
+    {
+      "url": "https://attackontitan.fandom.com/api.php?action=parse&page=List%20of%20Attack%20on%20Titan%20episodes/OVA&prop=wikitext&format=json",
+      "what": "Attack on Titan Wiki OVA list — OVA 6 = 16.5A, OVA 7 = 16.5B, OVA 8 = ??? (Lost in the cruel world)",
+      "tier": "cross-check"
+    },
+    {
+      "url": "https://attackontitan.fandom.com/api.php?action=parse&page=Wall%20Sina%2C%20Goodbye%3A%20Part%20One&prop=wikitext&format=json",
+      "what": "Attack on Titan Wiki episode page — Release date (JA) December 8, 2017; Alternate titles cite Funimation/Crunchyroll 'Lost Girls: Wall Sina, Goodbye: Part 1' (third independent agreement on row 1's date against en-WP's table cell)",
+      "tier": "cross-check"
+    },
+    {
+      "url": "https://attackontitan.fandom.com/api.php?action=parse&page=Lost%20in%20the%20cruel%20world%20(OVA)&prop=wikitext&format=json",
+      "what": "Attack on Titan Wiki episode page — Release date (JA) August 9, 2018; 'Number (episode) = ???' sourced to the title card; records the later NHK 2021-11-28 airing",
+      "tier": "cross-check"
+    }
+  ],
+  "flags_for_sean": [
+    "en-WP DATE DEFECT on row 1 — do NOT seed from its table cell. The Episodes table prints OriginalAirDate = December 9, 2017 for 16.5A, while the SAME article's lead prose and its OAD infobox both say December 8, 2017. Kodansha's own vol-24 限定版 product page prints 発売日 2017年12月08日, ja-WP's OAD table and tankōbon table both say 2017年12月8日, and the fandom says December 8. The grid carries 2017-12-08.",
+    "NUMBERING TRAP CONFIRMED AND WIDER THAN THE ASK. It is not only en-WP: every Japanese licensor page uses the franchise OAD ordinal (#16.5A / #16.5B / #???), the fandom uses OVA 6/7/8, and Crunchyroll's 'Attack on Titan OADs' collection uses Episodes 6/7/8. The THIRD OAD has no number in any official space — shingeki.tv and aot-portal.com print literally '#???' and the fandom sources that to the title card. Our 1-3 is release order; the only source that prints it is en-WP's secondary EpisodeNumber2 column. Never store 16.5A / 6 / ??? as a row number.",
+    "TITLE RENDERING FORK (cosmetic, but pick one convention). Japanese: the two licensor pages I read directly (shingeki.tv OAD Archive, aot-portal.com) print 'Wall Sina,Goodbye―前編―' with no space after the comma and none before the dashes; dアニメストア and the official niconico OAD channel print 'Wall Sina,Goodbye ―前編―'; ja-WP puts a line break there; Kodansha's prose writes 'Wall Sina, Goodbye（アニ外伝）' with the comma space. The grid uses the spaced dash form. Row 3's Japanese title is Latin-script lowercase on every licensor page ('Lost in the cruel world'); only the official ENGLISH title capitalizes it.",
+    "ENGLISH TITLE PREFIX STRIPPED. Crunchyroll and Funimation print 'Lost Girls: Wall Sina, Goodbye: Part 1' / 'Part 2' / 'Lost Girls: Lost in the Cruel World' — and the Japanese licensor does the same on the disc listing ('Lost girls Wall Sina,Goodbye（前編）'). The 'Lost Girls' prefix is this series' own name, so it is stripped in `title`. Licensor form is 'Part 1' / 'Part 2'; en-WP and the fandom use 'Part One' / 'Part Two' — say the word if you want the spelled-out form.",
+    "COUNT OK: 3 rows = AniList 99634's 3 episodes. No mismatch, no bonus disc, no recap.",
+    "NOT THE GRID DATES, recorded so they are not mistaken for one later: all eight OADs were later collected on the 進撃の巨人 OAD Archive Blu-ray (PCXG-50788, Pony Canyon, 2022-04-27); shingeki.tv's announcement says the three LOST GIRLS/悔いなき選択 OADs had been broadcast on NHK (the fandom dates the 'Lost in the cruel world' NHK 総合 airing 2021-11-28, as an extra of the Special Omnibus); the English releases were 2021-12-19 subtitled and 2022-06-12 / 06-19 / 06-26 dubbed. The grid carries the FIRST Japanese release = the limited-edition disc ship date.",
+    "CONTENT NOTE for the later standing programme, NOT a grid claim: Seko's source novel holds THREE stories — 'Lost in the cruel world', 'Wall Sina, Goodbye' and 'Lost Girls' — and the third, 'Lost Girls', was never animated. The fandom (cross-check) says rows 1-2 adapt vol 1 of Ryōsuke Fuji's Bessatsu Shōnen Magazine manga of the novel (chapters Carly Stratmann / Wayne Eisner / Wald and Lou / Coderoin / Annie Leonhart) and row 3 adapts vol 2 (Eren Yeager / Shiganshina / Airplane / Mirror Man). Note the source chain for the typing sitting: visual novel (2013, Nitroplus) → novel (2014) → manga (2015-16) → OAD (2017-18); the anime's chapter space, if any is ever mapped, is the 2-volume Lost Girls manga's own, not Isayama's 1-139.",
+    "AniList's GraphQL API returned HTTP 403 ('temporarily disabled due to severe stability issues') during this research, so the episode count of 3 rests on the task statement plus en-WP's OAD infobox (episodes = 3) and the three limited editions themselves. Re-confirm against AniList when the API is back if the count matters."
+  ]
+}
