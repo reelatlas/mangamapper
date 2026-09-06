@@ -1154,6 +1154,21 @@
    19-23 / 39 (chain_source) and 18 / 93-95 (AFL's loose Mixed bucket),
    beelzebub 15 / 26-28 / 51, rurouni TV ep 95 (identity). Batch 22 opens on
    the boruto follow-up (lanes I + C) with the batch-21 tooling copied.
+137. ✅ **SITTING B, STEP 2 — the chain ids as I41 entries (Sean's go 2026-09-05 evening).** Three
+    SOURCE_CHAINS works gain their AniList manga id, identity confirmed on AniList + MAL with the chain
+    notes' years and counts: Rosario+Vampire Season II 33403 (MAL 3403, 2007-14, 67 ch / 14 vols),
+    Trigun Maximum 30704 (MAL 704, 1997-2007, 104 ch / 14 vols), Shonan Junai Gumi 30445 (MAL 445,
+    1990-96, 267 ch / 31 vols). Cobra's Galaxy Knights (Super Jump 1996) has NO AniList node — three
+    searches (ギャラクシーナイツ / Cobra Galaxy Knights / Galaxy Knights) return nothing; its id stays null
+    and the note says so (P6: an honest gap, not a task). The audit's bucket delta for the three owners
+    is EMPTY (the only Trigun extra, Badlands Rumble, is an original and stays held); the sync changed
+    no row; every census class unchanged; five edges redeployed. Sitting B closed. NEXT: sitting C
+    (E9 as ruled — a series mint keeps the parent's row and the mint writer always writes
+    series_relations + franchise membership, a component mint retires the row; the skip-split with its
+    row list — 'owned by this owner' = I21, a one-row film series elsewhere stays an extra, a component
+    of another multi-row series does not; E12's clause naming the fact, never an edge type) before
+    step 2's mint writer.
+
 136. ✅ **SITTING B, STEP 1 — I47, A TAG ROUTES; ONLY RESEARCH OR A RULING ASSERTS THE FACT (E15;
     Sean's go 2026-09-05 evening, the census list shown first).** The new record I47 (family I): AniList's
     relation type and `source` tag decide WHERE a candidate goes — bucket, proposal, research queue —

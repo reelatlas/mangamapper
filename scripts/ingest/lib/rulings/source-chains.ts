@@ -23,7 +23,7 @@ export const ENTRIES: RulingEntry<SourceChain>[] = [
     ruleId: 'I41',
     value: { works: [
       { label: 'Season I', anilistMangaId: 30894, note: 'Rosario + Vampire (2004-07), the entry\'s instrument — 40 chapters' },
-      { label: 'Season II', anilistMangaId: null, note: 'Rosario + Vampire Season II (2007-14) — the sequel manga; the Capu2 TV season adapts its ch 1 + 3 in ep 14 and is otherwise original' },
+      { label: 'Season II', anilistMangaId: 33403, note: 'Rosario + Vampire Season II (2007-14; AniList 33403 / MAL 3403, 67 ch / 14 vols — registered 2026-09-05, I41) — the sequel manga; the Capu2 TV season adapts its ch 1 + 3 in ep 14 and is otherwise original' },
     ] },
     reason:
       "Batch 20 wave 16 (verified R24), Sean ruled 2026-09-04: ep 14 adapts Season II ch 1 'A Brand-New Season' + ch 3 'Superglue Girl' inside an original plot — the sequel manga is the same story by the same author, so the material is canon to the series told out of order: mixed, position-less, `chain_source`{Season II: ch 1, 3}. Whether Capu2 should be its own entry with Season II as its instrument is an identity question queued for the identity pass; this chain works either way.",
@@ -36,7 +36,7 @@ export const ENTRIES: RulingEntry<SourceChain>[] = [
     ruleId: 'I41',
     value: { works: [
       { label: 'Trigun', anilistMangaId: 30703, note: 'Trigun (1995-97), the entry\'s instrument' },
-      { label: 'Trigun Maximum', anilistMangaId: null, note: 'Trigun Maximum (1997-2007) — the continuation; its own numbering, never convertible into Trigun\'s' },
+      { label: 'Trigun Maximum', anilistMangaId: 30704, note: 'Trigun Maximum (1997-2007; AniList 30704 / MAL 704, 104 ch / 14 vols — registered 2026-09-05, I41) — the continuation; its own numbering, never convertible into Trigun\'s' },
     ] },
     reason:
       "Sean ruled 2026-09-04 (the wave-16 sitting): ep 18 adapts Trigun Maximum ch 1 'HERO REBORN' + ch 2 'LINA' — the continuation manga, canon to the series told out of order: the standing `side_source` becomes `chain_source`{Trigun Maximum: ch 1, 2} (the row stays mixed, position-less). The novel / game / parallel boundary keeps naruto-shippuden 452-457 + 484-500 (the Itachi / Sasuke / Shikamaru / Konoha Hiden novels) OFF the chain as side_source — FILLER unless an adopted{basis} act is cited (the T26 adoption sitting, 2026-09-05).",
@@ -64,7 +64,7 @@ export const ENTRIES: RulingEntry<SourceChain>[] = [
     ruleId: 'I41',
     value: { works: [
       { label: 'GTO', anilistMangaId: 30336, note: 'GTO: Great Teacher Onizuka (1997-2002), the entry\'s instrument — Lessons' },
-      { label: 'Shonan Junai Gumi', anilistMangaId: null, note: 'Shonan Junai Gumi! (湘南純愛組!, 1990-96, 267 ch / 31 vols) — Fujisawa\'s prequel manga (Onizuka\'s biker youth); eps 25-26 adapt its Last Signal arc (ch 239-242) recast for the GTO cast' },
+      { label: 'Shonan Junai Gumi', anilistMangaId: 30445, note: 'Shonan Junai Gumi! (湘南純愛組!, 1990-96, 267 ch / 31 vols; AniList 30445 / MAL 445 — registered 2026-09-05, I41) — Fujisawa\'s prequel manga (Onizuka\'s biker youth); eps 25-26 adapt its Last Signal arc (ch 239-242) recast for the GTO cast' },
     ] },
     reason:
       "The T26 adoption sitting (Sean 2026-09-05, G3): SJG is the Trigun Maximum shape — a prequel manga, countable, already verified as the Last Signal chapters (batch 19, R24). One continuous story by the same author = a chain work; the rows are canon told out of order (chain_source, position-less A44), not a licence question. AniList id for SJG not stored here (null is allowed); GTO's id is the entry's instrument.",
@@ -77,7 +77,7 @@ export const ENTRIES: RulingEntry<SourceChain>[] = [
     ruleId: 'I41',
     value: { works: [
       { label: 'Cobra', anilistMangaId: 31062, note: 'コブラ, the 1978-84 Weekly Shonen Jump serialization (18 vols / 156 instalments) — the entry\'s instrument' },
-      { label: 'Galaxy Knights', anilistMangaId: null, note: 'COBRA ギャラクシー・ナイツ (Super Jump 1996, 6 instalments; JC Deluxe full-colour vol 4) — Terasawa\'s later Cobra serial; eps 10-13 adapt it (ja-WP 各話リスト 原作エピソード rowspan-4)' },
+      { label: 'Galaxy Knights', anilistMangaId: null, note: 'COBRA ギャラクシー・ナイツ (Super Jump 1996, 6 instalments; JC Deluxe full-colour vol 4; NO AniList node — searched 2026-09-05 as ギャラクシーナイツ / Cobra Galaxy Knights / Galaxy Knights, none: the id stays null, P6) — Terasawa\'s later Cobra serial; eps 10-13 adapt it (ja-WP 各話リスト 原作エピソード rowspan-4)' },
     ] },
     reason:
       "The T26 adoption sitting (Sean 2026-09-05, G3): the weaker cousin of SJG (a later short serial rather than a prequel) but the same I41 shape as Naruto Gaiden — a named manga, its own instrument, the same continuity and author. On the chain; the batch-20 verdict's side_source on ep 13 is re-kinded to chain_source on the whole 10-13 block the verdict flagged.",
