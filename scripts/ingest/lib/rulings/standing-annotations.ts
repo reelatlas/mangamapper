@@ -580,6 +580,17 @@ export const ENTRIES: RulingEntry<StandingAnnotation[]>[] = [
     ruledOn: '2026-08-26',
     cite: ['docs/restructure/T4-GLOSSARY.md §3', 'docs/restructure/DRIFT-LIST.md A-7'],
   })),
+  {
+    seriesId: 'the-prince-of-tennis-national-tournament',
+    ruleId: 'T26',
+    value: [
+      { episodes: [7], kind: 'rearranged', chapters: "237-239", note: "REARRANGED (the Tennis own-series sitting, 2026-09-06; verified R24 — out/the-prince-of-tennis__995.json ep 7): the summer-camp beach-volleyball block — Genius 237 'Seigaku's Summer Vacation' → 239 'The Approaching Nightmare: Silver Seat' (vols 27-28) — is adapted whole and FIRST-TIME here, out of serialised order: in the manga the camp precedes the Nationals; the OVA moves it into the gap between the Higa match (ep 6, 269-272) and the Hyotei eve (ep 8, 272-273). The anchor is the block's own END (239, A8 / A44); the back-jump is this note. The first-time out-of-order INTERLUDES on rows 2 / 5 / 8 (245; 240; 242, 247-248) ride in chapters_adapted, never as anchors." },
+    ],
+    reason: "The Tennis sitting (Sean's go 2026-09-06): the 26 anchors landed from the three verified verdicts; row 7 is the one anchored back-jump (verify-series-display: 'ep 7 starts ch 237 below ep 6's 269 with no rearranged/graft ruling') and the verdict describes the reorder in its own words (R29 — the annotation matches a jump the verdict names: 'REARRANGED: in the manga the camp happens BEFORE the Nationals (vol 27-28); the anime moves it into the gap between the Higa and Hyotei matches').",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-06',
+    cite: ['scripts/ingest/research/discovery/out/the-prince-of-tennis__995.json', 'scripts/ingest/research/discovery/verify/the-prince-of-tennis__995.md'],
+  },
 ];
 
 // MERGED per series — a series may carry several rulings (its A-7 spread

@@ -1154,6 +1154,47 @@
    19-23 / 39 (chain_source) and 18 / 93-95 (AFL's loose Mixed bucket),
    beelzebub 15 / 26-28 / 51, rurouni TV ep 95 (identity). Batch 22 opens on
    the boruto follow-up (lanes I + C) with the batch-21 tooling copied.
+142. ✅ **THE TENNIS OWN-SERIES SITTING (Sean's go 2026-09-06, Cursor's numbering note: never TV 179-204).**
+    The Prince of Tennis National Tournament chain (AniList 995 → 2752 → 4053, three OVA releases the sources number
+    1-13 / 1-6 / 0-6 — never as TV 179-204, which no source prints; I42 (ii): the KEY is what the sources print, a
+    component when they number it into the run (HxH 63-92), else an OWN SERIES with the sources' numbering — the
+    Lost Canvas shape) minted from /discover as `the-prince-of-tennis-national-tournament`: seed.ts (the declaration
+    anilist:995 disposition series, chain [995, 2752, 4053], relation sequel → the-prince-of-tennis, franchise
+    the-prince-of-tennis; 3 components, 26 eps, source manga 30049, STAGED) → mint-grids.ts (the 26-row ruled grid
+    from grid__the-prince-of-tennis-national-tournament.json: the run's own 1-26, first-release dates 2006-03-24 →
+    2009-01-23, minted_by manual, format at mint time; idempotent — a second dry run: 0) → relations.ts (the sequel
+    relation; series_relation_missing 0) → sync-related-works (the parent's three rows 178.5 / .51 / .52 RETIRE —
+    entries of a 3-entry run elsewhere are not another series' extras, I13 (d); the walk now attributes the works
+    hanging off the chain to the new series: ANOTHER STORY 5751 @26.5, ANOTHER STORY II @26.51, the II OVA vs Genius
+    10 @26.52 (other_instrument — the New Prince of Tennis manga), Ryoma! 2021 @26.53, the Final's chibi flash
+    special @24.5 — five inserts, seven removes, idempotent) → apply-tennis-anchors.ts (26 anchors FROM THE THREE
+    VERIFIED VERDICTS — the verdict JSON is the anchor source: START / END per row with A47's sliverEnd against the
+    next row's START, interludes and slivers in chapters_adapted, the verdict's volume, source manual: rows 1-13
+    ch 248-305 vols 28-35 (row 7 = 237-239, the Kikumaru interlude block; 245 / 240 / 242 / 247-248 first-time
+    interludes ride in the strings), rows 14-19 ch 306-340 vols 36-38, rows 20-26 ch 341-379 vols 39-42 — to the
+    manga's last chapter). The series stays STAGED with the canon-tier default types until the standing programme
+    types it (P39 typesRuled). CENSUS (vs the wave-5 capture, every delta explained — P17): series_staged
+    31 → 32 and ok_full 253 → 254 (the new series renders fully anchored); anchor_nonmonotonic, anchor_start_offtrend
+    and backjump_continue_unruled 0 → 1 each on row 7's verdict-described back-jump (the beach-volleyball block, ch
+    237-239 adapted first-time out of serialised order) and the census's verify-series-display FAILED the series
+    ('ep 7 starts ch 237 below ep 6's 269 with no rearranged/graft ruling', which stopped the roster before
+    audit-discovery) — closed the ruled way: a `rearranged` STANDING ANNOTATION on row 7
+    (lib/rulings/standing-annotations.ts; R29 — the verdict names the reorder in its own words), asserted by
+    assert-overrides, then heal-parity-continues stamped the continues (ep 6 → 237, the jump; ep 7 → 272; seventeen
+    straddle continues; three C3 skip notes) — all three classes 0 and the series verifies (220 verified, 0 failing);
+    asterisk_unreviewed 177 → 178 (the new series joins Sean's annotation sign-off queue). audit-discovery (run
+    standalone): discovery_ruled_unbuilt 1 → 0 (the seed ran), extra_same_instrument 128 → 126 (the chain's two
+    hangers-on re-bucketed under the new owner), every related_work_* violation 0, related_work_unruled 368 (three
+    pending rows moved owner, none added or ruled), series_relation_missing 0. FINDINGS surfaced, not this
+    sitting's writes (the consolidate's items): heal-anchor-volumes --dry-run reports 1385 re-derivable volumes —
+    one-piece 1029 (its AFG anchors carry NULL volumes after today's refresh; the table would fill them; the
+    healer's last run at 07:34 re-derived 41) — run it at the next heal and check whether the AFG writer nulls
+    volumes on every refresh (churn, P8's shape); the parity healer converted 117 continues (Tennis's 19 + the
+    straddle parity on thirteen AFG-refreshed series — the standard post-cron churn); no volume_boundaries exist for
+    manga 30049 (the PoT manga — the display estimates volumes while the anchors carry the verdicts' en-WP Shogakukan
+    volumes; a volumes-backfill for 30049 queued, V5 / V6). Edges rebuilt + all five deployed for the annotation
+    ruling (P3); generated docs; 281 tests.
+
 141. ✅ **EXTRAS WAVE 5 APPLIED (Sean ruled 2026-09-06 with Cursor: as recommended, Magus' Bride → 9.5, DBS canon).**
     Eight works, ten owner rows, all verified SOUND WITH NOTES (research-agent Opus → verdict-verifier Fable, the
     structure Sean keeps; out/ + verify/ committed): one-punch-man OVA 21416 FILLER @12.5 (six ONE-原案 originals;

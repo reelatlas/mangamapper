@@ -363,6 +363,15 @@ the film), noragami 19.5x (the S1 OADs, then the Aragoto OADs). Overlord lands t
 volume 13, the units in the string). 12 moves + 4 updates, 0 refusals; related_work_unruled 378 → 368; every
 violation class 0. The protocol's Battle-of-Gods sentence rewritten for the parallel owner. The queue is in §12.141.
 
+## 9. THE TENNIS OWN-SERIES SITTING — applied (2026-09-06; §12.142)
+
+`the-prince-of-tennis-national-tournament` minted from /discover on Sean's go (Cursor's numbering note: the sources print
+1-13 / 1-6 / 0-6, never TV 179-204 — I42 (ii)): seed (3 components, 26 eps, STAGED) → the 26-row ruled grid (own
+numbering, first-release dates) → relations (sequel → the-prince-of-tennis) → the ledger writer (the parent's three rows
+retire under I13 (d); the chain's hangers-on — ANOTHER STORY I / II, vs Genius 10, Ryoma!, the chibi special — move to
+the new series) → 26 anchors from the three verified verdicts (apply-tennis-anchors.ts). Types stay the canon-tier
+default until the standing programme; the census delta is in §12.142.
+
 ## Appendix — the generated summary (2026-09-05; regenerate before use)
 
 ### Related-works sitting summary — 794 works (generated 2026-09-05)
