@@ -1,0 +1,115 @@
+{
+  "series_id": "the-prince-of-tennis",
+  "anilist_id": 4053,
+  "title": "Tennis no Ouji-sama: Zenkoku Taikai-hen Final",
+  "summary": "AniList 4053 is the THIRD and last installment of the Nationals OVA chain (995 Zenkoku Taikai-hen, 13 eps -> 2752 Semifinal, 6 eps -> 4053 Final, 7 eps), released on four DVDs 2008-04-25 to 2009-01-23 and officially numbered 第0話-第6話 (tenipuri.jp; the Blu-ray BOX BCXA-1379 prints '【7話収録】' and 本編158分). It animates the Seigaku vs Rikkaidai national final and the epilogue: Genius 341-379 in Konomi's printed Genius numbering, i.e. the manga's LAST 39 chapters, ending on Genius 379 'Dear Prince ~To the Princes of Tennis~', the final chapter (vol 42). MangaUpdates' coverage segment for this series reads exactly as the ask predicted - anime.start 'Vol 1, Chap 1', anime.end 'Vol 42, Chap 379 (Including OVA)' - and it is right: the run reaches the manga's end, and it is THIS work that gets it there. The premise held at both edges. START: the Semifinal's terminal is Genius 340 (its ep 19 一球勝負! = the Kintaro one-point match, Genius 336-340), and the Final's ep 0 opens on the NEXT chapter, Genius 341 'Tonight is a Yakiniku Party' - a clean seam, no re-shown partial, no recap share. END: Genius 379 is adapted to its own last page (Ryoma in America squaring up to a pair of court thugs, the chapter's mirror of Genius 1), and NOTHING after it appears - the manga ended in WSJ 2008 #14, vol 42's extra is a prose short story (卒業に向かって撃て) not a chapter, and the sequel Shin Tenipuri began in Jump SQ 2009年4月号, on sale 2009-03-04, six weeks AFTER this OVA's last volume. Standing is canon: I hunted for an original share and found none. Every one of the five finals matches plus the Kintaro/Yukimura interlude is manga; ja-Wikipedia says the OVA 原作の展開を踏襲した ('follows the manga's developments') and cites the one place it leans on anime continuity - Final ep 3 真昼に星は見えるか!? referencing the TV run's own filler Tezuka-vs-Fuji match (TV 174-176); the fandom's per-episode 'Anime and Manga Differences' lists are, item by item, cuts, reorders, substitutions and one-beat additions (the faithfulness clause, T28), the largest being an expanded epilogue in ep 6 (a scene for each school after the match, Sakuno narrating as a letter). Size settles it: 158 minutes of main feature for 39 chapters is ~4.0 min/chapter, roughly 2.6x denser than the TV run's ~2 chapters per 22-minute episode - this is an abridged adaptation, not a source share beside an original share.",
+  "standing": "canon",
+  "confidence": "high",
+  "chapters_adapted": [
+    {
+      "start": 341,
+      "end": 344,
+      "volume": 39,
+      "weight": "significant",
+      "note": "EPISODE 0 「焼肉の王子様」 (wiki/dAnime numbering: OVA ep 20), DVD Vol.0, 2008-04-25 - the yakiniku party and the all-you-can-eat battle. Genius 341 'Tonight is a Yakiniku Party' (今夜は焼肉パーティーだ！, the last chapter of vol 38) through Genius 344 'Farewell Yakiniku Sauce: The Golden Flavor' (サラバ焼肉のタレ～黄金の味～). The licensor's own synopsis walks the four chapter titles in order: the party, Shitenhoji/Rokkaku/Higa then Hyotei crashing it, 焼肉大食いバトル starting (= 342 勃発！焼肉バトル!!), an Inui drink every ten plates with 犠牲者続出 (= 343 散りゆく者達への鎮魂歌), Tanishi's tong-eating putting Higa in front (= 344). This is the START of the work: the Semifinal stopped at Genius 340."
+    },
+    {
+      "start": 345,
+      "end": 353,
+      "volume": 40,
+      "weight": "significant",
+      "note": "EPISODE 1 「頂上対決！」 (OVA ep 21), DVD Vol.1, 2008-07-25 - Singles 3, Tezuka vs Sanada, the whole match. Genius 345 'Where is Ryoma?' (リョーマはいずこ) through Genius 353 'The Whereabouts of the Ball' (ボールのゆくえ). Two-source lock at the END: the licensor's synopsis closes on 「打ちあがったボールの落ちる先は――。」, which is Genius 353's own title; and its middle names 風林火山 / 手塚ゾーン / 「百錬自得の極み」は「雷」/「才気煥発の極み」は「陰」/ 手塚ファントム, i.e. Genius 347 『雷』と『陰』, 348 風林火陰山雷, 349 敗れた手塚ゾーン. Nine chapters in ~23 minutes - the densest episode of the seven. ABRIDGED: the wiki itemises the cuts (Sanada's flashback asking the Rikkai regulars to strike him; Tezuka's Zero Shiki Serve at match point; Fuji's line that Tezuka is stretching the match for Ryoma's sake) - faithfulness-clause divergence, not original material."
+    },
+    {
+      "start": 354,
+      "end": 358,
+      "volume": 40,
+      "weight": "significant",
+      "note": "EPISODE 2 「オレたちのやりかた」 (OVA ep 22), DVD Vol.1, 2008-07-25 - Doubles 2, Inui/Kaido vs Yanagi/Kirihara, and the reveal that Ryoma has lost his memory. Genius 354 'The Prince who forgot Tennis' (テニスを忘れた王子様) through Genius 358 'Kaido Awakens' (海堂覚醒). The licensor's synopsis runs the same beats and closes on 「海堂の怒りは頂点に達し――。」 = 358's title. Cuts recorded by the wiki: Kaido's Gyro Snake training flashback and the Yagyu switch, Oshitari's glasses gag, the blood on Inui toned down."
+    },
+    {
+      "start": 359,
+      "end": 365,
+      "volume": 41,
+      "weight": "significant",
+      "note": "EPISODE 3 「真昼に星は見えるか!?」 (OVA ep 23), DVD Vol.2, 2008-10-24 - Singles 2, Fuji vs Niou, Niou's Illusion as Tezuka and as Shiraishi, Fuji's Hoshi Hanabi. Genius 359 'Nightmare' (悪夢) through Genius 365 'Time, Moving Once Again' (動き出した時間); 365 is SHARED with episode 4 (the chapter straddles the hand-off from Fuji's win to Ryoma's recovery). Licensor synopsis: 「コート上の詐欺師」仁王 (= 364 詐欺), the Illusion into Tezuka and Fuji's third meeting with him (= 360 不二周助VS手塚国光), the 1st-year 6-0 win and the pre-Nationals defeat (= 361 2年越しの想い). Divergences recorded: the anime has Atobe explain Fuji's closed eyes where the manga has Yagyu; the anime refers back to the TV series' own FILLER Tezuka-vs-Fuji match (TV 174-176) where the manga says they had met only once - ja-WP cites exactly this episode for that."
+    },
+    {
+      "start": 365,
+      "end": 370,
+      "volume": 41,
+      "weight": "significant",
+      "note": "EPISODE 4 「心をひとつに」 (OVA ep 24), DVD Vol.2, 2008-10-24 - Doubles 1, the Golden Pair vs Marui/Jackal; Ryoma's memory returning through the rivals he has beaten; Kintaro stalling Yukimura. Genius 365 'Time, Moving Once Again' (shared with ep 3) through Genius 370 'Reinforcements' (援軍, shared with ep 5). Licensor synopsis: the Golden Pair's last middle-school match, the power-wrist beat, and 「軽井沢で記憶を失ったリョーマは…段々と記憶を取り戻してきた」 = Genius 366 思い出せ!! / 367 記憶のピース / 368 絆 / 369 リョーマに繋げ. Divergence: Kentaro Aoi helps Ryoma remember in the anime because the anime had Ryoma play Aoi in the Rokkaku match, while the manga uses Kiraku Yasuyuki of Midoriyama, a school the anime replaced with Josei Shonan - a continuity substitution, not original plot."
+    },
+    {
+      "start": 370,
+      "end": 375,
+      "volume": 42,
+      "weight": "significant",
+      "note": "EPISODE 5 「最終決戦！王子様VS神の子」 (OVA ep 25), DVD Vol.3, 2009-01-23 - Singles 1 begins: Ryoma returns to a crushed Kintaro, Yukimura's illness backstory, the Yips. Genius 370 'Reinforcements' (shared with ep 4) through Genius 375 'Final Battle! The Prince vs The Child of God 5'; 374-375 are SHARED with episode 6. Licensor synopsis: 「全国大会決勝を2勝2敗で向かえた立海との最終決戦」, Muga no Kyochi and every technique failing against Yukimura, 「幸村の攻撃は次第にリョーマの体に異変を起こしていく」 - the yips onset. Divergences: the anime lets Ryoma take a point with Sanada's Lightning and attempt Atobe's World of Ice; the manga's Urayama Shiita scene is cut."
+    },
+    {
+      "start": 374,
+      "end": 379,
+      "volume": 42,
+      "weight": "significant",
+      "note": "EPISODE 6 「Dear Prince～テニスの王子様達へ～」 (OVA ep 26), DVD Vol.3, 2009-01-23 - the finale. Genius 374-375 (shared with ep 5, the senses stripped away and Ryoma collapsing) through Genius 379 'Dear Prince: To The Princes of Tennis' (Ｄｅａｒ Ｐｒｉｎｃｅ～テニスの王子様達へ～), the manga's LAST chapter, in vol 42. The episode carries its own title from that chapter. 379 is NOT a partial: the work's closing minutes are the chapter's closing scene - Ryoma in America about to take apart another pair of court thugs (the mirror of Genius 1) - with Momoshiro and Kaido as third-years, the freshman trio moved up and Tezuka bound for Germany. The anime EXPANDS the epilogue (a scene for each rival school after the match, the graduated Seigaku third-years watching on TV, an extra bully, and Sakuno narrating the coda as a letter to Ryoma) - additions inside an adapted chapter at ~3.8 min/chapter, i.e. faithfulness-clause divergence, not a story-carrying original share (T28). Nothing after 379 appears."
+    }
+  ],
+  "recap": false,
+  "position": {
+    "stored": 178.52,
+    "verdict": "confirmed",
+    "proposed": 178.52,
+    "why": "AFTER THE WHOLE TV RUN, and third in the OVA chain - confirmed on three orderings that agree. (1) Air date: TV ep 178 2005-03-30; 995 2006-03-24 -> 2007-03-23; 2752 2007-06-22 -> 2008-01-25; this work 2008-04-25 -> 2009-01-23 (AniList API, ja-WP's OVA release table, en-WP's OVA prose - all identical). (2) Story: the chain is one continuous Nationals tournament - quarterfinals/Hyotei (995) -> semifinal/Shitenhoji (2752) -> final/Rikkaidai + epilogue (this). (3) Chapter order: the Semifinal's terminal is Genius 340 and this work opens on 341, so no fraction inside or before the chain is possible. The .52 slot is therefore right IF AND ONLY IF 995 holds 178.50 and 2752 holds 178.51 - flagged, since the halo derives the fraction by iteration and the other two works are being ruled in the same wave."
+  },
+  "adopted": null,
+  "repairs": [],
+  "sources": [
+    "https://princeoftennis.fandom.com/api.php?action=parse&page=The%20Prince%20of%20Yakiniku&prop=wikitext&format=json",
+    "https://princeoftennis.fandom.com/api.php?action=parse&page=Summit%20Showdown!&prop=wikitext&format=json",
+    "https://princeoftennis.fandom.com/api.php?action=parse&page=The%20Way%20We%20Play&prop=wikitext&format=json",
+    "https://princeoftennis.fandom.com/api.php?action=parse&page=%20Can%20you%20see%20the%20Stars%20in%20Broad%20Daylight!%3F&prop=wikitext&format=json",
+    "https://princeoftennis.fandom.com/api.php?action=parse&page=The%20Only%20One%20in%20my%20Heart&prop=wikitext&format=json",
+    "https://princeoftennis.fandom.com/api.php?action=parse&page=The%20Prince%20vs%20The%20Child%20of%20God&prop=wikitext&format=json",
+    "https://princeoftennis.fandom.com/api.php?action=parse&page=Dear%20Prince~%20To%20the%20Princes%20of%20Tennis.&prop=wikitext&format=json",
+    "https://princeoftennis.fandom.com/api.php?action=parse&page=One-Point%20Match&prop=wikitext&format=json",
+    "https://princeoftennis.fandom.com/api.php?action=parse&page=The%20National%20Finals%20-%20Rikkai%20Dai%20Rematch%20arc&prop=wikitext&format=json",
+    "https://princeoftennis.fandom.com/api.php?action=parse&page=The%20Nationals%20Semifinals%20arc%20-%20Shitenh%C5%8Dji%20arc&prop=wikitext&format=json",
+    "https://princeoftennis.fandom.com/api.php?action=parse&page=List%20of%20The%20Prince%20of%20Tennis%20episodes&prop=wikitext&format=json",
+    "https://princeoftennis.fandom.com/api.php?action=parse&page=List%20of%20The%20Prince%20of%20Tennis%20Chapters/Volumes%2041-42&prop=wikitext&format=json",
+    "https://princeoftennis.fandom.com/api.php?action=parse&page=List%20of%20The%20Prince%20of%20Tennis%20Chapters/Volumes%2031-40&prop=wikitext&format=json",
+    "https://princeoftennis.fandom.com/api.php?action=parse&page=Volume%2042%20-%20Dear%20Prince&prop=wikitext&format=json",
+    "https://princeoftennis.fandom.com/api.php?action=parse&page=Yakiniku%20Battle!&prop=wikitext&format=json",
+    "https://princeoftennis.fandom.com/api.php?action=parse&page=Return%20of%20the%20Prince&prop=wikitext&format=json",
+    "http://tenipuri.jp/dvd_bd/03/",
+    "http://tenipuri.jp/dvd_bd/03/00.html",
+    "http://tenipuri.jp/dvd_bd/03/01.html",
+    "http://web.archive.org/web/20080405174328/http://www.tenipuri.jp/dvd03/00.html",
+    "http://web.archive.org/web/20081026043337/http://www.tenipuri.jp/dvd03/01.html",
+    "http://web.archive.org/web/20081012035230/http://www.tenipuri.jp/dvd03/02.html",
+    "http://web.archive.org/web/20081219002502/http://www.tenipuri.jp/dvd03/03.html",
+    "http://web.archive.org/web/20081220083507/http://www.tenipuri.jp/dvd02/03.html",
+    "https://a-onstore.jp/item/re-BCXA-1379/",
+    "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=22936",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%86%E3%83%8B%E3%82%B9%E3%81%AE%E7%8E%8B%E5%AD%90%E6%A7%98%20(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%86%E3%83%8B%E3%82%B9%E3%81%AE%E7%8E%8B%E5%AD%90%E6%A7%98&prop=wikitext&format=json",
+    "https://en.wikipedia.org/w/api.php?action=parse&page=List%20of%20The%20Prince%20of%20Tennis%20chapters&prop=wikitext&format=json",
+    "https://en.wikipedia.org/w/api.php?action=parse&page=List%20of%20The%20Prince%20of%20Tennis%20episodes&prop=wikitext&format=json",
+    "https://api.mangaupdates.com/v1/series/50288253485",
+    "https://graphql.anilist.co (Media id 4053 / 995 / 2752 / 5751 / 10276 / manga 30049)"
+  ],
+  "flags_for_sean": [
+    "THE STRUCTURE FLAG (yours to decide, not mine). This chain does not decorate the run - it FINISHES the adaptation. Facts a component ruling would need: (a) COUNT - 7 episodes, officially numbered 第0話 to 第6話 by the licensor (tenipuri.jp per-disc pages; the Blu-ray BOX BCXA-1379 product copy prints '【7話収録】' and lists all seven titles), 本編158分, four DVDs (Vol.0 BCBA-3270 30 min / Vol.1 BCBA-3271 46 min / Vol.2 BCBA-3272 46 min / Vol.3 BCBA-3273 46 min). (b) NAMING - the licensor calls it 「テニスの王子様 Original Video Animation 全国大会篇 Final」 and calls the three OVA series together 「OVA全国大会篇シリーズ」, sold as a 4-BOX Blu-ray set; dAnime numbers these seven episodes 'Episode 20' to 'Episode 26', i.e. CONTINUOUSLY with the two earlier OVA series, and so do en-WP, the fandom wiki and zh-WP. (c) BROADCAST - these are not disc-only: Animax aired the Nationals OVA from 2008 and put it on a regular slot from 2009-03; TV Tokyo aired Semifinal + Final as 「テニスの王子様 ベストマッチ」 2011-10-05 to 2011-12-28; TV Tokyo ran the 2021 新生劇場版公開記念 selection (with Final 第0話 unaired); a 2026 rebroadcast is listed by G-Guide as #1-#7. (d) TERMINAL - yes, the Final's last episode IS the adaptation's true terminal: it adapts Genius 379, the manga's final chapter, and MangaUpdates books the whole run as ONE segment ending there, 'Vol 42, Chap 379 (Including OVA)' - MU does not split the OVAs out at all. Filed today as a related work by FORMAT (OVA); by content it is the run's last 39 chapters and the only place the catalog can honestly show a Prince of Tennis reader finishing the manga.",
+    "BOUNDARY SCENE 1 - THE START IS A CLEAN SEAM, NOT A RECAP. The Semifinal (2752) ends on Genius 340 'Towards the Prince of Tennis' (テニスの王子達へ): its last episode 「一球勝負！」 is the Kintaro one-point match that splits the ball in half, plus Kirihara's evolution against Nagoya Seitoku - the licensor's Semifinal Vol.3 synopsis and the fandom's field (336-340) agree. This work's first episode opens on the NEXT chapter, Genius 341 'Tonight is a Yakiniku Party', with the party itself as its first scene. No re-shown partial, no recycled footage claimed by any source, and the episode has no opening theme at all (it runs the one-off ED 「や・き・に・く」) - so there is no recap share to weigh under T28. Chapter 341 is the last chapter of VOLUME 38; the entry above books its range's END volume (344 -> vol 39).",
+    "BOUNDARY SCENE 2 - THE END IS THE MANGA'S OWN LAST PAGE, AND NOTHING FOLLOWS IT. Genius 379 「Dear Prince～テニスの王子様達へ～」 is chapter 379 of 379 (ja-WP infobox 話数 全379話, 掲載誌 週刊少年ジャンプ 1999年32号 - 2008年14号; en-WP '379 chapters (380 if chapter 0 is included)', Shueisha-sourced; AniList manga 30049 chapters 379 / volumes 42; MU status '42 Volumes (Complete)'). The OVA adapts it to its close - Ryoma in America facing down another pair of court thugs, the deliberate mirror of Genius 1 - so 379 is a full adaptation, not a partial. I checked for anything past it and there is nothing: vol 42's only extra is a PROSE short story by Konomi, 「卒業に向かって撃て」, not a chapter and not animated; the sequel 新テニスの王子様 began in Jump SQ 2009年4月号 (on sale 2009-03-04), SIX WEEKS AFTER this OVA's final volume (2009-01-23), so no Shin Tenipuri prologue can be in it; and the anime-added epilogue beats (a scene for each rival school, the graduated third-years watching on TV, Sakuno's letter narration) are studio material inside 379, not a later chapter. There is no sliver row and no 番外編 to record.",
+    "WHAT THIS DOES TO THE READER'S POSITION. Our 178 TV rows carry no chapter anchors, and the context puts the TV run's manga content at roughly Genius 234-236 (ep 128). This chain carries a viewer to the END of the manga: after this work the honest position is 'finished' - Genius 379, vol 42, nothing unread. A post-series continue computed from episode rows alone under-reports Prince of Tennis by about 145 chapters, i.e. by the entire second half of the Nationals. Caveat for whoever writes the continue: the coverage is only complete if 995 and 2752 are also ruled canon and their ranges close the gap between the TV terminal and Genius 341 - see the next flag.",
+    "PREMISE CHECK, ONE EDGE DID NOT REPRODUCE (for the 995 owner, not researched by me). The task framed the chain as animating 'Genius 237-379'. The upper edge is exact. The LOWER edge is not what I saw in passing: the fandom's field on the first OVA episode ('Return of the Prince', 2006-03-24) reads Genius 248-253, not 237. That is ONE source read for ONE episode and I did no work on it - but if it holds, either the TV run covered 237-247 or there is an unadapted range at the seam, and the chain's start needs stating as 248. Please have the 995 agent settle it rather than inheriting '237'.",
+    "SOURCE TIERS - WHAT IS TWO-SOURCE AND WHAT IS NOT. The per-episode CHAPTER NUMBERS come from ONE lineage: the Prince of Tennis Wiki's 'Manga Chapter Equivalents' fields, created 2013-06-12 by Chinkycandie and filled out 2013-07 by Kellychocolate (page histories checked). No second list of chapter numbers per episode exists that I could find - AFL has no Prince of Tennis page at all (404), AFG likewise, programming-cafe 404s, zh-WP's OVA list has no chapter column (and mis-groups ep 20 into the Semifinal), and no Japanese 原作対応 table surfaced. What IS independent, and what every number above is corroborated against, is the licensor's own per-episode synopses (tenipuri.jp, both the 2008 Wayback captures and the live dvd_bd/03 pages) matched against the Shueisha-sourced chapter TITLES on en-WP's volume list - and that match is tight enough to be evidential, not decorative: ep 1's synopsis literally ends on Genius 353's title (ボールのゆくえ / 「打ちあがったボールの落ちる先は――。」), ep 2's on 358's (海堂覚醒 / 「海堂の怒りは頂点に達し――。」), ep 0 walks 341-344's four titles in order, and ep 6 IS 379's title. The FIELDS also pass an internal credibility test: across the whole 26-episode OVA run they are contiguous with straddles at 365, 370 and 374-375, and they carry genuine out-of-order detail (Semifinal ep 18 holds Genius 338 while ep 19 holds 337 - the Rikkai/Nagoya cross-cut), which is not what a naive editor produces. Confidence high on the span and on the standing; the exact page split at the three straddled chapters is the softest part.",
+    "T28 SIZING, ON THE RECORD. 本編158分 for 7 episodes (Blu-ray BOX BCXA-1379 spec block) = ~22.6 min/episode, against 39 chapters = ~4.0 min/chapter. Prince of Tennis chapters run ~20 pages, so ~5 pages/minute, versus the TV run's ~2 chapters per 22-minute episode (~1.9 pages/min). Even the loosest episode, ep 0's four yakiniku chapters, runs ~3.5 pages/min - still denser than the TV series. There is no room in the schedule for a substantial original share, and no source records one: ja-WP says the OVA 原作の展開を踏襲した and its single cited example of anime-continuity influence is a REFERENCE inside ep 3 to the TV run's filler Tezuka-vs-Fuji match (TV 174-176), while the fandom's difference lists are cuts, reorders, substitutions and one-beat additions. Nothing is omitted at match granularity either: all five finals matches plus the Kintaro/Yukimura interlude are present, so there is no coverage gap inside 341-379 to report.",
+    "A SMALL WIKI ERROR, AND A DISC EXTRA THAT CARRIES A MANGA BEAT. (a) The fandom's 'Yakiniku Battle!' event page says 'Chapters 341-344, Volume 39' - 341 is in VOLUME 38 (en-WP's Shueisha-sourced list: vol 38 = 332-341, vol 39 = 342-351; the same wiki's own chapter list and the Genius 341 page's VolumeNav both say vol 38). The volume figures in this verdict are en-WP's, cross-checked against the fandom's chapter lists, and they agree everywhere else: 40 = 352-360, 41 = 361-371, 42 = 372-379. (b) DVD Vol.0 also holds a video extra, 「全国大会決勝戦プロローグPV」 (carried forward onto the Blu-ray BOX as 映像特典), and the wiki records that the PV contains the scene of Momoshiro leaving with Atobe and Oshitari to fetch Ryoma - a manga beat the seven EPISODES do not show. It is an extra, not an episode (AniList's 7 = 第0話-第6話; the BOX prints 7話収録), so it takes no entry above; noted so nobody later reads the disc contents as an eighth episode or as extra coverage.",
+    "T26: KONOMI'S CREDIT IS A CREDIT. Every disc prints 原作：許斐 剛（集英社 ジャンプ・コミックス刊）and he wrote the lyrics to the ED 「Dear Prince～テニスの王子様達へ～」. Neither puts anything INTO the source line - the manga was finished (WSJ 2008 #14) before the first Final disc shipped - so `adopted` is null and this stays a note.",
+    "THE NEXT WORKS AFTER THIS CHAIN, UNSTAGED AT HOP 4 (for the owner's shelf, not ruled here). AniList's SEQUEL edges from 4053 are (i) 5751 'OVA ANOTHER STORY: Kako to Mirai no Message', OVA, 4 episodes + 2 bonus, 2009-05-26 to 2009-09-25 - a side-story set (Naniwa no Ouji-sama, the young Atobe, Rikkai Retsuden), which on its face is prequel/side material rather than mainline chapters, and (ii) 113254 'Ryouma! The Prince of Tennis Shinsei Gekijouban', MOVIE, 2021-09-03, which tenipuri.jp/ja-WP describe as continuing FROM the Nationals arc. There is also a SIDE_STORY edge to 10276 'Zenkoku Taikai-hen Final Chibi Character Flash Animation' (SPECIAL, 3 x 2 min) - AniList dates it 2008-12-19, which is exactly the Final's FAN DISC release date 「The Time Comes Around Remix」, i.e. it shipped between DVD Vol.2 and Vol.3 and is a chibi extra, not part of the seven. A second ANOTHER STORY II 〜アノトキノボクラ (2 discs, 2011-08-26 / 2011-10-26) exists in ja-WP's table as well; I did not check whether it is staged.",
+    "POSITION DEPENDENCY. 178.52 is confirmed on air date, story order and chapter order together, but the fraction is a CLUSTER SLOT the halo assigned by iteration. It is right only if 995 sits at 178.50 and 2752 at 178.51. All three orderings agree on that sequence, so if the cluster currently holds them in any other order, the fix is a reorder of the cluster, not a change to this row's verdict."
+  ]
+}
