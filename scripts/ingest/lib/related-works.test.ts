@@ -232,6 +232,12 @@ describe('retiredByOwnership (E9 — a component mint retires the row; a series 
   it('a row whose work became a component of ITS OWN series retires; a work that became its own one-row series elsewhere stays', () => {
     expect(retiredByOwnership(rows, ownerOf).map((r) => r.anilistId)).toEqual([995]);
   });
+  it("an entry of another MULTI-ENTRY run retires (the Oshii films: SAC's 1995 row); a one-row series elsewhere stays (JJK 0 on JJK)", () => {
+    const rows2 = [...rows, { seriesId: 'ghost-in-the-shell-stand-alone-complex', anilistId: 43, origin: 'halo' }];
+    const own = (id: number) => ({ 995: 'the-prince-of-tennis', 131573: 'jujutsu-kaisen-0', 1913: 'shounan-junai-gumi', 43: 'ghost-in-the-shell-1995' } as Record<number, string>)[id];
+    const entries = (sid: string) => ({ 'ghost-in-the-shell-1995': 2, 'jujutsu-kaisen-0': 1, 'shounan-junai-gumi': 1, 'the-prince-of-tennis': 30 } as Record<string, number>)[sid] ?? 0;
+    expect(retiredByOwnership(rows2, own, entries).map((r) => r.anilistId).sort((a, b) => Number(a) - Number(b))).toEqual([43, 995]);
+  });
   it('a wiki row (no identity) is never retired by ownership', () => {
     expect(retiredByOwnership(rows.filter((r) => r.origin === 'wiki'), ownerOf)).toEqual([]);
   });

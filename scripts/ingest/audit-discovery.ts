@@ -52,7 +52,7 @@ async function main() {
   console.log(`[audit-discovery] rankings (G60): ${rankings.length ? [...perList.entries()].map(([l, p]) => `${l} ${p.rows} rows (owned ${p.owned}, halo ${p.halo})`).join(' · ') : 'no snapshot yet — run discovery-stage --rankings'} → seed_candidate ${seeds.length}`);
   // I45 — the related-works buckets and the ledger's outcome
   const extras = cands.filter((c) => c.bucket === 'extra' || c.bucket === 'recap' || c.bucket === 'crossover');
-  const byBucket = (b: string) => extras.filter((c) => c.proposal === b && (!c.ruling || c.ruling.disposition === 'related_work')).map(candidateLine);
+  const byBucket = (b: string) => extras.filter((c) => c.proposal === b && (!c.ruling || c.ruling.disposition === 'related_work' || c.ownedElsewhere)).map(candidateLine); // a minted one-row series elsewhere is still this owner's related work (I13 d)
   const allRows = await selectAll<any>('watch_order_entries', 'series_id, position, anilist_id, origin, standing, kind, title, air_date, chapter');
   const epsBy = new Map<string, { number: number; air_date: string | null }[]>();
   for (const e of await selectAll<{ series_id: string; number: number; air_date: string | null }>('episodes', 'series_id, number, air_date')) epsBy.set(e.series_id, [...(epsBy.get(e.series_id) ?? []), e]);

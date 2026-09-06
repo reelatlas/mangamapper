@@ -1154,6 +1154,58 @@
    19-23 / 39 (chain_source) and 18 / 93-95 (AFL's loose Mixed bucket),
    beelzebub 15 / 26-28 / 51, rurouni TV ep 95 (identity). Batch 22 opens on
    the boruto follow-up (lanes I + C) with the batch-21 tooling copied.
+139. ✅ **STEP 2 — THE FILM MINT SITTING APPLIED (Sean's go 2026-09-06: "walk"; the first /discover
+    sitting to mint from the (d) declarations).** THE PICKS PASS (Sean with Cursor's three corrections):
+    26 series minted — 12 one-row films / specials (JJK 0, Episode of Bardock, Tokyo Ghoul Jack / Pinto,
+    Kuroko's Last Game, Spare Bike, Koro-sensei Q, Colourful Bleach, Episode Nagi, Wild Police Story, the
+    two One Piece novel specials), 3 two-entry film / special series (the Oshii films 1995 + Innocence —
+    Sean: walk; SAO Progressive's two films; the two Durarara Gaiden specials), 11 episodic OVA runs (Lost
+    Canvas 26 eps, Unicorn 7, The Origin 6, Thunderbolt 4 + 4, Rohan 4, Tokyo Babylon 2, Lost Girls 3,
+    Weekend Hero 2, Houkago 5, Magic Kaito 12, No Regrets 2). Two re-targeted to the HEAD work (I13 f):
+    Thunderbolt from the ONA 21458 (December Sky is its compilation), Magic Kaito from the 2010 specials
+    8310 (the Conan OVA 2514 is a cameo). Not mints, ruled as extras: the Sailor Moon S film (the
+    instrument's own short story), the Kekkai Sensen & BEYOND OVA (Back 2 Back registered as the
+    owner's chain work, I41), Arise Border:1 (attributed to Arise with its siblings — a label accident),
+    FMP's TSR special (Sigma is the manga edition of the owner's own novels), Dead Apple (a
+    comicalization). Deferred: Fate/strange Fake's prologue special (the TV is the head, 2026), the Oz
+    picture drama, Twilight Axis (a compilation on a disputed instrument). THE WRITER (lib/seed.ts):
+    holds a mint without a declared relation (I13 d); passes its RULED slug to the aggregate so the I38 /
+    T25 rulings are found (the aggregate had slugified the head title); a NOVEL-kind source registers no
+    manga id (Weekend Hero's pick had taken the parent's manga); ensures its FRANCHISE ROW from the map
+    before the series row (the first mint failed on the FK — the healer had been the only writer of
+    franchise rows); mints ONE ROW PER SINGLE-ENTRY FILM / SPECIAL from AniList (lineage `anilist` — the
+    named G59 path of I13 b; 15 series, 18 rows). Chains pinned where the SEQUEL walk over-reached
+    (Unicorn had pulled in Twilight Axis; The Origin had walked into the 1979 compilation films). The
+    wiki backfill (path A) served Lost Canvas 26, Magic Kaito 12, The Origin 6, Weekend Hero 1 (row 2
+    — mis-numbered by the parent list's OVA ordinal) and REFUSED every namesake page for Lost Girls / No
+    Regrets / Weekend Hero (G55); it minted 8 dateless, title-less rows for Thunderbolt from the main
+    article's table — removed (this sitting's own writes) and the writer now REFUSES a dateless table at
+    its one choke point (G55 cannot lock it). A namesake fractional (AoT's "Since That Day" @13.5 on the
+    No Regrets series) came through the watch-order writer — removed; its namesake gate is queued.
+    RELATIONS: `series_relation_missing` (the E9 outcome class) caught that RULED pairs never landed for
+    a series without an AFL slug — the healer keyed them by AFL slug; now by series id (three pairs
+    landed, one pre-existing); Unicorn → Gundam and Magic Kaito → Conan ruled (I17). THE SKIP-SPLIT
+    RAN: five parent rows retired by the rule Sean set (the 1995 film on SAC, Progressive on SAO, Lost
+    Canvas on Saint Seiya, the two Gaiden specials on Durarara — entries of multi-entry runs elsewhere;
+    `retiredByOwnership` now covers that case); Unicorn's row on Gundam KEPT (a one-row series) after two
+    fixes — the audit dropped a minted work from the parents' buckets because it carries a series
+    ruling, and the SEQUEL chain walk skipped it because Unicorn is also an owner of the chain candidate
+    (Char's Counterattack): the skip is per owner now. `special_numbered_unreviewed` exempts runs that are
+    non-TV by construction (0 from 29). CENSUS (vs sitting C): series_staged 5 → 31,
+    discovery_ruled_unbuilt 27 → 0, type_default_unclassified 34 → 79 (+45 default-typed rows owed
+    typing: Lost Canvas, Kaito, The Origin, Weekend Hero), title_incomplete 22 → 30 (+8: seven seeded
+    series with no rows yet + Weekend Hero's missing row 1 — the path B / C queue), ok_full +14,
+    pending_finished_no_totals +12, integrity_total_beyond_eps +1 (Weekend Hero), fractional_unmodeled 1
+    (the No Regrets namesake page still staged — the finder), halo_series_unclaimed +2 (Magic Kaito 1412,
+    the strange Fake TV — the minted series' own halos), extra_unstaged +8 (their unstaged related works
+    — the restage), extra_other_instrument 16 → 33 (+17: the 26 new owners' own related works that adapt
+    another run — Unicorn's Char's Counterattack and the like — the picks read's next input),
+    related_work_unruled 368 → 365, cluster_disorder 47 → 45; every violation-kind
+    class 0; 281 tests; five edges deployed. NEXT: G59 path B / C rows for the seven rowless OVA runs
+    (Unicorn, Thunderbolt, Rohan, Tokyo Babylon, Lost Girls, No Regrets, Houkago) and Weekend Hero's
+    numbering; the seeded series enter the research work-list (types + anchors); the /discover sitting
+    for the Prince of Tennis OVA component + E12's queue class; waves 5+ of the extras programme.
+
 138. ✅ **SITTING C — E9 AS RULED, THE SKIP-SPLIT, E12's CLAUSE (Sean's go 2026-09-05 evening, the row list
     shown first; Cursor's objection to E12's queue class taken).** I13 AMENDED: (d) a SERIES mint keeps the
     parent's ledger row — position and standing to the parent's manga live there, a relation carries neither

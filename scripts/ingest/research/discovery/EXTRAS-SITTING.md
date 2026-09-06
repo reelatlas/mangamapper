@@ -341,6 +341,17 @@ Census classes emitted by audit-discovery.ts for related works (15): extra_same_
 | E15 | its own add-rule: the routing-vs-truth rule (I47); the owner-instrument edge accepted whatever the tag says; the census list first (two works moved: PoT 995, Toriko 11787); the chain ids as I41 entries in a separate step (three resolved; Galaxy Knights has no AniList node) | LANDED (sitting B, §12.136 + §12.137: the three chain ids registered, no row moved) |
 | E16 | a KIND per census class (violation / queue / listing) — `lib/census-kinds.ts` | LANDED (sitting A) |
 
+## 7. STEP 2 — the film mint sitting (2026-09-06; §12.139)
+
+26 series minted from the (d) declarations after the picks pass (Cursor's three corrections + four of mine): 12 one-row
+films / specials, 3 two-entry film / special series, 11 episodic OVA runs; two re-targeted to the HEAD work (I13 f); five
+ruled as extras instead; three deferred. The writer gained the I13 (d) gate, the ruled-slug pass-through, the novel guard,
+the franchise-row prerequisite and the one-row path (lineage `anilist`); the wiki backfill refuses dateless tables. The
+skip-split retired five parent rows and kept Unicorn's (one-row) after two audit / walk fixes. `series_relation_missing`
+caught a pre-existing healer bug (ruled pairs keyed by AFL slug). Queue: G59 path B / C rows for seven rowless OVA runs
+and Weekend Hero's numbering; the seeded series' research (types + anchors); the watch-order writer's namesake gate; the
+finder's page choice for seeded series (a namesake page must never be a seeded series' list).
+
 ## Appendix — the generated summary (2026-09-05; regenerate before use)
 
 ### Related-works sitting summary — 794 works (generated 2026-09-05)

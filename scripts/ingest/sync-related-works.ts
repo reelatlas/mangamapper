@@ -96,8 +96,10 @@ async function main() {
     // slots (Made in Abyss: the recap films ahead of the feature) — inserting over an occupied slot would overwrite that row's identity
     // (the key is series + position), so the slot must be free before the insert; a ruled slot still held by a NON-moving row is refused
     // E9 (I13 amended 2026-09-05): a row whose work is now a COMPONENT of its own series retires — the identity lives in the component
-    for (const r of retiredByOwnership(existing.map((x) => ({ seriesId: x.series_id, anilistId: x.anilist_id, origin: x.origin, row: x })), (id) => input.owned.get(id))) {
-      await remove(r.row, `now a component of ${r.seriesId} (I13 amended: a work owned by its own series is never its extra) — the identity lives in the component`); byKey.delete(`${r.seriesId}#${r.anilistId}`);
+    const entriesOf = new Map<string, number>(); for (const o of input.owned.values()) entriesOf.set(o, (entriesOf.get(o) ?? 0) + 1);
+    for (const r of retiredByOwnership(existing.map((x) => ({ seriesId: x.series_id, anilistId: x.anilist_id, origin: x.origin, row: x })), (id) => input.owned.get(id), (sid) => entriesOf.get(sid) ?? 0)) {
+      const o = input.owned.get(r.anilistId!)!;
+      await remove(r.row, o === r.seriesId ? `now a component of ${r.seriesId} (I13 e: a work owned by its own series is never its extra) — the identity lives in the component` : `now an entry of ${o}, a ${entriesOf.get(o)}-entry run (I13 d, the skip-split: a multi-entry run's entry is not another series' extra — the franchise page orders runs)`); byKey.delete(`${r.seriesId}#${r.anilistId}`);
       if ([...registry.values()].some((v) => v.anilist_id === r.anilistId)) {
         if (!DRY) { const { error } = await db.from('related_work_external_ids').delete().eq('anilist_id', r.anilistId); if (error) throw new Error(`registry ${r.anilistId}: ${error.message}`); }
         for (const [k, v] of registry) if (v.anilist_id === r.anilistId) registry.delete(k);

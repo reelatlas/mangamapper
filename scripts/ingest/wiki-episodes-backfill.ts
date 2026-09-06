@@ -184,6 +184,9 @@ async function main() {
         const skipped: { name: string; eps: WikiEpisode[]; isOwnArticle?: boolean }[] = [];
         const lockAndMerge = (sets: { name: string; eps: WikiEpisode[]; isOwnArticle?: boolean }[]) => {
         for (const ps of sets) {
+          // G55 (the Thunderbolt lesson, 2026-09-06): a numbered table with NO air dates cannot be locked to the run — it is refused whole,
+          // whatever page it came from (the main article's own table minted 8 dateless, title-less rows for a seeded series)
+          if (!ps.eps.some((w) => w.airDate)) { console.log(`  ${t.id}: table on "${ps.name}" REFUSED — ${ps.eps.length} numbered row(s) with no air date (G55 cannot lock a dateless table)`); continue; }
           const ints = ps.eps.filter((w) => Number.isInteger(w.number));
           const tally = new Map<number, number>();
           for (const w of ints) {

@@ -308,5 +308,15 @@ export const clusterDisorder = (
  * Tournament block after its /discover mint) — is never that series' extra: the ledger writer RETIRES the row (its own origin, G57)
  * and the identity lives in the component. A series mint elsewhere (a one-row film series) never retires a row.
  */
-export const retiredByOwnership = <R extends { seriesId: string; anilistId: number | null; origin?: string | null }>(rows: R[], ownerOf: (anilistId: number) => string | null | undefined): R[] =>
-  rows.filter((r) => (r.origin ?? 'halo') === 'halo' && r.anilistId != null && ownerOf(r.anilistId) === r.seriesId);
+export const retiredByOwnership = <R extends { seriesId: string; anilistId: number | null; origin?: string | null }>(
+  rows: R[],
+  ownerOf: (anilistId: number) => string | null | undefined,
+  /** entries the owning series holds (its own id + components) — a ONE-ROW series elsewhere keeps the row (I13 d); a multi-entry run's entry does not (the franchise page orders runs) */
+  entriesOf: (seriesId: string) => number = () => 1,
+): R[] =>
+  rows.filter((r) => {
+    if ((r.origin ?? 'halo') !== 'halo' || r.anilistId == null) return false;
+    const o = ownerOf(r.anilistId);
+    if (o == null) return false;
+    return o === r.seriesId || entriesOf(o) > 1;
+  });

@@ -528,6 +528,7 @@ export const DISCOVERY_RULINGS: Record<number, DiscoveryRuling> = Object.fromEnt
 
 /** the sitting log — the last entry's date is what discovery_new_since_sitting reads */
 export const SITTINGS: { on: string; scope: string; note: string }[] = [
+  { on: '2026-09-06T07:20:31Z', scope: 'the step-2 film mint sitting (I13 b/d/e/f): 26 series minted from the (d) declarations + the picks pass (Sean 2026-09-06, Cursor\'s three corrections) — 12 one-row films / specials, 3 two-entry film series, 11 episodic OVA runs; the strange Fake prologue and the Oz picture drama deferred; four not-mints ruled as extras', note: 'the seed dry run read in chat (26 CREATE, 0 HELD); Sean: walk the Oshii films as one series' },
   { on: '2026-09-05T06:34:00Z', scope: 'the three witness promotions (go-list row 4): shield hero S2-S4 as an OVERRIDE_CHAINS ruled extension; trigun stampede + konosuba explosion as series rulings', note: 'the first sitting; the rest of the 267 TV-shaped candidates wait for /discover; the halo was staged 2026-09-05 before this timestamp' },
 ];
 

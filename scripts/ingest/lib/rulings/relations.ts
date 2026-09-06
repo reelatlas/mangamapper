@@ -258,6 +258,24 @@ export const ENTRIES: RulingEntry<RelationRuling>[] = [
     ruledOn: '2026-08-24',
     cite: [`${FR} "Tokyo Ghoul :re stays a SEPARATE entry"`],
   },
+  {
+    seriesId: 'mobile-suit-gundam-unicorn',
+    ruleId: 'I17',
+    value: { to: 'mobile-suit-gundam', kind: 'sequel' },
+    reason: "The step-2 film mint (2026-09-06): Unicorn (UC 0096) is a sequel of the original Gundam's continuity; AniList's edge between the two is not a story relation the auto rows carry — the declared kind (I13 d) lands as a ruled relation.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-06',
+    cite: ['scripts/ingest/lib/rulings/discovery.ts (anilist:6336)'],
+  },
+  {
+    seriesId: 'magic-kaito',
+    ruleId: 'I17',
+    value: { to: 'detective-conan', kind: 'side_story' },
+    reason: "The step-2 film mint (2026-09-06): Magic Kaito (the 2010-12 specials) is Aoyama's sister series to Conan; AniList links the two by CHARACTER only — the declared kind (I13 d) lands as a ruled relation.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-06',
+    cite: ['scripts/ingest/lib/rulings/discovery.ts (anilist:8310)'],
+  },
 ];
 
 /** relations.ts consumer shape: [fromSlug, toSlug, kind] tuples in ruling order */

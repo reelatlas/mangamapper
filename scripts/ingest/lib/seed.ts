@@ -26,7 +26,7 @@ import { aggregate, aired, getMedia, ownedAnilistIds, walkChain, writeComponents
 import { filterEpisodeRows, registerIds, stageAniList } from './resolve';
 import { slugify } from './slug';
 import { DISCOVERY_RULINGS, type DiscoveryRuling } from './rulings/discovery';
-import { FRANCHISE_OF } from './rulings/franchises';
+import { FRANCHISE_OF, FRANCHISES } from './rulings/franchises';
 
 export type SeedPlan = {
   anilistId: number;
@@ -116,6 +116,14 @@ export async function seedSeries(p: SeedPlan): Promise<'created' | 'skipped'> {
   for (const m of p.media) await stageAniList(m);
   const head = p.media[0];
   const row = { ...(aggregate(p.media, null, p.title, p.slug) as Record<string, unknown>), id: p.slug, visibility: 'staged', franchise_id: FRANCHISE_OF[p.slug] ?? null };
+  // I43 / I13 (d): the franchise row is the series row's prerequisite (series.franchise_id → franchises.id) — the seed writes it from the
+  // map itself (the healer converges the rest) so the mint never depends on run order (2026-09-06: the first film mint failed on the FK)
+  const fr = FRANCHISE_OF[p.slug] ?? null;
+  if (fr) {
+    const f = FRANCHISES[fr]; if (!f) throw new Error(`seed ${p.slug}: franchise '${fr}' has no entry in FRANCHISES (a base member carrying the title is required, I43)`);
+    const { error: fe } = await db.from('franchises').upsert({ id: fr, title: f.title, title_native: f.titleNative ?? null, note: f.note ?? null, base_series_id: f.base }, { onConflict: 'id' });
+    if (fe) throw new Error(`seed ${p.slug}: franchise ${fr}: ${fe.message}`);
+  }
   const { error } = await db.from('series').upsert(row);
   if (error) throw new Error(`seed ${p.slug}: ${error.message}`);
   await registerIds(p.slug, { anilist: head.id, mal: head.idMal });

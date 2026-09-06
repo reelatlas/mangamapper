@@ -250,9 +250,10 @@ async function main() {
   // Sean's standing rule (2026-08-24, N7): any non-typical entry NUMBERED
   // into a run by any source is a research trigger — the reviewed set (with
   // each ruling's reason) lives in lib/rulings/reviewed-specials.ts.
+  const hasSeason = new Set(comps.filter((c: any) => c.kind === 'season' || c.kind == null).map((c: any) => c.series_id)); // a run with no TV season is non-TV by construction (I13 b: a film / OVA series) — its numbered components ARE the run, never a numbered special to review
   for (const c of comps) {
     // I39: a ruled extra is its own N7 review
-    if (c.kind && c.kind !== 'season' && c.episode_start != null && !REVIEWED_NUMBERED_SPECIALS.has(`${c.series_id}:${c.anilist_id}`) && !RULED_EXTRA_KEYS.has(`${c.series_id}:${c.anilist_id}`)) {
+    if (c.kind && c.kind !== 'season' && c.episode_start != null && hasSeason.has(c.series_id) && !REVIEWED_NUMBERED_SPECIALS.has(`${c.series_id}:${c.anilist_id}`) && !RULED_EXTRA_KEYS.has(`${c.series_id}:${c.anilist_id}`)) {
       classes.special_numbered_unreviewed.push(`${c.series_id}: ${c.kind} "${c.label ?? c.anilist_id}" numbered ${c.episode_start}-${c.episode_end ?? '?'} [${c.series_id}:${c.anilist_id}]`);
     }
   }

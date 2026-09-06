@@ -234,10 +234,15 @@ export function haloCandidates(input: DiscoveryInput): Candidate[] {
     const m = input.staged.get(c.anilistId);
     if (!m) continue;
     for (const e of m.relations?.edges ?? []) {
-      if (e.relationType !== 'SEQUEL' || e.node.type !== 'ANIME' || input.owned.has(e.node.id)) continue;
-      const owners = [...c.owners];
-      const next = at(e.node, 'SEQUEL', owners[0], c.anilistId, c.hop + 1);
-      for (const o of owners) { next.owners.add(o); (next.ownerRelations.get(o) ?? next.ownerRelations.set(o, new Set()).get(o)!).add('SEQUEL'); }
+      if (e.relationType !== 'SEQUEL' || e.node.type !== 'ANIME') continue;
+      // the same skip-split as hop 1 (I13 d), PER OWNER: the node's own series never receives it (Char's Counterattack is a related work of
+      // both Gundam and Unicorn, and Unicorn must not become its own extra), the other owners do when it is a one-row series elsewhere
+      const ownerOf = input.owned.get(e.node.id);
+      const eligible = [...c.owners].filter((o) => o !== ownerOf);
+      if (!eligible.length || (ownerOf != null && !oneRowExtraElsewhere(ownedBy.get(ownerOf) ?? 0, e.node.format))) continue;
+      const next = at(e.node, 'SEQUEL', eligible[0], c.anilistId, c.hop + 1);
+      if (ownerOf != null) next.ownedElsewhere = ownerOf;
+      for (const o of eligible) { next.owners.add(o); (next.ownerRelations.get(o) ?? next.ownerRelations.set(o, new Set()).get(o)!).add('SEQUEL'); }
       if (!seen.has(next.anilistId)) { seen.add(next.anilistId); queue.push(next); }
     }
   }

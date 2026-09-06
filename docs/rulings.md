@@ -2,7 +2,7 @@
 
 > GENERATED from `scripts/ingest/lib/rulings/**` by `scripts/restructure/gen-rulings.ts` — do not edit by hand. A ruling is an INSTANCE of a rule (`docs/rules.md`); the map is the record, this is the index.
 
-- rulings: 2663 across 327 series/keys · by Sean: 1162 · UNRECORDED reasons: 9 · with a retire condition: 96
+- rulings: 2714 across 357 series/keys · by Sean: 1213 · UNRECORDED reasons: 9 · with a retire condition: 96
 
 ## Retire conditions (re-evaluate when…)
 
@@ -186,31 +186,37 @@
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
-| `I13` | {"disposition":"series","slug":"colourful-bleach","franchise":"bleach"} | Decision (d) of the extras sitting (Sean 2026-09-05): BLEACH Colorful!: Gotei Juusan Yatai Daisakusen! (OVA 2008) adapts Tsurezure Nichijou Ekotoba Colourful Bleach (AniList manga 104300: MANGA · FINISHED · 37/1 · 1196) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of bleach. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
+| `I13` | {"disposition":"series","relation":{"to":"bleach","kind":"side_story"},"slug":"colourful-bleach","franchise":"bleach"} | Decision (d) of the extras sitting (Sean 2026-09-05): BLEACH Colorful!: Gotei Juusan Yatai Daisakusen! (OVA 2008) adapts Tsurezure Nichijou Ekotoba Colourful Bleach (AniList manga 104300: MANGA · FINISHED · 37/1 · 1196) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of bleach. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
 
 ### anilist:101695 (1)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
-| `I13` | {"disposition":"series","slug":"blood-blockade-battlefront-back-2-back","franchise":"blood-blockade-battlefront"} | Decision (d) of the extras sitting (Sean 2026-09-05): Blood Blockade Battlefront & Beyond OVA (OVA 2018) adapts Kekkai Sensen: Back 2 Back (AniList manga 86771: MANGA · FINISHED · 32/10 · 2363) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of blood-blockade-battlefront. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
+| `I13` | {"disposition":"related_work","owner":"blood-blockade-battlefront","bucket":"same_instrument"} | NOT A MINT (2026-09-06, Cursor's correction): Back 2 Back (86771) is already this series' S2 instrument (Kekkai Sensen & BEYOND, component 97886; ep 13 grafts its ch 1) — registered as a chain work (I41) today; the OVA adapts side chapters of the owner's own chain → an extras row, research decides. Decision (d) of the extras sitting (Sean 2026-09-05): Blood Blockade Battlefront & Beyond OVA (OVA 2018) adapts Kekkai Sensen: Back 2 Back (AniList manga 86771: MANGA · FINISHED · 32/10 · 2363) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of blood-blockade-battlefront. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
 
 ### anilist:1043 (1)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
-| `I13` | {"disposition":"series","slug":"tokyo-babylon","franchise":"x"} | Decision (d) of the extras sitting (Sean 2026-09-05): Tokyo BABYLON (OVA 1992) adapts Tokyo BABYLON (AniList manga 30133: MANGA · FINISHED · 18/7 · 8483) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of x. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
+| `I13` | {"disposition":"series","relation":{"to":"x","kind":"prequel"},"slug":"tokyo-babylon","franchise":"x"} | Decision (d) of the extras sitting (Sean 2026-09-05): Tokyo BABYLON (OVA 1992) adapts Tokyo BABYLON (AniList manga 30133: MANGA · FINISHED · 18/7 · 8483) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of x. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
 
 ### anilist:10937 (1)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
-| `I13` | {"disposition":"series","slug":"mobile-suit-gundam-the-origin","franchise":"mobile-suit-gundam"} | Decision (d) of the extras sitting (Sean 2026-09-05): Mobile Suit Gundam: The Origin (OVA 2015) adapts Kidou Senshi Gundam: The Origin (AniList manga 30214: MANGA · FINISHED · 112/24 · 7722) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of mobile-suit-gundam. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
+| `I13` | {"disposition":"series","chain":[10937],"relation":{"to":"mobile-suit-gundam","kind":"prequel"},"slug":"mobile-suit-gundam-the-origin","franchise":"mobile-su… | CHAIN PINNED 2026-09-06 (the seed dry run): the SEQUEL walk ran from The Origin into the 1981 compilation films of the original Gundam (1090 →) — The Origin is its own 6-episode OVA run. Decision (d) of the extras sitting (Sean 2026-09-05): Mobile Suit Gundam: The Origin (OVA 2015) adapts Kidou Senshi Gundam: The Origin (AniList manga 30214: MANGA · FINISHED · 112/24 · 7722) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of mobile-suit-gundam. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
+
+### anilist:12231 (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I13` | {"disposition":"series","relation":{"to":"dragon-ball-z","kind":"side_story"},"slug":"dragon-ball-episode-of-bardock","franchise":"dragon-ball"} | The picks pass (2026-09-06): Dragon Ball: Episode of Bardock (SPECIAL 2011-12-17) adapts the V-Jump manga Episode of Bardock (56373, 2011-06 → 08, Ōishi) — a run of its own that PRECEDED the special (the live picks read; not a comicalization); a one-row series under the dragon-ball franchise (I13 b). | Sean 2026-09-06 · scripts/ingest/research/discovery/EXTRAS-SITTING.md appendix B |  |
 
 ### anilist:124140 (1)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
-| `I13` | {"disposition":"series","slug":"sword-art-online-progressive","franchise":"sword-art-online"} | Decision (d) of the extras sitting (Sean 2026-09-05): Sword Art Online the Movie -Progressive- Aria of a Starless Night (MOVIE 2021) adapts Sword Art Online: Progressive (AniList manga 73921: NOVEL · RELEASING · ?/? · 6430) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of sword-art-online. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
+| `I13` | {"disposition":"series","relation":{"to":"sword-art-online","kind":"alternative"},"slug":"sword-art-online-progressive","franchise":"sword-art-online"} | Decision (d) of the extras sitting (Sean 2026-09-05): Sword Art Online the Movie -Progressive- Aria of a Starless Night (MOVIE 2021) adapts Sword Art Online: Progressive (AniList manga 73921: NOVEL · RELEASING · ?/? · 6430) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of sword-art-online. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
 
 ### anilist:1250 (1)
 
@@ -228,7 +234,7 @@
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
-| `I13` | {"disposition":"series","slug":"jujutsu-kaisen-0","franchise":"jujutsu-kaisen"} | Decision (d) of the extras sitting (Sean 2026-09-05): JUJUTSU KAISEN 0 (MOVIE 2021) adapts Jujutsu Kaisen 0: Tokyo Toritsu Jujutsu Koutou Senmon Gakkou (AniList manga 105469: MANGA · FINISHED · 4/1 · 71509) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of jujutsu-kaisen. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
+| `I13` | {"disposition":"series","relation":{"to":"jujutsu-kaisen","kind":"prequel"},"slug":"jujutsu-kaisen-0","franchise":"jujutsu-kaisen"} | Decision (d) of the extras sitting (Sean 2026-09-05): JUJUTSU KAISEN 0 (MOVIE 2021) adapts Jujutsu Kaisen 0: Tokyo Toritsu Jujutsu Koutou Senmon Gakkou (AniList manga 105469: MANGA · FINISHED · 4/1 · 71509) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of jujutsu-kaisen. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
 
 ### anilist:1470 (1)
 
@@ -252,37 +258,43 @@
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
-| `I13` | {"disposition":"series","slug":"fate-strange-fake","franchise":"fate"} | Decision (d) of the extras sitting (Sean 2026-09-05): Fate/strange Fake -Whispers of Dawn- (SPECIAL 2023) adapts Fate/strange Fake (AniList manga 50006: NOVEL · RELEASING · ?/10 · 4575) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of fate. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
+| `I13` | {"disposition":"deferred","slug":"fate-strange-fake","franchise":"fate"} | DEFERRED 2026-09-06 (the picks pass): Whispers of Dawn is the PROLOGUE special of the TV series (AniList SEQUEL → 166617, 2026); the mint's anime entry is the HEAD (I13 f) — re-target to 166617 when it is dated and in the halo; the special becomes its extra. Decision (d) of the extras sitting (Sean 2026-09-05): Fate/strange Fake -Whispers of Dawn- (SPECIAL 2023) adapts Fate/strange Fake (AniList manga 50006: NOVEL · RELEASING · ?/10 · 4575) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of fate. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
 
 ### anilist:163147 (1)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
-| `I13` | {"disposition":"series","slug":"blue-lock-episode-nagi","franchise":"blue-lock"} | Decision (d) of the extras sitting (Sean 2026-09-05): BLUE LOCK THE MOVIE -EPISODE NAGI- (MOVIE 2024) adapts Blue Lock: EPISODE Nagi (AniList manga 146203: MANGA · FINISHED · 36/8 · 9563) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of blue-lock. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
+| `I13` | {"disposition":"series","relation":{"to":"blue-lock","kind":"side_story"},"slug":"blue-lock-episode-nagi","franchise":"blue-lock"} | Decision (d) of the extras sitting (Sean 2026-09-05): BLUE LOCK THE MOVIE -EPISODE NAGI- (MOVIE 2024) adapts Blue Lock: EPISODE Nagi (AniList manga 146203: MANGA · FINISHED · 36/8 · 9563) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of blue-lock. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
 
 ### anilist:166060 (1)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
-| `I13` | {"disposition":"series","slug":"detective-conan-wild-police-story","franchise":"detective-conan"} | Decision (d) of the extras sitting (Sean 2026-09-05): Meitantei Conan: Keisatsu Gakkou-hen - Wild Police Story CASE. Furuya Rei (SPECIAL 2023) adapts Meitantei Conan: Keisatsu Gakkou-hen - Wild Police Story (AniList manga 112094: MANGA · FINISHED · 13/2 · 957) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of detective-conan. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
+| `I13` | {"disposition":"series","relation":{"to":"detective-conan","kind":"side_story"},"slug":"detective-conan-wild-police-story","franchise":"detective-conan"} | Decision (d) of the extras sitting (Sean 2026-09-05): Meitantei Conan: Keisatsu Gakkou-hen - Wild Police Story CASE. Furuya Rei (SPECIAL 2023) adapts Meitantei Conan: Keisatsu Gakkou-hen - Wild Police Story (AniList manga 112094: MANGA · FINISHED · 13/2 · 957) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of detective-conan. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
+
+### anilist:17187 (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I45` | {"disposition":"related_work","owner":"ghost-in-the-shell-arise-alternative-architecture","bucket":"alternative"} | Attribution (2026-09-06, Sean with Cursor): Arise Border:1 Ghost Pain is the first of the four Border films the 2015 TV re-cut (our Arise series, source original) derives from — AniList labels it SPIN_OFF of SAC while its siblings Border:2-4 are ALTERNATIVE of Arise, a label accident (the Fate-films shape); it sits under Arise with them. Not a mint: Arise exists; the 'Sleepless Eye' manga (78321) is a media-mix tie-in, not the film's source — research decides its standing. | Sean 2026-09-06 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §6.3 |  |
 
 ### anilist:17277 (1)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
-| `I13` | {"disposition":"series","slug":"code-geass-oz-the-reflection","franchise":"code-geass-lelouch-of-the-rebellion"} | Decision (d) of the extras sitting (Sean 2026-09-05): Code Geass: Oz the Reflection Picture Drama (OVA 2013) adapts Code Geass: Soubou no Oz (AniList manga 72381: MANGA · FINISHED · 24/5 · 634) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of code-geass-lelouch-of-the-rebellion. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
+| `I13` | {"disposition":"deferred","slug":"code-geass-oz-the-reflection","franchise":"code-geass-lelouch-of-the-rebellion"} | DEFERRED 2026-09-06 (the picks pass): a PICTURE DRAMA is not a head work for a series (I13 f); the Oz manga (72381) has no full anime — the picture drama stays a Code Geass extra. Decision (d) of the extras sitting (Sean 2026-09-05): Code Geass: Oz the Reflection Picture Drama (OVA 2013) adapts Code Geass: Soubou no Oz (AniList manga 72381: MANGA · FINISHED · 24/5 · 634) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of code-geass-lelouch-of-the-rebellion. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
 
 ### anilist:182469 (1)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
-| `I13` | {"disposition":"series","slug":"one-piece-novel-mugiwara-stories","franchise":"one-piece"} | Decision (d) of the extras sitting (Sean 2026-09-05): ONE PIECE FAN LETTER (SPECIAL 2024) adapts ONE PIECE novel Mugiwara Stories (AniList manga 128291: NOVEL · FINISHED · 9/1 · 629) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of one-piece. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
+| `I13` | {"disposition":"series","relation":{"to":"one-piece","kind":"side_story"},"slug":"one-piece-novel-mugiwara-stories","franchise":"one-piece"} | Decision (d) of the extras sitting (Sean 2026-09-05): ONE PIECE FAN LETTER (SPECIAL 2024) adapts ONE PIECE novel Mugiwara Stories (AniList manga 128291: NOVEL · FINISHED · 9/1 · 629) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of one-piece. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
 
 ### anilist:197178 (1)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
-| `I13` | {"disposition":"series","slug":"one-piece-novel-heroines","franchise":"one-piece"} | Decision (d) of the extras sitting (Sean 2026-09-05): ONE PIECE HEROINES (SPECIAL 2026) adapts ONE PIECE novel HEROINES (AniList manga 113686: NOVEL · FINISHED · 10/2 · 987) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of one-piece. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
+| `I13` | {"disposition":"series","relation":{"to":"one-piece","kind":"side_story"},"slug":"one-piece-novel-heroines","franchise":"one-piece"} | Decision (d) of the extras sitting (Sean 2026-09-05): ONE PIECE HEROINES (SPECIAL 2026) adapts ONE PIECE novel HEROINES (AniList manga 113686: NOVEL · FINISHED · 10/2 · 987) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of one-piece. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
 
 ### anilist:20791 (1)
 
@@ -290,29 +302,47 @@
 |---|---|---|---|---|
 | `I45` | {"disposition":"related_work","owner":"fate-stay-night","bucket":"alternative"} | Fate/stay night [Heaven's Feel] I. presage flower: an alternative adaptation of the Fate/stay night visual novel (I16), attributed to the franchise base — Fate/Zero's SEQUEL edge is chronology (it points at all three stay-night adaptations) and Prisma Illya's PARENT edge names an ancestor, not a work in its run. Sean 2026-09-05: Heaven's Feel belongs to Fate, never to a Prisma Illya extras verdict. No instrument (a VN): held, never a mint. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 |  |
 
+### anilist:20811 (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I13` | {"disposition":"series","relation":{"to":"attack-on-titan","kind":"prequel"},"slug":"attack-on-titan-no-regrets","franchise":"attack-on-titan"} | The (d) queue (2026-09-06; the wave-2 owner triage): Shingeki no Kyojin Gaiden: Kuinaki Sentaku (2-ep OVA, 2014-12 / 2015-04) adapts 悔いなき選択 (Suruga, 2 vols) — Levi's prequel manga, a run of its own (I13 b); prequel of attack-on-titan. | Sean 2026-09-06 · scripts/ingest/research/discovery/out/triage__attack-on-titan.json |  |
+
+### anilist:20942 (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I13` | {"disposition":"series","relation":{"to":"the-prince-of-tennis","kind":"side_story"},"slug":"houkago-no-ouji-sama","franchise":"the-prince-of-tennis"} | The (d) queue (2026-09-06; the wave-2 owner triage): Houkago no Ouji-sama (5 shorts, 2014) adapts the 4-koma spin-off manga 放課後の王子様 — a run of its own (I13 b), the Colourful Bleach shape; side story of the-prince-of-tennis. | Sean 2026-09-06 · scripts/ingest/research/discovery/out/triage__the-prince-of-tennis.json |  |
+
 ### anilist:21068 (1)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
-| `I13` | {"disposition":"series","slug":"durarara-gaiden","franchise":"durarara"} | Decision (d) of the extras sitting (Sean 2026-09-05): Durarara!! X2: My Heart is in the Pattern of a Hot Pot (SPECIAL 2015) adapts Durarara!! Gaiden!? (AniList manga 85836: NOVEL · FINISHED · 10/1 · 333) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of durarara. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
+| `I13` | {"disposition":"series","relation":{"to":"durarara","kind":"side_story"},"chain":[21068,21331],"slug":"durarara-gaiden","franchise":"durarara"} | Decision (d) of the extras sitting (Sean 2026-09-05): Durarara!! X2: My Heart is in the Pattern of a Hot Pot (SPECIAL 2015) adapts Durarara!! Gaiden!? (AniList manga 85836: NOVEL · FINISHED · 10/1 · 333) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of durarara. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
 
 ### anilist:21132 (1)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
-| `I13` | {"disposition":"series","slug":"tokyo-ghoul-jack","franchise":"tokyo-ghoul"} | Decision (d) of the extras sitting (Sean 2026-09-05): Tokyo Ghoul: [JACK] (OVA 2015) adapts Tokyo Ghoul: Jack (AniList manga 85522: MANGA · FINISHED · 7/1 · 10119) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of tokyo-ghoul. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
+| `I13` | {"disposition":"series","relation":{"to":"tokyo-ghoul","kind":"prequel"},"slug":"tokyo-ghoul-jack","franchise":"tokyo-ghoul"} | Decision (d) of the extras sitting (Sean 2026-09-05): Tokyo Ghoul: [JACK] (OVA 2015) adapts Tokyo Ghoul: Jack (AniList manga 85522: MANGA · FINISHED · 7/1 · 10119) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of tokyo-ghoul. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
 
 ### anilist:21326 (1)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
-| `I13` | {"disposition":"series","slug":"tokyo-ghoul-hibi","franchise":"tokyo-ghoul"} | Decision (d) of the extras sitting (Sean 2026-09-05): Tokyo Ghoul: [PINTO] (OVA 2015) adapts Tokyo Ghoul: Hibi (AniList manga 87233: NOVEL · FINISHED · 6/1 · 3310) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of tokyo-ghoul. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
+| `I13` | {"disposition":"series","relation":{"to":"tokyo-ghoul","kind":"prequel"},"slug":"tokyo-ghoul-hibi","franchise":"tokyo-ghoul"} | Decision (d) of the extras sitting (Sean 2026-09-05): Tokyo Ghoul: [PINTO] (OVA 2015) adapts Tokyo Ghoul: Hibi (AniList manga 87233: NOVEL · FINISHED · 6/1 · 3310) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of tokyo-ghoul. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
 
 ### anilist:21377 (1)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
-| `I13` | {"disposition":"series","slug":"kurokos-basketball-extra-game","franchise":"kurokos-basketball"} | Decision (d) of the extras sitting (Sean 2026-09-05): Kuroko's Basketball: Last Game (MOVIE 2017) adapts Kuroko no Basket: Extra Game (AniList manga 85604: MANGA · FINISHED · 9/2 · 4449) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of kurokos-basketball. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
+| `I13` | {"disposition":"series","relation":{"to":"kurokos-basketball","kind":"sequel"},"slug":"kurokos-basketball-extra-game","franchise":"kurokos-basketball"} | Decision (d) of the extras sitting (Sean 2026-09-05): Kuroko's Basketball: Last Game (MOVIE 2017) adapts Kuroko no Basket: Extra Game (AniList manga 85604: MANGA · FINISHED · 9/2 · 4449) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of kurokos-basketball. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
+
+### anilist:21458 (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I13` | {"disposition":"series","relation":{"to":"mobile-suit-gundam","kind":"side_story"},"chain":[21458,97853],"slug":"mobile-suit-gundam-thunderbolt","franchise":… | RE-TARGETED 2026-09-06 (the picks pass, Cursor's correction): December Sky (21893) is the COMPILATION of the ONA (AniList ALTERNATIVE → 21458); the mint's anime entry is the HEAD — the ONA 21458 with its sequel 97853 (I13 f); the two compilation films join the new series' ledger as recaps. Decision (d) of the extras sitting (Sean 2026-09-05): Mobile Suit Gundam Thunderbolt: December Sky (MOVIE 2016) adapts Kidou Senshi Gundam Thunderbolt (AniList manga 67683: MANGA · FINISHED · 230/27 · 1815) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of mobile-suit-gundam. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
 
 ### anilist:21718 (1)
 
@@ -330,31 +360,19 @@
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
-| `I13` | {"disposition":"series","slug":"thus-spoke-rohan-kishibe","franchise":"jojos-bizarre-adventure"} | Decision (d) of the extras sitting (Sean 2026-09-05): Thus Spoke Rohan Kishibe (OVA 2017) adapts Kishibe Rohan wa Ugokanai (AniList manga 103029: MANGA · RELEASING · ?/? · 6967) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of jojos-bizarre-adventure. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
+| `I13` | {"disposition":"series","relation":{"to":"jojos-bizarre-adventure","kind":"side_story"},"slug":"thus-spoke-rohan-kishibe","franchise":"jojos-bizarre-adventure"} | Decision (d) of the extras sitting (Sean 2026-09-05): Thus Spoke Rohan Kishibe (OVA 2017) adapts Kishibe Rohan wa Ugokanai (AniList manga 103029: MANGA · RELEASING · ?/? · 6967) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of jojos-bizarre-adventure. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
 
 ### anilist:21806 (1)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
-| `I13` | {"disposition":"series","slug":"yowamushi-pedal-spare-bike","franchise":"yowamushi-pedal"} | Decision (d) of the extras sitting (Sean 2026-09-05): Yowamushi Pedal: SPARE BIKE (MOVIE 2016) adapts Yowamushi Pedal: Spare Bike (AniList manga 99139: MANGA · RELEASING · ?/? · 321) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of yowamushi-pedal. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
+| `I13` | {"disposition":"series","relation":{"to":"yowamushi-pedal","kind":"spin_off"},"slug":"yowamushi-pedal-spare-bike","franchise":"yowamushi-pedal"} | Decision (d) of the extras sitting (Sean 2026-09-05): Yowamushi Pedal: SPARE BIKE (MOVIE 2016) adapts Yowamushi Pedal: Spare Bike (AniList manga 99139: MANGA · RELEASING · ?/? · 321) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of yowamushi-pedal. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
 
 ### anilist:21864 (1)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
-| `I13` | {"disposition":"series","slug":"koro-sensei-q","franchise":"assassination-classroom"} | Decision (d) of the extras sitting (Sean 2026-09-05): Koro-sensei Q! (MOVIE 2016) adapts Koro-sensei Q! (AniList manga 86949: MANGA · FINISHED · 40/5 · 1233) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of assassination-classroom. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
-
-### anilist:21893 (1)
-
-| rule | value | reason | ruled | retires when |
-|---|---|---|---|---|
-| `I13` | {"disposition":"series","slug":"mobile-suit-gundam-thunderbolt","franchise":"mobile-suit-gundam"} | Decision (d) of the extras sitting (Sean 2026-09-05): Mobile Suit Gundam Thunderbolt: December Sky (MOVIE 2016) adapts Kidou Senshi Gundam Thunderbolt (AniList manga 67683: MANGA · FINISHED · 230/27 · 1815) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of mobile-suit-gundam. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
-
-### anilist:2514 (1)
-
-| rule | value | reason | ruled | retires when |
-|---|---|---|---|---|
-| `I13` | {"disposition":"series","slug":"magic-kaito","franchise":"detective-conan"} | Decision (d) of the extras sitting (Sean 2026-09-05): Case Closed: Conan and Kid and Crystal Mother (OVA 2004) adapts Magic Kaito (AniList manga 31804: MANGA · RELEASING · ?/? · 2881) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of detective-conan. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
+| `I13` | {"disposition":"series","relation":{"to":"assassination-classroom","kind":"spin_off"},"slug":"koro-sensei-q","franchise":"assassination-classroom"} | Decision (d) of the extras sitting (Sean 2026-09-05): Koro-sensei Q! (MOVIE 2016) adapts Koro-sensei Q! (AniList manga 86949: MANGA · FINISHED · 40/5 · 1233) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of assassination-classroom. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
 
 ### anilist:3272 (1)
 
@@ -378,13 +396,13 @@
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
-| `I13` | {"disposition":"series","slug":"saint-seiya-the-lost-canvas","franchise":"saint-seiya-knights-of-the-zodiac"} | Decision (d) of the extras sitting (Sean 2026-09-05): Saint Seiya: The Lost Canvas (OVA 2009) adapts Saint Seiya: THE LOST CANVAS - Meiou Shinwa (AniList manga 31047: MANGA · FINISHED · 224/25 · 4231) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of saint-seiya-knights-of-the-zodiac. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
+| `I13` | {"disposition":"series","relation":{"to":"saint-seiya-knights-of-the-zodiac","kind":"prequel"},"slug":"saint-seiya-the-lost-canvas","franchise":"saint-seiya-… | Decision (d) of the extras sitting (Sean 2026-09-05): Saint Seiya: The Lost Canvas (OVA 2009) adapts Saint Seiya: THE LOST CANVAS - Meiou Shinwa (AniList manga 31047: MANGA · FINISHED · 224/25 · 4231) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of saint-seiya-knights-of-the-zodiac. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
 
 ### anilist:6336 (1)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
-| `I13` | {"disposition":"series","slug":"mobile-suit-gundam-unicorn","franchise":"mobile-suit-gundam"} | Decision (d) of the extras sitting (Sean 2026-09-05): Mobile Suit Gundam UC (OVA 2010) adapts Kidou Senshi Gundam Unicorn (AniList manga 35177: NOVEL · FINISHED · 31/11 · 353) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of mobile-suit-gundam. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
+| `I13` | {"disposition":"series","chain":[6336],"relation":{"to":"mobile-suit-gundam","kind":"sequel"},"slug":"mobile-suit-gundam-unicorn","franchise":"mobile-suit-gu… | CHAIN PINNED 2026-09-06 (the seed dry run): the SEQUEL walk pulled Twilight AXIS (98504) in — a HELD, disputed-instrument work; Unicorn is the 7 OVA episodes (RE:0096 is its TV re-cut, an alternative). Decision (d) of the extras sitting (Sean 2026-09-05): Mobile Suit Gundam UC (OVA 2010) adapts Kidou Senshi Gundam Unicorn (AniList manga 35177: NOVEL · FINISHED · 31/11 · 353) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of mobile-suit-gundam. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
 
 ### anilist:6922 (1)
 
@@ -392,23 +410,29 @@
 |---|---|---|---|---|
 | `I45` | {"disposition":"related_work","owner":"fate-stay-night","bucket":"alternative"} | Fate/stay night: Unlimited Blade Works (Movie, 2010): an alternative adaptation of the Fate/stay night visual novel (I16), attributed to the franchise base — Fate/Zero's SEQUEL edge is chronology (it points at all three stay-night adaptations) and Prisma Illya's PARENT edge names an ancestor, not a work in its run. Sean 2026-09-05: Heaven's Feel belongs to Fate, never to a Prisma Illya extras verdict. No instrument (a VN): held, never a mint. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 |  |
 
+### anilist:8310 (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I13` | {"disposition":"series","relation":{"to":"detective-conan","kind":"side_story"},"slug":"magic-kaito","franchise":"detective-conan"} | RE-TARGETED 2026-09-06 (the picks pass): 2514 is a Conan OVA with a Kaito cameo; the HEAD adaptation of the Magic Kaito manga (31804) is the 2010-12 specials 8310 (12 eps; Magic Kaito 1412 — 20790 — is a second adaptation, a series candidate of its own, I16). The OVA stays a Conan extra. Decision (d) of the extras sitting (Sean 2026-09-05): Case Closed: Conan and Kid and Crystal Mother (OVA 2004) adapts Magic Kaito (AniList manga 31804: MANGA · RELEASING · ?/? · 2881) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of detective-conan. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
+
 ### anilist:97891 (1)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
-| `I13` | {"disposition":"series","slug":"blue-exorcist-weekend-hero","franchise":"blue-exorcist"} | Decision (d) of the extras sitting (Sean 2026-09-05): Ao no Exorcist: Kyoto Fujouou-hen OVA (OVA 2017) adapts Ao no Exorcist: Weekend Hero (AniList manga 58103: NOVEL · FINISHED · 5/1 · 428) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of blue-exorcist. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
+| `I13` | {"disposition":"series","relation":{"to":"blue-exorcist","kind":"side_story"},"slug":"blue-exorcist-weekend-hero","franchise":"blue-exorcist"} | Decision (d) of the extras sitting (Sean 2026-09-05): Ao no Exorcist: Kyoto Fujouou-hen OVA (OVA 2017) adapts Ao no Exorcist: Weekend Hero (AniList manga 58103: NOVEL · FINISHED · 5/1 · 428) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of blue-exorcist. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
 
 ### anilist:99634 (1)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
-| `I13` | {"disposition":"series","slug":"attack-on-titan-lost-girls","franchise":"attack-on-titan"} | Decision (d) of the extras sitting (Sean 2026-09-05): Attack on Titan: Lost Girls (OVA 2017) adapts Shingeki no Kyojin: LOST GIRLS (AniList manga 93313: NOVEL · FINISHED · 3/1 · 2871) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of attack-on-titan. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
+| `I13` | {"disposition":"series","relation":{"to":"attack-on-titan","kind":"side_story"},"slug":"attack-on-titan-lost-girls","franchise":"attack-on-titan"} | Decision (d) of the extras sitting (Sean 2026-09-05): Attack on Titan: Lost Girls (OVA 2017) adapts Shingeki no Kyojin: LOST GIRLS (AniList manga 93313: NOVEL · FINISHED · 3/1 · 2871) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of attack-on-titan. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
 
 ### anilist:997 (1)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
-| `I13` | {"disposition":"series","slug":"sailor-moon-short-stories","franchise":"sailor-moon"} | Decision (d) of the extras sitting (Sean 2026-09-05): Sailor Moon S Movie: Hearts in Ice (MOVIE 1994) adapts Bishoujo Senshi Sailor Moon: Short Stories (AniList manga 38552: MANGA · FINISHED · 10/2 · 1729) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of sailor-moon. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
+| `I13` | {"disposition":"related_work","owner":"sailor-moon","bucket":"same_instrument"} | NOT A MINT (2026-09-06, the picks pass): the S film adapts a SHORT STORY of the instrument itself (Kaguya-hime no Koibito, 1993-94) — AniList's 'Short Stories' node (38552) is the 2004 collected edition, the reissue-date trap; an extras row of sailor-moon adapting its own instrument, research decides the standing. Decision (d) of the extras sitting (Sean 2026-09-05): Sailor Moon S Movie: Hearts in Ice (MOVIE 1994) adapts Bishoujo Senshi Sailor Moon: Short Stories (AniList manga 38552: MANGA · FINISHED · 10/2 · 1729) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of sailor-moon. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
 
 ### another (1)
 
@@ -423,7 +447,7 @@
 | `V6` | {"full":true,"rows":[{"volume":1,"chapter_start":1,"chapter_end":7},{"volume":2,"chapter_start":8,"chapter_end":17},{"volume":3,"chapter_start":18,"chapter_e… | no boundaries stored; 83-unit space (chs 1-79 WSJ + Finale 80 + Period 81 + Embalming one-shot 82 + After 83) per MangaDex aggregate + en-WP + fandom (verifier-confirmed; flag #699). v10 starts at 81 (80.5 is a bonus, boundaries stay integer) — FULL replace | session 2026-08-25 · scripts/ingest/research/batch17/out/arms-alchemy.json, scripts/ingest/apply-research-batch-17.ts, §12.50 |  |
 | `A43` | {"episodes":[18],"kind":"partial","chapters":"63-64","note":"Sean 2026-08-25: ep 18 ends on a graveyard-ambush cliffhanger that plausibly touches ch 63-64's … | ep 18 ends on a graveyard-ambush cliffhanger that plausibly touches ch 63-64's opening (en-WP's final beat; unproven) — END stays 61; recorded as a partial annotation so the fact survives without overclaiming (honest gap beats a plausible guess) | Sean 2026-08-25 · scripts/ingest/research/batch17/out/arms-alchemy.json, scripts/ingest/apply-research-batch-17.ts, §12.50 |  |
 
-### assassination-classroom (26)
+### assassination-classroom (27)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -453,6 +477,7 @@
 | `A43` | {"episodes":[42],"kind":"divergence","chapters":"156-158, 161","asterisk_review":"pending (if unset)"} | Valentine's ep adapts 154-155 then 159-160, skipping 156-158; ch 161 also unadapted (ep 43 starts 162) | session 2026-08-23 · scripts/ingest/apply-research-batch-8.ts, docs/changelog.md §12.25, session scratchpad batch8/assassination-classroom.json |  |
 | `A43` | {"episodes":[46,47],"kind":"partial","chapters":"178","asterisk_review":"pending (if unset)"} | ch 178 split across eps 46/47; consistent with ep47→180 | session 2026-08-23 · scripts/ingest/apply-research-batch-8.ts, docs/changelog.md §12.25, session scratchpad batch8/assassination-classroom.json |  |
 | `A3` | {"episode":5,"chapter":11,"start_chapter":7,"chapters_adapted":"7, 11","volume":2,"source":"manual"} | ch 7 held back from ep 4, adapted here with 11 — as-stored | session 2026-08-23 · scripts/ingest/apply-rearranged-anchors.ts, docs/changelog.md §12.32, batch-10 verdict (assassination-classroom) |  |
+| `I43` | {"franchise":"assassination-classroom","title":"Assassination Classroom","titleNative":"暗殺教室","base":true} | The step-2 picks pass (2026-09-06): the base of the 'assassination-classroom' franchise, created so its minted members (I13 b/d) land in it at creation. | Sean 2026-09-06 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §6.3 |  |
 
 ### attack-on-titan (46)
 
@@ -510,6 +535,20 @@
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `I43` | {"franchise":"attack-on-titan"} | Attack on Titan and its parody spin-off Junior High (spin_off / parent edges both ways); one IP. | Sean 2026-09-05 · signed by Sean 2026-09-05 ("Sign the 39 / 97 franchise table"), the 2026-09-05 franchise bootstrap (connected components of series_relations ∪ AniList story / PARENT / SAME_UNIVERSE edges between owned entries; scripts/ingest/research/discovery/PROPOSAL.md §2) |  |
+
+### attack-on-titan-lost-girls (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I43` | {"franchise":"attack-on-titan"} | The step-2 picks pass (2026-09-06): a series minted from a (d) declaration (I13 b/d) belongs to its parent's franchise; the membership is ruled with the seed so the row lands in it at creation. | Sean 2026-09-06 · scripts/ingest/lib/rulings/discovery.ts (the declaration) |  |
+
+### attack-on-titan-no-regrets (3)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `T25` | manga | The step-2 seed dry run (2026-09-06): AniList tags the OVA's source VISUAL_NOVEL (the pachislot game sharing its title); the instrument is the manga 悔いなき選択 (AniList 85199, the ruled I38 link) — the tag routes, the edge is the fact (I47). | Sean 2026-09-06 · scripts/ingest/lib/rulings/source-relations.ts (the I38 link) |  |
+| `I38` | {"relation":"adaptation","mangaAnilistId":85199} | The step-2 seed dry run (2026-09-06): AniList tags the No Regrets OVA's source VISUAL_NOVEL (the pachislot game the OVA shares its title with), so the I38 pick found no manga; the OVA adapts 悔いなき選択 (Suruga, 2013-14, 11 ch / 2 vols; AniList 85199 / MAL 58007) — the tag routes, the edge is the fact (I47). | Sean 2026-09-06 · scripts/ingest/research/discovery/out/triage__attack-on-titan.json, https://anilist.co/manga/85199 |  |
+| `I43` | {"franchise":"attack-on-titan"} | The step-2 picks pass (2026-09-06): a series minted from a (d) declaration (I13 b/d) belongs to its parent's franchise; the membership is ruled with the seed so the row lands in it at creation. | Sean 2026-09-06 · scripts/ingest/lib/rulings/discovery.ts (the declaration) |  |
 
 ### ayakashi-triangle (5)
 
@@ -860,7 +899,7 @@
 | `I17` | {"to":"bleach","kind":"sequel"} | Bleach→TYBW: the same holding as Tokyo Ghoul :re (Sean 2026-08-24, Naruto→Shippuden pattern) — TYBW is a separate entry, linked sequel; enforced structurally by the ownership guard and the ruled-splits skip. | Sean 2026-08-24 · docs/franchise-rulings.md "Tokyo Ghoul :re stays a SEPARATE entry" |  |
 | `I43` | {"franchise":"bleach"} | Bleach — TYBW is the ruled separate sequel (Sean 2026-08-24, the Naruto → Shippuden pattern); BURN THE WITCH is Kubo's same-universe spin-off (AniList OTHER edge; the Reverse London setting is part of the Bleach world) — proposed IN as a member so the browse page keeps Kubo's world together. Sean rules the Burn the Witch membership at the sitting. | Sean 2026-09-05 · signed by Sean 2026-09-05 ("Sign the 39 / 97 franchise table"), the 2026-09-05 franchise bootstrap (connected components of series_relations ∪ AniList story / PARENT / SAME_UNIVERSE edges between owned entries; scripts/ingest/research/discovery/PROPOSAL.md §2), docs/franchise-rulings.md "Rulings 2026-08-24" (TYBW separate) |  |
 
-### blood-blockade-battlefront (11)
+### blood-blockade-battlefront (12)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -874,9 +913,10 @@
 | `A43` | {"episodes":[14,15,16,17,18,19,20,21,22],"kind":"rearranged","chapters":"21-22, 7, 15, 10, 26a+B2B 2-3, 23-24, 17, 18, 25","note":"research-tier batch 11 (20… | faithful but heavily shuffled | session 2026-08-23 · scripts/ingest/apply-research-batch-11.ts, scratchpad batch11/blood-blockade-battlefront.json (session scratchpad, not on disk), docs/changelog.md §12.30 |  |
 | `A43` | {"episodes":[18],"kind":"graft","chapters":"26 (first half) + Back 2 Back 2-3","note":"research-tier batch 11 (2026-08-23, agent-verified 2+ sources, full-re… | splices main + sequel; 26 re-adapted in ep 23 | session 2026-08-23 · scripts/ingest/apply-research-batch-11.ts, scratchpad batch11/blood-blockade-battlefront.json (session scratchpad, not on disk), docs/changelog.md §12.30 |  |
 | `A40` | {"table":"series","mapping_mode":"loose"} | pervasive anime-original White/Black thread woven through every S1 episode + heavy S2 shuffle → loose (research-ruled); anchors stored regardless as borrow-maps. | session 2026-08-23 · scripts/ingest/apply-research-batch-11.ts, scratchpad batch11/blood-blockade-battlefront.json (session scratchpad, not on disk), docs/changelog.md §12.30 |  |
+| `I41` | {"works":[{"label":"Kekkai Sensen","anilistMangaId":42994,"note":"Kekkai Sensen (2009-15, 33 ch / 10 vols; AniList 42994 / MAL 12994), the entry's instrument… | The step-2 picks pass (2026-09-06, Cursor's correction): the & BEYOND OVA (101695) adapts side chapters of Back 2 Back — the owner's own S2 instrument, not another run; registering the chain (I41) makes every Back 2 Back edge the owner's own (I47) so the OVA reads same_instrument and the picks read never proposes a mint for it. | Sean 2026-09-06 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §6.3 |  |
 | `A40` | loose | Borrows chapters out of any order (the A40 witness with Ouran): anchors are maps, not a curve (Sean 2026-08-23). | Sean 2026-08-23 · docs/changelog.md §12.29-31 (2026-08-23, the MU-pin verification session), docs/rules.md A40 |  |
 
-### blue-exorcist (8)
+### blue-exorcist (9)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -888,8 +928,15 @@
 | `A43` | {"episodes":[26],"kind":"rearranged","chapters":"ch 14 + 16","asterisk_review":"pending (if unset)"} | Kyoto Saga opener grabs skipped ch 14 before resuming from 16 | session 2026-08-23 · scripts/ingest/apply-research-batch-8.ts, docs/changelog.md §12.25, session scratchpad batch8/blue-exorcist.json |  |
 | `A43` | {"episodes":[38],"kind":"partial","chapters":"ch 35-37 skipped","asterisk_review":"pending (if unset)"} | Shimane opens at 38, skipping 35-37 (also 40, 42 later) | session 2026-08-23 · scripts/ingest/apply-research-batch-8.ts, docs/changelog.md §12.25, session scratchpad batch8/blue-exorcist.json |  |
 | `C9` | {"episode":37,"continue_chapter":38} | Kyoto Saga ends ch 34 but chs 35-37 are SKIPPED by the anime — S3 opens at 38; readers who want everything start at 35, anime-parity continues at 38 (WDTALO) | Sean 2026-08-23 · scripts/ingest/apply-continue-points.ts, docs/changelog.md §12.27, batch 8 verdict (blue-exorcist) | RETIRED 2026-08-27 (batch 19 wave 2 deep) — the parity healer (heal-parity-continues, C2/C3 with the C1 guard) re-derives every continue catalog-wide on each pass; the batch-17 values were converted 2026-08-24/26 and nothing stands outside the mechanism |
+| `I43` | {"franchise":"blue-exorcist","title":"Blue Exorcist","titleNative":"青の祓魔師","base":true} | The step-2 picks pass (2026-09-06): the base of the 'blue-exorcist' franchise, created so its minted members (I13 b/d) land in it at creation. | Sean 2026-09-06 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §6.3 |  |
 
-### blue-lock (9)
+### blue-exorcist-weekend-hero (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I43` | {"franchise":"blue-exorcist"} | The step-2 picks pass (2026-09-06): a series minted from a (d) declaration (I13 b/d) belongs to its parent's franchise; the membership is ruled with the seed so the row lands in it at creation. | Sean 2026-09-06 · scripts/ingest/lib/rulings/discovery.ts (the declaration) |  |
+
+### blue-lock (10)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -902,6 +949,13 @@
 | `A3` | {"episode":37,"chapter":143,"volume":17,"source":"manual"} | Rin's flow state = ch 143 'Not Alone' (identical title). fandom Episode_37 + Wikipedia + gamerant | session 2026-08-23 · scripts/ingest/apply-research-batch-9.ts, docs/changelog.md §12.26, session scratchpad batch9/blue-lock.json |  |
 | `A43` | {"episodes":[29],"kind":"abridged","chapters":"108-109","asterisk_review":"pending (if unset)"} | 5 chapters with page skips — densest ep of the season | session 2026-08-23 · scripts/ingest/apply-research-batch-9.ts, docs/changelog.md §12.26, session scratchpad batch9/blue-lock.json |  |
 | `A43` | {"episodes":[30],"kind":"graft","chapters":"~112-113","asterisk_review":"pending (if unset)"} | anime-original pre-match buildup scenes added | session 2026-08-23 · scripts/ingest/apply-research-batch-9.ts, docs/changelog.md §12.26, session scratchpad batch9/blue-lock.json |  |
+| `I43` | {"franchise":"blue-lock","title":"BLUE LOCK","titleNative":"ブルーロック","base":true} | The step-2 picks pass (2026-09-06): the base of the 'blue-lock' franchise, created so its minted members (I13 b/d) land in it at creation. | Sean 2026-09-06 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §6.3 |  |
+
+### blue-lock-episode-nagi (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I43` | {"franchise":"blue-lock"} | The step-2 picks pass (2026-09-06): a series minted from a (d) declaration (I13 b/d) belongs to its parent's franchise; the membership is ruled with the seed so the row lands in it at creation. | Sean 2026-09-06 · scripts/ingest/lib/rulings/discovery.ts (the declaration) |  |
 
 ### boruto-naruto-next-generations (31)
 
@@ -1144,6 +1198,12 @@
 |---|---|---|---|---|
 | `G53` | {"5":"2006-11-03","6":"2006-11-10","28":"2008-04-20","29":"2008-04-27"} | Batch 19 wave 2 lane B3 (ja-WP + en-WP / syoboi / fandom, 2+ sources per row; the contradictions verified R24; Sean ruled B3-7): ep 5: ja-WP コードギアス 反逆のルルーシュ 各話リスト: STAGE 5「皇女 と 魔女」= 11月3日; en-WP List of Code Geass season 1 episodes: ep 5 = 2006-11-03. Every R1 date in both sources is a Friday (10/6, 10/1 \| ep 6: ja-WP: STAGE 6「奪われた 仮面」= 11月10日; en-WP ep 6 'The Stolen Mask' = 2006-11-10 (cited to geass.jp/first/story_06.html). Stored 2006-10-09 is not a Code Geass broadcast date a \| ep 28: ja-WP R2 table: TURN 03「囚われ の 学園」= 4月20日; en-WP List of Code Geass season 2 episodes: 'Imprisoned in Campus' = 2008-04-20. R2 ran weekly Sunday 2008-04-06 … 2008-09-28; s \| ep 29: ja-WP: TURN 04「逆襲 の 処刑台」= 4月27日; en-WP: 'Counterattack at the Gallows' = 2008-04-27. Same month-digit corruption as ep 28. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/code-geass-lelouch-of-the-rebellion.json, https://en.wikipedia.org/wiki/List_of_Code_Geass_season_1_episodes, https://en.wikipedia.org/wiki/List_of_Code_Geass_season_2_episodes, https://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%BC%E3%83%89%E3%82%AE%E3%82%A2%E3%82%B9_%E5%8F%8D%E9%80%86%E3%81%AE%E3%83%AB%E3%83%AB%E3%83%BC%E3%82%B7%E3%83%A5 |  |
 
+### colourful-bleach (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I43` | {"franchise":"bleach"} | The step-2 picks pass (2026-09-06): a series minted from a (d) declaration (I13 b/d) belongs to its parent's franchise; the membership is ruled with the seed so the row lands in it at creation. | Sean 2026-09-06 · scripts/ingest/lib/rulings/discovery.ts (the declaration) |  |
+
 ### cowboy-bebop (3)
 
 | rule | value | reason | ruled | retires when |
@@ -1228,13 +1288,14 @@
 | `I45` | {"anilistId":112151,"standing":"canon","chapter":66,"volume":8,"chaptersAdapted":"54 (from p. 5 — pp. 1-4 are ep 26's) to 66, vols 7-8","note":"This work IS … | Wave 1 (research-agent, verified R24 SOUND WITH NOTES): a straight, in-order adaptation of the owner's manga, ch 54 p. 5 to the end of ch 66 — MangaUpdates' S1 / S2 page pins and the Kimetsu Wiki's page-partitioned episode fields agree; ja-WP: vols 7-8. The verifier corrected the note (the bento is p. 5 onward, the film's; the 70-cut figure is AV Watch's / ja-WP's anime article; MU segments by TV season). Sean 2026-09-05: canon, 26.5. | Sean 2026-09-05 · scripts/ingest/research/discovery/out/demon-slayer-kimetsu-no-yaiba__112151.json, scripts/ingest/research/discovery/verify/demon-slayer-kimetsu-no-yaiba__112151.md |  |
 | `I45` | {"anilistId":178788,"standing":"canon","chapter":157,"volume":18,"chaptersAdapted":"140-157 (157 pp. 1-6, partial); the ch 139 opening is re-shown from ep 63… | Wave 1 (verified SOUND WITH NOTES): the Kimetsu Wiki's film infobox prints 140-157 (p. 1-6) and MangaUpdates pins Vol 16 Chap 140 → Vol 18 Chap 156 (MU names the last chapter adapted in full; the straddle into 157 rests on the wiki and en-WP's plot). Realsound's inventory of the studio additions is all flourish (T28 faithfulness clause). Sean 2026-09-05: canon, 63.5; no Part 1 row; related-work coverage does not feed the series frontier until ruled. | Sean 2026-09-05 · scripts/ingest/research/discovery/out/demon-slayer-kimetsu-no-yaiba__178788.json, scripts/ingest/research/discovery/verify/demon-slayer-kimetsu-no-yaiba__178788.md |  |
 
-### detective-conan (25)
+### detective-conan (26)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `G53` | {"110":"1998-07-27","111":"1998-08-03","112":"1998-08-10","113":"1998-08-17","114":"1998-08-24","115":"1998-08-31"} | Batch 19 wave 2 lane B3 (ja-WP + en-WP / syoboi / fandom, 2+ sources per row; the contradictions verified R24; Sean ruled B3-7): ep 110: ja-WP: \|7月27日\|\|110\|\|料理教室殺人事件（前編）; DCW Season 3 {{SeasonItem\|110\|116\|Cooking Classroom Murder Case (Part 1)\|July 27, 1998}}. (DCW's first argument is the Jp# column, which \| ep 111: ja-WP: \|8月3日\|\|111\|\|料理教室殺人事件（後編）; DCW Season 3: Jp# 111 = August 3, 1998. A two-parter cannot straddle 07-27 and 08-10 with 08-03 given to a different case. \| ep 112: ja-WP: \|8月10日\|\|112\|\|帝丹小7不思議事件; DCW Season 3: Jp# 112 'The Seven Mysteries of Teitan Elementary School Case' = August 10, 1998. \| ep 113: ja-WP: \|8月17日\|\|113\|\|白い砂浜殺人事件; DCW Season 3: Jp# 113 'The White Sandy Beach Murder Case' = August 17, 1998. \| ep 114: ja-WP: \|8月24日\|\|114\|\|スキューバダイビング殺人事件（前編）; DCW Season 3: Jp# 114 = August 24, 1998. \| ep 115: ja-WP: \|8月31日\|\|115\|\|スキューバダイビング殺人事件（後編）; DCW Season 3: Jp# 115 = August 31, 1998. Ep 116 (09-07) is already correct in our data, so 08-31 is the only slot left. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/detective-conan.json, https://ja.wikipedia.org/wiki/%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7, https://www.detectiveconanworld.com/wiki/Season_3 |  |
 | `A18` | reorder regime (chunk 2, verifier-confirmed): 201 of 631 manga episodes start below the running-max chapter — the adaptation freely interleaves backlog cases… | verifier-confirmed: 201 of 631 manga episodes start below the running-max chapter — the adaptation freely interleaves backlog cases; every continue point carries both the parity value and the monotonic alternative | session 2026-08-25 · scripts/ingest/research/batch17/out/detective-conan.json, scripts/ingest/apply-research-batch-17.ts, §12.50 |  |
 | `T6` | {"128":"mixed","1000":"mixed","1001":"mixed"} | Eps 128/1000/1001 are chapter re-runs — re-staged canon content, never position → mixed. Under the later rehash rule (T8, DRIFT-LIST A-5) a re-staging with nothing new is filler; these three are a named re-check task. | Sean 2026-08-25 · scripts/ingest/research/batch17/out/detective-conan.json | A-5 re-check under T8: retype filler if the re-runs add no new canon |
+| `I43` | {"franchise":"detective-conan","title":"Detective Conan","titleNative":"名探偵コナン","base":true} | The step-2 picks pass (2026-09-06): the base of the 'detective-conan' franchise, created so its minted members (I13 b/d) land in it at creation. | Sean 2026-09-06 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §6.3 |  |
 | `I45` | {"anilistId":6115,"standing":"filler","note":"original (triage): Original crossover TV special (NTV 55th / ytv 50th anniversary, 金曜特別ロードショー 2009-03-27): ja-W… | Owner triage (triage__detective-conan.json): Lupin the 3rd Vs Detective Conan adapts no chapters of the instrument — Original crossover TV special (NTV 55th / ytv 50th anniversary, 金曜特別ロードショー 2009-03-27): ja-WP's infobox gives 原作=モンキー・パンチ、青山剛昌 (the two franchises' creator credits) and 脚本=前川淳 (Atsushi Maekawa); DCW's page prints the same screenplay credit and notes it is 'officially a Lupin III TV Special'. | Sean 2026-09-05 · scripts/ingest/research/discovery/out/triage__detective-conan.json, https://www.detectiveconanworld.com/wiki/api.php?action=parse&page=Lupin_III_vs._Detective_Conan&prop=wikitext&format=json, https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%AB%E3%83%91%E3%83%B3%E4%B8%89%E4%B8%96VS%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3&prop=wikitext&format=json, https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3_(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext&format=json |  |
 | `I45` | {"anilistId":18429,"standing":"filler","note":"original (triage): Original crossover feature (2013-12-07), the sequel to the 2009 special: ja-WP's Infobox Fi… | Owner triage (triage__detective-conan.json): Lupin the 3rd Vs Detective Conan: The Movie adapts no chapters of the instrument — Original crossover feature (2013-12-07), the sequel to the 2009 special: ja-WP's Infobox Film gives 原作=モンキー・パンチ／青山剛昌 and 脚本=前川淳; DCW's page gives the same director/screenplay pair and describes it as the second crossover between the two franchises, commemorating five anniversaries. | Sean 2026-09-05 · scripts/ingest/research/discovery/out/triage__detective-conan.json, https://www.detectiveconanworld.com/wiki/api.php?action=parse&page=Lupin_III_vs._Detective_Conan:_The_Movie&prop=wikitext&format=json, https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%AB%E3%83%91%E3%83%B3%E4%B8%89%E4%B8%96VS%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3_THE_MOVIE&prop=wikitext&format=json, https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E6%BC%AB%E7%94%BB%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7&prop=wikitext&format=json |  |
 | `I45` | {"anilistId":1369,"standing":"filler","note":"filler for this owner — adapts MAGIC KAITO vol 3 ch 5 (Aoyama's other run) — the IP is already declared (anilis… | Owner triage (triage__detective-conan.json): Case Closed: Conan vs. Kid vs. Yaiba adapts no chapters of the instrument — OVA 1 (2000-10-11). | Sean 2026-09-05 · scripts/ingest/research/discovery/out/triage__detective-conan.json, https://www.detectiveconanworld.com/wiki/api.php?action=parse&page=Conan_vs._Kid_vs._Yaiba_-_The_Grand_Battle_for_the_Treasure_Sword!!&prop=wikitext&format=json, https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AEOVA%E4%B8%80%E8%A6%A7&prop=wikitext&format=json, https://www.detectiveconanworld.com/wiki/api.php?action=parse&page=OVAs&prop=wikitext&format=json |  |
@@ -1257,6 +1318,12 @@
 | `I45` | {"anilistId":9786,"standing":"filler","note":"original (triage): A 2006 event 3D short screened exclusively at the サントリーアイマックスシアター (Tempozan, Osaka) as a spe… | Owner triage (triage__detective-conan.json): Meitantei Conan: Conan vs. Kid - Shikkoku no Sniper adapts no chapters of the instrument — A 2006 event 3D short screened exclusively at the サントリーアイマックスシアター (Tempozan, Osaka) as a special item of Yomiuri TV's 「天保山10デイズわくわく宝島」 event — ja-WP's Conan anime article lists both under §3Dアニメ as event screenings with no 原作 story credit. | Sean 2026-09-05 · scripts/ingest/research/discovery/out/triage__detective-conan.json, https://www.detectiveconanworld.com/wiki/api.php?action=parse&page=Conan_vs._Kid:_The_Pitch-Black_Sniper&prop=wikitext&format=json, https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3_(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext&format=json, https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E6%BC%AB%E7%94%BB%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7&prop=wikitext&format=json |  |
 | `I45` | {"anilistId":198369,"standing":"filler","note":"original (triage): Theatrical film 29 「名探偵コナン ハイウェイの堕天使」 (2026-04-10) — an original screenplay by 大倉崇裕 (Takah… | Owner triage (triage__detective-conan.json): Detective Conan: Fallen Angel of the Highway adapts no chapters of the instrument — Theatrical film 29 「名探偵コナン ハイウェイの堕天使」 (2026-04-10) — an original screenplay by 大倉崇裕 (Takahiro Okura, his fifth Conan film) directed by 蓮井隆弘; ja-WP's Infobox Film gives 原作=青山剛昌, which on this series is the CREATOR credit, not a story source, and the same article states the rule for the whole film line: 「ストーリー自体は劇場版独自のものだが、まれに原作やテレビアニメ版との明確な繋がりを示す描写があり…」 ('the story itself is the film's own'). | Sean 2026-09-05 · scripts/ingest/research/discovery/out/triage__detective-conan.json, https://www.detectiveconanworld.com/wiki/api.php?action=parse&page=Fallen_Angel_of_the_Highway&prop=wikitext&format=json, https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3_%E3%83%8F%E3%82%A4%E3%82%A6%E3%82%A7%E3%82%A4%E3%81%AE%E5%A0%95%E5%A4%A9%E4%BD%BF&prop=wikitext&format=json, https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3_(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext&format=json |  |
 | `I45` | {"anilistId":212994,"standing":"filler","note":"original (triage): TV special 「はなまるな真実(アンサー)」 (2026-06-06), a 30th-anniversary crossover with 『名探偵プリキュア!』 — D… | Owner triage (triage__detective-conan.json): Detective Conan: The Gold-Star Answer adapts no chapters of the instrument — TV special 「はなまるな真実(アンサー)」 (2026-06-06), a 30th-anniversary crossover with 『名探偵プリキュア!』 — DCW's infobox states it flatly: `manga = TV Original` (and `Filler case number = #465`), screenplay 大和屋暁. | Sean 2026-09-05 · scripts/ingest/research/discovery/out/triage__detective-conan.json, https://www.detectiveconanworld.com/wiki/api.php?action=parse&page=The_Gold-Star_Answer&prop=wikitext&format=json, https://ja.wikipedia.org/w/api.php?action=parse&page=%E5%90%8D%E6%8E%A2%E5%81%B5%E3%82%B3%E3%83%8A%E3%83%B3%E3%81%AE%E3%82%A2%E3%83%8B%E3%83%A1%E3%82%A8%E3%83%94%E3%82%BD%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7&prop=wikitext&format=json, https://www.ytv.co.jp/conan/archive/k20260606.html |  |
+
+### detective-conan-wild-police-story (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I43` | {"franchise":"detective-conan"} | The step-2 picks pass (2026-09-06): a series minted from a (d) declaration (I13 b/d) belongs to its parent's franchise; the membership is ruled with the seed so the row lands in it at creation. | Sean 2026-09-06 · scripts/ingest/lib/rulings/discovery.ts (the declaration) |  |
 
 ### detective-school-q (5)
 
@@ -1327,6 +1394,12 @@
 |---|---|---|---|---|
 | `T6` | {"34":"mixed"} | Batch 21 wave 2 (verified R24, w2-flips.md), Sean ruled 2026-09-03 — settled by chapter accounting on two independent sources beyond AFL/AFG; confirmations are pinned so the type_source_disagreement class stops re-listing them (T6). 34 → mixed (the seam-episode standing, ruled once for bc 85/88, db 34, dbz 118, TPN 21/22: a page-verified source share beside a story-carrying original act is MIXED) | Sean 2026-09-03 · scripts/ingest/research/batch21/WAVE2-RECOVERY.md, scripts/ingest/research/batch21/verify/w2-flips.md, scripts/ingest/research/batch21/out/dragon-ball-w2.json |  |
 | `I43` | {"franchise":"dragon-ball","title":"Dragon Ball","base":true} | Dragon Ball — DB → Z → {GT, Super} is one continuity that FORKS at Z (both are stored sequels of Z; the strip renders the fork, never one line); Kai is a remake of Z; Super Dragon Ball Heroes is an alternative telling off Super. The Naruto / DragonBall baseline (I16) keeps every one a separate series; the umbrella is the IP. | Sean 2026-09-05 · signed by Sean 2026-09-05 ("Sign the 39 / 97 franchise table"), the 2026-09-05 franchise bootstrap (connected components of series_relations ∪ AniList story / PARENT / SAME_UNIVERSE edges between owned entries; scripts/ingest/research/discovery/PROPOSAL.md §2), docs/franchise-rulings.md intro (the Naruto/DragonBall baseline) |  |
+
+### dragon-ball-episode-of-bardock (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I43` | {"franchise":"dragon-ball"} | The step-2 picks pass (2026-09-06): a series minted from a (d) declaration (I13 b/d) belongs to its parent's franchise; the membership is ruled with the seed so the row lands in it at creation. | Sean 2026-09-06 · scripts/ingest/lib/rulings/discovery.ts (the declaration) |  |
 
 ### dragon-ball-gt (3)
 
@@ -1453,7 +1526,7 @@
 |---|---|---|---|---|
 | `R21` | {"file":"scripts/ingest/research/batch20/out/drifters.json"} | verdict folded as delivered: anchors re-land at the MANUAL tier (P8: the mu/afg pins they replace would re-derive), continues through writeCuratedContinue (C7), annotations origin 'research'; the curated deviations are the sibling entries of this wave | Sean 2026-08-28 · scripts/ingest/research/batch20/out/drifters.json, scripts/ingest/history/apply-wave7.ts, §12.93 |  |
 
-### durarara (6)
+### durarara (7)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -1463,6 +1536,13 @@
 | `T26` | [{"episodes":[25],"kind":"loose_parallel","note":"Records the tie without treating it as adaptation: the OVA gives Mairu Orihara, Kururi Orihara and Max Sand… | Batch 18 wave 3 (2026-08-26): filler + loose_parallel (medium). | Sean 2026-08-26 · scripts/ingest/research/batch18/out/durarara.json |  |
 | `T29` | {"25":"ova"} | Row 25 is the S1 OVA 天下泰平 (DVD 13, 2011-02-23) — batch 18 wave 3; the x2 Shou component starts one row late (structure task), so no component covers it. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/durarara.json |  |
 | `T6` | {"25":"filler"} | Batch 18 wave 3 (2026-08-26): the S1 OVA 天下泰平 (DVD 13, 2011-02-23) — 'adapted from' empty where every TV row is filled; no matching Narita short story; pre-debuts vol-4 characters → filler + loose_parallel (medium). STRUCTURE: components off by one from row 25. | Sean 2026-08-26 · scripts/ingest/research/batch18/out/durarara.json |  |
+| `I43` | {"franchise":"durarara","title":"Durarara!!","titleNative":"デュラララ!!","base":true} | The step-2 picks pass (2026-09-06): the base of the 'durarara' franchise, created so its minted members (I13 b/d) land in it at creation. | Sean 2026-09-06 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §6.3 |  |
+
+### durarara-gaiden (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I43` | {"franchise":"durarara"} | The step-2 picks pass (2026-09-06): a series minted from a (d) declaration (I13 b/d) belongs to its parent's franchise; the membership is ruled with the seed so the row lands in it at creation. | Sean 2026-09-06 · scripts/ingest/lib/rulings/discovery.ts (the declaration) |  |
 
 ### edens-zero (2)
 
@@ -1775,6 +1855,12 @@
 | `A43` | {"episodes":[22,23,24,25],"kind":"divergence","chapters":"n/a","note":"The anime-original 玄野星人篇 / Kill Kei Kurono Mission (ja-WP: アニメ版オリジナル; fandom arc page:… | The anime-original 玄野星人篇 / Kill Kei Kurono Mission (ja-WP: アニメ版オリジナル; fandom arc page: 'chapters: None'): seven hunters, six of them wiki 'Filler characters', with Gantz targeting Kurono himself — never in the manga. Filler (A1); no page of chs 91+ plays. | session 2026-08-27 · scripts/ingest/research/batch20/out/gantz.json, scripts/ingest/research/batch20/verify/gantz.md, scripts/ingest/history/apply-wave1.ts, §12.78 |  |
 | `G3` | {"flag":932,"resolution":"RESOLVED (batch 20 wave 1, verified R24): ep 21's exact END is 90 [80] (gantz.fandom infobox + AFG + the chapter pages read against… | ingest_flags #932 dismissed with the verdict's finding (G3: only Sean dismisses): RESOLVED (batch 20 wave 1, verified R24): ep 21's exact END is 90 [80] (gantz.fandom infobox + AFG + the chapter pages read against the episode; ch 91 is in no episode); continue 91 (C5). The batch-17 notes are answered. | Sean 2026-08-27 · scripts/ingest/history/apply-wave1.ts, §12.78 |  |
 
+### ghost-in-the-shell-1995 (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I43` | {"franchise":"ghost-in-the-shell"} | The step-2 picks pass (2026-09-06): a series minted from a (d) declaration (I13 b/d) belongs to its parent's franchise; the membership is ruled with the seed so the row lands in it at creation. | Sean 2026-09-06 · scripts/ingest/lib/rulings/discovery.ts (the declaration) |  |
+
 ### ghost-in-the-shell-arise-alternative-architecture (2)
 
 | rule | value | reason | ruled | retires when |
@@ -1782,7 +1868,7 @@
 | `T25` | original | Alternative Architecture's source is the anime itself: eps 1-8 are a broadcast re-edit of the four 2013-14 Arise theatrical parts (ja-WP 各話リスト's 「オリジナル版エピソード出典」 column: #01-02 → border:4, #03-04 → border:1, #05-06 → border:2, #07-08 → border:3; the official site's INTRODUCTION 再編集 / 冲方丁による初期案 verbatim) and eps 9-10 PYROPHORIC CULT are 完全新作エピソード bridging into 新劇場版. Shirow's 攻殻機動隊 (AniList 31023, 11 ch / 1 vol) draws ADAPTATION edges to the 1995 film, S.A.C., Innocence and the 2026 TV — never to any Arise entry; AA (21056) is source OTHER with NO adaptation edge (ALTERNATIVE → the four films, SEQUEL → 21057). ja-WP's lead prints 「原作は士郎正宗の漫画」 — a franchise credit, not an adaptation (ja-WP itself calls Arise 「第4の攻殻」); Sleepless Eye (78321) is the project's comicalization (T21 direction). `original` per the outlaw-star precedent; a re-cut is the same work. Rides with the T6 retype of 9-10 to canon (EPISODE_TYPE_OVERRIDES) in the same apply — AFL classes them plain Filler, and nothing mechanical would flag it. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/ghost-in-the-shell-arise-alternative-architecture.json, scripts/ingest/research/batch19/verify/ghost-in-the-shell-arise-alternative-architecture.md, https://ja.wikipedia.org/wiki/攻殻機動隊ARISE, https://anilist.co/anime/21056 |  |
 | `T6` | {"9":"canon","10":"canon"} | Rides with the T25 `original` ruling (B2-3): under `original` the anime IS the source, and eps 9-10 PYROPHORIC CULT are 完全新作エピソード of the same production (ja-WP 新作エピソード table, 脚本 藤咲淳一; the official site's INTRODUCTION 新劇場版へとつながる; AV Watch 2015-04-06 「新作は話数としては9話と10話にあたり…前日譚」) that lead into 新劇場版 — story episodes of the source → canon, the outlaw-star shape. AFL classes them plain Filler (no anime-only-canon row), so nothing mechanical would retype them: this entry IS the retype (P8). No annotation — no source is overridden (T26). | Sean 2026-08-27 · scripts/ingest/research/batch19/out/ghost-in-the-shell-arise-alternative-architecture.json, scripts/ingest/research/batch19/verify/ghost-in-the-shell-arise-alternative-architecture.md |  |
 
-### ghost-in-the-shell-stand-alone-complex (5)
+### ghost-in-the-shell-stand-alone-complex (6)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -1791,6 +1877,7 @@
 | `N4` | {"anilistId":1566,"start":53,"end":53,"action":"numbered → order-only (rows deleted, later rows/anchors/annotations shift down)","fractional":{"position":52.… | Solid State Society is a FILM — movies are order-only unless community-numbered (Initial D rule; Sean sign-off 2026-08-23) | Sean 2026-08-23 · scripts/ingest/apply-research-batch-7.ts, docs/changelog.md §12.23 |  |
 | `N11` | {"drop":[53],"shifts":[]} | Queue-2 Group C demotion: Solid State Society is a FILM (movies are order-only unless community-numbered); AFL numbers it as 53, so the row drops — trailing, no shift. | Sean 2026-08-23 |  |
 | `T29` | {"position":52.5,"record":{"kind":"special","anilistId":1566}} | AniList 1566 format=SPECIAL, 108 min, 2006-09-01; our stored component kind for 1566 is also [special]. DISAGREEMENT: en-WP calls it 'a 2006 Japanese anime science fiction television film' and Sean's stored order-only ruling reasons from the movies rule ('is a FILM'). Kept as `special` so the AniList format and the stored component kind are not contradicted — see flags. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/1566, https://en.wikipedia.org/wiki/Ghost_in_the_Shell:_Stand_Alone_Complex_%E2%80%93_Solid_State_Society |  |
+| `I43` | {"franchise":"ghost-in-the-shell","title":"Ghost in the Shell","titleNative":"攻殻機動隊","base":true} | The step-2 picks pass (2026-09-06): the base of the 'ghost-in-the-shell' franchise, created so its minted members (I13 b/d) land in it at creation. | Sean 2026-09-06 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §6.3 |  |
 
 ### gintama (4)
 
@@ -2058,6 +2145,12 @@
 |---|---|---|---|---|
 | `I24` | {"ids":[967,1356]} | UNRECORDED — post-recovery relation-graph gap (Hokuto no Ken + Hokuto no Ken 2); per-series detail not written down. | session 2026-08-23 |  |
 
+### houkago-no-ouji-sama (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I43` | {"franchise":"the-prince-of-tennis"} | The step-2 picks pass (2026-09-06): a series minted from a (d) declaration (I13 b/d) belongs to its parent's franchise; the membership is ruled with the seed so the row lands in it at creation. | Sean 2026-09-06 · scripts/ingest/lib/rulings/discovery.ts (the declaration) |  |
+
 ### hunter-x-hunter (28)
 
 | rule | value | reason | ruled | retires when |
@@ -2162,13 +2255,14 @@
 |---|---|---|---|---|
 | `I17` | {"to":"it-wrong-try-pick-girls-dungeon","kind":"side_story"} | DanMachi main = ONE series; Sword Oratoria is the same events from another POV — side_story. | session 2026-08-22 · docs/franchise-rulings.md "DanMachi" |  |
 
-### jojos-bizarre-adventure (3)
+### jojos-bizarre-adventure (4)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `G53` | {"35":"2014-05-30","45":"2014-08-08"} | Batch 19 wave 2 lane B3 (ja-WP + en-WP / syoboi / fandom, 2+ sources per row; the contradictions verified R24; Sean ruled B3-7): ep 35: Ep 35 = Stardust Crusaders ep 9 'Yellow Temperance' / 黄の節制, first broadcast Tokyo MX 2014-05-30 24:30 (listed as 5月31日 / May 31 on ja-WP and en-WP, i.e. 2014-05-30 in thi \| ep 45: Ep 45 = SC ep 19 'Death Thirteen, Part 1' / 死神13 その1, first broadcast 2014-08-08 24:30 (ja-WP 8月9日, en-WP August 9 => 2014-08-08 stored convention). Stored 2014-08-28 is | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/jojos-bizarre-adventure.json, https://en.wikipedia.org/wiki/JoJo%27s_Bizarre_Adventure:_Stardust_Crusaders, https://ja.wikipedia.org/wiki/%E3%82%B8%E3%83%A7%E3%82%B8%E3%83%A7%E3%81%AE%E5%A5%87%E5%A6%99%E3%81%AA%E5%86%92%E9%99%BA_(%E3%83%86%E3%83%AC%E3%83%93%E3%82%A2%E3%83%8B%E3%83%A1) |  |
 | `I41` | {"works":[{"label":"Phantom Blood","anilistMangaId":31517,"note":"Part 1 — the entry's registered instrument"},{"label":"Battle Tendency","anilistMangaId":31… | Source-derived 2026-09-05 (the same shape as Prisma Illya, Sean's decision (d) ruling): AniList splits JoJo into one manga node per part and each owned component adapts its own part — the chain is the parts in order (I15 open-ended; Steel Ball Run stays a halo candidate until owned). Without the ids the 1993 / 2000 Stardust Crusaders OVAs read as another run (other_instrument) and were proposed as mints; with them they are alternative tellings of the owner's own instrument. Ids from the owned entries' ADAPTATION edges. | source-derived 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 | Sean re-rules the JoJo chain (the D2 per-part split) — then the works are re-labelled to his split |
 | `I15` | {"openEnded":true} | Sean 2026-08-22: JoJo's Bizarre Adventure = ONE series, parts as clearly-labeled components. Every part carries its own subtitle (Stardust Crusaders, Diamond wa Kudakenai, Ougon no Kaze, Stone Ocean), so title continuity alone would propose each new part as a separate series — the declared open-ended property is what proposes Steel Ball Run (190327) as a component. OVERRIDE_CHAINS presence carries no such meaning (I42). | Sean 2026-08-22 · docs/franchise-rulings.md "Ruled by Sean 2026-08-22" item 1, scripts/ingest/research/discovery/PROPOSAL.md §1.5 |  |
+| `I43` | {"franchise":"jojos-bizarre-adventure","title":"JoJo's Bizarre Adventure","titleNative":"ジョジョの奇妙な冒険","base":true} | The step-2 picks pass (2026-09-06): the base of the 'jojos-bizarre-adventure' franchise, created so its minted members (I13 b/d) land in it at creation. | Sean 2026-09-06 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §6.3 |  |
 
 ### jojos-bizarre-adventure-tv (1)
 
@@ -2176,7 +2270,7 @@
 |---|---|---|---|---|
 | `I24` | {"ids":[14719,20474,20799,21450,102883,131942,146722]} | Assisted-batch explicit chain: the relation walker cannot derive it. Sean ruled JoJo ONE series (unheld 2026-08-22). Off & Monster Season (173533) intentionally absent — AFL's page (100 rows) predates it; the count_mismatch flag on AFL's next update re-adds it here. | Sean 2026-08-22 |  |
 
-### jujutsu-kaisen (21)
+### jujutsu-kaisen (22)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -2201,6 +2295,14 @@
 | `A10` | {"episode":40,"start_chapter":113} | 113-116 (span opens on a whole chapter — sliver and majority rules agree) | Sean 2026-08-23 · scripts/ingest/apply-start-chapters.ts, docs/changelog.md §12.27, batch 8 verdict (jujutsu-kaisen) | RETIRED 2026-08-26 — batch 19 E3 (§12.67): lib/sliver.ts re-derived all 27 under A10 and every seed STANDS; the seeding comments became chapters_adapted on Sean's signature (start_without_span 0) |
 | `A11` | {"episode":42,"start_chapter":120} | 120 p.7-19 + 121-122 → majority 120 (majority rule decided this value; sliver rule may differ) | Sean 2026-08-23 · scripts/ingest/apply-start-chapters.ts, docs/changelog.md §12.27, batch 8 verdict (jujutsu-kaisen) | RETIRED 2026-08-26 — batch 19 E3 (§12.67): lib/sliver.ts re-derived all 27 under A10 and every seed STANDS; the seeding comments became chapters_adapted on Sean's signature (start_without_span 0) |
 | `A10` | {"episode":45,"start_chapter":129} | 129-132 (span opens on a whole chapter — sliver and majority rules agree) | Sean 2026-08-23 · scripts/ingest/apply-start-chapters.ts, docs/changelog.md §12.27, batch 8 verdict (jujutsu-kaisen) | RETIRED 2026-08-26 — batch 19 E3 (§12.67): lib/sliver.ts re-derived all 27 under A10 and every seed STANDS; the seeding comments became chapters_adapted on Sean's signature (start_without_span 0) |
+| `I43` | {"franchise":"jujutsu-kaisen","title":"JUJUTSU KAISEN","titleNative":"呪術廻戦","base":true} | The step-2 picks pass (2026-09-06): the base of the 'jujutsu-kaisen' franchise, created so its minted members (I13 b/d) land in it at creation. | Sean 2026-09-06 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §6.3 |  |
+
+### jujutsu-kaisen-0 (2)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `T25` | manga | The step-2 seed dry run (2026-09-06): AniList tags the entry's source UNKNOWN; the instrument is the manga run it adapts (Jujutsu Kaisen 0, AniList 105469) — the tag routes, the edge is the fact (I47). | Sean 2026-09-06 · scripts/ingest/lib/rulings/discovery.ts (the declaration) |  |
+| `I43` | {"franchise":"jujutsu-kaisen"} | The step-2 picks pass (2026-09-06): a series minted from a (d) declaration (I13 b/d) belongs to its parent's franchise; the membership is ruled with the seed so the row lands in it at creation. | Sean 2026-09-06 · scripts/ingest/lib/rulings/discovery.ts (the declaration) |  |
 
 ### k (1)
 
@@ -2384,6 +2486,12 @@
 | `I45` | {"anilistId":21574,"standing":"filler","note":"An author-written original for the disc — KADOKAWA: 原作者書きおろしエピソードを完全シナリオ化, TVアニメでは放送されないオリジナルアニメ; the fandom's… | Wave 3 (verified SOUND WITH NOTES on four lineages: the publisher, the trade press, the fandom's field, ja-WP's 特典小説 inventory): the S1 OVA adapts no printed unit of the novel line. Sean 2026-09-05: filler, 10.5. | Sean 2026-09-05 · scripts/ingest/research/discovery/out/konosuba-gods-blessing-on-this-wonderful-world__21574.json, scripts/ingest/research/discovery/verify/konosuba-gods-blessing-on-this-wonderful-world__21574.md |  |
 | `I45` | {"anilistId":97996,"standing":"filler","note":"An author-written original for the disc — the S2 product page and KADOKAWA: 原作者暁なつめ書き下ろしエピソード, TVアニメでは放送されないオリ… | Wave 3 (verified SOUND WITH NOTES): the same shape as the S1 OVA — the official S2 site, KADOKAWA's record, ja-WP's 特典小説 column and the fandom's Anime Original row agree; the vol 3 bonus 『芸術は爆裂だ』 is unrelated on content. Sean 2026-09-05: filler, 20.51. | Sean 2026-09-05 · scripts/ingest/research/discovery/out/konosuba-gods-blessing-on-this-wonderful-world__97996.json, scripts/ingest/research/discovery/verify/konosuba-gods-blessing-on-this-wonderful-world__97996.md |  |
 
+### koro-sensei-q (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I43` | {"franchise":"assassination-classroom"} | The step-2 picks pass (2026-09-06): a series minted from a (d) declaration (I13 b/d) belongs to its parent's franchise; the membership is ruled with the seed so the row lands in it at creation. | Sean 2026-09-06 · scripts/ingest/lib/rulings/discovery.ts (the declaration) |  |
+
 ### kowloon-generic-romance (6)
 
 | rule | value | reason | ruled | retires when |
@@ -2395,7 +2503,7 @@
 | `C8` | {"continue_from_chapter":83} | the anime touches ch 82 at most (out of order); readers continue at 83. | Sean 2026-08-23 · scripts/ingest/apply-research-batch-3.ts |  |
 | `A4` | {"max_adapted_chapter":82} | coverage = furthest chapter adapted: ch 82 (ep 11, out of order). | Sean 2026-08-23 · scripts/ingest/apply-research-batch-3.ts |  |
 
-### kurokos-basketball (11)
+### kurokos-basketball (12)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -2410,6 +2518,13 @@
 | `A43` | {"episodes":[14],"kind":"rearranged","chapters":"37","asterisk_review":"pending (if unset)"} | ch 37 skipped (adapted as the 'Idiots Can't Win!' BD OVA) | session 2026-08-23 · scripts/ingest/apply-research-batch-9.ts, docs/changelog.md §12.26, session scratchpad batch9/kurokos-basketball.json |  |
 | `A43` | {"episodes":[63,64,65,66],"kind":"divergence","chapters":"204-228","asterisk_review":"pending (if unset)"} | Teiko flashback adapts 6-8 ch/ep vs ~3 elsewhere — interpolation drifts inside | session 2026-08-23 · scripts/ingest/apply-research-batch-9.ts, docs/changelog.md §12.26, session scratchpad batch9/kurokos-basketball.json |  |
 | `A43` | {"episodes":[75],"kind":"graft","chapters":"272-275 + epilogues","asterisk_review":"pending (if unset)"} | finale adds epilogue chapters (MU's '276th') | session 2026-08-23 · scripts/ingest/apply-research-batch-9.ts, docs/changelog.md §12.26, session scratchpad batch9/kurokos-basketball.json |  |
+| `I43` | {"franchise":"kurokos-basketball","title":"Kuroko's Basketball","titleNative":"黒子のバスケ","base":true} | The step-2 picks pass (2026-09-06): the base of the 'kurokos-basketball' franchise, created so its minted members (I13 b/d) land in it at creation. | Sean 2026-09-06 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §6.3 |  |
+
+### kurokos-basketball-extra-game (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I43` | {"franchise":"kurokos-basketball"} | The step-2 picks pass (2026-09-06): a series minted from a (d) declaration (I13 b/d) belongs to its parent's franchise; the membership is ruled with the seed so the row lands in it at creation. | Sean 2026-09-06 · scripts/ingest/lib/rulings/discovery.ts (the declaration) |  |
 
 ### love-ru-darkness (1)
 
@@ -2443,6 +2558,13 @@
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `I43` | {"franchise":"magi","title":"Magi","base":true} | Magi and Adventure of Sinbad (the prequel spin-off manga's adaptation); one IP. | Sean 2026-09-05 · signed by Sean 2026-09-05 ("Sign the 39 / 97 franchise table"), the 2026-09-05 franchise bootstrap (connected components of series_relations ∪ AniList story / PARENT / SAME_UNIVERSE edges between owned entries; scripts/ingest/research/discovery/PROPOSAL.md §2) |  |
+
+### magic-kaito (2)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I17` | {"to":"detective-conan","kind":"side_story"} | The step-2 film mint (2026-09-06): Magic Kaito (the 2010-12 specials) is Aoyama's sister series to Conan; AniList links the two by CHARACTER only — the declared kind (I13 d) lands as a ruled relation. | Sean 2026-09-06 · scripts/ingest/lib/rulings/discovery.ts (anilist:8310) |  |
+| `I43` | {"franchise":"detective-conan"} | The step-2 picks pass (2026-09-06): a series minted from a (d) declaration (I13 b/d) belongs to its parent's franchise; the membership is ruled with the seed so the row lands in it at creation. | Sean 2026-09-06 · scripts/ingest/lib/rulings/discovery.ts (the declaration) |  |
 
 ### magic-knight-rayearth (4)
 
@@ -2527,10 +2649,11 @@
 | `A3` | {"episode":37,"chapter":101,"volume":null,"source":"manual"} | S3 completes the manga (ch 101, vol 16) | session 2026-08-23 · scripts/ingest/apply-research-batch-5.ts |  |
 | `A43` | {"episodes":[12],"kind":"rearranged","chapters":"S1 pulls ch ~56 material early","asterisk_review":"pending (if unset)"} | endpoint ch 50 firm; interior S1 order differs from the manga. cbr + mangashed | session 2026-08-23 · scripts/ingest/apply-research-batch-5.ts |  |
 
-### mobile-suit-gundam (8)
+### mobile-suit-gundam (9)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `I43` | {"franchise":"mobile-suit-gundam","title":"Mobile Suit Gundam","titleNative":"機動戦士ガンダム","base":true} | The step-2 picks pass (2026-09-06): the base of the 'mobile-suit-gundam' franchise, created so its minted members (I13 b/d) land in it at creation. | Sean 2026-09-06 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §6.3 |  |
 | `I45` | {"anilistId":139273,"standing":"filler","note":"original (triage): Remake of TV EPISODE 15 of the 1979 series (script Yoshihisa Araki), not a manga — ja-WP: … | Owner triage (triage__mobile-suit-gundam.json): Mobile Suit Gundam: Cucuruz Doan's Island adapts no chapters of the instrument — Remake of TV EPISODE 15 of the 1979 series (script Yoshihisa Araki), not a manga — ja-WP: 「第15話「ククルス・ドアンの島」のリメイク作品」; wiki infobox adapted from=Cucuruz Doan's Island. | Sean 2026-09-05 · scripts/ingest/research/discovery/out/triage__mobile-suit-gundam.json, https://gundam.fandom.com/api.php?action=parse&page=Mobile%20Suit%20Gundam%3A%20Cucuruz%20Doan%27s%20Island&prop=wikitext&format=json, https://ja.wikipedia.org/w/api.php?action=parse&page=%E6%A9%9F%E5%8B%95%E6%88%A6%E5%A3%AB%E3%82%AC%E3%83%B3%E3%83%80%E3%83%A0%20%E3%82%AF%E3%82%AF%E3%83%AB%E3%82%B9%E3%83%BB%E3%83%89%E3%82%A2%E3%83%B3%E3%81%AE%E5%B3%B6&prop=wikitext&format=json, https://gundam.fandom.com/api.php?action=parse&page=Cucuruz%20Doan%27s%20Island&prop=wikitext&format=json |  |
 | `I45` | {"anilistId":7113,"standing":"filler","note":"original (triage): Original ~3-minute promotional short (PV) for the TV series' 30th anniversary: the franchise… | Owner triage (triage__mobile-suit-gundam.json): 30th GUNDAM PERFECT MISSION adapts no chapters of the instrument — Original ~3-minute promotional short (PV) for the TV series' 30th anniversary: the franchise's Gundams escort a Core Fighter from Earth to space, set to 哀戦士. | Sean 2026-09-05 · scripts/ingest/research/discovery/out/triage__mobile-suit-gundam.json, https://gundam.fandom.com/api.php?action=parse&page=30th%20Gundam%20Perfect%20Mission&prop=wikitext&format=json, https://ja.wikipedia.org/w/api.php?action=parse&page=GUNDAM%20PERFECT%20MISSION&prop=wikitext&format=json, https://cdn.animenewsnetwork.com/encyclopedia/api.xml?anime=15758 |  |
 | `I45` | {"anilistId":5270,"standing":"filler","note":"original (triage): Original ~1-minute 10th-anniversary short: newly drawn footage of every Gundam set to Kenji … | Owner triage (triage__mobile-suit-gundam.json): ALL THAT GUNDAM adapts no chapters of the instrument — Original ~1-minute 10th-anniversary short: newly drawn footage of every Gundam set to Kenji Kawai's music plus a 夜明けのShooting Star clip cut from 0080, distributed free to buyers of all six 0080 VHS/LD volumes and teasing 0080. | Sean 2026-09-05 · scripts/ingest/research/discovery/out/triage__mobile-suit-gundam.json, https://gundam.fandom.com/api.php?action=parse&page=All%20That%20Gundam&prop=wikitext&format=json, https://ja.wikipedia.org/w/api.php?action=parse&page=%E6%A9%9F%E5%8B%95%E6%88%A6%E5%A3%AB%E3%82%AC%E3%83%B3%E3%83%80%E3%83%A00080%20%E3%83%9D%E3%82%B1%E3%83%83%E3%83%88%E3%81%AE%E4%B8%AD%E3%81%AE%E6%88%A6%E4%BA%89&prop=wikitext&format=json, https://cdn.animenewsnetwork.com/encyclopedia/api.xml?anime=17657 |  |
@@ -2539,6 +2662,25 @@
 | `I45` | {"anilistId":9040,"standing":"filler","note":"original (triage): Original 3-part model-kit OVA for Gunpla's 30th anniversary (2010; 黒田洋介 / 松尾衡)."} | Owner triage (triage__mobile-suit-gundam.json): Mokei Senshi Gunpla Builders Beginning G adapts no chapters of the instrument — Original 3-part model-kit OVA for Gunpla's 30th anniversary (2010; 黒田洋介 / 松尾衡). | Sean 2026-09-05 · scripts/ingest/research/discovery/out/triage__mobile-suit-gundam.json, https://gundam.fandom.com/api.php?action=parse&page=Model%20Suit%20Gunpla%20Builders%20Beginning%20G&prop=wikitext&format=json, https://ja.wikipedia.org/w/api.php?action=parse&page=%E6%A8%A1%E5%9E%8B%E6%88%A6%E5%A3%AB%E3%82%AC%E3%83%B3%E3%83%97%E3%83%A9%E3%83%93%E3%83%AB%E3%83%80%E3%83%BC%E3%82%BA%20%E3%83%93%E3%82%AE%E3%83%8B%E3%83%B3%E3%82%B0G&prop=wikitext&format=json, https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%82%AC%E3%83%B3%E3%83%80%E3%83%A0%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA%E4%B8%80%E8%A6%A7&prop=wikitext&format=json |  |
 | `I45` | {"anilistId":4540,"standing":"filler","note":"original (triage): Original ~3-minute full-CG short by Katsuhiro Otomo, screened 1998-08-01 at the ガンダムビッグバン宣言 … | Owner triage (triage__mobile-suit-gundam.json): Gundam: Mission To The Rise adapts no chapters of the instrument — Original ~3-minute full-CG short by Katsuhiro Otomo, screened 1998-08-01 at the ガンダムビッグバン宣言 20th-anniversary event. | Sean 2026-09-05 · scripts/ingest/research/discovery/out/triage__mobile-suit-gundam.json, https://gundam.fandom.com/api.php?action=parse&page=Gundam%3A%20Mission%20To%20The%20Rise&prop=wikitext&format=json, https://ja.wikipedia.org/w/api.php?action=parse&page=GUNDAM%20Mission%20to%20the%20Rise&prop=wikitext&format=json, http://gundamania.com/other/bigbang/bigbang.html |  |
 | `I45` | {"anilistId":19977,"standing":"filler","kind":"recap","note":"original (triage): A RECAP, not an adaptation — a multi-screen digest of the 1979 anime screene… | Owner triage (triage__mobile-suit-gundam.json): The Impression of First GUNDAM adapts no chapters of the instrument — A RECAP, not an adaptation — a multi-screen digest of the 1979 anime screened at the same 1998-08-01 ガンダムビッグバン宣言 event. | Sean 2026-09-05 · scripts/ingest/research/discovery/out/triage__mobile-suit-gundam.json, https://ja.wikipedia.org/w/api.php?action=parse&page=GUNDAM%20Mission%20to%20the%20Rise&prop=wikitext&format=json, http://gundamania.com/other/bigbang/bigbang.html, https://animeanime.jp/article/2019/04/27/45176.html |  |
+
+### mobile-suit-gundam-the-origin (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I43` | {"franchise":"mobile-suit-gundam"} | The step-2 picks pass (2026-09-06): a series minted from a (d) declaration (I13 b/d) belongs to its parent's franchise; the membership is ruled with the seed so the row lands in it at creation. | Sean 2026-09-06 · scripts/ingest/lib/rulings/discovery.ts (the declaration) |  |
+
+### mobile-suit-gundam-thunderbolt (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I43` | {"franchise":"mobile-suit-gundam"} | The step-2 picks pass (2026-09-06): a series minted from a (d) declaration (I13 b/d) belongs to its parent's franchise; the membership is ruled with the seed so the row lands in it at creation. | Sean 2026-09-06 · scripts/ingest/lib/rulings/discovery.ts (the declaration) |  |
+
+### mobile-suit-gundam-unicorn (2)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I17` | {"to":"mobile-suit-gundam","kind":"sequel"} | The step-2 film mint (2026-09-06): Unicorn (UC 0096) is a sequel of the original Gundam's continuity; AniList's edge between the two is not a story relation the auto rows carry — the declared kind (I13 d) lands as a ruled relation. | Sean 2026-09-06 · scripts/ingest/lib/rulings/discovery.ts (anilist:6336) |  |
+| `I43` | {"franchise":"mobile-suit-gundam"} | The step-2 picks pass (2026-09-06): a series minted from a (d) declaration (I13 b/d) belongs to its parent's franchise; the membership is ruled with the seed so the row lands in it at creation. | Sean 2026-09-06 · scripts/ingest/lib/rulings/discovery.ts (the declaration) |  |
 
 ### monogatari-series (4)
 
@@ -2944,6 +3086,18 @@
 | `A47` | {"episode":10,"end_chapter":617,"note":"A47: END normalized 618 → 617 (the 2-page tail of ch 618 is ep 11's, which starts on it)"} | the END-side sliver rule Sean ruled this wave, applied by lib/sliver.ts#sliverEnd at the write: ep 10 holds only ch 618 pp 3-4 and ep 11 starts on 618, so END stays 617 (the continue is IN 618, C1); orient ep 12 stays 46 as delivered — the gate does the ruling | Sean 2026-09-02 · scripts/ingest/research/batch20/out/one-piece-log-fish-man-island-saga.json, scripts/ingest/research/batch20/verify/one-piece-log-fish-man-island-saga.md, scripts/ingest/history/apply-wave8.ts, §12.96 |  |
 | `A47` | {"episodes":[10],"kind":"partial","chapters":"618 (pp. 3-4)","note":"A47 (Sean 2026-09-02): the episode's last two pages are ch 618 pp 3-4; ep 11 starts on 6… | the tail the normalizer moved off the END is named on the row as a partial (the orient ep-12 shape) so it stays visible | Sean 2026-09-02 · scripts/ingest/research/batch20/out/one-piece-log-fish-man-island-saga.json, scripts/ingest/research/batch20/verify/one-piece-log-fish-man-island-saga.md, scripts/ingest/history/apply-wave8.ts, §12.96 |  |
 | `I43` | {"franchise":"one-piece"} | One Piece and One Piece Log (the recap re-edit of the Fish-Man Island saga: AniList PARENT + SUMMARY); one IP. | Sean 2026-09-05 · signed by Sean 2026-09-05 ("Sign the 39 / 97 franchise table"), the 2026-09-05 franchise bootstrap (connected components of series_relations ∪ AniList story / PARENT / SAME_UNIVERSE edges between owned entries; scripts/ingest/research/discovery/PROPOSAL.md §2) |  |
+
+### one-piece-novel-heroines (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I43` | {"franchise":"one-piece"} | The step-2 picks pass (2026-09-06): a series minted from a (d) declaration (I13 b/d) belongs to its parent's franchise; the membership is ruled with the seed so the row lands in it at creation. | Sean 2026-09-06 · scripts/ingest/lib/rulings/discovery.ts (the declaration) |  |
+
+### one-piece-novel-mugiwara-stories (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I43` | {"franchise":"one-piece"} | The step-2 picks pass (2026-09-06): a series minted from a (d) declaration (I13 b/d) belongs to its parent's franchise; the membership is ruled with the seed so the row lands in it at creation. | Sean 2026-09-06 · scripts/ingest/lib/rulings/discovery.ts (the declaration) |  |
 
 ### one-punch-man (3)
 
@@ -3402,7 +3556,7 @@
 | `I17` | {"to":"sailor-moon","kind":"remake"} | Sailor Moon (90s, 200 eps) is ONE series; Crystal is a separate, superseding re-adaptation — remake. | session 2026-08-22 · docs/franchise-rulings.md "Sailor Moon" |  |
 | `I43` | {"franchise":"sailor-moon"} | Sailor Moon (the 90s series, ONE series of 200 eps) and Crystal (the remake); ruled in the franchise pass; one IP. | Sean 2026-09-05 · signed by Sean 2026-09-05 ("Sign the 39 / 97 franchise table"), the 2026-09-05 franchise bootstrap (connected components of series_relations ∪ AniList story / PARENT / SAME_UNIVERSE edges between owned entries; scripts/ingest/research/discovery/PROPOSAL.md §2), docs/franchise-rulings.md "Final rulings" Sailor Moon |  |
 
-### saint-seiya-knights-of-the-zodiac (16)
+### saint-seiya-knights-of-the-zodiac (17)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -3422,6 +3576,13 @@
 | `G3` | {"flag":702,"resolution":"RESOLVED (batch 20 wave 2, verified R24): AniList's 249 is the Weekly Shōnen Jump INSTALLMENT count (246 WSJ installments + the V J… | ingest_flags #702 dismissed with the verdict's finding (G3: only Sean dismisses): RESOLVED (batch 20 wave 2, verified R24): AniList's 249 is the Weekly Shōnen Jump INSTALLMENT count (246 WSJ installments + the V Jump #247 + 2 specials; the Poseidon arc = #113-157), not a chapter count; MU's latest_chapter 33 is a release artefact; the reading edition is the 109-chapter tankōbon (V6/N22), and the batch-20 re-migration put every stored value in it. | Sean 2026-08-27 · scripts/ingest/history/apply-wave2.ts, §12.80 |  |
 | `A10` | {"episode":65,"set":{"start_chapter":38}} | Verifier (w16-anchors): ep 65 opens INSIDE ch 38 (the testament's aftermath) — the stored START 39 collided with ep 64's C1 continue 38; both the verdict's flag and the verifier's sources agree | session 2026-09-04 · scripts/ingest/research/batch20/out/saint-seiya-knights-of-the-zodiac-w16.json, scripts/ingest/research/batch20/verify/w16-anchors.md, scripts/ingest/history/apply-wave16.ts, §12.107 |  |
 | `T28` | {"episode":64,"kind":"partial","note":"DISCLOSED (verifier): animefillerlist types ep 64 FILLER — the sole-adaptation exception overrules it (the Aiolos test… | animefillerlist types ep 64 FILLER — the sole-adaptation exception overrules it (the Aiolos testament pages appear in no other episode); the T6 map pins mixed (P8) | session 2026-09-04 · scripts/ingest/research/batch20/out/saint-seiya-knights-of-the-zodiac-w16.json, scripts/ingest/research/batch20/verify/w16-types.md, scripts/ingest/history/apply-wave16.ts, §12.107 |  |
+| `I43` | {"franchise":"saint-seiya-knights-of-the-zodiac","title":"Saint Seiya","titleNative":"聖闘士星矢","base":true} | The step-2 picks pass (2026-09-06): the base of the 'saint-seiya-knights-of-the-zodiac' franchise, created so its minted members (I13 b/d) land in it at creation. | Sean 2026-09-06 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §6.3 |  |
+
+### saint-seiya-the-lost-canvas (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I43` | {"franchise":"saint-seiya-knights-of-the-zodiac"} | The step-2 picks pass (2026-09-06): a series minted from a (d) declaration (I13 b/d) belongs to its parent's franchise; the membership is ruled with the seed so the row lands in it at creation. | Sean 2026-09-06 · scripts/ingest/lib/rulings/discovery.ts (the declaration) |  |
 
 ### seraph-of-the-end-vampire-reign (16)
 
@@ -3664,6 +3825,12 @@
 |---|---|---|---|---|
 | `I43` | {"franchise":"sword-art-online"} | Sword Art Online (the ruled MERGE of AFL's two pages) and Alternative: Gun Gale Online (spin-off, own story, shared universe); one IP. | Sean 2026-09-05 · signed by Sean 2026-09-05 ("Sign the 39 / 97 franchise table"), the 2026-09-05 franchise bootstrap (connected components of series_relations ∪ AniList story / PARENT / SAME_UNIVERSE edges between owned entries; scripts/ingest/research/discovery/PROPOSAL.md §2), docs/franchise-rulings.md "Final rulings" Sword Art Online |  |
 
+### sword-art-online-progressive (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I43` | {"franchise":"sword-art-online"} | The step-2 picks pass (2026-09-06): a series minted from a (d) declaration (I13 b/d) belongs to its parent's franchise; the membership is ruled with the seed so the row lands in it at creation. | Sean 2026-09-06 · scripts/ingest/lib/rulings/discovery.ts (the declaration) |  |
+
 ### sword-oratoria-is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-on-the-side (1)
 
 | rule | value | reason | ruled | retires when |
@@ -3764,10 +3931,11 @@
 | `I41` | {"works":[{"label":"Yuuutsu","anilistMangaId":33083,"note":"The Melancholy of Haruhi Suzumiya (vol 1) — the entry's instrument; AniList lists the novel per v… | Source-derived 2026-09-05 (decision (d) of the extras sitting): AniList splits the Haruhi novel into one node per volume; the 2009 TV run adapts five of them and the Disappearance film adapts the fourth alone, so without the chain the film read as another run (other_instrument) and was proposed as a mint. The volumes are one novel — the owner's own instrument (I41); the film is same_instrument. | source-derived 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 | Sean rules the Haruhi chain himself |
 | `I45` | {"anilistId":7311,"standing":"canon","chapter":null,"volume":4,"chaptersAdapted":"LN vol 4 ch 1-6 — the whole volume (プロローグ + 第一章-第六章 + エピローグ, 本編 247 pp)","n… | Wave 3 (verified SOUND WITH NOTES): ja-WP's series article (原作第4巻『消失』の内容を映像化したもの), the film article's critics (原作エピソードがほぼ網羅; 原作を忠実に再現) and the fandom agree the film adapts vol 4 whole; the six-chapter division is fan-tier (three compilations agree page for page; no publisher 目次 online) — the standing rests on the whole-volume claim, not the count. Sean 2026-09-05: canon, 28.5. | Sean 2026-09-05 · scripts/ingest/research/discovery/out/the-melancholy-of-haruhi-suzumiya__7311.json, scripts/ingest/research/discovery/verify/the-melancholy-of-haruhi-suzumiya__7311.md |  |
 
-### the-prince-of-tennis (10)
+### the-prince-of-tennis (11)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `I43` | {"franchise":"the-prince-of-tennis","title":"The Prince of Tennis","titleNative":"テニスの王子様","base":true} | The step-2 picks pass (2026-09-06): the base of the 'the-prince-of-tennis' franchise, created so its minted members (I13 b/d) land in it at creation. | Sean 2026-09-06 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §6.3 |  |
 | `I45` | {"anilistId":815,"standing":"filler","note":"original (triage): Original screenplay (脚本: 前川淳 / Jun Maekawa, per ja-WP and en-WP's film infobox)."} | Owner triage (triage__the-prince-of-tennis.json): Tennis no Ouji-sama: Futari no Samurai - The First Game adapts no chapters of the instrument — Original screenplay (脚本: 前川淳 / Jun Maekawa, per ja-WP and en-WP's film infobox). | Sean 2026-09-05 · scripts/ingest/research/discovery/out/triage__the-prince-of-tennis.json, https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%86%E3%83%8B%E3%82%B9%E3%81%AE%E7%8E%8B%E5%AD%90%E6%A7%98%20(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext, https://en.wikipedia.org/w/api.php?action=parse&page=The%20Prince%20of%20Tennis%3A%20Futari%20no%20Samurai&prop=wikitext, https://princeoftennis.fandom.com/api.php?action=parse&page=The%20Prince%20of%20Tennis%20-%20The%20Two%20Samurai%3A%20The%20First%20Game&prop=wikitext |  |
 | `I45` | {"anilistId":814,"standing":"filler","note":"original (triage): Original 29-minute short co-screened with Futari no Samurai; 脚本 志茂文彦 (Fumihiko Shimo) per ja-… | Owner triage (triage__the-prince-of-tennis.json): Tennis no Ouji-sama: Atobe Kara no Okurimono - Kimi ni Sasageru Tenipuri Matsuri adapts no chapters of the instrument — Original 29-minute short co-screened with Futari no Samurai; 脚本 志茂文彦 (Fumihiko Shimo) per ja-WP, whose synopsis is one line: 「跡部が各校のテニス部を集めて大規模な学園祭風のパーティーを開く」 — Atobe throws a school-festival-style party for every school's tennis club. | Sean 2026-09-05 · scripts/ingest/research/discovery/out/triage__the-prince-of-tennis.json, https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%86%E3%83%8B%E3%82%B9%E3%81%AE%E7%8E%8B%E5%AD%90%E6%A7%98%20(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext, https://princeoftennis.fandom.com/api.php?action=parse&page=Atobe's%20Gift&prop=wikitext, https://en.wikipedia.org/w/api.php?action=parse&page=The%20Prince%20of%20Tennis%3A%20Futari%20no%20Samurai&prop=wikitext |  |
 | `I45` | {"anilistId":1190,"standing":"filler","note":"original (triage): An event short, not an adaptation."} | Owner triage (triage__the-prince-of-tennis.json): Tennis no Ouji-sama: A Day of the Survival Mountain - Kyoufu no Kyouka Training! adapts no chapters of the instrument — An event short, not an adaptation. | Sean 2026-09-05 · scripts/ingest/research/discovery/out/triage__the-prince-of-tennis.json, https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%86%E3%83%8B%E3%82%B9%E3%81%AE%E7%8E%8B%E5%AD%90%E6%A7%98%20(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext, https://www.productionig.com/contents/works/07_/000129.html, https://princeoftennis.fandom.com/api.php?action=parse&page=A%20Day%20on%20Survival%20Mountain&prop=wikitext |  |
@@ -3849,6 +4017,13 @@
 | `A3` | {"episode":12,"chapter":26,"volume":null,"source":"manual"} | finale is mostly ch 26 with re-spliced ch-24 pages; small trim off ch 26 end. animefillerguide.com + wheredoestheanimeleaveoff.com | Sean 2026-08-23 · scripts/ingest/apply-research-batch-3.ts |  |
 | `A43` | {"episode":12,"kind":"rearranged","chapters":"ch 24 pages + ch 26"} | non-linear finale re-splices earlier chapter pages; ends inside ch 26 | Sean 2026-08-23 · scripts/ingest/apply-research-batch-3.ts |  |
 | `C8` | {"continue_from_chapter":27} | finale ends inside ch 26; continue at 27. | Sean 2026-08-23 · scripts/ingest/apply-research-batch-3.ts |  |
+
+### thus-spoke-rohan-kishibe (2)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `T25` | manga | The step-2 seed dry run (2026-09-06): AniList tags the entry's source UNKNOWN; the instrument is the manga run it adapts (Kishibe Rohan wa Ugokanai, AniList 103029) — the tag routes, the edge is the fact (I47). | Sean 2026-09-06 · scripts/ingest/lib/rulings/discovery.ts (the declaration) |  |
+| `I43` | {"franchise":"jojos-bizarre-adventure"} | The step-2 picks pass (2026-09-06): a series minted from a (d) declaration (I13 b/d) belongs to its parent's franchise; the membership is ruled with the seed so the row lands in it at creation. | Sean 2026-09-06 · scripts/ingest/lib/rulings/discovery.ts (the declaration) |  |
 
 ### time-i-got-reincarnated-slime (1)
 
@@ -3932,6 +4107,12 @@
 | `A43` | {"episodes":[46,48],"kind":"rearranged","chapters":"132","asterisk_review":"pending (if unset)"} | ch 132's opening cut from ep 46, grafted into ep 48 as flashback | session 2026-08-23 · scripts/ingest/apply-research-batch-9.ts, docs/changelog.md §12.26, session scratchpad batch9/to-your-eternity.json |  |
 | `A43` | {"episodes":[56,57,58,59],"kind":"partial","chapters":"151-158","asterisk_review":"pending (if unset)"} | chained half-chapter boundaries; interior ±half chapter | session 2026-08-23 · scripts/ingest/apply-research-batch-9.ts, docs/changelog.md §12.26, session scratchpad batch9/to-your-eternity.json |  |
 
+### tokyo-babylon (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I43` | {"franchise":"x"} | The step-2 picks pass (2026-09-06): a series minted from a (d) declaration (I13 b/d) belongs to its parent's franchise; the membership is ruled with the seed so the row lands in it at creation. | Sean 2026-09-06 · scripts/ingest/lib/rulings/discovery.ts (the declaration) |  |
+
 ### tokyo-ghoul (5)
 
 | rule | value | reason | ruled | retires when |
@@ -3941,6 +4122,18 @@
 | `I24` | {"ids":[20605,20850]} | AniList relation-graph gap found post-recovery: S1 + √A — the AFL page covers both (24 eps). :re is a SEPARATE entry (Sean 2026-08-24, Naruto/Shippuden pattern), so the chain stops at √A. | session 2026-08-23 |  |
 | `I20` | {"splitOffSeries":"tokyo-ghoul-re-0","splitAt":25} | AFG's tokyo-ghoul page numbers :re as 25+; :re is a separate entry (Sean 2026-08-24: Naruto/Shippuden pattern), so the page's tail belongs to tokyo-ghoul-re-0's own scope. | Sean 2026-08-24 · docs/franchise-rulings.md "Sean's :re ruling" |  |
 | `I43` | {"franchise":"tokyo-ghoul","title":"Tokyo Ghoul","base":true} | Tokyo Ghoul and :re — Sean's :re ruling (2026-08-24) keeps them separate series and said both may live under one franchise umbrella when the IA rework lands: this is that umbrella. The ownership guard (I21) still forbids the merge. | Sean 2026-09-05 · signed by Sean 2026-09-05 ("Sign the 39 / 97 franchise table"), the 2026-09-05 franchise bootstrap (connected components of series_relations ∪ AniList story / PARENT / SAME_UNIVERSE edges between owned entries; scripts/ingest/research/discovery/PROPOSAL.md §2), docs/franchise-rulings.md "Rulings 2026-08-24" (Tokyo Ghoul :re stays a SEPARATE entry) |  |
+
+### tokyo-ghoul-hibi (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I43` | {"franchise":"tokyo-ghoul"} | The step-2 picks pass (2026-09-06): a series minted from a (d) declaration (I13 b/d) belongs to its parent's franchise; the membership is ruled with the seed so the row lands in it at creation. | Sean 2026-09-06 · scripts/ingest/lib/rulings/discovery.ts (the declaration) |  |
+
+### tokyo-ghoul-jack (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I43` | {"franchise":"tokyo-ghoul"} | The step-2 picks pass (2026-09-06): a series minted from a (d) declaration (I13 b/d) belongs to its parent's franchise; the membership is ruled with the seed so the row lands in it at creation. | Sean 2026-09-06 · scripts/ingest/lib/rulings/discovery.ts (the declaration) |  |
 
 ### tokyo-ghoul-re (13)
 
@@ -4181,7 +4374,7 @@
 | `R21` | {"file":"scripts/ingest/research/batch15/out/world-trigger.json","anchors":3,"zoneAcks":0} | batch-15 verdict applied as-curated | session 2026-08-24 · scripts/ingest/research/batch15/out/world-trigger.json |  |
 | `T6` | {"48":"filler","49":"filler","50":"filler","51":"filler","52":"filler","53":"filler","54":"filler","55":"filler","56":"filler","57":"filler","58":"filler","5… | Ep 48 is an anime-original breather inside the canon arc; 49-63 is the Fugitive Arc, RETCONNED by S2 → filler, not canon. T4.3 (T27, 2026-08-26): anime-only-canon → filler (adheres to no source; the studio-ending class A-7 carries a divergence annotation and stays on the review list — twin-star 21-50 explicitly, T4-GLOSSARY §7). | session 2026-08-24 · scripts/ingest/research/batch17/out/world-trigger.json |  |
 
-### x (12)
+### x (13)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -4197,6 +4390,7 @@
 | `I24` | {"ids":[156]} | UNRECORDED — assisted-batch explicit chain pinning the X TV series (156); a case the relation walker could not derive (the one-letter title mis-matches upstream), per-series detail not written down. | session 2026-08-22 |  |
 | `R21` | {"file":"scripts/ingest/research/batch20/out/x.json","report":"scripts/ingest/research/batch20/verify/x.md"} | verdict folded as delivered: anchors re-land at the MANUAL tier (P8: the mu/afg pins they replace would re-derive), continues through writeCuratedContinue (C7), annotations origin 'research'; the curated deviations are the sibling entries of this wave | Sean 2026-08-27 · scripts/ingest/research/batch20/out/x.json, scripts/ingest/research/batch20/verify/x.md, scripts/ingest/history/apply-wave3.ts, §12.82 |  |
 | `A44` | {"episode":17,"kind":"rearranged","chapters":"54-62, 63","note":"Batch 20 wave 3 (the verifier's version): ep 17 'Wish' is a recap of vols 14 (54-62) with it… | the verifier's version: chapters {54-62, 63}; 70.5 dropped (no source places the shooting in ep 17); the row stays position-less | session 2026-08-27 · scripts/ingest/research/batch20/out/x.json, scripts/ingest/research/batch20/verify/x.md, scripts/ingest/history/apply-wave3.ts, §12.82 |  |
+| `I43` | {"franchise":"x","title":"X","titleNative":"X−エックス−","base":true} | The step-2 picks pass (2026-09-06): the base of the 'x' franchise, created so its minted members (I13 b/d) land in it at creation. | Sean 2026-09-06 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §6.3 |  |
 
 ### yashahime-princess-half-demon (1)
 
@@ -4210,12 +4404,19 @@
 |---|---|---|---|---|
 | `G26` | continua endEpisode converts to our ep 11 while AFG's OWN chart rows put the frontier at ep 12 (chart: ep 11 = 26-28, ep 12 = 29-31) — a wrong-episode pin th… | continua endEpisode converts to our ep 11 while AFG's OWN chart rows put the frontier at ep 12 (chart: ep 11 = 26-28, ep 12 = 29-31) — a wrong-episode pin that overwrote real chart data and tripped anchor_start_offtrend (deep pass 2026-08-25); the chart rows carry the true frontier. Retire if AFG fixes its continua episode or the conversion gains a chart cross-check (restructuring-phase gate candidate) | session 2026-08-25 | AFG fixes its continua episode, or the continua→episode conversion gains a chart cross-check (restructure gate candidate) |
 
-### yowamushi-pedal (2)
+### yowamushi-pedal (3)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `G33` | {"episode":38,"field":"end_chapter"} | stored 544 is the WHOLE-FRANCHISE endpoint (post-season-5 "continue at 544") on this S1-only entry; S1 ends ch 140 (fandom + Wikipedia + Grande Road ep 1 opening at 140-145) | session 2026-08-24 · scripts/ingest/research/batch17/out/yowamushi-pedal.json, scripts/ingest/apply-research-batch-17.ts, §12.42 |  |
 | `V10` | {"episode":38,"field":"volume"} | paired: ch 140 is vol 17 (138-146), not the season-5 franchise volume 63 | session 2026-08-24 · scripts/ingest/research/batch17/out/yowamushi-pedal.json, scripts/ingest/apply-research-batch-17.ts |  |
+| `I43` | {"franchise":"yowamushi-pedal","title":"Yowamushi Pedal","titleNative":"弱虫ペダル","base":true} | The step-2 picks pass (2026-09-06): the base of the 'yowamushi-pedal' franchise, created so its minted members (I13 b/d) land in it at creation. | Sean 2026-09-06 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §6.3 |  |
+
+### yowamushi-pedal-spare-bike (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I43` | {"franchise":"yowamushi-pedal"} | The step-2 picks pass (2026-09-06): a series minted from a (d) declaration (I13 b/d) belongs to its parent's franchise; the membership is ruled with the seed so the row lands in it at creation. | Sean 2026-09-06 · scripts/ingest/lib/rulings/discovery.ts (the declaration) |  |
 
 ### yu-gi-oh (1)
 

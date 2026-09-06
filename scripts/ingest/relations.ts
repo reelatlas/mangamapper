@@ -23,7 +23,9 @@ async function main() {
     for (const c of comps) owner.set(c.anilist_id, c.series_id);
 
     const seriesRows = await selectAll<{ id: string; afl_slug: string | null }>('series', 'id, afl_slug');
-    const bySlug = new Map(seriesRows.map((s) => [s.afl_slug, s.id]));
+    // a RULED pair names OUR series ids (I17); the AFL slug is accepted as an alias for the pre-restructure entries — a seeded series has no AFL slug
+    // (the step-2 film mint, 2026-09-06: unicorn / magic-kaito's ruled kinds never landed until the id was a key)
+    const bySlug = new Map<string, string>([...seriesRows.map((s) => [s.afl_slug, s.id] as [string, string]).filter(([k]) => k != null), ...seriesRows.map((s) => [s.id, s.id] as [string, string])]);
 
     // AUTO: edges between components of different series
     const rows = new Map<string, { from_series: string; to_series: string; kind: string }>();

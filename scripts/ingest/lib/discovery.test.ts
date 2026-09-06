@@ -173,6 +173,21 @@ describe('the skip-split (I13 amended 2026-09-05, E9): owned by THIS owner never
     expect(c?.signals.some((x) => /owned by jujutsu-kaisen-0/.test(x))).toBe(true);
   });
   it("this owner's own component (JJK S2) is never its extra", () => { expect(by(145064)).toBeUndefined(); });
+  it('down a SEQUEL chain through a candidate, a one-row OVA series elsewhere is still an extra of the chain\'s owner (Gundam → CCA → Unicorn)', () => {
+    const gundam = media(80, 'Kidou Senshi Gundam', { edges: [anime('SEQUEL', 90, 'Char\'s Counterattack', 'MOVIE')] });
+    const cca = media(90, "Char's Counterattack", { format: 'MOVIE', edges: [anime('SEQUEL', 6336, 'Gundam UC', 'OVA')] });
+    const cands2 = haloCandidates(input({ owned: new Map([[80, 'mobile-suit-gundam'], [6336, 'mobile-suit-gundam-unicorn']]), staged: new Map([[80, gundam], [90, cca], [6336, media(6336, 'Gundam UC', { format: 'OVA' })]]) }));
+    const uc = cands2.find((c) => c.anilistId === 6336);
+    expect(uc?.ownedElsewhere).toBe('mobile-suit-gundam-unicorn'); expect(uc?.hop).toBe(2); expect([...uc!.owners]).toEqual(['mobile-suit-gundam']);
+  });
+  it('the real shape: the chain candidate is ALSO a related work of the one-row series itself (Unicorn reaches CCA by PREQUEL) — Unicorn joins Gundam only, never itself', () => {
+    const gundam = media(80, 'Kidou Senshi Gundam', { edges: [anime('SEQUEL', 90, "Char's Counterattack", 'MOVIE')] });
+    const ucMedia = media(6336, 'Gundam UC', { format: 'OVA', edges: [anime('PREQUEL', 90, "Char's Counterattack", 'MOVIE')] });
+    const cca = media(90, "Char's Counterattack", { format: 'MOVIE', edges: [anime('SEQUEL', 6336, 'Gundam UC', 'OVA')] });
+    const cands2 = haloCandidates(input({ owned: new Map([[80, 'mobile-suit-gundam'], [6336, 'mobile-suit-gundam-unicorn']]), staged: new Map([[80, gundam], [90, cca], [6336, ucMedia]]) }));
+    const c90 = cands2.find((c) => c.anilistId === 90); expect([...c90!.owners].sort()).toEqual(['mobile-suit-gundam', 'mobile-suit-gundam-unicorn']);
+    const uc = cands2.find((c) => c.anilistId === 6336); expect(uc?.ownedElsewhere).toBe('mobile-suit-gundam-unicorn'); expect([...uc!.owners]).toEqual(['mobile-suit-gundam']);
+  });
   it('the Greed Island OVA — a component of the multi-entry 1999 run — is not an extra of the 2011 series (the franchise page orders runs); the 1999 TV entry neither', () => {
     expect(by(138)).toBeUndefined(); expect(by(136)).toBeUndefined();
   });
