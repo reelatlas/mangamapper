@@ -24,7 +24,7 @@ type Media = { format?: string | null; status?: string | null; source?: string |
 type Series = { id: string; title: string; title_english: string | null; source_type: string | null; manga_anilist_id: number | null; latest_known_chapters: number | null; total_chapters: number | null; max_adapted_chapter: number | null; manga_status: string | null; total_episodes: number | null; aired_episodes: number | null };
 type Ep = { number: number; title: string | null; air_date: string | null; type: string | null };
 type Anchor = { episode: number; chapter: number | null; start_chapter: number | null; chapters_adapted: string | null; continue_chapter: number | null };
-type Row = { position: number; standing: string | null; kind: string | null; note: string | null; chapter: number | null; chapters_adapted: string | null; display_label: string | null; origin: string | null };
+type Row = { position: number; air_date?: string | null; standing: string | null; kind: string | null; note: string | null; chapter: number | null; chapters_adapted: string | null; display_label: string | null; origin: string | null };
 
 const strip = (html: string | null | undefined) => (html ?? '').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim().slice(0, 900);
 
@@ -32,7 +32,7 @@ async function main() {
   const input = await loadDiscoveryInput();
   const all = haloCandidates(input).filter((c) => c.bucket === 'extra' || c.bucket === 'recap' || c.bucket === 'crossover');
   const series = new Map((await selectAll<Series>('series', 'id, title, title_english, source_type, manga_anilist_id, latest_known_chapters, total_chapters, max_adapted_chapter, manga_status, total_episodes, aired_episodes')).map((s) => [s.id, s]));
-  const rows = await selectAll<Row & { series_id: string; anilist_id: number | null; title: string | null }>('watch_order_entries', 'series_id, anilist_id, position, standing, kind, note, chapter, chapters_adapted, display_label, origin, title');
+  const rows = await selectAll<Row & { series_id: string; anilist_id: number | null; title: string | null }>('watch_order_entries', 'series_id, anilist_id, position, standing, kind, note, chapter, chapters_adapted, display_label, origin, title, air_date');
   const rowOf = new Map(rows.filter((r) => r.anilist_id != null).map((r) => [`${r.series_id}#${r.anilist_id}`, r]));
   const year = (c: Candidate) => (input.staged.get(c.anilistId) as Media | undefined)?.startDate?.year ?? null;
 
@@ -98,7 +98,8 @@ async function main() {
         `- other relations: ${(m?.relations?.edges ?? []).filter((e) => e.relationType !== 'ADAPTATION').map((e) => `${e.relationType} → ${e.node.title.romaji ?? e.node.id} (${e.node.type}${e.node.format ? ' ' + e.node.format : ''})`).join('; ') || 'none'}`,
         m?.description ? `- AniList synopsis: "${strip(m.description)}"` : '- AniList synopsis: none', '',
         `## STORED LEDGER ROW (watch_order_entries, origin ${row?.origin ?? '—'})`,
-        row ? `- position ${row.position} · kind ${row.kind ?? '?'} · standing ${row.standing ?? 'PENDING'} · chapter ${row.chapter ?? '—'} · chapters_adapted ${row.chapters_adapted ?? '—'} · label ${row.display_label ?? '(unsurfaced)'}\n- note: ${row.note ?? ''}` : '- no row: the work has no air date on AniList, so no position was derived (listed, never slotted)', '',
+        // P29 (the Food Wars verifier, 2026-09-06 — the second sighting after Noragami): the stored AIR DATE is printed so a wrong AniList date is a repair the author can see (RelatedWorkRuling.airDate), not one the verifier finds
+        row ? `- position ${row.position} · kind ${row.kind ?? '?'} · standing ${row.standing ?? 'PENDING'} · chapter ${row.chapter ?? '—'} · chapters_adapted ${row.chapters_adapted ?? '—'} · air_date ${row.air_date ?? '—'} (a wrong AniList date is an airDate repair) · label ${row.display_label ?? '(unsurfaced)'}\n- note: ${row.note ?? ''}` : '- no row: the work has no air date on AniList, so no position was derived (listed, never slotted)', '',
         // P29 (the Noragami verifier, 2026-09-06): a proposed position must SEE the slots the owner's other rows hold — the writer refuses a ruled
         // move onto a held slot (planRuledMoves), so a story-slot proposal that collides is a cluster ruling, never a lone value
         `## THE OWNER'S OTHER LEDGER ROWS (the slots held today — a proposed position that collides is a CLUSTER ruling)`,
