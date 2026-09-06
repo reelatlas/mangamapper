@@ -1,0 +1,52 @@
+{
+  "series_id": "the-seven-deadly-sins",
+  "anilist_id": 99540,
+  "title": "The Seven Deadly Sins the Movie: Prisoners of the Sky",
+  "summary": "Prisoners of the Sky is an ORIGINAL film, not an adaptation, and the licensor says so in its own words: the official site's STORY page reads 「物語は、原作者・鈴木央が劇場版用に描き下ろしたネームをもとにした完全オリジナルストーリー」 (a completely original story based on a name/storyboard Nakaba Suzuki newly drew FOR the film), Aniplex's own lineup page repeats 「原作者・鈴木央描き下ろし完全新作オリジナルストーリー」, and ja-WP's 劇場アニメ section opens with the same blanket statement for all three films (cited to Comic Natalie 2018-02-16); the screenplay is Makoto Uezu's and Suzuki's credit is 原作・劇場版原作ネーム. Every element of the plot is film-only: ja-WP files Bellion, the Six Knights of Black, Solaad and Ellatt under オリジナルキャラクター（天空の囚われ人）, the fandom's character pages give Solaad, Ellatt, Bellion and Pump no mainline chapter debut, and en-WP's volume-by-volume chapter list (Kodansha TOCs, all 41 volumes) contains no Sky Temple story anywhere. Zero standing in the instrument, so filler under T27 with an empty chapters_adapted; no recap either — the film is 99 minutes of new animation and no description of it (ANN's review included) mentions re-shown TV footage. THE TIE-IN TRAP, resolved: Suzuki did draw manga for the film — the 入場者プレゼント giveaway book 『天空の囚われ人』 (2018-08-18, 500,000 copies), which the official /novelty/ page describes as 「劇場版の前日譚」: 46 pages of newly drawn manga in two stories (Meliodas vs Mael 3,000 years ago; an all-Sins mock battle) plus 16 pages of お蔵入りネーム and a 12-page design collection, with the openings of both posted on Kodansha's マガポケ as 【番外編】黒き夢の目醒め and 【番外編】幻を求めて (title 00002 = 七つの大罪, 2018/08/13, no chapter number). Those are prologue material made FOR the film: they carry no mainline number and were never collected — ja-WP's 原作漫画 bibliography (全41巻) does not list the book, and none of its stories appears in any volume TOC on en-WP, while the WSM extras that WERE collected do (妹よ → vol 36, 真昼の決闘 → vol 34/35). Nothing of the film's events ever entered the numbered run, so under T26 Suzuki's 原作ネーム is a CREDIT in this note and not an adoption.",
+  "standing": "filler",
+  "confidence": "high",
+  "chapters_adapted": [],
+  "recap": false,
+  "position": {
+    "stored": 52.5,
+    "verdict": "confirmed",
+    "proposed": 52.5,
+    "why": "Confirmed — two independent regimes land on the same slot. RELEASE ORDER: the film opened 2018-08-18 (official site / Aniplex / ja-WP / en-WP), after the S2 finale (『戒めの復活』#24 君がいるだけで, 2018-06-30 = our ep 52) and 14 months before S3 ep 1 (『神々の逆鱗』#1 闇を払う光, 2019-10-09 = our ep 53), per ja-WP's 各話リスト. IN-UNIVERSE: ANN's review states 'it's set after season 2, which means that all seven of the Seven Deadly Sins appear in it', which matches the film's own framing (peace has returned to Liones after the Demon Clan nearly destroyed it; the Sins hunt the sky fish for King Bartra's birthday) and the full roster including Escanor and Merlin; AniList's PARENT edge is S2 (Imashime no Fukkatsu) as well. Nothing places it earlier — the same ANN line notes the film spoils no S2 event so it CAN be watched after S1, but that is viewing convenience, not the setting. 52.5 was the air-date proposal and it is also the sourced order."
+  },
+  "adopted": null,
+  "repairs": [],
+  "sources": [
+    "https://www.7-taizai-movie.net/story/",
+    "https://www.7-taizai-movie.net/novelty/",
+    "https://www.7-taizai-movie.net/staffcast/",
+    "https://www.aniplex.co.jp/lineup/7taizai_movie/",
+    "https://pocket.shonenmagazine.com/title/00002/episode/215548",
+    "https://pocket.shonenmagazine.com/title/00002/episode/215549",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E4%B8%83%E3%81%A4%E3%81%AE%E5%A4%A7%E7%BD%AA%20(%E6%BC%AB%E7%94%BB)&prop=wikitext&format=json&formatversion=2",
+    "https://en.wikipedia.org/w/api.php?action=parse&page=The%20Seven%20Deadly%20Sins%20the%20Movie%3A%20Prisoners%20of%20the%20Sky&prop=wikitext&format=json&formatversion=2",
+    "https://en.wikipedia.org/w/api.php?action=parse&page=List%20of%20The%20Seven%20Deadly%20Sins%20chapters&prop=wikitext&format=json&formatversion=2",
+    "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=The%20Seven%20Deadly%20Sins%3A%20Prisoners%20of%20the%20Sky&prop=wikitext&format=json",
+    "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Prisoners%20of%20the%20Sky%20(Manga)&prop=wikitext&format=json",
+    "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Prisoners%20of%20the%20Sky%20(Light%20Novel)&prop=wikitext&format=json",
+    "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Extra%20Chapter%2021&prop=wikitext&format=json",
+    "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Extra%20Chapter%2020&prop=wikitext&format=json",
+    "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Extra%20Chapter%2019&prop=wikitext&format=json",
+    "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Bellion&prop=wikitext&format=json",
+    "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Solaad&prop=wikitext&format=json",
+    "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Ellatt&prop=wikitext&format=json",
+    "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Pump&prop=wikitext&format=json",
+    "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Six%20Knights%20of%20Black&prop=wikitext&format=json",
+    "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Sky%20Temple&prop=wikitext&format=json",
+    "https://nanatsu-no-taizai.fandom.com/api.php?action=parse&page=Chapter%20203&prop=wikitext&format=json",
+    "https://www.animenewsnetwork.com/review/the-seven-deadly-sins-the-movie/prisoners-of-the-sky/.135721"
+  ],
+  "flags_for_sean": [
+    "WHY THIS ROW WAS PENDING, AND WHY BOTH ANILIST EDGES MISLEAD: the halo note reads 'adapts the series' own instrument: Nanatsu no Taizai (MANGA)', but AniList's `source: MANGA` here is the franchise tag (the protocol's own trap) and the SIDE_STORY manga edge points at 'Nanatsu no Taizai: Tenkuu no Torawarebito' — the 64-page moviegoer giveaway book, not the instrument. Neither is a chapter claim; the premise should not be re-derived. AniList's API returned 403 'The AniList API has been temporarily disabled' for the whole task, so every AniList fact here is the context's, unre-verified.",
+    "OTHER_INSTRUMENT candidate for decision (d), not this verdict: if the tie-in manga node ever enters the catalog, it is three 番外編 (黒き夢の目醒め / 幻を求めて / ガランの忠告) plus a design collection, drawn by Suzuki for the film, never collected into the 41-volume run — a film tie-in, never the source. The LIGHT NOVEL 『小説 劇場版 七つの大罪 天空の囚われ人』 (Shuka Matsuda, KC DX, 2018-08-29, ISBN 978-4-06-512400-0) is a novelisation OF the film — an adaptation of it, never its source.",
+    "THE SHELF (out of scope, strong prior): ja-WP's 劇場アニメ section opens with a blanket line covering ALL THREE films — 「いずれも、原作の鈴木描き下ろしによるオリジナルストーリーとなっている」 (Comic Natalie / Animate Times) — so Cursed by Light (2021) and Grudge of Edinburgh (2022) are almost certainly the same shape. They still need their own verdicts; Grudge in particular sits in the sequel era and has its own tie-ins.",
+    "SINGLE-SOURCE LORE NOTE, no weight on the standing: the fandom says the Six Knights of Black were first NAME-DROPPED in mainline ch 203 ({{ref|ch=203|p=2}}) — ch 203 = 「リュドシェルの計画」, vol 25, 2017-03-17 (cross-checked on en-WP for title/volume; the name-drop itself I could not verify on the page). That is why fan taxonomy calls the group 'semi-canon'. A name printed in a chapter is not the film adapting the chapter; the film is still filler and no chapter is anchorable to it.",
+    "DESIGNS WITHOUT EVENTS (the Twin Star rule), recorded so it is not re-found as a source tie: en-WP says Solaad's and Ellatt's designs come from the scrapped first-chapter designs of Meliodas and Elizabeth (ja-WP's 作品の前身 / 没ネーム). Imported designs are evidence AGAINST adoption, never for it.",
+    "CONTROL ON THE GRID I POSITIONED AGAINST (no repair proposed, outside the ask): ja-WP's 各話リスト dates S2 #19 AND #20 both 5月26日, while our ep 48 (希望を求めて / 'Pursuit of Hope') is stored 2018-06-02. The S2 run 2018-01-13 → 06-30 has 25 weekly slots for 24 episodes, so ja-WP's duplicate is the error and our 48-52 dates are the consistent slot — the ep 52 = 2018-06-30 boundary this position rests on is sound.",
+    "IDENTITY CONFIRMED, no repairs: kind `movie`; title 劇場版 七つの大罪 天空の囚われ人; date 2018-08-18 全国ロードショー (official site + Aniplex + ja-WP + en-WP); 99 min; Toei distribution, A-1 Pictures. Netflix's worldwide release 2018-12-31 and the Korean 2018-11-29 opening are distribution dates, never the row's."
+  ]
+}
