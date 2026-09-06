@@ -1,0 +1,239 @@
+{
+  "series_id": "the-prince-of-tennis",
+  "anilist_id": 995,
+  "title": "Tennis no Ouji-sama: Zenkoku Taikai-hen",
+  "summary": "AniList 995 is the FIRST of the three-part Nationals OVA chain (995 → 2752 Semifinal → 4053 Final) that carries The Prince of Tennis's adaptation through the whole second half of Konomi's manga, which the 178-episode TV run never reaches. Thirteen episodes on seven DVDs, 2006-03-24 (Vol.1 BCBA-2461) to 2007-03-23 (Vol.7 BCBA-2467), 294 minutes of main feature (Blu-ray BOX BCXA-1377: 301分（本編294分＋特典7分）/ 【13話収録】). It animates the National Tournament from the opening ceremony to the end of the Seigaku-Hyotei quarterfinal: Genius 248-305 in running order (vols 29-35), plus first-time coverage of five earlier chapters the TV run left behind, folded in out of order — 237-239 as the whole of episode 7 (the beach-volleyball holiday), 240 as episode 5's Yagyuu/Kaido flashback, 242 as episode 8's Hyotei day-off, 245 as Kintaro's debut inside episode 2 and 247 as his arrival inside episode 8. THE PREMISE REPRODUCED, with three corrections: 245 sits in episode 2 (not 8); the '248' the wiki puts on episode 8 is not a duplicate but 248's OTHER half, the Ryoma-Kintaro meeting at the venue, relocated because the anime delayed Kintaro's arrival; and the wiki also tags Genius 249 on episodes 3, 4 and 9, which are flashbacks to an anime-substituted scene, not new coverage. Standing is CANON: I hunted for an original share and found exactly one of substance — episode 5 dramatises the Inui/Kaido vs Higa Doubles 1 match, which the manga never depicts and only reports (6-3) in Genius 269 — one episode of thirteen, and even that one is built on Genius 240's flashback. Everything else the wiki lists under 'Anime and Manga Differences' is substitution, condensation or one added beat (T28's faithfulness clause), the largest being the anime having Oishi challenge the returning Ryoma instead of the returning Tezuka, because the TV series had already spent both of those beats. Density settles it: 294 minutes for ~65 chapters is ~4.5 min/chapter, the same class as the Final's ~4.0 and about 2.5x denser than the TV run. THE TERMINAL is Genius 305 'First Defeat' (vol 35), adapted to its last page — Atobe fainting on his feet, 7-6 to Ryoma, Seigaku into the semifinals and the head-shaving bet paid — so the Semifinal picks up at Genius 306 'Two Princes' with no gap. Not adapted anywhere in 237-305: Genius 241 (a girl from Hokkaido visits Seigaku), 243-244 (Fuji's night match with Tachibana) and 246 (wild 2, the Oshitari cousins' phone call) — coverage gaps, not original material.",
+  "standing": "canon",
+  "confidence": "high",
+  "chapters_adapted": [
+    {
+      "start": 248,
+      "end": 253,
+      "volume": 29,
+      "weight": "significant",
+      "note": "EPISODE 1 「帰ってきた王子様」 (Return of the Prince), DVD Vol.1 BCBA-2461, 2006-03-24 — the Nationals open; Rokkaku vs Higa; Oji is struck down; Ryoma is back from the US Open. Genius 248 'The Curtains Rise for the Nationals' through 253 'A Lone Man's Battle', i.e. 248 / 249 / 250 / 251 'Curtains Rise for the Nationals!!' / 252 'The Skill of Okinawa's Higa Jr. High' / 253. Two-source: the wiki's Manga Chapter Equivalents field lists exactly 248-253, and the licensor's own synopsis walks the same beats and ENDS on Oishi's proposal — 「青学の全国大会初戦は明日。すでに出場選手のオーダーは決まっている・・・。そのとき、大石からある提案が・・・」 = Genius 250 「大石の決断」 Oishi's Decision. weight: significant — first-time running-order coverage, the work's START. DIVERGENCE inside it: Genius 249 'Return of Tezuka' is SUBSTITUTED — the manga has Oishi challenge the just-returned Tezuka for a regular's spot (Shueisha's own vol 29 blurb says so), the anime has him challenge the just-returned RYOMA, because the TV run had already brought Tezuka back and had sent Ryoma to America. 253 straddles into episode 2."
+    },
+    {
+      "start": 253,
+      "end": 259,
+      "volume": 30,
+      "weight": "significant",
+      "note": "EPISODE 2 「Hot & Cool」, DVD Vol.2 BCBA-2462, 2006-05-26 — Singles 3, Ryoma vs Kei Tanishi: Drive C / COOL Drive against the Big Bang serve, into a tiebreak. Genius 253 (shared with ep 1) through 259 'I Hate Gouya', i.e. 254 'Seigaku vs. Higa' / 255 'One Shot Killer Big Bang' / 256 'Each's Service Game' / 257 '1 Point Difference' / 258 'Final Measures' / 259. Two-source: the wiki's field (245, 253-259) and the licensor synopsis, which names 「ドライブＣ」 and 「ビッグバン」 (= 255's title) — and the official @tenipuri_staff chapter blurb for 256 reads 「互いにサービスゲームをキープし続け、試合は白熱!!」, which is the episode's middle. weight: significant. 259 straddles into episode 3."
+    },
+    {
+      "start": 245,
+      "end": 245,
+      "volume": 28,
+      "weight": "significant",
+      "note": "EPISODE 2, INTERLUDE (out of order) — Genius 245, i.e. 「wild 1 ゴンタクレ」 'Tough Guy': Kintaro Toyama gets off at Shin-Fuji thinking Mt Fuji is in Tokyo, meets the cyclist Junpei Horio, flattens a delinquent with a drain cover and hoists a motor-scooter, then sets off running for Tokyo. Three-source: the wiki's field lists 245 on this episode; the wiki's Kintaro character infobox gives manga = Genius 245 and anime = [[Hot and Cool]] (= this episode) and the episode's 'Characters Introduced' lists Junpei Horio, who is 245's own co-star; the licensor's ep 2 cast list carries 遠山金太郎：杉本ゆう; and the archived per-chapter summary of 245 matches the scene beat for beat. weight: significant — not a tease: it is the FIRST and ONLY animation of Kintaro's debut chapter, a scene with its own beginning and end, and no other episode of the chain re-tells it. The wiki records one page-level difference (the manga has him throw a cinder block first)."
+    },
+    {
+      "start": 259,
+      "end": 264,
+      "volume": 30,
+      "weight": "significant",
+      "note": "EPISODE 3 「The fourth counter」, DVD Vol.2, 2006-05-26 — Doubles 2, Fuji/Kawamura vs Hirakoba/Chinen; the Habu; Fuji's fourth counter Kagero Zutsumi. Genius 259 (shared with ep 2) through 264 'Fourth Counter: Kagerou Zutsumi', i.e. 260 'Counterattack' / 261 'The spirit of an Artisan' / 262 'A Choice' / 263 'Determination Towards Victory' / 264. Two-source: the wiki's field and the licensor synopsis, which names 「飯匙倩（ハブ）」 and closes on 「不二の第４のカウンター「蜻蛉包み」が発動した！」 = Genius 264's own title. weight: significant. 264 straddles into episode 4."
+    },
+    {
+      "start": 264,
+      "end": 268,
+      "volume": 31,
+      "weight": "significant",
+      "note": "EPISODE 4 「菊丸ひとりぼっち」 (Kikumaru All Alone), DVD Vol.3 BCBA-2463, 2006-07-28 — Singles 2, Kikumaru vs Kai and the Viking Horn; Kikumaru plays 'doubles' alone. Genius 264 (shared with ep 3) through 268 'The Place to be Found', i.e. 265 'A Clever Scheme!? Kikumaru's Singles Match' / 266 'The Provision for that Promise' / 267 'Serious Mode' / 268. Two-source: the wiki's field and the licensor synopsis (「海賊の角笛（バイキングホーン）」, Kikumaru adapting to it), plus the official chapter blurb for 266 (「課題だったスタミナを克服し…甲斐が本領を発揮する!!」) and the archived summary of 268 (the lone Australian formation, the net-cord winner, 7-6, Seigaku's third straight win). weight: significant. 268 straddles into episode 5."
+    },
+    {
+      "start": 249,
+      "end": 249,
+      "volume": 29,
+      "weight": "sliver",
+      "note": "SLIVER, EPISODES 3, 4 and 9 — the wiki's fields also tag Genius 249 'Return of Tezuka' on eps 3, 4 and 9. 249 is already inside episode 1's running range, and what these three episodes carry are FLASHBACKS to the Oishi challenge in the anime's substituted form (ep 4's own difference note: 'Due to Ryoma replacing Tezuka in the anime in the match against Oishi, Ryoma is shown in Eiji's flashback instead of Tezuka'). weight: sliver — duplicate, re-shown material of a chapter episode 1 already adapts, and in the anime's substituted version rather than the printed pages; it earns no position and no type. I could not establish from any source exactly which pages eps 3 and 9 re-show — stated as a gap, not guessed."
+    },
+    {
+      "start": 268,
+      "end": 269,
+      "volume": 31,
+      "weight": "significant",
+      "note": "EPISODE 5 「いちばん長い夏」 (The Longest Summer), DVD Vol.3, 2006-07-28 — Doubles 1, Inui/Kaido vs Shiranui/Aragaki, Kaido sealing the Snake. Genius 268 (shared with ep 4) into 269 'The man called The Hitman' (Kite's introduction, shared with ep 6). weight: significant for the SOURCE beats — but see the flag: the MATCH ITSELF IS NOT IN THE MANGA. Genius 269 reports it in retrospect (the archived per-chapter summary: 「続いての第４試合は乾・海堂ペアが６－３で勝利！」) and the wiki says outright 'The match between Kaido-Inui vs. Shiranui-Koichi is not shown in the manga. The anime expanded the match'. This is the work's ONE substantial anime-original share and it is one episode of thirteen."
+    },
+    {
+      "start": 240,
+      "end": 240,
+      "volume": 28,
+      "weight": "significant",
+      "note": "EPISODE 5, INTERLUDE (out of order) — Genius 240 'A Strange Encounter': at the ABC Open, Kaido runs into the Murigaoka players badmouthing Seigaku and Rikkai, Rikkai's Yagyuu breaks up the fight, the two swap identities to beat the data-stealing pair, and Yagyuu asks Kaido what he would have left without the Snake. Two-source: the wiki's field lists 240 on this episode; the licensor's own synopsis names it — 「数日前の立海大附属・柳生との出会いが、試合に臨む海堂にある決意をさせていたのだ」; and the archived per-chapter summary of 240 matches the flashback scene for scene. weight: significant — it is the only animation of that chapter anywhere in the chain, it occupies a large share of the episode, and it is the reason the match is played the way it is. The wiki records one alteration: in the manga Kaido decides to seal the Snake himself."
+    },
+    {
+      "start": 269,
+      "end": 272,
+      "volume": 31,
+      "weight": "significant",
+      "note": "EPISODE 6 「殺し屋と呼ばれる男」 (The Man Called Killer), DVD Vol.4 BCBA-2464, 2006-09-22 — Singles 1, Tezuka vs Kite; the Shukuchi Method, the pebbles, and Hyakuren Jitoku no Kiwami. Genius 269 (shared with ep 5) through 272 'Hyaku Ren Jitoku no Kiwami', i.e. 270 'Advice' / 271 'Complete Revival' / 272. Two-source: the wiki's field and the licensor synopsis, which walks the same beats; the official chapter blurb for 271 (「全ての球種、全ての回転…全てを倍返しで返す神業」) is the episode's climax. weight: significant. 272 straddles into episode 8 (episode 7 is the interlude)."
+    },
+    {
+      "start": 237,
+      "end": 239,
+      "volume": 28,
+      "weight": "significant",
+      "note": "EPISODE 7 「ビーチバレーの王子様！？」 (The Prince of Beach Volleyball?!), DVD Vol.4, 2006-09-22 — the whole episode is the manga's summer-holiday comedy block: Genius 237 'Seigaku's Summer Vacation' (start; VOLUME 27), 238 'The Greatest Terror in History', 239 'The Approaching Nightmare: Silver Seat' (end; volume 28). Two INDEPENDENT sources: the wiki's field lists 237-239, and SHUEISHA's own vol 28 jacket copy describes exactly this episode — 「六角中との合同強化合宿の為、海へやって来た青学メンバー!!　そこで突如、オジイ杯ＢＶ（ビーチバレー）大会開催！…そして敗者には乾特製『イワシ水』が…!!」, matched by the licensor's synopsis (乾特製「いわしみず」, 竜崎＆オジイ). weight: significant — a complete adaptation that is the episode's entire plot. REARRANGED: in the manga the camp happens BEFORE the Nationals (vol 27-28); the anime moves it into the gap between the Higa and Hyotei matches. zh-Wikipedia marks this episode 番外 and TV Tokyo's 2021 selection broadcast skipped it — both are labels about its comedic register, not about its source: the pages are printed mainline chapters."
+    },
+    {
+      "start": 272,
+      "end": 273,
+      "volume": 31,
+      "weight": "significant",
+      "note": "EPISODE 8 「嵐の予感」 (Premonition Before the Storm), DVD Vol.5 BCBA-2465, 2006-11-24 — the eve of the quarterfinal. Genius 272's tail (Tezuka's win over Kite, watched by Atobe) into 273 'The Best 8 Gather!!'. Two-source: the wiki's field and the licensor synopsis (「百錬自得の極み」を発動し…勝利を収めた手塚。そのあまりの強さを目のあたりにし…会場を後にした氷帝・跡部), with the official chapter blurb for 273 (「全国の頂点を目指す8校が決定。青学は、準々決勝で再び氷帝と対決することに…!!」) naming the same outcome. weight: significant."
+    },
+    {
+      "start": 242,
+      "end": 242,
+      "volume": 28,
+      "weight": "significant",
+      "note": "EPISODE 8, INTERLUDE (out of order) — Genius 242 'Hyoutei Rhapsody': Hyotei's day off before the rematch, and the news that Tokyo as host city has given Hyotei a recommended place in the Nationals. The anime gives each regular his own vignette (Atobe diving into his pool in uniform, Mukahi and Hiyoshi at the amusement park, Shishido and Ohtori at the church, Oshitari's violin lesson) and gathers them all on the Hyotei courts for Atobe's roses. weight: significant — it is a large, story-carrying share of this episode and the only animation of that chapter in the chain. LOOSELY ADAPTED: the wiki's own note is 'Much of the scenes from the Hyotei Rhapsody chapter differ from its anime counterpart' — the archived per-chapter summary of 242 has Shishido drilling the second-years, Atobe alone in the family gym, the magazine headline about Rikkai's defeat, Jirou and Sakaki. Same chapter, restaged scenes: a faithfulness-clause divergence (T28), not an original share."
+    },
+    {
+      "start": 247,
+      "end": 248,
+      "volume": 29,
+      "weight": "significant",
+      "note": "EPISODE 8, INTERLUDE (out of order) — Genius 247, i.e. 「wild 3 さよなら平ちゃん…そして」, into the Kintaro half of Genius 248. The archived per-chapter summary of 247: Kintaro parts from Junpei in Tokyo, misses his bus, chases it for forty minutes, finally boards it and reaches the Arena tennis court — where Ryoma, who has come to scout the venue, is on the same bus. The official @tenipuri_staff blurb for 248 is 「下見のために全国大会の会場に訪れたリョーマは、遠山金太郎に出会う」. The licensor's ep 8 synopsis is the same scene: 「遠山金太郎はついに東京に到着、乗り遅れたバスを追いかけた末ようやく辿り着いた…センターコートで、リョーマと運命的な出会いを果たす！」. weight: significant — the first meeting of the two princes, first-time animated, and the only place 247 appears. NOTE the split of 248: its Nationals-opening / draw beat is in episode 1 (where the wiki records 'Shitenhoji is not present during the lot drawing in the anime'), its Kintaro beat is here, because the anime delayed Kintaro's arrival by six episodes."
+    },
+    {
+      "start": 274,
+      "end": 278,
+      "volume": 32,
+      "weight": "significant",
+      "note": "EPISODE 9 「折れない心」 (Heart Not Giving In), DVD Vol.5, 2006-11-24 — quarterfinal Singles 3, Momoshiro vs Yushi Oshitari. Genius 274 'Tricky Fellows' through 278 'Lighting the Heart on Fire', i.e. 275 'The Unreadable Man' / 276 'The Origins of Strength' / 277 'The Bloody Showdown' / 278. Two-source: the wiki's field and the licensor synopsis, which ends on 「勢いあまってフェンスに激突、流血の傷を負ってしまう！」 = the official blurb for 277 (「桃城は血だらけになりながらも忍足のラケットを吹き飛ばす」). weight: significant. 278 straddles into episode 10."
+    },
+    {
+      "start": 278,
+      "end": 282,
+      "volume": 32,
+      "weight": "significant",
+      "note": "EPISODE 10 「短期決戦」 (Short-lived Match), DVD Vol.6 BCBA-2466, 2007-01-26 — Doubles 2, Inui/Kaido vs Mukahi/Hiyoshi; Inui's Waterfall serve and Kaido's Tornado Snake. Genius 278 (shared with ep 9) through 282 'Tezuka's Close Call', i.e. 279 'Short-Term Battle' (the episode's own title) / 280 'Probability...100%' / 281 'The Unbeatable Man' / 282. Two-source: the wiki's field and the licensor synopsis (「ウォーターフォール」, the Hyotei pair's deliberate sprint strategy). weight: significant. 282 straddles into episode 11."
+    },
+    {
+      "start": 282,
+      "end": 289,
+      "volume": 33,
+      "weight": "significant",
+      "note": "EPISODE 11 「手塚国光」 (Tezuka Kunimitsu), DVD Vol.6, 2007-01-26 — Singles 2, Tezuka vs Kabaji, wrapped around the Kyushu flashback. Genius 282 (shared with ep 10) through 289 'Hyoutei's Golden Pair', i.e. 283-286 'Tezuka Kyuushuu Arc 1-4' / 287 'The One Who Has Mastered It' / 288 'Accident' / 289. Two-source: the wiki's field and the licensor synopsis, which names Kabaji's copying, the copied Hyakuren Jitoku no Kiwami, Sumire's line, and 「ある少女との出会いがあった…」 = the Miyuki Chitose flashback of 283-286. weight: significant — and note that the Kyushu block is a newly animated ADAPTATION of four printed chapters, not a recap. 289 straddles into episode 12."
+    },
+    {
+      "start": 289,
+      "end": 296,
+      "volume": 34,
+      "weight": "significant",
+      "note": "EPISODE 12 「ふたり」 (Two Of Us), DVD Vol.7 BCBA-2467, 2007-03-23 — Doubles 1, the Golden Pair vs Shishido/Ohtori; the Neo Scud Serve, Pile Mirage, and Synchro. Genius 289 (shared with ep 11) through 296 'The Self-Centered Pair', i.e. 290 'Double Peak Battle' / 291 'Overcome' / 292 'The Infinite Possibilities of Doubles' / 293 'Synchro' / 294 'Birth of the True Golden Pairs' / 295 'A Game One can Be Satisfied With' / 296. Two-source: the wiki's field and the licensor synopsis, whose climax is 「互いを知り抜き、信じぬいたペアのみが到達しうるダブルス究極のプレイスタイル」 = Genius 293 同調; Shueisha's vol 34 blurb describes the same match and the same 「同調」. weight: significant. DIVERGENCE: Pile Mirage is an anime-only technique invented to cover Ohtori's anime-only arm injury — one substitution inside an adapted match. 296 straddles into episode 13."
+    },
+    {
+      "start": 296,
+      "end": 305,
+      "volume": 35,
+      "weight": "significant",
+      "note": "EPISODE 13 「死闘・帝王VS王子様」 (Deathmatch - King vs Prince), DVD Vol.7, 2007-03-23, the FINALE — quarterfinal Singles 1, Ryoma vs Atobe, on the bet that the loser shaves his head. Genius 296 (shared with ep 12) through 305 'First Defeat', i.e. 297 'Fierce Clash! Echizen Ryoma vs Atobe Keigo' / 298 'Prelude to the Battle' / 299 'World of Ice' / 300 'An Approach to Perfection' / 301 'Supporting Seigaku's Pillar' / 302 'The Value Of Ryoma's Experience' / 303 'Decision For Victory' / 304 'Who's the Winner' / 305. Two-source: the wiki's field and the licensor synopsis (「負けたほうが坊主になる！」, 「無我の境地」, the new 「氷の世界」 = Genius 299), with Shueisha's vol 35 blurb covering the same span (「攻防極まる熱戦は遂にタイブレークへ…起き上がり勝利を手にするのはどっちだ!?」). weight: significant — this is the work's TERMINAL. Genius 305 is adapted to its end: the archived per-chapter summary of 305 runs Atobe rising first, the 90-second changeover, Ryoma's twist serve past an Atobe who has fainted on his feet, game set won by Echizen 7-6, Seigaku into the last four, and Ryoma taking the clippers to the unconscious Atobe — and the OVA plays all of it, with one alteration the wiki records: 'Ryoma shaves Atobe's hair in the manga while he is unconscious, in the anime Atobe shaves it himself'. CLOSING SCENE: Atobe, beaten, taking the clippers from Ryoma's hand and shaving his own head as Hyotei looks on."
+    }
+  ],
+  "recap": false,
+  "position": {
+    "stored": 178.5,
+    "verdict": "confirmed",
+    "proposed": 178.5,
+    "why": "After the whole TV run and FIRST in the Nationals OVA chain. Air date: TV ep 178 2005-03-30; this work 2006-03-24 -> 2007-03-23; 2752 2007-06-22 -> 2008-01-25; 4053 2008-04-25 -> 2009-01-23 (AniList API, ja-WP's OVA release table, every tenipuri.jp disc page). Story: ja-WP says the OVA's story carries straight on from the TV series, and the chain is one continuous tournament. Chapters: this work runs Genius 248-305 and 2752 opens on 306, so no fraction before or inside the chain is possible. 178.50 -> 178.51 -> 178.52 is the only order the three orderings allow; the Final's verdict already assumes it."
+  },
+  "adopted": null,
+  "repairs": [
+    {
+      "field": "watch_order_entries.note (the halo's held-reason)",
+      "old": "a source with no named instrument (AniList names no chapters — a franchise tag, a novel film without its edge, a visual-novel or game source) — held for Sean · position derived from the air date (a proposal) · I45 halo",
+      "new": "AniList 995 DOES carry an instrument edge: relation ADAPTATION → MANGA 30049 (Tennis no Ouji-sama), the same edge 2752 and 4053 carry. What 995 alone lacks is the `source` TAG (null on 995; MANGA on 2752 / 4053).",
+      "evidence": "https://graphql.anilist.co Media(id:995){relations{edges{relationType node{id type}}}} queried 2026-09-05 — edges: PREQUEL 22 (ANIME TV), SEQUEL 2752 (ANIME OVA), ADAPTATION 30049 (MANGA); Media(id:995){source} = null while Media(id:2752){source} = MANGA and Media(id:4053){source} = MANGA. This ruling supersedes the held-reason in any case; recorded so the row is not re-derived back to a false statement."
+    }
+  ],
+  "sources": [
+    "https://princeoftennis.fandom.com/api.php?action=parse&page=Return%20of%20the%20Prince&prop=wikitext&format=json",
+    "https://princeoftennis.fandom.com/api.php?action=parse&page=Episode%202%20-%20Hot%20and%20Cool&prop=wikitext&format=json",
+    "https://princeoftennis.fandom.com/api.php?action=parse&page=Episode%203%20-%20The%20Fourth%20Counter&prop=wikitext&format=json",
+    "https://princeoftennis.fandom.com/api.php?action=parse&page=Episode%204%20-%20Kikumaru%20All%20Alone&prop=wikitext&format=json",
+    "https://princeoftennis.fandom.com/api.php?action=parse&page=The%20Longest%20Summer&prop=wikitext&format=json",
+    "https://princeoftennis.fandom.com/api.php?action=parse&page=The%20Man%20Called%20Killer&prop=wikitext&format=json",
+    "https://princeoftennis.fandom.com/api.php?action=parse&page=The%20Prince%20of%20Beach%20Volleyball%3F%21&prop=wikitext&format=json",
+    "https://princeoftennis.fandom.com/api.php?action=parse&page=Premonition%20Before%20the%20Storm&prop=wikitext&format=json",
+    "https://princeoftennis.fandom.com/api.php?action=parse&page=Heart%20Not%20Giving%20In&prop=wikitext&format=json",
+    "https://princeoftennis.fandom.com/api.php?action=parse&page=Short-lived%20Match&prop=wikitext&format=json",
+    "https://princeoftennis.fandom.com/api.php?action=parse&page=Tezuka%20Kunimitsu%20%28Episode%29&prop=wikitext&format=json",
+    "https://princeoftennis.fandom.com/api.php?action=parse&page=Two%20Of%20Us&prop=wikitext&format=json",
+    "https://princeoftennis.fandom.com/api.php?action=parse&page=Deathmatch%20-%20King%20vs%20Prince&prop=wikitext&format=json",
+    "https://princeoftennis.fandom.com/api.php?action=parse&page=Fudoumine%20vs.%20Shitenhouji%20Battle&prop=wikitext&format=json",
+    "https://princeoftennis.fandom.com/api.php?action=parse&page=Roar&prop=wikitext&format=json",
+    "https://princeoftennis.fandom.com/api.php?action=parse&page=List%20of%20The%20Prince%20of%20Tennis%20episodes&prop=wikitext&format=json",
+    "https://princeoftennis.fandom.com/api.php?action=parse&page=The%20Nationals%20-%20Higa%20arc&prop=wikitext&format=json",
+    "https://princeoftennis.fandom.com/api.php?action=parse&page=Rematch%20against%20Hyotei%20arc&prop=wikitext&format=json",
+    "https://princeoftennis.fandom.com/api.php?action=parse&page=List%20of%20The%20Prince%20of%20Tennis%20Chapters/Volumes%2021-30&prop=wikitext&format=json",
+    "https://princeoftennis.fandom.com/api.php?action=parse&page=List%20of%20The%20Prince%20of%20Tennis%20Chapters/Volumes%2031-40&prop=wikitext&format=json",
+    "https://princeoftennis.fandom.com/api.php?action=parse&page=Volume%2027%20-%20The%20Captain%27s%20Decision&prop=wikitext&format=json",
+    "https://princeoftennis.fandom.com/api.php?action=parse&page=Volume%2028%20-%20Hyotei%20Rhapsody&prop=wikitext&format=json",
+    "https://princeoftennis.fandom.com/api.php?action=parse&page=Volume%2029%20-%20Curtains%20Rise%20for%20the%20Nationals&prop=wikitext&format=json",
+    "https://princeoftennis.fandom.com/api.php?action=parse&page=Genius%20305%3A%20First%20Defeat&prop=wikitext&format=json",
+    "https://princeoftennis.fandom.com/api.php?action=parse&page=Genius%20306%3A%20Two%20Princes&prop=wikitext&format=json",
+    "https://princeoftennis.fandom.com/api.php?action=parse&page=Genius%20244%3A%20A%20Place%20where%20the%20Top%20Talents%20gather%20once%20every%2010%20years&prop=wikitext&format=json",
+    "https://princeoftennis.fandom.com/api.php?action=parse&page=Kintar%C5%8D%20T%C5%8Dyama&prop=wikitext&format=json",
+    "https://princeoftennis.fandom.com/api.php?action=parse&page=Kenya%20Oshitari&prop=wikitext&format=json",
+    "https://princeoftennis.fandom.com/api.php?action=parse&page=Gin%20Ishida&prop=wikitext&format=json",
+    "https://princeoftennis.fandom.com/api.php?action=parse&page=Keigo%20Atobe&prop=wikitext&format=json",
+    "https://princeoftennis.fandom.com/api.php?action=query&prop=revisions&titles=Deathmatch%20-%20King%20vs%20Prince&rvlimit=50&rvprop=timestamp%7Cuser%7Ccomment%7Csize&rvdir=newer&format=json",
+    "http://tenipuri.jp/dvd_bd/01/01.html",
+    "http://tenipuri.jp/dvd_bd/01/02.html",
+    "http://tenipuri.jp/dvd_bd/01/03.html",
+    "http://tenipuri.jp/dvd_bd/01/04.html",
+    "http://tenipuri.jp/dvd_bd/01/05.html",
+    "http://tenipuri.jp/dvd_bd/01/06.html",
+    "http://tenipuri.jp/dvd_bd/01/07.html",
+    "http://tenipuri.jp/dvd_bd/02/",
+    "http://tenipuri.jp/dvd_bd/bdbox/01.html",
+    "http://web.archive.org/web/20061209113832id_/http://www.tenipuri.jp/dvd/05.html",
+    "http://web.archive.org/web/20070325021032id_/http://www.tenipuri.jp/dvd/07.html",
+    "https://www.tv-tokyo.co.jp/anime/tennipri/ova/index.html",
+    "https://www.production-ig.co.jp/works/tenipuri-zenkokutaikai/",
+    "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=22934",
+    "https://books.shueisha.co.jp/items/contents.html?isbn=4-08-873790-3",
+    "https://books.shueisha.co.jp/items/contents.html?isbn=4-08-873808-X",
+    "https://books.shueisha.co.jp/items/contents.html?isbn=4-08-874128-5",
+    "https://books.shueisha.co.jp/items/contents.html?isbn=4-08-874250-8",
+    "https://books.shueisha.co.jp/items/contents.html?isbn=978-4-08-874299-1",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%86%E3%83%8B%E3%82%B9%E3%81%AE%E7%8E%8B%E5%AD%90%E6%A7%98%20(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext&format=json",
+    "https://en.wikipedia.org/w/api.php?action=parse&page=List%20of%20The%20Prince%20of%20Tennis%20chapters&prop=wikitext&format=json",
+    "https://en.wikipedia.org/w/api.php?action=parse&page=List%20of%20The%20Prince%20of%20Tennis%20episodes&prop=wikitext&format=json",
+    "https://zh.wikipedia.org/w/api.php?action=parse&page=%E7%B6%B2%E7%90%83%E7%8E%8B%E5%AD%90%E5%90%84%E8%A9%B1%E6%A8%99%E9%A1%8C%E5%88%97%E8%A1%A8&prop=wikitext&format=json",
+    "https://www.jajanken.net/sakuhins/Zd5057YnyD",
+    "https://web.archive.org/web/20221001155117id_/https://www.tennipri.jp/hatunohaiboku",
+    "https://web.archive.org/web/20180411025028id_/https://www.tennipri.jp/kimyounadeai",
+    "https://web.archive.org/web/20180413000948id_/https://www.tennipri.jp/hyouteirhapsody",
+    "https://web.archive.org/web/20180413000645id_/https://www.tennipri.jp/gontakure",
+    "https://web.archive.org/web/20190216174817id_/https://www.tennipri.jp/takaramono",
+    "https://web.archive.org/web/20190302210857id_/https://www.tennipri.jp/sayonarapeityansosite",
+    "https://web.archive.org/web/20190822012103id_/https://www.tennipri.jp/mitukerubekibasyo",
+    "https://web.archive.org/web/20190822004544id_/https://www.tennipri.jp/korosiyatoyobareruotoko",
+    "https://web.archive.org/web/20201026005312id_/https://www.tennipri.jp/seigakunonatuyasumi",
+    "https://x.com/tenipuri_staff/status/1991673037452660786",
+    "https://x.com/tenipuri_staff/status/1991808930016579875",
+    "https://x.com/tenipuri_staff/status/1991310628766515638",
+    "https://x.com/tenipuri_staff/status/1992503508780605812",
+    "https://x.com/tenipuri_staff/status/1997108847442341935",
+    "https://api.mangaupdates.com/v1/series/50288253485",
+    "https://graphql.anilist.co (Media 995 / 2752 / 4053 / manga 30049, queried 2026-09-05)"
+  ],
+  "flags_for_sean": [
+    "THE STRUCTURE FLAG (yours, not mine). This work does not decorate the run — it RESTARTS the adaptation where the TV series abandoned it, and the chain it opens is the only place a Prince of Tennis reader can finish the manga. Facts a COMPONENT ruling (N4) would need. (a) COUNT: 13 episodes, numbered 第1話-第13話 by the licensor, 第13話（最終話）; the Blu-ray BOX BCXA-1377 prints 【13話収録】 with all thirteen titles and 本編294分; dアニメストア lists 「テニスの王子様 OVA 全国大会篇（全13話）」; en-WP says 'thirteen episodes across seven DVDs'. (b) DATES: seven DVDs, 2006-03-24 / 05-26 / 07-28 / 09-22 / 11-24 / 2007-01-26 / 03-23, exactly AniList's 2006-03-24 → 2007-03-23 (ja-WP's OVA table and every disc page agree). (c) CONTINUOUS NUMBERING ACROSS THE CHAIN: the licensor's own Niconico channel numbers the Semifinal's first episode 'Episode14'; dアニメ numbers the Final's seven 'Episode 20'-'Episode 26'; the fandom wiki and zh-WP both number the OVAs 1-26 continuously. (d) NOT DISC-ONLY: Animax aired Vol.1-Vol.7 in 2008 and put the OVA on a regular slot from 2009-03; NHK BS2 broadcast all 13 episodes 2010-01-10 to 2010-03-21; TV Tokyo ran the 2021 新生劇場版公開記念 selection (ep 7 unaired). (e) THE SEAM: the TV run's last manga-based arc is the Kanto final (fandom's episode list types every arc from ep 129 on as Filler); this work's first new chapter is Genius 237 (ep 7) and its running-order start is 248. (f) HOW THE LICENSOR TALKS ABOUT IT: ja-WP's OVA section says 「ストーリー自体はテレビシリーズからそのまま続き」, and en-WP calls it 'an OVA continuation of the anime' — but the Blu-ray BOX copy calls it 「新シリーズ」 and the discs are branded 「Original Video Animation」, and the three OVA series are sold together as 「OVA全国大会篇シリーズ」. Filed today as a related work by FORMAT; by content it is episodes 179-191 of the adaptation.",
+    "THE TERMINAL, AND THE SEAM WITH 2752 (question 3, answered on the pages). Genius 305 「初の敗北」 IS adapted in full by episode 13. The archived per-chapter summary of 305 gives the chapter's whole content — both players collapsed, Atobe up first, the 90-second changeover and the 12-second serve clock, Ryoma remembering what each senpai taught him, 「俺は青学の柱になる！！」, the twist serve past an Atobe who has fainted standing up, ゲームセットウォンバイ越前リョーマ 7-6, Seigaku into the last four, and Ryoma producing clippers for the unconscious Atobe — and every beat of that is in episode 13, with one alteration (the anime has Atobe shave himself; the wiki's ep-13 difference list records it, and the Atobe character page repeats it). CLOSING SCENE: Atobe taking the clippers and shaving his own head after his first defeat. The Semifinal therefore opens on Genius 306 「２人の王子様」 (Ryoma and Kintaro meet again) — the licensor's Semifinal Vol.1 synopsis states the Hyotei result as a PREMISE (「氷帝との激闘を制し、準決勝進出を決めた青春学園。つかのまの休息のはずが…」) and then goes to Kintaro. ONE CAVEAT for the 2752 agent: the wiki's field on OVA 14 opens with '305', and that field's straddle marks are otherwise trustworthy (they appear exactly where a chapter really spans two episodes and are absent where it does not — ep 8→ep 9 and ep 14→ep 15 have no shared number). So OVA 14 probably re-shows a short tail of 305 (the post-match farewell to Hyotei; Viz titles vol 35 'Farewell, Hyoutei Gakuen') before starting 306. That does not move this work's terminal: 305's decisive content and its last beat are here.",
+    "THE ONE REAL ORIGINAL SHARE, SIZED (T28). Episode 5 「いちばん長い夏」 dramatises a match the manga never draws. Genius 268 ends with Kikumaru's win and Seigaku's third straight (i.e. the tie is already decided) and Genius 269 REPORTS Doubles 1 in retrospect — 「続いての第４試合は乾・海堂ペアが６－３で勝利！」, with a line about Kaido out-lasting Shiranui and holding something back. The OVA turns that into a full match with Inui refusing to rally, backstories for Shiranui and Aragaki, and a win by forfeit when Aragaki faints (the wiki lists all four differences). The episode is still anchored in the source — Genius 240's flashback is its spine and its motive, and 268/269 bracket it — but this is the place where the work adds rather than adapts, and it is ONE episode of THIRTEEN (~7.7% of 294 minutes). Everything else is substitution or compression: ep 1's Oishi-vs-Ryoma challenge in place of Oishi-vs-Tezuka (Genius 249-250, spent by the TV run), ep 8's restaged Hyotei vignettes, ep 12's anime-only Pile Mirage, ep 4's referee gag. At the WORK level that is not a substantial original share beside a substantial source share, so the standing is canon — but the row-level shape of episode 5 is yours to look at if this chain is ever componentised.",
+    "COVERAGE GAPS INSIDE 237-305 (question 2 — skipped material, not original material). Four chapters are never animated by this work and are not claimed by any source for the Semifinal or the Final either: Genius 241 「リョーマのガールフレンド」 (a mystery girl from Hokkaido visits Seigaku — the official @tenipuri_staff blurb); Genius 243 「眠れる獅子」 and 244 「10年に1人の逸材が集いし場所」 (Fuji drags Tachibana out for a night match to wake the 'sleeping lion' — also the official blurbs; note this is NOT the Shitenhoji introduction, which is what the chapter title suggests); and Genius 246 「wild 2 宝物」 (Kenya Oshitari phoning Yushi from Tokyo station, Kintaro and Junpei's journey — the wiki's own note is 'Kintaro spent more time with Junpei in the manga, defending him against a delinquent and visiting a hot spring together'). Inside the running range 248-305 nothing is skipped: the wiki's fields are contiguous and the licensor's synopses account for every match. The chain therefore leaves Genius 234-236, 241, 243, 244 and 246 unadapted between the TV run's last manga content and its own start.",
+    "SOURCE TIERS — what is two-source and what is one lineage. The per-episode CHAPTER NUMBERS come from ONE lineage: the Prince of Tennis Wiki's 'Manga Chapter Equivalents' fields, added in July 2013 by the user Kellychocolate (page histories checked on eps 1, 8 and 13; Chinkycandie's edits stripping them were reverted). No second per-episode chapter list exists — AnimeFillerList and AnimeFillerGuide have no Prince of Tennis page, zh-WP's OVA list has no chapter column, and the TV-series episode pages on the same wiki carry no chapter fields at all. What is INDEPENDENT, and what every row above is corroborated against, is (i) the licensor's per-episode synopses on tenipuri.jp (live /dvd_bd/01/ pages, and the identical 2006-07 captures of the old /dvd/ pages and TV Tokyo's あにてれ OVA site), matched against Shueisha-sourced chapter TITLES on en-WP's volume list; (ii) Shueisha's own volume jacket copy (vol 28 = episode 7's beach-volleyball tournament; vol 29 = the Tezuka-return / Oishi-challenge block; vols 34-35 = episodes 12-13); (iii) the official @tenipuri_staff account's per-chapter あらすじ posts under #テニプリ歴代アオリ (241, 244, 248, 256, 266, 271, 273, 276, 277 used here — read as verbatim search-result quotations, not fetched directly: x.com is not reachable from here); and (iv) archived per-chapter summaries at tennipri.jp (a fan blog — cross-check tier, but page-level and consistent with every primary above). The wiki's fields also pass an internal test: their straddle marks fall exactly where a chapter really spans two episodes and are absent where it does not.",
+    "THE CHAPTER SPACE, STATED (N35). The catalog's space here is Konomi's printed continuous Genius numbering, 1-379 (AniList manga 30049: 379 chapters / 42 volumes; en-WP 'The Prince of Tennis manga spans a total of 379 chapters (380 if chapter 0 is included)'). The one wrinkle sits inside my range: the three Kintaro side chapters were serialized in Weekly Shonen Jump as 「wild 1 ゴンタクレ」 (2004 #49), 「wild 2 宝物」 (#50) and 「wild 3 さよなら平ちゃん…そして」 (#52) with NO Genius number, and the count resumes at 「Genius 248 全国への幕開け」 (#53) — jajanken.net's WSJ serialization table shows exactly that. So slots 245-247 belong to the wild chapters by Konomi's own arithmetic, which is how en-WP ('Wild 1 (Genius 245)') and the fandom ('Genius 245: (Wild 1)') label them, and how this verdict numbers them. VOLUME BOUNDARIES used: v27 230-237, v28 238-246, v29 247-255, v30 256-264, v31 265-273, v32 274-282, v33 283-292, v34 293-302, v35 303-312 — en-WP (Shueisha-cited) and the fandom's Volume 27/28/29 pages and chapter-page VolumeNavs agree. ONE WIKI ERROR to ignore: the fandom's 'Volumes 21-30' list subpage puts Genius 246 at the head of vol 29; its own Volume 28 page and the Genius 246 page's VolumeNav both put it in vol 28, with en-WP.",
+    "T26: KONOMI'S CREDIT IS A CREDIT. Every disc and the Production I.G work page print 原作：許斐 剛（集英社『週刊少年ジャンプ』連載）. Nothing here puts material INTO the source line — the OVA follows chapters that were serialized 2004-2006, ahead of it — so `adopted` is null and this stays a note.",
+    "NO RECAP SHARE (asked explicitly). Nothing in this work is re-used TV footage as far as any source records, and I found no recap opening: it is newly produced by a different team (M.S.C with Production I.G, character designer 石井明治, director 多田俊介) with its own OP/ED sets, and its flashbacks are either newly drawn adaptations of printed chapters (ep 11's Genius 283-286 Kyushu block; ep 5's Genius 240) or newly drawn scenes of the anime's own substituted Oishi match. `recap: false`. One disc IS a digest and is NOT an episode: the 「INVITATION DVD」 of 2006-12-22 (約67分) between Vol.5 and Vol.6, holding 「青学ＶＳ比嘉　ＩＮＶＩＴＡＴＩＯＮダイジェスト」, a cast cross-talk and a preview PV — ja-WP's table and TV Tokyo's OVA site both list it outside the 13; do not let it become a 14th row.",
+    "AniList STAGING (question 7). The context's held-reason says AniList names no instrument on 995. That is no longer true, and may never have been: queried today (2026-09-05), Media 995's relation edges are PREQUEL 22 (the TV series), SEQUEL 2752, and ADAPTATION → MANGA 30049 — the same instrument edge 2752 and 4053 carry. What 995 alone lacks is the `source` TAG: null on 995, MANGA on 2752 and 4053. Everything else in the stored row checks out: format OVA (kind ova), title 'Tennis no Ouji-sama: Zenkoku Taikai-hen' / テニスの王子様 全国大会篇, 13 episodes, 2006-03-24 → 2007-03-23, all confirmed on ja-WP and the licensor. If the halo re-derives from a snapshot, the snapshot is stale; if it filters relation types, ADAPTATION on an ANIME node is the type it needs to accept.",
+    "POSITION 178.5 CONFIRMED, AND THE CLUSTER ORDER. Three orderings agree and none of them can put this work anywhere else: (1) air date — TV ep 178 aired 2005-03-30, this work ran 2006-03-24 → 2007-03-23, 2752 2007-06-22 → 2008-01-25, 4053 2008-04-25 → 2009-01-23; (2) story — ja-WP says the OVA's story continues straight on from the TV series, and the chain is one continuous tournament (first round and quarterfinal → semifinal → final); (3) chapters — this work ends on Genius 305 and 2752 opens on 306. So the cluster must read 995 (178.50) → 2752 (178.51) → 4053 (178.52), which is exactly what the Final's verdict assumed. NOTE for whoever orders the cluster: the five 'Prince of Tennis Specials' (New Years Special, Mini Theater 1-3, Band of Princes) sit between TV 178 and this work on the fandom's own arc chain (episode 1's infobox reads previous arc = Prince of Tennis Specials~arc), and ANOTHER STORY / ANOTHER STORY II / the 2011 and 2021 films come after the chain — if any of them share the 178.5x band the fractions will need spacing, but the ORDER above is fixed.",
+    "OUTSIDE MY ASK, BUT I TRIPPED OVER IT: the TV run's tail. Our grid types TV 177 'Unforgettable Promise' and 178 'Goodbye, Prince' as CANON. The fandom's episode list files both under a header it names 'Final Episode - Start of Nationals arc — Filler' (its per-row Filler column is blank for them, which is silence, not a No), and their summaries are the anime's own invention: Ryoma at the US Open preliminaries, flying home to play Tezuka, and beating him. ONE genuine manga beat is in ep 177 though — Sakaki telling Hyotei they are in the Nationals because Tokyo is the host city, which is the back half of Genius 242 (see the archived summary of 242) — the same chapter this work re-tells in episode 8. I did not research the TV rows and I propose nothing for them; flagging it because it is the fact a component ruling would need for 'the first chapter after the TV run's manga content', and because it means the TV run's manga content does not stop cleanly at ep 128.",
+    "WHAT WOULD SETTLE THE SOFT SPOTS. (a) The exact page split of Genius 305 between OVA 13 and OVA 14 — only the wiki's field claims OVA 14 carries any of it; no synopsis does. (b) What eps 3 and 9 actually re-show under the wiki's 'Genius 249' tag. (c) Whether any part of Genius 246 survives in ep 8's condensed Kintaro travel montage. None of the three moves the standing, the terminal or the position."
+  ]
+}
