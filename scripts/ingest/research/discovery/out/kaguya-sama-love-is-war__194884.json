@@ -1,0 +1,97 @@
+{
+  "series_id": "kaguya-sama-love-is-war",
+  "anilist_id": 194884,
+  "title": "Kaguya-sama: Love Is War -Stairway to Adulthood-",
+  "summary": "A two-part TV special (「かぐや様は告らせたい 大人への階段」, TOKYO MX / BS11 / とちぎテレビ 2025-12-31 22:00-23:00 as one hour; Prime Video split it into 第1話 / 第2話 from 2026-01-01, which is the Blu-ray's 収録エピソード too). Its job is to animate manga chapters the 41-row run never reached, wrapped in an anime-original frame: an adult Kaguya opens a photo album and remembers (the official INTRODUCTION: 「月日は流れ、部屋でひとりアルバムを眺めるかぐや。」). Two independent sources name the same set: the owner's wiki lists chapters=162, 163, 170, 191, 218, 219, 220, 221, 266, 267 on the special's page, and MangaUpdates' coverage string now ends 'Stairway to Adulthood adapts Chap 163, 170, 191, 218-221, 266-268'; en-Wikipedia's two episode summaries (written independently of both) match those chapters' contents beat for beat, and every one of the ten chapter pages carries 'Anime Episode = Otona e no Kaidan' and no TV episode — this special is the SOLE adaptation of all of them. The two edges disagree and the pages settle both: ch 162 is a flashback inside the first segment (the New Year planner gift, the birthday necklace), single-source, so A10 keeps the START at 163; ch 268 is MU's only claim and its content (「日常①」 — Miko's summer plan, Gan'an's death) is in nobody's account of the special, so the END is 267. Surprises: the special carries NO 脚本 / シリーズ構成 credit at all (official STAFF + ja-WP's staff table print — for TVSP2), consistent with a work composed straight from the manga; and the seam exposes a stored-anchor problem — the run's last row (ep 41 = the film's part 4) is the row that holds ch 149-151 + 159-160, while our ep 40 carries the END 160.",
+  "standing": "canon",
+  "confidence": "high",
+  "chapters_adapted": [
+    {
+      "start": 162,
+      "end": 162,
+      "volume": 17,
+      "weight": "sliver",
+      "note": "「生徒会のNEW GAME」 — played as a flashback inside part 1's first segment (Kaguya's New Year planner gift; the pendulum-clock necklace Miyuki gave her for her birthday the week before). weight: sliver — a recollection opening another chapter's segment, sized by no source, and it is first-time material (the run stops at ch 160). Single-source: the owner's wiki lists it on the special's page and ch 162's own 'Anime Episode' field names this work; MangaUpdates' Stairway sentence omits it (a Japanese viewer's chapter list on Yahoo Chiebukuro, cross-check tier only, includes it). A10: flashback wording keeps the START at 163."
+    },
+    {
+      "start": 163,
+      "end": 163,
+      "volume": 17,
+      "weight": "significant",
+      "note": "「藤原千花は驚かせたい」 — part 1 segment 1 and the work's START: Chika's bald-cap prank, and Kaguya's counter-prank of announcing (truthfully) that she is Miyuki's girlfriend. en-WP's episode summary: 'A week following Kaguya's birthday, Chika decided to pull a prank on Kaguya. She eventually landed on pretending to be Miyuki's new girlfriend. However, Kaguya saw through the prank and pulled one of her own.' weight: significant — the segment entire, adapted in no other episode."
+    },
+    {
+      "start": 170,
+      "end": 170,
+      "volume": 17,
+      "weight": "significant",
+      "note": "「白銀御行は話したい」 — part 1 segment 2: the couple's first phone call, run into the small hours and overheard by Kei and Papa Shirogane. Corroborated by en-WP's vol 17 summary ('Miyuki enjoys a nightly phone call with Kaguya but is eavesdropped by Kei and his father') and the chapter page ('Kaguya and Miyuki share their first phone call as a couple'; Score: 'Today's Call Length: 5 hours, 21 minutes'). Not ch 20, which carries the same Japanese title — the setting is post-dating. weight: significant — the segment entire."
+    },
+    {
+      "start": 191,
+      "end": 191,
+      "volume": 19,
+      "weight": "significant",
+      "note": "「四宮かぐやの無理難題「燕の子安貝」編⑤」 (vol 19's last chapter) — part 1 segment 3, whose on-screen title drops the instalment number: Papa Shirogane's YouTube channel turning a profit and Kei's walk-on appearances drawing donations. weight: significant — the segment entire. Two beats in this segment are credited to no chapter by any source: the opening VTuber pitch, and the closing line that the income let the family move to a larger condo (that move is ch 197 「白銀家は引っ越したい」, which neither the wiki nor MU lists) — named here as studio bridging, not claimed as coverage."
+    },
+    {
+      "start": 218,
+      "end": 221,
+      "volume": 22,
+      "weight": "significant",
+      "note": "「男と女のABC」④⑤⑥ + 「かぐや様は話したい」 (vol 22's last four chapters) — part 2 segments 1-2, the largest block: the walk home, the night alone at the Shiroganes' new condo, and Kaguya's debrief with Ai the next day. en-WP's vol 22 summary tells the same story ('Kaguya accompanies Miyuki to his family's new home... After much hesitation, they spend the night in one bed and end up having sex. The next day, Miyuki and Kaguya reflect on their experience; Kaguya also tells Ai about it'). MU's '218-221' and the wiki's list agree chapter for chapter; ch 217 (「男と女のABC」③) is claimed by neither. weight: significant — two of the six segments."
+    },
+    {
+      "start": 266,
+      "end": 267,
+      "volume": 27,
+      "weight": "significant",
+      "note": "「かぐや様は見送りたい」前編 / 後編 — part 2 segment 3 and the work's END: Miyuki's departure for Stanford, Kaguya oversleeping and missing the airport, her own flight to see him off at San Francisco, then the video-call link that keeps him in the student council (ch 267's own subject: 'Kaguya's efforts to keep in touch with Miyuki'). ch 266's Un'yo Shinomiya meeting is absent from the special's cast list — a cut, faithfulness clause, still canon. END held at 267: MU's segment reads '266-268', but ch 268 「日常①」 (Miko's summer plan; Gan'an Shinomiya's death) appears in no account of the special, its chapter page carries no 'Anime Episode' field, and Gan'an is not in the special's cast — R3's existence clause: hold at the two-source chapter."
+    }
+  ],
+  "recap": false,
+  "position": {
+    "stored": 41.5,
+    "verdict": "confirmed",
+    "proposed": 41.5,
+    "why": "41.5 = directly after the run's last row, and the chapters agree. THE SEAM: the run's last row (ep 41 = part 4 of -The First Kiss That Never Ends-) ends on ch 160 「かぐや様は 後編」 (vol 16) — the owner's wiki prints 'chapters = Chapter 149 / 150 / 151 / 159 / 160' on First Kiss wa Owaranai Episode 4, and MangaUpdates' end string reads 'Vol 16, Chap 160 (Movie) Skips ... 152-158'. This work opens on ch 163 (vol 17), the next material the run had not reached; ch 161 「四条眞妃は悟りたい」 and the 152-158 block stay unadapted, and ch 162 appears only as the flashback above. No cluster: the owner's only other ledger row is the vol-22 OVA @24.5. The undated sequel -Kanketsu-hen- (the finale film, Akasaka's 書き下ろし原案, announced the moment this special ended) would follow this row when it is dated."
+  },
+  "adopted": null,
+  "repairs": [],
+  "sources": [
+    "https://kaguyasama-wa-kokurasetai.fandom.com/api.php?action=parse&pageid=6053&prop=wikitext&format=json&formatversion=2",
+    "https://kaguyasama-wa-kokurasetai.fandom.com/api.php?action=parse&pageid=2217&prop=wikitext&format=json&formatversion=2",
+    "https://kaguyasama-wa-kokurasetai.fandom.com/api.php?action=parse&page=Chapter%20162&prop=wikitext&format=json&formatversion=2",
+    "https://kaguyasama-wa-kokurasetai.fandom.com/api.php?action=parse&page=Chapter%20163&prop=wikitext&format=json&formatversion=2",
+    "https://kaguyasama-wa-kokurasetai.fandom.com/api.php?action=parse&page=Chapter%20170&prop=wikitext&format=json&formatversion=2",
+    "https://kaguyasama-wa-kokurasetai.fandom.com/api.php?action=parse&page=Chapter%20191&prop=wikitext&format=json&formatversion=2",
+    "https://kaguyasama-wa-kokurasetai.fandom.com/api.php?action=parse&page=Chapter%20218&prop=wikitext&format=json&formatversion=2",
+    "https://kaguyasama-wa-kokurasetai.fandom.com/api.php?action=parse&page=Chapter%20221&prop=wikitext&format=json&formatversion=2",
+    "https://kaguyasama-wa-kokurasetai.fandom.com/api.php?action=parse&page=Chapter%20266&prop=wikitext&format=json&formatversion=2",
+    "https://kaguyasama-wa-kokurasetai.fandom.com/api.php?action=parse&page=Chapter%20267&prop=wikitext&format=json&formatversion=2",
+    "https://kaguyasama-wa-kokurasetai.fandom.com/api.php?action=parse&page=Chapter%20268&prop=wikitext&format=json&formatversion=2",
+    "https://kaguyasama-wa-kokurasetai.fandom.com/api.php?action=parse&page=First%20Kiss%20wa%20Owaranai%20Episode%203&prop=wikitext&format=json&formatversion=2",
+    "https://kaguyasama-wa-kokurasetai.fandom.com/api.php?action=parse&page=First%20Kiss%20wa%20Owaranai%20Episode%204&prop=wikitext&format=json&formatversion=2",
+    "https://api.mangaupdates.com/v1/series/40032173896",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%81%8B%E3%81%90%E3%82%84%E6%A7%98%E3%81%AF%E5%91%8A%E3%82%89%E3%81%9B%E3%81%9F%E3%81%84%E3%80%9C%E5%A4%A9%E6%89%8D%E3%81%9F%E3%81%A1%E3%81%AE%E6%81%8B%E6%84%9B%E9%A0%AD%E8%84%B3%E6%88%A6%E3%80%9C&prop=wikitext&format=json&formatversion=2",
+    "https://en.wikipedia.org/w/api.php?action=parse&page=List%20of%20Kaguya-sama%3A%20Love%20Is%20War%20episodes&prop=wikitext&format=json&formatversion=2",
+    "https://en.wikipedia.org/w/api.php?action=parse&page=List%20of%20Kaguya-sama%3A%20Love%20Is%20War%20chapters&prop=wikitext&format=json&formatversion=2",
+    "https://kaguya.love/",
+    "https://kaguya.love/onair/",
+    "https://kaguya.love/bddvd/",
+    "https://kaguya.love/story/",
+    "https://web.archive.org/web/2026/https://natalie.mu/comic/news/651490",
+    "https://web.archive.org/web/2026/https://natalie.mu/comic/news/629138",
+    "https://game.watch.impress.co.jp/docs/news/2072216.html",
+    "https://www.animenewsnetwork.com/news/2025-12-31/kaguya-sama-love-is-war-anime-gets-new-finale-film/.232675",
+    "https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q14323866374"
+  ],
+  "flags_for_sean": [
+    "STORED EPISODE ANCHOR LOOKS WRONG (different object — flagged, not repaired here). The context grid gives ep 40 END = ch 160 and leaves ep 41 unanchored, but the owner's wiki partitions the film's four TV parts as ep 1 = chs 138-141, ep 2 = 142-144, ep 3 = 145-148, ep 4 = 149, 150, 151, 159, 160 — and ja-WP / en-WP independently give our ep 40's three on-screen titles as 「かぐや様はいただきたい（氷）」 / 「私達の仮面」 / 「かぐや様は告りたい（氷）」 = chs 145 / 146-147 / 148, and ep 41's single title as 「かぐや様はこれでいい」 = ch 149. Proposed: ep 40 END 148 (chapters 145-148); ep 41 END 160 (chapters 149-151, 159-160 — the film closes on the vol-16 date/confession out of order, so a 'rearranged' annotation belongs on that row). MU agrees the film's terminal is 'Vol 16, Chap 160 (Movie)'. This matters beyond one row: the run's honest terminal is displayed one row early today.",
+    "MU'S STAIRWAY SENTENCE LIVES IN anime.start, NOT anime.end, AND OVERSHOOTS BY ONE. Verbatim: start = 'Vol 1, Chap 1 (S1) / Vol 5, Chap 48 (S2) / Vol 11, Chap 102 (S3) / Vol 14, Chap 138 (Movie) / Stairway to Adulthood adapts Chap 163, 170, 191, 218-221, 266-268'. It is a prose sentence with no volume and no label of the segment form G32 expects, and its '268' is unsupported (see the 266-267 entry). If the MU reader ever parses coverage for this series, that trailing sentence is the shape to expect.",
+    "EN-WIKIPEDIA NUMBERS THE TWO PARTS AS EPISODES 42 AND 43, continuing the TV run's numbering. We hold the work as a related row at 41.5 (N4 / N8: a related work never becomes an episode row). Noted so a later editor does not 'fix' our 41-row count from that page. ja-WP files the same two parts as 前編 / 後編 under a 'TVSP2' block, and the Blu-ray calls them 第1話～第2話.",
+    "THE T28 FORK, STATED. The framing (adult Kaguya alone with the photo album; at the close, Miyuki home from work and the albums handed over for a project headed by Kozue Makihara) is anime-original — the manga ends at graduation (ch 281 「グッバイ秀知院」) and no source puts an adult-era scene in it; a Japanese viewer's chapter list adds 「作品全体を構成していた、回想するかぐやが大人になっている描写はアニオリです」 (cross-check tier). I read it as canon: a prologue/epilogue wrapper around six chapter-segments is not a story-carrying original SHARE under T28's materiality bar (the Demon Slayer grave-visit precedent), and no source sizes it beyond 'prologue' / 'epilogue'. If Sean weighs the wrapper as story-carrying — it is the setup the finale film is built on — the alternative reading is mixed with the same chapters. Nothing in the sources sizes the frame in minutes; that is the one thing I could not measure.",
+    "NO SCRIPT CREDIT, AND NO ADOPTION CLAIM. The official CAST&STAFF list and ja-WP's staff table agree the special has no 脚本 and no シリーズ構成 (ja-WP prints — for TVSP2 where the first four columns name 中西やすひろ; the per-episode 脚本 column is '-'), which is consistent with a work storyboarded straight from the manga. Akasaka is credited 原作 only — a credit, never an adoption (T26). His 書き下ろし原案 is for the SEPARATE finale film, which ANN reports he calls 'not an anime adaptation of the manga, but an entirely new work'; when that film is dated it will be a filler-or-adopted question of its own, not this row's.",
+    "COVERAGE VALUE. Every chapter here is adapted NOWHERE else: each of the ten chapter pages names only 'Otona e no Kaidan' in its Anime Episode field, and the 41-row run stops at ch 160. If the related-works ledger feeds a 'chapters covered' view, this row carries chs 163, 170, 191, 218-221, 266-267 (and the 162 sliver) on its own — without it they read never-adapted. What stays never-adapted after it: 152-158, 161, 164-169, 171-190, 192-217, 222-265, 268-281 — the special is a selection, not a continuation."
+  ]
+}
