@@ -1,6 +1,6 @@
 // I45 — the related-works derivation, pure
 import { describe, expect, it } from 'vitest';
-import { adaptedNodes, deriveWatchPosition, planRuledMoves, extraBucket, extraKind, extraStanding, freePosition, ledgerWorthy, matchRelatedTitle, ownerInstrumentIds, pickAdoption, relatedWorkOwners, relatedWorkStanding, titleMatch, type ExtraMedia } from './related-works';
+import { adaptedNodes, clusterDisorder, deriveWatchPosition, ledgerBaseProblems, planRuledMoves, PROMO, extraBucket, extraKind, extraStanding, freePosition, ledgerWorthy, matchRelatedTitle, ownerInstrumentIds, pickAdoption, relatedWorkOwners, relatedWorkStanding, titleMatch, type ExtraMedia } from './related-works';
 
 const media = (o: Partial<ExtraMedia> & { id: number }): ExtraMedia => ({ title: { romaji: 'x', english: null }, format: 'MOVIE', status: 'FINISHED', source: 'MANGA', relations: { edges: [] }, ...o });
 const manga = (id: number) => ({ relationType: 'ADAPTATION', node: { id, type: 'MANGA', format: 'MANGA', popularity: 100, title: { romaji: `m${id}` } } });
@@ -157,5 +157,50 @@ describe('planRuledMoves (I45 — the pre-pass plans before any row is touched)'
     expect(p.moves).toEqual([{ seriesId: 'k', anilistId: 3277, from: 117.5, to: 24.1 }]);
     const q = planRuledMoves([...rows, { seriesId: 'w', anilistId: 9, position: 30.5 }], (s, id) => (s === 'w' && id === 9 ? 24.1 : null));
     expect(q.refused).toEqual([{ seriesId: 'w', anilistId: 9, from: 30.5, to: 24.1, heldBy: null }]);
+  });
+});
+
+describe('PROMO (I45 e — the title test, a table)', () => {
+  it.each([
+    ['BLEACH 20th Anime Anniversary Official Trailer', true], ['Jongtama PV', true], ['Evangelion x KATE CM', true], ['One Piece Teaser', true],
+    ['Ranma ½ Music Video', true], ['らんま1/2 歌合戦', true], ['ミュージックビデオ集', true], ['Promo Special', true], ['Promotional Video', true],
+    ['Kinnikuman: Ooabare! Seigi Choujin', false], ['Tennis no Ouji-sama: Zenkoku Taikai-hen', false], ['Kcmax Special', false], ['The Disappearance of Haruhi Suzumiya', false],
+  ])('%s → promo %s', (title, promo) => { expect(PROMO.test(title)).toBe(promo); });
+});
+
+describe('ledgerBaseProblems (E2 — a positioned row whose base episode has no row)', () => {
+  const eps = (sid: string) => (sid === 'k' ? new Set([1, 2, 3, 47, 65, 119]) : new Set<number>());
+  it('a base that exists passes; 0.x (before ep 1) is allowed; a missing base lists', () => {
+    expect(ledgerBaseProblems([{ seriesId: 'k', position: 65.51 }, { seriesId: 'k', position: 0.5 }], eps)).toEqual([]);
+    expect(ledgerBaseProblems([{ seriesId: 'k', position: 76.5, title: 'x' }], eps)).toHaveLength(1);
+    expect(ledgerBaseProblems([{ seriesId: 'z', position: 1.5 }], eps)).toHaveLength(1);
+  });
+  it('a RULED position past the grid is a fixed point (my-hero-academia 171 = 170+1, Sean): never stranded', () => {
+    expect(ledgerBaseProblems([{ seriesId: 'k', position: 171 }, { seriesId: 'k', position: 171.5 }], eps, (sid, pos) => sid === 'k' && (pos === 171 || pos === 171.5))).toEqual([]);
+    expect(ledgerBaseProblems([{ seriesId: 'k', position: 172 }], eps, (sid, pos) => pos === 171)).toHaveLength(1);
+  });
+});
+
+describe('clusterDisorder (E13 — unruled rows inside a slot in air-date order among themselves)', () => {
+  it('the ranma shape before its ruling: the film (1994-08) stored behind the Special (1994-12) lists once per cluster', () => {
+    const rows = [
+      { seriesId: 'r', position: 161.5, airDate: '1993-10-21', ruled: false },
+      { seriesId: 'r', position: 161.51, airDate: '1994-12-16', ruled: false },
+      { seriesId: 'r', position: 161.52, airDate: '1994-08-20', ruled: false },
+      { seriesId: 'r', position: 161.53, airDate: '1995-03-03', ruled: false },
+    ];
+    expect(clusterDisorder(rows)).toHaveLength(1);
+    expect(clusterDisorder(rows.map((r) => ({ ...r, ruled: true })))).toEqual([]); // the ruling makes it a fixed cluster
+  });
+  it('ruled rows are fixed points and are skipped; unruled rows around them are compared among themselves; null dates are skipped', () => {
+    const rows = [
+      { seriesId: 'k', position: 119.5, airDate: '1985-07-13', ruled: true },
+      { seriesId: 'k', position: 119.51, airDate: '1986-01-01', ruled: true },
+      { seriesId: 'k', position: 119.52, airDate: '1990-01-01', ruled: false },
+      { seriesId: 'k', position: 119.53, airDate: null, ruled: false },
+      { seriesId: 'k', position: 119.54, airDate: '1991-01-01', ruled: false },
+    ];
+    expect(clusterDisorder(rows)).toEqual([]);
+    expect(clusterDisorder([...rows, { seriesId: 'k', position: 119.55, airDate: '1989-01-01', ruled: false }])).toHaveLength(1);
   });
 });

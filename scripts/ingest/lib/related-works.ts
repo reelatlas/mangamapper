@@ -22,7 +22,6 @@ import { pickMangaNode } from './rulings/source-relations';
 export type ExtraBucket = 'recap' | 'original' | 'same_instrument' | 'other_instrument' | 'crossover' | 'unknown' | 'promo' | 'alternative';
 
 /** the relations that put a related work IN an owner's run — AniList's OTHER is how it labels an entry's own specials and shorts (Shippuden's Sunny Side Battle, Railgun S's bathhouse special), so it counts; ALTERNATIVE and SAME_UNIVERSE are a different telling or a different work (I16) */
-export const IN_RUN_RELATIONS = new Set(['SEQUEL', 'PREQUEL', 'SIDE_STORY', 'SPIN_OFF', 'PARENT', 'OTHER', 'SUMMARY', 'COMPILATION']);
 /** the STRONG in-run relations — OTHER is weak: it owns a work only when nothing stronger reaches it and no ALTERNATIVE edge does (Prisma Illya's OTHER edge to the Heaven's Feel films must not out-rank Fate's ALTERNATIVE) */
 export const STRONG_IN_RUN_RELATIONS = new Set(['SEQUEL', 'PREQUEL', 'SIDE_STORY', 'SPIN_OFF', 'SUMMARY', 'COMPILATION']); // PARENT is the owner's ANCESTOR (a spin-off's edge to the main line), never a work in the owner's run
 
@@ -245,4 +244,48 @@ export const planRuledMoves = (
     else moves.push(m);
   }
   return { moves, refused };
+};
+
+/**
+ * E2 (2026-09-05) — a positioned ledger row whose integer BASE has no episode row in the owner's grid: the grid changed
+ * under the position (a deleted row strands it; a RENUMBER (N11) does not — it re-keys ledger positions like anchors and
+ * annotations, the apply-batch sweep). position 0.x (before ep 1) is allowed.
+ */
+export const ledgerBaseProblems = (
+  rows: { seriesId: string; position: number; title?: string | null }[],
+  episodeNumbers: (seriesId: string) => Set<number>,
+  /** a RULED position is a fixed point, never stranded — Sean's community-numbered counted extras (my-hero-academia 171 = '170+1', N4) sit past the grid by ruling */
+  isRuled: (seriesId: string, position: number) => boolean = () => false,
+): string[] => {
+  const out: string[] = [];
+  for (const r of rows) {
+    const base = Math.floor(Number(r.position));
+    if (isRuled(r.seriesId, Number(r.position))) continue;
+    if (base >= 1 && !episodeNumbers(r.seriesId).has(base)) out.push(`${r.seriesId} @${r.position} "${String(r.title ?? '').slice(0, 40)}": base episode ${base} has no row — the grid changed under the position (a renumber re-keys ledger positions like anchors; a deleted row strands them)`);
+  }
+  return out;
+};
+
+/**
+ * E13 (2026-09-05) — inside one base slot the UNRULED rows must sit in air-date order among themselves; ruled rows are
+ * fixed points and are skipped (once a cluster is partly ruled, mixed clusters are the normal case). A stored order that
+ * disagrees is insertion history (ranma-1-2 @161.5x before its ruling) — a listing until the cluster is ruled, or until
+ * the writer re-walks unruled rows between fixed points (after E1, the identity key).
+ */
+export const clusterDisorder = (
+  rows: { seriesId: string; position: number; airDate: string | null; ruled: boolean; title?: string | null }[],
+): string[] => {
+  const by = new Map<string, typeof rows>();
+  for (const r of rows) { const k = `${r.seriesId}#${Math.floor(Number(r.position))}`; by.set(k, [...(by.get(k) ?? []), r]); }
+  const out: string[] = [];
+  for (const [k, cluster] of by) {
+    const unruled = cluster.filter((r) => !r.ruled && r.airDate).sort((a, b) => Number(a.position) - Number(b.position));
+    for (let i = 1; i < unruled.length; i++) {
+      if ((unruled[i].airDate as string) < (unruled[i - 1].airDate as string)) {
+        out.push(`${k}: @${unruled[i - 1].position} (${unruled[i - 1].airDate}) sits before @${unruled[i].position} (${unruled[i].airDate}) — unruled rows out of air-date order (insertion history): rule the cluster, or the re-walk after E1`);
+        break;
+      }
+    }
+  }
+  return out;
 };

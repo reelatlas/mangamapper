@@ -322,6 +322,25 @@ Census classes emitted by audit-discovery.ts for related works (15): extra_same_
 | E14 | **FIXED 2026-09-05 (a data-loss bug, not a strategy call): the writer's pre-pass removed a ruled mover BEFORE checking its target slot** — a ruling onto a slot held by a non-moving row was refused at the insert, after the delete: the row was gone, and every later run refused it again | the wave-4 verifier on kinnikuman 3276 → 119.5 (the PSA 147810's slot) — a paper find, no row was lost | `planRuledMoves` (lib, pure, 5 tests): the plan is computed before any row is touched; a swap and a chain are allowed; a slot held by a non-mover (or an identity-less wiki row) REFUSES the move and the row is KEPT, listed by the dry run and by `related_work_violation` (stored ≠ ruled); I45's enforcement names it; edges redeployed | done — the pattern to keep: a writer that must delete-then-insert plans the whole run first (E1's PK fix removes the dance altogether) |
 | E15 | **`adaptedNodes` returns nothing when AniList's `source` tag is null — even when an ADAPTATION edge points at the OWNER'S OWN instrument id.** The instrument set was designed as 'ADAPTATION edges whose node format the extra's own source names' (a guard against mis-typed nodes); with no tag the guard empties the set and the work falls to `unknown` → held, though the edge is unambiguous | the-prince-of-tennis 995: staged 2026-09-05T09:22Z WITH ADAPTATION → 30049 (the owner's registered manga), `source` null → held as 'no named instrument'; the wave-4b verifier refuted the verdict's 'stale snapshot' diagnosis and named the mechanism | an edge to an id in `ownerInstrumentIds` is accepted whatever the tag says (the tag still gates edges to OTHER nodes); a census delta follows (some `extra_unknown` → `extra_same_instrument`) — list it before Sean rules | Sean rules in the evaluation; a lib change → P3 redeploy; the moved works enter the research queue, never a standing |
 
+### 6.3 Rulings on the evaluation (Sean 2026-09-05 evening, two agent reviews weighed) and what landed
+
+| # | ruling | status |
+|---|---|---|
+| E1 | the key becomes identity — before the UI pass; E13's re-walk and E5 follow it | queued |
+| E2 | the base-missing class (a ruled position is a fixed point); a RENUMBER re-keys ledger positions like anchors — an apply-batch trap, not a field | LANDED (sitting A) |
+| E3 | `related_work_unruled` — the R27 work-list, kind queue | LANDED (sitting A) |
+| E4 | the writer calls `ledgerWorthy` (a dead RULE, not a dead export); `IN_RUN_RELATIONS` deleted; I45 / I46 enforcement names the mechanisms | LANDED (sitting A) |
+| E5 | the ledger writer on the cron path — with the weekly restage, not a UI item | queued |
+| E6 / E7 / E10 | keep | — |
+| E8 | keep the AniList-entry grain; a structured `parts` field at the UI pass (three bundles today) | queued |
+| E9 | a SERIES mint keeps the parent's ledger row (I13) and the mint writer ALWAYS writes series_relations + franchise membership; a COMPONENT mint retires the row; no link kind; the skip-split: 'owned by this owner' = I21 (its own id + components), a one-row film series elsewhere stays an extra here, a component of another multi-row series does not (the franchise page orders runs) — moves rows: the E15 bar | sitting C |
+| E11 | the PROMO table test (the planner shipped with E14) | LANDED (sitting A) |
+| E12 | the component clause WITHOUT the edge-type condition ("continues the instrument past the run's last chapter"; the relation is a routing hint); the Prince of Tennis block = an OVA-range component, own numbering, the verdict JSON its anchor source | sitting C / the next /discover |
+| E13 | the class now (unruled rows between ruled fixed points; kind LISTING until the re-walk); the re-walk after E1 | class LANDED (sitting A) |
+| E14 | fixed | done |
+| E15 | its own add-rule: the routing-vs-truth rule; the owner-instrument edge accepted whatever the tag says; the census list first; the four chain ids as I41 entries in a separate step | sitting B |
+| E16 | a KIND per census class (violation / queue / listing) — `lib/census-kinds.ts` | LANDED (sitting A) |
+
 ## Appendix — the generated summary (2026-09-05; regenerate before use)
 
 ### Related-works sitting summary — 794 works (generated 2026-09-05)

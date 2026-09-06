@@ -1154,6 +1154,45 @@
    19-23 / 39 (chain_source) and 18 / 93-95 (AFL's loose Mixed bucket),
    beelzebub 15 / 26-28 / 51, rurouni TV ep 95 (identity). Batch 22 opens on
    the boruto follow-up (lanes I + C) with the batch-21 tooling copied.
+135. ✅ **THE RULE-LOGIC EVALUATION, SITTING A — inert hygiene (Sean ruled 2026-09-05 evening after
+    two agent reviews; E2 / E3 / E4 / E11 / E13-class / E16).** The evaluation (EXTRAS-SITTING §6,
+    E1-E16, the generated inventory) went to Sean as one table; Cursor's and an Opus agent's reviews
+    were weighed against the code: adopted — the second root (a source's relation or tag ROUTES a
+    candidate, only research or a ruling asserts the fact; E12 and E15 are one rule shape), inert
+    and data-moving changes land separately with attributable deltas, E13 as a class NOW and the
+    re-walk only after E1 (a re-walk on the position key is the E14 shape), E15 as its own add-rule
+    with the census list first, E4 is a dead RULE not a dead export (the writer re-implemented the
+    ledger predicate inline), E5 is not a UI item, E9 per Cursor (a series mint KEEPS the parent's
+    ledger row — I13 — and the mint writer ALWAYS writes series_relations + franchise membership; a
+    component mint RETIRES the row; no link kind; 'owned by this owner' = I21 for that series, its
+    own id and components, never franchise-mates — Stampede stays off Trigun's extras, JJK 0 stays
+    on JJK's; the skip-split moves rows → the E15 bar, its own step in sitting C), E16 in sitting A;
+    corrected — Opus's 're-proposed forever' (the halo skips owned ids; a minted work's row would
+    sit in the stale listing, never re-propose), Opus's E15 residue (the chains are registered; the
+    true residue is FOUR chain works without an id: Rosario+Vampire Season II, Trigun Maximum, Shonan
+    Junai Gumi, Cobra's Galaxy Knights — I41 entries in sitting B, a separate step), Opus's E2 field
+    (episode rows have no identity beyond their number — the mechanism is the N11 renumber sweep,
+    now a listed apply-batch trap covering ledger positions and ruled positions), Opus's E8 urgency
+    (three bundles; defer), Opus's E3 (the census already carries listing classes — what was missing
+    is a KIND per class: E16). LANDED: `ledgerWorthy` is now the writer's and the audit's predicate
+    (E4); `IN_RUN_RELATIONS` deleted (0 uses); I45's enforcement names relatedWorkOwners /
+    ledgerWorthy / freePosition / extraKind / isoDate and the new helpers, I46's names pickAdoption /
+    wikiKey / lookupRelatedWork; a PROMO title table test (E11); `ledgerBaseProblems` (E2 — a
+    positioned row whose base episode has no row; a RULED position is a fixed point: my-hero-academia
+    171 / 171.5 are Sean's '170+1' counted specials, the first run's only two hits) →
+    `related_work_base_missing` 0; `related_work_unruled` (E3, the R27 work-list: 367 = the pending
+    standings); `clusterDisorder` (E13 — inside one slot the UNRULED rows must sit in air-date order
+    among themselves, ruled rows are fixed points) → `related_work_cluster_disorder` 47 clusters of
+    insertion history (gundam, fate, code geass, AoT, cobra, rayearth, FotNS, toriko, evangelion,
+    conan, PoT, DBZ, haikyu…) — a LISTING until the re-walk after E1, then a violation;
+    `lib/census-kinds.ts` (E16: violation | queue | listing per class, printed beside every discovery
+    class count — a permanently non-zero work-list never reads as red). Tests 270; five edges
+    redeployed; no existing census class moved (the three new classes only). NEXT: sitting B — E15's
+    add-rule (the routing-vs-truth rule; an ADAPTATION edge to the owner's registered instrument
+    accepted whatever the tag says; the census list of works that change bucket shown BEFORE the
+    deploy), then the four chain ids as I41 entries; then sitting C (E9 as ruled, the skip-split with
+    its row list, E12's clause without the edge-type condition) before step 2's writer.
+
 134. ✅ **WAVES 4a + 4b APPLIED (Sean ruled 2026-09-05 evening, Cursor's notes evaluated;
     eleven works, thirteen rulings) · THE WRITER'S PRE-PASS PLANS BEFORE IT TOUCHES A ROW ·
     THE RULE-LOGIC EVALUATION DRAFTED (E1-E15).** Eleven per-work verdicts (research-agent,

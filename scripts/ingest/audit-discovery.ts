@@ -27,9 +27,10 @@ import { candidateLine, discoveryClasses, haloCandidates, loadDiscoveryInput } f
 import { lastSitting, SITTINGS } from './lib/rulings/discovery';
 import { loadLatestRankings, seedCandidates, seedLine } from './lib/rankings';
 import { selectAll } from './lib/db';
-import { deriveWatchPosition, type ExtraBucket, extraKind, isoDate, matchRelatedTitle, pickAdoption, relatedWorkStanding } from './lib/related-works';
+import { clusterDisorder, deriveWatchPosition, type ExtraBucket, pickAdoption, isoDate, ledgerBaseProblems, ledgerWorthy, matchRelatedTitle, relatedWorkStanding, extraKind } from './lib/related-works';
 import { relatedWorkRuling } from './lib/rulings/related-works';
-import { RULED_POSITION_BY_ANILIST } from './lib/rulings/watch-order-labels';
+import { censusKindMark } from './lib/census-kinds';
+import { RULED_LABELS, RULED_POSITION_BY_ANILIST, RULED_RECORDS } from './lib/rulings/watch-order-labels';
 import { identityProblems, loadRelatedWorkRegistry } from './lib/related-work-ids';
 
 async function main() {
@@ -80,7 +81,7 @@ async function main() {
     const c = reach.get(`${l.series_id}#${l.anilist_id}`);
     if (!c) { const elsewhere = extras.find((x) => x.anilistId === l.anilist_id); stale.push(elsewhere ? `${l.series_id} @${l.position}: "${String(l.title).slice(0, 40)}" — re-attributed by rule to ${[...elsewhere.owners].join(', ')} (${elsewhere.proposal}) — run sync-related-works` : `${l.series_id} @${l.position}: "${String(l.title).slice(0, 40)}" (anilist ${l.anilist_id}) — no AniList edge reaches the series any more (P24: a listing)`); continue; }
     const b = c.proposal as ExtraBucket;
-    if (b === 'promo') { stale.push(`${l.series_id} @${l.position}: "${String(l.title).slice(0, 40)}" — promotional (I45 amended: never a row) — run sync-related-works`); continue; }
+    if (!ledgerWorthy(b)) { stale.push(`${l.series_id} @${l.position}: "${String(l.title).slice(0, 40)}" — promotional (I45 amended: never a row) — run sync-related-works`); continue; }
     const ruling = relatedWorkRuling(l.series_id, Number(l.anilist_id));
     const wantStanding = relatedWorkStanding(b, ruling), wantKind = ruling?.kind ?? extraKind(c.format, b);
     if (ruling?.title != null && l.title !== ruling.title) violation.push(`${l.series_id} @${l.position}: title ≠ ruled '${ruling.title}' (P8 repair) — run sync-related-works`);
@@ -98,6 +99,16 @@ async function main() {
     if ((l.kind ?? null) !== wantKind) violation.push(`${l.series_id} @${l.position}: kind '${l.kind}' ≠ derived '${wantKind}' — run sync-related-works`);
   }
   console.log(`[audit-discovery] related works (I45): ${extras.length} listed · same_instrument ${byBucket('same_instrument').length} · other_instrument ${byBucket('other_instrument').length} · recap ${byBucket('recap').length} · original ${byBucket('original').length} · crossover ${byBucket('crossover').length} · promo ${byBucket('promo').length} · alternative ${byBucket('alternative').length} · unknown ${byBucket('unknown').length} · unstaged ${byBucket('unstaged').length} · ledger rows ${ledger.length} (${ledger.filter((l: any) => l.standing == null).length} standing pending)`);
+  // E3 — the research work-list (R27): a ledger row still pending its standing
+  const unruled = ledger.filter((r: any) => r.standing == null).map((r: any) => `${r.series_id} @${r.position} "${String(r.title).slice(0, 40)}" — ${reach.get(`${r.series_id}#${r.anilist_id}`)?.proposal ?? 'unreached'} (standing pending research)`);
+  // E2 — a positioned row whose base episode has no row
+  const epNumbers = new Map<string, Set<number>>(); for (const [sid, eps] of epsBy) epNumbers.set(sid, new Set(eps.map((e) => e.number)));
+  const ruledPosition = (sid: string, pos: number, anilistId: number | null) => RULED_RECORDS[sid]?.[pos] != null || RULED_LABELS[sid]?.[pos] != null || (anilistId != null && (relatedWorkRuling(sid, anilistId)?.position === pos || RULED_POSITION_BY_ANILIST[sid]?.[anilistId] === pos));
+  const rowById = new Map(allRows.map((r: any) => [`${r.series_id}@${Number(r.position)}`, r.anilist_id as number | null]));
+  const baseMissing = ledgerBaseProblems(allRows.map((r: any) => ({ seriesId: r.series_id, position: Number(r.position), title: r.title })), (sid) => epNumbers.get(sid) ?? new Set(), (sid, pos) => ruledPosition(sid, pos, rowById.get(`${sid}@${pos}`) ?? null));
+  // E13 — unruled rows inside one slot out of air-date order (insertion history)
+  const isRuled = (r: any) => relatedWorkRuling(r.series_id, Number(r.anilist_id))?.position != null || RULED_POSITION_BY_ANILIST[r.series_id]?.[Number(r.anilist_id)] != null;
+  const disorder = clusterDisorder(ledger.map((r: any) => ({ seriesId: r.series_id, position: Number(r.position), airDate: r.air_date ?? null, ruled: isRuled(r), title: r.title })));
   const lines: Record<string, string[]> = {
     halo_sequel_unclaimed: classes.halo_sequel_unclaimed.map(candidateLine),
     halo_series_unclaimed: classes.halo_series_unclaimed.map(candidateLine),
@@ -116,13 +127,16 @@ async function main() {
     related_work_identity_gap: identity.gap,
     related_work_identity_conflict: identity.conflict,
     related_work_identity_orphan: identity.orphan,
+    related_work_unruled: unruled,
+    related_work_base_missing: baseMissing,
+    related_work_cluster_disorder: disorder,
     discovery_new_since_sitting: classes.discovery_new_since_sitting.map(candidateLine),
     discovery_ruled_unbuilt: classes.discovery_ruled_unbuilt.map((r) => `anilist ${r.anilistId}: ruled series${r.ruling.slug ? ` as ${r.ruling.slug}` : ''} but no series owns it — the seed writer has not run (I42)${r.candidate ? ` · ${r.candidate.title}` : ''}`),
     discovery_ruling_stale: classes.discovery_ruling_stale.map((r) => `anilist ${r.anilistId}: ${r.why} (P24 — re-rule or retire the entry)`),
     seed_candidate: seeds.map(seedLine),
   };
   for (const [k, v] of Object.entries(lines)) {
-    console.log(`\n${k}: ${v.length}`);
+    console.log(`\n${k}: ${v.length}${censusKindMark(k)}`);
     for (const l of v.slice(0, 60)) console.log('   ' + l);
     if (v.length > 60) console.log(`   …+${v.length - 60} more`);
   }

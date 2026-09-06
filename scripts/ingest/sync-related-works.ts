@@ -18,7 +18,7 @@
 //   npx tsx --env-file=.env.ingest scripts/ingest/sync-related-works.ts [--dry-run]
 import { db, finishRun, selectAll, startRun } from './lib/db';
 import { haloCandidates, loadDiscoveryInput } from './lib/discovery';
-import { adaptedNodes, deriveWatchPosition, planRuledMoves, extraKind, freePosition, isoDate, pickAdoption, relatedWorkStanding, type ExtraBucket } from './lib/related-works';
+import { adaptedNodes, deriveWatchPosition, ledgerWorthy, planRuledMoves, extraKind, freePosition, isoDate, pickAdoption, relatedWorkStanding, type ExtraBucket } from './lib/related-works';
 import { relatedWorkRuling } from './lib/rulings/related-works';
 import { RULED_POSITION_BY_ANILIST } from './lib/rulings/watch-order-labels';
 import { loadRelatedWorkRegistry, lookupRelatedWork, registerRelatedWorkIds, wikiKey } from './lib/related-work-ids';
@@ -112,7 +112,7 @@ async function main() {
         const key = `${sid}#${c.anilistId}`;
         let cur = byKey.get(key);
         // (e) a promotional entry is never a row — a halo row of ours goes (G57: our own origin only)
-        if (bucket === 'promo') {
+        if (!ledgerWorthy(bucket)) { // (e) a promotional entry is never a row — the ledger predicate lives in lib (E4)
           if (cur && cur.origin === 'halo') { await remove(cur, 'promotional entry (I45 amended: never a related work)'); byKey.delete(key); }
           // a promo is never a related work: its identity leaves the registry with its row (whether the row went this run or an earlier one) — no orphan
           if ([...registry.values()].some((v) => v.anilist_id === c.anilistId)) {
