@@ -9,6 +9,8 @@ export const CENSUS_CLASS_KINDS: Record<string, CensusClassKind> = {
   halo_sequel_unclaimed: 'queue', halo_series_unclaimed: 'queue',
   discovery_new_since_sitting: 'queue', discovery_ruled_unbuilt: 'queue', discovery_ruling_stale: 'listing',
   seed_candidate: 'queue',
+  // G58 (amended 2026-09-06, the airing writer fix): the AniList refresh's outcome and the airing work-lists
+  anilist_resolve_debt: 'violation', halo_airing: 'queue', seed_airing: 'queue',
   // I45 — the related-works buckets (AniList's CLAIM, a bucket census — not a work-list)
   extra_same_instrument: 'listing', extra_other_instrument: 'listing', extra_unknown: 'listing', extra_unstaged: 'listing',
   extra_recap: 'listing', extra_original: 'listing', extra_crossover: 'listing', extra_promo: 'listing', extra_alternative: 'listing',

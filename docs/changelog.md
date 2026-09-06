@@ -1154,6 +1154,40 @@
    19-23 / 39 (chain_source) and 18 / 93-95 (AFL's loose Mixed bucket),
    beelzebub 15 / 26-28 / 51, rurouni TV ep 95 (identity). Batch 22 opens on
    the boruto follow-up (lanes I + C) with the batch-21 tooling copied.
+143. ✅ **PHASE A — THE AIRING WRITER FIX (G58 amended; Sean's go 2026-09-06, 'plan as saved, start A').**
+    THE DIAGNOSIS (measured 2026-09-06 with Cursor): airing is captured in STAGING (the weekly lists + the halo)
+    but the catalog holds 5 airing + 3 upcoming of 372 — AniFiller seeded finished shows and no /discover sitting
+    has minted the TV-shaped halo (285 unruled, 62 airing / announced) — and three defects hit OWNED airing
+    series: (1) anilist-restage refetched + staged WITHOUT resolving while the daily gate compared fresh data
+    with STAGING's hash, so a change between a series' last resolve and a restage was swallowed until the next
+    flip — one-piece's row read aired 1175 / next 2026-08-30 while its staging said ep 1177 on 09-06
+    (changed_at = the Sep 3 restage; a finished series would never self-correct); (2) the queue sorted
+    'stalest-first' by series.updated_at, which the healers bump daily, so airing series looked fresh and went
+    LAST; (3) the Sep 5 query-shape change (relation-node startDate for G60, 44a5873e) flipped every structural
+    hash and the restage event healer was not run — the 09-06 daily run saw 367 changed, resolved 40, deferred
+    327 (Bleach's 09-05 episode uncounted); and (4) 53 seeded series with no AFL page and one component were
+    skipped by the loop outright (`else if (slug)`). THE FIX, one lib loop: migration 20260906230000 adds
+    ingest_anilist_media.resolved_hash + resolved_at — stamped ONLY by the resolvers for the media they read
+    (lib/resolve.ts#stampResolved at resolveSeries' two success returns and refreshStitchedVolatile's end;
+    aniListChanged deleted), baselined resolved_hash := content_hash; lib/anilist-refresh.ts#refreshAniList
+    fetches everything, decides against resolved_hash (never staging), stages every payload, resolves AIRING /
+    UPCOMING first then the oldest resolve (resolveOrder — never updated_at) under optional budgets;
+    resolveInputsOf names exactly what each resolver reads (an AFL series its head; a stitched or seeded series
+    its ranged components — the 53 skipped series now take the volatile refresh); the edge is a thin caller
+    (40 / 110 s; a manual call may pass resolveBudget) and scripts/ingest/refresh-anilist.ts the local form
+    (--dry-run, --all = the catch-up, --budget; PULL roster, event); anilist-restage's note now says 'then run
+    refresh-anilist.ts the same day'. CLASSES: anilist_resolve_debt (violation — a resolve input whose
+    content_hash ≠ resolved_hash for more than a day; 0 at landing), halo_airing (queue — the 62 airing /
+    announced TV-shaped candidates of held series, airing first: Re:ZERO S4, Tanya S2, Iruma S4, 100 Girlfriends
+    S3…), seed_airing (queue — the airing / upcoming lists' unowned rows in list order, 207). Ledger: G58 amended
+    (the gate, the order, the debt, the two callers; retiredPhrases 'leaves what it could not reach UNSTAGED so
+    it leads the next run'); 7 unit tests (288 total); tsc / lint / build / ledger-check / system-census green;
+    edges rebuilt + deployed ×5. THE CATCH-UP (refresh-anilist.ts --all) COULD NOT RUN: AniList's API is
+    disabled site-wide ('temporarily disabled due to severe stability issues' — 403 on every scripted call
+    today; the edge got through at 08:10 UTC) — it runs the moment AniList answers (STATE carries it); until
+    then the daily edge digests the debt airing-first at 40 a day whenever the API is up. No catalog data moved
+    in this landing (the migration's baseline only); the classes read 0 / 62 / 207.
+
 142. ✅ **THE TENNIS OWN-SERIES SITTING (Sean's go 2026-09-06, Cursor's numbering note: never TV 179-204).**
     The Prince of Tennis National Tournament chain (AniList 995 → 2752 → 4053, three OVA releases the sources number
     1-13 / 1-6 / 0-6 — never as TV 179-204, which no source prints; I42 (ii): the KEY is what the sources print, a

@@ -237,7 +237,7 @@
 - `G55` Series window: a row dated outside its series is not its row — aka `series window`, `series-window gate`, `identity gate`, `namesake gate`, `namesake lesson`, `episode_date_off_window`, `AIR_DATE_WINDOW_ACK`, `E2`, `batch-19 E2`, `off-window`
 - `G56` Honest terminal: a covered MU pin is redundant, not a flag — aka `honest terminal`, `honest-terminal redundancy`, `covered pin`, `MU "EP N" pin`, `EP N pin`, `skipped_terminal`, `mu_pin_flag_redundant`, `claymore #945 class`, `pin already covered`
 - `G57` Row provenance: a writer deletes only rows it minted — aka `row provenance`, `minted_by`, `a writer deletes only rows it minted`, `row_minted_by_missing`, `the 5D 145 lesson`, `no delete-then-insert`
-- `G58` Budgeted edges: structural hash, deferral, closed run row — aka `budgeted edge`, `structural hash`, `volatile fields`, `edge wall clock`, `run_stuck`, `deferred not skipped`, `the refresh-anilist lesson`, `aniListHash`, `time budget`
+- `G58` Budgeted edges: structural hash, deferral, closed run row — aka `budgeted edge`, `structural hash`, `volatile fields`, `edge wall clock`, `run_stuck`, `deferred not skipped`, `the refresh-anilist lesson`, `aniListHash`, `time budget`, `resolved_hash`, `resolve debt`, `anilist_resolve_debt`, `airing-first queue`, `refreshAniList`, `stampResolved`, `the catch-up`, `the airing writer fix`
 - `G59` The mint rule: who creates the grid when AFL has nothing — aka `the mint rule`, `who mints the grid`, `grid minting`, `ruled wiki page`, `WIKI_PAGES`, `MINTED_GRIDS`, `manual grid`, `grid_unminted`, `AFL has nothing`
 - `G60` Rankings are a reader: a ranked queue, never authority — aka `rankings`, `the rankings reader`, `AniList rankings`, `ingest_anilist_rankings`, `seed_candidate`, `the seed queue`, `seed engine`, `product fit`, `productFitScore`, `the score`, `refresh-discovery`, `the fifth bundle`, `weekly discovery`, `LISTS`, `snapshotRankings`, `seedCandidates`, `manga-first`, `popularity is a sort key`, `rank is a sort key`, `top 500`
 
@@ -3226,16 +3226,17 @@ Every episodes row names the writer that minted it (minted_by: afl | afg | wiki 
 
 ### G58 · Budgeted edges: structural hash, deferral, closed run row
 
-An edge refresh never does unbounded work: each invocation decides what changed BEFORE writing anything, processes the stalest work under an explicit budget (a count of re-derives and a wall-clock allowance inside the platform limit), leaves what it could not reach UNSTAGED so it leads the next run (a deferral is data — the old hash — never a silent skip), and always closes its ingest_runs row. The change decision hashes the STRUCTURAL subset of a source payload — for AniList, media minus the metrics it recomputes continuously (averageScore, meanScore, popularity, favourites, trending, tag ranks, relation-node popularity; lib/anilist.ts#aniListStructural) — so a daily sweep re-derives only series whose structure moved (episodes, status, dates, titles, relations, the next-airing pointer); the full raw still refreshes on every fetch for readers of staging. A run still 'running' hours after it started was killed: heal-stuck-runs marks it, and run_stuck reads what is still open.
+An edge refresh never does unbounded work: each invocation decides what changed BEFORE writing anything, processes the stalest work under an explicit budget (a count of re-derives and a wall-clock allowance inside the platform limit), stages every fetched payload (the raw refreshes for readers of staging) and defers what it could not resolve to the next run — a deferral is data, never a silent skip — and always closes its ingest_runs row. The change decision hashes the STRUCTURAL subset of a source payload — for AniList, media minus the metrics it recomputes continuously (averageScore, meanScore, popularity, favourites, trending, tag ranks, relation-node popularity; lib/anilist.ts#aniListStructural) — and compares it with the hash the series was last RESOLVED from (ingest_anilist_media.resolved_hash, stamped only by the resolvers for the media they read: lib/resolve.ts#stampResolved), never with staging's own hash: a restage therefore leaves a RESOLVE DEBT by construction, and anilist_resolve_debt lists any resolve input still in debt after a day (must be 0). The queue runs AIRING and UPCOMING series first, then the oldest resolve first (resolved_at — never series.updated_at, which the healers bump). One loop, two callers (lib/anilist-refresh.ts#refreshAniList): the edge under its budgets, scripts/ingest/refresh-anilist.ts without them — the catch-up after a restage or a query-shape change is a local run the same day (--all resolves every series once). A run still 'running' hours after it started was killed: heal-stuck-runs marks it, and run_stuck reads what is still open.
 
-*Why:* refresh-anilist died mid-invocation every day from 2026-08-24 to 09-03 (11 runs 'running' forever, fetched 0): it hashed the whole media object, so ~all 679 media read as changed and it re-resolved ~100 series until the edge wall clock killed it — a quiet outage the census could not see because no class read ingest_runs. The healer then found refresh-afl killed on four of ten days for the same reason (20 pages × 10 s crawl delay + overhead). Sean 2026-09-03: 'did we ever address the edge function that was not firing correctly?' — the fix is a rule, not a restart.
+*Why:* refresh-anilist died mid-invocation every day from 2026-08-24 to 09-03 (11 runs 'running' forever, fetched 0): it hashed the whole media object, so ~all 679 media read as changed and it re-resolved ~100 series until the edge wall clock killed it — a quiet outage the census could not see because no class read ingest_runs. The healer then found refresh-afl killed on four of ten days for the same reason (20 pages × 10 s crawl delay + overhead). Sean 2026-09-03: 'did we ever address the edge function that was not firing correctly?' — the fix is a rule, not a restart. AMENDED 2026-09-06 (the airing writer fix, Sean with Cursor): the gate had compared fresh data with STAGING's hash, so anilist-restage (refetch + stage, no resolve) swallowed every change between a series' last resolve and the restage — one-piece's row read aired 1175 / next 2026-08-30 while staging said ep 1177 on 09-06; the queue sorted by series.updated_at, which the healers bump daily, so airing series went last; the Sep 5 query-shape change (relation-node startDate for G60) flipped every hash without a restage and the daily run deferred 327 of 367; and 53 seeded series with no AFL page and one component were skipped by the loop outright. One lib loop, resolved_hash, airing-first, a local catch-up, a violation class.
 
 - ruled Sean 2026-09-03 (docs/STATE.md awaiting-Sean item (§12.95 → §12.104); changelog §12.105)
 - layer **writer**
-- enforced: [lib/anilist.ts#aniListStructural](../scripts/ingest/lib/anilist.ts) · [lib/resolve.ts#aniListHash](../scripts/ingest/lib/resolve.ts) · [lib/resolve.ts#stageAniList](../scripts/ingest/lib/resolve.ts) · [supabase/functions/_src/refresh-anilist.ts](../supabase/functions/_src/refresh-anilist.ts) · [supabase/functions/_src/refresh-afl.ts](../supabase/functions/_src/refresh-afl.ts) · [heal-stuck-runs.ts](../scripts/ingest/heal-stuck-runs.ts) · [audit-ui-truth.ts#run_stuck](../scripts/ingest/audit-ui-truth.ts)
-- audit: `run_stuck`
-- witnesses: refresh-anilist (2026-08-24 → 09-03), refresh-afl (2026-08-29, 08-30, 09-01)
-- aliases: budgeted edge, structural hash, volatile fields, edge wall clock, run_stuck, deferred not skipped, the refresh-anilist lesson, aniListHash, time budget
+- enforced: [lib/anilist.ts#aniListStructural](../scripts/ingest/lib/anilist.ts) · [lib/resolve.ts#aniListHash](../scripts/ingest/lib/resolve.ts) · [lib/resolve.ts#stageAniList](../scripts/ingest/lib/resolve.ts) · [lib/resolve.ts#stampResolved](../scripts/ingest/lib/resolve.ts) · [lib/anilist-refresh.ts#refreshAniList](../scripts/ingest/lib/anilist-refresh.ts) · [lib/anilist-refresh.ts#resolveInputsOf](../scripts/ingest/lib/anilist-refresh.ts) · [lib/anilist-refresh.ts#resolveOrder](../scripts/ingest/lib/anilist-refresh.ts) · [lib/anilist-refresh.ts#resolveDebt](../scripts/ingest/lib/anilist-refresh.ts) · [supabase/functions/_src/refresh-anilist.ts](../supabase/functions/_src/refresh-anilist.ts) · [refresh-anilist.ts](../scripts/ingest/refresh-anilist.ts) · [anilist-restage.ts](../scripts/ingest/anilist-restage.ts) · [supabase/functions/_src/refresh-afl.ts](../supabase/functions/_src/refresh-afl.ts) · [heal-stuck-runs.ts](../scripts/ingest/heal-stuck-runs.ts) · [audit-ui-truth.ts#run_stuck](../scripts/ingest/audit-ui-truth.ts) · [audit-discovery.ts#anilist_resolve_debt](../scripts/ingest/audit-discovery.ts)
+- audit: `run_stuck`, `anilist_resolve_debt`
+- witnesses: refresh-anilist (2026-08-24 → 09-03), refresh-afl (2026-08-29, 08-30, 09-01), one-piece (2026-09-06: row aired 1175 vs staging 1177 after the Sep 3 restage), the Sep 5 query-shape flip (367 changed, 327 deferred)
+- aliases: budgeted edge, structural hash, volatile fields, edge wall clock, run_stuck, deferred not skipped, the refresh-anilist lesson, aniListHash, time budget, resolved_hash, resolve debt, anilist_resolve_debt, airing-first queue, refreshAniList, stampResolved, the catch-up, the airing writer fix
+- retired wording (P38): “leaves what it could not reach UNSTAGED so it leads the next run”
 - see: G44, P3, P4, P5, P20, G51
 
 ### G59 · The mint rule: who creates the grid when AFL has nothing
@@ -4412,6 +4413,7 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - AIRDATE_ORDER_ACK → `G54`
 - airdate_regression → `G54`
 - airdate_withheld → `G54`
+- airing-first queue → `G58`
 - airing-lag allowance → `I26`
 - airing-pin rule → `G34`
 - alias defense → `G8`
@@ -4446,6 +4448,7 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - AniFiller seed → `I10`
 - AniList naming authority → `I7`
 - AniList rankings → `G60`
+- anilist_resolve_debt → `G58`
 - aniListHash → `G58`
 - anime only retired → `T27`
 - anime parity → `C2`
@@ -5217,6 +5220,7 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - reconcile-structure → `I33`
 - refresh cadence → `G47`
 - refresh-discovery → `G60`
+- refreshAniList → `G58`
 - refreshStitchedVolatile → `I34`
 - refused_episode_type → `G36`
 - refused_scope_consumed → `G35`
@@ -5255,6 +5259,8 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - research-first rule → `R1`
 - RESEARCH-FIRST rule → `R1`
 - research-logged non-main entries → `N33`
+- resolve debt → `G58`
+- resolved_hash → `G58`
 - restage from raw → `G28`
 - retconned → `T26`
 - retire an annotation → `A45`
@@ -5421,6 +5427,7 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - stale verdict HELD → `P16`
 - stale-anchor class → `A27`
 - stale-zone healing → `N19`
+- stampResolved → `G58`
 - standing migration → `T27`
 - START = first chapter animated → `A10`
 - START majority rule → `A11`
@@ -5470,11 +5477,13 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - the A10 twin → `A47`
 - the adoption gate → `I44`
 - the adoption sitting → `T26`
+- the airing writer fix → `G58`
 - the ambiguity rule → `I4`
 - the apply discipline → `P15`
 - the audit-titles incident → `P40`
 - the candidate rule → `I42`
 - the capture table → `P29`
+- the catch-up → `G58`
 - the chain → `T26`
 - the confirm queue → `G1`
 - the curated map decides → `P10`

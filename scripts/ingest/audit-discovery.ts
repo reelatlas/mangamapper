@@ -25,7 +25,8 @@
 //   npx tsx --env-file=.env.ingest scripts/ingest/audit-discovery.ts
 import { candidateLine, discoveryClasses, haloCandidates, loadDiscoveryInput } from './lib/discovery';
 import { lastSitting, SITTINGS } from './lib/rulings/discovery';
-import { loadLatestRankings, seedCandidates, seedLine } from './lib/rankings';
+import { loadLatestRankings, seedCandidates, seedLine, type Seed } from './lib/rankings';
+import { resolveDebt, resolveInputsOf } from './lib/anilist-refresh';
 import { selectAll } from './lib/db';
 import { clusterDisorder, deriveWatchPosition, type ExtraBucket, pickAdoption, isoDate, ledgerBaseProblems, ledgerWorthy, matchRelatedTitle, relatedWorkStanding, extraKind } from './lib/related-works';
 import { relatedWorkRuling } from './lib/rulings/related-works';
@@ -119,6 +120,23 @@ async function main() {
     const v = e.value; if (v.disposition !== 'series' || !v.relation || !v.slug || !ownedSlugs.has(v.slug)) continue;
     if (!linked.has(`${v.slug}→${v.relation.to}`)) relationMissing.push(`${v.slug} → ${v.relation.to} (${v.relation.kind}): declared, series minted, no series_relations row — run relations.ts (a kind AniList cannot express needs a lib/rulings/relations.ts entry)`);
   }
+  // G58 (amended 2026-09-06) — the resolve debt: a resolve input whose staged structure is not what its series was last resolved from, older than the daily run's reach
+  const debtSeries = await selectAll<{ id: string; afl_slug: string | null; anilist_id: number | null }>('series', 'id, afl_slug, anilist_id');
+  const debtComps = await selectAll<{ series_id: string; anilist_id: number; episode_start: number | null }>('series_components', 'series_id, anilist_id, episode_start');
+  const debtStaged = new Map((await selectAll<{ anilist_id: number; content_hash: string | null; resolved_hash: string | null; resolved_at: string | null; changed_at: string | null }>('ingest_anilist_media', 'anilist_id, content_hash, resolved_hash, resolved_at, changed_at')).map((r) => [r.anilist_id, r]));
+  const debtCompsBy = new Map<string, { anilistId: number; ranged: boolean }[]>();
+  for (const c of debtComps) debtCompsBy.set(c.series_id, [...(debtCompsBy.get(c.series_id) ?? []), { anilistId: c.anilist_id, ranged: c.episode_start != null }]);
+  const resolveDebtLines: string[] = [];
+  for (const s of debtSeries) {
+    const inp = resolveInputsOf({ id: s.id, aflSlug: s.afl_slug, headId: s.anilist_id, comps: debtCompsBy.get(s.id) ?? [] });
+    const rows = inp.inputs.map((id) => { const st = debtStaged.get(id); return { anilistId: id, contentHash: st?.content_hash ?? null, resolvedHash: st?.resolved_hash ?? null, changedAt: st?.changed_at ?? null }; });
+    for (const r of resolveDebt(rows, new Date())) resolveDebtLines.push(`${s.id}: anilist ${r.anilistId} staged ${String(r.changedAt ?? '?').slice(0, 10)} is not what the row was resolved from (resolved ${String(debtStaged.get(r.anilistId)?.resolved_at ?? 'never').slice(0, 10)}) — run refresh-anilist.ts (G58)`);
+  }
+  // the airing work-lists (2026-09-06): the halo's airing / announced TV-shaped candidates, airing first then popularity; the seed lists' airing / upcoming rows in list order
+  const isLive = (st: string | null | undefined) => st === 'RELEASING' || st === 'NOT_YET_RELEASED';
+  const haloAiring = [...classes.halo_sequel_unclaimed, ...classes.halo_series_unclaimed].filter((c) => isLive(c.status)).sort((a, b) => Number(b.status === 'RELEASING') - Number(a.status === 'RELEASING') || b.popularity - a.popularity);
+  const airingRank = (x: Seed) => Math.min(Infinity, ...x.lists.filter((l) => l.list.startsWith('airing-') || l.list.startsWith('upcoming-')).map((l) => l.rank));
+  const seedAiring = seeds.filter((x) => airingRank(x) < Infinity || isLive(x.status)).sort((a, b) => Number(b.status === 'RELEASING') - Number(a.status === 'RELEASING') || airingRank(a) - airingRank(b) || b.popularity - a.popularity);
   const lines: Record<string, string[]> = {
 
     halo_sequel_unclaimed: classes.halo_sequel_unclaimed.map(candidateLine),
@@ -146,6 +164,9 @@ async function main() {
     discovery_ruled_unbuilt: classes.discovery_ruled_unbuilt.map((r) => `anilist ${r.anilistId}: ruled series${r.ruling.slug ? ` as ${r.ruling.slug}` : ''} but no series owns it — the seed writer has not run (I42)${r.candidate ? ` · ${r.candidate.title}` : ''}`),
     discovery_ruling_stale: classes.discovery_ruling_stale.map((r) => `anilist ${r.anilistId}: ${r.why} (P24 — re-rule or retire the entry)`),
     seed_candidate: seeds.map(seedLine),
+    anilist_resolve_debt: resolveDebtLines,
+    halo_airing: haloAiring.map(candidateLine),
+    seed_airing: seedAiring.map(seedLine),
   };
   for (const [k, v] of Object.entries(lines)) {
     console.log(`\n${k}: ${v.length}${censusKindMark(k)}`);

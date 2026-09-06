@@ -5,8 +5,11 @@
 // hash-gated so unchanged media cost nothing. Event healer (rosters.ts):
 // trigger = any MEDIA_FIELDS change in lib/anilist.ts (T4.1 2026-08-26 added
 // relation-node countryOfOrigin, which deriveSourceKind needs to tell manga
-// from manhwa / manhua). Does NOT re-resolve: the healers that read staging
-// (heal-source-kinds) run next.
+// from manhwa / manhua). Does NOT re-resolve — it leaves a RESOLVE DEBT by design
+// (content_hash moves, resolved_hash stays; G58 amended 2026-09-06): run
+// scripts/ingest/refresh-anilist.ts next, the same day, then the healers that read
+// staging (heal-source-kinds). Before the debt existed a restage silently swallowed
+// every change between a series' last resolve and the restage (one-piece, 2026-09-03).
 //   npx tsx --env-file=.env.ingest scripts/ingest/anilist-restage.ts
 
 import { db, finishRun, selectAll, startRun } from './lib/db';

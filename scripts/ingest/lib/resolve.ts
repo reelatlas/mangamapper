@@ -271,6 +271,7 @@ export async function refreshStitchedVolatile(seriesId: string) {
       updated_at: new Date().toISOString(),
     })
     .eq('id', seriesId);
+  await stampResolved(comps.map((c) => c.anilist_id)); // G58: the volatile fields were derived from these components as staged now
 }
 
 // The identity registry (data-pipeline.md): external ids map INTO our id.
@@ -395,13 +396,6 @@ export async function stageAfl(
 /** G58: the structural hash — the one change decision every AniList writer uses (the edge, anilist-restage). */
 export const aniListHash = (media: AniListMedia): string => contentHash(aniListStructural(media));
 
-/** G58: read-only — has this media's STRUCTURE changed since staging? (the edge decides its budget before writing anything) */
-export async function aniListChanged(media: AniListMedia): Promise<boolean> {
-  const { data: prev, error } = await db.from('ingest_anilist_media').select('content_hash').eq('anilist_id', media.id).maybeSingle();
-  if (error) throw new Error(`aniListChanged read (${media.id}): ${error.message}`);
-  return prev?.content_hash !== aniListHash(media);
-}
-
 export async function stageAniList(media: AniListMedia): Promise<StageOutcome> {
   const hash = aniListHash(media);
   const { data: prev, error: readErr } = await db
@@ -424,6 +418,23 @@ export async function stageAniList(media: AniListMedia): Promise<StageOutcome> {
   });
   if (error) throw new Error(`stageAniList write (${media.id}): ${error.message}`);
   return 'changed';
+}
+
+/**
+ * G58 (amended 2026-09-06): the series row was just DERIVED from these media as staged now —
+ * copy content_hash → resolved_hash and stamp resolved_at. Only the resolvers call this
+ * (resolveSeries for the head it read, refreshStitchedVolatile for the ranged components),
+ * so a restage that stages without resolving leaves content_hash ≠ resolved_hash — the
+ * RESOLVE DEBT the refresh loop clears (lib/anilist-refresh.ts) and anilist_resolve_debt lists.
+ */
+export async function stampResolved(ids: number[]): Promise<void> {
+  if (!ids.length) return;
+  const rows = await selectAll<{ anilist_id: number; content_hash: string | null }>('ingest_anilist_media', 'anilist_id, content_hash', (q) => q.in('anilist_id', ids));
+  const now = new Date().toISOString();
+  for (const r of rows) {
+    const { error } = await db.from('ingest_anilist_media').update({ resolved_hash: r.content_hash, resolved_at: now }).eq('anilist_id', r.anilist_id);
+    if (error) throw new Error(`stampResolved (${r.anilist_id}): ${error.message}`);
+  }
 }
 
 export const STATUS_MAP: Record<string, string> = {
@@ -543,6 +554,7 @@ export async function resolveSeries(runId: number, slug: string): Promise<{ epis
       const srcMax = translatedMax(existing.id, page.episodes, 'afl', SOURCE_NUMBERING_SHIFTS);
       await syncMintedRows(existing.id, stitchedRows, 'afl', Math.max(ourPageMax, srcMax));
       await db.from('series').update({ updated_at: new Date().toISOString() }).eq('id', existing.id);
+      await stampResolved([map.anilist_id]); // G58: the rows were derived from the head as staged now
       return { episodes: stitchedRows.length, flagged: false };
     }
   }
@@ -711,5 +723,6 @@ export async function resolveSeries(runId: number, slug: string): Promise<{ epis
   });
   if (e7) throw new Error(`component (${slug}): ${e7.message}`);
 
+  await stampResolved([map.anilist_id]); // G58: the row was derived from the head as staged now
   return { episodes: rows.length, flagged };
 }
