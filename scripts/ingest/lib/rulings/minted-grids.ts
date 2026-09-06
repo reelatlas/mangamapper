@@ -177,6 +177,47 @@ export const ENTRIES: RulingEntry<MintedGrid>[] = [
     ruledOn: '2026-09-06',
     cite: ['scripts/ingest/research/discovery/out/grid__tokyo-babylon.json'],
   },
+  // ---- the Prince of Tennis National Tournament chain as its OWN series (2026-09-06): 26 rows, the platforms' continuous numbering; types canon-tier default (typesRuled absent → the series stays STAGED until the standing programme types it, P39)
+  {
+    seriesId: 'the-prince-of-tennis-national-tournament',
+    ruleId: 'G59',
+    value: {
+      source: "the step-2 rows pass (2026-09-06; research/discovery/out/grid__the-prince-of-tennis-national-tournament.json): licensor: http://tenipuri.jp/dvd_bd/01/ · licensor: http://tenipuri.jp/dvd_bd/01/01.html · licensor: http://tenipuri.jp/dvd_bd/tenipuri/02/vol-1-%e3%80%8c%e5%9b%9b%e5%a4%a9%e5%ae%9d%e5%af%bavs%e4%b8%8d%e5%8b%95%e5%b3%b0%e3%80%8d-%e3%80%8c%e5%92%86%e5%93%ae%e3%80%8d.html · licensor: http://tenipuri.jp/dvd_bd/02/02.html",
+      rows: [
+        { number: 1, title: "Kaettekita Ouji-sama", air_date: "2006-03-24", type: 'canon' },
+        { number: 2, title: "Hot & Cool", air_date: "2006-05-26", type: 'canon' },
+        { number: 3, title: "The fourth counter", air_date: "2006-05-26", type: 'canon' },
+        { number: 4, title: "Kikumaru Hitoribocchi", air_date: "2006-07-28", type: 'canon' },
+        { number: 5, title: "Ichiban Nagai Natsu", air_date: "2006-07-28", type: 'canon' },
+        { number: 6, title: "Koroshiya to Yobareru Otoko", air_date: "2006-09-22", type: 'canon' },
+        { number: 7, title: "Beach Volley no Ouji-sama!?", air_date: "2006-09-22", type: 'canon' },
+        { number: 8, title: "Arashi no Yokan", air_date: "2006-11-24", type: 'canon' },
+        { number: 9, title: "Orenai Kokoro", air_date: "2006-11-24", type: 'canon' },
+        { number: 10, title: "Tanki Kessen", air_date: "2007-01-26", type: 'canon' },
+        { number: 11, title: "Tezuka Kunimitsu", air_date: "2007-01-26", type: 'canon' },
+        { number: 12, title: "Futari", air_date: "2007-03-23", type: 'canon' },
+        { number: 13, title: "Shitou - Teiou VS Ouji-sama", air_date: "2007-03-23", type: 'canon' },
+        { number: 14, title: "Shitenhouji VS Fudoumine", air_date: "2007-06-22", type: 'canon' },
+        { number: 15, title: "Houkou", air_date: "2007-06-22", type: 'canon' },
+        { number: 16, title: "Owarai Tennis no Kyoufu", air_date: "2007-09-25", type: 'canon' },
+        { number: 17, title: "Seigaku no Onimotsu", air_date: "2007-09-25", type: 'canon' },
+        { number: 18, title: "Futatsu no Tobira", air_date: "2008-01-25", type: 'canon' },
+        { number: 19, title: "Ikkyuu Shoubu!", air_date: "2008-01-25", type: 'canon' },
+        { number: 20, title: "Yakiniku no Ouji-sama", air_date: "2008-04-25", type: 'canon' },
+        { number: 21, title: "Choujou Taiketsu!", air_date: "2008-07-25", type: 'canon' },
+        { number: 22, title: "Ore-tachi no Yarikata", air_date: "2008-07-25", type: 'canon' },
+        { number: 23, title: "Mahiru ni Hoshi wa Mieru ka!?", air_date: "2008-10-24", type: 'canon' },
+        { number: 24, title: "Kokoro wo Hitotsu ni", air_date: "2008-10-24", type: 'canon' },
+        { number: 25, title: "Saishuu Kessen! Ouji-sama VS Kami no Ko", air_date: "2009-01-23", type: 'canon' },
+        { number: 26, title: "Dear Prince ~Tennis no Ouji-sama-tachi e~", air_date: "2009-01-23", type: 'canon' },
+      ],
+    },
+    reason:
+      "The Tennis own-series sitting (Sean 2026-09-06, with Cursor: the key is what the sources print — 1-26, the Lost Canvas shape; I42 ii): a series minted from a declaration with no rows AFL or the wiki finder can serve (the OVA lists sit inside the parent's episode page) (The run's OWN continuous 1-26 across the three entries in release order (995 全国大会篇 = rows 1-13, 2752 Semifinal = rows 14-19, 4053 Final = rows 20-26) — Sean's ruling of 2026-09-06, and the scheme the platforms print: dアニメストア numbers the chain Episode 1-13 / 14-19 / 20-26 across its three work pages and en-WP heads its three OVA tables 'Episodes 1–13' / 'Episodes 14–19' / 'Episode 20–26'. The LICENSOR numbers each set from its own beginning instead — tenipuri.jp's DVD pages print 'Episode 1' again at the head of Semifinal and again after the Final's opener, and its Blu-ray BOX pages print 第1話…第13話, 第1話…第6話 and, for the Final, 第0話…第6話 — so the Final's opener 「焼肉の王子様」 is the licensor's 第0話 and this grid's row 20. Never the parent TV series' 178-episode count. Dates are the first Japanese release of each episode = its DVD volume's on-sale date, so the twelve two-episode discs give twelve pairs of rows the same date.); the grid's rows are release facts on two source tiers — types default canon-tier (T27) until the standing programme researches them.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-06',
+    cite: ['scripts/ingest/research/discovery/out/grid__the-prince-of-tennis-national-tournament.json'],
+  },
 ];
 
 export const MINTED_GRIDS: Record<string, MintedGrid> = toRecord(ENTRIES);
