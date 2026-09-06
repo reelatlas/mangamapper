@@ -1063,6 +1063,15 @@ export const ENTRIES: RulingEntry<FranchiseMembership>[] = [
     cite: ['scripts/ingest/research/discovery/EXTRAS-SITTING.md §6.3'],
   },
   {
+    seriesId: 'ghost-in-the-shell-2026',
+    ruleId: 'I43',
+    value: { franchise: 'ghost-in-the-shell' },
+    reason: "C1 (2026-09-06): THE GHOST IN THE SHELL (2026, Science SARU) minted as a series alternative to the base (Stand Alone Complex) — the membership is ruled with the seed so the row lands in the franchise at creation.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-06',
+    cite: ['scripts/ingest/lib/rulings/discovery.ts (anilist:177699)'],
+  },
+  {
     seriesId: 'ghost-in-the-shell-1995',
     ruleId: 'I43',
     value: { franchise: 'ghost-in-the-shell' },

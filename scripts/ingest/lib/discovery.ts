@@ -249,6 +249,9 @@ export function haloCandidates(input: DiscoveryInput): Candidate[] {
 
   for (const c of out.values()) {
     c.bucket = bucketOf(c.relations, c.format);
+    // a related_work RULING beats the format (2026-09-06, C1): an ONA short series is TV-shaped by SERIES_FORMATS and proposed `series`;
+    // ruled a related work it is an EXTRA of its owner — the Frieren ●● no Mahou shorts — never a series to build
+    if (c.ruling?.disposition === 'related_work' && (c.bucket === 'sequel' || c.bucket === 'series')) c.bucket = 'extra';
     const s: string[] = [];
     if (c.format == null) s.push('format unknown');
     if (c.hop > 1) s.push(`hop ${c.hop} via ${c.via}`);
@@ -280,7 +283,8 @@ export function haloCandidates(input: DiscoveryInput): Candidate[] {
       const ownerManga = ownerIds.map((o) => input.ownerManga.get(o) ?? null).find((m) => m != null) ?? null;
       const media = (input.staged.get(c.anilistId) as never) ?? null;
       const ownerSet = { mangaId: ownerManga, chainWorkIds: ownerIds.flatMap((o) => input.chainWorks?.get(o) ?? []), instrumentIds: ownerIds.flatMap((o) => [...(input.ownerInstruments?.get(o) ?? [])]) };
-      const b = extraBucket(c.relations, media, ownerSet, c.title);
+      const ruledBucket = c.ruling?.disposition === 'related_work' && c.ruling.bucket && c.ruling.bucket !== 'alternative' ? c.ruling.bucket : null; // a ruling's declared bucket beats the derivation (2026-09-06, C1: the Frieren shorts' Part 1 read 'unknown')
+      const b = ruledBucket ?? extraBucket(c.relations, media, ownerSet, c.title);
       c.proposal = b;
       const adapts = adaptedNodes(media, ownerInstrumentSet(ownerSet));
       if (adapts.length) s.push(`adapts ${adapts.map((n) => `${n.title ?? n.id} (${n.format ?? '?'})`).join(', ')}`);

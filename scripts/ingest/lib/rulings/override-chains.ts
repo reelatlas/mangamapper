@@ -350,7 +350,59 @@ export const ENTRIES: RulingEntry<OverrideChain>[] = [
     cite: ['scripts/ingest/research/discovery/PROPOSAL.md §9 row 4', 'docs/changelog.md §12.124'],
     retiresWhen: 'S5 (anilist 199185) is dated — add it to ids',
   },
+  // ── C1 — the first AIRING /discover sitting (Sean 2026-09-06 with Cursor: 'C1 as proposed, except Frieren shorts'): the airing
+  //    sequels of held series as I27 ruled extensions; an owner with NO AFL page is keyed by its SERIES ID (stitch.ts, 2026-09-06)
+  {
+    seriesId: 're-zero-starting-life-another-world',
+    ruleId: 'I27',
+    value: { ids: [21355, 108632, 119661, 163134, 189046], ruledExtent: "AFL page stops at S2 Part 2 (50 rows); S3 (163134, 16 eps, 2024-10 → 2025-03, our 51-66) aired and S4 (189046, 19 eps, airing since 2026-04-08, our 67-85) is airing — S3 joins FIRST in the same extension: never S4 over an S3 hole (Cursor)" },
+    reason: "C1 (2026-09-06): halo_airing — SEQUEL hop 2 via 163134, season ordinal; Sean: component of re-zero, the chain gains S3 then S4 in one I27 extension.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-06',
+    cite: ['audit-discovery halo_airing (2026-09-06)', 'scripts/ingest/research/discovery/recap.ts --scope sequel,series --airing (2026-09-06)'],
+    retiresWhen: 'AFL lists S3 / S4 (the page reaches 85) — the walk then derives the chain',
+  },
+  {
+    seriesId: 'sage-tanya-evil',
+    ruleId: 'I27',
+    value: { ids: [21613, 135865], ruledExtent: "AFL page = S1 (12 rows); S2 (135865, 12 eps, airing since 2026-07-08, our 13-24) is airing. The 2019 film (100878) stays the ledger's extra between them (mixed, LN vol 4 — the wave 3 ruling), never a component: the SEQUEL walk passes through it, the ruled ids skip it" },
+    reason: "C1 (2026-09-06): halo_airing — SEQUEL hop 2 via the film, season ordinal; Sean: component; the film keeps its ruled ledger row (I46 one row per work).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-06',
+    cite: ['audit-discovery halo_airing (2026-09-06)', 'scripts/ingest/research/discovery/recap.ts --scope sequel,series --airing (2026-09-06)'],
+    retiresWhen: 'AFL lists S2 (the page reaches 24) — the walk then derives the chain (the film as an order-only hop it skips)',
+  },
+  {
+    seriesId: 'you-and-i-are-polar-opposites',
+    ruleId: 'I27',
+    value: { ids: [184951, 210031], ruledExtent: "NO AFL page (an AFG-era owner, keyed by series id); S2 (210031, 13 eps, airing since 2026-07-05, our 13-25) is airing — rows from the wiki writer (G59 A) / AFG" },
+    reason: "C1 (2026-09-06): halo_airing — SEQUEL, season ordinal; Sean: component.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-06',
+    cite: ['audit-discovery halo_airing (2026-09-06)', 'scripts/ingest/research/discovery/recap.ts --scope sequel,series --airing (2026-09-06)'],
+    retiresWhen: 'an AFL page appears (I44 adoption) — then keyed by its slug',
+  },
+  {
+    seriesId: 'welcome-to-demon-school-iruma-kun',
+    ruleId: 'I27',
+    value: { ids: [107693, 116338, 139092, 184492], ruledExtent: "NO AFL page (keyed by series id); S4 (184492, 24 eps, airing since 2026-04-04, our 66-89) is airing — rows from the wiki writer (G59 A) / AFG" },
+    reason: "C1 (2026-09-06): halo_airing — SEQUEL, season ordinal; Sean: component.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-06',
+    cite: ['audit-discovery halo_airing (2026-09-06)', 'scripts/ingest/research/discovery/recap.ts --scope sequel,series --airing (2026-09-06)'],
+    retiresWhen: 'an AFL page appears (I44 adoption) — then keyed by its slug',
+  },
+  {
+    seriesId: 'the-100-girlfriends-who-really-really-really-really-really-love-you',
+    ruleId: 'I27',
+    value: { ids: [162694, 172258, 200637], ruledExtent: "NO AFL page (keyed by series id); S3 (200637, 12 eps, 2026-07-05 → 09-20, our 25-36) is airing — rows from the wiki writer (G59 A) / AFG" },
+    reason: "C1 (2026-09-06): halo_airing — SEQUEL, season ordinal; Sean: component.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-06',
+    cite: ['audit-discovery halo_airing (2026-09-06)', 'scripts/ingest/research/discovery/recap.ts --scope sequel,series --airing (2026-09-06)'],
+    retiresWhen: 'an AFL page appears (I44 adoption) — then keyed by its slug',
+  },
 ];
 
-/** stitch.ts consumer shape: afl_slug → chain */
+/** stitch.ts consumer shape: afl_slug (or the series id of a no-AFL ruled extension, 2026-09-06) → chain */
 export const OVERRIDE_CHAINS: Record<string, OverrideChain> = toRecord(ENTRIES);

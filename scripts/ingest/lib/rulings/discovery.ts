@@ -520,6 +520,56 @@ export const CANDIDATE_ENTRIES: RulingEntry<DiscoveryRuling>[] = [
     ruledOn: '2026-09-06',
     cite: ['scripts/ingest/research/discovery/out/the-prince-of-tennis__995.json', 'scripts/ingest/research/discovery/out/the-prince-of-tennis__2752.json', 'scripts/ingest/research/discovery/out/the-prince-of-tennis__4053.json', 'scripts/ingest/research/discovery/verify/the-prince-of-tennis__995.md'],
   },
+  // ── C1 — the first AIRING sitting (Sean 2026-09-06 with Cursor: 'C1 as proposed, except Frieren shorts') ──
+  {
+    seriesId: 'anilist:177699',
+    ruleId: 'I13',
+    value: { disposition: 'series', chain: [177699], relation: { to: 'ghost-in-the-shell-stand-alone-complex', kind: 'alternative' }, slug: 'ghost-in-the-shell-2026', franchise: 'ghost-in-the-shell' },
+    reason:
+      "C1 (2026-09-06): THE GHOST IN THE SHELL (Science SARU, TV, 10 eps, 2026-07-07 → 09-08) is a new adaptation of the original manga (31023 — the same instrument as Stand Alone Complex): a SERIES, alternative to the franchise base, never a component of SAC — the 1995 film's shape (I16: same manga is no signal against a split). The slug carries the year like ranma1-2-2024 / rurouni-kenshin-2023.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-06',
+    cite: ['audit-discovery halo_airing (2026-09-06)', 'scripts/ingest/research/discovery/recap.ts --scope sequel,series --airing (2026-09-06)'],
+  },
+  {
+    seriesId: 'anilist:206425',
+    ruleId: 'I13',
+    value: { disposition: 'related_work', owner: 'frieren-beyond-journeys-end', bucket: 'original' },
+    reason:
+      "C1 (2026-09-06, Cursor's correction): ●● no Mahou Part 3 (ONA, one-minute comedy shorts, source ORIGINAL, airing since 2026-01-19) proposed `series` only because ONA is TV-shaped in the halo; the work is I13 — an EXTRA of Frieren (a ledger row, filler by rule: original), revisited with the extras programme, never phase B. The ruling beats the format (lib/discovery.ts, 2026-09-06).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-06',
+    cite: ['audit-discovery halo_airing (2026-09-06)', 'scripts/ingest/research/discovery/recap.ts --scope sequel,series --airing (2026-09-06)'],
+  },
+  {
+    seriesId: 'anilist:189513',
+    ruleId: 'I13',
+    value: { disposition: 'related_work', owner: 'frieren-beyond-journeys-end', bucket: 'original' },
+    reason: "C1 (2026-09-06): ●● no Mahou Part 2 (ONA, 6 shorts, 2025-04-02) — the same work's earlier part, one row per AniList id (I46), the same ruling as Part 3 (P9: one shape, every part).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-06',
+    cite: ['audit-discovery halo_airing (2026-09-06)', 'scripts/ingest/research/discovery/recap.ts --scope sequel,series --airing (2026-09-06)'],
+  },
+  {
+    seriesId: 'anilist:170068',
+    ruleId: 'I13',
+    value: { disposition: 'related_work', owner: 'frieren-beyond-journeys-end', bucket: 'original' },
+    reason: "C1 (2026-09-06): ●● no Mahou (Part 1: ONA, 12 shorts) — the same work's first part, one row per AniList id (I46), the same ruling as Part 3 (P9).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-06',
+    cite: ['audit-discovery halo_airing (2026-09-06)', 'scripts/ingest/research/discovery/recap.ts --scope sequel,series --airing (2026-09-06)'],
+  },
+  {
+    seriesId: 'anilist:188388',
+    ruleId: 'I13',
+    value: { disposition: 'deferred', slug: 'digimon-beatbreak', franchise: 'digimon' },
+    reason:
+      "DEFERRED 2026-09-06 (C1, Cursor): DIGIMON BEATBREAK (TV, airing since 2025-10-05, 46 eps aired, source ORIGINAL; PARENT → 552 Digimon Adventure, held as digimon-digital-monsters) — the relation exists and the writer would take it; the wait is the NO-INSTRUMENT shape (phase B: source_type as AniList states it, canon rows, no instrument, the studio-original label, an explicit publish ruling), never the gate.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-06',
+    cite: ['audit-discovery halo_airing (2026-09-06)', 'scripts/ingest/research/discovery/recap.ts --scope sequel,series --airing (2026-09-06)'],
+    retiresWhen: 'phase B lands (the no-instrument record) — then a series ruling at the next sitting',
+  },
 ];
 
 /** the rulings index reads ENTRIES (lib/rulings/index.ts) */
@@ -538,6 +588,7 @@ export const DISCOVERY_RULINGS: Record<number, DiscoveryRuling> = Object.fromEnt
 
 /** the sitting log — the last entry's date is what discovery_new_since_sitting reads */
 export const SITTINGS: { on: string; scope: string; note: string }[] = [
+  { on: '2026-09-06T21:51:34Z', scope: 'C1 — the first AIRING sitting (halo_airing, RELEASING first; Sean 2026-09-06 with Cursor): five season ordinals as I27 ruled extensions (re-zero S3 + S4, Tanya S2, Polar Opposites S2, Iruma-kun S4, 100 Girlfriends S3 — three on no-AFL owners keyed by series id), THE GHOST IN THE SHELL 2026 as a series (alternative to SAC), the Frieren ●● no Mahou shorts (three parts) as ledger extras by ruling, DIGIMON BEATBREAK deferred to phase B', note: 'the staging run before it: the weekly refresh-discovery of 2026-09-06 10:30 UTC (AniList was disabled site-wide afterwards — no restage possible; all eight candidates were already staged)' },
   { on: '2026-09-06T07:20:31Z', scope: 'the step-2 film mint sitting (I13 b/d/e/f): 26 series minted from the (d) declarations + the picks pass (Sean 2026-09-06, Cursor\'s three corrections) — 12 one-row films / specials, 3 two-entry film series, 11 episodic OVA runs; the strange Fake prologue and the Oz picture drama deferred; four not-mints ruled as extras', note: 'the seed dry run read in chat (26 CREATE, 0 HELD); Sean: walk the Oshii films as one series' },
   { on: '2026-09-05T06:34:00Z', scope: 'the three witness promotions (go-list row 4): shield hero S2-S4 as an OVERRIDE_CHAINS ruled extension; trigun stampede + konosuba explosion as series rulings', note: 'the first sitting; the rest of the 267 TV-shaped candidates wait for /discover; the halo was staged 2026-09-05 before this timestamp' },
 ];

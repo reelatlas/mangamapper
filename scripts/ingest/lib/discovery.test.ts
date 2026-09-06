@@ -192,3 +192,16 @@ describe('the skip-split (I13 amended 2026-09-05, E9): owned by THIS owner never
     expect(by(138)).toBeUndefined(); expect(by(136)).toBeUndefined();
   });
 });
+
+describe('a related_work ruling beats the format (2026-09-06, C1 — the Frieren ●● no Mahou shorts)', () => {
+  it('an ONA SIDE_STORY ruled a related work is an EXTRA candidate, never a series to build; unruled it proposes series', () => {
+    const owner = media(1, 'Frieren', { edges: [anime('SIDE_STORY', 2, 'Frieren: ●● no Mahou Part 3', 'ONA', 'RELEASING')] });
+    const shorts = media(2, 'Frieren: ●● no Mahou Part 3', { format: 'ONA', status: 'RELEASING', source: 'ORIGINAL', edges: [anime('PARENT', 1, 'Frieren')] });
+    const ruled = input({ owned: new Map([[1, 'frieren']]), staged: new Map([[1, owner], [2, shorts]]), ownerTitles: new Map([['frieren', ['Frieren']]]), rulings: { 2: { disposition: 'related_work', owner: 'frieren', bucket: 'original' } } });
+    const c = haloCandidates(ruled).find((x) => x.anilistId === 2)!;
+    expect(c.bucket).toBe('extra');
+    expect(discoveryClasses(haloCandidates(ruled), ruled, null).halo_series_unclaimed.map((x) => x.anilistId)).not.toContain(2);
+    const unruled = input({ owned: new Map([[1, 'frieren']]), staged: new Map([[1, owner], [2, shorts]]), ownerTitles: new Map([['frieren', ['Frieren']]]) });
+    expect(haloCandidates(unruled).find((x) => x.anilistId === 2)!.bucket).toBe('series');
+  });
+});

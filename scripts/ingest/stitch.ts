@@ -12,7 +12,9 @@
 // to COVER AFL's numbering (the ruling covers the excess). Episode rows
 // MERGE (AFL's range rewritten, rows beyond it — Wikipedia/AFG fills —
 // survive; §10 AFL-range merge rule), id/title stay stable (structure only).
-//   npx tsx --env-file=.env.ingest scripts/ingest/stitch.ts [--dry-run] [--only <afl-slug>]
+//   npx tsx --env-file=.env.ingest scripts/ingest/stitch.ts [--dry-run] [--only <afl-slug | series-id>]
+// A ruled extension whose owner has NO AFL page is keyed by the SERIES ID (2026-09-06, the C1 airing sitting): the chain is
+// the ruling, nothing of AFL's merges, the rows come from the wiki writer (G59 A) or AFG.
 
 import { db, selectAll, startRun, finishRun, fileFlagOnce } from './lib/db';
 import { type AniListMedia } from './lib/anilist';
@@ -40,7 +42,8 @@ const ONLY = process.argv.indexOf('--only') > 0 ? process.argv[process.argv.inde
 // the ruled component sequence (seasons + extras in order) — aired-count
 // drift on an airing tail is refreshStitchedVolatile's job, not a re-stitch.
 async function structureMatches(slug: string, ids: number[], extras?: { id: number; after: number }[]): Promise<boolean> {
-  const { data: s } = await db.from('series').select('id').eq('afl_slug', slug).maybeSingle();
+  const { data: bySlug } = await db.from('series').select('id').eq('afl_slug', slug).maybeSingle();
+  const s = bySlug ?? (await db.from('series').select('id').eq('id', slug).maybeSingle()).data; // a no-AFL ruled extension is keyed by the series id (2026-09-06)
   if (!s) return false;
   const comps = await selectAll<{ anilist_id: number; season_order: number; episode_start: number | null }>('series_components', 'anilist_id, season_order, episode_start', (q) =>
     q.eq('series_id', s.id).order('season_order'),
@@ -95,19 +98,24 @@ async function main() {
 
     for (const cand of candidates) {
       try {
+      const override = OVERRIDE_CHAINS[cand.slug];
+      const ruled = !!override?.ruledExtent;
       const { data: map } = await db
         .from('source_map')
         .select('anilist_id, disposition')
         .eq('afl_slug', cand.slug)
         .maybeSingle();
-      if (!map?.anilist_id || map.disposition !== 'active') continue;
       const { data: aflRow } = await db.from('ingest_afl_shows').select('raw').eq('slug', cand.slug).maybeSingle();
-      if (!aflRow) continue;
-      const page = aflRow.raw as AflShowPage;
-      const aflMax = page.episodes.reduce((m, e) => Math.max(m, e.number), 0);
-
-      const override = OVERRIDE_CHAINS[cand.slug];
-      const ruled = !!override?.ruledExtent;
+      // A RULED EXTENSION ON A SERIES WITH NO AFL PAGE (2026-09-06, the C1 airing sitting — Iruma-kun, 100 Girlfriends, Polar
+      // Opposites: seeded / AFG-only owners whose new season is ruled): the key is the SERIES ID, the chain is the ruling, and
+      // there is nothing of AFL's to merge — the rows come from the wiki writer (G59 A) or AFG. The walked path keeps its guards.
+      const noAfl = ruled && !aflRow;
+      if (!noAfl) {
+        if (!map?.anilist_id || map.disposition !== 'active') continue;
+        if (!aflRow) continue;
+      }
+      const page = noAfl ? null : (aflRow!.raw as AflShowPage);
+      const aflMax = page ? page.episodes.reduce((m, e) => Math.max(m, e.number), 0) : 0;
       let chain: AniListMedia[];
       let ambiguity: string | null = null;
       if (override) {
@@ -118,7 +126,7 @@ async function main() {
         // canonical series already claims (ruled splits stay split)
         const { data: self } = await db.from('series').select('id').eq('afl_slug', cand.slug).maybeSingle();
         const owned = await ownedAnilistIds(self?.id ?? '__none__');
-        ({ chain, ambiguity } = await walkChain(map.anilist_id, aflMax, owned));
+        ({ chain, ambiguity } = await walkChain(map!.anilist_id, aflMax, owned));
       }
       const chainAired = chain.reduce((s, m) => s + aired(m), 0);
 
@@ -146,12 +154,14 @@ async function main() {
 
       // finalize: stage chain, re-key series, components with ranges
       for (const m of chain) await stageAniList(m);
-      const series = aggregate(chain, cand.slug, page.title);
+      const series = aggregate(chain, noAfl ? null : cand.slug, page?.title ?? chain[0]?.title?.romaji ?? cand.slug);
       if (override?.title) {
         series.title = override.title;
         series.id = slugify(override.title);
       }
-      const { data: old } = await db.from('series').select('id, title').eq('afl_slug', cand.slug).maybeSingle();
+      const { data: old } = noAfl
+        ? await db.from('series').select('id, title').eq('id', cand.slug).maybeSingle()
+        : await db.from('series').select('id, title').eq('afl_slug', cand.slug).maybeSingle();
       // a ruled extension is structure only: the canonical id/title an
       // existing series already carries are stable (afg-extend's rule)
       if (ruled && old) {
@@ -162,7 +172,7 @@ async function main() {
       const ourMax = Math.max(aflMax, topRow?.[0]?.number ?? 0);
       if (DRY_RUN) {
         actions.push(
-          `DRY ${ruled ? 'EXTEND' : 'STITCH'} ${cand.slug} → ${series.id}: ${chain.length} seasons, ${chainAired} eps vs afl ${aflMax} (${chain.map((m) => m.id).join(' → ')})${override?.extras?.length ? ` + ${override.extras.length} order-only` : ''}`,
+          `DRY ${ruled ? 'EXTEND' : 'STITCH'} ${cand.slug} → ${series.id}: ${chain.length} seasons, ${chainAired} eps vs ${noAfl ? `no AFL page (stored max ${ourMax})` : `afl ${aflMax}`} (${chain.map((m) => m.id).join(' → ')})${override?.extras?.length ? ` + ${override.extras.length} order-only` : ''}`,
         );
         continue;
       }
@@ -180,12 +190,13 @@ async function main() {
       if (old && old.id !== series.id) await db.from('series').delete().eq('id', old.id);
       const { error: e1 } = await db.from('series').upsert(series);
       if (e1) throw new Error(`series (${cand.slug}): ${e1.message}`);
-      await registerIds(series.id, { anilist: series.anilist_id, mal: series.mal_id, afl: cand.slug });
+      await registerIds(series.id, { anilist: series.anilist_id, mal: series.mal_id, afl: noAfl ? null : cand.slug });
+      if (!noAfl) {
 
       // every episode writer goes through the per-series rulings (community
       // caps + type overrides) — a re-stitch must never resurrect rows or
       // types a ruling removed
-      const epRows = filterEpisodeRows(series.id, page.episodes.map((e) => ({
+      const epRows = filterEpisodeRows(series.id, page!.episodes.map((e) => ({
         series_id: series.id,
         number: e.number,
         title: e.title,
@@ -198,8 +209,9 @@ async function main() {
       const aflTop = epRows.reduce((m, r) => Math.max(m, r.number), 0);
       // G57: the stitcher mints its rows as 'stitch' (upsert + re-stamp) and deletes only its own stale rows ≤ aflTop
       await syncMintedRows(series.id, epRows, 'stitch', aflTop);
+      }
 
-      await writeComponents(series.id, chain, cand.slug, override?.extras);
+      await writeComponents(series.id, chain, noAfl ? null : cand.slug, override?.extras);
 
       if (cand.id != null) {
         await db

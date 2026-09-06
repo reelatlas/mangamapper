@@ -2,12 +2,14 @@
 
 > GENERATED from `scripts/ingest/lib/rulings/**` by `scripts/restructure/gen-rulings.ts` — do not edit by hand. A ruling is an INSTANCE of a rule (`docs/rules.md`); the map is the record, this is the index.
 
-- rulings: 2742 across 360 series/keys · by Sean: 1241 · UNRECORDED reasons: 9 · with a retire condition: 96
+- rulings: 2753 across 369 series/keys · by Sean: 1252 · UNRECORDED reasons: 9 · with a retire condition: 102
 
 ## Retire conditions (re-evaluate when…)
 
 - **A-5 re-check under T8: retype filler if the re-runs add no new canon** — detective-conan (T6)
 - **AFG fixes its continua episode, or the continua→episode conversion gains a chart cross-check (restructure gate candidate)** — you-and-i-are-polar-opposites (G26)
+- **AFL lists S2 (the page reaches 24) — the walk then derives the chain (the film as an order-only hop it skips)** — sage-tanya-evil (I27)
+- **AFL lists S3 / S4 (the page reaches 85) — the walk then derives the chain** — re-zero-starting-life-another-world (I27)
 - **Bousou Ressha-hen (210073) airs — chain gains an id** — golden-kamuy (I27)
 - **D2 lands (Clear-Card-style scoped entries split the multi-manga run)** — fate-kaleid-liner-prisma-illya (G37)
 - **D2 lands** — magic-knight-rayearth (I36)
@@ -43,8 +45,10 @@
 - **T24 build lands (planned)** — * (T24)
 - **T28 the sliver clause ruled (§12.106)** — * (T28)
 - **Zoku-hen (204688) airs — chain gains an id** — kingdom (I27)
+- **an AFL page appears (I44 adoption) — then keyed by its slug** — you-and-i-are-polar-opposites (I27), welcome-to-demon-school-iruma-kun (I27), the-100-girlfriends-who-really-really-really-really-really-love-you (I27)
 - **flips to mixed if the step-stool line is ever confirmed inside ch 166** — beastars (T6)
 - **landed as the N35 chapter-space ruling (chapter-spaces.ts) — check the standing map** — gto-great-teacher-onizuka (N35), zatch-bell (N35)
+- **phase B lands (the no-instrument record) — then a series ruling at the next sitting** — anilist:188388 (I13)
 - **repaired §12.45 (rosario ep 11 9→8)** — rosario-vampire (A3)
 - **the STATUS design pass rules on surfacing — then the label is restored (N32)** — my-hero-academia (N31), my-hero-academia (N31)
 - **the lane-B date pair lands (wave 9, killing-bites-w9)** — killing-bites (G53)
@@ -272,6 +276,12 @@
 |---|---|---|---|---|
 | `I13` | {"disposition":"series","relation":{"to":"detective-conan","kind":"side_story"},"slug":"detective-conan-wild-police-story","franchise":"detective-conan"} | Decision (d) of the extras sitting (Sean 2026-09-05): Meitantei Conan: Keisatsu Gakkou-hen - Wild Police Story CASE. Furuya Rei (SPECIAL 2023) adapts Meitantei Conan: Keisatsu Gakkou-hen - Wild Police Story (AniList manga 112094: MANGA · FINISHED · 13/2 · 957) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of detective-conan. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
 
+### anilist:170068 (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I13` | {"disposition":"related_work","owner":"frieren-beyond-journeys-end","bucket":"original"} | C1 (2026-09-06): ●● no Mahou (Part 1: ONA, 12 shorts) — the same work's first part, one row per AniList id (I46), the same ruling as Part 3 (P9). | Sean 2026-09-06 · audit-discovery halo_airing (2026-09-06), scripts/ingest/research/discovery/recap.ts --scope sequel,series --airing (2026-09-06) |  |
+
 ### anilist:17187 (1)
 
 | rule | value | reason | ruled | retires when |
@@ -284,17 +294,41 @@
 |---|---|---|---|---|
 | `I13` | {"disposition":"deferred","slug":"code-geass-oz-the-reflection","franchise":"code-geass-lelouch-of-the-rebellion"} | DEFERRED 2026-09-06 (the picks pass): a PICTURE DRAMA is not a head work for a series (I13 f); the Oz manga (72381) has no full anime — the picture drama stays a Code Geass extra. Decision (d) of the extras sitting (Sean 2026-09-05): Code Geass: Oz the Reflection Picture Drama (OVA 2013) adapts Code Geass: Soubou no Oz (AniList manga 72381: MANGA · FINISHED · 24/5 · 634) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of code-geass-lelouch-of-the-rebellion. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
 
+### anilist:177699 (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I13` | {"disposition":"series","chain":[177699],"relation":{"to":"ghost-in-the-shell-stand-alone-complex","kind":"alternative"},"slug":"ghost-in-the-shell-2026","fr… | C1 (2026-09-06): THE GHOST IN THE SHELL (Science SARU, TV, 10 eps, 2026-07-07 → 09-08) is a new adaptation of the original manga (31023 — the same instrument as Stand Alone Complex): a SERIES, alternative to the franchise base, never a component of SAC — the 1995 film's shape (I16: same manga is no signal against a split). The slug carries the year like ranma1-2-2024 / rurouni-kenshin-2023. | Sean 2026-09-06 · audit-discovery halo_airing (2026-09-06), scripts/ingest/research/discovery/recap.ts --scope sequel,series --airing (2026-09-06) |  |
+
 ### anilist:182469 (1)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `I13` | {"disposition":"series","relation":{"to":"one-piece","kind":"side_story"},"slug":"one-piece-novel-mugiwara-stories","franchise":"one-piece"} | Decision (d) of the extras sitting (Sean 2026-09-05): ONE PIECE FAN LETTER (SPECIAL 2024) adapts ONE PIECE novel Mugiwara Stories (AniList manga 128291: NOVEL · FINISHED · 9/1 · 629) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of one-piece. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
 
+### anilist:188388 (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I13` | {"disposition":"deferred","slug":"digimon-beatbreak","franchise":"digimon"} | DEFERRED 2026-09-06 (C1, Cursor): DIGIMON BEATBREAK (TV, airing since 2025-10-05, 46 eps aired, source ORIGINAL; PARENT → 552 Digimon Adventure, held as digimon-digital-monsters) — the relation exists and the writer would take it; the wait is the NO-INSTRUMENT shape (phase B: source_type as AniList states it, canon rows, no instrument, the studio-original label, an explicit publish ruling), never the gate. | Sean 2026-09-06 · audit-discovery halo_airing (2026-09-06), scripts/ingest/research/discovery/recap.ts --scope sequel,series --airing (2026-09-06) | phase B lands (the no-instrument record) — then a series ruling at the next sitting |
+
+### anilist:189513 (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I13` | {"disposition":"related_work","owner":"frieren-beyond-journeys-end","bucket":"original"} | C1 (2026-09-06): ●● no Mahou Part 2 (ONA, 6 shorts, 2025-04-02) — the same work's earlier part, one row per AniList id (I46), the same ruling as Part 3 (P9: one shape, every part). | Sean 2026-09-06 · audit-discovery halo_airing (2026-09-06), scripts/ingest/research/discovery/recap.ts --scope sequel,series --airing (2026-09-06) |  |
+
 ### anilist:197178 (1)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `I13` | {"disposition":"series","relation":{"to":"one-piece","kind":"side_story"},"slug":"one-piece-novel-heroines","franchise":"one-piece"} | Decision (d) of the extras sitting (Sean 2026-09-05): ONE PIECE HEROINES (SPECIAL 2026) adapts ONE PIECE novel HEROINES (AniList manga 113686: NOVEL · FINISHED · 10/2 · 987) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of one-piece. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
+
+### anilist:206425 (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I13` | {"disposition":"related_work","owner":"frieren-beyond-journeys-end","bucket":"original"} | C1 (2026-09-06, Cursor's correction): ●● no Mahou Part 3 (ONA, one-minute comedy shorts, source ORIGINAL, airing since 2026-01-19) proposed `series` only because ONA is TV-shaped in the halo; the work is I13 — an EXTRA of Frieren (a ledger row, filler by rule: original), revisited with the extras programme, never phase B. The ruling beats the format (lib/discovery.ts, 2026-09-06). | Sean 2026-09-06 · audit-discovery halo_airing (2026-09-06), scripts/ingest/research/discovery/recap.ts --scope sequel,series --airing (2026-09-06) |  |
 
 ### anilist:20791 (1)
 
@@ -1873,6 +1907,12 @@
 |---|---|---|---|---|
 | `I43` | {"franchise":"ghost-in-the-shell"} | The step-2 picks pass (2026-09-06): a series minted from a (d) declaration (I13 b/d) belongs to its parent's franchise; the membership is ruled with the seed so the row lands in it at creation. | Sean 2026-09-06 · scripts/ingest/lib/rulings/discovery.ts (the declaration) |  |
 
+### ghost-in-the-shell-2026 (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I43` | {"franchise":"ghost-in-the-shell"} | C1 (2026-09-06): THE GHOST IN THE SHELL (2026, Science SARU) minted as a series alternative to the base (Stand Alone Complex) — the membership is ruled with the seed so the row lands in the franchise at creation. | Sean 2026-09-06 · scripts/ingest/lib/rulings/discovery.ts (anilist:177699) |  |
+
 ### ghost-in-the-shell-arise-alternative-architecture (2)
 
 | rule | value | reason | ruled | retires when |
@@ -3355,6 +3395,12 @@
 | `V2` | {"rows":[{"volume":9,"chapter_start":65,"chapter_end":73},{"volume":10,"chapter_start":74,"chapter_end":79}]} | stored v9 "65-14" and v10 "15-79" are corrupt (omake chapter numbering 0014/0015 polluted the parse); true v9=65-73, v10=74-79 per Wikipedia chapter list + fandom chapter pages | session 2026-08-24 · scripts/ingest/research/batch17/out/rave-master.json, scripts/ingest/apply-research-batch-17.ts, §12.42 |  |
 | `T6` | {"41":"mixed"} | Ep 41: filler sites say filler, but its core IS ch 74 (Let joins / Silver Knights) — chapter overlap in an original frame = mixed. | session 2026-08-24 · scripts/ingest/research/batch17/out/rave-master.json |  |
 
+### re-zero-starting-life-another-world (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I27` | {"ids":[21355,108632,119661,163134,189046],"ruledExtent":"AFL page stops at S2 Part 2 (50 rows); S3 (163134, 16 eps, 2024-10 → 2025-03, our 51-66) aired and … | C1 (2026-09-06): halo_airing — SEQUEL hop 2 via 163134, season ordinal; Sean: component of re-zero, the chain gains S3 then S4 in one I27 extension. | Sean 2026-09-06 · audit-discovery halo_airing (2026-09-06), scripts/ingest/research/discovery/recap.ts --scope sequel,series --airing (2026-09-06) | AFL lists S3 / S4 (the page reaches 85) — the walk then derives the chain |
+
 ### reborn (28)
 
 | rule | value | reason | ruled | retires when |
@@ -3557,6 +3603,12 @@
 | `G53` | {"5":"2017-02-03","6":"2017-02-10"} | Batch 19 wave 2 lane B3 (ja-WP + en-WP / syoboi / fandom, 2+ sources per row; the contradictions verified R24; Sean ruled B3-7): ep 5: Episode 5 is 'My First Battalion' (はじまりの大隊), aired 2017-02-03 (Fri 22:00, AT-X). ja-WP 各話リスト 第伍話 = 2月3日; en-WP episode list ep 5 = February 3, 2017; AniList airing schedu \| ep 6: Episode 6 is 'Beginning of Madness' (狂気の幕開け), aired 2017-02-10. ja-WP 第陸話 = 2月10日; en-WP ep 6 = February 10, 2017; AniList = 2017-02-10. Same transposition as ep 5 - swap | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/saga-of-tanya-the-evil.json, https://anilist.co/anime/21613, https://en.wikipedia.org/wiki/List_of_Saga_of_Tanya_the_Evil_episodes, https://ja.wikipedia.org/wiki/%E5%B9%BC%E5%A5%B3%E6%88%A6%E8%A8%98_(%E3%82%A2%E3%83%8B%E3%83%A1), scripts/ingest/research/batch19/verify/b3-contradictions.md |  |
 | `G53` | {"5":"My First Battalion","6":"Beginning of Madness"} | Rows 5 and 6 held each other's title AND date (AFL-inherited): ja-WP 各話リスト 第伍話 はじまりの大隊 2月3日 / 第陸話 狂気の幕開け 2月10日; en-WP agrees. The dates move under AIR_DATE_OVERRIDES; the titles travel with them. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/saga-of-tanya-the-evil.json, scripts/ingest/research/batch19/verify/b3-contradictions.md |  |
 | `I45` | {"anilistId":100878,"standing":"mixed","chapter":null,"volume":4,"chaptersAdapted":"LN vol 4: ch 1-3 in substance (ch 3's Tiegenhoff substantially altered), … | Wave 1 (verified SOUND WITH NOTES, standing corrected to MIXED): ja-WP's 作中の年表 (原作 4巻 / 劇場版 rows), the fandom's vol 4 chapter pages and a reader's dated scene index of the printed volume agree on ch 1-3 + ch 4's outcome + ch 6's first scene; the same timeline marks the film's Mary clashes アニメのみ and the novel's ch 5 clash unadapted — no source states a relocation. Sean 2026-09-05: mixed; ch 5 not adapted; 12.5. | Sean 2026-09-05 · scripts/ingest/research/discovery/out/saga-of-tanya-the-evil__100878.json, scripts/ingest/research/discovery/verify/saga-of-tanya-the-evil__100878.md |  |
+
+### sage-tanya-evil (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I27` | {"ids":[21613,135865],"ruledExtent":"AFL page = S1 (12 rows); S2 (135865, 12 eps, airing since 2026-07-08, our 13-24) is airing. The 2019 film (100878) stays… | C1 (2026-09-06): halo_airing — SEQUEL hop 2 via the film, season ordinal; Sean: component; the film keeps its ruled ledger row (I46 one row per work). | Sean 2026-09-06 · audit-discovery halo_airing (2026-09-06), scripts/ingest/research/discovery/recap.ts --scope sequel,series --airing (2026-09-06) | AFL lists S2 (the page reaches 24) — the walk then derives the chain (the film as an order-only hop it skips) |
 
 ### sailor-moon (12)
 
@@ -3879,6 +3931,12 @@
 | `T29` | {"position":48.2,"record":{"kind":"movie","anilistId":139498}} | AniList 139498 format=MOVIE, 108 min, 2022-11-25. en-WP: 'is a 2022 Japanese animated isekai fantasy film'. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/139498, https://en.wikipedia.org/wiki/That_Time_I_Got_Reincarnated_as_a_Slime_the_Movie:_Scarlet_Bond |  |
 | `T29` | {"position":72.3,"record":{"kind":"movie","anilistId":182206}} | AniList 182206 'Soukai no Namida-hen' format=MOVIE, 104 min, 2026-02-27 = the entry's stated JP release. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/182206 |  |
 | `I45` | {"anilistId":106509,"standing":"filler","position":24.05,"note":"Five publisher-stated originals (Kodansha: 完全新作オリジナルアニメーション on every limited edition; Fuse's… | Wave 3 (verified SOUND WITH NOTES): the fandom's adaptation = N/A on all five OAD pages, ja-WP's 番外編OAD table, Bandai Channel and ANN / Famitsu agree nothing adapts a printed unit; the Veldora's Journal hypothesis points at the S1 recap special (a separate work, not held). Sean 2026-09-05: filler; ruled before Coleus at 24.05. | Sean 2026-09-05 · scripts/ingest/research/discovery/out/that-time-i-got-reincarnated-as-a-slime__106509.json, scripts/ingest/research/discovery/verify/that-time-i-got-reincarnated-as-a-slime__106509.md |  |
+
+### the-100-girlfriends-who-really-really-really-really-really-love-you (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I27` | {"ids":[162694,172258,200637],"ruledExtent":"NO AFL page (keyed by series id); S3 (200637, 12 eps, 2026-07-05 → 09-20, our 25-36) is airing — rows from the w… | C1 (2026-09-06): halo_airing — SEQUEL, season ordinal; Sean: component. | Sean 2026-09-06 · audit-discovery halo_airing (2026-09-06), scripts/ingest/research/discovery/recap.ts --scope sequel,series --airing (2026-09-06) | an AFL page appears (I44 adoption) — then keyed by its slug |
 
 ### the-ancient-magus-bride (14)
 
@@ -4356,7 +4414,7 @@
 | `A40` | {"table":"series","mapping_mode":"loose"} | heavy skipping and vol 9-11 material aired before the festival arc; anchors are high-water marks, not a monotone map — loose. | session 2026-08-23 · scripts/ingest/apply-research-batch-12.ts, scratchpad batch12/we-never-learn-bokuben.json (session scratchpad, not on disk), docs/changelog.md §12.31 |  |
 | `A40` | loose | Pin 26 → 69 verified and promoted as loose (2026-08-23): the adaptation reorders chapters freely. | session 2026-08-23 · docs/changelog.md §12.29-31 (2026-08-23, the MU-pin verification session) |  |
 
-### welcome-to-demon-school-iruma-kun (33)
+### welcome-to-demon-school-iruma-kun (34)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -4393,6 +4451,7 @@
 | `A3` | {"episode":65,"chapter":147,"volume":null,"source":"manual"} | S3 end partially covers ch 147 (restart 147, Music Festival). both sources | session 2026-08-23 · scripts/ingest/apply-research-batch-6.ts |  |
 | `A3` | {"episode":36,"chapter":73,"start_chapter":69,"chapters_adapted":"69 (p.1, 12-20), 70, 73 (p.4-20)","volume":9,"source":"manual"} | ch 73 pulled ahead — as-stored | session 2026-08-23 · scripts/ingest/apply-rearranged-anchors.ts, docs/changelog.md §12.32, batch-11 verdict (welcome-to-demon-school-iruma-kun) |  |
 | `A3` | {"episode":37,"chapter":74,"start_chapter":71,"chapters_adapted":"71, 72, 74","volume":9,"source":"manual"} | Walter Park reorder pair — as-stored | session 2026-08-23 · scripts/ingest/apply-rearranged-anchors.ts, docs/changelog.md §12.32, batch-11 verdict (welcome-to-demon-school-iruma-kun) |  |
+| `I27` | {"ids":[107693,116338,139092,184492],"ruledExtent":"NO AFL page (keyed by series id); S4 (184492, 24 eps, airing since 2026-04-04, our 66-89) is airing — row… | C1 (2026-09-06): halo_airing — SEQUEL, season ordinal; Sean: component. | Sean 2026-09-06 · audit-discovery halo_airing (2026-09-06), scripts/ingest/research/discovery/recap.ts --scope sequel,series --airing (2026-09-06) | an AFL page appears (I44 adoption) — then keyed by its slug |
 
 ### when-they-cry (2)
 
@@ -4441,11 +4500,12 @@
 |---|---|---|---|---|
 | `I43` | {"franchise":"inuyasha"} | InuYasha and Yashahime (the next-generation sequel series); one IP. | Sean 2026-09-05 · signed by Sean 2026-09-05 ("Sign the 39 / 97 franchise table"), the 2026-09-05 franchise bootstrap (connected components of series_relations ∪ AniList story / PARENT / SAME_UNIVERSE edges between owned entries; scripts/ingest/research/discovery/PROPOSAL.md §2) |  |
 
-### you-and-i-are-polar-opposites (1)
+### you-and-i-are-polar-opposites (2)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `G26` | continua endEpisode converts to our ep 11 while AFG's OWN chart rows put the frontier at ep 12 (chart: ep 11 = 26-28, ep 12 = 29-31) — a wrong-episode pin th… | continua endEpisode converts to our ep 11 while AFG's OWN chart rows put the frontier at ep 12 (chart: ep 11 = 26-28, ep 12 = 29-31) — a wrong-episode pin that overwrote real chart data and tripped anchor_start_offtrend (deep pass 2026-08-25); the chart rows carry the true frontier. Retire if AFG fixes its continua episode or the conversion gains a chart cross-check (restructuring-phase gate candidate) | session 2026-08-25 | AFG fixes its continua episode, or the continua→episode conversion gains a chart cross-check (restructure gate candidate) |
+| `I27` | {"ids":[184951,210031],"ruledExtent":"NO AFL page (an AFG-era owner, keyed by series id); S2 (210031, 13 eps, airing since 2026-07-05, our 13-25) is airing —… | C1 (2026-09-06): halo_airing — SEQUEL, season ordinal; Sean: component. | Sean 2026-09-06 · audit-discovery halo_airing (2026-09-06), scripts/ingest/research/discovery/recap.ts --scope sequel,series --airing (2026-09-06) | an AFL page appears (I44 adoption) — then keyed by its slug |
 
 ### yowamushi-pedal (3)
 
