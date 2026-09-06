@@ -6,7 +6,7 @@
 // the verdict's volume on the END entry (en-WP's Shogakukan boundaries — the series has no boundary table yet). source 'manual'.
 //   npx tsx --env-file=.env.ingest scripts/ingest/research/discovery/apply-tennis-anchors.ts [--dry-run]
 import { readFileSync } from 'node:fs';
-import { db } from '../../lib/db';
+import { db, selectAll } from '../../lib/db';
 import { sliverEnd } from '../../lib/sliver';
 
 const SID = 'the-prince-of-tennis-national-tournament';
@@ -35,8 +35,8 @@ async function main() {
   if (rows.size !== 26) throw new Error(`${rows.size} rows carry entries, expected 26`);
   const { data: series } = await db.from('series').select('id').eq('id', SID).maybeSingle();
   if (!series) { console.log(`[tennis-anchors] ${SID} is not in canonical — run the seed and the grid first (nothing written)`); return; }
-  const { data: eps } = await db.from('episodes').select('number').eq('series_id', SID);
-  const have = new Set((eps ?? []).map((e) => Number(e.number)));
+  const eps = await selectAll<{ number: number }>('episodes', 'number', (q) => q.eq('series_id', SID)); // P32
+  const have = new Set(eps.map((e) => Number(e.number)));
   // the plan: START / END / volume per row, then A47 against the NEXT row's START
   const plan = [...rows.entries()].sort((a, b) => a[0] - b[0]).map(([row, r]) => {
     const main = r.sig.reduce((best, e) => (best == null || (e.end ?? 0) > (best.end ?? 0) ? e : best), null as Entry | null)!;
