@@ -18,6 +18,7 @@ export const CENSUS_CLASS_KINDS: Record<string, CensusClassKind> = {
   related_work_violation: 'violation', related_work_duplicate: 'violation', related_work_base_missing: 'violation',
   // E13: a LISTING until the writer re-walks unruled rows between ruled fixed points (after E1, the identity key) — the stored order is insertion history by the writer's own contract today; it becomes a violation the day the re-walk lands
   related_work_cluster_disorder: 'listing',
+  series_relation_missing: 'violation',
   related_work_identity_gap: 'violation', related_work_identity_conflict: 'violation', related_work_identity_orphan: 'violation',
 };
 

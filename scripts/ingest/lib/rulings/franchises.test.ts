@@ -8,7 +8,7 @@ describe('franchises (I43)', () => {
   });
   it('the bootstrap: Yu-Gi-Oh is nine entries under one IP; Dragon Ball six; Naruto three; every 2026-09-05 entry is session-ruled until Sean signs', () => {
     expect(FRANCHISES['yu-gi-oh'].members).toHaveLength(9);
-    expect(FRANCHISES['dragon-ball'].members).toHaveLength(6);
+    expect(FRANCHISES['dragon-ball'].members).toHaveLength(7); // the six bootstrap members + dragon-ball-episode-of-bardock (the step-2 picks pass, 2026-09-06)
     expect(FRANCHISE_OF['naruto-shippuden']).toBe('naruto');
     expect(FRANCHISE_OF['boruto-naruto-next-generations']).toBe('naruto');
     expect(FRANCHISES['naruto'].base).toBe('naruto');

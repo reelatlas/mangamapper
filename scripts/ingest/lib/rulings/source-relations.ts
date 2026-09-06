@@ -52,6 +52,16 @@ export const ENTRIES: RulingEntry<SourceRelationRuling>[] = [
       'scripts/ingest/research/batch20/WAVE5-RECOVERY.md',
     ],
   },
+  {
+    seriesId: 'attack-on-titan-no-regrets',
+    ruleId: 'I38',
+    value: { relation: 'adaptation', mangaAnilistId: 85199 },
+    reason:
+      "The step-2 seed dry run (2026-09-06): AniList tags the No Regrets OVA's source VISUAL_NOVEL (the pachislot game the OVA shares its title with), so the I38 pick found no manga; the OVA adapts 悔いなき選択 (Suruga, 2013-14, 11 ch / 2 vols; AniList 85199 / MAL 58007) — the tag routes, the edge is the fact (I47).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-06',
+    cite: ['scripts/ingest/research/discovery/out/triage__attack-on-titan.json', 'https://anilist.co/manga/85199'],
+  },
 ];
 
 /** seriesId → the ruled relation (parallel today; an adaptation ruling would only override a wrong derivation) */

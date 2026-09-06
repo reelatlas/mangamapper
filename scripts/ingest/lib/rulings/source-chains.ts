@@ -135,6 +135,19 @@ export const ENTRIES: RulingEntry<SourceChain>[] = [
     cite: ['scripts/ingest/research/discovery/EXTRAS-SITTING.md §0'],
     retiresWhen: 'Sean rules the Haruhi chain himself',
   },
+  {
+    seriesId: 'blood-blockade-battlefront',
+    ruleId: 'I41',
+    value: { works: [
+      { label: 'Kekkai Sensen', anilistMangaId: 42994, note: 'Kekkai Sensen (2009-15, 33 ch / 10 vols; AniList 42994 / MAL 12994), the entry\'s instrument — S1' },
+      { label: 'Back 2 Back', anilistMangaId: 86771, note: 'Kekkai Sensen: Back 2 Back (2015-22, 32 ch / 10 vols; AniList 86771 / MAL 95964) — the sequel manga S2 (Kekkai Sensen & BEYOND, component 97886) adapts; ep 13 grafts its ch 1 (batch 11)' },
+    ] },
+    reason:
+      "The step-2 picks pass (2026-09-06, Cursor's correction): the & BEYOND OVA (101695) adapts side chapters of Back 2 Back — the owner's own S2 instrument, not another run; registering the chain (I41) makes every Back 2 Back edge the owner's own (I47) so the OVA reads same_instrument and the picks read never proposes a mint for it.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-06',
+    cite: ['scripts/ingest/research/discovery/EXTRAS-SITTING.md §6.3'],
+  },
 ];
 
 export const SOURCE_CHAINS: Record<string, SourceChain> = toRecord(ENTRIES);

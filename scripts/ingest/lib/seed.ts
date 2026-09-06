@@ -19,10 +19,11 @@
 // seedSeries writes only a plan that held nothing back. Run from /discover
 // after the dry-run recap, never from `npm run heal`.
 
+import { isoDate } from './related-works';
 import { db } from './db';
 import type { AniListMedia } from './anilist';
 import { aggregate, aired, getMedia, ownedAnilistIds, walkChain, writeComponents } from './chain';
-import { registerIds, stageAniList } from './resolve';
+import { filterEpisodeRows, registerIds, stageAniList } from './resolve';
 import { slugify } from './slug';
 import { DISCOVERY_RULINGS, type DiscoveryRuling } from './rulings/discovery';
 import { FRANCHISE_OF } from './rulings/franchises';
@@ -77,7 +78,7 @@ export async function planSeed(anilistId: number, ruling: DiscoveryRuling, owned
       if (!c2) { slug = c; break; }
     }
   }
-  const agg = aggregate(media, null, title) as Record<string, unknown>;
+  const agg = aggregate(media, null, title, ruling.slug ?? null) as Record<string, unknown>;
   const plan: SeedPlan = {
     ...base,
     held: ambiguity,
@@ -93,7 +94,8 @@ export async function planSeed(anilistId: number, ruling: DiscoveryRuling, owned
     franchise: FRANCHISE_OF[slug] ?? ruling.franchise ?? null,
     franchiseRuled: !!FRANCHISE_OF[slug],
   };
-  if (plan.franchise && !plan.franchiseRuled) plan.held = `franchise '${plan.franchise}' named by the ruling but no membership entry for '${slug}' in lib/rulings/franchises.ts — rule the membership with the seed`;
+  if (!ruling.relation && !ruling.restoration) plan.held = `no relation declared — I13 (d): a mint writes its relation (series_relations) and its franchise membership or does not mint; add relation: { to, kind } to the declaration`;
+  else if (plan.franchise && !plan.franchiseRuled) plan.held = `franchise '${plan.franchise}' named by the ruling but no membership entry for '${slug}' in lib/rulings/franchises.ts — rule the membership with the seed`;
   return plan;
 }
 
@@ -102,19 +104,30 @@ export function seedLine(p: SeedPlan): string {
   if (p.owner) return `SKIP anilist ${p.anilistId}: already owned by ${p.owner}`;
   if (p.held) return `HELD anilist ${p.anilistId}${p.title ? ` "${p.title}"` : ''}: ${p.held}`;
   const rel = p.ruling.relation ? `${p.ruling.relation.kind} → ${p.ruling.relation.to} (relations.ts derives it from the AniList edge on the next heal)` : 'none ruled';
-  return `CREATE series ${p.slug} ← anilist ${p.anilistId} "${p.title}" · chain [${p.chain.map((c) => `${c.id} ${c.title} (${c.aired}${c.episodes == null ? '+' : ''} ${c.format ?? '?'} ${c.status})`).join(' → ')}] · ${p.airedEpisodes} eps · status ${p.status} · source ${p.sourceType ?? 'UNKNOWN (flag)'} · manga ${p.mangaId ?? 'none'} · franchise ${p.franchise ?? 'none'} · relation ${rel} · visibility STAGED (P39) · rows: none yet — the wiki writer (G59 A) mints them next`;
+  return `CREATE series ${p.slug}${oneRow(p) ? ` [rows from AniList: ${p.media.length} film / special row(s)]` : ''} ← anilist ${p.anilistId} "${p.title}" · chain [${p.chain.map((c) => `${c.id} ${c.title} (${c.aired}${c.episodes == null ? '+' : ''} ${c.format ?? '?'} ${c.status})`).join(' → ')}] · ${p.airedEpisodes} eps · status ${p.status} · source ${p.sourceType ?? 'UNKNOWN (flag)'} · manga ${p.mangaId ?? 'none'} · franchise ${p.franchise ?? 'none'} · relation ${rel} · visibility STAGED (P39) · rows: none yet — the wiki writer (G59 A) mints them next`;
 }
+
+/** I13 (b): one entry, one episode — a film or a single special — gets its single row from AniList (the one-row path) */
+export const oneRow = (p: { media: { episodes?: number | null; format?: string | null }[] }): boolean => p.media.length > 0 && p.media.every((m) => m.episodes === 1 || (m.episodes == null && m.format === 'MOVIE'));
 
 /** the write — only a plan that held nothing back */
 export async function seedSeries(p: SeedPlan): Promise<'created' | 'skipped'> {
   if (p.owner || p.held || !p.media.length) return 'skipped';
   for (const m of p.media) await stageAniList(m);
   const head = p.media[0];
-  const row = { ...(aggregate(p.media, null, p.title) as Record<string, unknown>), id: p.slug, visibility: 'staged', franchise_id: FRANCHISE_OF[p.slug] ?? null };
+  const row = { ...(aggregate(p.media, null, p.title, p.slug) as Record<string, unknown>), id: p.slug, visibility: 'staged', franchise_id: FRANCHISE_OF[p.slug] ?? null };
   const { error } = await db.from('series').upsert(row);
   if (error) throw new Error(`seed ${p.slug}: ${error.message}`);
   await registerIds(p.slug, { anilist: head.id, mal: head.idMal });
   await writeComponents(p.slug, p.media, null);
+  // I13 (b) — THE ONE-ROW PATH (the named G59 path for films / single specials): a series whose every entry is a single-episode film or
+  // special gets one row per entry from AniList's own media (title, air date) — lineage `anilist` (G57; never the wiki finder, which has no
+  // list for a film); typed by the canon-tier default like a wiki row (type_default_unclassified lists it until research types it)
+  if (oneRow(p)) { // every entry a single film / special → one row per entry, numbered in chain order (a two-film series: rows 1 and 2)
+    const rows = p.media.map((m, k) => ({ series_id: p.slug, number: k + 1, title: m.title.english ?? m.title.romaji ?? p.title, type: 'canon', air_date: isoDate(m.startDate) }));
+    const ruled = filterEpisodeRows(p.slug, rows, 'anilist', { sourceType: ((row as Record<string, unknown>).source_type as string | null) ?? null });
+    if (ruled.length) { const { error: e2 } = await db.from('episodes').insert(ruled.map((r) => ({ ...r, minted_by: 'anilist' }))); if (e2) throw new Error(`seed ${p.slug} row 1: ${e2.message}`); }
+  }
   return 'created';
 }
 

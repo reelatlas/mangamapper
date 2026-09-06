@@ -14,7 +14,8 @@ import { mediaByIds, type AniListMedia } from './anilist';
 import { stageAniList, searchTextFor } from './resolve';
 import { slugify } from './slug';
 import { deriveSourceKind, mangaStatusOf, seriesHasSource } from './rulings/source-kinds';
-import { deriveSourceRelation, pickMangaNode } from './rulings/source-relations';
+import { deriveSourceRelation, MANGA_LINK_OVERRIDES, pickMangaNode } from './rulings/source-relations';
+import { NOVEL_SOURCE_TYPES } from './related-works';
 import { ruledChapterSpace } from './rulings/chapter-spaces';
 import { planComponents, type PlanMember } from './structure-plan';
 
@@ -146,7 +147,7 @@ export async function walkChain(
   return walked;
 }
 
-export function aggregate(chain: AniListMedia[], aflSlug: string | null, fallbackTitle: string) {
+export function aggregate(chain: AniListMedia[], aflSlug: string | null, fallbackTitle: string, ruledSlug?: string | null) {
   const head = chain[0];
   const tail = chain[chain.length - 1];
   const releasing = chain.find((m) => m.status === 'RELEASING');
@@ -168,10 +169,12 @@ export function aggregate(chain: AniListMedia[], aflSlug: string | null, fallbac
   // derivative-manga rule holds here too: a source=ORIGINAL head never
   // claims its ADAPTATION edge (that manga adapts the anime)
   // I40: the same picker as resolve.ts — a ruled link (a parallel telling) wins
-  const seriesId = slugify(head.title.english ?? head.title.romaji ?? fallbackTitle);
+  const seriesId = ruledSlug ?? slugify(head.title.english ?? head.title.romaji ?? fallbackTitle); // a seeded series is keyed by its RULED slug (I1), so its rulings (I38 / T25) are found
   const mangaEdge = pickMangaNode(head.relations.edges, seriesId) ?? undefined;
-  const manga = head.source === 'ORIGINAL' ? undefined : mangaEdge;
   const sourceKindValue = deriveSourceKind(seriesId, { source: head.source, mangaCountry: mangaEdge ? mangaEdge.countryOfOrigin : null, hasMangaEdge: !!mangaEdge }).value;
+  // T25 / I38 (the step-2 seed dry run, 2026-09-06 — blue-exorcist-weekend-hero): a NOVEL-kind source registers no manga id — its instrument
+  // is the NOVEL node its own anime adapts (ownerInstrumentIds), never a manga sibling on the same ADAPTATION list; a ruled link still wins
+  const manga = head.source === 'ORIGINAL' || (NOVEL_SOURCE_TYPES.has(sourceKindValue) && MANGA_LINK_OVERRIDES[seriesId] == null) ? undefined : mangaEdge;
 
   const dedupBy = <T>(items: T[], key: (t: T) => string) => {
     const m = new Map<string, T>();

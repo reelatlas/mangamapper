@@ -203,14 +203,14 @@ async function main() {
     for (const r of await selectAll<any>('ingest_afl_shows', 'slug, raw')) afl.set(r.slug, new Set(((r.raw?.episodes ?? []) as { number: number }[]).map((e) => e.number)));
     const slugOf = new Map((await selectAll<any>('series', 'id, afl_slug')).map((s: any) => [s.id, s.afl_slug]));
     const owed = new Map<string, number[]>();
-    for (const e of await selectAll<any>('episodes', 'series_id, number, minted_by', (q) => q.eq('minted_by', 'wiki'))) {
+    for (const e of await selectAll<any>('episodes', 'series_id, number, minted_by', (q) => q.in('minted_by', ['wiki', 'anilist']))) { // a wiki row or a one-row seed (I13 b) — both typed by the default
       if ((EPISODE_TYPE_OVERRIDES[e.series_id] ?? {})[e.number] != null) continue;
       const aflNums = afl.get(slugOf.get(e.series_id) ?? '');
       const aflN = translateEpisodeNumber(e.series_id, e.number, 'afl');
       if (aflNums && aflN != null && aflNums.has(aflN)) continue;
       owed.set(e.series_id, [...(owed.get(e.series_id) ?? []), e.number]);
     }
-    for (const [sid, nums] of owed) classes.type_default_unclassified.push(`${sid}: ${nums.length} wiki-minted row(s) typed by the canon-tier DEFAULT — no AFL classification, no T6 ruling (eps ${nums.sort((a, b) => a - b).slice(0, 5).join(', ')}${nums.length > 5 ? '…' : ''}); typing still owed (research or a ruled type)`);
+    for (const [sid, nums] of owed) classes.type_default_unclassified.push(`${sid}: ${nums.length} wiki / anilist-minted row(s) typed by the canon-tier DEFAULT — no AFL classification, no T6 ruling (eps ${nums.sort((a, b) => a - b).slice(0, 5).join(', ')}${nums.length > 5 ? '…' : ''}); typing still owed (research or a ruled type)`);
   }
   // G59 (2026-09-04): an entry with anchors and NO episode rows must have a ruled minter — a wiki page (WIKI_PAGES) or a manual grid
   // (MINTED_GRIDS); otherwise the grid is unminted and the display is synthesizing (A42) what a writer should own

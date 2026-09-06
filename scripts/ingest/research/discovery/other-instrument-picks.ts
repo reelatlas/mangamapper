@@ -13,8 +13,19 @@ import { FRANCHISE_OF } from '../../lib/rulings/franchises';
 type Node = { id: number; title: { romaji: string | null; english: string | null }; format: string | null; status: string | null; chapters: number | null; volumes: number | null; popularity: number | null; startDate?: { year?: number | null } | null };
 const slugify = (t: string) => t.toLowerCase().normalize('NFKD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
+/** I13 (f): the HEAD work a compilation / prologue / cameo entry points at — an ALTERNATIVE or SEQUEL edge to an unowned TV / ONA / special-series entry */
+let headOf: (id: number) => { id: number; title: string; format: string } | null = () => null;
 async function main() {
   const input = await loadDiscoveryInput();
+  headOf = (id: number) => {
+    const m = input.staged.get(id) as { format?: string | null; relations?: { edges: { relationType: string; node: { id: number; type: string; format?: string | null; title?: { romaji?: string | null } } }[] } } | undefined;
+    for (const e of m?.relations?.edges ?? []) {
+      if (e.node.type !== 'ANIME' || input.owned.has(e.node.id)) continue;
+      const f = e.node.format ?? '';
+      if ((e.relationType === 'ALTERNATIVE' || e.relationType === 'SEQUEL') && (['TV', 'TV_SHORT', 'ONA'].includes(f) || (f === 'SPECIAL' && (m?.format === 'MOVIE' || m?.format === 'OVA')))) return { id: e.node.id, title: e.node.title?.romaji ?? String(e.node.id), format: f };
+    }
+    return null;
+  };
   const works = haloCandidates(input).filter((c) => c.proposal === 'other_instrument' || c.proposal === 'alternative'); // an alternative adaptation that adapts an instrument is the same shape (GitS 1995)
   const ownedInstrument = new Map<number, string>();
   for (const [sid, ids] of input.ownerInstruments ?? []) for (const id of ids) ownedInstrument.set(id, sid);
@@ -45,7 +56,8 @@ async function main() {
       // an alternative telling of the OWNER's own instrument (GitS 1995 beside SAC, Hellsing Ultimate, the Madoka / AoT / JJK compilation films) is not a
       // mechanical mint: a retelling is a series of its own (Sean ruled GitS 1995 a mint candidate), a compilation is a recap — research or Sean decides
       const ownTelling = alt && [...c.owners].some((o) => (input.ownerInstruments?.get(o) ?? new Set()).has(a.id));
-      const proposed = c.ownedElsewhere ? `already a series — owned by ${c.ownedElsewhere} (one-row; an extra here by I13): no mint` : ownTelling ? `alternative telling of ${[...c.owners].join('+')}'s own instrument — a retelling (a mint, Sean's call) or a compilation (a recap): research decides` : downstream ? `NOT a source — the run began ${runYear}, after the work (${workYear}): a comicalization / novelization; the work is held (research)` : ours ? `no mint — the run is ${ours}'s instrument (a same-instrument row there)` : a.format === 'ONE_SHOT' ? 'tie-in — never a series; research with (b)' : isRun ? `MINT (step 2): ${alt ? 'an alternative adaptation (I16) — ' : ''}a one-row staged series, this work as its anime${counted ? '' : ' (size unverified — AniList down)'}` : n ? 'hold — below the threshold (no volume, < 8 chapters, finished)' : 'hold — node not found';
+      const head = headOf(c.anilistId);
+      const proposed = head ? `mint from the HEAD ${head.id} "${head.title}" (${head.format}) — this work is its compilation / prologue, never the mint's anime entry (I13 f)` : c.ownedElsewhere ? `already a series — owned by ${c.ownedElsewhere} (one-row; an extra here by I13): no mint` : ownTelling ? `alternative telling of ${[...c.owners].join('+')}'s own instrument — a retelling (a mint, Sean's call) or a compilation (a recap): research decides` : downstream ? `NOT a source — the run began ${runYear}, after the work (${workYear}): a comicalization / novelization; the work is held (research)` : ours ? `no mint — the run is ${ours}'s instrument (a same-instrument row there)` : a.format === 'ONE_SHOT' ? 'tie-in — never a series; research with (b)' : isRun ? `MINT (step 2): ${alt ? 'an alternative adaptation (I16) — ' : ''}a one-row staged series, this work as its anime${counted ? '' : ' (size unverified — AniList down)'}` : n ? 'hold — below the threshold (no volume, < 8 chapters, finished)' : 'hold — node not found';
       const title = n?.title.english ?? n?.title.romaji ?? a.title ?? String(a.id);
       const slug = isRun && !ours ? `${slugify(title)} · ${groups[0]}` : '';
       rows.push({ pop: c.popularity, line: `| ${groups.join(' + ')} | ${c.title.replace(/\|/g, '/')} (${c.anilistId} · ${c.format ?? '?'} · ${media?.startDate?.year ?? '?'}) | ${(a.title ?? '').replace(/\|/g, '/')} (${a.id}) | ${run} | ${ours ?? '—'} | ${proposed} | ${slug} | |` });

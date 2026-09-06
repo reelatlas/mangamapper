@@ -30,6 +30,7 @@ import { selectAll } from './lib/db';
 import { clusterDisorder, deriveWatchPosition, type ExtraBucket, pickAdoption, isoDate, ledgerBaseProblems, ledgerWorthy, matchRelatedTitle, relatedWorkStanding, extraKind } from './lib/related-works';
 import { relatedWorkRuling } from './lib/rulings/related-works';
 import { censusKindMark } from './lib/census-kinds';
+import { CANDIDATE_ENTRIES } from './lib/rulings/discovery';
 import { RULED_LABELS, RULED_POSITION_BY_ANILIST, RULED_RECORDS } from './lib/rulings/watch-order-labels';
 import { identityProblems, loadRelatedWorkRegistry } from './lib/related-work-ids';
 
@@ -109,7 +110,17 @@ async function main() {
   // E13 — unruled rows inside one slot out of air-date order (insertion history)
   const isRuled = (r: any) => relatedWorkRuling(r.series_id, Number(r.anilist_id))?.position != null || RULED_POSITION_BY_ANILIST[r.series_id]?.[Number(r.anilist_id)] != null;
   const disorder = clusterDisorder(ledger.map((r: any) => ({ seriesId: r.series_id, position: Number(r.position), airDate: r.air_date ?? null, ruled: isRuled(r), title: r.title })));
+  // I13 (d) — a minted series with a declared relation and no series_relations row between the pair (either direction)
+  const relRows = await selectAll<{ from_series: string; to_series: string }>('series_relations', 'from_series, to_series');
+  const linked = new Set(relRows.flatMap((r) => [`${r.from_series}→${r.to_series}`, `${r.to_series}→${r.from_series}`]));
+  const ownedSlugs = new Set(input.owned.values());
+  const relationMissing: string[] = [];
+  for (const e of CANDIDATE_ENTRIES) {
+    const v = e.value; if (v.disposition !== 'series' || !v.relation || !v.slug || !ownedSlugs.has(v.slug)) continue;
+    if (!linked.has(`${v.slug}→${v.relation.to}`)) relationMissing.push(`${v.slug} → ${v.relation.to} (${v.relation.kind}): declared, series minted, no series_relations row — run relations.ts (a kind AniList cannot express needs a lib/rulings/relations.ts entry)`);
+  }
   const lines: Record<string, string[]> = {
+
     halo_sequel_unclaimed: classes.halo_sequel_unclaimed.map(candidateLine),
     halo_series_unclaimed: classes.halo_series_unclaimed.map(candidateLine),
     extra_same_instrument: byBucket('same_instrument'),
@@ -130,6 +141,7 @@ async function main() {
     related_work_unruled: unruled,
     related_work_base_missing: baseMissing,
     related_work_cluster_disorder: disorder,
+    series_relation_missing: relationMissing,
     discovery_new_since_sitting: classes.discovery_new_since_sitting.map(candidateLine),
     discovery_ruled_unbuilt: classes.discovery_ruled_unbuilt.map((r) => `anilist ${r.anilistId}: ruled series${r.ruling.slug ? ` as ${r.ruling.slug}` : ''} but no series owns it — the seed writer has not run (I42)${r.candidate ? ` · ${r.candidate.title}` : ''}`),
     discovery_ruling_stale: classes.discovery_ruling_stale.map((r) => `anilist ${r.anilistId}: ${r.why} (P24 — re-rule or retire the entry)`),

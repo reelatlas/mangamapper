@@ -130,6 +130,33 @@ export const OVERRIDE_ENTRIES: RulingEntry<string>[] = [
     ruledOn: '2026-08-27',
     cite: ['scripts/ingest/research/batch19/out/ghost-in-the-shell-arise-alternative-architecture.json', 'scripts/ingest/research/batch19/verify/ghost-in-the-shell-arise-alternative-architecture.md', 'https://ja.wikipedia.org/wiki/攻殻機動隊ARISE', 'https://anilist.co/anime/21056'],
   },
+  {
+    seriesId: 'thus-spoke-rohan-kishibe',
+    ruleId: 'T25',
+    value: 'manga',
+    reason: "The step-2 seed dry run (2026-09-06): AniList tags the entry's source UNKNOWN; the instrument is the manga run it adapts (Kishibe Rohan wa Ugokanai, AniList 103029) — the tag routes, the edge is the fact (I47).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-06',
+    cite: ['scripts/ingest/lib/rulings/discovery.ts (the declaration)'],
+  },
+  {
+    seriesId: 'jujutsu-kaisen-0',
+    ruleId: 'T25',
+    value: 'manga',
+    reason: "The step-2 seed dry run (2026-09-06): AniList tags the entry's source UNKNOWN; the instrument is the manga run it adapts (Jujutsu Kaisen 0, AniList 105469) — the tag routes, the edge is the fact (I47).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-06',
+    cite: ['scripts/ingest/lib/rulings/discovery.ts (the declaration)'],
+  },
+  {
+    seriesId: 'attack-on-titan-no-regrets',
+    ruleId: 'T25',
+    value: 'manga',
+    reason: "The step-2 seed dry run (2026-09-06): AniList tags the OVA's source VISUAL_NOVEL (the pachislot game sharing its title); the instrument is the manga 悔いなき選択 (AniList 85199, the ruled I38 link) — the tag routes, the edge is the fact (I47).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-06',
+    cite: ['scripts/ingest/lib/rulings/source-relations.ts (the I38 link)'],
+  },
 ];
 export const SOURCE_TYPE_OVERRIDES: Record<string, string> = toRecord(OVERRIDE_ENTRIES);
 
