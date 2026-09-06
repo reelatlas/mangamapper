@@ -26,7 +26,7 @@ import type { AniListMedia } from './anilist';
 import { aggregate, aired, getMedia, KIND_BY_FORMAT, ownedAnilistIds, walkChain, writeComponents } from './chain';
 import { filterEpisodeRows, registerIds, stageAniList } from './resolve';
 import { slugify } from './slug';
-import { DISCOVERY_RULINGS, type DiscoveryRuling } from './rulings/discovery';
+import { DISCOVERY_RULINGS, type DiscoveryRuling, seedRelationHold } from './rulings/discovery';
 import { FRANCHISE_OF, FRANCHISES } from './rulings/franchises';
 
 export type SeedPlan = {
@@ -95,8 +95,7 @@ export async function planSeed(anilistId: number, ruling: DiscoveryRuling, owned
     franchise: FRANCHISE_OF[slug] ?? ruling.franchise ?? null,
     franchiseRuled: !!FRANCHISE_OF[slug],
   };
-  if (!ruling.relation && !ruling.restoration) plan.held = `no relation declared — I13 (d): a mint writes its relation (series_relations) and its franchise membership or does not mint; add relation: { to, kind } to the declaration`;
-  else if (plan.franchise && !plan.franchiseRuled) plan.held = `franchise '${plan.franchise}' named by the ruling but no membership entry for '${slug}' in lib/rulings/franchises.ts — rule the membership with the seed`;
+  plan.held = plan.held ?? seedRelationHold(ruling, plan.franchise, plan.franchiseRuled, slug); // I13 (d) + T31 (newIp) — the pure gate, unit-tested
   return plan;
 }
 
@@ -104,7 +103,7 @@ export async function planSeed(anilistId: number, ruling: DiscoveryRuling, owned
 export function seedLine(p: SeedPlan): string {
   if (p.owner) return `SKIP anilist ${p.anilistId}: already owned by ${p.owner}`;
   if (p.held) return `HELD anilist ${p.anilistId}${p.title ? ` "${p.title}"` : ''}: ${p.held}`;
-  const rel = p.ruling.relation ? `${p.ruling.relation.kind} → ${p.ruling.relation.to} (relations.ts derives it from the AniList edge on the next heal)` : 'none ruled';
+  const rel = p.ruling.relation ? `${p.ruling.relation.kind} → ${p.ruling.relation.to} (relations.ts derives it from the AniList edge on the next heal)` : p.ruling.newIp ? 'NEW IP (T31: nothing the catalog holds relates to it; franchise null)' : 'none ruled';
   return `CREATE series ${p.slug}${oneRow(p) ? ` [rows from AniList: ${p.media.length} film / special row(s)]` : ''} ← anilist ${p.anilistId} "${p.title}" · chain [${p.chain.map((c) => `${c.id} ${c.title} (${c.aired}${c.episodes == null ? '+' : ''} ${c.format ?? '?'} ${c.status})`).join(' → ')}] · ${p.airedEpisodes} eps · status ${p.status} · source ${p.sourceType ?? 'UNKNOWN (flag)'} · manga ${p.mangaId ?? 'none'} · franchise ${p.franchise ?? 'none'} · relation ${rel} · visibility STAGED (P39) · rows: none yet — the wiki writer (G59 A) mints them next`;
 }
 

@@ -1,15 +1,25 @@
 // G60 — the rankings reader, pure
 import { describe, expect, it } from 'vitest';
-import { LISTS, productFitScore, seedCandidates } from './rankings';
+import { LISTS, MANGA_SOURCES, MEDIA_SOURCE_ENUM, NOVEL_SOURCES, OTHER_SOURCES, isNoInstrumentSource, productFitScore, seedCandidates } from './rankings';
 
 const anime = (id: number, title: string, o: Partial<{ status: string; episodes: number; popularity: number; source: string; format: string; edges: any[] }> = {}) => ({ id, type: 'ANIME', title: { romaji: title, english: null }, format: o.format ?? 'TV', status: o.status ?? 'FINISHED', source: o.source ?? 'MANGA', episodes: o.episodes ?? 12, popularity: o.popularity ?? 1000, startDate: { year: 2020 }, relations: { edges: o.edges ?? [] } });
 const mangaEdge = (id: number, status = 'RELEASING', chapters = 300) => ({ relationType: 'ADAPTATION', node: { id, type: 'MANGA', format: 'MANGA', status, chapters, popularity: 5000, title: { romaji: `manga ${id}` } } });
 
 describe('LISTS (G60)', () => {
-  it('eight named lists, ~28 requests a week, airing first', () => {
+  it('eleven named lists, ~36 requests a week, airing first', () => {
     expect(LISTS[0].name).toBe('airing-manga');
-    expect(LISTS.reduce((n, l) => n + l.pages, 0)).toBe(28);
+    expect(LISTS.map((l) => l.name)).toEqual(['airing-manga', 'upcoming-manga', 'airing-novel', 'upcoming-novel', 'airing-other', 'upcoming-other', 'popular-manga', 'popular-novel', 'popular-other', 'trending', 'manga-first']);
+    expect(LISTS.reduce((n, l) => n + l.pages, 0)).toBe(36);
     expect(LISTS.every((l) => l.args.includes('isAdult: false'))).toBe(true);
+  });
+  it('T31 — the three source families PARTITION the AniList enum: disjoint, exhaustive, the manga census untouched', () => {
+    const all = [...MANGA_SOURCES, ...NOVEL_SOURCES, ...OTHER_SOURCES];
+    expect(new Set(all).size).toBe(all.length);
+    expect([...all].sort()).toEqual([...MEDIA_SOURCE_ENUM].sort());
+    expect(LISTS.find((l) => l.name === 'airing-manga')!.args).toContain('source_in: [MANGA]');
+    expect(LISTS.find((l) => l.name === 'popular-other')!.args).toContain('ORIGINAL');
+    expect(LISTS.find((l) => l.name === 'trending')!.args).not.toContain('source_in');
+    expect(isNoInstrumentSource('ORIGINAL')).toBe(true); expect(isNoInstrumentSource('VISUAL_NOVEL')).toBe(true); expect(isNoInstrumentSource('MANGA')).toBe(false); expect(isNoInstrumentSource(null)).toBe(false);
   });
 });
 
@@ -23,9 +33,11 @@ describe('productFitScore', () => {
 
 describe('seedCandidates', () => {
   const rows = (ms: any[], list = 'popular-manga', snapshot = '2026-09-05') => ms.map((m, i) => ({ list, snapshot, rank: i + 1, anilist_id: m.id, raw: m }));
-  it('an owned title is never a seed; a title one edge from the catalog is the halo\'s, not a seed; an original has no instrument', () => {
+  it('an owned title is never a seed; a title one edge from the catalog is the halo\'s, not a seed; an original is KEPT and marked no-instrument (T31)', () => {
     const seeds = seedCandidates(rows([anime(10, 'Owned'), anime(11, 'Related', { edges: [{ relationType: 'SEQUEL', node: { id: 10, type: 'ANIME', format: 'TV', title: { romaji: 'Owned' } } }] }), anime(12, 'Original', { source: 'ORIGINAL' }), anime(13, 'New IP')]), new Set([10]), new Set([11]));
-    expect(seeds.map((s) => s.anilistId)).toEqual([13]);
+    expect(seeds.map((s) => s.anilistId).sort()).toEqual([12, 13]);
+    expect(seeds.find((s) => s.anilistId === 12)!.noInstrument).toBe(true);
+    expect(seeds.find((s) => s.anilistId === 13)!.noInstrument).toBe(false);
   });
   it('the latest snapshot per list wins; a title on several lists carries every rank; sorted by score', () => {
     const old = rows([anime(20, 'Old only')], 'popular-manga', '2026-08-01');

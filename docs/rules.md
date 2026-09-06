@@ -74,7 +74,7 @@
 - `C8` AFG continue-from is reading guidance, not the frontier — aka `continue-from is guidance`, `continue-from-is-guidance`, `sanity band`, `40-chapter band`, `three-numbers model`
 - `C9` Default continue = anchor end + 1 (superseded by C2) *(superseded)* — aka `continue-reading points`, `end+1 default`, `default continue = end + 1`, `apply-continue-points`
 
-**T — Typing & taxonomy** (30)
+**T — Typing & taxonomy** (31)
 - `T1` Episode-type vocabulary: four stored tokens — aka `four tokens`, `AFL class map`, `CLASS_TO_TYPE`, `episodes.type vocabulary`, `type_corrections allowed types`
 - `T2` Episode-type semantics (Sean 2026-08-25) — aka `episode-type semantics`, `Sean's vocabulary`, `typing vocabulary`, `filler = zero canon`, `consensus-canon`, `mixed = canon AND non-canon`
 - `T3` Filler = outside both canons (b17 D3 form) *(superseded)* — aka `b17 D3`, `outside both canons`, `b17 D3 form`
@@ -105,6 +105,7 @@
 - `T28` mixed needs a substantial share: the episode's job decides — aka `mixed_fragment_only`, `T28 discrepancy queue`, `materiality bar for mixed`, `episode job test`, `what is this episode's job`, `fragment is an annotation`, `slivers are not mixed`, `Claymore-26 shape`, `mixed threshold`, `canon sliver`, `sole adaptation`, `load-bearing sliver`, `graft flip`, `the FotNS-57 test`, `sole-adaptation exception`, `the sliver clause`, `significance not size`, `weightless sliver`, `the unverified share`, `unverified_share`
 - `T29` The format axis: derived, stored, never a type — aka `format axis`, `episodes.format`, `FORMAT_OVERRIDES`, `heal-format`, `format_missing`, `episode_without_component`, `watch_order_kind_missing`, `D-11`, `tv ova special movie recap`
 - `T30` Standing on a parallel series: from the outline or not — aka `parallel standing`, `from the outline or not`, `the timelines model`, `timeline D`, `studio padding`, `the story test`, `load-bearing test`, `B vs D proxy`, `anime-only telling`, `arc_row_conflict`, `DBS standing`
+- `T31` No-instrument shape: originals enter, publish by ruling — aka `no-instrument shape`, `the no-instrument shape`, `the no-instrument family`, `originals`, `no instrument`, `newIp`, `new IP`, `the partition`, `source families`, `OTHER_SOURCES`, `other family`, `airing-other`, `popular-other`, `upcoming-other`, `isNoInstrumentSource`, `seedRelationHold`
 
 **N — Numbering, counts & chapter spaces** (32)
 - `N1` Episode-floor invariant — aka `episode-floor invariant`, `episode floor`, `floor rule`, `EXTRAS_ADOPTED`
@@ -1502,6 +1503,20 @@ On a series whose source_relation is 'parallel' (I40) the three standings measur
 - witnesses: dragon-ball-super
 - aliases: parallel standing, from the outline or not, the timelines model, timeline D, studio padding, the story test, load-bearing test, B vs D proxy, anime-only telling, arc_row_conflict, DBS standing
 - see: I40, A46, T27, T28, T26, A1
+
+### T31 · No-instrument shape: originals enter, publish by ruling
+
+A series whose source has no instrument to map — a studio original, a visual novel, a game, or any AniList source outside the manga and novel families — is a FULL catalog member: its source_type is what AniList states through the registry (T25; never guessed), its rows type as the story's own (canon by a classifier or the default; filler only where a classifier says so), it carries NO chapter strip (seriesHasInstrument false — the card's honest dash; a studio-original label is the UI pass's), and it PUBLISHES ONLY BY AN EXPLICIT RULING (P39: a PUBLISHED entry in lib/rulings/visibility.ts, never a default — the eight-grid lesson). Discovery never drops it: the seed queue keeps every no-instrument title its lists return and MARKS it; the ranked lists are a PARTITION of AniList's source enum — MANGA (the mapping census, untouched), NOVEL, and OTHER (the exact complement) — so no show falls between lists and each list stays a complete census (an unscoped airing list is no longer a census — Cursor); a title nothing in the catalog relates to mints with an explicit `newIp` declaration (no relation, franchise null; fail closed on a contradiction), never by reusing `restoration`.
+
+*Why:* Sean 2026-09-06 with Cursor (the airing programme, phase B): Kill la Kill and Madoka are in the catalog from AniFiller and searchable, but discovery threw away every NEW original (`source === 'ORIGINAL'` → skip) and the airing / popularity lists were manga- or novel-sourced at the AniList query, so an airing original could never be seen; Sean: 'if our current filters find an original that is part of our top inclusions we should also include it' and 'the top-500 manga-sourced list is our most important' — so no general top 500, no originals-only list: the partition. The new-IP hold was real: planSeed refused any series with no relation and no restoration, so the seed engine's own 'new IP, series' proposals could never mint. DIGIMON BEATBREAK (188388) was deferred at C1 until this record existed.
+
+- ruled Sean 2026-09-06 (docs/STATE.md (the plan saved 2026-09-06 evening); changelog §12.145)
+- layer **both**
+- enforced: [lib/rankings.ts#LISTS](../scripts/ingest/lib/rankings.ts) · [lib/rankings.ts#OTHER_SOURCES](../scripts/ingest/lib/rankings.ts) · [lib/rankings.ts#isNoInstrumentSource](../scripts/ingest/lib/rankings.ts) · [lib/rankings.ts#seedCandidates](../scripts/ingest/lib/rankings.ts) · [lib/rankings.ts#seedLine](../scripts/ingest/lib/rankings.ts) · [lib/rulings/discovery.ts#seedRelationHold](../scripts/ingest/lib/rulings/discovery.ts) · [lib/seed.ts#planSeed](../scripts/ingest/lib/seed.ts) · [lib/rulings/source-kinds.ts#seriesHasInstrument](../scripts/ingest/lib/rulings/source-kinds.ts) · [lib/rulings/visibility.ts](../scripts/ingest/lib/rulings/visibility.ts) · [src/components/AnimeCard.tsx](../src/components/AnimeCard.tsx) · [audit-ui-truth.ts#no_instrument](../scripts/ingest/audit-ui-truth.ts) · [audit-ui-truth.ts#no_source](../scripts/ingest/audit-ui-truth.ts) · [audit-discovery.ts#seed_candidate](../scripts/ingest/audit-discovery.ts)
+- audit: `no_instrument`, `no_source`, `series_staged`, `seed_candidate`
+- witnesses: kill-la-kill, puella-magi-madoka-magica, digimon-beatbreak (anilist 188388, deferred at C1 2026-09-06)
+- aliases: no-instrument shape, the no-instrument shape, the no-instrument family, originals, no instrument, newIp, new IP, the partition, source families, OTHER_SOURCES, other family, airing-other, popular-other, upcoming-other, isNoInstrumentSource, seedRelationHold
+- see: T25, P39, G52, G60, I42, I13, I44
 
 ## N — Numbering, counts & chapter spaces
 
@@ -3141,7 +3156,7 @@ A staging table stores every pull's complete raw payload — including raw HTML 
 
 ### G52 · Canon-tier creation: chartless manga shows still enter
 
-A manga-sourced show with no per-episode chart anywhere (~0% filler, so AFL never built a page and AFG has no filler chart) still enters the catalog: AniList supplies structure and totals through the ownership-guarded chain walk, episode typing defaults to canon through the spans-gap rule (no episode rows are fabricated), AFG's continua table supplies the end-frontier anchor where present, and MU picks the series up on its universal cycle. Anime-original holds have no manga side and are deferred. Since 2026-09-05 the creation path is THE SEED WRITER (lib/seed.ts#seedSeries, scripts/ingest/seed.ts — run from /discover after the dry-run recap, never from a standard heal): a `series` ruling in lib/rulings/discovery.ts is the durable provenance (I42), the walk / aggregate / planner are the ones every chain writer uses, and a seeded series lands STAGED (P39) until a classifier registers or a ruling publishes it.
+A manga-sourced show with no per-episode chart anywhere (~0% filler, so AFL never built a page and AFG has no filler chart) still enters the catalog: AniList supplies structure and totals through the ownership-guarded chain walk, episode typing defaults to canon through the spans-gap rule (no episode rows are fabricated), AFG's continua table supplies the end-frontier anchor where present, and MU picks the series up on its universal cycle. A show whose source has NO INSTRUMENT (a studio original, a visual novel, a game — T31) enters the same way, marked, and publishes only by an explicit ruling (P39). Since 2026-09-05 the creation path is THE SEED WRITER (lib/seed.ts#seedSeries, scripts/ingest/seed.ts — run from /discover after the dry-run recap, never from a standard heal): a `series` ruling in lib/rulings/discovery.ts is the durable provenance (I42), the walk / aggregate / planner are the ones every chain writer uses, and a seeded series lands STAGED (P39) until a classifier registers or a ruling publishes it.
 
 *Why:* Ruled YES 2026-08-23 (§12.19c2) for SHY, Cells at Work ×2, Ranking of Kings, Chrono Crusade, Orient, Shaman King 2001; confirmed a standing rule 2026-08-25 (DRIFT-LIST A-9). The 2026-08-23 script (history/canon-tier.ts) was a fixed TARGETS list; the seed writer is its rostered form (2026-09-05, discovery step 3).
 
@@ -3151,7 +3166,7 @@ A manga-sourced show with no per-episode chart anywhere (~0% filler, so AFL neve
 - audit: `pending_no_canon`, `title_incomplete`
 - witnesses: shy, cells-at-work, ranking-of-kings, chrono-crusade, orient, shaman-king-2001
 - aliases: canon-tier creation, canon-tier, A-9
-- retired wording (P38): “whether it is the rostered creation path for NEW chartless shows is for the system census to find”
+- retired wording (P38): “whether it is the rostered creation path for NEW chartless shows is for the system census to find” · “Anime-original holds have no manga side and are deferred”
 - see: G11, G12, G22, G39, base-type padding, ownership guard
 
 ### G53 · Ruled air dates: AIR_DATE_OVERRIDES, applied at every write
@@ -3255,7 +3270,7 @@ When AFL has nothing for an entry (no page, an empty page, a page held sparse), 
 
 ### G60 · Rankings are a reader: a ranked queue, never authority
 
-AniList's ranked lists are a READER of an existing source, never a fifth source (G50 applies where it applies — a staging table, a rule record, inline upkeep, a freshness-map row — and no new website). Eight lists (lib/rankings.ts#LISTS: airing / upcoming manga-sourced TV / ONA, airing / upcoming novel-sourced, all-time popularity top 500 manga and top 200 novel, trending, and MANGA-FIRST — the most popular manga and their ADAPTATION anime) are SNAPSHOT into ingest_anilist_rankings as greedy staging (G51), one snapshot per list per run, kept as history so a title climbing is itself a signal; the weekly bundle refresh-discovery (pg_cron, Sunday 10:30 UTC; budgeted, G58; a deferred list leads the next run) and discovery-stage.ts --rankings are its two forms, both the same lib. The census reads the LATEST snapshot of every list into ONE queue, seed_candidate: media no series owns (I21) and no halo edge reaches (a related title is the halo's row, I42), series-shaped, not source ORIGINAL (no instrument, T25), collapsed to its chain head (a later season of an unowned chain names its prequel as the head), scored by PRODUCT FIT — popularity × a still-publishing source (×1.5) × far more to read than adapted (×1.25) × airing (×1.2) or announced (×1.1) — a documented, re-tunable derivation, and franchise-shaped (every seed is a new IP; anything with a relation to the catalog belongs to the halo). A rank is the SORT KEY of the queue: never standing, never chapter math, never a mint — promotion is a `series` ruling and the seed writer at a /discover sitting (the recap's --scope seed table), and a seeded series lands STAGED (P39).
+AniList's ranked lists are a READER of an existing source, never a fifth source (G50 applies where it applies — a staging table, a rule record, inline upkeep, a freshness-map row — and no new website). Eleven lists (lib/rankings.ts#LISTS) — a PARTITION of AniList's source enum (T31): airing / upcoming / all-time popular for the MANGA family (the mapping census, untouched: top 500), the NOVEL family (top 200) and the OTHER family (originals and their kin, top 200 — never a general top 500, never originals-only), plus trending (any source) and MANGA-FIRST (the most popular manga and their ADAPTATION anime) are SNAPSHOT into ingest_anilist_rankings as greedy staging (G51), one snapshot per list per run, kept as history so a title climbing is itself a signal; the weekly bundle refresh-discovery (pg_cron, Sunday 10:30 UTC; budgeted, G58; a deferred list leads the next run) and discovery-stage.ts --rankings are its two forms, both the same lib. The census reads the LATEST snapshot of every list into ONE queue, seed_candidate: media no series owns (I21) and no halo edge reaches (a related title is the halo's row, I42), series-shaped, not source ORIGINAL (no instrument, T25), collapsed to its chain head (a later season of an unowned chain names its prequel as the head), scored by PRODUCT FIT — popularity × a still-publishing source (×1.5) × far more to read than adapted (×1.25) × airing (×1.2) or announced (×1.1) — a documented, re-tunable derivation, and franchise-shaped (every seed is a new IP; anything with a relation to the catalog belongs to the halo). A rank is the SORT KEY of the queue: never standing, never chapter math, never a mint — promotion is a `series` ruling and the seed writer at a /discover sitting (the recap's --scope seed table), and a seeded series lands STAGED (P39).
 
 *Why:* Measured 2026-09-05 (PROPOSAL.md §0): the catalog held 3 of the 56 manga-sourced shows airing that week, 1 of 29 announced for the next season, and 293 of the top 500 manga-sourced TV / ONA — existence itself was borrowed from AFL's page list. Sean's value proposition: no cohesive source of truth exists; mangaMapper seeds first and the classifiers attach later (I44). Cursor's framing kept: top 500 is the third engine, not the first — the airing list is the product edge and it is small; the halo (I42) comes first because it is free. The product-fit score is the correction to raw popularity: Tower of God (600+ chapters, one season adapted) outranks Horimiya (finished at 122, mostly adapted) for a reading-continuation product. The fifth bundle was chosen over a mode knob because invoke_edge_refresh posts an empty body to a named function — one function, one job, one budget (P3 amended to 'every bundle').
 
@@ -3265,6 +3280,7 @@ AniList's ranked lists are a READER of an existing source, never a fifth source 
 - audit: `seed_candidate`
 - witnesses: trigun-stampede, konosuba-an-explosion-on-this-wonderful-world, kakegurui
 - aliases: rankings, the rankings reader, AniList rankings, ingest_anilist_rankings, seed_candidate, the seed queue, seed engine, product fit, productFitScore, the score, refresh-discovery, the fifth bundle, weekly discovery, LISTS, snapshotRankings, seedCandidates, manga-first, popularity is a sort key, rank is a sort key, top 500
+- retired wording (P38): “airing / upcoming novel-sourced, all-time popularity top 500 manga and top 200 novel, trending, and MANGA-FIRST”
 - see: I42, I43, I44, P39, G51, G47, G58, G50, R4, I21, T25, P3
 
 ## V — Volumes & boundaries
@@ -4415,6 +4431,7 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - airdate_withheld → `G54`
 - airing-first queue → `G58`
 - airing-lag allowance → `I26`
+- airing-other → `T31`
 - airing-pin rule → `G34`
 - alias defense → `G8`
 - alias-corruption defense → `G8`
@@ -4956,6 +4973,7 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - Ippo finale lesson → `A4`
 - Ippo v61 lesson → `V4`
 - Ippo v61 partial-boundary principle → `V2`
+- isNoInstrumentSource → `T31`
 - join on title → `R20`
 - judgment → gate → audit → `P30`
 - judgment to gate to audit → `P30`
@@ -5085,7 +5103,9 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - never index-join → `R20`
 - never overload episodes.type → `T23`
 - never silently contradict stored data → `R12`
+- new IP → `T31`
 - new-source checklist → `G50`
+- newIp → `T31`
 - next-step offer → `P28`
 - no anchors on a parallel series → `A46`
 - no blanket precedence rule → `R2`
@@ -5093,12 +5113,14 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - no delete-then-insert → `G57`
 - no digit-mashing → `G20`
 - no fourth type → `T26`
+- no instrument → `T31`
 - no one-offs → `P9`
 - no one-offs (sources) → `G50`
 - no one-offs, ever → `P9`
 - no randomized intervals → `G16`
 - no script deletes a series → `P40`
 - no silent TODO → `P28`
+- no-instrument shape → `T31`
 - non-main entries carry the why → `N33`
 - non-monotonic display ruling → `A19`
 - note-vs-row check → `P38`
@@ -5131,12 +5153,15 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - OPEN_ENDED → `I42`
 - open-ended I15 → `I42`
 - order-only components never count → `N4`
+- originals → `T31`
 - orphan anchor → `A42`
 - orphan records → `A42`
 - orphaned-verdict review → `R26`
 - Oshi ep-4 lesson → `A21`
 - Oshi no Ko rule → `R4`
 - Oshi stale-harness lesson → `P19`
+- other family → `T31`
+- OTHER_SOURCES → `T31`
 - our cumulative numbering → `R18`
 - our slug is identity → `I1`
 - out_of_space → `N28`
@@ -5184,6 +5209,7 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - pin-episode redundancy → `A26`
 - pinned protocol → `R31`
 - planComponents → `I39`
+- popular-other → `T31`
 - popularity is a sort key → `G60`
 - position-less rows → `A44`
 - post-adjustment whole-series verification → `P19`
@@ -5339,6 +5365,7 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - seed_candidate → `G60`
 - seedCandidates → `G60`
 - seeded starts → `A10`
+- seedRelationHold → `T31`
 - seiya +1 space witness → `V11`
 - series deletion → `P40`
 - series visibility → `P39`
@@ -5383,6 +5410,7 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - sole-adaptation exception → `T28`
 - source chain → `I41`
 - source chapter shift → `N35`
+- source families → `T31`
 - source is identity → `T25`
 - source is series identity → `T25`
 - source kinds registry → `T25`
@@ -5508,8 +5536,11 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - the ledger of extras → `I45`
 - the mint rule → `G59`
 - the Naruto bug → `I36`
+- the no-instrument family → `T31`
+- the no-instrument shape → `T31`
 - the owner-instrument edge counts → `I47`
 - the parallel clause → `T26`
+- the partition → `T31`
 - the proposal never writes → `I42`
 - the rankings reader → `G60`
 - the ranma lesson → `G26`
@@ -5574,6 +5605,7 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - universal MU targeting → `G39`
 - unresolved disagreement → `R17`
 - unverified_share → `T28`
+- upcoming-other → `T31`
 - Urusei Yatsura wipe → `V2`
 - validation tier is event-driven → `G29`
 - Vanitas amendment → `A29`
@@ -5641,6 +5673,6 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 
 ## Scoreboard
 
-- rules: 290 (live 275, planned 8, superseded 7)
+- rules: 291 (live 276, planned 8, superseded 7)
 - live data rules with no audit class (the automation backlog): 83
-- by layer: writer 151 · display 23 · both 31 · process 85
+- by layer: writer 151 · display 23 · both 32 · process 85

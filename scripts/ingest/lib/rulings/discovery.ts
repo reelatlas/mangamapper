@@ -29,6 +29,22 @@ import type { RulingEntry } from './types';
 
 export type OpenEnded = { openEnded: true };
 
+/**
+ * THE SEED WRITER'S RELATION GATE, pure (I13 d + T31, 2026-09-06): a mint writes its relation (series_relations) and its franchise
+ * membership or does not mint — unless it is an explicit NEW IP (no relation, franchise null) or a restoration. Fail closed: a newIp
+ * that also names a relation or a franchise is a contradiction; a series with neither declaration is held. Returns the hold text or null.
+ */
+export function seedRelationHold(ruling: Pick<DiscoveryRuling, 'relation' | 'restoration' | 'newIp' | 'franchise'>, franchise: string | null, franchiseRuled: boolean, slug: string): string | null {
+  if (ruling.newIp) {
+    if (ruling.relation) return `newIp declared WITH a relation (${ruling.relation.kind} → ${ruling.relation.to}) — a contradiction (T31 / I13 d): a new IP relates to nothing the catalog holds; drop newIp or the relation`;
+    if (ruling.franchise || franchise) return `newIp declared WITH a franchise ('${ruling.franchise ?? franchise}') — a contradiction (T31): a new IP is franchise: null; rule the membership and drop newIp if it belongs to a held franchise`;
+    return null;
+  }
+  if (!ruling.relation && !ruling.restoration) return 'no relation declared — I13 (d): a mint writes its relation (series_relations) and its franchise membership or does not mint; add relation: { to, kind } to the declaration, or newIp: true for a title nothing in the catalog relates to (T31)';
+  if (franchise && !franchiseRuled) return `franchise '${franchise}' named by the ruling but no membership entry for '${slug}' in lib/rulings/franchises.ts — rule the membership with the seed`;
+  return null;
+}
+
 export type DiscoveryDisposition = 'series' | 'excluded' | 'deferred' | 'related_work';
 export type DiscoveryRuling = {
   disposition: DiscoveryDisposition;
@@ -42,6 +58,8 @@ export type DiscoveryRuling = {
   chain?: number[];
   /** a RESTORATION: the series existed and was deleted by the named incident; the ruling recreates it under its old id (never a discovery proposal) */
   restoration?: string;
+  /** disposition 'series', T31 (2026-09-06): a NEW IP — nothing the catalog holds relates to it (a seed-list title); no relation, franchise null; the gate refuses a contradiction (newIp WITH a relation or a franchise). Never reuse `restoration` for it. */
+  newIp?: true;
   /** disposition 'related_work' (I45 / I16): AniList's relation labels mis-attribute the work — it is a related work of THIS owner, in this bucket (an alternative adaptation under the franchise base, say), whatever the edges claim */
   owner?: string;
   bucket?: 'alternative' | 'same_instrument' | 'other_instrument' | 'unknown' | 'original' | 'recap';
