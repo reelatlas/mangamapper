@@ -38,7 +38,7 @@ export type Visibility = 'public' | 'staged';
 export function deriveVisibility(seriesId: string, has: { afl: boolean; afg: boolean }): Visibility {
   if (has.afl || has.afg) return 'public';
   if (Object.keys(EPISODE_TYPE_OVERRIDES[seriesId] ?? {}).length) return 'public'; // T6: a ruling typed it
-  if (MINTED_GRIDS[seriesId]) return 'public'; // G59 path C: every row carries a ruled type
+  if (MINTED_GRIDS[seriesId]?.typesRuled) return 'public'; // G59 path C: a ruled grid publishes only when its TYPES are ruled (amended 2026-09-06: the step-2 grids carry the canon-tier default, signed as a default — staged until the standing programme types them)
   if (PUBLISHED.has(seriesId)) return 'public';
   return 'staged';
 }

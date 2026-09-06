@@ -1154,6 +1154,49 @@
    19-23 / 39 (chain_source) and 18 / 93-95 (AFL's loose Mixed bucket),
    beelzebub 15 / 26-28 / 51, rurouni TV ep 95 (identity). Batch 22 opens on
    the boruto follow-up (lanes I + C) with the batch-21 tooling copied.
+140. ✅ **THE ROWS PASS — eight ruled grids for the seeded OVA runs (G59 path C; Sean signed 2026-09-06).**
+    The seven seeded runs the wiki finder could not serve (Unicorn's list page holds the OVA and the TV
+    re-cut together; Lost Girls and No Regrets carry the franchise's fractional OVA ordinals; Thunderbolt's
+    table reads dateless to our parser; Rohan, Tokyo Babylon and Houkago have no episode template) plus
+    Weekend Hero's mis-numbered row got RULED GRIDS: a narrow research wave of eight asks under a new
+    contract (PROTOCOL-grids.md — the run's OWN numbering, ISO first-release dates, two source tiers
+    incl. the licensor, the AniList count check; no standings, no anchors), validated by
+    validate-grids.ts (0 problems; --entries proposed the MINTED_GRIDS entries) and read as the
+    stored-first recap in chat. 33 rows minted by the manual writer (mint-grids.ts, which gained
+    --dry-run for the /discover stop): Lost Girls 3 (Kodansha's 限定版 ship dates), No Regrets 2, Weekend
+    Hero 2 (bundled with MANGA vols 19 / 20 — not the Kyoto Saga discs; the pair adapts the 2nd and 4th
+    j-BOOKS novels, not Weekend Hero — an instrument question for the standing programme), Houkago 5
+    (one 4-koma block per vs Genius10 disc; the licensor numbers and titles nothing — constructed disc
+    labels), Thunderbolt 8 (the licensor's own continuous Episode 1-8; general-premiere dates over the
+    fan-club early window — Sean's call), Unicorn 7 (first-release dates; the SP / EX shorts and the
+    RE:0096 rows on the same page excluded), Rohan 4 (release order with the manga episode labels; row
+    1's day NULL — the community's 2017-09-20 is one lineage, ja-WP's date is another disc's — P6),
+    Tokyo Babylon 2 (アニメ大全 + the product pages; the VISION music clip is not a row). Weekend Hero's
+    wiki row 2 ("Snake and Poison", this sitting's namesake-table write under the franchise ordinal)
+    removed on Sean's sign — it is the run's row 1. Every grid's types are the canon-tier DEFAULT,
+    signed as such: the standing programme (per-episode type + anchors) is the next research shape for
+    all 26 seeded series; the research work-list is `series_staged`. Traps recorded: our wiki parser
+    reads only the Start-date template / ISO date forms (en-WP's Thunderbolt table carries prose dates
+    — queued); AniList's API was 403 again for the whole wave (every count rests on the licensor + the
+    wikis). Idempotent (a second dry run: 0 minted); 281 tests; the manual writer's --dry-run added.
+    THE CENSUS AFTER THE PASS surfaced three things, each closed: (1) the 33 fresh rows had no FORMAT
+    (T29 derives it from the component kind; the healer set it) — both writers now set the format AT
+    MINT TIME (`deriveFormat` in mint-grids.ts and the seed's row path; a fresh mint never fires
+    ruling_violation again); (2) Unicorn's own three extras re-derived their slots (0.5x → 1.5 / 7.5x)
+    now that the series has rows — the writer moved them; (3) the discovery CRON had run during the
+    pass and staged the fifteen unstaged related works plus new candidates (extra_unstaged 16 → 1,
+    halo_sequel +5, discovery_new_since_sitting +5): the ledger writer inserted 26 rule-derived rows
+    (Ranma ½ SUPER and the 2008 OVA — the queued restage, done by the cron; GitS 2.0; Tennis's ANOTHER
+    STORY I / II and the 2021 film; Gundam Narrative / Hathaway / Perfectibility under Unicorn;
+    Evangelion 3.0 / 3.0+1.0 and the Digimon tri chapters as originals; Bandit Flower under
+    Thunderbolt; the NG-shuu under Last Game; Additional Time under Nagi) — related_work_unruled 365
+    → 378. P39 AMENDED: a ruled grid (G59 path C) publishes the series only when the grid declares
+    its TYPES ruled (`typesRuled` — the Shonan grid's researched types); the eight grids carry the
+    canon-tier default signed as a default, so their series stay STAGED until the standing programme
+    types them (the derivation had said 'public' for all eight — a default is a plausible guess, never
+    a shown truth, P6; Sean's to reverse). Also by the cron: one-piece's AFG anchor at ep 1176 past
+    aired 1175 (`anchor_without_row` +1, a numbering fault listed), a killed AFL run (`run_stuck`).
+
 139. ✅ **STEP 2 — THE FILM MINT SITTING APPLIED (Sean's go 2026-09-06: "walk"; the first /discover
     sitting to mint from the (d) declarations).** THE PICKS PASS (Sean with Cursor's three corrections):
     26 series minted — 12 one-row films / specials (JJK 0, Episode of Bardock, Tokyo Ghoul Jack / Pinto,

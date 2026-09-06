@@ -8,13 +8,14 @@ import type { RulingEntry } from './types';
 import { toRecord } from './types';
 
 export type GridRow = { number: number; title: string; air_date: string | null; type: 'canon' | 'mixed' | 'filler' };
-export type MintedGrid = { rows: GridRow[]; source: string };
+export type MintedGrid = { rows: GridRow[]; source: string; /** P39 (amended 2026-09-06): the grid's TYPES are researched / ruled, not the canon-tier default — only then does the grid publish the series */ typesRuled?: true };
 
 export const ENTRIES: RulingEntry<MintedGrid>[] = [
   {
     seriesId: 'shounan-junai-gumi',
     ruleId: 'G59',
     value: {
+      typesRuled: true, // the five types are researched (batch 17, mixed) — the grid publishes (P39)
       source: 'AFL page sh%C5%8Dnan-pure-love-gang (5 rows, titles + dates + types, staged 2026-08-22; held sparse for the resolver by the source_map note) + the batch-17 research anchors (Sean sign-off 2026-08-23: OVA endpoints spot-checked)',
       rows: [
         { number: 1, title: 'Shonan Junai Gumi! Down the Delinquent Highway!', air_date: '1994-01-21', type: 'mixed' },

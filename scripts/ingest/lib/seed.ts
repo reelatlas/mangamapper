@@ -19,10 +19,11 @@
 // seedSeries writes only a plan that held nothing back. Run from /discover
 // after the dry-run recap, never from `npm run heal`.
 
+import { deriveFormat } from './format';
 import { isoDate } from './related-works';
 import { db } from './db';
 import type { AniListMedia } from './anilist';
-import { aggregate, aired, getMedia, ownedAnilistIds, walkChain, writeComponents } from './chain';
+import { aggregate, aired, getMedia, KIND_BY_FORMAT, ownedAnilistIds, walkChain, writeComponents } from './chain';
 import { filterEpisodeRows, registerIds, stageAniList } from './resolve';
 import { slugify } from './slug';
 import { DISCOVERY_RULINGS, type DiscoveryRuling } from './rulings/discovery';
@@ -132,7 +133,7 @@ export async function seedSeries(p: SeedPlan): Promise<'created' | 'skipped'> {
   // special gets one row per entry from AniList's own media (title, air date) — lineage `anilist` (G57; never the wiki finder, which has no
   // list for a film); typed by the canon-tier default like a wiki row (type_default_unclassified lists it until research types it)
   if (oneRow(p)) { // every entry a single film / special → one row per entry, numbered in chain order (a two-film series: rows 1 and 2)
-    const rows = p.media.map((m, k) => ({ series_id: p.slug, number: k + 1, title: m.title.english ?? m.title.romaji ?? p.title, type: 'canon', air_date: isoDate(m.startDate) }));
+    const rows = p.media.map((m, k) => ({ series_id: p.slug, number: k + 1, title: m.title.english ?? m.title.romaji ?? p.title, type: 'canon', air_date: isoDate(m.startDate), format: deriveFormat(p.slug, k + 1, KIND_BY_FORMAT[m.format ?? ''] ?? 'season') })); // T29 at mint time: the row's format is its component's kind (the healer and the audit derive the same)
     const ruled = filterEpisodeRows(p.slug, rows, 'anilist', { sourceType: ((row as Record<string, unknown>).source_type as string | null) ?? null });
     if (ruled.length) { const { error: e2 } = await db.from('episodes').insert(ruled.map((r) => ({ ...r, minted_by: 'anilist' }))); if (e2) throw new Error(`seed ${p.slug} row 1: ${e2.message}`); }
   }

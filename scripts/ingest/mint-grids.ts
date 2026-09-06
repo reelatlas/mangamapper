@@ -6,6 +6,7 @@
 // a row removed from the ruling is a listing for Sean, not a delete).
 //   npx tsx --env-file=.env.ingest scripts/ingest/mint-grids.ts [--dry-run]   (the dry run prints every insert / assertion / skip and writes nothing — the /discover stop, 2026-09-06)
 import { db, selectAll, startRun, finishRun } from './lib/db';
+import { deriveFormat } from './lib/format';
 import { filterEpisodeRows } from './lib/resolve';
 import { MINTED_GRIDS } from './lib/rulings/minted-grids';
 import { loadEpisodeTies } from './lib/side-source';
@@ -19,7 +20,9 @@ async function main() {
     const { data: s } = await db.from('series').select('id, source_type').eq('id', sid).maybeSingle();
     if (!s) { console.log(`  ${sid}: not in canonical — skipped`); continue; }
     const existing = new Map((await selectAll<any>('episodes', 'number, title, air_date, type, minted_by', (q) => q.eq('series_id', sid))).map((e) => [Number(e.number), e]));
-    const rows = grid.rows.map((r) => ({ series_id: sid, number: r.number, title: r.title, type: r.type, air_date: r.air_date }));
+    const comps = await selectAll<{ episode_start: number | null; episode_end: number | null; kind: string | null }>('series_components', 'episode_start, episode_end, kind', (q) => q.eq('series_id', sid));
+    const kindOf = (n: number) => comps.find((c) => c.episode_start != null && n >= c.episode_start && (c.episode_end == null || n <= c.episode_end))?.kind ?? null;
+    const rows = grid.rows.map((r) => ({ series_id: sid, number: r.number, title: r.title, type: r.type, air_date: r.air_date, format: deriveFormat(sid, r.number, kindOf(r.number)) })); // T29 at mint time (2026-09-06: 33 fresh rows had fired ruling_violation until the healer ran)
     const ruled = filterEpisodeRows(sid, rows, 'manual', { sourceType: s.source_type, ties: await loadEpisodeTies(sid) }); // T26: the side_source default
     for (const r of ruled) {
       checked++;

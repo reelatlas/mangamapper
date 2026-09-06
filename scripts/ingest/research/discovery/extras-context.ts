@@ -64,6 +64,8 @@ async function main() {
   else if (targets === 'ovas') picked = picked.filter((c) => c.format === 'OVA' || c.format === 'SPECIAL');
   else if (targets.startsWith('owner:')) { const o = targets.slice(6); picked = all.filter((c) => c.owners.has(o) && (c.proposal === 'same_instrument' || c.proposal === 'other_instrument' || c.proposal === 'unknown')); }
   else if (targets.startsWith('ids:')) { const ids = new Set(targets.slice(4).split(',').map(Number)); picked = all.filter((c) => ids.has(c.anilistId)); }
+  // R27 — the work-list is the UNRULED rows (a standing already set leaves the queue; `related_work_unruled` is the census twin); explicit ids: / owner: modes keep everything
+  if (!targets.startsWith('ids:') && !targets.startsWith('owner:')) picked = picked.filter((c) => [...c.owners].some((o) => !rowOf.get(`${o}#${c.anilistId}`)?.standing));
   picked = picked.sort((a, b) => b.popularity - a.popularity).slice(0, limit);
   if (listOnly) {
     console.log(`| # | owner | work | anilist | format · year | stored position | popularity |`); console.log('|---|---|---|---|---|---|---|');

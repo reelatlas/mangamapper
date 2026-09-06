@@ -2,7 +2,7 @@
 
 > GENERATED from `scripts/ingest/lib/rulings/**` by `scripts/restructure/gen-rulings.ts` — do not edit by hand. A ruling is an INSTANCE of a rule (`docs/rules.md`); the map is the record, this is the index.
 
-- rulings: 2714 across 357 series/keys · by Sean: 1213 · UNRECORDED reasons: 9 · with a retire condition: 96
+- rulings: 2722 across 357 series/keys · by Sean: 1221 · UNRECORDED reasons: 9 · with a retire condition: 96
 
 ## Retire conditions (re-evaluate when…)
 
@@ -536,18 +536,20 @@
 |---|---|---|---|---|
 | `I43` | {"franchise":"attack-on-titan"} | Attack on Titan and its parody spin-off Junior High (spin_off / parent edges both ways); one IP. | Sean 2026-09-05 · signed by Sean 2026-09-05 ("Sign the 39 / 97 franchise table"), the 2026-09-05 franchise bootstrap (connected components of series_relations ∪ AniList story / PARENT / SAME_UNIVERSE edges between owned entries; scripts/ingest/research/discovery/PROPOSAL.md §2) |  |
 
-### attack-on-titan-lost-girls (1)
+### attack-on-titan-lost-girls (2)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `G59` | {"source":"the step-2 rows pass (2026-09-06; research/discovery/out/grid__attack-on-titan-lost-girls.json): licensor: https://www.kodansha.co.jp/comic/produc… | The step-2 rows pass (Sean signed 2026-09-06): a series minted from a (d) declaration (I13) with no rows AFL or the wiki finder can serve (Release order of THIS entry's three OADs, 1-3 (2017-12-08 → 2018-04-09 → 2018-08-09). No Japanese source numbers the run itself: the licensor's own OAD Archive listing (shingeki.tv 商品情報 and the official portal aot-portal.com) and dアニメストア label them with the FRANCHISE OVA ordinal #16.5A / #16.5B / #??? — the third has no number, its title card reads '???'. The Attack on Titan Wiki calls them OVA 6 / 7 / 8 and Crunchyroll's 'Attack on Titan OADs' collection numbers them Episodes 6 / 7 / 8. en-WP's 'Attack on Titan: Lost Girls' episode table prints 16.5A / 16.5B / ??? in its EpisodeNumber column but carries 1 / 2 / 3 in EpisodeNumber2 — that release-order column is the one that matches our numbering. Dates are the first Japanese release of each row = the manga limited edition's ship date (the disc bundle), per the protocol.); the grid's rows are release facts on two source tiers — types default canon-tier (T27) until the standing programme researches them. | Sean 2026-09-06 · scripts/ingest/research/discovery/out/grid__attack-on-titan-lost-girls.json |  |
 | `I43` | {"franchise":"attack-on-titan"} | The step-2 picks pass (2026-09-06): a series minted from a (d) declaration (I13 b/d) belongs to its parent's franchise; the membership is ruled with the seed so the row lands in it at creation. | Sean 2026-09-06 · scripts/ingest/lib/rulings/discovery.ts (the declaration) |  |
 
-### attack-on-titan-no-regrets (3)
+### attack-on-titan-no-regrets (4)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `T25` | manga | The step-2 seed dry run (2026-09-06): AniList tags the OVA's source VISUAL_NOVEL (the pachislot game sharing its title); the instrument is the manga 悔いなき選択 (AniList 85199, the ruled I38 link) — the tag routes, the edge is the fact (I47). | Sean 2026-09-06 · scripts/ingest/lib/rulings/source-relations.ts (the I38 link) |  |
 | `I38` | {"relation":"adaptation","mangaAnilistId":85199} | The step-2 seed dry run (2026-09-06): AniList tags the No Regrets OVA's source VISUAL_NOVEL (the pachislot game the OVA shares its title with), so the I38 pick found no manga; the OVA adapts 悔いなき選択 (Suruga, 2013-14, 11 ch / 2 vols; AniList 85199 / MAL 58007) — the tag routes, the edge is the fact (I47). | Sean 2026-09-06 · scripts/ingest/research/discovery/out/triage__attack-on-titan.json, https://anilist.co/manga/85199 |  |
+| `G59` | {"source":"the step-2 rows pass (2026-09-06; research/discovery/out/grid__attack-on-titan-no-regrets.json): licensor: https://www.kodansha.co.jp/comic/produc… | The step-2 rows pass (Sean signed 2026-09-06): a series minted from a (d) declaration (I13) with no rows AFL or the wiki finder can serve (Release order of THIS entry's own two OADs — rows 1 and 2 (2014-12-09, then 2015-04-09). The licensor does NOT number the run 第1話/第2話: Kodansha's limited-edition copy labels the discs 前編 / 後編, and the anime's official site labels them with the FRANCHISE OAD ordinal #0.5A / #0.5B (shingeki.tv 進撃の巨人 OAD Archive Blu-ray 収録話, alongside #3.25 / #3.5 / #3.75 / #16.5A / #16.5B / #???). Every third-party numbering seen is a franchise ordinal too — en-WP's episode table prints 0.5A / 0.5B in its EpisodeNumber column (it does carry 1 / 2 as EpisodeNumber2), the AoT Wiki's infoboxes print `Number (OVA) = 4` and `= 5`, and Crunchyroll's combined 'Attack on Titan OADs' collection numbers them E4 / E5. None of those is our space; ours is 1-2 in release order, which matches en-WP's secondary column and livechart's episode list.); the grid's rows are release facts on two source tiers — types default canon-tier (T27) until the standing programme researches them. | Sean 2026-09-06 · scripts/ingest/research/discovery/out/grid__attack-on-titan-no-regrets.json |  |
 | `I43` | {"franchise":"attack-on-titan"} | The step-2 picks pass (2026-09-06): a series minted from a (d) declaration (I13 b/d) belongs to its parent's franchise; the membership is ruled with the seed so the row lands in it at creation. | Sean 2026-09-06 · scripts/ingest/lib/rulings/discovery.ts (the declaration) |  |
 
 ### ayakashi-triangle (5)
@@ -930,10 +932,11 @@
 | `C9` | {"episode":37,"continue_chapter":38} | Kyoto Saga ends ch 34 but chs 35-37 are SKIPPED by the anime — S3 opens at 38; readers who want everything start at 35, anime-parity continues at 38 (WDTALO) | Sean 2026-08-23 · scripts/ingest/apply-continue-points.ts, docs/changelog.md §12.27, batch 8 verdict (blue-exorcist) | RETIRED 2026-08-27 (batch 19 wave 2 deep) — the parity healer (heal-parity-continues, C2/C3 with the C1 guard) re-derives every continue catalog-wide on each pass; the batch-17 values were converted 2026-08-24/26 and nothing stands outside the mechanism |
 | `I43` | {"franchise":"blue-exorcist","title":"Blue Exorcist","titleNative":"青の祓魔師","base":true} | The step-2 picks pass (2026-09-06): the base of the 'blue-exorcist' franchise, created so its minted members (I13 b/d) land in it at creation. | Sean 2026-09-06 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §6.3 |  |
 
-### blue-exorcist-weekend-hero (1)
+### blue-exorcist-weekend-hero (2)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `G59` | {"source":"the step-2 rows pass (2026-09-06; research/discovery/out/grid__blue-exorcist-weekend-hero.json): licensor: https://ao-ex.com/news/?id=66728 · ja-W… | The step-2 rows pass (Sean signed 2026-09-06): a series minted from a (d) declaration (I13) with no rows AFL or the wiki finder can serve (release order 1-2 of THIS run's own entries (AniList 97891 = 2 episodes; the licensor says 「青の祓魔師 京都不浄王篇OAD」（全2話）). The licensor and the JP streaming platforms do NOT number the run itself — they carry 第13話 / 第14話, continuing the Kyoto Saga TV season's 12 episodes (a number space that would collide with the TV rows); en-WP's OVA table is franchise-numbered 1-3, where 1 is the 2011 series' OVA クロの家出 (2012-12-27) and 2-3 are ours. Neither foreign numbering is used.); the grid's rows are release facts on two source tiers — types default canon-tier (T27) until the standing programme researches them. | Sean 2026-09-06 · scripts/ingest/research/discovery/out/grid__blue-exorcist-weekend-hero.json |  |
 | `I43` | {"franchise":"blue-exorcist"} | The step-2 picks pass (2026-09-06): a series minted from a (d) declaration (I13 b/d) belongs to its parent's franchise; the membership is ruled with the seed so the row lands in it at creation. | Sean 2026-09-06 · scripts/ingest/lib/rulings/discovery.ts (the declaration) |  |
 
 ### blue-lock (10)
@@ -2145,10 +2148,11 @@
 |---|---|---|---|---|
 | `I24` | {"ids":[967,1356]} | UNRECORDED — post-recovery relation-graph gap (Hokuto no Ken + Hokuto no Ken 2); per-series detail not written down. | session 2026-08-23 |  |
 
-### houkago-no-ouji-sama (1)
+### houkago-no-ouji-sama (2)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `G59` | {"source":"the step-2 rows pass (2026-09-06; research/discovery/out/grid__houkago-no-ouji-sama.json): licensor: http://tenipuri.jp/dvd_bd/09/01.html · licens… | The step-2 rows pass (Sean signed 2026-09-06): a series minted from a (d) declaration (I13) with no rows AFL or the wiki finder can serve (Release order of the five 「新テニスの王子様 OVA vs Genius10」 discs (Vol.1-Vol.5, 2014-10-29 -> 2015-06-26), one 4-koma anime 『放課後の王子様』 block per disc as a 映像特典. The licensor numbers the HOST OVA's own episodes 第1話-第10話 but prints NO number for the 4-koma blocks, so this run's numbering is ours: 1..5 in disc order. Dates are the discs' Japanese on-sale dates, identical on the licensor's product pages, the licensor's news posts and ja-WP's per-volume table (day-of-week checked: Wed / Thu / Fri / Fri / Fri, exactly as the licensor prints them).); the grid's rows are release facts on two source tiers — types default canon-tier (T27) until the standing programme researches them. | Sean 2026-09-06 · scripts/ingest/research/discovery/out/grid__houkago-no-ouji-sama.json |  |
 | `I43` | {"franchise":"the-prince-of-tennis"} | The step-2 picks pass (2026-09-06): a series minted from a (d) declaration (I13 b/d) belongs to its parent's franchise; the membership is ruled with the seed so the row lands in it at creation. | Sean 2026-09-06 · scripts/ingest/lib/rulings/discovery.ts (the declaration) |  |
 
 ### hunter-x-hunter (28)
@@ -2669,17 +2673,19 @@
 |---|---|---|---|---|
 | `I43` | {"franchise":"mobile-suit-gundam"} | The step-2 picks pass (2026-09-06): a series minted from a (d) declaration (I13 b/d) belongs to its parent's franchise; the membership is ruled with the seed so the row lands in it at creation. | Sean 2026-09-06 · scripts/ingest/lib/rulings/discovery.ts (the declaration) |  |
 
-### mobile-suit-gundam-thunderbolt (1)
+### mobile-suit-gundam-thunderbolt (2)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `G59` | {"source":"the step-2 rows pass (2026-09-06; research/discovery/out/grid__mobile-suit-gundam-thunderbolt.json): licensor: https://gundam-official.com/series/… | The step-2 rows pass (Sean signed 2026-09-06): a series minted from a (d) declaration (I13) with no rows AFL or the wiki finder can serve (The licensor's own continuous 第1話-第8話 / Episode 1-Episode 8 across both ONA seasons. gundam-official.com's STORY index (Bandai Namco Filmworks' live CMS) emits episodeNumber 1..8 with subtile 第1話..第8話 on the JA locale and Episode 1..Episode 8 on the EN locale, in one list; Gundam.info's season-2 announcement writes 「アニメ第2シーズンとなる第5話から第8話」; the legacy official site's STORY artwork is act01..act08. Only the production ASSET filenames keep a per-season index (TB_1st_sc_ep01-04, TB_2nd_sc_ep01-04). So our run numbering 1-4 (AniList 21458) then 5-8 (AniList 97853) IS the licensor's published numbering — no re-basing, and the task's premise that season 2 is re-numbered 第1話-第4話 does not hold (flag 2). air_date is the GENERAL Japanese paid-streaming premiere (通常配信, 12:00 JST); the season-1 fan-club advance dates are per-row notes (flag 3). The compilation films and the 2023 TV Edition are not rows (flags 6, 7).); the grid's rows are release facts on two source tiers — types default canon-tier (T27) until the standing programme researches them. | Sean 2026-09-06 · scripts/ingest/research/discovery/out/grid__mobile-suit-gundam-thunderbolt.json |  |
 | `I43` | {"franchise":"mobile-suit-gundam"} | The step-2 picks pass (2026-09-06): a series minted from a (d) declaration (I13 b/d) belongs to its parent's franchise; the membership is ruled with the seed so the row lands in it at creation. | Sean 2026-09-06 · scripts/ingest/lib/rulings/discovery.ts (the declaration) |  |
 
-### mobile-suit-gundam-unicorn (2)
+### mobile-suit-gundam-unicorn (3)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `I17` | {"to":"mobile-suit-gundam","kind":"sequel"} | The step-2 film mint (2026-09-06): Unicorn (UC 0096) is a sequel of the original Gundam's continuity; AniList's edge between the two is not a story relation the auto rows carry — the declared kind (I13 d) lands as a ruled relation. | Sean 2026-09-06 · scripts/ingest/lib/rulings/discovery.ts (anilist:6336) |  |
+| `G59` | {"source":"the step-2 rows pass (2026-09-06; research/discovery/out/grid__mobile-suit-gundam-unicorn.json): licensor: https://web.archive.org/web/20140324050… | The step-2 rows pass (Sean signed 2026-09-06): a series minted from a (d) declaration (I13) with no rows AFL or the wiki finder can serve (The licensor's own labelling of the OVA run: its seven volumes are 'episode 1' … 'episode 7' (gundam-unicorn.net STORY pages; the current gundam-official.com portal serves episodeNumber 1-7 for this series and states 話数：全7話; ja-WP's 各章リスト 巻数 column reads episode 1-7). Rows are in release order, one per volume, dated by the FIRST Japanese release of that volume — the nationwide event screening (a commercial theatrical release for episode 7), which for episodes 1-5 was also the day paid streaming opened. NOT en-WP's page numbering: 'List of Mobile Suit Gundam Unicorn episodes' holds two runs on one page and its OVA table also carries a non-episode 'SP' row; the 22-episode TV re-cut RE:0096 (AniList 21658) is a different series and is excluded entirely. No franchise OVA ordinal is used.); the grid's rows are release facts on two source tiers — types default canon-tier (T27) until the standing programme researches them. | Sean 2026-09-06 · scripts/ingest/research/discovery/out/grid__mobile-suit-gundam-unicorn.json |  |
 | `I43` | {"franchise":"mobile-suit-gundam"} | The step-2 picks pass (2026-09-06): a series minted from a (d) declaration (I13 b/d) belongs to its parent's franchise; the membership is ruled with the seed so the row lands in it at creation. | Sean 2026-09-06 · scripts/ingest/lib/rulings/discovery.ts (the declaration) |  |
 
 ### monogatari-series (4)
@@ -3671,7 +3677,7 @@
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `N7` | 1913 | A (high): the series IS the 5-episode OVA run — numbering 1-5 is its identity (Sean 2026-08-24). | Sean 2026-08-24 |  |
-| `G59` | {"source":"AFL page sh%C5%8Dnan-pure-love-gang (5 rows, titles + dates + types, staged 2026-08-22; held sparse for the resolver by the source_map note) + the… | A five-episode OVA (1994-97) with no wiki episode list; the AFL page carries the five rows but the source_map holds it sparse (anilist_id null, 'AFL page stays sparse-held for validation', 2026-08-23), so the resolver refuses by design and the entry sat with five manual anchors and ZERO rows. Sean ruled 2026-09-04 (G59 path C): the grid is ruled here from AFL's own rows (types mixed per AFL's quick list — each OVA condenses a manga arc with original framing) and minted at the manual tier. | Sean 2026-09-04 · scripts/ingest/research/batch17/out/shounan-junai-gumi.json |  |
+| `G59` | {"typesRuled":true,"source":"AFL page sh%C5%8Dnan-pure-love-gang (5 rows, titles + dates + types, staged 2026-08-22; held sparse for the resolver by the sour… | A five-episode OVA (1994-97) with no wiki episode list; the AFL page carries the five rows but the source_map holds it sparse (anilist_id null, 'AFL page stays sparse-held for validation', 2026-08-23), so the resolver refuses by design and the entry sat with five manual anchors and ZERO rows. Sean ruled 2026-09-04 (G59 path C): the grid is ruled here from AFL's own rows (types mixed per AFL's quick list — each OVA condenses a manga arc with original framing) and minted at the manual tier. | Sean 2026-09-04 · scripts/ingest/research/batch17/out/shounan-junai-gumi.json |  |
 | `I43` | {"franchise":"gto"} | GTO and Shounan Junai Gumi (Fujisawa's prequel about Onizuka's biker years — the I41 chain work on GTO's reading chain); one IP, base = GTO (the name the world knows). | Sean 2026-09-05 · signed by Sean 2026-09-05 ("Sign the 39 / 97 franchise table"), the 2026-09-05 franchise bootstrap (connected components of series_relations ∪ AniList story / PARENT / SAME_UNIVERSE edges between owned entries; scripts/ingest/research/discovery/PROPOSAL.md §2) |  |
 
 ### shugo-chara (15)
@@ -4018,11 +4024,12 @@
 | `A43` | {"episode":12,"kind":"rearranged","chapters":"ch 24 pages + ch 26"} | non-linear finale re-splices earlier chapter pages; ends inside ch 26 | Sean 2026-08-23 · scripts/ingest/apply-research-batch-3.ts |  |
 | `C8` | {"continue_from_chapter":27} | finale ends inside ch 26; continue at 27. | Sean 2026-08-23 · scripts/ingest/apply-research-batch-3.ts |  |
 
-### thus-spoke-rohan-kishibe (2)
+### thus-spoke-rohan-kishibe (3)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `T25` | manga | The step-2 seed dry run (2026-09-06): AniList tags the entry's source UNKNOWN; the instrument is the manga run it adapts (Kishibe Rohan wa Ugokanai, AniList 103029) — the tag routes, the edge is the fact (I47). | Sean 2026-09-06 · scripts/ingest/lib/rulings/discovery.ts (the declaration) |  |
+| `G59` | {"source":"the step-2 rows pass (2026-09-06; research/discovery/out/grid__thus-spoke-rohan-kishibe.json): licensor: http://jojo-animation.com/ova/rohan/ · li… | The step-2 rows pass (Sean signed 2026-09-06): a series minted from a (d) declaration (I13) with no rows AFL or the wiki finder can serve (Release order of THIS run's own four entries, 1-4, by first Japanese release (row 1 = 2017 mail-in bonus disc, row 2 = 2018-07-19 bundled disc, rows 3-4 = 2019-12-08 event premiere). The licensor does NOT number the run: every OVA is titled by the MANGA one-shot's own episode number (#05 富豪村, #02 六壁坂, #16 懺悔室, #09 ザ・ラン), which is a source-chapter label, never a run ordinal — kept in title / title_native so the label is not lost. Rows 3 and 4 share a date; tie broken by the premiere programme 『懺悔室／ザ・ラン』 (the production committee's own event report) plus ja-WP's 各話リスト order and en-WP's OVA 3 / OVA 4.); the grid's rows are release facts on two source tiers — types default canon-tier (T27) until the standing programme researches them. | Sean 2026-09-06 · scripts/ingest/research/discovery/out/grid__thus-spoke-rohan-kishibe.json |  |
 | `I43` | {"franchise":"jojos-bizarre-adventure"} | The step-2 picks pass (2026-09-06): a series minted from a (d) declaration (I13 b/d) belongs to its parent's franchise; the membership is ruled with the seed so the row lands in it at creation. | Sean 2026-09-06 · scripts/ingest/lib/rulings/discovery.ts (the declaration) |  |
 
 ### time-i-got-reincarnated-slime (1)
@@ -4107,10 +4114,11 @@
 | `A43` | {"episodes":[46,48],"kind":"rearranged","chapters":"132","asterisk_review":"pending (if unset)"} | ch 132's opening cut from ep 46, grafted into ep 48 as flashback | session 2026-08-23 · scripts/ingest/apply-research-batch-9.ts, docs/changelog.md §12.26, session scratchpad batch9/to-your-eternity.json |  |
 | `A43` | {"episodes":[56,57,58,59],"kind":"partial","chapters":"151-158","asterisk_review":"pending (if unset)"} | chained half-chapter boundaries; interior ±half chapter | session 2026-08-23 · scripts/ingest/apply-research-batch-9.ts, docs/changelog.md §12.26, session scratchpad batch9/to-your-eternity.json |  |
 
-### tokyo-babylon (1)
+### tokyo-babylon (2)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `G59` | {"source":"the step-2 rows pass (2026-09-06; research/discovery/out/grid__tokyo-babylon.json): licensor: https://db.animedb.jp/index.php/searchdata/?mode=vie… | The step-2 rows pass (Sean signed 2026-09-06): a series minted from a (d) declaration (I13) with no rows AFL or the wiki finder can serve (Release order of this run's own two OVA volumes (1 = the 1992 tape, 2 = the 1994 tape). The licensor numbers the run itself only on the second unit — the product title is 東京BABYLON2 (Sony Music Shop / Aniplex SVWB-7016; アニメ大全 id 02817) against a plain 東京BABYLON for the first (SVWB-7015; アニメ大全 id 02433). allcinema's single work record calls the run 「OVAシリーズ全2巻」. No franchise ordinal and no TV numbering is involved.); the grid's rows are release facts on two source tiers — types default canon-tier (T27) until the standing programme researches them. | Sean 2026-09-06 · scripts/ingest/research/discovery/out/grid__tokyo-babylon.json |  |
 | `I43` | {"franchise":"x"} | The step-2 picks pass (2026-09-06): a series minted from a (d) declaration (I13 b/d) belongs to its parent's franchise; the membership is ruled with the seed so the row lands in it at creation. | Sean 2026-09-06 · scripts/ingest/lib/rulings/discovery.ts (the declaration) |  |
 
 ### tokyo-ghoul (5)
