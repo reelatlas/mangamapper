@@ -1,0 +1,129 @@
+{
+  "series_id": "mobile-suit-gundam-unicorn",
+  "anilist_id": 6336,
+  "expected_episodes": 7,
+  "rows": [
+    {
+      "number": 1,
+      "title": "Day of the Unicorn",
+      "title_native": "ユニコーンの日",
+      "air_date": "2010-02-20",
+      "note": "First Japanese release = the nationwide event screening (\"premiere review\", 5 cities / 8 venues, 2010-02-20 – 2010-03-05) with same-day paid streaming on PlayStation Store (PS3 / PSP). Licensor top page: 「2010年2月20日より、プレミアレビュー＆配信開始!!」. BD/DVD general release 2010-03-12 (BCXA-0223 / BCBA-3772). The official English site printed this title as \"The Day of Unicorn\" (2010-2015); the current official portal, the English home-video release and en-WP print \"Day of the Unicorn\"."
+    },
+    {
+      "number": 2,
+      "title": "The Second Coming of Char",
+      "title_native": "赤い彗星",
+      "air_date": "2010-10-30",
+      "note": "First Japanese release = event screening 2010-10-30 – 2010-11-12 (8 venues) with same-day PlayStation Store paid streaming (licensor: /info/ep2.html 「10月30日スタート！」). BD/DVD general release 2010-11-12 (BCXA-0224 / BCBA-3773) — en-WP prints that disc date as the episode's air date. Japanese title means \"The Red Comet\"; \"The Second Coming of Char\" is Sunrise's chosen English title (the current portal instead renders it \"RED COMET\")."
+    },
+    {
+      "number": 3,
+      "title": "The Ghost of Laplace",
+      "title_native": "ラプラスの亡霊",
+      "air_date": "2011-03-05",
+      "note": "First Japanese release = event screening 2011-03-05 – 2011-03-18 (10 venues) with same-day PlayStation Store / Qriocity paid streaming (licensor: /info/ep3.html 「３月５日スタート！」). BD/DVD general release postponed from 2011-03-18 to 2011-04-07 (BCXA-0225 / BCBA-3774). The current official portal drops the article (\"Ghost of Laplace\")."
+    },
+    {
+      "number": 4,
+      "title": "At the Bottom of the Gravity Well",
+      "title_native": "重力の井戸の底で",
+      "air_date": "2011-11-12",
+      "note": "First Japanese release = event screening 2011-11-12 – 2011-11-25 (12 venues) with same-day paid streaming (PlayStation Store / J:COM On Demand / MOVIE SPLASH / LISMO Video Store) — licensor /info/ep4.html 「11月12日スタート！」. BD/DVD general release 2011-12-02 (BCXA-0226 / BCBA-3775). All three licensor and wiki sources agree on this title."
+    },
+    {
+      "number": 5,
+      "title": "The Black Unicorn",
+      "title_native": "黒いユニコーン",
+      "air_date": "2012-05-19",
+      "note": "First Japanese release = event screening 2012-05-19 – 2012-06-01 (12 venues) with same-day paid streaming (PlayStation Store / J:COM / au ひかりTV / MOVIE SPLASH VOD) — licensor /info/ep5.html 「5月19日スタート！」. BD/DVD general release 2012-06-08 (BCXA-0227 / BCBA-3776). Both licensor English sources print \"The Black Unicorn\"; en-WP prints \"Black Unicorn\"."
+    },
+    {
+      "number": 6,
+      "title": "Two Worlds, Two Tomorrows",
+      "title_native": "宇宙と地球と",
+      "air_date": "2013-03-02",
+      "note": "First Japanese release = event screening 2013-03-02 – 2013-03-15 (16 venues) with same-day paid streaming — licensor /info/ep6.html 「2013年3月2日スタート！」. BD/DVD general release 2013-03-22 (BCXA-0228 / BCXA-0689 / BCBA-3777). Native title carries ruby readings 宇宙(そら)と地球(ほし)と, literally \"The Sky and the Stars\"; \"Two Worlds, Two Tomorrows\" is Sunrise's chosen English title (the current portal instead renders it \"Space and EARTH\")."
+    },
+    {
+      "number": 7,
+      "title": "Over the Rainbow",
+      "title_native": "虹の彼方に",
+      "air_date": "2014-05-17",
+      "note": "First Japanese release = theatrical release 2014-05-17 – 2014-06-13 (35 screens, 4 weeks; the only entry booked as a commercial theatrical release rather than an event screening) with paid streaming and a limited theatre-advance BD. Licensor top page: 「episode 7「虹の彼方に」2014年5月17日スタート！」; /info/ep7_theater.html 公開期間 5月17日（土）～6月13日（金）. BD/DVD general release 2014-06-06 (BCXA-0827 / BCXA-0828 / BCBA-4595) — en-WP prints that disc date as the episode's air date. ~90 min, longer than episodes 1-6 (~60 min)."
+    }
+  ],
+  "numbering_basis": "The licensor's own labelling of the OVA run: its seven volumes are 'episode 1' … 'episode 7' (gundam-unicorn.net STORY pages; the current gundam-official.com portal serves episodeNumber 1-7 for this series and states 話数：全7話; ja-WP's 各章リスト 巻数 column reads episode 1-7). Rows are in release order, one per volume, dated by the FIRST Japanese release of that volume — the nationwide event screening (a commercial theatrical release for episode 7), which for episodes 1-5 was also the day paid streaming opened. NOT en-WP's page numbering: 'List of Mobile Suit Gundam Unicorn episodes' holds two runs on one page and its OVA table also carries a non-episode 'SP' row; the 22-episode TV re-cut RE:0096 (AniList 21658) is a different series and is excluded entirely. No franchise OVA ordinal is used.",
+  "sources": [
+    {
+      "url": "https://web.archive.org/web/20140324050036/http://www.gundam-unicorn.net/en/world/",
+      "what": "Official English site (gundam-unicorn.net/en) STORY index — nav lists episode 1 through episode 7 and prints 'episode 7 Over the Rainbow'; establishes the run is seven numbered episodes",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://web.archive.org/web/20140324/http://www.gundam-unicorn.net/en/world/episode1.html",
+      "what": "Official English site, episode 1 STORY page — 'episode 1 The Day of Unicorn' (same text in the 2010-07-29 and 2015-01-09 snapshots); episode2/3/4.html give 'The Second Coming of Char', 'The Ghost of Laplace', 'At the Bottom of the Gravity Well'",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://web.archive.org/web/20121214092434/http://www.gundam-unicorn.net/en/world/episode5.html",
+      "what": "Official English site, episode 5 — 'episode 5 The Black Unicorn'; the 20140324050111 snapshot of episode6.html gives 'episode 6 Two Worlds, Two Tomorrows'",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://web.archive.org/web/20100301/http://www.gundam-unicorn.net/",
+      "what": "Official Japanese site top page (Mar 2010) — 「2010年2月20日より、プレミアレビュー＆配信開始!!」「Blu-ray Disc ＆ DVD 3月12日発売!」 (episode 1 first release and disc date)",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://web.archive.org/web/20100128221533/http://www.gundam-unicorn.net/info/",
+      "what": "Official site INFORMATION page (Jan 2010) — episode 1 一般上映 公開期間 2010年2月20日～3月5日, venue-by-venue schedule",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://web.archive.org/web/2014/http://www.gundam-unicorn.net/info/ep2.html",
+      "what": "Official 映像展開情報 pages, one per episode (ep2 … ep6) — each prints イベント上映 start date, 有料配信 start date and Blu-ray/DVD 一般販売 date: ep2 10/30 → 11/12; ep3 3/5 → 4/7; ep4 11/12 → 12/2; ep5 5/19 → 6/8; ep6 2013/3/2 → 3/22",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://web.archive.org/web/20140418/http://www.gundam-unicorn.net/info/ep7_theater.html",
+      "what": "Official site, episode 7 theatre information — 公開期間 5月17日（土）～6月13日（金）; the 2014-05-30 top-page snapshot repeats 「episode 7「虹の彼方に」2014年5月17日スタート！」",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://gundam-official.com/series/unicorn",
+      "what": "Current official portal (Bandai Namco Filmworks; gundam-unicorn.net now redirects here) — 「公開：2010年 [OVA] 話数：全7話」, publishDate 2010-02-20, and an episodes list of episodeNumber 1-7 with the Japanese subtitles ユニコーンの日 / 赤い彗星 / ラプラスの亡霊 / 重力の井戸の底で / 黒いユニコーン / 宇宙と地球と / 虹の彼方に",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://en.gundam-official.com/series/unicorn",
+      "what": "Current official English portal — the same episodeNumber 1-7 with English subtitles: Day of the Unicorn / RED COMET / Ghost of Laplace / At the Bottom of the Gravity Well / The Black Unicorn / Space and EARTH / Over the Rainbow",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://ja.wikipedia.org/wiki/%E6%A9%9F%E5%8B%95%E6%88%A6%E5%A3%AB%E3%82%AC%E3%83%B3%E3%83%80%E3%83%A0UC",
+      "what": "ja-WP 機動戦士ガンダムUC (rev 110728115, 2026-08-21) §OVA 各章リスト — 巻数 episode 1-7 with サブタイトル, a 公開日 column (配信・劇場での公開日) = 2/20, 10/30, 3/5, 11/12, 5/19, 3/2, 5/17 and a separate 発売日 (BD/DVD) column; §BD/DVD gives the seven catalogue numbers BCXA-0223 … BCXA-0827",
+      "tier": "ja-WP"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/List_of_Mobile_Suit_Gundam_Unicorn_episodes",
+      "what": "en-WP list (rev 1372226956, 2026-08-30) — the OVA section's {{Episode list}} rows supply the English release titles and confirm episodes 1/3/4/5/6's dates; it also holds the 22-episode RE:0096 table and a non-episode 'SP' row, and prints the disc date for episodes 2 and 7",
+      "tier": "en-WP"
+    },
+    {
+      "url": "https://www.b-ch.com/titles/2368/",
+      "what": "Bandai Channel title 2368 (the JP streaming platform the official portal links to) — story sequence 1-4 served in HTML as ユニコーンの日 / 赤い彗星 / ラプラスの亡霊 / 重力の井戸の底で, corroborating the run's order",
+      "tier": "cross-check"
+    }
+  ],
+  "flags_for_sean": [
+    "TWO RUNS ON ONE PAGE (the named trap, confirmed): en-WP's 'List of Mobile Suit Gundam Unicorn episodes' carries the 7 OVA rows under '=== Mobile Suit Gundam Unicorn episodes ===' and 22 more under \"=== ''Mobile Suit Gundam Unicorn RE:0096'' Episodes ===\". Only the OVA table is in this grid; RE:0096 (AniList 21658, TV, 2016-04-03 →) is a different series and its numbering was never touched.",
+    "en-WP's OVA table also carries a NON-EPISODE row inside it: 'EpisodeNumber = SP', Mobile Suit Gundam UC: One of Seventy-Two, 2013-08-03 — a ~5-minute 3DCG work screened only in the DOME-G theatre at Gundam Front Tokyo (ja-WP files it under イベント上映作品 alongside 'ネオ・ジオング、お台場に現る!' and 'A Phantom World'). Excluded: it is not one of the seven OVA volumes. An index-join on that table would have shifted episode 7 to row 8.",
+    "episode EX 「百年の孤独」 (~25 min, screened before episode 7 on 2014-05-17; a ~46-min 〈完全版〉 sits on episode 7's BD bonus disc) is NOT a numbered row — ja-WP's infobox reads 話数=全7章(+ episode EX). Excluded; flagged in case the extras programme wants it as a separate entry (episode EX2 「獅子の帰還」 is a drama CD, not video).",
+    "DATE LINEAGE — en-WP is mixed: it prints the event-screening date for episodes 1, 3, 4, 5, 6 but the Blu-ray/DVD general-release date for episode 2 (2010-11-12) and episode 7 (2014-06-06). This grid uses the first Japanese release for all seven (event screening / theatrical, licensor-confirmed page by page), which is what ja-WP's 公開日 column holds. Consistency check: all seven first-release dates are Saturdays; all seven disc dates are Fridays except episode 3's Thursday 2011-04-07, itself a licensor-announced postponement from 2011-03-18. Episodes 1-5 opened paid streaming the same day as the screening, so no 'streaming vs theatrical' fork exists on any row.",
+    "TITLE VARIANCE, licensor against licensor: the contemporaneous official English site (2010-2015, stable across snapshots) printed 'The Day of Unicorn' (ep 1), 'The Ghost of Laplace' (ep 3) and 'The Black Unicorn' (ep 5); the current official portal prints 'Day of the Unicorn', 'Ghost of Laplace', 'The Black Unicorn', and replaces Sunrise's chosen English titles for eps 2 and 6 with literal renderings of the Japanese ('RED COMET' for 赤い彗星, 'Space and EARTH' for 宇宙と地球と). The grid uses the English RELEASE titles — the 2010-2014 official English site and en-WP where they agree, and 'Day of the Unicorn' for ep 1 (current portal + en-WP + the English home-video release, against the old site's 'The Day of Unicorn'). Ep 5 keeps the article ('The Black Unicorn') because both licensor sources print it; en-WP's 'Black Unicorn' is the minority.",
+    "Episode 1 had an invitational 300-seat completion premiere on 2010-02-02 and a Hong Kong premiere on 2010-02-06. Neither is a public release; the licensor's own wording makes 2010-02-20 the start ('2010年2月20日より、プレミアレビュー＆配信開始'), so that is the row's date.",
+    "COUNT CHECK PASSES: 7 rows = AniList 6336's 7 episodes, corroborated by the licensor's 話数：全7話 and the seven-volume BD/DVD catalogue run (BCXA-0223, -0224, -0225, -0226, -0227, -0228, -0827). NOTE: AniList's GraphQL API returned 403 'temporarily disabled' throughout this task, so the count of 7 is the task's given value plus the two licensor corroborations, not a live AniList read.",
+    "Cosmetic source defect worth knowing if anyone re-parses ja-WP: 各章リスト's episode 7 row carries a stray rowspan=\"2\" on both date cells (a leftover from a removed row). The table has exactly seven data rows."
+  ]
+}
