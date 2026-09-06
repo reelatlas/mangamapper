@@ -1,0 +1,79 @@
+{
+  "series_id": "tokyo-babylon",
+  "anilist_id": 1043,
+  "expected_episodes": 2,
+  "rows": [
+    {
+      "number": 1,
+      "title": "Tokyo Babylon",
+      "title_native": "東京BABYLON",
+      "air_date": "1992-10-21",
+      "note": "OVA vol. 1, first Japanese home-video release (VHS/LD) 1992-10-21. アニメ大全 registers the work as 東京BABYLON A SAVE FOR TOKYO CITY STORY (発売日 1992年10月21日, 販売元 SME・ビジュアルワークス) and ja-WP's OVA section heads the volume with the same long form; the rights holder's own product title is 東京BABYLON (Aniplex DVD SVWB-7015, reissued 2000-06-21, 収録時間55分, 脚本 浦畑達彦). A ミュージッククリップなしの通常版 followed 1993-08-21 (allcinema soft #7367, LD ¥8117) — a reissue, not a new unit. ANN: 50 min."
+    },
+    {
+      "number": 2,
+      "title": "Tokyo Babylon 2",
+      "title_native": "東京BABYLON2",
+      "air_date": "1994-03-21",
+      "note": "OVA vol. 2, first Japanese home-video release (VHS/LD) 1994-03-21 (アニメ大全 id 02817: 発売日 1994年03月21日, 発売・販売 ムービック, 話数 1話; ja-WP OVA section: 「東京BABYLON2 （1994年3月21日発売）」, ドラマCD as a 特典). Aniplex DVD SVWB-7016, reissued 2000-06-21, 収録時間60分, 脚本 じんのひろあき. ANN: 55 min."
+    }
+  ],
+  "numbering_basis": "Release order of this run's own two OVA volumes (1 = the 1992 tape, 2 = the 1994 tape). The licensor numbers the run itself only on the second unit — the product title is 東京BABYLON2 (Sony Music Shop / Aniplex SVWB-7016; アニメ大全 id 02817) against a plain 東京BABYLON for the first (SVWB-7015; アニメ大全 id 02433). allcinema's single work record calls the run 「OVAシリーズ全2巻」. No franchise ordinal and no TV numbering is involved.",
+  "sources": [
+    {
+      "url": "https://db.animedb.jp/index.php/searchdata/?mode=view&id=02433",
+      "what": "アニメ大全 (the Association of Japanese Animations' official database, 事務局独自調査) — work 東京BABYLON A SAVE FOR TOKYO CITY STORY: ■公開メディア OVA / ■発売日 1992年10月21日 / ■発売・販売 ・販売元／SME・ビジュアルワークス / ■監督 千明孝一 / ■脚本 浦畑達彦 / 関連作品 OVA『東京BABYLON2』",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://db.animedb.jp/index.php/searchdata/?mode=view&id=02817",
+      "what": "アニメ大全 — work 東京BABYLON2: ■公開メディア OVA / ■発売日 1994年03月21日 / ■発売・販売 ムービック / ■話数 1話 / ■脚本 じんのひろあき / ■製作、著作 ムービック、SPE・ビジュアルワークス、新書館. Search 「東京BABYLON」 returns exactly these two works (2件).",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://www.sonymusicshop.jp/m/item/itemShw.php?site=S&ima=0148&cd=SVWB000007015",
+      "what": "Sony Music Shop (the rights holder's own store; LABEL: Aniplex) — product 東京BABYLON, DVD, RELEASE DATE 2000/06/21, NUMBER SVWB-7015, 脚本：浦畑達彦, 収録時間55分. The unit's official Japanese product title. Sister product SVWB-7016 = 東京BABYLON2 (脚本：じんのひろあき, 収録時間60分, same 2000/06/21). Both listed under artist page EC000034.",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://ja.wikipedia.org/wiki/%E6%9D%B1%E4%BA%ACBABYLON#OVA",
+      "what": "ja-WP 東京BABYLON, == OVA == section, verbatim: 「; 東京BABYLON A SAVE FOR TOKYO CITY STORY （1992年10月21日発売）」 … 「1993年8月21日にはミュージッククリップなしの通常版も発売されている。」 / 「; 東京BABYLON2 （1994年3月21日発売）」. Infobox animanga/OVA: 開始 1992年10月21日, 終了 1994年3月21日, アニメーション制作 アニメイトフィルム, 製作 ムービック、SPE・ビジュアルワークス、新書館（#2）.",
+      "tier": "ja-WP"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Tokyo_Babylon",
+      "what": "en-WP Tokyo Babylon, Infobox animanga/Video (ova): first = October 21, 1992; last = March 21, 1994; episodes = 2; studio Madhouse. §Media → Anime → Original video animation: 'The original video animations (OVA) series are two episodes … re-released in Japan in DVD format on June 21, 2000.'",
+      "tier": "en-WP"
+    },
+    {
+      "url": "https://www.allcinema.net/cinema/88456",
+      "what": "allcinema (Stingray) work 88456 東京ＢＡＢＹＬＯＮ: オリジナルビデオ / アニメ / 1992/10/21 ～; the record's own comment reads 「CLAMPによる人気コミックのOVAシリーズ全2巻」. Its soft records: LD 東京 BABYLON 1993/08/21 (¥8117) and DVDs 東京ＢＡＢＹＬＯＮ / 東京ＢＡＢＹＬＯＮ 2, both 2000/06/21 (JAN 4534530701558 / 4534530701657).",
+      "tier": "cross-check"
+    },
+    {
+      "url": "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=761",
+      "what": "ANN 'Tokyo Babylon (OAV)': vintage 1992-10-21, running time 50 minutes, ©1992 CLAMP/Shinshokan/MOVIC/Sony Music Entertainment (Japan). Sibling entry id=762 'Tokyo Babylon 2 (OAV)': vintage 1994-03-21, 55 minutes. ANN's episode-title page prints editor-made 'Tokyo Babylon Part One' / 'Part Two' — no Japanese counterpart; not used.",
+      "tier": "cross-check"
+    },
+    {
+      "url": "https://myanimelist.net/anime/1043",
+      "what": "MAL 1043 (the id AniList 1043 inherits): Type OVA, Episodes 2, Aired Oct 21, 1992 to Mar 21, 1994, Duration 49 min. per ep., Japanese 東京ＢＡＢＹＬＯＮ, Synonyms 'Tokyo Babylon 2'. Used only to corroborate the count while the AniList API is down.",
+      "tier": "cross-check"
+    },
+    {
+      "url": "https://tokyo-babylon.fandom.com/wiki/Tokyo_Babylon_(OVA)",
+      "what": "tokyo-babylon.fandom 'List of OVAs' table: ep 1 (東京ＢＡＢＹＬＯＮ) October 21, 1992; ep 2 (東京ＢＡＢＹＬＯＮ２) March 21, 1994. Its English titles 'The Curse' / 'The Ripper' are wiki inventions (the table's own Japanese column reads 'TBA') — not used.",
+      "tier": "cross-check"
+    }
+  ],
+  "flags_for_sean": [
+    "COUNT CHECK PASSES, but not against AniList directly: graphql.anilist.co is returning 403 'The AniList API has been temporarily disabled due to severe stability issues.' The expected count of 2 comes from the task and docs/STATE.md ('Tokyo Babylon 2' among the seven rowless seeded OVA runs); it is corroborated by MAL 1043 (OVA, 2 episodes, Oct 21 1992 – Mar 21 1994), en-WP's infobox (episodes = 2), allcinema's 「OVAシリーズ全2巻」 and アニメ大全 returning exactly two OVA works for 東京BABYLON. 2 rows delivered.",
+    "NO PER-VOLUME SUBTITLE EXISTS. Every Japanese source titles the two units 東京BABYLON and 東京BABYLON2 — there are no episode titles to find. The English strings floating around are database/wiki inventions with no Japanese counterpart: ANN's 'Tokyo Babylon Part One / Part Two' and tokyo-babylon.fandom's 'The Curse' / 'The Ripper'. The task's guess 'Tokyo Babylon 2: Vision' is a different work entirely (see the VISION flag). Rows carry romaji of the product titles.",
+    "ROW 1's TITLE IS SOURCE-DEPENDENT — Sean's call. ja-WP's OVA section and アニメ大全 (id 02433) both head the 1992 volume 東京BABYLON A SAVE FOR TOKYO CITY STORY, which is ALSO ja-WP's series-level OVA infobox title covering both volumes (開始 1992-10-21 / 終了 1994-03-21) — i.e. on ja-WP the long form is the RUN's title, not the volume's. The rights holder's product title for the unit is plain 東京BABYLON (Aniplex SVWB-7015). The grid uses the product title; swap in the long form if you prefer the registered work name.",
+    "DO NOT READ アニメ大全's 「話数 2話」 ON RECORD 02433 AS TWO UNITS IN 1992. That record also prints 分数 30分 while the volume runs ~50 min (ANN) / 55 min on the DVD — the 2話 is the RUN's count parked on the vol-1 record (whose title is the run's title); the sibling record 02817 (東京BABYLON2) prints 話数 1話. No source anywhere describes a third unit.",
+    "A SIBLING WORK THAT IS NOT A ROW: 「VISION」 / 'Tokyo Babylon: Vision' (MAL 24139) — Type Music, 1 episode, 5 min, dated 1992-12-21, studio animate Film. ja-WP records that the 1992 OVA tape carried 全3曲のミュージッククリップ as 映像特典 (the third animated). If that title ever surfaces in the halo it is a music clip, not an OVA volume — keep it out of this run.",
+    "DATES ARE 発売日 / 初出 (Japanese home-video release), not broadcasts — this run never aired. Two reissues exist and neither is a row: a 通常版 of vol 1 without the music clips on 1993-08-21 (allcinema LD soft #7367), and both volumes on DVD on 2000-06-21 (Aniplex SVWB-7015 / SVWB-7016).",
+    "SOURCE UNREACHABLE, declared: Media Arts DB (mediaarts-db.bunka.go.jp) could not be read at all this session — its TLS certificate has expired (curl exit 60; the fetcher returns 'certificate has expired'). It was not used, and no claim here rests on it. akiba-souken.com did not resolve either.",
+    "FOR THE LATER STANDING PROGRAMME, NOT PART OF THIS GRID (no judgment made here): アニメ大全 id 02433's 解説 says of the 1992 volume 「アニメオリジナルストーリーだが、原作の雰囲気そのままに…」, and id 02817 records 原作メディア: アニメオリジナル for the 1994 volume; en-WP likewise calls the two 'two episodes with original stories'. Both units may therefore be anime-original against the CLAMP manga — that is for the per-episode research to rule, on its own sources."
+  ]
+}
