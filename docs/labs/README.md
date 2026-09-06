@@ -21,14 +21,15 @@ what you edit to produce the next one.
 
 ## The published labs
 
-**The 2026-09-02 artifact URLs below are dead** — they were published from an
-account this session cannot reach, and `action: list` returns nothing. Only the
-first row is live; the rest are listed for the record and must be republished
-from the sources here if they are wanted again.
+All six URLs below are live. (A 2026-09-04 session briefly recorded them as
+dead — a transient listing failure, not deleted artifacts. If `action: list`
+ever returns nothing, retry before concluding anything is gone, and never
+publish a replacement without the retry: doing so creates a duplicate and
+orphans the URL these docs point at.)
 
 | artifact | what it is |
 |---|---|
-| [Theme Lab](https://claude.ai/code/artifact/d03a4f5f-9403-4b1d-b574-f59e62a4efa9) | **current** — all FIVE themes over one 343-series fixture (republished 2026-09-04) |
+| [Theme Lab](https://claude.ai/code/artifact/1dc4f456-f554-4b63-b0e0-3684a6c63d44) | **current** — all FIVE themes over one 343-series fixture (plain added 2026-09-04) |
 | [Theme Contract](https://claude.ai/code/artifact/3813655e-ed72-4515-9776-9972c67ddeb3) | the four-layer architecture; 12 variants on one card mock |
 | [Atmosphere Lab](https://claude.ai/code/artifact/97aa57fe-2562-42b8-b38f-91308ff25821) | the generation pass — 15 concepts, kept/set-aside marked |
 | [Terminal Lab](https://claude.ai/code/artifact/ea224daf-2f6d-4b0d-8c7c-23499ab75fd9) | strip test per terminal variant + colour-vision simulator |
