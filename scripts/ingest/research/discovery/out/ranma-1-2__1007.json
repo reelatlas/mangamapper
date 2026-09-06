@@ -1,0 +1,85 @@
+{
+  "series_id": "ranma-1-2",
+  "anilist_id": 1007,
+  "title": "Ranma ½ (OVA)",
+  "summary": "AniList 1007 is the Kitty Film / Pony Canyon OVA Vol.1-6 block (1993-10-21 → 1994-08-19), the six half-hour tapes that continue the 1989 TV line from where it stopped: our ep 161 ends at ch 229 (22巻6話 「母子水いらず!!」) and OVA Vol.1 opens on ch 230 (22巻7話 「突然大嫌い!!」) — the Ranma Wiki's Chapter 229 page says in as many words 'This is the last chapter to be adapted into the 1989 anime', and en-WP puts the TV run's coverage at 'or 229 chapters'. THREE of the six adapt the manga and THREE are anime-original, and three independent sources say so the same way: ja-WP's OVA list (Vol.1 = 原作コミックス22巻7-10話, Vol.2 = OVAオリジナル, Vol.3 = 23巻7話, Vol.4 = 同25巻3-9話, Vol.5/6 = OVAオリジナル), the Ranma Wiki's OVA infoboxes (manga = Chapter 230/231/232/233 · None · 241 · 259-265 · None · None, each chapter page naming its OVA back in an `anime` field I read one by one for chs 224-290), and en-WP's episode list ('All but three are based on stories originally in the manga'). The 巻話 → continuous conversion is proved at BOTH edges of every range from en-WP's Shogakukan volume table (vol 22 = 224-234, vol 23 = 235-245, vol 25 = 257-267) and doubly by the wiki's Japanese scan filenames (Vol22Chapter7.png = ch 230, Vol23Chapter7.png = ch 241, Vol23Chapter11.png = ch 245); the chapter titles carry the content test — 230 「突然大嫌い!!」 is the Reversal Jewel taking effect and 233 「告白の行方」 is the confession's outcome (the arc's close); 241 「暴力料理教室」 is the cooking duel; 259 「必殺新任教師!!」 is Hinako Ninomiya's debut and 265 「究極の健康法！」 closes her arc. Under T28 the block is a substantial source share beside a substantial original share: the six tapes are one story each and of one length (ANN prints 26 minutes per OVA episode; en-WP's OVA infobox says 30 minutes; Pony Canyon's 3-film + 11-OVA Blu-ray BOX totals about 470 minutes), so the three adapting tapes are about HALF the block's runtime — roughly 80 of some 165 minutes, arithmetic on those per-episode figures (3 x ~27 of 6 x ~27), not a sourced total — and each of the three is source material end to end, not a fragment, while the other three (the Christmas party tape and both halves of 道を継ぐ者, whose Natsume and Kurumi are anime-original characters) carry no chapter at all. One standing for the bundle, per Sean's 2026-09-05 ruling: MIXED. Surprises for the file: OVA 4 opens on a RESTAGED fragment of ch 245 (Gosunkugi cornered by thugs — in the manga Ranma saves him, in the OVA Hinako does), delivered here as a sliver because the rest of ch 245 is animated nowhere and the claim rests on one wiki; and AniList's synopsis for 1007 is ANN's blurb for the ELEVEN-OVA line (ANN id 200), not a scope statement.",
+  "standing": "mixed",
+  "confidence": "high",
+  "chapters_adapted": [
+    {
+      "start": 230,
+      "end": 233,
+      "volume": 22,
+      "weight": "significant",
+      "note": "OVA Vol.1 シャンプー豹変! 反転宝珠の禍 (1993-10-21) — the whole Reversal Jewel arc (22巻7-10話), first-time coverage picking up immediately after ep 161's ch 229. All four chapter pages name this OVA in their `anime` field and the arc page maps them 1:1. The wiki's 'Changes in anime' are staging and order only (Ranma takes his flirting tips from a Saotome-school scroll instead of a magazine, one added fake-out, classmates absent) — divergence under T28's faithfulness clause, not a second story."
+    },
+    {
+      "start": 241,
+      "end": 241,
+      "volume": 23,
+      "weight": "significant",
+      "note": "OVA Vol.3 あかねVSらんま お母さんの味は私が守る! (1994-02-18) — 23巻7話 「暴力料理教室」, the single chapter, and it is the episode's whole spine (Kasumi ill, Nodoka teaches Akane and 'Ranko' to cook, the duel, the ramen). The OVA expands it: Mrs. Tendo's old cookbook and flashbacks to her, and how Kasumi learned to cook, are added (Ranma Wiki: 'The OVA versions greatly expand this arc'; its own trivia: 'In the manga counterpart, there is no mention of Mrs. Tendo or her old cookbook'). Expansion inside the adapted story = divergence; the chapter still carries the episode."
+    },
+    {
+      "start": 245,
+      "end": 245,
+      "volume": 23,
+      "weight": "sliver",
+      "note": "SLIVER — OVA Vol.4's opening scene only, and RESTAGED: ch 245 「ファイト一発」 opens with Gosunkugi cornered by three thugs and rescued by Ranma; the OVA plays that scene with HINAKO as the rescuer (she has not been introduced yet at that point in the manga). No weight, no anchor: the rest of ch 245 (the mail-order One-Punch suit and the duel with Ranma) is animated by NOTHING in the 1989-96 line — the chapter is not 'adapted properly' by any later episode, it is simply never adapted. SINGLE-LINEAGE CLAIM: the Ranma Wiki says it on two pages (One-Punch Armor Arc 'Changes in anime'; Hinako Ninomiya Intro Arc 'Changes in anime') while ja-WP credits OVA 4 with 25巻3-9話 only and the wiki's own Chapter 245 page leaves `anime` empty; every web echo I could find traces back to that wiki."
+    },
+    {
+      "start": 259,
+      "end": 265,
+      "volume": 25,
+      "weight": "significant",
+      "note": "OVA Vol.4 学園に吹く嵐! アダルトチェンジひな子先生 (1994-04-21) — the whole Hinako Ninomiya debut arc (25巻3-9話), first-time coverage; all seven chapter pages name this OVA. PARTIAL START: the wiki records that the OVA 'skips most of first chapter till Hinako meets her class', so ch 259's opening is not animated (A10 keeps the START at 259). Other changes are cuts and restagings inside the arc (Ukyo/Shampoo/Kodachi dropped, Ryoga's line added, a challenge duel instead of the basketball ambush) — divergence."
+    }
+  ],
+  "recap": false,
+  "position": {
+    "stored": 161.5,
+    "verdict": "confirmed",
+    "proposed": 161.5,
+    "why": "Confirmed on CONTENT, not just the air date. Our ep 161 「Boy Meets Mom, Part 2」 ends at ch 229 and this block's first tape opens at ch 230 — contiguous, no overlap, no gap; the Ranma Wiki's OVA Vol.1 infobox chains it exactly that way (`previous ova = Boy Meets Mom Part 2 Someday, Somehow... (Anime Episode)`), and en-WP states the TV run covered 229 chapters. Release order also agrees (1993-10-21, after the 1992-09-25 finale). The block's furthest chapter is 265 and AniList 1008 (the two-part SPECIAL よみがえる記憶) opens at 266 — so the shelf after ep 161 reads 1007 → 1008 → SUPER in both release and chapter order."
+  },
+  "adopted": null,
+  "repairs": [],
+  "sources": [
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%82%89%E3%82%93%E3%81%BE1/2&prop=wikitext&format=json&formatversion=2",
+    "https://en.wikipedia.org/w/api.php?action=parse&page=List%20of%20Ranma%20%C2%BD%20episodes&prop=wikitext&format=json&formatversion=2",
+    "https://en.wikipedia.org/w/api.php?action=parse&page=List%20of%20Ranma%20%C2%BD%20chapters&prop=wikitext&format=json&formatversion=2",
+    "https://en.wikipedia.org/w/api.php?action=parse&page=Ranma%20%C2%BD&prop=wikitext&format=json&formatversion=2",
+    "https://ranma.fandom.com/api.php?action=parse&page=Shampoo%27s%20Sudden%20Switch%20-%20The%20Curse%20of%20the%20Contrary%20Jewel&prop=wikitext&format=json&formatversion=2",
+    "https://ranma.fandom.com/api.php?action=parse&page=Tendo%20Family%20Christmas%20Scramble&prop=wikitext&format=json&formatversion=2",
+    "https://ranma.fandom.com/api.php?action=parse&page=Akane%20vs.%20Ranma%21%20I%27ll%20Be%20the%20One%20to%20Inherit%20Mother%27s%20Recipes%21&prop=wikitext&format=json&formatversion=2",
+    "https://ranma.fandom.com/api.php?action=parse&page=Stormy%20Weather%20Comes%20to%20School%21%20Growing%20Up%20With%20Miss%20Hinako&prop=wikitext&format=json&formatversion=2",
+    "https://ranma.fandom.com/api.php?action=parse&page=The%20One%20to%20Carry%20On%20Part%20One&prop=wikitext&format=json&formatversion=2",
+    "https://ranma.fandom.com/api.php?action=parse&page=The%20One%20to%20Carry%20On%20Part%20Two&prop=wikitext&format=json&formatversion=2",
+    "https://ranma.fandom.com/api.php?action=parse&page=Reversal%20Jewel%20Arc&prop=wikitext&format=json&formatversion=2",
+    "https://ranma.fandom.com/api.php?action=parse&page=Violence%20of%20Cooking%20Arc&prop=wikitext&format=json&formatversion=2",
+    "https://ranma.fandom.com/api.php?action=parse&page=One-Punch%20Armor%20Arc&prop=wikitext&format=json&formatversion=2",
+    "https://ranma.fandom.com/api.php?action=parse&page=Hinako%20Ninomiya%20Intro%20Arc&prop=wikitext&format=json&formatversion=2",
+    "https://ranma.fandom.com/api.php?action=parse&page=Chapter%20229&prop=wikitext&format=json&formatversion=2",
+    "https://ranma.fandom.com/api.php?action=parse&page=Chapter%20230&prop=wikitext&format=json&formatversion=2",
+    "https://ranma.fandom.com/api.php?action=parse&page=Chapter%20233&prop=wikitext&format=json&formatversion=2",
+    "https://ranma.fandom.com/api.php?action=parse&page=Chapter%20241&prop=wikitext&format=json&formatversion=2",
+    "https://ranma.fandom.com/api.php?action=parse&page=Chapter%20245&prop=wikitext&format=json&formatversion=2",
+    "https://ranma.fandom.com/api.php?action=parse&page=Chapter%20259&prop=wikitext&format=json&formatversion=2",
+    "https://ranma.fandom.com/api.php?action=parse&page=Chapter%20265&prop=wikitext&format=json&formatversion=2",
+    "https://ranma.fandom.com/api.php?action=parse&page=Chapter%20146&prop=wikitext&format=json&formatversion=2",
+    "https://ranma.fandom.com/api.php?action=parse&page=Movie%20%2B%20OVA%20Ranma%20%C2%BD&prop=wikitext&format=json&formatversion=2",
+    "https://web.archive.org/web/20120918152832/http://www.furinkan.com/ranma/anime/ovas.html",
+    "https://av.watch.impress.co.jp/docs/news/700455.html",
+    "https://seesaawiki.jp/w/radioi_34/d/%A4%E9%A4%F3%A4%DE1/2%20OVA",
+    "https://cdn.animenewsnetwork.com/encyclopedia/api.xml?title=~ranma"
+  ],
+  "flags_for_sean": [
+    "BUNDLE — one standing, six tapes. If the block is ever split into six rows the per-tape verdicts are: Vol.1 シャンプー豹変! 反転宝珠の禍 = CANON (230-233); Vol.2 天道家すくらんぶるクリスマス = FILLER (anime-original; ja-WP OVAオリジナル, wiki manga = None, 'the first OVA to not adapt a manga storyline'; the only Christmas chapter in the manga, ch 146 「サンタクロースの弟子」, is a different story — Happosai as Santa with two children — and its `anime` field is empty); Vol.3 あかねVSらんま = CANON (241, greatly expanded); Vol.4 学園に吹く嵐! = CANON (259-265, ch 259's opening skipped, opens on the ch-245 sliver); Vol.5 + Vol.6 道を継ぐ者 前編/後編 = FILLER (anime-original; Natsume and Kurumi are anime-original characters). 3 canon / 3 filler → MIXED at the bundle level.",
+    "THE CH-245 SLIVER IS SINGLE-LINEAGE. Delivered as weight `sliver` (no anchor, no weight in the standing) precisely because R3 is not met: the Ranma Wiki asserts it on two arc pages, ja-WP credits OVA 4 with 25巻3-9話 only, and the wiki's OWN Chapter 245 page leaves `anime` empty. TV Tropes has a recap page for the OVA but it is Cloudflare-gated and is cross-check tier regardless; every search echo restates the wiki. If Sean prefers, drop the entry entirely — nothing downstream depends on it; what must survive is the fact that ch 245's actual story is animated NOWHERE.",
+    "SCOPE TRAP — do not read AniList 1007's synopsis as its membership. That text is ANN's plot summary for the ALL-ELEVEN OVA line (ANN id 200: 11 episodes, vintage 1993 to 1996, 26 min each). Membership rests on: AniList's own 6 episodes / start 1993-10-21 / duration 30 min, its SEQUEL edge to 1008 (the two-part SPECIAL, which the chapter reverse index shows adapting 266-278 — a clean, non-overlapping continuation), en-WP's OVA infobox (episodes = 6, October 21 1993 → August 19 1994, runtime 30 minutes), ja-WP's OVA list, and two production facts that fence the six as one block: they share the OP/ED 「恋だ!パニック」/「乱馬とあかねのバラード」 (Vol.1-6 only) and one credit sequence (音楽 松浦晃久, 脚本 山口亮太, 製作 小学館・キティフィルム・ポニーキャニオン) that changes at SUPER Vol.1. So: exactly six, no more, no fewer.",
+    "CHAPTER SPACE AND EDITIONS. Everything above is in the CONTINUOUS 1-407 numbering our anchors already use (ep 161 → 229; the wiki's last chapter is 407 = the stored total). Japanese tankōbon number stories WITHIN a volume, which is why ja-WP writes 22巻7-10話; the conversion is proved from en-WP's Shogakukan volume table at both edges of every range and by the wiki's own scan filenames. The ORIGINAL 38-volume tankōbon and the 2002-03 新装版 (also 38 volumes) share one volume numbering — the Ranma Wiki prints a single value for both ('22 (Tankōbon/Shinsoban)') — so no edition fork exists for these anchors. VIZ's English volumes run 2 LOWER across this range (ch 230 = Viz vol 20 = JP vol 22; ch 259 = Viz 23 = JP 25) and must never enter the ledger; the 2016-18 B6 edition is 20 volumes and is a third space again.",
+    "WHAT THIS BLOCK DOES NOT COVER (I read the wiki's per-chapter `anime` field for every chapter 224-290, pulled in two batched action=query&prop=revisions reads): after ep 161's ch 229 the animated line is 230-233 (this work) → 241 (this work) → 259-265 (this work) → 266-278 (AniList 1008) → 287-288 (SUPER Vol.1). Chapters 234-240 and 242-258 are animated by nothing in the 1989-96 line — a real never-adapted gap sitting INSIDE this work's span, worth carrying in the ledger note so a reader is not told to read straight through.",
+    "AUTHOR CREDITS ARE CREDITS, NOT ADOPTION (T26). All six tapes carry 原作：高橋留美子 on screen with 脚本：山口亮太 (アニメスタッフデータベース's transcription of the OP/ED credits); for the two original tapes Takahashi supplied only the CHARACTER DESIGNS for Natsume and Kurumi (Ranma Wiki; furinkan.com) — designs without events, evidence AGAINST adoption. `adopted` is null. Related trap already handled: the 1994-10-15 「映画＋OVA らんま1/2」 visual comic is a film-comic made FROM The One to Carry On and film 3 (stills, not new pages) — an adaptation OF the work, never a source for it.",
+    "TWO en-WP SELF-CONTRADICTIONS, neither affecting the verdict: (a) the main 'Ranma ½' article's prose says the OVAs began 'December 7, 1993' (citing furinkan, which itself prints October 21, 1993), while its own infobox, its episode-list article, ja-WP and the Ranma Wiki all say 1993-10-21 — the stored AniList date is right, no repair proposed; (b) the main article says 'All but two are based on stories originally in the manga' where the episode-list article says 'All but three' — three is correct (Vol.2, Vol.5, Vol.6), confirmed by ja-WP's OVAオリジナル marks and the wiki's three `manga = None` infoboxes."
+  ]
+}
