@@ -1,0 +1,160 @@
+{
+  "series_id": "mobile-suit-gundam-thunderbolt",
+  "anilist_id": 21458,
+  "anilist_ids": [21458, 97853],
+  "expected_episodes": 8,
+  "rows": [
+    {
+      "number": 1,
+      "title": "Episode 1",
+      "title_native": "第1話",
+      "air_date": "2015-12-25",
+      "note": "S1 (AniList 21458), licensor asset TB_1st_sc_ep01. General paid streaming premiere, Fri 12:00 JST — V-STORAGE 2015.12.25: 「第1話が本日正午より配信開始となりました」. Advance (最速先行配信) on the official ガンダムファンクラブ smartphone app 2015-12-11 — gundam-tb.net NEWS 2015/12/11: 「本日正午より『機動戦士ガンダム サンダーボルト』第1話の先行配信が開始」. See flag 3."
+    },
+    {
+      "number": 2,
+      "title": "Episode 2",
+      "title_native": "第2話",
+      "air_date": "2016-02-12",
+      "note": "S1, TB_1st_sc_ep02. General premiere Fri 12:00 — V-STORAGE 2016.2.12: 「第2話が本日正午より配信開始となりました」. Advance on ガンダムファンクラブ 2016-01-29 — V-STORAGE 2015.12.25: 「ガンダムファンクラブにて、1月29日（金）正午より最速配信決定!!」."
+    },
+    {
+      "number": 3,
+      "title": "Episode 3",
+      "title_native": "第3話",
+      "air_date": "2016-03-18",
+      "note": "S1, TB_1st_sc_ep03. General premiere Fri 12:00 — V-STORAGE 2016.3.18: 「第3話が本日正午より配信開始となりました」. Advance 2016-03-04 — V-STORAGE 2016.2.12: 「公式スマートフォンアプリ「ガンダムファンクラブ」にて2016年3月4日(金)正午より第3話の最速先行配信を実施！」."
+    },
+    {
+      "number": 4,
+      "title": "Episode 4",
+      "title_native": "第4話",
+      "air_date": "2016-04-22",
+      "note": "S1 finale, TB_1st_sc_ep04. General premiere Fri 12:00 — gundam-tb.net NEWS 2016/04/22: 「本日正午より『機動戦士ガンダム サンダーボルト』第4話の有料配信がスタートしました！」. Advance 2016-04-08 — V-STORAGE 2016.3.18: 「…2016年4月8日(金)正午より第4話の最速先行配信を実施！」."
+    },
+    {
+      "number": 5,
+      "title": "Episode 5",
+      "title_native": "第5話",
+      "air_date": "2017-03-24",
+      "note": "S2 (AniList 97853), licensor asset TB_2nd_sc_ep01 — but published as 第5話 / Episode 5. Fri 12:00 — V-STORAGE 2017.3.24: 「本日3月24日（金）より第5話の配信がスタートした」. No advance window from S2 on: ガンダムファンクラブ is listed among the same-day TVOD services."
+    },
+    {
+      "number": 6,
+      "title": "Episode 6",
+      "title_native": "第6話",
+      "air_date": "2017-04-28",
+      "note": "S2, TB_2nd_sc_ep02. Fri 12:00 — V-STORAGE 2017.4.28: 「本日４月２８日（金）より第６話の配信がスタートした」."
+    },
+    {
+      "number": 7,
+      "title": "Episode 7",
+      "title_native": "第7話",
+      "air_date": "2017-05-31",
+      "note": "S2, TB_2nd_sc_ep03. A WEDNESDAY among Friday releases — sourced, not a defect: V-STORAGE 2017.5.31: 「本日５月３１日（水）正午より第７話の配信がスタートした」; the 2017-01-20 licensor schedule also prints 「2017年5月31日（水）」."
+    },
+    {
+      "number": 8,
+      "title": "Episode 8",
+      "title_native": "第8話",
+      "air_date": "2017-07-14",
+      "note": "S2 finale, TB_2nd_sc_ep04. Fri 12:00 — Gundam.info 2017-07-14: 「第8話の有料配信が、本日7月14日（金）12：00より国内21サービスにてスタートした」. DELAYED from the announced 2017-06-30 — V-STORAGE: 「第8話は、6月30日正午の配信予定でしたが、諸事情により、7月14日(金)に変更になりました」. See flag 5."
+    }
+  ],
+  "numbering_basis": "The licensor's own continuous 第1話-第8話 / Episode 1-Episode 8 across both ONA seasons. gundam-official.com's STORY index (Bandai Namco Filmworks' live CMS) emits episodeNumber 1..8 with subtile 第1話..第8話 on the JA locale and Episode 1..Episode 8 on the EN locale, in one list; Gundam.info's season-2 announcement writes 「アニメ第2シーズンとなる第5話から第8話」; the legacy official site's STORY artwork is act01..act08. Only the production ASSET filenames keep a per-season index (TB_1st_sc_ep01-04, TB_2nd_sc_ep01-04). So our run numbering 1-4 (AniList 21458) then 5-8 (AniList 97853) IS the licensor's published numbering — no re-basing, and the task's premise that season 2 is re-numbered 第1話-第4話 does not hold (flag 2). air_date is the GENERAL Japanese paid-streaming premiere (通常配信, 12:00 JST); the season-1 fan-club advance dates are per-row notes (flag 3). The compilation films and the 2023 TV Edition are not rows (flags 6, 7).",
+  "sources": [
+    {
+      "url": "https://gundam-official.com/series/thunderbolt/story",
+      "what": "GUNDAM Official Website (Bandai Namco Filmworks) — Thunderbolt STORY index. Served CMS payload lists all eight episodes in one array: episodeNumber 1..8, subtile 第1話..第8話, thumbnails TB_1st_sc_ep01-04 then TB_2nd_sc_ep01-04. Decisive for the numbering and for the absence of episode subtitles.",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://en.gundam-official.com/series/thunderbolt/story",
+      "what": "Same licensor CMS, EN locale — subtile 'Episode 1'..'Episode 8', episodeNumber 1..8. The source of the title field; the run has no subtitles, only ordinals. (The /en/ path on the JA host 307s to a broken internal origin en.gundam-official.com:3000 — use this host directly.)",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://web.archive.org/web/20151215034513/http://gundam-tb.net/top_news.php",
+      "what": "Official series site gundam-tb.net, NEWS 2015/12/11 — ep 1 ADVANCE streaming opened that day at noon (「本日正午より…第1話の先行配信が開始」).",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://web.archive.org/web/20160512050253/http://gundam-tb.net/news/index.php",
+      "what": "Official series site NEWS index — 2016/04/22 「『機動戦士ガンダム サンダーボルト』第4話有料配信スタート！ 本日正午より…」. Day-of confirmation for ep 4.",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://v-storage.jp/talk/31457/",
+      "what": "V-STORAGE (Bandai Namco Filmworks official), 2015.12.25 — ep 1 released that day at noon; ep 2 set for 2016-02-12; ep 2 fan-club advance 2016-01-29.",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://v-storage.jp/talk/33774/",
+      "what": "V-STORAGE 2016.2.12 — ep 2 released that day; ep 3 set for 2016-03-18 with fan-club advance 2016-03-04.",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://v-storage.jp/talk/35841/",
+      "what": "V-STORAGE 2016.3.18 — ep 3 released that day; ep 4 (最終話) set for 2016-04-22 with fan-club advance 2016-04-08.",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://v-storage.jp/anime/etc-anime/61514/",
+      "what": "V-STORAGE 2017.3.24 — ep 5 released that day (「本日3月24日（金）より第5話の配信がスタート」); ep 6 set for 2017-04-28.",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://v-storage.bnarts.jp/anime/etc-anime/64725/",
+      "what": "V-STORAGE 2017.4.28 — ep 6 released that day; ep 7 set for 2017-05-31 (Wed).",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://v-storage.jp/event-info/66146/",
+      "what": "V-STORAGE 2017.5.31 — ep 7 released that day (「本日５月３１日（水）正午」); and the ep 8 delay notice: 「第8話は、6月30日正午の配信予定でしたが、諸事情により、7月14日(金)に変更になりました」.",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://www.gundam.info/news/video-music/news_video-music_20170714_18338p.html",
+      "what": "Gundam.info 2017-07-14 (now redirects to gundam-official.com/news/i/news/video-music/news_video-music_20170714_18338p) — ep 8 released that day at 12:00 across 21 domestic services. Day-of confirmation for the finale.",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://www.gundam.info/news/video-music/news_video-music_20170120_17332p.html",
+      "what": "Gundam.info 2017-01-20 — the season-2 schedule as ANNOUNCED: 第5話 3/24, 第6話 4/28, 第7話 5/31（水）, 第8話 6/30 (later moved to 7/14). Also the numbering witness: 「アニメ第2シーズンとなる第5話から第8話」.",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://web.archive.org/web/20170314195104/http://gundam-tb.net/story/first.html",
+      "what": "Official site STORY (season 1) — per-episode synopses headed 第1話/第2話/第3話/第4話 only; no subtitles anywhere on the page.",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://ja.wikipedia.org/wiki/%E6%A9%9F%E5%8B%95%E6%88%A6%E5%A3%AB%E3%82%AC%E3%83%B3%E3%83%80%E3%83%A0_%E3%82%B5%E3%83%B3%E3%83%80%E3%83%BC%E3%83%9C%E3%83%AB%E3%83%88",
+      "what": "ja-WP 機動戦士ガンダム サンダーボルト §Webアニメ → 各話リスト: 第1話-第8話 with 配信日 split into 先行 / 通常 columns (S1 has both; S2 rows colspan one date). Matches the licensor on all 12 dates. Read wikitext via api.php?action=parse&pageid=2667894&prop=wikitext. Also §TVエディション — a SECOND, unrelated episode table (flag 6).",
+      "tier": "ja-WP"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Mobile_Suit_Gundam_Thunderbolt",
+      "what": "en-WP §Media → Original net animation → Episodes: an {{Episode table}} of 8 rows in two {{Episode table/part}} blocks, each with OriginalAirDate. All 8 dates match the licensor's general-release regime. Contra the task premise, the table is NOT dateless (flag 1).",
+      "tier": "en-WP"
+    },
+    {
+      "url": "https://akiba-souken.com/article/26048/",
+      "what": "Cross-check only — independent trade report of the ep 3 dual date (fan club 3/4, general 3/18); corroborates the two-regime structure from outside the licensor's own channels.",
+      "tier": "cross-check"
+    }
+  ],
+  "flags_for_sean": [
+    "1. TASK PREMISE STALE (en-WP). The task says en-WP's 8-row table has NO air dates. It does, on every row, and has since at least revision 1293205074 (2025-05-31), where the table already carried a 'Release date' column with OriginalAirDate. The current version (rev of 2026-08-24) is the same data in a richer {{Episode table}}. All 8 en-WP dates match the licensor exactly, so en-WP served as a genuine second source rather than a dead end.",
+    "2. TASK PREMISE REFUTED (numbering). The licensor does NOT re-number season 2 as 第1話-第4話. Its live CMS emits one array of episodeNumber 1..8 (subtile 第1話..第8話 / Episode 1..Episode 8), Gundam.info's own announcement writes 「第5話から第8話」, and the legacy site's story art is act01..act08. Only the internal production asset names keep a per-season index (TB_1st_sc_ep01-04, TB_2nd_sc_ep01-04). Our 1-8 IS the licensor's published numbering — the numbering_basis should say so, not claim a re-base.",
+    "3. DATE REGIME FORK on eps 1-4 — a curator call. Season 1 episodes had TWO Japanese streaming dates: a 最速先行配信 on the official ガンダムファンクラブ smartphone app, then the general 有料配信 across ~20 services exactly two weeks later. I used the GENERAL date as air_date for all 8 rows because (a) season 2 has no advance window at all, so the general date is the only regime consistent across the whole run; (b) the licensor headlines the general date and explicitly labels the fan-club run 先行 (advance); (c) en-WP frames 12/25 as the premiere and 12/11 as 'early access'. If you prefer the protocol's strict 'first Japanese release', eps 1-4 become 2015-12-11 / 2016-01-29 / 2016-03-04 / 2016-04-08 (all licensor-sourced, all in the row notes) and eps 5-8 are unchanged. One switch, four rows, fully reversible.",
+    "4. NO EPISODE SUBTITLES EXIST. The run's episodes carry only an ordinal — 第N話 on the JA licensor site, 'Episode N' on the EN one, and en-WP's table has no Title parameter at all. title / title_native carry the licensor's own labels; there is nothing else to carry, and any subtitle a downstream source offers for these rows is either the 2023 TV Edition's (flag 6) or invented.",
+    "5. EP 8 WAS DELAYED. Announced for 2017-06-30, released 2017-07-14 (licensor: 「6月30日正午の配信予定でしたが、諸事情により、7月14日(金)に変更になりました」). Any source keyed to the January 2017 schedule — including the still-live Gundam.info announcement — prints 06-30. 07-14 is the release; 06-30 is an announcement. Related: ANN's 'Episode 8 Previewed in Video' article is dated 2017-06-30 and is a preview, not a release.",
+    "6. ja-WP LAYOUT TRAPS — two, on one page. (a) The 各話リスト has a 劇場版 row (DECEMBER SKY, 6月25日 劇場公開) sitting BETWEEN 第4話 and 第5話, plus two colspan season-header rows (第1シーズン / 第2シーズン): a naive row parse yields 9-11 rows, not 8. (b) The SAME page carries a second {{エピソードリスト}} block under §TVエディション — the 2023 MBS/TBS 日5 three-part re-cut of DECEMBER SKY, numbered 第1話-第3話 with real titles 雷 / 水 / 花 (2023-02-12 / 02-19 / 02-26, Sundays). That is the ONLY titled episode table on the page, so a title-hungry scraper lands on it. This is the golden-kamuy shape: scope any scrape to §Webアニメ → 各話リスト and stop at the TVエディション heading.",
+    "7. WHICH PAGE CARRIES WHICH RUN. Not rows of this grid: December Sky (AniList 21893, theatrical 2016-06-25, a director's cut compiling eps 1-4, later split 4 ways on TOKYO MX in Oct-Nov 2017 and 2 ways on BS11); Bandit Flower (AniList 99547, theatrical 2017-11-18, re-cut of eps 5-8); and the 2023 TV Edition (3 parts, a re-cut of December Sky, gundam-tb.net/tv/). All three are re-cuts or compilations of the eight ONA episodes in this grid.",
+    "8. ANILIST COUNTS NOT RE-VERIFIED. graphql.anilist.co returns HTTP 403 'The AniList API has been temporarily disabled due to severe stability issues' and anilist.co serves a JS shell with no og metadata, so I could not re-read 21458 / 97853. expected_episodes 8 is the 4+4 given in the task, independently corroborated by the licensor's own 1..8 index (8 rows, 8 episodeNumbers, 8 thumbnails). Worth a re-check when the API returns.",
+    "9. TWO ANILIST ENTRIES, ONE GRID. The schema's anilist_id holds one id; I put the root entry 21458 there and added anilist_ids [21458, 97853] so the second entry is not lost. Rows 1-4 belong to 21458 and rows 5-8 to 97853 (each row's note says which, with the licensor's asset name as the witness).",
+    "10. DAY-OF-WEEK SWEEP CLEAN. Every general-release date is a Friday except ep 7 (Wednesday 2017-05-31), and that irregularity is sourced twice in the licensor's own words (「本日５月３１日（水）」 and 「2017年5月31日（水）」) — real, not a defect. All four season-1 advance dates are Fridays; the 2023 TV Edition dates are Sundays (日5 slot). No unexplained slot break anywhere in the run.",
+    "11. MINOR, en-WP prose only (not our data). The ONA paragraph reads 'concluding on 22 April 2016 (with early access for the Gundam Fan Club on 8 December)' — '8 December' is a typo for 8 April (licensor: 2016年4月8日). The episode table itself is correct; flagged only so nobody reconciles our ep-4 note against that sentence and doubts the 04-08 advance date."
+  ]
+}
