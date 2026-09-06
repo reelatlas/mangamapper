@@ -1,0 +1,83 @@
+{
+  "series_id": "attack-on-titan-no-regrets",
+  "anilist_id": 20811,
+  "expected_episodes": 2,
+  "rows": [
+    {
+      "number": 1,
+      "title": "No Regrets: Part 1",
+      "title_native": "悔いなき選択―前編―",
+      "air_date": "2014-12-09",
+      "note": "OAD disc bundled with the LIMITED edition of the Attack on Titan manga vol. 15 — 講談社『ＤＶＤ付き　進撃の巨人（１５）限定版』, 発売日 2014年12月09日, ISBN 9784063587227 (= 978-4-06-358722-7); the publisher's own copy reads 「悔いなき選択」待望のアニメ化！前編を収録. Franchise OAD ordinal #0.5A (4th of the eight AoT OADs) — NOT our number. Aliases: 'No Regrets: Part One' (the form printed on the back of the Kodansha USA DVD in the AoT vol. 18 Special Edition, 2016-04-05), 悔いなき選択（前編） (en-WP / fandom form), 'A Choice with No Regrets: Part One' (the AoT Wiki's page name, taken from the visual novel's English title — not a licensor-printed episode title). Crunchyroll/Funimation subtitled release 2021-12-19; English dub 2022-05-29."
+    },
+    {
+      "number": 2,
+      "title": "No Regrets: Part 2",
+      "title_native": "悔いなき選択―後編―",
+      "air_date": "2015-04-09",
+      "note": "OAD disc bundled with the LIMITED edition of the Attack on Titan manga vol. 16 — 講談社『ＤＶＤ付き　進撃の巨人（１６）限定版』, 発売日 2015年04月09日, ISBN 9784063587234 (= 978-4-06-358723-4); the publisher's own copy reads 「悔いなき選択」待望のアニメ化！後編を収録. Franchise OAD ordinal #0.5B (5th of the eight AoT OADs) — NOT our number. Aliases: 'No Regrets: Part Two' (Kodansha USA DVD, AoT vol. 19 Special Edition, 2016-08-02), 悔いなき選択（後編）, 'A Choice with No Regrets: Part Two' (AoT Wiki page name). Crunchyroll/Funimation subtitled 2021-12-19; English dub 2022-06-05."
+    }
+  ],
+  "numbering_basis": "Release order of THIS entry's own two OADs — rows 1 and 2 (2014-12-09, then 2015-04-09). The licensor does NOT number the run 第1話/第2話: Kodansha's limited-edition copy labels the discs 前編 / 後編, and the anime's official site labels them with the FRANCHISE OAD ordinal #0.5A / #0.5B (shingeki.tv 進撃の巨人 OAD Archive Blu-ray 収録話, alongside #3.25 / #3.5 / #3.75 / #16.5A / #16.5B / #???). Every third-party numbering seen is a franchise ordinal too — en-WP's episode table prints 0.5A / 0.5B in its EpisodeNumber column (it does carry 1 / 2 as EpisodeNumber2), the AoT Wiki's infoboxes print `Number (OVA) = 4` and `= 5`, and Crunchyroll's combined 'Attack on Titan OADs' collection numbers them E4 / E5. None of those is our space; ours is 1-2 in release order, which matches en-WP's secondary column and livechart's episode list.",
+  "sources": [
+    {
+      "url": "https://www.kodansha.co.jp/comic/products/0000039927",
+      "what": "Kodansha (publisher / disc licensor) product page 『ＤＶＤ付き　進撃の巨人（１５）限定版』 — 書誌情報 発売日 2014年12月09日, ISBN 9784063587227; description: 『進撃の巨人』人気キャラクター・リヴァイとエルヴィンの出会いを描くスピンオフストーリー「悔いなき選択」待望のアニメ化！前編を収録。…制作会社：WIT STUDIO. Row 1's date + disc identity.",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://www.kodansha.co.jp/comic/products/0000039928",
+      "what": "Kodansha product page 『ＤＶＤ付き　進撃の巨人（１６）限定版』 — 発売日 2015年04月09日, ISBN 9784063587234; description: …「悔いなき選択」待望のアニメ化！後編を収録。地下街のゴロツキと調査兵団の若き分隊長、知られざる2人の邂逅。 Row 2's date + disc identity.",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://shingeki.tv/final/product/oad/",
+      "what": "The anime's official site (shingeki.tv), 進撃の巨人 OAD Archive Blu-ray (2022-04-27, PCXG-50788, ポニーキャニオン, 収録内容：OAD全8話) — the 収録話 list prints the Japanese episode titles verbatim: 「#0.5A 悔いなき選択―前編―」「#0.5B 悔いなき選択―後編―」. Native titles + the franchise ordinal.",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://shingeki.tv/news/archives/2605",
+      "what": "shingeki.tv news 2017-03-06: ＴＶアニメ「進撃の巨人」悔いなき選択 TOKYO MXにて3月25日（土）19時〜20時 放送決定 — a ONE-HOUR single broadcast of both parts (the TV re-cut), with the OAD staff/cast list (製作：「進撃の巨人」OAD製作委員会). Cited to show the re-cut is NOT a grid row.",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://ja.wikipedia.org/w/api.php?action=parse&page=%E9%80%B2%E6%92%83%E3%81%AE%E5%B7%A8%E4%BA%BA%20(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext&format=json",
+      "what": "ja-WP 進撃の巨人 (アニメ) § OAD — the per-OAD table: 「#0.5A | 悔いなき選択―前編― | … | 第15巻限定版 | 12月9日」 and 「#0.5B | 悔いなき選択―後編― | … | 第16巻限定版 | 2015年4月9日」 (the 2014 year header sits on the row above). Also § OAD（放送）: the 2017-03-25 TOKYO MX 19:00-20:00 airing, and 概要: 2017年には外伝「悔いなき選択」が…1エピソード化した版が放送された.",
+      "tier": "ja-WP"
+    },
+    {
+      "url": "https://ja.wikipedia.org/w/api.php?action=parse&page=%E9%80%B2%E6%92%83%E3%81%AE%E5%B7%A8%E4%BA%BA&prop=wikitext&format=json",
+      "what": "ja-WP 進撃の巨人 — the tankōbon table's 限定版同梱 column: vol 15 (2014年12月9日) 「オリジナルアニメDVD「悔いなき選択」前編」, vol 16 (2015年4月9日) 「…後編」; and § 進撃の巨人 悔いなき選択: 2014年から2015年にかけてOADとして前後編でアニメ化。…限定版15巻（2014年12月9日発売 前編）、同じく限定版16巻（2015年4月9日発売 後編）の同梱ディスクとしてリリース。 (Independent of the anime article's table.)",
+      "tier": "ja-WP"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Attack_on_Titan:_No_Regrets#Anime",
+      "what": "en-WP 'Attack on Titan: No Regrets' § Anime — prose ('A two-episode original animation DVD adaptation…The first episode was included with the 15th volume…on December 9, 2014, and the second episode was included with the 16th volume on April 9, 2015') and the episode list: EpisodeNumber 0.5A / EpisodeNumber2 1, Title 'No Regrets: Part 1', NativeTitle 悔いなき選択 (前編), OriginalAirDate 2014-12-09; EpisodeNumber 0.5B / 2, 'No Regrets: Part 2', 悔いなき選択 (後編), 2015-04-09 — each cited to Kodansha USA's DVD liner notes (AoT Vol.18 / Vol.19 Special Edition).",
+      "tier": "en-WP"
+    },
+    {
+      "url": "https://attackontitan.fandom.com/api.php?action=parse&page=A%20Choice%20with%20No%20Regrets%3A%20Part%20One&prop=wikitext&format=json",
+      "what": "AoT Wiki Part One infobox: Number (episode) 0.5A, Number (OVA) 4, Kanji 悔いなき選択 (前編), Release date (JA) December 9, 2014, Alternate titles 'No Regrets: Part One / No Regrets: Part 1' with the footnote 'The full title is seen on the back of the DVD released with the special edition of Volume 18 of the manga'. Part Two page: 0.5B / OVA 5 / 悔いなき選択 (後編) / April 9, 2015. Confirms the licensor-printed English title and that 'A Choice with No Regrets' is the wiki's own (visual-novel) naming.",
+      "tier": "cross-check"
+    },
+    {
+      "url": "https://www.livechart.me/anime/755",
+      "what": "LiveChart entry for Shingeki no Kyojin: Kuinaki Sentaku — OVA, 2 episodes, episode 1 'No Regrets: Part 1', episode 2 'No Regrets: Part 2', first release December 9, 2014. Corroborates the 1-2 release-order numbering and the English title form.",
+      "tier": "cross-check"
+    },
+    {
+      "url": "https://www.crunchyroll.com/watch/GX9UQ72X8/no-regrets-part-1",
+      "what": "Crunchyroll's watch pages for the two OADs — 'Attack on Titan OADs | E4 - No Regrets: Part 1' and 'Attack on Titan OADs | E5 - No Regrets: Part 2' (https://www.crunchyroll.com/watch/G14U4E5D8/no-regrets-part-2). NOTE: both URLs return Cloudflare 403 to direct fetch and the Wayback snapshots archive only the JS shell, so this is the titles as they appear in the pages' own titles via search index — cross-check only; the same title form is carried by en-WP (Kodansha USA liner notes) and the fandom's DVD-back-cover footnote, which are the citations the grid rests on.",
+      "tier": "cross-check"
+    }
+  ],
+  "flags_for_sean": [
+    "NUMBERING (the ask's trap, confirmed and then some): every source numbers these in the FRANCHISE's OAD ordinal, not the run's own — shingeki.tv's official OAD Archive prints #0.5A / #0.5B, en-WP's table prints 0.5A / 0.5B in its EpisodeNumber column, the AoT Wiki prints OVA 4 / OVA 5, and Crunchyroll's combined 'Attack on Titan OADs' collection prints E4 / E5. Our rows are 1 and 2 in release order. Two witnesses independently agree with our space: en-WP's EpisodeNumber2 (1 / 2) and LiveChart's episode list.",
+    "NOT ROWS — the re-cut: on 2017-03-25 TOKYO MX aired 悔いなき選択 as a SINGLE one-hour programme, 19:00-20:00 (shingeki.tv news 2605; ja-WP 概要 calls it 「1エピソード化した版」), and on 2021-11-28 NHK General aired both parts inside an extra edition of the Special Omnibus. Neither is an entry of this run; the grid stays at 2 rows.",
+    "NOT ROWS — the archive disc: 進撃の巨人 OAD Archive (Blu-ray, 2022-04-27, PCXG-50788) collects all EIGHT AoT OADs (#0.5A, #0.5B, #3.25, #3.5, #3.75, #16.5A, #16.5B, #???). Only #0.5A/#0.5B belong to this series; #3.25/#3.5/#3.75 are attack-on-titan's own OADs and #16.5A/#16.5B/#??? are Lost Girls.",
+    "DATE SEMANTICS: air_date is the Japanese DISC ship date — the manga limited edition the OAD was bundled with (vol 15 → 2014-12-09, vol 16 → 2015-04-09), per the protocol's 'a disc bundle's ship date for an OAD'. There was no Japanese broadcast until the 2017 re-cut. Both dates are the publisher's own 発売日 field, cross-confirmed by ja-WP's tankōbon table, ja-WP's OAD table and en-WP.",
+    "TITLE FORM: the licensor's printed English is 'No Regrets: Part 1 / Part 2' (Crunchyroll) = '\"No Regrets\" Part One / Part Two' (Kodansha USA DVD back cover, AoT vols 18/19 Special Edition). 'A Choice with No Regrets: Part One/Two' — the AoT Wiki's page names and the common fan title — is the VISUAL NOVEL's English title, not the licensor's episode title; a title-join against the fandom will miss unless the alias is carried. Both aliases are in the row notes.",
+    "COUNT CHECK: 2 rows vs AniList's 2 — matches. Caveat on the instrument: AniList's GraphQL API answered 403 'temporarily disabled due to severe stability issues' for every call during this task (2026-09-06), so the count of 2 is the task's figure, not a live re-read. It is independently supported by en-WP ('A two-episode original animation DVD adaptation') and ja-WP ('OADとして前後編でアニメ化') and by LiveChart's '2 episodes'.",
+    "OUT OF SCOPE, for the standing programme only (no standing is claimed here): both rows adapt the spin-off manga 進撃の巨人 悔いなき選択 (Gun Snark / Hikaru Suruga, ARIA 2014-01 → 2014-08, 2 vols), which is itself from the S1 Blu-ray visual novel — the AoT Wiki's Manga-chapters fields name that run's own chapters (row 1: Prologue, The Wings Of Freedom; row 2: One Arrow, ...of Revolution, Proof, Hearts, Those Three, Choices). That is the I13 ruling already on file (rulings/discovery.ts, anilist:20811) and is a chapter question for later, not a grid fact."
+  ]
+}
