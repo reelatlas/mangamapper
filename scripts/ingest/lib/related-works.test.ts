@@ -1,6 +1,6 @@
 // I45 — the related-works derivation, pure
 import { describe, expect, it } from 'vitest';
-import { adaptedNodes, clusterDisorder, deriveWatchPosition, ledgerBaseProblems, planRuledMoves, PROMO, extraBucket, extraKind, extraStanding, freePosition, ledgerWorthy, matchRelatedTitle, ownerInstrumentIds, pickAdoption, relatedWorkOwners, relatedWorkStanding, titleMatch, type ExtraMedia } from './related-works';
+import { adaptedNodes, clusterDisorder, retiredByOwnership, deriveWatchPosition, ledgerBaseProblems, planRuledMoves, PROMO, extraBucket, extraKind, extraStanding, freePosition, ledgerWorthy, matchRelatedTitle, ownerInstrumentIds, pickAdoption, relatedWorkOwners, relatedWorkStanding, titleMatch, type ExtraMedia } from './related-works';
 
 const media = (o: Partial<ExtraMedia> & { id: number }): ExtraMedia => ({ title: { romaji: 'x', english: null }, format: 'MOVIE', status: 'FINISHED', source: 'MANGA', relations: { edges: [] }, ...o });
 const manga = (id: number) => ({ relationType: 'ADAPTATION', node: { id, type: 'MANGA', format: 'MANGA', popularity: 100, title: { romaji: `m${id}` } } });
@@ -218,5 +218,21 @@ describe('I47 (E15) — the source tag ROUTES; an ADAPTATION edge to the owner\'
   it('a tagged work is unchanged: source MANGA + ADAPTATION → another manga = other_instrument; → the owner\'s = same_instrument', () => {
     expect(extraBucket(['SIDE_STORY'], media({ id: 2, source: 'MANGA', relations: { edges: [manga(99999)] } }), owner)).toBe('other_instrument');
     expect(extraBucket(['SIDE_STORY'], media({ id: 3, source: 'MANGA', relations: { edges: [manga(30049)] } }), owner)).toBe('same_instrument');
+  });
+});
+
+describe('retiredByOwnership (E9 — a component mint retires the row; a series mint elsewhere never does)', () => {
+  const rows = [
+    { seriesId: 'the-prince-of-tennis', anilistId: 995, origin: 'halo' },
+    { seriesId: 'jujutsu-kaisen', anilistId: 131573, origin: 'halo' },
+    { seriesId: 'gto-great-teacher-onizuka', anilistId: 1913, origin: 'halo' },
+    { seriesId: 'x', anilistId: null, origin: 'wiki' },
+  ];
+  const ownerOf = (id: number) => ({ 995: 'the-prince-of-tennis', 131573: 'jujutsu-kaisen-0', 1913: 'shounan-junai-gumi' } as Record<number, string>)[id];
+  it('a row whose work became a component of ITS OWN series retires; a work that became its own one-row series elsewhere stays', () => {
+    expect(retiredByOwnership(rows, ownerOf).map((r) => r.anilistId)).toEqual([995]);
+  });
+  it('a wiki row (no identity) is never retired by ownership', () => {
+    expect(retiredByOwnership(rows.filter((r) => r.origin === 'wiki'), ownerOf)).toEqual([]);
   });
 });

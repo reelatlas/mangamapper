@@ -18,7 +18,7 @@
 //   npx tsx --env-file=.env.ingest scripts/ingest/sync-related-works.ts [--dry-run]
 import { db, finishRun, selectAll, startRun } from './lib/db';
 import { haloCandidates, loadDiscoveryInput } from './lib/discovery';
-import { adaptedNodes, deriveWatchPosition, ledgerWorthy, ownerInstrumentSet, planRuledMoves, extraKind, freePosition, isoDate, pickAdoption, relatedWorkStanding, type ExtraBucket } from './lib/related-works';
+import { adaptedNodes, deriveWatchPosition, ledgerWorthy, ownerInstrumentSet, planRuledMoves, retiredByOwnership, extraKind, freePosition, isoDate, pickAdoption, relatedWorkStanding, type ExtraBucket } from './lib/related-works';
 import { relatedWorkRuling } from './lib/rulings/related-works';
 import { RULED_POSITION_BY_ANILIST } from './lib/rulings/watch-order-labels';
 import { loadRelatedWorkRegistry, lookupRelatedWork, registerRelatedWorkIds, wikiKey } from './lib/related-work-ids';
@@ -95,6 +95,14 @@ async function main() {
     // PRE-PASS — a ruled position moves a row: every mover is removed FIRST, then re-inserted at its ruled slot below. Two movers can swap
     // slots (Made in Abyss: the recap films ahead of the feature) — inserting over an occupied slot would overwrite that row's identity
     // (the key is series + position), so the slot must be free before the insert; a ruled slot still held by a NON-moving row is refused
+    // E9 (I13 amended 2026-09-05): a row whose work is now a COMPONENT of its own series retires — the identity lives in the component
+    for (const r of retiredByOwnership(existing.map((x) => ({ seriesId: x.series_id, anilistId: x.anilist_id, origin: x.origin, row: x })), (id) => input.owned.get(id))) {
+      await remove(r.row, `now a component of ${r.seriesId} (I13 amended: a work owned by its own series is never its extra) — the identity lives in the component`); byKey.delete(`${r.seriesId}#${r.anilistId}`);
+      if ([...registry.values()].some((v) => v.anilist_id === r.anilistId)) {
+        if (!DRY) { const { error } = await db.from('related_work_external_ids').delete().eq('anilist_id', r.anilistId); if (error) throw new Error(`registry ${r.anilistId}: ${error.message}`); }
+        for (const [k, v] of registry) if (v.anilist_id === r.anilistId) registry.delete(k);
+      }
+    }
     // — planned BEFORE any row is touched (planRuledMoves): a mover whose ruled slot is held by a NON-moving row is refused and KEPT, never removed
     const ruledOf = (sid: string, id: number) => relatedWorkRuling(sid, id)?.position ?? RULED_POSITION_BY_ANILIST[sid]?.[id];
     const plan = planRuledMoves(existing.map((r) => ({ seriesId: r.series_id, anilistId: r.origin === 'halo' ? r.anilist_id : null, position: Number(r.position) })), ruledOf);

@@ -82,6 +82,8 @@ export type Candidate = {
   hop: number;
   bucket: Bucket;
   proposal: Proposal;
+  /** I13 (amended 2026-09-05): the ONE-ROW series that owns this work elsewhere — it is still an extra of THIS owner (JJK 0 on JJK's page); never a series or mint proposal */
+  ownedElsewhere?: string;
   signals: string[];
   /** the candidate's own media is staged (discovery-stage.ts) — the full-media signals are available */
   staged: boolean;
@@ -155,6 +157,9 @@ export function titleContinuity(candidateTitles: (string | null | undefined)[], 
 const seriesShaped = (format: string | null | undefined): boolean => format == null || SERIES_FORMATS.has(format);
 
 /** bucket from what reached the candidate and what it is */
+/** I13 (amended 2026-09-05): a work owned by another series is an extra HERE only when that series is one-row and the format is extras-shaped */
+export const oneRowExtraElsewhere = (entriesOfThatSeries: number, format: string | null | undefined): boolean => entriesOfThatSeries === 1 && EXTRA_FORMATS.has(format ?? '');
+
 export function bucketOf(relations: Set<string>, format: string | null | undefined): Bucket {
   if (format === 'MUSIC') return 'ignored';
   if ([...relations].some((r) => RECAP_RELATIONS.has(r))) return 'recap'; // a recap / compilation, whatever its format (N8: never a numbered row)
@@ -202,13 +207,23 @@ export function haloCandidates(input: DiscoveryInput): Candidate[] {
     return c;
   };
 
-  // hop 1: every ANIME edge from an owned, staged entry to an unowned entry
+  // hop 1: every ANIME edge from an owned, staged entry to an entry this owner does not own. THE SKIP-SPLIT (I13 amended 2026-09-05,
+  // the rule-logic evaluation E9): an entry owned by THIS owner (its own id or a component — the I21 set for that series) is never its
+  // extra; an entry owned by ANOTHER series is an extra here only when that series is ONE-ROW (the film-mint shape, I13 b) and the format
+  // is extras-shaped — JJK 0 stays on JJK's page after its mint; any entry of another MULTI-ENTRY run (its first entry or a component:
+  // Stampede for Trigun, Greed Island for the 2011 series) is not — the franchise page orders runs (I43)
+  const ownedBy = new Map<string, number>();
+  for (const owner of input.owned.values()) ownedBy.set(owner, (ownedBy.get(owner) ?? 0) + 1);
   for (const [id, owner] of input.owned) {
     const m = input.staged.get(id);
     if (!m) continue;
     for (const e of m.relations?.edges ?? []) {
-      if (e.node.type !== 'ANIME' || input.owned.has(e.node.id)) continue;
-      at(e.node, e.relationType, owner, id, 1);
+      if (e.node.type !== 'ANIME') continue;
+      const ownerOf = input.owned.get(e.node.id);
+      if (ownerOf === owner) continue;
+      if (ownerOf != null && !oneRowExtraElsewhere(ownedBy.get(ownerOf) ?? 0, e.node.format)) continue;
+      const c = at(e.node, e.relationType, owner, id, 1);
+      if (ownerOf != null) c.ownedElsewhere = ownerOf;
     }
   }
   // hops 2+: SEQUEL chains through STAGED candidates (S2 staged → S3 seen), owners inherited
@@ -256,6 +271,7 @@ export function haloCandidates(input: DiscoveryInput): Candidate[] {
         c.signals = s; continue;
       }
       const ownerIds = [...c.owners];
+      if (c.ownedElsewhere) s.push(`owned by ${c.ownedElsewhere} — its own one-row series; an extra here by I13, never a series or mint proposal`);
       const ownerManga = ownerIds.map((o) => input.ownerManga.get(o) ?? null).find((m) => m != null) ?? null;
       const media = (input.staged.get(c.anilistId) as never) ?? null;
       const ownerSet = { mangaId: ownerManga, chainWorkIds: ownerIds.flatMap((o) => input.chainWorks?.get(o) ?? []), instrumentIds: ownerIds.flatMap((o) => [...(input.ownerInstruments?.get(o) ?? [])]) };

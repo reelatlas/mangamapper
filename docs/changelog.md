@@ -1154,6 +1154,39 @@
    19-23 / 39 (chain_source) and 18 / 93-95 (AFL's loose Mixed bucket),
    beelzebub 15 / 26-28 / 51, rurouni TV ep 95 (identity). Batch 22 opens on
    the boruto follow-up (lanes I + C) with the batch-21 tooling copied.
+138. ✅ **SITTING C — E9 AS RULED, THE SKIP-SPLIT, E12's CLAUSE (Sean's go 2026-09-05 evening, the row list
+    shown first; Cursor's objection to E12's queue class taken).** I13 AMENDED: (d) a SERIES mint keeps the
+    parent's ledger row — position and standing to the parent's manga live there, a relation carries neither
+    — and the mint writer ALWAYS writes series_relations + franchise membership (the outcome class for a
+    minted series with a declared parent and no relation row lands with the writer at step 2); (e) a
+    COMPONENT mint RETIRES the row (`retiredByOwnership`, the ledger writer removes its own-origin row and the
+    registry entries, the identity lives in the component); no link kind. THE SKIP-SPLIT in the halo walk
+    (`oneRowExtraElsewhere`): an entry owned by THIS owner (I21 — its own id and components) is never its
+    extra; an entry owned by ANOTHER series is an extra here only when that series is ONE-ROW (the film-mint
+    shape) and the format is extras-shaped — marked `ownedElsewhere`, never a series / component / mint
+    proposal (the picks read says 'already a series'); any entry of another multi-entry run (its first
+    entry or a component) is not — the franchise page orders runs. THE LIST BEFORE THE DEPLOY: one work
+    appears (gto-great-teacher-onizuka ← the Shonan Junai Gumi OVA 1913, owned by the one-row series
+    shounan-junai-gumi; it adapts GTO's chain work 30445 registered today → same_instrument, standing
+    pending, the research queue), none leaves, 189 stay off (176 TV entries of other runs; 13 non-TV
+    entries of multi-entry runs — the Clear Card prologue OVA, the three Greed Island OVAs (components of
+    the 1999 run, episodes 63-92 there — untouched), the Clannad side OVAs, Yu-Gi-Oh's DSOD film). Using
+    'one-row series' rather than 'another series' own id' avoids an asymmetry the list exposed (a two-film
+    series' first film listing on a parent page while its sequel does not). I42 AMENDED: (i) the
+    owned-elsewhere candidate clause; (ii) E12's clause naming the FACT — a non-TV work that continues the
+    instrument AND joins the numbered run (a counted extra, N4: episodic, canon, contiguous with the run;
+    a film that continues the manga is still an extra) is a COMPONENT ruled at /discover, whatever relation
+    reached it (I47) — the Prince of Tennis block the witness; its QUEUE CLASS DEFERRED to that sitting
+    with its list first: Cursor showed the drafted predicate ('past the frontier') would have re-opened
+    Dumpster Battle, Infinity Castle, Reze Arc, First Slam Dunk and the Ranma cluster against their
+    rulings. Tests 278 (the walk, the retire helper); the sync inserted the one row; census
+    extra_same_instrument 125 → 126, related_work_unruled 367 → 368, nothing else; every violation-kind
+    class 0; five edges redeployed. THE EVALUATION IS CLOSED as ruled: E1 / E5 / E8 queued by name; E9 / E12
+    / E13's re-walk have their homes. NEXT: step 2's film mint writer — the I13 (d) invariants (the row
+    stays; the relation and the membership written atomically; the outcome class), the 27 declarations +
+    the five live MINT proposals + the (d) queue; then the /discover sitting (the PoT OVA component with
+    its own numbering, the queue class with its list); waves 5+ between.
+
 137. ✅ **SITTING B, STEP 2 — the chain ids as I41 entries (Sean's go 2026-09-05 evening).** Three
     SOURCE_CHAINS works gain their AniList manga id, identity confirmed on AniList + MAL with the chain
     notes' years and counts: Rosario+Vampire Season II 33403 (MAL 3403, 2007-14, 67 ch / 14 vols),

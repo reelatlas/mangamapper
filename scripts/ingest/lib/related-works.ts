@@ -302,3 +302,11 @@ export const clusterDisorder = (
   }
   return out;
 };
+
+/**
+ * E9 (I13 amended 2026-09-05): a work owned by ITS OWN series — now a component of that series (the Prince of Tennis National
+ * Tournament block after its /discover mint) — is never that series' extra: the ledger writer RETIRES the row (its own origin, G57)
+ * and the identity lives in the component. A series mint elsewhere (a one-row film series) never retires a row.
+ */
+export const retiredByOwnership = <R extends { seriesId: string; anilistId: number | null; origin?: string | null }>(rows: R[], ownerOf: (anilistId: number) => string | null | undefined): R[] =>
+  rows.filter((r) => (r.origin ?? 'halo') === 'halo' && r.anilistId != null && ownerOf(r.anilistId) === r.seriesId);

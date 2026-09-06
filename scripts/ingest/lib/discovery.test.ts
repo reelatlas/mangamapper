@@ -159,3 +159,21 @@ describe('haloCandidates — the witnesses', () => {
     expect(before.halo_extra_standing.map((c) => c.anilistId).sort()).toEqual([5391, 999]); // extras + crossovers are listed (I45)
   });
 });
+
+describe('the skip-split (I13 amended 2026-09-05, E9): owned by THIS owner never an extra; a ONE-ROW film series elsewhere still is; another multi-entry run never is', () => {
+  const jjk = media(113415, 'Jujutsu Kaisen', { edges: [anime('SIDE_STORY', 131573, 'Jujutsu Kaisen 0', 'MOVIE'), anime('SEQUEL', 145064, 'Jujutsu Kaisen 2nd Season', 'TV')] });
+  const jjk0 = media(131573, 'Jujutsu Kaisen 0', { format: 'MOVIE', edges: [anime('PARENT', 113415, 'Jujutsu Kaisen', 'TV')] });
+  const hxh2011 = media(11061, 'Hunter x Hunter (2011)', { edges: [anime('ALTERNATIVE', 136, 'Hunter x Hunter', 'TV'), anime('ALTERNATIVE', 138, 'Hunter x Hunter: Greed Island', 'OVA')] });
+  const owned = new Map([[113415, 'jujutsu-kaisen'], [145064, 'jujutsu-kaisen'], [131573, 'jujutsu-kaisen-0'], [136, 'hunter-x-hunter'], [137, 'hunter-x-hunter'], [138, 'hunter-x-hunter'], [11061, 'hunter-x-hunter-2011']]);
+  const cands = haloCandidates(input({ owned, staged: new Map([[113415, jjk], [131573, jjk0], [11061, hxh2011], [136, media(136, 'Hunter x Hunter')], [138, media(138, 'Greed Island', { format: 'OVA' })]]) }));
+  const by = (id: number) => cands.find((c) => c.anilistId === id);
+  it('JJK 0 (a one-row film series) is an extra candidate of JJK, marked ownedElsewhere — never a series or mint proposal', () => {
+    const c = by(131573);
+    expect(c?.ownedElsewhere).toBe('jujutsu-kaisen-0'); expect([...c!.owners]).toEqual(['jujutsu-kaisen']); expect(c?.bucket).toBe('extra');
+    expect(c?.signals.some((x) => /owned by jujutsu-kaisen-0/.test(x))).toBe(true);
+  });
+  it("this owner's own component (JJK S2) is never its extra", () => { expect(by(145064)).toBeUndefined(); });
+  it('the Greed Island OVA — a component of the multi-entry 1999 run — is not an extra of the 2011 series (the franchise page orders runs); the 1999 TV entry neither', () => {
+    expect(by(138)).toBeUndefined(); expect(by(136)).toBeUndefined();
+  });
+});
