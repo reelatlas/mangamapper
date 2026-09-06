@@ -1,6 +1,6 @@
 // I45 — the related-works derivation, pure
 import { describe, expect, it } from 'vitest';
-import { adaptedNodes, deriveWatchPosition, extraBucket, extraKind, extraStanding, freePosition, ledgerWorthy, matchRelatedTitle, ownerInstrumentIds, pickAdoption, relatedWorkOwners, relatedWorkStanding, titleMatch, type ExtraMedia } from './related-works';
+import { adaptedNodes, deriveWatchPosition, planRuledMoves, extraBucket, extraKind, extraStanding, freePosition, ledgerWorthy, matchRelatedTitle, ownerInstrumentIds, pickAdoption, relatedWorkOwners, relatedWorkStanding, titleMatch, type ExtraMedia } from './related-works';
 
 const media = (o: Partial<ExtraMedia> & { id: number }): ExtraMedia => ({ title: { romaji: 'x', english: null }, format: 'MOVIE', status: 'FINISHED', source: 'MANGA', relations: { edges: [] }, ...o });
 const manga = (id: number) => ({ relationType: 'ADAPTATION', node: { id, type: 'MANGA', format: 'MANGA', popularity: 100, title: { romaji: `m${id}` } } });
@@ -124,5 +124,38 @@ describe('deriveWatchPosition / freePosition', () => {
   it('a taken position steps by 0.01 so same-day works keep their order', () => {
     expect(freePosition(2.5, new Set([2.5, 2.51]))).toBe(2.52);
     expect(freePosition(2.5, new Set())).toBe(2.5);
+  });
+});
+
+describe('planRuledMoves (I45 — the pre-pass plans before any row is touched)', () => {
+  const rows = [
+    { seriesId: 'k', anilistId: 3276, position: 100.5 },
+    { seriesId: 'k', anilistId: 147810, position: 119.5 },
+    { seriesId: 'k', anilistId: 3277, position: 117.5 },
+    { seriesId: 'm', anilistId: 1, position: 13.5 },
+    { seriesId: 'm', anilistId: 2, position: 13.51 },
+    { seriesId: 'w', anilistId: null, position: 24.1 },
+  ];
+  it('a mover onto a FREE slot moves', () => {
+    const p = planRuledMoves(rows, (s, id) => (s === 'k' && id === 3276 ? 121.5 : null));
+    expect(p.moves).toEqual([{ seriesId: 'k', anilistId: 3276, from: 100.5, to: 121.5 }]); expect(p.refused).toEqual([]);
+  });
+  it('a mover onto a slot held by a NON-moving row is REFUSED with the holder named — kinnikuman 3276 → 119.5 (the PSA); the row is kept', () => {
+    const p = planRuledMoves(rows, (s, id) => (s === 'k' && id === 3276 ? 119.5 : null));
+    expect(p.moves).toEqual([]); expect(p.refused).toEqual([{ seriesId: 'k', anilistId: 3276, from: 100.5, to: 119.5, heldBy: 147810 }]);
+  });
+  it('two movers may SWAP (Made in Abyss: the recap films ahead of the feature)', () => {
+    const p = planRuledMoves(rows, (s, id) => (s === 'm' ? ({ 1: 13.51, 2: 13.5 } as Record<number, number>)[id] : null));
+    expect(p.moves.map((m) => m.anilistId).sort()).toEqual([1, 2]); expect(p.refused).toEqual([]);
+  });
+  it('a mover may take a slot another mover is LEAVING (a chain) — the ruling that vacates it lands in the same run', () => {
+    const p = planRuledMoves(rows, (s, id) => (s === 'k' ? ({ 3276: 119.5, 147810: 119.51 } as Record<number, number>)[id] : null));
+    expect(p.moves.map((m) => m.anilistId).sort((a, b) => a - b)).toEqual([3276, 147810]); expect(p.refused).toEqual([]);
+  });
+  it('a slot held by a row WITHOUT identity (a wiki row) refuses too (heldBy null); another series\' slot is not this series\' slot', () => {
+    const p = planRuledMoves(rows, (s, id) => (s === 'k' && id === 3277 ? 24.1 : null));
+    expect(p.moves).toEqual([{ seriesId: 'k', anilistId: 3277, from: 117.5, to: 24.1 }]);
+    const q = planRuledMoves([...rows, { seriesId: 'w', anilistId: 9, position: 30.5 }], (s, id) => (s === 'w' && id === 9 ? 24.1 : null));
+    expect(q.refused).toEqual([{ seriesId: 'w', anilistId: 9, from: 30.5, to: 24.1, heldBy: null }]);
   });
 });

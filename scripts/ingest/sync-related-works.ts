@@ -18,7 +18,7 @@
 //   npx tsx --env-file=.env.ingest scripts/ingest/sync-related-works.ts [--dry-run]
 import { db, finishRun, selectAll, startRun } from './lib/db';
 import { haloCandidates, loadDiscoveryInput } from './lib/discovery';
-import { adaptedNodes, deriveWatchPosition, extraKind, freePosition, isoDate, pickAdoption, relatedWorkStanding, type ExtraBucket } from './lib/related-works';
+import { adaptedNodes, deriveWatchPosition, planRuledMoves, extraKind, freePosition, isoDate, pickAdoption, relatedWorkStanding, type ExtraBucket } from './lib/related-works';
 import { relatedWorkRuling } from './lib/rulings/related-works';
 import { RULED_POSITION_BY_ANILIST } from './lib/rulings/watch-order-labels';
 import { loadRelatedWorkRegistry, lookupRelatedWork, registerRelatedWorkIds, wikiKey } from './lib/related-work-ids';
@@ -95,10 +95,14 @@ async function main() {
     // PRE-PASS — a ruled position moves a row: every mover is removed FIRST, then re-inserted at its ruled slot below. Two movers can swap
     // slots (Made in Abyss: the recap films ahead of the feature) — inserting over an occupied slot would overwrite that row's identity
     // (the key is series + position), so the slot must be free before the insert; a ruled slot still held by a NON-moving row is refused
-    for (const r of existing) {
-      if (r.origin !== 'halo' || r.anilist_id == null) continue;
-      const ruled = relatedWorkRuling(r.series_id, r.anilist_id)?.position ?? RULED_POSITION_BY_ANILIST[r.series_id]?.[r.anilist_id];
-      if (ruled != null && Number(r.position) !== ruled) { await remove(r, `moves to the ruled position ${ruled} (identity ${r.anilist_id} keeps every field)`); byKey.delete(`${r.series_id}#${r.anilist_id}`); }
+    // — planned BEFORE any row is touched (planRuledMoves): a mover whose ruled slot is held by a NON-moving row is refused and KEPT, never removed
+    const ruledOf = (sid: string, id: number) => relatedWorkRuling(sid, id)?.position ?? RULED_POSITION_BY_ANILIST[sid]?.[id];
+    const plan = planRuledMoves(existing.map((r) => ({ seriesId: r.series_id, anilistId: r.origin === 'halo' ? r.anilist_id : null, position: Number(r.position) })), ruledOf);
+    for (const m of plan.refused) { ambiguous++; console.log(`  refused ${m.seriesId} @${m.to} for anilist ${m.anilistId} (stored @${m.from}): the ruled slot is held by ${m.heldBy ?? 'a row without identity'}, which is not moving — rule that row too; the row stays put (listed by the census)`); }
+    for (const m of plan.moves) {
+      const r = byKey.get(`${m.seriesId}#${m.anilistId}`);
+      if (!r) continue;
+      await remove(r, `moves to the ruled position ${m.to} (identity ${m.anilistId} keeps every field)`); byKey.delete(`${m.seriesId}#${m.anilistId}`);
     }
     for (const c of cands) {
       const m = input.staged.get(c.anilistId);

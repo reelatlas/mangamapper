@@ -214,3 +214,35 @@ export const ledgerWorthy = (bucket: ExtraBucket | 'unstaged'): boolean => bucke
 
 /** the standing the ledger writes: a RULING (lib/rulings/related-works.ts — researched, Sean-signed) beats the rule; null = still pending the sitting */
 export const relatedWorkStanding = (bucket: ExtraBucket | 'unstaged', ruling: { standing?: Standing | null } | null | undefined): Standing | null => ruling?.standing ?? extraStanding(bucket);
+
+/** one ruled move of a ledger row: identity (series, anilist_id) from its stored position to its ruled one */
+export type RuledMove = { seriesId: string; anilistId: number; from: number; to: number };
+
+/**
+ * I45 — the RULED MOVES of a run, planned BEFORE any row is touched (the writer's pre-pass). The ledger key is
+ * (series, position) while identity is (series, anilist_id), so a mover must leave its slot before another row can
+ * take it and its ruled slot must be free before it lands. Two movers may SWAP (Made in Abyss: the recap films
+ * ahead of the feature) and a mover may take a slot another mover is leaving; a ruled slot held by a row that is
+ * NOT moving is REFUSED — the mover keeps its stored position (the census lists stored ≠ ruled) and is never
+ * removed. Found by the wave-4 verifier on kinnikuman 3276 → 119.5 (the PSA's slot): removing the mover first and
+ * refusing the insert afterwards would have deleted the row (2026-09-05).
+ */
+export const planRuledMoves = (
+  rows: { seriesId: string; anilistId: number | null; position: number }[],
+  ruledOf: (seriesId: string, anilistId: number) => number | null | undefined,
+): { moves: RuledMove[]; refused: (RuledMove & { heldBy: number | null })[] } => {
+  const movers: RuledMove[] = [];
+  for (const r of rows) {
+    if (r.anilistId == null) continue;
+    const to = ruledOf(r.seriesId, r.anilistId);
+    if (to != null && Number(r.position) !== to) movers.push({ seriesId: r.seriesId, anilistId: r.anilistId, from: Number(r.position), to });
+  }
+  const leaving = new Set(movers.map((m) => `${m.seriesId}@${m.from}`));
+  const moves: RuledMove[] = []; const refused: (RuledMove & { heldBy: number | null })[] = [];
+  for (const m of movers) {
+    const holder = rows.find((r) => r.seriesId === m.seriesId && Number(r.position) === m.to);
+    if (holder && !leaving.has(`${m.seriesId}@${m.to}`)) refused.push({ ...m, heldBy: holder.anilistId });
+    else moves.push(m);
+  }
+  return { moves, refused };
+};

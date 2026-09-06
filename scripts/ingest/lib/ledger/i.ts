@@ -971,6 +971,7 @@ export const RULES: Rule[] = [
     enforcement: [
       { path: 'supabase/migrations/20260905170000_related_works.sql' },
       { path: 'scripts/ingest/lib/related-works.ts', symbol: 'extraBucket' },
+      { path: 'scripts/ingest/lib/related-works.ts', symbol: 'planRuledMoves' },
       { path: 'scripts/ingest/lib/related-works.ts', symbol: 'extraStanding' },
       { path: 'scripts/ingest/lib/related-works.ts', symbol: 'relatedWorkStanding' },
       { path: 'scripts/ingest/lib/related-works.ts', symbol: 'adaptedNodes' },
