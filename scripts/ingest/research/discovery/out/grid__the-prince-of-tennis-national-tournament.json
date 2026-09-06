@@ -1,0 +1,275 @@
+{
+  "series_id": "the-prince-of-tennis-national-tournament",
+  "anilist_id": 995,
+  "anilist_ids": [
+    995,
+    2752,
+    4053
+  ],
+  "expected_episodes": 26,
+  "rows": [
+    {
+      "number": 1,
+      "title": "Kaettekita Ouji-sama",
+      "title_native": "帰ってきた王子様",
+      "air_date": "2006-03-24",
+      "note": "AniList 995 『全国大会篇』 (set 1 of 3); licensor's own number Episode 1 / 第1話; first Japanese release = DVD Vol.1 (BCBA-2461) on-sale date. SINGLE-EPISODE DISC — Vol.1 is the only disc of set 1 that carries one episode (約46分), so this date is not shared. en-WP English title: \"Return of the Prince\"."
+    },
+    {
+      "number": 2,
+      "title": "Hot & Cool",
+      "title_native": "Hot & Cool",
+      "air_date": "2006-05-26",
+      "note": "AniList 995 『全国大会篇』 (set 1 of 3); licensor's own number Episode 2 / 第2話; first Japanese release = DVD Vol.2 (BCBA-2462) on-sale date. TWO-EPISODE DISC shared with row 3 — same date by construction. en-WP English title: \"Hot and Cool\". Licensor prints 「Hot & Cool」 (spaced); ja-WP and dAnime print Hot＆Cool."
+    },
+    {
+      "number": 3,
+      "title": "The fourth counter",
+      "title_native": "The fourth counter",
+      "air_date": "2006-05-26",
+      "note": "AniList 995 『全国大会篇』 (set 1 of 3); licensor's own number Episode 3 / 第3話; first Japanese release = DVD Vol.2 (BCBA-2462) on-sale date. TWO-EPISODE DISC shared with row 2 — same date by construction. en-WP English title: \"The Fourth Counter\"."
+    },
+    {
+      "number": 4,
+      "title": "Kikumaru Hitoribocchi",
+      "title_native": "菊丸ひとりぼっち",
+      "air_date": "2006-07-28",
+      "note": "AniList 995 『全国大会篇』 (set 1 of 3); licensor's own number Episode 4 / 第4話; first Japanese release = DVD Vol.3 (BCBA-2463) on-sale date. TWO-EPISODE DISC shared with row 5. en-WP English title: \"Kikumaru All Alone\"."
+    },
+    {
+      "number": 5,
+      "title": "Ichiban Nagai Natsu",
+      "title_native": "いちばん長い夏",
+      "air_date": "2006-07-28",
+      "note": "AniList 995 『全国大会篇』 (set 1 of 3); licensor's own number Episode 5 / 第5話; first Japanese release = DVD Vol.3 (BCBA-2463) on-sale date. TWO-EPISODE DISC shared with row 4. en-WP English title: \"The Longest Summer\"."
+    },
+    {
+      "number": 6,
+      "title": "Koroshiya to Yobareru Otoko",
+      "title_native": "殺し屋と呼ばれる男",
+      "air_date": "2006-09-22",
+      "note": "AniList 995 『全国大会篇』 (set 1 of 3); licensor's own number Episode 6 / 第6話; first Japanese release = DVD Vol.4 (BCBA-2464) on-sale date. TWO-EPISODE DISC shared with row 7. en-WP English title: \"The Man Called Killer\"."
+    },
+    {
+      "number": 7,
+      "title": "Beach Volley no Ouji-sama!?",
+      "title_native": "ビーチバレーの王子様！？",
+      "air_date": "2006-09-22",
+      "note": "AniList 995 『全国大会篇』 (set 1 of 3); licensor's own number Episode 7 / 第7話; first Japanese release = DVD Vol.4 (BCBA-2464) on-sale date. TWO-EPISODE DISC shared with row 6. en-WP English title: \"The Prince of Beach-Volleyball?!\". ja-WP records that the 2021 TV Tokyo セレクション rebroadcast skipped this episode; that is a rerun fact, not a release fact."
+    },
+    {
+      "number": 8,
+      "title": "Arashi no Yokan",
+      "title_native": "嵐の予感",
+      "air_date": "2006-11-24",
+      "note": "AniList 995 『全国大会篇』 (set 1 of 3); licensor's own number Episode 8 / 第8話; first Japanese release = DVD Vol.5 (BCBA-2465) on-sale date. TWO-EPISODE DISC shared with row 9. en-WP English title: \"Premonition Before the Storm\"."
+    },
+    {
+      "number": 9,
+      "title": "Orenai Kokoro",
+      "title_native": "折れない心",
+      "air_date": "2006-11-24",
+      "note": "AniList 995 『全国大会篇』 (set 1 of 3); licensor's own number Episode 9 / 第9話; first Japanese release = DVD Vol.5 (BCBA-2465) on-sale date. TWO-EPISODE DISC shared with row 8. en-WP English title: \"Heart Not Giving In\"."
+    },
+    {
+      "number": 10,
+      "title": "Tanki Kessen",
+      "title_native": "短期決戦",
+      "air_date": "2007-01-26",
+      "note": "AniList 995 『全国大会篇』 (set 1 of 3); licensor's own number Episode 10 / 第10話; first Japanese release = DVD Vol.6 (BCBA-2466) on-sale date. TWO-EPISODE DISC shared with row 11. en-WP English title: \"Short-lived Match\"."
+    },
+    {
+      "number": 11,
+      "title": "Tezuka Kunimitsu",
+      "title_native": "手塚国光",
+      "air_date": "2007-01-26",
+      "note": "AniList 995 『全国大会篇』 (set 1 of 3); licensor's own number Episode 11 / 第11話; first Japanese release = DVD Vol.6 (BCBA-2466) on-sale date. TWO-EPISODE DISC shared with row 10. en-WP English title: \"Tezuka Kunimitsu\"."
+    },
+    {
+      "number": 12,
+      "title": "Futari",
+      "title_native": "ふたり",
+      "air_date": "2007-03-23",
+      "note": "AniList 995 『全国大会篇』 (set 1 of 3); licensor's own number Episode 12 / 第12話; first Japanese release = DVD Vol.7 (BCBA-2467) on-sale date. TWO-EPISODE DISC shared with row 13. en-WP English title: \"Two Of Us\"."
+    },
+    {
+      "number": 13,
+      "title": "Shitou - Teiou VS Ouji-sama",
+      "title_native": "死闘・帝王VS王子様",
+      "air_date": "2007-03-23",
+      "note": "AniList 995 『全国大会篇』 (set 1 of 3); licensor's own number Episode 13 / 第13話（最終話） of set 1; first Japanese release = DVD Vol.7 (BCBA-2467) on-sale date. TWO-EPISODE DISC shared with row 12. en-WP English title: \"Deathmatch · King vs. Prince\"."
+    },
+    {
+      "number": 14,
+      "title": "Shitenhouji VS Fudoumine",
+      "title_native": "四天宝寺VS不動峰",
+      "air_date": "2007-06-22",
+      "note": "AniList 2752 『全国大会篇 Semifinal』 (set 2 of 3); licensor's own number Episode 1 / 第1話 (the licensor restarts at 1 for this set); first Japanese release = DVD Semifinal Vol.1 (BCBA-2985) on-sale date. TWO-EPISODE DISC shared with row 15. en-WP English title: \"Fudoumine vs. Shitenhouji Battle\"."
+    },
+    {
+      "number": 15,
+      "title": "Houkou",
+      "title_native": "咆哮",
+      "air_date": "2007-06-22",
+      "note": "AniList 2752 『全国大会篇 Semifinal』 (set 2 of 3); licensor's own number Episode 2 / 第2話; first Japanese release = DVD Semifinal Vol.1 (BCBA-2985) on-sale date. TWO-EPISODE DISC shared with row 14. en-WP English title: \"Roar\". dAnime prints the reading as 咆哮（ほうこう）."
+    },
+    {
+      "number": 16,
+      "title": "Owarai Tennis no Kyoufu",
+      "title_native": "お笑いテニスの恐怖",
+      "air_date": "2007-09-25",
+      "note": "AniList 2752 『全国大会篇 Semifinal』 (set 2 of 3); licensor's own number Episode 3 / 第3話; first Japanese release = DVD Semifinal Vol.2 (BCBA-2986) on-sale date. TWO-EPISODE DISC shared with row 17. en-WP English title: \"The Horror of Amusing Tennis\". en-WP prints 2007-09-28 here — wrong; see flag."
+    },
+    {
+      "number": 17,
+      "title": "Seigaku no Onimotsu",
+      "title_native": "青学のお荷物",
+      "air_date": "2007-09-25",
+      "note": "AniList 2752 『全国大会篇 Semifinal』 (set 2 of 3); licensor's own number Episode 4 / 第4話; first Japanese release = DVD Semifinal Vol.2 (BCBA-2986) on-sale date. TWO-EPISODE DISC shared with row 16. en-WP English title: \"Seigaku's Dead Weight\". en-WP prints 2007-09-28 here — wrong; see flag."
+    },
+    {
+      "number": 18,
+      "title": "Futatsu no Tobira",
+      "title_native": "二つの扉",
+      "air_date": "2008-01-25",
+      "note": "AniList 2752 『全国大会篇 Semifinal』 (set 2 of 3); licensor's own number Episode 5 / 第5話; first Japanese release = DVD Semifinal Vol.3 (BCBA-2987) on-sale date. TWO-EPISODE DISC shared with row 19. en-WP English title: \"The Two Doors\"."
+    },
+    {
+      "number": 19,
+      "title": "Ikkyuu Shoubu!",
+      "title_native": "一球勝負！",
+      "air_date": "2008-01-25",
+      "note": "AniList 2752 『全国大会篇 Semifinal』 (set 2 of 3); licensor's own number Episode 6 / 第6話（最終話） of set 2; first Japanese release = DVD Semifinal Vol.3 (BCBA-2987) on-sale date. TWO-EPISODE DISC shared with row 18. en-WP English title: \"One-Point Match\"."
+    },
+    {
+      "number": 20,
+      "title": "Yakiniku no Ouji-sama",
+      "title_native": "焼肉の王子様",
+      "air_date": "2008-04-25",
+      "note": "AniList 4053 『全国大会篇 Final』 (set 3 of 3); licensor's own number 第0話 — the licensor's Blu-ray BOX listing numbers the Final set 0-6 and counts it inside 【7話収録】; the DVD Vol.0 page gives it the title only, with no Episode number; first Japanese release = DVD Final Vol.0 (BCBA-3270) on-sale date. SINGLE-EPISODE DISC — Vol.0 carries this episode plus the non-episode 「全国大会決勝戦プロローグPV」 (disc total 約30分); the date is not shared. en-WP English title: \"The Prince of Yakiniku\". THE 第0話 PLACEMENT: row 20 — dAnime numbers it Episode 20 and en-WP numbers it 20, both continuing the chain; ja-WP numbers it 0 with the editor note 「公式で0からカウントしています」. ja-WP also records the 2021 TV Tokyo セレクション rebroadcast skipped it."
+    },
+    {
+      "number": 21,
+      "title": "Choujou Taiketsu!",
+      "title_native": "頂上対決！",
+      "air_date": "2008-07-25",
+      "note": "AniList 4053 『全国大会篇 Final』 (set 3 of 3); licensor's own number Episode 1 / 第1話 (the licensor restarts at 1 after 第0話); first Japanese release = DVD Final Vol.1 (BCBA-3271) on-sale date. TWO-EPISODE DISC shared with row 22. en-WP English title: \"Summit Showdown!\"."
+    },
+    {
+      "number": 22,
+      "title": "Ore-tachi no Yarikata",
+      "title_native": "オレたちのやりかた",
+      "air_date": "2008-07-25",
+      "note": "AniList 4053 『全国大会篇 Final』 (set 3 of 3); licensor's own number Episode 2 / 第2話; first Japanese release = DVD Final Vol.1 (BCBA-3271) on-sale date. TWO-EPISODE DISC shared with row 21. en-WP English title: \"The Way We Play\". en-WP leaves this row's OriginalAirDate EMPTY — the date here is the licensor's + ja-WP's + A-on STORE's (BCBA-3271)."
+    },
+    {
+      "number": 23,
+      "title": "Mahiru ni Hoshi wa Mieru ka!?",
+      "title_native": "真昼に星は見えるか！？",
+      "air_date": "2008-10-24",
+      "note": "AniList 4053 『全国大会篇 Final』 (set 3 of 3); licensor's own number Episode 3 / 第3話; first Japanese release = DVD Final Vol.2 (BCBA-3272) on-sale date. TWO-EPISODE DISC shared with row 24. en-WP English title: \"Can you see the Stars in Broad Daylight!?\"."
+    },
+    {
+      "number": 24,
+      "title": "Kokoro wo Hitotsu ni",
+      "title_native": "心をひとつに",
+      "air_date": "2008-10-24",
+      "note": "AniList 4053 『全国大会篇 Final』 (set 3 of 3); licensor's own number Episode 4 / 第4話; first Japanese release = DVD Final Vol.2 (BCBA-3272) on-sale date. TWO-EPISODE DISC shared with row 23. en-WP English title: \"The Only One in my Heart\"."
+    },
+    {
+      "number": 25,
+      "title": "Saishuu Kessen! Ouji-sama VS Kami no Ko",
+      "title_native": "最終決戦！王子様VS神の子",
+      "air_date": "2009-01-23",
+      "note": "AniList 4053 『全国大会篇 Final』 (set 3 of 3); licensor's own number Episode 5 / 第5話; first Japanese release = DVD Final Vol.3 (BCBA-3273) on-sale date. TWO-EPISODE DISC shared with row 26. en-WP English title: \"The Prince vs. The Child of God\". Orthography: the Blu-ray BOX listing, ja-WP and dAnime print VS; the DVD Vol.3 page prints lowercase vs — same title."
+    },
+    {
+      "number": 26,
+      "title": "Dear Prince ~Tennis no Ouji-sama-tachi e~",
+      "title_native": "Dear Prince～テニスの王子様達へ～",
+      "air_date": "2009-01-23",
+      "note": "AniList 4053 『全国大会篇 Final』 (set 3 of 3); licensor's own number Episode 6 / 第6話（最終話） — the chain's finale; first Japanese release = DVD Final Vol.3 (BCBA-3273) on-sale date. TWO-EPISODE DISC shared with row 25. en-WP English title: \"Dear Prince~ To the Princes of Tennis.\"."
+    }
+  ],
+  "numbering_basis": "The run's OWN continuous 1-26 across the three entries in release order (995 全国大会篇 = rows 1-13, 2752 Semifinal = rows 14-19, 4053 Final = rows 20-26) — Sean's ruling of 2026-09-06, and the scheme the platforms print: dアニメストア numbers the chain Episode 1-13 / 14-19 / 20-26 across its three work pages and en-WP heads its three OVA tables 'Episodes 1–13' / 'Episodes 14–19' / 'Episode 20–26'. The LICENSOR numbers each set from its own beginning instead — tenipuri.jp's DVD pages print 'Episode 1' again at the head of Semifinal and again after the Final's opener, and its Blu-ray BOX pages print 第1話…第13話, 第1話…第6話 and, for the Final, 第0話…第6話 — so the Final's opener 「焼肉の王子様」 is the licensor's 第0話 and this grid's row 20. Never the parent TV series' 178-episode count. Dates are the first Japanese release of each episode = its DVD volume's on-sale date, so the twelve two-episode discs give twelve pairs of rows the same date.",
+  "sources": [
+    {
+      "url": "http://tenipuri.jp/dvd_bd/01/",
+      "what": "Licensor index for set 1 (テニスの王子様 OVA 全国大会篇): the seven DVD volumes with the episode titles each carries. HTTP only — the host refuses HTTPS.",
+      "tier": "licensor"
+    },
+    {
+      "url": "http://tenipuri.jp/dvd_bd/01/01.html",
+      "what": "Set 1 Vol.1 — prints 'Episode 1 「帰ってきた王子様」', ■発売日：2006年3月24日発売, ■品番：BCBA-2461, ■収録：#１. Volumes 02.html–07.html carry rows 2-13 in the same shape (dates 2006-05-26 / 07-28 / 09-22 / 11-24, 2007-01-26 / 03-23; BCBA-2462–2467).",
+      "tier": "licensor"
+    },
+    {
+      "url": "http://tenipuri.jp/dvd_bd/tenipuri/02/vol-1-%e3%80%8c%e5%9b%9b%e5%a4%a9%e5%ae%9d%e5%af%bavs%e4%b8%8d%e5%8b%95%e5%b3%b0%e3%80%8d-%e3%80%8c%e5%92%86%e5%93%ae%e3%80%8d.html",
+      "what": "Semifinal Vol.1 — 'Episode 1 「四天宝寺VS不動峰」' / 'Episode 2 「咆哮」', 2007年6月22日, BCBA-2985. (Reached from /dvd_bd/02/; the Vol.1 page sits on an odd legacy slug while Vol.2/Vol.3 are 02.html / 03.html.)",
+      "tier": "licensor"
+    },
+    {
+      "url": "http://tenipuri.jp/dvd_bd/02/02.html",
+      "what": "Semifinal Vol.2 — 'Episode 3 「お笑いテニスの恐怖」' / 'Episode 4 「青学のお荷物」', ■発売日：2007年9月25日発売, BCBA-2986. /dvd_bd/02/03.html is Vol.3 (rows 18-19, 2008年1月25日, BCBA-2987).",
+      "tier": "licensor"
+    },
+    {
+      "url": "http://tenipuri.jp/dvd_bd/03/00.html",
+      "what": "Final Vol.0 — 「焼肉の王子様」 + 「全国大会決勝戦プロローグPV」, 2008年4月25日, BCBA-3270, 約30分. NOTE: this page gives the episode NO number. /dvd_bd/03/01.html–03.html are Final Vol.1-3 (rows 21-26; 2008-07-25 / 2008-10-24 / 2009-01-23; BCBA-3271–3273), and they restart at 'Episode 1'.",
+      "tier": "licensor"
+    },
+    {
+      "url": "http://tenipuri.jp/dvd_bd/bdbox/01.html",
+      "what": "Blu-ray BOX (set 1), BCXA-1377 — 【13話収録】 with the licensor's own 第1話…第13話（最終話） title list; 301分（本編294分）. The per-set 第N話 numbering witness.",
+      "tier": "licensor"
+    },
+    {
+      "url": "http://tenipuri.jp/dvd_bd/bdbox/02.html",
+      "what": "Blu-ray BOX (Semifinal), BCXA-1378 — 【6話収録】, 第1話…第6話（最終話）.",
+      "tier": "licensor"
+    },
+    {
+      "url": "http://tenipuri.jp/dvd_bd/bdbox/03.html",
+      "what": "Blu-ray BOX (Final), BCXA-1379 — 【7話収録】 listing 第0話「焼肉の王子様」／第1話…第6話（最終話）. THIS is where the licensor itself calls the yakiniku episode 第0話 and counts it as one of seven.",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%86%E3%83%8B%E3%82%B9%E3%81%AE%E7%8E%8B%E5%AD%90%E6%A7%98%20(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext&format=json",
+      "what": "ja-WP 『テニスの王子様 (アニメ)』 §OVA → 各話リスト（第1作）: a 巻数 / 話数 / サブタイトル / 発売日 table covering all 26 rows across the three sets. Numbers per set (1-13, 1-6, 0-6); the Final's 0 carries the editor comment 「公式で0からカウントしています」. Every date matches the licensor. Non-episode discs (INVITATION, the two FAN DISCs) sit in the same table with an EMPTY 話数 cell.",
+      "tier": "ja-WP"
+    },
+    {
+      "url": "https://en.wikipedia.org/w/api.php?action=parse&page=List%20of%20The%20Prince%20of%20Tennis%20episodes&prop=wikitext&format=json",
+      "what": "en-WP 'List of The Prince of Tennis episodes' §OVAs → National Tournament / National Semifinals / National Finals. Prints the CONTINUOUS scheme in its own headings: 'OVA series Episodes 1–13', 'Episodes 14–19', 'Episode 20–26', with row 20 = The Prince of Yakiniku. Third witness on dates: agrees on 24 of 26; rows 16/17 print 2007-09-28 (wrong) and row 22's date is blank.",
+      "tier": "en-WP"
+    },
+    {
+      "url": "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=22934",
+      "what": "dアニメストア 「テニスの王子様 OVA 全国大会篇」 — Episode 1-13 with titles. Its siblings workId=22935 (Semifinal) run Episode 14-19 and workId=22936 (Final) run Episode 20-26 (Episode 20 = 焼肉の王子様): the platform numbers the chain CONTINUOUSLY 1-26 across the three works, which is the ruled basis.",
+      "tier": "cross-check"
+    },
+    {
+      "url": "https://a-onstore.jp/item/item-1000184036/",
+      "what": "A-on STORE (Bandai Namco Filmworks' own shop) product record for BCBA-2986 — 発売日 2007/09/25. Fetched the same way for BCBA-2461–2467, 2985, 2987, 3270–3273: 2006/03/24, 05/26, 07/28, 09/22, 11/24, 2007/01/26, 03/23, 2007/06/22, 2008/01/25, 2008/04/25, 2008/07/25, 2008/10/24, 2009/01/23. All thirteen disc dates agree with the licensor and ja-WP; this is what settles en-WP's 09-28 error and fills its blank row 22.",
+      "tier": "licensor"
+    },
+    {
+      "url": "http://web.archive.org/web/20070626182250id_/http://www.tenipuri.jp/dvd02/02.html",
+      "what": "Contemporaneous 2007 snapshot of the then-live licensor page for set 1 Vol.2 — 2006年5月24日-era copy confirming 2006年5月26日 and the two-episode disc. (Snapshots of Vol.1/Vol.3 likewise. The Internet Archive went 'Temporarily Offline' mid-session, so no further snapshots were pulled.)",
+      "tier": "cross-check"
+    }
+  ],
+  "flags_for_sean": [
+    "NUMBERING (Sean ruled 2026-09-06): rows are the run's OWN continuous 1-26 across the three AniList entries. The LICENSOR numbers each SET from its own 1 — tenipuri.jp's DVD pages print 'Episode 1'…'Episode 13' for 全国大会篇, then restart at 'Episode 1'…'Episode 6' for Semifinal, and the Blu-ray BOX pages print the same as 第1話…第N話 (the Final set as 第0話…第6話). The continuous 1-26 scheme is what the PLATFORMS print: dアニメストア runs Episode 1-13 / 14-19 / 20-26 across workId 22934 / 22935 / 22936, and en-WP heads its three tables 'Episodes 1–13' / 'Episodes 14–19' / 'Episode 20–26'. Every row's note carries the licensor's own number so the two schemes can always be reconciled.",
+    "THE 第0話 IS ROW 20. 「焼肉の王子様」 shipped alone on Final Vol.0 (BCBA-3270, 2008-04-25). It is a real episode, not an extra: the licensor's own Blu-ray BOX page counts the Final as 【7話収録】 and lists it as 第0話; ja-WP numbers it 0 with 「公式で0からカウントしています」; dアニメ = Episode 20; en-WP = 20. NOTE the one place it looks unnumbered: the DVD Vol.0 page itself gives only the title, with no 'Episode' header — that is a page-layout quirk, not a claim.",
+    "DISC-DATE SHARING IS STRUCTURAL, NOT AN AMBIGUITY. 12 of the 13 discs hold TWO episodes, so 12 pairs of rows necessarily share a date: 2/3, 4/5, 6/7, 8/9, 10/11, 12/13, 14/15, 16/17, 18/19, 21/22, 23/24, 25/26. Only rows 1 (set 1 Vol.1) and 20 (Final Vol.0) are alone on their disc. Within a pair the ORDER is the licensor's own — both the DVD page ('Episode N' then 'Episode N+1') and the Blu-ray BOX 第N話 list — not an inference from the date.",
+    "THESE ARE DVD ON-SALE DATES, NOT BROADCAST DATES. The chain never aired first; ja-WP records the reruns that came later (Animax single broadcasts 2008 then a regular slot from 2009-03; NHK BS2 2010-01-10→2010-03-21 for set 1's 13; TV Tokyo 『テニスの王子様 ベストマッチ』 2011-10-05→2011-12-28 for Semifinal+Final; the 2021 TV Tokyo セレクション, which SKIPPED row 7 and row 20). Do not let a rerun list overwrite these.",
+    "en-WP DEFECTS (recorded so nobody 'repairs' our grid toward them): rows 16 and 17 print 2007-09-28 — the licensor's Semifinal Vol.2 page, ja-WP and A-on STORE's BCBA-2986 record all say 2007-09-25; and row 22's OriginalAirDate is EMPTY — the true value is 2008-07-25 (Final Vol.1, BCBA-3271, three sources). en-WP is otherwise clean on all 26 rows.",
+    "TITLE ORTHOGRAPHY — same episode, two printed forms. title_native follows the licensor's Blu-ray BOX / 'Episode' headers. Variants seen: 「Hot & Cool」 (licensor, spaced) vs Hot＆Cool (ja-WP, dアニメ); 「ビーチバレーの王子様！？」 (licensor header + BOX) vs 「ビーチバレーの王子様 !?」 (licensor 収録 line, dアニメ) vs ビーチバレーの王子様!? (ja-WP); 「真昼に星は見えるか！？」 (licensor) vs !? (ja-WP, dアニメ); and 「最終決戦！王子様VS神の子」 — the licensor prints uppercase VS in the Blu-ray BOX list and lowercase vs on the DVD Vol.3 page; ja-WP and dアニメ both use VS, which is what we take. No row identity is in doubt.",
+    "NO OFFICIAL ENGLISH TITLE SET FOUND for these OVAs — no licensor/Crunchyroll English listing of the Nationals OVA chain surfaced (the Crunchyroll hits are for the later 'The Prince of Tennis II OVA'). Per the protocol the `title` field therefore carries ROMAJI of the licensor's Japanese; en-WP's English titles are fan translations and are kept in each row's note for search only, never as the row title.",
+    "DELIBERATELY EXCLUDED (they sit on the same licensor index pages and in the same ja-WP table, and ja-WP gives each an EMPTY 話数 cell): the INVITATION DVD (2006-12-22), the Semifinal FAN DISC 'White heat Remix' (2007-12-21), the Final FAN DISC 'The Time Comes Around Remix' (2008-12-19), and the Vol.0 disc's 「全国大会決勝戦プロローグPV」. None is an episode. Also out of scope and a DIFFERENT series: OVA ANOTHER STORY (2 vols, 2009) and ANOTHER STORY II (2 vols, 2011).",
+    "COUNT CHECK PASSES: 26 rows = 13 (AniList 995) + 6 (2752) + 7 (4053), and the licensor's own Blu-ray BOX pages independently print 【13話収録】 / 【6話収録】 / 【7話収録】. Per-set first/last dates also match the task's AniList windows exactly (2006-03-24→2007-03-23, 2007-06-22→2008-01-25, 2008-04-25→2009-01-23).",
+    "SCHEMA NOTE: this grid covers THREE AniList entries under one slug, so `anilist_id` carries the first (995) and `anilist_ids` carries all three in order; `expected_episodes` is the sum, 26. Each row's note names which entry it belongs to.",
+    "AniList's GraphQL API returned 403 ('temporarily disabled due to severe stability issues') during this session and the Internet Archive went 'Temporarily Offline' mid-session — neither was needed: the counts and windows in the task match the licensor's and ja-WP's own figures exactly."
+  ]
+}
