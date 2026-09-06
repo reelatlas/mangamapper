@@ -1,0 +1,44 @@
+{
+  "series_id": "blue-exorcist",
+  "anilist_id": 11737,
+  "title": "Blue Exorcist: The Movie",
+  "summary": "An 88-minute A-1 Pictures feature (2012-12-28, Toho) whose story is original to the film: ja-WP's anime article, citing Monthly Newtype 2013/01, states it plainly — 「テレビシリーズ第1期の後日談に当たり、映画オリジナルのストーリーとなる」 (an epilogue to TV season 1, a movie-original story), scripted by Reiko Yoshida with three film-exclusive characters (Usamaro, Cheng-Long Liu, Lena). Comic Natalie's release-week PowerPush feature independently calls Usamaro and Liu 「劇場版オリジナルキャラクター」 and notes Kazue Kato drew their character designs herself — designs, not events. The only manga tie anyone names is the opening: the owner's wiki says the film \"also adapts the bonus chapter 'Phantom Train'… found in Volume 6\", while the same wiki's chapter page downgrades that to \"used as inspiration for the introduction scene\"; that bonus chapter is an UNNUMBERED 番外編 printed after ch 23 (Shueisha's own vol-6 page: 「番外編2本も同時収録!!」; en-WP's chapter list names both bonus chapters), so it carries no printed chapter number and could never become an anchor (N35). Under T28 the opening train exorcism is a sliver — ANN's review counts the film's substance as \"three intertwining plot threads: The festival, the renewing of the wards, and the freeing of Usamaro\", all original, and the train sequence is the \"opening action set-piece\" that exists to wreck the shrine and free Usamaro (a beat the bonus chapter does not contain). MangaUpdates' coverage string for the manga carries segments only for S1-S5 and no movie segment. Standing: filler, chapters_adapted empty; the vol-6 bonus-chapter tie is recorded as a sliver in the note, not as a number.",
+  "standing": "filler",
+  "confidence": "high",
+  "chapters_adapted": [],
+  "recap": false,
+  "position": {
+    "stored": 25.5,
+    "verdict": "confirmed",
+    "proposed": 25.5,
+    "why": "Both instruments agree. Release slot: 2012-12-28 falls between ep 25 (2011-10-02, the S1 finale) and ep 26 (2017-01-07, Kyoto Saga) — a filler extra sits at its release slot. Stated setting: the only sourced setting statement, ja-WP citing Newtype 2013/01, is 「テレビシリーズ第1期の後日談」 — AFTER the S1 finale — so the setting does not collide with the slot, it confirms it (Comic Natalie's feature headline frames the film as a TV-anime sequel: 「ただのTVアニメ続編にあらず!?」). Branch note for the ledger: S2 explicitly does not follow S1's anime-original second half (ja-WP: 「テレビシリーズ第1期後半のアニメオリジナルストーリーには準じず」), so 25.5 places the film at the end of a discarded branch — correct for a viewer of the whole run, skippable on a manga-canon route. No collision with the 25.51 row (see flags)."
+  },
+  "adopted": null,
+  "repairs": [],
+  "sources": [
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E9%9D%92%E3%81%AE%E7%A5%93%E9%AD%94%E5%B8%AB%20(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E9%9D%92%E3%81%AE%E7%A5%93%E9%AD%94%E5%B8%AB&prop=wikitext&format=json",
+    "https://en.wikipedia.org/wiki/Blue_Exorcist:_The_Movie",
+    "https://en.wikipedia.org/wiki/List_of_Blue_Exorcist_chapters",
+    "https://aonoexorcist.fandom.com/api.php?action=parse&page=Blue%20Exorcist%20Movie&prop=wikitext&format=json",
+    "https://aonoexorcist.fandom.com/api.php?action=parse&page=Phantom%20Train%20(Chapter)&prop=wikitext&format=json",
+    "https://aonoexorcist.fandom.com/api.php?action=parse&page=Volume%206&prop=wikitext&format=json",
+    "https://web.archive.org/web/20160620124506/http://movie.ao-ex.com/introduction/index.html",
+    "https://books.shueisha.co.jp/items/contents.html?isbn=978-4-08-870214-8",
+    "https://j-books.shueisha.co.jp/books/aonoexorcist_movie.html",
+    "https://web.archive.org/web/20121229143027/http://natalie.mu/comic/pp/aoex_movie",
+    "https://www.animenewsnetwork.com/review/blue-exorcist/the-movie-limited-edition/blu-ray",
+    "https://eiga.com/movie/57623/",
+    "https://press.moviewalker.jp/mv49565",
+    "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=24507",
+    "https://api.mangaupdates.com/v1/series/4415562067",
+    "https://www.ao-ex.com/tv/bd_dvd/05.html"
+  ],
+  "flags_for_sean": [
+    "THE VOL-6 BONUS-CHAPTER TIE, and why it is a note and not a number. The owner's wiki (aonoexorcist.fandom, one wiki — blueexorcist.fandom is the same base) says on its movie page: \"The film also adapts the bonus chapter 'Phantom Train' (幽霊列車 Fantomu Torein), which is found in Volume 6 of the manga\"; its chapter page for the same bonus chapter says only \"Chapter was used as inspiration for the introduction scene in Blue Exorcist Movie\", and its Phantom Train demon page gives manga debut = \"Volume 6 Extras\" / anime debut = the movie. Independent corroboration exists for the CHAPTER (Shueisha's own vol-6 product page: 「番外編2本も同時収録!!」; en-WP's List of Blue Exorcist chapters lists Bonus Chapter 1 \"Phantom Train\" and Bonus Chapter 2 \"Kuro Runs Away\" under vol 6) and for the FILM'S OPENING being a Phantom Train exorcism (the licensor's own introduction page, dAnime, eiga.com, MOVIE WALKER, ANN), but the word \"adapts\" itself is single-wiki. It changes nothing: the bonus chapter is an unnumbered 番外編 sitting after ch 23 in vol 6, so under N35 it is a FACT, never a number, and under T28 the opening set-piece is a sliver — ANN: \"The film weaves its spectacle-with-a-heart from three intertwining plot threads: The festival, the renewing of the wards, and the freeing of Usamaro\", none of them the bonus chapter, and the train sequence's payload (wrecking the shrine, freeing Usamaro) is original. chapters_adapted delivered as [] with the tie in the note; if the ruling layer wants it visible, the right shape is a side_story-style note naming 「幽霊列車」, vol 6, printed after ch 23.",
+    "NO ADOPTION (T26), and the two things that could be mistaken for one. (a) Kazue Kato personally drew the film-original characters' designs — Comic Natalie, release week: 「劇場版オリジナルキャラクターである、うさ麻呂とリュウ・セイリュウのキャラクターデザインは、加藤和恵自らが担当」 — designs plus festival costume settings, no events. (b) Cheng-Long Liu was later reverse-imported into the manga — ja-WP: 「元々はアニメ劇場版のオリジナルキャラクターだったが、アニメから多少設定を変更し逆輸入して登場した」 (the fandom dates it to the Of One Cloth arc, \"almost a decade later\"). A character crossing into the source is not the film's EVENTS entering the source line — designs without events is the Twin Star shape, evidence against adoption. adopted: null.",
+    "CLUSTER — the 25.51 row is probably in the wrong gap, and it is not mine to move. Ledger row @25.51 is Runaway Kuro (AniList 11266) = 特別番外編「クロの家出」, i.e. vol 6's OTHER bonus chapter (en-WP + fandom both list \"Kuro Runs Away\" クロの家出 as Bonus Chapter 2 of vol 6). The licensor's own Blu-ray page for 『青の祓魔師 5』 (2011-10-26) lists its contents as 「第12話「鬼事」 / 第13話「証明」 / 特別番外編「クロの家出」」 and ja-WP calls it 「第11.5話に当たる特別番外編」. If that row's own verdict applies the setting-wins rule its slot is ~11.5-13.5, not 25.51, and the 25.x cluster dissolves. Flagged with citations only — no repair proposed here, it is another work's verdict. (If it stays in the 25.x gap, date order is OVA first: BD 2011-10-26 and TV broadcast 2012-12-27, one day before this film.)",
+    "DISSENT RECORDED, NOT USED. English watch-order pages (Collider, Popverse, Escapist, fictionhorizon et al.) place the film mid-S1, most often \"between episodes 18 and 19\"; they are content farms with no sourcing and they disagree with each other (others say \"between S1 and S2\"). Cross-check tier only (R1). The only sourced setting statement remains ja-WP's Newtype-cited 後日談, and it agrees with the release slot, so nothing in the ask turns on the dissent.",
+    "MINOR, no repair proposed: runtime is printed 88 min by MOVIE WALKER and AniList and 90 min by eiga.com and en-WP; dAnime's four streaming parts sum to 88m43s (22:28 + 21:20 + 21:47 + 23:08). Not a stored field on the ledger row, so nothing to correct — recorded in case a duration column ever lands."
+  ]
+}
