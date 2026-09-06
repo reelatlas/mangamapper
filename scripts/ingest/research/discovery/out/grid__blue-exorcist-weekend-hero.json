@@ -1,0 +1,95 @@
+{
+  "series_id": "blue-exorcist-weekend-hero",
+  "anilist_id": 97891,
+  "expected_episodes": 2,
+  "rows": [
+    {
+      "number": 1,
+      "title": "Hebi to Doku",
+      "title_native": "蛇と毒",
+      "air_date": "2017-04-04",
+      "note": "OAD bundled with the MANGA — Jump Comics vol 19 アニメDVD同梱版 (Shueisha), on sale 2017-04-04, same day as the regular vol 19. The licensor numbers it 第13話 of 京都不浄王篇 (ao-ex.com; Hulu JP prints '青の祓魔師 京都不浄王篇 OAD シーズン1 第13話 蛇と毒'). en-WP renders the title 'Snake and Poison'. Content per the licensor: Mamushi Hojo and Juzo Shima as True Cross Academy students, a prequel to the Kyoto Impure King arc. Later streaming premiere 2024-12-27 00:00 JST (U-NEXT / Hulu / dアニメ / Netflix et al.) — not the grid date."
+    },
+    {
+      "number": 2,
+      "title": "Supai Gēmu",
+      "title_native": "スパイ・ゲーム",
+      "air_date": "2017-10-04",
+      "note": "OAD bundled with the MANGA — Jump Comics vol 20 アニメDVD同梱版 (Shueisha), on sale 2017-10-04, same day as the regular vol 20. The licensor numbers it 第14話 of 京都不浄王篇. en-WP renders the title 'Spy Game'. Content per the licensor: Renzo Shima's three spy-training missions from Mephisto. ja-WP's date cell for this row is the UNFILLED header placeholder 「初放送日」 — the date rests on the licensor + en-WP + ja-WP's own volume list (vol 20 発売 2017年10月4日). Later streaming premiere 2024-12-27 00:00 JST — not the grid date."
+    }
+  ],
+  "numbering_basis": "release order 1-2 of THIS run's own entries (AniList 97891 = 2 episodes; the licensor says 「青の祓魔師 京都不浄王篇OAD」（全2話）). The licensor and the JP streaming platforms do NOT number the run itself — they carry 第13話 / 第14話, continuing the Kyoto Saga TV season's 12 episodes (a number space that would collide with the TV rows); en-WP's OVA table is franchise-numbered 1-3, where 1 is the 2011 series' OVA クロの家出 (2012-12-27) and 2-3 are ours. Neither foreign numbering is used.",
+  "sources": [
+    {
+      "url": "https://ao-ex.com/news/?id=66728",
+      "what": "Official Blue Exorcist anime site (Aniplex), news 2024-11-29: 「青の祓魔師 京都不浄王篇OAD」（全2話）; lists 第13話「蛇と毒」 and 第14話「スパイ・ゲーム」 with synopses and states 『第13話は2017年4月4日発売のコミック19巻DVD同梱版の収録話、第14話は2017年10月4日発売のコミック20巻DVD同梱版の収録話となります』 — both titles and both release dates from the licensor on one page",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://ja.wikipedia.org/wiki/%E9%9D%92%E3%81%AE%E7%A5%93%E9%AD%94%E5%B8%AB_(%E3%82%A2%E3%83%8B%E3%83%A1)",
+      "what": "ja-WP 青の祓魔師 (アニメ): infobox 話数 = 全12話+OAD2話; 各話リスト rows 第拾参話「蛇と毒」 (Aux5 = 4月4日, ref 原作第19巻同梱) and 第拾肆話「スパイ・ゲーム」 (ref 原作第20巻同梱, date cell = the unfilled 初放送日 placeholder); BD/DVD 第2期 table (citing ao-ex.com/tv2017/bddvd/) shows the Kyoto Saga discs vols 1-6 (2017-03-08 … 2017-08-09) carry ONLY 第壱話-第拾弐話 — the OADs are not on them",
+      "tier": "ja-WP"
+    },
+    {
+      "url": "https://ja.wikipedia.org/wiki/%E9%9D%92%E3%81%AE%E7%A5%93%E9%AD%94%E5%B8%AB",
+      "what": "ja-WP 青の祓魔師 (manga): 書誌情報 volume list with Shueisha refs — vol 19 発売 2017年4月4日 (ISBN 978-4-08-881052-2), vol 20 発売 2017年10月4日 (ISBN 978-4-08-881152-9); independent confirmation of both bundle ship dates. Also the JUMP j-BOOKS novel list (ウィークエンド・ヒーロー 2011-09-02, ホーム・スイート・ホーム 2012-12-04, ブラッディ・フェアリーテイル 2014-03-04, スパイ・ゲーム 2017-03-03)",
+      "tier": "ja-WP"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/List_of_Blue_Exorcist_episodes",
+      "what": "en-WP OVA table: row 2 'Snake and Poison' 蛇と毒 2017-04-04, row 3 'Spy Game' スパイ・ゲーム 2017-10-04 (row 1 = 'Runaway Kuro' クロの家出 2012-12-27, the 2011 series' OVA — the franchise-numbering trap, confirmed live)",
+      "tier": "en-WP"
+    },
+    {
+      "url": "https://books.shueisha.co.jp/items/contents.html?isbn=978-4-08-881052-2",
+      "what": "Shueisha's own catalog page for 青の祓魔師 19 — 紙版 2017年4月4日発売 (the regular edition; the DVD同梱版 SKU is not in this catalog, so the bundle date comes from the licensor's news page and ja-WP)",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://j-books.shueisha.co.jp/books/aonoexorcist_spygame.html",
+      "what": "JUMP j-BOOKS (Shueisha) page for the 4th novel 『青の祓魔師 スパイ・ゲーム』 (2017-03-03): 「表題作『スパイ･ゲーム』はじめ、5本の小説でしか読むことができないエピソードを収録」 — the work OAD 2 adapts",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://j-books.shueisha.co.jp/books/aonoexorcist_homesweet.html",
+      "what": "JUMP j-BOOKS page for the 2nd novel 『青の祓魔師 ホーム・スイート・ホーム』 (2012-12-04): 「…柔造と蝮が正十字学園に通っていた頃など、本編では語られなかったエピソードを収録」 — matches the licensor's own synopsis of OAD 1 (蛇と毒) beat for beat",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://j-books.shueisha.co.jp/books/aonoexorcist_weekend.html",
+      "what": "JUMP j-BOOKS page for the 1st novel 『青の祓魔師 ウィークエンド・ヒーロー』 (2011-09-02) — the work AniList names as this entry's source: its blurb is the middle-school Yukio charity-concert title story plus Shiemi / Izumo / Ryuji / Shima / Konekomaru / Mephisto episodes; neither OAD's content appears in it",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://www.hulu.jp/blue-exorcist-oad-kyoto-saga-snake-and-venom-spy-game",
+      "what": "Hulu Japan listing '青の祓魔師 京都不浄王篇 OAD' — a 2-episode container labelled シーズン1 第13話 蛇と毒 …; corroborates the 2-episode run and the licensor's 13/14 labels",
+      "tier": "cross-check"
+    },
+    {
+      "url": "https://www.animehodai.jp/title/SID0163503",
+      "what": "Anime Hodai listing of the same 2-episode OAD title: 第13話「蛇と毒」 / 第14話「スパイ・ゲーム」 with synopses",
+      "tier": "cross-check"
+    },
+    {
+      "url": "https://www.amiami.jp/top/detail/detail?gcode=MED-BOOK-010029",
+      "what": "Retailer listing of 青の祓魔師 20巻 アニメDVD同梱版 quoting the publisher's copy: 「JUMP jBOOKS『青の祓魔師 スパイ・ゲーム』より、表題作がアニメ化！主人公は…志摩廉造！」",
+      "tier": "cross-check"
+    },
+    {
+      "url": "https://web.archive.org/web/20240623140422/https://natalie.mu/comic/news/200738",
+      "what": "Comic Natalie (2016-09) on ジャンプスペシャルアニメフェスタ2016 — event dates 2016-11-27 (Tokyo, Yomiuri Hall) and 2016-12-04 (Sapporo / Nagoya / Osaka / Fukuoka); the announced screening lineup is BORUTO, My Hero Academia, Black Clover — no Blue Exorcist. Checked against ja-WP's claim of a Blue Exorcist screening there (see flags)",
+      "tier": "cross-check"
+    }
+  ],
+  "flags_for_sean": [
+    "TASK PREMISE FAILS (disc identity): these are NOT Kyoto Saga Blu-ray/DVD bonuses. Both OADs shipped inside the MANGA — Jump Comics vol 19 アニメDVD同梱版 (2017-04-04) and vol 20 アニメDVD同梱版 (2017-10-04) — stated verbatim by the licensor (ao-ex.com news 66728). The Kyoto Saga discs, vols 1-6 (2017-03-08 … 2017-08-09), carry only 第壱話-第拾弐話 (ja-WP's table, citing the official Blu-ray&DVD page).",
+    "DATE: row 2 is 2017-10-04, not the task's guessed '2017-08?'. The August date in circulation is Kyoto Saga BD vol 6 (2017-08-09) — a different product. Licensor + en-WP + ja-WP's volume list all give 2017-10-04.",
+    "TRAP CONFIRMED as described: en-WP's OVA table is franchise-numbered 1-3 with row 1 = クロの家出 (2012-12-27, the 2011 series' OVA). Our two rows are its rows 2 and 3.",
+    "NUMBERING FORK: the licensor and every JP streaming platform label these 第13話 / 第14話 — a continuation of the Kyoto Saga TV season's 12 episodes, which would collide with that season's rows. The grid uses the run's own 1-2 per the protocol; if the mint ever wants the licensor labels they belong in a note, never in `number`.",
+    "SOURCE TIE (not a grid fact — for the mint and the later standing research): AniList ties 97891 to the novel 'Ao no Exorcist: Weekend Hero' (58103) and our slug is blue-exorcist-weekend-hero, but the evidence points elsewhere. Row 1 (蛇と毒) matches the SECOND novel 『ホーム・スイート・ホーム』 (j-books blurb 「柔造と蝮が正十字学園に通っていた頃」 = the licensor's own ep-13 synopsis). Row 2 (スパイ・ゲーム) is the TITLE story of the FOURTH novel 『青の祓魔師 スパイ・ゲーム』 (the vol-20 bundle's publisher copy says so outright). Neither is evidently the Weekend Hero volume. The instrument may need re-targeting to the JUMP j-BOOKS novel SERIES (4 volumes, Aya Yajima / Kazue Kato) rather than volume 1 — Sean's call at the mint.",
+    "OPEN (unresolved, low stakes for the grid): ja-WP 青の祓魔師 (アニメ) asserts 「同年中には新作アニメが『ジャンプスペシャルアニメフェスタ2016』にて上映され、原作コミックスのDVD同梱版に収録された」 — i.e. a prior theatrical screening (2016-11-27 Tokyo / 2016-12-04 four cities) of what is most likely 蛇と毒. I could not confirm the title: Comic Natalie's lineup piece names only BORUTO / MHA / Black Clover, and heroaca.com and natalie's live pages are Cloudflare/CAPTCHA-blocked. Per the protocol an OAD's date is the disc bundle's ship date, so 2017-04-04 stands; if the screening is later confirmed it is a note, not a date change.",
+    "ja-WP DEFECT (reported, not used): the date cell for 第拾肆話 is the literal header placeholder 「初放送日」 (Aux5 copied from the template header) — ja-WP carries NO date for row 2. Row 2's date is licensor + en-WP + ja-WP's volume list.",
+    "TITLES: no official English title was found — the release is Japan-only and the Dec-2024 streaming was on JP platforms. Per the protocol `title` is the romaji ('Hebi to Doku' / 'Supai Gēmu'); en-WP (and IMDb / Simkl) print 'Snake and Poison' / 'Spy Game', which are the natural English display titles if the catalog prefers them — a one-field flip, Sean's call.",
+    "COUNT CHECK PASSES: 2 rows = AniList's 2 episodes = the licensor's 「全2話」."
+  ]
+}
