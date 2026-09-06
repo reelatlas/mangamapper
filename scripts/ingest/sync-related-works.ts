@@ -157,7 +157,30 @@ async function main() {
             continue;
           }
         }
-        if (cur && cur.origin !== 'halo') { counters.unchanged++; continue; } // a wiki / ruled row models this work — never overwritten here
+        if (cur && cur.origin !== 'halo') {
+          // I45 ON AN ADOPTED ROW (2026-09-06, the BSD Walking Alone verifier: a ruling for a wiki-origin row landed nowhere and no class said so):
+          // a wiki / ruled row models this work — its position, label and derived text are its own — but the RULED FACTS of the WORK (standing,
+          // chapters, a repair, the ruling note) land on it exactly as on a halo row. A ruled POSITION is refused here (the fractional's position
+          // is an identity-tier ruling of its own) and the census lists the disagreement (related_work_violation).
+          const adoptedRuling = relatedWorkRuling(sid, c.anilistId);
+          if (!adoptedRuling) { counters.unchanged++; continue; }
+          const patch: Record<string, unknown> = {};
+          if (adoptedRuling.standing !== undefined && cur.standing !== adoptedRuling.standing) patch.standing = adoptedRuling.standing;
+          if (adoptedRuling.chapter !== undefined && (cur.chapter ?? null) !== adoptedRuling.chapter) patch.chapter = adoptedRuling.chapter;
+          if (adoptedRuling.volume !== undefined && (cur.volume ?? null) !== adoptedRuling.volume) patch.volume = adoptedRuling.volume;
+          if (adoptedRuling.chaptersAdapted !== undefined && (cur.chapters_adapted ?? null) !== adoptedRuling.chaptersAdapted) patch.chapters_adapted = adoptedRuling.chaptersAdapted;
+          if (adoptedRuling.note && cur.note !== adoptedRuling.note) patch.note = adoptedRuling.note;
+          if (adoptedRuling.title && cur.title !== adoptedRuling.title) patch.title = adoptedRuling.title;
+          if (adoptedRuling.airDate !== undefined && (cur.air_date ?? null) !== adoptedRuling.airDate) patch.air_date = adoptedRuling.airDate;
+          if (adoptedRuling.kind && cur.kind !== adoptedRuling.kind) patch.kind = adoptedRuling.kind;
+          if (DRY && adoptedRuling.position != null && Number(cur.position) !== adoptedRuling.position) console.log(`  adopted ${sid} @${cur.position} ${c.title}: the ruled position ${adoptedRuling.position} is REFUSED on a ${cur.origin} row (its position is the fractional's own ruling) — listed by the census`);
+          if (!Object.keys(patch).length) { counters.unchanged++; continue; }
+          updated++;
+          if (DRY) { console.log(`  update ${sid} @${cur.position} ${c.title} [${cur.origin} row — ruled ${Object.keys(patch).join(', ')}]`); continue; }
+          const { error: ae } = await db.from('watch_order_entries').update(patch).eq('series_id', sid).eq('position', cur.position);
+          if (ae) throw new Error(`${key}: ${ae.message}`);
+          continue;
+        }
         const ruling = relatedWorkRuling(sid, c.anilistId);
         const airDate = ruling?.airDate !== undefined ? ruling.airDate : date; // a ruled date (P8) beats AniList's
         const ruledPos = ruling?.position ?? RULED_POSITION_BY_ANILIST[sid]?.[c.anilistId];

@@ -102,7 +102,18 @@ async function main() {
   }
   console.log(`[audit-discovery] related works (I45): ${extras.length} listed · same_instrument ${byBucket('same_instrument').length} · other_instrument ${byBucket('other_instrument').length} · recap ${byBucket('recap').length} · original ${byBucket('original').length} · crossover ${byBucket('crossover').length} · promo ${byBucket('promo').length} · alternative ${byBucket('alternative').length} · unknown ${byBucket('unknown').length} · unstaged ${byBucket('unstaged').length} · ledger rows ${ledger.length} (${ledger.filter((l: any) => l.standing == null).length} standing pending)`);
   // E3 — the research work-list (R27): a ledger row still pending its standing
-  const unruled = ledger.filter((r: any) => r.standing == null).map((r: any) => `${r.series_id} @${r.position} "${String(r.title).slice(0, 40)}" — ${reach.get(`${r.series_id}#${r.anilist_id}`)?.proposal ?? 'unreached'} (standing pending research)`);
+  const unruled = [...ledger, ...others.filter((r: any) => r.anilist_id != null)].filter((r: any) => r.standing == null).map((r: any) => `${r.series_id} @${r.position} "${String(r.title).slice(0, 40)}" — ${reach.get(`${r.series_id}#${r.anilist_id}`)?.proposal ?? 'unreached'} (standing pending research)`);
+  // I45 on ADOPTED rows (2026-09-06, the BSD Walking Alone verifier): a wiki / ruled row that carries an AniList id takes the ruled FACTS of the
+  // work like a halo row — a stored disagreement is a violation; a ruled POSITION on such a row is refused by the writer and listed here
+  for (const o of others) {
+    if (o.anilist_id == null) continue;
+    const ruling = relatedWorkRuling(o.series_id, Number(o.anilist_id)); if (!ruling) continue;
+    if (ruling.standing !== undefined && (o.standing ?? null) !== ruling.standing) violation.push(`${o.series_id} @${o.position} (${o.origin} row): standing '${o.standing}' ≠ ruled '${ruling.standing}' (I45 on an adopted row) — run sync-related-works`);
+    if (ruling.chapter !== undefined && (o.chapter == null ? null : Number(o.chapter)) !== ruling.chapter) violation.push(`${o.series_id} @${o.position} (${o.origin} row): chapter ${o.chapter} ≠ ruled ${ruling.chapter} (I45 on an adopted row) — run sync-related-works`);
+    if (ruling.title != null && o.title !== ruling.title) violation.push(`${o.series_id} @${o.position} (${o.origin} row): title ≠ ruled '${ruling.title}' (P8 repair) — run sync-related-works`);
+    if (ruling.airDate !== undefined && (o.air_date ?? null) !== ruling.airDate) violation.push(`${o.series_id} @${o.position} (${o.origin} row): air_date ${o.air_date} ≠ ruled ${ruling.airDate} (P8 repair) — run sync-related-works`);
+    if (ruling.position != null && Number(o.position) !== ruling.position) violation.push(`${o.series_id} @${o.position} (${o.origin} row): a ruled position ${ruling.position} on an adopted row is refused — the fractional's position is its own ruling; rule the fractional, not the work`);
+  }
   // E2 — a positioned row whose base episode has no row
   const epNumbers = new Map<string, Set<number>>(); for (const [sid, eps] of epsBy) epNumbers.set(sid, new Set(eps.map((e) => e.number)));
   const ruledPosition = (sid: string, pos: number, anilistId: number | null) => RULED_RECORDS[sid]?.[pos] != null || RULED_LABELS[sid]?.[pos] != null || (anilistId != null && (relatedWorkRuling(sid, anilistId)?.position === pos || RULED_POSITION_BY_ANILIST[sid]?.[anilistId] === pos));
