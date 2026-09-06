@@ -1,0 +1,38 @@
+{
+ "series_id": "dragon-ball-z-kai",
+ "anilist_id": 20778,
+ "title": "Dragon Ball Z: Resurrection 'F'",
+ "summary": "The same 2015 Toei feature under Kai's roof, and the same instrument: Kai re-cuts Toriyama's manga (ch 1-519, finished 1995), so the film adapts nothing of it — an ORIGINAL by Toei Animation's own credits (原作・脚本・キャラクターデザイン 鳥山明; Kanzenshuu: 'Premiered 18 April 2015 · 93 Minutes'), set in the ten-year gap the manga leaves between ch 517 and ch 518 (the wiki: 'Serving as a sequel to Dragon Ball Z: Battle of Gods, it is placed between the chapters 517 and 518 of the manga'; Age 779, 'five years before the 28th World Martial Arts Tournament'). Filler (T27), no chapters (A1), no adoption — nothing could enter a manga that closed twenty years before the film. THE POSITION IS THE WHOLE VERDICT, AND IT IS THE 98.5 SHAPE WAVE 5 REFUTED, ONE STEP SMALLER: the stored 155.5 is the air-date derivation (premiere 2015-04-18, between our rows 155 2015-04-12 and 156 2015-04-19) and it drops a post-Buu film into the MIDDLE of the Buu fight — our rows 151-158 animate ch 500-509, Vegito and the absorption. ja-WP names the film's predecessor's slot in Kai's own numbering (神と神: 『ドラゴンボール改』の第157話と第158話の間) and that Japanese seam, converted by TITLE and DATE into our international 167-row space, is our rows 164 → 166 with the international-only barbecue row 165 inside it. Battle of Gods holds 165.5 by Sean's ruling of 2026-09-06; Resurrection 'F' is a year later in the story and two years later in the cinema, so it takes the next seat, 165.51. No re-ruling is needed on this shelf — unlike dragon-ball-z, where a third work (Yo! Son Goku, Age 776) sits ahead of both.",
+ "standing": "filler",
+ "confidence": "high",
+ "chapters_adapted": [],
+ "recap": false,
+ "position": {
+  "stored": 155.5,
+  "verdict": "corrected",
+  "proposed": 165.51,
+  "why": "CORRECTED 155.5 → 165.51. (1) THE STORY POINT: the ten-year gap between ch 517 and 518 — the wiki's RoF page ('placed between the chapters 517 and 518 of the manga', Age 779, five years before the Age-784 28th Budokai) and Toei's own Battle of Gods release for the gap itself (「原作517話で魔人ブウとの戦いが終わった後、518話までの空白の10年」). ja-WP 神と神 states that gap in Kai's numbering: 『ドラゴンボール改』の第157話と第158話の間. (2) THE CONVERSION, BY TITLE + DATE, NEVER BY NUMBER (R20): our space is the INTERNATIONAL numbering (en-WP: 'abridging the 291 episodes of Dragon Ball Z down to 159 in Japan and 167 internationally'; eight rows print OriginalAirDate '—': 101, 102, 103, 106, 108, 111, 113, 165). ja-WP's JP 157 やっぱり最強孫悟空!! 魔人ブウ消滅 (6月14日, Z該当話 286話Aパート中盤-287話) = en-WP's intl 164 (2015-06-14); ja-WP's JP 158 そして10年後…久しぶりの天下一武道会! (6月21日, Z該当話 289話-290話Bパート序盤) = intl 166 (2015-06-21). (3) WHAT SITS IN THE SEAM: intl 165 'Peace Returns! A Time of Rest for the Warriors!' — no Japanese airing, footage = DBZ 287B-288 (the post-Buu peace and the barbecue the Japanese Kai skips). The film goes after it. (4) THE SEAT: BoG holds the ruled 165.5; RoF is later in story (Age 779 vs 778) and in release (2015 vs 2013), so 165.51 — free today, no re-ruling on this shelf. In plain words for the note: after Kai's last pre-timeskip row, before 'And So, Ten Years Later…', behind Battle of Gods."
+ },
+ "adopted": null,
+ "repairs": [],
+ "sources": [
+  "https://lineup.toei-anim.co.jp/ja/movie/dragonball2015/staff/",
+  "https://lineup.toei-anim.co.jp/ja/movie/dragonball2015/story/",
+  "https://www.kanzenshuu.com/movie/resurrection-f/",
+  "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E6%94%B9&prop=wikitext&format=json&formatversion=2",
+  "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%ABZ_%E7%A5%9E%E3%81%A8%E7%A5%9E&prop=wikitext&format=json&formatversion=2",
+  "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%ABZ_%E5%BE%A9%E6%B4%BB%E3%81%AE%E3%80%8CF%E3%80%8D&prop=wikitext&format=json&formatversion=2",
+  "https://en.wikipedia.org/w/api.php?action=parse&page=List%20of%20Dragon%20Ball%20Z%20Kai%20episodes&prop=wikitext&format=json&formatversion=2",
+  "https://web.archive.org/web/20210519030420/https://www.toei.co.jp/release/movie/1200211_979.html",
+  "https://dragonball.fandom.com/api.php?action=parse&page=Dragon%20Ball%20Z%3A%20Resurrection%20%E2%80%98F%E2%80%99&prop=wikitext&format=json",
+  "https://dragonball.fandom.com/api.php?action=parse&page=Age%20779&prop=wikitext&format=json"
+ ],
+ "flags_for_sean": [
+  "FLAG 1 — RULE THIS WITH THE TWO DRAGON-BALL-Z ROWS; ON THIS SHELF THERE IS NOTHING TO RE-RULE. Kai holds only two works in the gap — Battle of Gods at the ruled 165.5 and this film at 165.51 — and story order (Age 778 → 779) and release order (2013 → 2015) agree, so 165.51 needs no decision beyond yes. The DBZ shelf is the one with a cluster problem: a THIRD work, Yo! Son Goku (Age 776, 2008), sits ahead of both there, and giving it the first seat re-rules BoG's 288.5 → 288.51 (see dragon-ball-z__5152.json flag 1 and dragon-ball-z__20778.json flag 1).",
+  "FLAG 2 — THE RELEASE-ORDER ALTERNATIVE, AND ITS COST. If you prefer release order on this shelf the film goes to 167.51 (after the finale, behind a BoG moved to 167.5) — the cost is that a viewer would meet the 28th World Martial Arts Tournament, Uub and Goku's departure (rows 166-167, Age 784) before a film set in Age 779, five years earlier. Every placement source, Toei's own release included, puts the story inside the ch 517/518 gap; the licensor's slot is 165.5x.",
+  "FLAG 3 — YO! SON GOKU HAS NO ROW ON THIS SHELF. Kai covers the same manga to ch 519 and the same gap, but the halo staged the 2008 Jump Super Anime Tour special (AniList 5152) only on dragon-ball-z (@291.53). If you want shelf parity its Kai seat would be 165.5 with everything behind it shifting a hundredth — a ROSTER question (I45 staging), out of this wave's scope; I raise it only so the two shelves are not silently inconsistent.",
+  "FLAG 4 — 正史 IS NOT A STANDING, AND NO ADOPTION REACHES THIS INSTRUMENT. Toei sells the modern films as official Dragon Ball history; under T25/T27 the row is filler because no page of ch 1-519 is animated in it. The adopted{author} you ruled for this film on 2026-09-05 (T26 sitting, G2) lives on DRAGON BALL SUPER's rows 18-21 / 23-27, where the anime restages it — Kai's instrument is the 1995-finished manga, so nothing could be incorporated here. `adopted` is null by fact, not by omission.",
+  "FLAG 5 — THE NUMBERING NOTE THAT KEEPS BITING (R20). Any Japanese source that names a Kai episode number is in the 159-episode broadcast space, not ours: our 167 rows are Funimation's, the eight rows with no Japanese airing (101, 102, 103, 106, 108, 111, 113, 165 — en-WP's '—') make the offset +7 through the Buu arc and +8 after row 165. ja-WP's 「第157話と第158話の間」 is JP; our seam is 164 → 166. Join through the title and the date, never the number.",
+  "FLAG 6 — CURATION SHAPE: position.why and summary are over the 400 / 900 ledger caps — write the note by hand, leading with the conclusion ('the ch 517/518 gap, a year after Battle of Gods: after row 165, the international-only Peace Returns!, and before row 166, the ten-year jump — behind BoG at 165.5')."
+ ]
+}
