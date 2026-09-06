@@ -510,6 +510,16 @@ export const CANDIDATE_ENTRIES: RulingEntry<DiscoveryRuling>[] = [
     ruledOn: '2026-09-06',
     cite: ['scripts/ingest/research/discovery/out/triage__the-prince-of-tennis.json'],
   },
+  {
+    seriesId: 'anilist:995',
+    ruleId: 'I13',
+    value: { disposition: 'series', chain: [995, 2752, 4053], relation: { to: 'the-prince-of-tennis', kind: 'sequel' }, slug: 'the-prince-of-tennis-national-tournament', franchise: 'the-prince-of-tennis' },
+    reason:
+      "The extras wave 4b (three verdicts verified SOUND WITH NOTES): the National Tournament OVA chain — 995 (13 eps) → 2752 Semifinal (6) → 4053 Final (7) — adapts Genius 237-379, the manga's second half the TV run never animates, seams clean at 305/306 and 340/341. Sean ruled (2026-09-06, with Cursor): NOT a component keyed 179-204 — that count is invented (N4: the key is what the sources print; Hunter x Hunter's 63-92 is printed, Tennis's sources print 1-26 or three sets); its OWN series with the numbering the sources print — the Lost Canvas shape (one series, three OVA components, rows 1-26), sequel of the-prince-of-tennis under its franchise; the three ledger rows on the parent retire by the skip-split (a multi-entry run elsewhere). Rows via a ruled grid (G59 C) from the verdicts + the licensor; anchors from the verdicts' per-episode maps.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-06',
+    cite: ['scripts/ingest/research/discovery/out/the-prince-of-tennis__995.json', 'scripts/ingest/research/discovery/out/the-prince-of-tennis__2752.json', 'scripts/ingest/research/discovery/out/the-prince-of-tennis__4053.json', 'scripts/ingest/research/discovery/verify/the-prince-of-tennis__995.md'],
+  },
 ];
 
 /** the rulings index reads ENTRIES (lib/rulings/index.ts) */

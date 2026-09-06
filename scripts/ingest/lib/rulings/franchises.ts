@@ -1296,6 +1296,15 @@ export const ENTRIES: RulingEntry<FranchiseMembership>[] = [
     ruledOn: '2026-09-06',
     cite: ['scripts/ingest/lib/rulings/discovery.ts (the declaration)'],
   },
+  {
+    seriesId: 'the-prince-of-tennis-national-tournament',
+    ruleId: 'I43',
+    value: { franchise: 'the-prince-of-tennis' },
+    reason: "The National Tournament OVA chain as its own series (2026-09-06, Sean with Cursor — the Lost Canvas shape); the membership is ruled with the seed so the row lands in its franchise at creation.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-06',
+    cite: ['scripts/ingest/lib/rulings/discovery.ts (anilist:995)'],
+  },
 ];
 
 export type Franchise = { title: string; titleNative?: string; note?: string; base: string | null; members: string[] };
