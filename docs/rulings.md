@@ -2,7 +2,7 @@
 
 > GENERATED from `scripts/ingest/lib/rulings/**` by `scripts/restructure/gen-rulings.ts` — do not edit by hand. A ruling is an INSTANCE of a rule (`docs/rules.md`); the map is the record, this is the index.
 
-- rulings: 2645 across 327 series/keys · by Sean: 1144 · UNRECORDED reasons: 9 · with a retire condition: 96
+- rulings: 2653 across 327 series/keys · by Sean: 1152 · UNRECORDED reasons: 9 · with a retire condition: 96
 
 ## Retire conditions (re-evaluate when…)
 
@@ -454,7 +454,7 @@
 | `A43` | {"episodes":[46,47],"kind":"partial","chapters":"178","asterisk_review":"pending (if unset)"} | ch 178 split across eps 46/47; consistent with ep47→180 | session 2026-08-23 · scripts/ingest/apply-research-batch-8.ts, docs/changelog.md §12.25, session scratchpad batch8/assassination-classroom.json |  |
 | `A3` | {"episode":5,"chapter":11,"start_chapter":7,"chapters_adapted":"7, 11","volume":2,"source":"manual"} | ch 7 held back from ep 4, adapted here with 11 — as-stored | session 2026-08-23 · scripts/ingest/apply-rearranged-anchors.ts, docs/changelog.md §12.32, batch-10 verdict (assassination-classroom) |  |
 
-### attack-on-titan (45)
+### attack-on-titan (46)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -503,6 +503,7 @@
 | `I45` | {"anilistId":120257,"standing":"filler","note":"original (triage): ORIGINAL — the same ちみキャラ劇場“とんでけ！新生リヴァイ班” shorts, continued on Season 3 Blu-ray/DVD vols 5… | Owner triage (triage__attack-on-titan.json): Shingeki no Kyojin: Chimi Kyara Gekijou - Rivai-han Part 2 adapts no chapters of the instrument — ORIGINAL — the same ちみキャラ劇場“とんでけ！新生リヴァイ班” shorts, continued on Season 3 Blu-ray/DVD vols 5, 6 and 7 (2019-07-24, 2019-08-21, 2019-09-18 — the stored date matches vol 5), which ja-WP's table numbers as segments #50-#59; AniList's own description says three videos of three stories each. | Sean 2026-09-05 · scripts/ingest/research/discovery/out/triage__attack-on-titan.json, https://shingeki.tv/season3/product/season3_5.php, https://shingeki.tv/season3/product/season3_7.php, https://ja.wikipedia.org/w/api.php?action=parse&page=%E9%80%B2%E6%92%83%E3%81%AE%E5%B7%A8%E4%BA%BA%20(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext&format=json |  |
 | `I45` | {"anilistId":139754,"standing":"filler","note":"original (triage): ORIGINAL — the same chibi theatre, one video on each of The Final Season Blu-ray/DVD vols … | Owner triage (triage__attack-on-titan.json): Attack On Titan: The Final Season Specials adapts no chapters of the instrument — ORIGINAL — the same chibi theatre, one video on each of The Final Season Blu-ray/DVD vols 1 and 2 (2021-07-07 and 2021-08-04; the stored date matches vol 1). | Sean 2026-09-05 · scripts/ingest/research/discovery/out/triage__attack-on-titan.json, https://shingeki.tv/final/product/final_1/, https://shingeki.tv/final/product/final_2/, https://animaru.jp/anmr/product/P2100324 |  |
 | `I45` | {"anilistId":110640,"standing":"filler","airDate":"2017-04-10","note":"original (triage): ORIGINAL PROMOTIONAL SHORT — 進撃の巨塔 ~attack on SKYTREE~, made for th… | Owner triage (triage__attack-on-titan.json): Attack on Skytree adapts no chapters of the instrument — ORIGINAL PROMOTIONAL SHORT — 進撃の巨塔 ~attack on SKYTREE~, made for the Tokyo Skytree collaboration event that ran 2017-04-10 → 2017-07-14. | Sean 2026-09-05 · scripts/ingest/research/discovery/out/triage__attack-on-titan.json, https://shingeki.tv/news/archives/2761, https://shingeki.tv/news/archives/3109, http://web.archive.org/web/20170427015101/http://www.tokyo-skytree.jp:80/event/special/shingeki2017/ |  |
+| `I45` | {"anilistId":18397,"standing":"mixed","chapter":null,"volume":5,"chaptersAdapted":"the unnumbered 特別編「イルゼの手帳」 (head of vol 5, before ch 19; WSM 2011 No. 2-3)… | Wave 3 (verified SOUND WITH NOTES): Kodansha's vol-5 目次 prints 特別編 イルゼの手帳 first, before ch 19; the AoT Wiki's chapter infobox (Number N/A, overall s2) and OAD pages (Manga chapters = Ilse's Notebook on #3.5 only); shingeki.tv's OAD Archive lists #3.25 / #3.5 / #3.75; Kodansha's limited-edition copy calls the other two 完全新作アニメ. Sean 2026-09-05 (with Cursor): mixed, position 3.5, volume 5 by hand. | Sean 2026-09-05 · scripts/ingest/research/discovery/out/attack-on-titan__18397.json, scripts/ingest/research/discovery/verify/attack-on-titan__18397.md |  |
 
 ### attack-on-titan-junior-high (1)
 
@@ -1897,7 +1898,7 @@
 | `G3` | {"flag":691,"resolution":"RESOLVED (batch 20 wave 1, verified R24): MU's latest_chapter 13 is not an edition — it is the chapter of MU's latest-DATED release… | ingest_flags #691 dismissed with the verdict's finding (G3: only Sean dismisses): RESOLVED (batch 20 wave 1, verified R24): MU's latest_chapter 13 is not an edition — it is the chapter of MU's latest-DATED release records (AnimeRev ch 11-13, Aug 2012); the reading edition is Fujisawa's Lesson numbering, 1-200 mainline + 7 numberless Scenes + the vol-25 supplement = AniList's 208 unit count. total_chapters as a NUMBER ceiling (200) is a queued chapter-count ruling. | Sean 2026-08-27 · scripts/ingest/history/apply-wave1.ts, §12.78 |  |
 | `I43` | {"franchise":"gto","title":"GTO (Great Teacher Onizuka)","base":true} | GTO and Shounan Junai Gumi (Fujisawa's prequel about Onizuka's biker years — the I41 chain work on GTO's reading chain); one IP, base = GTO (the name the world knows). | Sean 2026-09-05 · signed by Sean 2026-09-05 ("Sign the 39 / 97 franchise table"), the 2026-09-05 franchise bootstrap (connected components of series_relations ∪ AniList story / PARENT / SAME_UNIVERSE edges between owned entries; scripts/ingest/research/discovery/PROPOSAL.md §2) |  |
 
-### haikyu (34)
+### haikyu (35)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -1935,6 +1936,7 @@
 | `A10` | {"episode":72,"start_chapter":231} | 231-234 (span opens on a whole chapter — sliver and majority rules agree) | Sean 2026-08-23 · scripts/ingest/apply-start-chapters.ts, docs/changelog.md §12.27, batch 9 verdict (haikyu) | RETIRED 2026-08-26 — batch 19 E3 (§12.67): lib/sliver.ts re-derived all 27 under A10 and every seed STANDS; the seeding comments became chapters_adapted on Sean's signature (start_without_span 0) |
 | `A10` | {"episode":74,"start_chapter":243} | 243-246 (span opens on a whole chapter — sliver and majority rules agree) | Sean 2026-08-23 · scripts/ingest/apply-start-chapters.ts, docs/changelog.md §12.27, batch 9 verdict (haikyu) | RETIRED 2026-08-26 — batch 19 E3 (§12.67): lib/sliver.ts re-derived all 27 under A10 and every seed STANDS; the seeding comments became chapters_adapted on Sean's signature (start_without_span 0) |
 | `N7` | 111790 | A (high): Riku vs Kuu OVA = eps 61-62 — our conversion ruling; community counts it. | Sean 2026-08-23 |  |
+| `I45` | {"anilistId":153658,"standing":"canon","chapter":326,"volume":37,"chaptersAdapted":"293-325 in full; 326 closing scene only (Kamomedai's win, Hoshiumi's chal… | Wave 3 (verified SOUND WITH NOTES): the Haikyu Wiki's film infobox (293 to 326), MangaUpdates' segment (Vol 33 Chap 293 → Vol 37 Chap 325, abridged) and ja-WP (vols 33-37) agree; ep 87's stored END 292 is the manual G56 terminal and the film opens on 293; the 38-item difference list is reorders and omissions (T28). Sean 2026-09-05: canon, 87.5; END 326 (the Infinity Castle precedent), volume 37. | Sean 2026-09-05 · scripts/ingest/research/discovery/out/haikyu__153658.json, scripts/ingest/research/discovery/verify/haikyu__153658.md |  |
 
 ### hajime-no-ippo-the-fighting (22)
 
@@ -2206,7 +2208,7 @@
 |---|---|---|---|---|
 | `N3` | {"action":"toOrderOnly","nonSeasonComponents":"episode range → null","seasonRanges":"recomputed contiguously in season_order"} | Missing Kings movie = watch-order event; 26 eps | Sean 2026-08-24 · scripts/ingest/apply-research-batch.ts |  |
 
-### kaguya-sama-love-is-war (6)
+### kaguya-sama-love-is-war (7)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -2216,6 +2218,7 @@
 | `A3` | {"episode":40,"chapter":160,"volume":null,"source":"manual"} | First Kiss Never Ends content ends ch 160 (adapts 138-151 + parts of 159-160; SKIPS side chs 152-158), continue 161 | session 2026-08-23 · scripts/ingest/apply-research-batch-5.ts |  |
 | `A43` | {"episodes":[40],"kind":"partial","chapters":"ch 139-151 + 159-160 (skips 152-158)","asterisk_review":"pending (if unset)"} | First Kiss Never Ends adapts the confession aftermath but skips the side chapters. fandom + wikipedia | session 2026-08-23 · scripts/ingest/apply-research-batch-5.ts |  |
 | `C8` | {"continue_from_chapter":161} | First Kiss Never Ends content ends ch 160; continue 161. | session 2026-08-23 · scripts/ingest/apply-research-batch-5.ts |  |
+| `I45` | {"anilistId":125368,"standing":"canon","chapter":96,"volume":10,"chaptersAdapted":"96 (かぐや様は食べさせたい, vol 10 — its sole adaptation) + the two unnumbered 番外編 「か… | Wave 3 (verified SOUND WITH NOTES): the official 収録内容 names the three segments; the fandom's Chapter 96 page, MangaDex and Abema agree on ch 96; Comic Natalie and Shueisha's own copy file the Darkness one-shots as the series' 番外編 / 外伝 (特別読切, 単行本未収録). Sean 2026-09-05 (with Cursor): canon, chapter 96, volume 10, the note names both specials; the GTO rule is not the basis (those extras were in the run and collected). | Sean 2026-09-05 · scripts/ingest/research/discovery/out/kaguya-sama-love-is-war__125368.json, scripts/ingest/research/discovery/verify/kaguya-sama-love-is-war__125368.md |  |
 
 ### kamisama-kiss (21)
 
@@ -2370,12 +2373,14 @@
 | `G59` | {"page":"KonoSuba: An Explosion on This Wonderful World!","note":"the series article's own 12-row table; the finder returned 'List of KonoSuba episodes' — th… | The seeded series (I42 witness #3) has no AFL / AFG page; the finder matched the franchise's episode list, which the offset lock refused. en-WP 'KonoSuba: An Explosion on This Wonderful World!' #Episodes: 12 rows numbered 1-12, first 'The Crimson-Eyed Wizards' 2023-04-06 — the one component 1-12. Sean's mint go 2026-09-05. | Sean 2026-09-05 · docs/changelog.md §12.125, https://en.wikipedia.org/wiki/KonoSuba:_An_Explosion_on_This_Wonderful_World! |  |
 | `I43` | {"franchise":"konosuba"} | The seeded spin-off (anilist 150075) belongs to the konosuba IP; ruled with the seed. | Sean 2026-09-05 · scripts/ingest/research/discovery/PROPOSAL.md §9 row 4 |  |
 
-### konosuba-gods-blessing-on-this-wonderful-world (2)
+### konosuba-gods-blessing-on-this-wonderful-world (4)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `I43` | {"franchise":"konosuba","title":"KonoSuba","base":true} | KonoSuba (2016-2024, three seasons) and the Megumin spin-off An Explosion on This Wonderful World! (2023, seeded 2026-09-05) — one IP. | Sean 2026-09-05 · scripts/ingest/research/discovery/PROPOSAL.md §9 row 4 |  |
 | `I45` | {"anilistId":102976,"standing":"mixed","chapter":null,"volume":5,"chaptersAdapted":"LN vol 5 ch 1-6 (the ch 1-2 trek and vol 5's Epilogue are cut — both land… | Wave 1 (verified SOUND WITH NOTES, standing corrected to MIXED): the owner's instrument is Akatsuki's light novel; the film adapts vol 5 ch 1-6 (fandom LN range + manga map ch 43-53; ja-WP 第2期の後・原作第5巻; the licensor's STORY page and the Sneaker Bunko blurb tell the same story) with two holes S3 ep 1 fills. Every source agrees the post-Railgun act is anime-original and the film's dramatic peak — the Shippuden-388 shape Sean ruled mixed. Position after the S2 OVA per the fandom's navigation (ep 20 → OVA 2 → Movie → ep 21). | Sean 2026-09-05 · scripts/ingest/research/discovery/out/konosuba-gods-blessing-on-this-wonderful-world__102976.json, scripts/ingest/research/discovery/verify/konosuba-gods-blessing-on-this-wonderful-world__102976.md |  |
+| `I45` | {"anilistId":21574,"standing":"filler","note":"An author-written original for the disc — KADOKAWA: 原作者書きおろしエピソードを完全シナリオ化, TVアニメでは放送されないオリジナルアニメ; the fandom's… | Wave 3 (verified SOUND WITH NOTES on four lineages: the publisher, the trade press, the fandom's field, ja-WP's 特典小説 inventory): the S1 OVA adapts no printed unit of the novel line. Sean 2026-09-05: filler, 10.5. | Sean 2026-09-05 · scripts/ingest/research/discovery/out/konosuba-gods-blessing-on-this-wonderful-world__21574.json, scripts/ingest/research/discovery/verify/konosuba-gods-blessing-on-this-wonderful-world__21574.md |  |
+| `I45` | {"anilistId":97996,"standing":"filler","note":"An author-written original for the disc — the S2 product page and KADOKAWA: 原作者暁なつめ書き下ろしエピソード, TVアニメでは放送されないオリ… | Wave 3 (verified SOUND WITH NOTES): the same shape as the S1 OVA — the official S2 site, KADOKAWA's record, ja-WP's 特典小説 column and the fandom's Anime Original row agree; the vol 3 bonus 『芸術は爆裂だ』 is unrelated on content. Sean 2026-09-05: filler, 20.51. | Sean 2026-09-05 · scripts/ingest/research/discovery/out/konosuba-gods-blessing-on-this-wonderful-world__97996.json, scripts/ingest/research/discovery/verify/konosuba-gods-blessing-on-this-wonderful-world__97996.md |  |
 
 ### kowloon-generic-romance (6)
 
@@ -2936,12 +2941,13 @@
 | `A47` | {"episodes":[10],"kind":"partial","chapters":"618 (pp. 3-4)","note":"A47 (Sean 2026-09-02): the episode's last two pages are ch 618 pp 3-4; ep 11 starts on 6… | the tail the normalizer moved off the END is named on the row as a partial (the orient ep-12 shape) so it stays visible | Sean 2026-09-02 · scripts/ingest/research/batch20/out/one-piece-log-fish-man-island-saga.json, scripts/ingest/research/batch20/verify/one-piece-log-fish-man-island-saga.md, scripts/ingest/history/apply-wave8.ts, §12.96 |  |
 | `I43` | {"franchise":"one-piece"} | One Piece and One Piece Log (the recap re-edit of the Fish-Man Island saga: AniList PARENT + SUMMARY); one IP. | Sean 2026-09-05 · signed by Sean 2026-09-05 ("Sign the 39 / 97 franchise table"), the 2026-09-05 franchise bootstrap (connected components of series_relations ∪ AniList story / PARENT / SAME_UNIVERSE edges between owned entries; scripts/ingest/research/discovery/PROPOSAL.md §2) |  |
 
-### one-punch-man (2)
+### one-punch-man (3)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `A3` | {"episode":12,"chapter":37,"volume":null,"source":"manual"} | S1 end: Dark Matter Thieves = ch 32-37 (Boros) | session 2026-08-23 · scripts/ingest/apply-research-batch-5.ts |  |
 | `A3` | {"episode":24,"chapter":85,"volume":null,"source":"manual"} | S2 end mid-chapter 84/85, continue 86 (manga numbering, not webcomic) | session 2026-08-23 · scripts/ingest/apply-research-batch-5.ts |  |
+| `I45` | {"anilistId":21386,"standing":"filler","note":"An original prequel (Saitama's pre-hero days) told inside a present-day frame with Genos — no numbered chapter… | Wave 3 (verified SOUND WITH NOTES): the 45-bonus-chapter sweep replicated; the fandom's Saitama's Hero Suit page cites only the OVA for its origin; the official BOX page and V-STORAGE call it the vol-10 bundled OVA. The verifier corrected the note: ONE is credited 原案 on the official page the verdict cites — a credit, never an adoption. Sean 2026-09-05: filler, 9.5. | Sean 2026-09-05 · scripts/ingest/research/discovery/out/one-punch-man__21386.json, scripts/ingest/research/discovery/verify/one-punch-man__21386.md |  |
 
 ### orange (4)
 
@@ -3657,7 +3663,7 @@
 |---|---|---|---|---|
 | `I43` | {"franchise":"danmachi"} | DanMachi and Sword Oratoria (same events, another POV — the I17 side_story witness); one IP. | Sean 2026-09-05 · signed by Sean 2026-09-05 ("Sign the 39 / 97 franchise table"), the 2026-09-05 franchise bootstrap (connected components of series_relations ∪ AniList story / PARENT / SAME_UNIVERSE edges between owned entries; scripts/ingest/research/discovery/PROPOSAL.md §2), docs/franchise-rulings.md "Final rulings" DanMachi |  |
 
-### that-time-i-got-reincarnated-as-a-slime (6)
+### that-time-i-got-reincarnated-as-a-slime (7)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -3667,6 +3673,7 @@
 | `T29` | {"position":24.1,"record":{"kind":"ova","anilistId":161802}} | AniList 161802 'Coleus no Yume' format=OVA, 3 eps, 2023-11-01. (The stored note calls it '3 ONA eps'; AniList's format field for the entry is OVA — flagged.) | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/161802 |  |
 | `T29` | {"position":48.2,"record":{"kind":"movie","anilistId":139498}} | AniList 139498 format=MOVIE, 108 min, 2022-11-25. en-WP: 'is a 2022 Japanese animated isekai fantasy film'. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/139498, https://en.wikipedia.org/wiki/That_Time_I_Got_Reincarnated_as_a_Slime_the_Movie:_Scarlet_Bond |  |
 | `T29` | {"position":72.3,"record":{"kind":"movie","anilistId":182206}} | AniList 182206 'Soukai no Namida-hen' format=MOVIE, 104 min, 2026-02-27 = the entry's stated JP release. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/182206 |  |
+| `I45` | {"anilistId":106509,"standing":"filler","position":24.05,"note":"Five publisher-stated originals (Kodansha: 完全新作オリジナルアニメーション on every limited edition; Fuse's… | Wave 3 (verified SOUND WITH NOTES): the fandom's adaptation = N/A on all five OAD pages, ja-WP's 番外編OAD table, Bandai Channel and ANN / Famitsu agree nothing adapts a printed unit; the Veldora's Journal hypothesis points at the S1 recap special (a separate work, not held). Sean 2026-09-05: filler; ruled before Coleus at 24.05. | Sean 2026-09-05 · scripts/ingest/research/discovery/out/that-time-i-got-reincarnated-as-a-slime__106509.json, scripts/ingest/research/discovery/verify/that-time-i-got-reincarnated-as-a-slime__106509.md |  |
 
 ### the-ancient-magus-bride (13)
 
@@ -3741,13 +3748,14 @@
 | `R21` | {"file":"scripts/ingest/research/batch14/out/the-heroic-legend-of-arslan.json","anchors":25} | batch-14 verdict applied as-curated | session 2026-08-23 · scripts/ingest/research/batch14/out/the-heroic-legend-of-arslan.json |  |
 | `T29` | {"position":25.1,"record":{"kind":"ova","anilistId":21817}} | AniList 21817 'Arslan Senki (TV) OVA' format=OVA, 2 eps, 2016-03-09 and 2016-12-09. en-WP The Heroic Legend of Arslan carries an infobox with type=ova for the TV series' OVAs. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/21817, https://en.wikipedia.org/wiki/The_Heroic_Legend_of_Arslan |  |
 
-### the-melancholy-of-haruhi-suzumiya (3)
+### the-melancholy-of-haruhi-suzumiya (4)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `G54` | all | The 2006 broadcast deliberately aired its 14 episodes out of chronological order ("Episode 00" first, the six-part Melancholy arc interleaved); our 28 rows follow the 2009 chronological rebroadcast numbering while the rows keep their ORIGINAL first-air dates (2006 for the original episodes, 2009 for the new ones). Every regression in the series is that design, not a typo. | Sean 2026-08-26 · https://en.wikipedia.org/wiki/List_of_The_Melancholy_of_Haruhi_Suzumiya_episodes, docs/restructure/DRIFT-LIST.md A-11 |  |
 | `G55` | all | Same fact as the G54 acknowledgement: our 28 rows follow the 2009 chronological rebroadcast numbering (start_date 2009) while the fourteen original episodes keep their true 2006 first-air dates. Every 'before start' row in the series is that design, not another show's data. | Sean 2026-08-26 · https://en.wikipedia.org/wiki/List_of_The_Melancholy_of_Haruhi_Suzumiya_episodes, scripts/ingest/lib/rulings/air-date-order.ts |  |
 | `I41` | {"works":[{"label":"Yuuutsu","anilistMangaId":33083,"note":"The Melancholy of Haruhi Suzumiya (vol 1) — the entry's instrument; AniList lists the novel per v… | Source-derived 2026-09-05 (decision (d) of the extras sitting): AniList splits the Haruhi novel into one node per volume; the 2009 TV run adapts five of them and the Disappearance film adapts the fourth alone, so without the chain the film read as another run (other_instrument) and was proposed as a mint. The volumes are one novel — the owner's own instrument (I41); the film is same_instrument. | source-derived 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 | Sean rules the Haruhi chain himself |
+| `I45` | {"anilistId":7311,"standing":"canon","chapter":null,"volume":4,"chaptersAdapted":"LN vol 4 ch 1-6 — the whole volume (プロローグ + 第一章-第六章 + エピローグ, 本編 247 pp)","n… | Wave 3 (verified SOUND WITH NOTES): ja-WP's series article (原作第4巻『消失』の内容を映像化したもの), the film article's critics (原作エピソードがほぼ網羅; 原作を忠実に再現) and the fandom agree the film adapts vol 4 whole; the six-chapter division is fan-tier (three compilations agree page for page; no publisher 目次 online) — the standing rests on the whole-volume claim, not the count. Sean 2026-09-05: canon, 28.5. | Sean 2026-09-05 · scripts/ingest/research/discovery/out/the-melancholy-of-haruhi-suzumiya__7311.json, scripts/ingest/research/discovery/verify/the-melancholy-of-haruhi-suzumiya__7311.md |  |
 
 ### the-prince-of-tennis (7)
 

@@ -49,6 +49,17 @@ title / airDate / kind fields, the promo test extended to music videos by title.
 Houkago no Ouji-sama sit on the (d) queue; one-shots (Excalibur, Death Game) are tie-ins. Wave 3 dispatched
 (the next eight same-instrument works).
 
+**Fifth pass (wave 3 applied; §12.133).** The first same-instrument wave: eight works, all verified SOUND WITH
+NOTES, three task premises refuted on sources (the KonoSuba OVAs and Road to Hero are originals; the AoT OADs
+shipped with manga volumes). Rulings: Haruhi CANON (vol 4 whole) · AoT MIXED at the licensor's 3.5 (volume 5 by
+hand) · KonoSuba ×2 FILLER · Haikyu CANON (END 326 partial; the ch 327 post-credit scene is a sliver) · Road to
+Hero FILLER · Kaguya CANON (ch 96 + the two Darkness 番外編, the instrument's own specials — not the GTO rule) ·
+Slime FILLER ruled to 24.05 before Coleus. T26 amended with the related-works credit clause. Queued: kaguya ep 24
+END 102 → 101 as a superseding curated anchor (never a silent edit). Ledger 697 halo rows, 378 pending, every
+related_work_* class 0. Sean's standing request: ONE RULE-LOGIC EVALUATION of the related-works structure after
+wave 4 lands and before step 2's mint writer — a generated table in chat (mechanism · gate · audit class ·
+witnesses · verdict). Wave 4 = the nine yeses + the Prince of Tennis Semifinal / Final OVAs, in two P12 waves.
+
 Gaps found while executing (queued in STATE, not rulings): SOURCE_CHAINS works carry no AniList ids
 (a chain work reads as another run: Prisma Illya 2wei / 3rei, JoJo Stardust Crusaders, Haruhi's
 per-volume nodes); a comicalization of a film reads as the run it adapts until node start years

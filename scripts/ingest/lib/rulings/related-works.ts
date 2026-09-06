@@ -1122,6 +1122,87 @@ export const ENTRIES: RulingEntry<RelatedWorkRuling>[] = [
     ruledOn: '2026-09-05',
     cite: ['scripts/ingest/research/discovery/out/triage__kinnikuman.json', 'scripts/ingest/research/discovery/verify/triage__kinnikuman.md'],
   },
+  // ---- WAVE 3 (same-instrument works), Sean ruled 2026-09-05 with Cursor: three of the eight task premises refuted on sources (the KonoSuba OVAs and Road to Hero are originals; the AoT OADs shipped with manga volumes and sit at 3.5)
+  {
+    seriesId: 'the-melancholy-of-haruhi-suzumiya',
+    ruleId: 'I45',
+    value: { anilistId: 7311, standing: 'canon', chapter: null, volume: 4, chaptersAdapted: 'LN vol 4 ch 1-6 — the whole volume (プロローグ + 第一章-第六章 + エピローグ, 本編 247 pp)', note: 'After the 2009 run\'s last row (Someday in the Rain is chronologically last; ja-WP: the film 続く from the TV finale). The original share is relocations (the rooftop) and a post-credits library coda from Tanigawa\'s idea — faithfulness-clause slivers (T28); Tanigawa 原作・脚本協力 is a credit, not an adoption. 162 min, 2010-02-06.' },
+    reason:
+      "Wave 3 (verified SOUND WITH NOTES): ja-WP's series article (原作第4巻『消失』の内容を映像化したもの), the film article's critics (原作エピソードがほぼ網羅; 原作を忠実に再現) and the fandom agree the film adapts vol 4 whole; the six-chapter division is fan-tier (three compilations agree page for page; no publisher 目次 online) — the standing rests on the whole-volume claim, not the count. Sean 2026-09-05: canon, 28.5.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/out/the-melancholy-of-haruhi-suzumiya__7311.json', 'scripts/ingest/research/discovery/verify/the-melancholy-of-haruhi-suzumiya__7311.md'],
+  },
+  {
+    seriesId: 'attack-on-titan',
+    ruleId: 'I45',
+    value: { anilistId: 18397, standing: 'mixed', chapter: null, volume: 5, chaptersAdapted: 'the unnumbered 特別編「イルゼの手帳」 (head of vol 5, before ch 19; WSM 2011 No. 2-3) — adapted in full by OAD #3.5 inside an original 49th-expedition frame; #3.25 突然の来訪者 and #3.75 困難 are originals (Kodansha: 完全新作アニメ)', position: 3.5, note: 'One AniList id, one standing: a whole special chapter beside two full originals is MIXED (T28); if the bundle is ever split, #3.5 is mixed too (the original frame), never canon. Ruled to 3.5: the licensor numbers the three OADs #3.25 / #3.5 / #3.75 between TV eps 3 and 4; they shipped with manga vols 12-14 limited editions (2013-12-09 → 2014-08-08) — AniList carries only the first date; 25.51 was the air-date proposal.' },
+    reason:
+      "Wave 3 (verified SOUND WITH NOTES): Kodansha's vol-5 目次 prints 特別編 イルゼの手帳 first, before ch 19; the AoT Wiki's chapter infobox (Number N/A, overall s2) and OAD pages (Manga chapters = Ilse's Notebook on #3.5 only); shingeki.tv's OAD Archive lists #3.25 / #3.5 / #3.75; Kodansha's limited-edition copy calls the other two 完全新作アニメ. Sean 2026-09-05 (with Cursor): mixed, position 3.5, volume 5 by hand.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/out/attack-on-titan__18397.json', 'scripts/ingest/research/discovery/verify/attack-on-titan__18397.md'],
+  },
+  {
+    seriesId: 'konosuba-gods-blessing-on-this-wonderful-world',
+    ruleId: 'I45',
+    value: { anilistId: 21574, standing: 'filler', note: 'An author-written original for the disc — KADOKAWA: 原作者書きおろしエピソードを完全シナリオ化, TVアニメでは放送されないオリジナルアニメ; the fandom\'s own row: Anime Original; no bonus story of vol 9 (four others) or of the よりみち collections is this story. Akatsuki\'s credit is not an adoption (T26). 第1期 第11話 — after ep 10 (10.5); the fandom\'s in-universe 14.5 is inference.' },
+    reason:
+      "Wave 3 (verified SOUND WITH NOTES on four lineages: the publisher, the trade press, the fandom's field, ja-WP's 特典小説 inventory): the S1 OVA adapts no printed unit of the novel line. Sean 2026-09-05: filler, 10.5.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/out/konosuba-gods-blessing-on-this-wonderful-world__21574.json', 'scripts/ingest/research/discovery/verify/konosuba-gods-blessing-on-this-wonderful-world__21574.md'],
+  },
+  {
+    seriesId: 'konosuba-gods-blessing-on-this-wonderful-world',
+    ruleId: 'I45',
+    value: { anilistId: 97996, standing: 'filler', note: 'An author-written original for the disc — the S2 product page and KADOKAWA: 原作者暁なつめ書き下ろしエピソード, TVアニメでは放送されないオリジナルアニメ; LN vol 12 is the bundle, not the source (its four bonus stories and the よりみち collections cleared); the fandom\'s Ran = an unnamed vol 11 cameo the OVA does not adapt. 第2期 第11話 — after ep 20, before the film (20.52).' },
+    reason:
+      "Wave 3 (verified SOUND WITH NOTES): the same shape as the S1 OVA — the official S2 site, KADOKAWA's record, ja-WP's 特典小説 column and the fandom's Anime Original row agree; the vol 3 bonus 『芸術は爆裂だ』 is unrelated on content. Sean 2026-09-05: filler, 20.51.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/out/konosuba-gods-blessing-on-this-wonderful-world__97996.json', 'scripts/ingest/research/discovery/verify/konosuba-gods-blessing-on-this-wonderful-world__97996.md'],
+  },
+  {
+    seriesId: 'haikyu',
+    ruleId: 'I45',
+    value: { anilistId: 153658, standing: 'canon', chapter: 326, volume: 37, chaptersAdapted: '293-325 in full; 326 closing scene only (Kamomedai\'s win, Hoshiumi\'s challenge — partial); the post-credit Daishō scene is ch 327\'s, played out of order — a sliver, never the END', note: 'After ep 87 (END 292): the film continues the run with no gap and stops at ch 326\'s closing scene — the whole Nekoma match, abridged (vols 33-37, 85 min); the TV run never animates it, so a viewer who skips the film misses 33 chapters. The cold open restages ch 25 (weightless). Continue = 326 from the top (C1). Film 2 (VS 小さな巨人, 2027) follows.' },
+    reason:
+      "Wave 3 (verified SOUND WITH NOTES): the Haikyu Wiki's film infobox (293 to 326), MangaUpdates' segment (Vol 33 Chap 293 → Vol 37 Chap 325, abridged) and ja-WP (vols 33-37) agree; ep 87's stored END 292 is the manual G56 terminal and the film opens on 293; the 38-item difference list is reorders and omissions (T28). Sean 2026-09-05: canon, 87.5; END 326 (the Infinity Castle precedent), volume 37.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/out/haikyu__153658.json', 'scripts/ingest/research/discovery/verify/haikyu__153658.md'],
+  },
+  {
+    seriesId: 'one-punch-man',
+    ruleId: 'I45',
+    value: { anilistId: 21386, standing: 'filler', note: 'An original prequel (Saitama\'s pre-hero days) told inside a present-day frame with Genos — no numbered chapter and none of the 45 bonus chapters is this story (the fandom\'s OVA-only characters; ja-WP\'s アニメオリジナル lists). 原案 ONE (the official site), 脚本 鈴木智尋 — a credit, not an adoption (T26). Shipped with manga vol 10 (2015-12-04) between eps 9 and 10; the "#00" label is a set ordinal, not a run position.' },
+    reason:
+      "Wave 3 (verified SOUND WITH NOTES): the 45-bonus-chapter sweep replicated; the fandom's Saitama's Hero Suit page cites only the OVA for its origin; the official BOX page and V-STORAGE call it the vol-10 bundled OVA. The verifier corrected the note: ONE is credited 原案 on the official page the verdict cites — a credit, never an adoption. Sean 2026-09-05: filler, 9.5.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/out/one-punch-man__21386.json', 'scripts/ingest/research/discovery/verify/one-punch-man__21386.md'],
+  },
+  {
+    seriesId: 'kaguya-sama-love-is-war',
+    ruleId: 'I45',
+    value: { anilistId: 125368, standing: 'canon', chapter: 96, volume: 10, chaptersAdapted: '96 (かぐや様は食べさせたい, vol 10 — its sole adaptation) + the two unnumbered 番外編 「かぐや様は告らせたい ダークネス」 vol.1 / vol.2 (YJ GOLD 2017-05-18 / 2017-10-19, uncollected) — the manga\'s own specials by its author, side-story facts with no number', note: 'CANON (Sean 2026-09-05): the publisher files Darkness as this manga\'s own 番外編 by the same author and bundled its adaptation with vol 22 — the instrument, not another work (I41). After S2 ep 24 (第2期OVA; ja-WP 全12話+OVA; MU (S2 + OVA)); nothing passes the S2 frontier (S2 ends 101, S3 opens 102). 2021-05-19.' },
+    reason:
+      "Wave 3 (verified SOUND WITH NOTES): the official 収録内容 names the three segments; the fandom's Chapter 96 page, MangaDex and Abema agree on ch 96; Comic Natalie and Shueisha's own copy file the Darkness one-shots as the series' 番外編 / 外伝 (特別読切, 単行本未収録). Sean 2026-09-05 (with Cursor): canon, chapter 96, volume 10, the note names both specials; the GTO rule is not the basis (those extras were in the run and collected).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/out/kaguya-sama-love-is-war__125368.json', 'scripts/ingest/research/discovery/verify/kaguya-sama-love-is-war__125368.md'],
+  },
+  {
+    seriesId: 'that-time-i-got-reincarnated-as-a-slime',
+    ruleId: 'I45',
+    value: { anilistId: 106509, standing: 'filler', position: 24.05, note: 'Five publisher-stated originals (Kodansha: 完全新作オリジナルアニメーション on every limited edition; Fuse\'s 描き下ろし on OADs 3-5 is a credit — printed only as the OAD\'s own plot in the 2022 BD booklet, never in the LN or manga line). Shipped with manga vols 12-16 limited editions (2019-07-09 → 2020-11-27). Ruled to 24.05: the OADs precede Visions of Coleus (the wiki row @24.1) in every sourced order (ja-WP\'s Coleus footnote, ABEMA\'s guide, the fandom\'s navigation); OAD 5 ends at the ep 24/25 seam.' },
+    reason:
+      "Wave 3 (verified SOUND WITH NOTES): the fandom's adaptation = N/A on all five OAD pages, ja-WP's 番外編OAD table, Bandai Channel and ANN / Famitsu agree nothing adapts a printed unit; the Veldora's Journal hypothesis points at the S1 recap special (a separate work, not held). Sean 2026-09-05: filler; ruled before Coleus at 24.05.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/out/that-time-i-got-reincarnated-as-a-slime__106509.json', 'scripts/ingest/research/discovery/verify/that-time-i-got-reincarnated-as-a-slime__106509.md'],
+  },
 ];
 
 /** series id → anilist id → the ruling */

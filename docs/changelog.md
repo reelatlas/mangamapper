@@ -1154,6 +1154,45 @@
    19-23 / 39 (chain_source) and 18 / 93-95 (AFL's loose Mixed bucket),
    beelzebub 15 / 26-28 / 51, rurouni TV ep 95 (identity). Batch 22 opens on
    the boruto follow-up (lanes I + C) with the batch-21 tooling copied.
+133. ✅ **WAVE 3 APPLIED — THE FIRST SAME-INSTRUMENT WAVE (Sean ruled 2026-09-05
+    with Cursor; eight works).** Eight per-work verdicts (research-agent, Opus) +
+    eight adversarial reviews (verdict-verifier, Fable): all SOUND WITH NOTES, no
+    value refuted — but three of the eight TASK PREMISES were (the KonoSuba OVAs
+    and Road to Hero are author-written ORIGINALS, not LN adaptations; the AoT
+    OADs shipped with manga volumes 12-14, not on a 2013 date). RULINGS (eight
+    hand-written `RelatedWorkRuling` entries, E56): Haruhi's Disappearance CANON
+    (LN vol 4 whole; 28.5) · the Attack on Titan OVA MIXED (one AniList id for
+    three OADs — 「イルゼの手帳」 adapted in full by #3.5 inside an original frame,
+    #3.25 / #3.75 originals; `volume: 5` by hand — the proposer would emit 4; RULED
+    to position 3.5 where the licensor numbers it, from the air-date 25.51) ·
+    KonoSuba OVA 1 / 2 FILLER (10.5 / 20.51; KADOKAWA: 原作者書きおろし, TVアニメでは
+    放送されないオリジナル — Akatsuki's credit is a credit) · Haikyu's Dumpster Battle
+    CANON (293-325 in full, END 326 partial — the post-credit Daishō scene is ch
+    327's, a sliver, never the END; volume 37; 87.5) · Road to Hero FILLER (原案
+    ONE credit; 9.5) · the Kaguya OVA CANON (ch 96 + the two uncollected Darkness
+    番外編 by the author — the instrument's own specials, I41; NOT the GTO rule,
+    whose extras were in the run; volume 10; 24.5) · the Slime OAD FILLER (five
+    publisher-stated originals; Fuse's 描き下ろし a credit; RULED to 24.05, before
+    the Coleus wiki row at 24.1 — every sourced order puts the OADs first).
+    T26 AMENDED (the related-works clause): an author's screen-only credit on a
+    film / OVA that exists only as that film / OVA is a CREDIT in the note, never
+    an adoption — adoption puts material INTO the source line (Slam Dunk, Road to
+    Hero, KonoSuba, Slime). The writer moved the two ruled rows through the
+    pre-pass (identity kept), 2 inserted / 6 updated / 700 unchanged, the second
+    dry run 0 / 0 / 708. LEDGER: 697 halo rows (8 canon · 4 mixed · 307 filler ·
+    378 pending) + 39 wiki rows; every related_work_* class 0. QUEUED, never a
+    silent edit: kaguya ep 24's stored END 102 → 101 as a SUPERSEDING curated
+    anchor (a batch-5 manual value; three sources agree; the episode-row pass
+    with its own dry run); the Coleus wiki row's note carries a retired
+    "anime-only-canon" string (a T27 sweep item). SEAN'S STANDING REQUEST: ONE
+    RULE-LOGIC EVALUATION of the related-works structure (buckets · owner
+    precedence · instrument sets · the ruling layer · the identity registry · the
+    seed) — is it sound, strong and best practice going forward — recommended
+    AFTER wave 4 lands and BEFORE step 2's mint writer is built, as a generated
+    table in chat (mechanism · gate · audit class · witnesses · verdict).
+    WAVE 4 = the nine triage yeses + the Prince of Tennis Semifinal / Final OVAs
+    (eleven contexts in the scratchpad), dispatched in two P12-sized waves.
+
 132. ✅ **WAVE 2 APPLIED — THE OWNER TRIAGE (Sean ruled 2026-09-05 with Cursor; ten
     owners, 111 held works).** Ten triage verdicts (research-agent, Opus) + seven
     adversarial reviews (verdict-verifier, Fable; the three all-original shelves
