@@ -1,0 +1,161 @@
+{
+  "series_id": "houkago-no-ouji-sama",
+  "anilist_id": 20942,
+  "expected_episodes": 5,
+  "rows": [
+    {
+      "number": 1,
+      "title": "Houkago no Ouji-sama - vs Genius10 Vol.1 bonus",
+      "title_native": "４コマアニメ『放課後の王子様』（「新テニスの王子様 OVA vs Genius10」Vol.1 映像特典）",
+      "air_date": "2014-10-29",
+      "note": "Disc bundle: 「新テニスの王子様 OVA vs Genius10」Vol.1, Blu-ray BCXA-0924 / DVD BCBA-4642, on sale Wed 2014-10-29 (the licensor prints 10月29日（水）). Licensor 収録内容 for the 4-koma block: 「リョーマのハロウィン」「お出迎え」「象徴」「リアリティ抜群」 ほか (cast listed: 越前リョーマ 皆川純子 / 手塚国光 置鮎龍太郎 / 跡部景吾 諏訪部順一 / 幸村精市 永井幸子 / 丸井ブン太 高橋直純 ほか). Two licensor pages carry the same list (the product page and the 2014-08-26 news post) and the 2014-11-08 Wayback snapshot of the product page is identical. The disc's 映像特典 runs 7 min total including the non-telop OP and two non-telop EDs, so the 4-koma block itself is shorter."
+    },
+    {
+      "number": 2,
+      "title": "Houkago no Ouji-sama - vs Genius10 Vol.2 bonus",
+      "title_native": "４コマアニメ『放課後の王子様』（「新テニスの王子様 OVA vs Genius10」Vol.2 映像特典）",
+      "air_date": "2014-12-25",
+      "note": "Disc bundle: Vol.2, Blu-ray BCXA-0925 / DVD BCBA-4643, on sale Thu 2014-12-25 (licensor: 12月25日(木)). Licensor 収録内容: 「フラグが立ちまくった」「わかりやすく」「神出鬼没」「平和の使者」などを収録. NOTE: the LIVE product page (dvd_bd/09/02.html) has lost its 初回特典 block in a site redesign - the bonus is read from the 2014-10-28 news post AND the 2014-12-30 Wayback snapshot of the same product page, which agree verbatim. The disc's 映像特典 runs 11 min (the longest of the five)."
+    },
+    {
+      "number": 3,
+      "title": "Houkago no Ouji-sama - vs Genius10 Vol.3 bonus",
+      "title_native": "４コマアニメ『放課後の王子様』（「新テニスの王子様 OVA vs Genius10」Vol.3 映像特典）",
+      "air_date": "2015-02-20",
+      "note": "Disc bundle: Vol.3, Blu-ray BCXA-0926 / DVD BCBA-4644, on sale Fri 2015-02-20 (licensor: 2015年2月20日（金）). Licensor 収録内容: 「ワン 東京に行くさ」「日吉いじり」「オバケなんてないさ」ほか (three named, vs four on the other discs; cast listed 忍足侑士 木内秀信 / 向日岳人 保志総一朗 / 日吉若 岩崎征実 / 木手永四郎 新垣樽助 / 田仁志慧 上田耀司 ほか). Product page and the 2014-12-20 news post agree. 映像特典 8 min total."
+    },
+    {
+      "number": 4,
+      "title": "Houkago no Ouji-sama - vs Genius10 Vol.4 bonus",
+      "title_native": "４コマアニメ『放課後の王子様』（「新テニスの王子様 OVA vs Genius10」Vol.4 映像特典）",
+      "air_date": "2015-04-24",
+      "note": "Disc bundle: Vol.4, Blu-ray BCXA-0927 / DVD BCBA-4645, on sale Fri 2015-04-24 (licensor: 2015年4月24日（金）). Licensor 収録内容: 「ヒョウ柄の理由」「白石のうた」「俺の星」「菊丸のやさしさ」ほか. Product page and the 2015-03-03 news post agree. 映像特典 8 min total."
+    },
+    {
+      "number": 5,
+      "title": "Houkago no Ouji-sama - vs Genius10 Vol.5 bonus",
+      "title_native": "４コマアニメ『放課後の王子様』（「新テニスの王子様 OVA vs Genius10」Vol.5 映像特典）",
+      "air_date": "2015-06-26",
+      "note": "Disc bundle: Vol.5 (the last), Blu-ray BCXA-0928 / DVD BCBA-4646, on sale Fri 2015-06-26 (licensor: 6月26日(金)). Licensor 収録内容: 「良質な睡眠」「ポジティブ」「利きラケット」「幸せのために」ほか. Product page and the 2015-04-04 news post agree. 映像特典 8 min total. This date is AniList's / MAL's / Kitsu's end date for the entry."
+    }
+  ],
+  "numbering_basis": "Release order of the five 「新テニスの王子様 OVA vs Genius10」 discs (Vol.1-Vol.5, 2014-10-29 -> 2015-06-26), one 4-koma anime 『放課後の王子様』 block per disc as a 映像特典. The licensor numbers the HOST OVA's own episodes 第1話-第10話 but prints NO number for the 4-koma blocks, so this run's numbering is ours: 1..5 in disc order. Dates are the discs' Japanese on-sale dates, identical on the licensor's product pages, the licensor's news posts and ja-WP's per-volume table (day-of-week checked: Wed / Thu / Fri / Fri / Fri, exactly as the licensor prints them).",
+  "sources": [
+    {
+      "url": "http://tenipuri.jp/dvd_bd/09/01.html",
+      "what": "licensor product page - vs Genius10 Vol.1: release date 2014年10月29日（水）, BCXA-0924/BCBA-4642, 【映像特典】①４コマアニメ『放課後の王子様』 with its 収録内容 and cast",
+      "tier": "licensor"
+    },
+    {
+      "url": "http://tenipuri.jp/dvd_bd/09/02.html",
+      "what": "licensor product page - Vol.2: date 2014年12月25日, BCXA-0925/BCBA-4643 (the 初回特典 block is MISSING on the live page; see the Wayback snapshot)",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://web.archive.org/web/20141230014904/http://tenipuri.jp/dvd_bd/09/02.html",
+      "what": "Wayback 2014-12-30 snapshot of the Vol.2 product page - carries the 初回特典 block: ４コマアニメ『放課後の王子様』「フラグが立ちまくった」「わかりやすく」「神出鬼没」「平和の使者」ほか",
+      "tier": "licensor"
+    },
+    {
+      "url": "http://tenipuri.jp/dvd_bd/09/03.html",
+      "what": "licensor product page - Vol.3: 2015年2月20日（金）, BCXA-0926/BCBA-4644, 4-koma bonus 収録内容",
+      "tier": "licensor"
+    },
+    {
+      "url": "http://tenipuri.jp/dvd_bd/09/04.html",
+      "what": "licensor product page - Vol.4: 2015年4月24日（金）, BCXA-0927/BCBA-4645, 4-koma bonus 収録内容",
+      "tier": "licensor"
+    },
+    {
+      "url": "http://tenipuri.jp/dvd_bd/09/05.html",
+      "what": "licensor product page - Vol.5: 2015年6月26日（金）, BCXA-0928/BCBA-4646, 4-koma bonus 収録内容",
+      "tier": "licensor"
+    },
+    {
+      "url": "http://tenipuri.jp/news/news/1388.html",
+      "what": "licensor news 2014-08-26 - Vol.1 詳細情報: same release date and the same 4-koma 収録内容 list (a second licensor page for row 1)",
+      "tier": "licensor"
+    },
+    {
+      "url": "http://tenipuri.jp/news/news/1568.html",
+      "what": "licensor news 2014-10-28 - Vol.2 詳細情報: 発売日 12月25日(木) and 「フラグが立ちまくった」「わかりやすく」「神出鬼没」「平和の使者」などを収録",
+      "tier": "licensor"
+    },
+    {
+      "url": "http://tenipuri.jp/news/news/2128.html",
+      "what": "licensor news 2014-12-20 - Vol.3 詳細情報: 発売日 2015年2月20日（金） and 「ワン 東京に行くさ」「日吉いじり」「オバケなんてないさ」などを収録",
+      "tier": "licensor"
+    },
+    {
+      "url": "http://tenipuri.jp/news/news/2223.html",
+      "what": "licensor news 2015-03-03 - Vol.4 詳細情報: 発売日 2015年4月24日（金） and 「ヒョウ柄の理由」「白石のうた」「俺の星」「菊丸のやさしさ」などを収録",
+      "tier": "licensor"
+    },
+    {
+      "url": "http://tenipuri.jp/news/news/2382.html",
+      "what": "licensor news 2015-04-04 - Vol.5 詳細情報: 発売日 6月26日(金) and 「良質な睡眠」「ポジティブ」「利きラケット」「幸せのために」などを収録",
+      "tier": "licensor"
+    },
+    {
+      "url": "http://tenipuri.jp/dvd_bd/10/01.html",
+      "what": "licensor product page - 新テニスの王子様 OVA vs Genius10 FAN DISC (2015-12-24, BCXA-1087/BCBA-4747): carries the 「放課後の王子様」番外編ピクチャードラマ『毒草聖書外伝〜白石探偵走る〜』 and 'DVD未収録４コマアニメ「放課後の王子様」' = the three shorts web-distributed for one month before Vol.1 in an animate-only campaign",
+      "tier": "licensor"
+    },
+    {
+      "url": "http://tenipuri.jp/news/event/1351.html",
+      "what": "licensor news 2014-08-15 - アニメイト「新テニスの王子様フェア」 2014年8月23日〜9月23日: a serial code on the fair postcard unlocked 「放課後の王子様」特別編 viewing (dates the pre-disc WEB block)",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%86%E3%83%8B%E3%82%B9%E3%81%AE%E7%8E%8B%E5%AD%90%E6%A7%98%20(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext",
+      "what": "ja-WP テニスの王子様 (アニメ) - the 新テニスの王子様 OVA vs Genius10 section: '2014年10月29日より発売のOVAシリーズ。全5巻各2話ずつ収録。映像特典として4コマアニメ『放課後の王子様』も収録' plus the per-volume table whose 発売日 column gives 2014-10-29 / 12-25, 2015-02-20 / 04-24 / 06-26 - identical to the licensor's five dates",
+      "tier": "ja-WP"
+    },
+    {
+      "url": "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%86%E3%83%8B%E3%82%B9%E3%81%AE%E7%8E%8B%E5%AD%90%E6%A7%98&prop=wikitext",
+      "what": "ja-WP テニスの王子様 (放課後の王子様 redirects here) - the 放課後の王子様 section: the 4-koma spin-off, 原案・監修 許斐剛 / 漫画 佐倉ケンイチ, Jump SQ from the 2008年12月号, 9 volumes; the section is a 節スタブ and does NOT mention the 2014 anime at all - ja-WP carries no episode list for this entry",
+      "tier": "ja-WP"
+    },
+    {
+      "url": "https://en.wikipedia.org/w/api.php?action=parse&page=The%20Prince%20of%20Tennis&prop=wikitext",
+      "what": "en-WP The Prince of Tennis - names the 4-panel spin-off The Prince of After School and cites the ANN flash-anime announcement; no episode list either",
+      "tier": "en-WP"
+    },
+    {
+      "url": "https://www.animenewsnetwork.com/news/2014-05-30/prince-of-tennis-4-panel-tribute-manga-gets-flash-anime/.75051",
+      "what": "ANN 2014-05-30 - 'Prince of Tennis 4-Panel Tribute Manga Gets Flash Anime': the Flash anime is one of the bonuses on the OVA sequel project's discs, first shipping October 29",
+      "tier": "cross-check"
+    },
+    {
+      "url": "https://myanimelist.net/anime/24457",
+      "what": "MAL 24457 Houkago no Oujisama - Special, Episodes: 5, Aired Oct 29, 2014 to Jun 26, 2015, 7 min per ep, Source: Manga, Studio M.S.C (the AniList entry's mal_id per api.ani.zip)",
+      "tier": "cross-check"
+    },
+    {
+      "url": "https://kitsu.io/api/edge/anime/8665",
+      "what": "Kitsu 8665 - episodeCount 5, startDate 2014-10-29, endDate 2015-06-26, synopsis 'Flash anime specials bundled with the New Prince of Tennis OVA' (the AniList entry's kitsu_id)",
+      "tier": "cross-check"
+    },
+    {
+      "url": "https://api.ani.zip/mappings?anilist_id=20942",
+      "what": "id mapping for AniList 20942 -> mal_id 24457, kitsu_id 8665, anime-planet houkago-no-ouji-sama (used only to reach MAL/Kitsu; the AniList GraphQL API is returning 403 'temporarily disabled')",
+      "tier": "cross-check"
+    },
+    {
+      "url": "https://princeoftennis.fandom.com/api.php?action=parse&page=List%20of%20The%20Prince%20of%20After%20School%20Episodes&prop=wikitext",
+      "what": "fandom 'List of The Prince of After School Episodes' - enumerates 16 SEGMENTS, not 5 disc bonuses; its items 3-16 match the licensor's Vol.2-Vol.5 lists (romanised), it omits Vol.1's four named segments and Vol.2's 「平和の使者」, and adds two the discs never name (「だって」/「丸井改名」, added 2014-08-28, inside the animate web window). Cross-check only - a different row space",
+      "tier": "cross-check"
+    }
+  ],
+  "flags_for_sean": [
+    "TASK PREMISE CORRECTED: the shorts are NOT bundled with the Prince of Tennis 'Zenkoku Taikai-hen' Blu-ray box and were not a standalone stream. They are the 映像特典 4-koma anime on the five 「新テニスの王子様 OVA vs Genius10」 discs (2014-10-29 -> 2015-06-26), each disc carrying two OVA episodes of that OTHER work plus one 放課後の王子様 block. Licensor + ja-WP + ANN all say so.",
+    "COUNT: 5 rows = AniList's 5 (no mismatch). The count basis is one 4-koma block per disc, and the disc dates bracket the entry exactly: MAL 'Oct 29, 2014 to Jun 26, 2015' and Kitsu 2014-10-29/2015-06-26 = Vol.1 and Vol.5.",
+    "NO OFFICIAL PER-EPISODE TITLES. The licensor prints one heading per disc (４コマアニメ『放課後の王子様』) and then lists the CONSTITUENT 4-koma segment titles, every list ending 「ほか」/「などを収録」 - so each disc's block holds MORE segments than are named. The row titles in this grid are CONSTRUCTED disc labels ('… vs Genius10 Vol.N bonus'); the named segments are in each row's note. If the catalog prefers content-bearing titles, the segment lists are the only printed material - Sean's call.",
+    "A SIXTH 放課後 VIDEO UNIT EXISTS, outside AniList's 5: the 「新テニスの王子様 OVA vs Genius10 FAN DISC」 (2015-12-24, BCXA-1087 / BCBA-4747) carries (a) 「放課後の王子様」番外編ピクチャードラマ『毒草聖書外伝〜白石探偵走る〜』 and (b) 'DVD未収録４コマアニメ「放課後の王子様」' = 「ダメだし ダメおし ダメチョップ」「３の６」「憂える不二」. NOT added as row 6 (AniList counts 5 and the FAN DISC is a separate product) - flagged so the decision is explicit.",
+    "A PRE-DISC WEB BLOCK: the licensor's 2014-08-15 news post dates the animate 「新テニスの王子様フェア」 2014-08-23 -> 2014-09-23, whose postcard serial code unlocked 「放課後の王子様」特別編 viewing; the FAN DISC page says three of those web shorts stayed off the DVDs until 2015-12-24. So row 1's 2014-10-29 is the first DISC release, not necessarily the first release of every segment inside it (the fandom logged 「だって」/「丸井改名」 on 2014-08-28, inside the web window, and neither title appears in any disc list - they may sit under a disc list's 「ほか」). No exact per-short web dates are published; the honest value is the disc date.",
+    "SOURCE DEFECT (licensor site): the live Vol.2 product page http://tenipuri.jp/dvd_bd/09/02.html has lost its 初回特典 block, so the live page alone would read as 'no 4-koma on Vol.2'. The 2014-12-30 Wayback snapshot and the 2014-10-28 news post both carry it, and the page still shows the ©許斐 剛・佐倉ケンイチ credit line (the 放課後 co-credit) that only appears on discs carrying the short. Also: tenipuri.jp REFUSES HTTPS (connection refused on :443) - it must be fetched over HTTP.",
+    "ROW SPACE WARNING for whoever does the standing pass: princeoftennis.fandom's 'List of The Prince of After School Episodes' is a 16-SEGMENT list, not a 5-episode list, and it is incomplete/mixed (see sources). Do not join our 5 rows to it by index.",
+    "SHARED-DISC IDENTITY: every row's release is a disc of 新テニスの王子様 OVA vs Genius10, which is its own AniList entry (10 episodes over these same 5 dates). If that work ever enters the catalog, the two entries must not share rows - the dates will collide by construction.",
+    "AniList's GraphQL API answered 403 'temporarily disabled' throughout this task; expected_episodes 5 is taken from the task statement and independently corroborated by MAL 24457 (Episodes: 5) and Kitsu 8665 (episodeCount 5)."
+  ]
+}
