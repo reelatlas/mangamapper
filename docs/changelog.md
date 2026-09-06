@@ -1154,6 +1154,55 @@
    19-23 / 39 (chain_source) and 18 / 93-95 (AFL's loose Mixed bucket),
    beelzebub 15 / 26-28 / 51, rurouni TV ep 95 (identity). Batch 22 opens on
    the boruto follow-up (lanes I + C) with the batch-21 tooling copied.
+132. ✅ **WAVE 2 APPLIED — THE OWNER TRIAGE (Sean ruled 2026-09-05 with Cursor; ten
+    owners, 111 held works).** Ten triage verdicts (research-agent, Opus) + seven
+    adversarial reviews (verdict-verifier, Fable; the three all-original shelves
+    with explicit structural evidence — Gundam, Naruto, Railgun — reviewed in
+    session): every yes / no reproduced from primary sources, none refuted; the
+    nine chapter claims exact at every boundary (Ranma's on a third instrument,
+    en-WP's Shogakukan volume contents). RULINGS: the 100 originals are FILLER BY
+    RULING — 99 entries (the note = the researcher's first sentence; the verdict
+    cited), six of them naming ANOTHER run rather than "original" (No Regrets =
+    悔いなき選択 and Houkago no Ouji-sama = the 4-koma spin-off → decision (d);
+    Twilight Axis → (d) with the direction disputed — ja-WP dates the web novel
+    from 2016-11-07, the ONA from 2017-06, the Gundam Wiki says the reverse — the
+    picks read decides on dates; Conan OVA 1 → the existing magic-kaito
+    declaration; Conan OVA 12 = the えくすかりばあ one-shot and Kinnikuman Movie 7 =
+    the デスゲーム one-shot are tie-ins, never a series, riding with the per-work
+    programme); the nine yeses stay PENDING and join the per-work programme
+    (Kinnikuman 82-83 / 86-89 / the unnumbered ロビン・メモ special; Ranma 230-233 +
+    241 + 259-265 / 266-278 / 301-302; Prince of Tennis Genius 248-305 with
+    237-240, 242, 245, 247 as interludes; One Piece's Episode of Luffy and 3D2Y
+    as recap-boundary cases); God Valley / Baad stay held (unreleased). REPAIRS
+    (P8, on the ruling entries — `RelatedWorkRuling` now carries title / airDate /
+    kind; the writer applies them, the position re-derives from the ruled date,
+    the census lists a row that disagrees): Lord Slug 1991-03-09 · the Kinnikuman
+    TV special 1984-04-07 (a month/day swap; on a pending row) · Attack on
+    Skytree 2017-04-10 · Railgun's #EX 2010-10-29 and the bathhouse short
+    2014-03-27 · Tongari Island 2018-04-21 with its own title (AniList carried
+    the treasure-hunt EVENT's) · Conan's "Magic File 6" = BONUS FILE ファンタジスタの花
+    · AoT's "Picture Drama" = the S1 chibi theatre (MAL 19391 / Kitsu 7889 / the
+    licensor's line-up) · Hagiota → Hagoita · Gundam's Impression of First
+    GUNDAM and Ranma's 29-opponent clip video = kind recap. Bardock's ch 307
+    cameo = a note, not an adoption (Sean: two panels are not material). THE
+    PROMO TEST now catches a music video by title (music video / uta gassen /
+    歌合戦 / ミュージックビデオ — AniList files Ranma's two as OVAs): extra_promo 7,
+    their rows and registry entries removed (a promo's identity leaves with its
+    row). Held, not ruled: Cry heart's date (three uploads), the Conan
+    application-window OVAs (five positions would move under DCW's dates).
+    Findings for the shelf: the Prince of Tennis Semifinal / Final OVAs (Genius
+    306-379) are held same_instrument rows — wave-3+ targets; Ranma ½ SUPER
+    (1011) and the 2008 OVA (5493) adapt the instrument but are UNSTAGED (a
+    discovery-stage run reaches them); Made in Abyss S2 and KonoSuba 3 are
+    unclaimed sequels waiting for `/discover`. validate-extras: a triage note is
+    the first sentence, cut visibly when over the cap, never a silent slice. LEDGER:
+    697 rows · 386 standings pending (from 486) · every related_work_* class 0.
+    WAVE 3 DISPATCHED: the next eight same-instrument works by popularity —
+    Haruhi's Disappearance (vol 4 of the owner's novel — the chain registered
+    today), the Attack on Titan OVA, KonoSuba's two OVAs, Haikyu's Dumpster
+    Battle, Road to Hero, the Kaguya OVA, the Slime OAD; the nine yeses queue
+    behind them.
+
 131. ✅ **WAVE 1 APPLIED · THE IDENTITY REGISTRY FOR RELATED WORKS · WAVE 2
     DISPATCHED (2026-09-05, afternoon — Sean's identity concern).** WAVE 1: eight
     verdicts (research-agent, Opus) + eight adversarial reviews (verdict-verifier,

@@ -108,7 +108,15 @@ async function main() {
         const key = `${sid}#${c.anilistId}`;
         let cur = byKey.get(key);
         // (e) a promotional entry is never a row — a halo row of ours goes (G57: our own origin only)
-        if (bucket === 'promo') { if (cur && cur.origin === 'halo') { await remove(cur, 'promotional entry (I45 amended: never a related work)'); byKey.delete(key); } continue; }
+        if (bucket === 'promo') {
+          if (cur && cur.origin === 'halo') { await remove(cur, 'promotional entry (I45 amended: never a related work)'); byKey.delete(key); }
+          // a promo is never a related work: its identity leaves the registry with its row (whether the row went this run or an earlier one) — no orphan
+          if ([...registry.values()].some((v) => v.anilist_id === c.anilistId)) {
+            if (!DRY) { const { error } = await db.from('related_work_external_ids').delete().eq('anilist_id', c.anilistId); if (error) throw new Error(`registry ${c.anilistId}: ${error.message}`); }
+            for (const [k, v] of registry) if (v.anilist_id === c.anilistId) registry.delete(k);
+          }
+          continue;
+        }
         // (I46) a wiki / ruled row naming this work ADOPTS the identity; a halo duplicate goes. lib/related-works#pickAdoption decides —
         // it fails closed (two fits with nothing to separate them → listed by the census as related_work_duplicate, never adopted)
         if (!cur || cur.origin === 'halo') {
@@ -145,7 +153,7 @@ async function main() {
         // (Sean 2026-09-05, the identity concern): a row moves when its ruled position changes, or when its unruled BASE SLOT changes (the
         // grid grew — a sequel season minted after the work's date; the air date corrected). Inside one slot a stored row keeps its 0.01
         // order (a wrong intra-slot order is a ruling, never a re-sort); a new arrival takes the next free step in air-date order.
-        if (cur && ruling?.position == null && derived != null && Math.floor(Number(cur.position)) !== Math.floor(derived)) { await remove(cur, `re-derived: the base slot moved ${Math.floor(Number(cur.position))} → ${Math.floor(derived)} (the grid changed)`); byKey.delete(key); cur = undefined; }
+        if (cur && ruling?.position == null && derived != null && Math.floor(Number(cur.position)) !== Math.floor(derived)) { await remove(cur, `re-derived: the base slot moved ${Math.floor(Number(cur.position))} → ${Math.floor(derived)} (the air date or the grid changed)`); byKey.delete(key); cur = undefined; }
         const position = cur ? Number(cur.position) : ruledPos ?? freePosition(derived!, takenBy.get(sid) ?? new Set());
         if (!cur && ruledPos != null && takenBy.get(sid)?.has(ruledPos)) { // the ruled slot is another (non-moving) row's — never overwrite an identity
           ambiguous++;

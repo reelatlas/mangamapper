@@ -91,7 +91,7 @@ async function main() {
     else if (ruling?.position == null && labelPos != null && Number(l.position) !== labelPos) violation.push(`${l.series_id} @${l.position}: position ≠ ruled ${labelPos} (watch-order-labels, by AniList id) — run sync-related-works`);
     else if (ruling?.position == null && labelPos == null) {
       const m = input.staged.get(Number(l.anilist_id)) as { startDate?: { year?: number | null; month?: number | null; day?: number | null } | null } | undefined;
-      const derived = deriveWatchPosition(isoDate(m?.startDate), epsBy.get(l.series_id) ?? []);
+      const derived = deriveWatchPosition(ruling?.airDate !== undefined ? ruling.airDate : isoDate(m?.startDate), epsBy.get(l.series_id) ?? []); // a ruled date (P8) beats AniList's, as in the writer
       if (derived != null && Math.floor(derived) !== Math.floor(Number(l.position))) violation.push(`${l.series_id} @${l.position}: derived base slot is ${Math.floor(derived)} (the grid changed; position is an attribute, identity is the AniList id) — run sync-related-works`);
     }
     if ((l.standing ?? null) !== wantStanding && wantStanding != null) violation.push(`${l.series_id} @${l.position}: standing '${l.standing}' ≠ rule '${wantStanding}' (${b}) — run sync-related-works`);

@@ -43,6 +43,12 @@ an external id maps into the WORK once, a collision is refused and listed, the w
 identity-first adoption found six title-hidden duplicates. Wave 2 (the owner triage, ten owners, 111 works)
 dispatched.
 
+**Fourth pass (wave 2 applied; §12.132).** The owner triage: ten owners, 111 works — 100 originals filler by ruling
+(six naming another run), nine chapter-adapting works queued, eleven attribute repairs via the ruling layer's new
+title / airDate / kind fields, the promo test extended to music videos by title. Twilight Axis, No Regrets and
+Houkago no Ouji-sama sit on the (d) queue; one-shots (Excalibur, Death Game) are tie-ins. Wave 3 dispatched
+(the next eight same-instrument works).
+
 Gaps found while executing (queued in STATE, not rulings): SOURCE_CHAINS works carry no AniList ids
 (a chain work reads as another run: Prisma Illya 2wei / 3rei, JoJo Stardust Crusaders, Haruhi's
 per-volume nodes); a comicalization of a film reads as the run it adapts until node start years

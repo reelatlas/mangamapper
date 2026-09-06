@@ -61,7 +61,7 @@ export type ExtraMedia = {
 
 const RECAP_TITLE = /\b(recap|summary|digest|compilation|special edition|re-?cut)\b|総集編|ダイジェスト/i;
 /** I45 (amended 2026-09-05, Sean's ruling (e)): a promotional entry — a trailer, PV, teaser, commercial, promotion — is never a related work; like a music video it is listed by the census (extra_promo) and never a ledger row. AniList gives no format for these (SPECIAL / ONA), the title is the signal */
-export const PROMO = /\b(?:PV|trailer|promo(?:tion(?:al)?)?|teaser|CM)\b/i;
+export const PROMO = /\b(?:PV|trailer|promo(?:tion(?:al)?)?|teaser|CM|music video|uta gassen)\b|歌合戦|ミュージックビデオ/i; // Sean 2026-09-05 (wave 2): a music video AniList files as an OVA is still a music video
 
 /** a title reduced to its comparable core: lower-case, no diacritics, a trailing parenthetical dropped ("(film, 2021-08-06)"), punctuation collapsed */
 export const normTitle = (t: string): string => t.toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g, '').replace(/\s*\([^)]*\)\s*$/, '').replace(/[^a-z0-9]+/g, ' ').trim();
