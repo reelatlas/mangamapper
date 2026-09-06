@@ -1,0 +1,48 @@
+{
+  "series_id": "is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon",
+  "anilist_id": 21660,
+  "title": "Is It Wrong to Try to Pick Up Girls in a Dungeon?: Is It Wrong to Expect a Hot Spring in a Dungeon?",
+  "summary": "An OVA sold on BD/DVD on 2016-12-07 whose story is in no printed unit of the owner's instrument, the GA Bunko light novel: climbing back from the 18th floor, the party finds an uncharted hot spring and an anglerfish boss. The LICENSOR says so twice on its own site (the OVA product page; the 2016-08-17 announcement), heading the synopsis 「大森藤ノ先生完全監修によるオリジナルストーリー！」, and Omori says it twice himself: Comic Natalie 2019-08-16 「…オリジナルストーリーのOVAでそれを先に膨らませてくださって」, Da Vinci 2020-04-30 「OVAなどのオリジナルストーリーは、あまり自分が口出しをしないほうが良いのかなと」. The only tie to the novels is a character SETTING, not a scene: Mikoto's love of hot springs, which Omori places at VOLUME 7's opening (2015-04-14) and scriptwriter Shirane inflated into a whole original episode; vol 7's own bath scene is adapted by the TV run in S2 ep 5 「竈火の館」 (ruby ホーム) = our row 18. Filler under T27; the 完全監修 credit is a T26 credit, never adoption.",
+  "standing": "filler",
+  "confidence": "high",
+  "chapters_adapted": [],
+  "recap": false,
+  "position": {
+    "stored": 13.5,
+    "verdict": "confirmed",
+    "proposed": 13.5,
+    "why": "Confirmed as ruled (wave 5's 13.x cluster in date order: this OVA 13.5, the 2019 film 13.51 — the film row is stored at 13.51). No position work per the ask; I record only that the licensor CORROBORATES the slot: its OVA synopsis is set 「TVシリーズの最終話で…ダンジョンから地上に戻る途中で」, the climb out beginning immediately after our ep 13, and danmachi.fandom navigates Previous = Episode 13 / Next = II Episode 1."
+  },
+  "adopted": null,
+  "repairs": [],
+  "sources": [
+    "https://danmachi.com/danmachi/item/bd_dvd9.html",
+    "https://web.archive.org/web/20160826205552id_/http://danmachi.com/item/bd_dvd9.html",
+    "https://web.archive.org/web/20161225124948id_/http://danmachi.com/danmachi/item/bd_dvd9.html",
+    "https://danmachi.com/danmachi/news/",
+    "https://danmachi.com/danmachi/item/bd_dvd8.html",
+    "https://web.archive.org/web/20190904025041id_/https://natalie.mu/comic/pp/danmachi03",
+    "https://web.archive.org/web/20190904025041id_/https://natalie.mu/comic/pp/danmachi03/page/3",
+    "https://ddnavi.com/article/d562801/a/",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%80%E3%83%B3%E3%82%B8%E3%83%A7%E3%83%B3%E3%81%AB%E5%87%BA%E4%BC%9A%E3%81%84%E3%82%92%E6%B1%82%E3%82%81%E3%82%8B%E3%81%AE%E3%81%AF%E9%96%93%E9%81%95%E3%81%A3%E3%81%A6%E3%81%84%E3%82%8B%E3%81%A0%E3%82%8D%E3%81%86%E3%81%8B%20(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext&format=json&formatversion=2",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%80%E3%83%B3%E3%82%B8%E3%83%A7%E3%83%B3%E3%81%AB%E5%87%BA%E4%BC%9A%E3%81%84%E3%82%92%E6%B1%82%E3%82%81%E3%82%8B%E3%81%AE%E3%81%AF%E9%96%93%E9%81%95%E3%81%A3%E3%81%A6%E3%81%84%E3%82%8B%E3%81%A0%E3%82%8D%E3%81%86%E3%81%8B&prop=wikitext&format=json&formatversion=2",
+    "https://danmachi.fandom.com/api.php?action=parse&page=DanMachi%20OVA&prop=wikitext&format=json&formatversion=2",
+    "https://danmachi.fandom.com/api.php?action=parse&page=DanMachi%20II%20Episode%205&prop=wikitext&format=json&formatversion=2",
+    "https://danmachi.fandom.com/api.php?action=parse&page=DanMachi%20Light%20Novel%20Volume%207&prop=wikitext&format=json&formatversion=2",
+    "https://danmachi.fandom.com/api.php?action=parse&page=DanMachi%20Light%20Novel%20Volume%205&prop=wikitext&format=json&formatversion=2",
+    "https://danmachi.fandom.com/api.php?action=parse&page=Yamato%20Mikoto&prop=wikitext&format=json&formatversion=2",
+    "https://danmachi.fandom.com/api.php?action=parse&page=Sword%20Oratoria%20Manga%20Special&prop=wikitext&format=json&formatversion=2",
+    "https://ndlsearch.ndl.go.jp/api/opensearch?title=%E3%83%80%E3%83%B3%E3%82%B8%E3%83%A7%E3%83%B3%E3%81%AB%E6%B8%A9%E6%B3%89&cnt=30",
+    "https://www.sbcr.jp/product/4815619657/",
+    "https://www.sbcr.jp/product/4815619664/",
+    "https://www.sbcr.jp/product/4815619671/"
+  ],
+  "flags_for_sean": [
+    "THE LICENSOR LINE WAVE 5 WANTED AND DID NOT HAVE — it exists, for THIS work, and I grep-verified it in the bytes I fetched. The film verdict (101166) attributed 「原作 大森藤ノ先生書き下ろしの完全オリジナルストーリー」 to danmachi.com/movie/story/, where the verifier could not find it and struck it. The OVA's own licensor page carries a DIFFERENT and real sentence: 「大森藤ノ先生完全監修によるオリジナルストーリー！」 — 完全監修 (fully SUPERVISED), not 完全オリジナル. It is live at https://danmachi.com/danmachi/item/bd_dvd9.html (grep hit in the served HTML), on the same site's news index under the 2016.08.17 entry, and in two Wayback snapshots (2016-08-26 and 2016-12-25, byte-identical text). Note for anyone re-checking: ja-WP cites the page under the path /danmachi/bd-dvd/bd_dvd9.html, which is 404 live and 404 in every Wayback capture — the working path is /danmachi/item/bd_dvd9.html.",
+    "THE ADOPTION QUESTION IS ANSWERED BY THE AUTHOR HIMSELF, AGAINST HIS OWN CREDIT (T26). The licensor sells the OVA on 大森藤ノ先生完全監修 — a blanket supervision credit, exactly the shape the catalog already rejects as an adoption basis (Boruto's Kodachi ストーリー監修). Omori's own account is stronger than a refusal: Da Vinci 2020-04-30, asked how he was involved, 「あれは脚本の白根（秀樹）さんが暴走してくださったエピソードです（笑）。「ヤマト・命が温泉好き」という、ひとつの設定をすごく膨らませて。「命ってそんなキャラクターだったの？」と自分が思うくらいの内容になりました」 and 「OVAなどのオリジナルストーリーは、あまり自分が口出しをしないほうが良いのかなと」. adopted stays null; the credit is in the note.",
+    "THE NEAR-MISS THAT WOULD FOOL A TITLE JOIN: THE NOVELS DO HAVE HOT SPRINGS, AND THE TV RUN ADAPTS THEM. Omori, Comic Natalie roundtable 2019-08-16: 「原作だと、命が温泉好きという設定を出したのは7巻の冒頭なんですけれど。それを読んだ脚本家（白根秀樹）さんが、オリジナルストーリーのOVAでそれを先に膨らませてくださって」 — the SETTING is vol 7's opening (LN vol 7 published 2015-04-14, per the fandom's volume page), the OVA (2016-12-07) merely inflated it, and vol 7's own bath scene is adapted by the TV run: S2 ep 5 「竈火の館」 (ruby ホーム) (ja-WP 2019-08-10; = our row 18, counting from our ep 14 = S2 ep 1 on the weekly slot), whose fandom infobox reads Volume = DanMachi Volume 7 and whose plot has 'Hestia reveals that she commissioned him to create a cypress bathhouse setting for them in the mansion as well. Without hesitation, Mikoto bathes in it and relishes in it.' Omori confirms the episode in the same roundtable: 「温泉は5話ですね」. So: no graft, no sliver, no chapters on this OVA — the printed hot-spring pages belong to a TV row, not to it.",
+    "THREE DanMachi OVAs, TWO OF THEM TITLED 温泉, AND SEARCH ENGINES MERGE THEM — a live trap for whoever takes 112125 at 25.5. ja-WP's episode list (which prints these titles broken by <br/>): S1 OVA 「ダンジョンに温泉を求めるのは間違っているだろうか」 (BD 2016-12-07, this work); S2 OVA 「無人島に薬草を求めるのは間違っているだろうか」 (BD 2020-01-29 — that is the 25.5 row, a deserted-island story, NOT a hot-spring one); S3 OVA 「オラリオに温泉を求めるのは間違っているだろうか〜おふろの神様フォーエバー〜」 (BD 2021-04-28), which is the bathhouse one. A search I ran for this work's source returned an AI summary describing the S3 OVA's bathhouse premise as if it were this OVA's — cross-check only, and it was wrong. (Separately: danmachi.fandom's 'Sword Oratoria Manga Special', a manga-ORIGINAL hot-springs chapter in Young Gangan 2017-04-13 collected in SO manga vol 8, is a third hot-spring near-miss in a different, separately owned run.)",
+    "THE PRINTED-UNIT NEGATIVE, said plainly so nobody re-runs it. (a) The disc carried no novella: the licensor's spec list is ・特典：解説書（8P予定） plus a character-song CD, and the Blu-ray BOX repeats ・特典：OVA解説書（8P予定） — a liner-notes booklet, not a story. (b) NDL opensearch title=ダンジョンに温泉 returns totalResults 1 and it is the video disc itself (映像資料 / ビデオディスク 1枚 (24分), Warner Bros. Home Entertainment, [2016.12]). (c) The 2023 collections that would hold such a piece do not: SB Creative's own copy for オラリオ・ストーリーズ names the anime BD/DVD bonus novels exhaustively — 「英雄と娼婦」 and 「異端児からの手紙」 plus one new story — and 掌編集1/2 are store-bonus / limited-edition SS of the main series and the spin-offs. (d) ja-WP's main article, which carries the full 既刊一覧 (45+ books incl. 掌編集 and オラリオ・ストーリーズ), contains 温泉 on exactly two lines and neither is a book: the Mikoto character note about this OVA, and an Infinite Combate game mode.",
+    "BY-CATCH, OUTSIDE MY ASK — the OVA has a SECOND, TV-AIRED FORM. ja-WP's anime article: 「放送開始の前週には、本編OVAの特別編集版と外伝第1話の冒頭映像が放送された」 (the week before Sword Oratoria's April-2017 premiere). Our stored date 2016-12-07 is the BD/DVD release, which is the right date for the work and matches the licensor (発売日 2016年12月7日(水)) and the NDL; the 2017 broadcast is an edited re-cut, not a separate work. No repair — recorded so a future date sweep does not 'fix' it."
+  ]
+}
