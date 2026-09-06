@@ -1,0 +1,67 @@
+{
+  "series_id": "overlord",
+  "anilist_id": 133845,
+  "title": "OVERLORD: The Sacred Kingdom (劇場版 オーバーロード 聖王国編)",
+  "summary": "A 135-minute wholly-new theatrical feature (Madhouse, 2024-09-20; IMAX advance 2024-09-13) that animates the 聖王国編 — Kugane Maruyama's light-novel volumes 12 『聖王国の聖騎士 [上]』 and 13 『聖王国の聖騎士 [下]』, the one arc the TV run skipped. It is not a recap and not a continuation: Overlord IV adapted vols 10 (eps 1-4), 11 (eps 5-7) and 14 (eps 8-13), so the film is a MIDQUEL that back-fills the hole between our rows 46 and 47 — ja-WP calls it 「第4期第7話と第8話の間に当たるエピソード」, en-WP 'a midquel to the fourth season', and director Naoyuki Itō said at NYCC 2024 'if you watch Episode 7 and episode 8 of season 4, you may notice little nuances we blend into the season'. Content proves it independently: the fandom's ep-7 summary ends on Ainz reading Demiurge's report on the Roble Holy Kingdom (vol 11's epilogue), and ep 8 opens with the Re-Estize court discussing that 'Ainz Ooal Gown defeated Jaldabaoth and is now sending relief supplies through Re-Estize meant for Roble' — the film's outcome, already in the past. Coverage is the arc entire: the film opens on ch 1's Great Wall assault (Pabel and Orlando's deaths) and closes on the volume-13 epilogue — Neia's farewell, Demiurge and the Doppel-Caspond at the palace window, and the post-credit Ainz/CZ carriage scene, which is the epilogue's own last beat. Nothing in it is anime-original: every 'difference' any source names is an omission, a compression or a relocation (the largest being the final Jaldabaoth duel moved from the field before Prart to Kalinsha, with the rest of the liberation campaign narrated inside Neia's closing speech), so under T28's faithfulness clause the standing is canon with `abridged` as the annotation — 984 printed pages in 135 minutes, a Japanese reviewer who has read all sixteen volumes calling it 「原作に忠実です。忠実すぎて…『ダイジェスト』を見ているような」. The one structural unit with no film coverage is vol 13's unnumbered 幕間 (Jircniv and Pe Riyuro; Hilma, the Eight Fingers and Philip; Enri and Nfirea hearing of Ainz's death) — a coverage gap, not an original share.",
+  "standing": "canon",
+  "confidence": "high",
+  "chapters_adapted": [
+    {
+      "start": 1,
+      "end": 3,
+      "volume": 12,
+      "weight": "significant",
+      "note": "vol 12 『聖王国の聖騎士 [上]』 IN FULL — 1章 魔皇ヤルダバオト / 2章 救いを求めて / 3章 反攻作戦開始 (the volume has no プロローグ and no エピローグ; it stops on ch 3). Film beats in order: the Great Wall assault and Pabel/Orlando's deaths, Kalinsha and Calca used as a bludgeon, the delegation's journey to E-Rantel and the audience with Ainz, the terms (the Demon Maids), the march back, Loyts — the hostage child, the emancipated prisoners, the Buser duel, the chained orcs, Caspond found, and the 40,000-strong siege closing in. Chapter structure verified on two independent sources that agree unit for unit (overlordmaruyama.fandom's Volume 12 'Chapters' list; a Japanese per-chapter 感想 that prints the printed headers 「１章 魔皇ヤルダバオト」「２章 救いを求めて」「３章 反攻作戦開始」)."
+    },
+    {
+      "start": 4,
+      "end": 7,
+      "volume": 13,
+      "weight": "significant",
+      "note": "vol 13 『聖王国の聖騎士 [下]』 — 4章 攻城戦 / 5章 アインズ死す / 6章 銃兵と弓兵 / 7章 救国の英雄 + エピローグ, all present, ABRIDGED. Film beats: the siege of Loyts and Ainz's terms, the staged duel at the clocktower with the Evil Lord Wrath and the Erich String Orchestra doppelgängers, Ainz's 'death' and Neia raising the bow in the rain, the Zern alliance and the Kalinsha infiltration with CZ (the Vah Un, the Circlet Demon wearing Kelart's head), Ainz's return at the head of an Abelion Hills army, the rematch, Neia's Hoburns speech and the fifty-thousand-strong faith, Ainz's departure, Demiurge and the Doppel-Caspond, and the post-credit carriage scene (「頑張れたと思います」 — the epilogue's own closing exchange, adapted, not an original coda). GAP INSIDE THE VOLUME: the unnumbered 幕間 between ch 5 and ch 6 is not adapted at all — Jircniv and Pe Riyuro as fellow 'victims', Hilma and the Eight Fingers' two-to-three-year plot, and the reactions to Ainz's supposed death (the fandom's own difference list names the Philip / Enri / Nfirea share). It carries no chapter number, so it takes none here. LARGEST DIVERGENCE: in the novel the final Jaldabaoth duel happens in the field during the campaign against Prart, after Kalinsha is retaken and after the southern nobles join with a 100,000-man army; the film relocates it to Kalinsha and narrates the rest of the campaign ('the Liberation Army had retaken Kalinsha and later retook Prart, which was followed by the capital') inside Neia's speech. Faithfulness-clause divergence, not original material."
+    }
+  ],
+  "recap": false,
+  "position": {
+    "stored": 52.5,
+    "verdict": "corrected",
+    "proposed": 46.5,
+    "why": "CORRECTED 52.5 → 46.5. The stored value was derived from the air date (2024-09-20, after the run ended), but this film is a MIDQUEL, not a continuation — Overlord IV adapted vols 10 (eps 1-4 = our 40-43), 11 (eps 5-7 = our 44-46) and 14 (eps 8-13 = our 47-52), and vols 12-13 sit between vol 11 and vol 14. Four independent lines agree: (1) ja-WP 「2021年4月には第4期第7話と第8話の間に当たるエピソード『聖王国編』を描く完全新作劇場アニメ」; (2) overlordmaruyama.fandom's film page — 'it fills in the empty gaps between Overlord IV Episode 07 and Overlord IV Episode 08'; (3) director Naoyuki Itō at NYCC 2024 — 'If you watch Episode 7 and episode 8 of season 4, you may notice little nuances we blend into the season'; (4) the CONTENT, which settles it without any of them: our row 46 (S4 ep 7, 霜の竜王 / 'Frost Dragon Lord', 2022-08-16) is vol 11 and ends on Ainz reading Demiurge's report on the Roble Holy Kingdom, while our row 47 (S4 ep 8, 計算外の一手 / 'An Unexpected Move', 2022-08-23) is vol 14 and opens with Zanac and Renner discussing that Roble asked the Sorcerer Kingdom for help and 'Ainz Ooal Gown defeated Jaldabaoth and is now sending relief supplies through Re-Estize meant for Roble' — the film's ending, already in the past. 46.5 = after our row 46."
+  },
+  "adopted": null,
+  "repairs": [],
+  "sources": [
+    "https://ja.wikipedia.org/w/api.php?action=parse&pageid=4569748&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/w/api.php?action=parse&pageid=2718558&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/w/api.php?action=compare&fromrev=91146696&torelative=prev&format=json&prop=diff",
+    "https://en.wikipedia.org/w/api.php?action=parse&pageid=78338422&prop=wikitext&format=json",
+    "https://en.wikipedia.org/w/api.php?action=parse&pageid=43681856&prop=wikitext&format=json",
+    "https://overlordmaruyama.fandom.com/api.php?action=parse&pageid=99686&prop=wikitext&format=json",
+    "https://overlordmaruyama.fandom.com/api.php?action=parse&page=Overlord%20Volume%2012&prop=wikitext&format=json",
+    "https://overlordmaruyama.fandom.com/api.php?action=parse&page=Overlord%20Volume%2013&prop=wikitext&format=json",
+    "https://overlordmaruyama.fandom.com/api.php?action=parse&page=Story%20Arcs&prop=wikitext&format=json",
+    "https://overlordmaruyama.fandom.com/api.php?action=parse&page=Overlord%20IV%20Episode%2007&prop=wikitext&format=json",
+    "https://overlordmaruyama.fandom.com/api.php?action=parse&page=Overlord%20IV%20Episode%2008&prop=wikitext&format=json",
+    "https://overlord-anime.com/",
+    "https://overlord-anime.com/bddvd.html",
+    "https://www.kadokawa.co.jp/product/video2198/",
+    "https://www.kadokawa.co.jp/product/321706000847/",
+    "https://www.kadokawa.co.jp/product/321709000664/",
+    "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=28243",
+    "https://www.thepopverse.com/live-tv-movies-overlord-easter-eggs-new-york-comic-con-2024-nycc-2024",
+    "https://stripepanties4po.blogspot.com/2017/10/12.html",
+    "https://stripepanties4po.blogspot.com/2018/05/13.html",
+    "https://ameblo.jp/eiga-yumetebako/entry-12871415969.html",
+    "https://cococolourblog.com/overlord/"
+  ],
+  "flags_for_sean": [
+    "POSITION IS THE HEADLINE, AND THE DERIVATION RULE IS THE LESSON. Stored 52.5 came from the air date; the honest value is 46.5. An air-date-derived position is WRONG BY CONSTRUCTION for a midquel — a film released after a run but set inside it. Overlord is the clean witness (S4 = vols 10, 11, 14 with the film's vols 12-13 excised from the middle), and the class is not rare: any 'the film covers the arc the season skipped' work has this shape. Worth a note in the halo generator that `position derived from the air date (a proposal)` must be treated as a claim to re-derive, never a default to confirm.",
+    "ROW IDENTITY THE CONTEXT DID NOT PRINT — please confirm before applying. The grid in my context stopped at rows 48-52, so I derived rows 46/47 arithmetically: row 48 = 2022-08-30 = S4 ep 9, each season is exactly 13 episodes (ja-WP 話数 = 各期全13話) and our run is 52 rows, so row N = S4 ep N-39. That makes row 46 = S4 ep 7 霜の竜王 / 'Frost Dragon Lord' (2022-08-16) and row 47 = S4 ep 8 計算外の一手 / 'An Unexpected Move' (2022-08-23). The apply layer should eyeball those two stored titles/dates before writing 46.5; if either differs, the position is 'after the last vol-11 row', whatever its index.",
+    "CHAPTER SPACE IS ARC-LOCAL, NOT RUN-LOCAL — the Haruhi flag again, one notch different. Overlord's light novels restart 章 numbering at every arc, and a two-volume arc numbers CONTINUOUSLY across the pair: vol 5 = Prologue + ch 1-5 + 幕間 and vol 6 = ch 6-11 + 幕間 + Epilogue; vol 12 = ch 1-3 and vol 13 = ch 4-7 + 幕間 + Epilogue; vols 10, 11 and 14 each restart at 1 (vol 14 = Prologue + ch 1-4 + 幕間 + Epilogue). So 'ch 1-7' here means the 聖王国編's own 1章-7章, and it collides numerically with vol 10's ch 1-3, vol 11's ch 1-5 and vol 14's ch 1-4. On this owner the VOLUME qualifier is load-bearing on every row; a flat chapter axis would be meaningless. Worth one shelf-level ruling before any more Overlord verdicts land.",
+    "PROVENANCE OF THE ep7/ep8 SENTENCE, recorded so nobody mis-cites it. ja-WP's 「第4期第7話と第8話の間に当たるエピソード」 was inserted on 2022-08-25 by user Komaru INTO an existing sentence whose only ref is the May-2021 natalie announcement (natalie.mu/comic/news/427474), which cannot have said it — I pulled the diff (oldid 91146696). The fandom's identical trivia line was added 2024-04-21, i.e. after ja-WP's, so the two wikis are not safely independent on this point. The claim is still right: the director says it himself (Popverse, NYCC Oct 2024) and the episode content proves it on its own. Verified rather than assumed.",
+    "THE 幕間 IS A COVERAGE GAP, NOT AN ORIGINAL SHARE — and it takes no number. Vol 13's unnumbered Intermission (Jircniv and Pe Riyuro; Hilma and the Eight Fingers; the reactions to Ainz's 'death', including Enri and Nfirea) is the only structural unit with zero film coverage. Everything else the film changes is omission, compression or relocation; NO source I found — the fandom's five-item difference list, two Japanese reviews, en-WP, ja-WP — names a single anime-original scene. Under T28's faithfulness clause the row stays canon with `abridged`; a reviewer who has read all sixteen volumes puts it as 「本作は原作に忠実です。忠実すぎて、ジェットコースターに乗せられて『ダイジェスト』を見ているような感じ」.",
+    "THE FILM DOES NOT MOVE THE READER'S FRONTIER — it fills a hole behind it. Unlike the haikyu films, this one carries nobody past the run's terminal: our ep 52 already ends on vol 14, and the film sits at vols 12-13. The consequence for the census is the inverse of haikyu's: a viewer who watched all 52 rows and NOT this film has an unread two-volume hole in the middle of their position, not at its end. If the display ever computes 'volumes seen' for a novel owner, this work is what makes 10-11-14 read as 10-14.",
+    "TWO NEIGHBOURING WORKS THAT ARE NOT THIS ONE, in case they sit in the halo. (a) 「劇場版ぷれぷれぷれあです」 — the chibi short screened before the feature (the fandom's 'pre-movie chibi skit'); dアニメストア lists it as its OWN title alongside ぷれぷれぷれあです 1-4, so it is not part of the 135-minute film and must not be read as an original share inside it. (b) 「カッツェ平野の幽霊船」上・下 — a 書き下ろし novel BY Maruyama handed out as the week-1/week-2 theatrical bonus and reprinted in the limited Blu-ray (official bddvd.html, items ③④). It is new material in the novel line that the film does not adapt; it does not touch this standing, but it is a Maruyama side story the chain may eventually want to register.",
+    "NO REPAIRS. Kind (movie), title and date all hold: ja-WP and en-WP agree on 2024-09-20 for the Japanese wide release with an IMAX advance on 2024-09-13 (en-WP's {{Film date}} carries both; AniList's 2024-09-20 is the wide release, so no date repair). Runtime is the only field sources disagree on and we do not store it — ja-WP 135分, en-WP 134 minutes, a reviewer 2時間12分; recorded here so a later pass does not read it as a defect. The 原作 credit is 丸山くがね(「オーバーロード」／KADOKAWA刊) with 監督・構成・脚本 伊藤尚往 and 脚本協力 菅原雪絵 — an adaptation of the author's own novel, a CREDIT and never a T26 adoption, so `adopted` is null: nothing from the film entered the novel line."
+  ]
+}
