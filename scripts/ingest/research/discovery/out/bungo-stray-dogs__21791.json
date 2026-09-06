@@ -1,0 +1,71 @@
+{
+  "series_id": "bungo-stray-dogs",
+  "anilist_id": 21791,
+  "title": "Bungo Stray Dogs 2: Walking Alone",
+  "summary": "A ~25-minute OVA, 文豪ストレイドッグス『独り歩む』, bundled with the completely-made-to-order limited edition of MANGA volume 13 (KADOKAWA product 321607000585, 発売日 2017年08月04日) — and 独り歩む is the title of the owner's own manga chapter 40. Volume 10's printed 目次 (scanned on the owner's wiki) reads 第三十八話 Slap the Stick ○○一 / 第三十九話 父の肖像 ○二五 / 第四十話 独り歩む ○六七 / 第四十一話 Addict 一一一 / 第四十二話 咎与うるは神の業 一四七, so ch 40 is vol 10 pp. 67-110 (44 pp., a double-length chapter — a natural 1:1 fit for a 25-min OVA). The licensor's own anime site carries it as 「第25話 独り歩む」 on both its STORY page and its Blu-ray page (「特典①　第25話 「独り歩む」を収録したBlu-ray Discを同梱」), and the STORY synopsis is chapter 40's plot in outline (Kunikida's perfect schedule, Dazai's sabotage, the train he cannot miss, 「黒いフードの男が少女に旅行かばんを手渡す光景」, 「頭をよぎる、爆弾魔の噂……」); ja-WP states it flatly — 「2017年8月に、原作単行本13巻限定版付属のOVAとして、第25話「独り歩む」が映像化された」. It is a straight, essentially full adaptation of that one chapter: bungostraydogs.fandom's OVA page carries |adapted from = [[Chapter 40]], ch 40's own page points back at it, and every character the chapter introduces — Aya Kōda, Shōsaku Katsura, Master Carlyle — carries 'manga debut = Chapter 40, anime debut = Bungo Stray Dogs: Hitori Ayumu'. The load-bearing surprise: the TV run never adapts ch 40. Season 3 covers the surrounding block out of order (our ep 28 = ch 42, ep 29 = ch 38 + 41, ep 30 = ch 39 + 43, ep 31 = ch 44-45) and steps straight over 40, so this OVA is the SOLE adaptation of the chapter and this ruling is what keeps it from reading never-adapted. Standing canon; additions are small (Atsushi taking two office lines the manga gives Dazai and Tanizaki, a Chūya cameo reporting to Mori, a closing Fukuzawa/Taneda tea scene at Tachibana Temple, and a flashback to already-animated ep-6 material) — faithfulness-clause divergences under T28, not a story-carrying original share.",
+  "standing": "canon",
+  "confidence": "high",
+  "chapters_adapted": [
+    {
+      "start": 40,
+      "end": 40,
+      "volume": 10,
+      "weight": "significant",
+      "note": "第四十話「独り歩む」 / 'Walking Alone' — printed vol 10, pp. 67-110 (44 pp.; the volume's own 目次 gives ch 40 at p. 067 and ch 41 at p. 111), first serialized in ヤングエース 2016年4月号. Animated essentially in full and in order: the packed schedule and Dazai's sabotage, the suitcase bomb at the station, Aya Kōda dragging Kunikida into the hunt, the wired tunnel, Shōsaku Katsura and the two-years-ago arrest, page 86/89 of the notebook and the stun grenade, the hundreds-or-one choice, Yosano's arrival, and the closing reveal that Kunikida is Fukuzawa's designated successor. weight: significant — it is the whole work's plot, licensor-titled and licensor-synopsised. NEW, not a duplicate: no TV episode adapts ch 40 (bungostraydogs.fandom's chapter pages map 38 → wiki ep 30, 39 → 31, 41 → 30, 42 → 29, 43 → 31, 44/45 → 32 = our eps 29, 30, 29, 28, 30, 31; ch 40's only 'anime' value is this OVA), so the OVA is its sole adaptation. The stored ledger END for the run's neighbouring row is ch 37 at our ep 24, and MangaUpdates starts S3 at 'Vol 10, Chap 38 (S3)' — ch 40 sits three chapters past the position and is not an anchor on any row (N8/A1)."
+    }
+  ],
+  "recap": false,
+  "position": {
+    "stored": 24.5,
+    "verdict": "confirmed",
+    "proposed": 24.5,
+    "why": "Confirmed per the ask (24.5 is already ruled by the owner's numbering, N9) — and the research supports it rather than merely leaving it alone. The SOURCE's own numbering puts the work immediately after our ep 24: bungo-stray-dogs.jp prints 「第25話 独り歩む」, ja-WP's 話数 footnote reads 「「黒の時代」編（第13話 - 第16話）、第2シーズン（第17話 - 第24話）、OVA（第25話）」 and its next row is 第二十六話「太宰、中也、十五歳」 = OUR ep 25 (2019-04-12). Release order agrees (2017-08-04, between S2's finale 2016-12-22 and S3's premiere 2019-04-12) and MangaUpdates groups it in the S2 block ('Vol 9, Chap 37 (S2+OVA+Movie)'). The STORY does not contradict 24.5 either: at 24.5 the viewer has seen through ch 37 (our ep 24) and our eps 25-27 are the 「十五歳」 prequel, so nothing later than ch 40 has been shown and the OVA spoils nothing; the first story-present S3 row (our ep 28) opens on ch 42, which is AFTER ch 40. The only cost is meeting ch 40 before chs 38-39 — an order the TV run itself breaks — so any slot in 24.5-27.5 is equivalent and 24.5 is the earliest clean one. AniList's synopsis note ('the chapter it adapts... chronologically takes place during the third season') describes that reordered block, not a conflict with the slot; see flags. No move proposed; the AFL/AniList 'episode 25' is the recorded numbering-shift artefact, not a live row."
+  },
+  "adopted": null,
+  "repairs": [
+    {
+      "field": "watch_order_entries.note",
+      "old": "OVA aired 2017-08-04 between S2 and S3; adapts ~ch 40 side material; AFL numbers it as ep 25 (SOURCE_NUMBERING_SHIFTS translates). Community TV count = 60. Research batch 8.",
+      "new": "OVA released 2017-08-04 with the limited edition of manga vol 13; adapts manga ch 40 「独り歩む」 (vol 10, pp. 67-110) essentially in full — a mainline numbered chapter, not side material, and the only adaptation of it (the TV run skips ch 40). The LICENSOR itself numbers it 第25話 (SOURCE_NUMBERING_SHIFTS translates). Community TV count = 60. Research batch 8; extras wave 6.",
+      "why": "PRECISION, low urgency — the stored kind (ova), title and date are all correct and need no repair. Only the phrase '~ch 40 side material' is wrong: ch 40 is a plain mainline chapter of the owner's instrument (vol 10's printed 目次 lists 第四十話 独り歩む at p. 067 between 第三十九話 and 第四十一話), so nothing here is side material and no T26 side_source shape applies. Also worth carrying in the note: 'AFL numbers it as ep 25' understates the evidence — bungo-stray-dogs.jp and ja-WP number it 第25話 too, so the shift is the source's own count.",
+      "evidence": "https://bungostraydogs.fandom.com/wiki/File:Volume_10_Table_of_Contents.png (printed 目次 scan); https://bungo-stray-dogs.jp/tv/goods/?mode=bd-dvd&bd=bd25 ; https://ja.wikipedia.org/wiki/文豪ストレイドッグス"
+    }
+  ],
+  "sources": [
+    "https://bungo-stray-dogs.jp/tv/story/",
+    "https://bungo-stray-dogs.jp/tv/goods/?mode=bd-dvd&bd=bd25",
+    "https://www.kadokawa.co.jp/product/321607000585/",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E6%96%87%E8%B1%AA%E3%82%B9%E3%83%88%E3%83%AC%E3%82%A4%E3%83%89%E3%83%83%E3%82%B0%E3%82%B9&prop=wikitext&format=json&formatversion=2",
+    "https://en.wikipedia.org/w/api.php?action=parse&page=List%20of%20Bungo%20Stray%20Dogs%20episodes&prop=wikitext&format=json&formatversion=2",
+    "https://zh.wikipedia.org/w/api.php?action=parse&page=%E6%96%87%E8%B1%AAStray%20Dogs&prop=wikitext&format=json&formatversion=2",
+    "https://bungostraydogs.fandom.com/api.php?action=parse&page=Bungo%20Stray%20Dogs%3A%20Hitori%20Ayumu&prop=wikitext&format=json",
+    "https://bungostraydogs.fandom.com/api.php?action=parse&page=Chapter%2040&prop=wikitext&format=json",
+    "https://bungostraydogs.fandom.com/api.php?action=parse&page=Bungo%20Stray%20Dogs%20Volume%2010&prop=wikitext&format=json",
+    "https://bungostraydogs.fandom.com/api.php?action=parse&page=Bungo%20Stray%20Dogs%20Volume%2013&prop=wikitext&format=json",
+    "https://bungostraydogs.fandom.com/wiki/File:Volume_10_Table_of_Contents.png",
+    "https://bungostraydogs.fandom.com/api.php?action=parse&page=The%20Guild%20Aftermath%20Arc&prop=wikitext&format=json",
+    "https://bungostraydogs.fandom.com/api.php?action=parse&page=Episode%2029&prop=wikitext&format=json",
+    "https://bungostraydogs.fandom.com/api.php?action=parse&page=Episode%2030&prop=wikitext&format=json",
+    "https://bungostraydogs.fandom.com/api.php?action=parse&page=Episode%2031&prop=wikitext&format=json",
+    "https://bungostraydogs.fandom.com/api.php?action=parse&page=Chapter%2037&prop=wikitext&format=json",
+    "https://bungostraydogs.fandom.com/api.php?action=parse&page=Chapter%2038&prop=wikitext&format=json",
+    "https://bungostraydogs.fandom.com/api.php?action=parse&page=Chapter%2039&prop=wikitext&format=json",
+    "https://bungostraydogs.fandom.com/api.php?action=parse&page=Chapter%2041&prop=wikitext&format=json",
+    "https://bungostraydogs.fandom.com/api.php?action=parse&page=Chapter%2042&prop=wikitext&format=json",
+    "https://bungostraydogs.fandom.com/api.php?action=parse&page=Aya%20Koda&prop=wikitext&format=json",
+    "https://bungostraydogs.fandom.com/api.php?action=parse&page=Sh%C5%8Dsaku%20Katsura&prop=wikitext&format=json",
+    "https://bungostraydogs.fandom.com/api.php?action=parse&page=Master%20Carlyle&prop=wikitext&format=json",
+    "https://bungostraydogs.fandom.com/api.php?action=parse&page=Sant%C5%8Dka%20Taneda&prop=wikitext&format=json",
+    "https://api.mangaupdates.com/v1/series/34850283553",
+    "https://comic-walker.com/api/contents/details/work?workCode=KC_004071_S&episodeType=comics",
+    "https://animestore.docomo.ne.jp/animestore/ci_pc?workId=22013"
+  ],
+  "flags_for_sean": [
+    "POSITION 24.5 CONFIRMED — AND THE LICENSOR IS THE WITNESS FOR THE NUMBERING SHIFT, not just AFL/AniList. bungo-stray-dogs.jp prints the work as 「第25話 独り歩む」 on its STORY page (with 「※第25話は文豪ストレイドッグス(13) オリジナルアニメBD付き限定版に収録されます。」) and on its Blu-ray page (「特典①　第25話 「独り歩む」を収録したBlu-ray Discを同梱」); ja-WP's 話数 footnote reads 「「黒の時代」編（第13話 - 第16話）、第2シーズン（第17話 - 第24話）、OVA（第25話）」 and zh-WP prints the same row; ja-WP's next row, 第二十六話「太宰、中也、十五歳」 (2019-04-12), is OUR ep 25. So the +1 recorded in lib/rulings/numbering-shifts.ts is the SOURCE's own count and the source itself seats the OVA immediately after our ep 24 — independent support for 24.5. No row, no move (per the ask).",
+    "THE STORY DOES NOT CONTRADICT 24.5, but AniList's note is pointing at something real — a reorder. Ch 40 sits between ch 39 and ch 41 in the manga, and the TV run adapts that block out of order: our ep 28 = ch 42, ep 29 = ch 38 + 41, ep 30 = ch 39 + 43, ep 31 = ch 44-45 (bungostraydogs.fandom's per-episode 'adapted from' fields, read in BOTH directions against the chapter pages' 'anime episode' fields; wiki ep N = our ep N-1 from 26 on, verified on wiki Episode 29 = S3 ep 4 = 2019-05-03 = our ep 28). No strictly manga-chronological slot exists inside that shuffle. At 24.5 the viewer is at ch 37 and eps 25-27 are the 「十五歳」 prequel, so nothing later than ch 40 has been shown; the first story-present S3 row (our ep 28) opens on ch 42. Any slot in 24.5-27.5 is equivalent — 24.5 is the earliest clean one and matches release order and MU's grouping.",
+    "COVERAGE VALUE — THIS OVA IS THE SOLE ADAPTATION OF CH 40. The TV run steps over it: the fandom's chapter pages give 37 → wiki ep 24 (= our 24), 38 → 30, 39 → 31, 41 → 30, 42 → 29, 43 → 31, 44/45 → 32, and ch 40 → this OVA and nothing else; the Guild Aftermath Arc page lists the arc (ch 38-45) as 'Episode 25 [the OVA], 29-32'. Without this ruling ch 40 reads never-adapted with covered chapters on both sides. RELATED LEAD, outside this ask: the grid I was given shows no anchors on our eps 25-31, and their content is exactly the reordered set above (25-27 = the 「十五歳」 light-novel prequel; 28 = 42; 29 = 38 + 41; 30 = 39 + 43; 31 = 44-45) — a cheap anchoring/typing win for the run, with the out-of-order rows needing `rearranged`.",
+    "TRAP, RECORDED: KADOKAWA's product copy calls the disc 「完全新作のオリジナルアニメ」 ('a completely new original anime', 発売日 2017年08月04日) — that is 'newly produced animation', NOT 'an original story'. The same publisher's anime site prints it as 第25話「独り歩む」 with ch 40's plot as the synopsis, and volume 10's printed 目次 has 第四十話「独り歩む」 at p. 067. Do not let オリジナルアニメ in bundled-with-a-volume copy be read as anime-original.",
+    "T28 SIZING, stated so it can be re-ruled without re-research. The work's job is ch 40 end to end: 44 printed pages (vol 10 pp. 67-110) in ~25 minutes, licensor-titled and licensor-synopsised. The only material anyone names as added is small — (a) Atsushi taking the office lines the manga gives Dazai and Tanizaki, (b) a Chūya cameo reporting the subway incident to Mori, (c) a closing Fukuzawa/Taneda tea scene at Tachibana Temple, (d) a flashback to Rokuzō Taguchi and Nobuko Sasaki, i.e. already-animated ep-6 material (weightless re-shown footage). (a) and (b) are the two bullets the wiki's 'Manga and Anime Differences' section lists, both cited to ch 40. (c) is NOT in the wiki's ch 40 summary or its per-chapter cast list, and Taneda's own manga debut is ch 58 — so it reads as an anime-added coda leaning on the anime's Dark Era continuity. All faithfulness-clause divergences → canon; nothing approaching a story-carrying original share. HONEST GAP: I did not read the chapter's pages (BSD is licensed; MangaDex holds no chapters for the main series and dアニメストア has delisted the OVA), so the coda's anime-original status rests on the wiki's structured fields plus Taneda's debut chapter, not on the printed page.",
+    "FYI, OUTSIDE THIS ASK — the owner's stored chapter space looks stale. The context says 'latest known 128' and MangaUpdates still reads latest_chapter 128, but KADOKAWA's own カドコミ listing for 文豪ストレイドッグス (workCode KC_004071_S) carries 第127話 (2026-01-08), 第128話 (2026-02-09), 第129話 (2026-03-09) and 第129.5話 (2026-04-04). Not touched here; noting it because it came free from a licensor page."
+  ]
+}
