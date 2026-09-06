@@ -1,0 +1,144 @@
+{
+  "series_id": "thus-spoke-rohan-kishibe",
+  "anilist_id": 21778,
+  "expected_episodes": 4,
+  "rows": [
+    {
+      "number": 1,
+      "title": "Episode 5: Millionaire Village",
+      "title_native": "エピソード#05 富豪村",
+      "air_date": null,
+      "note": "2017 (day unsourced at the required tier — see flag 1). Mail-in all-volume-purchase bonus DVD for the TV anime JoJo's Bizarre Adventure: Diamond Is Unbreakable BD/DVD Vol.1-13; the application coupon shipped inside Vol.13 (2017-06-28, licensor), so the disc itself was delivered later — a dated fan review of the received disc is 2017-09-23, and the two JoJo wikis (one lineage) give 2017-09-20. david production's own works page dates the work only '2017年'. NOT an event release: its first public screening anywhere was overseas (Crunchyroll Expo, San Jose, 2019-08-30, billed 世界初上映). Licensor per-episode page: jojo-animation.com/ova/rohan/story/episode05.php."
+    },
+    {
+      "number": 2,
+      "title": "Episode 2: Mutsu-kabe Hill",
+      "title_native": "エピソード#02 六壁坂",
+      "air_date": "2018-07-19",
+      "note": "Disc. DVD bundled with the limited 'アニメDVD同梱版' of manga volume 2 (Shueisha, ISBN 978-4-08-881557-2). Licensor prints 「7月19日(木)発売」 (jojo-animation.com/du/bddvd/ova2.html); Thursday checks out. ja-WP and en-WP both carry 2018-07-19."
+    },
+    {
+      "number": 3,
+      "title": "Episode 16: At a Confessional",
+      "title_native": "エピソード#16 懺悔室",
+      "air_date": "2019-12-08",
+      "note": "Event screening. Premiered with row 4 at the opening night of the licensor's six-city screening tour 「岸辺露伴は動かない」全国六都市上映ツアー 奇譚見聞録, Tokyo TFT HALL 1000 (Sunday, 昼公演 15:00 / 夜公演 18:15). Disc release later: Blu-ray/DVD 「ザ・ラン／懺悔室」 and the 4-episode Collector's Edition, both 2020-03-25 (水). ja-WP's 各話リスト prints the DISC date (2020-03-25) for this row — see flag 2."
+    },
+    {
+      "number": 4,
+      "title": "Episode 9: The Run",
+      "title_native": "エピソード#09 ザ・ラン",
+      "air_date": "2019-12-08",
+      "note": "Event screening. Same premiere as row 3 (奇譚見聞録 Tokyo, 2019-12-08). Order within the shared date taken from the premiere programme's own billing 『懺悔室／ザ・ラン』 in the official event report, and from ja-WP's and en-WP's list order — see flag 3. Disc release 2020-03-25."
+    }
+  ],
+  "numbering_basis": "Release order of THIS run's own four entries, 1-4, by first Japanese release (row 1 = 2017 mail-in bonus disc, row 2 = 2018-07-19 bundled disc, rows 3-4 = 2019-12-08 event premiere). The licensor does NOT number the run: every OVA is titled by the MANGA one-shot's own episode number (#05 富豪村, #02 六壁坂, #16 懺悔室, #09 ザ・ラン), which is a source-chapter label, never a run ordinal — kept in title / title_native so the label is not lost. Rows 3 and 4 share a date; tie broken by the premiere programme 『懺悔室／ザ・ラン』 (the production committee's own event report) plus ja-WP's 各話リスト order and en-WP's OVA 3 / OVA 4.",
+  "sources": [
+    {
+      "url": "http://jojo-animation.com/ova/rohan/",
+      "what": "Official OVA site (Warner Bros. Japan / 岸辺露伴は動かない製作委員会). Carries all four episodes and the disc listings: Collector's Edition 2020年3月25日（水）4話収録, and 「ザ・ラン／懺悔室」 2020年3月25日（水）2話収録.",
+      "tier": "licensor"
+    },
+    {
+      "url": "http://jojo-animation.com/ova/rohan/story/episode05.php",
+      "what": "Official per-episode page '#05 富豪村' — episode label, synopsis, staff, cast. Siblings: /episode02.php (#02 六壁坂), /episode16.php (#16 懺悔室), /episode09.php (#09 ザ・ラン). These four pages are the licensor's own episode list; none of them carries a date.",
+      "tier": "licensor"
+    },
+    {
+      "url": "http://jojo-animation.com/ova/rohan/kitankenbunroku.html",
+      "what": "Official 奇譚見聞録 tour page. Header: 「新作OVA「懺悔室」「ザ・ラン」2作と共に全国六都市九公演を巡る上映ツアー」. Schedule (image alt text, verbatim): 2019年12月8日（日）東京 TFT HALL 1000 / 2020年1月19日（日）名古屋 Zepp Nagoya / 2020年2月9日（日）大阪 メルパルクホール / 2020年2月23日（日）広島 上野学園ホール / 2020年3月8日（日）仙台 SENDAI GIGS / 2020年3月29日（日）大宮 ソニックシティ 大ホール / 2020年2月29日（土）長崎 長崎県美術館. Also the Omiya cancellation + refund notice (COVID).",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://jojo-animation.com/du/bddvd/13.html",
+      "what": "Licensor page for DiU BD/DVD Vol.13: 「Vol.13 2017年6月28日」「2017年6月28日(水)発売」, 初回仕様特典 includes 「全巻購入特典応募券（全巻購入特典：完全新作OVA「岸辺露伴は動かない」 ※DVDにて「富豪村」を収録）」. This is the date ja-WP prints for the OVA — it is Vol.13's date, not the bonus disc's.",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://jojo-animation.com/du/bddvd/ova.html",
+      "what": "Licensor page for the 全巻購入特典 OVA itself (富豪村): staff, cast, synopsis, 60秒PV. No release or shipping date is printed — checked live and on three Wayback snapshots (2017-06-28, 2017-08-29, 2017-10-28).",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://jojo-animation.com/du/bddvd/ova2.html",
+      "what": "Licensor page for 「岸辺露伴は動かない」第2巻 アニメDVD同梱版: 「収録内容：OVA「六壁坂」／7月19日(木)発売」, 予価3,500円+税, ISBN 978-4-08-881557-2, 集英社刊 — row 2's date.",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://jojo-portal.com/anime/rohan/bddvd/01/",
+      "what": "Official JoJo portal, 「岸辺露伴は動かない」OVA ＜コレクターズエディション＞: 発売日 2020年3月25日（水）, 4話収録（「六壁坂」「富豪村」初収録）— the disc date for rows 3-4 (and the first disc release of rows 1-2).",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://web.archive.org/web/20171016113504/http://davidproduction.jp/works/",
+      "what": "The studio's own works list, archived 2017-10-16: 「Blu-ray＆DVD全巻購入特典／完全新作OVA「岸辺露伴は動かない」 2017年」 — the studio dates row 1 to the YEAR only. (This is the source en-WP cites for its year-only value.)",
+      "tier": "licensor"
+    },
+    {
+      "url": "https://ja.wikipedia.org/wiki/%E5%B2%B8%E8%BE%BA%E9%9C%B2%E4%BC%B4%E3%81%AF%E5%8B%95%E3%81%8B%E3%81%AA%E3%81%84",
+      "what": "ja-WP 岸辺露伴は動かない, ==OVA== section. 各話リスト (エピソードリスト template): #05 富豪村 / 放送日 2017年6月28日; #02 六壁坂 / 2018年7月19日; #16 懺悔室 and #09 ザ・ラン / 2020年3月25日 (rowspan). BD/DVD table: 全巻購入特典DVD 2017年6月28日 富豪村; コミックス第2巻同梱 2018年7月19日 六壁坂; OVA「懺悔室/ザ・ラン」and コレクターズエディション 2020年3月25日. Prose confirms the 2019-08-18 announcement and the 全国六都市 tour, and the Netflix 2021-02-18 / NHK 2021-12 first TV airings.",
+      "tier": "ja-WP"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Thus_Spoke_Rohan_Kishibe",
+      "what": "en-WP, ==Original video animation== / ===Episodes===. Episode table: OVA 1 'Episode 5: Millionaire Village' — {{Start date|2017}} with an inline editorial note 'Please do not change to a more specific date without a source'; OVA 2 'Episode 2: Mutsu-kabe Hill' 2018-07-19; OVA 3 'Episode 16: At a Confessional' 2019-12-08; OVA 4 'Episode 9: The Run' 2019-12-08. Prose: the two new episodes 'were screened theatrically in nine cities in Japan starting on December 8, 2019, and were released on DVD and Blu-Ray on March 25, 2020'. NOTE: 'Thus Spoke Kishibe Rohan' is a redirect to this article; the same article also holds the LIVE-ACTION episode table — do not join the two.",
+      "tier": "en-WP"
+    },
+    {
+      "url": "https://eiga.com/news/20190904/12/",
+      "what": "映画.com, 2019-09-04: the two new OVAs and the full 奇譚見聞録 six-city schedule with 12月8日 東京・TFT HALL first — corroborates the licensor's tour page.",
+      "tier": "cross-check"
+    },
+    {
+      "url": "https://cho-animedia.jp/event/113414/",
+      "what": "超！アニメディア, 2019-08-18 (announcement day): 「12月8日（日）東京 TFT HALL 1000 … 昼夜2回公演」 heading the six-city tour list.",
+      "tier": "cross-check"
+    },
+    {
+      "url": "https://www.bs-log.com/20191212_1388458/",
+      "what": "Tokyo premiere report carrying the production committee's 公式レポート verbatim: 「2019年12月8日、東京・TFTHALL1000にて…本イベントでは新作OVA『懺悔室／ザ・ラン』の上映…」, 「この日が初披露となった」, and the 作品情報 block titled 『岸辺露伴は動かない』OVA『懺悔室／ザ・ラン』 with エピソード#16『懺悔室』 listed first. This is the tie-break for rows 3/4.",
+      "tier": "cross-check"
+    },
+    {
+      "url": "https://animeanime.jp/article/2019/12/12/50312.html",
+      "what": "Second Tokyo-premiere report, same date and same 「懺悔室／ザ・ラン」 billing; also records the added Nagasaki screening 2020-02-29.",
+      "tier": "cross-check"
+    },
+    {
+      "url": "https://jojowiki.com/Thus_Spoke_Kishibe_Rohan_(OVA)",
+      "what": "JoJo's Bizarre Encyclopedia (read via api.php). Infobox first = September 20, 2017; episode table Japan dates 2017-09-20 / 2018-07-19 / 2020-03-25 (ep 9) / 2020-03-25 (ep 16); prose: application deadline 2017-07-31, theatrical screenings from 2019-12-08. NOTE: this wiki and jojo.fandom.com are ONE lineage (a fork — the Summary paragraphs are near-verbatim), so they count as a single cross-check, not two.",
+      "tier": "cross-check"
+    },
+    {
+      "url": "https://jojo.fandom.com/wiki/Thus_Spoke_Kishibe_Rohan_(OVA)",
+      "what": "jojo.fandom (read via api.php). Same 2017-09-20 for ep 5 and the same 2017-07-31 deadline claim; its episode table dates rows 3/4 2019-12-08 (unlike jojowiki, which uses the disc date). Same lineage as jojowiki.com.",
+      "tier": "cross-check"
+    },
+    {
+      "url": "https://zakusamansa.hatenablog.com/entry/20170923/1506164800",
+      "what": "Dated fan review, 2017-09-23 20:06: 「ジョジョの奇妙な冒険 ダイヤモンドは砕けない Vol.1〜13購入特典である、完全新作OVAが届きますたので見ますた」 — the mail-in disc had just arrived. Circumstantial only, but it proves the disc was in buyers' hands in late September 2017 and therefore that 2017-06-28 is not its release date.",
+      "tier": "cross-check"
+    },
+    {
+      "url": "https://animageplus.jp/articles/detail/28051",
+      "what": "アニメージュプラス, 2019-09-09: 富豪村's 世界初上映 at Crunchyroll Expo 2019, San Jose, 2019-08-30 (Warner Japan panel), and 「『富豪村』は…Blu-ray/DVDの全巻購入特典としてのみ視聴できるエピソード」 — i.e. as of Sept 2019 the episode had had no public screening in Japan at all.",
+      "tier": "cross-check"
+    },
+    {
+      "url": "https://cho-animedia.jp/article/2017/06/28/2834.html",
+      "what": "超！アニメディア, 2017-06-28: the 富豪村 staff/cast comments release. Prints 「Vol.1～12 好評発売中」 and the application instruction 「Vol.1～13に封入されている『全巻購入特典応募券』にてご応募ください」 — Vol.13 was not yet out on 2017-06-28 and the bonus was an application, not a purchase.",
+      "tier": "cross-check"
+    }
+  ],
+  "flags_for_sean": [
+    "ROW 1 DATE IS NULL (P6). No source at the required tier gives a day for 富豪村. The year is licensor-solid (david production's works page: 「2017年」). ja-WP prints 2017年6月28日 in BOTH its 各話リスト and its BD/DVD table, but the licensor's own Vol.13 page shows 2017-06-28 is DiU BD/DVD Vol.13's release date — the volume that CONTAINED the mail-in application coupon; the disc could only be delivered after applicants sent that coupon in (deadline reported as 2017-07-31), so ja-WP's value is a conflation. en-WP refuses a day outright with an inline 'do not change to a more specific date without a source' note. The community value is 2017-09-20 (jojowiki.com + jojo.fandom — ONE lineage, so one cross-check), corroborated only circumstantially by a fan review dated 2017-09-23 saying the disc had just arrived, and by the fact that 2017-09-20 is a Wednesday (the normal JP disc weekday). YOUR CALL: leave null, or accept 2017-09-20 as a cross-check-tier value with the note attached.",
+    "ROWS 3/4 DATE — a real source split, resolved toward the event per the ask. The licensor's tour page + en-WP give the 2019-12-08 premiere screening (Tokyo TFT HALL 1000, six-city tour 奇譚見聞録); ja-WP's 各話リスト gives 2020-03-25, which is the Blu-ray/DVD date (both discs, per the licensor and the JoJo portal). Grid uses 2019-12-08 and names the disc date in each row note. If the catalog would rather hold home-video dates for OVA rows, rows 3 and 4 both become 2020-03-25 and the run's span becomes 2017 → 2020-03-25.",
+    "ROWS 3/4 ORDER — 懺悔室 before ザ・ラン. Evidence for: the premiere programme's own billing 『懺悔室／ザ・ラン』 in the production committee's official event report, the 2019-08-18 announcement wording 「懺悔室」「ザ・ラン」, ja-WP's 各話リスト order, en-WP's OVA 3 / OVA 4, jojo.fandom's table order. Evidence against: the retail disc is titled 「ザ・ラン／懺悔室」 and the Collector's Edition is listed 「ザ・ラン / 懺悔室 / 六壁坂 / 富豪村」, and jojowiki.com orders 9 before 16. The disc's track order is not the release order; both share one date either way, so this is presentation only.",
+    "TASK PREMISE PARTLY FAILS (a claim, not a fact). (a) There was no '2017-09 event' — September 2017 is the SHIP window of a mail-in bonus DVD, not a screening; 富豪村's only screening was overseas (Crunchyroll Expo, San Jose, 2019-08-30, billed 世界初上映), which is itself proof it had never screened publicly in Japan. (b) The 2019 pair was not tied to a JoJo exhibition — it premiered on the licensor's own 奇譚見聞録 screening tour. (c) 'The 2018-07 second' and 'the 2020-03 Blu-ray' hold exactly as stated.",
+    "COUNT CHECK PASSES: 4 rows = AniList 21778's 4 episodes. No recap, no bonus row, no split.",
+    "ANILIST WAS UNREACHABLE during this research — graphql.anilist.co returns HTTP 403 'temporarily disabled due to severe stability issues', and anilist.co/anime/21778 serves a JS shell. Episode count and the 2017-2019 span are taken from the task. When the API returns, read 21778's startDate: if it is 2017-09-20 that is a third (independent-ish) witness for row 1's day; if it is 2017-06-28 AniList inherited ja-WP's conflation. AniList's END being in 2019 already agrees with 2019-12-08 rather than the 2020-03-25 disc.",
+    "MANGA-NUMBER TRAP HELD, and it is load-bearing for the later standing work: the four OVA titles carry the MANGA one-shot numbers (#05, #02, #16, #09 — ja-WP's chapter table lists them in publication order 16, 02, 05, 06, …). Those are source labels; they must never be read as this run's episode numbers, and #09 ザ・ラン is the fourth ROW even though 9 < 16.",
+    "en-WP NAMESAKE / SAME-PAGE HAZARD (G55-adjacent): 'Thus Spoke Kishibe Rohan' is a redirect; the live article 'Thus Spoke Rohan Kishibe' holds FOUR tables — chapters, the OVA episode table, and the LIVE-ACTION NHK drama episode table (whose ep 1 is also titled 'Millionaire Village', aired 2020-12-28). Any later scrape of this article must scope to the ==Original video animation== section.",
+    "LATER RELEASES, deliberately not used as row dates: Netflix worldwide 2021-02-18 (all four); NHK 総合 first TV broadcast 2021-12-18 (懺悔室 + 六壁坂) and 2021-12-20, i.e. late 19th (富豪村 + ザ・ラン). Note the NHK pairing is another ordering again, and Netflix numbers 'At a Confessional' as its episode 1 — three published orders exist for this run, none of them release order."
+  ]
+}
