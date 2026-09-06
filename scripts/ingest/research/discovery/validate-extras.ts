@@ -32,7 +32,7 @@ const oneLine = (why: string, cap = 300): string => {
 };
 
 async function main() {
-  const files = readdirSync(DIR).filter((f) => f.endsWith('.json')).sort();
+  const files = readdirSync(DIR).filter((f) => !f.startsWith('grid__') && f.endsWith('.json')).sort(); // a grid__ file is the ROWS pass's (PROTOCOL-grids.md; validate-grids.ts) — not a standing verdict (2026-09-06: it crashed the --entries proposer)
   const rows = await selectAll<{ series_id: string; anilist_id: number | null; position: number; kind: string | null; standing: string | null }>('watch_order_entries', 'series_id, anilist_id, position, kind, standing');
   const stored = new Map(rows.filter((r) => r.anilist_id != null).map((r) => [`${r.series_id}#${r.anilist_id}`, r]));
   const problems: string[] = []; const perWork: { file: string; v: PerWork }[] = []; const triage: { file: string; v: Triage }[] = [];
