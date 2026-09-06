@@ -1,0 +1,46 @@
+{
+  "series_id": "kaguya-sama-love-is-war",
+  "anilist_id": 125368,
+  "title": "Kaguya-sama wa Kokurasetai: Tensaitachi no Renai Zunousen OVA",
+  "summary": "A 24-minute, three-segment OVA bundled with the limited (anime DVD) edition of manga vol 22 on 2021-05-19; every segment animates material Aka Akasaka drew for the owner's own manga, and no source reports any original story. The official site's 収録内容 notice and Anime Hack name the three segments 「かぐや様ダークネスvolume1」「かぐや様ダークネスvolume2」「かぐや様は食べさせたい」, and ja-Wikipedia's episode table carries exactly those three titles in one OVA row placed after season 2's 第12話. The third segment is printed chapter 96 「かぐや様は食べさせたい」 (vol 10, the student council's fried-rice showdown) — the one chapter of the 95-101 block no TV episode adapts, so this OVA is its sole adaptation in the whole 41-row run. The two Darkness segments adapt Akasaka's own 番外編 / 外伝 特別読切 of the same manga, run as 2号連続巻頭カラー in 週刊ヤングジャンプ増刊 ヤングジャンプGOLD vol.1 (2017-05-18) and vol.2 (2017-10-19); they carry NO mainline chapter number and are 単行本未収録, so under the Dai ruling they are side_story facts, never numbers (the fandom slots them at '64-01' / '83-01', MangaDex at scanlator sort keys 64.5 / 83.5 — both conventions, not printed numbers). The surprise is AniList's second edge: it mints Darkness as a separate manga node (126244), but Shueisha and Comic Natalie both call it a 番外編/外伝 of 「かぐや様は告らせたい〜天才たちの恋愛頭脳戦〜」 by the same author, MangaUpdates holds no separate series for it, and the GTO rule (a side story serialized inside the source IS the source) makes the whole OVA canon rather than side_source.",
+  "standing": "canon",
+  "confidence": "high",
+  "chapters_adapted": [
+    {
+      "start": 96,
+      "end": 96,
+      "note": "vol 10, 「かぐや様は食べさせたい」 — the third segment, adapted in full; weight: significant (a whole chapter is the segment's entire job, ~a third of the runtime, and the run adapts it nowhere else — no TV episode carries the title and the fandom chapter page's Anime Episode field reads OVA 1). The other two segments adapt the two unnumbered Darkness 番外編 (see flags): they are the owner's own instrument but have no printed number, so they take no chapter row."
+    }
+  ],
+  "recap": false,
+  "position": {
+    "stored": 24.5,
+    "verdict": "confirmed",
+    "proposed": 24.5,
+    "why": "Released 2021-05-19 between S2 (ep 24, 2020-06-27) and S3. ja-WP counts it inside 第2期 (全12話+OVA), MU labels its coverage segment '(S2 + OVA)', Bandai Channel titles it 第2期OVA. Nothing in it passes the S2 frontier: S2 ends at ch 101, S3 opens on ch 102, and the OVA holds ch 96 plus two extras printed after chs 64 and 83."
+  },
+  "adopted": null,
+  "repairs": [],
+  "sources": [
+    "https://kaguyasama-wa-kokurasetai.fandom.com/api.php?action=parse&page=OVA%201&prop=wikitext&format=json&formatversion=2",
+    "https://kaguyasama-wa-kokurasetai.fandom.com/api.php?action=parse&page=Chapter%2096&prop=wikitext&format=json&formatversion=2",
+    "https://kaguyasama-wa-kokurasetai.fandom.com/api.php?action=parse&page=Chapter%2064-01&prop=wikitext&format=json&formatversion=2",
+    "https://kaguyasama-wa-kokurasetai.fandom.com/api.php?action=parse&page=Chapter%2083-01&prop=wikitext&format=json&formatversion=2",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%81%8B%E3%81%90%E3%82%84%E6%A7%98%E3%81%AF%E5%91%8A%E3%82%89%E3%81%9B%E3%81%9F%E3%81%84%E3%80%9C%E5%A4%A9%E6%89%8D%E3%81%9F%E3%81%A1%E3%81%AE%E6%81%8B%E6%84%9B%E9%A0%AD%E8%84%B3%E6%88%A6%E3%80%9C&prop=wikitext&format=json&formatversion=2",
+    "https://kaguya.love/news/?id=56301",
+    "https://anime.eiga.com/news/113476/",
+    "https://web.archive.org/web/20240104084727/https://natalie.mu/comic/news/233062",
+    "https://shonenjumpplus.com/magazine/316112896848990878",
+    "https://ynjn.jp/title/327",
+    "https://ynjn.jp/title/373",
+    "https://api.mangaupdates.com/v1/series/40032173896",
+    "https://api.mangadex.org/manga/37f5cce0-8070-4ada-96e5-fa24b1bd4ff9/feed?translatedLanguage%5B%5D=en&limit=100&order%5Bchapter%5D=asc",
+    "https://www.b-ch.com/titles/7735/"
+  ],
+  "flags_for_sean": [
+    "SIDE_STORY, not numbers (Dai ruling): segments 1-2 adapt 「かぐや様は告らせたい ダークネス」 vol.1 and vol.2 — Akasaka's own 番外編/外伝 特別読切, 巻頭カラー in 週刊ヤングジャンプ増刊 ヤングジャンプGOLD vol.1 (2017-05-18, Comic Natalie: 「赤坂アカ『かぐや様は告らせたい〜天才たちの恋愛頭脳戦〜』の番外編」) and vol.2 (2017-10-19, Shueisha's own magazine page: 「2号連続巻頭カラー！本誌では読めない“トラブル”だらけの外伝！『かぐや様は告らせたい ダークネス』（赤坂アカ）」), listed on Shueisha's Yanjan+ as 特別読切 (ynjn.jp/title/327 and /373). They sit between printed chs 64/65 and 83/84 and are 単行本未収録 — no mainline number exists, so they are named as side_story facts and take no anchor. Suggested annotation: side_story{「かぐや様は告らせたい ダークネス」vol.1 (after printed ch 64) and vol.2 (after printed ch 83), YJ GOLD vol.1/vol.2 2017, uncollected}.",
+    "AniList's second adapts-edge (Kaguya-sama wa Kokurasetai Darkness, manga 126244) is a cataloguing artifact, NOT a second licensed work: Shueisha and Comic Natalie both file Darkness as a 番外編/外伝 of the main manga by the same author, MangaUpdates holds no separate series for it, and MangaDex carries it inside the main series' feed at sort keys 64.5 / 83.5. Under the GTO rule (a side story serialized inside the source IS the source) this OVA is plain canon. If Sean rules the other way — Darkness as a distinct work — the standing becomes mixed (one significant instrument segment, ch 96, beside two significant side_source segments) and chapters_adapted is unchanged; nothing else moves.",
+    "OUTSIDE THIS WORK — a stored episode anchor looks wrong. The context grid gives ep 24 (S2 finale) END = ch 102, but ch 102 「かぐや様は気づかない」 is ep 25's SECOND segment: ja-WP's S3 第1話 = 伊井野ミコは癒されたい / かぐや様は気づかない / 藤原千花は闘いたい = chs 95 / 102 / 117 (titles verified against MangaDex), while ep 24 = 生徒会は撮られたい / 生徒会は撮らせたい / 藤原千花は膨らませたい = chs 100 / 101 / 91. MU's segments read END 'Vol 10, Chap 101 (S2 + OVA)' and START 'Vol 11, Chap 102 (S3)'. Proposed (not applied here, different object): ep 24 END 101, chapters 91, 100-101.",
+    "COVERAGE VALUE: printed ch 96 is adapted nowhere in the 41-row TV/TVSP run — 「かぐや様は食べさせたい」 occurs exactly once in ja-WP's whole episode table (the OVA row) and in no fandom episode's chapter field (eps 1-37 swept). If the related-works ledger feeds the 'chapters covered' view, this row is load-bearing: without it ch 96 reads never-adapted while MU's '(S2 + OVA)' segment already counts it as covered."
+  ]
+}

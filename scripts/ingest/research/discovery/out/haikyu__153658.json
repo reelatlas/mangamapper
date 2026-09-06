@@ -1,0 +1,56 @@
+{
+  "series_id": "haikyu",
+  "anilist_id": 153658,
+  "title": "HAIKYU!! The Dumpster Battle",
+  "summary": "The first of the two HAIKYU!! FINAL films (Toho, 2024-02-16, 85 min): a faithful but heavily condensed adaptation of the Spring Nationals third-round Karasuno vs Nekoma match, the 'Battle of the Garbage Dump'. Three independent sources give the same span in Furudate's printed chapter numbering: the Haikyu fandom's film infobox prints 'Chapters 293 to 326'; MangaUpdates' coverage string carries its own per-work segment, 'Vol 33, Chap 293 (Dumpster Battle)' to 'Vol 37, Chap 325 (Dumpster Battle) Abridged'; and ja-Wikipedia (citing the official site's episode reveal) says the film animates the Karasuno-Nekoma match drawn in volumes 33-37 - which the fandom's volume tables resolve to ch 288-331, so 293-326 sits inside it exactly. Nothing in the film is anime-original: the wiki's 37-item 'Difference between Anime and Manga' list is entirely reorders, omissions and small alterations, the largest being a swapped opening - the film restages Hinata and Kenma's first meeting (ch 25, already animated in S1) in place of ch 293's Nekomata / Ikkei backstory flashback - so under the T28 faithfulness clause the standing is canon, with 'abridged' as the annotation (33 chapters in 85 minutes). One surprise: the post-credit scene, the Nekoma third-years running into Daisho and Mika, is chapter 327 material - one chapter past the range the wiki prints - reordered ahead of ch 326's closing Hoshiumi challenge, which is the film's final scene. The TV run's honest terminal is ch 292, so the film picks up at 293 with no gap and carries the reader 34 chapters further than any episode row does.",
+  "standing": "canon",
+  "confidence": "high",
+  "chapters_adapted": [
+    {
+      "start": 293,
+      "end": 325,
+      "note": "vols 33-37, the Karasuno vs Nekoma match in full - ch 293 'Promised Land' (the Nekomata / Ikkei promise, both teams take the court, Daichi and Kuroo's handshake) through ch 325 'A Dumpster Promise' (the post-match handshakes, Kenma thanking Kuroo, the promise of a rematch next year). MangaUpdates pins the film 'Vol 33, Chap 293' to 'Vol 37, Chap 325 ... Abridged'; the fandom's film infobox opens the same range at 293. Abridged throughout (85 min for 33 chapters): cut/moved flashbacks and side scenes are listed one by one in the wiki's anime-vs-manga section - faithfulness-clause divergences, not original material."
+    },
+    {
+      "start": 326,
+      "end": 326,
+      "note": "PARTIAL - only ch 326 'Afternoon's closing beat is in the film: Kamomedai win their match and Hoshiumi walks over to challenge Hinata for the 'Little Giant' title (the film's last scene). The chapter's earlier half (all three teams watching Fukurodani's straight-set round-3 win, Bokuto greeting Kiryu of Mujinazaka, the day-3 schedule talk, lunch) does not appear in the film's plot record. This is why the two sources differ by one: the fandom's field prints '293 to 326' (the chapters drawn on), MU's 325 is its usual last-chapter-adapted-IN-FULL convention."
+    },
+    {
+      "start": 327,
+      "end": 327,
+      "note": "FRAGMENT, past the range any source prints - the post-credit scene only: the Nekoma third-years walking through the crowd run into Daisho and Mika, Daisho's taunt and tirade, Kuroo filming his face. That is ch 327 'The Volleyball Bug's gymnasium scene (the fandom's ch 327 page carries it; the film page's own difference list says 'Manga: Hinata and Hoshiumi speak before Suguru talks with Nekoma's third years / Anime: the scenes are switched'). The rest of 327 - Hinata's reaction to the challenge, the alumni restaurant scene, Fukurodani vs Mujinazaka's set-up - is not adapted. Evidence is one wiki (two of its pages), hence flagged rather than folded into the headline range."
+    }
+  ],
+  "recap": false,
+  "position": {
+    "stored": 87.5,
+    "verdict": "confirmed",
+    "proposed": 87.5,
+    "why": "CONFIRMED at 87.5 — the film continues the run with NO gap. Our last row, ep 87 (TO THE TOP 2 finale, 2020-12-18), ends at ch 292: the fandom's chapter field reads 247 - 290 - 291 - 292 and MU's segment reads 'Vol 33, Chap 292 (S4P2)'. The film opens on ch 293; the official site calls it the episode following S4's Inarizaki match, en-WP a direct sequel to the TV series."
+  },
+  "adopted": null,
+  "repairs": [],
+  "sources": [
+    "https://haikyuu.fandom.com/api.php?action=parse&page=Haikyu!!%20The%20Dumpster%20Battle&prop=wikitext&format=json",
+    "https://haikyuu.fandom.com/api.php?action=parse&page=The%20Promised%20Land%20(Episode)&prop=wikitext&format=json",
+    "https://haikyuu.fandom.com/api.php?action=parse&page=Promised%20Land&prop=wikitext&format=json",
+    "https://haikyuu.fandom.com/api.php?action=parse&page=A%20Dumpster%20Promise&prop=wikitext&format=json",
+    "https://haikyuu.fandom.com/api.php?action=parse&page=Afternoon&prop=wikitext&format=json",
+    "https://haikyuu.fandom.com/api.php?action=parse&page=The%20Volleyball%20Bug&prop=wikitext&format=json",
+    "https://haikyuu.fandom.com/api.php?action=parse&page=Random%20Encounter&prop=wikitext&format=json",
+    "https://haikyuu.fandom.com/api.php?action=parse&page=Monsters'%20Ball%20(Volume)&prop=wikitext&format=json",
+    "https://haikyuu.fandom.com/api.php?action=parse&page=The%20Party's%20Over%20(Volume)&prop=wikitext&format=json",
+    "https://api.mangaupdates.com/v1/series/66577264547",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%8F%E3%82%A4%E3%82%AD%E3%83%A5%E3%83%BC!!&prop=wikitext&format=json",
+    "http://web.archive.org/web/20250720181818/https://haikyu.jp/news/604/",
+    "https://en.wikipedia.org/w/api.php?action=parse&page=Haikyu!!%20The%20Dumpster%20Battle&prop=wikitext&format=json"
+  ],
+  "flags_for_sean": [
+    "THE FILM CARRIES THE SERIES 34 CHAPTERS PAST THE TV TERMINAL. haikyu's honest terminal from episode rows is ep 87 -> ch 292 (context; corroborated by MU's 'Vol 33, Chap 292 (S4P2)' and the fandom's ep-87 chapter field). With this film watched, the reader's true position is ch 327 (326's close is in the film, 327 only as the post-credit fragment). Any post-series continue computed from episode rows alone under-reports haikyu by the whole Nekoma match; the manga is complete at 402 chapters (45 vols), so the honest continue for a viewer who has seen the film is ch 327 (C1-style: 326 is unfinished, but its remaining share is the FIRST half of the chapter, so 327 is the clean read-on point and 326's opening pages are the named skip-back).",
+    "THE 327 FRAGMENT IS THE OVERLAP TO EXPECT IN FILM 2. Gekijoban Haikyu!! VS Chiisana Kyojin (the Kamomedai match; announced 2025-03-02 at the 10th anniversary event per ja-WP, still undated) will start around ch 326/327. When that work is ruled, position it AFTER this film and expect it to re-cover ch 327's opening beats that this film's post-credit scene already used.",
+    "TWO SOURCES, ONE CHAPTER APART, BOTH RIGHT. The fandom's film infobox says 'Chapters 293 to 326'; MU's segment ends 'Vol 37, Chap 325 ... Abridged'. That is MU's documented segment convention (the pin names the last chapter adapted in full; a straddled chapter goes to the next segment) rather than a contradiction - delivered here as 293-325 full + 326 partial + 327 fragment.",
+    "CHAPTER-SPACE CHECK PASSED. The fandom's volume tables (vol 33 = ch 288-296, 34 = 297-305, 35 = 306-314, 36 = 315-322, 37 = 323-331) are contiguous with no phantom slot, they agree with ja-WP's 'the Nekoma match = vols 33-37' and with MU's 'Vol 33, Chap 293' / 'Vol 37, Chap 325', and vol 33 for ch 292 matches our stored ep-87 anchor. No source shift to apply; every number above is the printed WSJ / tankobon numbering. (Note for the census: MU's latest_chapter field reads 145 for this series - a release-record artefact, not a chapter ceiling; the manga ends at 402.)",
+    "THE OPENING IS A RESTAGING, NOT NEW COVERAGE. The film replaces ch 293's Nekomata / Ikkei backstory flashback with an altered retelling of Hinata and Kenma's first meeting - ch 25 'Random Encounter', animated in season 1. Re-shown / restaged material earns no coverage credit, so ch 25 is deliberately NOT in chapters_adapted; it is noted here so nobody later reads the film's cold open as a second adaptation claim."
+  ]
+}

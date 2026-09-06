@@ -1,0 +1,45 @@
+{
+  "series_id": "the-melancholy-of-haruhi-suzumiya",
+  "anilist_id": 7311,
+  "title": "The Disappearance of Haruhi Suzumiya (涼宮ハルヒの消失)",
+  "summary": "A 162-minute all-new theatrical film (Kyoto Animation, 2010-02-06) that adapts the WHOLE of Nagaru Tanigawa's fourth light novel 『涼宮ハルヒの消失』: the printed volume runs プロローグ (p.5), 第一章-第六章, エピローグ (p.246), あとがき (p.252), and the film plays that line in order — 16/17 Dec party prep (prologue), 18 Dec Asakura and the vanished Haruhi (ch 1), the bookmark and Nagato's flat (ch 2), 20 Dec Kouyouen and the keys (ch 3), the escape program to 7 July three years ago (ch 4), the syringe gun and the 18 Dec dawn (ch 5), the hospital (ch 6), the 24 Dec hotpot party (epilogue). ja-WP calls it 「原作第4巻『消失』の内容を映像化したもの」 and haruhi.fandom 'a film based on the fourth Haruhi Suzumiya light novel'; a review quoted by ja-WP says 原作エピソードがほぼ網羅されており. The original material is small and cosmetic — the closing Kyon/Nagato conversation moved from the hospital bed to a snowy rooftop, an added policeman, the clubroom scenes spread over 16-17 Dec, and a post-credits library coda the 公式ガイドブック (via ja-WP) sources to Tanigawa's own idea — so this is canon with divergence under T28's faithfulness clause, not mixed, and it is 全編新作 (wholly new animation), never a recap. Surprise: no publisher prints the volume's 目次 online, so the six-chapter structure rests on two independent fan compilations of the printed table of contents that agree page-for-page (see flags).",
+  "standing": "canon",
+  "confidence": "high",
+  "chapters_adapted": [
+    {
+      "start": 1,
+      "end": 6,
+      "note": "vol 4 『涼宮ハルヒの消失』 IN FULL — プロローグ + 第一章〜第六章 + エピローグ (the volume's whole story; 本編 247 pp, 目次 p.5 / 30 / 73 / 103 / 160 / 195 / 223 / 246, あとがき p.252). vol 4 is a 長編 (one continuous novel), not a short-story collection, so its units are 章 and the prologue/epilogue are unnumbered — named here as facts, never numbered. Chapter-by-chapter correspondence verified in both directions: the novel's per-chapter content (atwiki 大辞典) against the film's scene order (ja-WP あらすじ + haruhi.fandom summary). The 7 July three-years-ago segment (第四章/第五章) revisits the setting of vol 3's 「笹の葉ラプソディ」 but is vol 4's own text — not a second adaptation of that story, and no TV footage is reused."
+    }
+  ],
+  "recap": false,
+  "position": {
+    "stored": 28.5,
+    "verdict": "confirmed",
+    "proposed": 28.5,
+    "why": "Confirmed. Our 28 rows are the 2009 broadcast, which ja-WP's 構成 section says ran 時系列順 (サムデイ イン ザ レイン = 原作の時系列 #14, 冬 — chronologically last). ja-WP's film article: 「物語はテレビアニメ版最終回から続く形となっており」; haruhi.fandom's film infobox: previous = Someday in the Rain. The novel runs 16-24 Dec, after Endless Eight, Sigh and Day of Sagittarius."
+  },
+  "adopted": null,
+  "repairs": [],
+  "sources": [
+    "https://ja.wikipedia.org/w/api.php?action=parse&pageid=601453&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/wiki/%E6%B6%BC%E5%AE%AE%E3%83%8F%E3%83%AB%E3%83%92%E3%81%AE%E6%B6%88%E5%A4%B1_(%E6%98%A0%E7%94%BB)",
+    "https://ja.wikipedia.org/w/api.php?action=parse&pageid=1817643&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/w/api.php?action=parse&pageid=475803&prop=wikitext&format=json",
+    "https://haruhi.fandom.com/api.php?action=parse&page=The_Disappearance_of_Haruhi_Suzumiya_(film)&prop=wikitext&format=json",
+    "https://haruhi.fandom.com/api.php?action=parse&page=The_Disappearance_of_Haruhi_Suzumiya_(light_novel)&prop=wikitext&format=json",
+    "https://www.kyotoanimation.co.jp/works/haruhiDMovie/",
+    "https://haruhitv-anniversary.com/movie/",
+    "https://www.kadokawa.co.jp/product/200403000353/",
+    "https://ndlsearch.ndl.go.jp/books/R100000002-I000007442470",
+    "https://web.archive.org/web/20251114175131/https://w.atwiki.jp/haruhi_dictionary/pages/61.html",
+    "http://wons.yukigesho.com/contents/noveldata.html"
+  ],
+  "flags_for_sean": [
+    "CHAPTER-SPACE SOURCE TIER (the one soft spot, and it is a class, not a one-off). No publisher prints vol 4's 目次 online: KADOKAWA's product page (200403000353) gives only 文庫判／264ページ, 2004-07-31, and the NDL record (000007442470) only 254p. The six-chapter structure therefore rests on two INDEPENDENT fan compilations of the printed table of contents that agree exactly — the 涼宮ハルヒシリーズ大辞典 atwiki (Wayback 2025-11-14) prints the 目次 page numbers プロローグ p.5 / 第一章 p.30 / 第二章 p.73 / 第三章 p.103 / 第四章 p.160 / 第五章 p.195 / 第六章 p.223 / エピローグ p.246 / あとがき p.252, and wons.yukigesho's 各巻分解 (2006) prints the per-chapter page counts 25/43/30/57/35/28/23/6, which are the differences of those page numbers to the page. Their 247-page 本編 total is consistent with NDL's 254p. I treated them as cross-check tier that happens to agree page-for-page; the STANDING and the 'whole volume' finding do not depend on them (ja-WP + haruhi.fandom carry those). Only the literal 'ch 1-6' label does. Also a live trap: a web-search summary handed me プロローグ(4P)/第一章(37P)…第七章(44P) for 消失 — that block is 憂鬱 (vol 1) on the same page. Read the volume header before taking a chapter table.",
+    "CHAPTER NUMBERS HERE ARE VOLUME-LOCAL. The owner's instrument is the light-novel line and the chain registers it per volume (Yuuutsu 1 … Douyou 6), so 'ch 1-6' means 第一章-第六章 INSIDE vol 4, not a run-wide chapter axis — every Haruhi volume restarts at 第一章 (憂鬱 has 第一章-第七章, 溜息 第一章-第五章). If related-works.ts stores a flat chapter start/end, this row needs the volume qualifier to be readable; the note carries it. Worth one ruling for the whole Haruhi shelf before more per-volume verdicts land.",
+    "POSITION DERIVATION, informational — no repair proposed. The stored note says the position was 'derived from the air date', and on this owner the run's dates are NOT monotonic: rows 25-28 carry the 2006 first-broadcast dates (2006-04-02 / 2006-06-18 / 2006-06-11 / 2006-05-28) inside the 2009 chronological broadcast ORDER, because the 2009 run re-aired the fourteen 2006 episodes interleaved with fourteen new ones. 28.5 is right under either reading (the film aired 2010-02-06, after everything, and story order puts it after the chronologically last episode), so I confirmed it — but a date-sorted position derivation is not safe on this series in general.",
+    "adopted LEFT NULL, deliberately. KyoAni's own works page credits 脚本 志茂文彦 and 原作・脚本協力 谷川流; haruhi.fandom's film page wrongly says the film was 'written by Nagaru Tanigawa'. Either way that is a CREDIT on an adaptation of the author's own novel, not a T26 adoption — nothing new entered the novel line (the film's two original touches, the snowy rooftop relocation and the library coda, were Shimo's and Tanigawa's ideas for the FILM, per 公式ガイドブック p.90 via ja-WP, and were never printed).",
+    "NO REPAIRS. Stored kind (movie), title and date all hold: ja-WP, KyoAni's official works page and haruhi.fandom agree on 2010-02-06, MOVIE, 162 min (公式ガイドブック: 162分53秒; some sources round to 163). In passing, and outside the ask, the stored type of ep 28 is corroborated: ja-WP calls サムデイ イン ザ レイン 「谷川自身の脚本によるアニメオリジナルエピソード」 — stored filler, confirmed as stored, no change proposed."
+  ]
+}

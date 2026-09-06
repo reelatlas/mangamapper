@@ -1,0 +1,44 @@
+{
+  "series_id": "konosuba-gods-blessing-on-this-wonderful-world",
+  "anilist_id": 97996,
+  "title": "KONOSUBA -God's blessing on this wonderful world! 2: God's Blessings on These Wonderful Works of Art! (この素晴らしい芸術に祝福を！)",
+  "summary": "A 29-minute unaired episode bundled with the made-to-order limited edition of light novel volume 12 (女騎士のララバイ, 2017-07-24, ISBN 978-4-04-105005-7); TOKYO MX first broadcast it 2019-06-20 as 第2期第11話. THE TASK PREMISE FAILS - it adapts no bonus short story: the official season-2 site and KADOKAWA's product copy say the same thing, 「TVアニメでは放送されないオリジナルアニメ」 whose story is 「原作者暁なつめ書き下ろしエピソードをシナリオ化」 (scripted by Touko Machida) - an episode the author wrote NEW for the disc, not an adaptation of anything printed. Volume 12's own contents rule out a printed home: its chapters are the Darkness tax-collection story and its four store bonuses are 『伝説の魔女』『真夏の夜には……』『暴虐を司る者』『世にも幸運な盗賊娘』 (ja-WP's 特典小説 column and the fandom's volume page agree); none of the four よりみち collections holds it either, and the only printed KonoSuba story with 芸術 in its title is vol 3's Toranoana bonus 『芸術は爆裂だ』 (2014), a different pre-vol-4 story. Two structural controls confirm the negative: the fandom's Anime page prints an LN volume + chapter for every TV row and a よりみち story for each 2025 OVA, but prints 'Anime Original' for this row; and ja-WP files the OVA's lead guest ラン under アニメオリジナルキャラクター and cites 「アニメ版OVA」 as the only source for the Doctor's reincarnation backstory. Zero standing in the novel = filler; the author's 書き下ろし credit is a NOTE, not an adoption (T26 - the story never entered the novel line), and the novel lore it re-uses (the Doctor, the Destroyer, the Crimson Demons' maker) is background, never an animated chapter.",
+  "standing": "filler",
+  "confidence": "high",
+  "chapters_adapted": [],
+  "recap": false,
+  "position": {
+    "stored": 20.51,
+    "verdict": "confirmed",
+    "proposed": 20.51,
+    "why": "Confirmed. The OVA opens after the Arcanretia trip with the debts cleared by the Hans reward - the state our ep 20 ends on (vol 4 ch 5 ~ Epilogue) - and Kazuma boasts of THREE generals beaten (Beldia, Vanir, Hans); the film adds Sylvia and runs vol 4's epilogue into vol 5. ja-WP numbers it 第2期第11話; the wiki navigates Ep 20 → OVA 2 → Movie 1. So 20.51 sits before the film's 20.52."
+  },
+  "adopted": null,
+  "repairs": [],
+  "sources": [
+    "https://konosuba.com/2nd/product/?mode=books",
+    "https://www.kadokawa.co.jp/product/321607000406/",
+    "https://www.kadokawa.co.jp/product/321607000366/",
+    "https://sneakerbunko.jp/product/konosuba/321607000366.html",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%81%93%E3%81%AE%E7%B4%A0%E6%99%B4%E3%82%89%E3%81%97%E3%81%84%E4%B8%96%E7%95%8C%E3%81%AB%E7%A5%9D%E7%A6%8F%E3%82%92!&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%81%93%E3%81%AE%E7%B4%A0%E6%99%B4%E3%82%89%E3%81%97%E3%81%84%E4%B8%96%E7%95%8C%E3%81%AB%E7%A5%9D%E7%A6%8F%E3%82%92!%20(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext&format=json",
+    "https://konosuba.fandom.com/api.php?action=parse&page=Anime&prop=wikitext&format=json",
+    "https://konosuba.fandom.com/api.php?action=parse&page=Konosuba_2_OVA&prop=wikitext&format=json",
+    "https://konosuba.fandom.com/api.php?action=parse&page=Konosuba_Light_Novel_Volume_12&prop=wikitext&format=json",
+    "https://konosuba.fandom.com/api.php?action=parse&page=Konosuba_Movie&prop=wikitext&format=json",
+    "https://konosuba.fandom.com/api.php?action=parse&page=Yorimichi_Anthology_Volume_1&prop=wikitext&format=json",
+    "https://konosuba.fandom.com/api.php?action=parse&page=Yorimichi_Anthology_Volume_2&prop=wikitext&format=json",
+    "https://konosuba.fandom.com/api.php?action=parse&page=Yorimichi_Anthology_Volume_3&prop=wikitext&format=json",
+    "https://konosuba.fandom.com/api.php?action=parse&page=Yorimichi_Anthology_Volume_4&prop=wikitext&format=json",
+    "https://konosuba.fandom.com/api.php?action=parse&page=Ran&prop=wikitext&format=json",
+    "https://en.wikipedia.org/wiki/KonoSuba_season_2",
+    "https://anime.eiga.com/news/102232/"
+  ],
+  "flags_for_sean": [
+    "THE TASK PREMISE FAILED (a claim, not a fact). The ask said the OVA 'adapts a bonus short story - name it and its home in the printed form'. It does not, and no honest 'vol N (bonus story X)' string exists. Volume 12's units are fully enumerated on two independent sources (ja-WP's 特典小説 column; konosuba.fandom's Volume 12 page): six numbered chapters + prologue/epilogue about Darkness, the tax collection and the girl who calls her Mama, plus four store bonuses (伝説の魔女 / 真夏の夜には…… / 暴虐を司る者 / 世にも幸運な盗賊娘). I also cleared all four よりみち collections' tables of contents and swept ja-WP's per-volume 特典小説 list for the whole 17-volume line. The one near-miss is vol 3's Toranoana bonus 『芸術は爆裂だ』 ('Art is Explosion', 2014) - a title pun three years earlier, set pre-vol-4, with no source linking it to the OVA. So chapters_adapted is [] and the volume is the OVA's BUNDLE, not its source.",
+    "THE AUTHOR CREDIT - adopted left NULL on purpose, identically to the S1 OVA verdict (21574). The official S2 site: 「オリジナルアニメは原作者暁なつめ書き下ろしエピソードをシナリオ化」; KADOKAWA: 「原作者書きおろしエピソードを完全シナリオ化」. Akatsuki Natsume wrote the story new for the disc; Touko Machida is credited 脚本 (ja-WP, en-WP). Under T26 and the protocol's Inoue / First Slam Dunk wording that is a CREDIT, not an adoption - nothing entered the novel line. If Sean rules the other way, the entry would be adopted = {basis: 'author', note: '原作者書き下ろしエピソード (konosuba.com/2nd/product; KADOKAWA 321607000406) - scripted by Touko Machida, never printed'}, and the SAME ruling must then cover the S1 OVA (LN vol 9's bundle, same copy) - it is a franchise-wide pattern, not a one-off.",
+    "A CONTROL WORTH KEEPING: konosuba.fandom's 'Anime' page episode table has an 'LN volume' column that prints a volume + chapter range for every TV row, 'Anime Original' for BOTH LN-bundled OVAs (2016 choker, 2017 art), and a よりみち volume + story number for each of the two 2025 'BONUS STAGE' OVAs (Detour 2 story 5; Detour 1 story 7). The column therefore names a short-story home when one exists - which makes its 'Anime Original' on this row a positive claim, not an empty field. Same page: our ep 20 = Volume 4, Chapter 5 ~ Epilogue (manga ch 39-42), which is the beat the OVA opens after.",
+    "NEARBY TRAP for whoever researches the 2025 S3 OVAs: those DO adapt printed よりみち stories (per the table above), AND their theatrical screenings handed out a separate 原作者書き下ろし短編小説 as an 入場特典 (Natalie 613501) - a giveaway novella, not the OVAs' source. Do not let the giveaway be read as the adapted story.",
+    "NO REPAIRS. Stored kind (ova), date 2017-07-24 and title all check out: KADOKAWA product 321607000406 (オリジナルアニメブルーレイ付き同梱版, ISBN 9784041050057, 2017-07-24) and ja-WP's volume table agree; the standard vol 12 shipped 2017-08-01 (product 321607000366) and the first TV broadcast was 2019-06-20 - neither is our stored value, so nothing to fix. Minor by-catch, outside my ask: the fandom's Anime table dates ep 20 '15 March 2017' (the MX Wednesday 24:30 slot) while ja-WP and our row say 2017-03-16 - our value is the right one, but it confirms the fandom's date column runs a day early on this show."
+  ]
+}

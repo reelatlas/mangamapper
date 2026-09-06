@@ -1,0 +1,52 @@
+{
+  "series_id": "that-time-i-got-reincarnated-as-a-slime",
+  "anilist_id": 106509,
+  "title": "That Time I Got Reincarnated as a Slime OAD (転生したらスライムだった件 OAD / 番外編OAD)",
+  "summary": "AniList 106509 is the five-part OAD bundle shipped one episode at a time with the LIMITED EDITIONS of Kawakami Taiki's manga vols 12-16 (2019-07-09 → 2020-11-27): 外伝：HEY！尻！ (the Tempest sumo tournament, vol 13, collection #1), 外伝：Ｍの悲劇？ (the slime-cushion / Sarasa-sand lakeside picnic, vol 12, collection #2) and 外伝：リムルの華麗な教師生活 1-3 (the Freedom Academy field-training arc, vols 14-16). THE TASK PREMISE FAILS: not one of the five adapts a printed unit — no 'vol N, ch X' and no named bonus story exists for any of them. Kodansha's own product copy on all five limited editions calls the disc 「完全新作オリジナルアニメーション」, the vols 14/16 pages add 「原作・伏瀬先生がOADのために描き下ろした、完全新作エピソード」, Bandai Channel's title blurb repeats 完全新作オリジナル, and tensura.fandom prints adaptation = N/A on every OAD page plus, on OAD 3, 'an anime original episode as it does not adopt any material from the Light Novels and the Manga'. So the entry is FILLER against the owner's instrument — zero source share, not a small one, so T28's mixed bar is never in play — and Fuse's authorship of OADs 3-5 (書き下ろし, ANN / Famitsu / Kodansha) is a CREDIT, not an adoption: the story exists only as the OAD and never entered the novel or manga line. The 'Veldora's Journal' the ask suspected is a different work — 閑話：ヴェルドラ日記 is the 2019-03-26 S1 RECAP special, not part of this bundle.",
+  "standing": "filler",
+  "confidence": "high",
+  "chapters_adapted": [],
+  "recap": false,
+  "position": {
+    "stored": 24.5,
+    "verdict": "confirmed",
+    "proposed": 24.5,
+    "why": "Confirmed at 24.5. The five OADs shipped with manga vols 12-16 between S1's finale (ep 24, 2019-03-19) and S2's opener (ep 25, 2021-01-12); ABEMA's watch-order guide puts the whole block after S1 (「第1期の後であればどこで見ても問題ありません」) and OAD 5 ends with Rimuru leaving the Academy for Tempest — the ep 24/25 seam. OADs 3-5 sit internally inside eps 20-23."
+  },
+  "adopted": null,
+  "repairs": [],
+  "sources": [
+    "https://www.kodansha.co.jp/comic/products/0000318126",
+    "https://www.kodansha.co.jp/comic/products/0000318383",
+    "https://www.kodansha.co.jp/comic/products/0000318384",
+    "https://www.kodansha.co.jp/comic/products/0000318386",
+    "https://www.kodansha.co.jp/comic/products/0000328254",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E8%BB%A2%E7%94%9F%E3%81%97%E3%81%9F%E3%82%89%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%A0%E3%81%A0%E3%81%A3%E3%81%9F%E4%BB%B6%20(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E8%BB%A2%E7%94%9F%E3%81%97%E3%81%9F%E3%82%89%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%A0%E3%81%A0%E3%81%A3%E3%81%9F%E4%BB%B6&prop=wikitext&format=json",
+    "https://tensura.fandom.com/api.php?action=parse&page=Season%201/OAD&prop=wikitext&format=json",
+    "https://tensura.fandom.com/api.php?action=parse&page=Extra:%20The%20Tragedy%20of%20M%3F&prop=wikitext&format=json",
+    "https://tensura.fandom.com/api.php?action=parse&page=Extra:%20HEY!%20Butts!&prop=wikitext&format=json",
+    "https://tensura.fandom.com/api.php?action=parse&page=Extra:%20Rimuru's%20Glamorous%20Life%20as%20a%20Teacher,%20Part%201&prop=wikitext&format=json",
+    "https://tensura.fandom.com/api.php?action=parse&page=Extra:%20Rimuru's%20Glamorous%20Life%20as%20a%20Teacher,%20Part%203&prop=wikitext&format=json",
+    "https://tensura.fandom.com/api.php?action=parse&page=Tales:%20Veldora's%20Journal%201&prop=wikitext&format=json",
+    "https://www.b-ch.com/titles/7460/001",
+    "https://www.b-ch.com/titles/7460/002",
+    "https://www.b-ch.com/titles/7460/003",
+    "https://www.b-ch.com/titles/7460/004",
+    "https://www.b-ch.com/titles/7460/005",
+    "https://www.animenewsnetwork.com/news/2019-11-26/that-time-i-got-reincarnated-as-a-slime-anime-gets-3-more-original-anime-dvds/.153702",
+    "https://www.famitsu.com/news/202001/26191358.html",
+    "https://times.abema.tv/articles/-/10037937",
+    "https://www.ten-sura.com/anime/oad/story"
+  ],
+  "flags_for_sean": [
+    "THE TASK PREMISE FAILED (a claim, not a fact). The ask said the bundle 'mixes original episodes with an adaptation of a side story (Veldora's Journal / Tensura Nikki)'. It does not. The five units are, in RELEASE order: 2019-07-09 外伝：Ｍの悲劇？ (manga vol 12 限定版), 2019-12-04 外伝：HEY！尻！ (vol 13; originally announced for vol 11 on 2019-03-29 and delayed — Kodansha says so on the vol 13 page), 2020-03-27 / 2020-07-09 / 2020-11-27 外伝：リムルの華麗な教師生活 その1-3 (vols 14, 15, 16). All five are 完全新作オリジナルアニメーション per the publisher. 閑話：ヴェルドラ日記 (Tales: Veldora's Journal, 2019-03-26) is the S1 RECAP special — a separate work, filler by N8 when it reaches the shelf — and 転スラ日記 is Shiba's spin-off manga's own 12-episode TV anime (2021). Neither is inside AniList 106509.",
+    "WHY THIS WORK WAS IN THE same_instrument PROGRAMME AT ALL — the halo note is refuted. The stored row reads 'adapts the series' own instrument: Tensei Shitara Slime Datta Ken (MANGA)', which is AniList's SIDE_STORY / ADAPTATION edge to node 86399. That edge is the documented franchise-tag trap: it is a production/franchise relation (the OADs were bundled WITH the manga's limited editions and share its 原作 credit line 「原作：川上泰樹・伏瀬・みっつばー」), not a chapter claim. Nothing in the bundle animates a manga or novel page.",
+    "COLLECTION NUMBERING ≠ RELEASE ORDER (an index-join trap for whoever renders this shelf). Bandai Channel, dAnime, ABEMA and the official portal all number the sumo OAD 外伝：HEY！尻！ as 第1話 and the cushion OAD 外伝：Ｍの悲劇？ as 第2話 — production order, because the sumo disc slipped from vol 11 (2019-03-29) to vol 13 (2019-12-04). AniList's stored start date 2019-07-09 is the CUSHION OAD's ship date while its synopsis text runs in collection order (OVA 1 = sumo). Both facts are correct; joining OAD number to date would invert them.",
+    "CHAPTER-SPACE OBSERVATION, no action needed for this verdict. The context header calls the instrument Fuse's light novel, but the stored anchors are in Kawakami's MANGA numbering (eps 20-23 = chs 43-54; ep 91 END = ch 142), which tensura.fandom's own chapter pages confirm (ch 55 'Natural Enemy of Monsters', Manga Volume 12, on sale 2019-03-26). Worth a look at the series' source_type / instrument pairing at some point; it does not touch this ruling because the OADs adapt NEITHER the manga nor the novel.",
+    "adopted LEFT NULL ON PURPOSE. Fuse wrote OADs 3-5 himself — Kodansha: 「原作・伏瀬先生がOADのために描き下ろした、完全新作エピソード」; Famitsu: 「作者・伏瀬氏書き下ろし完全新作エピソード」; ANN: 'Original novel author Fuse wrote new stories exclusively for the three-part anime' (the on-screen 脚本 is Kazuyuki Fudeyasu). Under T26 and the protocol's Inoue / First Slam Dunk line that is a CREDIT, not an adoption: I found no printing of the story in any form — it is absent from ja-WP's novel and manga articles, from the LN volume list, and no novelization or comicalization exists. Same shape as the KONOSUBA vol-9 OVA already delivered in this programme.",
+    "ONE NOTE-WORTHY CONTINUITY FACT (not a standing fact). OAD 5 has Tiss summon a daemon who is Noir, the Primordial Black — Diablo before his naming — which the anime line proper does not reach until S2. ABEMA's guide flags him as the trilogy's draw. It is Fuse-written anime-original material, so it changes nothing here, but it is the kind of beat that could later be pulled into the source line; if that ever happens the row becomes canon + adopted{author} and would need re-ruling.",
+    "SIBLING WORKS SHARING THIS POSITION SLOT (for the shelf, not researched here): 閑話：ヴェルドラ日記 (S1 recap, 2019-03-26, fandom 'episode 24.5') and 閑話：ヒナタ・サカグチ (fandom 'episode 24.9', the pre-S2 interlude). Both also land after our ep 24, so expect three works at or near 24.5 once they are ruled.",
+    "NO REPAIRS. Stored kind 'ova' is right (オリジナルビデオ on Bandai Channel; an OAD is an OVA sold with a book), the stored date 2019-07-09 matches Kodansha's ship date for the vol 12 限定版 (ISBN 978-4-06-513935-6), and the title matches AniList. The ledger note's 'standing and chapters pending' clause is what this verdict closes."
+  ]
+}

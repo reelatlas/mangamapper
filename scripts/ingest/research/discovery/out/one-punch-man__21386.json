@@ -1,0 +1,44 @@
+{
+  "series_id": "one-punch-man",
+  "anilist_id": 21386,
+  "title": "One-Punch Man: Road to Hero",
+  "summary": "Road to Hero is the 24-minute OAD bundled with the limited edition of Murata's manga volume 10 (2015-12-04, ISBN 978-4-08-908260-7) — NOT with the first Blu-ray, which shipped 2015-12-24 carrying OVA 1 'A Shadow That Snuck Up Too Close'; the official site's BOX page says '原作コミックス10巻に同梱されていたOVAを収録' and labels it 'OVA 1 #00 コミックス同梱版OVA', and ANN's vintage reads '2015-12-04 (bundled with 10th manga volume)'. It tells the origin of Saitama's hero suit: his tracksuit-era training year, the draper whose shop the Niya Niya Loans gang is squeezing, and the gang boss who becomes Fish of Darkness — all inside a present-day frame in which Saitama recounts the story to Genos (en-WP: 'In present day, after hearing all this, Genos tells Saitama that he should get a better suit'). No unit of the owner's instrument carries this story: every character in it (Draper, Landlady, Fish of Darkness, Caramel Macchiato Kaito) is categorised 'OVA Only' / 'Anime Only Characters' on the fandom wiki with 'Chapter(s): None' in its battle table, and ja-WP files 呉服屋 and ヤミ金魚 under アニメオリジナル, each attributed to 単行本10巻付属のOVA『ロード・トゥ・ヒーロー』. I checked both units of the chapter space: no numbered chapter (N撃目 / 'Punch N') and no bonus chapter — all 45 bonus chapters on the wiki (番外編, the online ones numbered '番外編10' etc., the volume extras titled and unnumbered) were fetched and none is this story, and volume 10 itself holds 48th–55th Punch plus extras Tatsumaki's Day Off / Sense / Numbers and the Holiday Special. So the OVA is an anime-original prequel — zero standing in the instrument, filler under T27 — and AniList's 'original story by the series' mangaka, ONE' is the franchise 原作 credit read as a story credit: the script is Tomohiro Suzuki (ja-WP 脚本 鈴木智尋; en-WP; ANN).",
+  "standing": "filler",
+  "confidence": "high",
+  "chapters_adapted": [],
+  "recap": false,
+  "position": {
+    "stored": 9.5,
+    "verdict": "confirmed",
+    "proposed": 9.5,
+    "why": "Confirmed. The disc shipped 2015-12-04 with manga vol 10 — between ep 9 (11-29) and ep 10 (12-06). The prequel is a flashback inside a PRESENT-DAY frame (Saitama recounts it to Genos, already his disciple), so it cannot sit before ep 1; the fandom's 'OVA 0' and the official '#00' are OVA-set ordinals, not run positions."
+  },
+  "adopted": null,
+  "repairs": [],
+  "sources": [
+    "https://onepunchman.fandom.com/api.php?action=parse&page=OVA%200&prop=wikitext&format=json",
+    "https://onepunchman.fandom.com/api.php?action=parse&page=Draper&prop=wikitext&format=json",
+    "https://onepunchman.fandom.com/api.php?action=parse&page=Fish%20of%20Darkness&prop=wikitext&format=json",
+    "https://onepunchman.fandom.com/api.php?action=parse&page=Landlady&prop=wikitext&format=json",
+    "https://onepunchman.fandom.com/api.php?action=parse&page=Caramel%20Macchiato%20Kaito&prop=wikitext&format=json",
+    "https://onepunchman.fandom.com/api.php?action=parse&page=Saitama%27s%20Hero%20Suit&prop=wikitext&format=json",
+    "https://onepunchman.fandom.com/api.php?action=parse&page=Volume%2010&prop=wikitext&format=json",
+    "https://onepunchman.fandom.com/api.php?action=query&list=categorymembers&cmtitle=Category%3ABonus%20Chapters&cmlimit=500&format=json",
+    "https://onepunchman.fandom.com/api.php?action=parse&page=Episode%209&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%83%AF%E3%83%B3%E3%83%91%E3%83%B3%E3%83%9E%E3%83%B3&prop=wikitext&format=json&formatversion=2",
+    "https://en.wikipedia.org/w/api.php?action=parse&page=List%20of%20One-Punch%20Man%20episodes&prop=wikitext&format=json&formatversion=2",
+    "https://onepunchman-anime.net/goods/bd/bdbox.php",
+    "https://onepunchman-anime.net/news/archives/6576",
+    "https://v-storage.jp/anime/opm/106581/",
+    "https://www.animenewsnetwork.com/encyclopedia/anime.php?id=17989",
+    "https://web.archive.org/web/20151206020456/http://onepunchman-anime.net/news/"
+  ],
+  "flags_for_sean": [
+    "TASK PREMISE FAILED (a claim, not a fact): the task described this as 'the OVA bundled with the first Blu-ray'. It is the manga volume 10 OAD (2015-12-04, ISBN 978-4-08-908260-7). The first BD/DVD volume shipped 2015-12-24 (archived official news: '12月24日のBlu-ray & DVD第1巻の発売') and carried OVA 1 忍び寄りすぎる影. The two are different works; Road to Hero was only added to home video in the 2018 Blu-ray BOX (official BOX page; V-STORAGE).",
+    "NAMESAKE TRAP for any future join: 'One-Punch Man: Road to Hero' is ALSO a 2019 Oasis Games mobile RPG (successor 'Road to Hero 2.0', 2020). On the fandom wiki the page titled 'One-Punch Man: Road to Hero' IS the game; the OVA lives at 'OVA 0' behind an {{about}} hatnote. Never key this title without checking the entity.",
+    "AniList's synopsis ('an original story by the series' mangaka, ONE') is UNVERIFIED and probably the franchise 原作 credit misread: ja-WP credits 脚本 鈴木智尋 / 絵コンテ 立川譲 / 演出 山岡実, en-WP 'Written by Tomohiro Suzuki', ANN 'Script: Tomohiro Suzuki' with ONE + Murata only as Original Creator. ja-WP does record 原案 ONE for the volume-9 drama CD 「桃太郎？」, so its silence here is meaningful. Even if a Japanese primary later shows an ONE 原案, the protocol makes that a CREDIT in the note, never adoption — nothing of this story ever entered the manga line.",
+    "Kind stands as `ova`; the precise Japanese term is OAD (原作コミックス同梱), as the fandom's own OVA note says.",
+    "Control that the instrument lineage is sound: the fandom's TV-episode infobox carries a `Chapters =` field and Episode 9 reads 26, 27, 28, 29 — exactly our stored anchor. The OVA pages use a chapterless {{Infobox movie}}, so their silence on chapters is structural (not a claim); the positive evidence here is the character-level data plus ja-WP's アニメオリジナル classification.",
+    "Out of scope, noted for the shelf: OVAs 1-6 (the BD/DVD volumes) likewise show no chapter link on the wiki, but I did not research them — they need their own triage before any standing is written."
+  ]
+}

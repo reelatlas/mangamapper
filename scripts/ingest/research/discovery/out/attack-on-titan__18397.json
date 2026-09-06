@@ -1,0 +1,48 @@
+{
+  "series_id": "attack-on-titan",
+  "anilist_id": 18397,
+  "title": "Attack on Titan OVA",
+  "summary": "AniList 18397 bundles the three S1-era OADs, which Kodansha shipped with the LIMITED EDITIONS OF MANGA VOLUMES 12, 13 and 14 (2013-12-09 / 2014-04-09 / 2014-08-08) — not with the S1 discs. OAD #3.5 (イルゼの手帳 ―ある調査兵団員の手記―) animates Isayama's special chapter 特別編「イルゼの手帳」: Kodansha's vol-5 目次 prints it at the HEAD of volume 5, ahead of ch 19 「まだ目を見れない」 (vol 4 ends at ch 18), so it sits between printed chs 18 and 19 in book order and carries NO mainline number (初出 週刊少年マガジン 2011年第2・3合併号); en-WP says the same in English ('adapting a special chapter from tankōbon volume 5'). The other two adapt nothing — Kodansha's own copy calls each 完全新作アニメ ('an entirely new anime episode'), the Attack on Titan Wiki leaves both 'Manga chapters' fields empty, and en-WP describes them only as 104th-Training-Corps stories (849 for #3.25, 848 for #3.75). One full source episode beside two full originals is a substantial source share beside a substantial original share, so the ENTRY is mixed under T28; inside OAD #3.5 the chapter's own events (Ilse's flight, the Talking Titan, Levi and Hange finding the body and the notebook) are all there, wrapped in an expanded 49th-expedition frame the chapter lacks (Hange vs Erwin, Oruo's near-death, the Titan-capture approval) plus an opening recap montage of eps 1-3 — divergence and recap, weightless, not a second source. Surprise for the file: the wiki records that #3.25 animates five of Isayama's joke 次巻予告 'fake volume previews' (vols 4, 7, 8, 9, 12) — author-drawn volume gag panels, not chapters, so they carry no standing.",
+  "standing": "mixed",
+  "confidence": "high",
+  "chapters_adapted": [
+    {
+      "start": null,
+      "end": null,
+      "note": "the UNNUMBERED special chapter 特別編「イルゼの手帳」 (Ilse's Notebook) — it has no mainline number in the 1-139 space: Kodansha's vol-5 目次 lists 特別編 イルゼの手帳 first, then まだ目を見れない (ch 19), 特別作戦班 (20), 開門 (21), 長距離索敵陣形 (22), and vol 4 closes on ch 18, so in book order it sits between printed chs 18 and 19 with no number of its own (初出 週刊少年マガジン 2011年第2・3合併号; collected in vol 5, 2011-08-09). Adapted in full by OAD #3.5 only; OADs #3.25 and #3.75 adapt nothing."
+    }
+  ],
+  "recap": false,
+  "position": {
+    "stored": 25.51,
+    "verdict": "corrected",
+    "proposed": 3.5,
+    "why": "All three OADs are officially numbered BETWEEN TV eps 3 and 4: shingeki.tv's OAD Archive Blu-ray lists 収録話 #3.25 / #3.5 / #3.75; en-WP and ja-WP print the same numbers and the wiki names ep 3 previous, ep 4 next. Kodansha calls OAD 1 a 調査兵団の前日譚 and sets #3.25 in 849 and #3.75 in 848 (trainee days). 25.51 was the air-date proposal only."
+  },
+  "adopted": null,
+  "repairs": [],
+  "sources": [
+    "https://kc.kodansha.co.jp/product?isbn=9784063845136",
+    "https://kc.kodansha.co.jp/product?isbn=9784063584653",
+    "https://kc.kodansha.co.jp/product?isbn=9784063584882",
+    "https://kc.kodansha.co.jp/product?isbn=9784063587036",
+    "https://shingeki.tv/final/product/oad/",
+    "https://shingeki.tv/news/archives/1436",
+    "https://en.wikipedia.org/wiki/List_of_Attack_on_Titan_episodes",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E9%80%B2%E6%92%83%E3%81%AE%E5%B7%A8%E4%BA%BA&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E9%80%B2%E6%92%83%E3%81%AE%E5%B7%A8%E4%BA%BA%20(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext&format=json",
+    "https://attackontitan.fandom.com/api.php?action=parse&page=Ilse%27s%20Notebook&prop=wikitext&format=json",
+    "https://attackontitan.fandom.com/api.php?action=parse&page=Ilse%27s%20Notebook:%20Notes%20from%20a%20Scout%20Regiment%20Member&prop=wikitext&format=json",
+    "https://attackontitan.fandom.com/api.php?action=parse&page=A%20Sudden%20Visitor:%20The%20Torturous%20Curse%20of%20Adolescence&prop=wikitext&format=json",
+    "https://attackontitan.fandom.com/api.php?action=parse&page=Distress&prop=wikitext&format=json",
+    "https://attackontitan.fandom.com/api.php?action=parse&page=List%20of%20Attack%20on%20Titan%20chapters&prop=wikitext&format=json",
+    "https://attackontitan.fandom.com/api.php?action=parse&page=List%20of%20Attack%20on%20Titan%20episodes/OVA&prop=wikitext&format=json"
+  ],
+  "flags_for_sean": [
+    "CHAPTER SHAPE: the adapted unit has no number. start/end are null and the unit is named in the note, per 'unnumbered extras and one-shots are FACTS, never numbers'. The only honest numeric hook is VOLUME 5 (head of the volume, before ch 19) — never 18.5 or any decimal a database may sort it under.",
+    "BUNDLE: one entry, three OADs, one standing. If it is ever split into three: #3.5 イルゼの手帳 = canon (the special chapter; the extra 49th-expedition frame is divergence, the eps 1-3 montage is recap); #3.25 突然の来訪者 = filler; #3.75 困難 = filler (Kodansha: 完全新作アニメ on both).",
+    "TASK PREMISE REFUTED: the OADs did not ship with the S1 discs. Kodansha bundled them with the LIMITED EDITIONS of manga vols 12 / 13 / 14 (ISBN 978-4-06-358465-3, -358488-2, -358703-6). AniList's single 2013-12-09 date is OAD 1's alone; the bundle runs to 2014-08-08. OAD 1 was also first announced for the vol-11 LE (2013-08-09) and postponed (en-WP, ja-WP), and later got a terrestrial airing on MBS/TBS on 2014-09-28.",
+    "POSITION VALUE: 3.5 is the official number of the bundle's own source-adapting OAD, so it doubles as the bundle's slot; any fraction in (3, 4) states the same claim if the halo needs a value that does not read as an episode number (3.26 / 3.51 would do). Our rows 1-25 are S1's 25 TV episodes with no recap row, so our ep 3 IS S1 ep 3 (A Dim Light Amid Despair) — no offset.",
+    "CROSS-CHECK TIER, no weight: the Attack on Titan Wiki's trivia (echoed by Japanese fan write-ups) says #3.25 animates five of Isayama's joke 次巻予告 fake volume previews (vols 4, 7, 8, 9, 12). Author-drawn volume gag panels are not chapters of the instrument — recorded here so the tie is not re-discovered later as a source claim."
+  ]
+}

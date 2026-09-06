@@ -1,0 +1,41 @@
+{
+  "series_id": "konosuba-gods-blessing-on-this-wonderful-world",
+  "anilist_id": 21574,
+  "title": "KONOSUBA -God's blessing on this wonderful world!: God's Blessings On This Wonderful Choker! (この素晴らしいチョーカーに祝福を！)",
+  "summary": "A 24-minute unaired OVA bundled with the made-to-order limited edition of light novel volume 9 (紅の宿命), released 2016-06-24: Kazuma picks up a wish-granting choker at Wiz's shop, it will not come off until his wish is granted and it tightens for four days while the girls (plus Yunyun) indulge his every degrading whim. THE TASK PREMISE FAILS - the OVA adapts no bonus short story. Volume 9's four bonus stories are named identically by ja-WP's 特典小説 column and by the fandom's volume page (Animate 「続、アクアの水商売」, Toranoana 「抑制する紅魔族」, Gamers 「たまにはこんなお約束」, e-book 「とあるひよこの必殺芸」) and none is the choker story; nor is it among the five S1 Blu-ray booklet stories Akatsuki wrote (later collected as よりみち! stories 1-5), nor anywhere in the three よりみち collections. What the sources positively say is that the author wrote the episode NEW for the disc: KADOKAWA's own product copy reads 「完全受注生産！ 原作者書きおろしエピソードを完全シナリオ化！！」 and 「TVアニメでは放送されないオリジナルアニメ」, and Anime Hack (eiga.com, 2016-03-20) reports 「収録されるアニメは原作者・暁氏による書き下ろしエピソード」. The fandom's episode table - which prints an LN volume + chapter for every TV episode and a よりみち story for each 2025 OVA - prints 'Anime Original' on this row and the OVA page names no chapter, unlike every TV episode page. So: zero standing in the novel = filler, with the author's 書きおろし credit as a NOTE only (T26 / the First Slam Dunk shape: a story that exists only as the anime never entered the source line).",
+  "standing": "filler",
+  "confidence": "high",
+  "chapters_adapted": [],
+  "recap": false,
+  "position": {
+    "stored": 10.5,
+    "verdict": "confirmed",
+    "proposed": 10.5,
+    "why": "Confirmed at 10.5. Official numbering, disc order and broadcast order agree: ja-WP lists it as 第11話 inside the 第1期 block; the S1 Blu-ray BOX is 第1話-第10話＋OVA第11話; TOKYO MX first aired it 2019-03-27, after the S1 rerun and before the S2 rerun (from 04-10). The fandom's own in-universe reasoning would place it near 14.5 - see flags."
+  },
+  "adopted": null,
+  "repairs": [],
+  "sources": [
+    "https://konosuba.fandom.com/api.php?action=parse&page=Anime&prop=wikitext&format=json",
+    "https://konosuba.fandom.com/api.php?action=parse&page=Konosuba_OVA&prop=wikitext&format=json",
+    "https://konosuba.fandom.com/api.php?action=parse&page=Konosuba_Light_Novel_Volume_9&prop=wikitext&format=json",
+    "https://konosuba.fandom.com/api.php?action=parse&page=Konosuba_Episode_10&prop=wikitext&format=json",
+    "https://konosuba.fandom.com/api.php?action=parse&page=Konosuba_BD_5&prop=wikitext&format=json",
+    "https://konosuba.fandom.com/api.php?action=parse&page=Yorimichi_Anthology_Volume_1&prop=wikitext&format=json",
+    "https://konosuba.fandom.com/api.php?action=parse&page=Yorimichi_Anthology_Volume_2&prop=wikitext&format=json",
+    "https://konosuba.fandom.com/api.php?action=parse&page=Yorimichi_Anthology_Volume_3&prop=wikitext&format=json",
+    "https://www.kadokawa.co.jp/product/321510000448/",
+    "https://www.kadokawa.co.jp/product/321510000449/",
+    "https://anime.eiga.com/news/102232/",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%81%93%E3%81%AE%E7%B4%A0%E6%99%B4%E3%82%89%E3%81%97%E3%81%84%E4%B8%96%E7%95%8C%E3%81%AB%E7%A5%9D%E7%A6%8F%E3%82%92%21&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%81%93%E3%81%AE%E7%B4%A0%E6%99%B4%E3%82%89%E3%81%97%E3%81%84%E4%B8%96%E7%95%8C%E3%81%AB%E7%A5%9D%E7%A6%8F%E3%82%92%21%20%28%E3%82%A2%E3%83%8B%E3%83%A1%29&prop=wikitext&format=json",
+    "https://www.animatetimes.com/news/details.php?id=1552896769"
+  ],
+  "flags_for_sean": [
+    "THE TASK PREMISE FAILED (a claim, not a fact). The ask said the OVA 'adapts a bonus short story - name it and its home'. It does not. Volume 9's bonus stories are fully enumerated and cross-checked on two independent sources (ja-WP 特典小説 column; konosuba.fandom's Volume 9 page) - 続、アクアの水商売 (Animate), 抑制する紅魔族 (Toranoana), たまにはこんなお約束 (Gamers), とあるひよこの必殺芸 (e-book) - and none is the choker story. I also cleared the five S1 Blu-ray booklet stories (BD 1-5, all by Akatsuki, all later collected as よりみち! stories 1-5) and all three よりみち collections' tables of contents. No printed novel unit exists for this episode, so chapters_adapted is [] and no 'vol N (bonus story X)' form can be delivered honestly.",
+    "THE AUTHOR CREDIT - adopted left NULL on purpose. KADOKAWA: 「原作者書きおろしエピソードを完全シナリオ化！！」; Anime Hack: 「収録されるアニメは原作者・暁氏による書き下ろしエピソード」. Akatsuki Natsume wrote this episode's story new for the Blu-ray (Aoi Akashiro is credited 脚本 on ja-WP's episode table). Under T26 and the protocol's own words this is a CREDIT, not an adoption: nothing was put INTO the novel line - the story was never printed as a volume chapter, a store bonus SS, a BD booklet story or a よりみち entry. If Sean wants the credit carried as a note rather than prose, the entry would be adopted = {basis: 'author', note: '原作者書きおろしエピソード (KADOKAWA product copy; Anime Hack 2016-03-20) - a screenplay-only story, never in the novel line'} - but that would contradict the protocol's Inoue/First Slam Dunk ruling, so I did not write it.",
+    "POSITION - one alternative worth a ruling. konosuba.fandom's OVA page carries a 'Timeline Placement' section arguing the story sits IN-UNIVERSE after S2 ep 4 (our ep 14) and before S2 ep 5 (our ep 15): Yunyun is already an acquaintance (she debuts in our ep 12), Darkness is back with the party (our ep 13), the debt is still unpaid (cleared in our ep 15) and Vanir II is not yet at Wiz's shop. That reasoning is explicitly hedged fan inference and the same page concedes an inconsistency ('Kazuma and Darkness should have already told Wiz about Vanir's death'). Every OFFICIAL ordering - ja-WP's 第11話 row inside the 第1期 block, the S1 Blu-ray BOX 第1話-第10話＋OVA第11話, the fandom's own Previous=Episode 10 / Next=S2 Episode 1 infobox, and the 2019 TOKYO MX broadcast between the S1 and S2 reruns - gives 10.5, which is what I confirmed. If Sean prefers in-story chronology over official numbering the alternative is 14.5.",
+    "SIBLING, NOT RESEARCHED HERE: the S2 OVA 「この素晴らしい芸術に祝福を！」 (bundled with LN vol 12, 2017-07-24) is the SAME shape - the fandom's episode table prints 'Anime Original' for it too, and ja-WP records an anime-original character (ラン, voiced by 赤﨑千夏) debuting in it. Expect an identical filler ruling; its natural position is 20.5 (it is numbered 第11話 of 第2期 and the fandom's infobox reads Previous=Episode 20 / Next=Movie 1), which would put it alongside the already-delivered Legend of Crimson verdict at 20.5.",
+    "NO REPAIRS. Stored kind (ova), the AniList date 2016-06-24 and the title all check out against KADOKAWA's product record for the 同梱版 (発売日 2016年06月24日, ISBN 9784041039533); the standard vol 9 shipped a week later on 2016-07-01 (product 321510000449), which is the date the fandom's volume page rounds to '30 June 2016' - not our date, so nothing to fix."
+  ]
+}
