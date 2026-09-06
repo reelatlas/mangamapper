@@ -12,15 +12,17 @@ const arg = (k: string): string | null => { const i = process.argv.indexOf(k); r
 const DIR = arg('--dir') ?? 'scripts/ingest/research/discovery/out';
 const STANDINGS = new Set(['canon', 'mixed', 'filler']); const CONF = new Set(['high', 'medium', 'low']); const YNU = new Set(['yes', 'no', 'unclear']);
 
-type Chap = { start: number | string | null; end?: number | string | null; note?: string; volume?: number | null };
+type Chap = { start: number | string | null; end?: number | string | null; note?: string; volume?: number | null; weight?: 'significant' | 'sliver' };
 type PerWork = { series_id: string; anilist_id: number; title: string; summary: string; standing: string; confidence: string; chapters_adapted: Chap[]; recap: boolean; position: { stored: number | null; verdict: string; proposed: number | null; why: string }; adopted: { basis: string; note: string } | null; repairs: unknown[]; sources: string[]; flags_for_sean: string[] };
 type Triage = { series_id: string; summary: string; works: { anilist_id: number; title: string; adapts_chapters: string; chapters: string | null; why: string; sources: string[] }[]; flags_for_sean: string[] };
 
 const chapters = (c: Chap[]) => c.map((x) => (x.end != null && x.end !== x.start ? `${x.start ?? '?'}-${x.end}` : String(x.start ?? x.note ?? '?'))).join(', ');
-/** the ruling's `chapter` is the END — the last numbered unit adapted (A4's convention; the Abyss / Mugen Train verifiers) — never the first listed unit (KonoSuba leads with an unnumbered epilogue scene) */
-const endChapter = (c: Chap[]): number | null => { for (const x of [...c].reverse()) { const e = x.end ?? x.start; if (typeof e === 'number') return e; } return null; };
-/** a novel owner's chapters are volume-local (T25 light_novel): the volume of the END unit, from its `volume` field or a "vol N" in its start / note — searched from the END backwards */
-const volumeOf = (c: Chap[]): number | null => { for (const x of [...c].reverse()) { if (typeof x.volume === 'number') return x.volume; const m = String(x.start ?? '').match(/vol\s*(\d+)/i) ?? String(x.end ?? '').match(/vol\s*(\d+)/i) ?? String(x.note ?? '').match(/vol(?:ume)?\s*(\d+)/i); if (m) return Number(m[1]); } return null; };
+/** the ruling's `chapter` is the END — the last SIGNIFICANT row's end (a sliver row — a restaged / out-of-order / post-credit beat — is noted, never the END: T28's sliver clause, A47; the Haikyu verifier's finding); a string start (a volume-local unit) yields null */
+const significant = (c: Chap[]) => c.filter((x) => x.weight !== 'sliver' && !/^\s*(?:sliver|fragment|post-credit|restag|re-shown|cold open)/i.test(x.note ?? '')); // the explicit weight, or a note that OPENS by naming itself a sliver — a coverage row that merely mentions a cold open stays
+const num = (v: number | string | null | undefined): number | null => (typeof v === 'number' ? v : typeof v === 'string' && /^\d+$/.test(v.trim()) ? Number(v) : null); // a verdict may print its numbers as strings
+const endChapter = (c: Chap[]): number | null => { for (const x of [...significant(c)].reverse()) { const e = num(x.end ?? x.start); if (e != null) return e; } return null; };
+/** the END row's `volume` field — never a regex over notes (it once read "Vol 33" out of a quoted MangaUpdates string); null when the verdict did not fill it, and the curator writes it */
+const volumeOf = (c: Chap[]): number | null => { for (const x of [...significant(c)].reverse()) { if (typeof x.volume === 'number') return x.volume; } return null; };
 const esc = (s: string) => s.replace(/\|/g, '/').replace(/\n/g, ' ');
 /** a triage note is ONE LINE: the researcher's first sentence (the conclusion, by the protocol's convention); a longer first sentence is cut at a word boundary with a VISIBLE ellipsis — never a silent mid-word slice (the wave-2 verifiers' finding); the full why stays cited on the entry */
 const oneLine = (why: string, cap = 300): string => {
@@ -56,6 +58,7 @@ async function main() {
   // the ledger note is short by design (RelatedWorkRuling.note; the Slam Dunk verifier: a 1,480-char `why` sliced at 400 lost its conclusion) — over-cap
   // fields are WARNINGS: the entry is written by hand at curation, never truncated silently
   const warnings = perWork.filter(({ v }) => (v.position?.why ?? '').length > 400 || (v.summary ?? '').length > 900).map(({ file, v }) => `${file}: position.why ${(v.position?.why ?? '').length} chars / summary ${(v.summary ?? '').length} chars — over the 400 / 900 ledger caps: write the note and reason by hand (lead with the conclusion and the caveat)`);
+  for (const { file, v } of perWork) if (v.standing !== 'filler' && (v.chapters_adapted ?? []).length && volumeOf(v.chapters_adapted) == null) warnings.push(`${file}: no \`volume\` on the END row of chapters_adapted — the entry's volume is written by hand (the protocol now asks for it)`);
   for (const { file, v } of triage) { const over = v.works.filter((w) => oneLine(w.why ?? '').endsWith('(see the verdict)')); if (over.length) warnings.push(`${file}: ${over.length} work note(s) whose first sentence exceeds the cap and is cut visibly (${over.map((w) => w.anilist_id).join(', ')}) — read them before the paste`); }
   console.log(`[validate-extras] ${files.length} verdict file(s): ${perWork.length} per-work, ${triage.length} triage · ${problems.length} problem(s)${problems.length ? '\n  ' + problems.join('\n  ') : ''}${warnings.length ? `\n  ${warnings.length} over-cap note(s) (hand-curate):\n  ` + warnings.join('\n  ') : ''}`);
   if (process.argv.includes('--entries')) {

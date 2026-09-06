@@ -95,7 +95,7 @@ source plus consistent secondary evidence; `low` = inference — say what would 
   "summary": "3-6 sentences: what the work is, what the sources say it adapts, anything surprising",
   "standing": "canon",
   "confidence": "high",
-  "chapters_adapted": [{ "start": 54, "end": 69, "note": "vols 7-8; the Enmu / Akaza arc — one line" }],
+  "chapters_adapted": [{ "start": 54, "end": 69, "volume": 8, "weight": "significant", "note": "the Enmu / Akaza arc — one line" }],
   "recap": false,
   "position": { "stored": 26.5, "verdict": "confirmed", "proposed": 26.5, "why": "directly after S1 ep 26; S2 ep 1-7 retell it" },
   "adopted": null,
@@ -104,7 +104,11 @@ source plus consistent secondary evidence; `low` = inference — say what would 
   "flags_for_sean": []
 }
 ```
-`standing` ∈ canon | mixed | filler; `chapters_adapted` is `[]` when filler; `adopted` is
+`standing` ∈ canon | mixed | filler; `chapters_adapted` is `[]` when filler — each entry carries the
+`volume` its END sits in (the printed tankōbon number; the ledger stores one END chapter and its volume)
+and a `weight`: `significant` (adapted coverage) or `sliver` (a restaged, out-of-order or post-credit
+beat, an opening tail — noted, never the END: T28's sliver clause, A47); the END chapter of the entry
+is the last SIGNIFICANT row's end; `adopted` is
 `null` or `{ "basis": "author | studio | community", "note": "…" }` (a note for the
 sitting, never a standing); `position.verdict` ∈ confirmed | corrected.
 
