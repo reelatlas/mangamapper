@@ -1154,6 +1154,61 @@
    19-23 / 39 (chain_source) and 18 / 93-95 (AFL's loose Mixed bucket),
    beelzebub 15 / 26-28 / 51, rurouni TV ep 95 (identity). Batch 22 opens on
    the boruto follow-up (lanes I + C) with the batch-21 tooling copied.
+134. ✅ **WAVES 4a + 4b APPLIED (Sean ruled 2026-09-05 evening, Cursor's notes evaluated;
+    eleven works, thirteen rulings) · THE WRITER'S PRE-PASS PLANS BEFORE IT TOUCHES A ROW ·
+    THE RULE-LOGIC EVALUATION DRAFTED (E1-E15).** Eleven per-work verdicts (research-agent,
+    Opus) + eleven adversarial reviews (verdict-verifier, Fable): all SOUND WITH NOTES, no
+    value refuted; four agents died at a session limit (two had written their files; two
+    re-dispatched on the new account). Sean kept the model structure as built (Opus research,
+    Fable verification) after the cost diagnosis (memory research-cost-structure: ≈450k tokens
+    per work, the verifier tier as heavy as the research). RULINGS — Kinnikuman: Movie 2 MIXED
+    (ch 82-83, vol 7; the pages' sole adaptation beside an original half; title repaired to
+    Ooabare! Seigi Choujin per MAL / Toei), the TV special MIXED (ch 86-89, vol 7; the spine
+    is the chapters', ja-WP catalogues the replaced half), Movie 4 MIXED (the UNNUMBERED Robin
+    Memo one-shot — no volume, no number; 1985-07-13, the task's 'Movie 3, 1984' refuted) —
+    all three ruled to their WATCH SLOTS on the licensor-stated settings (65.51 with Movie 1
+    ruled 65.5; 47.5 with Toei Video's VOL.5 listing; 119.5 with the PSA ruled 119.51), the
+    broadcast slots in the notes. Ranma: the six-OVA bundle MIXED (230-233 / 241 / 259-265,
+    END 265 vol 25; one id, one standing), the two-part Special CANON (266-278, END 278 vol
+    26; a fabricated 'ja-WP 原作 column' citation struck by the verifier), the third film MIXED
+    at the borderline (301-302, vol 29; ~36-43% studio-made; 配給 東映) with the English title
+    repaired 'Flew' → 'Grew' (Viz's jacket) — Cursor's 'keep the Japanese on-screen name'
+    evaluated and DEFERRED to the display-label pass as a rule (a one-row language swap is a
+    one-off, P9); the cluster ruled 161.5 / 161.51 / 161.52 explicitly (E13: the stored order
+    was insertion history — the rows predate the writer's air-date sort). One Piece: Episode
+    of Luffy FILLER (re-shown ch 1-2 pages + a two-page first-time sliver, the wiki's Qref
+    index reproduced over 693 pages) and 3D2Y FILLER (re-told bookends, zero first-time
+    coverage; the recap share wider than the verdict said) — both at their broadcast slots,
+    in-universe placements noted only. Prince of Tennis: the National Tournament chain CANON
+    ×3 (995: 237-305 with the interludes, END 305 vol 35; 2752: 306-340, END 340 vol 38;
+    4053: 341-379 to the manga's last chapter, vol 42), seams clean at 305/306 and 340/341,
+    positions 178.5 / .51 / .52 confirmed — the STRUCTURE fork ruled: three ledger rows NOW,
+    an OVA COMPONENT at the next /discover sitting with its OWN numbering (1-26 or three sets,
+    never TV 179-204; the verdict JSON the anchor source — Cursor's note, adopted). THE WRITER:
+    `planRuledMoves` (lib, pure, 5 tests) — the pre-pass plans every ruled move before any row
+    is touched; a slot held by a non-moving row REFUSES the move and keeps the row (the old
+    pre-pass removed first and refused after: the row would have been deleted — the Movie 4
+    verifier's paper find, E14); a swap and a chain still land (the PSA vacating 119.5 for
+    Movie 4 in one run); I45's enforcement names it; five edges redeployed. The rulings map now
+    THROWS on a duplicate (series, work) key instead of overriding silently (three entries
+    were MERGED: 3273 / 147810 / 3280). LEDGER: 697 halo rows (12 canon · 9 mixed · 309 filler
+    · 367 pending) + 39 wiki; every related_work_* class 0; no other census class moved.
+    FINDINGS captured for the evaluation (EXTRAS-SITTING §6, E1-E15): identity vs PK · ruled
+    decimals with no base · bucket = claim vs standing = fact · unnamed mechanisms + dead
+    exports · the writer at script tier · the AniList-entry grain · the two-map overlap a mint
+    must resolve · intra-slot order as insertion history · format routing a manga-continuing
+    OVA block to extras · the pre-pass hazard (fixed) · adaptedNodes drops every edge when the
+    source tag is null (E15: PoT 995 was held with its ADAPTATION → 30049 edge staged all
+    along). QUEUED (never silent): a wiki title parser gate (kinnikuman eps 47 / 86 / 137
+    store `|airdate= |episodes=` as their title — the only three rows catalog-wide); ranma ep
+    161's stale anchor note (AFG ch 227 vs the value 229); PoT ep 177's date (03-23 vs ja-WP
+    03-30, a one-hour special with 178) and eps 177-178's types; SP9 Episode of Sabo (staged
+    recap / filler by rule, may front-run chs 786 / 792 / 794); Ranma ½ SUPER (1011) and the
+    2008 OVA unstaged; the five live MINT proposals not among the 27 declarations (appendix B,
+    regenerated with live AniList facts — the API answered again this evening; two date traps
+    in the comicalization test captured). NEXT: the rule-logic evaluation as one table in chat
+    (Sean's ask), then step 2's film mint writer.
+
 133. ✅ **WAVE 3 APPLIED — THE FIRST SAME-INSTRUMENT WAVE (Sean ruled 2026-09-05
     with Cursor; eight works).** Eight per-work verdicts (research-agent, Opus) +
     eight adversarial reviews (verdict-verifier, Fable): all SOUND WITH NOTES, no

@@ -60,6 +60,16 @@ related_work_* class 0. Sean's standing request: ONE RULE-LOGIC EVALUATION of th
 wave 4 lands and before step 2's mint writer — a generated table in chat (mechanism · gate · audit class ·
 witnesses · verdict). Wave 4 = the nine yeses + the Prince of Tennis Semifinal / Final OVAs, in two P12 waves.
 
+**Sixth pass (waves 4a + 4b applied; §12.134).** Eleven works, thirteen rulings (three merged into existing
+entries). Kinnikuman's three ruled to WATCH SLOTS on licensor-stated settings (the broadcast slots in the notes);
+Ranma's cluster ruled explicitly (E13) with the English title repaired Flew → Grew and the title-language
+question deferred to the display pass as a rule; the two One Piece specials filler at their broadcast slots; the
+Prince of Tennis chain canon ×3 as ledger rows now and an OVA COMPONENT (own numbering, never TV 179-204; the
+verdict JSON the anchor source) at the next /discover sitting. The writer's pre-pass now plans before touching a
+row (E14, fixed); E15 (adaptedNodes drops every edge when the source tag is null) queued for the evaluation. Sean
+kept the model structure (Opus research / Fable verification) after the cost diagnosis. Ledger 697 halo rows (12
+canon · 9 mixed · 309 filler · 367 pending) + 39 wiki; every related_work_* class 0. NEXT: §6 delivered in chat.
+
 Gaps found while executing (queued in STATE, not rulings): SOURCE_CHAINS works carry no AniList ids
 (a chain work reads as another run: Prisma Illya 2wei / 3rei, JoJo Stardust Crusaders, Haruhi's
 per-volume nodes); a comicalization of a film reads as the run it adapts until node start years

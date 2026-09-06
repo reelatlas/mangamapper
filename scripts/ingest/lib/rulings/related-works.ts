@@ -655,7 +655,7 @@ export const ENTRIES: RulingEntry<RelatedWorkRuling>[] = [
   {
     seriesId: 'kinnikuman',
     ruleId: 'I45',
-    value: { anilistId: 3273, standing: 'filler', note: "original (triage): NO — original screenplay (山崎晴哉), film 1 of the Toei Manga Matsuri line." },
+    value: { anilistId: 3273, standing: 'filler', position: 65.5, note: "original (triage): NO — original screenplay (山崎晴哉), film 1 of the Toei Manga Matsuri line. Position RULED 65.5 (wave 4a, Sean 2026-09-05): the seam slot it derives to, ruled beside Movie 2's 65.51 so the pair never re-walks." },
     reason:
       "Owner triage (triage__kinnikuman.json): Kinnikuman (1984) adapts no chapters of the instrument — NO — original screenplay (山崎晴哉), film 1 of the Toei Manga Matsuri line.",
     ruledBy: 'Sean',
@@ -705,7 +705,7 @@ export const ENTRIES: RulingEntry<RelatedWorkRuling>[] = [
   {
     seriesId: 'kinnikuman',
     ruleId: 'I45',
-    value: { anilistId: 147810, standing: 'filler', note: "original (triage): NO — an original 15-minute 16mm traffic-safety education film (安全教育アニメ; ja-WP lists it in that genre's table)." },
+    value: { anilistId: 147810, standing: 'filler', position: 119.51, note: "original (triage): NO — an original 15-minute 16mm traffic-safety education film (安全教育アニメ; ja-WP lists it in that genre's table). Position RULED 119.51 (wave 4a, Sean 2026-09-05): 119.5 is Movie 4's ruled watch slot; an out-of-story PSA follows it." },
     reason:
       "Owner triage (triage__kinnikuman.json): Kinnikuman no Koutsuu Anzen adapts no chapters of the instrument — NO — an original 15-minute 16mm traffic-safety education film (安全教育アニメ; ja-WP lists it in that genre's table).",
     ruledBy: 'Sean',
@@ -1115,9 +1115,9 @@ export const ENTRIES: RulingEntry<RelatedWorkRuling>[] = [
   {
     seriesId: 'kinnikuman',
     ruleId: 'I45',
-    value: { anilistId: 3280, airDate: '1984-04-07', note: 'repair (P8): AniList prints 1984-07-04 — a month/day swap; ja-WP (three places) and the 土曜トップスペシャル list give Saturday 1984-04-07. Standing stays pending: the special adapts ch 86-89 (the owner triage, wave 2) and joins the per-work programme.' },
+    value: { anilistId: 3280, standing: 'mixed', chapter: 89, volume: 7, chaptersAdapted: "86-89 (JC vol 7 = 81-94) — the Planet Rakka / 宇宙野武士 spine (the invasion, the elder's messenger, the seven assembled, Rakka freed); the seven named bandits' ring duels, Marron's abduction, the Prince Medaka reveal and four recruitment duels are original", position: 47.5, airDate: '1984-04-07', note: "MIXED — the chapters supply the spine, ja-WP's アニメオリジナルシリーズ section catalogues the replaced second half; the block's sole animation (ch 80-81 / 84-85 animated nowhere). Ruled to the WATCH SLOT 47.5: the setting + the wiki's viewing order, Toei Video's VOL.5 = TVスペシャル＋第48話～第56話; broadcast 1984-04-07 = the air-date slot 51.5 (mid-match). ja-WP: パラレルワールド的な扱い. The 扉絵 roster (WSJ 1984 #18) = a credit (T26). Date repair (P8): AniList prints 1984-07-04, a month/day swap — Saturday 1984-04-07 on ja-WP and the 土曜トップスペシャル list." },
     reason:
-      "Wave 2 triage (verified R24): the TV special 決戦!七人の正義超人vs宇宙野武士 adapts printed ch 86-89 (the Rakka arc the TV run cut) — a YES; the stored date is a month/day swap. Sean 2026-09-05: the repair lands now, the standing waits for the per-work verdict.",
+      "Wave 2 triage (verified R24): the TV special adapts printed ch 86-89 (the Rakka arc the TV run cut); the stored date is a month/day swap. WAVE 4a (verified SOUND WITH NOTES): mixed — the spine is the chapters', the second half a replaced plot; Kayama's WSJ issue numbers prove no phantom slot; the watch slot 47.5 on the setting, the wiki's stated viewing order and Toei Video's own VOL.5 listing (a listing order, not an AoT-style ordinal). Sean 2026-09-05: mixed, 47.5.",
     ruledBy: 'Sean',
     ruledOn: '2026-09-05',
     cite: ['scripts/ingest/research/discovery/out/triage__kinnikuman.json', 'scripts/ingest/research/discovery/verify/triage__kinnikuman.md'],
@@ -1203,10 +1203,115 @@ export const ENTRIES: RulingEntry<RelatedWorkRuling>[] = [
     ruledOn: '2026-09-05',
     cite: ['scripts/ingest/research/discovery/out/that-time-i-got-reincarnated-as-a-slime__106509.json', 'scripts/ingest/research/discovery/verify/that-time-i-got-reincarnated-as-a-slime__106509.md'],
   },
+  // ---- WAVE 4a (Kinnikuman ×3, Ranma ×3, One Piece ×2) + WAVE 4b (the Prince of Tennis National Tournament chain), Sean ruled 2026-09-05 with Cursor's notes: positions as WATCH SLOTS where the licensor states the setting; the Ranma cluster ruled explicitly (E13); the PoT chain three ledger rows now, an OVA component at the next /discover sitting
+  {
+    seriesId: 'kinnikuman',
+    ruleId: 'I45',
+    value: { anilistId: 3274, standing: 'mixed', chapter: 83, volume: 7, chaptersAdapted: "82-83 (JC vol 7 = 81-94) — Bibimba's attempt, the wounded leg, Meat's cape; Horumon Yaki / Shishkeba Boo's challenge (the film's first half); the Black Emperor / Black Corps half is original", position: 65.51, title: 'Kinnikuman: Ooabare! Seigi Choujin', note: "MIXED — ch 82-83's SOLE adaptation (the TV run cut 第2次怪獣退治編) beside a wholly original Black Corps half; share estimated (~15-20 of 48 min), no timings published. Ruled to the WATCH SLOT 65.51: set between 7人の悪魔超人編 and 黄金のマスク編 (Eiren / Anime Hodai copy; the wiki chain ep 65B → Movie 1 → Movie 2 → 66A); broadcast 1984-12-22 = the air-date slot 76.5. Title per MAL / Toei (ooabare; AniList's Daiabare / Segi is a misreading). ゆでたまご 原作 = a credit (T26)." },
+    reason:
+      "Wave 4a (verified SOUND WITH NOTES): Nikupedia's per-volume lists re-cumulated (vol 7 = 81-94, the vol-2 prose-line trap survives), the act on Eiren / ja-WP / the wiki / Anime Hodai, the New Characters list = Black Corps only; the setting is licensor-STATED copy with no licensor watch order. Sean 2026-09-05: mixed; positions as WATCH SLOTS (65.51, Movie 1 ruled 65.5); the title repair as 'Ooabare'.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/out/kinnikuman__3274.json', 'scripts/ingest/research/discovery/verify/kinnikuman__3274.md'],
+  },
+  {
+    seriesId: 'kinnikuman',
+    ruleId: 'I45',
+    value: { anilistId: 3276, standing: 'mixed', chapter: null, volume: null, chaptersAdapted: "the UNNUMBERED one-shot 「キン肉マン スペシャル編 ロビン・メモ!!の巻」 — 8 colour pages, 週刊少年ジャンプ特別編集『キン肉マン熱闘スペシャル』1984-08-25; collected only in お〜い!!マンガだよ〜ん (1989) and マッスル・リターンズ (1997): no mainline number, in no numbered tankōbon", position: 119.5, note: "MIXED (medium) — all four one-shot beats in order (the film is its sole adaptation; the licensor's synopsis is the one-shot's plot) beside a wholly original middle (Hydra King, eight matches); ~8 pages ≈ 5 of 39 min, untimed. Movie 4, 1985-07-13 (the task's 'Movie 3, 1984' was wrong; nothing stored repaired). Ruled to the WATCH SLOT 119.5: 時系列は夢の超人タッグ編終了後 (ja-WP; the wiki timeline 87-119 → Movie 4 → 120); the air-date slot 100.5 is a story impossibility. The one-shot precedes the film (manga → film). ゆでたまご = a credit (T26)." },
+    reason:
+      "Wave 4a (verified SOUND WITH NOTES): identity, the one-shot (NDL for the 1989 collection; no numbered tankōbon holds it), the direction and the T28 fork reproduced; mixed is the better-supported reading under T28's text and the AoT / Railgun-41 precedent (the Kaguya precedent: the author's own uncollected special is the instrument's). The slot 119.5 was the PSA's — ruled to 119.51 in the same paste; the writer now plans before touching a row (E14). Sean 2026-09-05: mixed, 119.5.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/out/kinnikuman__3276.json', 'scripts/ingest/research/discovery/verify/kinnikuman__3276.md'],
+  },
+  {
+    seriesId: 'ranma-1-2',
+    ruleId: 'I45',
+    value: { anilistId: 1007, standing: 'mixed', chapter: 265, volume: 25, chaptersAdapted: "230-233 (OVA Vol.1 = v22 stories 7-10); 241 (Vol.3 = v23 story 7); 259-265 (Vol.4 = v25 stories 3-9); Vol.2 / 5 / 6 originals. A ch-245 graft in one lineage only (the Ranma Wiki) — a sentence, never a unit", position: 161.5, note: "MIXED — three whole-arc tapes beside three originals (one AniList id, one standing; if ever split: Vol.1 / 4 canon, Vol.3 mixed-if-split, Vol.2 / 5 / 6 filler). The six 1993-94 OVAs (Vol.1-6, 1993-10-21 → 1994-08-19). Continuous 1-407 numbering; 単行本 = 新装版 boundaries (Kinokuniya's 目次); Viz runs two lower — never in the ledger. After the whole run on content: ep 161 ends at 229, Vol.1 opens on 230. Ruled 161.5 with the Special .51 and the film .52 (chapter and packaging order). Takahashi 原作 = a credit (T26)." },
+    reason:
+      "Wave 4a (verified SOUND WITH NOTES): membership on AniList / en-WP / ja-WP / the OP-ED fence, chapters on four lineages at every edge, the 新装版 fork proven absent at publisher tier, 234-240 / 242-258 animated by nothing. Sean 2026-09-05: mixed; the cluster ruled 161.5 / 161.51 / 161.52 (E13: the stored order was insertion history).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/out/ranma-1-2__1007.json', 'scripts/ingest/research/discovery/verify/ranma-1-2__1007.md'],
+  },
+  {
+    seriesId: 'ranma-1-2',
+    ruleId: 'I45',
+    value: { anilistId: 1008, standing: 'canon', chapter: 278, volume: 26, chaptersAdapted: "266-278 (25巻10話 → 26巻11話, the Ryugenzawa arc; Part One 266-268, Part Two 269-278), adapted to the end (the closing hand-hold)", position: 161.51, note: "CANON — the two-part SPECIAL 甦る記憶 (上巻 1994-12-16 / 下巻 1995-02-17): every difference is a cut or alteration, no original share (53 min for 13 chapters). Boundaries on en-WP's Shogakukan volume table (vol 25 = 257-267, vol 26 = 268-278), the wiki's infoboxes and Shogakukan's 新装版 blurbs — not a 'ja-WP 原作 column' (none exists). Ruled 161.51: chapter order and Viz's set order put the Special before the third film; the air date (1994-12) does not. Title stays AniList's." },
+    reason:
+      "Wave 4a (verified SOUND WITH NOTES): canon on the negative control (ja-WP's OVAオリジナル marker sits on Vol.2 / 5 / 6, not here), both edges on the volume table, the 新装版 contents at publisher tier; one fabricated citation struck (no ja-WP 原作 column); the title repair refuted (AniList's romaji is stored correctly). Sean 2026-09-05: canon, 161.51 ruled.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/out/ranma-1-2__1008.json', 'scripts/ingest/research/discovery/verify/ranma-1-2__1008.md'],
+  },
+  {
+    seriesId: 'ranma-1-2',
+    ruleId: 'I45',
+    value: { anilistId: 1010, standing: 'mixed', chapter: 302, volume: 29, chaptersAdapted: "301-302 (29巻1-2話, 恐怖の鳳凰剣 / 不滅の鳳凰剣 — the Phoenix Sword arc), adapted end to end", position: 161.52, title: "Ranma ½: One Grew Over the Kuno's Nest", note: "MIXED at the borderline — both chapters whole, but ~36-43% of the 25-min film is studio-made (the eviction, the Ukyo / Shampoo recruitment, the vacant-lot night; the aerial battle, the Furinkan rampage) and the phoenix's behaviour is changed; the distributor sold it on the original characters (映連). The third film, 1994-08-20, 配給 東映 (not a Toho fair). Ruled 161.52 after the Special (story order, Pony Canyon's DVD Vol.3, Viz's OVA #9). Title: Viz's jacket prints GREW — AniList's 'Flew' is a mistranscription; the on-screen 'Team Ranma vs. The Legendary Phoenix' is the display pass's question. Takahashi 原作 = a credit (T26)." },
+    reason:
+      "Wave 4a (verified SOUND WITH NOTES): 301-302 on ja-WP, the wiki's closed reverse index, en-WP's tables and the title-page scans; Shogakukan's own 新装版 29 目次; the verifier's own share count (36-39%) and MIXED recommended with the verdict; 配給 東映 on seven sources. Sean 2026-09-05 (Cursor's note evaluated): mixed; 'Flew' → 'Grew' as the English string; the title language is the display pass's rule, not a one-row swap.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/out/ranma-1-2__1010.json', 'scripts/ingest/research/discovery/verify/ranma-1-2__1010.md'],
+  },
+  {
+    seriesId: 'one-piece',
+    ruleId: 'I45',
+    value: { anilistId: 16239, standing: 'filler', note: "FILLER — an original (Hand Island; 完全新作) whose flashbacks re-animate ch 1 pp. 4-47 and ch 2 pp. 4-22, pages the TV run owns (eps 4 / 1) — a recap share, weightless (T28); the ONE first-time share is ch 1 pp. 4-5 (Luffy's scar), a sliver (the wiki's Qref index: exactly two credits). Oda 原作 / 監修 / designs = credits (T26). Broadcast 2012-12-15 (Fuji TV); 576.51 = the broadcast slot; in-universe 'a little before Film Z' (574.5-578.5, all filler rows) noted only." },
+    reason:
+      "Wave 4a (verified SOUND WITH NOTES): the single first-time share reproduced mechanically over all 693 pages linking the special; the re-shown pages on Episode 1 / 4's own notes; nothing entered the manga. Sean 2026-09-05: filler, 576.51.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/out/one-piece__16239.json', 'scripts/ingest/research/discovery/verify/one-piece__16239.md'],
+  },
+  {
+    seriesId: 'one-piece',
+    ruleId: 'I45',
+    value: { anilistId: 20835, standing: 'filler', note: "FILLER — an original (Byrnndi World, Oda's 描き下ろし villain — a credit, never an adoption, T26) with re-told bookends: Marineford beats (554-580, Ace's death 574), the cliff vow (589), the 3D2Y frame (597), Sabaody (598-602) and a series montage — every page TV-animated (eps 465-522), zero first-time coverage. The post-credit Sabo scene = ch 668's cover, a sliver. 658.5 = the broadcast slot (2014-08-30); the in-universe 516.5 (the timeskip) noted only." },
+    reason:
+      "Wave 4a (verified SOUND WITH NOTES): zero first-time coverage reproduced page by page; the recap share reaches wider than the verdict's 570-574 (Little Oars Jr, the Pacifistas, Kuzan / Law — all TV-animated); 658.5 the honest position under the KonoSuba precedent. Sean 2026-09-05: filler, 658.5.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/out/one-piece__20835.json', 'scripts/ingest/research/discovery/verify/one-piece__20835.md'],
+  },
+  {
+    seriesId: 'the-prince-of-tennis',
+    ruleId: 'I45',
+    value: { anilistId: 995, standing: 'canon', chapter: 305, volume: 35, chaptersAdapted: "248-305 in running order (vols 29-35) + first-time interludes 237(tail)-239, 240, 242, 245, 247 (vols 27-29); 249 re-shown as flashbacks (a sliver); gaps 241 / 243 / 244 / 246 never animated; ep 5's Doubles 1 dramatised from a match the manga reports in 269 (the one original share)", note: "CANON — the 13-episode 全国大会篇 (2006-03-24 → 2007-03-23) restarts the adaptation the TV run abandoned after the Kanto final; every row on the wiki's fields AND the licensor's per-episode synopses. END 305 (Atobe's shave; the Semifinal opens on 306). Held until now because adaptedNodes drops every edge when AniList's source tag is null — the ADAPTATION → 30049 edge was staged all along (E15). Position 178.5 after ep 178 (2005-03-30), first of the chain. Konomi 原作 = a credit (T26)." },
+    reason:
+      "Wave 4b (verified SOUND WITH NOTES): all three triage corrections reproduced (245 in ep 2; ep 8's 248 the other half; 249 a flashback sliver); the 'stale snapshot' repair refuted on mechanism (E15); ep 5's original match mixed only at episode grain. Sean 2026-09-05: canon; the chain stays three ledger rows now and is declared an OVA COMPONENT (own numbering 1-26 or three sets, never TV 179-204; the verdict JSON the anchor source) at the next /discover sitting.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/out/the-prince-of-tennis__995.json', 'scripts/ingest/research/discovery/verify/the-prince-of-tennis__995.md'],
+  },
+  {
+    seriesId: 'the-prince-of-tennis',
+    ruleId: 'I45',
+    value: { anilistId: 2752, standing: 'canon', chapter: 340, volume: 38, chaptersAdapted: "306-340 (vols 35-38): ep 1 306-313 (a 305 cold open re-shown — a sliver) · 2 314-321 · 3 321-327 · 4 327-332 · 5 331-336 + 338 · 6 336-340", note: "CANON — the six-episode Semifinal (2007-06-22 → 2008-01-25; the licensor's 9月25日 for disc 2, not the wiki's Sept 28): Seigaku vs Shitenhōji, 36 chapters in 136 min, every difference a cut. END 340 「テニスの王子達へ」 in full; the Final opens on 341. Numbering: the licensor 第1話-第6話, the platforms Episode 14-19, TV Tokyo 2011 ＃1-＃13 with the Final. Position 178.51, second of the chain. Konomi = a credit (T26)." },
+    reason:
+      "Wave 4b (verified SOUND WITH NOTES): all eight rows on both lineages character for character; the 305 seam leans re-shown (a pre-OP cold open); the seams 305/306 and 340/341 clean; vol 38 on four lineages. Sean 2026-09-05: canon, 178.51 (durable — strictly increasing dates).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/out/the-prince-of-tennis__2752.json', 'scripts/ingest/research/discovery/verify/the-prince-of-tennis__2752.md'],
+  },
+  {
+    seriesId: 'the-prince-of-tennis',
+    ruleId: 'I45',
+    value: { anilistId: 4053, standing: 'canon', chapter: 379, volume: 42, chaptersAdapted: "341-379 (vols 39-42): 341-344 · 345-353 · 354-358 · 359-365 · 365-370 · 370-375 · 374-379 — to the manga's last chapter", note: "CANON — the seven-episode Final (2008-04-25 → 2009-01-23; 第0話 on the BOX): Seigaku vs Rikkai to the epilogue; 379 is the final chapter (vol 42 = 372-379; MU: 'Vol 42, Chap 379 (Including OVA)'). Clean seam from 340. The next works (ANOTHER STORY 5751, the 2021 film 113254) adapt nothing printed. Position 178.52, third of the chain. Konomi = a credit (T26)." },
+    reason:
+      "Wave 4b (verified SOUND WITH NOTES): all seven rows on the fandom and the licensor, 379 the final chapter on four sources, the seam from 340 clean with no recap share, 178.52 durable; the chapter fields are one editor's 2015 sitting (the single-lineage caveat, corroborated by the licensor at every boundary). Sean 2026-09-05: canon, 178.52.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-05',
+    cite: ['scripts/ingest/research/discovery/out/the-prince-of-tennis__4053.json', 'scripts/ingest/research/discovery/verify/the-prince-of-tennis__4053.md'],
+  },
 ];
 
 /** series id → anilist id → the ruling */
 export const RELATED_WORK_RULINGS: Record<string, Record<number, RelatedWorkRuling>> = {};
-for (const e of ENTRIES) (RELATED_WORK_RULINGS[e.seriesId] ??= {})[e.value.anilistId] = e.value;
+for (const e of ENTRIES) {
+  const m = (RELATED_WORK_RULINGS[e.seriesId] ??= {});
+  if (m[e.value.anilistId]) throw new Error(`related-works rulings: duplicate entry for ${e.seriesId} × anilist ${e.value.anilistId} — the lookup is ONE ruling per work: merge the fields into the existing entry (a second entry would silently override the first)`);
+  m[e.value.anilistId] = e.value;
+}
 
 export const relatedWorkRuling = (seriesId: string, anilistId: number): RelatedWorkRuling | null => RELATED_WORK_RULINGS[seriesId]?.[anilistId] ?? null;
