@@ -245,6 +245,69 @@ Gundam UC → other_instrument).
    research wave (`/research-batch`, the extras variant) · (d) → step 2, films
    as entries · step 3, the manga watch table. Batch 23 wave 1 stays parked.
 
+## 6. THE RULE-LOGIC EVALUATION — DRAFT (Sean's ask 2026-09-05; delivered in chat as ONE table after wave 4 lands, before step 2's mint writer)
+
+Sean: "once we have our waves done and rules in place especially with the seed, one quick evaluation on the
+strategy of the rule logic to make sure we still like how it turned out and how its structured and will be the
+best way for best practice moving forward". Two layers: the GENERATED inventory (`rule-inventory.ts --md`,
+regenerate before use — P5) and the judgment findings below it (E1-E11, each with a proposed change and a
+cost; Sean rules each line). Wave 4's witnesses (a six-OVA bundle, an unnumbered one-shot, two recap-boundary
+specials) refine E2 / E3 / E8 before the table goes to chat.
+
+### 6.1 The inventory (generated 2026-09-05 — regenerate)
+
+| mechanism | home | used inside home | consumed by (gates) | in an edge bundle | ledger enforcement naming it | test lines |
+|---|---|---|---|---|---|---|
+| `ExtraBucket` | related-works.ts | 5 | audit-discovery.ts, lib/discovery.ts, sync-related-works.ts | yes (refresh-discovery) | — | 0 |
+| `IN_RUN_RELATIONS` | related-works.ts | 0 | — UNUSED | no | — | 0 |
+| `STRONG_IN_RUN_RELATIONS` | related-works.ts | 1 | — (internal helper) | no | — | 0 |
+| `relatedWorkOwners` | related-works.ts | 0 | lib/discovery.ts | yes (refresh-discovery) | — | 7 |
+| `Standing` | related-works.ts | 3 | lib/resolve.ts, lib/rulings/applied/batch-6.ts, lib/rulings/related-works.ts, lib/rulings/standing-annotations.ts | no | — | 0 |
+| `ExtraMedia` | related-works.ts | 4 | — (internal helper) | no | — | 2 |
+| `PROMO` | related-works.ts | 1 | lib/discovery.ts | yes (refresh-discovery) | I45 | 0 |
+| `normTitle` | related-works.ts | 2 | — (internal helper) | no | — | 0 |
+| `matchRelatedTitle` | related-works.ts | 0 | audit-discovery.ts | no | I46 | 7 |
+| `titleMatch` | related-works.ts | 5 | — (internal helper) | no | — | 3 |
+| `AdoptionPick` | related-works.ts | 1 | — (internal helper) | no | — | 0 |
+| `pickAdoption` | related-works.ts | 0 | audit-discovery.ts, sync-related-works.ts | no | — | 10 |
+| `SOURCE_FORMATS` | related-works.ts | 1 | — (internal helper) | no | — | 0 |
+| `NOVEL_SOURCE_TYPES` | related-works.ts | 1 | — (internal helper) | no | — | 0 |
+| `AdaptedNode` | related-works.ts | 1 | — (internal helper) | no | — | 0 |
+| `adaptedNodes` | related-works.ts | 1 | lib/discovery.ts, sync-related-works.ts | yes (refresh-discovery) | I45 | 3 |
+| `ownerInstrumentIds` | related-works.ts | 0 | lib/discovery.ts | yes (refresh-discovery) | I45 | 3 |
+| `extraBucket` | related-works.ts | 0 | lib/discovery.ts | yes (refresh-discovery) | I13, I45 | 20 |
+| `extraStanding` | related-works.ts | 1 | — (internal helper) | no | I45 | 7 |
+| `extraKind` | related-works.ts | 0 | audit-discovery.ts, sync-related-works.ts | no | — | 7 |
+| `isoDate` | related-works.ts | 0 | audit-discovery.ts, sync-related-works.ts | no | — | 0 |
+| `deriveWatchPosition` | related-works.ts | 0 | audit-discovery.ts, sync-related-works.ts | no | I45 | 7 |
+| `freePosition` | related-works.ts | 0 | sync-related-works.ts | no | — | 4 |
+| `ledgerWorthy` | related-works.ts | 0 | — UNUSED | no | — | 2 |
+| `relatedWorkStanding` | related-works.ts | 0 | audit-discovery.ts, lib/rulings/related-works.ts, sync-related-works.ts | no | I45 | 5 |
+| `RelatedWorkIdentity` | related-work-ids.ts | 5 | — (internal helper) | no | — | 0 |
+| `RegisteredBy` | related-work-ids.ts | 1 | — (internal helper) | no | — | 0 |
+| `wikiKey` | related-work-ids.ts | 1 | sync-related-works.ts, sync-watch-order.ts | no | — | 3 |
+| `lookupRelatedWork` | related-work-ids.ts | 1 | sync-related-works.ts, sync-watch-order.ts | no | — | 2 |
+| `LedgerRowIdentity` | related-work-ids.ts | 1 | — (internal helper) | no | — | 0 |
+| `identityProblems` | related-work-ids.ts | 0 | audit-discovery.ts | no | I46 | 4 |
+
+Census classes emitted by audit-discovery.ts for related works (15): extra_same_instrument, extra_other_instrument, extra_recap, extra_original, extra_crossover, extra_unknown, extra_unstaged, extra_promo, extra_alternative, related_work_duplicate, related_work_identity_gap, related_work_identity_conflict, related_work_identity_orphan, related_work_stale, related_work_violation
+
+### 6.2 Findings (judgment layer — DRAFT)
+
+| # | finding | evidence | proposed change | cost / timing |
+|---|---|---|---|---|
+| E1 | **Identity vs primary key.** `watch_order_entries` is keyed (series, position) while the identity is (series, anilist_id); the wiki identity key is `series@position` — a POSITION, i.e. a mutable attribute | the writer needs a pre-pass to move a ruled row (AoT 25.51 → 3.5); a swap could overwrite an identity until the pre-pass existed; the registry carries the join | PK → (series, anilist_id) (or a surrogate id) with position a per-series unique column; the wiki key → a stable per-row key from the wiki list itself | one migration + writer simplification + types regen; BEFORE the UI pass (the UI keys on ids — Sean's identity concern); does not block step 2 |
+| E2 | **Ruled positions are raw decimals with no base reference.** A renumber of the owner's grid (N11) would leave a ruled 3.5 / 24.05 / 20.52 / 13.5x pointing at a different episode and no class would fire | AoT 3.5, Slime 24.05, KonoSuba 20.52, Made in Abyss 13.5 / 13.51 / 13.52 | cheap: an audit class `related_work_base_missing` (a positioned row whose integer base has no episode row in the owner's grid — catches derived rows too); structural only if a renumber ever hits a series with ruled extras (position as {after, order}) | the class via `/add-rule` now (P5: checkable → must be checked); the structure never unless a witness appears |
+| E3 | **Buckets are AniList's CLAIM; standings are the FACT** — and the design held: three of eight wave-3 premises were refuted by research and the ruling layer holds the fact while the bucket stays as staged | KonoSuba OVAs + Road to Hero (bucket same_instrument, standing filler); AoT's dates | keep; but `extra_same_instrument: 123` still counts RULED works — it is a bucket census, not a work-list (R27). Add `related_work_unruled` = ledger rows with standing null in same / other / unknown (today 378) as the research work-list class | small; the next `/add-rule` |
+| E4 | **Mechanisms no ledger record's enforcement names**: `relatedWorkOwners` (owner precedence — strong > base-ALTERNATIVE > OTHER, PARENT never a claim), `pickAdoption` (I46's adoption), `wikiKey` / `lookupRelatedWork` (the registry), `freePosition` / `extraKind` / `isoDate`; and two DEAD exports: `IN_RUN_RELATIONS` (0 uses), `ledgerWorthy` (tests only) | the inventory | amend I45 / I46 `enforcement` to name them (ledger-check keeps them honest); delete the dead exports (P24) | zero risk; this pass |
+| E5 | **The ledger writer and its audit are script-tier**: `refresh-discovery` (the cron) stages the halo but never writes ledger rows; `sync-related-works.ts` runs on the standard roster (`npm run heal`) — the queued weekly restage would stage new specials the ledger receives only at the next heal | rosters.ts:47; `_src/` never imports the writer | acceptable while surfacing is parked (N31); before the UI pass either the writer joins the refresh-discovery bundle (P3, same code) or a scheduled roster run exists | flag for the UI pass; not now |
+| E6 | **The ruling layer** (hand-written `RelatedWorkRuling` from verdicts; `validate-extras.ts --entries` only proposes; the census lists stored ≠ ruled) is the right tier: Sean's ruling is the record (P10) | AoT `volume: 5` by hand where the proposer emits 4; Haikyu END 326 by the last-significant rule; `related_work_violation` 0 | no change; the END rule stays at the verifier + Sean tier (A47's normalizer needs a next anchored row — a related work never has one, N4 / N8) | — |
+| E7 | **T26's credit clause** (a screen-only author credit is note text, never an adoption; adoption shows up as chapters) needs no `adopted` field on the ruling | Slam Dunk, Road to Hero, KonoSuba, Slime | keep; a note is free text — the T27-style retired-string sweep is its only check (the Coleus string is queued) | — |
+| E8 | **The identity GRAIN is AniList's entry**: a bundle of N OVAs under one id gets ONE standing and ONE position, while the licensor numbers the parts separately (#3.25 / #3.5 / #3.75) | the AoT OADs (ruled 3.5); wave 4a's Ranma bundle (six OVAs, three adapting) is the second witness | keep the grain (stable ids; the registry works; the note carries the parts); a `parts` display field later if the UI needs it — the (series, anilist_id) identity must not fork | Sean rules the grain when the Ranma verdict lands |
+| E9 | **A work can sit in two ruling maps**: attribution / (d) declarations in `rulings/discovery.ts` (owner + bucket) and standings in `rulings/related-works.ts`; GitS 1995 is an alternative ROW under the base AND a mint declaration. After step 2 mints a declared work as a SERIES, what does its ledger row become? | GitS 1995; the 27 declarations; No Regrets / Houkago / Twilight Axis on the (d) queue | an I-rule ruled BEFORE the mint writer is written: a minted related work's row becomes a link (kind `series` → the minted series id, standing n/a) or is removed by the mint writer — Sean's call; the strongest reason this evaluation sits before step 2 | the ruling is a sentence; the writer behaviour follows it |
+| E10 | **Undated works are listed, unpositioned** (ruling f); a date arriving re-derives the position on the next run | 127 undated pairs; the restage queued | keep; the UI upcoming-schedule note stands | — |
+| E11 | **Tests**: 35 cases over the three lib files; `PROMO` has no direct test (it is exercised through `extraBucket`); the writer's pre-pass / swap safety is exercised only by dry runs | the inventory's test-lines column | a PROMO table test; a pure `planMoves()` extracted from the writer with a unit test on the swap shape | small; with E4's pass |
+
 ## Appendix — the generated summary (2026-09-05; regenerate before use)
 
 ### Related-works sitting summary — 794 works (generated 2026-09-05)
