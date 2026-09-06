@@ -4,11 +4,13 @@
 // manual rows. Standard roster; idempotent; never deletes (G57: only this
 // writer may delete a manual row, and a ruled grid never shrinks silently —
 // a row removed from the ruling is a listing for Sean, not a delete).
-//   npx tsx --env-file=.env.ingest scripts/ingest/mint-grids.ts
+//   npx tsx --env-file=.env.ingest scripts/ingest/mint-grids.ts [--dry-run]   (the dry run prints every insert / assertion / skip and writes nothing — the /discover stop, 2026-09-06)
 import { db, selectAll, startRun, finishRun } from './lib/db';
 import { filterEpisodeRows } from './lib/resolve';
 import { MINTED_GRIDS } from './lib/rulings/minted-grids';
 import { loadEpisodeTies } from './lib/side-source';
+
+const DRY = process.argv.includes('--dry-run');
 
 async function main() {
   const runId = await startRun('resolve');
@@ -23,20 +25,21 @@ async function main() {
       checked++;
       const cur = existing.get(r.number);
       if (!cur) {
+        if (DRY) { console.log(`    insert ${sid} #${r.number} ${r.air_date ?? '—'} ${r.type} "${r.title}" [manual]`); minted++; continue; }
         const { error } = await db.from('episodes').insert({ ...r, minted_by: 'manual' });
         if (error) throw new Error(`${sid} #${r.number}: ${error.message}`);
         minted++; continue;
       }
-      if (cur.minted_by !== 'manual') continue; // another writer's row — G57: not ours to rewrite
+      if (cur.minted_by !== 'manual') { if (DRY && (cur.title !== r.title || String(cur.air_date ?? '') !== String(r.air_date ?? ''))) console.log(`    SKIP ${sid} #${r.number}: another writer's row [${cur.minted_by}] "${cur.title}" ${cur.air_date ?? '—'} ≠ the ruled "${r.title}" ${r.air_date ?? '—'} — G57: not ours to rewrite (rule the row or remove the other writer's)`); continue; } // another writer's row — G57: not ours to rewrite
       const patch: Record<string, unknown> = {};
       if (cur.title !== r.title) patch.title = r.title;
       if (String(cur.air_date ?? '') !== String(r.air_date ?? '')) patch.air_date = r.air_date;
       if (cur.type !== r.type) patch.type = r.type;
-      if (Object.keys(patch).length) { const { error } = await db.from('episodes').update(patch).eq('series_id', sid).eq('number', r.number); if (error) throw new Error(error.message); asserted++; }
+      if (Object.keys(patch).length) { if (DRY) { console.log(`    assert ${sid} #${r.number}: ${JSON.stringify(patch)}`); asserted++; continue; } const { error } = await db.from('episodes').update(patch).eq('series_id', sid).eq('number', r.number); if (error) throw new Error(error.message); asserted++; }
     }
     console.log(`  ${sid}: ${grid.rows.length} ruled rows — ${ruled.length} pass the gate`);
   }
-  console.log(`[mint-grids] ${Object.keys(MINTED_GRIDS).length} ruled grid(s), ${checked} rows checked, ${minted} minted, ${asserted} asserted`);
-  await finishRun(runId, 'ok', { fetched: 0, unchanged: checked - minted - asserted, changed: minted + asserted, flagged: 0 }, `mint-grids: ${minted} minted, ${asserted} asserted`);
+  console.log(`[mint-grids] ${Object.keys(MINTED_GRIDS).length} ruled grid(s), ${checked} rows checked, ${minted} minted, ${asserted} asserted${DRY ? ' — DRY RUN (nothing written)' : ''}`);
+  await finishRun(runId, 'ok', { fetched: 0, unchanged: checked - minted - asserted, changed: DRY ? 0 : minted + asserted, flagged: 0 }, `mint-grids: ${minted} minted, ${asserted} asserted${DRY ? ' (dry run)' : ''}`);
 }
 main().then(() => process.exit(0)).catch((e) => { console.error(e); process.exit(1); });
