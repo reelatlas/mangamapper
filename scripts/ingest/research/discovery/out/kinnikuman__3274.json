@@ -1,0 +1,84 @@
+{
+  "series_id": "kinnikuman",
+  "anilist_id": 3274,
+  "title": "Kinnikuman: Daiabare! Segi Choujin",
+  "summary": "Toei Manga Matsuri film 2 (1984-12-22, 48 min, dir. Takeshi Shiratsuchi, screenplay Haruya Yamazaki, 原作 ゆでたまご). THE PREMISE HELD: the film is built on the Bibimba story of Yudetamago's original run - printed ch 82 「初地球の出の巻」 (14 pp) and ch 83 「ビビンバのムコの巻」 (12 pp), both in Jump Comics vol 7. ja-WP says it in words (原作における超人オリンピック ザ・ビッグファイト前にキン肉星に帰国した際の話をベースにしている / ブラック軍団以外は原作にも登場している), the Kinnikuman Wiki pins it structurally (Chapter 82's infobox anime = Movie 2; the 2nd Kaiju Extermination Arc page maps ch 80-89 to 'TV Special & Movie 2'; Bibimba's card reads manga = Chapter 82 / anime = Movie 2 and Shishkeba Boo's manga = Chapter 83 / anime = Movie 2; its 'New Characters' list is the Black Corps and Great Ukon only), and two licensor-tier texts dramatize the same act (Eiren's official story: the Planet Kinniku victory parade, ホルモン族の王女ビビンバ attacking, her falling for him, then Shishkeba's challenge; Anime Hodai/U-NEXT's 見どころ: 原作漫画で登場するビビンバとシシカバ・ブーがアニメで活躍…本作の大きな見どころ). The Black Emperor / Black Corps half (the seven death fights the poster sells, Great Ukon, Buffaloman's rescue, the Kinniku Driver finish) is entirely anime-original - so a substantial source share sits beside a substantial original share and the standing is MIXED under T28, the Attack on Titan OVA shape. What is surprising: the TV run CUT the whole 第2次怪獣退治編 (ch 80-89), so this film is the ONLY screen adaptation of ch 82-83 in the catalogue; the film relocates the story (the manga's homecoming is a belt-less disgrace, the film's is the V2 / 7-Devil-Chojin triumph) and inverts its ending (manga: Shishkeba Boo steps aside for Kinnikuman; film: Kinnikuman steps aside for Shishkeba Boo and goes back to Mari); and ja-WP records that Buffaloman's Justice-Chojin turn and the Kinniku Driver were shown here AHEAD OF THE TV ANIME (which reaches them at ep 79B, 1985-01-06, and later).",
+  "standing": "mixed",
+  "confidence": "high",
+  "chapters_adapted": [
+    {
+      "start": 82,
+      "end": 82,
+      "volume": 7,
+      "weight": "significant",
+      "note": "ch 82 「初地球の出の巻」 (14 pp, JC vol 7's 2nd chapter) = the film's whole opening act on Planet Kinniku, dramatized, not narrated: Kinnikuman's homecoming, Horumon Yaki setting his daughter on the Kinniku clan, Bibimba's assassination attempt, her own injury when it fails, Kinnikuman treating the wound (the chapter's Meat's-cape beat) and falling for her, and the blade raised over him that she cannot bring down (the chapter's Muscle Field duel, restaged in the film as the 美ヶ原 date-trap her father arranges). SHARE: no source publishes timings; Eiren's licensor story, ja-WP's four-paragraph plot (two of them this act), the fandom's plot record and viewers' own accounts (前半部分はほぼ原作通り / 原作に意外と忠実な展開を見せる前半) put it at roughly the first quarter of the 48 minutes (~10-15 min) - a story-carrying act, not a premise line. CHANGED, per T28's faithfulness clause: the manga's Kinnikuman arrives stripped of the belt and passes off a fake (Mayumi tears it up); the film's arrives as the Olympics V2 champion fresh from the 7 Devil Chojin arc."
+    },
+    {
+      "start": 83,
+      "end": 83,
+      "volume": 7,
+      "weight": "significant",
+      "note": "ch 83 「ビビンバのムコの巻」 (12 pp, JC vol 7's 3rd chapter) = the film's middle: Horumon Yaki, with Bibimba refusing to kill, offers her hand to Shishkeba Boo of the Barbecue clan on condition he defeat Kinnikuman, and the challenge match is fought with Bibimba as the stake. The ja Kinnikuman Wiki states the mechanism as the manga's (原作同様、娘のビビンバやバーベキュー族のシシカバ・ブーを刺客として送り込む), and Anime Hodai calls the Shishkeba Boo confrontation-and-alliance 本作の大きな見どころ. SHARE: roughly another 5-10 min (the Chojin Hour scene, Chairman Harabote's letter of challenge, the Fuji bout) before Black Emperor takes the film over - so ch 82 + ch 83 together are on the order of a third of the running time. CHANGED: the venue moves from Planet Kinniku to Mt Fuji, the manga's comic preliminaries (space race, gyūdon speed-eating, tower-building) are not in the plot record, and the resolution is inverted - the manga has Shishkeba Boo forfeit to Kinnikuman, the film has Kinnikuman hand Bibimba to Shishkeba Boo and return to Mari. NOT ADAPTED: ch 80, 81, 84 and 85 (the belt loss, the Christmas kaiju, Bibimba's life on Earth and Gonta, the game show) and ch 86-89, which are the 1984 TV Special's."
+    }
+  ],
+  "recap": false,
+  "position": {
+    "stored": 76.5,
+    "verdict": "corrected",
+    "proposed": 65.6,
+    "why": "76.5 is the AIR DATE only (1984-12-22 falls between ep 76, 12-16, and ep 77, 12-23). Three independent sources put the film's story at the arc seam instead: ja-WP (作中の時系列では7人の悪魔超人編と黄金のマスク編の間に起こった出来事), the Kinnikuman Wiki (Movie 2's infobox previous = Movie 1, next = Episode 66A; prose: 'It is set after the Seven Akuma Chojin Arc'), and the film's own opening as the licensor prints it (Eiren: 超人オリンピックV2チャンプ達成！祝！悪魔超人シリーズ制覇！; Anime Hodai: 悪魔超人を撃破したキン肉マンは、キン肉星で凱旋のお祭を行っていた). In OUR row space (which is ja-WP's 137-broadcast numbering - the context's dates for eps 72-79 match ja-WP row for row) the Seven Devil Chojin arc ends at ep 65 (1984-07-08, タイムリミット1秒前!! / リングは男の友情, where Buffaloman saves Meat) and the Golden Mask arc opens at ep 66 (1984-10-07, 伝説の黄金マスク). The wiki chains Episode 65B -> Movie 1 -> Movie 2 -> Episode 66A, so this film sits in that gap AFTER Movie 1, whose stored position is 65.5 - hence 65.6. Any value in (65.5, 66) states the same claim; the claim is 'after ep 65, after Movie 1, before ep 66'. Note that 76.5 does not buy continuity either: the film's Buffaloman-as-ally and Kinniku Driver were ahead of the TV run at release too (the TV run reaches Buffaloman's return at ep 79B, 1985-01-06)."
+  },
+  "adopted": null,
+  "repairs": [
+    {
+      "field": "title",
+      "old": "Kinnikuman: Daiabare! Segi Choujin",
+      "new": "Kinnikuman: Ōabare! Seigi Choujin",
+      "evidence": "AniList's romaji is misread twice. ja-WP gives the title's own furigana: キン肉マン 大暴れ!正義超人（キンにくマン おおあばれ!せいぎちょうじん） - 大暴れ is Ōabare, not 'Daiabare', and 正義 is Seigi, not 'Segi'. The Kinnikuman Wiki titles it 'Ō Abare! Seigi Chōjin' / 'Great Riot! Justice Chojin'; the film's own on-poster English (ja-WP infobox and Eiren) is 'Mr. Muscleman 2: The Rowdy Superman of Justice'. DISPLAY ONLY - the AniList id 3274 stays the join key; the minimal safe fix is Segi -> Seigi."
+    }
+  ],
+  "sources": [
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%82%AD%E3%83%B3%E8%82%89%E3%83%9E%E3%83%B3%20%E5%A4%A7%E6%9A%B4%E3%82%8C%21%E6%AD%A3%E7%BE%A9%E8%B6%85%E4%BA%BA&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%82%AD%E3%83%B3%E8%82%89%E3%83%9E%E3%83%B3&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%82%AD%E3%83%B3%E8%82%89%E3%83%9E%E3%83%B3%20(%E3%83%86%E3%83%AC%E3%83%93%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext&format=json",
+    "https://kinnikuman.fandom.com/api.php?action=parse&page=Movie_2&prop=wikitext&format=json",
+    "https://kinnikuman.fandom.com/api.php?action=parse&page=Chapter_82&prop=wikitext&format=json",
+    "https://kinnikuman.fandom.com/api.php?action=parse&page=Chapter_83&prop=wikitext&format=json",
+    "https://kinnikuman.fandom.com/api.php?action=parse&page=Chapter_84&prop=wikitext&format=json",
+    "https://kinnikuman.fandom.com/api.php?action=parse&page=2nd_Kaiju_Extermination_Arc&prop=wikitext&format=json",
+    "https://kinnikuman.fandom.com/api.php?action=parse&page=List%20of%20Kinnikuman%20Chapters/Volumes%201-10&prop=wikitext&format=json",
+    "https://kinnikuman.fandom.com/api.php?action=parse&page=Bibimba&prop=wikitext&format=json",
+    "https://kinnikuman.fandom.com/api.php?action=parse&page=Shishkeba_Boo&prop=wikitext&format=json",
+    "https://kinnikuman.fandom.com/api.php?action=parse&page=Black_Emperor&prop=wikitext&format=json",
+    "https://kinnikuman.fandom.com/api.php?action=parse&page=Kinniku%20Driver&prop=wikitext&format=json",
+    "https://kinnikuman.fandom.com/api.php?action=parse&page=Episode_65A&prop=wikitext&format=json",
+    "https://kinnikuman.fandom.com/api.php?action=parse&page=Episode_65B&prop=wikitext&format=json",
+    "https://kinnikuman.fandom.com/api.php?action=parse&page=Episode_66A&prop=wikitext&format=json",
+    "https://kinnikuman.fandom.com/api.php?action=parse&page=Episode_79B&prop=wikitext&format=json",
+    "https://kinnikuman.fandom.com/api.php?action=parse&page=Movie_1&prop=wikitext&format=json",
+    "https://kinnikuman.fandom.com/ja/api.php?action=parse&page=%E3%82%B7%E3%82%B7%E3%82%AB%E3%83%90%E3%83%BB%E3%83%96%E3%83%BC&prop=wikitext&format=json",
+    "https://kinnikuman.fandom.com/ja/api.php?action=parse&page=%E3%83%9B%E3%83%AB%E3%83%A2%E3%83%B3%E3%83%BB%E3%83%A4%E3%83%BC%E3%82%AD&prop=wikitext&format=json",
+    "http://db.eiren.org/contents/03000001518.html",
+    "https://lineup.toei-anim.co.jp/ja/movie/movie_niku_ooabare/story/",
+    "https://www.animehodai.jp/title/SID0003123",
+    "https://eiga.com/movie/68198/",
+    "https://eiga.com/movie/68198/review/",
+    "https://www.s-manga.net/items/contents.html?isbn=978-4-08-870731-0",
+    "http://web.archive.org/web/20220627205942/http://nikupedia.com/JC_%E3%82%AD%E3%83%B3%E8%82%89%E3%83%9E%E3%83%B3_%E7%AC%AC7%E5%B7%BB",
+    "http://web.archive.org/web/20220807162135/http://nikupedia.com/JC_%E3%82%AD%E3%83%B3%E8%82%89%E3%83%9E%E3%83%B3_%E7%AC%AC6%E5%B7%BB",
+    "http://web.archive.org/web/20220627203816/http://nikupedia.com/JC_%E3%82%AD%E3%83%B3%E8%82%89%E3%83%9E%E3%83%B3_%E7%AC%AC1%E5%B7%BB",
+    "https://filmarks.com/movies/7550?page=2"
+  ],
+  "flags_for_sean": [
+    "CHAPTER SPACE, CONVERTED AT BOTH EDGES. The numbers above are the ORIGINAL 1979-87 run's PRINTED (Jump Comics) numbering, the space the context names. Nikupedia's per-volume 各話リスト (an independent Japanese Kinnikuman MediaWiki; live host dead, read via the Wayback Machine) gives vol 1 = 13 chapters, vol 2 = 14, vol 3 = 14, vol 4 = 12, vol 5 = 14, vol 6 = 13 -> vol 6 closes on the 80th chapter 「ベルトか日本救出か!?の巻」, so vol 7's 14 chapters are printed 81-94: 81 クリスマス怪獣, 82 初地球の出, 83 ビビンバのムコ, ... 94 富士の最終予選. BOTH EDGES CHECK AGAINST ja-WP's arc numbers independently: 第2次怪獣退治編 = 第80話-第89話 (so ch 80 = vol 6's last, the arc's first) and 第21回超人オリンピック編 = 第90話- (so ch 90 = ライバルは日本にいたの巻, vol 7's 10th = 81+9). The Kinnikuman Wiki's own volume list prints exactly the same numbers (068-080 / 081-094), and Shueisha's S-MANGA blurb for vol 7 (ISBN 978-4-08-870731-0) describes the Planet Rakka story AND the Big Fight prelims, i.e. ch 86-94. No shift to apply.",
+    "EDITION FORK worth recording next to that space (N35 shape). ja-WP: the two Roots Island chapters 「南からの使者の巻」「伝説の救世主の巻」 (printed 26-27, the end of JC vol 2) are collected ONLY in the Jump Comics edition - any later edition that drops them numbers everything from ch 28 on TWO lower, which would render this film's chapters as 80-81. Separately, the 2011 continuation RESTARTS at 新シリーズ第1話, so a bare '82' beside a Perfect-Origin-era owner is a different chapter. Both numbers here are JC/printed.",
+    "SOLE ADAPTATION - the reason a filler standing would be a data defect. The TV run CUT the whole 第2次怪獣退治編 (ja-WP manga article: アニメ版ではカットされている; its TV episode list jumps 世界遠征編 (eps 19-26) straight to 第21回超人オリンピック編 (ep 27); the fandom's arc page gives the arc's only anime as 'TV Special & Movie 2'). With the TV Special holding ch 86-89, ch 82-83 reach the screen ONLY through this film. Typing it filler would mark those pages never-adapted in the catalogue.",
+    "THE SHARE IS ESTIMATED, NOT MEASURED - the one soft edge in this verdict. No source publishes timings for the 48 minutes. What is sourced: the act STRUCTURE (Eiren's licensor story runs Planet Kinniku parade -> Bibimba's attack -> she falls for him -> back on Earth -> Shishkeba's challenge -> Great Ukon -> the Black Corps -> Buffaloman -> the Kinniku Driver; ja-WP spends two of four plot paragraphs on the Planet Kinniku act; the fandom's plot record spends its bulk on the Fuji fights), plus viewer testimony on Filmarks (cross-check tier, several independent voices): 「原作に意外と忠実な展開を見せる前半。…後半は完全オリジナルで展開」 and 「前半部分はほぼ原作通り。ホルモン・ヤーキもシシカバ・ブーも登場」. My reading is ~15-20 min of 48 for ch 82+83; even at the low end that is an act, not a premise line, so mixed holds either way. A stopwatch pass on the film (or the Complete DVD-BOX guide's chapter marks, 収録内容ガイド p.43, which ja-WP cites and I could not read) would settle the exact figure.",
+    "POSITION COLLISION. Movie 1 (anilist 3273) is stored at 65.5 and the wiki chains Episode 65B -> Movie 1 -> Movie 2 -> Episode 66A, so this film needs a value strictly between them: 65.6 proposed. If the ledger tolerates a shared fraction with an ordering key, 65.5 with Movie 1 second is the same claim. The 1984 TV Special (anilist 3280) also belongs in this neighbourhood by the triage's reading (47.5) - three related works cluster in this run's first half, so whatever fraction convention is chosen should be chosen once.",
+    "T26 CREDIT, NO ADOPTION. 原作：ゆでたまご is on the film (screenplay 山崎晴哉), and Yudetamago themselves voice Black Emperor's minions in a cameo - a CREDIT in the note, never an adoption: nothing the film invented entered the manga. The two 'firsts' ja-WP records (Buffaloman joining the Justice Chojin, the Kinniku Driver) are firsts AHEAD OF THE TV ANIME only - the manga had already developed the Kinniku Driver in the Golden Mask arc (incomplete vs Ashuraman, perfected for Akuma Shogun; the fandom's technique page and the ja wiki's vol-21 citation), which is exactly why ja-WP calls the film's use 会得前のキン肉ドライバー, a continuity error against the source. adopted = null.",
+    "TWO TRIAGE PREMISES CORRECTED. (a) 'Toei Animation's lineup site carries only the TV series, no film pages' is not true - lineup.toei-anim.co.jp/ja/movie/movie_niku_ooabare/ exists with its own ストーリー page (a shortened cut of Eiren's text that drops the Bibimba act entirely, which is why it reads as an all-original film if quoted alone). (b) The wiki-vs-stored position gap the triage flagged as '65.5' is right in direction; the exact value has to clear Movie 1.",
+    "DATE HYGIENE. Our stored 1984-12-22 is right and unanimous (ja-WP, Eiren 映倫 number 24911, Toei's lineup page, eiga.com). The EN Kinnikuman Wiki's dates run ONE DAY EARLY across this series (Movie 2 infobox 'December 21', ep 66A 'October 6' vs ja-WP's 10月7日, ep 65 'July 7' vs 7/8) - the TV series' slot is Sunday and every stored date in the context grid is a Sunday, so never join Kinnikuman rows on the fandom's date column.",
+    "SOURCE INDEPENDENCE BOOKKEEPING. kinnikuman.fandom.com/ja's article on the film is near-verbatim ja-Wikipedia (one lineage) - I used the ja wiki only for its CHARACTER pages (ホルモン・ヤーキ, シシカバ・ブー), whose text is its own. The independent legs of this verdict are: ja-WP, the EN Kinnikuman Wiki (chapter / arc / character / episode pages), Eiren's producers-association record, Toei Animation's lineup page, Anime Hodai (U-NEXT-operated licensed VOD), Nikupedia (volume contents) and Shueisha's S-MANGA catalogue. Filmarks / eiga.com reviews are cross-check tier only and carry no claim on their own.",
+    "NEW SOURCE FOR THE FILE: Nikupedia (nikupedia.com) is a Japanese Kinnikuman MediaWiki with one page per volume (JC_キン肉マン_第N巻, carrying the printed 各話リスト and the first-edition ISBN/date) and one page per chapter title. The live host does not resolve (connection refused, both schemes) - it is fully archived in the Wayback Machine. It is the cheapest Kinnikuman chapter-space instrument we have; note the vol-2 page's list carries one trailing PROSE line (a note about the Roots Island chapters) that a naive line count reads as a 15th chapter and shifts every later volume by one."
+  ]
+}
