@@ -1,0 +1,68 @@
+{
+  "series_id": "ranma-1-2",
+  "anilist_id": 1008,
+  "title": "Ranma 1/2 Special",
+  "summary": "AniList 1008 is the two-part home-video special らんま1/2 SPECIAL よみがえる記憶 — 上巻 (1994-12-16, 26 min) and 下巻 (1995-02-17, 27 min) — and it animates ONE thing: Takahashi's Ryugenzawa arc, the thirteen chapters 266-278 (Akane's childhood rescue at Ryugenzawa, Shinnosuke and the Water of Life, the Yamata-no-Orochi). The premise held on every point I could reproduce. ja-Wikipedia's OVA list prints 「原作コミックス25巻10話 - 26巻11話」 for 上巻 and 「同上」 for 下巻; the Ranma Wiki carries the same span four different ways (the two episode infoboxes, the Ryugenzawa Arc page's 13-row 'Chapters Covered' table with an Anime Counterpart column, the Story Arcs master index, and all thirteen chapter pages' own anime= field — while ch 279, the next arc's opener, carries none). The 巻話 → continuous conversion is proved at BOTH edges from a volume-contents table that is independent of the wiki: en-Wikipedia's Shogakukan-sourced volume list gives vol 25 = ch 257-267 (so 25巻10話 = 266 「あかねの旅立ち」) and vol 26 = ch 268-278 (so 26巻11話 = 278 「贈る言葉」), with vol 27 opening on 279 — and the Ranma Wiki's per-chapter volume field prints exactly the same boundaries. A third boundary test uses our own data: our ep 161's stored END, ch 229, is 22巻6話 「母子水いらず!!」 in that same table, which is what ja-WP's TV column calls 22巻2-6 for eps 160-161. Nothing in the work is anime-original: ja-WP marks three of the eleven OVAs 「OVAオリジナル」 (Vol.2, Vol.5, Vol.6) and this one carries a chapter range instead — a negative control — and en-WP says the same in English ('All but three are based on stories originally in the manga'). The Ranma Wiki's 'Changes in anime' list for the arc is entirely cuts and alterations (Akane's edible curry, the grandfather's zoo backstory replaced by 'exotic pets', Ranma saving Shinnosuke, the crossdressing beats, Shinnosuke's goodbye, Ranma's inner monologue at the closing hand-hold; the additions are a Megaton Punch gag, Shinnosuke saving Ranma, Orochi wanting women rather than beer). Size settles what the lists imply: 53 minutes for 13 chapters is roughly 4 manga pages a minute against the TV series' ~1.5 (two chapters per 22-minute episode) — there is no room for a substantial original share, and the sources record cuts, not padding. So the standing is canon with abridged / divergence as the annotations, END 278 in volume 26 — and 278 is adapted to its end: the work's final minutes are the chapter's final scene, Ranma reaching for Akane's hand and the two walking home hand in hand.",
+  "standing": "canon",
+  "confidence": "high",
+  "chapters_adapted": [
+    {
+      "start": 266,
+      "end": 278,
+      "volume": 26,
+      "weight": "significant",
+      "note": "the Ryugenzawa arc entire, in order, across both parts — ch 266 「あかねの旅立ち」 (Akane's Journey, vol 25's 10th story) through ch 278 「贈る言葉」 (These Words I Send to You, vol 26's 11th and last). 266-267 sit in vol 25, 268-278 in vol 26 (Viz 1st-edition vols 23-24). ABRIDGED: ~53 min of animation for 13 chapters (~208 pages) — the Ranma Wiki's arc page itemises the cuts (Akane's edible curry, the grandfather's zoo backstory, Ranma saving Shinnosuke, the grandfather's first crossdressing, the makeup gag, Shinnosuke's goodbye, Ranma's inner monologue at the hand-hold) and the alterations (the giant animals are the grandfather's exotic pets rather than escaped zoo stock; the grandfather's Megaton Punch; Shinnosuke saves Ranma; the Orochi wants women, not beer; Ranma turns girl earlier in the fight) — faithfulness-clause divergence (T28), not original material. 278 is NOT a partial: the work's last minutes are the chapter's closing scene (Ranma reaches for Akane's hand; they walk home holding hands), only the internal monologue and Shinnosuke's farewell are cut."
+    }
+  ],
+  "recap": false,
+  "position": {
+    "stored": 161.51,
+    "verdict": "confirmed",
+    "proposed": 161.51,
+    "why": "AFTER THE WHOLE RUN, confirmed: our last row, ep 161 (1992-09-25), ends at ch 229 = 22巻6話, and this work opens on ch 266 — every TV row is behind it, so no fraction inside the run is possible. The .51 is the CLUSTER SLOT, and the sourced order inside the post-161 cluster is: the OVA bundle (AniList 1007, whose last adapted chapter is 265 — OVA Vol.4 = 25巻3-9話) → this Special (266-278) → the third film (AniList 1010 = 29巻1、2話 = ch 301-302). Two independent orderings give that: chapter order, and Viz's own packaging — en-WP records that Viz released the 11 OVAs as one set with the third film 'added as the ninth episode', i.e. behind OVA 7/8, which is this Special (the Ranma Wiki numbers them the same way). Only the raw air date inverts the last pair (film 1994-08-20, Special 1994-12-16), and the halo's fraction is air-date derived — so 161.51 is right IF and ONLY IF AniList 1007 holds 161.50 and 1010 sits above this row; flagged for the sitting."
+  },
+  "adopted": null,
+  "repairs": [
+    {
+      "field": "title",
+      "old": "Ranma 1/2 Special",
+      "new": "Ranma ½ Special: Reawakening Memories",
+      "why": "PROPOSAL (low urgency, disambiguation): AniList's bare 'Ranma 1/2 Special' is not wrong, it is incomplete, and the shelf already holds a second work whose short name is also a 'special' — AniList 10825 らんま1/2 スペシャルビデオ バトルがいっぱい29人の懲りないやつら (ruled recap/filler on 2026-09-05) — with a 2011 live-action スペシャルドラマ「らんま1/2」 in the franchise as well. The work's own title is らんま1/2 SPECIAL よみがえる記憶 (ja-WP's OVA list), rendered 'Reawakening Memories (1)/(2)' by en-WP, 「らんま1/2 よみがえる記憶 上巻／下巻」 by アニメハック and 'Reawakening Memories, Pt. 1/2' by Viz on Apple TV. Native title for the row if one is wanted: らんま1/2 SPECIAL よみがえる記憶."
+    }
+  ],
+  "sources": [
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%82%89%E3%82%93%E3%81%BE1/2&prop=wikitext&format=json",
+    "https://en.wikipedia.org/w/api.php?action=parse&page=List%20of%20Ranma%20%C2%BD%20chapters&prop=wikitext&format=json",
+    "https://en.wikipedia.org/w/api.php?action=parse&page=List%20of%20Ranma%20%C2%BD%20episodes&prop=wikitext&format=json",
+    "https://ranma.fandom.com/api.php?action=parse&page=Reawakening%20Memories%20Part%20One&prop=wikitext&format=json",
+    "https://ranma.fandom.com/api.php?action=parse&page=Reawakening%20Memories%20Part%20Two&prop=wikitext&format=json",
+    "https://ranma.fandom.com/api.php?action=parse&page=Ryugenzawa%20Arc&prop=wikitext&format=json",
+    "https://ranma.fandom.com/api.php?action=parse&page=Story%20Arcs&prop=wikitext&format=json",
+    "https://ranma.fandom.com/api.php?action=parse&page=Chapter%20266&prop=wikitext&format=json",
+    "https://ranma.fandom.com/api.php?action=parse&page=Chapter%20267&prop=wikitext&format=json",
+    "https://ranma.fandom.com/api.php?action=parse&page=Chapter%20268&prop=wikitext&format=json",
+    "https://ranma.fandom.com/api.php?action=parse&page=Chapter%20269&prop=wikitext&format=json",
+    "https://ranma.fandom.com/api.php?action=parse&page=Chapter%20278&prop=wikitext&format=json",
+    "https://ranma.fandom.com/api.php?action=parse&page=Chapter%20279&prop=wikitext&format=json",
+    "https://ranma.fandom.com/api.php?action=parse&page=Ranma-Akane%20Relationship&prop=wikitext&format=json",
+    "https://ranma.fandom.com/api.php?action=parse&page=Ryugenzawa&prop=wikitext&format=json",
+    "https://anime.eiga.com/movie/109203/",
+    "https://anime.eiga.com/movie/109204/",
+    "https://tv.apple.com/us/episode/reawakening-memories-pt-1/umc.cmc.1esari3g7p9894tr7ts2ulgmc",
+    "https://tv.apple.com/us/episode/reawakening-memories-pt-2/umc.cmc.61qrd8f1ms0irmxxu9s3xc5pg",
+    "https://kitsu.io/api/edge/mappings?filter%5BexternalSite%5D=anilist%2Fanime&filter%5BexternalId%5D=1008&include=item",
+    "https://kitsu.io/api/edge/anime/898/episodes",
+    "https://av.watch.impress.co.jp/docs/news/700455.html",
+    "https://www.allcinema.net/cinema/235910",
+    "http://web.archive.org/web/20200216153825/http://www.furinkan.com/ranma/anime/ovas.html"
+  ],
+  "flags_for_sean": [
+    "PREMISE REPRODUCED, WITH ONE CORRECTION — THE INTERNAL SPLIT IS NOT SETTLED. The triage's '266-278, Part One = 266-268, Part Two = 269-278' is one of TWO readings inside the same wiki: the Part One infobox (266/267/268) and ch 269's own page (anime = Part Two) say 269 belongs to Part Two, while the Ryugenzawa Arc page's 'Anime Counterpart(s)' column AND the Story Arcs master index both put 269 in Part One (Part Two = 270-278). Two surfaces each way, no tie-breaker found, and no licensor per-part synopsis survives. It changes nothing here — under E8 the AniList entry is the grain, one standing and one chapter record, and the UNION is 266-278 either way — but if the row is ever split into two, the split point is unproven and 269 is the disputed chapter.",
+    "CHAPTER SPACE: RANMA PRINTS NO GLOBAL CHAPTER NUMBERS. The tankōbon number the stories WITHIN each volume, which is why ja-WP states coverage as 「25巻10話 - 26巻11話」; the continuous 1-407 numbering our catalog uses is the convention en-WP and the Ranma Wiki share (en-WP's volume list runs 001-407 = our stored total of 407). The conversion is proved, not inferred, at three boundaries: vol 25 = 257-267 so 25巻10話 = 266 「あかねの旅立ち」; vol 26 = 268-278 so 26巻11話 = 278 「贈る言葉」; and our own ep-161 anchor, ch 229, is 22巻6話 「母子水いらず!!」 (vol 22 = 224-234), which is where ja-WP's TV 原作 column puts eps 160-161 (22巻2-6). Both boundary tables — en-WP's (sourced to Shogakukan's own book pages, ISBN 4-09-123095-4 / 4-09-123096-2) and the Ranma Wiki's per-chapter volume field — agree exactly, so there is no source shift to apply.",
+    "EDITION: the numbers above are the 38-volume 少年サンデーコミックス tankōbon's volume structure, and the Ranma Wiki's chapter infobox prints ONE number for '(Tankōbon/Shinsoban)', i.e. the 2002-03 38-volume 新装版 keeps the same boundaries (en-WP describes it as a re-release 'with new cover art'). I did NOT verify the 新装版's own 目次 — Shogakukan's product pages for 09126525/09126526 are JS-rendered and served no contents list. Two other packagings differ and must never be joined: Viz's 1st English edition puts this arc in ITS vols 23-24 (the wiki prints that number too), and Shogakukan's 2016-18 B6 edition is 20 volumes.",
+    "POSITION IS A CLUSTER ORDER, LIKE MADE IN ABYSS — the fraction needs your ruling, not the air date. Everything Ranma made after 1992-09-25 stacks at 161.5x, and the halo orders that stack by air date, which is the ONE ordering that gets this wrong: the third film (AniList 1010, 1994-08-20, ch 301-302) aired four months BEFORE this Special (1994-12-16, ch 266-278) but reads a whole volume-and-a-half later. Chapter order and Viz's own set numbering agree against the date: 1007 (OVA Vol.1-6, last adapted chapter 265) → 1008 (266-278) → 1010 (the film, added to Viz's OVA set as episode 9, behind OVA 7/8 = this Special). 161.51 is confirmed on that reading; if the cluster currently holds 1010 at .51 and this row is only there by iteration accident, the two should swap.",
+    "WHAT THIS WORK DOES TO THE READER'S POSITION — and the trap in reading it as a continue. The run's honest terminal is ep 161 → ch 229. This work carries a viewer to ch 279, but ONLY on top of the OVA bundle: after ep 161 the shelf's coverage is a patchwork — 230-233 (OVA Vol.1), 241 (OVA Vol.3), 259-265 (OVA Vol.4), then 266-278 here. Chapters 234-240 and 242-258 (the Phantom Lingerie, Pantyhose Taro, Heron Island, Fishing Pole of Love, One-Punch Armor and the whole 13-chapter Musk Dynasty arc) are animated by NOTHING on the shelf, and 279-286 are unadapted before the next work resumes at 287. So a post-series continue computed from this row alone (279) would silently claim 30 unanimated chapters as read.",
+    "T28 SIZING, for the record: Viz's own per-episode runtimes (Apple TV: 26m + 27m) give ~53 minutes for 13 chapters ≈ 208 pages — about 4 pages a minute, against the TV series' ~1.5 (two chapters per 22-minute episode). Combined with ja-WP's negative control (it writes 「OVAオリジナル」 on exactly the three OVAs that are original — Vol.2, Vol.5, Vol.6 — and a chapter range on this one) and a difference list that is all cuts, the mixed question does not arise: this is an abridged adaptation, not a source share beside an original share.",
+    "SOURCE-TIER NOTE: furinkan.com's OVA page (the Ranma ½ Perfect Edition, archived) is the origin of AniList's and Kitsu's synopsis text for this work — count them as ONE lineage, not three — and it is defective here: its 'Reawakening Memories (Part 2)' block carries The One to Carry On Part 2's release date (1994-08-19) and synopsis verbatim. It is cited above only as cross-check for the 上巻 date and for the (unverified, single-source) claim that this arc topped a Japanese fan poll of stories readers wanted animated. Nothing in the verdict rests on it."
+  ]
+}
