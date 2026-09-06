@@ -18,7 +18,7 @@
 //   npx tsx --env-file=.env.ingest scripts/ingest/sync-related-works.ts [--dry-run]
 import { db, finishRun, selectAll, startRun } from './lib/db';
 import { haloCandidates, loadDiscoveryInput } from './lib/discovery';
-import { adaptedNodes, deriveWatchPosition, ledgerWorthy, planRuledMoves, extraKind, freePosition, isoDate, pickAdoption, relatedWorkStanding, type ExtraBucket } from './lib/related-works';
+import { adaptedNodes, deriveWatchPosition, ledgerWorthy, ownerInstrumentSet, planRuledMoves, extraKind, freePosition, isoDate, pickAdoption, relatedWorkStanding, type ExtraBucket } from './lib/related-works';
 import { relatedWorkRuling } from './lib/rulings/related-works';
 import { RULED_POSITION_BY_ANILIST } from './lib/rulings/watch-order-labels';
 import { loadRelatedWorkRegistry, lookupRelatedWork, registerRelatedWorkIds, wikiKey } from './lib/related-work-ids';
@@ -170,7 +170,7 @@ async function main() {
           series_id: sid, position, anilist_id: c.anilistId, origin: 'halo', relation: [...c.relations].join('/'),
           kind: ruling?.kind ?? extraKind(c.format, bucket), standing, title: ruling?.title ?? c.title, air_date: airDate,
           chapter: ruling?.chapter ?? null, volume: ruling?.volume ?? null, chapters_adapted: ruling?.chaptersAdapted ?? null,
-          note: `${bucketNote(bucket, adaptedNodes(m ?? null))} · position ${ruling?.position != null ? 'ruled (I45 ruling layer)' : ruledPos != null ? 'ruled' : 'derived from the air date (a proposal)'}${ruling?.standing ? ' · standing ruled (I45 ruling layer)' : ''}${ruling?.note ? ` · ${ruling.note}` : ''} · I45 halo`,
+          note: `${bucketNote(bucket, adaptedNodes(m ?? null, ownerInstrumentSet({ mangaId: input.ownerManga.get(sid) ?? null, chainWorkIds: input.chainWorks?.get(sid) ?? [], instrumentIds: [...(input.ownerInstruments?.get(sid) ?? [])] })))} · position ${ruling?.position != null ? 'ruled (I45 ruling layer)' : ruledPos != null ? 'ruled' : 'derived from the air date (a proposal)'}${ruling?.standing ? ' · standing ruled (I45 ruling layer)' : ''}${ruling?.note ? ` · ${ruling.note}` : ''} · I45 halo`,
         };
         const same = cur && cur.origin === 'halo' && cur.standing === standing && cur.kind === row.kind && cur.title === row.title && cur.air_date === row.air_date && cur.relation === row.relation && cur.note === row.note
           && (cur.chapter ?? null) === row.chapter && (cur.volume ?? null) === row.volume && (cur.chapters_adapted ?? null) === row.chapters_adapted;

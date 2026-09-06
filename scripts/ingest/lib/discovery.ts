@@ -32,7 +32,7 @@
 
 import { pickMangaNode } from './rulings/source-relations';
 import type { DiscoveryRuling } from './rulings/discovery';
-import { adaptedNodes, extraBucket, ownerInstrumentIds, PROMO, relatedWorkOwners, type ExtraBucket } from './related-works';
+import { adaptedNodes, extraBucket, type ExtraBucket, ownerInstrumentIds, ownerInstrumentSet, PROMO, relatedWorkOwners } from './related-works';
 
 export const SERIES_FORMATS = new Set(['TV', 'TV_SHORT', 'ONA']);
 export const EXTRA_FORMATS = new Set(['MOVIE', 'OVA', 'SPECIAL']);
@@ -244,7 +244,8 @@ export function haloCandidates(input: DiscoveryInput): Candidate[] {
       if (who.alternative && !c.relations.has('CHARACTER') && !PROMO.test(c.title)) { // a promotional entry is promo first, whatever reached it
         c.owners = who.owners; // the base(s) that claimed it
         const media = (input.staged.get(c.anilistId) as never) ?? null;
-        const adapts = adaptedNodes(media);
+        const baseIds = [...who.owners];
+        const adapts = adaptedNodes(media, ownerInstrumentSet({ mangaId: baseIds.map((o) => input.ownerManga.get(o) ?? null).find((m) => m != null) ?? null, chainWorkIds: baseIds.flatMap((o) => input.chainWorks?.get(o) ?? []), instrumentIds: baseIds.flatMap((o) => [...(input.ownerInstruments?.get(o) ?? [])]) }));
         const staged = input.staged.get(c.anilistId);
         c.proposal = staged ? 'alternative' : 'unstaged';
         if (attribution) s.push(`attributed to ${attribution.owner} by ruling (I45)`);
@@ -257,9 +258,10 @@ export function haloCandidates(input: DiscoveryInput): Candidate[] {
       const ownerIds = [...c.owners];
       const ownerManga = ownerIds.map((o) => input.ownerManga.get(o) ?? null).find((m) => m != null) ?? null;
       const media = (input.staged.get(c.anilistId) as never) ?? null;
-      const b = extraBucket(c.relations, media, { mangaId: ownerManga, chainWorkIds: ownerIds.flatMap((o) => input.chainWorks?.get(o) ?? []), instrumentIds: ownerIds.flatMap((o) => [...(input.ownerInstruments?.get(o) ?? [])]) }, c.title);
+      const ownerSet = { mangaId: ownerManga, chainWorkIds: ownerIds.flatMap((o) => input.chainWorks?.get(o) ?? []), instrumentIds: ownerIds.flatMap((o) => [...(input.ownerInstruments?.get(o) ?? [])]) };
+      const b = extraBucket(c.relations, media, ownerSet, c.title);
       c.proposal = b;
-      const adapts = adaptedNodes(media);
+      const adapts = adaptedNodes(media, ownerInstrumentSet(ownerSet));
       if (adapts.length) s.push(`adapts ${adapts.map((n) => `${n.title ?? n.id} (${n.format ?? '?'})`).join(', ')}`);
       s.push(b === 'unstaged' ? 'not staged — run discovery-stage' : `related work: ${b}${b === 'same_instrument' ? ' (the sitting: standing + chapters)' : b === 'other_instrument' ? (adapts.some((n) => n.format === 'MANGA' || n.format === 'NOVEL') ? ' (a series candidate too)' : ' (a one-shot tie-in)') : b === 'promo' ? ' (promotional: a trailer / PV / teaser / CM — ignored like a music video, never a ledger row)' : b === 'unknown' ? ' (hold for Sean)' : ' (filler by rule)'}`);
       c.signals = s; continue;

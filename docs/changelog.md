@@ -1154,6 +1154,29 @@
    19-23 / 39 (chain_source) and 18 / 93-95 (AFL's loose Mixed bucket),
    beelzebub 15 / 26-28 / 51, rurouni TV ep 95 (identity). Batch 22 opens on
    the boruto follow-up (lanes I + C) with the batch-21 tooling copied.
+136. ✅ **SITTING B, STEP 1 — I47, A TAG ROUTES; ONLY RESEARCH OR A RULING ASSERTS THE FACT (E15;
+    Sean's go 2026-09-05 evening, the census list shown first).** The new record I47 (family I): AniList's
+    relation type and `source` tag decide WHERE a candidate goes — bucket, proposal, research queue —
+    never WHAT is true of it; a fact (standing, chapters, ownership, whether a block continues the run)
+    is asserted only by research or a ruling. Consequences landed: `adaptedNodes(media, own)` accepts an
+    ADAPTATION edge to one of the OWNER'S OWN instrument ids (the registered manga, a chain work — I41, a
+    novel owner's NOVEL nodes — T25; `ownerInstrumentSet`) whatever the tag says, while the tag still
+    gates edges to OTHER nodes (a novelization never becomes a source); every call site passes the owner
+    set (extraBucket, both discovery branches, the writer's note); I45 amended to cite it; three tests
+    (273). THE LIST BEFORE THE DEPLOY: exactly two works change bucket — the-prince-of-tennis 995
+    (Zenkoku Taikai-hen, tag null, already ruled canon: only its note changes from 'held' to 'adapts the
+    series' own instrument') and toriko 11787 (Barbarian Ivy wo Hokaku Seyo!, a SIDE_STORY special, tag
+    null) which enters the research queue as same_instrument (standing pending). The sync updated six
+    rows: those two plus four NOTE refreshes on rows whose bucket did not change (the alternative rows
+    Fist of the North Star Movie, Dai 1991 and Drifters OVA now name the base's instrument they adapt; the
+    Blue Exorcist Kyoto OVA's note names an instrument node the tag-gated filter had hidden); second dry
+    run 0 / 0 / 708. Census: extra_unknown 261 → 259, extra_same_instrument 123 → 125, nothing else
+    moved; every violation-kind class 0; five edges redeployed (lib-hash fe021049). The E12 clause will
+    name the fact (continues the instrument past the run's last chapter), never an edge type — the same
+    rule. NEXT (step 2, the separate step): the chain ids as I41 entries — Rosario+Vampire Season II
+    33403 (MAL 3403), Trigun Maximum 30704 (MAL 704), Shonan Junai Gumi 30445 (MAL 445); Cobra's Galaxy
+    Knights has NO AniList node (three searches) — its id stays null with the note saying so (P6).
+
 135. ✅ **THE RULE-LOGIC EVALUATION, SITTING A — inert hygiene (Sean ruled 2026-09-05 evening after
     two agent reviews; E2 / E3 / E4 / E11 / E13-class / E16).** The evaluation (EXTRAS-SITTING §6,
     E1-E16, the generated inventory) went to Sean as one table; Cursor's and an Opus agent's reviews

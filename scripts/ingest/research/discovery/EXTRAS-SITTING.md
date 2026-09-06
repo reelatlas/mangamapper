@@ -338,7 +338,7 @@ Census classes emitted by audit-discovery.ts for related works (15): extra_same_
 | E12 | the component clause WITHOUT the edge-type condition ("continues the instrument past the run's last chapter"; the relation is a routing hint); the Prince of Tennis block = an OVA-range component, own numbering, the verdict JSON its anchor source | sitting C / the next /discover |
 | E13 | the class now (unruled rows between ruled fixed points; kind LISTING until the re-walk); the re-walk after E1 | class LANDED (sitting A) |
 | E14 | fixed | done |
-| E15 | its own add-rule: the routing-vs-truth rule; the owner-instrument edge accepted whatever the tag says; the census list first; the four chain ids as I41 entries in a separate step | sitting B |
+| E15 | its own add-rule: the routing-vs-truth rule (I47); the owner-instrument edge accepted whatever the tag says; the census list first (two works moved: PoT 995, Toriko 11787); the chain ids as I41 entries in a separate step (three resolved; Galaxy Knights has no AniList node) | LANDED (sitting B, §12.136) — the chain ids next |
 | E16 | a KIND per census class (violation / queue / listing) — `lib/census-kinds.ts` | LANDED (sitting A) |
 
 ## Appendix — the generated summary (2026-09-05; regenerate before use)

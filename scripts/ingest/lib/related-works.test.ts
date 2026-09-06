@@ -204,3 +204,19 @@ describe('clusterDisorder (E13 — unruled rows inside a slot in air-date order 
     expect(clusterDisorder([...rows, { seriesId: 'k', position: 119.55, airDate: '1989-01-01', ruled: false }])).toHaveLength(1);
   });
 });
+
+describe('I47 (E15) — the source tag ROUTES; an ADAPTATION edge to the owner\'s own instrument counts whatever the tag says', () => {
+  const owner = { mangaId: 30049, chainWorkIds: [] as number[] };
+  it('the-prince-of-tennis 995: source null + ADAPTATION → the owner\'s manga = same_instrument (was unknown, held)', () => {
+    expect(extraBucket(['SEQUEL'], media({ id: 995, source: null, relations: { edges: [manga(30049)] } }), owner)).toBe('same_instrument');
+    expect(adaptedNodes(media({ id: 995, source: null, relations: { edges: [manga(30049)] } }), [30049]).map((n) => n.id)).toEqual([30049]);
+  });
+  it('the tag still gates edges to OTHER nodes: source null + ADAPTATION → another manga stays unknown (held), never other_instrument', () => {
+    expect(extraBucket(['SIDE_STORY'], media({ id: 1, source: null, relations: { edges: [manga(99999)] } }), owner)).toBe('unknown');
+    expect(adaptedNodes(media({ id: 1, source: null, relations: { edges: [manga(99999)] } }), [30049])).toEqual([]);
+  });
+  it('a tagged work is unchanged: source MANGA + ADAPTATION → another manga = other_instrument; → the owner\'s = same_instrument', () => {
+    expect(extraBucket(['SIDE_STORY'], media({ id: 2, source: 'MANGA', relations: { edges: [manga(99999)] } }), owner)).toBe('other_instrument');
+    expect(extraBucket(['SIDE_STORY'], media({ id: 3, source: 'MANGA', relations: { edges: [manga(30049)] } }), owner)).toBe('same_instrument');
+  });
+});

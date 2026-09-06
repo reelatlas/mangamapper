@@ -140,7 +140,7 @@
 - `N34` Episode totals derive, then floor, then cap — aka `episode totals derivation`
 - `N35` Ruled chapter space: a proven numbering beats AniList totals — aka `ruled chapter space`, `chapter space override`, `CHAPTER_SPACE_OVERRIDES`, `ruledChapterSpace`, `totals re-base`, `propagated scalar`, `the 260-that-is-255 class`, `sourceShifts`, `source chapter shift`, `chapter shift`, `toRuledChapter`, `printed numbering`, `the reading edition`
 
-**I — Identity, franchise & structure** (46)
+**I — Identity, franchise & structure** (47)
 - `I1` Our slug is the identity — aka `identity`, `our slug is identity`, `canonical identity is ours`, `own-slug identity`
 - `I2` Identity registry: every external id maps INTO our id — aka `identity registry`, `registerIds`, `ID COLLISION`, `series_external_ids`
 - `I3` AFG↔canonical registration by evidence strength — aka `registration tiers`, `AFG match tiers`, `identity-first, flag-first`
@@ -187,6 +187,7 @@
 - `I44` Adoption: a page attaches to an existing series by identity — aka `adoption`, `the adoption gate`, `adoption gate`, `identity-first`, `identity first`, `adoptByIdentity`, `adoption_held`, `a page adopts a series`, `AFL attaches later`, `seed first, AFL attaches later`, `the ID COLLISION lesson`
 - `I45` The related-works ledger: every extra listed, three layers — aka `related works`, `the related-works ledger`, `related-works ledger`, `the ledger of extras`, `recaps and specials`, `extras ledger`, `sync-related-works`, `extra_same_instrument`, `extra_recap`, `extra_original`, `extra_crossover`, `extra_other_instrument`, `extra_unknown`, `related_work_stale`, `related_work_violation`, `the three layers`, `catch-up`, `skip guide`, `derived watch position`, `deriveWatchPosition`, `extraBucket`
 - `I46` One row per work: a wiki or ruled row adopts the identity — aka `one row per work`, `related-work adoption`, `wiki row adoption`, `the ledger adopts the identity`, `matchRelatedTitle`, `related_work_duplicate`, `halo duplicate`
+- `I47` A tag routes; only research or a ruling asserts the fact — aka `a tag routes, research asserts`, `the source tag is a routing hint`, `relation type is a routing hint`, `sources are evidence never truth`, `the owner-instrument edge counts`, `E15`, `the second root`
 
 **G — Gates & freshness (sources)** (50)
 - `G1` The flag rule: nothing suspicious auto-applies — aka `flag rule`, `the flag rule`, `the confirm queue`, `nothing suspicious ever auto-applies`
@@ -2544,7 +2545,7 @@ A source page for a series the catalog already holds ATTACHES to that series —
 
 ### I45 · The related-works ledger: every extra listed, three layers
 
-Every related work of a series we hold — recap, compilation, special, OVA, film — is a ROW in watch_order_entries (origin 'halo'; lib/related-works.ts, sync-related-works.ts) with its identity (anilist_id), the relation that reached it, its kind (T29's format axis: movie / ova / special / recap), a STANDING in the episode vocabulary (canon | mixed | filler — never a third 'essential / optional / skippable' axis; the skip guide is standing + format), a derived position (after the last episode that aired before it; a ruling by AniList id in lib/rulings/watch-order-labels.ts overrides) and a note naming its bucket. THREE LAYERS, never collapsed: (1) the LEDGER lists everything (music videos and promotional entries — trailers, PVs, teasers, commercials — are ignored: listed by the census as extra_promo, never a row; character-only crossovers are listed, not fetched); (2) the NUMBERED COUNT admits only counted extras, which keep a component (N4) — a recap never becomes an integer row (N8); (3) the SERIES PAGE shows only labeled rows (N31, display_label; the app reads nothing else) — a work our sources already number into the run surfaces with a note, everything else is the sitting's decision. The BUCKET decides the standing where a rule can: SUMMARY / COMPILATION or a recap title → filler, kind recap; source ORIGINAL → filler (T25: no instrument); a character-only crossover → filler; a work adapting the owner's own instrument (the registered manga or a chain work, I41; a novel owner's instrument is the NOVEL node its own anime adapts — T25, ownerInstrumentIds) → standing PENDING — the sitting and research decide with its chapters; another work under the extra's OWN source (adaptedNodes: a novelization is never a source) → pending and a series candidate too (a one-shot tie-in is not); a source naming no instrument node (AniList's franchise tag with no chapters behind it, a novel film without its edge, a visual-novel or game source) → held for Sean. Every writer deletes only its own origin (G57): sync-watch-order owns 'wiki', the sitting's rulings 'ruling', this ledger 'halo'; a stale ledger row is a listing (related_work_stale), a stored standing or kind that disagrees with the derivation is related_work_violation. THE RULING LAYER (Sean ruled (b)/(c), 2026-09-05): a researched standing, chapters or position lives in lib/rulings/related-works.ts keyed by the owner and the AniList id — relatedWorkStanding: a ruling beats the rule; the row keeps origin halo, the facts are ruled; every entry lands from a verdict (R1). A wiki or ruling row that names the same work ADOPTS the AniList identity instead of a second row (I46). A work NO owner reached by an in-run relation (SEQUEL / PREQUEL / SIDE_STORY / SPIN_OFF / PARENT / OTHER — AniList's label for an entry's own specials — / SUMMARY / COMPILATION) is an ALTERNATIVE ADAPTATION (I16) — the 1995 Ghost in the Shell beside SAC, the Heaven's Feel films beside every Fate entry: never in a run, attributed ONCE to the franchise base (I43), standing not a question, a series candidate when it adapts an instrument (step 2), held when the source has none (Sean ruled 2026-09-05).
+Every related work of a series we hold — recap, compilation, special, OVA, film — is a ROW in watch_order_entries (origin 'halo'; lib/related-works.ts, sync-related-works.ts) with its identity (anilist_id), the relation that reached it, its kind (T29's format axis: movie / ova / special / recap), a STANDING in the episode vocabulary (canon | mixed | filler — never a third 'essential / optional / skippable' axis; the skip guide is standing + format), a derived position (after the last episode that aired before it; a ruling by AniList id in lib/rulings/watch-order-labels.ts overrides) and a note naming its bucket. THREE LAYERS, never collapsed: (1) the LEDGER lists everything (music videos and promotional entries — trailers, PVs, teasers, commercials — are ignored: listed by the census as extra_promo, never a row; character-only crossovers are listed, not fetched); (2) the NUMBERED COUNT admits only counted extras, which keep a component (N4) — a recap never becomes an integer row (N8); (3) the SERIES PAGE shows only labeled rows (N31, display_label; the app reads nothing else) — a work our sources already number into the run surfaces with a note, everything else is the sitting's decision. The BUCKET decides the standing where a rule can: SUMMARY / COMPILATION or a recap title → filler, kind recap; source ORIGINAL → filler (T25: no instrument); a character-only crossover → filler; a work adapting the owner's own instrument (the registered manga or a chain work, I41; a novel owner's instrument is the NOVEL node its own anime adapts — T25, ownerInstrumentIds) → standing PENDING — an ADAPTATION edge to one of those ids counts whatever the `source` tag says (I47, 2026-09-05) — the sitting and research decide with its chapters; another work under the extra's OWN source (adaptedNodes: a novelization is never a source) → pending and a series candidate too (a one-shot tie-in is not); a source naming no instrument node (AniList's franchise tag with no chapters behind it, a novel film without its edge, a visual-novel or game source) → held for Sean. Every writer deletes only its own origin (G57): sync-watch-order owns 'wiki', the sitting's rulings 'ruling', this ledger 'halo'; a stale ledger row is a listing (related_work_stale), a stored standing or kind that disagrees with the derivation is related_work_violation. THE RULING LAYER (Sean ruled (b)/(c), 2026-09-05): a researched standing, chapters or position lives in lib/rulings/related-works.ts keyed by the owner and the AniList id — relatedWorkStanding: a ruling beats the rule; the row keeps origin halo, the facts are ruled; every entry lands from a verdict (R1). A wiki or ruling row that names the same work ADOPTS the AniList identity instead of a second row (I46). A work NO owner reached by an in-run relation (SEQUEL / PREQUEL / SIDE_STORY / SPIN_OFF / PARENT / OTHER — AniList's label for an entry's own specials — / SUMMARY / COMPILATION) is an ALTERNATIVE ADAPTATION (I16) — the 1995 Ghost in the Shell beside SAC, the Heaven's Feel films beside every Fate entry: never in a run, attributed ONCE to the franchise base (I43), standing not a question, a series candidate when it adapts an instrument (step 2), held when the source has none (Sean ruled 2026-09-05).
 
 *Why:* Sean 2026-09-05: a viewer coming back after years needs to know where the recaps and compilations sit, and a viewer inside a series needs to know whether a related OVA, special or film is canon or skippable — so every related work must be in the data, classifiable, and positionable, surfaced or not. Cursor's must-fix in the same sitting: sync-watch-order deleted every row it had not derived, so ledger rows would have vanished on the next heal — the incident-shaped hole, closed by origin. Components stay the numbered spine (Naruto's eleven films do not belong there); the ledger is the watch-order table, which already carried position, kind, date and the adaptation fields.
 
@@ -2570,6 +2571,20 @@ A related work is ONE row per series in watch_order_entries. When a row of anoth
 - witnesses: my-hero-academia, to-love-ru-darkness, cardcaptor-sakura, golden-kamuy
 - aliases: one row per work, related-work adoption, wiki row adoption, the ledger adopts the identity, matchRelatedTitle, related_work_duplicate, halo duplicate
 - see: I45, I44, G57, N31, P24
+
+### I47 · A tag routes; only research or a ruling asserts the fact
+
+AniList's relation type (SEQUEL / SIDE_STORY / OTHER / ADAPTATION…) and its `source` tag decide WHERE a candidate goes — which bucket, which proposal, which research queue — and never WHAT is true of it. A fact about the catalog (a standing, the chapters, ownership, whether a block continues the run) is asserted only by research under the protocol or by a ruling. Two consequences today: (1) an ADAPTATION edge to one of the owner's OWN instrument ids (the registered manga, a chain work — I41, a novel owner's NOVEL nodes — T25) counts whatever the `source` tag says, so a null-tagged work with that edge is bucketed same_instrument (research decides its standing) rather than held; the tag still gates edges to OTHER nodes (a novelization never becomes a source). (2) A rule that keys a structural test on an edge type (a component clause on 'reached by SEQUEL') is wrong by construction — the predicate that carries the truth names the fact (continues the instrument past the run's last chapter); the edge stays a routing hint.
+
+*Why:* The rule-logic evaluation (Sean, 2026-09-05, with an Opus agent's review): the-prince-of-tennis 995 (Zenkoku Taikai-hen, 13 OVA episodes adapting Genius 237-305) was held as 'a source with no named instrument' for a day while its ADAPTATION → 30049 edge sat staged, because adaptedNodes looked formats up by the null `source` tag and returned nothing; the wave-4b verifier refuted the verdict's 'stale snapshot' diagnosis and named the mechanism. The same shape hid in E12's draft clause ('reached by SEQUEL'), which would miss the identical block tagged SIDE_STORY. Both are one defect: a source's label used as a gate on truth instead of a hint for routing — the vision's premise is that sources are evidence, never truth (I44's identity principle, the same direction).
+
+- ruled Sean 2026-09-05 (the rule-logic evaluation, sitting B (E15) — EXTRAS-SITTING.md §6)
+- layer **writer**
+- enforced: [lib/related-works.ts#adaptedNodes](../scripts/ingest/lib/related-works.ts) · [lib/related-works.ts#ownerInstrumentSet](../scripts/ingest/lib/related-works.ts) · [lib/related-works.ts#extraBucket](../scripts/ingest/lib/related-works.ts) · [lib/discovery.ts](../scripts/ingest/lib/discovery.ts)
+- audit: `extra_unknown`, `extra_same_instrument`, `related_work_unruled`
+- witnesses: the-prince-of-tennis, ranma-1-2
+- aliases: a tag routes, research asserts, the source tag is a routing hint, relation type is a routing hint, sources are evidence never truth, the owner-instrument edge counts, E15, the second root
+- see: I45, I41, T25, I44, I13
 
 ## G — Gates & freshness (sources)
 
@@ -4313,6 +4328,7 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - 6–8 wave cap → `P12`
 - a licence is not adoption → `T26`
 - a page adopts a series → `I44`
+- a tag routes, research asserts → `I47`
 - a wave is the unit of loss → `P12`
 - a writer deletes only rows it minted → `G57`
 - A-11 → `G54`
@@ -4708,6 +4724,7 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - DSQ class → `T11`
 - dual adaptation → `I40`
 - duplicate rule → `I12`
+- E15 → `I47`
 - E2 → `G55`
 - E3 → `A10`
 - E4 → `I39`
@@ -5219,6 +5236,7 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - related-work adoption → `I46`
 - related-works ledger → `I45`
 - relation kinds → `I17`
+- relation type is a routing hint → `I47`
 - relationship direction → `I17`
 - reliability tiers → `G5`
 - relocated openers → `A12`
@@ -5382,6 +5400,7 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - source-kinds → `T25`
 - source-scope enforcement → `I36`
 - source-scope rule → `I36`
+- sources are evidence never truth → `I47`
 - sourceShifts → `N35`
 - sourceType → `T20`
 - span override → `I39`
@@ -5480,6 +5499,7 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - the ledger of extras → `I45`
 - the mint rule → `G59`
 - the Naruto bug → `I36`
+- the owner-instrument edge counts → `I47`
 - the parallel clause → `T26`
 - the proposal never writes → `I42`
 - the rankings reader → `G60`
@@ -5490,10 +5510,12 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - the refresh-anilist lesson → `G58`
 - the related-works ledger → `I45`
 - the score → `G60`
+- the second root → `I47`
 - the seed queue → `G60`
 - the signing table → `I43`
 - the sitting recap → `I42`
 - the sliver clause → `T28`
+- the source tag is a routing hint → `I47`
 - the standing goal → `P30`
 - the START clause → `A18`
 - the story test → `T30`
@@ -5610,6 +5632,6 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 
 ## Scoreboard
 
-- rules: 289 (live 274, planned 8, superseded 7)
+- rules: 290 (live 275, planned 8, superseded 7)
 - live data rules with no audit class (the automation backlog): 83
-- by layer: writer 150 · display 23 · both 31 · process 85
+- by layer: writer 151 · display 23 · both 31 · process 85

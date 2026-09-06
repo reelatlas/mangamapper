@@ -124,11 +124,25 @@ export const NOVEL_SOURCE_TYPES = new Set(['light_novel', 'novel', 'web_novel'])
 export type AdaptedNode = { id: number; format: string | null; title: string | null };
 
 /** the works a media adapts under its OWN source: ADAPTATION edges to MANGA-type nodes whose format the source names — [] when the source is ORIGINAL, unknown, or names nothing (an edge to a novelization is not a source) */
-export function adaptedNodes(media: ExtraMedia | null): AdaptedNode[] {
-  const formats = media?.source ? SOURCE_FORMATS[media.source] : undefined;
-  if (!media || !formats) return [];
+/** the owner's instrument ids as one set: the registered manga, the chain works (I41) and a novel owner's NOVEL nodes (T25) */
+export const ownerInstrumentSet = (owner: { mangaId: number | null; chainWorkIds?: Iterable<number>; instrumentIds?: Iterable<number> }): Set<number> => {
+  const own = new Set<number>([...(owner.chainWorkIds ?? []), ...(owner.instrumentIds ?? [])]);
+  if (owner.mangaId != null) own.add(owner.mangaId);
+  return own;
+};
+
+/**
+ * the ADAPTATION nodes a related work adapts. I47 (E15, Sean 2026-09-05): an edge to one of the OWNER'S OWN instrument ids counts
+ * WHATEVER AniList's `source` tag says — the tag ROUTES (it still gates edges to other nodes: a novelization never becomes a
+ * source), it never asserts the fact. the-prince-of-tennis 995 sat held for a day with its ADAPTATION → 30049 edge staged
+ * because its tag was null.
+ */
+export function adaptedNodes(media: ExtraMedia | null, own?: Iterable<number>): AdaptedNode[] {
+  if (!media) return [];
+  const formats = media.source ? SOURCE_FORMATS[media.source] : undefined;
+  const ownSet = new Set(own ?? []);
   return (media.relations?.edges ?? [])
-    .filter((e) => e.relationType === 'ADAPTATION' && e.node.type === 'MANGA' && formats.includes(e.node.format ?? ''))
+    .filter((e) => e.relationType === 'ADAPTATION' && e.node.type === 'MANGA' && (ownSet.has(e.node.id) || (formats?.includes(e.node.format ?? '') ?? false)))
     .sort((a, b) => (b.node.popularity ?? 0) - (a.node.popularity ?? 0))
     .map((e) => ({ id: e.node.id, format: e.node.format ?? null, title: e.node.title?.romaji ?? null }));
 }
@@ -159,10 +173,9 @@ export function extraBucket(relations: Iterable<string>, media: ExtraMedia | nul
   if (!media) return 'unstaged';
   if (RECAP_TITLE.test(title)) return 'recap';
   if (media.source === 'ORIGINAL') return 'original';
-  const nodes = adaptedNodes(media);
+  const own = ownerInstrumentSet(owner);
+  const nodes = adaptedNodes(media, own); // I47: the owner's own instrument counts whatever the source tag says
   if (nodes.length) {
-    const own = new Set<number>([...(owner.chainWorkIds ?? []), ...(owner.instrumentIds ?? [])]);
-    if (owner.mangaId != null) own.add(owner.mangaId);
     return nodes.some((n) => own.has(n.id)) ? 'same_instrument' : 'other_instrument';
   }
   // a source that is not ORIGINAL and names no instrument node is HELD: AniList's franchise tag with no chapters behind it (most
