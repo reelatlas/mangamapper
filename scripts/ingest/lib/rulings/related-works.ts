@@ -1328,9 +1328,9 @@ export const ENTRIES: RulingEntry<RelatedWorkRuling>[] = [
   {
     seriesId: 'is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon',
     ruleId: 'I45',
-    value: { anilistId: 21660, position: 13.5, note: "First of the 13.x cluster in date order (the film 101166 follows at 13.51): the S1 hot-springs OVA (2016-12-07) is the climb back from the 18th floor after the Black Goliath — ABEMA's 時系列 list and the fandom's navigation (ep 13 → OVA → II ep 1). Standing pending: its own verdict is a later wave." },
+    value: { anilistId: 21660, standing: 'filler', position: 13.5, note: "FILLER — 「大森藤ノ先生完全監修によるオリジナルストーリー！」 on the licensor's own OVA page (live + two 2016 snapshots) and its 2016-08-17 news entry; Ōmori twice (Comic Natalie 2019-08-09; Da Vinci 2019-09-07: the scriptwriter 白根 'ran wild', the author keeps out of OVA originals); the fandom's Volume = Anime Original; no printed unit (the disc's 8-page 解説書; NDL; the 2023 collections; ja-WP's 45-book list). 完全監修 is a blanket supervision credit — T26's rejected shape; adopted null. Vol 7's hot-spring pages belong to TV row 18 (S2 ep 5), not here. First of the 13.x cluster in date order (the film 101166 at 13.51; the climb back from the 18th floor after the Black Goliath — ABEMA's 時系列 list, the fandom's nav); air_date 2016-12-07 holds." },
     reason:
-      "Sean 2026-09-06 (wave 5, the danmachi cluster): the writer had the film at 13.5 and this OVA behind it at 13.51 in insertion order — related_work_cluster_disorder's witness; the sourced order is OVA then film. Identity is the AniList id; the position is the ruled order (the Made in Abyss shape).",
+      "Sean 2026-09-06 (wave 5, the danmachi cluster): the writer had the film at 13.5 and this OVA behind it at 13.51 in insertion order — related_work_cluster_disorder's witness; the sourced order is OVA then film. WAVE 6 (a standing-only ask, verified SOUND WITH NOTES — the licensor line grep-verified in all four places, both Ōmori quotes verbatim, the printed-unit negative on three independent lineages): filler, edited IN PLACE (a replaced entry would have dropped the cluster ruling); the interview dates are the pages' own, not ja-WP's. Sean 2026-09-06: filler, 13.5.",
     ruledBy: 'Sean',
     ruledOn: '2026-09-06',
     cite: ['scripts/ingest/research/discovery/verify/is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon__101166.md'],
@@ -1438,9 +1438,9 @@ export const ENTRIES: RulingEntry<RelatedWorkRuling>[] = [
   {
     seriesId: 'dragon-ball-z',
     ruleId: 'I45',
-    value: { anilistId: 14837, standing: 'filler', position: 288.5, note: "FILLER — official continuity (Toei: 「スピンオフでも番外編でもない…正史」) but no page of the manga is in it: set in the ten-year gap between ch 517 and 518 (Toei 2012-07-17; WSJ #33 via ANN; ja-WP's 年代記 ref) — after ep 288 (遅いぜ悟空！みんなでパーティ!!, 1996-01-10, the barbecue) and before ep 289 (悟空おじいちゃん！私がパンよ!!, the ten-years-later Budokai), ja-WP's own Z slot, rows joined by title + date (R20); our anchors agree (287 → 517, 288 filler, 289 → 517-518). Release order (291.5) would show Uub and Goku's departure before a film set six years earlier. No adopted{author} on the 脚本 basis (渡辺雄介; Sean 2026-09-05); nothing entered this manga (closed 1995) — the DBS manga's ch 1-4 incorporation is correspondence on THAT owner." },
+    value: { anilistId: 14837, standing: 'filler', position: 288.51, note: "RE-SEATED 288.51 (wave 6, 2026-09-06 — the 288.5x cluster in story and release order, one package: Yo! Son Goku Age 776 / 2008 at 288.5, this film 778 / 2013 at 288.51, Resurrection 'F' 779 / 2015 at 288.52). FILLER — official continuity (Toei: 「スピンオフでも番外編でもない…正史」) but no page of the manga is in it: set in the ten-year gap between ch 517 and 518 (Toei 2012-07-17; WSJ #33 via ANN; ja-WP's 年代記 ref) — after ep 288 (遅いぜ悟空！みんなでパーティ!!, 1996-01-10, the barbecue) and before ep 289 (悟空おじいちゃん！私がパンよ!!, the ten-years-later Budokai), ja-WP's own Z slot, rows joined by title + date (R20); our anchors agree (287 → 517, 288 filler, 289 → 517-518). Release order (291.5) would show Uub and Goku's departure before a film set six years earlier. No adopted{author} on the 脚本 basis (渡辺雄介; Sean 2026-09-05); nothing entered this manga (closed 1995) — the DBS manga's ch 1-4 incorporation is correspondence on THAT owner." },
     reason:
-      "Wave 5 (verified SOUND WITH NOTES, one work under three owners — verify/dragon-ball__14837.md): the placement sources reproduce verbatim (Toei's 2012-07-17 release, ANN / WSJ #33, ja-WP 神と神's three-owner slot, the wiki); the DBS standing was a genuine fork the verdict delivered honestly — the verifier and the sitting read CANON as the ruled model (I40 / T30 outrank the protocol's adaptation-owner example, whose adopted-note premise the 2026-09-05 sitting removed) and required the chapter string to say correspondence (a bare 'vol 1 · ch 4' would render as adaptation). Sean 2026-09-06: DBS canon; DBZ 288.5 and Kai 165.5 as one story point. Queued (same class, next wave): Resurrection 'F' 20778 under all three owners; Yo! Son Goku 5152 (Age 776) at DBZ 291.53; the protocol's stale Battle-of-Gods sentence; a parallel-owner clause; the writer / census gap for chapter fields on a parallel owner.",
+      "Wave 5 (verified SOUND WITH NOTES, one work under three owners — verify/dragon-ball__14837.md): the placement sources reproduce verbatim (Toei's 2012-07-17 release, ANN / WSJ #33, ja-WP 神と神's three-owner slot, the wiki); the DBS standing was a genuine fork the verdict delivered honestly — the verifier and the sitting read CANON as the ruled model (I40 / T30 outrank the protocol's adaptation-owner example, whose adopted-note premise the 2026-09-05 sitting removed) and required the chapter string to say correspondence (a bare 'vol 1 · ch 4' would render as adaptation). Sean 2026-09-06: DBS canon; DBZ 288.5 and Kai 165.5 as one story point. WAVE 6: the DBZ seat re-ruled 288.51 with the cluster (Cursor: 'do not leave BoG at 288.5'). Queued (same class, next wave): Resurrection 'F' 20778 under all three owners; Yo! Son Goku 5152 (Age 776) at DBZ 291.53; the protocol's stale Battle-of-Gods sentence; a parallel-owner clause; the writer / census gap for chapter fields on a parallel owner.",
     ruledBy: 'Sean',
     ruledOn: '2026-09-06',
     cite: ['scripts/ingest/research/discovery/out/dragon-ball-z__14837.json', 'scripts/ingest/research/discovery/verify/dragon-ball__14837.md'],
@@ -1464,6 +1464,107 @@ export const ENTRIES: RulingEntry<RelatedWorkRuling>[] = [
     ruledBy: 'Sean',
     ruledOn: '2026-09-06',
     cite: ['scripts/ingest/research/discovery/out/dragon-ball-super__14837.json', 'scripts/ingest/research/discovery/verify/dragon-ball__14837.md'],
+  },
+  // ---- WAVE 6 (Blue Exorcist, Food Wars, BSD, DanMachi, Kaguya-sama, Fruits Basket, OPM S2, the Dragon Ball slot ask), Sean ruled 2026-09-06 with Cursor: all eleven as recommended — DBS Resurrection F canon at 14.5 (T30), the DBZ 288.5x cluster as ONE package (Yo! → BoG → RoF), Blue Exorcist pinned, no Kai row for Yo!; BSD lands on its wiki row through the adopted-row path
+  {
+    seriesId: 'food-wars',
+    ruleId: 'I45',
+    value: { anilistId: 98702, standing: 'mixed', chapter: 119, volume: 15, chaptersAdapted: "118-119 (vol 15 — the Elite Ten's arrival: ch 118 the Council's full appearance, 119 their formal introduction; en-WP: vol 14 ends at 118, vol 15 opens at 119) — episode 2 「遠月十傑」 entire, the TV run's hole between ep 37 (END 117) and ep 38 (START 120); episode 1 「秋月のめぐり逢い」 is the licensor's アニメオリジナルストーリー", position: 37.5, airDate: '2017-05-02', note: "MIXED — two near-equal OVAs on one AniList id (I46: one row, one standing): ep 1 (vol-24 disc, 2017-05-02, 24 min) an original on the licensor's own label; ep 2 (vol-25 disc, 2017-07-04, 25 min) a straight adaptation — ja-WP 「これまでのOVAシリーズとは違い原作の本筋が描かれ」. The OVA is the sole animation of 118-119 (S3 re-shows it as a flashback). Position 37.5: the chapters, the setting, the fandom's arc order (37 → OVA → 38) and the release slot agree. airDate 2017-05-02 (AniList's 05-01 = MAL's, one lineage — P8). 脚本 ヤスカワショウゴ; Tsukuda / Saeki = credits (T26)." },
+    reason:
+      "Wave 6 (research-agent, verified R24 SOUND WITH NOTES): standing, 118-119 / vol 15, 37.5 and adopted null on the licensor's own copy, ja-WP, en-WP's chapter list (a second lineage for the volume seam), the fandom's chapter and episode pages and MU's coverage string (its volume digits wrong, its chapters right). The verifier: the START 118 is firmer than filed (the Council's 'Full Appearance' debut) — no 119-119 fallback; the date repair is owed (four sources say 05-02; the verdict declined it on a false premise); the fandom's ch-118 summary is an AI paste — re-cited. Sean 2026-09-06: mixed, 37.5, airDate 2017-05-02.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-06',
+    cite: ['scripts/ingest/research/discovery/out/food-wars__98702.json', 'scripts/ingest/research/discovery/verify/food-wars__98702.md'],
+  },
+  {
+    seriesId: 'bungo-stray-dogs',
+    ruleId: 'I45',
+    value: { anilistId: 21791, standing: 'canon', chapter: 40, volume: 10, chaptersAdapted: "40 (vol 10) — 第四十話 独り歩む in full (44 pp); the run's SOLE adaptation: S3 reorders around it (28 = 42, 29 = 38 + 41, 30 = 39 + 43, 31 = 44-45) and no episode carries ch 40", note: "CANON — the owner's own ch 40 『独り歩む』 (vol 10's printed 目次; KADOKAWA: the vol-13 限定版's Blu-ray, 発売日 2017-08-04; the licensor's own 第25話 count is the shift N9 records — the source's count, not an AFL artefact). The position 24.5 is the wiki row's own ruling (I46 adoption) — never moved here. The closing Fukuzawa / Taneda coda is an anime addition (Taneda debuts ch 58) — a divergence beat, T28. Asagiri / Harukawa credits = credits (T26); 脚本 榎戸洋司." },
+    reason:
+      "Wave 6 (verified SOUND on the facts — REFUTED on the landing, closed in code): ch 40 / vol 10 on the publisher's print, the licensor's own 第25話, en-WP's chapter list, the fandom's adapted-from field and three debut characters; the reorder verified on titles + dates; ja-WP's BD-BOX 2 「第13話 - 第25話」 a witness the verdict missed. The stored row is WIKI-origin (the batch-8 fractional ruling) and sync-related-works skipped non-halo rows before reading rulings — the I45 layer now applies a ruling's FACTS to adopted rows (standing, chapters, note, repairs; never the position) and the census covers them (2026-09-06). Sean 2026-09-06: canon, ch 40, 24.5 kept.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-06',
+    cite: ['scripts/ingest/research/discovery/out/bungo-stray-dogs__21791.json', 'scripts/ingest/research/discovery/verify/bungo-stray-dogs__21791.md'],
+  },
+  {
+    seriesId: 'kaguya-sama-love-is-war',
+    ruleId: 'I45',
+    value: { anilistId: 194884, standing: 'canon', chapter: 267, volume: 27, chaptersAdapted: "a SELECTION, not a continuation — 163, 170, 191, 218-221, 266-267 (vols 17-27; each chapter page carries Anime Episode = Otona e no Kaidan and no TV episode; MU's 'adapts Chap 163, 170, 191, 218-221, 266-268' — 268 refuted, in no account); ch 162 「生徒会のNEW GAME」 is a ~1.5-min flashback sliver inside the first segment, never coverage; the adult-Kaguya album frame (~2 + 2 min) is the anime's own", position: 41.5, note: "CANON — the two-part TV special (2025-12-31, TOKYO MX / BS11 / とちぎテレビ as one hour; Prime Video 第1話 / 第2話 from 2026-01-01; AniList 2 × 26 min = one row, I46) animates chapters the 41-row run never reached, cherry-picked across vols 17-27 — the sole adaptation of each. The seam: ep 41 (First Kiss part 4) ends on ch 160 (vol 16; MU 'Vol 16, Chap 160 (Movie) Skips 152-158'); this work opens on 163; 161 and 152-158 stay unadapted. The undated finale film -Kanketsu-hen- (AniList 205081, Akasaka's 書き下ろし原案) follows when dated. Akasaka = a credit (T26)." },
+    reason:
+      "Wave 6 (the author died in a session-limit kill seconds after writing; verified R24 SOUND WITH NOTES): the ten-chapter set on the fandom's special page and all ten chapter pages, MU's sentence, en-WP's two episode summaries beat for beat; the START on the broadcast clock (the 163 title card at 22:04:33, the 162 gift beats after it); END 267 / vol 27 on the chapter and volume pages; 41.5 on the run's last END 160. The verifier: the generated string printed the sliver as coverage — hand-written as a SELECTION (Cursor); the 191 note's 'credited to no chapter' was wrong; ep 40 / 41's stored partial / rearranged is a by-catch (queued). Sean 2026-09-06: canon, 267 / vol 27, 41.5.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-06',
+    cite: ['scripts/ingest/research/discovery/out/kaguya-sama-love-is-war__194884.json', 'scripts/ingest/research/discovery/verify/kaguya-sama-love-is-war__194884.md'],
+  },
+  {
+    seriesId: 'fruits-basket-2019',
+    ruleId: 'I45',
+    value: { anilistId: 136192, standing: 'canon', chapter: 93, volume: 16, chaptersAdapted: "90-93 (vol 16 — the Kyoko and Katsuya story that opens vol 16; producer Ito: 「原作第90話〜第93話」): the film's last hour, in order and in full — the one block the TV run never adapted (ep 48 = 88-89, ep 49 = 94-95; only ch 93's present-day frame sits in ep 57); the first ~30 min is a clip show of the 63-row run through Kyoko's grave (weightless — T28's recap clause, the Gintama-prologue shape) and a 3-min Takaya epilogue closes it", position: 63.5, note: "CANON — the new footage is the film's job and it is the manga's own chapters (three independent bylines size the clip show at ~30-33 min against ~52 min of adaptation). Position 63.5: the chapter slot would be 48.5, but the film opens on a recap through the finale's own grave scene and its epilogue is post-series — after the run's last row, the chapter fact carried here. Takaya's opening-day booklet manga and the BD 8-pager are tie-ins downstream of the film (T26 — the comicalization trap); a 'prelude - Special Comics' node is unverified, minted nothing. 88 min, 2022-02-18." },
+    reason:
+      "Wave 6 (verified SOUND WITH NOTES): 90-93 on Ito's Febri line verbatim, en-WP's vol 16 = 90-95 and Hakusensha's own copy; the never-adapted block reproduced on all 63 fandom episode pages; canon under T28's recap clause (the ledger's precedents: gintama's prologue, FotNS 130, bleach 190). The verifier: `recap: true` beside canon is the wave's only such pair — ruled in the gintama shape, the clip show in the string, no 'recap;' note prefix (Cursor: recap false on the row); the category API's 50-revision cap silently truncated the author's coverage dump (a trap, queued). Sean 2026-09-06: canon, 90-93 / vol 16, 63.5.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-06',
+    cite: ['scripts/ingest/research/discovery/out/fruits-basket-2019__136192.json', 'scripts/ingest/research/discovery/verify/fruits-basket-2019__136192.md'],
+  },
+  {
+    seriesId: 'blue-exorcist',
+    ruleId: 'I45',
+    value: { anilistId: 11737, standing: 'filler', position: 25.5, note: "FILLER — a film-original story (ja-WP, citing Monthly Newtype 2013/01: 「テレビシリーズ第1期の後日談に当たり、映画オリジナルのストーリーとなる」; Comic Natalie: Usamaro and Liu 「劇場版オリジナルキャラクター」). The vol-6 unnumbered 番外編 「幽霊列車」 (Shueisha: 「番外編2本も同時収録!!」 — a fact, never a number, N35) is RESTAGED as the opening exorcism — a sliver (T28): the train's return, the shrine and Usamaro are original. Position 25.5 PINNED: the release slot (2012-12-28, between ep 25 and ep 26) and the stated setting (S1's 後日談) agree; the 2011 OVA beside it (25.51) is mis-dated — its true slot is ~11.5, its own ruling later. Kato's designs, the BD jacket, the 年賀カード and the novella's cover + 巻末マンガ are drawn pages OFF the source line — T26's non-adoption (Liu's later manga cameo carries no film event); the same-day novelisation is downstream. 88 min." },
+    reason:
+      "Wave 6 (verified SOUND WITH NOTES): the original-story claim on ja-WP (Newtype) and Comic Natalie independently, the fandom, J-Books and ANN; the bonus chapter's two wiki readings reconciled on the chapter's own content (restaged beats, an original payload); MU's coverage string has no movie segment; the date 2012-12-28 on every source (no repair). The verifier: the adoption clause must name the BD jacket, the 年賀カード and the novella's art and dismiss them on T26's source-line test (done above); the 25.5x cluster stays listed until pinned — pinned here (Cursor: the 2011 OVA is a mis-dated ~11.5, not a 25.x peer). Sean 2026-09-06: filler, 25.5.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-06',
+    cite: ['scripts/ingest/research/discovery/out/blue-exorcist__11737.json', 'scripts/ingest/research/discovery/verify/blue-exorcist__11737.md'],
+  },
+  {
+    seriesId: 'one-punch-man',
+    ruleId: 'I45',
+    value: { anilistId: 108945, standing: 'filler', position: 24.5, note: "FILLER — six anime-original shorts on the six S2 discs (2019-10-25 → 2020-03-27, 約10分 each): 「アニメ完全オリジナルストーリー」 once per page, six for six, on the licensor's site and v-storage (one publisher's copy on two outlets; the independent legs are the credits — 脚本 稲本達郎 ×4 / 鈴木智尋 ×2 — and the content: no bonus chapter matches, zero Chapter / Volume backlinks, ten OVA-only characters). Position 24.5 — the derived S2 seam stands because every member's floor is cleared and nothing pins later: #02 12.5 (「ボロスの地球襲撃から1週間」), #03 14.5+, #04 17.5-19.5 (Suiryu introduced ep 17, broken inside ep 20), #05 9.5+, #06 unpinned; disc order is not story order. ONE 原案 = a credit (T26); the discs' audio dramas carry 「プロット原案：ONE」, the OVAs do not. air_date = disc 1 (the bundle convention)." },
+    reason:
+      "Wave 6 (the S1 bundle's method reused; verified SOUND WITH NOTES): the licensor's line six for six on two outlets, the writers on ja-WP's OVA table and en-WP, ANN's 'new story'; the negatives reproduced (the bonus-chapter sweep, the backlinks query, the character fields). The verifier: the sensitivity-control flag overstated 'positive silence' (the OVA infobox has no chapter field at all — the standing rests on the licensor's copy + the content); two member windows corrected by an episode (#04 17.5-19.5, #05 9.5+); the position's basis written as the protocol's form, never a new convention (P9). Sean 2026-09-06: filler, 24.5.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-06',
+    cite: ['scripts/ingest/research/discovery/out/one-punch-man__108945.json', 'scripts/ingest/research/discovery/verify/one-punch-man__108945.md'],
+  },
+  {
+    seriesId: 'dragon-ball-z',
+    ruleId: 'I45',
+    value: { anilistId: 20778, standing: 'filler', position: 288.52, note: "FILLER — an original (原作・脚本 鳥山明 = a credit, T26; no page of the manga is in it): set in Age 779, after Battle of Gods (Age 778), both inside the ten-year gap between ch 517 and 518 (Toei; ja-WP 神と神; the fandom's Age pages) — after ep 288, before ep 289 (rows joined by title + date, R20). Third seat of the 288.5x cluster in story AND release order: Yo! Son Goku (Age 776, 2008) → Battle of Gods (778, 2013) → Resurrection 'F' (779, 2015) — ruled as ONE package (the writer refuses a half-applied cluster). The DBS manga skipped this arc — nothing was ever incorporated (this manga closed in 1995)." },
+    reason:
+      "Wave 6 (the narrow slot ask, verified SOUND WITH NOTES): the ch 517 / 518 gap on Toei's 2012 release, ja-WP 神と神 and the wiki; the Ages on three lineages; rows 288 / 289 by title + date. The verifier: the seat 288.52 is conditional on the cluster (BoG → 288.51) — ruled together (Cursor: 'do not leave BoG at 288.5'); the 291.5x release-order alternative is closed by the ruled BoG entry. Sean 2026-09-06: filler, 288.52.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-06',
+    cite: ['scripts/ingest/research/discovery/out/dragon-ball-z__20778.json', 'scripts/ingest/research/discovery/verify/dragon-ball__20778.md'],
+  },
+  {
+    seriesId: 'dragon-ball-z',
+    ruleId: 'I45',
+    value: { anilistId: 5152, standing: 'filler', position: 288.5, note: "FILLER — the 2008-09-21 Jump Super Anime Tour special (Age 776; 脚本 小山高生, 原案 鳥山明 = a credit, T26); no page of the manga is in it. The 2009 manga chapter 「オッス！帰ってきた孫悟空と仲間たち!!」 (AniList 46110) is a COMICALIZATION of the special — never an instrument, never a mint (disposed, wave 6; ja-WP 「単行本化はされていない」). First seat of the DBZ 288.5x cluster in story and release order (776 / 2008 → BoG 778 / 2013 → RoF 779 / 2015): after ep 288, before ep 289 (the ch 517 / 518 gap). No Kai row: the halo cannot derive one (5152's only edges are PARENT → 813 and the comicalization) and none is minted." },
+    reason:
+      "Wave 6 (the narrow slot ask, verified SOUND WITH NOTES): Age 776 on three lineages; the credits on ja-WP and Kanzenshuu; no chapter cited (the comicalization trap held). The verifier: the cluster and its options stated; a Kai row is a ruling-only staging question — none (Cursor: 'do not mint a Kai row the halo cannot keep'); the wiki's 'collected 2010-09-10' conflicts with ja-WP (the 2010 anime comics is a different product). Sean 2026-09-06: filler, 288.5, the first seat.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-06',
+    cite: ['scripts/ingest/research/discovery/out/dragon-ball-z__5152.json', 'scripts/ingest/research/discovery/verify/dragon-ball__20778.md'],
+  },
+  {
+    seriesId: 'dragon-ball-z-kai',
+    ruleId: 'I45',
+    value: { anilistId: 20778, standing: 'filler', position: 165.51, note: "FILLER — the same story point as DBZ 288.52 (Age 779, the ch 517 / 518 gap): ja-WP's 改 slot converted by TITLE, never by number (R20 — JP 157 / 158 = our rows 164 / 166; row 165 is international-only) → behind Battle of Gods' ruled 165.5, the 165.5x cluster in date order. No Yo! Son Goku row on Kai (the halo cannot derive one; none minted). 脚本 鳥山明 = a credit (T26)." },
+    reason:
+      "Wave 6 (the narrow slot ask, verified SOUND): the wave-5 conversion repeated correctly (exactly eight international-only rows on en-WP; row 165 NULL-dated filler); 165.51 free; nothing to re-rule. Sean 2026-09-06: filler, 165.51.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-06',
+    cite: ['scripts/ingest/research/discovery/out/dragon-ball-z-kai__20778.json', 'scripts/ingest/research/discovery/verify/dragon-ball__20778.md'],
+  },
+  {
+    seriesId: 'dragon-ball-super',
+    ruleId: 'I45',
+    value: { anilistId: 20778, standing: 'canon', chapter: null, volume: null, chaptersAdapted: "none — CORRESPONDENCE: the DBS manga SKIPPED the Resurrection 'F' arc (ja-WP 「漫画：未登場…省略されている」; Kanzenshuu: omitted from the manga, which charged ahead to the Champa arc; the wiki's manga field empty) — the run's rows 15-27 are the story's telling; nothing to read for it", position: 14.5, note: "CANON on the parallel owner (I40 / T30: from the outline or not — Toriyama's own story outline, listed by ja-WP under 「鳥山が自らストーリー原案を手がけた内容」; the run's rows 18-21 / 23-27 are canon on adopted{author} for THIS film). Position 14.5 — the film precedes its own retelling (rows 15-27), the Battle of Gods parity (0.5); a viewer who takes the film KEEPS 16-17 (the bridges ruled mixed); 17.5 (after the bridges) was the alternative seam. No adopted record on the film — that act is already on rows 18-27. Chapter null = the honest dash: no correspondence exists. 脚本 鳥山明 = a credit (T26)." },
+    reason:
+      "Wave 6 (the narrow slot ask; the standing REFUTED as filler by the verifier — the ruled parallel model gives canon: T30's proxy, the T26 sitting's adopted{author} rows, ja-WP's outline list): the skip statements verified verbatim on three lineages; 14.5 on the ruled arc's seat and BoG parity, 17.5 the truer story seam. The validator's 'canon with no chapters' rule is an adaptation-owner rule — a parallel-owner clause is queued (P29). Sean 2026-09-06 (Cursor: 'Fork 1 is T30, not a stretch'): canon, chapter null, 14.5, keep 16-17.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-06',
+    cite: ['scripts/ingest/research/discovery/out/dragon-ball-super__20778.json', 'scripts/ingest/research/discovery/verify/dragon-ball__20778.md'],
   },
 ];
 

@@ -1154,6 +1154,51 @@
    19-23 / 39 (chain_source) and 18 / 93-95 (AFL's loose Mixed bucket),
    beelzebub 15 / 26-28 / 51, rurouni TV ep 95 (identity). Batch 22 opens on
    the boruto follow-up (lanes I + C) with the batch-21 tooling copied.
+146. ✅ **EXTRAS WAVE 6 APPLIED (Sean ruled 2026-09-06 with Cursor: all eleven as recommended — DBS Resurrection 'F' canon
+    at 14.5, the DBZ 288.5x cluster as one package, Blue Exorcist pinned, no Kai row for Yo! Son Goku).** Seven works + the
+    narrow Dragon Ball slot ask (Golden Age Arc III dropped: the Memorial Edition is a series and berserk-golden-age-arc an
+    I11 exclusion awaiting the watch-order pass), all verified SOUND WITH NOTES on the values — the wave survived a
+    SESSION-LIMIT KILL mid-flight (the account switched; every verdict and report was recovered from disk, the Dragon Ball
+    research and all six verifiers re-dispatched staggered, P11 / P12). RULED: food-wars 98702 MIXED, ch 118-119 vol 15 (ep 2
+    「遠月十傑」 entire — the TV run's hole between ep 37 → 117 and ep 38 → 120; ep 1 the licensor's original) @37.5, airDate
+    2017-05-02 (the verifier found the repair the author declined) · bungo-stray-dogs 21791 CANON, ch 40 vol 10 in full (the
+    run's sole adaptation; S3 reorders around it), 24.5 kept — the row is WIKI-origin and the verifier found the ruling
+    would land nowhere: sync-related-works now applies a ruling's FACTS to adopted rows (standing, chapters, note, repairs;
+    never the position) and the census covers them — related_work_unruled gained the 11 adopted rows with no standing
+    (c9420183) · danmachi 21660 FILLER (the licensor's 完全監修 line grep-verified in four places; Ōmori twice), the 13.5 entry
+    edited IN PLACE (a replaced entry would have dropped the cluster ruling) · kaguya-sama 194884 CANON, END 267 vol 27, the
+    string a SELECTION (163, 170, 191, 218-221, 266-267; 162 a flashback sliver, never coverage; 268 refuted) @41.5 — the
+    author died seconds after writing, the verifier read the file cold · fruits-basket-2019 136192 CANON, ch 90-93 vol 16
+    (the Kyoko / Katsuya story, the last hour; the 30-min clip show weightless under T28's recap clause, in the string, recap
+    false on the row) @63.5 · blue-exorcist 11737 FILLER (a film-original story; the vol-6 番外編 「幽霊列車」 restaged as the
+    opening, a sliver; Kato's drawn tie-in art dismissed on T26's source-line test) @25.5 PINNED (the 2011 OVA beside it is a
+    mis-dated ~11.5, its own ruling later) · one-punch-man 108945 FILLER (six originals, the licensor's line six for six; the
+    member windows corrected by the verifier, #04 17.5-19.5 / #05 9.5+; the position's basis written as the protocol's form,
+    never a convention) @24.5 · Resurrection 'F' 20778: DBZ FILLER @288.52, Kai FILLER @165.51, DBS CANON @14.5 with chapter
+    NULL and a 'no correspondence' string (the manga skipped the arc — ja-WP 漫画：未登場, Kanzenshuu, the wiki; the ruled
+    parallel model I40 / T30 — the verifier REFUTED filler: rows 18-27 are canon on Sean's own adopted{author}; 'keep 16-17
+    if you take the film'; no adopted record on the film — that act is on the rows) · Yo! Son Goku 5152 FILLER @288.5, the
+    first seat (Age 776 / 2008; the 2009 manga a comicalization, disposed — never a mint; no Kai row, the halo cannot keep
+    one) · Battle of Gods 14837 RE-SEATED DBZ 288.5 → 288.51 in the same map (the cluster Yo! → BoG → RoF in story and
+    release order — one package: planRuledMoves refuses a half-applied cluster). The ledger writer: 5 inserted, 7 updated, 5
+    moved, 0 refusals, idempotent after; audit: every related_work_* violation 0, related_work_unruled 379 → 371,
+    related_work_cluster_disorder 45 → 44 (Blue Exorcist pinned). Also landed: the DBS arc note's stale '(filler)' for the
+    bridges 16-17 (T6 mixed pins) corrected in arcs.ts; extras-context.ts prints the stored row's air_date (the Food Wars
+    verifier — the second sighting after Noragami). Edges rebuilt + deployed ×5; generated docs; ledger-check + system-census
+    green. QUEUED (never silent): a parallel-owner clause in validate-extras (canon with no chapters on a parallel owner) and
+    explicit null chapter fields from the proposer; the --entries proposer printing cluster-conditional seats
+    unconditionally; Kaguya ep 40 / 41's partial vs rearranged (the film's END 160 sits on ep 40); the Kaguya special's MAL
+    id 61903 unregistered; Blue Exorcist's 2011 OVA 11266 (mis-dated 2011-10-26 → its slot ~11.5, ja-WP 第11.5話); the Fruits
+    Basket 'prelude - Special Comics' node unverified; two research traps — date an interview by the page's own datePublished,
+    never the ja-WP citation date; the wiki category API's 50-item cap silently truncates a coverage dump; Tanya's two
+    fractionals and the Berserk count_mismatch flag stay Sean's. Usage: eight research agents + eight verifiers ≈ 4.2M
+    tokens across two accounts, plus the runs the limit killed (Opus research ≈ 1.9M, Fable verification ≈ 2.3M).
+    CENSUS (vs the post-C1 capture, every delta explained — P17): the UI-truth classes are UNCHANGED (the apply
+    touched only the related-works ledger; 220 series verified, 0 failing; ruling_violation 0); discovery:
+    related_work_unruled 368 → 379 → 371 (+11 the adopted rows with an AniList id and no standing now on the work-list;
+    −8 the seven pending works ruled + Yo! Son Goku), related_work_cluster_disorder 45 → 44 (the Blue Exorcist 25.5x
+    cluster pinned), every violation-kind class 0, anilist_resolve_debt 0; 294 tests.
+
 145. ✅ **PHASE B — THE NO-INSTRUMENT SHAPE, THE NEW-IP PATH, THE SOURCE PARTITION (T31 new; G52 + G60 amended; Sean's plan
     2026-09-06 with Cursor).** THE RECORD (T31): a series whose source has no instrument to map — a studio original, a
     visual novel, a game, any AniList source outside the manga and novel families — is a full catalog member: source_type
