@@ -1154,6 +1154,49 @@
    19-23 / 39 (chain_source) and 18 / 93-95 (AFL's loose Mixed bucket),
    beelzebub 15 / 26-28 / 51, rurouni TV ep 95 (identity). Batch 22 opens on
    the boruto follow-up (lanes I + C) with the batch-21 tooling copied.
+157. ✅ **BATCH 24 WAVE 2 — THE RE-ZERO GAP BLOCK APPLIED (2026-09-07; Sean ruled with Cursor: 'Yes on the block. Overlay only.').**
+    THE WAVE: two research-agents (Opus) on lane A2 in LN VOLUME space (T24, live since §12.155) — the 50 AFL-typed rows wave 1
+    exposed as never anchored: S1 rows 1-25 = volumes 1 → 9 (Arcs 1-3; two A10 seam rows 19 → 7 [6] and 22 → 8 [7]; v7's Wilhelm
+    chapter un-cross-cut across 20-21), S2 rows 26-50 = 9 → 15 (ep 26 FINISHES v9 — Arc 3's last row; Arc 4 = 27-50; ep 30's relocated
+    scenes; the five-episode cross-cut of v14 ch 2) — both agents verified the arc brackets on ja-WP's 章構成 / 既刊一覧, KADOKAWA's own
+    volume labels and the PRINTED CONTENTS of all fifteen books, and the 25 / 26 seam agrees EXACTLY across the two files (ep 25 stops
+    inside v9 at 第五章's end, ep 26 opens on its 幕間 and finishes it); ep 50 → 15 closes one below the stored ep 51 → 16 fence. One
+    Fable verifier by the COUNT (Sean's lever — the S2 verdict; S1 unverified, no structure surprise): SOUND WITH FIXES — the instrument
+    and both seams sound on the contents scans, the two reorders real, scope clean; FINDING: the S2 verdict's 'four independent
+    lineages' on ep 34 are ONE wiki family (es / zh / ru translate en) — but the v12 share EXISTS on independent lineages (en-WP's ep-34
+    plot; Kadokawa's v12 blurb 「影に呑まれる集落、敵であるはずのガーフィールの助力」), so END 12 [11] medium stands as on ep 77. SEAN'S
+    SEVEN DECISIONS (with Cursor): (1) the 50 anchors; (2) eps 24-25 on v9 although v9 printed four days after the finale — 'T24 is the
+    printed book, not the print date'; (3) ep 34 END 12 [11] — the second lineage is en-WP's plot + Kadokawa's blurb, the fandom's
+    book-side arc page is the same wiki family (R3 is editorship), the web novel's break a cross-check never a position; (4) ep 50's
+    continue → 16 STORED (it differs from END 15) — 'C5 unseen, landed as parity with the 蛇足 named; not C3' (v15's closing
+    蛇足『――再臨』 is never animated through ep 79; the reader reads it before v16); (5) ep 45 side_story (a Melonbooks purchase-bonus
+    story bundled with v14 of the SAME novel — the series' own source), the false 'a side_source would flip this canon row to filler'
+    clause struck; (6) NO T6 pins — AFL already types these rows, the confirmation entries are no-ops; (7) the wording + the capture:
+    translated wikis are one lineage under R3 (research-agent trap), and an ask names the fact WANTED, never one remembered (the
+    'double-length premiere' premise I wrote into the S2 ask was false — syobocal: 30-minute slots; research-batch skill line). THE APPLY
+    (apply-w2.ts, file-driven + overlay, dry-run → apply → dry-run idempotent): 50 anchors (manual; volume = END; A47 / A10 through
+    lib/sliver.ts's vocabulary — nothing moved), 53 annotations, ONE stored continue, 5 overlay entries, the one-lineage correction
+    appended to 32 notes; the heal: parity converted 110 (re-zero's C1 rows and the afg-rebuilt series), c3-skip-notes 4,
+    heal-anchor-volumes 0. CENSUS (vs §12.156, every delta explained — P17): anchor_gap_research 4 → 3 (re-zero gone: 79 of 79 rows
+    anchored); run_stuck 2 → 0 (healed); **verify-series-display 222 verified, 1 FAILING — record-of-ragnarok**: eps 22 / 27 / 33 / 38
+    'start below the previous anchor with no rearranged / graft ruling' — NOT this wave's: the §12.156 afg run rebuilt RoK's afg tier
+    (20 / 21 / 23 / 26 / 32 / 37 created 09:22 UTC) and the batch-12 ROUND-GRAIN manual STARTs (22 [31], 27 [43], 33 [55], 38 [66] —
+    'the round's first chapter', the phantom back-reach batch 22's verifier named and repaired on ep 17) now render as four false
+    back-jumps; the roster stopped at the verifier (P32), so the discovery census was run standalone — UNCHANGED in every class; every
+    violation class 0. THE INTERIM PROPOSED TO SEAN (not applied): null the four round-grain STARTs under A13 (a START that is not the
+    row's first chapter is a breach; the ENDs are the verified round finales and render monotone alone) until batch 23 wave 1's RoK ask
+    refines the map on pages. THE SYOBOI EVALUATION (Sean's question, with Cursor's read — recorded as the process decision): cal.syoboi.jp
+    is the JP TV broadcast record (per-TID airings, channels, slot lengths, rerun flags) and it already works where it matters — a
+    research CITE for first JP air dates, slot lengths and reruns (batch 19 lane B's G53 repairs; this wave's 'double-length' refutation);
+    Wikipedia and AFL write air_date; a second writer would fight the first, so NO syoboi puller. An automatic wiki-vs-syoboi date checker
+    is an engineering sitting, deferred with its trigger (a date census class showing Wikipedia wrong at a rate that matters, or the
+    extras seats needing day-accurate dates), and its two known traps recorded now: the TID ↔ series join belongs on COMPONENTS (one
+    TID per season; series_external_ids holds one id per source), and syoboi's times run past 24:00 on the programming day (25:05 =
+    01:05 next day — the rezero.fandom one-day-early shape), so a naive diff would flag every late-night show. Made explicit today: the
+    research-agent definition names syoboi as the broadcast instrument with the normalization trap. LEDGER / MAPS: lib/rulings/applied/
+    batch-24.ts +7 wave-2 entries; no rule or map moved (the block lands as data under T24 / N35 already live). USAGE: research 382k +
+    372k, the verifier 383k ≈ 1.14M (the 0.95M estimate under-called the verifier's floor again). Edges rebuilt + deployed ×5 (the applied
+    map is lib) — off the cron minute; 305 tests; lint 463; system census green.
 156. ✅ **THE EVENT WIKI RUN AFTER THE TWO-PART-TITLE PARSER FIX + the AniList check (2026-09-07).** THE TRIGGER: §12.155's parser fix
     (lib/wikipedia.ts#multiPartTitle) made the ~140 empty-title wiki rows the S4 verifier counted fillable; title_incomplete is the event
     run's trigger. THE DRY RUN FIRST (P40; 33 target series, every lock line read): three series fill — kinnikuman 134 (its 1983 run
