@@ -1154,6 +1154,21 @@
    19-23 / 39 (chain_source) and 18 / 93-95 (AFL's loose Mixed bucket),
    beelzebub 15 / 26-28 / 51, rurouni TV ep 95 (identity). Batch 22 opens on
    the boruto follow-up (lanes I + C) with the batch-21 tooling copied.
+153. ✅ **THE EVENT WIKI RUN — the five catalog readings applied (2026-09-07).** §12.152's catalog-wide dry run named five
+    series; each was dry-run on its own lock lines and read: that-time-i-got-reincarnated-as-a-slime creates 92-93 (the airing
+    S4's newest rows, 2026-08-28 / 09-04; the main list page's own rows REJECTED as a namesake — the season sub-pages locked,
+    five fractional separators aligned); kakegurui fills 24 titles / dates from "Kakegurui (2017 TV series)" (the main-
+    article path); revolutionary-girl-utena fills 2; the-prince-of-tennis creates 105 (2003-10-22, inside the 2001-05 run —
+    the row AFL lagged; the 24 OVA rows dated 2006-09 G55-REFUSED as the namesake pages they are — the National Tournament
+    chain's own series); beyblade-x creates 133 (2026-09-04, the airing tail). Every one a standing lag fill under G55's date
+    gate — the event run's own job (title_incomplete is its trigger), applied: 4 created, 26 filled; heal-format 2. CENSUS
+    (vs §12.152): title_incomplete 23 → 20 (slime's 2, tennis's 1, beyblade-x's 1 rowless eps filled); airdate_incomplete
+    23 → 21 (kakegurui / utena); integrity_total_beyond_eps 10 → 9 (tennis 178 vs rows 177 → 178); frontier_tail_null 13 → 14
+    (slime's 92-93 past anchor 91 — honest, P6); type_default_unclassified 85 → 87 (slime's and tennis's wiki-minted rows;
+    beyblade-x's 92 → 93); format_missing 2 → 3 and episode_without_component 2 → 3 — slime's 92-93 sit past its S4
+    component's span (73-91: the span is AniList's aired count at the last RESOLVE, and AniList has been 403 since 2026-09-06;
+    aired_episodes already reads 93 from the daily refresh) — the catch-up's resolve re-plans the component (planComponents)
+    and both classes return to 2; queued by name, never silent; every violation class 0; 220 verified, 0 failing.
 152. ✅ **THE WIKI WRITER'S LOCKS — G59 amended (2026-09-07; the C1 / C2 owed rows landed: re-zero 51-79, Ace act II 53-65,
     gits-2026 1-9 = 51 rows).** THE DRY RUN FIRST (P40): wiki-episodes-backfill.ts has `--dry-run` — every lock line and every
     planned row printed, no insert / update / fractional / flag / run — and it paid for itself on the first witness: re-zero's
