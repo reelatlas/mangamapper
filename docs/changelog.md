@@ -1208,8 +1208,9 @@
     the six old continue classes gone; afl_page_stale 286 → 246 (draining at 20 an hour as predicted); frontier_tail_null 13 → 14
     and ruling_violation 0 → 2 → 0 — the resumed AFL rotation reached bleach-thousand-year-blood-war's page and minted rows 41-42
     (format null until heal-format ran in the roster; the tail is a real frontier gap); anilist_resolve_debt 0 → 2 — re-zero's S3 /
-    S4 components (163134 / 189046, staged 09-06) read as resolved never after the page's re-resolve; the AniList refresh (403 since
-    09-06) resolves them when it answers (the catch-up); every other class unchanged; 222 verified, 0 failing. Gates: tsc, lint 456
+    S4 components (163134 / 189046) were staged 09-06 21:54 by the last AniList fetch before the outage and never resolved; the
+    class lists a debt only past a day, so the window elapsed during this pass (nothing here touched them); the AniList refresh
+    (403 since 09-06) resolves them when it answers (the catch-up); every other class unchanged; 222 verified, 0 failing. Gates: tsc, lint 456
     (463 before — the old healer left the lint scope), 324 tests (308 + 16), build, ledger-check, system census.
 158. ✅ **THE ROK INTERIM APPLIED, THE CONSOLIDATE DEEP, BATCH 23 WAVE 1 DISPATCHED AND LANDED (2026-09-07; Sean's 'ready to proceed' after the compact).**
     THE INTERIM (Sean with Cursor, A14 — null = unknown, the display derives): apply-rok-interim.ts nulled the four round-grain
