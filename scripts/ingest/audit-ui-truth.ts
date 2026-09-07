@@ -22,7 +22,7 @@ import { orphanRecords } from './lib/row-presence';
 import { STANDING_ANNOTATIONS } from './lib/rulings/standing-annotations';
 import { AIR_DATE_OVERRIDES } from './lib/rulings/air-dates';
 import { EPISODE_TITLE_OVERRIDES } from './lib/rulings/episode-titles';
-import { continueUnprovenanced, curatedOverwritten } from './lib/continues';
+import { continueUnprovenanced, curatedOverwritten, healerContinueBasisGone, parityBasis } from './lib/continues';
 import { annotationWorkLabel, isChainWork } from './lib/rulings/source-chains';
 import { WIKI_PAGES } from './lib/rulings/wiki-pages';
 import { AFG_CHART_SUPPRESSED } from './lib/rulings/afg-chart-suppressed';
@@ -108,7 +108,7 @@ async function main() {
     integrity_degenerate_span: degenerateSpans,
     special_numbered_unreviewed: [], anchor_gap_research: [], frontier_tail_null: [],
     anchor_volume_mismatch: [], row_minted_by_missing: [],
-    anchor_nonmonotonic: [], anchor_start_offtrend: [], start_sliver_mismatch: [], start_without_span: [], end_sliver_mismatch: [], anchor_note_repeated: [], anchor_beyond_chapter_space: [], anchor_beyond_display_total: [], anchor_fractional_chapter: [], anchor_on_noncanon_row: [], continue_skip_unnoted: [], continue_provenance_missing: [], boundaries_degenerate: [], ruling_violation: [], repair_on_derivation_tier: [],
+    anchor_nonmonotonic: [], anchor_start_offtrend: [], start_sliver_mismatch: [], start_without_span: [], end_sliver_mismatch: [], anchor_note_repeated: [], anchor_beyond_chapter_space: [], anchor_beyond_display_total: [], anchor_fractional_chapter: [], anchor_on_noncanon_row: [], continue_skip_unnoted: [], continue_provenance_missing: [], continue_basis_unknown: [], afl_page_stale: [], boundaries_degenerate: [], ruling_violation: [], repair_on_derivation_tier: [],
     mu_pin_unverified: [], mu_pin_flag_redundant: [], anchor_without_row: [], annotation_without_row: [],
     rearranged_zone_unanchored: [], rearranged_zone_acknowledged: [], backjump_continue_unruled: [], backjump_continue_unnoted: [], annotation_contradicts_row: [],
     title_incomplete: [], airdate_incomplete: [], airdate_regression: [], airdate_withheld: [], episode_date_off_window: [], asterisk_unreviewed: [],
@@ -738,6 +738,25 @@ async function main() {
         }
       }
     }
+    // C7 × A14 (2026-09-07, record-of-ragnarok 21 / 26 / 32 / 37): a HEALER parity
+    // continue whose basis is gone — the next anchored row's START unknown (A14)
+    // with a span naming no chapter, or that row no longer the adjacent canon /
+    // mixed episode — is a stale derivation the healer clears on its next pass
+    // (lib/continues.ts#healerContinueBasisGone, the same reader the healer uses).
+    // One still standing renders a phantom continue: a violation.
+    {
+      const tOf = new Map<string, string>(episodes.map((e) => [`${e.series_id}#${e.number}`, e.type]));
+      for (const [sid, list] of bySeries) {
+        const sorted = [...list].sort((x, y) => x.episode - y.episode);
+        for (let i = 0; i < sorted.length - 1; i++) {
+          const a = sorted[i], b = sorted[i + 1];
+          if (!Number.isInteger(a.episode) || !Number.isInteger(b.episode)) continue;
+          const basis = parityBasis(a, b, (n) => tOf.get(`${sid}#${n}`));
+          if (healerContinueBasisGone(a, b, basis))
+            classes.continue_basis_unknown.push(`${sid}: ep ${a.episode} healer continue ${a.continue_chapter} (parity) but ep ${b.episode}'s start is unknown / underivable — the basis is gone (A14 × C7); the parity healer clears it`);
+        }
+      }
+    }
     // P38 — NOTE vs ROW (Sean + Cursor 2026-09-04): a standing note that asserts
     // no-anchor language on a row that carries an anchor is a stale ruling the
     // T26 healer re-asserts every pass (sailor-moon 167/168 said 'no anchor by
@@ -1199,7 +1218,20 @@ async function main() {
   // lib/rulings/permanence.ts). A LOCKED series failing any of it =
   // permanence_violation — data drifted under a lock (P5).
   {
-    const OPEN_CLASSES = ['integrity_eps_beyond_total', 'integrity_total_beyond_eps', 'integrity_double_claimed', 'integrity_degenerate_span', 'special_numbered_unreviewed', 'anchor_gap_research', 'frontier_tail_null', 'anchor_nonmonotonic', 'anchor_start_offtrend', 'anchor_volume_mismatch', 'row_minted_by_missing', 'source_relation_missing', 'parallel_has_anchor', 'arcs_not_partition', 'arc_row_conflict', 'correspondence_invalid', 'correspondence_incomplete', 'anchor_beyond_chapter_space', 'anchor_beyond_display_total', 'anchor_fractional_chapter', 'anchor_on_noncanon_row', 'continue_skip_unnoted', 'continue_provenance_missing', 'boundaries_degenerate', 'boundaries_wrong_page', 'boundaries_beyond_total', 'ruling_violation', 'repair_on_derivation_tier', 'mu_pin_unverified', 'rearranged_zone_unanchored', 'title_incomplete', 'airdate_incomplete', 'airdate_regression', 'airdate_withheld', 'asterisk_unreviewed', 'fractional_unmodeled', 'annotation_invalid', 'afl_anime_canon_unruled', 'format_missing', 'episode_without_component', 'watch_order_kind_missing', 'series_without_source_kind', 'pending_airing_no_anchor', 'pending_finished_no_totals', 'pending_no_canon', 'pending_other', 'identity_registry_gap', 'adoption_held'];
+    // G9 (amended 2026-09-07 — the stuck rotation; the cadence is G47): every ACTIVE AFL page is refetched within the 6-day cutoff plus one
+    // rotation (20 pages an hour; ~17 hours over the catalog). A page older than 8 days means the hourly refresh is not
+    // rotating — the outcome check for the fetched_at accounting (lib/resolve.ts#touchAflFetched). Drains at 20 an hour
+    // once the writer is fixed; a violation that reads the backlog, never a page to hand-edit.
+    {
+      const activeSlugs = new Set((await selectAll<{ afl_slug: string }>('source_map', 'afl_slug', (q) => q.eq('disposition', 'active'))).map((m) => m.afl_slug));
+      const limit = Date.now() - 8 * 24 * 60 * 60 * 1000;
+      const stale = (await selectAll<{ slug: string; fetched_at: string }>('ingest_afl_shows', 'slug, fetched_at')).filter((r) => activeSlugs.has(r.slug) && new Date(r.fetched_at).getTime() < limit);
+      if (stale.length) {
+        const oldest = stale.map((r) => String(r.fetched_at).slice(0, 10)).sort()[0];
+        classes.afl_page_stale.push(`${stale.length} active AFL page(s) not fetched for more than 8 days (oldest ${oldest}; ${activeSlugs.size} active) — the hourly rotation is not advancing (G9 / G47; lib/resolve.ts#touchAflFetched) or a backlog is draining at 20 an hour`);
+      }
+    }
+    const OPEN_CLASSES = ['integrity_eps_beyond_total', 'integrity_total_beyond_eps', 'integrity_double_claimed', 'integrity_degenerate_span', 'special_numbered_unreviewed', 'anchor_gap_research', 'frontier_tail_null', 'anchor_nonmonotonic', 'anchor_start_offtrend', 'anchor_volume_mismatch', 'row_minted_by_missing', 'source_relation_missing', 'parallel_has_anchor', 'arcs_not_partition', 'arc_row_conflict', 'correspondence_invalid', 'correspondence_incomplete', 'anchor_beyond_chapter_space', 'anchor_beyond_display_total', 'anchor_fractional_chapter', 'anchor_on_noncanon_row', 'continue_skip_unnoted', 'continue_provenance_missing', 'continue_basis_unknown', 'boundaries_degenerate', 'boundaries_wrong_page', 'boundaries_beyond_total', 'ruling_violation', 'repair_on_derivation_tier', 'mu_pin_unverified', 'rearranged_zone_unanchored', 'title_incomplete', 'airdate_incomplete', 'airdate_regression', 'airdate_withheld', 'asterisk_unreviewed', 'fractional_unmodeled', 'annotation_invalid', 'afl_anime_canon_unruled', 'format_missing', 'episode_without_component', 'watch_order_kind_missing', 'series_without_source_kind', 'pending_airing_no_anchor', 'pending_finished_no_totals', 'pending_no_canon', 'pending_other', 'identity_registry_gap', 'adoption_held'];
     const openBy = new Map<string, Set<string>>();
     const ids = new Set(series.map((s: any) => s.id));
     for (const c of OPEN_CLASSES) for (const line of classes[c] ?? []) {

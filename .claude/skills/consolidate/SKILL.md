@@ -57,6 +57,16 @@ event healer named in `scripts/ingest/rosters.ts` (`afg-restage.ts` — no
 refetch) so staging never holds output a current parse wouldn't produce
 (`G44`).
 
+**A cron that reports ok every hour with CONSTANT counters is a rotation stuck
+on one batch** (2026-09-07, `G9` amended): refresh-afl logged fetched 20 /
+unchanged 17 / flagged 3 / changed 0 every hour for ten days while 306 of 327
+active pages sat at 2026-08-22 — an unchanged or held fetch never moved
+`fetched_at`, so the same twenty oldest pages led the queue every hour. The run
+log cannot show this; read the STAGING's `fetched_at` distribution (`afl_page_stale`
+in the census is the outcome check). The same shape can hide in any
+oldest-first puller: check `changed_at` vs `fetched_at` by day when a source
+"never changes".
+
 ## 4. Healers — `npm run heal`
 
 - **An EVENT roster script runs only on its trigger, after you have READ it, with `--dry-run` first where it has one — and a script with no dry-run is never assumed to have one** (INCIDENT-2026-09-05, `P40`): `audit-titles.ts` was run to apply one exclusion and deleted six series through a cascade against a stale fixture index; `afg-expansion.ts` has no dry-run and created a series when the flag was passed. `wiki-episodes-backfill.ts` HAS one since 2026-09-07 (`--dry-run`): its first catalog run refused a wrong +14 lock on re-zero that a live run would have written — use it before every event run. Never run a script for its side effect; find the ruling map its job belongs to.

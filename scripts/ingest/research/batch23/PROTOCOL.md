@@ -24,3 +24,18 @@ round-grain map (12, 18-41) → `record-of-ragnarok-w1.json`; (2) eyeshield-21
 (3) sailor-moon 73-77 (Act 18's home; the N35 shape for the 60-act renewal
 space) → `sailor-moon-w1.json`; (4) beelzebub 59 (the stale finale note) →
 `beelzebub-w1.json`.
+
+**Dispatched 2026-09-07 (Sean's go, with Cursor: 'batch 23 wave 1 — the actual
+RoK map and the other three refuted pins').** The RoK ask was REFRESHED before
+dispatch: since it was written (2026-09-05) the afg sweep (§12.156) rebuilt a
+derivation-tier anchor on every row 18-41 and the four finale STARTs / spans on
+22 / 27 / 33 / 38 were nulled under A14 (§12.157) — the ask now names the
+stored state as the anchor table, the afg tier as one lineage to check, the
+four nulls as gaps to fill, and the healer's stale parity continues on 21 / 26
+/ 32 / 37 as values to replace. AniList's API has been down since 2026-09-06:
+every context carries the STAGED facts and says so — never guess a date, a
+count or an id from memory. Verification (R23 by the count, Sean 2026-09-07):
+the RoK verdict gets `verdict-verifier` on a DIFFERENT model (R24) — every
+anchor, the repairs, the afg confirmations; the three narrow verdicts only on a
+structure surprise (a reorder, a repair contradicting stored data, a retype).
+Reports: `verify/w1-<series>.md`. Files: `out/<series>-w1.json`.

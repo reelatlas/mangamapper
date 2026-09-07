@@ -1,0 +1,1016 @@
+{
+ "series_id": "record-of-ragnarok",
+ "summary": "THE ROUND-GRAIN MAP IS NOW A PAGE-GRAIN MAP: 25 anchors for rows 12 and 18-41, every one on two independent lineages, plus the four A14 nulls filled and three ENDs repaired. THE HEADLINE STRUCTURAL FINDING, because it changes how the stored data should be read: animefillerguide's chapter column for this series is record-of-ragnarok.fandom's `adapted=` chapter set with the page splits stripped — identical on all 42 rows, including the unusual ones (ep 17 '29, 30, 32, 33'; ep 18 '31, 34'; ep 33 '64, 65, 66') and on all twelve S1 rows. The twenty stored afg-tier anchors are therefore a mechanical re-derivation of ONE editorship, never an independent witness, and this verdict cites AFG nowhere. It does check them: of the twenty afg endpoints in the ask, NINETEEN are confirmed exactly on the pages and ONE is refuted — ep 19's START, which the stored row gives as 34 and the pages give as 32 (the episode opens on ch 32 p.1, Shiva's wives and the salt ritual; ch 34's three pages sit in its middle, and A13 says a row displays its FIRST chapter). THE FOUR A14 NULLS ARE FILLED FROM THE PAGES: ep 22 = 43 [41] {41, 42, 43 (pp.1-15, 22-43)} v11 — the END repairs 42 -> 43, because the episode plays 37 of ch 43's 43 pages and ends on its LAST page (Buddha taking the Gjallarhorn and declaring for mankind), while ep 23 owns only a six-page MIDDLE slice (pp.16-21, the Jack/Göll tea scene), so A47's tail clause cannot reach it; ep 27 = 54 [52] {52, 53, 54, 55 (pp.21-23)} v14 — END CONFIRMED, the ch-55 share really is a three-page tease and A47 holds it back; ep 33 = 66 [64] {64, 65, 66 (pp.1-9, 27-32)} v16 — the END repairs 65 -> 66, because the episode plays 15 of ch 66's 32 pages including its last page, out of order (Hermes' requiem before the vault door), a shape en-WP's summary independently narrates; ep 38 = 77 [76] {76 (pp.8-46), 77} v19 — END CONFIRMED, ch 77 adapted whole to the Tartarus coda. EP 12 IS REPAIRED IN THREE FIELDS: START 1 -> 19 (a nine-episode phantom back-reach; the episode opens at ch 19 p.19, the page ep 11 stops on), chapters_adapted -> '19 (pp.19-69), 20 (pp.1-16, 32-52)', and END 19 -> 20 — the S1 finale plays 37 of ch 20's 52 pages to the chapter's last page (Heimdall introducing Jack and Heracles), so the stored 'ch 20 partial as R4 cold-open' is position language, not a five-page scrap. Volume 5 stands. THE INSTRUMENT WAS TESTED, NOT ASSUMED. The page-closure check the ask names was run on every straddled chapter: thirteen close exactly (chs 19, 20, 29, 32, 33, 34, 43, 45, 55, 66, 73 by count, 79, and 36 conditionally), five are off by exactly one page at the chapter's last page (59, 71, 73, 76, 83 — clamped here and named on each row), and TWO have real gaps. The verifier's ch-36 finding is CONFIRMED — six pages (pp.35-40) are claimed by no row, reported and not smoothed — and a second gap at ch 49 pp.23-26 turns out to have a cause the wiki itself records: 'Beelzebub debut and his laboratory scenes were removed and delayed', i.e. they are ep 26's cold open, now a `rearranged` annotation. SECOND LINEAGES: programming-cafe's anicomi 対応表 (per-episode AND per-chapter) carries eps 12 and 18-27, but it has NO season-3 data at all — its per-chapter table stops at ch 56 with '↓ここから先はアニメ未放送' — so eps 28-41 rest on en-Wikipedia's per-episode summaries read against the fandom's per-CHAPTER summaries, plus ja-WP's episode titles, eleven of which are the namesake title of a chapter inside the row's own span. Volumes needed a third lineage because programming-cafe's 単行本 column runs one volume behind from v12 to v19; MangaDex's aggregate matches the fandom exactly (v12 = 46-49, v16 = 62-66, v21 = 83-86, the last being the stored boundary), so the two contested volumes (ch 49 -> v12 on ep 25, ch 66 -> v16 on ep 33) go the fandom/MangaDex way. TEN ANNOTATIONS record what the numbers cannot: four un-cross-cuts (chs 31-36 across eps 17-19, ch 43 across 22/23, ch 49 across 25/26, ch 66 across 33/34) and the eps 27/28/29 recap cluster, in which ch 55's 34 pages are split 21-23 (ep 27's tease) / 1-18 (ep 28's only first-time content) / 19-34 (ep 29) and the overlaps are exactly the re-shown material. ELEVEN CONTINUES: the four healer-written 'anime jumps back' values on 21 / 26 / 32 / 37 all disappear — those seams are ordinary END + 1 parities once the finale STARTs are real (21 -> 41, 26 -> 52, 32 -> 64, 37 -> 76). The ONE genuine back-jump continue in the run is ep 18 -> 32, delivered under C2 with a C3 skip note, on the d-gray-man precedent. NO TYPE CHANGES: all 25 rows are CONFIRMED AS STORED canon, including ep 28, whose recap frame is weightless under T28's recap clause and whose remainder (ch 55 pp.1-18) is pure source. No anchor_hostile row: every row in the ask carries a position.",
+ "anchors": [
+  {
+   "episode": 12,
+   "end_chapter": 20,
+   "start_chapter": 19,
+   "chapters_adapted": "19 (pp.19-69), 20 (pp.1-16, 32-52)",
+   "volume": 5,
+   "confidence": "high",
+   "why": "REPAIRED ROW (see repairs: START 1 -> 19, span, and END 19 -> 20). START 19 (A10/A13): the episode opens INSIDE ch 19 '燕が見た深淵' at p.19 — Poseidon whistling and combing his hair with his own blood, then the Chione/Medusa barrage — which is exactly where ep 11 stops (the fandom's ep-11 field is '18, 19 (p. 1-18)', and ch 19's own page count is 69, so eps 11 and 12 partition it once with no gap: 18 + 51 = 69). 51 pages is far above A10's 5-page floor and there is no teaser/cold-open wording, so it is a real START. The stored START 1 is batch 12's ROUND-LEVEL span ('1-19 + ch 20 partial as R4 cold-open', applied/batch-12.ts) — a nine-episode back-reach into material eps 1-11 already carry, and A13 says a row displays its FIRST chapter, which here is 19. END 20 (A4): the episode adapts ch 20 '正義VS悪' pp.1-16 AND pp.32-52 — 37 of the chapter's 52 pages, running to the chapter's LAST page (Heimdall's Round-4 introduction of Jack the Ripper and Heracles, which is ep 12's closing scene and ch 20's closing scene). A47 does NOT hold the END at 19: its exception is a tail of at most 5 pages or teaser/cold-open wording, and 21 trailing pages that carry the round's entire announcement are neither; the stored span's phrase 'ch 20 partial as R4 cold-open' is exactly the position language the Dai wave-13 ruling (Sean 2026-09-02) says is not evidence of size. The 15 pages ep 12 skips (ch 20 pp.17-31 — Heracles' conversation with the Valkyries and Loki, and Brunhilde choosing Jack) are played by ep 13, which is why the stored eps-12/13 `rearranged {20, 24}` fact already describes ch 20 as 'split THREE ways'. WEIGHT: SIGNIFICANT for both chapters — this is the whole S1 finale (Kojiro's win, Zeus's resolve, the Round-4 card). VOLUME 5 = ch 20's volume, unchanged: the fandom's ch-20 page gives Volume 5, programming-cafe prints 第5巻 over 19-21 and MangaDex's aggregate books vol 5 = chs 19, 20, 21. TWO INDEPENDENT LINEAGES: (1) record-of-ragnarok.fandom's page-partitioned `adapted=` field plus its own Plot and 'Differences in Adaptations' sections, which name the two moved scenes; (2) programming-cafe's Japanese anicomi 対応表, whose per-episode row reads 第12話 そしてラグナロクはつづく | 19〜20 and whose per-chapter table books ch 20 to 1-12 AND 2-1(13). en-WP's ep-12 summary is the content check and ends on 'Brunhilde sends mankind's most devious murderer, Jack the Ripper, to fight' = ch 20's last page.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2011&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2012&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2013&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2019&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2020&prop=wikitext&format=json",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-recordofragnarok-list/",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes",
+    "https://api.mangadex.org/manga/b5b21ca1-bba5-4b9a-8cd1-6248f731650b/aggregate"
+   ]
+  },
+  {
+   "episode": 18,
+   "end_chapter": 34,
+   "start_chapter": 34,
+   "chapters_adapted": "31, 34 (pp.1-27)",
+   "volume": 9,
+   "confidence": "high",
+   "why": "afg-TIER VALUE CONFIRMED ON THE PAGES (stored 34 [34] {31, 34}; now research-tier, page-level, with a volume). This row is the outbound half of an UN-CROSS-CUT (the bleach 152-159 shape): the manga cross-cuts the Raiden-vs-Shiva match (chs 32, 33, 35, 36) with the Loki-vs-Buddha subplot (ch 32 slivers, ch 33's back half, ch 34), and the anime separates the two threads. START 34 (A13 + frame continuity): the episode OPENS on ch 34 'それぞれの思惑' p.1 — 'As Buddha and the swordsmen face Loki and the Seven Lucky Gods, Isami asks Kojiro about his wounds' — which is the direct continuation of the frame ep 17 stops on (ch 33's last page: 'As Buddha, Kojiro, Soji and Isami stand against Loki and the Seven Lucky Gods, Loki asks if they're ready'). The episode carries ch 34's own title. It then goes BACK to ch 31 '第五回戦' for Brunhilde's recruitment of Raiden, Thrud's Völundr and Heimdall's introduction of Raiden and Shiva, and ends there — so ch 31 is a relocated EARLIER chapter inside the episode, never its START (A12's sense), and the `rearranged` annotation records it. END 34 (A4): the furthest mainline chapter adapted in running order is 34; the episode plays pp.1-27 of its 30, and the 3-page remainder (pp.28-30) is ep 19's. A47 is inert here in both directions (the END is already 34 and ep 19 does not start on 34). WEIGHT: SIGNIFICANT for both segments — ch 34's half is the resolution of ep 17's cliffhanger (Zeus and Odin break up the fight, Bishamonten's warning, Buddha's refusal to be told what to do) and ch 31's half is the entire Round-5 card. VOLUME 9 = ch 34's volume on three lineages (fandom ch-34 page 'Volume 9'; programming-cafe prints 第9巻 against 34; MangaDex vol 9 = 34-37). TWO INDEPENDENT LINEAGES: (1) the fandom's `adapted=` field '31, 34 (p. 1-27)' — whose ch-34 split unions exactly with ep 19's pp.28-30 to the chapter page's own 30 pages — plus its Plot section, which narrates the episode in broadcast order (ch 34 first, ch 31 second) and whose 'Differences in Adaptations' states outright: 'while in the anime this fight takes place right before round 5 begins, in the manga it takes place during the first minutes of the round'; (2) en-WP's ep-18 summary in the same order ('Zeus and the Norse god Odin stop the ensuing battle ... To capitalize on humanity's momentum, Brunhilde sends the most powerful sumo wrestler in history, Tameemon Raiden'). programming-cafe's 対応表 lists this episode as '31、33 第9巻 34' — its chapter LIST is numeric/volume-grouped, not play order, so it does not dissent on the START; it does credit ch 33 to this episode, which is the one-episode lag already recorded in the R24 note of 2026-09-05 (Sean's ep-17 ruling puts ch 33 pp.27-60 in ep 17).",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2017&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2018&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2019&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2031&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2033&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2034&prop=wikitext&format=json",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-recordofragnarok-list/",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes",
+    "https://api.mangadex.org/manga/b5b21ca1-bba5-4b9a-8cd1-6248f731650b/aggregate"
+   ]
+  },
+  {
+   "episode": 19,
+   "end_chapter": 36,
+   "start_chapter": 32,
+   "chapters_adapted": "32 (pp.1-5, 9-29, 33-38), 33 (pp.1-26), 34 (pp.28-30), 35, 36 (pp.1-14)",
+   "volume": 9,
+   "confidence": "high",
+   "why": "afg-TIER VALUE PART-CONFIRMED, PART-REFUTED: the stored END 36 stands, the stored START 34 does NOT — the pages give START 32. This is the RETURN LEG of the un-cross-cut. START 32 (A13): the episode opens on ch 32 '応酬' p.1 — Shiva's wives Parvati, Kali and Durga and his son Ganesha cheering, the frog with the salt basket, the rikishi ritual — which is the fandom's ep-19 Plot's first paragraph and ch 32's own opening. The stored START 34 cannot be right under A13 (a row displays its FIRST chapter) because ch 34's share here is three pages in the middle of the episode; 34 is ep 18's opening chapter, not ep 19's. The back-jump from ep 18's END 34 to ch 32 is real and is annotated `rearranged`. END 36 (A4 + A47): the furthest mainline chapter adapted in running order is ch 36 '破壊と暴風', of which the episode plays pp.1-14 (the Shiva/Raiden headbutt exchange closing on Shiva recalling 'those times' with Rudra); 14 pages is above A47's 5-page floor with no teaser wording, so the END advances to 36 and ep 20 starts inside it at p.15. WEIGHT: SIGNIFICANT throughout — the episode is the first half of Round 5 plus Raiden's Hundred Seals origin (ch 33 pp.1-26, the chapter whose title the episode carries). The ch-34 share (pp.28-30) is the only SLIVER: three pages of the Indian gods' 1116 souls beat that the un-cross-cut left behind in ep 18's chapter; ch 34 is adapted properly by ep 18, which carries pp.1-27. PAGE CLOSURE (the instrument's own check): ch 32 = ep 17's pp.6-8 + 30-32 and ep 19's pp.1-5 + 9-29 + 33-38 = 6 + 32 = 38 = the chapter page's own count; ch 33 = ep 17's pp.27-60 (34) + ep 19's pp.1-26 (26) = 60 = its count; ch 34 = ep 18's 27 + ep 19's 3 = 30 = its count. Three chapters partitioned exactly once each with no gap and no overlap. VOLUME 9 = ch 36's volume (fandom ch-36 page; programming-cafe '第9巻 35〜36'; MangaDex vol 9 = 34-37). TWO INDEPENDENT LINEAGES: (1) the fandom's `adapted=` field and Plot section; (2) programming-cafe's row '第7話 百閉 | 第8巻 32〜33 第9巻 35〜36', which lists ch 32 in this episode and (per-chapter table) books ch 32 to 2-7 alone — both put ch 32 in ep 19. en-WP's summary is the content check and covers exactly this span.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2017&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2018&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2019&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2020&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2032&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2033&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2034&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2035&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2036&prop=wikitext&format=json",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-recordofragnarok-list/",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes",
+    "https://api.mangadex.org/manga/b5b21ca1-bba5-4b9a-8cd1-6248f731650b/aggregate"
+   ]
+  },
+  {
+   "episode": 20,
+   "end_chapter": 38,
+   "start_chapter": 36,
+   "chapters_adapted": "36 (pp.15-34), 37, 38",
+   "volume": 10,
+   "confidence": "high",
+   "why": "afg-TIER VALUE CONFIRMED ON THE PAGES (stored 38 [36] {36-38}); page level and a volume added. START 36 (A10): the episode opens inside ch 36 at p.15 with the Rudra flashback's first page — 'Long ago, the Indian pantheon was made up of a jumble of thousands of gods ... In Mount Kailash there were two nearly unknown gods' — which is ch 36's own switch into the past and the exact frame ep 19 stops on (Shiva 'recalls his time with Rudra'). The leading share is 20 pages, far above A10's 5-page floor and with no cold-open wording, so it is a real START. END 38 (A4): the last chapter adapted is ch 38 '覚醒の刻', played whole (Shiva's dance, the Tandava awakening); ep 21 starts on ch 39 p.1, so no A47 tail is in play. WEIGHT: SIGNIFICANT for all three chapters — the episode IS the Shiva/Rudra origin (its title 「１１１６の天辺」 is the 1116 gods of that flashback) plus the return to the match. VOLUME 10 = ch 38's volume on three lineages (fandom ch-38 page; programming-cafe '36〜37 第10巻 38'; MangaDex vol 10 = 38-41). TWO INDEPENDENT LINEAGES: (1) the fandom's `adapted=` field '36 (p. 15-34), 37, 38' plus its Plot section; (2) programming-cafe's row '第8話 １１１６の天辺 | 36〜37 第10巻 38' and its per-chapter table (ch 36 -> 2-7,8; ch 37 -> 2-8; ch 38 -> 2-8). en-WP's summary is the content check. ONE HONEST GAP, recorded and not papered over: the fandom's two ch-36 splits union to 34 pages against the ch-36 page's own count of 40, so pp.35-40 are unaccounted on either row. Nothing in the run claims them (no other episode's field names ch 36) and the content argues the anime played straight through into ch 37, so the likely truth is that ep 20's share is pp.15-40 and the field's upper bound is a transcription slip. It moves no boundary: ep 19's END is 36 either way and ep 20's START is 36 either way.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2019&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2020&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2021&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2036&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2037&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2038&prop=wikitext&format=json",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-recordofragnarok-list/",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes",
+    "https://api.mangadex.org/manga/b5b21ca1-bba5-4b9a-8cd1-6248f731650b/aggregate"
+   ]
+  },
+  {
+   "episode": 21,
+   "end_chapter": 40,
+   "start_chapter": 39,
+   "chapters_adapted": "39, 40",
+   "volume": 10,
+   "confidence": "high",
+   "why": "afg-TIER VALUE CONFIRMED ON THE PAGES (stored 40 [39] {39-40}); volume added. START 39 (A13): the episode opens on ch 39 '禁じ手' p.1 — 'Shiva looks confused to see Raiden Tameemon smile ... the men who had fought Raiden in the sumo ring knew different' — which is the fandom's ep-21 Plot's first line ('The sumo wrestlers see that Raiden is smiling and Kajinosuke Tanikaze notes that he can finally fight with all of his might'). Ep 20 ends on ch 38's last page, so there is no leading partial to weigh under A10 and no back-jump. END 40 (A4): ch 40 '共鳴' — the chapter the episode is named after — is adapted whole and last (Raiden's Yatagarasu, Rudra's arrival, Shiva stimulating his own heart for the Tandava); ep 22 starts on ch 41 p.1, so A47 holds nothing back. WEIGHT: SIGNIFICANT — the two chapters ARE the episode (Raiden's childhood-to-Ozeki backstory and the turn of the fight); no anime-original plot, so the row stays canon. VOLUME 10 = ch 40's volume on three lineages (fandom ch-40 page; programming-cafe prints 39〜40 under 第10巻; MangaDex vol 10 = 38-41). TWO INDEPENDENT LINEAGES: (1) the fandom's `adapted= 39, 40` plus its Plot; (2) programming-cafe's '第9話 共鳴 | 39〜40' and its per-chapter table (ch 39 -> 2-9; ch 40 -> 2-9 — this episode alone, both chapters). en-WP's summary is the content check and matches beat for beat.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2020&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2021&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2022&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2039&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2040&prop=wikitext&format=json",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-recordofragnarok-list/",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes",
+    "https://api.mangadex.org/manga/b5b21ca1-bba5-4b9a-8cd1-6248f731650b/aggregate"
+   ]
+  },
+  {
+   "episode": 22,
+   "end_chapter": 43,
+   "start_chapter": 41,
+   "chapters_adapted": "41, 42, 43 (pp.1-15, 22-43)",
+   "volume": 11,
+   "confidence": "high",
+   "why": "NEW ANCHOR on the A14 null (START and span were set to unknown on 2026-09-07) AND an END repair 42 -> 43 (see repairs). START 41 (A13): the episode opens on ch 41 'ありがとう' p.1 — 'Shiva's flaming fist collides with Raiden Tameemon's palm strike' (ch 41's own first line), which the fandom's ep-22 Plot renders as 'The Indian gods can't believe they are seeing Shiva, as he is far more powerful now. While he and Raiden exchange blows...'. Ep 21 ends on ch 40's last page, so no leading partial and no back-jump. The nulled stored START 31 was batch 12's round span ('31-42 + ch 43 partial', 'R5 ends (Shiva)'). END 43 (A4): the episode adapts ch 43 '第6回戦' pp.1-15 AND pp.22-43 — 37 of its 43 pages, running to the chapter's LAST page, which is the S2-part-1 finale's closing beat: Buddha walks to humanity's gate, takes the Gjallarhorn, declares he will fight FOR mankind and crushes the horn. A47 cannot hold the END at 42: its exception is a tail of at most 5 pages or teaser wording, and this is 22 pages carrying the round's central reveal; nor does the 'next episode owns the tail' clause apply, because ep 23 owns a MIDDLE slice of ch 43 (pp.16-21), not its tail. The 6 pages ep 22 skips are the Jack-the-Ripper / Göll tea confrontation, which ep 23 opens on — recorded as `rearranged`, and the fandom's own ep-22 Differences note says 'The confrontation of Jack and the Seven Lucky Gods is shortened'. WEIGHT: SIGNIFICANT for all three chapters — Raiden's death, Thrud's death, the 3-2 scoreline and Buddha's defection. VOLUME 11 = ch 43's volume, unchanged from the stored row: fandom ch-43 page 'Volume 11', programming-cafe '第11巻 42〜43', MangaDex vol 11 = 42-45. TWO INDEPENDENT LINEAGES: (1) the fandom's page-partitioned field '41, 42, 43 (p. 1-15, 22-43)' — whose split unions with ep 23's pp.16-21 to exactly ch 43's own 43 pages — plus its Plot; (2) programming-cafe's '第10話 崖っぷち | 41 第11巻 42〜43' and its per-chapter table booking ch 43 to 2-10 (this episode). en-WP's ep-22 summary ends 'Buddha agrees to Zeus' request for him to fight in the sixth match, only to later declare that he is fighting on humanity's side' — ch 43's last page, in this episode.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2021&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2022&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2023&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2041&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2042&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2043&prop=wikitext&format=json",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-recordofragnarok-list/",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes",
+    "https://api.mangadex.org/manga/b5b21ca1-bba5-4b9a-8cd1-6248f731650b/aggregate"
+   ]
+  },
+  {
+   "episode": 23,
+   "end_chapter": 45,
+   "start_chapter": 43,
+   "chapters_adapted": "43 (pp.16-21), 44, 45 (pp.1-12)",
+   "volume": 11,
+   "confidence": "high",
+   "why": "afg-TIER VALUE CONFIRMED ON THE PAGES (stored 45 [43] {43-45}); page level and a volume added. START 43 (A10): the episode opens on ch 43 p.16 — the six pages ep 22 skipped: Jack the Ripper leaning in the doorway quoting Shakespeare and offering the Seven Lucky Gods black tea, Bishamonten standing Ebisu down, Jack's 'Assumption is mortals' chiefest enemy' and the tea he offers Göll. Six pages is above A10's 5-page floor and the field carries no sliver/teaser/cold-open wording, so the leading partial counts and the START is 43, not 44; and the pages are FIRST-TIME (ep 22 played pp.1-15 and 22-43 only), so this is not a re-showing. The episode also carries ch 43's own title (第6回戦 / 'Round Six'). END 45 (A4 + A47): the last chapter reached is ch 45 '零の哀しみ', of which the episode plays pp.1-12 (Zerofuku formed, the fight opened); 12 pages is above the 5-page floor with no teaser wording, so the END advances to 45 and ep 24 continues inside it at p.13. WEIGHT: SIGNIFICANT — ch 44 '零' entire (Heimdall's protest, Zeus's ruling, Odin's challenge, the Seven Lucky Gods fusing into Zerofuku) is the episode. One recap segment is discounted under the recap clause and does not touch the standing: the S2-part-2 premiere re-shows ch 43 pp.22-43 (the Round-6 announcement and Buddha's declaration) that ep 22 already animated — annotated `recap`. VOLUME 11 = ch 45's volume on three lineages (fandom ch-45 page; programming-cafe '第11巻 ... 45'; MangaDex vol 11 = 42-45). TWO INDEPENDENT LINEAGES: (1) the fandom's '43 (p. 16-21), 44, 45 (p. 1-12)' plus its Plot; (2) programming-cafe's '第11話 第6回戦 | 44〜45' with its per-chapter table booking ch 45 to 2-11,12 — it assigns ch 43 wholly to ep 22, the single-assignment convention this class of table uses on a chapter two episodes share, and it agrees with the fandom on 44 and on ch 45 straddling 23/24.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2022&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2023&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2024&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2043&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2044&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2045&prop=wikitext&format=json",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-recordofragnarok-list/",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes",
+    "https://api.mangadex.org/manga/b5b21ca1-bba5-4b9a-8cd1-6248f731650b/aggregate"
+   ]
+  },
+  {
+   "episode": 24,
+   "end_chapter": 46,
+   "start_chapter": 45,
+   "chapters_adapted": "45 (pp.13-68), 46",
+   "volume": 12,
+   "confidence": "high",
+   "why": "afg-TIER VALUE CONFIRMED ON THE PAGES (stored 46 [45] {45-46}); page level and a volume added. START 45 (A10): the episode opens inside ch 45 at p.13 with Zerofuku's origin — 'In ancient Asia, at a time when the gods and humanity were still close ... A young Zerofuku wakes up and becomes excited to make everyone happy' — 56 pages of the chapter, unambiguously a START; ep 23 holds only pp.1-12, so nothing is re-shown. END 46 (A4): ch 46 '結晶' is adapted whole and last (Buddha's Six Realms Staff turning into the Shield of Ahimsa against Zerofuku's axe); ep 25 starts on ch 47 p.1, so A47 holds nothing back. PAGE CLOSURE: 12 + 56 = 68 = the ch-45 page's own count. WEIGHT: SIGNIFICANT — Zerofuku's whole backstory and the first half of Round 6. VOLUME 12 = ch 46's volume on three lineages (fandom ch-46 page and the fandom's Volume 12 page, which lists chs 46-49; programming-cafe '第12巻 46'; MangaDex vol 12 = 46-49). TWO INDEPENDENT LINEAGES: (1) the fandom's '45 (p. 13-68), 46' plus its Plot; (2) programming-cafe's '第12話 零 | 45 第12巻 46' and its per-chapter table (ch 45 -> 2-11,12; ch 46 -> 2-12). en-WP's summary is the content check.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2023&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2024&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2025&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2045&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2046&prop=wikitext&format=json",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-recordofragnarok-list/",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes",
+    "https://api.mangadex.org/manga/b5b21ca1-bba5-4b9a-8cd1-6248f731650b/aggregate"
+   ]
+  },
+  {
+   "episode": 25,
+   "end_chapter": 49,
+   "start_chapter": 47,
+   "chapters_adapted": "47, 48, 49 (pp.1-22)",
+   "volume": 12,
+   "confidence": "high",
+   "why": "afg-TIER VALUE CONFIRMED ON THE PAGES (stored 49 [47] {47-49}); page level and a volume added. START 47 (A13): the episode opens on ch 47 '至る道' p.1 — 'Göll questions where the shield came from and Brunhilde explains that it is the work of Buddha's Divine Weapon: the Six Realms Staff', which is the fandom's ep-25 Plot's first line verbatim in substance. Ep 24 ends on ch 46's last page, so there is no leading partial and no back-jump. END 49 (A4): the last chapter reached is ch 49 '冥界の伝説', of which the episode plays pp.1-22 of 26 — the Zerofuku reversion, the horns, the dragons, the shell and Hajun breaking out; 22 pages is far above A47's floor, so the END advances to 49. WEIGHT: SIGNIFICANT — Siddhartha Gautama's whole origin (ch 47-48) plus Zerofuku's resolution and the Hajun reveal. THE 4-PAGE REMAINDER IS A REAL FACT, not a rounding error: ch 49 pp.23-26 are Beelzebub watching from his room and naming Hajun, and the fandom's own ep-25 'Differences in Adaptations' says 'Beelzebub debut and his laboratory scenes were removed and delayed' — the anime moved them to ep 26's cold open. That is annotated `rearranged` on eps 25/26 and it explains the only closure gap in this stretch. It moves no boundary: the END is 49 either way and ep 26's START is 50 either way (its ch-51 rose fragment is a cold open, never a START under A10). VOLUME 12 = ch 49's volume. THIS IS THE ONE PLACE THE TWO CHAPTER-SPACE LINEAGES DISAGREE ON A VOLUME and a third source settles it our way: the fandom's ch-49 page AND its Volume 12 page (chs 46, 47, 48, 49) and MangaDex's aggregate (vol 12 = 46-49; vol 13 = 50-53) both give v12, while programming-cafe's 単行本 column prints 第13巻 against 49. programming-cafe's volume column is one behind from v12 to v19 and re-converges at v20 (it would make v12 a three-chapter volume of 148 pages against the 200-page books); its chapter/episode mapping is unaffected. TWO INDEPENDENT LINEAGES for the anchor itself: (1) the fandom's '47, 48, 49 (p. 1-22)' plus its Plot and Differences; (2) programming-cafe's '第13話 史上最強の思春期 | 47〜48 第13巻 49' and its per-chapter table (47, 48, 49 all -> 2-13). en-WP's summary is the content check.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2024&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2025&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2026&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2047&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2048&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2049&prop=wikitext&format=json",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-recordofragnarok-list/",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes",
+    "https://api.mangadex.org/manga/b5b21ca1-bba5-4b9a-8cd1-6248f731650b/aggregate",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Volume%2012&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episode": 26,
+   "end_chapter": 51,
+   "start_chapter": 50,
+   "chapters_adapted": "50, 51",
+   "volume": 13,
+   "confidence": "high",
+   "why": "afg-TIER VALUE CONFIRMED ON THE PAGES (stored 51 [50] {50-51}); volume added. START 50 (A10/A12): the episode's first images are the relocated ch-49 tail and ch 51's own opening beat — Beelzebub in his room with the rose, 'when perfect soil appears, a wise man would till it', the petals falling — used as a cold open; the episode's forward progress then begins at ch 50 p.1 ('As dark and stormy clouds form over the arena, Buddha glares at Hajun ... Loki asks Odin what the heck Hajun is ... Hades then sits down'), which is the fandom's ep-26 Plot from its second sentence on. A relocated fragment is never a START (A10's cold-open clause; A12 for the ch-49 pages), and a LATER chapter cannot be the START of a forward-running row, so the START is 50. END 51 (A4): ch 51 '種と土' is adapted whole and last, ending on Buddha impaled on Hajun's halberd and repeating his oath; ep 27 starts on ch 52 p.1, so A47 holds nothing back. WEIGHT: SIGNIFICANT for both chapters; the ch-49 pp.23-26 and ch-51 opening fragments used as the cold open are SLIVERS (a few pages of framing) and ch 51 is adapted in full in this same episode, so nothing is left dangling. VOLUME 13 = ch 51's volume on three lineages (fandom ch-51 page and Volume 13 page listing chs 50-53; programming-cafe prints 50〜51 in this row under 第13巻; MangaDex vol 13 = 50-53). TWO INDEPENDENT LINEAGES: (1) the fandom's `adapted= 50, 51` plus its Plot and ep 25's Differences note; (2) programming-cafe's '第14話 冥界の伝説 | 50〜51' and its per-chapter table (ch 50 -> 2-14; ch 51 -> 2-14). en-WP's summary is the content check.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2025&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2026&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2027&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2049&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2050&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2051&prop=wikitext&format=json",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-recordofragnarok-list/",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes",
+    "https://api.mangadex.org/manga/b5b21ca1-bba5-4b9a-8cd1-6248f731650b/aggregate"
+   ]
+  },
+  {
+   "episode": 27,
+   "end_chapter": 54,
+   "start_chapter": 52,
+   "chapters_adapted": "52, 53, 54, 55 (pp.21-23)",
+   "volume": 14,
+   "confidence": "high",
+   "why": "NEW ANCHOR on the A14 null (START and span were set to unknown on 2026-09-07); the stored END 54 is CONFIRMED, not repaired. START 52 (A13): the episode opens on ch 52 '光と影' p.1 — 'Despite huffing and bleeding from Hajun's halberd through his abdomen, Buddha grins and keeps moving forward to drive Salakayas more into Hajun's left forearm' — which is the fandom's ep-27 Plot's first line and the direct continuation of ep 26's stop point (ch 51's last page). The nulled stored START 43 was batch 12's round span ('43-54 + ch 55 tease', 'R6 ends (Buddha, 3-3)'). END 54 (A4 + A47): chs 52, 53 and 54 are adapted whole — the Parinirvana Sword, Buddha's victory in 21:37, Zerofuku's farewell, Buddha collapsing, Beelzebub burning his notes under Odin's glare, and Hades crushing his eyepatch to volunteer for Round 7 (ch 54's last page). The episode then shows ch 55 pp.21-23 — Brunhilde selecting 'King of All Beginnings' on her phone and a blindfolded man breaking through a wall — as its closing tease. A47 HOLDS the END at 54 for that: three pages, at or under the 5-page floor, and it is a forward tease rather than the chapter's own next scene. R3-BEFORE-A47 (the existence clause, Dai wave 14) is satisfied in the safe direction: BOTH lineages credit ch 55 to this episode (the fandom's field '55 (p. 21-23)'; programming-cafe's '第15話 光の道 | 52 第14巻 53〜55'), and the batch-12 note already called it 'ch 55 tease'. WEIGHT: SIGNIFICANT for chs 52-54; the ch-55 fragment is a SLIVER — three pages of hook, and ch 55 is adapted properly across eps 28 (pp.1-18) and 29 (pp.19-34). VOLUME 14 = ch 54's volume, unchanged: fandom ch-54 page, programming-cafe '第14巻 53〜55', MangaDex vol 14 = 54-57. TWO INDEPENDENT LINEAGES as cited; en-WP's ep-27 summary is the content check and ends 'After learning of Hades' involvement, Brunhilde chooses the next fighter for humanity: Chinese emperor Qin Shi Huang'.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2026&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2027&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2028&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2052&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2053&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2054&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2055&prop=wikitext&format=json",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-recordofragnarok-list/",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes",
+    "https://api.mangadex.org/manga/b5b21ca1-bba5-4b9a-8cd1-6248f731650b/aggregate"
+   ]
+  },
+  {
+   "episode": 28,
+   "end_chapter": 55,
+   "start_chapter": 55,
+   "chapters_adapted": "55 (pp.1-18)",
+   "volume": 14,
+   "confidence": "medium",
+   "why": "afg-TIER VALUE CONFIRMED IN ITS ENDPOINTS (stored 55 [55] {54-55}), with the span narrowed to what is FIRST-TIME. This is the S3 prologue and en-WP labels it outright: 'This episode serves mostly as a quick recap of the featured matches portrayed in the first two seasons.' Under the recap clause (T28, Sean 2026-09-02) the clip-show montage of Rounds 1-6 counts for nothing in the standing and nothing in the position, and the re-shown ch-54 beats (Buddha carried to the sickbay and the lollipops; Odin confronting Beelzebub over the burning documents) are pages ep 27 already animated — 'Re-shown pages are never cited', so they are not the START and not the END. START 55 and END 55 (A13 + A4): the only first-time source material in the episode is ch 55 '禁忌' pp.1-18 — Brunhilde and Göll finding a second Brunhilde in her room, Nostradamus dropping the disguise, the fake prophecy, the Helheim threat and the whole Bifröst explanation — precisely the block ep 27 SKIPPED (its own Differences note: 'Michel Nostradamus' introduction an his scenes with the valkyries are omitted'). Eighteen pages is a real scene, far above A47's floor, and ep 29 continues inside the same chapter, so the END is 55 and the reader is left mid-chapter. WEIGHT: SIGNIFICANT for ch 55 pp.1-18 (it is the episode's only story-carrying content and it introduces a fighter); the ch-54 share is a DUPLICATE (recap) and carries no weight. CONFIDENCE MEDIUM, and the reason is stated rather than hidden: the fandom's field prints the ch-54 share as 'p. 21-23' while the episode's Plot narrates ch 54's earlier beats (the sickbay and the Beelzebub/Odin scene, roughly pp.10-19) and ch 54 pp.21-23 is the Ares/Hades hand-over that ep 29 replays — the page numbers on the RE-SHOWN half of this row are not trustworthy, and the same '21-23' string sits on ep 27's ch-55 segment on the adjacent page. Nothing in the anchor depends on them: both endpoints rest on ch 55 pp.1-18. VOLUME 14 = ch 55's volume (fandom ch-55 page; MangaDex vol 14 = 54-57). TWO INDEPENDENT LINEAGES: (1) the fandom's ep-28 `adapted=` field and Plot, plus ep 27's Differences note naming the deferred Nostradamus block; (2) en-WP's ep-28 summary, which describes exactly the Nostradamus scene and the Bifröst backstory and then flags the rest as recap. programming-cafe has NO S3 data (its table stops at ch 55 with the note 第56話 ... ↓ここから先はアニメ未放送), so it is silent here — silence, not dissent, and stated as such.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2027&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2028&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2029&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2054&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2055&prop=wikitext&format=json",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes",
+    "https://ja.wikipedia.org/wiki/%E7%B5%82%E6%9C%AB%E3%81%AE%E3%83%AF%E3%83%AB%E3%82%AD%E3%83%A5%E3%83%BC%E3%83%AC",
+    "https://api.mangadex.org/manga/b5b21ca1-bba5-4b9a-8cd1-6248f731650b/aggregate"
+   ]
+  },
+  {
+   "episode": 29,
+   "end_chapter": 56,
+   "start_chapter": 55,
+   "chapters_adapted": "54 (pp.17-24, recap — re-shown from ep 27), 55 (pp.19-34), 56",
+   "volume": 14,
+   "confidence": "high",
+   "why": "afg-TIER VALUE CONFIRMED ON THE PAGES (stored 56 [55] {54-56}); page level and a volume added. START 55 (A13 + the re-shown-pages rule): the episode opens on ch 54 pp.17-24 — Hermes and Zeus on Buddha's empty slot, Ares' 0.25-second inner monologue, Hades removing his eyepatch — but ep 27 already animated that whole chapter, so these are re-shown pages and 'Re-shown pages (recap, cold open, flashback, a re-staging of an already-animated scene) are never cited'; the one first-time beat inside them is Ares' monologue, which ep 27 dropped (the fandom's ep-27 Differences: 'Ares' internal monologue about wanting to fight in the seventh round is omitted') and this episode restores (ep 29's Differences: 'The ommited scenes from Episode 27 (Ares' monologue) are included in this episode') — a one-page SLIVER, not a position. The first-time forward progress is ch 55 from p.19: the arena rebuilt for Hades, Qin walking into the gods' box and flipping Ares, and then ch 56 entire. END 56 (A4): ch 56 '王VS王' — the chapter the episode is named after — is adapted whole and last (Alvitr's Völundr, Proteus and the trident shard, the opening exchange, Qin's 'there is only one king'); ep 30 starts on ch 57 p.1, so A47 holds nothing back. PAGE CLOSURE ACROSS THE THREE-EPISODE RECAP CLUSTER: ch 55's first-time pages are ep 28's pp.1-18 plus ep 29's pp.19-34 = 34 = the ch-55 page's own count, with ep 27's pp.21-23 tease sitting inside ep 29's block — the overlaps are exactly the re-shown material and nothing is unaccounted. WEIGHT: SIGNIFICANT for ch 55 pp.19-34 and ch 56; SLIVER for the Ares beat; DUPLICATE (recap) for the rest of the ch-54 and ch-55 pages. VOLUME 14 = ch 56's volume (fandom ch-56 page; MangaDex vol 14 = 54-57). TWO INDEPENDENT LINEAGES: (1) the fandom's ep-29 field '54 (p. 17-24), 55, 56', its Plot and its Differences ('The anime skips Michel Nostradamus since it took place in the previous episode'); (2) en-WP's ep-29 summary in the same order, and ja-WP's 各話リスト, whose 第3期 第2話 title 王VS王 is ch 56's own title — a namesake tie an index join could not fake. programming-cafe is silent on S3. SHAPE NOTE for the A10 normalizer: the ch-54 segment is written with the word 'recap' precisely because it is re-shown material — without that wording lib/sliver.ts's sliverStart() would read an 8-page leading partial of the preceding chapter as substantive and pull the START back to 54, which is the value this row must not carry.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2027&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2028&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2029&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2030&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2054&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2055&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2056&prop=wikitext&format=json",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes",
+    "https://ja.wikipedia.org/wiki/%E7%B5%82%E6%9C%AB%E3%81%AE%E3%83%AF%E3%83%AB%E3%82%AD%E3%83%A5%E3%83%BC%E3%83%AC",
+    "https://api.mangadex.org/manga/b5b21ca1-bba5-4b9a-8cd1-6248f731650b/aggregate"
+   ]
+  },
+  {
+   "episode": 30,
+   "end_chapter": 59,
+   "start_chapter": 57,
+   "chapters_adapted": "57, 58, 59 (pp.1-12)",
+   "volume": 15,
+   "confidence": "high",
+   "why": "afg-TIER VALUE CONFIRMED ON THE PAGES (stored 59 [57] {57-59}); page level and a volume added. START 57 (A13): the episode opens on ch 57 '蚩尤' p.1 with the chapter's own opening narration, almost sentence for sentence — 'Chiyou is a being that has appeared in various forms across the myths and records of Ancient China. In Shan Hai Jing, he is depicted as an ox-headed monster with four eyes and six arms' — and ja-WP gives this episode the title 蚩尤, ch 57's own title. Ep 29 ends on ch 56's last page, so no leading partial and no back-jump. END 59 (A4 + A47): the last chapter reached is ch 59 '最高の王' (77 pages), of which the episode plays pp.1-12, closing on the young Ying Zheng thanking the guards who hate him and seeing a woman waiting — 12 pages, above the 5-page floor with no teaser wording, so the END advances to 59 and ep 31 continues inside it. WEIGHT: SIGNIFICANT for all three chapters — the Chiyou ordeal, the five tools of war, the Force of the Phoenix reveal and the opening of Qin's childhood. VOLUME 15 = ch 59's volume (fandom ch-59 page; MangaDex vol 15 = 58-61; programming-cafe, though silent on S3 episodes, also prints 59 under 第15巻). TWO INDEPENDENT LINEAGES: (1) the fandom's field '57, 58, 59 (p.1-12)' plus its Plot; (2) en-WP's ep-30 summary, which runs Chiyou -> the five tools -> the blindfold removed -> 'Abandoned as a child, Qin meets a mysterious woman while being held hostage' — ch 59's p.12 stop point — and ja-WP's episode title matching ch 57.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2029&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2030&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2031&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2057&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2058&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2059&prop=wikitext&format=json",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes",
+    "https://ja.wikipedia.org/wiki/%E7%B5%82%E6%9C%AB%E3%81%AE%E3%83%AF%E3%83%AB%E3%82%AD%E3%83%A5%E3%83%BC%E3%83%AC",
+    "https://api.mangadex.org/manga/b5b21ca1-bba5-4b9a-8cd1-6248f731650b/aggregate"
+   ]
+  },
+  {
+   "episode": 31,
+   "end_chapter": 60,
+   "start_chapter": 59,
+   "chapters_adapted": "59 (pp.13-77), 60",
+   "volume": 15,
+   "confidence": "high",
+   "why": "afg-TIER VALUE CONFIRMED ON THE PAGES (stored 60 [59] {59-60}); page level and a volume added. START 59 (A10): the episode opens inside ch 59 at p.13 — 'The woman introduces herself as Chunyan, his new caretaker and bodyguard' — the direct continuation of the frame ep 30 stops on ('He then sees a woman waiting for him'); 65 pages of the chapter, so unambiguously a START and not a scrap. END 60 (A4): ch 60 '約束と誓い' — the chapter the episode is named after, and ja-WP gives this episode exactly that title — is adapted whole and last (Chun Yan's death, Ying Zheng's oath, the return to the Hades fight and Qin's Halberd Form); ep 32 starts on ch 61 p.1, so A47 holds nothing back. WEIGHT: SIGNIFICANT for both. NOTE ON THE PAGE RANGE: the fandom's field reads '59 (p.13-78)' while the ch-59 page gives 77 pages, so the upper bound is clamped to 77 here; the two shares then union to exactly 77. It moves no boundary. VOLUME 15 = ch 60's volume (fandom ch-60 page; MangaDex vol 15 = 58-61). TWO INDEPENDENT LINEAGES: (1) the fandom's field plus its Plot; (2) en-WP's ep-31 summary (Chun Yan's arrival, the assassination attempt, her death, 'Hades moves past Qin's air bullets and knees him directly in the chin, but is successfully countered by Qin's leg kick' = ch 60's close) and ja-WP's episode title 約束と誓い = ch 60's title.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2030&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2031&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2032&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2059&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2060&prop=wikitext&format=json",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes",
+    "https://ja.wikipedia.org/wiki/%E7%B5%82%E6%9C%AB%E3%81%AE%E3%83%AF%E3%83%AB%E3%82%AD%E3%83%A5%E3%83%BC%E3%83%AC",
+    "https://api.mangadex.org/manga/b5b21ca1-bba5-4b9a-8cd1-6248f731650b/aggregate"
+   ]
+  },
+  {
+   "episode": 32,
+   "end_chapter": 63,
+   "start_chapter": 61,
+   "chapters_adapted": "61, 62, 63",
+   "volume": 16,
+   "confidence": "high",
+   "why": "afg-TIER VALUE CONFIRMED ON THE PAGES (stored 63 [61] {61-63}); volume added. START 61 (A13): the episode opens on ch 61 '冥王の矜持' p.1 — Beelzebub reading in his room, the creature breaking out of the tank, Adamas arriving in his cyborg body — which is ch 61's own opening and the fandom's ep-32 Plot's first paragraph; ja-WP gives this episode the title 冥王の矜持, ch 61's own title. Ep 31 ends on ch 60's last page, so no leading partial and no back-jump. END 63 (A4): ch 63 '終わりの始まり' is adapted whole and last (Alvitr becoming the Sword of Goujian, Qin's left arm severed, Qin standing back up to the crowd's protest); ep 33 starts on ch 64 p.1, so A47 holds nothing back. WEIGHT: SIGNIFICANT for all three — Desmos, the Gigantomachy retrospective, Adamas alive as 'Adamantine'. VOLUME 16 = ch 63's volume (fandom ch-63 page and the fandom's Volume 16 page listing chs 62-66; MangaDex vol 16 = 62-66). TWO INDEPENDENT LINEAGES: (1) the fandom's `adapted= 61, 62, 63` plus its Plot; (2) en-WP's ep-32 summary in the same order (Desmos -> the Gigantomachy -> Adamantine -> the sword -> 'Though Hades severs his left arm, Qin refuses to back down') and ja-WP's namesake title. NOTE: ch 61 was serialised in two parts (20 pp + 14 pp) and the fandom's page field records both; the episode adapts it entire.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2031&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2032&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2033&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2061&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2062&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2063&prop=wikitext&format=json",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes",
+    "https://ja.wikipedia.org/wiki/%E7%B5%82%E6%9C%AB%E3%81%AE%E3%83%AF%E3%83%AB%E3%82%AD%E3%83%A5%E3%83%BC%E3%83%AC",
+    "https://api.mangadex.org/manga/b5b21ca1-bba5-4b9a-8cd1-6248f731650b/aggregate",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Volume%2016&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episode": 33,
+   "end_chapter": 66,
+   "start_chapter": 64,
+   "chapters_adapted": "64, 65, 66 (pp.1-9, 27-32)",
+   "volume": 16,
+   "confidence": "high",
+   "why": "NEW ANCHOR on the A14 null (START and span were set to unknown on 2026-09-07) AND an END repair 65 -> 66 (see repairs). START 64 (A13): the episode opens on ch 64 '王の帰還' p.1 — 'Heimdall announces that on the verge of death, with his left arm gone ... Qin Shi Huang is standing up with sheer willpower alone' — the direct continuation of ep 32's last frame; ja-WP gives this episode the title 王の帰還, ch 64's own title. The nulled stored START 55 was batch 12's round span ('55-65 + ch 66 partial', 'R7 ends (Qin)'). END 66 (A4): the episode adapts ch 66 '創造と想像' pp.27-32 AND pp.1-9 — 15 of its 32 pages — and it plays them OUT OF ORDER: after ch 65's Kintoki/Siegfried scene it goes to ch 66's closing pages (Hermes' violin requiem for Hades, the six books of the fallen, Beelzebub telling Hermes he will fight next) and only then to ch 66's opening pages (Brunhilde furious that Buddha has snuck out, the retinal scanner, the vault door, 'the only one in all of Human history that is a sorcerer'), which is where the episode ends. A47 cannot hold the END at 65: 15 pages including the chapter's own last page is neither a 5-page scrap nor a teaser, and the batch-12 span's phrase 'ch 66 partial' is position language, not evidence of size (Dai wave 13, Sean 2026-09-02). The middle block ch 66 pp.10-26 (Tesla's laboratory and the Völundr) is ep 34's, so the chapter is partitioned exactly once: 15 + 17 = 32 = the ch-66 page's own count. WEIGHT: SIGNIFICANT for all three chapters — Hades' death, the seventh round won, Adamas' attack on Brunhilde, and the hand-over into Round 8. VOLUME 16 = ch 66's volume, so the stored 16 is unchanged even though the END advances: the fandom's ch-66 page and its Volume 16 page (chs 62-66) and MangaDex (vol 16 = 62-66) all agree; programming-cafe's 単行本 column would print 第17巻 against 66, which is the same one-behind volume shift it carries from v12 to v19 and which MangaDex refutes. TWO INDEPENDENT LINEAGES: (1) the fandom's field '64, 65, 66 (p.1-9, 27-32)' — extended from '(p.1-9)' to '(p.1-9, 27-32)' by the same editor on release day, i.e. a correction toward the pages — plus its Plot section, which narrates the requiem BEFORE the vault door; (2) en-WP's ep-33 summary, which independently ends 'Beelzebub states to Hermes his intention to fight next, while Brunhilde enters the chambers of Nikola Tesla' — the same out-of-order pair — and ja-WP's namesake title.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2032&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2033&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2034&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2064&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2065&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2066&prop=wikitext&format=json",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes",
+    "https://ja.wikipedia.org/wiki/%E7%B5%82%E6%9C%AB%E3%81%AE%E3%83%AF%E3%83%AB%E3%82%AD%E3%83%A5%E3%83%BC%E3%83%AC",
+    "https://api.mangadex.org/manga/b5b21ca1-bba5-4b9a-8cd1-6248f731650b/aggregate",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Volume%2016&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episode": 34,
+   "end_chapter": 67,
+   "start_chapter": 66,
+   "chapters_adapted": "66 (pp.10-26), 67",
+   "volume": 17,
+   "confidence": "high",
+   "why": "afg-TIER VALUE CONFIRMED ON THE PAGES (stored 67 [66] {66-67}); page level and a volume added. START 66 (A10): the episode opens inside ch 66 at p.10 — 'The man in the room is Nikola Tesla, the mad scientist who had invented the alternating current generator' — the block ep 33 left out when it played ch 66's opening and closing pages; 17 pages, well above A10's floor, no cold-open wording, so it is a real START. END 67 (A4): ch 67 'アナテマ' (74 pages, the longest chapter in the run) is adapted whole and last — Beelzebub's entire origin: the Anathema curse, Lucifer, Azazel and Samael, the apples of Eden, Lilith, the Destrudo reveal and Lilith's dying curse-that-is-a-prayer; ep 35 starts on ch 68 p.1, so A47 holds nothing back. WEIGHT: SIGNIFICANT for both. VOLUME 17 = ch 67's volume (fandom ch-67 page and the fandom's Volume 17 page, which lists chs 67-70 plus Bonus Chapter 2; MangaDex vol 17 = 67-70 + 70.5). TWO INDEPENDENT LINEAGES: (1) the fandom's field '66 (p.10-26), 67' plus its Plot; (2) en-WP's ep-34 summary, which runs the Völundr first and then the whole Beelzebub flashback to Lilith's death. The anime EXPANDS the flashback (the fandom's Differences: 'The anime expands on Beelzebub's flashback', and Beelzebub feeds a goat rather than a unicorn) — under the faithfulness clause that is `divergence` inside an adapted chapter, never a weight toward mixed; the row stays canon.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2033&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2034&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2035&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2066&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2067&prop=wikitext&format=json",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes",
+    "https://ja.wikipedia.org/wiki/%E7%B5%82%E6%9C%AB%E3%81%AE%E3%83%AF%E3%83%AB%E3%82%AD%E3%83%A5%E3%83%BC%E3%83%AC",
+    "https://api.mangadex.org/manga/b5b21ca1-bba5-4b9a-8cd1-6248f731650b/aggregate",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Volume%2017&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episode": 35,
+   "end_chapter": 71,
+   "start_chapter": 68,
+   "chapters_adapted": "68, 69, 70, 71 (pp.1-13)",
+   "volume": 18,
+   "confidence": "high",
+   "why": "afg-TIER VALUE CONFIRMED ON THE PAGES (stored 71 [68] {68-71}); page level and a volume added. START 68 (A13): the episode opens on ch 68 '闇VS光' p.1 — the arena rebuilt as a gorge with the hexagonal column and the six gargoyle pillars, Heimdall on his skull aircraft announcing the eighth round — which is ch 68's own opening; ja-WP gives this episode the title 闇VS光, ch 68's own title. Ep 34 ends on ch 67's last page, so no leading partial and no back-jump. END 71 (A4 + A47): the last chapter reached is ch 71 '科学の反撃', of which the episode plays pp.1-13, closing on the audience's shock at the Gematria Zone and Tesla's faster strike; 13 pages is above the 5-page floor with no teaser wording, so the END advances to 71 and ep 36 continues inside it at p.14. WEIGHT: SIGNIFICANT for all four chapters — Beelzebub's entrance to silence, Tesla's entrance, the vibration duel and the Gematria Zone. VOLUME 18 = ch 71's volume (fandom ch-71 page; MangaDex vol 18 = 71-74). TWO INDEPENDENT LINEAGES: (1) the fandom's field plus its Plot; (2) en-WP's ep-35 summary, which covers exactly this span and stops at 'The cage implements an anti-gravity system, allowing Tesla to float and strike Beelzebub faster', and ja-WP's namesake title.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2034&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2035&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2036&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2068&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2069&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2070&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2071&prop=wikitext&format=json",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes",
+    "https://ja.wikipedia.org/wiki/%E7%B5%82%E6%9C%AB%E3%81%AE%E3%83%AF%E3%83%AB%E3%82%AD%E3%83%A5%E3%83%BC%E3%83%AC",
+    "https://api.mangadex.org/manga/b5b21ca1-bba5-4b9a-8cd1-6248f731650b/aggregate"
+   ]
+  },
+  {
+   "episode": 36,
+   "end_chapter": 73,
+   "start_chapter": 71,
+   "chapters_adapted": "71 (pp.14-40), 72, 73 (pp.1-27)",
+   "volume": 18,
+   "confidence": "high",
+   "why": "afg-TIER VALUE CONFIRMED ON THE PAGES (stored 73 [71] {71-73}); page level and a volume added. START 71 (A10): the episode opens inside ch 71 at p.14 — 'As Tesla's attack had hit Beelzebub, Ares feels he became faster. Hermes explains that his top speed haven't changed ... with anti-gravity, Tesla is reaching his top speed instantly' — the direct continuation of ep 35's last frame; 27 pages, far above A10's floor. END 73 (A4 + A47): the last chapter reached is ch 73 '呪いと祈り' — the chapter this episode is named after on ja-WP — of which it plays pp.1-27, closing on Beelzebub gathering dark energy with the Staff of Apomyius; 27 pages is far above the 5-page floor, so the END advances to 73 and ep 37 continues inside it. WEIGHT: SIGNIFICANT for all three chapters — the Tesla Step, the Philadelphia Experiment, and the Hades/Lilith 'this is not a curse but a prayer' flashback that gives the episode its title. NOTE ON THE PAGE RANGE: the fandom's field reads '71 (p.14-41)' while the ch-71 page gives 40 pages, so the upper bound is clamped to 40 here and the two shares then union to exactly 40. VOLUME 18 = ch 73's volume (fandom ch-73 page; MangaDex vol 18 = 71-74). TWO INDEPENDENT LINEAGES: (1) the fandom's field plus its Plot and its Differences note ('The fight between Hades and Beelzebub is expanded' — an expansion inside an adapted chapter, `divergence` under the faithfulness clause, not a weight toward mixed); (2) en-WP's ep-36 summary in the same order, and ja-WP's namesake title.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2035&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2036&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2037&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2071&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2072&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2073&prop=wikitext&format=json",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes",
+    "https://ja.wikipedia.org/wiki/%E7%B5%82%E6%9C%AB%E3%81%AE%E3%83%AF%E3%83%AB%E3%82%AD%E3%83%A5%E3%83%BC%E3%83%AC",
+    "https://api.mangadex.org/manga/b5b21ca1-bba5-4b9a-8cd1-6248f731650b/aggregate"
+   ]
+  },
+  {
+   "episode": 37,
+   "end_chapter": 76,
+   "start_chapter": 73,
+   "chapters_adapted": "73 (pp.28-33), 74, 75, 76 (pp.1-7)",
+   "volume": 19,
+   "confidence": "high",
+   "why": "afg-TIER VALUE CONFIRMED ON THE PAGES (stored 76 [73] {73-76}); page level and a volume added. START 73 (A10): the episode opens inside ch 73 at p.28 — Beelzebub charging and releasing Chaos, the black sphere engulfing the arena — the direct continuation of ep 36's last frame ('Using the Apomyius, Beelzebub then starts gathering some dark energy'); ch 74 opens on the sphere BURSTING, so the charge-and-release is ch 73's own ending. Six pages is above A10's 5-page floor and the field carries no cold-open wording, so the leading partial counts and the START is 73. END 76 (A4 + A47): the last chapter reached is ch 76 '前進', of which the episode plays pp.1-7 (Heimdall on humanity's cheers, Hlökk watching from her room, Tesla's onslaught of punches); 7 pages is above the 5-page floor with no teaser wording, so the END advances to 76 and ep 38 continues inside it at p.8. WEIGHT: SIGNIFICANT for all four chapters — Chaos, the Dane Tesla windmill origin (ch 74 '繋ぐ想い', the chapter ja-WP gives this episode its title from), and the destruction of the Gematria Zone. NOTE ON THE PAGE RANGE: the fandom's field reads '73 (p.29-34)' but ch 73 has only 33 pages and ep 36 holds pp.1-27, so the honest range is pp.28-33 — the union then closes exactly on 33 and the count the field implies (6 pages) is unchanged. The boundary is not load-bearing: the START is 73 on either reading. VOLUME 19 = ch 76's volume (fandom ch-76 page; MangaDex vol 19 = 75-78). TWO INDEPENDENT LINEAGES: (1) the fandom's field plus its Plot; (2) en-WP's ep-37 summary in the same order, and ja-WP's namesake title 繋ぐ想い = ch 74.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2036&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2037&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2038&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2073&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2074&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2075&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2076&prop=wikitext&format=json",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes",
+    "https://ja.wikipedia.org/wiki/%E7%B5%82%E6%9C%AB%E3%81%AE%E3%83%AF%E3%83%AB%E3%82%AD%E3%83%A5%E3%83%BC%E3%83%AC",
+    "https://api.mangadex.org/manga/b5b21ca1-bba5-4b9a-8cd1-6248f731650b/aggregate"
+   ]
+  },
+  {
+   "episode": 38,
+   "end_chapter": 77,
+   "start_chapter": 76,
+   "chapters_adapted": "76 (pp.8-46), 77",
+   "volume": 19,
+   "confidence": "high",
+   "why": "NEW ANCHOR on the A14 null (START and span were set to unknown on 2026-09-07); the stored END 77 is CONFIRMED, not repaired. START 76 (A10): the episode opens inside ch 76 at p.8 — 'Tesla unleashes a barrage of punches forcing Beelzebub to defend himself with his vibration shield' — the direct continuation of ep 37's last frame ('if one punch doesn't do it, then he will continue punching'); 39 pages of the chapter, unambiguously a START. ja-WP gives this episode the title 前進, ch 76's own title. The nulled stored START 66 was batch 12's round span ('66-77 (Round 8 complete)', 'R8 ends (Beelzebub, 4-4)'). END 77 (A4): ch 77 '奈落の英雄' is adapted whole and last — Tesla's severed arm teleported, Beelzebub's mortal blow, Tesla and Göndul dying, the score tied 4-4, Brunhilde at the memorial, and the Tartarus coda with Flauros, Andras and Siegfried in his cell, which is the episode's closing scene and the chapter's own ending. Ep 39 starts on ch 78 p.1, so A47 holds nothing back. WEIGHT: SIGNIFICANT for both chapters. NOTE ON THE PAGE RANGE: the fandom's field reads '76 (p.8-47)' while the ch-76 page gives 46 pages, so the upper bound is clamped to 46 here and the two shares then union to exactly 46. VOLUME 19 = ch 77's volume, unchanged from the stored row (fandom ch-77 page; MangaDex vol 19 = 75-78). TWO INDEPENDENT LINEAGES: (1) the fandom's field '76 (p.8-47), 77' plus its Plot; (2) en-WP's ep-38 summary, which runs the same beats and ends on Siegfried overhearing the guards, and ja-WP's namesake title.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2037&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2038&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2039&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2076&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2077&prop=wikitext&format=json",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes",
+    "https://ja.wikipedia.org/wiki/%E7%B5%82%E6%9C%AB%E3%81%AE%E3%83%AF%E3%83%AB%E3%82%AD%E3%83%A5%E3%83%BC%E3%83%AC",
+    "https://api.mangadex.org/manga/b5b21ca1-bba5-4b9a-8cd1-6248f731650b/aggregate"
+   ]
+  },
+  {
+   "episode": 39,
+   "end_chapter": 79,
+   "start_chapter": 78,
+   "chapters_adapted": "78, 79 (pp.1-14)",
+   "volume": 20,
+   "confidence": "high",
+   "why": "afg-TIER VALUE CONFIRMED ON THE PAGES (stored 79 [78] {78-79}); page level and a volume added. START 78 (A13): the episode opens on ch 78 '太陽神と反骨の英雄' p.1 — Ares, Zeus and Hermes going to fetch Apollo and finding him bathing in a fountain with several women — which is ch 78's own opening; ja-WP gives this episode that exact title. Ep 38 ends on ch 77's last page, so no leading partial and no back-jump. END 79 (A4 + A47): the last chapter reached is ch 79 '叛逆の王', of which the episode plays pp.1-14 — the Leonidas legend ('he has the coolest back in the entire world') and the 480 BC Carneia council scene, closing on 'Leonidas then stands up asking them if they are idiots'; 14 pages is above the 5-page floor with no teaser wording, so the END advances to 79 and ep 40 continues inside it at p.15. WEIGHT: SIGNIFICANT for both. The anime adds an original scene — Geirölul's earlier debut and her Völundr with Leonidas (the fandom's Differences: 'the anime adds a scene of Geirolul meeting with Leonidas and performing Völundr'; also Odin and Aphrodite watching a round the manga leaves them out of) — but under T28 one added scene inside two fully adapted chapters is not a story-carrying original SHARE; it is `divergence` and the row stays canon. VOLUME 20 = ch 79's volume (fandom ch-79 page; MangaDex vol 20 = 79-82; programming-cafe's 単行本 column also converges on 第20巻 = 79-82). TWO INDEPENDENT LINEAGES: (1) the fandom's field '78, 79 (p.1-14)' plus its Plot and Differences; (2) en-WP's ep-39 summary in the same order, and ja-WP's namesake title.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2038&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2039&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2040&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2078&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2079&prop=wikitext&format=json",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes",
+    "https://ja.wikipedia.org/wiki/%E7%B5%82%E6%9C%AB%E3%81%AE%E3%83%AF%E3%83%AB%E3%82%AD%E3%83%A5%E3%83%BC%E3%83%AC",
+    "https://api.mangadex.org/manga/b5b21ca1-bba5-4b9a-8cd1-6248f731650b/aggregate"
+   ]
+  },
+  {
+   "episode": 40,
+   "end_chapter": 81,
+   "start_chapter": 79,
+   "chapters_adapted": "79 (pp.15-48), 80, 81",
+   "volume": 20,
+   "confidence": "high",
+   "why": "afg-TIER VALUE CONFIRMED ON THE PAGES (stored 81 [79] {79-81}); page level and a volume added. START 79 (A10): the episode opens inside ch 79 at p.15 — 'Leonidas decides to go to war even without the council approval ... smashes his statue [of Apollo]' — the direct continuation of ep 39's last frame; 34 pages, far above A10's floor. END 81 (A4): ch 81 '誇りVS意地' — the chapter ja-WP gives this episode its title from — is adapted whole and last (Apollo's threads, the shortened arena, Leonidas surviving the finishing blow, the headbutt and Apollo forced to his knees); ep 41 starts on ch 82 p.1, so A47 holds nothing back. PAGE CLOSURE: ep 39's pp.1-14 + ep 40's pp.15-48 = 48 = the ch-79 page's own count. WEIGHT: SIGNIFICANT for all three chapters — Thermopylae, the Threads of Artemis, and the turn of Round 9. VOLUME 20 = ch 81's volume (fandom ch-81 page; MangaDex vol 20 = 79-82). TWO INDEPENDENT LINEAGES: (1) the fandom's field '79 (p.15-48), 80, 81' plus its Plot; (2) en-WP's ep-40 summary in the same order, and ja-WP's namesake title.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2039&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2040&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2041&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2079&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2080&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2081&prop=wikitext&format=json",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes",
+    "https://ja.wikipedia.org/wiki/%E7%B5%82%E6%9C%AB%E3%81%AE%E3%83%AF%E3%83%AB%E3%82%AD%E3%83%A5%E3%83%BC%E3%83%AC",
+    "https://api.mangadex.org/manga/b5b21ca1-bba5-4b9a-8cd1-6248f731650b/aggregate"
+   ]
+  },
+  {
+   "episode": 41,
+   "end_chapter": 83,
+   "start_chapter": 82,
+   "chapters_adapted": "82, 83 (pp.1-28)",
+   "volume": 21,
+   "confidence": "high",
+   "why": "afg-TIER VALUE CONFIRMED ON THE PAGES (stored 83 [82] {82-83} v21); page level added, volume unchanged. START 82 (A13): the episode opens on ch 82 '汝自身を知れ' p.1 — 'All the Goddesses supporting Apollo can't believe the sight before their eyes: Apollo on his hands and knees, with his head bowed down ... Heimdall announces that the indomitable Spartan King has dragged the Sun God down' — which is ch 82's own opening and the fandom's ep-41 Plot's first paragraph; ja-WP gives this episode the title 汝、自身を知れ, ch 82's own title. Ep 40 ends on ch 81's last page, so no leading partial and no back-jump. END 83 (A4 + A47): the last chapter reached is ch 83 '激突する魂' (66 pages), of which the episode plays pp.1-28 — the golden Artemis statue, the bow of light, the barrage of arrows and Leonidas deflecting one back through Apollo's chest; 28 pages is far above the 5-page floor, so the END advances to 83 and ep 42 continues inside it at p.29. WEIGHT: SIGNIFICANT for both — the Python/Delphi origin that explains the temple inscription the episode is named for, and the fight's decisive reversal. The anime adds two beats at the close (the deflected arrow also piercing Apollo's chest, and Apollo falling unconscious — the fandom's Differences: 'None of these scenes were in the manga'); that is `divergence` inside an adapted chapter under the faithfulness clause, not an original share, and the row stays canon. VOLUME 21 = ch 83's volume, unchanged and confirmed against the STORED boundary table (v21: 83-86): fandom ch-83 page, MangaDex vol 21 = 83-86, programming-cafe 第21巻 = 83〜86. TWO INDEPENDENT LINEAGES: (1) the fandom's field '82, 83 (p.1-28)' plus its Plot and Differences; (2) en-WP's ep-41 summary in the same order, and ja-WP's namesake title.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2040&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2041&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2042&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2082&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2083&prop=wikitext&format=json",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes",
+    "https://ja.wikipedia.org/wiki/%E7%B5%82%E6%9C%AB%E3%81%AE%E3%83%AF%E3%83%AB%E3%82%AD%E3%83%A5%E3%83%BC%E3%83%AC",
+    "https://api.mangadex.org/manga/b5b21ca1-bba5-4b9a-8cd1-6248f731650b/aggregate"
+   ]
+  }
+ ],
+ "continue_points": [
+  {
+   "episode": 12,
+   "continue_chapter": 20,
+   "kind": "parity",
+   "confidence": "high",
+   "why": "UNCHANGED (stored 20) but re-derived and now resting on the right END. C2 parity: ep 13's START is ch 20 (it opens at p.17 with Heracles' conversation with the Valkyries and Loki, and Brunhilde choosing Jack — the 15 pages ep 12 skipped), so parity lands on 20. C3 SKIP NOTE for the apply layer: after ep 12 the reader has already seen ch 20 pp.1-16 and pp.32-52, so on arriving at ch 20 they need only pp.17-31 before moving on; C1 does not apply because ep 12 ends on ch 20's LAST page, not mid-chapter.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2012&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2013&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2020&prop=wikitext&format=json",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-recordofragnarok-list/",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes"
+   ]
+  },
+  {
+   "episode": 18,
+   "continue_chapter": 32,
+   "kind": "parity",
+   "confidence": "high",
+   "why": "CHANGED: stored 34 -> 32, and it is a BACKWARD parity, which is the correct answer after an un-cross-cut (the d-gray-man 5 -> 2 / 6 -> 3 precedent: a 'don't read back' continue hands the reader nothing for the chapters the anime plays next). C2 parity: ep 19's START is ch 32 p.1 — the Shiva/Raiden match proper, which ep 18 never touched. The stored 34 encoded the old reading in which ep 19 started on ch 34. C3 SKIP NOTE: by the end of ep 18 the reader has seen ch 32 pp.6-8 and 30-32 and ch 33 pp.27-60 (in ep 17) and ch 34 pp.1-27 (in ep 18) — the Loki/Buddha thread only; everything else in chs 32-34 is unseen, so read ch 32 from p.1 and skip the Loki-at-the-fountain cutaways when they recur.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2017&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2018&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2019&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2032&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2033&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2034&prop=wikitext&format=json",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-recordofragnarok-list/",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes"
+   ]
+  },
+  {
+   "episode": 21,
+   "continue_chapter": 41,
+   "kind": "parity",
+   "confidence": "high",
+   "why": "CHANGED: stored 31 ('anime jumps back: ep 22 opens at ch 31') -> 41. The stored value was the healer's parity against ep 22's phantom START 31, which was batch 12's round span; ep 22 in fact opens on ch 41 p.1 (Shiva's flaming fist meeting Raiden's palm strike). C2 parity therefore lands on 41, which here also equals END + 1 — there is no back-jump at this seam at all.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2021&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2022&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2040&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2041&prop=wikitext&format=json",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-recordofragnarok-list/",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes"
+   ]
+  },
+  {
+   "episode": 22,
+   "continue_chapter": 43,
+   "kind": "parity",
+   "confidence": "high",
+   "why": "UNCHANGED (stored 43) but on a different basis now that the END is 43 rather than 42. C2/C3 parity: ep 23's START is ch 43 p.16 — the Jack-the-Ripper / Göll tea scene this episode skipped — so parity is 43. C1 does not apply: ep 22 ends on ch 43's LAST page. C3 SKIP NOTE: the reader who continues at ch 43 has already seen pp.1-15 and pp.22-43 and needs only pp.16-21; a reader who prefers not to re-open the chapter can start at ch 44 and will lose only that six-page scene, which ep 23 shows in full.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2022&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2023&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2043&prop=wikitext&format=json",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-recordofragnarok-list/",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes"
+   ]
+  },
+  {
+   "episode": 26,
+   "continue_chapter": 52,
+   "kind": "parity",
+   "confidence": "high",
+   "why": "CHANGED: stored 43 ('anime jumps back: ep 27 opens at ch 43') -> 52. The stored value was the healer's parity against ep 27's phantom START 43, which was batch 12's round span ('43-54 + ch 55 tease'); ep 27 in fact opens on ch 52 p.1 (Buddha driving Salakayas deeper into Hajun's forearm). C2 parity lands on 52, which here also equals END + 1 — there is no back-jump at this seam.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2026&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2027&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2051&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2052&prop=wikitext&format=json",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-recordofragnarok-list/",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes"
+   ]
+  },
+  {
+   "episode": 27,
+   "continue_chapter": 55,
+   "kind": "parity",
+   "confidence": "high",
+   "why": "UNCHANGED (stored 55). C1: the episode ends on a three-page fragment of ch 55 (pp.21-23, the Qin tease), so the reader is inside ch 55 with almost all of it unread; C2 parity agrees, because the next episode's only first-time source content is ch 55 pp.1-18. Read ch 55 from its first page — the three pages already glimpsed sit at pp.21-23 and are replayed in ep 29 anyway.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2027&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2028&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2055&prop=wikitext&format=json",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-recordofragnarok-list/",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes"
+   ]
+  },
+  {
+   "episode": 32,
+   "continue_chapter": 64,
+   "kind": "parity",
+   "confidence": "high",
+   "why": "CHANGED: stored 55 ('anime jumps back: ep 33 opens at ch 55') -> 64. The stored value was the healer's parity against ep 33's phantom START 55, which was batch 12's round span ('55-65 + ch 66 partial'); ep 33 in fact opens on ch 64 p.1 (Heimdall announcing that Qin is standing up on willpower alone). C2 parity lands on 64, which here also equals END + 1 — there is no back-jump at this seam.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2032&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2033&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2063&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2064&prop=wikitext&format=json",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes",
+    "https://ja.wikipedia.org/wiki/%E7%B5%82%E6%9C%AB%E3%81%AE%E3%83%AF%E3%83%AB%E3%82%AD%E3%83%A5%E3%83%BC%E3%83%AC"
+   ]
+  },
+  {
+   "episode": 33,
+   "continue_chapter": 66,
+   "kind": "parity",
+   "confidence": "high",
+   "why": "UNCHANGED (stored 66) but on a different basis now that the END is 66 rather than 65. C1: the episode ends inside ch 66 — it has played pp.27-32 and pp.1-9 and left pp.10-26 (Tesla's laboratory and the Völundr) unseen; C2 parity agrees, because ep 34's START is ch 66 p.10. C3 SKIP NOTE: the reader arriving at ch 66 has already seen its first nine pages and its last six, out of order — the unread block is the middle.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2033&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2034&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2066&prop=wikitext&format=json",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes",
+    "https://ja.wikipedia.org/wiki/%E7%B5%82%E6%9C%AB%E3%81%AE%E3%83%AF%E3%83%AB%E3%82%AD%E3%83%A5%E3%83%BC%E3%83%AC"
+   ]
+  },
+  {
+   "episode": 37,
+   "continue_chapter": 76,
+   "kind": "parity",
+   "confidence": "high",
+   "why": "CHANGED: stored 66 ('anime jumps back: ep 38 opens at ch 66') -> 76. The stored value was the healer's parity against ep 38's phantom START 66, which was batch 12's round span ('66-77 (Round 8 complete)'); ep 38 in fact opens on ch 76 p.8 (Tesla's barrage of punches). Both rules agree on 76: C1 because ep 37 ends inside ch 76 at p.7, and C2 parity because ep 38's START is ch 76.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2037&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2038&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2076&prop=wikitext&format=json",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes",
+    "https://ja.wikipedia.org/wiki/%E7%B5%82%E6%9C%AB%E3%81%AE%E3%83%AF%E3%83%AB%E3%82%AD%E3%83%A5%E3%83%BC%E3%83%AC"
+   ]
+  },
+  {
+   "episode": 38,
+   "continue_chapter": 78,
+   "kind": "parity",
+   "confidence": "high",
+   "why": "NEW (no stored continue on this row). C2 parity: ep 39's START is ch 78 p.1 (the Greek gods fetching Apollo), and ep 38 ends on ch 77's last page, so parity equals END + 1 and C1 does not apply. This is the Round-8 close (4-4) — the seam a reader is most likely to stop at.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2038&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2039&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2077&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2078&prop=wikitext&format=json",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes",
+    "https://ja.wikipedia.org/wiki/%E7%B5%82%E6%9C%AB%E3%81%AE%E3%83%AF%E3%83%AB%E3%82%AD%E3%83%A5%E3%83%BC%E3%83%AC"
+   ]
+  },
+  {
+   "episode": 41,
+   "continue_chapter": 83,
+   "kind": "parity",
+   "confidence": "high",
+   "why": "NEW (no stored continue on this row). C1: the episode ends inside ch 83 at p.28 (Leonidas deflecting the arrow of light back through Apollo), so the reader continues IN ch 83; C2 parity agrees, because ep 42 opens at ch 83 p.29. Delivered because row 41 is in the ask and its anchor is now page-level.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2041&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2042&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2083&prop=wikitext&format=json",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes",
+    "https://ja.wikipedia.org/wiki/%E7%B5%82%E6%9C%AB%E3%81%AE%E3%83%AF%E3%83%AB%E3%82%AD%E3%83%A5%E3%83%BC%E3%83%AC"
+   ]
+  }
+ ],
+ "anchor_hostile": [],
+ "annotations": [
+  {
+   "episodes": [
+    18
+   ],
+   "kind": "rearranged",
+   "chapters": "31, 34 (pp.1-27)",
+   "note": "weight: SIGNIFICANT — this is the OUTBOUND half of an un-cross-cut and it is the reason ep 18's END (34) sits four chapters above ep 17's (30) while ep 19 then back-jumps to ch 32. The manga cross-cuts Round 5 (chs 32, 33, 35, 36) with the Loki-vs-Buddha subplot (ch 32's cutaways, ch 33's back half, ch 34); the anime separates the threads. Ep 18 therefore OPENS on ch 34 'それぞれの思惑' p.1 — the direct continuation of ep 17's last frame — plays it to p.27 (Zeus and Odin breaking up the standoff, Bishamonten's warning to Buddha, Odin's aura rotting the garden) and only then goes BACK to ch 31 '第五回戦' for the whole Round-5 card (Brunhilde waking Raiden, Thrud's Völundr, Heimdall introducing Raiden and Shiva), which is where the episode ends. Both segments are first-time material and neither is a sliver. The fandom's own 'Differences in Adaptations' states the reorder in one line: 'while in the anime this fight takes place right before round 5 begins, in the manga it takes place during the first minutes of the round.'",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2017&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2018&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2019&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2031&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2033&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2034&prop=wikitext&format=json",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes"
+   ]
+  },
+  {
+   "episodes": [
+    19
+   ],
+   "kind": "rearranged",
+   "chapters": "32 (pp.1-5, 9-29, 33-38), 33 (pp.1-26), 34 (pp.28-30), 35, 36 (pp.1-14)",
+   "note": "weight: SIGNIFICANT — the RETURN LEG. Ep 19 back-jumps from ep 18's END 34 to ch 32 p.1 and plays the match thread the anime had held back: ch 32 minus the two Loki/Buddha cutaways ep 17 took (pp.6-8 and 30-32), ch 33's front half (Raiden's 1767 birth, the Hundred Seals, the unsealing), then the three-page ch-34 remainder (the Indian gods' 1116 souls), then ch 35 and ch 36's first 14 pages. Every page is first-time: chs 32, 33 and 34 are each partitioned exactly once between eps 17/18/19 and the parts union to the chapter pages' own counts (38, 60, 30). One further within-chapter reorder sits inside ch 35 and is worth recording with it: the fandom's ep-18 Differences note says 'In the anime Raiden uses his Wild Boar technique to break Shiva's arm in real time, while in the manga it is shown as a flashback narrated by Hermes to Zeus' — the anime straightens the manga's flashback into present tense. The ch-34 share is the only SLIVER in the row (3 pages; ch 34 is adapted properly by ep 18, which carries pp.1-27).",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2017&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2018&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2019&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2032&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2033&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2034&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2035&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2036&prop=wikitext&format=json",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-recordofragnarok-list/",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes"
+   ]
+  },
+  {
+   "episodes": [
+    22,
+    23
+   ],
+   "kind": "rearranged",
+   "chapters": "43 (pp.16-21)",
+   "note": "weight: SIGNIFICANT — the S2-part-1 finale (ep 22) plays ch 43 '第6回戦' pp.1-15 and then jumps to p.22, deferring the six-page Jack-the-Ripper / Göll scene (Jack in the doorway quoting Shakespeare and offering the Seven Lucky Gods black tea, Bishamonten standing Ebisu down, 'Assumption is mortals' chiefest enemy', Jack seeing Heracles' colour in Göll's aura). The S2-part-2 premiere (ep 23) OPENS on exactly those pages six months later, which is why ep 23's START is 43 and not 44. The fandom's ep-22 Differences records the outbound half — 'The confrontation of Jack and the Seven Lucky Gods is shortened' — and the two shares union to ch 43's own 43 pages with no gap and no overlap. Not a duplicate: the pages are first-time in ep 23.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2022&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2023&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2043&prop=wikitext&format=json",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-recordofragnarok-list/",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes"
+   ]
+  },
+  {
+   "episodes": [
+    23
+   ],
+   "kind": "recap",
+   "chapters": "43 (pp.22-43)",
+   "note": "weight: RECAP, therefore weightless in the standing (T28's recap clause, Sean 2026-09-02). The S2-part-2 premiere re-shows the Round-6 announcement and Buddha's declaration for humanity — Heimdall's introduction, Buddha walking past the gods' gate to the humans' side, taking the Gjallarhorn, crushing it and swearing to kill any god in his way — which ep 22 had already animated as its finale. The remainder of ep 23 is pure source adaptation (ch 43 pp.16-21 first-time, ch 44 entire, ch 45 pp.1-12), so the row stays CANON and the recap changes no anchor. Recorded because the fandom's ep-23 Plot narrates the re-shown block at full length, which could otherwise be read as a second adaptation of pages the position already counts in ep 22; en-WP's ep-23 summary omits it, consistent with recap.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2022&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2023&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2043&prop=wikitext&format=json",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes"
+   ]
+  },
+  {
+   "episodes": [
+    25,
+    26
+   ],
+   "kind": "rearranged",
+   "chapters": "49 (pp.23-26)",
+   "note": "weight: SLIVER — four pages, and they explain the only real page-closure gap in the S2 run. Ch 49 '冥界の伝説' has 26 pages; ep 25 plays pp.1-22 and stops on Hajun breaking out of the shell, and the fandom's ep-25 'Differences in Adaptations' says 'Beelzebub debut and his laboratory scenes were removed and delayed'. Those removed pages are ch 49's last four — Beelzebub watching from the room with the fly on the door and naming the berserker of the underworld — and the anime moved them, together with ch 51's own opening rose beat, to ep 26's cold open ('A god claims that he does not care who it was ... as the petals of the rose he holds begin to fall off'). A relocated fragment is never a START (A10's cold-open clause, A12), so ep 26's START stays 50 and ep 25's END stays 49; the annotation exists so the four pages are not read as never-adapted.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2025&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2026&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2049&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2050&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2051&prop=wikitext&format=json",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes"
+   ]
+  },
+  {
+   "episodes": [
+    27
+   ],
+   "kind": "partial",
+   "chapters": "55 (pp.21-23)",
+   "note": "weight: SLIVER — a three-page closing tease, not a scene the episode does anything with: Brunhilde's phone shows that Hades is going up in Round 7, she selects 'King of All Beginnings', and a blindfolded man breaks through a wall looking for his waiting room. CH 55 IS ADAPTED PROPERLY LATER — pp.1-18 (Nostradamus and the Bifröst) by ep 28 and pp.19-34 (the arena rebuilt, Qin in Hades' seat) by ep 29, which between them cover the chapter's 34 pages. This is the A47 tail that holds ep 27's END at 54: three pages, at or under the five-page floor, with the batch-12 record already calling it a 'tease'. R3 before A47 is satisfied — both lineages credit ch 55 to this episode (the fandom's field; programming-cafe's '第14巻 53〜55').",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2027&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2028&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2029&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2055&prop=wikitext&format=json",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-recordofragnarok-list/",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes"
+   ]
+  },
+  {
+   "episodes": [
+    27,
+    28
+   ],
+   "kind": "rearranged",
+   "chapters": "55 (pp.1-18)",
+   "note": "weight: SIGNIFICANT — ep 27 SKIPPED the Nostradamus block of ch 55 (its own Differences note: 'Michel Nostradamus' introduction an his scenes with the valkyries are omitted') and the S3 prologue plays it: Brunhilde and Göll finding a second Brunhilde in her room, the fake prophecy, the threat to send him back to Helheim, and the whole Bifröst explanation. Those eighteen pages are the ONLY first-time source content in ep 28 and they are what its anchor rests on. The fandom's ep-29 Differences confirms the destination from the other side: 'The anime skips Michel Nostradamus since it took place in the previous episode.'",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2027&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2028&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2029&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2055&prop=wikitext&format=json",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes"
+   ]
+  },
+  {
+   "episodes": [
+    28
+   ],
+   "kind": "recap",
+   "chapters": "54; plus a clip-show montage of Rounds 1-6",
+   "note": "weight: RECAP, therefore weightless (T28's recap clause). en-WP states it on the row itself: 'This episode serves mostly as a quick recap of the featured matches portrayed in the first two seasons.' The re-shown material is (a) ch 54's beats that ep 27 already animated — Buddha carried to the sickbay asking for his cola lollipops, and Odin confronting Beelzebub as he burns his Hajun documents — and (b) Hermes' and Brunhilde's separate recollections of Rounds 1-6 (Lü Bu/Thor, Adam/Zeus, Kojiro/Poseidon, Jack/Heracles, Raiden/Shiva, Buddha/Zerofuku), which is footage from S1 and S2. Judge the remainder: it is ch 55 pp.1-18, pure source, so the row is CANON (confirmed as stored). The stored batch-12 annotation on this row is `partial {54-55}` with the note 'S3 opener largely recap; ep 29 re-covers' — this entry restates the same fact in the current vocabulary (`recap` for re-shown material, `rearranged` for the deferred Nostradamus block) and does not contradict it.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2027&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2028&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2029&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2054&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2055&prop=wikitext&format=json",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes"
+   ]
+  },
+  {
+   "episodes": [
+    29
+   ],
+   "kind": "recap",
+   "chapters": "54 (pp.17-24), 55 (pp.1-18)",
+   "note": "weight: RECAP for the bulk, SLIVER for one first-time beat inside it. Ep 29 opens by restaging ch 54's hand-over (Hermes and Zeus on Buddha's empty slot, Hades taking the round to avenge Poseidon) which ep 27 animated, and then re-shows ch 55's Nostradamus scene which ep 28 animated, before its own first-time material begins at ch 55 p.19. The ONE new thing in the re-shown block is Ares' 0.25-second internal monologue about volunteering, which ep 27 dropped and this episode restores — the fandom records both halves ('Ares' internal monologue about wanting to fight in the seventh round is omitted' on ep 27; 'The ommited scenes from Episode 27 (Ares' monologue) are included in this episode' on ep 29). A single restored page is a sliver: it earns no position, which is why ep 29's START is 55 and not 54.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2027&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2028&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2029&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2054&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2055&prop=wikitext&format=json",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes"
+   ]
+  },
+  {
+   "episodes": [
+    33
+   ],
+   "kind": "rearranged",
+   "chapters": "66 (pp.1-9, 27-32)",
+   "note": "weight: SIGNIFICANT — and it is the reason ep 33's END is 66 rather than 65. After ch 65's Kintoki/Siegfried scene the episode plays ch 66's CLOSING six pages first (Hermes' violin requiem for Hades, the shelf of books for every fallen fighter, Beelzebub telling Hermes he will go next) and then ch 66's OPENING nine pages (Brunhilde furious that Buddha has snuck out of the sickbay, the retinal scanner, the vault door, 'the only one in all of Human history that is a sorcerer'), ending there. Both blocks are first-time; the middle block, ch 66 pp.10-26 — Tesla's laboratory and the Völundr — is ep 34's, so the chapter is partitioned exactly once (15 + 17 = 32 pages). Two lineages narrate the same inverted order: the fandom's ep-33 Plot and en-WP's ep-33 summary, which ends 'Beelzebub states to Hermes his intention to fight next, while Brunhilde enters the chambers of Nikola Tesla.'",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2033&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2034&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2065&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2066&prop=wikitext&format=json",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes"
+   ]
+  }
+ ],
+ "repairs": [
+  {
+   "episode": 12,
+   "target": "anchor",
+   "field": "anchor.start_chapter",
+   "old": "1",
+   "new": "19",
+   "why": "THE STORED ROW IS A ROUND-LEVEL RECORD, NOT AN EPISODE RECORD. Ep 12 is 'END 19 [START 1] {1-19 + ch 20 partial as R4 cold-open} v5 (manual)', laid down by research-tier batch 12 (2026-08-23) as the S1 finale / 'Round 3 ends (Kojiro)' — its START is the round's first chapter and its span is the round's whole range, which is the same provenance the ep-17 repair of 2026-09-05 already corrected on this series. The pages refute all three parts of the span. (1) START: ep 12 opens INSIDE ch 19 at p.19 — Poseidon whistling and combing his hair with his own blood before the Chione/Medusa barrage — because ep 11 stops at ch 19 p.18; the fandom's ep-11 field is '18, 19 (p. 1-18)', ep 12's is '19 (p. 19-69), 20 (p. 1-16, 32-52)' and the ch-19 page gives 69 pages, so the two rows partition the chapter exactly once (18 + 51 = 69). A13 says a row displays its FIRST chapter and that is 19; the stored 1 reaches back across every episode of the season. (2) SPAN: the correct list is '19 (pp.19-69), 20 (pp.1-16, 32-52)'. (3) END: the episode adapts 37 of ch 20's 52 pages and runs to the chapter's LAST page — Heimdall's Round-4 introduction of Jack the Ripper and Heracles is both ep 12's closing scene and ch 20's closing scene — so under A4 the END is 20. A47 cannot hold it at 19: the exception is a tail of at most five pages or teaser/cold-open wording, and 21 trailing pages carrying an entire round announcement are neither; the stored phrase 'as R4 cold-open' is position language, which the Dai ruling of 2026-09-02 says is not evidence of size. The 15 skipped pages (ch 20 pp.17-31) are ep 13's, exactly as the standing eps-12/13 `rearranged {20, 24}` annotation already describes ('ch 20 is split THREE ways'). Corroboration is two-lineage: programming-cafe's per-episode row '第12話 そしてラグナロクはつづく | 19〜20' and its per-chapter table booking ch 20 to 1-12 AND 2-1(13). VOLUME 5 is correct and untouched (ch 20 = v5 on the fandom, programming-cafe and MangaDex).",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2011&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2012&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2013&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2019&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2020&prop=wikitext&format=json",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-recordofragnarok-list/",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes",
+    "https://api.mangadex.org/manga/b5b21ca1-bba5-4b9a-8cd1-6248f731650b/aggregate"
+   ]
+  },
+  {
+   "episode": 12,
+   "target": "anchor",
+   "field": "anchor.chapters_adapted",
+   "old": "1-19 + ch 20 partial as R4 cold-open",
+   "new": "19 (pp.19-69), 20 (pp.1-16, 32-52)",
+   "why": "THE STORED ROW IS A ROUND-LEVEL RECORD, NOT AN EPISODE RECORD. Ep 12 is 'END 19 [START 1] {1-19 + ch 20 partial as R4 cold-open} v5 (manual)', laid down by research-tier batch 12 (2026-08-23) as the S1 finale / 'Round 3 ends (Kojiro)' — its START is the round's first chapter and its span is the round's whole range, which is the same provenance the ep-17 repair of 2026-09-05 already corrected on this series. The pages refute all three parts of the span. (1) START: ep 12 opens INSIDE ch 19 at p.19 — Poseidon whistling and combing his hair with his own blood before the Chione/Medusa barrage — because ep 11 stops at ch 19 p.18; the fandom's ep-11 field is '18, 19 (p. 1-18)', ep 12's is '19 (p. 19-69), 20 (p. 1-16, 32-52)' and the ch-19 page gives 69 pages, so the two rows partition the chapter exactly once (18 + 51 = 69). A13 says a row displays its FIRST chapter and that is 19; the stored 1 reaches back across every episode of the season. (2) SPAN: the correct list is '19 (pp.19-69), 20 (pp.1-16, 32-52)'. (3) END: the episode adapts 37 of ch 20's 52 pages and runs to the chapter's LAST page — Heimdall's Round-4 introduction of Jack the Ripper and Heracles is both ep 12's closing scene and ch 20's closing scene — so under A4 the END is 20. A47 cannot hold it at 19: the exception is a tail of at most five pages or teaser/cold-open wording, and 21 trailing pages carrying an entire round announcement are neither; the stored phrase 'as R4 cold-open' is position language, which the Dai ruling of 2026-09-02 says is not evidence of size. The 15 skipped pages (ch 20 pp.17-31) are ep 13's, exactly as the standing eps-12/13 `rearranged {20, 24}` annotation already describes ('ch 20 is split THREE ways'). Corroboration is two-lineage: programming-cafe's per-episode row '第12話 そしてラグナロクはつづく | 19〜20' and its per-chapter table booking ch 20 to 1-12 AND 2-1(13). VOLUME 5 is correct and untouched (ch 20 = v5 on the fandom, programming-cafe and MangaDex).",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2011&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2012&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2013&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2019&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2020&prop=wikitext&format=json",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-recordofragnarok-list/",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes",
+    "https://api.mangadex.org/manga/b5b21ca1-bba5-4b9a-8cd1-6248f731650b/aggregate"
+   ]
+  },
+  {
+   "episode": 12,
+   "target": "anchor",
+   "field": "anchor.end_chapter",
+   "old": "19",
+   "new": "20",
+   "why": "THE STORED ROW IS A ROUND-LEVEL RECORD, NOT AN EPISODE RECORD. Ep 12 is 'END 19 [START 1] {1-19 + ch 20 partial as R4 cold-open} v5 (manual)', laid down by research-tier batch 12 (2026-08-23) as the S1 finale / 'Round 3 ends (Kojiro)' — its START is the round's first chapter and its span is the round's whole range, which is the same provenance the ep-17 repair of 2026-09-05 already corrected on this series. The pages refute all three parts of the span. (1) START: ep 12 opens INSIDE ch 19 at p.19 — Poseidon whistling and combing his hair with his own blood before the Chione/Medusa barrage — because ep 11 stops at ch 19 p.18; the fandom's ep-11 field is '18, 19 (p. 1-18)', ep 12's is '19 (p. 19-69), 20 (p. 1-16, 32-52)' and the ch-19 page gives 69 pages, so the two rows partition the chapter exactly once (18 + 51 = 69). A13 says a row displays its FIRST chapter and that is 19; the stored 1 reaches back across every episode of the season. (2) SPAN: the correct list is '19 (pp.19-69), 20 (pp.1-16, 32-52)'. (3) END: the episode adapts 37 of ch 20's 52 pages and runs to the chapter's LAST page — Heimdall's Round-4 introduction of Jack the Ripper and Heracles is both ep 12's closing scene and ch 20's closing scene — so under A4 the END is 20. A47 cannot hold it at 19: the exception is a tail of at most five pages or teaser/cold-open wording, and 21 trailing pages carrying an entire round announcement are neither; the stored phrase 'as R4 cold-open' is position language, which the Dai ruling of 2026-09-02 says is not evidence of size. The 15 skipped pages (ch 20 pp.17-31) are ep 13's, exactly as the standing eps-12/13 `rearranged {20, 24}` annotation already describes ('ch 20 is split THREE ways'). Corroboration is two-lineage: programming-cafe's per-episode row '第12話 そしてラグナロクはつづく | 19〜20' and its per-chapter table booking ch 20 to 1-12 AND 2-1(13). VOLUME 5 is correct and untouched (ch 20 = v5 on the fandom, programming-cafe and MangaDex).",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2011&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2012&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2013&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2019&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2020&prop=wikitext&format=json",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-recordofragnarok-list/",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes",
+    "https://api.mangadex.org/manga/b5b21ca1-bba5-4b9a-8cd1-6248f731650b/aggregate"
+   ]
+  },
+  {
+   "episode": 22,
+   "target": "anchor",
+   "field": "anchor.end_chapter",
+   "old": "42",
+   "new": "43",
+   "why": "THE FINALE END IS ONE CHAPTER SHORT. Ep 22's END 42 survives from batch 12's round-level record ('31-42 + ch 43 partial', 'S2P1 finale / R5 ends (Shiva)'); the START and span were nulled under A14 on 2026-09-07 but the END was kept pending the pages. The pages refute it. Ep 22 adapts ch 43 '第6回戦' pp.1-15 AND pp.22-43 — 37 of its 43 pages — and ends on the chapter's LAST page: Buddha walks past the gods' gate to humanity's side, takes the Gjallarhorn from Heimdall, announces he is fighting for mankind, crushes the horn and swears to kill any god who stands in his way. That is the S2-part-1 finale's closing scene and it is ch 43's closing scene. Under A4 the END is therefore 43. A47's hold-back does not reach it on either limb: the trailing share is 22 pages, not the at-most-five-page scrap the rule needs, there is no teaser or cold-open wording anywhere in the sources, and the 'next episode owns the tail' clause fails because ep 23 owns a MIDDLE slice of ch 43 (pp.16-21, the Jack/Göll tea scene ep 22 skipped), not its tail. Two lineages: the fandom's page-partitioned field '41, 42, 43 (p. 1-15, 22-43)', whose split unions with ep 23's pp.16-21 to exactly the ch-43 page's own 43 pages, plus its Plot section; and programming-cafe's per-episode row '第10話 崖っぷち | 41 第11巻 42〜43' with its per-chapter table booking ch 43 to 2-10. en-WP's ep-22 summary is the content check: 'Buddha agrees to Zeus' request for him to fight in the sixth match, only to later declare that he is fighting on humanity's side.' The batch-22 wave-3 verifier flagged this exact value on this exact evidence; this verdict confirms it on the pages. VOLUME 11 is correct either way (chs 42 and 43 are both v11) and is untouched.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2021&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2022&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2023&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2042&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2043&prop=wikitext&format=json",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-recordofragnarok-list/",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes",
+    "https://api.mangadex.org/manga/b5b21ca1-bba5-4b9a-8cd1-6248f731650b/aggregate"
+   ]
+  },
+  {
+   "episode": 33,
+   "target": "anchor",
+   "field": "anchor.end_chapter",
+   "old": "65",
+   "new": "66",
+   "why": "THE FINALE END IS ONE CHAPTER SHORT. Ep 33's END 65 survives from batch 12's round-level record ('55-65 + ch 66 partial', 'R7 ends (Qin)'); the START and span were nulled under A14 on 2026-09-07 but the END was kept pending the pages. The pages refute it. Ep 33 adapts 15 of ch 66's 32 pages — pp.27-32 (Hermes' violin requiem for Hades, the shelf of books for the fallen, Beelzebub telling Hermes he will fight next) and pp.1-9 (Brunhilde and Göll at Nikola Tesla's vault door, 'the only one in all of Human history that is a sorcerer'), the second block being the episode's final scene. Under A4 the furthest mainline chapter adapted in running order is 66. A47 cannot hold the END at 65: 15 pages including the chapter's own last page is not an at-most-five-page scrap, there is no teaser wording, and while ep 34 does start on ch 66 it starts on the chapter's MIDDLE (p.10), not on a tail this row failed to finish. The batch-12 phrase 'ch 66 partial' is position language, which the Dai ruling of 2026-09-02 says is not evidence of size — the size is known and it is half the chapter. Two lineages narrate the same out-of-order block: the fandom's field '64, 65, 66 (p.1-9, 27-32)' — extended from '(p.1-9)' by the same editor on release day, a correction toward the pages — plus its Plot section; and en-WP's ep-33 summary, which independently ends 'Beelzebub states to Hermes his intention to fight next, while Brunhilde enters the chambers of Nikola Tesla.' ja-WP's 第3期 第6話 title 王の帰還 is ch 64's title, fixing the row's other end. VOLUME 16 is correct either way (chs 65 and 66 are both v16 on the fandom's Volume 16 page and on MangaDex) and is untouched.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2032&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2033&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2034&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2065&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2066&prop=wikitext&format=json",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes",
+    "https://ja.wikipedia.org/wiki/%E7%B5%82%E6%9C%AB%E3%81%AE%E3%83%AF%E3%83%AB%E3%82%AD%E3%83%A5%E3%83%BC%E3%83%AC",
+    "https://api.mangadex.org/manga/b5b21ca1-bba5-4b9a-8cd1-6248f731650b/aggregate",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Volume%2016&prop=wikitext&format=json"
+   ]
+  }
+ ],
+ "type_corrections": [
+  {
+   "episodes": [
+    28
+   ],
+   "type": "canon",
+   "note": "CONFIRMED AS STORED (canon) — the one row in the ask with a real typing question, because en-WP labels it on the row: 'This episode serves mostly as a quick recap of the featured matches portrayed in the first two seasons.' Under T28's recap clause (Sean 2026-09-02) a clip show progresses nothing and counts for NOTHING in the standing, so the test is the REMAINDER. The remainder is ch 55 '禁忌' pp.1-18 — Brunhilde and Göll finding Nostradamus in her room, the fake prophecy, the threat of Helheim and the entire Bifröst explanation — eighteen pages of pure source that ep 27 had skipped and that nothing else in the run adapts. There is no anime-ORIGINAL story-carrying share anywhere in the episode: the only non-source elements are the montage (re-shown S1/S2 footage) and a staging change the fandom records as a difference ('The encounter between Michel Nostradamus and the Valkyries takes place in the hallway, also, Göll is not present'). Source remainder with no original share = canon, not mixed and certainly not filler. AFL has no page for this series (the context prints 'AFL: —' on every row) and AFG is not used as a type witness; ja-WP's 各話リスト carries no アニメオリジナル marker anywhere in the run — silence, stated as such, not evidence.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2027&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2028&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2029&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Chapter%2055&prop=wikitext&format=json",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes",
+    "https://ja.wikipedia.org/wiki/%E7%B5%82%E6%9C%AB%E3%81%AE%E3%83%AF%E3%83%AB%E3%82%AD%E3%83%A5%E3%83%BC%E3%83%AC"
+   ]
+  },
+  {
+   "episodes": [
+    12,
+    22,
+    27,
+    33,
+    38
+   ],
+   "type": "canon",
+   "note": "CONFIRMED AS STORED (canon) — the five manual round-finale rows, delivered with their stored type so they are pinned rather than re-derived. Every one is an unbroken adaptation of consecutive manga chapters with no anime-original plot: ep 12 = ch 19 back half + ch 20 (Kojiro's win, Zeus's resolve, the Round-4 card); ep 22 = chs 41-43 (Raiden's and Thrud's deaths, Buddha's defection); ep 27 = chs 52-54 (Buddha's victory, Hades volunteering); ep 33 = chs 64-66 (Hades' death, Adamas' attack, the hand-over to Round 8); ep 38 = chs 76-77 (Tesla's death, 4-4, the Tartarus coda). The deviations that exist are all reorders, cuts and small additions to the SOURCE's own material — ch 20 split three ways, ch 43's Jack scene deferred, ch 55's Nostradamus block deferred, ch 66 played out of order — which under the faithfulness clause keep a row canon and are recorded here as `rearranged` / `partial` annotations. No AFL page exists for this series; no ja-WP アニメオリジナル marker exists anywhere in the run.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2012&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2022&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2027&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2033&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2038&prop=wikitext&format=json",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-recordofragnarok-list/",
+    "https://ja.wikipedia.org/wiki/%E7%B5%82%E6%9C%AB%E3%81%AE%E3%83%AF%E3%83%AB%E3%82%AD%E3%83%A5%E3%83%BC%E3%83%AC"
+   ]
+  },
+  {
+   "episodes": [
+    18,
+    19,
+    20,
+    21,
+    23,
+    24,
+    25,
+    26,
+    29,
+    30,
+    31,
+    32,
+    34,
+    35,
+    36,
+    37,
+    39,
+    40,
+    41
+   ],
+   "type": "canon",
+   "note": "CONFIRMED AS STORED (canon) — the nineteen afg-tier rows in the ask. Each is a straight adaptation of the manga in the anime's own order; the fandom's per-episode Plot sections and en-WP's summaries describe only source events, chapter for chapter, and every one of the nineteen is accounted for by the page-level map delivered above with no unexplained minutes. The additions the fandom's 'Differences in Adaptations' sections list are small and internal to adapted chapters — an extended Loki/Okita exchange (18), the Wild Boar shown in present tense rather than as Hermes' flashback (19), an expanded Beelzebub flashback and a goat in place of a unicorn (34), an expanded Hades/Beelzebub fight (36), Geirölul's earlier debut and her Völundr scene (39), the deflected arrow also piercing Apollo's chest (41) — which under the faithfulness clause are `divergence`, never a weight toward mixed, because none of them is a story-carrying ORIGINAL share of the episode's own plot (T28). AFL has no page for this series and AFG's type column is not used as a witness; ja-WP marks nothing as アニメオリジナル.",
+   "sources": [
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2019&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2026&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2034&prop=wikitext&format=json",
+    "https://record-of-ragnarok.fandom.com/api.php?action=parse&page=Episode%2039&prop=wikitext&format=json",
+    "https://en.wikipedia.org/wiki/List_of_Record_of_Ragnarok_episodes",
+    "https://ja.wikipedia.org/wiki/%E7%B5%82%E6%9C%AB%E3%81%AE%E3%83%AF%E3%83%AB%E3%82%AD%E3%83%A5%E3%83%BC%E3%83%AC",
+    "https://programming-cafe.com/amazon/primevideo/anime/anicomi-recordofragnarok-list/"
+   ]
+  }
+ ],
+ "structure": {
+  "notes": "IDENTITY FIRST (R20), joined on title + date, never index — and it is clean on all 25 rows. en-WP's 'List of Record of Ragnarok episodes' prints BOTH numbers (EpisodeNumber / EpisodeNumber2): 12/12 on 2021-06-17; 18/6 ... 22/10 all on 2023-01-26; 23/11 ... 27/15 all on 2023-07-12; 28/1 ... 41/14 all on 2025-12-10 — exactly the component structure the context stages (12 + 10 + 5 + 15). ja-WP's 各話リスト numbers each season internally and gives the same Japanese titles in the same order (第3期 第1話 プロローグ：追憶 ... 第15話 激突する魂). record-of-ragnarok.fandom's pages are titled by the CUMULATIVE number and carry `season=` and `episode=` fields that agree (Episode 33 = season 3, episode 33, jname 王の帰還). No off-by-one anywhere, no count mismatch, no date question. CHAPTER SPACE: the manga's own printed tankobon numbering, contiguous 1-124, used identically by every source in this verdict; the stored anchors, the stored v21 boundary (83-86) and MangaDex's aggregate all sit in it. No sourceShift applies. Bonus chapters (the fandom's 'Bonus Chapter N', MangaDex's decimal sort keys 23.5 / 56.1 / 61.5 / 70.5 / 84.5) carry no mainline number and none falls inside rows 12-41. THE INSTRUMENT AND ITS CLOSURE (the ask's page-closure check, run on every straddled chapter in the zone). record-of-ragnarok.fandom's per-episode `adapted=` field is page-partitioned across the whole run and its parts were checked against each chapter page's own `page=` count. EXACT CLOSURE on thirteen: ch 19 (18+51=69), ch 20 (37+15=52), ch 29 (24+26=50), ch 32 (6+32=38), ch 33 (34+26=60), ch 34 (27+3=30), ch 43 (37+6=43), ch 45 (12+56=68), ch 55 across the recap cluster (18+16=34), ch 66 (15+17=32), ch 73 by count (27+6=33), ch 79 (14+34=48), and ch 36 only if ep 20's share runs to p.40. OFF BY EXACTLY ONE PAGE at the chapter's last page on five: ch 59 (the field's '13-78' against 77 pp), ch 71 ('14-41' against 40), ch 73 (the range reads '29-34' where the union and the 33-page count give 28-33), ch 76 ('8-47' against 46), ch 83 ('29-67' against 66) — the same class of cover/title-page slip the batch-22 verifier found on chs 22 and 25, and it moves no boundary; this verdict clamps those upper bounds and says so on each row. TWO REAL GAPS, both reported rather than smoothed: ch 36 pp.35-40 (six pages) are unaccounted on either ep 19 or ep 20 — no other episode's field names ch 36 and the content argues the anime ran straight on into ch 37, so the likely truth is that ep 20's share is pp.15-40; and ch 49 pp.23-26 (four pages) are unaccounted, which the fandom's own ep-25 Differences note explains ('Beelzebub debut and his laboratory scenes were removed and delayed') — they are ep 26's cold open, delivered as a `rearranged` annotation. The verifier's earlier ch-36 finding is therefore CONFIRMED and now has a cause. AFG IS NOT A SECOND LINEAGE — IT IS THE FANDOM. This is the structural finding of the wave and it bears on the stored data directly. animefillerguide's Record of Ragnarok page (slug /anime/shuumatsu-no-valkyrie/) prints a chapter set for all 42 rows that is EXACTLY the fandom's `adapted=` chapter set with the page splits stripped and the bonus chapter dropped — identical on every row including the unusual ones (ep 17 '29, 30, 32, 33'; ep 18 '31, 34'; ep 19 '32, 33, 34, 35, 36'; ep 28 '54, 55'; ep 33 '64, 65, 66'), and identical on all twelve S1 rows too. The stored afg-tier anchors on rows 18-21 / 23-26 / 28-32 / 34-37 / 39-41 are therefore a mechanical re-derivation of ONE editorship, not an independent witness; a future wave must not count 'the fandom and AFG agree' as R3 satisfaction. This verdict never cites AFG. THE TWO LINEAGES THAT DO CARRY THE ANCHORS. Eps 12 and 18-27: (1) the fandom's page-partitioned `adapted=` field plus its per-episode Plot and 'Differences in Adaptations' sections, and its chapter pages for page counts, titles and volumes; (2) programming-cafe's Japanese anicomi 対応表, which carries BOTH a per-episode 単行本/原作話数 table and a per-chapter アニメ話数 table. Eps 28-41: programming-cafe has NO season-3 data at all — its per-chapter table stops at ch 56 with the note '↓ここから先はアニメ未放送' and its season table still says 第3期 (未放送) — so the second lineage there is en-Wikipedia's per-episode summaries (a different editorship) read against the fandom's per-CHAPTER summaries, plus ja-WP's episode titles, eleven of which are the namesake title of a chapter inside the episode's own span (ep 29 王VS王 = ch 56, 30 蚩尤 = 57, 31 約束と誓い = 60, 32 冥王の矜持 = 61, 33 王の帰還 = 64, 35 闇VS光 = 68, 36 呪いと祈り = 73, 37 繋ぐ想い = 74, 38 前進 = 76, 39 太陽神と反骨の英雄 = 78, 40 誇りVS意地 = 81, 41 汝、自身を知れ = 82) — a namesake tie an index join cannot fake. Provenance was read: the S2 `adapted=` fields were written in 2023 by PGV 2 and revised by Serch-9564 and others since; the S3 fields were written by Serch-9564 on and around release day (2025-12-10/11) and refined the same day (ep 33's ch-66 split was extended from '(p.1-9)' to '(p.1-9, 27-32)'), with Unok, Leceopa and InfoTraveller94 editing the same pages without changing them. One editorship for the field, but the Plot sections are a different hand and en-WP is a different wiki. VOLUMES — A THIRD LINEAGE WAS NEEDED AND FOUND. The fandom's chapter/Volume pages and programming-cafe's 単行本 column agree up to v11 and again from v20, but programming-cafe runs ONE VOLUME BEHIND from v12 to v19 (it books ch 49 to 第13巻 and ch 66 to 第17巻, and makes v12 a three-chapter, ~148-page volume against 200-page books). MangaDex's aggregate for the series (manga b5b21ca1-bba5-4b9a-8cd1-6248f731650b) is an independent third lineage and matches the fandom exactly across the whole range: v5 = 19-21, v9 = 34-37, v10 = 38-41, v11 = 42-45, v12 = 46-49, v13 = 50-53, v14 = 54-57, v15 = 58-61, v16 = 62-66, v17 = 67-70, v18 = 71-74, v19 = 75-78, v20 = 79-82, v21 = 83-86 — the last of which is the stored boundary row. The fandom's own Volume 12 / 13 / 16 / 17 pages list the same chapter sets. Every volume in this verdict therefore rests on two agreeing lineages; the two contested chapters are ch 49 (v12, on ep 25) and ch 66 (v16, on ep 33) and both go the fandom/MangaDex way. THE REORDER MAP, stated once so the display can be read: this run contains four un-cross-cuts and one recap cluster. (a) chs 20/24 across eps 12-14 (already recorded). (b) chs 31-36 across eps 17-19: ep 17 takes the Loki/Buddha cutaways (ch 32 pp.6-8, 30-32 and ch 33 pp.27-60), ep 18 opens on ch 34 and then plays ch 31, ep 19 back-jumps to ch 32 p.1 and plays the match thread — one END jump (17 -> 18: 30 to 34) and one START back-jump (19: START 32 under an END 36). (c) ch 43 across eps 22/23 (pp.16-21 deferred over the six-month part break). (d) ch 66 across eps 33/34 (ep 33 plays the chapter's end before its beginning). (e) the eps 27/28/29 recap cluster around chs 54-55. Every one of these is annotated. OUT OF SCOPE, as instructed: rows 1-11, 13-17 and 42, and the RoK 155/156 scope seam.",
+  "coverage_set_checked": "Yes. Every episode page 1-42 was fetched individually through the MediaWiki API (action=parse&prop=wikitext) rather than through any category or revisions listing, so the 50-result cap that truncates fandom category queries never applied — 42 of 42 pages exist and 42 of 42 carry an `adapted=` field. Chapter pages 18-86 were fetched the same way (69 of 69 exist) for page counts, titles, volumes and summaries; Volume pages 12, 13, 16 and 17 for the contested boundaries. programming-cafe's 8 tables were parsed in full (its per-chapter table runs chs 1-124). en-WP's episode list was parsed from wikitext: 42 {{Episode list}} entries, all with ShortSummary. ja-WP's 各話リスト was read in full (42 rows across three season blocks). MangaDex's aggregate covers vols 1-29. AFG's page was fetched once, for the lineage comparison only, and is cited nowhere."
+ },
+ "flags_for_sean": [
+  "AFG AND THE FANDOM ARE ONE LINEAGE ON THIS SERIES — please treat this as a data fact, not a note. AFG's chapter column reproduces record-of-ragnarok.fandom's `adapted=` chapter set on all 42 rows exactly (page splits stripped, Bonus Chapter 5 dropped), including the odd ones (ep 17 '29, 30, 32, 33', ep 18 '31, 34', ep 33 '64, 65, 66'). So the twenty stored afg-tier anchors were never an independent corroboration of the fandom, and any future RoK wave that pairs 'fandom + AFG' has one source, not two. The good news is that the pages back the values: of the twenty afg rows in this ask, NINETEEN endpoints are confirmed exactly and only ONE is refuted — ep 19's START 34, which the pages put at 32.",
+  "TWO FINALE ENDS MOVE BY ONE CHAPTER: ep 22 42 -> 43 and ep 33 65 -> 66. Both are the same shape as the ep-17 repair Sean ruled on 2026-09-05: a batch-12 round-level record whose 'ch N partial' phrasing was taken as a reason to hold the END back, where the pages show the share is a story-carrying half or more of the chapter, running to the chapter's last page. That leaves ONE round-finale row of the five with its END unchanged in each direction — ep 27's END 54 is CONFIRMED (its ch-55 share really is a three-page tease, A47 holds) and ep 38's END 77 is CONFIRMED (ch 77 is adapted whole). Ep 12's END also moves, 19 -> 20, for the same reason.",
+  "EP 17's CONTINUE (31) IS CORRECT BUT THE HEALER MAY DISAGREE WITH IT. Ep 17 is ruled and outside this ask, and its stored continue 31 is the right answer — ch 31 is unseen after ep 17 and ep 18 does play it. But ep 18's START is 34, not 31, so a pure 'parity = the next episode's START' healer would rewrite ep 17's continue to 34 and silently strand ch 31. Worth a look at apply time; if the healer touches it, 31 should be pinned.",
+  "EP 18's ROW WILL LOOK WRONG IN A NAIVE DISPLAY AND IT IS NOT. Its START and END are both 34 while its chapters_adapted opens with 31, because the episode opens on ch 34 and then plays ch 31 (A13 + A12). The stored afg row already had this shape; this verdict confirms it on the pages and adds the `rearranged` annotation that explains it. The paired row is ep 19, whose START (32) sits below the previous row's END (34) — one END jump plus one START back-jump, the bleach 152-159 signature, both annotated.",
+  "EP 28's CONFIDENCE IS MEDIUM AND THE REASON IS A SOURCE DEFECT, NOT A JUDGEMENT GAP. Its endpoints (START 55, END 55) rest entirely on ch 55 pp.1-18, which two lineages agree is the episode's only first-time source content. What is NOT trustworthy is the fandom's page range for the RE-SHOWN half: it prints ch 54 '(p. 21-23)' while the episode's own Plot narrates ch 54's earlier beats, and the identical string '21-23' sits on ep 27's ch-55 segment on the adjacent page — it looks like a copy across pages. Nothing in the anchor depends on it, and the ch-54 material is recap either way.",
+  "PROGRAMMING-CAFE'S VOLUME COLUMN IS ONE BEHIND FROM v12 TO v19 (it books ch 49 to 第13巻 and ch 66 to 第17巻). MangaDex's aggregate and the fandom's own Volume pages agree against it, and the stored v21 boundary (83-86) is where all three re-converge. Its EPISODE mapping is unaffected and remains this verdict's second lineage for eps 12 and 18-27. If the RoK volume table is ever built out, use the fandom/MangaDex boundaries: 12 = 46-49, 13 = 50-53, 14 = 54-57, 15 = 58-61, 16 = 62-66, 17 = 67-70, 18 = 71-74, 19 = 75-78, 20 = 79-82, 21 = 83-86.",
+  "SIX ROWS IN THE ASK GAIN A CONTINUE THEY DID NOT HAVE OR CHANGE ONE THAT ENCODED A PHANTOM: 18 (34 -> 32, a legitimate BACKWARD parity after the un-cross-cut), 21 (31 -> 41), 26 (43 -> 52), 32 (55 -> 64), 37 (66 -> 76), and 38 / 41 which had none. The four 'anime jumps back' notes the healer wrote on 21 / 26 / 32 / 37 all disappear: none of those seams is a back-jump at all once the finale STARTs are real. The only genuine back-jump continue in the whole run is ep 18 -> 32.",
+  "NOT RESEARCHED, FLAGGED HONESTLY: ch 36 pp.35-40 (six pages) are claimed by no episode's field. The content says ep 20 played straight through the Rudra flashback into ch 37, so pp.15-40 is the likely true share, but no source states it and this verdict does not assert it — ep 20's chapters_adapted keeps the field's '36 (pp.15-34)'. It moves no boundary. Similarly ep 42 (outside the ask) still carries an afg-continua END 85 and a `graft {B5, 84-85}` annotation; its field reads '83 (p.29-67), 84 (p.1-19), B5 (A Beautiful Scar), 85 (p.19-41)', where the ch-84 share stops at p.19 of 36 and the ch-85 share starts at p.19 of 40 — that row deserves its own narrow ask before anyone trusts END 85."
+ ]
+}

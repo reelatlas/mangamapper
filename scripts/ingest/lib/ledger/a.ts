@@ -320,7 +320,7 @@ export const RULES: Rule[] = [
     auditClass: [],
     witnesses: ['gintama'],
     status: 'live',
-    see: ['A13', 'A15', 'A18'],
+    see: ['A13', 'A15', 'A18', 'C7'],
   },
   {
     id: 'A15',

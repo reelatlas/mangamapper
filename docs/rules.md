@@ -523,7 +523,7 @@ MangaMapping carries the record's own `start` explicitly (set from chapter_ancho
 - **audit: none — automation backlog**
 - witnesses: gintama
 - aliases: Gintama ep-35 rule, Gintama ep-35 report, exact record outranks derivation, exact-record-outranks-derivation
-- see: A13, A15, A18
+- see: A13, A15, A18, C7
 
 ### A15 · Derived start = prev end + 1, clamped, never across reorder
 
@@ -1046,17 +1046,17 @@ chapter_anchors.continue_kind takes exactly one of: parity (continue = the next 
 
 ### C7 · Curated continue metadata survives writers and healers
 
-continue_chapter / continue_kind / continue_note are curated data that may live on derived rows. Every delete+reinsert rebuild of afg or afg-continua anchors carries them over by episode (for continua only when the fresh pin lands on the same episode), so the hourly cron cannot erode the parity conversion one series at a time. The parity healer fills only ABSENT metadata; a curated continue with its kind and note is never overwritten by a healer.
+continue_chapter / continue_kind / continue_note are curated data that may live on derived rows. Every delete+reinsert rebuild of afg or afg-continua anchors carries them over by episode (for continua only when the fresh pin lands on the same episode), so the hourly cron cannot erode the parity conversion one series at a time. The parity healer fills only ABSENT metadata; a curated continue with its kind and note is never overwritten by a healer. THE BASIS CLAUSE (amended 2026-09-07 — record-of-ragnarok 21 / 26 / 32 / 37, the A14 interim): a healer parity continue is DERIVED from the next canon / mixed row's START; when that basis is gone — the START set to unknown under A14 with no span naming a chapter, or the row no longer the adjacent anchored canon / mixed episode — the healer CLEARS the continue on its next pass (the display then derives END + 1, the same designed unknown as the derived START), and `continue_basis_unknown` lists one still standing — a back-jump or a skip ahead only; a continue equal to the row's own END is the C1 straddle shape and is KEPT (its basis is the row's own tail). A stale derivation is never left to render as a fact.
 
 *Why:* refresh-afg's rebuild dropped continue fields until preservation was added; batch-17 curated continues (trigun) had to survive the C3 pass. GAP CLOSED 2026-08-27 (batch 19 wave 2 close, Cursor's process nit): the parity healer had converted three JUST-APPLIED curated continues (tokyo-mew-mew 28 → 20, eyeshield-21 43 → 101, project-arms 43 → 186) because nothing on the row said curated — only the C1 guard protected a value. `continue_source` (migration 20260827100000: manual | healer | source, backfilled from the writers' own note shapes — 618 manual / 2,492 healer / 1 source) is the marker: the healer skips manual rows (stamping an absent kind only) and marks its own writes healer; writers preserve it through rebuilds; applies write through lib/continues.ts#writeCuratedContinue. The three values stay at C2 (C5: known future coverage → parity), marked healer.
 
 - ruled session 2026-08-24 (data-pipeline §12.38 "CRON REVIEW" (preservation added to syncAnchors + applyContinua); apply-research-batch-17 CURATED_CONTINUES)
 - layer **writer**
-- enforced: [lib/anchors.ts#syncAnchors](../scripts/ingest/lib/anchors.ts) · [lib/anchors.ts#applyContinua](../scripts/ingest/lib/anchors.ts) · [history/apply-research-batch-17.ts#CURATED_CONTINUES](../scripts/ingest/history/apply-research-batch-17.ts) · [heal-parity-continues.ts](../scripts/ingest/heal-parity-continues.ts) · [lib/continues.ts#isCuratedContinue](../scripts/ingest/lib/continues.ts) · [lib/continues.ts#writeCuratedContinue](../scripts/ingest/lib/continues.ts) · [audit-ui-truth.ts#classes.continue_provenance_missing](../scripts/ingest/audit-ui-truth.ts)
-- audit: `ruling_violation`, `continue_provenance_missing`
-- witnesses: trigun, tokyo-mew-mew, eyeshield-21, project-arms
+- enforced: [lib/anchors.ts#syncAnchors](../scripts/ingest/lib/anchors.ts) · [lib/anchors.ts#applyContinua](../scripts/ingest/lib/anchors.ts) · [history/apply-research-batch-17.ts#CURATED_CONTINUES](../scripts/ingest/history/apply-research-batch-17.ts) · [heal-parity-continues.ts](../scripts/ingest/heal-parity-continues.ts) · [lib/continues.ts#isCuratedContinue](../scripts/ingest/lib/continues.ts) · [lib/continues.ts#writeCuratedContinue](../scripts/ingest/lib/continues.ts) · [audit-ui-truth.ts#classes.continue_provenance_missing](../scripts/ingest/audit-ui-truth.ts) · [lib/continues.ts#parityBasis](../scripts/ingest/lib/continues.ts) · [lib/continues.ts#healerContinueBasisGone](../scripts/ingest/lib/continues.ts) · [audit-ui-truth.ts#classes.continue_basis_unknown](../scripts/ingest/audit-ui-truth.ts)
+- audit: `ruling_violation`, `continue_provenance_missing`, `continue_basis_unknown`
+- witnesses: trigun, tokyo-mew-mew, eyeshield-21, project-arms, record-of-ragnarok
 - aliases: parity-continue preservation, continue fields survive re-derive, curated continues, CURATED_CONTINUES, continue_source, continue provenance, continue_provenance_missing, curated continue overwritten, writeCuratedContinue
-- see: C2, C6, A24, invariant 7
+- see: C2, C6, A14, A24, invariant 7
 
 ### C8 · AFG continue-from is reading guidance, not the frontier
 
@@ -2715,14 +2715,15 @@ A fetched AFL page is staged only when its own episode links resolve to the requ
 
 Every staging write is gated on a key-order-stable content hash of the record: an identical hash is "unchanged" (no write; only fetched_at bumps), a changed hash updates that row only, and ingest_runs logs fetched/unchanged/changed/flagged per run. Re-running any puller is a no-op.
 
-*Why:* Idempotent pulls are what make hourly/daily crons safe; diffs stay row-scoped so a changed page cannot clobber unrelated rows. MU refines this to hash only the acted-on fields (S42).
+*Why:* Idempotent pulls are what make hourly/daily crons safe; diffs stay row-scoped so a changed page cannot clobber unrelated rows. MU refines this to hash only the acted-on fields (S42). THE STUCK ROTATION (amended 2026-09-07, the consolidate deep after §12.157): the statement always said an unchanged fetch bumps fetched_at, but stageAfl bumped it only on a content change and the edge only on a 304 — a page answering 200 with the same hash, or held by a flag, kept its old timestamp, led refresh-afl's oldest-first queue again next hour, and the SAME twenty pages were refetched every hour from 2026-08-28 while 306 of 327 active pages sat at 2026-08-22 (ingest_runs read fetched 20 / unchanged 17 / flagged 3 / changed 0 every hour and looked healthy). fetched_at is the ROTATION clock and moves on every fetch (lib/resolve.ts#touchAflFetched — unchanged and held alike); changed_at is the CONTENT clock and moves only on a new hash. The outcome check is afl_page_stale (an active page older than 8 days); the run log alone can never show a stuck rotation — constant counters are the tell.
 
 - ruled session 2026-08-22 (data-pipeline §4 "Change detection before writing"; §10 "Hash gate")
 - layer **writer**
-- enforced: [lib/hash.ts#contentHash](../scripts/ingest/lib/hash.ts) · [lib/resolve.ts#stageAfl](../scripts/ingest/lib/resolve.ts) · [lib/resolve.ts#stageAniList](../scripts/ingest/lib/resolve.ts)
-- **audit: none — automation backlog**
+- enforced: [lib/hash.ts#contentHash](../scripts/ingest/lib/hash.ts) · [lib/resolve.ts#stageAfl](../scripts/ingest/lib/resolve.ts) · [lib/resolve.ts#touchAflFetched](../scripts/ingest/lib/resolve.ts) · [lib/resolve.ts#stageAniList](../scripts/ingest/lib/resolve.ts) · [audit-ui-truth.ts#classes.afl_page_stale](../scripts/ingest/audit-ui-truth.ts)
+- audit: `afl_page_stale`
+- witnesses: naruto
 - aliases: hash gate, content-hash gate, staging hashes make re-runs no-ops
-- see: G42, G15
+- see: G42, G15, G47
 
 ### G10 · Large-diff hold: >20% type churn is a parser break
 
@@ -3126,9 +3127,9 @@ Every writing source has exactly one scheduled freshness path — a pg_cron → 
 - ruled Sean 2026-08-23 (data-pipeline §11 "The freshness map"; "Refresh cadence — IMPLEMENTED 2026-08-23, RATIFIED by Sean")
 - layer **writer**
 - enforced: [supabase/functions/_src/refresh-afl.ts#BATCH](../supabase/functions/_src/refresh-afl.ts) · [supabase/functions/_src/refresh-afg.ts#BATCH](../supabase/functions/_src/refresh-afg.ts) · [supabase/functions/_src/refresh-mu.ts#BATCH](../supabase/functions/_src/refresh-mu.ts) · [supabase/functions/_src/refresh-anilist.ts](../supabase/functions/_src/refresh-anilist.ts) · [supabase/migrations/20260823150000_refresh_cron.sql](../supabase/migrations/20260823150000_refresh_cron.sql) · [build-functions.ts](../scripts/ingest/build-functions.ts)
-- **audit: none — automation backlog**
+- audit: `afl_page_stale`
 - aliases: freshness map, refresh cadence, the four crons
-- see: G29, I34, G49, G50, invariant 2
+- see: G29, I34, G49, G50, G9, invariant 2
 
 ### G49 · Inline upkeep: derived writes ride the puller
 
@@ -5714,5 +5715,5 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 ## Scoreboard
 
 - rules: 292 (live 278, planned 7, superseded 7)
-- live data rules with no audit class (the automation backlog): 83
+- live data rules with no audit class (the automation backlog): 81
 - by layer: writer 151 · display 23 · both 34 · process 84

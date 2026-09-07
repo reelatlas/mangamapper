@@ -1154,6 +1154,67 @@
    19-23 / 39 (chain_source) and 18 / 93-95 (AFL's loose Mixed bucket),
    beelzebub 15 / 26-28 / 51, rurouni TV ep 95 (identity). Batch 22 opens on
    the boruto follow-up (lanes I + C) with the batch-21 tooling copied.
+158. ✅ **THE ROK INTERIM APPLIED, THE CONSOLIDATE DEEP, BATCH 23 WAVE 1 DISPATCHED AND LANDED (2026-09-07; Sean's 'ready to proceed' after the compact).**
+    THE INTERIM (Sean with Cursor, A14 — null = unknown, the display derives): apply-rok-interim.ts nulled the four round-grain
+    STARTs AND spans on record-of-ragnarok 22 / 27 / 33 / 38 (the ENDs 42 / 54 / 65 / 77 stay; 4 rows, a second dry run 0);
+    verify-series-display 222 verified, 0 failing (the census roster runs to the end again); anchor_start_offtrend 4 → 0. BATCH 23
+    WAVE 1 DISPATCHED (the refuted-pin wave, ≈ 2.4M planned): the RoK ask was REFRESHED first — its 2026-09-05 premise 'eps 18-41
+    carry no record' was false (the §12.156 afg sweep had rebuilt a derivation-tier anchor on every row) and the four A14 nulls and
+    the healer's stale continues on 21 / 26 / 32 / 37 were named as what to replace; four research-agents (Opus), contexts regenerated
+    to the session scratchpad. ALL FOUR LANDED (validate 4/4, scan 0, the baseline tables in chat; research 1.31M — RoK 356k,
+    eyeshield 379k, sailor-moon 294k, beelzebub 278k): RoK 25 anchors with the four nulls filled from the pages (22 = 43 [41],
+    27 = 54 [52], 33 = 66 [64], 38 = 77 [76]), five repairs (ep 12's phantom START 1 → 19 + END 19 → 20; ep 22 END 42 → 43; ep 33
+    END 65 → 66), one afg refutation (ep 19 START 34 → 32) and nineteen confirmations, the four healer back-jumps become ordinary
+    parities; eyeshield ep 54 END 111 → 109 with ep 57's first anchor 112 [111] (a back-jump); sailor-moon ep 73 END 17 → 18 (Act
+    18's home on Toei's own page) with 75 / 76 / 77 → filler and 75's anchor deleted; beelzebub 59 END 121 confirmed, START 119.
+    VERIFICATION by the count (R23): RoK (ruled) and sailor-moon (three retypes, an anchor deletion, a repair moving an A41 record)
+    dispatched; eyeshield (a NEW reorder record) queued behind them; beelzebub unverified. STOPPED at step 4 (P13) — the recap for
+    Sean follows the verifier reports (WAVE1-RECOVERY.md holds the landing and the forks).
+    THE CONSOLIDATE DEEP (required, P21 / P22: lib/sliver.ts, lib/wikipedia.ts, lib/related-work-ids.ts, lib/discovery.ts and
+    lib/wiki-identity.ts — enforcement sites of A / T / G / N / V / I records — changed since §12.150; run while the agents worked).
+    (1) C7 × A14 — THE HEALER'S STALE BASIS: the interim's nulls left the parity healer's own continues on RoK 21 / 26 / 32 / 37
+    pointing at the phantom STARTs ('anime jumps back: ep 22 opens at ch 31'), and the healer SKIPPED a row whose next start it
+    could not derive instead of clearing what it had derived from it. Built: lib/continues.ts#parityBasis (the adjacency + known-start
+    test, moved out of the healer so the healer and the audit read ONE function, P2) and #healerContinueBasisGone; the healer CLEARS a
+    healer parity continue whose basis is gone — a back-jump or a skip ahead only; a continue EQUAL to the row's own END is the C1
+    straddle shape and is KEPT (its basis is the row's own tail; 16 such rows stand before finale continua pins) — and the audit lists
+    one standing (continue_basis_unknown, violation; C7 amended, A14 sees it; 3 tests). Catalog-wide dry run 26 → refined 10 →
+    CLEARED 10: RoK's four and six skips across unanchored canon rows written before the adjacency check existed (ranma 93 → 158,
+    beastars 43 → 162, railgun 40 → 43, kenichi 39 → 110, one-piece 452 → 551, gto 21 → 75); each row now derives END + 1. THE
+    DELTA THAT FOLLOWS: backjump_continue_unruled 0 → 3 (gto 21 → 70 behind the frontier 74, ranma 93 → 58 behind 157, beastars
+    43 → 151 behind 158 — the exit of a jumped-back block with no continue): the healer's number had coincided with C5's for gto (75)
+    and ranma (158) and NOT for beastars (162; the frontier says 159) — the three are Sean's C5 curation via writeCuratedContinue,
+    a queue by the class's own text, listed in STATE with the proposed values and the frontier evidence.
+    (2) THE STUCK AFL ROTATION (G9 amended; G47): refresh-afl takes the 20 ACTIVE pages with the oldest fetched_at each hour, and
+    only a 304 (the edge) or a content change (stageAfl's upsert) moved fetched_at — a page answering 200 with the same hash, or
+    held by a flag, kept its timestamp, led the queue again next hour, and the SAME twenty pages were refetched every hour from
+    2026-08-28 while 286 of 303 active pages sat at 2026-08-22. ingest_runs read fetched 20 / unchanged 17 / flagged 3 / changed 0
+    every hour and LOOKED healthy — §12.156's 'AFL hourly healthy' read was wrong; the staging's fetched_at distribution was the
+    tell (constant counters). Fixed in the shared writer (lib/resolve.ts#touchAflFetched: an unchanged or held fetch moves fetched_at,
+    changed_at stays the content clock; proven on naruto — fetched_at 08-22 → 09-07 20:47, changed_at untouched, outcome unchanged);
+    the outcome class afl_page_stale (an active page older than 8 days; violation) reads 286 today and drains at 20 an hour (≈ 15 h).
+    What the stall hid: every I27 / I24 'AFL lists the new season' condition was unevaluable (Ace act II's staged page reads 52 rows,
+    re-zero 50, tanya 12, jojo 190 — all from 08-22) and no AFL typing reached the C1 / C2 rows by AFL. Captured: the consolidate skill
+    (step 3 — a cron with constant counters is a rotation stuck on one batch; read staging's clocks) and the runbook.
+    (3) THE RETIRESWHEN WALK (P24, 80 conditions): four MET and retired in place — batch-7's T24 held (landed §12.155); batch-20's
+    killing-bites G53 held (the pair landed 2026-09-02); batch-20's 'T28 six PARKED' (the sliver clause was ruled at §12.106 and the
+    six carry their rulings today: dbz 43 mixed + partial with a manual anchor, zatch 99 / soul-eater 40 / claymore 26 filler + graft,
+    shugo 127 filler + partial, fma 40 canon); batch-20's gto N35 held → LANDED as the chapter-spaces.ts entry {chapters: 200} (the
+    map the hold waited for exists since batch 20 wave 6; assert-overrides wrote totals 208 → 200 — Sean's 2026-08-27 ruling, the
+    mechanism supplied). Checked and unmet: G37's MU pins (gantz 91 / gto 106 / toriko 263 still overstate the terminals 90 / 105 /
+    254), kingdom 204688 and golden-kamuy 210073 NOT_YET_RELEASED undated, apothecary 200927 month-dated, the no-AFL-page owners,
+    N20's aired clamp (still not in lib — a T2 dedupe item), digimon-beatbreak (phase B). (4) P23 — the maps citing the amended T24 /
+    I46 / G59 re-read against the amended text: consistent (source-kinds, chapter-spaces, minted-grids, wiki-pages, related-works,
+    override-chains). (5) P24 orphan scan over all 2,812 rulings: 0 keyed by a dead series (11 keys are AFL page slugs of excluded /
+    folded pages by design — I11 / I15 / I17; override-chains keys by the AFL slug where a page exists, by the series id where none
+    does). (6) Edges rebuilt and deployed TWICE (20:31 for the rulings maps + C7, 20:48 for the AFL fix — both off the :40 minute);
+    the system census green after the docs regen (rulings.md had been stale since the pre-compact save point).
+    CENSUS (vs §12.157, every delta explained — P17): anchor_start_offtrend 4 → 0 (the interim); backjump_continue_unruled 0 → 3
+    (the six skip clears — above); continue_basis_unknown NEW, 0 after the heal; afl_page_stale NEW, 1 line (286 pages, draining);
+    gto totals 208 → 200 (N35 asserted); heal-parity cleared 10; every other UI-truth class unchanged (the standing sign-off rows
+    tokyo-mew-mew 38 / one-piece 195 in the sliver classes, asterisk_unreviewed 181, type_default_unclassified 84, permanence_candidate
+    53, fractional_unmodeled 5); the discovery census unchanged; 222 verified, 0 failing. Gates: tsc, lint 463 warnings (the baseline, unchanged —
+    the new audit blocks are typed), 308 tests (305 + 3), build, ledger-check, system census. STILL 403 at AniList.
 157. ✅ **BATCH 24 WAVE 2 — THE RE-ZERO GAP BLOCK APPLIED (2026-09-07; Sean ruled with Cursor: 'Yes on the block. Overlay only.').**
     THE WAVE: two research-agents (Opus) on lane A2 in LN VOLUME space (T24, live since §12.155) — the 50 AFL-typed rows wave 1
     exposed as never anchored: S1 rows 1-25 = volumes 1 → 9 (Arcs 1-3; two A10 seam rows 19 → 7 [6] and 22 → 8 [7]; v7's Wilhelm

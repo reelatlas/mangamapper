@@ -18,17 +18,12 @@
 import { db, selectAll } from './lib/db';
 import { seriesHasInstrument } from './lib/rulings/source-kinds';
 import { c3Ahead, hasSkipLanguage, c3Note } from './lib/c3';
-import { isCuratedContinue } from './lib/continues';
+import { healerContinueBasisGone, isCuratedContinue, parityBasis } from './lib/continues';
 
 const DRY = process.argv.includes('--dry-run');
 const ONLY = process.argv.slice(2).filter((a) => !a.startsWith('--'));
 
-const firstNum = (s: string | null): number | null => {
-  const m = String(s ?? '').match(/\d+(?:\.\d+)?/);
-  if (!m) return null;
-  const n = Number(m[0]);
-  return Number.isInteger(n) ? n : Math.floor(n);
-};
+// firstNum moved to lib/continues.ts#firstChapterOf (2026-09-07, P2: the audit reads the same basis)
 
 async function main() {
   const seriesRows = await selectAll<{ id: string; status: string; mapping_mode: string | null; source_type: string | null; manga_status: string | null }>(
@@ -38,7 +33,7 @@ async function main() {
   );
   const targets = seriesRows.filter((s: any) => (ONLY.length ? ONLY.includes(s.id) : true))
     .filter((s: any) => seriesHasInstrument(s.source_type)); // T25
-  let converted = 0, stamped = 0, postSeries = 0;
+  let converted = 0, stamped = 0, postSeries = 0, cleared = 0;
   for (const s of targets) {
     const anchors = await selectAll<any>('chapter_anchors', 'episode, chapter, start_chapter, chapters_adapted, continue_chapter, continue_kind, continue_source, source', (q) => q.eq('series_id', s.id).order('episode'));
     if (anchors.length < 2) continue;
@@ -76,15 +71,27 @@ async function main() {
         continue;
       }
       // B must be the immediately next canon/mixed EPISODE (no unanchored
-      // canon/mixed row between) with a known start
-      let adjacent = true;
-      for (let n = A.episode + 1; n < B.episode; n++) {
-        const t = typeOf.get(n);
-        if (t === 'canon' || t === 'mixed' || t === undefined) { adjacent = false; break; }
+      // canon/mixed row between) with a known start — lib/continues.ts#parityBasis
+      // (the audit reads the same function, P2)
+      if (!Number.isInteger(B.episode)) continue;
+      const bStart = parityBasis(A, B, (n) => typeOf.get(n));
+      if (bStart == null) {
+        // C7 × A14 (2026-09-07, record-of-ragnarok 21 / 26 / 32 / 37): a continue THIS
+        // healer derived from B's START stands on nothing once that START is unknown
+        // (A14) or B is no longer the adjacent anchored row — clear it; the display
+        // derives END + 1, the same designed unknown as the derived START
+        if (healerContinueBasisGone(A, B, bStart)) {
+          lines.push(`  ep${A.episode}: healer continue ${A.continue_chapter} CLEARED — ep ${B.episode}'s start is unknown / underivable now (A14 × C7); the display derives END + 1 = ${Number(A.chapter) + 1}${Number(A.chapter) + 1 === Number(A.continue_chapter) ? ' (same number — no visible change)' : ' (VISIBLE: was ' + A.continue_chapter + ')'}`);
+          if (!DRY) {
+            const { error: e3 } = await db.from('chapter_anchors')
+              .update({ continue_chapter: null, continue_kind: null, continue_note: null, continue_source: null })
+              .eq('series_id', s.id).eq('episode', A.episode);
+            if (e3) throw new Error(`${s.id} ep${A.episode}: ${e3.message}`);
+          }
+          cleared++;
+        }
+        continue;
       }
-      if (!adjacent) continue;
-      const bStart = A === B ? null : (B.start_chapter ?? firstNum(B.chapters_adapted));
-      if (bStart == null || !Number.isInteger(B.episode)) continue;
       // C1 guard (batch 19 wave 1, Sean 2026-08-26 — the soul-eater ep-36
       // lesson): a stored continue AT OR BELOW the row's own END is a ruled
       // mid-chapter straddle (C1) or a C3 skip-note shape, never a value for
@@ -158,6 +165,6 @@ async function main() {
       c3++;
     }
   }
-  console.log(`\n[parity] converted ${converted}, stamped ${stamped}, post-series ${postSeries}, c3-skip-notes ${c3}${DRY ? ' — DRY RUN, nothing written' : ''}`);
+  console.log(`\n[parity] converted ${converted}, stamped ${stamped}, post-series ${postSeries}, cleared (basis gone, C7 × A14) ${cleared}, c3-skip-notes ${c3}${DRY ? ' — DRY RUN, nothing written' : ''}`);
 }
 main().then(() => process.exit(0)).catch((e) => { console.error(e); process.exit(1); });

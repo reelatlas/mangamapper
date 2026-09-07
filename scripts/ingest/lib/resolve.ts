@@ -330,6 +330,22 @@ export function titlesAgree(a: string, b: string): boolean {
   return hit / Math.min(ta.size, tb.size) >= 0.5;
 }
 
+/**
+ * G9 (amended 2026-09-07 — the stuck rotation; the cadence is G47): a fetch that staged NOTHING still happened. refresh-afl takes the 20
+ * ACTIVE pages with the oldest fetched_at each hour; before this, only a 304 (the edge) or a content change (the upsert
+ * below) moved fetched_at, so a page answering 200 with the same hash — or held by a flag — kept its old timestamp,
+ * led the queue again next hour, and the SAME twenty pages were refetched every hour from 2026-08-28 while 306 active
+ * pages sat at 2026-08-22 (the counters read fetched 20 / unchanged 17 / flagged 3 / changed 0 every run). changed_at
+ * is the content clock and is untouched here; fetched_at is the rotation clock and moves on every fetch.
+ */
+async function touchAflFetched(slug: string, meta: { etag?: string | null; lastModified?: string | null }): Promise<void> {
+  const { error } = await db
+    .from('ingest_afl_shows')
+    .update({ fetched_at: new Date().toISOString(), etag: meta.etag ?? null, last_modified: meta.lastModified ?? null })
+    .eq('slug', slug);
+  if (error) throw new Error(`stageAfl touch (${slug}): ${error.message}`);
+}
+
 export async function stageAfl(
   runId: number,
   slug: string,
@@ -348,6 +364,7 @@ export async function stageAfl(
       servedTitle: page.title,
       expectedTitle: meta.expectedTitle ?? null,
     });
+    await touchAflFetched(slug, meta); // the fetch happened; the hold is a flag, not a reason to lead the queue again next hour
     return 'held';
   }
 
@@ -361,7 +378,10 @@ export async function stageAfl(
     .maybeSingle();
   if (readErr) throw new Error(`stageAfl read (${slug}): ${readErr.message}`);
 
-  if (prev?.content_hash === hash) return 'unchanged';
+  if (prev?.content_hash === hash) {
+    await touchAflFetched(slug, meta);
+    return 'unchanged';
+  }
 
   if (prev) {
     const oldTypes = new Map(
@@ -376,7 +396,8 @@ export async function stageAfl(
         previousCount: oldTypes.size,
         proposed: raw,
       });
-      return 'held';
+      await touchAflFetched(slug, meta); // the fetch happened; the hold is a flag, not a reason to lead the queue again next hour
+    return 'held';
     }
   }
 

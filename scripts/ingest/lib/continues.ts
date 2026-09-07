@@ -30,6 +30,45 @@ export const curatedOverwritten = (r: ContinueRow): boolean => isCuratedContinue
 /** A stored continue no writer claimed — every writer must set the marker (P2). */
 export const continueUnprovenanced = (r: ContinueRow): boolean => r.continue_chapter != null && !r.continue_source;
 
+/** The first chapter a span names — the parity healer's own reader, moved here 2026-09-07 so the healer and the audit read ONE function (P2). */
+export const firstChapterOf = (s: string | null | undefined): number | null => {
+  const m = String(s ?? '').match(/\d+(?:\.\d+)?/);
+  if (!m) return null;
+  const n = Number(m[0]);
+  return Number.isInteger(n) ? n : Math.floor(n);
+};
+
+export type NextAnchoredRow = { episode: number; start_chapter: number | null; chapters_adapted?: string | null };
+
+/**
+ * Where the parity healer may derive (C2): the next anchored row is the immediately next canon / mixed EPISODE (no
+ * unanchored canon / mixed row between — a missing row counts as one) and its START is known (start_chapter, else the
+ * first chapter its span names). Null = no basis today.
+ */
+export const parityBasis = (a: { episode: number }, b: NextAnchoredRow | undefined, typeOf: (episode: number) => string | undefined): number | null => {
+  if (!b) return null;
+  for (let n = a.episode + 1; n < b.episode; n++) {
+    const t = typeOf(n);
+    if (t === 'canon' || t === 'mixed' || t === undefined) return null;
+  }
+  return b.start_chapter ?? firstChapterOf(b.chapters_adapted);
+};
+
+/**
+ * C7 × A14 (2026-09-07, record-of-ragnarok 21 / 26 / 32 / 37): a HEALER parity continue was derived from the next
+ * row's START. When that START is later set to unknown (A14 — the four round-grain finale STARTs nulled) and the span
+ * names no chapter either, or that row is no longer the adjacent anchored canon / mixed episode, the continue's BASIS
+ * IS GONE: the healer clears it on its next pass (the display then derives END + 1 — the same designed unknown as the
+ * derived START) and the audit lists one still standing (`continue_basis_unknown`). A curated continue (manual) is
+ * never touched — its basis is the apply's citation, not the neighbour; a C1 straddle (continue = the row's own END) is kept.
+ */
+export const healerContinueBasisGone = (r: ContinueRow & { chapter?: number | null; episode?: number }, next: NextAnchoredRow | undefined, basis: number | null): boolean =>
+  r.continue_chapter != null && r.continue_source === 'healer' && r.continue_kind === 'parity' && !!next && basis == null
+  // the C1 shape — a continue EQUAL to the row's own END (a straddle) — is kept: its basis is the row's own tail, whichever
+  // neighbour the healer read it from (the C1 guard's rule: value kept); only the pure neighbour-derived values go — a
+  // back-jump (below the END) or a skip ahead (above it)
+  && Number(r.continue_chapter) !== Number(r.chapter);
+
 export type CuratedContinue = { chapter: number; kind: 'parity' | 'post_series'; note: string };
 
 /** The one way an apply writes a continue: value + kind + note + the 'manual' marker. */
