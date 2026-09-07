@@ -1154,6 +1154,28 @@
    19-23 / 39 (chain_source) and 18 / 93-95 (AFL's loose Mixed bucket),
    beelzebub 15 / 26-28 / 51, rurouni TV ep 95 (identity). Batch 22 opens on
    the boruto follow-up (lanes I + C) with the batch-21 tooling copied.
+149. ✅ **THE PASTA SEAT — position IS watch order (Sean 2026-09-07 with Cursor, the C2 follow-up).** The C2 apply had parked
+    Operation Desert Pasta (135866, a 17-minute original, first shown 2021-06-19) at 12.51 by its release date, AFTER the 2019
+    film at 12.5 — release order on the watch-order key. The sourced order was already on file: the film's own wave-1 note
+    (ruled 2026-09-05) says the short is the film's 前日譚; the verdict cites ja-WP's episode table (閑話 with 劇場版の前日譚
+    between ep 12 and the 第2期 header) and Comic Natalie (「第1期と劇場版をつなぐストーリー」), and the verifier reproduced both,
+    predicted the 12.51 outcome and named the missing mechanism (a ruled position on the pair). RULED: a related-works position
+    ruling — Pasta 12.5 (a new I45 entry, standing filler by rule), the film 12.51 (its existing entry amended — the map refuses
+    a second entry per work) — one apply through planRuledMoves: 2 removed / 2 inserted, identities kept every field, the
+    second dry run 0; every related_work_* violation 0; cluster_disorder 44 unchanged (a ruled pair is not disorder). THE
+    PRINCIPLE, stated for the next consolidate's I45 / N31 sentence: two keys, never three — `air_date` is release (a fact,
+    never rewritten), `position` / episode `number` is watch order ('where do I go next'); in a gap `.5` is the FIRST seat in
+    watch order, then `.51`, `.52` — never the earlier release; the writer's date-derived seat is a proposal; a sourced watch
+    slot beats release (Made in Abyss 13.5 / .51 / .52, Kinnikuman's licensor settings, now Pasta); a `.49` is never written.
+    Chronology (the in-story timeline) is INFORMATION ON THE ROW, not a sort: where it splits from watch order it splits one
+    way (a work set earlier, made to be seen later — Kizumonogatari, Fate/Zero, No Regrets) and `position` carries the viewing
+    order; a `story_position` beside `position` is the right SHAPE if a franchise page ever needs a chronological sort and the
+    wrong thing to add now (empty on almost every series, its own sourced rulings for a handful of IPs) — a STATE sidecar for
+    the franchise UI pass. The UI wish it serves: default sort by release, a toggle to watch order, filters on kind (T29) and
+    standing (T27) — two sorts and filters on rows that exist (N31 surfacing parked), no third key, no skippable flag.
+    CAPTURED: the discover-skill trap corrected (read the owner's existing ledger notes before accepting a derived seat; the
+    tool is a related-works position ruling, never N7 — N7 is a source numbering a work INTO the run); §12.148's and STATE's
+    'N7' wording fixed. Edges rebuilt + deployed ×5; 294 tests.
 148. ✅ **C2 — THE SECOND AIRING /discover SITTING (Sean ruled 2026-09-07 with Cursor: 'C2 as proposed, with four flips').**
     The recap (recap.ts --scope sequel,series --airing: 57 candidates over 54 owners) was derived from disk — AniList's API
     was still 403, so the halo could not be restaged (the last staging: the weekly refresh-discovery of 2026-09-06 10:30 UTC).
@@ -1179,8 +1201,8 @@
     only because ONA / TV_SHORT is TV-shaped (the Frieren precedent, four owners now: THE SHORTS GATE is queued as an
     /add-rule — format TV_SHORT, or an ONA of at most five minutes, on a SPIN_OFF / SIDE_STORY edge → the extras bucket; each
     ruling's retiresWhen names it); Operation Desert Pasta (135866, ONA, ONE 17-minute original) is NOT that shape (Cursor's
-    flip 4) — its own extra of Tanya, the writer derived @12.51 from its 2021 release (after the film's 12.5; Sean's word if
-    he wants it re-seated by an N7 ruling). Three ruled shorts are unstaged (182417, 210687, 213961) — their rows land when
+    flip 4) — its own extra of Tanya, the writer derived @12.51 from its 2021 release (after the film's 12.5 — corrected the same morning by a
+    related-works position ruling, §12.149). Three ruled shorts are unstaged (182417, 210687, 213961) — their rows land when
     the halo restages. DEFERRED, named: every 2027 / undated row (Dandadan S3, Frieren S3, Delicious in Dungeon S2, Shangri-La
     S3, Sakamoto Days S2, KonoSuba 4, Shield Hero S5, Oshi no Ko Final, THE ONE PIECE 2027-02 — an alternative like GitS 2026,
     a C3 series mint when firm — Gundam, Evangelion, NARUTO 2026, the rest); DIGIMON BEATBREAK stays deferred to B; the two

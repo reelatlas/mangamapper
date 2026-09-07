@@ -103,12 +103,22 @@ export const ENTRIES: RulingEntry<RelatedWorkRuling>[] = [
   {
     seriesId: 'saga-of-tanya-the-evil',
     ruleId: 'I45',
-    value: { anilistId: 100878, standing: 'mixed', chapter: null, volume: 4, chaptersAdapted: 'LN vol 4: ch 1-3 in substance (ch 3\'s Tiegenhoff substantially altered), ch 4 outcome only, ch 6 opening (the 1926-06-25 call) as the epilogue; ch 5 NOT adapted; framed by vol 1\'s 1967 Andrew–Schugel interlude', note: 'MIXED (Sean 2026-09-05): the Commonwealth multinational force, Mary\'s Moskva and Tiegenhoff clashes, Vivi and the eleven-minute duel are anime-only (ja-WP 年表 アニメのみ) — a story-carrying original share the film\'s own staff call its theme; the novel\'s Dodobird engagement (ch 5) is not adapted. S2 opens after the epilogue; the Pasta Operation short (2021) is a prequel sitting before the film in watch order.' },
+    value: { anilistId: 100878, position: 12.51, standing: 'mixed', chapter: null, volume: 4, chaptersAdapted: 'LN vol 4: ch 1-3 in substance (ch 3\'s Tiegenhoff substantially altered), ch 4 outcome only, ch 6 opening (the 1926-06-25 call) as the epilogue; ch 5 NOT adapted; framed by vol 1\'s 1967 Andrew–Schugel interlude', note: 'MIXED (Sean 2026-09-05): the Commonwealth multinational force, Mary\'s Moskva and Tiegenhoff clashes, Vivi and the eleven-minute duel are anime-only (ja-WP 年表 アニメのみ) — a story-carrying original share the film\'s own staff call its theme; the novel\'s Dodobird engagement (ch 5) is not adapted. S2 opens after the epilogue; the Pasta Operation short (2021) is a prequel sitting before the film in watch order.' },
     reason:
-      "Wave 1 (verified SOUND WITH NOTES, standing corrected to MIXED): ja-WP's 作中の年表 (原作 4巻 / 劇場版 rows), the fandom's vol 4 chapter pages and a reader's dated scene index of the printed volume agree on ch 1-3 + ch 4's outcome + ch 6's first scene; the same timeline marks the film's Mary clashes アニメのみ and the novel's ch 5 clash unadapted — no source states a relocation. Sean 2026-09-05: mixed; ch 5 not adapted; 12.5.",
+      "POSITION RULED 12.51 (Sean 2026-09-07, C2 follow-up with Cursor): the 12.x gap holds two extras and watch order is Pasta THEN the film — ja-WP's episode table files 砂漠のパスタ大作戦 as 閑話 with 劇場版の前日譚 between ep 12 and the 第2期 header; Comic Natalie: 「第1期と劇場版をつなぐストーリー」; the wave-1 verdict flagged it and the verifier reproduced it, naming the missing mechanism (a ruled position). The writer's date-derived seat had put the 2021 short at 12.51 AFTER the 2019 film — release order on the watch-order key; the sourced watch slot wins (the Kinnikuman / Made in Abyss shape): .5 is the FIRST seat in watch order, never the earlier release. The film keeps its place between the seasons. Wave 1 (verified SOUND WITH NOTES, standing corrected to MIXED): ja-WP's 作中の年表 (原作 4巻 / 劇場版 rows), the fandom's vol 4 chapter pages and a reader's dated scene index of the printed volume agree on ch 1-3 + ch 4's outcome + ch 6's first scene; the same timeline marks the film's Mary clashes アニメのみ and the novel's ch 5 clash unadapted — no source states a relocation. Sean 2026-09-05: mixed; ch 5 not adapted; 12.5.",
     ruledBy: 'Sean',
     ruledOn: '2026-09-05',
     cite: ['scripts/ingest/research/discovery/out/saga-of-tanya-the-evil__100878.json', 'scripts/ingest/research/discovery/verify/saga-of-tanya-the-evil__100878.md'],
+  },
+  {
+    seriesId: 'saga-of-tanya-the-evil',
+    ruleId: 'I45',
+    value: { anilistId: 135866, position: 12.5, standing: 'filler', note: 'Operation Desert Pasta (砂漠のパスタ大作戦, ONA, 17 min, first shown 2021-06-19) — original, filler by rule; the film\'s 前日譚: watch order is ep 12 → Pasta → the film → S2 (ja-WP 閑話 / 劇場版の前日譚; Comic Natalie 「第1期と劇場版をつなぐストーリー」). Position RULED 12.5 (Sean 2026-09-07): the first seat in watch order, the film re-seated 12.51; release (2021, after the film) stays on air_date.' },
+    reason:
+      "C2 follow-up (Sean 2026-09-07 with Cursor): the halo writer derived 12.51 from the 2021 release — after the 2019 film — which is release order on the watch-order key; the two sources the film's wave-1 verdict cites (ja-WP's 閑話 row with 劇場版の前日譚 between ep 12 and 第2期; Comic Natalie's 'connects S1 and the film') put it BEFORE the film, and the verifier reproduced both and named the missing mechanism: a ruled position on the pair. .5 = the first seat in watch order in that gap (the Made in Abyss cluster shape); the film moves to 12.51 in the same apply (planRuledMoves); a 12.49 is never written. Chronology and watch order agree here — only release differs.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-07',
+    cite: ['scripts/ingest/research/discovery/out/saga-of-tanya-the-evil__100878.json', 'scripts/ingest/research/discovery/verify/saga-of-tanya-the-evil__100878.md', 'https://ja.wikipedia.org/wiki/幼女戦記', 'https://natalie.mu/comic/', 'docs/changelog.md §12.149'],
   },
   {
     seriesId: 'goblin-slayer',
