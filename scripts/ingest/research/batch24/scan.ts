@@ -1,4 +1,4 @@
-// Batch-20 contradiction scan (P13 step 2, R25) for lane A2 gap blocks — runs
+// Batch-20 contradiction scan (P13 step 2, R25) for lane A2 gap blocks and lane T typed blocks (batch 24) — runs
 // AFTER validate.ts. Mechanical, against the DB: (1) every delivered END sits
 // inside the block's FENCE (the stored anchors bracketing the target range)
 // unless the verdict REPAIRS that fence row; (2) ENDs are monotone across the
@@ -29,7 +29,7 @@ async function main() {
     // several same-wave entries (sub-blocks): the entry covering the MOST touched rows wins — a repair on the fence row outside every range must not throw the pick (wave 11, bleach-w11b's ep-203 START enrichment)
     const covered = (t: (typeof mine)[number]) => touched.filter((n) => ranges(t[1]).some(([a, b]) => n >= a && n <= b)).length;
     const task = (sameWave.length > 1 ? [...sameWave].sort((x, y) => covered(y) - covered(x))[0] : sameWave[0]) ?? mine[0];
-    if (!task || (task[2] !== 'A2' && task[2] !== 'C')) continue; // lane C narrow follow-ups get the same fence / monotone / orphan checks (FotNS 1-28 is a gap block)
+    if (!task || (task[2] !== 'A2' && task[2] !== 'C' && task[2] !== 'T')) continue; // lane C narrow follow-ups and lane T typed blocks (batch 24) get the same fence / monotone / orphan checks (FotNS 1-28 is a gap block)
     if (only.size && !only.has(v.series_id)) continue;
     const [lo, hi] = [Math.min(...ranges(task[1]).map((r) => r[0])), Math.max(...ranges(task[1]).map((r) => r[1]))];
     const stored = await selectAll<any>('chapter_anchors', 'episode, chapter, start_chapter, continue_chapter, source', (q) => q.eq('series_id', v.series_id).order('episode'));

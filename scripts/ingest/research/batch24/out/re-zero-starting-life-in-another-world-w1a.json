@@ -1,0 +1,555 @@
+{
+ "series_id": "re-zero-starting-life-in-another-world",
+ "summary": "Re:Zero season 3 (rows 51-66) is Arc 5 of the LIGHT NOVEL, and it maps cleanly onto MF文庫J volumes 16 -> 20 in order: 51 -> v16 (the whole volume, a 90-minute premiere), 52-54 -> v17, 55-58 -> v18, 59-62 -> v19 (complete at 62), 63-66 -> v20 (NOT complete — v20 ch 7 straddles into ep 67). All sixteen rows are ANCHORED in LN VOLUME space (end_chapter / start_chapter / volume = the volume number; chapters_adapted = the units inside it) and there are no anchor-hostile rows. All sixteen rows are CONFIRMED CANON against the light novel — the wiki mint's default is right on every one of them, and it is now typed on sources rather than defaulted: every single S3 episode title is verbatim a light-novel chapter title of volumes 16-20 (51 = v16 ch 5 劇場型悪意 … 66 = v20 ch 6 プリステラ攻防戦リザルト), read off two separately-maintained wikis' tables of contents plus the author's own web-novel index, and the licensor's sixteen per-episode synopses plus en-Wikipedia's sixteen summaries are light-novel content throughout. No row is filler and no row is mixed: the only anime-original material any source names is a set of slivers (a training montage, a Wilhelm/Reinhard flashback visual, extra lines for an Elsa phantom, two dramatisations of events the novel states off-page, and a shot of Subaru's two curses) — divergence under T28's faithfulness clause — and the only 総集編 is a rebroadcast-only split of ep 51 into 『「劇場型悪意」総集編 前編』 and 『「劇場型悪意」総集編 後編』, neither of which ever carried an episode number. Fifteen anchors are HIGH confidence; ep 54 is MEDIUM and is the one real fork: one lineage (the en wiki and its Russian translation) credits it with the opening of volume 18 chapter 1 while the Spanish wiki records no volume 18 at all and the Chinese wiki garbles it, so under R3-before-A47 the END is HELD at 17, the share is kept in chapters_adapted and a single-lineage partial records it — the reader's continue is volume 18 under either reading. Annotations: a v17-ch-4 graft on ep 51 (four wikis credit the fragment; the chapter is properly adapted by ep 53), two 'rearranged' records for the un-cross-cutting of volumes 19 and 20's simultaneous battles (ep 64 = v20 ch 4-5 then ep 65 steps back to v20 prologue/ch 1-2), a partial on ep 66 for the unfinished v20 ch 7, and divergence/abridged records for the named additions and cuts. NO repairs: all sixteen stored titles and air dates are confirmed on four sources and every date is a Wednesday. NO continue_point is delivered — the season stops mid-volume-20 and ep 67 resumes inside the same chapter (C1), so the frontier is derived from the anchors, not published as a post-series continue on a series that is still airing.",
+ "anchors": [
+  {
+   "episode": 51,
+   "end_chapter": 16,
+   "start_chapter": 16,
+   "chapters_adapted": "v16 ch 1-5 (the complete volume), v17 ch 4 (relocated fragment — graft, see the annotation)",
+   "volume": 16,
+   "confidence": "high",
+   "note": "SPACE: LN VOLUME space (T24) — end_chapter / start_chapter / volume all carry the MF文庫J tankobon volume number of 長月達平『Re:ゼロから始める異世界生活』; chapters_adapted names the units INSIDE the volume as the printed table of contents numbers them (序章 = prologue, 第N章 = ch N). This is NOT the web novel's arc/part space (なろう 第五章1-81) and NOT any per-arc comicalization's chapter space (T24: the arc manga is a downstream licensed work, never an instrument). ARC MAP (ja-WP, the series article's 章構成): 第五章『歴史を刻む星々』（文庫第16巻 - 第20巻、アニメ第3期 第51話 - アニメ第4期 第67話）— verbatim; ja-WP's 既刊一覧 table repeats it in the 備考 column (vols 16-20 rowspan '第五章'). END 16 (A4): four independently-edited Re:Zero wikis credit the WHOLE of volume 16 to this row — en 'Volume 16 (Ch 1-Ch 5)', ru 'Том 16, главы 1-5', zh '16卷（整卷）' (= the entire volume), es 'Volumen 16'. TITLE TEST: the episode title 劇場型悪意 IS volume 16's chapter 5 title (en fandom ToC 'Chapter 5: Theatrical Malice'; zh fandom ToC '第五章：剧场型恶意'; the author's own web-novel index for 第五章　『歴史を刻む星々』 prints a section titled 『劇場型悪意』 (part 19 in the WEB-NOVEL space)). CONTENT: the licensor's 第51話 synopsis ('聖域での戦いから1年…アナスタシアの使者としてやってきたヨシュアとミミによって届けられたのは、水門都市プリステラへの招待状…プリステラへと出発したスバルたちを待っていたのは、懐かしい顔ぶれだった。') is Kadokawa's own volume-16 blurb almost sentence for sentence ('『聖域』での戦いから一年…水門都市プリステラへの招待状――…スバルたちは、水の都でアナスタシアを始めとした懐かしい顔ぶれと再会する…その裏で、蠢く悪意の胎動に気付けぬままに。'). START 16 (A10/A13): the row opens on volume 16 chapter 1 (Subaru's training, Joshua's arrival) — no leading partial of anything earlier. This row is the 90-MINUTE premiere (ja-WP: 第3期第1話は、90分拡大版として制作され、2024年8月30日より劇場にて先行上映された), which is why one row carries a whole volume. The v17 ch 4 fragment does NOT move the END (the beelzebub 46/47 lesson: a graft is not a frontier) — v17 ch 4 'ゴージャス・タイガー' is properly adapted by ep 53, which carries the same chapter in its own range.",
+   "sources": [
+    "https://rezero.fandom.com/api.php?action=parse&page=Episode%2051&prop=wikitext&format=json",
+    "https://rezero.fandom.com/es/api.php?action=parse&page=Episodio%2051&prop=wikitext&format=json",
+    "https://rezero.fandom.com/ru/api.php?action=parse&page=Re%3AZero%20%D0%AD%D0%BF%D0%B8%D0%B7%D0%BE%D0%B4%2051&prop=wikitext&format=json",
+    "https://rezero.fandom.com/zh/api.php?action=parse&page=%E5%8A%A8%E7%94%BB%3A%E7%AC%AC51%E9%9B%86&prop=wikitext&format=json",
+    "https://re-zero-anime.jp/tv/story/tv3.html",
+    "https://en.wikipedia.org/w/api.php?action=parse&page=Re%3AZero%20season%203&prop=wikitext&format=json",
+    "https://rezero.fandom.com/api.php?action=parse&page=Re%3AZero%20Light%20Novel%20Volume%2016&prop=wikitext&format=json",
+    "https://rezero.fandom.com/zh/api.php?action=parse&page=%E5%B0%8F%E8%AF%B4%3A16%E5%8D%B7&prop=wikitext&format=json",
+    "https://www.kadokawa.co.jp/product/321712000365/",
+    "https://rezero.fandom.com/api.php?action=parse&page=Re%3AZero%20Light%20Novel%20Volume%2017&prop=wikitext&format=json",
+    "https://rezero.fandom.com/zh/api.php?action=parse&page=%E5%B0%8F%E8%AF%B4%3A17%E5%8D%B7&prop=wikitext&format=json",
+    "https://www.kadokawa.co.jp/product/321806000205/",
+    "https://ja.wikipedia.org/w/api.php?action=parse&pageid=3333726&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episode": 52,
+   "end_chapter": 17,
+   "start_chapter": 17,
+   "chapters_adapted": "v17 ch 1-2",
+   "volume": 17,
+   "confidence": "high",
+   "note": "SPACE: LN VOLUME space (T24) — end_chapter / start_chapter / volume all carry the MF文庫J tankobon volume number of 長月達平『Re:ゼロから始める異世界生活』; chapters_adapted names the units INSIDE the volume as the printed table of contents numbers them (序章 = prologue, 第N章 = ch N). This is NOT the web novel's arc/part space (なろう 第五章1-81) and NOT any per-arc comicalization's chapter space (T24: the arc manga is a downstream licensed work, never an instrument). END 17 / START 17 (A4/A10): four wikis agree on 'v17 ch 1-2' (en 'Volume 17 (Ch 1-Ch 2)', es 'Volumen 17 (capítulo 1-2)', ru 'Том 17, главы 1-2', zh '17卷（第一章～第二章）'). TITLE TEST: 氷炎の結末 IS volume 17 chapter 2 ('Chapter 2: A Showdown of Fire and Ice' on the en fandom's Volume 17/Synopsis page — the same string our stored English title uses — and '第二章：冰炎之结果' on the zh fandom's 小说:17卷; the author's web-novel index prints a section titled 『氷炎の結末』 (part 24 in the WEB-NOVEL space)). CONTENT: the licensor's 第52話 synopsis opens on the return-by-death restart ('刻限塔に現れた…シリウス・ロマネコンティによって、訳の分からぬままに命を奪われたスバル。シリウスの凶行を阻止すべく、刻限塔へと向かったスバル…') = volume 17 chapter 1 気安い/安易さの答え合わせ ('Casually Comparing Answers', the first loop) running into chapter 2. Volume 17's Kadokawa blurb ('水門都市プリステラを舞台に、『憤怒』の大罪司教シリウスの悪夢の幕が上がる。…かつてなく短い『死に戻り』の猶予を駆使し') is this episode's premise.",
+   "sources": [
+    "https://rezero.fandom.com/api.php?action=parse&page=Episode%2052&prop=wikitext&format=json",
+    "https://rezero.fandom.com/api.php?action=parse&page=Re%3AZero%20Light%20Novel%20Volume%2017/Synopsis&prop=wikitext&format=json",
+    "https://rezero.fandom.com/es/api.php?action=parse&page=Episodio%2052&prop=wikitext&format=json",
+    "https://rezero.fandom.com/ru/api.php?action=parse&page=Re%3AZero%20%D0%AD%D0%BF%D0%B8%D0%B7%D0%BE%D0%B4%2052&prop=wikitext&format=json",
+    "https://rezero.fandom.com/zh/api.php?action=parse&page=%E5%8A%A8%E7%94%BB%3A%E7%AC%AC52%E9%9B%86&prop=wikitext&format=json",
+    "https://re-zero-anime.jp/tv/story/tv3.html",
+    "https://en.wikipedia.org/w/api.php?action=parse&page=Re%3AZero%20season%203&prop=wikitext&format=json",
+    "https://rezero.fandom.com/api.php?action=parse&page=Re%3AZero%20Light%20Novel%20Volume%2017&prop=wikitext&format=json",
+    "https://rezero.fandom.com/zh/api.php?action=parse&page=%E5%B0%8F%E8%AF%B4%3A17%E5%8D%B7&prop=wikitext&format=json",
+    "https://www.kadokawa.co.jp/product/321806000205/",
+    "https://ja.wikipedia.org/w/api.php?action=parse&pageid=3333726&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episode": 53,
+   "end_chapter": 17,
+   "start_chapter": 17,
+   "chapters_adapted": "v17 ch 2-4",
+   "volume": 17,
+   "confidence": "high",
+   "note": "SPACE: LN VOLUME space (T24) — end_chapter / start_chapter / volume all carry the MF文庫J tankobon volume number of 長月達平『Re:ゼロから始める異世界生活』; chapters_adapted names the units INSIDE the volume as the printed table of contents numbers them (序章 = prologue, 第N章 = ch N). This is NOT the web novel's arc/part space (なろう 第五章1-81) and NOT any per-arc comicalization's chapter space (T24: the arc manga is a downstream licensed work, never an instrument). END 17 / START 17: en 'Volume 17 (Ch 2-Ch 4)', es 'Volumen 17 (capítulo 2-4)', ru 'Том 17, главы 2-4', zh '17卷（第二章～第四章）' (zh also appends a stray '18卷（第四章）' which it repeats on ep 54 — a copy artifact on that wiki only, refuted by the other three and by the content). TITLE TEST: ゴージャス・タイガー IS volume 17 chapter 4 (en 'Chapter 4: Gorgeous Tiger'; zh '第四章：华丽猛虎'; web novel 『ゴージャス・タイガー』, part 29). CONTENT: the licensor's 第53話 synopsis (Regulus saves Emilia from Sirius' flames; Otto meets 『暴食』ライ・バテンカイトス) and en-WP's summary (Garfiel meets his mother's new family and learns she has amnesia — the Gorgeous Tiger material) both sit inside v17 ch 2-4.",
+   "sources": [
+    "https://rezero.fandom.com/api.php?action=parse&page=Episode%2053&prop=wikitext&format=json",
+    "https://rezero.fandom.com/es/api.php?action=parse&page=Episodio%2053&prop=wikitext&format=json",
+    "https://rezero.fandom.com/ru/api.php?action=parse&page=Re%3AZero%20%D0%AD%D0%BF%D0%B8%D0%B7%D0%BE%D0%B4%2053&prop=wikitext&format=json",
+    "https://rezero.fandom.com/zh/api.php?action=parse&page=%E5%8A%A8%E7%94%BB%3A%E7%AC%AC53%E9%9B%86&prop=wikitext&format=json",
+    "https://re-zero-anime.jp/tv/story/tv3.html",
+    "https://en.wikipedia.org/w/api.php?action=parse&page=Re%3AZero%20season%203&prop=wikitext&format=json",
+    "https://rezero.fandom.com/api.php?action=parse&page=Re%3AZero%20Light%20Novel%20Volume%2017&prop=wikitext&format=json",
+    "https://rezero.fandom.com/zh/api.php?action=parse&page=%E5%B0%8F%E8%AF%B4%3A17%E5%8D%B7&prop=wikitext&format=json",
+    "https://www.kadokawa.co.jp/product/321806000205/",
+    "https://ja.wikipedia.org/w/api.php?action=parse&pageid=3333726&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episode": 54,
+   "end_chapter": 17,
+   "start_chapter": 17,
+   "chapters_adapted": "v17 ch 3-5 (ch 5 unfinished — ep 55 carries its Emilia/Regulus thread), v18 ch 1 (opening share — SINGLE-LINEAGE claim, see the partial)",
+   "volume": 17,
+   "confidence": "medium",
+   "note": "SPACE: LN VOLUME space (T24) — end_chapter / start_chapter / volume all carry the MF文庫J tankobon volume number of 長月達平『Re:ゼロから始める異世界生活』; chapters_adapted names the units INSIDE the volume as the printed table of contents numbers them (序章 = prologue, 第N章 = ch N). This is NOT the web novel's arc/part space (なろう 第五章1-81) and NOT any per-arc comicalization's chapter space (T24: the arc manga is a downstream licensed work, never an instrument). END 17, HELD (A47's existence clause, R3 before A47 — the Dai wave-14 ruling): the four wikis agree this row adapts v17 ch 3-5 (en 'Volume 17 (Ch 3-Ch 5)', es 'Volumen 17 (capítulo 3-5)', ru 'Том 17, главы 3-5', zh '17卷（第三章～第五章）') and its TITLE 都市庁舎奪還作戦 IS volume 17 chapter 5 (en 'Chapter 5: The Operation to Retake City Hall'; zh '第五章：都市市政厅夺还战'). A share of VOLUME 18 chapter 1 (敗戦処理 / 'Fighting a Losing Battle') is credited by only ONE lineage — the en fandom's 'Volume 18 (Ch 1)' and its Russian translation 'Том 18, глава 1' — while the es wiki records NO volume 18 on this row and the zh wiki garbles it as '18卷（第四章）' (v18 ch 4 is 歴史を刻む星々, which is ep 58's territory). The unproven-tail convention (advance on unknown SIZE) presumes the tail exists on two INDEPENDENT sources; it does not here, so the END stays at the furthest agreed volume and the share stays in chapters_adapted with a single-lineage partial. NOTE this costs the reader nothing: ep 54 does not finish volume 17 either (v17 ch 5's Emilia/Regulus thread continues into ep 55 — the licensor's 第55話 synopsis opens on exactly the scene 第54話 ends on: 'レグルス…困惑するエミリアは着替えを持ってきた百八十四番と呼ばれる女性にレグルスのことを聞く'), so the C1 continue lands INSIDE volume 17 either way and the next volume to open is 18 under both readings. Confidence MEDIUM because the volume seam inside this row is not page-verified. Flagged for Sean.",
+   "sources": [
+    "https://rezero.fandom.com/api.php?action=parse&page=Episode%2054&prop=wikitext&format=json",
+    "https://rezero.fandom.com/es/api.php?action=parse&page=Episodio%2054&prop=wikitext&format=json",
+    "https://rezero.fandom.com/ru/api.php?action=parse&page=Re%3AZero%20%D0%AD%D0%BF%D0%B8%D0%B7%D0%BE%D0%B4%2054&prop=wikitext&format=json",
+    "https://rezero.fandom.com/zh/api.php?action=parse&page=%E5%8A%A8%E7%94%BB%3A%E7%AC%AC54%E9%9B%86&prop=wikitext&format=json",
+    "https://re-zero-anime.jp/tv/story/tv3.html",
+    "https://en.wikipedia.org/w/api.php?action=parse&page=Re%3AZero%20season%203&prop=wikitext&format=json",
+    "https://rezero.fandom.com/api.php?action=parse&page=Re%3AZero%20Light%20Novel%20Volume%2017&prop=wikitext&format=json",
+    "https://rezero.fandom.com/zh/api.php?action=parse&page=%E5%B0%8F%E8%AF%B4%3A17%E5%8D%B7&prop=wikitext&format=json",
+    "https://www.kadokawa.co.jp/product/321806000205/",
+    "https://rezero.fandom.com/api.php?action=parse&page=Re%3AZero%20Light%20Novel%20Volume%2018&prop=wikitext&format=json",
+    "https://rezero.fandom.com/zh/api.php?action=parse&page=%E5%B0%8F%E8%AF%B4%3A18%E5%8D%B7&prop=wikitext&format=json",
+    "https://www.kadokawa.co.jp/product/321809000108/",
+    "https://ja.wikipedia.org/w/api.php?action=parse&pageid=3333726&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episode": 55,
+   "end_chapter": 18,
+   "start_chapter": 17,
+   "chapters_adapted": "v17 ch 5 (the Emilia/Regulus and Julius/Roy threads), v18 prologue, v18 ch 1-2",
+   "volume": 18,
+   "confidence": "high",
+   "note": "SPACE: LN VOLUME space (T24) — end_chapter / start_chapter / volume all carry the MF文庫J tankobon volume number of 長月達平『Re:ゼロから始める異世界生活』; chapters_adapted names the units INSIDE the volume as the printed table of contents numbers them (序章 = prologue, 第N章 = ch N). This is NOT the web novel's arc/part space (なろう 第五章1-81) and NOT any per-arc comicalization's chapter space (T24: the arc manga is a downstream licensed work, never an instrument). END 18 (A4): four wikis agree — en 'Volume 17 (Ch 5), Volume 18 (Prologue-Ch 2)', es 'Volumen 17 (capítulo 5) / Volumen 18 (prólogo-capítulo 2)', ru 'Том 17, глава 5 / Том 18, Пролог-Глава 2', zh '17卷（第五章） / 18卷（序章~第二章）'. TITLE TEST: 濁流 IS volume 18's PROLOGUE (en 'Prologue: Muddy Stream'; zh '序章：浊流'). START 17 (A10): the row opens on the continuation of v17 ch 5 (Regulus and Emilia; Julius stays behind to fight Roy) — a substantial leading share, not a teaser. CONTENT: Kadokawa's volume-18 blurb is this episode plus the next few — '都市庁舎奪還作戦が失敗に終わり、一時は濁流に呑まれる水門都市プリステラ。' — and en-WP's ep-55 summary ends on exactly that (the watergates open, the city floods, Capella's three new demands).",
+   "sources": [
+    "https://rezero.fandom.com/api.php?action=parse&page=Episode%2055&prop=wikitext&format=json",
+    "https://rezero.fandom.com/es/api.php?action=parse&page=Episodio%2055&prop=wikitext&format=json",
+    "https://rezero.fandom.com/ru/api.php?action=parse&page=Re%3AZero%20%D0%AD%D0%BF%D0%B8%D0%B7%D0%BE%D0%B4%2055&prop=wikitext&format=json",
+    "https://rezero.fandom.com/zh/api.php?action=parse&page=%E5%8A%A8%E7%94%BB%3A%E7%AC%AC55%E9%9B%86&prop=wikitext&format=json",
+    "https://re-zero-anime.jp/tv/story/tv3.html",
+    "https://en.wikipedia.org/w/api.php?action=parse&page=Re%3AZero%20season%203&prop=wikitext&format=json",
+    "https://rezero.fandom.com/api.php?action=parse&page=Re%3AZero%20Light%20Novel%20Volume%2017&prop=wikitext&format=json",
+    "https://rezero.fandom.com/zh/api.php?action=parse&page=%E5%B0%8F%E8%AF%B4%3A17%E5%8D%B7&prop=wikitext&format=json",
+    "https://www.kadokawa.co.jp/product/321806000205/",
+    "https://rezero.fandom.com/api.php?action=parse&page=Re%3AZero%20Light%20Novel%20Volume%2018&prop=wikitext&format=json",
+    "https://rezero.fandom.com/zh/api.php?action=parse&page=%E5%B0%8F%E8%AF%B4%3A18%E5%8D%B7&prop=wikitext&format=json",
+    "https://www.kadokawa.co.jp/product/321809000108/",
+    "https://ja.wikipedia.org/w/api.php?action=parse&pageid=3333726&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episode": 56,
+   "end_chapter": 18,
+   "start_chapter": 18,
+   "chapters_adapted": "v18 ch 1-3",
+   "volume": 18,
+   "confidence": "high",
+   "note": "SPACE: LN VOLUME space (T24) — end_chapter / start_chapter / volume all carry the MF文庫J tankobon volume number of 長月達平『Re:ゼロから始める異世界生活』; chapters_adapted names the units INSIDE the volume as the printed table of contents numbers them (序章 = prologue, 第N章 = ch N). This is NOT the web novel's arc/part space (なろう 第五章1-81) and NOT any per-arc comicalization's chapter space (T24: the arc manga is a downstream licensed work, never an instrument). END 18 / START 18: en 'Volume 18 (Ch 1-Ch 3)', es 'Volumen 18 (capítulo 1-3)', ru 'Том 18, Главы 1-3', zh '18卷（第一章~第三章）' — four wikis, no dissent. TITLE TEST: 騎士の条件 IS volume 18 chapter 2 (en 'Chapter 2: Conditions of the Knight'; zh '第二章：骑士的条件'). CONTENT: the licensor's 第56話 synopsis (Subaru wakes after the flood with Priscilla and Liliana; Capella's new demands broadcast by metia) is the 敗戦処理 aftermath (ch 1) running into ch 2.",
+   "sources": [
+    "https://rezero.fandom.com/api.php?action=parse&page=Episode%2056&prop=wikitext&format=json",
+    "https://rezero.fandom.com/es/api.php?action=parse&page=Episodio%2056&prop=wikitext&format=json",
+    "https://rezero.fandom.com/ru/api.php?action=parse&page=Re%3AZero%20%D0%AD%D0%BF%D0%B8%D0%B7%D0%BE%D0%B4%2056&prop=wikitext&format=json",
+    "https://rezero.fandom.com/zh/api.php?action=parse&page=%E5%8A%A8%E7%94%BB%3A%E7%AC%AC56%E9%9B%86&prop=wikitext&format=json",
+    "https://re-zero-anime.jp/tv/story/tv3.html",
+    "https://en.wikipedia.org/w/api.php?action=parse&page=Re%3AZero%20season%203&prop=wikitext&format=json",
+    "https://rezero.fandom.com/api.php?action=parse&page=Re%3AZero%20Light%20Novel%20Volume%2018&prop=wikitext&format=json",
+    "https://rezero.fandom.com/zh/api.php?action=parse&page=%E5%B0%8F%E8%AF%B4%3A18%E5%8D%B7&prop=wikitext&format=json",
+    "https://www.kadokawa.co.jp/product/321809000108/",
+    "https://ja.wikipedia.org/w/api.php?action=parse&pageid=3333726&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episode": 57,
+   "end_chapter": 18,
+   "start_chapter": 18,
+   "chapters_adapted": "v18 ch 2-3",
+   "volume": 18,
+   "confidence": "high",
+   "note": "SPACE: LN VOLUME space (T24) — end_chapter / start_chapter / volume all carry the MF文庫J tankobon volume number of 長月達平『Re:ゼロから始める異世界生活』; chapters_adapted names the units INSIDE the volume as the printed table of contents numbers them (序章 = prologue, 第N章 = ch N). This is NOT the web novel's arc/part space (なろう 第五章1-81) and NOT any per-arc comicalization's chapter space (T24: the arc manga is a downstream licensed work, never an instrument). END 18 / START 18: en 'Volume 18 (Ch 2-Ch 3)', es 'Volumen 18 (capítulo 2-3)', ru 'Том 18, Главы 2-3' (zh reads '第二章~第四章', one unit wider — the outlier). TITLE TEST: 最も新しい英雄と最も古い英雄 IS volume 18 chapter 3 (en 'Chapter 3: The Most Recent Hero and the Most Ancient Hero'; zh '第三章：最新的英雄与最古老的英雄'; web novel 『最も新しい英雄と最も古い英雄』, part 42). CONTENT: the licensor's 第57話 synopsis (Al's 対話鏡 call reaches Emilia; Subaru's broadcast speech) matches, and en-WP's summary confirms the speech is this row's spine.",
+   "sources": [
+    "https://rezero.fandom.com/api.php?action=parse&page=Episode%2057&prop=wikitext&format=json",
+    "https://rezero.fandom.com/es/api.php?action=parse&page=Episodio%2057&prop=wikitext&format=json",
+    "https://rezero.fandom.com/ru/api.php?action=parse&page=Re%3AZero%20%D0%AD%D0%BF%D0%B8%D0%B7%D0%BE%D0%B4%2057&prop=wikitext&format=json",
+    "https://rezero.fandom.com/zh/api.php?action=parse&page=%E5%8A%A8%E7%94%BB%3A%E7%AC%AC57%E9%9B%86&prop=wikitext&format=json",
+    "https://re-zero-anime.jp/tv/story/tv3.html",
+    "https://en.wikipedia.org/w/api.php?action=parse&page=Re%3AZero%20season%203&prop=wikitext&format=json",
+    "https://rezero.fandom.com/api.php?action=parse&page=Re%3AZero%20Light%20Novel%20Volume%2018&prop=wikitext&format=json",
+    "https://rezero.fandom.com/zh/api.php?action=parse&page=%E5%B0%8F%E8%AF%B4%3A18%E5%8D%B7&prop=wikitext&format=json",
+    "https://www.kadokawa.co.jp/product/321809000108/",
+    "https://ja.wikipedia.org/w/api.php?action=parse&pageid=3333726&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episode": 58,
+   "end_chapter": 18,
+   "start_chapter": 18,
+   "chapters_adapted": "v18 ch 4-5",
+   "volume": 18,
+   "confidence": "high",
+   "note": "SPACE: LN VOLUME space (T24) — end_chapter / start_chapter / volume all carry the MF文庫J tankobon volume number of 長月達平『Re:ゼロから始める異世界生活』; chapters_adapted names the units INSIDE the volume as the printed table of contents numbers them (序章 = prologue, 第N章 = ch N). This is NOT the web novel's arc/part space (なろう 第五章1-81) and NOT any per-arc comicalization's chapter space (T24: the arc manga is a downstream licensed work, never an instrument). END 18 / START 18: all four wikis agree ('Volume 18 (Ch 4-Ch 5)' / 'capítulo 4-5' / 'Главы 4-5' / '第四章~第五章'). TITLE TEST: いつか好きになる人 IS volume 18 chapter 5 (en 'Chapter 5: The One You Will Come to Love Someday'; zh '第五章：迟早会喜欢上的人'; web novel 『いつか好きになる人』, part 48). CONTENT: the licensor's 第58話 synopsis (the four Witch-Cult demands discussed in the city-hall meeting room; Otto admits he brought 叡智の書 into the city) and en-WP's summary (Wilhelm names Kurgan and Theresia; the assignments for the four fronts) are volume 18's closing two chapters. Volume 18 is not finished here — ch 5 straddles into ep 59.",
+   "sources": [
+    "https://rezero.fandom.com/api.php?action=parse&page=Episode%2058&prop=wikitext&format=json",
+    "https://rezero.fandom.com/es/api.php?action=parse&page=Episodio%2058&prop=wikitext&format=json",
+    "https://rezero.fandom.com/ru/api.php?action=parse&page=Re%3AZero%20%D0%AD%D0%BF%D0%B8%D0%B7%D0%BE%D0%B4%2058&prop=wikitext&format=json",
+    "https://rezero.fandom.com/zh/api.php?action=parse&page=%E5%8A%A8%E7%94%BB%3A%E7%AC%AC58%E9%9B%86&prop=wikitext&format=json",
+    "https://re-zero-anime.jp/tv/story/tv3.html",
+    "https://en.wikipedia.org/w/api.php?action=parse&page=Re%3AZero%20season%203&prop=wikitext&format=json",
+    "https://rezero.fandom.com/api.php?action=parse&page=Re%3AZero%20Light%20Novel%20Volume%2018&prop=wikitext&format=json",
+    "https://rezero.fandom.com/zh/api.php?action=parse&page=%E5%B0%8F%E8%AF%B4%3A18%E5%8D%B7&prop=wikitext&format=json",
+    "https://www.kadokawa.co.jp/product/321809000108/",
+    "https://ja.wikipedia.org/w/api.php?action=parse&pageid=3333726&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episode": 59,
+   "end_chapter": 19,
+   "start_chapter": 18,
+   "chapters_adapted": "v18 ch 5, v19 prologue, v19 ch 1-2, v19 ch 6 (out-of-order fragment)",
+   "volume": 19,
+   "confidence": "high",
+   "note": "SPACE: LN VOLUME space (T24) — end_chapter / start_chapter / volume all carry the MF文庫J tankobon volume number of 長月達平『Re:ゼロから始める異世界生活』; chapters_adapted names the units INSIDE the volume as the printed table of contents numbers them (序章 = prologue, 第N章 = ch N). This is NOT the web novel's arc/part space (なろう 第五章1-81) and NOT any per-arc comicalization's chapter space (T24: the arc manga is a downstream licensed work, never an instrument). END 19 (A4): four wikis agree — en 'Volume 18 (Ch 5), Volume 19 (Prologue-Ch 2, Ch 6)', es 'Volumen 18 (capítulo 5) / Volumen 19 (prólogo-capítulo 2 y 6)', ru 'Том 18, Глава 5 / Том 19, Пролог-Глава 2, Глава 6', zh '18卷（第五章） / 19卷（序章~第二章、第六章）'. TITLE TEST: 混戦都市 IS volume 19's PROLOGUE (en 'Prologue: A City of Strife'; zh '序章：混战都市'; web novel 『混戦都市』, part 53). START 18 (A10): the row opens on the tail of v18 ch 5. CONTENT: Kadokawa's volume-19 blurb is this row's own premise — '大罪司教に占拠された都市を解放するべく、王選候補者と騎士たちがついに大罪司教と激突する！' — and the licensor's 第59話 synopsis names the four simultaneous assaults ('制御塔四ヶ所同時攻略の火蓋が切って落とされる'). The ch-6 material here is an out-of-order fragment (annotated 'rearranged'); ch 6 レグルス・コルニアス is properly adapted by ep 62.",
+   "sources": [
+    "https://rezero.fandom.com/api.php?action=parse&page=Episode%2059&prop=wikitext&format=json",
+    "https://rezero.fandom.com/es/api.php?action=parse&page=Episodio%2059&prop=wikitext&format=json",
+    "https://rezero.fandom.com/ru/api.php?action=parse&page=Re%3AZero%20%D0%AD%D0%BF%D0%B8%D0%B7%D0%BE%D0%B4%2059&prop=wikitext&format=json",
+    "https://rezero.fandom.com/zh/api.php?action=parse&page=%E5%8A%A8%E7%94%BB%3A%E7%AC%AC59%E9%9B%86&prop=wikitext&format=json",
+    "https://re-zero-anime.jp/tv/story/tv3.html",
+    "https://en.wikipedia.org/w/api.php?action=parse&page=Re%3AZero%20season%203&prop=wikitext&format=json",
+    "https://rezero.fandom.com/api.php?action=parse&page=Re%3AZero%20Light%20Novel%20Volume%2018&prop=wikitext&format=json",
+    "https://rezero.fandom.com/zh/api.php?action=parse&page=%E5%B0%8F%E8%AF%B4%3A18%E5%8D%B7&prop=wikitext&format=json",
+    "https://www.kadokawa.co.jp/product/321809000108/",
+    "https://rezero.fandom.com/api.php?action=parse&page=Re%3AZero%20Light%20Novel%20Volume%2019&prop=wikitext&format=json",
+    "https://rezero.fandom.com/zh/api.php?action=parse&page=%E5%B0%8F%E8%AF%B4%3A19%E5%8D%B7&prop=wikitext&format=json",
+    "https://www.kadokawa.co.jp/product/321812000141/",
+    "https://ja.wikipedia.org/w/api.php?action=parse&pageid=3333726&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episode": 60,
+   "end_chapter": 19,
+   "start_chapter": 19,
+   "chapters_adapted": "v19 ch 1-3, v19 ch 6 (out-of-order fragment)",
+   "volume": 19,
+   "confidence": "high",
+   "note": "SPACE: LN VOLUME space (T24) — end_chapter / start_chapter / volume all carry the MF文庫J tankobon volume number of 長月達平『Re:ゼロから始める異世界生活』; chapters_adapted names the units INSIDE the volume as the printed table of contents numbers them (序章 = prologue, 第N章 = ch N). This is NOT the web novel's arc/part space (なろう 第五章1-81) and NOT any per-arc comicalization's chapter space (T24: the arc manga is a downstream licensed work, never an instrument). END 19 / START 19: four wikis agree ('Volume 19 (Ch 1-Ch 3, Ch 6)' / 'capítulo 1-3 y 6' / 'Главы 1-3, Глава 6' / '第一章~第三章，第六章'). TITLE TEST: 強欲攻略戦 IS volume 19 chapter 1 (en 'Chapter 1: Thus Opens the Crusade Against Greed'; zh '第一章：强欲攻略战开幕'; web novel 『強欲攻略戦開幕』, part 49). CONTENT: the licensor's 第60話 synopsis (Capella at the city hall; 'ラインハルトとレグルスによる最強対無敵の戦いが本格化') is chapter 1's own subject. The ch-6 material is again an out-of-order fragment (annotated); ch 6 is properly adapted by ep 62.",
+   "sources": [
+    "https://rezero.fandom.com/api.php?action=parse&page=Episode%2060&prop=wikitext&format=json",
+    "https://rezero.fandom.com/es/api.php?action=parse&page=Episodio%2060&prop=wikitext&format=json",
+    "https://rezero.fandom.com/ru/api.php?action=parse&page=Re%3AZero%20%D0%AD%D0%BF%D0%B8%D0%B7%D0%BE%D0%B4%2060&prop=wikitext&format=json",
+    "https://rezero.fandom.com/zh/api.php?action=parse&page=%E5%8A%A8%E7%94%BB%3A%E7%AC%AC60%E9%9B%86&prop=wikitext&format=json",
+    "https://re-zero-anime.jp/tv/story/tv3.html",
+    "https://en.wikipedia.org/w/api.php?action=parse&page=Re%3AZero%20season%203&prop=wikitext&format=json",
+    "https://rezero.fandom.com/api.php?action=parse&page=Re%3AZero%20Light%20Novel%20Volume%2019&prop=wikitext&format=json",
+    "https://rezero.fandom.com/zh/api.php?action=parse&page=%E5%B0%8F%E8%AF%B4%3A19%E5%8D%B7&prop=wikitext&format=json",
+    "https://www.kadokawa.co.jp/product/321812000141/",
+    "https://ja.wikipedia.org/w/api.php?action=parse&pageid=3333726&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episode": 61,
+   "end_chapter": 19,
+   "start_chapter": 19,
+   "chapters_adapted": "v19 ch 3-4",
+   "volume": 19,
+   "confidence": "high",
+   "note": "SPACE: LN VOLUME space (T24) — end_chapter / start_chapter / volume all carry the MF文庫J tankobon volume number of 長月達平『Re:ゼロから始める異世界生活』; chapters_adapted names the units INSIDE the volume as the printed table of contents numbers them (序章 = prologue, 第N章 = ch N). This is NOT the web novel's arc/part space (なろう 第五章1-81) and NOT any per-arc comicalization's chapter space (T24: the arc manga is a downstream licensed work, never an instrument). END 19 / START 19: four wikis agree ('Volume 19 (Ch 3-Ch 4)' / 'capítulo 3-4' / 'Главы 3-4' / '第三章~第四章'). TITLE TEST: リリアナ・マスカレード IS volume 19 chapter 4 (en 'Chapter 4: Liliana Masquerade'; zh '第四章：莉莉安娜·马斯卡莱德'; web novel 『リリアナ・マスカレード』, part 67). CONTENT: the licensor's 第61話 synopsis is Liliana's life story and the Priscilla/Sirius confrontation — chapter 4 exactly.",
+   "sources": [
+    "https://rezero.fandom.com/api.php?action=parse&page=Episode%2061&prop=wikitext&format=json",
+    "https://rezero.fandom.com/es/api.php?action=parse&page=Episodio%2061&prop=wikitext&format=json",
+    "https://rezero.fandom.com/ru/api.php?action=parse&page=Re%3AZero%20%D0%AD%D0%BF%D0%B8%D0%B7%D0%BE%D0%B4%2061&prop=wikitext&format=json",
+    "https://rezero.fandom.com/zh/api.php?action=parse&page=%E5%8A%A8%E7%94%BB%3A%E7%AC%AC61%E9%9B%86&prop=wikitext&format=json",
+    "https://re-zero-anime.jp/tv/story/tv3.html",
+    "https://en.wikipedia.org/w/api.php?action=parse&page=Re%3AZero%20season%203&prop=wikitext&format=json",
+    "https://rezero.fandom.com/api.php?action=parse&page=Re%3AZero%20Light%20Novel%20Volume%2019&prop=wikitext&format=json",
+    "https://rezero.fandom.com/zh/api.php?action=parse&page=%E5%B0%8F%E8%AF%B4%3A19%E5%8D%B7&prop=wikitext&format=json",
+    "https://www.kadokawa.co.jp/product/321812000141/",
+    "https://ja.wikipedia.org/w/api.php?action=parse&pageid=3333726&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episode": 62,
+   "end_chapter": 19,
+   "start_chapter": 19,
+   "chapters_adapted": "v19 ch 3, v19 ch 5-6",
+   "volume": 19,
+   "confidence": "high",
+   "note": "SPACE: LN VOLUME space (T24) — end_chapter / start_chapter / volume all carry the MF文庫J tankobon volume number of 長月達平『Re:ゼロから始める異世界生活』; chapters_adapted names the units INSIDE the volume as the printed table of contents numbers them (序章 = prologue, 第N章 = ch N). This is NOT the web novel's arc/part space (なろう 第五章1-81) and NOT any per-arc comicalization's chapter space (T24: the arc manga is a downstream licensed work, never an instrument). END 19 / START 19: four wikis agree ('Volume 19 (Ch 3, Ch 5-Ch 6)' / 'capítulo 3, 5-6' / 'Главы 3, Главы 5-6' / '第三章，第五章-第六章'). TITLE TEST: レグルス・コルニアス IS volume 19 chapter 6, the volume's LAST chapter (en 'Chapter 6: Regulus Corneas'; zh '第六章：雷格鲁斯·科尼亚斯'; web novel 『レグルス・コルニアス』, part 59). CONTENT: the licensor's 第62話 synopsis (Emilia and the brides; 百八十四番) and en-WP's summary (Regulus' death; Sirius knocked into the canal in ep 61 and captured) close both the Greed and the Wrath threads — which is exactly the state Kadokawa's volume-20 blurb opens on ('『強欲』と『憤怒』の大罪司教が陥落し、なおも戦いの続く水門都市'). Volume 19 is COMPLETE at this row.",
+   "sources": [
+    "https://rezero.fandom.com/api.php?action=parse&page=Episode%2062&prop=wikitext&format=json",
+    "https://rezero.fandom.com/es/api.php?action=parse&page=Episodio%2062&prop=wikitext&format=json",
+    "https://rezero.fandom.com/ru/api.php?action=parse&page=Re%3AZero%20%D0%AD%D0%BF%D0%B8%D0%B7%D0%BE%D0%B4%2062&prop=wikitext&format=json",
+    "https://rezero.fandom.com/zh/api.php?action=parse&page=%E5%8A%A8%E7%94%BB%3A%E7%AC%AC62%E9%9B%86&prop=wikitext&format=json",
+    "https://re-zero-anime.jp/tv/story/tv3.html",
+    "https://en.wikipedia.org/w/api.php?action=parse&page=Re%3AZero%20season%203&prop=wikitext&format=json",
+    "https://rezero.fandom.com/api.php?action=parse&page=Re%3AZero%20Light%20Novel%20Volume%2019&prop=wikitext&format=json",
+    "https://rezero.fandom.com/zh/api.php?action=parse&page=%E5%B0%8F%E8%AF%B4%3A19%E5%8D%B7&prop=wikitext&format=json",
+    "https://www.kadokawa.co.jp/product/321812000141/",
+    "https://rezero.fandom.com/api.php?action=parse&page=Re%3AZero%20Light%20Novel%20Volume%2020&prop=wikitext&format=json",
+    "https://rezero.fandom.com/zh/api.php?action=parse&page=%E5%B0%8F%E8%AF%B4%3A20%E5%8D%B7&prop=wikitext&format=json",
+    "https://www.kadokawa.co.jp/product/321903000103/",
+    "https://ja.wikipedia.org/w/api.php?action=parse&pageid=3333726&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episode": 63,
+   "end_chapter": 20,
+   "start_chapter": 20,
+   "chapters_adapted": "v20 prologue, v20 ch 1-3",
+   "volume": 20,
+   "confidence": "high",
+   "note": "SPACE: LN VOLUME space (T24) — end_chapter / start_chapter / volume all carry the MF文庫J tankobon volume number of 長月達平『Re:ゼロから始める異世界生活』; chapters_adapted names the units INSIDE the volume as the printed table of contents numbers them (序章 = prologue, 第N章 = ch N). This is NOT the web novel's arc/part space (なろう 第五章1-81) and NOT any per-arc comicalization's chapter space (T24: the arc manga is a downstream licensed work, never an instrument). END 20 / START 20: four wikis agree ('Volume 20 (Prologue-Ch 3)' / 'prólogo-capítulo 3' / 'Пролог-Глава 3' / '20卷（序章~第三章）'). TITLE TEST: 戦士の称賛 IS volume 20 chapter 3 (en 'Chapter 3: Commend of the Warrior'; zh '第三章：战士的称赞'; web novel 『戦士の称賛』, part 62). CONTENT: the licensor's 第63話 synopsis cuts between all three threads the volume's first chapters carry — 'オットーやフェルトたちとライの戦闘は続き' (ch 1 醜悪なる晩餐会), '地下水道ではアルが再生し続けるカペラとの死闘' (ch 2 領域の被害者), 'クルガンとの戦いの最中…ガーフィール' (ch 3 戦士の称賛).",
+   "sources": [
+    "https://rezero.fandom.com/api.php?action=parse&page=Episode%2063&prop=wikitext&format=json",
+    "https://rezero.fandom.com/es/api.php?action=parse&page=Episodio%2063&prop=wikitext&format=json",
+    "https://rezero.fandom.com/ru/api.php?action=parse&page=Re%3AZero%20%D0%AD%D0%BF%D0%B8%D0%B7%D0%BE%D0%B4%2063&prop=wikitext&format=json",
+    "https://rezero.fandom.com/zh/api.php?action=parse&page=%E5%8A%A8%E7%94%BB%3A%E7%AC%AC63%E9%9B%86&prop=wikitext&format=json",
+    "https://re-zero-anime.jp/tv/story/tv3.html",
+    "https://en.wikipedia.org/w/api.php?action=parse&page=Re%3AZero%20season%203&prop=wikitext&format=json",
+    "https://rezero.fandom.com/api.php?action=parse&page=Re%3AZero%20Light%20Novel%20Volume%2020&prop=wikitext&format=json",
+    "https://rezero.fandom.com/zh/api.php?action=parse&page=%E5%B0%8F%E8%AF%B4%3A20%E5%8D%B7&prop=wikitext&format=json",
+    "https://www.kadokawa.co.jp/product/321903000103/",
+    "https://ja.wikipedia.org/w/api.php?action=parse&pageid=3333726&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episode": 64,
+   "end_chapter": 20,
+   "start_chapter": 20,
+   "chapters_adapted": "v20 ch 4-5",
+   "volume": 20,
+   "confidence": "high",
+   "note": "SPACE: LN VOLUME space (T24) — end_chapter / start_chapter / volume all carry the MF文庫J tankobon volume number of 長月達平『Re:ゼロから始める異世界生活』; chapters_adapted names the units INSIDE the volume as the printed table of contents numbers them (序章 = prologue, 第N章 = ch N). This is NOT the web novel's arc/part space (なろう 第五章1-81) and NOT any per-arc comicalization's chapter space (T24: the arc manga is a downstream licensed work, never an instrument). END 20 / START 20: four wikis agree on ch 4-5 (en 'Volume 20 (Ch 4-Ch 5)' / es 'capítulo 4 y 5' / ru 'Главы 4-5'; the zh wiki prints the right chapters under the wrong volume number — '19卷（第四章~第五章）' — a volume-number typo it repeats on eps 65 and 66, refuted by the other three wikis and by the chapter titles, which are volume 20's). TITLE TEST: テレシア・ヴァン・アストレア IS volume 20 chapter 5 (en 'Chapter 5: Theresia van Astrea'; zh 小说:20卷 '第五章：特雷西亚·梵·阿斯特雷亚'; web novel 『テレシア・ヴァン・アストレア』, part 73). CONTENT: the licensor's 第64話 synopsis is the Wilhelm/Theresia duel end to end — chapters 4 (剣鬼恋歌――断章) and 5.",
+   "sources": [
+    "https://rezero.fandom.com/api.php?action=parse&page=Episode%2064&prop=wikitext&format=json",
+    "https://rezero.fandom.com/es/api.php?action=parse&page=Episodio%2064&prop=wikitext&format=json",
+    "https://rezero.fandom.com/ru/api.php?action=parse&page=Re%3AZero%20%D0%AD%D0%BF%D0%B8%D0%B7%D0%BE%D0%B4%2064&prop=wikitext&format=json",
+    "https://rezero.fandom.com/zh/api.php?action=parse&page=%E5%8A%A8%E7%94%BB%3A%E7%AC%AC64%E9%9B%86&prop=wikitext&format=json",
+    "https://re-zero-anime.jp/tv/story/tv3.html",
+    "https://en.wikipedia.org/w/api.php?action=parse&page=Re%3AZero%20season%203&prop=wikitext&format=json",
+    "https://rezero.fandom.com/api.php?action=parse&page=Re%3AZero%20Light%20Novel%20Volume%2020&prop=wikitext&format=json",
+    "https://rezero.fandom.com/zh/api.php?action=parse&page=%E5%B0%8F%E8%AF%B4%3A20%E5%8D%B7&prop=wikitext&format=json",
+    "https://www.kadokawa.co.jp/product/321903000103/",
+    "https://ja.wikipedia.org/w/api.php?action=parse&pageid=3333726&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episode": 65,
+   "end_chapter": 20,
+   "start_chapter": 20,
+   "chapters_adapted": "v20 prologue, v20 ch 1-2",
+   "volume": 20,
+   "confidence": "high",
+   "note": "SPACE: LN VOLUME space (T24) — end_chapter / start_chapter / volume all carry the MF文庫J tankobon volume number of 長月達平『Re:ゼロから始める異世界生活』; chapters_adapted names the units INSIDE the volume as the printed table of contents numbers them (序章 = prologue, 第N章 = ch N). This is NOT the web novel's arc/part space (なろう 第五章1-81) and NOT any per-arc comicalization's chapter space (T24: the arc manga is a downstream licensed work, never an instrument). END 20 / START 20: en 'Volume 20 (Prologue, Ch 1-Ch 2)', es 'Volumen 20 (prólogo y capítulo 1-2)', ru 'Том 20, Пролог-Глава 2' (zh again prints the chapters under the wrong volume: '19卷（第一章～第二章）'). TITLE TEST: 醜悪なる晩餐会 IS volume 20 chapter 1 (en 'Chapter 1: An Ugly Dinner Banquet'; zh 小说:20卷 '第一章：丑陋的晚餐会'; web novel 『醜悪なる晩餐会』, part 69). This row STEPS BACK inside volume 20 after ep 64's ch 4-5 — see the 'rearranged' annotation; it does not move any volume-level position because eps 63-66 all sit in volume 20. CONTENT: the licensor's 第65話 synopsis carries the two threads chapter 1 owns (Otto and Felt against Lye; Julius and Ricardo against Roy at the No. 2 district control tower).",
+   "sources": [
+    "https://rezero.fandom.com/api.php?action=parse&page=Episode%2065&prop=wikitext&format=json",
+    "https://rezero.fandom.com/es/api.php?action=parse&page=Episodio%2065&prop=wikitext&format=json",
+    "https://rezero.fandom.com/ru/api.php?action=parse&page=Re%3AZero%20%D0%AD%D0%BF%D0%B8%D0%B7%D0%BE%D0%B4%2065&prop=wikitext&format=json",
+    "https://rezero.fandom.com/zh/api.php?action=parse&page=%E5%8A%A8%E7%94%BB%3A%E7%AC%AC65%E9%9B%86&prop=wikitext&format=json",
+    "https://re-zero-anime.jp/tv/story/tv3.html",
+    "https://en.wikipedia.org/w/api.php?action=parse&page=Re%3AZero%20season%203&prop=wikitext&format=json",
+    "https://rezero.fandom.com/api.php?action=parse&page=Re%3AZero%20Light%20Novel%20Volume%2020&prop=wikitext&format=json",
+    "https://rezero.fandom.com/zh/api.php?action=parse&page=%E5%B0%8F%E8%AF%B4%3A20%E5%8D%B7&prop=wikitext&format=json",
+    "https://www.kadokawa.co.jp/product/321903000103/",
+    "https://ja.wikipedia.org/w/api.php?action=parse&pageid=3333726&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episode": 66,
+   "end_chapter": 20,
+   "start_chapter": 20,
+   "chapters_adapted": "v20 ch 1, v20 ch 6-7 (ch 7 unfinished — ep 67 continues in it)",
+   "volume": 20,
+   "confidence": "high",
+   "note": "SPACE: LN VOLUME space (T24) — end_chapter / start_chapter / volume all carry the MF文庫J tankobon volume number of 長月達平『Re:ゼロから始める異世界生活』; chapters_adapted names the units INSIDE the volume as the printed table of contents numbers them (序章 = prologue, 第N章 = ch N). This is NOT the web novel's arc/part space (なろう 第五章1-81) and NOT any per-arc comicalization's chapter space (T24: the arc manga is a downstream licensed work, never an instrument). END 20 / START 20: en 'Volume 20 (Ch 1, Ch 6-Ch 7)', es 'Volumen 20 (capítulo 1 y capítulo 6-7)', ru 'Том 20, Глава 1, Главы 6-7' (zh: right chapters, wrong volume number again). TITLE TEST: プリステラ攻防戦リザルト IS volume 20 chapter 6 (en 'Chapter 6: Results of the Battle for Priestella'; zh 小说:20卷 '第六章：普利斯提拉攻防战结果'; the author's own web novel prints three consecutive sections 『プリステラ攻防戦リザルト１』『プリステラ攻防戦リザルト２』『プリステラ攻防戦リザルト３』 (parts 74-76 in the WEB-NOVEL space)). THE VOLUME IS NOT FINISHED HERE: chapter 7 (水面に残す波紋 / zh '第七章：水面留下波纹') straddles into ep 67, which three wikis credit as 'Volume 20 (Ch 7), Volume 21 (Prologue-Ch 1, Interlude)' — and ja-WP's arc line says the same, 第五章…アニメ第3期 第51話 - アニメ第4期 第67話. So this season FINALE is a mid-volume stop (C1), not a terminal; no post-series continue is delivered (the series is airing and rows 67-79 exist).",
+   "sources": [
+    "https://rezero.fandom.com/api.php?action=parse&page=Episode%2066&prop=wikitext&format=json",
+    "https://rezero.fandom.com/es/api.php?action=parse&page=Episodio%2066&prop=wikitext&format=json",
+    "https://rezero.fandom.com/ru/api.php?action=parse&page=Re%3AZero%20%D0%AD%D0%BF%D0%B8%D0%B7%D0%BE%D0%B4%2066&prop=wikitext&format=json",
+    "https://rezero.fandom.com/zh/api.php?action=parse&page=%E5%8A%A8%E7%94%BB%3A%E7%AC%AC66%E9%9B%86&prop=wikitext&format=json",
+    "https://re-zero-anime.jp/tv/story/tv3.html",
+    "https://en.wikipedia.org/w/api.php?action=parse&page=Re%3AZero%20season%203&prop=wikitext&format=json",
+    "https://rezero.fandom.com/api.php?action=parse&page=Re%3AZero%20Light%20Novel%20Volume%2020&prop=wikitext&format=json",
+    "https://rezero.fandom.com/zh/api.php?action=parse&page=%E5%B0%8F%E8%AF%B4%3A20%E5%8D%B7&prop=wikitext&format=json",
+    "https://www.kadokawa.co.jp/product/321903000103/",
+    "https://ja.wikipedia.org/w/api.php?action=parse&pageid=3333726&prop=wikitext&format=json"
+   ]
+  }
+ ],
+ "continue_points": [],
+ "anchor_hostile": [],
+ "annotations": [
+  {
+   "episodes": [
+    51
+   ],
+   "kind": "graft",
+   "chapters": "v17 ch 4 (ゴージャス・タイガー — the Garfiel thread of the Priestella arrival day, incl. the Elsa phantom that taunts him)",
+   "note": "weight: SLIVER — because it is one relocated thread inside a 90-minute episode whose spine is the whole of volume 16 (four wikis put the complete volume on this row; the zh wiki words it '16卷（整卷）'), and the material is a POV strand of the same story day rather than a new story beat. All four Re:Zero wikis credit 'v17 ch 4' to this row (en 'Volume 17 (Ch 4)', es 'Volumen 17 (capítulo 4)', ru 'Том 17, глава 4', zh '17卷（第四章）'), so the fragment's EXISTENCE is well sourced; what it must not do is move the END (the beelzebub 46/47 lesson — a graft is not a frontier). The chapter is adapted PROPERLY by ep 53, whose own range is 'v17 ch 2-4' and whose title IS that chapter (ゴージャス・タイガー): read v17 ch 4 there. The en fandom's Anime Differences for this row names the visible seam: the Elsa phantom Garfiel sees 'has several lines of dialogue, compared to the light novel in which she did not speak' — quoted from the wikitext, whose own sentence carries [[…]] links around the two names.",
+   "sources": [
+    "https://rezero.fandom.com/api.php?action=parse&page=Episode%2051&prop=wikitext&format=json",
+    "https://rezero.fandom.com/es/api.php?action=parse&page=Episodio%2051&prop=wikitext&format=json",
+    "https://rezero.fandom.com/ru/api.php?action=parse&page=Re%3AZero%20%D0%AD%D0%BF%D0%B8%D0%B7%D0%BE%D0%B4%2051&prop=wikitext&format=json",
+    "https://rezero.fandom.com/zh/api.php?action=parse&page=%E5%8A%A8%E7%94%BB%3A%E7%AC%AC51%E9%9B%86&prop=wikitext&format=json",
+    "https://rezero.fandom.com/api.php?action=parse&page=Re%3AZero%20Light%20Novel%20Volume%2017&prop=wikitext&format=json",
+    "https://rezero.fandom.com/zh/api.php?action=parse&page=%E5%B0%8F%E8%AF%B4%3A17%E5%8D%B7&prop=wikitext&format=json",
+    "https://rezero.fandom.com/api.php?action=parse&page=Episode%2053&prop=wikitext&format=json",
+    "https://en.wikipedia.org/w/api.php?action=parse&page=Re%3AZero%20season%203&prop=wikitext&format=json",
+    "https://re-zero-anime.jp/tv/story/tv3.html"
+   ]
+  },
+  {
+   "episodes": [
+    54
+   ],
+   "kind": "partial",
+   "chapters": "v17 ch 5 (unfinished — its Emilia/Regulus thread continues into ep 55), v18 ch 1 (opening share — single-lineage claim)",
+   "note": "weight: SIGNIFICANT for the v17 ch 5 share (it is the row's title chapter and its whole second half), SLIVER-to-unknown for the v18 ch 1 share. TWO facts here. (a) This row does not finish volume 17: all four wikis also put 'v17 ch 5' on ep 55, and the licensor's 第55話 synopsis opens on the very scene 第54話 closes on (Regulus and the bewildered Emilia, and 百八十四番 bringing her a change of clothes) — so the C1 continue after ep 54 lands INSIDE volume 17. (b) A share of volume 18 chapter 1 (敗戦処理) is credited by ONE lineage only — the en fandom's 'Volume 18 (Ch 1)' and its Russian translation — while the es wiki records no volume 18 on this row at all and the zh wiki writes '18卷（第四章）', which is certainly wrong (v18 ch 4 is 歴史を刻む星々). Under R3-before-A47 (the Dai wave-14 existence clause) an unproven tail on one lineage does not advance the END, so the END is held at 17 and the share is recorded here instead of in the position. The size of the share is genuinely unknown: no source states it, and the LN's own seam is ambiguous (v17 ch 5 都市庁舎奪還作戦 covers the operation; v18 ch 1 敗戦処理 covers the losing battle's aftermath, and the anime's ep 54 ends mid-battle). Flagged for Sean.",
+   "sources": [
+    "https://rezero.fandom.com/api.php?action=parse&page=Episode%2054&prop=wikitext&format=json",
+    "https://rezero.fandom.com/es/api.php?action=parse&page=Episodio%2054&prop=wikitext&format=json",
+    "https://rezero.fandom.com/ru/api.php?action=parse&page=Re%3AZero%20%D0%AD%D0%BF%D0%B8%D0%B7%D0%BE%D0%B4%2054&prop=wikitext&format=json",
+    "https://rezero.fandom.com/zh/api.php?action=parse&page=%E5%8A%A8%E7%94%BB%3A%E7%AC%AC54%E9%9B%86&prop=wikitext&format=json",
+    "https://rezero.fandom.com/api.php?action=parse&page=Episode%2055&prop=wikitext&format=json",
+    "https://rezero.fandom.com/api.php?action=parse&page=Re%3AZero%20Light%20Novel%20Volume%2017&prop=wikitext&format=json",
+    "https://rezero.fandom.com/api.php?action=parse&page=Re%3AZero%20Light%20Novel%20Volume%2018&prop=wikitext&format=json",
+    "https://rezero.fandom.com/zh/api.php?action=parse&page=%E5%B0%8F%E8%AF%B4%3A17%E5%8D%B7&prop=wikitext&format=json",
+    "https://rezero.fandom.com/zh/api.php?action=parse&page=%E5%B0%8F%E8%AF%B4%3A18%E5%8D%B7&prop=wikitext&format=json",
+    "https://re-zero-anime.jp/tv/story/tv3.html",
+    "https://en.wikipedia.org/w/api.php?action=parse&page=Re%3AZero%20season%203&prop=wikitext&format=json",
+    "https://www.kadokawa.co.jp/product/321809000108/"
+   ]
+  },
+  {
+   "episodes": [
+    66
+   ],
+   "kind": "partial",
+   "chapters": "v20 ch 7 (unfinished — ep 67 continues inside it)",
+   "note": "weight: SIGNIFICANT — the chapter's opening is this finale's coda (Subaru reunites with Julius and is stunned that Emilia does not recognise him: Roy has eaten his name), but the chapter is not completed here. Three wikis credit ep 67 with 'Volume 20 (Ch 7)' before it moves into volume 21 (en 'Volume 20 (Ch 7), Volume 21 (Prologue-Ch 1, Interlude)', ru 'Том 20 / Том 21', zh '文庫正傳20卷(第七章) / 文庫正傳21卷'), and ja-WP's arc line independently ends 第五章 at anime ep 67, not 66. This is why NO continue_point is delivered on the block: the season stops mid-volume-20 and the next stored row resumes in the same chapter (C1), so the frontier is read off the anchors rather than published as a post-series continue.",
+   "sources": [
+    "https://rezero.fandom.com/api.php?action=parse&page=Episode%2066&prop=wikitext&format=json",
+    "https://rezero.fandom.com/api.php?action=parse&page=Episode%2067&prop=wikitext&format=json",
+    "https://rezero.fandom.com/ru/api.php?action=parse&page=Re%3AZero%20%D0%AD%D0%BF%D0%B8%D0%B7%D0%BE%D0%B4%2067&prop=wikitext&format=json",
+    "https://rezero.fandom.com/zh/api.php?action=parse&page=%E5%8A%A8%E7%94%BB%3A%E7%AC%AC67%E9%9B%86&prop=wikitext&format=json",
+    "https://rezero.fandom.com/api.php?action=parse&page=Re%3AZero%20Light%20Novel%20Volume%2020&prop=wikitext&format=json",
+    "https://rezero.fandom.com/zh/api.php?action=parse&page=%E5%B0%8F%E8%AF%B4%3A20%E5%8D%B7&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/w/api.php?action=parse&pageid=3333726&prop=wikitext&format=json",
+    "https://en.wikipedia.org/w/api.php?action=parse&page=Re%3AZero%20season%203&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episodes": [
+    59,
+    60,
+    62
+   ],
+   "kind": "rearranged",
+   "chapters": "v19 ch 6 (fragments carried early by eps 59 and 60), v19 ch 3 (revisited by ep 62 after ep 61)",
+   "note": "weight: SLIVER for each out-of-order fragment — because volume 19 tells four SIMULTANEOUS battles one thread at a time (prologue 混戦都市, ch 1 強欲攻略戦開幕, ch 2 燃える都市の賛歌, ch 3 絶縁状にサインを, ch 4 リリアナ・マスカレード, ch 5 ――信じてる, ch 6 レグルス・コルニアス) while the anime cuts between all of them every week. en-WP's episode summaries show the cross-cutting directly (each of eps 59-62 moves between Reinhard/Regulus, Priscilla/Sirius, Wilhelm/Theresia, Garfiel/Kurgan, Julius/Roy and Al/Capella), and the four wikis' per-episode fields page-partition the chapters accordingly. Nothing here moves a volume-level position: eps 59-62 all END at volume 19, so this annotation records the reorder for audits (A42) rather than a back-jump. The main body of ch 6 is adapted by ep 62 (its title chapter); ch 3 is carried mainly by eps 60 and 61.",
+   "sources": [
+    "https://rezero.fandom.com/api.php?action=parse&page=Episode%2059&prop=wikitext&format=json",
+    "https://rezero.fandom.com/api.php?action=parse&page=Episode%2060&prop=wikitext&format=json",
+    "https://rezero.fandom.com/api.php?action=parse&page=Episode%2062&prop=wikitext&format=json",
+    "https://rezero.fandom.com/es/api.php?action=parse&page=Episodio%2060&prop=wikitext&format=json",
+    "https://rezero.fandom.com/ru/api.php?action=parse&page=Re%3AZero%20%D0%AD%D0%BF%D0%B8%D0%B7%D0%BE%D0%B4%2060&prop=wikitext&format=json",
+    "https://rezero.fandom.com/zh/api.php?action=parse&page=%E5%8A%A8%E7%94%BB%3A%E7%AC%AC60%E9%9B%86&prop=wikitext&format=json",
+    "https://rezero.fandom.com/api.php?action=parse&page=Re%3AZero%20Light%20Novel%20Volume%2019&prop=wikitext&format=json",
+    "https://rezero.fandom.com/zh/api.php?action=parse&page=%E5%B0%8F%E8%AF%B4%3A19%E5%8D%B7&prop=wikitext&format=json",
+    "https://en.wikipedia.org/w/api.php?action=parse&page=Re%3AZero%20season%203&prop=wikitext&format=json",
+    "https://re-zero-anime.jp/tv/story/tv3.html"
+   ]
+  },
+  {
+   "episodes": [
+    63,
+    64,
+    65,
+    66
+   ],
+   "kind": "rearranged",
+   "chapters": "v20 prologue, v20 ch 1-2 (carried by eps 63 and 65 and closed by ep 66), v20 ch 3, v20 ch 4-5 (ep 64)",
+   "note": "weight: SIGNIFICANT — this is a real UN-CROSS-CUT, not a fragment. Volume 20 tells its threads sequentially (prologue 月下狂想曲, ch 1 醜悪なる晩餐会 = Otto/Felt vs Lye and Julius/Ricardo vs Roy, ch 2 領域の被害者 = Al vs Capella, ch 3 戦士の称賛 = Garfiel vs Kurgan, ch 4 剣鬼恋歌――断章 and ch 5 テレシア・ヴァン・アストレア = Wilhelm vs Theresia, ch 6 プリステラ攻防戦リザルト, ch 7 水面に残す波紋) and the anime interleaves them chronologically: ep 63 = prologue-ch 3, ep 64 = ch 4-5, ep 65 STEPS BACK to prologue/ch 1-2, ep 66 = ch 1 + ch 6-7. Two independent lineages: the per-episode fields on the en/es/ru wikis, and the TITLE TEST (ep 64's title is ch 5's, ep 65's title is ch 1's — a title-order regression the licensor's own synopses confirm in content: 第64話 is the Wilhelm/Theresia duel end to end, 第65話 returns to Otto vs ライ and Julius/Ricardo vs ロイ). Every one of these rows still ENDS at volume 20, so no volume-level position back-jumps.",
+   "sources": [
+    "https://rezero.fandom.com/api.php?action=parse&page=Episode%2063&prop=wikitext&format=json",
+    "https://rezero.fandom.com/api.php?action=parse&page=Episode%2064&prop=wikitext&format=json",
+    "https://rezero.fandom.com/api.php?action=parse&page=Episode%2065&prop=wikitext&format=json",
+    "https://rezero.fandom.com/api.php?action=parse&page=Episode%2066&prop=wikitext&format=json",
+    "https://rezero.fandom.com/es/api.php?action=parse&page=Episodio%2064&prop=wikitext&format=json",
+    "https://rezero.fandom.com/es/api.php?action=parse&page=Episodio%2065&prop=wikitext&format=json",
+    "https://rezero.fandom.com/ru/api.php?action=parse&page=Re%3AZero%20%D0%AD%D0%BF%D0%B8%D0%B7%D0%BE%D0%B4%2065&prop=wikitext&format=json",
+    "https://rezero.fandom.com/api.php?action=parse&page=Re%3AZero%20Light%20Novel%20Volume%2020&prop=wikitext&format=json",
+    "https://rezero.fandom.com/zh/api.php?action=parse&page=%E5%B0%8F%E8%AF%B4%3A20%E5%8D%B7&prop=wikitext&format=json",
+    "https://re-zero-anime.jp/tv/story/tv3.html",
+    "https://ja.wikipedia.org/w/api.php?action=parse&pageid=4469375&prop=wikitext&format=json",
+    "https://en.wikipedia.org/w/api.php?action=parse&page=Re%3AZero%20season%203&prop=wikitext&format=json"
+   ]
+  },
+  {
+   "episodes": [
+    51,
+    54,
+    55,
+    56
+   ],
+   "kind": "divergence",
+   "chapters": "v16 ch 1-5 (ep 51), v17 ch 3-5 (ep 54), v17 ch 5 + v18 prologue-ch 2 (ep 55), v18 ch 1-3 (ep 56)",
+   "note": "weight: SLIVER on every segment — these are the anime-only ADDITIONS the en fandom names, and none of them is a story-carrying original share (T28's materiality bar), so under the faithfulness clause every row stays CANON. ep 51: an opening parkour/whip training montage (the source has Subaru training under Clind; the anime visualises it and drops Clind's name), an anime-only flashback visual of a younger Wilhelm and Reinhard, and extra spoken lines for the Elsa phantom ('compared to the light novel in which she did not speak'). ep 54: 'A scene depicting Heinkel taking Felt hostage, which was not displayed in the light novel despite still occurring, was added' — the EVENT is the source's own, only the staging is new; also Al travels with the city-hall party before splitting off. ep 55: a scene where Otto assists Felt in freeing her from Heinkel, 'which was not displayed in the light novel despite still occurring, was added' — same shape. ep 56: a scene displaying the two curses 'within Subaru resisting each other is added'. Note that the en fandom leaves its Anime Differences section EMPTY for eps 59-66; that is SILENCE, not a finding, and the positive readings (the licensor's per-episode synopses and en-WP's summaries, both pure light-novel content) carry the standing there.",
+   "sources": [
+    "https://rezero.fandom.com/api.php?action=parse&page=Episode%2051&prop=wikitext&format=json",
+    "https://rezero.fandom.com/api.php?action=parse&page=Episode%2054&prop=wikitext&format=json",
+    "https://rezero.fandom.com/api.php?action=parse&page=Episode%2055&prop=wikitext&format=json",
+    "https://rezero.fandom.com/api.php?action=parse&page=Episode%2056&prop=wikitext&format=json",
+    "https://en.wikipedia.org/w/api.php?action=parse&page=Re%3AZero%20season%203&prop=wikitext&format=json",
+    "https://re-zero-anime.jp/tv/story/tv3.html"
+   ]
+  },
+  {
+   "episodes": [
+    51,
+    57,
+    58
+   ],
+   "kind": "abridged",
+   "chapters": "v16 ch 1-5 (ep 51), v18 ch 2-3 (ep 57), v18 ch 4-5 (ep 58)",
+   "note": "weight: the cuts are SLIVERS of the adapted chapters — recorded because they are named cuts, not because they change any standing (T28 faithfulness clause: cuts, condensations and omissions keep a row canon). ep 51: Mimi frolicking around Beatrice and pulling her hair is omitted and Subaru's night talk with Rem is abridged (both are instead expanded in the Break Time short 'Break Time Episode 51', which is NOT one of our rows); the Julius/Subaru exchange about the rumour that Heinkel kidnapped the missing princess is cut; Annerose Miload's attendance and the camp's inability to prove the Great Rabbit kill are dropped. ep 57: Garfiel following Subaru's scent to find Al is cut, and the written note for Subaru's speech is dropped. ep 58: Wilhelm's exposition naming Sphinx, Valga Cromwell, Libre Fermi and the Demi-Human Alliance is cut, and Dartz the restorer is not mentioned.",
+   "sources": [
+    "https://rezero.fandom.com/api.php?action=parse&page=Episode%2051&prop=wikitext&format=json",
+    "https://rezero.fandom.com/api.php?action=parse&page=Episode%2057&prop=wikitext&format=json",
+    "https://rezero.fandom.com/api.php?action=parse&page=Episode%2058&prop=wikitext&format=json",
+    "https://en.wikipedia.org/w/api.php?action=parse&page=Re%3AZero%20season%203&prop=wikitext&format=json",
+    "https://re-zero-anime.jp/tv/story/tv3.html"
+   ]
+  }
+ ],
+ "repairs": [],
+ "type_corrections": [
+  {
+   "episodes": [
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66
+   ],
+   "type": "canon",
+   "why": "CONFIRMED AS STORED — all sixteen rows are canon against the series' identified source, the MF文庫J light novel (T24/T25). The census line for this block reads 'the row's type is the wiki mint's default (canon) and no source has typed it'; it is now typed. Positive evidence, per row and on independent lineages: (1) EVERY ONE of the sixteen episode titles is verbatim a light-novel chapter title of volumes 16-20, and every one falls inside the volume range the wikis credit to that row — 51 劇場型悪意 = v16 ch 5, 52 氷炎の結末 = v17 ch 2, 53 ゴージャス・タイガー = v17 ch 4, 54 都市庁舎奪還作戦 = v17 ch 5, 55 濁流 = v18 prologue, 56 騎士の条件 = v18 ch 2, 57 最も新しい英雄と最も古い英雄 = v18 ch 3, 58 いつか好きになる人 = v18 ch 5, 59 混戦都市 = v19 prologue, 60 強欲攻略戦 = v19 ch 1, 61 リリアナ・マスカレード = v19 ch 4, 62 レグルス・コルニアス = v19 ch 6, 63 戦士の称賛 = v20 ch 3, 64 テレシア・ヴァン・アストレア = v20 ch 5, 65 醜悪なる晩餐会 = v20 ch 1, 66 プリステラ攻防戦リザルト = v20 ch 6. The chapter lists come from TWO separately-maintained wikis (the English Re:Zero Wiki's per-volume ToC and the Chinese wiki's 小说:NN卷 章节 lists), and fourteen of the sixteen strings are also the author's own section titles in the 第五章　『歴史を刻む星々』 index of the web novel on 小説家になろう. (2) The licensor's own per-episode synopses at re-zero-anime.jp/tv/story/tv3.html are light-novel content for all sixteen rows with nothing original in them, and en-Wikipedia's independent per-episode summaries agree beat for beat. (3) ja-Wikipedia states the block's frame outright: 第五章『歴史を刻む星々』（文庫第16巻 - 第20巻、アニメ第3期 第51話 - アニメ第4期 第67話）. NOTHING here is filler or mixed: there is no recap row in the numbered run (the only 総集編 is a REBROADCAST-ONLY split of the 90-minute ep 51 — ja-WP's footnote on row 51 reads 「初回放送時は90分で放送されたが、再放送では通常の30分枠で『「劇場型悪意」総集編 前編』および『「劇場型悪意」総集編 後編』の2回に分けた総集編として放送された」 — and neither half ever carried an episode number or is one of our rows), and the only anime-original material any source names is a set of slivers — a training montage, a Wilhelm/Reinhard flashback visual, extra lines for an Elsa phantom, two dramatisations of events the novel states off-page (Heinkel taking Felt hostage; Otto freeing her), and a shot of Subaru's two curses resisting each other. Under T28's faithfulness clause those are divergence annotations, never a story-carrying original share, so no row reaches 'mixed'. animefillerlist makes NO claim on this block: its Re:Zero page carries exactly 50 data rows, ending at ep 50 (2021-03-24), so its silence here is not evidence in either direction.",
+   "sources": [
+    "https://ja.wikipedia.org/w/api.php?action=parse&pageid=3333726&prop=wikitext&format=json",
+    "https://ja.wikipedia.org/w/api.php?action=parse&pageid=4469375&prop=wikitext&format=json",
+    "https://re-zero-anime.jp/tv/story/tv3.html",
+    "https://en.wikipedia.org/w/api.php?action=parse&page=Re%3AZero%20season%203&prop=wikitext&format=json",
+    "https://rezero.fandom.com/api.php?action=parse&page=Episode%2051&prop=wikitext&format=json",
+    "https://rezero.fandom.com/api.php?action=parse&page=Episode%2055&prop=wikitext&format=json",
+    "https://rezero.fandom.com/api.php?action=parse&page=Episode%2063&prop=wikitext&format=json",
+    "https://rezero.fandom.com/api.php?action=parse&page=Re%3AZero%20Light%20Novel%20Volume%2016&prop=wikitext&format=json",
+    "https://rezero.fandom.com/api.php?action=parse&page=Re%3AZero%20Light%20Novel%20Volume%2018&prop=wikitext&format=json",
+    "https://rezero.fandom.com/api.php?action=parse&page=Re%3AZero%20Light%20Novel%20Volume%2020&prop=wikitext&format=json",
+    "https://rezero.fandom.com/zh/api.php?action=parse&page=%E5%B0%8F%E8%AF%B4%3A16%E5%8D%B7&prop=wikitext&format=json",
+    "https://rezero.fandom.com/zh/api.php?action=parse&page=%E5%B0%8F%E8%AF%B4%3A19%E5%8D%B7&prop=wikitext&format=json",
+    "https://rezero.fandom.com/zh/api.php?action=parse&page=%E5%B0%8F%E8%AF%B4%3A20%E5%8D%B7&prop=wikitext&format=json",
+    "https://ncode.syosetu.com/n2267be/?p=4",
+    "https://www.animefillerlist.com/shows/re-zero-starting-life-another-world"
+   ]
+  }
+ ],
+ "structure": {
+  "notes": "THE INSTRUMENT AND ITS SPACE (T24, first anchors ever on this series — 0 stored anchors on all 79 rows). The source is the light novel 長月達平『Re:ゼロから始める異世界生活』 (KADOKAWA / MF文庫J), so end_chapter / start_chapter / volume all carry the LN VOLUME number and chapters_adapted names the units INSIDE that volume exactly as the printed table of contents numbers them (序章 = prologue, 第N章 = chapter N). Three other spaces exist for this work and NONE of them is used here: (a) the WEB NOVEL on 小説家になろう numbers Arc 5 as 第五章　『歴史を刻む星々』 parts 1-81 plus a 幕間 — cited in this verdict only for the author's own title STRINGS, never for a position; (b) the per-arc comicalizations (『第五章 水の都と英雄の詩』, アライブ+, 高瀬若弥, serialised from 2024-02-19, 3 volumes so far) are DOWNSTREAM licensed works — never an instrument, never a position (T24: no fake manga position); (c) the anime's own numbering. \n\nTHE BLOCK'S ARC MAP. ja-Wikipedia's 章構成 section states it verbatim: 第五章『歴史を刻む星々』（文庫第16巻 - 第20巻、アニメ第3期 第51話 - アニメ第4期 第67話） and 第六章『記憶の回廊』（文庫第21巻 - 第25巻、アニメ第4期 第68話 - ）; its 既刊一覧 table says the same in the 備考 column (vols 16-20 carry a rowspan '第五章', vols 21-25 '第六章'). So the S3 block (51-66) is Arc 5 minus its tail: rows 51-66 map onto LIGHT-NOVEL VOLUMES 16 -> 20, in order, with no skipped volume, and volume 20 is NOT finished at the finale (v20 ch 7 straddles into ep 67, which is the w1b agent's first row). The en Re:Zero Wiki's Season 3 page says the same in prose — the season adapts 'a majority of' Arc 5. \n\nTHE VOLUME MAP, ROW BY ROW (END [START] {chapters}): 51 -> 16 [16] {v16 ch 1-5, the complete volume; + a v17 ch 4 graft}; 52 -> 17 [17] {v17 ch 1-2}; 53 -> 17 [17] {v17 ch 2-4}; 54 -> 17 [17] {v17 ch 3-5, ch 5 unfinished; + a single-lineage v18 ch 1 opening share}; 55 -> 18 [17] {v17 ch 5, v18 prologue-ch 2}; 56 -> 18 [18] {v18 ch 1-3}; 57 -> 18 [18] {v18 ch 2-3}; 58 -> 18 [18] {v18 ch 4-5}; 59 -> 19 [18] {v18 ch 5, v19 prologue-ch 2, + a v19 ch 6 fragment}; 60 -> 19 [19] {v19 ch 1-3, + a v19 ch 6 fragment}; 61 -> 19 [19] {v19 ch 3-4}; 62 -> 19 [19] {v19 ch 3, ch 5-6 — volume 19 COMPLETE}; 63 -> 20 [20] {v20 prologue-ch 3}; 64 -> 20 [20] {v20 ch 4-5}; 65 -> 20 [20] {v20 prologue, ch 1-2}; 66 -> 20 [20] {v20 ch 1, ch 6-7 — ch 7 unfinished}. The END sequence is monotone: 16,17,17,17,18,18,18,18,19,19,19,19,20,20,20,20. \n\nTHE FOUR LINEAGES BEHIND THAT MAP. (1) FOUR separately-edited Re:Zero wikis carry a per-episode volume+chapter field — rezero.fandom.com (en), /es, /ru and /zh (checked by siteinfo: four different sitenames and bases, not aliases of one another). They agree on fourteen of the sixteen rows outright; the disagreements are informative and are reported where they matter (see ep 54, and the zh wiki's volume-number typos on eps 64-66 where it writes 19卷 for volume 20's own chapters, plus a stray '18卷（第四章）' it repeats on eps 53 and 54). (2) THE TITLE TEST: every S3 episode title is verbatim a light-novel chapter title, and the chapter lists come from two different wikis in two different languages (the en wiki's per-volume ToC in Yen Press's renderings, the zh wiki's 章节 lists) with the author's own 第五章　『歴史を刻む星々』 web-novel index as a Japanese witness for fourteen of the strings. (3) THE LICENSOR: re-zero-anime.jp/tv/story/tv3.html carries a full synopsis for each of the sixteen rows, and they line up with Kadokawa's own per-volume あらすじ for volumes 16-20 (e.g. v18: '都市庁舎奪還作戦が失敗に終わり、一時は濁流に呑まれる水門都市プリステラ' -> eps 54-56; v19: '大罪司教に占拠された都市を解放するべく、王選候補者と騎士たちがついに大罪司教と激突する！' -> eps 59-62; v20: '『強欲』と『憤怒』の大罪司教が陥落し、なおも戦いの続く水門都市' -> eps 63-66). (4) en-Wikipedia's 'Re:Zero season 3' page carries long per-episode summaries that match all of the above and is also the G59 mint source for our stored titles and dates. \n\nSTANDING, ROW BY ROW — every row CONFIRMED CANON (a confirmed default is a result): 51 canon (all of v16; the 90-minute premiere); 52 canon (v17 ch 1-2); 53 canon (v17 ch 2-4); 54 canon (v17 ch 3-5); 55 canon (v17 ch 5 + v18 prologue-ch 2); 56 canon (v18 ch 1-3); 57 canon (v18 ch 2-3); 58 canon (v18 ch 4-5); 59 canon (v18 ch 5 + v19 prologue-ch 2); 60 canon (v19 ch 1-3); 61 canon (v19 ch 3-4); 62 canon (v19 ch 3, 5-6); 63 canon (v20 prologue-ch 3); 64 canon (v20 ch 4-5); 65 canon (v20 prologue, ch 1-2); 66 canon (v20 ch 1, 6-7). No row is filler and no row is mixed: the only anime-original material any source names is a handful of slivers (annotated as divergence), and there is no recap row in the numbered run. \n\nTITLES AND DATES — NO REPAIRS. All sixteen stored English titles and all sixteen stored air dates are confirmed against en-Wikipedia's 'Re:Zero season 3' table (the G59 mint source), ja-Wikipedia's 第3期 各話リスト, the licensor's STORY page and the en Re:Zero Wiki's Season 3 table. Day-of-week sweep: all sixteen dates are WEDNESDAYS (TOKYO MX's slot), with the expected two-cour gap between 襲撃編 (2024-10-02 -> 11-20, 8 rows) and 反撃編 (2025-02-05 -> 03-26, 8 rows), which ja-WP states outright. \n\nWHAT THE CONTEXT GOT WRONG, AND ONE LIVE HAZARD. (a) THE ASK'S PREMISE FAILED: the context says 'ja.wikipedia's episode list … the 3rd season table's 原作 column names volumes per episode'. It does not — ja-WP's 第3期 table has eight columns and NO 原作 column among them — its エピソードリスト/base/header declares Number = 話数, Title = サブタイトル, Aux0 = 脚本, Aux1 = 絵コンテ, Aux2 = 演出, Aux3 = 作画監督, Aux4 = 総作画監督, Aux5 = 初放送日 for any season. The volume map had to be built from the four wikis, the title test and the licensor/publisher content match instead; ja-WP contributes the ARC-level line, which is decisive but block-level. (b) A GOLDEN-KAMUY-CLASS CONTAMINATION HAZARD sits on en-Wikipedia's 'List of Re:Zero episodes': that page carries a SECOND '=== Season 3 (2024-2025) ===' heading under '== Break Time ==' holding the sixteen Re:ゼロから始める休憩時間 mini-anime shorts, numbered 37-52, with THE SAME SIXTEEN AIR DATES as our rows 51-66 and titles like 眠れる鬼の夜話 / エミリア陣営奮闘記 / 大瀑布フォロワーズ. Our rows are clean (they carry the TV titles), but any future scrape of that page must be scoped to the '== Episodes ==' section or it will import the shorts' titles onto the TV rows. (c) animefillerlist's Re:Zero page is at the slug /shows/re-zero-starting-life-another-world (not the id-shaped slug in the context) and holds exactly 50 data rows ending at ep 50 — confirmed, no claim on this block. animefillerguide has no page for this series at /anime/re-zero-starting-life-in-another-world/ (404). (d) The en Re:Zero Wiki's Season 3 table misprints ep 66's Japanese title as プリステラ攻略戦リザルト; ja-WP, en-WP, the licensor's STORY page, the zh wiki's ToC and the author's web novel all read 攻防戦. That is the wiki's error, not ours — our stored English title is unaffected.\n\nHOW WIKI FIELDS ARE QUOTED HERE: the four Re:Zero wikis' per-episode volume fields are quoted as they RENDER (en 'Volume 17 (Ch 3-Ch 5)', es 'Volumen 17 (capítulo 3-5)', ru 'Том 17, главы 3-5', zh '17卷（第三章～第五章）'); the underlying wikitext wraps the volume label in [[…|…]] link markup and the es wiki adds <small>…</small>, so a byte-for-byte grep of a rendered field against the parse API's wikitext will not match — the label and the parenthetical each do. Every Japanese and English sentence quoted in single quotes in this verdict WAS grepped against the fetched bytes of the URL cited beside it."
+ },
+ "flags_for_sean": [
+  "EP 54's VOLUME SEAM — the one fork in the block. Does ep 54 reach LN volume 18 or stop inside volume 17? The en Re:Zero Wiki (and its Russian mirror) credit 'Volume 18 (Ch 1)' to the row; the Spanish wiki records only 'Volumen 17 (capítulo 3-5)' and the Chinese wiki writes '18卷（第四章）', which is certainly wrong. I HELD the END at 17 under R3-before-A47 (the Dai wave-14 existence clause: an unproven tail on one lineage does not advance an END) and recorded the share as a single-lineage partial. The reader is unaffected either way — ep 54 does not finish volume 17 in either reading (v17 ch 5's Emilia/Regulus thread continues into ep 55), so the continue lands inside volume 17 and the next volume opened is 18. If Sean prefers the Dai 'advance on unknown size' convention here, the change is end_chapter 17 -> 18, volume 17 -> 18, confidence medium.",
+  "SERIES-LEVEL: this is the FIRST anchor set on a NOVEL owner in the catalog's volume convention, and the series row has total_chapters = null, latest_known = null, total_volumes = null with ZERO volume_boundaries stored. The anchors therefore sit in a space the DB does not yet describe. Sean may want (a) the LN volume count seeded (ja-WP's 既刊一覧 header reads 「既刊65巻+4巻（本編45巻、短編集14巻、外伝6巻、円盤特典4巻）」 — the MAINLINE is 45 volumes) and (b) volume_boundaries for at least 16-20 so the display can render a volume table. Nothing in this verdict depends on it.",
+  "CROSS-WAVE CONSISTENCY with the w1b agent (rows 67-79): ja-WP's arc line ends Arc 5 at anime ep 67, not 66 — 第五章『歴史を刻む星々』（文庫第16巻 - 第20巻、アニメ第3期 第51話 - アニメ第4期 第67話）— and three wikis credit ep 67 with 'Volume 20 (Ch 7)' before it enters volume 21. So ep 67 should anchor END 21 [START 20], and the finale of THIS block (ep 66, END 20) must not be read as completing volume 20. If the two verdicts disagree on that seam, this is the sentence to check.",
+  "A LIVE CONTAMINATION HAZARD on the page our rows were minted from: en-Wikipedia's 'List of Re:Zero episodes' carries a SECOND '=== Season 3 (2024-2025) ===' heading, under '== Break Time ==', holding the sixteen Re:ゼロから始める休憩時間 shorts numbered 37-52 with THE SAME SIXTEEN AIR DATES as our rows 51-66 (眠れる鬼の夜話, エミリア陣営奮闘記, 大瀑布フォロワーズ, ドキドキ王選懇親会 …). Our rows are clean, but this is the golden-kamuy shape exactly and it will bite any future scrape of that page that is not scoped to '== Episodes ==' (the TV rows live on the separate 'Re:Zero season 3' article, transcluded by section)."
+ ]
+}
