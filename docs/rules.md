@@ -141,7 +141,7 @@
 - `N34` Episode totals derive, then floor, then cap — aka `episode totals derivation`
 - `N35` Ruled chapter space: a proven numbering beats AniList totals — aka `ruled chapter space`, `chapter space override`, `CHAPTER_SPACE_OVERRIDES`, `ruledChapterSpace`, `totals re-base`, `propagated scalar`, `the 260-that-is-255 class`, `sourceShifts`, `source chapter shift`, `chapter shift`, `toRuledChapter`, `printed numbering`, `the reading edition`
 
-**I — Identity, franchise & structure** (47)
+**I — Identity, franchise & structure** (48)
 - `I1` Our slug is the identity — aka `identity`, `our slug is identity`, `canonical identity is ours`, `own-slug identity`
 - `I2` Identity registry: every external id maps INTO our id — aka `identity registry`, `registerIds`, `ID COLLISION`, `series_external_ids`
 - `I3` AFG↔canonical registration by evidence strength — aka `registration tiers`, `AFG match tiers`, `identity-first, flag-first`
@@ -189,6 +189,7 @@
 - `I45` The related-works ledger: every extra listed, three layers — aka `related works`, `the related-works ledger`, `related-works ledger`, `the ledger of extras`, `recaps and specials`, `extras ledger`, `sync-related-works`, `extra_same_instrument`, `extra_recap`, `extra_original`, `extra_crossover`, `extra_other_instrument`, `extra_unknown`, `related_work_stale`, `related_work_violation`, `the three layers`, `catch-up`, `skip guide`, `derived watch position`, `deriveWatchPosition`, `extraBucket`, `position is watch order`, `the first watch seat`, `watch order vs release`, `chronology is a note`
 - `I46` One row per work: a wiki or ruled row adopts the identity — aka `one row per work`, `related-work adoption`, `wiki row adoption`, `the ledger adopts the identity`, `matchRelatedTitle`, `related_work_duplicate`, `halo duplicate`
 - `I47` A tag routes; only research or a ruling asserts the fact — aka `a tag routes, research asserts`, `the source tag is a routing hint`, `relation type is a routing hint`, `sources are evidence never truth`, `the owner-instrument edge counts`, `E15`, `the second root`
+- `I48` Short-form spin-offs are related works, never series — aka `the shorts gate`, `short-form route`, `chibi shorts`, `short-form spin-off`, `a shorts spin-off is an extra`, `TV_SHORT spin-off`, `five-minute ONA`, `isShortForm`, `related_work_short_unlisted`, `SHORT_FORM_MAX_MINUTES`
 
 **G — Gates & freshness (sources)** (50)
 - `G1` The flag rule: nothing suspicious auto-applies — aka `flag rule`, `the flag rule`, `the confirm queue`, `nothing suspicious ever auto-applies`
@@ -2601,6 +2602,20 @@ AniList's relation type (SEQUEL / SIDE_STORY / OTHER / ADAPTATION…) and its `s
 - aliases: a tag routes, research asserts, the source tag is a routing hint, relation type is a routing hint, sources are evidence never truth, the owner-instrument edge counts, E15, the second root
 - see: I45, I41, T25, I44, I13
 
+### I48 · Short-form spin-offs are related works, never series
+
+A TV_SHORT or ONA whose STAGED per-episode length is at most five minutes, reached from an owned series by any in-run relation other than SEQUEL (SIDE_STORY / SPIN_OFF / PARENT / OTHER / ALTERNATIVE…), is routed to the related-works ledger as an EXTRA of that owner (I45 layer 1: a row, its bucket and standing derived as for any extra — source ORIGINAL → filler; no instrument edge → unknown, the sitting decides) and is never proposed as a series or a component. The route is a FORMAT-and-length test, not a standing: a 12-minute TV_SHORT run with its own manga (Bungo Stray Dogs WAN!) stays a series candidate; a SEQUEL keeps its bucket (a shorts run we hold continues as shorts); an unstaged or duration-less ONA keeps the series-shaped route (fail closed — the sitting sees it, discovery-stage fills the length); a disposition ruling (series / related_work) beats the route either way. Outcome: every staged short the route sends to the ledger holds a row — related_work_short_unlisted is 0 after sync-related-works.
+
+*Why:* The chibi-shorts shape reached its fourth owner: Frieren's ●● no Mahou (three parts, C1), Re:Zero's Break Time ×4 + Re:PETIT, Tanya's Youjo Shenki ×2, Apothecary's Maomao no Hitorigoto ×2 (C2, §12.148) — every part proposed `series` only because ONA / TV_SHORT is TV-shaped in the halo (SERIES_FORMATS), and each cost a hand ruling; eleven more staged shorts sat in halo_series_unclaimed the same way (Haruhi-chan, AkaKill! Theater, Ple Ple Pleiades, Miniature Dragon…). Sean 2026-09-07 with Cursor: rulings now, the gate queued; the duration bound (not the format alone) came from the census: WAN! is TV_SHORT at 12 minutes and a real run. P30: judgment → gate → audit — the ten C1 / C2 rulings keep their bucket DECLARATIONS (the shorts carry no ADAPTATION edge, so the derivation reads unknown), the routing they also encoded is this gate.
+
+- ruled Sean 2026-09-07 (the C2 sitting (§12.148) and the consolidate after it (§12.150); /add-rule §12.151)
+- layer **both**
+- enforced: [lib/discovery.ts#isShortForm](../scripts/ingest/lib/discovery.ts) · [lib/discovery.ts#bucketOf](../scripts/ingest/lib/discovery.ts) · [sync-related-works.ts](../scripts/ingest/sync-related-works.ts) · [audit-discovery.ts#related_work_short_unlisted](../scripts/ingest/audit-discovery.ts)
+- audit: `related_work_short_unlisted`
+- witnesses: frieren-beyond-journeys-end, re-zero-starting-life-in-another-world, saga-of-tanya-the-evil, the-apothecary-diaries, bungo-stray-dogs
+- aliases: the shorts gate, short-form route, chibi shorts, short-form spin-off, a shorts spin-off is an extra, TV_SHORT spin-off, five-minute ONA, isShortForm, related_work_short_unlisted, SHORT_FORM_MAX_MINUTES
+- see: I45, I42, I13, I47, T25, T29
+
 ## G — Gates & freshness (sources)
 
 ### G1 · The flag rule: nothing suspicious auto-applies
@@ -4345,6 +4360,7 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - 6–8 wave cap → `P12`
 - a licence is not adoption → `T26`
 - a page adopts a series → `I44`
+- a shorts spin-off is an extra → `I48`
 - a tag routes, research asserts → `I47`
 - a wave is the unit of loss → `P12`
 - a writer deletes only rows it minted → `G57`
@@ -4604,6 +4620,7 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - checkpoint after every wave → `P13`
 - checkpoint lattice → `R14`
 - checkpoint steps → `P13`
+- chibi shorts → `I48`
 - chronology is a note → `I45`
 - chToVol → `V3`
 - claimed continuation → handoff → `I37`
@@ -4835,6 +4852,7 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - first FULL chapter rule → `A11`
 - first-chapter display → `A13`
 - first-chapter ruling → `A13`
+- five-minute ONA → `I48`
 - fix the writer, never the data → `P18`
 - flag rule → `G1`
 - flags must be mapped → `T15`
@@ -4975,6 +4993,7 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - Ippo v61 lesson → `V4`
 - Ippo v61 partial-boundary principle → `V2`
 - isNoInstrumentSource → `T31`
+- isShortForm → `I48`
 - join on title → `R20`
 - judgment → gate → audit → `P30`
 - judgment to gate to audit → `P30`
@@ -5263,6 +5282,7 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - rehash rule → `T8`
 - related works → `I45`
 - related_work_duplicate → `I46`
+- related_work_short_unlisted → `I48`
 - related_work_stale → `I45`
 - related_work_violation → `I45`
 - related-work adoption → `I46`
@@ -5387,6 +5407,9 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - sharing never moves position → `A31`
 - sharper deep trigger → `P22`
 - shift verification → `N11`
+- SHORT_FORM_MAX_MINUTES → `I48`
+- short-form route → `I48`
+- short-form spin-off → `I48`
 - sibling-scope ceiling → `G33`
 - side_source → `T26`
 - side_source_on_chain → `T26`
@@ -5555,6 +5578,7 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - the score → `G60`
 - the second root → `I47`
 - the seed queue → `G60`
+- the shorts gate → `I48`
 - the signing table → `I43`
 - the sitting recap → `I42`
 - the sliver clause → `T28`
@@ -5591,6 +5615,7 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - triage lane → `R27`
 - tsc -b gate → `P27`
 - tv ova special movie recap → `T29`
+- TV_SHORT spin-off → `I48`
 - two modes → `P21`
 - two realizations of one outline → `I40`
 - two views one table → `A46`
@@ -5677,6 +5702,6 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 
 ## Scoreboard
 
-- rules: 291 (live 276, planned 8, superseded 7)
+- rules: 292 (live 277, planned 8, superseded 7)
 - live data rules with no audit class (the automation backlog): 83
-- by layer: writer 151 · display 23 · both 32 · process 85
+- by layer: writer 151 · display 23 · both 33 · process 85

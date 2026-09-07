@@ -1154,6 +1154,37 @@
    19-23 / 39 (chain_source) and 18 / 93-95 (AFL's loose Mixed bucket),
    beelzebub 15 / 26-28 / 51, rurouni TV ep 95 (identity). Batch 22 opens on
    the boruto follow-up (lanes I + C) with the batch-21 tooling copied.
+151. ✅ **I48 — SHORT-FORM SPIN-OFFS ARE RELATED WORKS, NEVER SERIES (the shorts gate; /add-rule, 2026-09-07; Sean with Cursor:
+    'rulings now, gate queued' at C2).** THE PREDICATE: a TV_SHORT or ONA whose STAGED per-episode length is at most five minutes,
+    reached from an owned series by any in-run relation other than SEQUEL, routes to the related-works ledger as an EXTRA of that
+    owner (I45 layer 1); its bucket and standing then derive as for any extra; a SEQUEL keeps its bucket; an unstaged or
+    duration-less ONA keeps the series-shaped route (fail closed); a disposition ruling beats the route. THE BOUND CAME FROM THE
+    CENSUS, not the ruling: Cursor's 'TV_SHORT, or an ONA ≤ 5 min' would have routed Bungo Stray Dogs WAN! (TV_SHORT, 12 minutes,
+    its own manga — a real run) — the format alone is no signal, the length is. THE GATE: lib/discovery.ts#isShortForm +
+    SHORT_FORM_MAX_MINUTES (5, inclusive — Haruhi-chan and Kagaijugyou-hen sit on it) read by bucketOf, which every consumer shares
+    (the recap, the census, the ledger writer — P2); MediaLike / Candidate carry `duration` from staging (relation nodes carry
+    none); 11 unit tests (the witnesses, WAN!, Desert Pasta, the null-duration fail-closed, the SEQUEL carve-out, a 3-min TV
+    entry is not the shape). THE OUTCOME CLASS: related_work_short_unlisted (violation) — a staged short the route sends to the
+    ledger with no row of any origin; its first run read 4, all PV / CM shorts the promo rule never rows (I45) — the class now
+    excludes the promo proposal, 0. THE APPLY: sync-related-works 66 inserted / 0 removed (68 candidates, two carry two owners
+    — Nisekoimonogatari, Puella Magi Sonico Magica), the second dry run 0. MY PREDICTION HAD SAID 11: the census prints at most 60
+    lines per class and the scratch read the printed lines — count from the class header, never the listing (a trap, noted
+    here). CENSUS (vs §12.150, every delta explained — P17): UI-truth IDENTICAL in every class (the new rows take kind 'special'
+    from extraKind; 220 verified, 0 failing); discovery: halo_series_unclaimed 162 → 94 (the 68 routed); ledger rows 736 → 802,
+    listed 816 → 884; extra_same_instrument 127 → 136, other_instrument 33 → 36, unknown 269 → 310, original 156 → 165,
+    alternative 70 → 72 (the routed shorts by derived bucket: most carry no ADAPTATION edge — 'unknown', the sitting's), promo
+    7 → 11 (four PV / CM shorts the route reached and the promo rule refused); related_work_unruled 371 → 428 (the pending
+    ones); related_work_cluster_disorder 44 → 52 (date-order seats behind existing rows — listings); related_work_short_unlisted
+    0; related_work_identity_conflict 0 → 1 — SEAN'S: AniList gives ONE MAL id (59832) to two different one-minute Annecy
+    Festival 60th Anniversary shorts (One Piece 143293 → one-piece @978.5, Dragon Ball 147996 → dragon-ball-super @131.53); the
+    registry holds the MAL id for the first and refused the second (I46: a mix-up is refused, ruled by Sean) — the fork: an I46
+    clause 'a MAL id AniList assigns to two distinct works registers to neither (the anilist id is the identity)' (a gate
+    amendment, the general fix) or a per-row MAL repair; every other violation class 0. THE TEN C1 / C2 SHORTS RULINGS STAY as
+    bucket DECLARATIONS (the shorts carry no ADAPTATION edge — the derivation reads 'unknown'); their retiresWhen now names the
+    real condition (the extras programme researches the short) and credits I48 with the routing. LEDGER: I48 (I family, witnesses
+    frieren / re-zero / tanya / apothecary / bungo-stray-dogs; auditClass related_work_short_unlisted); census-kinds marks the
+    class a violation; one-hop case added; the discover-skill trap now cites I48. Edges rebuilt + deployed ×5; 295 tests; lint
+    437 (baseline); system census green.
 150. ✅ **CONSOLIDATE (standard) after C2 + the Pasta seat (2026-09-07; Sean: 'if a deep makes sense do it first').** STEP 0: the
     deep trigger FIRED mechanically — all five lib files changed since the pre-C2 save point (4f651fe6) are ruling maps
     (discovery / franchises / override-chains / related-works / source-relations) that ledger records name as enforcement

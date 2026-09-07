@@ -58,6 +58,8 @@ export type MediaLike = {
   title: { romaji: string | null; english: string | null; native?: string | null };
   /** AniList's source tag (ORIGINAL / MANGA / LIGHT_NOVEL / …) — the extras derivation reads it (I45) */
   source?: string | null;
+  /** AniList's per-episode minutes (staged media only; relation nodes carry none) — the short-form route reads it (I48) */
+  duration?: number | null;
   synonyms?: string[];
   format: string | null;
   status: string | null;
@@ -69,6 +71,8 @@ export type Candidate = {
   anilistId: number;
   title: string;
   format: string | null;
+  /** staged per-episode minutes; null when unstaged or unknown (I48 fails closed: the series-shaped route stays) */
+  duration: number | null;
   status: string | null;
   popularity: number;
   /** every relation type that reached it (SEQUEL / SPIN_OFF / …) */
@@ -160,12 +164,22 @@ const seriesShaped = (format: string | null | undefined): boolean => format == n
 /** I13 (amended 2026-09-05): a work owned by another series is an extra HERE only when that series is one-row and the format is extras-shaped */
 export const oneRowExtraElsewhere = (entriesOfThatSeries: number, format: string | null | undefined): boolean => entriesOfThatSeries === 1 && EXTRA_FORMATS.has(format ?? '');
 
-export function bucketOf(relations: Set<string>, format: string | null | undefined): Bucket {
+/** I48 (Sean 2026-09-07): a TV_SHORT or ONA whose staged per-episode length is at most this many minutes is short-form */
+export const SHORT_FORM_MAX_MINUTES = 5;
+/** I48 — the short-form test: format TV_SHORT or ONA AND a STAGED duration ≤ 5 min; an unknown duration is never short (fail closed: the sitting sees it) */
+export const isShortForm = (format: string | null | undefined, duration: number | null | undefined): boolean =>
+  (format === 'TV_SHORT' || format === 'ONA') && duration != null && duration <= SHORT_FORM_MAX_MINUTES;
+
+export function bucketOf(relations: Set<string>, format: string | null | undefined, duration?: number | null): Bucket {
   if (format === 'MUSIC') return 'ignored';
   if ([...relations].some((r) => RECAP_RELATIONS.has(r))) return 'recap'; // a recap / compilation, whatever its format (N8: never a numbered row)
   const story = [...relations].filter((r) => !IGNORED_RELATIONS.has(r) && r !== 'CHARACTER');
   if (!story.length) return relations.has('CHARACTER') ? 'crossover' : 'ignored';
   if (format != null && EXTRA_FORMATS.has(format)) return 'extra';
+  // I48: a short-form spin-off / side story (≤ 5-min TV_SHORT / ONA) is a RELATED WORK of its owner, never a series candidate — the
+  // chibi-shorts shape (Frieren, Re:Zero Break Time, Youjo Shenki, Maomao no Hitorigoto); a SEQUEL keeps its bucket (a shorts run we hold
+  // continues as shorts); the bucket and standing then derive as for any extra; a disposition ruling beats the route either way
+  if (isShortForm(format, duration) && !story.includes('SEQUEL')) return 'extra';
   if (!seriesShaped(format)) return 'ignored'; // MANGA / NOVEL / ONE_SHOT nodes never come here (type ANIME only), but fail closed
   if (story.includes('SEQUEL')) return 'sequel';
   if (story.some((r) => SERIES_RELATIONS.has(r))) return 'series';
@@ -183,6 +197,7 @@ export function haloCandidates(input: DiscoveryInput): Candidate[] {
         anilistId: node.id,
         title: staged?.title.english ?? staged?.title.romaji ?? node.title.english ?? node.title.romaji ?? String(node.id),
         format: staged?.format ?? node.format ?? null,
+        duration: staged?.duration ?? null,
         status: staged?.status ?? node.status ?? null,
         popularity: staged?.popularity ?? node.popularity ?? 0,
         relations: new Set(),
@@ -248,7 +263,7 @@ export function haloCandidates(input: DiscoveryInput): Candidate[] {
   }
 
   for (const c of out.values()) {
-    c.bucket = bucketOf(c.relations, c.format);
+    c.bucket = bucketOf(c.relations, c.format, c.duration);
     // a related_work RULING beats the format (2026-09-06, C1): an ONA short series is TV-shaped by SERIES_FORMATS and proposed `series`;
     // ruled a related work it is an EXTRA of its owner — the Frieren ●● no Mahou shorts — never a series to build
     if (c.ruling?.disposition === 'related_work' && (c.bucket === 'sequel' || c.bucket === 'series')) c.bucket = 'extra';

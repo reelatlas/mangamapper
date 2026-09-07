@@ -55,6 +55,19 @@ describe('bucketOf', () => {
     expect(bucketOf(new Set(['OTHER']), 'MUSIC')).toBe('ignored');
     expect(bucketOf(new Set(['CHARACTER', 'SEQUEL']), 'TV')).toBe('sequel'); // a noise edge beside a story edge does not hide it
   });
+  it('I48: a short-form spin-off / side story (≤ 5-min TV_SHORT / ONA, staged duration) is an extra, never a series candidate', () => {
+    expect(bucketOf(new Set(['SPIN_OFF']), 'TV_SHORT', 3)).toBe('extra'); // Re:Zero Break Time (2016)
+    expect(bucketOf(new Set(['SIDE_STORY']), 'ONA', 2)).toBe('extra'); // Maomao no Hitorigoto
+    expect(bucketOf(new Set(['SPIN_OFF']), 'ONA', 5)).toBe('extra'); // Haruhi-chan — the bound is inclusive
+    expect(bucketOf(new Set(['OTHER']), 'ONA', 1)).toBe('extra'); // AkaKill! Theater
+    expect(bucketOf(new Set(['SPIN_OFF']), 'TV_SHORT', 12)).toBe('series'); // Bungo Stray Dogs WAN! — a 12-min shorts RUN with its own manga stays a candidate
+    expect(bucketOf(new Set(['SIDE_STORY']), 'ONA', 17)).toBe('series'); // Operation Desert Pasta — not the shape (its own ruling)
+    expect(bucketOf(new Set(['SIDE_STORY']), 'ONA', null)).toBe('series'); // unknown duration fails closed: the sitting sees it
+    expect(bucketOf(new Set(['SIDE_STORY']), 'ONA')).toBe('series');
+    expect(bucketOf(new Set(['SEQUEL']), 'TV_SHORT', 3)).toBe('sequel'); // a shorts run we hold continues as shorts
+    expect(bucketOf(new Set(['SEQUEL']), 'ONA', 3)).toBe('sequel');
+    expect(bucketOf(new Set(['SPIN_OFF']), 'TV', 3)).toBe('series'); // the route is a FORMAT test — a 3-min TV entry is not the shape
+  });
 });
 
 describe('haloCandidates — the witnesses', () => {

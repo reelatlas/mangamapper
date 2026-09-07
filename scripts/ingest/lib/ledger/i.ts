@@ -1064,5 +1064,28 @@ export const RULES: Rule[] = [
     auditClass: ['extra_unknown', 'extra_same_instrument', 'related_work_unruled'],
     witnesses: ['the-prince-of-tennis', 'ranma-1-2'],
   },
-
+  {
+    id: 'I48',
+    aliases: ['the shorts gate', 'short-form route', 'chibi shorts', 'short-form spin-off', 'a shorts spin-off is an extra', 'TV_SHORT spin-off', 'five-minute ONA', 'isShortForm', 'related_work_short_unlisted', 'SHORT_FORM_MAX_MINUTES'],
+    family: 'I',
+    title: 'Short-form spin-offs are related works, never series',
+    statement:
+      "A TV_SHORT or ONA whose STAGED per-episode length is at most five minutes, reached from an owned series by any in-run relation other than SEQUEL (SIDE_STORY / SPIN_OFF / PARENT / OTHER / ALTERNATIVE…), is routed to the related-works ledger as an EXTRA of that owner (I45 layer 1: a row, its bucket and standing derived as for any extra — source ORIGINAL → filler; no instrument edge → unknown, the sitting decides) and is never proposed as a series or a component. The route is a FORMAT-and-length test, not a standing: a 12-minute TV_SHORT run with its own manga (Bungo Stray Dogs WAN!) stays a series candidate; a SEQUEL keeps its bucket (a shorts run we hold continues as shorts); an unstaged or duration-less ONA keeps the series-shaped route (fail closed — the sitting sees it, discovery-stage fills the length); a disposition ruling (series / related_work) beats the route either way. Outcome: every staged short the route sends to the ledger holds a row — related_work_short_unlisted is 0 after sync-related-works.",
+    why:
+      "The chibi-shorts shape reached its fourth owner: Frieren's ●● no Mahou (three parts, C1), Re:Zero's Break Time ×4 + Re:PETIT, Tanya's Youjo Shenki ×2, Apothecary's Maomao no Hitorigoto ×2 (C2, §12.148) — every part proposed `series` only because ONA / TV_SHORT is TV-shaped in the halo (SERIES_FORMATS), and each cost a hand ruling; eleven more staged shorts sat in halo_series_unclaimed the same way (Haruhi-chan, AkaKill! Theater, Ple Ple Pleiades, Miniature Dragon…). Sean 2026-09-07 with Cursor: rulings now, the gate queued; the duration bound (not the format alone) came from the census: WAN! is TV_SHORT at 12 minutes and a real run. P30: judgment → gate → audit — the ten C1 / C2 rulings keep their bucket DECLARATIONS (the shorts carry no ADAPTATION edge, so the derivation reads unknown), the routing they also encoded is this gate.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-07',
+    origin: 'the C2 sitting (§12.148) and the consolidate after it (§12.150); /add-rule §12.151',
+    enforcement: [
+      { path: 'scripts/ingest/lib/discovery.ts', symbol: 'isShortForm' },
+      { path: 'scripts/ingest/lib/discovery.ts', symbol: 'bucketOf' },
+      { path: 'scripts/ingest/sync-related-works.ts' },
+      { path: 'scripts/ingest/audit-discovery.ts', symbol: 'related_work_short_unlisted' },
+    ],
+    layer: 'both',
+    status: 'live',
+    see: ['I45', 'I42', 'I13', 'I47', 'T25', 'T29'],
+    auditClass: ['related_work_short_unlisted'],
+    witnesses: ['frieren-beyond-journeys-end', 're-zero-starting-life-in-another-world', 'saga-of-tanya-the-evil', 'the-apothecary-diaries', 'bungo-stray-dogs'],
+  },
 ];

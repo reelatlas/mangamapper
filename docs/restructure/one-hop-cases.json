@@ -584,6 +584,20 @@
         "ledger"
       ],
       "source": "the extras sitting, 2026-09-05"
+    },
+    {
+      "ask": "a 3-minute chibi ONA spin-off of a held series shows up in the halo proposed as a series — is it a series candidate or an extra, and what decides its standing?",
+      "expected": [
+        "I48",
+        "I45",
+        "T25"
+      ],
+      "terms": [
+        "short-form",
+        "spin-off",
+        "extra"
+      ],
+      "source": "C2 (§12.148) and the /add-rule after it (§12.151), 2026-09-07"
     }
   ]
 }

@@ -615,7 +615,7 @@ export const CANDIDATE_ENTRIES: RulingEntry<DiscoveryRuling>[] = [
     ruledBy: 'Sean',
     ruledOn: '2026-09-07',
     cite: ['audit-discovery halo_airing (2026-09-07)', 'scripts/ingest/research/discovery/recap.ts --scope sequel,series --airing (2026-09-07)', 'docs/changelog.md §12.148'],
-    retiresWhen: 'the shorts gate lands (queued /add-rule: a TV_SHORT, or an ONA of at most five minutes, on a SPIN_OFF / SIDE_STORY edge of an owned series routes to the extras bucket) — the derivation then carries this ruling',
+    retiresWhen: 'the extras programme researches this short (a verdict names its source) — the bucket then derives. I48 (2026-09-07) carries the ROUTING (a ≤ 5-min TV_SHORT / ONA spin-off is an extra), but the shorts carry no ADAPTATION edge, so the derivation reads unknown: this bucket DECLARATION is the standing\'s basis until then',
   },
   {
     seriesId: 'anilist:21891',
@@ -625,7 +625,7 @@ export const CANDIDATE_ENTRIES: RulingEntry<DiscoveryRuling>[] = [
     ruledBy: 'Sean',
     ruledOn: '2026-09-07',
     cite: ['audit-discovery halo_airing (2026-09-07)', 'scripts/ingest/research/discovery/recap.ts --scope sequel,series --airing (2026-09-07)', 'docs/changelog.md §12.148'],
-    retiresWhen: 'the shorts gate lands (queued /add-rule: a TV_SHORT, or an ONA of at most five minutes, on a SPIN_OFF / SIDE_STORY edge of an owned series routes to the extras bucket) — the derivation then carries this ruling',
+    retiresWhen: 'the extras programme researches this short (a verdict names its source) — the bucket then derives. I48 (2026-09-07) carries the ROUTING (a ≤ 5-min TV_SHORT / ONA spin-off is an extra), but the shorts carry no ADAPTATION edge, so the derivation reads unknown: this bucket DECLARATION is the standing\'s basis until then',
   },
   {
     seriesId: 'anilist:120700',
@@ -635,7 +635,7 @@ export const CANDIDATE_ENTRIES: RulingEntry<DiscoveryRuling>[] = [
     ruledBy: 'Sean',
     ruledOn: '2026-09-07',
     cite: ['audit-discovery halo_airing (2026-09-07)', 'scripts/ingest/research/discovery/recap.ts --scope sequel,series --airing (2026-09-07)', 'docs/changelog.md §12.148'],
-    retiresWhen: 'the shorts gate lands (queued /add-rule: a TV_SHORT, or an ONA of at most five minutes, on a SPIN_OFF / SIDE_STORY edge of an owned series routes to the extras bucket) — the derivation then carries this ruling',
+    retiresWhen: 'the extras programme researches this short (a verdict names its source) — the bucket then derives. I48 (2026-09-07) carries the ROUTING (a ≤ 5-min TV_SHORT / ONA spin-off is an extra), but the shorts carry no ADAPTATION edge, so the derivation reads unknown: this bucket DECLARATION is the standing\'s basis until then',
   },
   {
     seriesId: 'anilist:182417',
@@ -645,7 +645,7 @@ export const CANDIDATE_ENTRIES: RulingEntry<DiscoveryRuling>[] = [
     ruledBy: 'Sean',
     ruledOn: '2026-09-07',
     cite: ['audit-discovery halo_airing (2026-09-07)', 'scripts/ingest/research/discovery/recap.ts --scope sequel,series --airing (2026-09-07)', 'docs/changelog.md §12.148'],
-    retiresWhen: 'the shorts gate lands (queued /add-rule: a TV_SHORT, or an ONA of at most five minutes, on a SPIN_OFF / SIDE_STORY edge of an owned series routes to the extras bucket) — the derivation then carries this ruling',
+    retiresWhen: 'the extras programme researches this short (a verdict names its source) — the bucket then derives. I48 (2026-09-07) carries the ROUTING (a ≤ 5-min TV_SHORT / ONA spin-off is an extra), but the shorts carry no ADAPTATION edge, so the derivation reads unknown: this bucket DECLARATION is the standing\'s basis until then',
   },
   {
     seriesId: 'anilist:210687',
@@ -655,7 +655,7 @@ export const CANDIDATE_ENTRIES: RulingEntry<DiscoveryRuling>[] = [
     ruledBy: 'Sean',
     ruledOn: '2026-09-07',
     cite: ['audit-discovery halo_airing (2026-09-07)', 'scripts/ingest/research/discovery/recap.ts --scope sequel,series --airing (2026-09-07)', 'docs/changelog.md §12.148'],
-    retiresWhen: 'the shorts gate lands (queued /add-rule: a TV_SHORT, or an ONA of at most five minutes, on a SPIN_OFF / SIDE_STORY edge of an owned series routes to the extras bucket) — the derivation then carries this ruling',
+    retiresWhen: 'the extras programme researches this short (a verdict names its source) — the bucket then derives. I48 (2026-09-07) carries the ROUTING (a ≤ 5-min TV_SHORT / ONA spin-off is an extra), but the shorts carry no ADAPTATION edge, so the derivation reads unknown: this bucket DECLARATION is the standing\'s basis until then',
   },
   {
     seriesId: 'anilist:98186',
@@ -665,7 +665,7 @@ export const CANDIDATE_ENTRIES: RulingEntry<DiscoveryRuling>[] = [
     ruledBy: 'Sean',
     ruledOn: '2026-09-07',
     cite: ['audit-discovery halo_airing (2026-09-07)', 'scripts/ingest/research/discovery/recap.ts --scope sequel,series --airing (2026-09-07)', 'docs/changelog.md §12.148'],
-    retiresWhen: 'the shorts gate lands (queued /add-rule: a TV_SHORT, or an ONA of at most five minutes, on a SPIN_OFF / SIDE_STORY edge of an owned series routes to the extras bucket) — the derivation then carries this ruling',
+    retiresWhen: 'the extras programme researches this short (a verdict names its source) — the bucket then derives. I48 (2026-09-07) carries the ROUTING (a ≤ 5-min TV_SHORT / ONA spin-off is an extra), but the shorts carry no ADAPTATION edge, so the derivation reads unknown: this bucket DECLARATION is the standing\'s basis until then',
   },
   {
     seriesId: 'anilist:213961',
@@ -675,7 +675,7 @@ export const CANDIDATE_ENTRIES: RulingEntry<DiscoveryRuling>[] = [
     ruledBy: 'Sean',
     ruledOn: '2026-09-07',
     cite: ['audit-discovery halo_airing (2026-09-07)', 'scripts/ingest/research/discovery/recap.ts --scope sequel,series --airing (2026-09-07)', 'docs/changelog.md §12.148'],
-    retiresWhen: 'the shorts gate lands (queued /add-rule: a TV_SHORT, or an ONA of at most five minutes, on a SPIN_OFF / SIDE_STORY edge of an owned series routes to the extras bucket) — the derivation then carries this ruling',
+    retiresWhen: 'the extras programme researches this short (a verdict names its source) — the bucket then derives. I48 (2026-09-07) carries the ROUTING (a ≤ 5-min TV_SHORT / ONA spin-off is an extra), but the shorts carry no ADAPTATION edge, so the derivation reads unknown: this bucket DECLARATION is the standing\'s basis until then',
   },
   {
     seriesId: 'anilist:170508',
@@ -685,7 +685,7 @@ export const CANDIDATE_ENTRIES: RulingEntry<DiscoveryRuling>[] = [
     ruledBy: 'Sean',
     ruledOn: '2026-09-07',
     cite: ['audit-discovery halo_airing (2026-09-07)', 'scripts/ingest/research/discovery/recap.ts --scope sequel,series --airing (2026-09-07)', 'docs/changelog.md §12.148'],
-    retiresWhen: 'the shorts gate lands (queued /add-rule: a TV_SHORT, or an ONA of at most five minutes, on a SPIN_OFF / SIDE_STORY edge of an owned series routes to the extras bucket) — the derivation then carries this ruling',
+    retiresWhen: 'the extras programme researches this short (a verdict names its source) — the bucket then derives. I48 (2026-09-07) carries the ROUTING (a ≤ 5-min TV_SHORT / ONA spin-off is an extra), but the shorts carry no ADAPTATION edge, so the derivation reads unknown: this bucket DECLARATION is the standing\'s basis until then',
   },
   {
     seriesId: 'anilist:186148',
@@ -695,7 +695,7 @@ export const CANDIDATE_ENTRIES: RulingEntry<DiscoveryRuling>[] = [
     ruledBy: 'Sean',
     ruledOn: '2026-09-07',
     cite: ['audit-discovery halo_airing (2026-09-07)', 'scripts/ingest/research/discovery/recap.ts --scope sequel,series --airing (2026-09-07)', 'docs/changelog.md §12.148'],
-    retiresWhen: 'the shorts gate lands (queued /add-rule: a TV_SHORT, or an ONA of at most five minutes, on a SPIN_OFF / SIDE_STORY edge of an owned series routes to the extras bucket) — the derivation then carries this ruling',
+    retiresWhen: 'the extras programme researches this short (a verdict names its source) — the bucket then derives. I48 (2026-09-07) carries the ROUTING (a ≤ 5-min TV_SHORT / ONA spin-off is an extra), but the shorts carry no ADAPTATION edge, so the derivation reads unknown: this bucket DECLARATION is the standing\'s basis until then',
   },
   {
     seriesId: 'anilist:135866',

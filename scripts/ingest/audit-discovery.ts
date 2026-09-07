@@ -18,12 +18,13 @@
 //   related_work_identity_orphan   a registry entry whose work has no stored row (the row went, the identity stays — P24 listing)
 //   related_work_stale           a ledger row (origin halo) whose AniList edge no longer reaches the series (P24 — a listing)
 //   related_work_violation       a ledger row whose standing / kind disagrees with the derivation (the healer must run)
+//   related_work_short_unlisted  I48: a staged ≤ 5-min TV_SHORT / ONA spin-off routed to the ledger but holding NO row — run sync-related-works (violation)
 //   discovery_new_since_sitting  TV-shaped candidates first staged / structurally changed after the last sitting, or never staged — THE TRIGGER TO SIT
 //   discovery_ruled_unbuilt      a `series` ruling whose entry is still unowned — the seed writer has not run
 //   discovery_ruling_stale       an `excluded` / `deferred` ruling whose entry is now owned, or that no owned entry relates to any more (P24 — a listing, never an auto-delete)
 //   seed_candidate               G60: the latest ranked snapshots → unowned, un-haloed, series-shaped media collapsed to chain heads, scored by product fit — a ranked queue for the sitting, never authority (capped listing)
 //   npx tsx --env-file=.env.ingest scripts/ingest/audit-discovery.ts
-import { candidateLine, discoveryClasses, haloCandidates, loadDiscoveryInput } from './lib/discovery';
+import { candidateLine, discoveryClasses, haloCandidates, isShortForm, loadDiscoveryInput } from './lib/discovery';
 import { lastSitting, SITTINGS } from './lib/rulings/discovery';
 import { loadLatestRankings, seedCandidates, seedLine, type Seed } from './lib/rankings';
 import { resolveDebt, resolveInputsOf } from './lib/anilist-refresh';
@@ -59,6 +60,11 @@ async function main() {
   const epsBy = new Map<string, { number: number; air_date: string | null }[]>();
   for (const e of await selectAll<{ series_id: string; number: number; air_date: string | null }>('episodes', 'series_id, number, air_date')) epsBy.set(e.series_id, [...(epsBy.get(e.series_id) ?? []), e]);
   const ledger = allRows.filter((r: any) => r.origin === 'halo');
+  // I48 — the OUTCOME the short-form route promises: every staged short routed to the ledger has a row (any origin — a wiki / ruled row may have adopted it, I46)
+  const rowIds = new Set((allRows as { anilist_id: number | null }[]).map((r) => r.anilist_id).filter((x): x is number => x != null));
+  const shortUnlisted = cands
+    .filter((c) => c.staged && c.bucket === 'extra' && c.proposal !== 'promo' && isShortForm(c.format, c.duration) && !(c.ruling && c.ruling.disposition !== 'related_work') && !rowIds.has(c.anilistId)) // a promo-titled short is never a row (I45) — not this class
+    .map((c) => `${[...c.owners].join(',')}: anilist ${c.anilistId} ${c.title} [${c.format} ${c.duration} min] — short-form route (I48) with no ledger row — run sync-related-works`);
   const others = allRows.filter((r: any) => r.origin !== 'halo');
   const reach = new Map<string, typeof extras[number]>();
   for (const c of extras) for (const o of c.owners) reach.set(`${o}#${c.anilistId}`, c);
@@ -168,6 +174,7 @@ async function main() {
     extra_alternative: byBucket('alternative'),
     related_work_stale: stale,
     related_work_violation: violation,
+    related_work_short_unlisted: shortUnlisted,
     related_work_duplicate: duplicate,
     related_work_identity_gap: identity.gap,
     related_work_identity_conflict: identity.conflict,
