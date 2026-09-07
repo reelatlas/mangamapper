@@ -26,8 +26,8 @@ export const CENSUS_CLASS_KINDS: Record<string, CensusClassKind> = {
   related_work_identity_gap: 'violation', related_work_identity_conflict: 'violation', related_work_identity_orphan: 'violation',
   // P5 (2026-09-07, batch 24): an anchor note carrying the same sentence twice is a writer's append loop
   anchor_note_repeated: 'violation',
-  // C7 × A14 (2026-09-07, the consolidate after the RoK interim): a healer parity continue whose basis (the next row's START) is gone — the healer clears it
-  continue_basis_unknown: 'violation',
+  // C2 (amended 2026-09-07 — the coverage walk): a healer row off the walk is a healer that has not run; a curated row off it is Sean's review queue
+  continue_offwalk_healer: 'violation', continue_offwalk_curated: 'queue',
   // G9 / G47 (amended 2026-09-07, the stuck rotation): an active AFL page older than 8 days means the hourly refresh is not rotating
   afl_page_stale: 'violation',
 };

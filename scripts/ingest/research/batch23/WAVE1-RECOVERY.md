@@ -53,3 +53,7 @@ Ep 54 END 111 → 109 SOUND (ch 111 pp 6-19 = episode 57 on four lineages, every
 Research 1.31M (RoK 356k, eyeshield 379k, sailor-moon 294k, beelzebub 278k); verification 925k (sailor-moon 326k, RoK 353k, eyeshield 246k); wave ≈ 2.23M (planned ≈ 2.4M).
 
 ## STOPPED AT STEP 4 (P13) — the decisions are in chat with the baseline tables; then /apply-batch (a batch-23 apply script on the batch-24 pattern, file-driven + overlay; curated continues via writeCuratedContinue with notes in the accepted shape; the RoK A14 interim entry retires).
+
+## The rule changed after the wave (2026-09-07 evening, §12.159)
+
+`C2` was amended: the continue is the coverage walk (open the book here), derived by heal-coverage-continues from the anchors and annotations — the verdicts' `continue_points` (delivered under the parity rule) are NOT applied as values. The walk on the verdict rows: eyeshield 54 → **111** (not 112), 57 → **115** (the 115 / 116 fork dissolves), 56 → 115 derived with the back-jump note, 58 → 117 derived (117-118 unbooked); RoK 18 → 32 [hole], 12 / 22 / 33 / 37 / 41 open, the rest END + 1 derived — every delivered number coincides; sailor-moon 71 → 17 derived, 73 → 18 open; beelzebub 59 → 122 post_series. The apply writes anchors, annotations, repairs and retypes only, then the healer runs.

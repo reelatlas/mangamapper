@@ -65,11 +65,11 @@
 
 **C — Continue-read regimes** (9)
 - `C1` C1: a mid-chapter ending continues in the straddled chapter — aka `C1 rule`, `mid-chapter straddle`, `mid-chapter END`, `straddled chapter`
-- `C2` C2: continue-read = anime parity — aka `C2 rule`, `anime parity`, `parity continue`, `continue-read = anime parity`, `C2 ANIME-PARITY continue rule`
-- `C3` C3: a parity continue below covered chapters notes the skip — aka `C3 rule`, `skip notes`, `skip-on-arrival note`, `C3 skip-note predicate`, `C3 clarification`
+- `C2` C2: continue-read = open the book here (the coverage walk) — aka `C2 rule`, `anime parity`, `parity continue`, `C2 ANIME-PARITY continue rule`, `open the book here`, `the coverage walk`, `coverage walk`, `continue walk`, `walkContinue`, `first unfinished chapter`, `covered means finished`
+- `C3` C3: a continue below covered chapters notes the skip — aka `C3 rule`, `skip notes`, `skip-on-arrival note`, `C3 skip-note predicate`, `C3 clarification`
 - `C4` C4: single-source-final — aka `C4 rule`, `single-source-final`, `single-source final`, `do-not-demote`
-- `C5` Continue-read is a regime choice governed by coverage — aka `continue-read regimes`, `regime choice`, `continue point (b17)`, `continue point`, `C1 C2 C3`, `continue-read = a regime choice`, `covered-or-not test`, `back-jump continue`
-- `C6` continue_kind vocabulary: parity \| unseen \| post_series — aka `continue_kind`, `continue_kind vocabulary`, `parity | unseen | post_series`
+- `C5` Continue-read is governed by coverage: the walk — aka `continue-read regimes`, `regime choice`, `continue point (b17)`, `continue point`, `C1 C2 C3`, `continue-read = a regime choice`, `covered-or-not test`, `back-jump continue`
+- `C6` continue_kind vocabulary: hole \| open \| walk \| post_series — aka `continue_kind`, `continue_kind vocabulary`, `parity | unseen | post_series`, `hole | open | walk | post_series`
 - `C7` Curated continue metadata survives writers and healers — aka `parity-continue preservation`, `continue fields survive re-derive`, `curated continues`, `CURATED_CONTINUES`, `continue_source`, `continue provenance`, `continue_provenance_missing`, `curated continue overwritten`, `writeCuratedContinue`
 - `C8` AFG continue-from is reading guidance, not the frontier — aka `continue-from is guidance`, `continue-from-is-guidance`, `sanity band`, `40-chapter band`, `three-numbers model`
 - `C9` Default continue = anchor end + 1 (superseded by C2) *(superseded)* — aka `continue-reading points`, `end+1 default`, `default continue = end + 1`, `apply-continue-points`
@@ -910,8 +910,8 @@ A canon or mixed row whose source content cannot be a reading position — a cov
 
 - ruled Sean 2026-08-26 (scripts/ingest/research/batch18/verify/one-piece.md (verifier finding 1))
 - layer **writer**
-- enforced: [lib/rulings/anchor-suppressed.ts#ANCHOR_SUPPRESSED](../scripts/ingest/lib/rulings/anchor-suppressed.ts) · [lib/anchors.ts#syncAnchors](../scripts/ingest/lib/anchors.ts) · [lib/anchors.ts#applyContinua](../scripts/ingest/lib/anchors.ts) · [lib/mu-frontier.ts#applyMuFrontier](../scripts/ingest/lib/mu-frontier.ts) · [assert-overrides.ts#assertAnchorSuppression](../scripts/ingest/assert-overrides.ts) · [audit-ui-truth.ts#classes.backjump_continue_unruled](../scripts/ingest/audit-ui-truth.ts)
-- audit: `ruling_violation`, `backjump_continue_unruled`, `backjump_continue_unnoted`, `annotation_contradicts_row`
+- enforced: [lib/rulings/anchor-suppressed.ts#ANCHOR_SUPPRESSED](../scripts/ingest/lib/rulings/anchor-suppressed.ts) · [lib/anchors.ts#syncAnchors](../scripts/ingest/lib/anchors.ts) · [lib/anchors.ts#applyContinua](../scripts/ingest/lib/anchors.ts) · [lib/mu-frontier.ts#applyMuFrontier](../scripts/ingest/lib/mu-frontier.ts) · [assert-overrides.ts#assertAnchorSuppression](../scripts/ingest/assert-overrides.ts) · [audit-ui-truth.ts#classes.continue_offwalk_healer](../scripts/ingest/audit-ui-truth.ts)
+- audit: `ruling_violation`, `continue_offwalk_healer`, `continue_offwalk_curated`, `annotation_contradicts_row`
 - witnesses: one-piece, gto-great-teacher-onizuka, sailor-moon, a-certain-scientific-railgun, naruto-shippuden
 - aliases: anchor suppression, ANCHOR_SUPPRESSED, anchorless rows, position-less rows, cover-page serial rule, suppressed anchor
 - retired wording (P38): “acts that sit behind an earlier anchor” · “unless anchoring it would relocate the reader” · “never its END + 1”
@@ -963,41 +963,44 @@ END (chapter_anchors.chapter) is the furthest mainline chapter the episode adapt
 
 ### C1 · C1: a mid-chapter ending continues in the straddled chapter
 
-When an episode ends mid-chapter, continue-read is the straddled chapter itself — the reader re-reads a few pages, which is fine; no page-level precision hunting. A continue point equal to a chapter the episode already adapted is C1 by definition, never a "skip".
+When an episode ends mid-chapter, continue-read is the straddled chapter itself — the reader re-reads a few pages, which is fine; no page-level precision hunting. A continue point equal to a chapter the episode already adapted is C1 by definition, never a "skip". THE OPEN END (amended 2026-09-07, the coverage walk): the END chapter is OPEN while a later FIRST-TIME remainder is pending — the next canon / mixed row starts on it, or the span marks it page-partial and no row at or before this one closes it; a recap, restaging, graft or flashback of that chapter later never reopens it (lib/coverage.ts#endOpenAt — the walk's second candidate, kind open).
 
 *Why:* Page-level resume positions cannot be verified from any source; re-reading a few pages is the honest cost.
 
 - ruled Sean 2026-08-24 (batch-15 DECISIONS-FOR-SEAN "C1 mid-chapter END — RATIFIED"; data-pipeline §11 "AS ONE UNIT" item 3)
 - layer **both**
-- enforced: [lib/c3.ts#c3Ahead](../scripts/ingest/lib/c3.ts) · [research/batch17/PROTOCOL.md](../scripts/ingest/research/batch17/PROTOCOL.md) · [heal-parity-continues.ts#C1 guard](../scripts/ingest/heal-parity-continues.ts)
-- audit: `continue_skip_unnoted`
+- enforced: [lib/c3.ts#c3Ahead](../scripts/ingest/lib/c3.ts) · [research/batch17/PROTOCOL.md](../scripts/ingest/research/batch17/PROTOCOL.md) · [lib/coverage.ts#endOpenAt](../scripts/ingest/lib/coverage.ts) · [heal-coverage-continues.ts](../scripts/ingest/heal-coverage-continues.ts)
+- audit: `continue_offwalk_healer`, `continue_offwalk_curated`
+- witnesses: record-of-ragnarok
 - aliases: C1 rule, mid-chapter straddle, mid-chapter END, straddled chapter
 - see: C5, C3, C2
 
-### C2 · C2: continue-read = anime parity
+### C2 · C2: continue-read = open the book here (the coverage walk)
 
-Where the next canon/mixed episode's start is KNOWN, continue_chapter = that start, so the reader stays in step with the anime even across skips and back-jumps. The chronological next-unseen value and any skip facts are preserved in continue_note; continue_kind records the regime (parity). Converted catalog-wide; nothing is UI-surfaced yet by design.
+AMENDED 2026-09-07 (Sean with Cursor, after batch 23 wave 1 — eyeshield 54 / 57, sailor-moon 71 / 73, record-of-ragnarok 18): the continue is where a reader who stops watching after this episode OPENS THE BOOK — the first chapter not yet FINISHED by this or any earlier episode in watch order. Three candidates, the lowest wins: (1) a HOLE this episode made (a chapter inside its own span it jumped over — RoK 18 plays 31 then 34 → 32); (2) its END while the END chapter is still OPEN (C1); (3) END + 1 stepping over every chapter finished at or before this episode (eyeshield 54: 110 was ep 52, 111 is unread until ep 57 → 111). FINISHED = substantively adapted (T28): a position (START / END), a bare listing in chapters_adapted, an abridged annotation; a page-ranged or partial listing touches; sliver / teaser / recap / flashback / graft / restaging never finish; an unanchored row contributes nothing (unknown is never finished, A14). What the NEXT episode does is a generated NOTE (the old parity value — "ep 55 opens at ch 112"), never the number: the next row's START is on screen already. A hole an EARLIER episode made never pulls a later row back (the owning row said so; the strip carries the series-wide list). Notes are generated in three parts and name episodes as ranges. A value equal to END + 1 is derived by the display, never stored; a curated continue is written only where the verdict carries page-level facts the walk cannot see. The retired rule (2026-08-24 → 09-07): continue_chapter = the next known canon / mixed episode's START (anime parity) with the unread chapters in a note — it printed the anime's next move as the number and hid the unread chapter in the note.
 
-*Why:* End+1 sent readers ahead of or behind the anime whenever an adaptation skipped or reordered; parity is the only continue point a viewer can act on episode by episode.
+*Why:* End+1 sent readers ahead of or behind the anime whenever an adaptation skipped or reordered; parity (2026-08-24) was the answer for a viewer reading alongside the anime. Batch 23 wave 1 (2026-09-07) showed the inversion for the reader who LEAVES the screen for the page: eyeshield 54 printed 112 (ep 55's START) while ch 111, unread until ep 57, sat in the note; sailor-moon 71 pointed at ep 73's 18 past a never-adapted 17. The parity value is the next row's START and is on screen anyway; the first unread chapter was shown nowhere. Sean's rule (with Cursor): continue means open the book here; the next episode's move is a warning, not the number; covered means finished, not touched.
 
 - ruled Sean 2026-08-24 (batch-15 DECISIONS-FOR-SEAN "C2 continue-read = ANIME PARITY"; data-pipeline §12.37; migration 20260825200000)
-- layer **writer**
-- enforced: [heal-parity-continues.ts](../scripts/ingest/heal-parity-continues.ts) · [research/batch17/PROTOCOL.md](../scripts/ingest/research/batch17/PROTOCOL.md)
-- **audit: none — automation backlog**
-- aliases: C2 rule, anime parity, parity continue, continue-read = anime parity, C2 ANIME-PARITY continue rule
+- layer **both**
+- enforced: [lib/coverage.ts#walkContinue](../scripts/ingest/lib/coverage.ts) · [lib/coverage.ts#buildCoverage](../scripts/ingest/lib/coverage.ts) · [heal-coverage-continues.ts](../scripts/ingest/heal-coverage-continues.ts) · [audit-ui-truth.ts#classes.continue_offwalk_healer](../scripts/ingest/audit-ui-truth.ts) · [audit-ui-truth.ts#classes.continue_offwalk_curated](../scripts/ingest/audit-ui-truth.ts)
+- audit: `continue_offwalk_healer`, `continue_offwalk_curated`
+- witnesses: eyeshield-21, sailor-moon, record-of-ragnarok, beelzebub
+- aliases: C2 rule, anime parity, parity continue, C2 ANIME-PARITY continue rule, open the book here, the coverage walk, coverage walk, continue walk, walkContinue, first unfinished chapter, covered means finished
+- retired wording (P38): “continue_chapter = that start” · “continue-read = anime parity” · “stays in step with the anime even across skips”
 - see: C1, C3, C5, C6, C7, A4, A32
 - supersedes: C9
 
-### C3 · C3: a parity continue below covered chapters notes the skip
+### C3 · C3: a continue below covered chapters notes the skip
 
-A continue point sitting STRICTLY below integer chapters listed in the same episode's chapters_adapted must carry a continue_note telling the reader which already-covered later chapters to skip on arrival. Parenthesized page/graft facts are stripped before number extraction so page spans never masquerade as chapters; fractional chapters are ignored. Skip language is any of skip / already / covered / re-read. The predicate is the single lib definition shared by the healer that stamps notes and the audit that verifies them.
+A continue point sitting STRICTLY below integer chapters listed in the same episode's chapters_adapted must carry a continue_note telling the reader which already-covered later chapters to skip on arrival. Parenthesized page/graft facts are stripped before number extraction so page spans never masquerade as chapters; fractional chapters are ignored. Skip language is any of skip / already / covered / re-read. The predicate is the single lib definition shared by the healer that stamps notes and the audit that verifies them. AMENDED 2026-09-07: the walk (C2) generates this line itself ("already seen here: ch 24 — skip on arrival") for every healer row; the requirement still binds a CURATED note, and continue_offwalk_curated lists one that names no skip.
 
 *Why:* Iruma ep 63: END 142, continue 143, and ch 145 already covered — without the note the reader re-reads 145 without knowing why.
 
 - ruled Sean 2026-08-25 (data-pipeline §10 "Continue-read regimes + re-use is true data (Sean's C3 clarification, 2026-08-25)"; §12.46)
 - layer **both**
-- enforced: [lib/c3.ts#c3Ahead](../scripts/ingest/lib/c3.ts) · [lib/c3.ts#hasSkipLanguage](../scripts/ingest/lib/c3.ts) · [lib/c3.ts#c3Note](../scripts/ingest/lib/c3.ts) · [heal-parity-continues.ts](../scripts/ingest/heal-parity-continues.ts)
-- audit: `continue_skip_unnoted`
+- enforced: [lib/c3.ts#c3Ahead](../scripts/ingest/lib/c3.ts) · [lib/c3.ts#hasSkipLanguage](../scripts/ingest/lib/c3.ts) · [lib/coverage.ts#walkContinue](../scripts/ingest/lib/coverage.ts) · [heal-coverage-continues.ts](../scripts/ingest/heal-coverage-continues.ts)
+- audit: `continue_offwalk_healer`, `continue_offwalk_curated`
 - witnesses: welcome-to-demon-school-iruma-kun, trigun, zatch-bell
 - aliases: C3 rule, skip notes, skip-on-arrival note, C3 skip-note predicate, C3 clarification
 - see: C2, C1, C5, A4, A31, A30
@@ -1016,46 +1019,48 @@ Where research proves that no second source exists for a position, a medium-conf
 - aliases: C4 rule, single-source-final, single-source final, do-not-demote
 - see: 2+ sources, R16
 
-### C5 · Continue-read is a regime choice governed by coverage
+### C5 · Continue-read is governed by coverage: the walk
 
-The continue point is governed by COVERAGE and KNOWN FUTURE anime coverage, never by which episode a chapter appears in. Mid-chapter ending → the straddled chapter (C1). Skipped or out-of-order material the anime WILL cover in known later episodes → PARITY: continue at the next episode's start (C2), with the already-covered later chapters noted to skip on arrival (C3). Skips never covered, or an unknown future → continue = furthest-covered + 1 with the skip range noted (kind unseen). After the finale → coverage + 1 (kind post_series), which may sit exactly one chapter past the display total and never further. The agent delivers this continue point; the apply layer stamps the regime metadata. Every jump records its why in annotations and continue_note. A BACKWARD FIRST-TIME PASS (Sean 2026-09-03/04, shippuden 112: END 318, continue 343): the row's END is where the episode is; its continue is where the reader goes next. THE TEST — is the stretch between this END and the frontier already covered? YES → continue at the frontier — the frontier CHAPTER itself, C1 by default (112 → 343; stored data cannot prove the chapter was closed and a few repeated pages are expected; frontier + 1 only when the frontier row's own forward continue says it was finished — Sean 2026-09-05); a note names the stretch as already adapted and where. NO → continue at END + 1, or at the next canon/mixed START when it is known (C2 wins), and the note NAMES the still-unadapted range (kind unseen) — the continue is never the hole itself unless the next episode actually starts there. END + 1 IS NOT A LOCK: it means only 'this episode closed that chapter' — an UNFINISHED END continues in that chapter (C1, the straddle; re-reading a few pages is intended), and a known next START outranks both. The parity healer refuses a row whose next canon/mixed neighbour is unanchored, so such a continue is CURATED (C7) in the same apply as the anchor; `backjump_continue_unruled` lists exits left with no continue, `backjump_continue_unnoted` the ones whose note does not say already / never (the C3 twin: C3 sees only a continue BELOW the row's own chapters).
+The continue point is governed by COVERAGE — which chapters the anime has FINISHED by this episode in watch order — never by which episode a chapter appears in and never by the anime's next move. AMENDED 2026-09-07 (the coverage walk, C2): one derivation for every row — a hole this episode made, else the END while it is still open (C1), else END + 1 stepping over chapters finished at or before this episode; a back-jump exit (shippuden 112: END 318 behind the frontier) is the walk's ordinary case, its continue the first chapter not finished so far, with the already-adapted stretch and the episodes that adapted it named in the generated note. Skips the anime never returns for stop the walk at their first chapter (the honest gap). After the finale the same walk runs with kind post_series, which may sit exactly one chapter past the display total and never further. The agent delivers the coverage FACTS (what the episode adapted, page splits, what is re-shown); the healer derives the value; the apply writes a curated continue only where the verdict carries page-level facts the walk cannot see. Every jump records its why in annotations; the continue_note is generated.
 
 *Why:* Three batches drifted on what "continue" meant until the regimes were written as one choice; the iruma ep-63 END-vs-max misread was the last casualty.
 
 - ruled Sean 2026-08-25 (data-pipeline §11 "THE POSITION & CONTINUE-READ LOGIC, AS ONE UNIT" item 3; batch-17 PROTOCOL "Rules that bind" bullet 4; DRIFT-LIST A-1)
 - layer **both**
-- enforced: [research/batch17/PROTOCOL.md](../scripts/ingest/research/batch17/PROTOCOL.md) · [heal-parity-continues.ts](../scripts/ingest/heal-parity-continues.ts) · [audit-ui-truth.ts#classes.anchor_beyond_display_total](../scripts/ingest/audit-ui-truth.ts) · [audit-ui-truth.ts#classes.backjump_continue_unruled](../scripts/ingest/audit-ui-truth.ts) · [lib/c3.ts#backjumpNoteOk](../scripts/ingest/lib/c3.ts) · [lib/continues.ts#writeCuratedContinue](../scripts/ingest/lib/continues.ts)
-- audit: `continue_skip_unnoted`, `anchor_beyond_display_total`, `backjump_continue_unruled`, `backjump_continue_unnoted`
-- witnesses: welcome-to-demon-school-iruma-kun, zatch-bell, ranma-1-2, shugo-chara, hajime-no-ippo-the-fighting, naruto-shippuden
+- enforced: [research/batch17/PROTOCOL.md](../scripts/ingest/research/batch17/PROTOCOL.md) · [heal-coverage-continues.ts](../scripts/ingest/heal-coverage-continues.ts) · [lib/coverage.ts#walkContinue](../scripts/ingest/lib/coverage.ts) · [audit-ui-truth.ts#classes.anchor_beyond_display_total](../scripts/ingest/audit-ui-truth.ts) · [audit-ui-truth.ts#classes.continue_offwalk_healer](../scripts/ingest/audit-ui-truth.ts) · [lib/continues.ts#writeCuratedContinue](../scripts/ingest/lib/continues.ts)
+- audit: `continue_offwalk_healer`, `continue_offwalk_curated`, `anchor_beyond_display_total`
+- witnesses: welcome-to-demon-school-iruma-kun, zatch-bell, ranma-1-2, shugo-chara, hajime-no-ippo-the-fighting, naruto-shippuden, eyeshield-21, record-of-ragnarok
 - aliases: continue-read regimes, regime choice, continue point (b17), continue point, C1 C2 C3, continue-read = a regime choice, covered-or-not test, back-jump continue
-- retired wording (P38): “first unadapted chapter after the contiguous run” · “never END + 1, and never a re-read”
+- retired wording (P38): “first unadapted chapter after the contiguous run” · “never END + 1, and never a re-read” · “PARITY: continue at the next episode” · “the coverage / parity value by C5”
 - see: C1, C2, C3, C6, A4, A31, A43
 
-### C6 · continue_kind vocabulary: parity \| unseen \| post_series
+### C6 · continue_kind vocabulary: hole \| open \| walk \| post_series
 
-chapter_anchors.continue_kind takes exactly one of: parity (continue = the next known canon/mixed episode's start), unseen (frontier or unknown future: furthest-covered + 1), post_series (finale: coverage + 1). continue_note carries the why. The columns exist from migration 20260825200000; a continue point outside the vocabulary is not a regime and is not written.
+chapter_anchors.continue_kind names the walk's reason (C2, amended 2026-09-07) and takes exactly one of: hole (this episode jumped over the chapter), open (the END chapter is still open — C1), walk (END + 1 stepped over chapters finished earlier), post_series (the finale: the same walk after the last adaptation). The HEALER never stores a value equal to END + 1 (the display derives it) except the finale's, whose kind is the information; a curated one may stand for the facts its note carries, its kind walk. continue_note is the generated three-part note (what was finished earlier and where, what this episode skipped or left open, where the next episode opens). Retired 2026-09-07: parity (the next episode's start as the number) and unseen; the healer restamps a retired kind on a curated row whose value agrees with the walk. The columns exist from migration 20260825200000; a continue point outside the vocabulary is not a regime and is not written.
 
 *Why:* Without a typed kind the healer could not tell a curated exception from a default and re-stamped both.
 
 - ruled Sean 2026-08-24 (batch-15 DECISIONS-FOR-SEAN C2 (migration 20260825200000); data-pipeline §11 "CONTINUE-READ = ANIME PARITY")
 - layer **writer**
-- enforced: [heal-parity-continues.ts](../scripts/ingest/heal-parity-continues.ts)
-- **audit: none — automation backlog**
-- aliases: continue_kind, continue_kind vocabulary, parity | unseen | post_series
+- enforced: [lib/coverage.ts#STORED_CONTINUE_KINDS](../scripts/ingest/lib/coverage.ts) · [lib/continues.ts#CuratedContinue](../scripts/ingest/lib/continues.ts) · [heal-coverage-continues.ts](../scripts/ingest/heal-coverage-continues.ts)
+- audit: `continue_offwalk_healer`
+- aliases: continue_kind, continue_kind vocabulary, parity | unseen | post_series, hole | open | walk | post_series
+- retired wording (P38): “parity (continue = the next known canon/mixed episode”
 - see: C2, C5, C7
 
 ### C7 · Curated continue metadata survives writers and healers
 
-continue_chapter / continue_kind / continue_note are curated data that may live on derived rows. Every delete+reinsert rebuild of afg or afg-continua anchors carries them over by episode (for continua only when the fresh pin lands on the same episode), so the hourly cron cannot erode the parity conversion one series at a time. The parity healer fills only ABSENT metadata; a curated continue with its kind and note is never overwritten by a healer. THE BASIS CLAUSE (amended 2026-09-07 — record-of-ragnarok 21 / 26 / 32 / 37, the A14 interim): a healer parity continue is DERIVED from the next canon / mixed row's START; when that basis is gone — the START set to unknown under A14 with no span naming a chapter, or the row no longer the adjacent anchored canon / mixed episode — the healer CLEARS the continue on its next pass (the display then derives END + 1, the same designed unknown as the derived START), and `continue_basis_unknown` lists one still standing — a back-jump or a skip ahead only; a continue equal to the row's own END is the C1 straddle shape and is KEPT (its basis is the row's own tail). A stale derivation is never left to render as a fact.
+continue_chapter / continue_kind / continue_note are curated data that may live on derived rows. Every delete+reinsert rebuild of afg or afg-continua anchors carries them over by episode (for continua only when the fresh pin lands on the same episode), so the hourly cron cannot erode the parity conversion one series at a time. The parity healer fills only ABSENT metadata; a curated continue with its kind and note is never overwritten by a healer. THE WALK (amended 2026-09-07, superseding the same day's basis clause): the healer derives every non-curated continue from the coverage index (lib/coverage.ts) on each pass — a healer value stands only where the walk derives it today, so a value whose basis is gone (a START nulled under A14, a neighbour no longer anchored) is re-derived or cleared; nothing derived is ever left to render as a fact. A curated continue (manual / source) is never overwritten; continue_offwalk_curated lists a disagreement for Sean.
 
 *Why:* refresh-afg's rebuild dropped continue fields until preservation was added; batch-17 curated continues (trigun) had to survive the C3 pass. GAP CLOSED 2026-08-27 (batch 19 wave 2 close, Cursor's process nit): the parity healer had converted three JUST-APPLIED curated continues (tokyo-mew-mew 28 → 20, eyeshield-21 43 → 101, project-arms 43 → 186) because nothing on the row said curated — only the C1 guard protected a value. `continue_source` (migration 20260827100000: manual | healer | source, backfilled from the writers' own note shapes — 618 manual / 2,492 healer / 1 source) is the marker: the healer skips manual rows (stamping an absent kind only) and marks its own writes healer; writers preserve it through rebuilds; applies write through lib/continues.ts#writeCuratedContinue. The three values stay at C2 (C5: known future coverage → parity), marked healer.
 
 - ruled session 2026-08-24 (data-pipeline §12.38 "CRON REVIEW" (preservation added to syncAnchors + applyContinua); apply-research-batch-17 CURATED_CONTINUES)
 - layer **writer**
-- enforced: [lib/anchors.ts#syncAnchors](../scripts/ingest/lib/anchors.ts) · [lib/anchors.ts#applyContinua](../scripts/ingest/lib/anchors.ts) · [history/apply-research-batch-17.ts#CURATED_CONTINUES](../scripts/ingest/history/apply-research-batch-17.ts) · [heal-parity-continues.ts](../scripts/ingest/heal-parity-continues.ts) · [lib/continues.ts#isCuratedContinue](../scripts/ingest/lib/continues.ts) · [lib/continues.ts#writeCuratedContinue](../scripts/ingest/lib/continues.ts) · [audit-ui-truth.ts#classes.continue_provenance_missing](../scripts/ingest/audit-ui-truth.ts) · [lib/continues.ts#parityBasis](../scripts/ingest/lib/continues.ts) · [lib/continues.ts#healerContinueBasisGone](../scripts/ingest/lib/continues.ts) · [audit-ui-truth.ts#classes.continue_basis_unknown](../scripts/ingest/audit-ui-truth.ts)
-- audit: `ruling_violation`, `continue_provenance_missing`, `continue_basis_unknown`
+- enforced: [lib/anchors.ts#syncAnchors](../scripts/ingest/lib/anchors.ts) · [lib/anchors.ts#applyContinua](../scripts/ingest/lib/anchors.ts) · [history/apply-research-batch-17.ts#CURATED_CONTINUES](../scripts/ingest/history/apply-research-batch-17.ts) · [heal-coverage-continues.ts](../scripts/ingest/heal-coverage-continues.ts) · [lib/continues.ts#isCuratedContinue](../scripts/ingest/lib/continues.ts) · [lib/continues.ts#writeCuratedContinue](../scripts/ingest/lib/continues.ts) · [audit-ui-truth.ts#classes.continue_provenance_missing](../scripts/ingest/audit-ui-truth.ts) · [audit-ui-truth.ts#classes.continue_offwalk_curated](../scripts/ingest/audit-ui-truth.ts)
+- audit: `ruling_violation`, `continue_provenance_missing`, `continue_offwalk_curated`
 - witnesses: trigun, tokyo-mew-mew, eyeshield-21, project-arms, record-of-ragnarok
 - aliases: parity-continue preservation, continue fields survive re-derive, curated continues, CURATED_CONTINUES, continue_source, continue provenance, continue_provenance_missing, curated continue overwritten, writeCuratedContinue
+- retired wording (P38): “the healer CLEARS the continue on its next pass”
 - see: C2, C6, A14, A24, invariant 7
 
 ### C8 · AFG continue-from is reading guidance, not the frontier
@@ -4663,6 +4668,7 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - continue point → `C5`
 - continue point (b17) → `C5`
 - continue provenance → `C7`
+- continue walk → `C2`
 - continue_kind → `C6`
 - continue_kind vocabulary → `C6`
 - continue_provenance_missing → `C7`
@@ -4670,7 +4676,6 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - continue-from is guidance → `C8`
 - continue-from-is-guidance → `C8`
 - continue-read = a regime choice → `C5`
-- continue-read = anime parity → `C2`
 - continue-read regimes → `C5`
 - continue-reading points → `C9`
 - continues in X → `I37`
@@ -4691,6 +4696,8 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - coverage floor → `G38`
 - coverage gate → `A37`
 - coverage synthesis → `A38`
+- coverage walk → `C2`
+- covered means finished → `C2`
 - covered pin → `G56`
 - covered-or-not test → `C5`
 - crawl-delay → `G16`
@@ -4854,6 +4861,7 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - finalize gate → `I25`
 - finished-total trim → `V6`
 - first FULL chapter rule → `A11`
+- first unfinished chapter → `C2`
 - first-chapter display → `A13`
 - first-chapter ruling → `A13`
 - five-minute ONA → `I48`
@@ -4955,6 +4963,7 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - historical apply scripts non-runnable → `P34`
 - history non-runnable → `P34`
 - history/ → `P34`
+- hole \| open \| walk \| post_series → `C6`
 - honest dash on a parallel series → `A46`
 - honest gap > guess → `R13`
 - honest gap beats a plausible guess → `R13`
@@ -5174,6 +5183,7 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - only ending → `T10`
 - only-ending class → `T10`
 - only-tie → `T26`
+- open the book here → `C2`
 - OPEN_ENDED → `I42`
 - open-ended I15 → `I42`
 - order-only components never count → `N4`
@@ -5548,6 +5558,7 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - the catch-up → `G58`
 - the chain → `T26`
 - the confirm queue → `G1`
+- the coverage walk → `C2`
 - the curated map decides → `P10`
 - the cycle → `P1`
 - the data cycle → `P1`
@@ -5675,6 +5686,7 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - volume-boundary identity + numbering space → `V5`
 - volumes-staleness event → `V8`
 - walk refuses ambiguity → `I22`
+- walkContinue → `C2`
 - watch order vs release → `I45`
 - watch_order_kind_missing → `T29`
 - watch-order entries → `N31`
@@ -5715,5 +5727,5 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 ## Scoreboard
 
 - rules: 292 (live 278, planned 7, superseded 7)
-- live data rules with no audit class (the automation backlog): 81
-- by layer: writer 151 · display 23 · both 34 · process 84
+- live data rules with no audit class (the automation backlog): 79
+- by layer: writer 150 · display 23 · both 35 · process 84

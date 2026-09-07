@@ -56,11 +56,15 @@ line after it. Never point Sean at the file for the baseline.**
    (`N3`); numbering → `SOURCE_NUMBERING_SHIFTS` (`N11`) — all under
    `lib/rulings/`, never a direct row write. Deletions cite `A1`/`A6`;
    curated anchors/continues cite `A24`/`C5`; a repair on a derivation-tier
-   row flips the source to manual (`P8`). Curated continue points are
-   written ONLY through `lib/continues.ts#writeCuratedContinue` (`C7`,
-   2026-08-27): it stamps `continue_source = 'manual'`, which is what stops
-   the parity healer from converting the value on the next heal (it did, to
-   three just-applied continues, before the marker existed).
+   row flips the source to manual (`P8`). CONTINUES ARE DERIVED (`C2` amended
+   2026-09-07, the coverage walk): after the anchors and annotations land, the
+   coverage healer derives every continue from the spans
+   (`lib/coverage.ts#walkContinue`); the apply writes a curated continue
+   ONLY where the verdict carries page-level facts the walk cannot see, and
+   only through `lib/continues.ts#writeCuratedContinue` (`C7`) with a kind
+   from `hole | open | walk | post_series` and the walk's own note prepended
+   — a curated value that merely restates the walk is dead weight, and one
+   that disagrees with it lands in `continue_offwalk_curated` for Sean.
 3. **Dry run** — `apply-research-batch-N.ts --dry-run`. Read the output as
    a proposal. Every line is a change you are authorising.
 4. **Apply.** The script is idempotent and file-driven; re-running as later
@@ -89,7 +93,7 @@ ruled), add it to `lib/rulings/index.ts`, move the script to
 
 - **An EVENT roster script runs only on its trigger, after you have READ it, with `--dry-run` first where it has one — and a script with no dry-run is never assumed to have one** (INCIDENT-2026-09-05, `P40`): `audit-titles.ts` was run to apply one exclusion and deleted six series through a cascade against a stale fixture index; `afg-expansion.ts` has no dry-run and created a series when the flag was passed. Never run a script for its side effect; find the ruling map its job belongs to.
 - **A confirmed default lands as a T6 PIN, never as a no-op** (batch 24 wave 1, 2026-09-07 — the S3 verifier): `type_default_unclassified` retires only on a T6 pin or an AFL number, and `deriveVisibility` publishes on the pin, so a lane-T verdict's "CONFIRMED AS STORED" entry goes into EPISODE_TYPE_OVERRIDES with the verdict as its reason — that is the class's retirement path for a season AFL never lists.
-- **A continue equal to the END is derived, never stored** (T24 landing, 2026-09-07): a C1 continue inside a straddled unit equals the END by construction (gits-2026's five; re-zero 79) — skip it in the apply; store only a continue that differs (a C2 parity across a reorder, an A47 hold).
+- **The healer owns continues; the apply writes facts** (`C2` amended 2026-09-07 — supersedes the T24-landing line 'a continue equal to the END is derived'): an open END (kind open) IS stored, by the healer, from the span's page split and the next row's START; a value equal to END + 1 is never stored. The apply never restates what the walk derives — dry-run the healer on the series after the anchors land and read its lines as the continue proposal.
 - **Repairs on derivation-tier rows get wiped** (`P8`): a repaired value on
   `mu` / `afg` / `afg-continua` is deleted by that source's next re-derive.
   Flip the row to `manual`. Batches 15/16 forgot — 14 rows carry a
@@ -137,7 +141,7 @@ ruled), add it to `lib/rulings/index.ts`, move the script to
 
 - **A row-less entry interpolates between its anchors** (wave 9, cells-at-work-code-black): landing a finale anchor plus one frontier anchor on an entry with ZERO episode rows rendered a false back-jump (`verify-series-display` FAIL: "ep 10 starts ch 10 below ep 9's 17") because the synthesized rows in between were interpolated across a reorder. On a row-less entry land the whole verified map with `rearranged` on the jump row, or nothing — never two anchors across a reorder.
 - **A continue on a row whose anchor the same apply deletes lands NOTHING — move it** (`CONTINUE_MOVE`, wave 9 erased: the verdict placed the continue on ep 12, whose mu anchor was deleted under A1; the overlay moved it to the surviving terminal row 11). Read every deletion against every continue before the dry run.
-- **A back-jump anchor lands WITH its curated continue** (shippuden 112, 2026-09-03): a first-time significant block anchors at its own END behind the frontier (`A8`/`A44`), and the parity healer REFUSES the row when its next canon/mixed neighbour is unanchored — so the continue (the coverage / parity value, `C5`) goes through `writeCuratedContinue` in the same apply, never left for the healer. `backjump_continue_unruled` is the outcome check; the holes the anchor opens inside the crossing (`verify:hole`) are the next narrow ask, not a reason to withhold the anchor.
+- **A back-jump anchor's continue is the walk's** (shippuden 112, 2026-09-03; superseded 2026-09-07 by `C2` amended): land the anchor + `rearranged` and let heal-coverage-continues derive the continue (the first chapter not finished so far, the already-adapted stretch named in the generated note); a curated continue is for page-level facts only.
 - **A retyped position-less row past the last anchor needs its A44 entry in the same apply** (erased ep 12 → mixed): `frontier_tail_null` lists a canon/mixed row past the terminal that renders null; the ruling that makes it honest is `ANCHOR_SUPPRESSED` (A44), not an anchor.
 
 - **Derive every anchor's VOLUME from the boundary table in the apply** (waves 10-11): agents copy the START's volume or a neighbour's; the derivation caught four wrong volumes on FotNS and two on kingdom. Print "(volume derived: agent said vN)" beside each move.

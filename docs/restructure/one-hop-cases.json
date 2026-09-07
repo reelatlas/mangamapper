@@ -611,6 +611,19 @@
         "MAL"
       ],
       "source": "the Annecy clause (§12.154), 2026-09-07"
+    },
+    {
+      "ask": "a reader stops watching after episode N and opens the manga — which chapter, and what if the anime skips ahead or jumps back next episode?",
+      "expected": [
+        "C2",
+        "C1"
+      ],
+      "terms": [
+        "open the book",
+        "finished",
+        "walk"
+      ],
+      "source": "the 2026-09-07 C2 amendment (Sean with Cursor after batch 23 wave 1): eyeshield 54 printed the next episode's START while the unread chapter sat in a note"
     }
   ]
 }

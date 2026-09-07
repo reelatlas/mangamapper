@@ -72,7 +72,7 @@ oldest-first puller: check `changed_at` vs `fetched_at` by day when a source
 - **An EVENT roster script runs only on its trigger, after you have READ it, with `--dry-run` first where it has one — and a script with no dry-run is never assumed to have one** (INCIDENT-2026-09-05, `P40`): `audit-titles.ts` was run to apply one exclusion and deleted six series through a cascade against a stale fixture index; `afg-expansion.ts` has no dry-run and created a series when the flag was passed. `wiki-episodes-backfill.ts` HAS one since 2026-09-07 (`--dry-run`): its first catalog run refused a wrong +14 lock on re-zero that a live run would have written — use it before every event run. Never run a script for its side effect; find the ruling map its job belongs to.
 
 Runs the HEAL roster's standard entries in order (`P20`): scopes, continua,
-coverage (self-healing), volume boundaries, parity continues (`C2`/`C3`),
+coverage (self-healing), volume boundaries, the coverage walk's continues (`C2` amended 2026-09-07 — heal-coverage-continues),
 assert-overrides (`T6`/`G53`), watch order, relations, flag cleanup. Event
 healers are listed by `npm run heal -- --list`; run one only on its trigger.
 If numbering/type rulings changed: re-run `resolveSeries` for the affected
@@ -90,8 +90,9 @@ series (stale-zone healing).
   unexplained and never auto-deleted.
 - `anchor_beyond_display_total`: count-space value in a number-space
   instrument (`N22`/`N23`) — convert, never leave standing.
-- `continue_skip_unnoted`: `C3` outcome — the parity healer should have
-  stamped it; if not, why not.
+- `continue_offwalk_healer` MUST be 0 (the coverage healer has not run);
+  `continue_offwalk_curated` is Sean's queue — a curated continue the walk
+  disagrees with (`C2` amended 2026-09-07), listed with the proposed value.
 - Compare every class to the previous census and explain each delta
   (`P17`). A class that moved without an explanation is an unshipped bug.
   **Read every NON-ZERO class, not only the watched ones** (2026-09-04:

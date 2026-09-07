@@ -39,3 +39,5 @@ the RoK verdict gets `verdict-verifier` on a DIFFERENT model (R24) — every
 anchor, the repairs, the afg confirmations; the three narrow verdicts only on a
 structure surprise (a reorder, a repair contradicting stored data, a retype).
 Reports: `verify/w1-<series>.md`. Files: `out/<series>-w1.json`.
+
+**After the wave landed (2026-09-07): `C2` was amended — the continue is the coverage walk (open the book here), not parity.** The four verdicts' `continue_points` were delivered under the parity rule; the apply lands anchors and annotations and lets the coverage healer derive every continue (eyeshield 54 → 111 not 112; 57 → 115 not 116; RoK's parities become END + 1, derived). A verdict continue survives only as a curated fact where it carries pages the walk cannot see.

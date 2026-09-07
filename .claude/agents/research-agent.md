@@ -101,7 +101,7 @@ Read both, fully:
   not a number. BEHIND IS NOT A BASIS (Sean 2026-09-03, shippuden 112): a
   first-time SIGNIFICANT block anchors at its own END even 25 chapters behind
   the frontier — deliver the anchor + `rearranged`, and deliver the row's
-  CONTINUE by `C5`'s covered-or-not test (the frontier when the stretch between is already adapted; else END + 1 / the next START with the unseen range named). END = the furthest MAINLINE chapter adapted in running order
+  CONTINUE facts (the walk derives the value — `C2` amended 2026-09-07: what the row FINISHED, what it only touched, what it re-shows; never a parity number). END = the furthest MAINLINE chapter adapted in running order
   (`A4`); START = the first chapter animated under the sliver rule (`A10`: a
   leading partial of the preceding chapter counts unless ≤5 pages or
   sliver/teaser/cold-open/recap/flashback wording; `A12`: a relocated
@@ -112,13 +112,18 @@ Read both, fully:
   `partial` names it; a finale's tail stands, C1); page splits live in
   `chapters_adapted`; a row displays its FIRST chapter (`A13`). Chapter-NUMBER
   space only — the manga's own numbering, never a count with specials, never
-  a sequel's or a sibling manga's space. Continue points: a mid-chapter
-  ending continues IN the straddled chapter (`C1`); skipped material the
-  anime covers later → PARITY, continue at the next episode's start and note
-  what to skip on arrival (`C2`/`C3`); after the anime's last adaptation the
-  POST-SERIES continue is the furthest first-time coverage + 1 (`C5`; coverage
-  per `A4`) with the never-adapted range named — `C4` is single-source-final,
-  not a continue regime. Chapter re-use never moves position. Movies
+  a sequel's or a sibling manga's space. CONTINUE = OPEN THE BOOK HERE (`C2`
+  amended 2026-09-07 with Cursor): the first chapter not yet FINISHED by this
+  or any earlier episode — a hole this episode jumped over, else the END while
+  it is still open (`C1`), else END + 1 stepping over chapters finished
+  earlier; covered means FINISHED, not touched (a sliver, recap, graft,
+  flashback or restaging never finishes; abridged does). The apply's healer
+  DERIVES it from your coverage facts (`lib/coverage.ts`); deliver a
+  `continue_points` entry only where you hold page-level facts the walk
+  cannot see (a page-partial END nobody closes) and say why. What the next
+  episode does is a NOTE, never the number. After the anime's last adaptation
+  the same walk runs as post_series (`C5`). `C4` is single-source-final, not
+  a continue regime. Chapter re-use never moves position. Movies
   count only when numbered (`N4`). Join on title or date, never index (`R20`).
 
 ## Traps that have cost real time
@@ -225,7 +230,7 @@ Read both, fully:
 - **Wrong dates that still ASCEND never trip the order gate** (sailor-moon-crystal 10, shugo-chara 26/88, gx 134). On a fixed weekly slot, check the day of week of every stored date, not just the regressions.
 - **Licensor synopses are decisive for multi-block episodes:** Yomiuri TV `ytv.co.jp/conan/archive/kYYYYMMDD.html`, Bandai Channel `b-ch.com/titles/<id>/NNN`, dアニメストア og:description; syobocal (`cal.syoboi.jp`, per-airing XML) is a strong third source for 2002+ air dates and the network that actually carried a row (black-cat 15 = Animax). A fan summary's FORMATION or technique name can conflate two chapters (eyeshield "High Wave" vs the Poseidon Formation = ch 120 vs 124) — trust the official synopsis over the fan name.
 - **"Pages, not numbers" (Sean's catalog line, 2026-08-27).** New pages of a chapter airing for the first time are a real position even when the chapter's NUMBER was already an END (saint-seiya 29-30 → 24; TMM 27 → 16): deliver the anchor + `rearranged`, not anchor_hostile. Re-shown pages (recap, cold open, flashback, a re-staging of an already-animated scene) are never cited; a first-time SLIVER inside an original plot is `A44` position-less (ranma 130). Do not default the two shapes opposite ways in one bundle. THE CONTINUE ON A BACK-JUMP EXIT (C5): is the stretch between this END and the frontier already covered? yes → continue at the frontier and SAY where it was adapted; no → END + 1 or the next known START, and NAME the never-adapted range (kind unseen); an unfinished END continues in that chapter (C1). Distance from the frontier is NOT a reason to refuse: shippuden 112's Akatsuki half of chs 317-318 anchors at 318 [317] behind ep 90's 343 (Sean 2026-09-03), with continue 343 because 319-343 were already adapted — the wave-2 verdict that hedged it as 'position-less under A44' was reading a retired clause.
-- **Continue vocabulary:** when the anime WILL cover the skipped / out-of-order chapters in known later episodes, the continue is PARITY at the next episode's START (`C2`/`C5`) with the unseen chapters in the note — the apply layer's healer enforces exactly that and will overwrite a "chronological next-unseen" value (TMM 28 → 18 became 20; eyeshield 43 → 99 became 101). Deliver parity; name the unseen range in the note.
+- **Continue vocabulary (RETIRED 2026-09-07 — read `C2`):** parity at the next episode's START was the rule from 2026-08-24 to 09-07 (TMM 28 → 20; eyeshield 43 → 101). It printed the anime's next move as the number and hid the unread chapter in the note (eyeshield 54 → 112 while ch 111 waited for ep 57). The continue is now the coverage walk — the first chapter not yet finished; the healer derives it from the span and the annotations you deliver. Do not deliver parity values.
 - **Detective Conan per-CHAPTER summaries exist — ConanWiki.org (German).** Its `Kapitel_NNN` pages carry a full plot summary per manga file in the same global file space as DCW, which resolves multi-part boundaries DCW and ja-WP only give as case blocks (513 → 629 not 630; 584 START 706). The live site is Cloudflare-403 — use web.archive.org; its `Episode_NNN` pages were renumbered to German broadcast numbers in 2025, so take pre-2025 snapshots.
 - **MU's coverage string is per WORK (batch 20 wave 1).** `anime.end` holds one "Vol N, Chap M (label)" segment per adaptation — "(TV)", "(1983 EP 119)", "(The First Slam Dunk)", "(Ultimate)", "(Gantz:O)", "(S2+OVA)" — and the writer now reads only THIS entry's segment (G32 gate 0). When you quote MU's chapter, quote the SEGMENT and its label, never the biggest number; a ranged "EP 22-26" names a filler block, not the pin episode.
 - **MU's `latest_chapter` is the chapter of its latest-DATED release records** (toriko 2 = a coloured re-release of ch 1-2; gto 13 = Aug-2012 records) — never an edition signal and never a purge; the series/volume fields and the coverage string carry the space.
@@ -238,7 +243,7 @@ Read both, fully:
 - **A chapter-space check you can run without a source: the stored VOLUME.** An anchor whose volume disagrees with the boundary table's volume for its chapter is in the wrong space (saint-seiya's batch-17 rows sat in Wikipedia's +1 phantom space; seven rows disagreed with their own table) — the `anchor_volume_mismatch` class now lists it; when you see one, say which space every source uses before converting (SaintSeiyaPedia = OUR below 46 but +1 from 47: it numbers the Cygnus omake as 046 — two causes, one +1).
 - **An OVA block can have two "official" date regimes** (hxh G.I. Final: ja-WP's table vs Nippon Animation's sell-through schedule, 2-3 weeks apart on five of seven volumes) — repair only where both regimes agree against the stored value (83/84: a Sunday among Wednesdays), and name the regime choice as a series-level fork.
 - **Un-cross-cutting is a reorder shape** (bleach 152-159: Kubo's parallel fights serialized one after another) — one END regression + one START back-jump, both `rearranged`; page-partitioned wiki fields (each shared chapter split exactly once across rows) are what make such anchors trustworthy.
-- **C2 parity after a reorder is the NEXT canon row's START, even when that is BACKWARDS** (d-gray-man 5 → 2, 6 → 3, 24 → 29 — the bobobo precedent): a "don't read back" continue hands the reader nothing for the chapters the anime plays next. Name the already-read range as a C3 skip.
+- **A reorder's continue is the walk, never the next row's START** (`C2` amended 2026-09-07; the d-gray-man 5 → 2 / bobobo shape retired): after a row that jumped over chapters, the continue is the first of those it left unread (a hole it made); after a back-jump block the walk steps over what earlier rows finished. The next row opening backwards is the generated note ("the anime jumps back: ep 6 opens at ch 3"). Deliver spans with page splits and `rearranged`; the healer does the rest.
 - **Two fandom hostnames can be ONE wiki** (batch 20 wave 3: `x1999.fandom` == `xtvclamp.fandom`; `solo-leveling.fandom` is an alias of `sololeveling.fandom`). Before counting two wikis as two sources, compare `api.php?action=query&meta=siteinfo` (the `base` / logo) or diff one page byte for byte.
 - **A task premise is a claim, not a fact** (TBATE: "AFG 81-85" was not on the live page — it prints 81-84 → 86). Re-read the live source before arguing from the ask; say so when the premise fails.
 - **Web-short contamination is a BLOCK** (golden-kamuy: rows 25-46 = en-WP's second `{{Episode list}}` of Dōga Gekijō shorts, exactly the flag's 22 conflicts, entered where AFL's title authority stopped). When one row carries a short's title, check the whole run to the next clean row — and the repair is one atomic block, or the seam regresses.
@@ -281,7 +286,7 @@ Read both, fully:
 - **A repair's `old` must be the CONTEXT's stored value, never a source's label** (wave 11, kingdom 110/111: the fandom's US-simulcast Saturday dates were read as "our stored" dates; the context printed the correct Sunday values all along — a phantom repair the verifier refuted). Read the stored value in the context before writing `old`.
 - **"No source names X" is SILENCE, not a finding** (bleach 193: the fandom's Anime Notes stop at ep 167 in that range). Say so in the note and let the positive readings carry the standing; never write silence as evidence.
 - **Narutopedia's episode summary can omit a page-split chapter's opening share** (374 → 634 vs the true 635) — en-WP's season summaries matched against the per-CHAPTER summaries settle a split; ja-WP's 通算話 column is cumulative EPISODE numbers, never chapters; an episode titled with a chapter's title can adapt a different chapter (385 うちはオビト = ch 599's title, ch 653's content).
-- **The parity / C1 continue on a fence row in front of a filler block is legitimate and precedented** (bleach 167 → 286 before the 22-episode Amagai arc; stored 127 → 229, 146 → 247) — deliver it, flag it as outside the ask, and enrich the row (START, span) so the census can prove it.
+- **A fence row in front of a filler block carries the walk like any row** (bleach 167 before the 22-episode Amagai arc; the old parity values 127 → 229, 146 → 247 are re-derived by the healer): enrich the row (START, span) so the walk can prove it, flag it as outside the ask.
 
 - **A run can hold TWO un-cross-cuts a few episodes apart** (four-knights 18/19 inside ch 58, 22/23 inside ch 69): the chapter's own cast order splitting where the wiki partitions it is the page-level witness; programming-cafe single-assigns a partitioned chapter to one episode — a dissent by convention, not evidence. Deliver the START back-jump + `rearranged`, never a plain range.
 - **A licensor host can MOVE** (4knights-anime.com → 7sins-4knights.net/story/<N>.html): check the live site before declaring the licensor's synopses gone; a dead host in the context is a claim, not a fact.

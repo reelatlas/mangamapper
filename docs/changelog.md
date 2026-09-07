@@ -1154,6 +1154,63 @@
    19-23 / 39 (chain_source) and 18 / 93-95 (AFL's loose Mixed bucket),
    beelzebub 15 / 26-28 / 51, rurouni TV ep 95 (identity). Batch 22 opens on
    the boruto follow-up (lanes I + C) with the batch-21 tooling copied.
+159. ✅ **C2 AMENDED — THE CONTINUE IS THE COVERAGE WALK, "OPEN THE BOOK HERE" (2026-09-07 evening; Sean ruled with Cursor after
+    batch 23 wave 1; built through /add-rule and a rule-change deep).** THE RULE: the continue is where a reader who stops watching
+    after this episode opens the book — the first chapter not yet FINISHED by this or any earlier episode in watch order. Three
+    candidates, the lowest wins: (1) a HOLE this episode made (a chapter inside its own span it jumped over — record-of-ragnarok 18
+    plays 31 then 34 → 32); (2) its END while the END chapter is still OPEN (C1: the next canon / mixed row starts on it, or the span
+    marks it page-partial and no row at or before this one closes it — a recap / restaging / flashback later never reopens it);
+    (3) END + 1 stepping over every chapter finished at or before this episode (eyeshield 54: 110 was ep 52, 111 is unread until ep 57
+    → 111, not ep 55's 112). FINISHED = substantively adapted (T28): a position (START / END, A10 / A47), a bare listing in the span,
+    an abridged annotation upgrading what the row lists; a page-ranged or partial listing touches; sliver / teaser / recap / flashback
+    / graft / restaging / echo wording and partial / graft / recap annotations never finish (an explicit partial on the END keeps it
+    open); an unanchored row contributes nothing (A14: unknown is never finished); a chapter listed ABOVE the END is a tail the next
+    row owns (A47). What the NEXT episode does is the generated NOTE — the old parity value survives as "the anime skips ahead: ep 55
+    opens at ch 112" / "jumps back" — never the number: the next row's START is on screen already. A hole an EARLIER episode made
+    never pulls a later row back (its own row said so; the strip carries the series-wide list). The three-part note is GENERATED
+    (what was finished earlier and by which episodes, as ranges; what this episode skipped or left open and who returns for it;
+    where the next episode opens), never hand prose. WHY (Sean): C2 printed the anime's next move as the number and hid the unread
+    chapter in the note; for the reader who leaves the screen for the page the skip is the fact; covered means finished, not
+    touched; abridged counts (else a condensed season sends everyone to chapter 1); filler and position-less rows get no continue.
+    THE BUILD (P31): lib/coverage.ts — spanContributions (whole / part / never per unit, chapter or LN volume under T24),
+    annotationChapters, buildCoverage (the index: finishedAt / endOpenAt / finishedLaterBy / nextRow), walkContinue (value, kind,
+    the note), continueAgrees / continueValueAgrees / kindFor; 23 unit tests on the rows that ruled it (RoK 18 / 22 / 21 / 17, the
+    binge reader, eyeshield 54 / 57 / 56 / 58, sailor-moon 46, kingdom 16 and 44-48, beelzebub 59, ranma 93's unknown rows, the
+    eyeshield block-abridged shape, kinnikuman 33's precedence in both orders, 7DS 76's partial END). heal-coverage-continues.ts
+    (rostered, standard — placed AFTER assert-overrides and the pin healers because the walk reads what they assert: the fixed-point
+    lesson; heal-parity-continues.ts to history) derives every non-curated continue, writes a stored kind (hole / open / walk /
+    post_series), clears a healer value the walk derives as END + 1, restamps a retired kind on an agreeing curated value, and never
+    touches a curated value (C7). Audit classes: continue_offwalk_healer (violation — the healer has not run) and
+    continue_offwalk_curated (queue — a curated continue the walk disagrees with, the proposal printed beside it); retired:
+    backjump_continue_unruled / unnoted, continue_basis_unknown, continue_skip_unnoted (subsumed). Ledger: C2 amended (title, the
+    walk, retiredPhrases for the parity clauses), C5 (coverage governs — the walk is the one derivation; the back-jump exit its
+    ordinary case), C6 (kinds hole | open | walk | post_series; parity / unseen retired, refused by writeCuratedContinue at
+    runtime), C1 (the open END is the walk's second candidate), C3 (the skip line is generated), C7 (the same-day basis clause
+    superseded: a healer value stands only where the walk derives it today), A44 (classes). lib/c3.ts keeps c3Ahead +
+    hasSkipLanguage (the "already seen here" part and the curated-note check); the back-jump helpers and batch22/c5-queue.ts
+    retired. research-agent, apply-batch, consolidate skills and the batch-23 protocol carry the vocabulary ("deliver coverage
+    facts; the healer derives the value; a curated continue is for page-level facts only"); one-hop case 51. Edges deployed ×2 (22:56,
+    23:23). THE TWO DEFECTS THE DRY RUNS CAUGHT: an END the span did not mention was read as page-partial (nearly every row 'open')
+    — a position is finished by itself; and annotation precedence followed the query's row order (kinnikuman 33: abridged{95-120}
+    + partial{98} flip-flopped between heals) — fixed precedence, downgrades win. THE HEAL (catalog-wide, converged — a second pass
+    writes 0): 8,977 rows walked over 314 series; 2,552 written (309 holes, ~1,860 open ENDs in chapter space — afg lists a straddled
+    chapter on both rows, 99 in volume space, 255 walks, 123 + 15 finales), 592 stale parity values cleared (skips the anime never
+    returned for, back-jumps — each now derives END + 1), 633 curated kinds restamped; the roster's second pass wrote 15 finales
+    (audit-manga-coverage had flipped statuses first) and cleared 2 — the ordering fix. SEAN'S QUEUE: 204 curated continues off the
+    walk (batch23/CURATED-CONTINUES-OFF-WALK.md — by shape: 61 straddles the walk cannot see (stored = END, no page range in the
+    span, the next row not on it), 43 skips whose skipped chapters are unread, 24 back-jumps, 16 shorter walks, 13 holes, 45 END + 1
+    values the walk steps past, 1 longer walk, 1 back-jump hole; by series: detective-conan 20, fist-of-the-north-star 16,
+    naruto-shippuden 12, gantz 10, bleach 9 …) — proposed as one ruling: the straddles STAND as curated 'open' (page-level facts),
+    the rest convert to the walk with the curated note kept. BATCH 23 UNDER THE WALK (the preview on the verdict rows): eyeshield 54
+    → 111 (not 112), 57 → 115 (the fork dissolves), 56 → 115 derived with the back-jump note; RoK 18 → 32 [hole], 12 / 22 / 33 / 37 /
+    41 open, the rest END + 1 — every verdict number coincides; sailor-moon 71 → 17 derived, 73 → 18 open; beelzebub 59 → 122
+    post_series. CENSUS (vs §12.158, every delta explained — P17): continue_offwalk_healer NEW 0; continue_offwalk_curated NEW 204;
+    the six old continue classes gone; afl_page_stale 286 → 246 (draining at 20 an hour as predicted); frontier_tail_null 13 → 14
+    and ruling_violation 0 → 2 → 0 — the resumed AFL rotation reached bleach-thousand-year-blood-war's page and minted rows 41-42
+    (format null until heal-format ran in the roster; the tail is a real frontier gap); anilist_resolve_debt 0 → 2 — re-zero's S3 /
+    S4 components (163134 / 189046, staged 09-06) read as resolved never after the page's re-resolve; the AniList refresh (403 since
+    09-06) resolves them when it answers (the catch-up); every other class unchanged; 222 verified, 0 failing. Gates: tsc, lint 456
+    (463 before — the old healer left the lint scope), 324 tests (308 + 16), build, ledger-check, system census.
 158. ✅ **THE ROK INTERIM APPLIED, THE CONSOLIDATE DEEP, BATCH 23 WAVE 1 DISPATCHED AND LANDED (2026-09-07; Sean's 'ready to proceed' after the compact).**
     THE INTERIM (Sean with Cursor, A14 — null = unknown, the display derives): apply-rok-interim.ts nulled the four round-grain
     STARTs AND spans on record-of-ragnarok 22 / 27 / 33 / 38 (the ENDs 42 / 54 / 65 / 77 stay; 4 rows, a second dry run 0);

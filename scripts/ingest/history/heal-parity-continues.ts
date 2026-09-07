@@ -15,10 +15,25 @@
 //   - loose series skipped (borrow-maps).
 // Re-runnable. --dry-run prints every change without writing.
 //   npx tsx --env-file=.env.ingest scripts/ingest/heal-parity-continues.ts [--dry-run] [seriesId ...]
-import { db, selectAll } from './lib/db';
-import { seriesHasInstrument } from './lib/rulings/source-kinds';
-import { c3Ahead, hasSkipLanguage, c3Note } from './lib/c3';
-import { healerContinueBasisGone, isCuratedContinue, parityBasis } from './lib/continues';
+import { db, selectAll } from '../lib/db';
+const seriesHasInstrument = _shi;
+import { c3Ahead, hasSkipLanguage } from '../lib/c3';
+const c3Note = (existingNote: string | null, ahead: number[]): string => { const kept = String(existingNote ?? '').trim(); return `${kept ? kept + ' | ' : ''}C3 (Sean 2026-08-25): this episode also covered ch ${ahead.join(', ')} ahead of the continue point — skip on arrival unless re-reading.`.slice(0, 600); };
+import { isCuratedContinue, type ContinueRow } from '../lib/continues';
+import { seriesHasInstrument as _shi } from '../lib/rulings/source-kinds';
+
+
+// HISTORY (2026-09-07): this healer was superseded the same day by heal-coverage-continues.ts (C2 amended — the coverage
+// walk); the parity-basis helpers it used were removed from lib/continues.ts and are inlined here so the record compiles.
+const firstChapterOf = (s: string | null | undefined): number | null => { const m = String(s ?? '').match(/\d+(?:\.\d+)?/); if (!m) return null; const n = Number(m[0]); return Number.isInteger(n) ? n : Math.floor(n); };
+type NextAnchoredRow = { episode: number; start_chapter: number | null; chapters_adapted?: string | null };
+const parityBasis = (a: { episode: number }, b: NextAnchoredRow | undefined, typeOf: (episode: number) => string | undefined): number | null => {
+  if (!b) return null;
+  for (let n = a.episode + 1; n < b.episode; n++) { const t = typeOf(n); if (t === 'canon' || t === 'mixed' || t === undefined) return null; }
+  return b.start_chapter ?? firstChapterOf(b.chapters_adapted);
+};
+const healerContinueBasisGone = (r: ContinueRow & { chapter?: number | null; episode?: number }, next: NextAnchoredRow | undefined, basis: number | null): boolean =>
+  r.continue_chapter != null && r.continue_source === 'healer' && r.continue_kind === 'parity' && !!next && basis == null && Number(r.continue_chapter) !== Number(r.chapter);
 
 const DRY = process.argv.includes('--dry-run');
 const ONLY = process.argv.slice(2).filter((a) => !a.startsWith('--'));

@@ -9,7 +9,7 @@
 //   npx tsx --env-file=.env.ingest scripts/ingest/audit-ui-truth.ts
 
 import { db, selectAll } from './lib/db';
-import { backjumpNoteOk, backjumpRange, c3Ahead, hasSkipLanguage } from './lib/c3';
+import { c3Ahead, hasSkipLanguage } from './lib/c3';
 import { COMMUNITY_COUNT_OVERRIDES, CONTINUA_SUPPRESSED, EPISODE_TYPE_OVERRIDES, SOURCE_NUMBERING_SHIFTS, translateEpisodeNumber } from './lib/resolve';
 import { AIRDATE_REGRESSION_THRESHOLD_DAYS, airdateOrderWalk } from './lib/airdate-order';
 import { offWindowRows, seriesDatesInvalid } from './lib/wiki-identity';
@@ -22,7 +22,9 @@ import { orphanRecords } from './lib/row-presence';
 import { STANDING_ANNOTATIONS } from './lib/rulings/standing-annotations';
 import { AIR_DATE_OVERRIDES } from './lib/rulings/air-dates';
 import { EPISODE_TITLE_OVERRIDES } from './lib/rulings/episode-titles';
-import { continueUnprovenanced, curatedOverwritten, healerContinueBasisGone, parityBasis } from './lib/continues';
+import { continueUnprovenanced, curatedOverwritten, isCuratedContinue } from './lib/continues';
+import { buildCoverage, continueAgrees, continueValueAgrees, walkContinue, type CoverageAnchor, type CoverageAnnotation } from './lib/coverage';
+import { sourceKindOf } from './lib/rulings/source-kinds';
 import { annotationWorkLabel, isChainWork } from './lib/rulings/source-chains';
 import { WIKI_PAGES } from './lib/rulings/wiki-pages';
 import { AFG_CHART_SUPPRESSED } from './lib/rulings/afg-chart-suppressed';
@@ -108,9 +110,9 @@ async function main() {
     integrity_degenerate_span: degenerateSpans,
     special_numbered_unreviewed: [], anchor_gap_research: [], frontier_tail_null: [],
     anchor_volume_mismatch: [], row_minted_by_missing: [],
-    anchor_nonmonotonic: [], anchor_start_offtrend: [], start_sliver_mismatch: [], start_without_span: [], end_sliver_mismatch: [], anchor_note_repeated: [], anchor_beyond_chapter_space: [], anchor_beyond_display_total: [], anchor_fractional_chapter: [], anchor_on_noncanon_row: [], continue_skip_unnoted: [], continue_provenance_missing: [], continue_basis_unknown: [], afl_page_stale: [], boundaries_degenerate: [], ruling_violation: [], repair_on_derivation_tier: [],
+    anchor_nonmonotonic: [], anchor_start_offtrend: [], start_sliver_mismatch: [], start_without_span: [], end_sliver_mismatch: [], anchor_note_repeated: [], anchor_beyond_chapter_space: [], anchor_beyond_display_total: [], anchor_fractional_chapter: [], anchor_on_noncanon_row: [], continue_offwalk_healer: [], continue_offwalk_curated: [], continue_provenance_missing: [], afl_page_stale: [], boundaries_degenerate: [], ruling_violation: [], repair_on_derivation_tier: [],
     mu_pin_unverified: [], mu_pin_flag_redundant: [], anchor_without_row: [], annotation_without_row: [],
-    rearranged_zone_unanchored: [], rearranged_zone_acknowledged: [], backjump_continue_unruled: [], backjump_continue_unnoted: [], annotation_contradicts_row: [],
+    rearranged_zone_unanchored: [], rearranged_zone_acknowledged: [], annotation_contradicts_row: [],
     title_incomplete: [], airdate_incomplete: [], airdate_regression: [], airdate_withheld: [], episode_date_off_window: [], asterisk_unreviewed: [],
     fractional_unmodeled: [], annotation_invalid: [], annotation_retired_standing: [], afl_anime_canon_unruled: [], format_missing: [], episode_without_component: [], watch_order_kind_missing: [],
     permanence_candidate: [], permanence_violation: [], series_without_franchise: [], identity_registry_gap: [], adoption_held: [], series_staged: [], series_deleted_unruled: [], mixed_fragment_only: [], run_stuck: [], unverified_share: [], sliver_only_anchor: [], chain_source_unmapped: [], side_source_on_chain: [], source_work_unlabelled: [], grid_unminted: [], type_source_disagreement: [], type_default_unclassified: [], side_source_unadopted: [],
@@ -693,67 +695,36 @@ async function main() {
         );
       }
     }
-    // BACK-JUMP CONTINUE (A8 / A44 / C5, Sean 2026-09-03 — shippuden 112): a
-    // canon/mixed row whose END sits BELOW the running maximum of the rows
-    // before it is a first-time block adapted out of order — it anchors at
-    // its own END (behind is not a basis), and its continue is the coverage /
-    // parity value by C5's covered-or-not test (END + 1 only when the stretch
-    // between is NOT already adapted). The parity healer REFUSES such a row when
-    // its next canon/mixed neighbour is unanchored, so a null continue here
-    // is a curation queue (writeCuratedContinue, C7), never a healer miss.
+    // C2 (amended 2026-09-07 — the coverage walk, "open the book here"): every anchored canon / mixed row's continue is
+    // the walk's value (lib/coverage.ts#walkContinue — the healer and the apply read the same function). A HEALER row off
+    // the walk (a stale value, a stale note, a missing stored value, a value where the walk says END + 1) is a healer that
+    // has not run (violation). A CURATED row off the walk (continue_source manual / source) is Sean's review queue: the
+    // proposed value and reason are printed beside the stored ones; a curated note that names no skip where the row
+    // covered chapters above its continue is listed too (C3's note requirement).
     {
+      const annos = await selectAll<CoverageAnnotation & { series_id: string }>('episode_annotations', 'series_id, episode, kind, chapters');
+      const annBy = new Map<string, CoverageAnnotation[]>();
+      for (const a of annos) annBy.set(a.series_id, [...(annBy.get(a.series_id) ?? []), a]);
+      const tOf = new Map<string, string>(episodes.map((e) => [`${e.series_id}#${e.number}`, e.type]));
       const looseIds = new Set(series.filter((s: any) => s.mapping_mode === 'loose').map((s: any) => s.id));
+      const statusOf = new Map(series.map((s: any) => [s.id, s.status]));
+      const unitOf = new Map(series.map((s: any) => [s.id, sourceKindOf(s.source_type)?.unit === 'volume' ? 'vol' : 'ch']));
       for (const [sid, list] of bySeries) {
         if (looseIds.has(sid)) continue;
-        const sorted = [...list].sort((x: any, y: any) => x.episode - y.episode);
-        // only the EXIT row of a jumped-back block is flagged: inside an
-        // advancing block the next row's start carries the reader (parity /
-        // END + 1 are the same number); at the exit — the next anchored row
-        // is back on the frontier, or there is none — END + 1 would send the
-        // reader through chapters already adapted (shippuden 112 → 343,
-        // Kakashi Gaiden 120 → 353 are the curated shape)
-        let envelope = -Infinity;
-        for (let i = 0; i < sorted.length; i++) {
-          const a = sorted[i];
-          const back = Number.isFinite(envelope) && a.chapter < envelope;
-          envelope = Math.max(envelope, a.chapter);
-          if (!back) continue;
-          const next = sorted[i + 1];
-          const exit = !next || next.chapter >= envelope || next.chapter < a.chapter;
-          if (!exit) continue;
-          if (a.continue_chapter != null) {
-            // the C3 twin: a continue ABOVE the END must say whether the
-            // stretch in between was already adapted or never (lib/c3.ts)
-            const range = backjumpRange(a.chapter, a.continue_chapter);
-            if (range && !backjumpNoteOk(a.continue_note ?? null)) {
-              classes.backjump_continue_unnoted.push(
-                `${sid}: ep ${a.episode}→ch${a.chapter} continue ${a.continue_chapter} (${a.continue_kind ?? 'no kind'}) — chs ${range[0]}${range[1] > range[0] ? `-${range[1]}` : ''} lie between END and the continue and the note does not say already / never adapted (C5; C3 cannot see this shape)`,
-              );
-            }
+        const index = buildCoverage(list as CoverageAnchor[], annBy.get(sid) ?? [], (n) => tOf.get(`${sid}#${n}`));
+        const last = index.rows[index.rows.length - 1];
+        for (const row of index.rows) {
+          const w = walkContinue(row, index, { finale: statusOf.get(sid) === 'finished' && row === last, unit: unitOf.get(sid) as 'ch' | 'vol' });
+          const curated = isCuratedContinue(row) || row.continue_source === 'source';
+          if (curated) {
+            const notes: string[] = [];
+            if (!continueValueAgrees(row, w)) notes.push(`the walk says ${w.value} [${w.kind}]${w.stored ? '' : ' (END + 1, nothing stored)'}`);
+            if (row.continue_chapter != null && c3Ahead(row.chapters_adapted, row.continue_chapter).length && !hasSkipLanguage(row.continue_note ?? null)) notes.push('the note names no skip for the chapters this episode covered above its continue (C3)');
+            if (notes.length) classes.continue_offwalk_curated.push(`${sid}: ep ${row.episode}→ch${row.chapter} curated continue ${row.continue_chapter} [${row.continue_kind ?? 'no kind'}] — ${notes.join('; ')} — ${w.note.slice(0, 140)}`);
             continue;
           }
-          classes.backjump_continue_unruled.push(
-            `${sid}: ep ${a.episode}→ch${a.chapter} (${a.source}) exits a jumped-back block behind the frontier ${envelope}${next ? ` (ep ${next.episode} → ${next.chapter})` : ' (last anchored row)'} with NO continue — END + 1 would re-read adapted chapters; the continue is the coverage / parity value (C5), curated via writeCuratedContinue`,
-          );
-        }
-      }
-    }
-    // C7 × A14 (2026-09-07, record-of-ragnarok 21 / 26 / 32 / 37): a HEALER parity
-    // continue whose basis is gone — the next anchored row's START unknown (A14)
-    // with a span naming no chapter, or that row no longer the adjacent canon /
-    // mixed episode — is a stale derivation the healer clears on its next pass
-    // (lib/continues.ts#healerContinueBasisGone, the same reader the healer uses).
-    // One still standing renders a phantom continue: a violation.
-    {
-      const tOf = new Map<string, string>(episodes.map((e) => [`${e.series_id}#${e.number}`, e.type]));
-      for (const [sid, list] of bySeries) {
-        const sorted = [...list].sort((x, y) => x.episode - y.episode);
-        for (let i = 0; i < sorted.length - 1; i++) {
-          const a = sorted[i], b = sorted[i + 1];
-          if (!Number.isInteger(a.episode) || !Number.isInteger(b.episode)) continue;
-          const basis = parityBasis(a, b, (n) => tOf.get(`${sid}#${n}`));
-          if (healerContinueBasisGone(a, b, basis))
-            classes.continue_basis_unknown.push(`${sid}: ep ${a.episode} healer continue ${a.continue_chapter} (parity) but ep ${b.episode}'s start is unknown / underivable — the basis is gone (A14 × C7); the parity healer clears it`);
+          if (continueAgrees(row, w) && (!w.stored || row.continue_note === w.note)) continue;
+          classes.continue_offwalk_healer.push(`${sid}: ep ${row.episode}→ch${row.chapter} ${row.continue_chapter == null ? 'no continue' : `healer continue ${row.continue_chapter} [${row.continue_kind ?? 'no kind'}]`} but the walk says ${w.stored ? `${w.value} [${w.kind}]` : 'END + 1 (nothing stored)'} — run heal-coverage-continues`);
         }
       }
     }
@@ -899,18 +870,6 @@ async function main() {
         const rowType = typeByEp.get(`${sid}#${a.episode}`);
         if (rowType && rowType !== 'canon' && rowType !== 'mixed') {
           classes.anchor_on_noncanon_row.push(`${sid}: ep ${a.episode}→ch${a.chapter} (${a.source}) anchored on a ${rowType} row — A1 forbids; junk anchor (delete, honest terminal on last canon/mixed ep) or wrong row type?`);
-        }
-        // C3 outcome check (Sean 2026-08-25): a continue point sitting below
-        // chapters this same episode already covered (forward graft +
-        // parity-back-jump) must tell the reader which chapters to skip on
-        // arrival. Strictly greater — continue == an adapted chapter is C1
-        // (mid-chapter straddle, re-reading intended). Healed by
-        // apply-parity-continues.ts's C3 pass.
-        {
-          const ahead = c3Ahead(a.chapters_adapted ?? null, a.continue_chapter ?? null);
-          if (ahead.length && !hasSkipLanguage(a.continue_note ?? null)) {
-            classes.continue_skip_unnoted.push(`${sid}: ep ${a.episode} continue ${a.continue_chapter} but this episode covered ch ${ahead.join(', ')} ahead — C3 requires a skip-on-arrival note (run the parity healer)`);
-          }
         }
       }
     }
@@ -1231,7 +1190,7 @@ async function main() {
         classes.afl_page_stale.push(`${stale.length} active AFL page(s) not fetched for more than 8 days (oldest ${oldest}; ${activeSlugs.size} active) — the hourly rotation is not advancing (G9 / G47; lib/resolve.ts#touchAflFetched) or a backlog is draining at 20 an hour`);
       }
     }
-    const OPEN_CLASSES = ['integrity_eps_beyond_total', 'integrity_total_beyond_eps', 'integrity_double_claimed', 'integrity_degenerate_span', 'special_numbered_unreviewed', 'anchor_gap_research', 'frontier_tail_null', 'anchor_nonmonotonic', 'anchor_start_offtrend', 'anchor_volume_mismatch', 'row_minted_by_missing', 'source_relation_missing', 'parallel_has_anchor', 'arcs_not_partition', 'arc_row_conflict', 'correspondence_invalid', 'correspondence_incomplete', 'anchor_beyond_chapter_space', 'anchor_beyond_display_total', 'anchor_fractional_chapter', 'anchor_on_noncanon_row', 'continue_skip_unnoted', 'continue_provenance_missing', 'continue_basis_unknown', 'boundaries_degenerate', 'boundaries_wrong_page', 'boundaries_beyond_total', 'ruling_violation', 'repair_on_derivation_tier', 'mu_pin_unverified', 'rearranged_zone_unanchored', 'title_incomplete', 'airdate_incomplete', 'airdate_regression', 'airdate_withheld', 'asterisk_unreviewed', 'fractional_unmodeled', 'annotation_invalid', 'afl_anime_canon_unruled', 'format_missing', 'episode_without_component', 'watch_order_kind_missing', 'series_without_source_kind', 'pending_airing_no_anchor', 'pending_finished_no_totals', 'pending_no_canon', 'pending_other', 'identity_registry_gap', 'adoption_held'];
+    const OPEN_CLASSES = ['integrity_eps_beyond_total', 'integrity_total_beyond_eps', 'integrity_double_claimed', 'integrity_degenerate_span', 'special_numbered_unreviewed', 'anchor_gap_research', 'frontier_tail_null', 'anchor_nonmonotonic', 'anchor_start_offtrend', 'anchor_volume_mismatch', 'row_minted_by_missing', 'source_relation_missing', 'parallel_has_anchor', 'arcs_not_partition', 'arc_row_conflict', 'correspondence_invalid', 'correspondence_incomplete', 'anchor_beyond_chapter_space', 'anchor_beyond_display_total', 'anchor_fractional_chapter', 'anchor_on_noncanon_row', 'continue_offwalk_healer', 'continue_offwalk_curated', 'continue_provenance_missing', 'boundaries_degenerate', 'boundaries_wrong_page', 'boundaries_beyond_total', 'ruling_violation', 'repair_on_derivation_tier', 'mu_pin_unverified', 'rearranged_zone_unanchored', 'title_incomplete', 'airdate_incomplete', 'airdate_regression', 'airdate_withheld', 'asterisk_unreviewed', 'fractional_unmodeled', 'annotation_invalid', 'afl_anime_canon_unruled', 'format_missing', 'episode_without_component', 'watch_order_kind_missing', 'series_without_source_kind', 'pending_airing_no_anchor', 'pending_finished_no_totals', 'pending_no_canon', 'pending_other', 'identity_registry_gap', 'adoption_held'];
     const openBy = new Map<string, Set<string>>();
     const ids = new Set(series.map((s: any) => s.id));
     for (const c of OPEN_CLASSES) for (const line of classes[c] ?? []) {
