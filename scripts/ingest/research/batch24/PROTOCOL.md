@@ -105,3 +105,29 @@ map, Ace's 169 → 170 seam and the part's endpoint against MU's 259), every
 (it contradicts stored data), the block's first and last anchor and one
 middle row on the pages, and the mechanical R25 scan (`scan.ts`) — not a
 per-row citation fetch. Reports: `verify/w1-<series>.md`.
+
+## Wave 2 = THE RE-ZERO GAP BLOCK (Sean's go 2026-09-07: 'lets get through the rezero blocks')
+
+Two lane-A2 asks (anchor_gap_research: 50 AFL-typed canon rows never anchored — the
+block wave 1 exposed), the same instrument clause as wave 1's re-zero asks: LN
+VOLUME space (T24, now live), `end_chapter` / `start_chapter` / `volume` = the LN
+volume number, `chapters_adapted` = 'vN ch M' as the printed table of contents
+numbers them; the web-novel part numbering and the per-arc comicalizations are
+other spaces, never positions. THE TYPES STAND: every row is AFL-typed canon and
+AFL is a source here (T4: advisory); a `type_corrections` entry needs T28 evidence
+on ≥ 2 sources, otherwise no type change. THE FENCES: the block's upper fence is
+the stored ep 51 → 16 [16] (Arc 5 opens on volume 16 whole — the wave-1 verdict);
+there is no lower fence (ep 1 is the series' first row). The seam at 25 / 26 is
+the two asks' shared claim (Arc 3's last volume closes S1; Arc 4 opens S2) and
+must agree across the two files.
+
+1. rows 1-25 (season 1, 2016 — Arcs 1-3) → `re-zero-starting-life-in-another-world-w2a.json`
+2. rows 26-50 (season 2, 2020-21, two cours — Arc 4) → `re-zero-starting-life-in-another-world-w2b.json`
+
+Not rows, not the ask: the 2020 Director's Cut rebroadcast (13 double-length
+episodes — a re-cut, I16), the Memory Snow / Frozen Bonds OVAs (related works),
+the Break Time / Break Room shorts (a companion table on the same dates — the
+G59 guard's witness). Verification: R23 by the count — the S2 verdict (the denser
+arc, six volumes over 25 rows with its time loops) gets a verifier; S1's only if
+its verdict carries a structure surprise (a reorder, a repair contradicting
+stored data, a retype).
