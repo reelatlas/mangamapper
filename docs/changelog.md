@@ -1180,7 +1180,33 @@
     of old rulings under every live rule (the lock pass, an amendedOn-vs-ruledOn worklist); Sean's queues untouched
     (permanence_candidate 52, asterisk_unreviewed 178 incl. the Tennis annotation, Tanya's two fractionals, the Berserk
     count_mismatch flag); the open-flag backlog (count_mismatch 210 · match_ambiguous 90 · parse_integrity 31 ·
-    taxonomy_conflict 26 · large_diff 2, oldest 2026-08-22) is Sean's triage class, listed, not farmed. CENSUS_DEEP_PLACEHOLDER
+    taxonomy_conflict 26 · large_diff 2, oldest 2026-08-22) is Sean's triage class, listed, not farmed. CENSUS (vs the post-wave-6 capture, every delta explained — P17): fractional_unmodeled 3 → 2 (the No Regrets namesake
+    fractional deleted from staging; Tanya's two remain — Sean's); run_stuck 1 → 0 (heal-stuck-runs marked afg#1227 killed);
+    related_work_ruling_orphan 0 (new); anchor_volume_mismatch 0 and heal-anchor-volumes --dry-run 0 after the roster (1379
+    re-derived once; the writer fix proves itself at the next AFG refresh); ruling_violation 0; every violation-kind class 0;
+    220 series verified, 0 failing; 294 tests. THE ROSTER: heal-source-kinds 0 changed · scopes / continua / coverage as before
+    · heal-boundaries 0 · heal-anchor-volumes 1379 (once) · parity 0 · wiki --ruled 0 targets · mint-grids 0 · assert-overrides
+    0 asserted everywhere (393 standing annotations, 821 T6 rows, 199 dates, 139 memberships — all current) · sync-watch-order
+    39 synced, 0 dropped (the namesake row NOT re-added) · sync-related-works 1 routine update · relations 182 rows (28 ruled
+    pairs) · cleanup-flags 1 duplicate dismissed, 359 open (Sean's triage class: count_mismatch 210 · match_ambiguous 90 ·
+    parse_integrity 31 · taxonomy_conflict 26 · large_diff 2) · heal-structure 0 · heal-format 0 (the 5 null formats are
+    fist-of-the-blue-sky 23-26 and detective-conan 1212 — rows no component covers, N7 kind components owed). THE STANDING
+    NON-ZERO CLASSES, read whole and each queued by name (unchanged this pass): integrity_eps_beyond_total 1
+    (fist-of-the-blue-sky 26 vs 22), integrity_total_beyond_eps 10 (yu-gi-oh-zexal, fish-man island saga, digimon-adventure,
+    the-prince-of-tennis 178 vs 177, cells-at-work, hayate, to-love-ru, durarara, bokuben, arslan — AFL lag / row-less
+    series), anchor_gap_research 3 (ranma 31-87, trigun-stampede 1-18, shy 1-23 — the research work-list),
+    start/end_sliver_mismatch 1/1 (tokyo-mew-mew 38, one-piece 195 — Sean signs), anchor_beyond_display_total 2 (soul-eater-not
+    ep 12 → ch 42 / continue 43 vs the display total 41 — a count-space value, N22 / N23: convert at the next batch, never
+    left silent), mu_pin_unverified 1 (trigun-stampede), anchor_without_row 8 and annotation_without_row 3 (the row-less
+    entries by ruling A42 — fish-man island saga, to-love-ru, bokuben, cells-at-work — plus one-piece's AFG anchor at 1176 past
+    aired 1175), afl_anime_canon_unruled 1 (assassination-classroom), format_missing 2 / episode_without_component 2 (the
+    same five rows), watch_order_kind_missing 3, mixed_fragment_only 3 (naruto ×6 rows, chrono-crusade 21, tokyo-mew-mew 21 —
+    T28 sole-adaptation checks), unverified_share 3 (one-piece 214 / 216 / 319), type_source_disagreement 1 (weak, parked),
+    correspondence_incomplete 1 (dragon-ball-super's 66 rows — Sean's row-by-row pass), pending_no_canon 2 (excel-saga,
+    dragon-ball-gt), pending_airing_no_anchor 3 (the C1 seasons + gits-2026), frontier_tail_null 12, title_incomplete 24,
+    airdate_incomplete 23, asterisk_unreviewed 178, permanence_candidate 52, series_staged 33, type_default_unclassified 81,
+    no_source 39 / no_instrument 13 (T31's full members), the halo / extras listings and the queues (halo_airing 56,
+    seed_airing 209, related_work_unruled 371, seed_candidate 528).
 
 146. ✅ **EXTRAS WAVE 6 APPLIED (Sean ruled 2026-09-06 with Cursor: all eleven as recommended — DBS Resurrection 'F' canon
     at 14.5, the DBZ 288.5x cluster as one package, Blue Exorcist pinned, no Kai row for Yo! Son Goku).** Seven works + the
