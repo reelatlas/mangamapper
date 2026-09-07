@@ -1,0 +1,457 @@
+{
+ "series_id": "ace-of-the-diamond-act-ii",
+ "summary": "THIRTEEN NEW ANCHORS OVER THIRTEEN TARGET ROWS (53-65), the whole of Second Season part 1, and all thirteen CONFIRMED CANON — no retype, no anchor_hostile row, no repair. THE BLOCK COVERS ch 170-259, which is MangaUpdates' claim for this part exactly; but MU was a cross-check, not the premise, and the pages moved the shape inside it: the season does NOT open where ep 52 stopped. Ep 53 opens on ch 189 and plays the whole Seidou vs Norikane 5th-round game to ch 197, and only THEN do eps 54 and 55 go back to ch 170 for the Ichidaisan vs Yakushi 5th-round game the manga tells first — an un-cross-cut that puts Seidou in the premiere, annotated `rearranged` on both rows and carrying the one END regression in the block (ep 54 -> 180 after ep 53 -> 197). The map: 53 -> 197 [189], 54 -> 180 [170], 55 -> 187 [181], 56 -> 216 [198], 57 -> 222 [217], 58 -> 227 [223], 59 -> 232 [228], 60 -> 236 [233], 61 -> 240 [237], 62 -> 245 [241], 63 -> 251 [246], 64 -> 254 [252], 65 -> 259 [255]. Ten anchors are high confidence and three medium (56, 57, 61 — the derived seams). The instrument that made the interior seams derivable is a CHAIN: eleven of the thirteen episode titles are their own chapters' titles verbatim, and every episode's next-episode teaser names content the following episode's licensor あらすじ opens on, so each seam is closed from both sides — e.g. ep 58 opens on Miyuki's 「よし、初っ端からかましとくか！　奴らの頭にない球種「ナンバー９」」, which is ch 223's own line, and ep 65 closes on Kawakami's 精密検査 result, which is ch 259's. FIRST FOUR ROWS ARE COMPRESSED, annotated `abridged`: 47 chapters in four episodes (ep 56 alone carries the entire Seidou vs Sousei quarter-final, 204-216, plus the other quarter-final blocks), against 4.8 chapters an episode from ep 57 on. TWO CONTINUES, both C2 parity across the reorder: ep 53 -> 170 and ep 55 -> 198; ep 65 gets none, because 259 is not straddled and Part 2 is undated. ONE HONEST HOLE: a single chapter of the block (188, Seidou's team meeting plus the scouting report on Amahisa's new pitch) is placed by nothing — the reorder makes both of its halves redundant, so a cut is the economical reading, but it is flagged rather than assigned. Stored titles and air dates all match ja-WP, en-WP and the official site, so repairs is empty; the ep-52 graft naming ch 189 is now corroborated by the fandom's own match record.",
+ "anchors": [
+  {
+   "episode": 53,
+   "end_chapter": 197,
+   "start_chapter": 189,
+   "chapters_adapted": "189-197",
+   "volume": 22,
+   "confidence": "high",
+   "why": "NEW ANCHOR, the season's first row. THE EPISODE IS THE WHOLE SEIDOU vs NORIKANE (法兼学園) 5th-round game. START 189 / END 197 (A4): three lineages give the same span. (1) diamondnoace.fandom's episode page 'To What Lies Ahead' states it in words: 'The episode follows the storyline from chapter 189 to chapter 197 of the Act II manga' (written by PerseusHunt on broadcast day, 2026-04-05, per the page history). (2) The same wiki's match record independently books that game at 'Act II, Chapter 189-197' on BOTH the per-match page ('Norikane Academy vs. Seidou High', which also carries anime = 'Episode 52, Season 3 - TBC', i.e. the act II finale's teaser) and the Round-Five table of 'List of Baseball Matches/Act II'. (3) TITLE IDENTITY: the episode's own title 「その先へ」 IS ch 197's title (fandom Volumes/Act II, 第22巻 Chapter 197 「その先へ」 Sono saki e), and ch 197 is the game's last chapter — the Japanese per-chapter blog イノさんの漫画アニメ heads its ch-197 post 「第22巻197話（法兼9）ネタバレ感想：試合終了」 (game part 9, game over). CONTENT: the licensor's own あらすじ (diaace.com/story/1/, reproduced verbatim by Bandai Channel and paraphrased by WEBザテレビジョン) is 「全国高等学校野球選手権 西東京代表を決める5回戦、青道VS法兼学園。先発はこの夏よりエースナンバーを背負う沢村栄純。…プレイボール！」 and ja-WP's act II summer bracket lists 五回戦 青道○13-0●法兼学園（五回コールド） — a nine-chapter, five-inning called game compressed into one 22-minute premiere (see the `abridged` annotation). WEIGHT: SIGNIFICANT — the game is the whole episode. VOLUME 22: ch 197 sits in vol 22 (193-201) on the fandom's Volumes/Act II table AND on the Japanese blog's own per-post volume label 「第22巻197話」 — two independent readings of the tankōbon contents. THE ONE SOFT EDGE, stated: ch 188 「期待の表れ」 (Watanabe's report on Amahisa's new pitch + Seidou's full team meeting the night before this game) is not placed by any source — it could open this episode; and ch 198 「次の相手」 (learning the QF opponent is Sousei) could tail it instead of opening ep 56. Neither is claimed here; both are named in structure.notes and flagged.",
+   "sources": [
+    "https://diamondnoace.fandom.com/api.php?action=parse&page=To%20What%20Lies%20Ahead&prop=wikitext&format=json",
+    "https://diamondnoace.fandom.com/api.php?action=parse&page=Norikane%20Academy%20vs.%20Seidou%20High&prop=wikitext&format=json",
+    "https://diamondnoace.fandom.com/api.php?action=parse&page=List%20of%20Baseball%20Matches%2FAct%20II&prop=wikitext&format=json",
+    "https://diamondnoace.fandom.com/api.php?action=parse&page=Volumes%2FAct%20II&prop=wikitext&format=json",
+    "https://diaace.com/story/1/",
+    "https://www.b-ch.com/titles/9671/001",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA",
+    "https://api.mangaupdates.com/v1/series/65081981544",
+    "https://mangakansou.xyz/archives/15690",
+    "https://mangakansou.xyz/archives/15999",
+    "https://mangakansou.xyz/archives/15456",
+    "https://mangakansou.xyz/archives/16012"
+   ]
+  },
+  {
+   "episode": 54,
+   "end_chapter": 180,
+   "start_chapter": 170,
+   "chapters_adapted": "170-171 (the pre-game lead-in), 172-180",
+   "volume": 20,
+   "confidence": "high",
+   "why": "NEW ANCHOR — and the BACK-JUMP row (see the `rearranged` annotation). The episode is the FIRST HALF of the OTHER 5th-round game, 市大三高 (Ichidaisan) vs 薬師 (Yakushi), which the manga tells BEFORE Seidou's own 5th-round game but the anime plays AFTER it. START 170 (A10): two independent lineages. (1) MangaUpdates' curated coverage for this entry reads anime.start 'Vol 1, Chap 1 (S1) / Vol 19, Chap 170 (S2P1) / Vol 30, Chap 260 (S2P2)' — 170 is the season's own start pin, and it is the chapter immediately after the stored ep-52 END (169), so nothing between the seasons is stranded. (2) CONTENT: the per-episode Japanese review (yanaginaya.com #2) opens with 「やりとりをする沢村：市大三高の天久とやり取りをする沢村」 and 「新球種の正体：曲がりきらないスライダー…ジャイロ回転」 — that LINE exchange between Amahisa and Sawamura and the gyro-spin hint about Amahisa's new pitch are ch 170 (blog: 「第19巻170話：薬師と市大三高の試合前日」, which ends on Amahisa's LINE) and ch 171 (「第19巻171話：市大三高のミーティング」, which carries the カットボール/ジャイロ回転 hints and Ichidaisan's pre-game meeting) — i.e. the episode opens on the two lead-in chapters, then plays the game from 172. END 180 (A4): the episode's own title 「チームの為に」 IS ch 180's title (fandom Volumes/Act II, 第20巻 Chapter 180 「チームの為に」 Chīmu no tame ni), and the episode's NEXT-EPISODE PREVIEW as reported in the same review — 「轟と天久の対決が熱い…チャンスの打席でプレッシャーを感じる雷市に、ふたりで決めようと伝える真田」 — is Raichi vs Amahisa, which is ch 181-183 (blog: 181 「轟VS天久」, 182 「天久VS轟～決着～」). So the episode stops with the top of the 8th opened (ch 180 = 「８回表の薬師」 per the same blog) and hands Raichi's at-bat to ep 55. The game itself is 172-187 on the fandom's match page ('Act II, Chapter 171-187') and its Round-Five table ('Chapters 172-187'). WEIGHT: SIGNIFICANT. VOLUME 20: ch 180 ∈ vol 20 (175-183) on the fandom table and on the blog's own 「第20巻180話」 label; ja-WP's character notes independently cite 'actII 第20巻第183話' and 'actII 第19巻第172話/第173話', which fix the same two volume edges.",
+   "sources": [
+    "https://api.mangaupdates.com/v1/series/65081981544",
+    "https://diamondnoace.fandom.com/api.php?action=parse&page=Volumes%2FAct%20II&prop=wikitext&format=json",
+    "https://diamondnoace.fandom.com/api.php?action=parse&page=List%20of%20Baseball%20Matches%2FAct%20II&prop=wikitext&format=json",
+    "https://diamondnoace.fandom.com/api.php?action=parse&page=Yakushi%20High%20vs.%20Ichidaisan%20High&prop=wikitext&format=json",
+    "https://yanaginaya.com/diaace2-2-02/",
+    "https://diaace.com/story/2/",
+    "https://www.b-ch.com/titles/9671/002",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA",
+    "https://mangakansou.xyz/archives/13718",
+    "https://mangakansou.xyz/archives/13744",
+    "https://mangakansou.xyz/archives/13798",
+    "https://mangakansou.xyz/archives/15123",
+    "https://mangakansou.xyz/archives/15149",
+    "https://mangakansou.xyz/archives/15162"
+   ]
+  },
+  {
+   "episode": 55,
+   "end_chapter": 187,
+   "start_chapter": 181,
+   "chapters_adapted": "181-187",
+   "volume": 21,
+   "confidence": "high",
+   "why": "NEW ANCHOR — the second half of the Ichidaisan vs Yakushi 5th-round game, i.e. the return leg of the reorder. START 181 / END 187 (A4). END 187 is the game's LAST chapter on two readings: the fandom's match record ('Act II, Chapter 171-187' on the match page; 'Chapters 172-187' in the Round-Five table) and the Japanese per-chapter blog, whose ch-187 post is headed 「第21巻187話：市大三高の勝利」 and describes the 9th-inning walk-off (2 out, runners on 1st and 3rd, Chimaru's hit) that ends it. TITLE IDENTITY: the episode's title 「勝者の道」 IS ch 187's title (fandom Volumes/Act II, 第21巻 Chapter 187 「勝者の道」 Shōsha no michi). CONTENT: the licensor's あらすじ (diaace.com/story/3/) frames the episode from the situation 「三回裏、薬師・エースの真田がマウンドに…七回が終わり、2-0で市大三高がリード」 and then gives the episode's actual content, 「しかし、雷市がここで終わるわけがない！」 — Raichi's 8th-inning heroics onward; ja-WP's bracket gives the result 市大三○3-2●薬師 and the fandom's inning table shows Yakushi's 2 runs in the 8th and Ichidaisan's walk-off in the 9th, i.e. exactly the span 181-187 (blog: 181 轟VS天久, 182 天久VS轟～決着～, 183 ４番三島, 184 ピッチャーの明暗, 185 天久の打席, 186 やっちまった, 187 市大三高の勝利). The per-episode review (yanaginaya #3) matches beat for beat: 「打たれた後に素直に雷市がすごかっただけと称える天久」「まだ投げられるのか素直に聞く監督」「投げる真田を見てかっこいいと言う天久」「動けない雷市に言葉をかける真田」. START 181 is the complement of ep 54's END and carries no relocated opener (A12 not engaged). WEIGHT: SIGNIFICANT. VOLUME 21: ch 187 ∈ vol 21 (184-192) on the fandom table and on the blog's 「第21巻187話」 label; ja-WP independently cites 'actII 第21巻 第192話'.",
+   "sources": [
+    "https://diamondnoace.fandom.com/api.php?action=parse&page=Volumes%2FAct%20II&prop=wikitext&format=json",
+    "https://diamondnoace.fandom.com/api.php?action=parse&page=List%20of%20Baseball%20Matches%2FAct%20II&prop=wikitext&format=json",
+    "https://diamondnoace.fandom.com/api.php?action=parse&page=Yakushi%20High%20vs.%20Ichidaisan%20High&prop=wikitext&format=json",
+    "https://diaace.com/story/3/",
+    "https://www.b-ch.com/titles/9671/003",
+    "https://yanaginaya.com/diaace2-2-03/",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA",
+    "https://thetv.jp/program/0001070349/plot/",
+    "https://mangakansou.xyz/archives/15149",
+    "https://mangakansou.xyz/archives/15162",
+    "https://mangakansou.xyz/archives/15199",
+    "https://mangakansou.xyz/archives/15282",
+    "https://mangakansou.xyz/archives/15291",
+    "https://mangakansou.xyz/archives/15306",
+    "https://mangakansou.xyz/archives/15325"
+   ]
+  },
+  {
+   "episode": 56,
+   "end_chapter": 216,
+   "start_chapter": 198,
+   "chapters_adapted": "198-216",
+   "volume": 24,
+   "confidence": "medium",
+   "why": "NEW ANCHOR — the quarter-final round, and the single most compressed row of the cour: nineteen chapters, including the ENTIRE Seidou vs Sousei quarter-final, in one episode (see the `abridged` annotation). START 198 (A10): ch 198 is 「次の相手」 / blog 「第22巻198話ネタバレ感想：準々決勝は創聖高校」 — Seidou learns the QF opponent is Sousei, which is where the licensor's あらすじ opens the episode: 「ベスト4をかけた試合が続々と始まる。成孔×稲城実業…そして青道の次なる相手は創聖高校。先発マウンドには降谷が登る」. The other QFs it then shows are the fandom's 'Inashiro Industrial vs. Seiko Academy 10-0 (Act II - Chapters 199-200)' and 'Ichidaisan High vs. Sensen Academy 7-3 (Chapters 201-202)' (blog: 201/202 「仙泉学園ＶＳ市大三高」), matching the review's 「試合を見に行く沢村」. END 216 (A4): the Seidou vs Sousei QF runs 204-216 (fandom match page: 'Act II, Chapter 204-216'; the blog labels ch 204 創聖戦1 「『創聖高校』戦試合開始」 through ch 216 創聖戦13 「抑えの川上」) and ch 216 is the final out — an independent Japanese ネタバレ page for ch 216 「守護神」 describes the 9th inning with Kawakami coming in as closer, striking out the batter and ending the game 7-1. The per-episode review (yanaginaya #4) carries exactly that arc — 「ついに降谷が登板。155キロ…チームメイトのナイスプレーに素直に拍手する降谷…川上への信頼感もいい」 — and its next-episode teaser is 「次の試合はいよいよ沢村が登板」, i.e. the QF is finished. TITLE IDENTITY: the episode's title on the OFFICIAL site and Bandai Channel is 「豪音」, which IS ch 207's title (fandom Volumes/Act II, 第23巻 Chapter 207 「豪音」 Gōon; blog: 創聖戦4 「投手戦」) — mid-episode, not the END (ja-WP and en-WP print 「轟音」 for this row, a different character; see flags). MEDIUM because no source states the range: START 198 and END 216 are both derived (198 could tail ep 53; ch 217, the post-game with Nara's handshake and the OB, is placed in ep 57 here but could close ep 56). WEIGHT: SIGNIFICANT — all nineteen chapters are source. VOLUME 24: ch 216 ∈ vol 24 (211-219) on the fandom table and on the blog's 「第24巻216話」 label; ja-WP independently cites 'actII 第24巻218話' and '第24巻第219話', and Kodansha's own vol-24 copy describes 「息詰まる投手戦となった青道vs.創聖の中盤戦…打席には…エース・柳楽…降谷は春からの成長を証明できるのか」.",
+   "sources": [
+    "https://diamondnoace.fandom.com/api.php?action=parse&page=List%20of%20Baseball%20Matches%2FAct%20II&prop=wikitext&format=json",
+    "https://diamondnoace.fandom.com/api.php?action=parse&page=Seidou%20High%20vs.%20Sousei%20High&prop=wikitext&format=json",
+    "https://diamondnoace.fandom.com/api.php?action=parse&page=Volumes%2FAct%20II&prop=wikitext&format=json",
+    "https://diaace.com/story/4/",
+    "https://www.b-ch.com/titles/9671/004",
+    "https://yanaginaya.com/diaace2-2-04/",
+    "https://mycomics.jp/daiyanoaact216/",
+    "https://kc.kodansha.co.jp/product?item=0000345619",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA",
+    "https://mangakansou.xyz/archives/16012",
+    "https://mangakansou.xyz/archives/16029",
+    "https://mangakansou.xyz/archives/16059",
+    "https://mangakansou.xyz/archives/16075",
+    "https://mangakansou.xyz/archives/16098",
+    "https://mangakansou.xyz/archives/16115",
+    "https://mangakansou.xyz/archives/16167",
+    "https://mangakansou.xyz/archives/16285"
+   ]
+  },
+  {
+   "episode": 57,
+   "end_chapter": 222,
+   "start_chapter": 217,
+   "chapters_adapted": "217-222",
+   "volume": 25,
+   "confidence": "medium",
+   "why": "NEW ANCHOR — the interlude between the quarter-final and the semi-final. END 222 IS CONFIRMED VERBATIM: the Japanese per-chapter blog's ch-222 post (「第25巻222話ネタバレ感想：川上の怪我」) contains BOTH of this episode's closing threads — Kawakami's arm (Tanba and Furuya notice, the hospital, 「筋肉か腱の部分的損傷の可能性/骨に異常はない/後日MRI」, and his plea 「野球は高校で最後でいい…お願いします！投げさせてください！」) AND Ichidaisan's pre-game scene with Amahisa telling his team 「俺はお前らを甲子園で見たい」. The per-episode review (yanaginaya #5) has exactly those two, as its 「負傷した川上」 section (「病院に行くように言ったのが丹波」「投げずに後悔するぐらいなら、投げて壊れてもいい」) and its 「天久の変化」 section (「試合前のチームメイトへの言葉も実に天久らしい」). The licensor's あらすじ opens the episode on the other thread — 「奥村と投球動作や新球の確認…試したい握りがいくつかある…一方そのころ、川上は右腕の感覚が…」 — which is ch 219 「持ち球」 and ch 220 「プレゼンテーション」 (blog ch 220: 「沢村、戦略を練る」; the review: 「しっかりプレゼン仕切り、変化球を試した沢村」) running into ch 221 「違和感」, the episode's TITLE chapter (fandom Volumes/Act II, 第25巻 Chapter 221 「違和感」 Iwakan) — mid-episode, not the END. The graduated OB thread the review also reports (「卒業した先輩たちがやってきて…テツさんに足を褒められて…倉持」) is ch 219 「真中先輩が応援に」 and ch 221 「卒業した先輩たち」 in the blog's headings. START 217 is the softer edge and is why this row is MEDIUM: ch 217 (創聖戦14, Nara's handshake with Miyuki and the Ryosuke/Chris visit after the Sousei game) is placed at the head of this episode because ep 56's review reports the game only to its final out while this episode's review carries the senpai material; no source states it, and 217 could instead close ep 56. WEIGHT: SIGNIFICANT. VOLUME 25: ch 222 ∈ vol 25 (220-228) on the fandom table and on the blog's own 「第25巻222話」 label; Kodansha's vol-25 copy independently opens 「西東京大会準決勝を前に、ＯＢの激励を受ける青道ナイン達」 — the OB visit is this volume's opening material.",
+   "sources": [
+    "https://diamondnoace.fandom.com/api.php?action=parse&page=Volumes%2FAct%20II&prop=wikitext&format=json",
+    "https://diaace.com/story/5/",
+    "https://www.b-ch.com/titles/9671/005",
+    "https://yanaginaya.com/diaace2-2-05/",
+    "https://kc.kodansha.co.jp/product?item=0000347325",
+    "https://thetv.jp/program/0001070349/plot/",
+    "https://mangakansou.xyz/archives/16289",
+    "https://mangakansou.xyz/archives/16317",
+    "https://mangakansou.xyz/archives/16321",
+    "https://mangakansou.xyz/archives/16335",
+    "https://mangakansou.xyz/archives/16349",
+    "https://mangakansou.xyz/archives/16373"
+   ]
+  },
+  {
+   "episode": 58,
+   "end_chapter": 227,
+   "start_chapter": 223,
+   "chapters_adapted": "223-227",
+   "volume": 25,
+   "confidence": "high",
+   "why": "NEW ANCHOR — the semi-final (青道 vs 市大三高) begins. START 223 IS CONFIRMED VERBATIM. The blog's ch-223 post (「第25巻223話ネタバレ感想：準決勝の日の朝」) is the morning of 7月26日 at Jingu, the OB and family in the stands, Kawakami ruled out for the game, Seidou winning the toss and taking 後攻, and Miyuki's line 「よし、初っ端からかましとくか！　奴らの頭にない球種「ナンバー９」」 — and the per-episode review (yanaginaya #6) opens with 「川上の決意を受け止める監督」 and then 「御幸のしょっぱなカマしとくかの言葉で表情が崩れるのがいい」, the same line. END 227 (A4): the review closes the episode on 「市大三高の四番に御幸の要求どおりの球を長打されることに…無死二塁のピンチをどう乗り越えるのか」 — Hoshida's deep drive with none out — which is ch 227 (blog: 「227話（市大三高4）：星田の粘り強いバッティング」); the NEXT episode's licensor あらすじ picks up from exactly that state (「二回表…ノーアウトでランナー二塁、迎えるバッターは5番佐々木」), so the seam sits at the chapter boundary and no C1 straddle applies. TITLE IDENTITY: 「お披露目」 IS ch 224's title (fandom Volumes/Act II, 第25巻 Chapter 224 「お披露目」 Ohirome) — here the episode's SECOND chapter, the unveiling of Sawamura's revised splitter 'number 9'; the fandom's semi-final page opens its First Inning with 'Miyuki asks for number 9 — the revised Splitter right from the first pitch'. The game as a whole is 'Act II, Chapter 224 - 253' on the fandom's semi-final page and 'Chapters 224-253' in its Semifinals table, and the blog numbers it 市大三高1 (ch 224) … 市大三高30 (ch 253) — a 30-chapter game, exactly. WEIGHT: SIGNIFICANT. VOLUME 25: ch 227 ∈ vol 25 (220-228) on the fandom table; the blog's per-post volume labels run 第25巻 through ch 223 and its index groups 220-228 as vol 25.",
+   "sources": [
+    "https://diamondnoace.fandom.com/api.php?action=parse&page=Volumes%2FAct%20II&prop=wikitext&format=json",
+    "https://diamondnoace.fandom.com/api.php?action=parse&page=Seidou%20High%20vs.%20Ichidaisan%20High%20(WTT)&prop=wikitext&format=json",
+    "https://diamondnoace.fandom.com/api.php?action=parse&page=List%20of%20Baseball%20Matches%2FAct%20II&prop=wikitext&format=json",
+    "https://diaace.com/story/6/",
+    "https://www.b-ch.com/titles/9671/006",
+    "https://yanaginaya.com/diaace2-2-06/",
+    "https://thetv.jp/program/0001070349/plot/",
+    "https://mangakansou.xyz/archives/16373",
+    "https://mangakansou.xyz/archives/16395",
+    "https://mangakansou.xyz/archives/16420",
+    "https://mangakansou.xyz/archives/16434",
+    "https://mangakansou.xyz/archives/16452",
+    "https://mangakansou.xyz/archives/16471"
+   ]
+  },
+  {
+   "episode": 59,
+   "end_chapter": 232,
+   "start_chapter": 228,
+   "chapters_adapted": "228-232",
+   "volume": 26,
+   "confidence": "high",
+   "why": "NEW ANCHOR. START 228 (A10): the licensor's あらすじ opens the episode 「二回表、市大三高に先制のチャンスがまわってきた。ノーアウトでランナー二塁、迎えるバッターは5番佐々木」, which is ch 228 (blog: 「228話（市大三高5）：２回表市大三高の攻撃」) — the chapter that also gives the episode its TITLE, 「積み上げてきたもの」 (fandom Volumes/Act II, 第25巻 Chapter 228 「積み上げてきたもの」 Tsumiagete Kita Mono). END 232 (A4): the per-episode review (yanaginaya #7) walks the episode through the top of the 2nd jam (228), Miyuki leading off the bottom of the 2nd and being called out looking (ch 229 「天久VS御幸」), Sawamura's 140 km/h in the 3rd (ch 230 「市大三高の攻撃」), and Seidou's bottom of the 3rd — Kanemaru's long hit, Sawamura's sacrifice bunt, then 「二死三塁で迎えたのは倉持。天久と倉持の心理戦」 — which is ch 232 (blog: 「232話（市大三高9）：倉持の打席」), the third out of the inning; its next-episode teaser is 「お互いに無得点のまま試合は中盤へ」 and the NEXT episode's licensor あらすじ opens at 四回表, i.e. ch 233. The fandom's semi-final page corroborates the inning content beat for beat (Second Inning: Hoshida/Sasaki's bunt/Adachi; Third Inning: Sawamura's 140 km record, Kanemaru's hit, Sawamura's bunt, Kuramochi out). WEIGHT: SIGNIFICANT. VOLUME 26: ch 232 ∈ vol 26 (229-237) on the fandom's Volumes/Act II table and in the Japanese blog's own volume index; ja-WP independently cites 'actII 第26巻第230話'.",
+   "sources": [
+    "https://diamondnoace.fandom.com/api.php?action=parse&page=Volumes%2FAct%20II&prop=wikitext&format=json",
+    "https://diamondnoace.fandom.com/api.php?action=parse&page=Seidou%20High%20vs.%20Ichidaisan%20High%20(WTT)&prop=wikitext&format=json",
+    "https://diaace.com/story/7/",
+    "https://www.b-ch.com/titles/9671/007",
+    "https://yanaginaya.com/diaace2-2-07/",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA",
+    "https://thetv.jp/program/0001070349/plot/",
+    "https://mangakansou.xyz/archives/16471",
+    "https://mangakansou.xyz/archives/16482",
+    "https://mangakansou.xyz/archives/16486",
+    "https://mangakansou.xyz/archives/16497",
+    "https://mangakansou.xyz/archives/16519",
+    "https://mangakansou.xyz/archives/16533"
+   ]
+  },
+  {
+   "episode": 60,
+   "end_chapter": 236,
+   "start_chapter": 233,
+   "chapters_adapted": "233-236",
+   "volume": 26,
+   "confidence": "high",
+   "why": "NEW ANCHOR — one half-inning as a whole episode. START 233 (A10): the licensor's あらすじ is 「四回表の三高の攻撃、リズムよく沢村が投げる中、ファースト前園のエラーでランナーが二塁へ。迎えるバッターは二回に続き、4番の星田」 — Maezono's error putting the runner on second is ch 233 (blog: 「233話（市大三高10）：エラーでピンチ」). END 236 (A4): the per-episode review (yanaginaya #8) says 「ほぼ三高の攻撃だけで丸々1話」 and ends the episode past the first run and on Amahisa's reaction — 「ピンチを迎える天久：1点取って勝ったっという天久…チームメイトのことを思うからこそ、今までの天久にはなかった力みが」 — which is ch 236 (blog: 「236話（市大三高13）：天久崩れる！？」); its next-episode teaser 「チャンスで迎えた御幸の打席」 is ch 237 (blog: 「237話（市大三高14）：天久と御幸の勝負」), which is where the NEXT episode's licensor あらすじ starts. Kodansha's own volume copy fixes the same seam from the other side: vol 26 (229-237) is sold as ending on 「鍵となる先制点を奪ったのは──」 and vol 27 (238-) opens 「ついに均衡が破られた４回。試合は中盤戦に突入する」. TITLE IDENTITY: 「エースの理念」 IS ch 234's title (fandom Volumes/Act II, 第26巻 Chapter 234 「エースの理念」 Ēsu no Rinen), mid-episode — the fandom's semi-final page puts Sawamura's thoughts on 'what type of ace he aims to be' in this very half-inning, at the Hoshida strikeout. WEIGHT: SIGNIFICANT. VOLUME 26 on both volume readings.",
+   "sources": [
+    "https://diamondnoace.fandom.com/api.php?action=parse&page=Volumes%2FAct%20II&prop=wikitext&format=json",
+    "https://diamondnoace.fandom.com/api.php?action=parse&page=Seidou%20High%20vs.%20Ichidaisan%20High%20(WTT)&prop=wikitext&format=json",
+    "https://diaace.com/story/8/",
+    "https://www.b-ch.com/titles/9671/008",
+    "https://yanaginaya.com/diaace2-2-08/",
+    "https://kc.kodansha.co.jp/product?item=0000349820",
+    "https://kc.kodansha.co.jp/product?item=0000352564",
+    "https://mangakansou.xyz/archives/16533",
+    "https://mangakansou.xyz/archives/16554",
+    "https://mangakansou.xyz/archives/16566",
+    "https://mangakansou.xyz/archives/16587",
+    "https://mangakansou.xyz/archives/16594"
+   ]
+  },
+  {
+   "episode": 61,
+   "end_chapter": 240,
+   "start_chapter": 237,
+   "chapters_adapted": "237-240",
+   "volume": 27,
+   "confidence": "medium",
+   "why": "NEW ANCHOR. START 237 (A10): the licensor's あらすじ is 「先制を許した青道。四回裏の攻撃で追いつきたい青道は、ランナーを一・二塁において打席に主砲・御幸が。ここまで好調の天久は渾身のカットボールを投げ込む。御幸のバットがボールを捉えるが…」 — Miyuki batting with runners on first and second in the bottom of the 4th, which is ch 237 (blog: 「237話（市大三高14）：天久と御幸の勝負」); the fandom's semi-final page has Haruichi's leadoff single and Shirasu's walk (the end of ep 60's ch 236, 「天久崩れる！？」) and then Miyuki's 3-6-1 double play. END 240 (A4): the per-episode review (yanaginaya #9) calls this a 「ナレーション多めの紙芝居回」 in which 「ナレーション多めで一気に進む試合」 — innings 5 to 7 pass quickly, as they do in the manga — and its next-episode teaser is 「試合はいよいよ終盤…川上がブルペンで投げるようですが果たして登板はあるのでしょうか」, i.e. ch 242 「川上も投げたい」; the NEXT episode's licensor あらすじ opens 「七回裏、青道はノーアウトランナー一塁と反撃の糸口が。打席に入るのは東条」, with Maezono ALREADY on base, so the leadoff hit closes this episode inside ch 240 (blog: 「240話（市大三高17）：７回の攻防」) and Toujou/Yuki/Kanemaru — 青道の下位打線, ch 241 — belong to ep 62. MEDIUM because that 240/241 split is read off the blog's chapter headings and the two synopses rather than stated by any source. TITLE IDENTITY: 「High Voltage」 IS ch 239's title (fandom Volumes/Act II and Chapters/Act II both give Chapter 239 'High Voltage'), mid-episode. WEIGHT: SIGNIFICANT. VOLUME 27: ch 240 ∈ vol 27 on BOTH volume readings of the tankōbon (the fandom's 238-247 and the Japanese blog index's 238-246), and Kodansha's vol-27 copy — 「ついに均衡が破られた４回。試合は中盤戦に突入するも、青道ナインは天久攻略の糸口をつかめずにいた」 — is this episode's material exactly.",
+   "sources": [
+    "https://diamondnoace.fandom.com/api.php?action=parse&page=Volumes%2FAct%20II&prop=wikitext&format=json",
+    "https://diamondnoace.fandom.com/api.php?action=parse&page=Chapters%2FAct%20II&prop=wikitext&format=json",
+    "https://diamondnoace.fandom.com/api.php?action=parse&page=Seidou%20High%20vs.%20Ichidaisan%20High%20(WTT)&prop=wikitext&format=json",
+    "https://diaace.com/story/9/",
+    "https://www.b-ch.com/titles/9671/009",
+    "https://yanaginaya.com/diaace2-2-09/",
+    "https://diaace.com/story/10/",
+    "https://kc.kodansha.co.jp/product?item=0000352564",
+    "https://mangakansou.xyz/archives/16594",
+    "https://mangakansou.xyz/archives/16614",
+    "https://mangakansou.xyz/archives/16639",
+    "https://mangakansou.xyz/archives/16654",
+    "https://mangakansou.xyz/archives/16661",
+    "https://mangakansou.xyz/archives/16735"
+   ]
+  },
+  {
+   "episode": 62,
+   "end_chapter": 245,
+   "start_chapter": 241,
+   "chapters_adapted": "241-245",
+   "volume": 27,
+   "confidence": "high",
+   "why": "NEW ANCHOR. START 241 (A10): the licensor's あらすじ 「七回裏、青道はノーアウトランナー一塁と反撃の糸口が。打席に入るのは東条。セーフティバントを狙う。そして続くバッターは…結城将司！」 is ch 241 (blog: 「241話（市大三高18）：青道の下位打線」 — Toujou 6th, Yuki 7th, Kanemaru 8th), and the fandom's semi-final page has the same order in the bottom of the 7th. END 245 (A4): the per-episode review (yanaginaya #10) carries Kawakami going to the bullpen without a ball to lift the mood (ch 242 「川上も投げたい」 / 243 「エールを送る川上」), Sawamura's precision rising late — the top of the 8th, where the fandom page has him strike out the side with Furuya warming up (ch 244 「降谷、ブルペンで投球練習」) — and ends on 「打席で粘る沢村。自分だったら先頭打者に粘られたくないと投手目線で」, Sawamura leading off the bottom of the 8th, which is ch 245 (blog: 「245話（市大三高22）：９番沢村、１番倉持」). Its next-episode teaser 「一度は刺されているのに盗塁を決める倉持。打席には春市」 is ch 246 (blog: 「246話（市大三高23）：同点に追いつけるか！？」), which the next episode's licensor あらすじ then opens on. TITLE IDENTITY: 「俺の戦い」 IS ch 242's title (fandom Volumes/Act II, 第27巻 Chapter 242 「俺の戦い」 Ore no Tatakai), mid-episode. WEIGHT: SIGNIFICANT. VOLUME 27 on both volume readings.",
+   "sources": [
+    "https://diamondnoace.fandom.com/api.php?action=parse&page=Volumes%2FAct%20II&prop=wikitext&format=json",
+    "https://diamondnoace.fandom.com/api.php?action=parse&page=Seidou%20High%20vs.%20Ichidaisan%20High%20(WTT)&prop=wikitext&format=json",
+    "https://diaace.com/story/10/",
+    "https://www.b-ch.com/titles/9671/010",
+    "https://yanaginaya.com/diaace2-2-10/",
+    "https://diaace.com/story/11/",
+    "https://thetv.jp/program/0001070349/plot/",
+    "https://mangakansou.xyz/archives/16661",
+    "https://mangakansou.xyz/archives/16735",
+    "https://mangakansou.xyz/archives/16747",
+    "https://mangakansou.xyz/archives/16785",
+    "https://mangakansou.xyz/archives/16803",
+    "https://mangakansou.xyz/archives/16843"
+   ]
+  },
+  {
+   "episode": 63,
+   "end_chapter": 251,
+   "start_chapter": 246,
+   "chapters_adapted": "246-251",
+   "volume": 28,
+   "confidence": "high",
+   "why": "NEW ANCHOR — the bottom of the 8th, the comeback. START 246 (A10): the licensor's あらすじ 「八回表を3人でピシャリと抑えた沢村。八回裏の攻撃、倉持が盗塁を決め二塁に…春市、そして好打者の白州。御幸に繋げたい青道と、繋げたくない三高」 opens on Kuramochi's steal with Haruichi at the plate — ch 246 (blog: 「246話（市大三高23）：同点に追いつけるか！？」) — its first sentence being a recap of the top of the 8th that ep 62 already played. END 251 (A4): the per-episode review (yanaginaya #11) runs Shirasu's tying single (ch 248 「白州と川上」), Miyuki's go-ahead hit (ch 249 「４番の御幸」 / 250 「天久、勝負に出てしまう」) and ends on 「監督に呼ばれる沢村：頭をよぎる降板。エースとしてと同じセリフでマウンドに送り出されるの熱すぎる」 — Kataoka sending Sawamura back out, which is ch 251 (blog: 「251話（市大三高28）：沢村、９回のマウンドへ」); its teaser is 「ついにリードした青道。沢村は抑えきることができるのか」. The next episode's review starts at the dead ball (ch 252), so the seam is at the chapter boundary and no C1 straddle applies. Ch 247 「先輩たち」 (blog: 「小湊、白州のあたりは！？」) sits inside this row. TITLE: 「相棒として」 is NOT a chapter title in this run — it names the episode's own centre, Miyuki batting to answer his battery partner (the review: 「バッテリーとして沢村のピッチングに答えたいと強い気持ちで打席に立つ御幸」); an anime-made TITLE over source content changes nothing under T27/T28. WEIGHT: SIGNIFICANT. VOLUME 28: ch 251 ∈ vol 28 on BOTH volume readings (the fandom's 248-256 and the Japanese blog index's 247-255); Kodansha's vol-28 copy 「白熱の投手戦は終盤8回へ突入！　1点のビハインドを追う青道高校クリーンナップと…天久が対峙する…4番対エースの大一番」 is this episode's material.",
+   "sources": [
+    "https://diamondnoace.fandom.com/api.php?action=parse&page=Volumes%2FAct%20II&prop=wikitext&format=json",
+    "https://diamondnoace.fandom.com/api.php?action=parse&page=Seidou%20High%20vs.%20Ichidaisan%20High%20(WTT)&prop=wikitext&format=json",
+    "https://diaace.com/story/11/",
+    "https://www.b-ch.com/titles/9671/011",
+    "https://yanaginaya.com/diaace2-2-11/",
+    "https://kc.kodansha.co.jp/product?item=0000354480",
+    "https://thetv.jp/program/0001070349/plot/",
+    "https://mangakansou.xyz/archives/16843",
+    "https://mangakansou.xyz/archives/16854",
+    "https://mangakansou.xyz/archives/16867",
+    "https://mangakansou.xyz/archives/16901",
+    "https://mangakansou.xyz/archives/16922",
+    "https://mangakansou.xyz/archives/16946",
+    "https://mangakansou.xyz/archives/16969"
+   ]
+  },
+  {
+   "episode": 64,
+   "end_chapter": 254,
+   "start_chapter": 252,
+   "chapters_adapted": "252-254",
+   "volume": 28,
+   "confidence": "high",
+   "why": "NEW ANCHOR — the 9th inning and the game's close. START 252 (A10): the per-episode review (yanaginaya #12) opens the episode on Sawamura issuing a dead ball and the Inashiro trauma it triggers — ch 252 (blog: 「252話（市大三高29）：デットボール」, whose own recap paragraph reads 「９回表、市大三高の攻撃…ワンナウト１塁という場面でバッターは４番の星田」) — the licensor's あらすじ 「最後まで沢村で行くことを決めた片岡監督は、沢村をマウンドに送り出す」 restating the hand-off ep 63 ended on. END 254 (A4): the game ends in ch 253 (blog: 「253話（市大三高30）：試合終了」 — the 6-4-3 double play, 2-1 Seidou, and the blog's own count 『市大三高戦は30話です』 closing the 224-253 game), and the episode then plays ch 254, whose blog heading is 「254話：稲城実業の試合も終了」 — Inashiro's semi-final also finishes, setting the final — and which IS the episode's title chapter, 「次のステージ」 (fandom Volumes/Act II, 第28巻 Chapter 254 「次のステージ」 Tsugi no sutēji). The review confirms both halves: 「試合後の天久：試合後に泣き崩れる天久…1ファンとして次のステップを楽しみにしている…甲子園に行けとエール」 and its teaser 「次に待ち受けるは稲実戦」. WEIGHT: SIGNIFICANT. VOLUME 28 on both volume readings.",
+   "sources": [
+    "https://diamondnoace.fandom.com/api.php?action=parse&page=Volumes%2FAct%20II&prop=wikitext&format=json",
+    "https://diamondnoace.fandom.com/api.php?action=parse&page=Seidou%20High%20vs.%20Ichidaisan%20High%20(WTT)&prop=wikitext&format=json",
+    "https://diamondnoace.fandom.com/api.php?action=parse&page=List%20of%20Baseball%20Matches%2FAct%20II&prop=wikitext&format=json",
+    "https://diaace.com/story/12/",
+    "https://www.b-ch.com/titles/9671/012",
+    "https://yanaginaya.com/diaace2-2-12/",
+    "https://thetv.jp/program/0001070349/plot/",
+    "https://mangakansou.xyz/archives/16969",
+    "https://mangakansou.xyz/archives/16988",
+    "https://mangakansou.xyz/archives/17000",
+    "https://mangakansou.xyz/archives/17026"
+   ]
+  },
+  {
+   "episode": 65,
+   "end_chapter": 259,
+   "start_chapter": 255,
+   "chapters_adapted": "255-259",
+   "volume": 29,
+   "confidence": "high",
+   "why": "NEW ANCHOR — the cour finale, and the row that settles the part's endpoint. START 255 (A10): ch 255 is the first post-semi-final chapter (blog: 「255話：プロになる気は？」) and ch 256 「道果てしなく」 IS the episode's title chapter (fandom Volumes/Act II, 第28巻 Chapter 256 「道果てしなく」 Michi hateshinaku; blog: 「256話：プロの話をする御幸と降谷」) — the per-episode review (yanaginaya #13) opens on exactly that: 「御幸と話す降谷：稲実戦の先発に指名された降谷…御幸が話した少し先の未来。それは、夏の大会が終わった先にあるプロという道」. END 259 (A4): the licensor's あらすじ ends the cour on 「肘の痛みを覚えていた川上は、精密検査の結果、右腕に炎症が確認された。しかしその決意に御幸たちは…」, and the detailed examination result is ch 259 — the blog's ch-259 post is headed 「259話：川上は内上顆炎」 (medial epicondylitis) — with the review's closing section 「川上の決意：負傷した川上は病院に行き、決勝戦も投げられないことが確定…自ら納得して決勝戦を投げないことを決意」. Ch 257 「覚悟しとけよ」 (blog: 「沢村がおかしい」 — the review's 「モヤる沢村」) and ch 258 「待ちきれねえよ」 (blog: 「相手を分析」 — the review's 「稲実戦に向け…入念に準備」) sit between. INDEPENDENT CORROBORATION: MangaUpdates' curated coverage for this entry reads anime.end '... / Vol 30, Chap 259 (S2P1)' and anime.start '... / Vol 30, Chap 260 (S2P2)', last updated 2026-06-28 — the very day this episode aired. (MU's VOLUME label there is wrong — 259 and 260 are in vol 29, not 30 — but its chapter numbers match the pages; see flags.) NO CONTINUE is delivered: ch 259 is not straddled (ch 260 「あの日」 opens the East Tokyo results, a new beat) and Second Season Part 2 (AniList 213658) is announced and undated, so no post-series continue applies. WEIGHT: SIGNIFICANT. VOLUME 29: ch 259 ∈ vol 29 on BOTH volume readings (the fandom's 257-265 and the Japanese blog index's 256-264); ja-WP independently cites 'actII 第29巻第262話'.",
+   "sources": [
+    "https://diamondnoace.fandom.com/api.php?action=parse&page=Volumes%2FAct%20II&prop=wikitext&format=json",
+    "https://api.mangaupdates.com/v1/series/65081981544",
+    "https://diaace.com/story/13/",
+    "https://www.b-ch.com/titles/9671/013",
+    "https://yanaginaya.com/diaace2-2-13/",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA",
+    "https://thetv.jp/program/0001070349/plot/",
+    "https://mangakansou.xyz/archives/17026",
+    "https://mangakansou.xyz/archives/17044",
+    "https://mangakansou.xyz/archives/17063",
+    "https://mangakansou.xyz/archives/17140",
+    "https://mangakansou.xyz/archives/17182",
+    "https://mangakansou.xyz/archives/17208"
+   ]
+  }
+ ],
+ "continue_points": [
+  {
+   "episode": 53,
+   "continue_chapter": 170,
+   "kind": "parity",
+   "confidence": "high",
+   "why": "C2 PARITY ACROSS A REORDER (the d-gray-man / bobobo shape: parity is the next canon row's START even when that is backwards). Ep 53 ends on ch 197, but the anime's next episode goes BACK to ch 170 — the anime plays Seidou's own 5th-round game before the Ichidaisan vs Yakushi 5th-round game the manga tells first. A reader stopping here has read to 169 (the stored ep-52 END) plus 189-197, so 170 is genuinely their next unread chapter as well as ep 54's START; both rules land on the same number. C3 NOTE ON ARRIVAL: when the reader reaches 189 again they have already seen it in this episode, and ch 188 (Watanabe's report on Amahisa's new pitch + Seidou's full team meeting) is the one chapter of 170-259 no episode's evidence places.",
+   "sources": [
+    "https://api.mangaupdates.com/v1/series/65081981544",
+    "https://diamondnoace.fandom.com/api.php?action=parse&page=To%20What%20Lies%20Ahead&prop=wikitext&format=json",
+    "https://diamondnoace.fandom.com/api.php?action=parse&page=Norikane%20Academy%20vs.%20Seidou%20High&prop=wikitext&format=json",
+    "https://diaace.com/story/1/",
+    "https://diaace.com/story/2/",
+    "https://yanaginaya.com/diaace2-2-02/",
+    "https://mangakansou.xyz/archives/13744",
+    "https://mangakansou.xyz/archives/15456",
+    "https://mangakansou.xyz/archives/15690"
+   ]
+  },
+  {
+   "episode": 55,
+   "continue_chapter": 198,
+   "kind": "parity",
+   "confidence": "high",
+   "why": "C2 PARITY at the next canon row's START. Ep 55 closes the Ichidaisan vs Yakushi game on ch 187's last page (no straddle, so C1 does not apply) and ep 56 STARTS on ch 198. C3 SKIP NOTE: 189-197 in between are already animated — they were ep 53, the anime having played Seidou's own 5th-round game first — so the reader skips them. The honest caveat that belongs with this continue: ch 188 「期待の表れ」 is NOT covered by any episode on the evidence found, so a reader who takes parity at 198 will miss it; it is a single chapter (the scouting report on Amahisa's new pitch, which ep 54 already conveyed through the Amahisa-Sawamura LINE exchange, plus Seidou's team meeting before a game ep 53 already played), which is why the anime most plausibly cut it — but that is not proven, and it is flagged rather than assigned.",
+   "sources": [
+    "https://diamondnoace.fandom.com/api.php?action=parse&page=List%20of%20Baseball%20Matches%2FAct%20II&prop=wikitext&format=json",
+    "https://diamondnoace.fandom.com/api.php?action=parse&page=Yakushi%20High%20vs.%20Ichidaisan%20High&prop=wikitext&format=json",
+    "https://diaace.com/story/3/",
+    "https://diaace.com/story/4/",
+    "https://yanaginaya.com/diaace2-2-03/",
+    "https://yanaginaya.com/diaace2-2-04/",
+    "https://mangakansou.xyz/archives/15325",
+    "https://mangakansou.xyz/archives/15456",
+    "https://mangakansou.xyz/archives/15999",
+    "https://mangakansou.xyz/archives/16012"
+   ]
+  }
+ ],
+ "anchor_hostile": [],
+ "annotations": [
+  {
+   "episodes": [
+    54,
+    55
+   ],
+   "kind": "rearranged",
+   "chapters": "170-171, 172-180, 181-187",
+   "note": "weight: SIGNIFICANT — because these two episodes ARE the reordered block, not a fragment of one. THE UN-CROSS-CUT: the manga runs 170-171 (the day before Ichidaisan vs Yakushi), 172-187 (that 5th-round game), 188 (Seidou's team meeting the night before their own 5th-round game), 189-197 (Seidou vs Norikane). The anime opens its new season with SEIDOU'S game (ep 53 = 189-197) and only then goes back for the rival game (ep 54 = 170-180, ep 55 = 181-187) — a premiere-first reorder, and the reason ep 54's END (180) regresses below ep 53's (197). Every page in these two rows is NEW: nothing here was shown in ep 53 or in the act II run that ended at ch 169. Three lineages fix the direction: MangaUpdates' start pin for this part is ch 170 while the first episode adapts 189-197; the fandom's match records date the Yakushi vs Ichidaisan game July 19 and Seidou vs Norikane July 20, i.e. the rival game is first in story time; and the act II finale (our ep 52) already carried a stored graft naming ch 189 as its closing teaser, which the fandom's Norikane match page independently records as anime = 'Episode 52, Season 3'. The rows stay CANON — a reorder of the SOURCE's own material is a faithfulness annotation, never a typing question (T28's faithfulness clause).",
+   "sources": [
+    "https://api.mangaupdates.com/v1/series/65081981544",
+    "https://diamondnoace.fandom.com/api.php?action=parse&page=List%20of%20Baseball%20Matches%2FAct%20II&prop=wikitext&format=json",
+    "https://diamondnoace.fandom.com/api.php?action=parse&page=Yakushi%20High%20vs.%20Ichidaisan%20High&prop=wikitext&format=json",
+    "https://diamondnoace.fandom.com/api.php?action=parse&page=Norikane%20Academy%20vs.%20Seidou%20High&prop=wikitext&format=json",
+    "https://diamondnoace.fandom.com/api.php?action=parse&page=To%20What%20Lies%20Ahead&prop=wikitext&format=json",
+    "https://diaace.com/story/1/",
+    "https://diaace.com/story/2/",
+    "https://diaace.com/story/3/",
+    "https://yanaginaya.com/diaace2-2-02/",
+    "https://mangakansou.xyz/archives/13744",
+    "https://mangakansou.xyz/archives/13798",
+    "https://mangakansou.xyz/archives/15325",
+    "https://mangakansou.xyz/archives/15456",
+    "https://mangakansou.xyz/archives/15690"
+   ]
+  },
+  {
+   "episodes": [
+    53,
+    54,
+    55,
+    56
+   ],
+   "kind": "abridged",
+   "chapters": "170-216",
+   "note": "weight: SIGNIFICANT — this is condensed SOURCE, not original material, and it does not touch the typing. The first four rows of the cour carry 47 chapters (170-216) in four episodes — 11.75 chapters per episode — against the 3.25 per episode the act II run averaged over its first 52 rows and the 4.8 per episode this cour settles into from ep 57 (217-259 over nine rows). The extremes: ep 56 compresses the entire Seidou vs Sousei quarter-final (204-216, thirteen chapters) plus the other three quarter-final blocks (198-202) into one episode, and ep 53 plays the whole nine-chapter Norikane game — a five-inning 13-0 called game — end to end. The catch-up is structural: the season had to clear two 5th-round games and a quarter-final round before reaching the Ichidaisan semi-final, which is then adapted at normal pace across eps 58-64 (224-253, thirty chapters, seven episodes). Recorded so a later reader knows the coverage is real but compressed, never so a row is downgraded.",
+   "sources": [
+    "https://diamondnoace.fandom.com/api.php?action=parse&page=List%20of%20Baseball%20Matches%2FAct%20II&prop=wikitext&format=json",
+    "https://diamondnoace.fandom.com/api.php?action=parse&page=Seidou%20High%20vs.%20Sousei%20High&prop=wikitext&format=json",
+    "https://diamondnoace.fandom.com/api.php?action=parse&page=Norikane%20Academy%20vs.%20Seidou%20High&prop=wikitext&format=json",
+    "https://diamondnoace.fandom.com/api.php?action=parse&page=Yakushi%20High%20vs.%20Ichidaisan%20High&prop=wikitext&format=json",
+    "https://diamondnoace.fandom.com/api.php?action=parse&page=Seidou%20High%20vs.%20Ichidaisan%20High%20(WTT)&prop=wikitext&format=json",
+    "https://diaace.com/story/1/",
+    "https://diaace.com/story/4/",
+    "https://yanaginaya.com/diaace2-2-04/",
+    "https://api.mangaupdates.com/v1/series/65081981544"
+   ]
+  }
+ ],
+ "repairs": [],
+ "type_corrections": [
+  {
+   "episodes": [
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65
+   ],
+   "type": "canon",
+   "note": "CONFIRMED AS STORED (canon) for all thirteen rows — delivered with the stored type so the census stops re-listing a settled block, not as a no-op. The census line for these rows reads 'the row's type is the wiki mint's default (canon) and no source has typed it'; a source has now typed them. Every one of the thirteen adapts identified Act II chapters end to end and NONE carries a story-carrying anime-original share to weigh under T28: the licensor's own per-episode あらすじ (diaace.com/story/1-13, carried verbatim by Bandai Channel and paraphrased by WEBザテレビジョン) describes only source events, and each episode's content maps chapter-for-chapter onto the Japanese per-chapter summaries (イノさんの漫画アニメ) and the fandom's match records — 53 = the Norikane 5th-round game 189-197; 54/55 = the Ichidaisan vs Yakushi 5th-round game 170-187 (reordered, annotated); 56 = the quarter-final round 198-216; 57 = the interlude 217-222; 58-64 = the Ichidaisan semi-final 223-254; 65 = the post-semi-final run-up 255-259. Eleven of the thirteen episode titles ARE their own chapters' titles verbatim (その先へ=197, チームの為に=180, 勝者の道=187, 豪音=207, 違和感=221, お披露目=224, 積み上げてきたもの=228, エースの理念=234, High Voltage=239, 俺の戦い=242, 次のステージ=254, 道果てしなく=256); the two that are not (轟音/豪音 is the same chapter with a listings typo, and 相棒として on ep 63) are anime-made TITLES over source content, which changes nothing under T27/T28. The only deviations are of the source's own material — the eps 54/55 reorder and the eps 53-56 compression — which the faithfulness clause keeps canon and which are recorded as `rearranged` and `abridged`. NEGATIVE EVIDENCE, stated as silence rather than proof: AnimeFillerList has no page for this season (the context prints 'AFL: —' on all thirteen rows) and ja-WP's 第4期 episode table carries no アニメオリジナル marker anywhere in the run — that is silence; the positive readings above carry the standing.",
+   "sources": [
+    "https://diaace.com/story/1/",
+    "https://diaace.com/story/6/",
+    "https://diaace.com/story/13/",
+    "https://ja.wikipedia.org/wiki/%E3%83%80%E3%82%A4%E3%83%A4%E3%81%AEA",
+    "https://en.wikipedia.org/wiki/Ace_of_Diamond_Act_II_season_2",
+    "https://diamondnoace.fandom.com/api.php?action=parse&page=List%20of%20Baseball%20Matches%2FAct%20II&prop=wikitext&format=json",
+    "https://diamondnoace.fandom.com/api.php?action=parse&page=Seidou%20High%20vs.%20Ichidaisan%20High%20(WTT)&prop=wikitext&format=json",
+    "https://diamondnoace.fandom.com/api.php?action=parse&page=Volumes%2FAct%20II&prop=wikitext&format=json",
+    "https://thetv.jp/program/0001070349/plot/",
+    "https://yanaginaya.com/diaace2-2-04/"
+   ]
+  }
+ ],
+ "structure": {
+  "notes": "IDENTITY FIRST (R20), joined on title + date, never index. All thirteen stored rows join cleanly on three independent lists: ja-WP's 第4期『ダイヤのA actII -Second Season-』 table (season-internal 1-13, JP titles, 4月5日 - 6月28日), en-WP's 'Ace of Diamond Act II season 2' episode table (cumulative 179-191 with EpisodeNumber2 1-13, the same English titles and dates our rows hold), and the official site's あらすじ index (diaace.com/story/, 第1話-第13話). Every stored air date is a Sunday on the 日曜17:30 テレ東 slot; no date or title repair is warranted, so repairs is empty. ONE LISTINGS DEFECT WORTH KNOWING (not ours): the ep-56 row's Japanese title is 「豪音」 on the OFFICIAL site and on Bandai Channel — and 「豪音」 IS ch 207's title — while ja-WP, WEBザテレビジョン, en-WP and the weekly press all print 「轟音」, a different first character with the same reading. Our stored English title ('Roar!') is unaffected.\n\nCHAPTER SPACE: the act II manga's own printed chapter numbering (AniList 86569, 308 chapters / 34 volumes), which is the space every source here uses and the space the stored anchors use — no sourceShift applies, and Act I's numbering is never mixed in. THE BLOCK COVERS ch 170-259, which is exactly MangaUpdates' curated line for this entry (anime.start '… / Vol 19, Chap 170 (S2P1) / Vol 30, Chap 260 (S2P2)', anime.end '… / Vol 19, Chap 169 (S1) / Vol 30, Chap 259 (S2P1)', last updated 2026-06-28, the day the cour ended). MU was a CROSS-CHECK, not the premise: the endpoint was re-derived on the pages (ch 259 = Kawakami's 内上顆炎 diagnosis, the licensor's own closing beat for ep 65) and the start on the content of ch 170-171 (the Amahisa-Sawamura LINE exchange that opens ep 54). MU's volume labels on the 259/260 pins are wrong (both are in vol 29, not 30) — the same volume/chapter conflation that produced the ruled G33/V10 repairs on ep 52.\n\nTHE ARC ↔ INSTRUMENT MAP, row by row (all thirteen CONFIRMED CANON):\n  53 その先へ — Seidou vs 法兼学園 (Norikane), 5th round, 13-0 five-inning called — ch 189-197 [v21-22]. CONFIRMED CANON.\n  54 チームの為に — 市大三高 vs 薬師, 5th round, lead-in + innings 1 through the top of the 8th — ch 170-180 [v19-20]. CONFIRMED CANON. REORDERED.\n  55 勝者の道 — the same game, the 8th and 9th, Ichidaisan 3-2 walk-off — ch 181-187 [v21]. CONFIRMED CANON. REORDERED.\n  56 豪音 — the quarter-final round: Inashiro vs Seikou, Ichidaisan vs Sensen, and the whole Seidou vs 創聖 QF 7-1 — ch 198-216 [v22-24]. CONFIRMED CANON.\n  57 違和感 — the interlude: Sawamura's new pitch, the OB visit, Kawakami's arm — ch 217-222 [v24-25]. CONFIRMED CANON.\n  58 お披露目 — semi-final vs 市大三高: the morning, the 1st inning, into the top of the 2nd — ch 223-227 [v25]. CONFIRMED CANON.\n  59 積み上げてきたもの — the 2nd and 3rd innings — ch 228-232 [v25-26]. CONFIRMED CANON.\n  60 エースの理念 — the top of the 4th, the game's only Ichidaisan run — ch 233-236 [v26]. CONFIRMED CANON.\n  61 High Voltage — the bottom of the 4th through the top of the 7th — ch 237-240 [v26-27]. CONFIRMED CANON.\n  62 俺の戦い — the bottom of the 7th, the top of the 8th, Sawamura leading off the 8th — ch 241-245 [v27]. CONFIRMED CANON.\n  63 相棒として — the bottom of the 8th: Shirasu ties it, Miyuki puts Seidou ahead — ch 246-251 [v27-28]. CONFIRMED CANON.\n  64 次のステージ — the 9th, the 2-1 win, Inashiro's semi-final also ends — ch 252-254 [v28]. CONFIRMED CANON.\n  65 道果てしなく — the run-up to the final vs 稲城実業; Kawakami's diagnosis — ch 255-259 [v28-29]. CONFIRMED CANON.\n\nTHE INSTRUMENTS AND THEIR TIERS, stated plainly. (1) LICENSOR PRIMARY: diaace.com/story/N (the official special site) for all thirteen あらすじ; Bandai Channel b-ch.com/titles/9671/00N serves the same text in its HTML and WEBザテレビジョン paraphrases it — ONE lineage, counted once. (2) THE FANDOM (diamondnoace.fandom, read through api.php action=parse, never scraped): 'Volumes/Act II' gives the per-volume chapter contents with Japanese chapter titles — the title-identity instrument and the volume table; 'List of Baseball Matches/Act II' plus the four per-match pages give game ↔ chapter ranges (Yakushi vs Ichidaisan 171/172-187, Norikane vs Seidou 189-197, Seidou vs Sousei 204-216, Seidou vs Ichidaisan 224-253); the episode page 'To What Lies Ahead' is the only Season-4 episode page that exists (created and filled on broadcast day; the Episodes/Season 4 list page carries only ep 1 and no chapter data). (3) A JAPANESE PER-CHAPTER LINEAGE: mangakansou.xyz (イノさんの漫画アニメ) posted a ネタバレ感想 for each weekly chapter, each headed with the chapter number, its tankōbon volume up to ch 223, and — inside a game — its position in that game (ch 224 = 市大三高1 … ch 253 = 市大三高30, which independently reproduces the 30-chapter semi-final). (4) A JAPANESE PER-EPISODE LINEAGE: yanaginaya.com posted a 感想とあらすじ for each of the thirteen episodes with a section list and a next-episode teaser; the teasers CHAIN — every episode's teaser names content the following episode's licensor あらすじ opens on — which is what made the interior seams derivable. (3) and (4) are personal blogs, i.e. fan summaries: they are content witnesses, cross-checked against the licensor text and the fandom at every seam, and no anchor here rests on a blog claim alone. (5) MangaUpdates for the block's outer bounds only. (6) Kodansha's own volume copy (kc.kodansha.co.jp/product?item=…) for vols 24-30, which independently fixes the vol 26/27 seam at the semi-final's first run and the vol 27/28 seam at the 8th inning.\n\nTHE VOLUME TABLE USED (no volume_boundaries are stored for 86569; cited from the tankōbon contents): v19 166-174, v20 175-183, v21 184-192, v22 193-201, v23 202-210, v24 211-219, v25 220-228, v26 229-237, v27 238-247, v28 248-256, v29 257-265. The fandom's Volumes/Act II table and the Japanese blog's own per-post volume labels agree exactly through vol 26, and ja-WP's per-character citations corroborate eight points of it independently (actII 第19巻第172話/第173話, 第20巻第183話, 第21巻第192話, 第23巻第204話/第210話, 第24巻218話/第219話, 第26巻第230話, 第29巻第262話). ONE UNRESOLVED BOUNDARY, and it does not touch this verdict: the fandom puts ch 247 in vol 27 (238-247, ten chapters) while the Japanese blog's volume index puts it in vol 28 (vol 27 = 238-246) — and Kodansha's vol-28 copy, which opens '白熱の投手戦は終盤8回へ突入！ 1点のビハインドを追う青道高校クリーンナップと…天久が対峙する', reads as the blog's boundary (ch 247 「先輩たち」 is Shirasu and Miyuki batting one down in the 8th). EVERY chapter this verdict names as an END or a START falls in the SAME volume on both readings, so no delivered volume is at risk; the dispute is flagged for whoever seeds volume_boundaries for 86569.",
+  "coverage_set_checked": "Yes, exhaustively over ch 170-259 in both directions. FORWARD (episode -> chapters), from the licensor あらすじ + the per-episode reviews + the per-chapter posts: 53 = 189-197; 54 = 170-180; 55 = 181-187; 56 = 198-216; 57 = 217-222; 58 = 223-227; 59 = 228-232; 60 = 233-236; 61 = 237-240; 62 = 241-245; 63 = 246-251; 64 = 252-254; 65 = 255-259. BACKWARD (chapter -> episode): 170-187 and 189-259 are each claimed by exactly one row, with no overlap and no gap. THE ONE UNPLACED CHAPTER IS 188 「期待の表れ」 (blog: 「第21巻188話：全体ミーティング」 — Watanabe reporting Amahisa's new two-seam gyro to the team, the Sawamura/Amahisa LINE exchange being exposed, then Seidou's full meeting before the Norikane game). It has no home in the evidence: its scouting-report half is redundant after ep 54 showed Amahisa revealing the pitch himself, and its team-meeting half precedes a game ep 53 had already played, so the reorder plausibly cut it — but no source says so and it is not assigned. NO EPISODE IN THE BLOCK re-shows pages another episode carries; the only page-order irregularity is the eps 54/55 back-jump, annotated. SEAM VERIFICATION METHOD, recorded because it is what makes the interior anchors trustworthy: every seam from 56/57 through 64/65 was closed by matching the NEXT episode's licensor あらすじ opening beat to a named chapter and the PREVIOUS episode's next-episode teaser to the same chapter — e.g. ep 58 opens on Miyuki's 「よし、初っ端からかましとくか！奴らの頭にない球種「ナンバー９」」, which is ch 223's own line; ep 62's teaser is Kuramochi's steal with Haruichi up, which is ch 246's own content; ep 65 closes on the 精密検査 result, which is ch 259's."
+ },
+ "flags_for_sean": [
+  "THE ONE HOLE: ch 188 「期待の表れ」. Chapters 170-259 are otherwise covered without gap or overlap, but 188 is placed by nothing. Its content (blog: 「第21巻188話：全体ミーティング」) is Watanabe's scouting report on Amahisa's new pitch plus Seidou's full team meeting the night before the Norikane game — and the reorder makes BOTH halves redundant: ep 54 already had Amahisa reveal the pitch himself over LINE, and ep 53 already played the game the meeting previews. Cutting it is the most economical reading, but it is not proven. The alternative is that its meeting half opens ep 53, in which case ep 53's START is 188, not 189 — the fandom's episode page and its match page both say 189, and both may simply be quoting the GAME's range. Sean's call: leave 188 unassigned (as delivered), or take ep 53 START 188 on the reorder argument.",
+  "THE EP-52 GRAFT IS NOW CORROBORATED — open flag #927 item (1) can close. The stored ep-52 annotation 'graft {189} … final scene reportedly a teaser from Act II ch 189 (MangaShed) — single source' now has a second and a third witness: diamondnoace.fandom's 'Norikane Academy vs. Seidou High' match page carries anime = 'Episode 52, Season 3 - TBC' against manga 'Act II, Chapter 189-197', and the new season's first episode opens on ch 189 exactly. Nothing to repair on ep 52 (its END 169 / START 166 / v19 are confirmed by ch 169's content — 「次の相手は法兼学園」, the post-Hachiya-Ouji scouting — and ch 170 immediately follows into ep 54). Flag #927 item (2), 'check whether the MU-derived pipeline is writing Season-…', is answered in the affirmative below.",
+  "MU's CURATED LINE IS CHAPTER-RIGHT AND VOLUME-WRONG, which is exactly the conflation the ruled G33/V10 repairs on ep 52 were about. Live value (api.mangaupdates.com/v1/series/65081981544, updated 2026-06-28): start 'Vol 1, Chap 1 (S1) / Vol 19, Chap 170 (S2P1) / Vol 30, Chap 260 (S2P2)', end 'Vol 19, Chap 169 (S1) / Vol 30, Chap 259 (S2P1)'. The chapters 170 / 259 / 260 are all confirmed on the pages by this verdict; the 'Vol 30' labels on 259 and 260 are wrong (both chapters are in vol 29). If the MU lane ever re-derives an anchor for this series it will again produce a Season-2 endpoint on a Season-1 row and a wrong volume with it — the derivation-tier suppression that G33/V10 imply should stay in force.",
+  "A VOLUME-BOUNDARY DISPUTE TO SETTLE BEFORE SEEDING volume_boundaries FOR 86569: the fandom's Volumes/Act II gives vol 27 = 238-247 (ten chapters) and vol 28 = 248-256; the Japanese per-chapter blog's own volume index gives vol 27 = 238-246 and vol 28 = 247-255, i.e. a one-chapter shift from vol 27 to the end of the run. Kodansha's own vol-28 copy favours the blog ('白熱の投手戦は終盤8回へ突入！　1点のビハインドを追う青道高校クリーンナップと…天久が対峙する' opens on Shirasu/Miyuki batting one run down, which is ch 247), while the fandom's table is the only one that runs contiguously to ch 308 in 34 volumes. Both readings agree on vols 1-26 and, by luck, on every chapter this verdict delivers — so nothing here is at risk — but a boundary table built from the fandom alone would inherit the dispute.",
+  "A SINGLE-SOURCE OBSERVATION I DID NOT TURN INTO AN ANNOTATION: the ep-53 review (yanaginaya #1) opens its account with 「背番号１を受け取る緊張した面持ちの沢村…入学当時のお前にエースナンバーは任せられないと言われたときとは大違い」 — Sawamura receiving the ace number, a beat the manga places well before ch 189 and one the act II run already animated. That reads like a premiere recap, but nothing else mentions it, and I could not establish whether it is re-shown footage, a newly drawn retelling, or simply the reviewer recalling the past — which is precisely the distinction the recap boundary (Sean 2026-09-02) turns on. So no `recap` annotation is delivered and the row's canon standing is unaffected either way (a recap is weightless; the remainder is a full adaptation of 189-197). Worth one line of confirmation if anyone gets eyes on the episode.",
+  "SCOPE NOTE: Second Season Part 2 (AniList 213658) is announced for October 2026 and covers the West Tokyo FINAL, 青道 vs 稲城実業 — ja-WP cites Comic Natalie 2026-06-28 ('第2クールは10月放送、御幸と成宮が対峙') and MU already pins its start at ch 260. The final itself is ch 264-305 on the fandom's match record, with 260-263 the run-up. Ep 65 therefore gets NO continue: 259 is not straddled and Part 2 has no dates, so neither C1 nor a post-series continue applies. When Part 2's rows arrive the fence below them is ep 65 -> 259."
+ ]
+}
