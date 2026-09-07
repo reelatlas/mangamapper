@@ -1154,6 +1154,32 @@
    19-23 / 39 (chain_source) and 18 / 93-95 (AFL's loose Mixed bucket),
    beelzebub 15 / 26-28 / 51, rurouni TV ep 95 (identity). Batch 22 opens on
    the boruto follow-up (lanes I + C) with the batch-21 tooling copied.
+150. ✅ **CONSOLIDATE (standard) after C2 + the Pasta seat (2026-09-07; Sean: 'if a deep makes sense do it first').** STEP 0: the
+    deep trigger FIRED mechanically — all five lib files changed since the pre-C2 save point (4f651fe6) are ruling maps
+    (discovery / franchises / override-chains / related-works / source-relations) that ledger records name as enforcement
+    sites — and the diffs were READ: 248 lines of ruling ENTRIES, no gate code moved, no prior per-series decision invalidated
+    (P21 is about gate code). Ruled standard, said so; the trigger's blind spot captured in the consolidate skill (read the
+    diff before declaring deep — entries are rulings, not a gate change). System census green at entry. STEP 1: no new writer;
+    the two writers that produced owed work this cycle are limitations, not bypasses — the related-works date seat is a
+    proposal by design (now stated in I45), the wiki lock's franchise-numbering miss is queued engineering (§12.148).
+    STEP 2: edges rebuilt + deployed ×5 (the ledger is lib). STEP 3: no parser change. STEP 4: heal ran to zero — one stuck
+    AFL run (afl#1265, 2026-09-06) marked killed. STEP 5 CENSUS (vs §12.148 / §12.149): EVERY class identical — series_staged
+    35, title_incomplete 25, type_default_unclassified 82, fractional_unmodeled 5, pending_airing_no_anchor 4, frontier_tail_null
+    12, asterisk_unreviewed 178, permanence_candidate 52; discovery halo_airing 44, halo_sequel_unclaimed 93, halo_series_
+    unclaimed 162, discovery_new_since_sitting 2 (the Tennis pair), related_work_cluster_disorder 44; ruling_violation 0,
+    every violation-kind class 0; 220 verified, 0 failing. Every standing non-zero class is one §12.147 / §12.148 named and
+    queued (integrity_total_beyond_eps 10 AFL-lag rows, anchor_without_row 8 + annotation_without_row 3 the Tennis / gits
+    rowless tails, watch_order_kind_missing 3, format_missing 2 / episode_without_component 2 fist-of-the-blue-sky + conan
+    1212, the mu_* listings). STEP 6 LEDGER: I45 AMENDED (2026-09-07, amendedOn stamped) — POSITION IS WATCH ORDER, air_date
+    IS RELEASE, two keys never a third; .5 is the FIRST seat in watch order in a gap then .51 / .52, never the earlier release,
+    never a .49; the writer's air-date seat is a proposal and a sourced watch slot beats it through a position ruling on the
+    pair (planRuledMoves); chronology is information on the row, never a sort (a story_position is the deferred shape); a
+    sitting reads the owner's existing ledger notes before accepting a derived seat — witnesses + aliases added; no clause
+    replaced (retiredPhrases unchanged). docs/rules.md regenerated. STEP 7: tsc / lint 0 errors / 294 tests / build green.
+    CAPTURE HOMES this cycle: I45 (the sentence), the discover skill (six C2 traps + the Pasta correction), the consolidate
+    skill (the deep-trigger note), STATE (the chronology sidecar, the owed list). QUEUED BY NAME, next: the SHORTS GATE as an
+    /add-rule (ten I13 rulings carry its retiresWhen — the first mechanical retirement of a whole cluster); the wiki lock's
+    family-offset carry (Ace act II 53-65, re-zero 51-79, gits-2026); the AniList catch-up + restage when the API answers.
 149. ✅ **THE PASTA SEAT — position IS watch order (Sean 2026-09-07 with Cursor, the C2 follow-up).** The C2 apply had parked
     Operation Desert Pasta (135866, a 17-minute original, first shown 2021-06-19) at 12.51 by its release date, AFTER the 2019
     film at 12.5 — release order on the watch-order key. The sourced order was already on file: the film's own wave-1 note

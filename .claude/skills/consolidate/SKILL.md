@@ -26,6 +26,11 @@ Two modes:
   the link (or the record), never work around it.
 - Deep trigger: `git diff <last-save-point>..HEAD -- scripts/ingest/lib/`
   touching a file named in any ledger record's `enforcement` = deep.
+  READ the diff before declaring deep (2026-09-07): the ruling MAPS under
+  `lib/rulings/` are named as enforcement sites too, so a sitting that only
+  ADDED ruling entries trips the file-name check — entries are rulings, not a
+  gate change (P21 is about gate code invalidating prior decisions). Deep when
+  gate CODE moved; standard when only entries did — and say which.
 
 ## 1. Writer-consistency sweep — mechanical
 
