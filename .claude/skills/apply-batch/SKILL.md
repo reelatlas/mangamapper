@@ -88,6 +88,8 @@ ruled), add it to `lib/rulings/index.ts`, move the script to
 ## Traps this pipeline has actually hit
 
 - **An EVENT roster script runs only on its trigger, after you have READ it, with `--dry-run` first where it has one — and a script with no dry-run is never assumed to have one** (INCIDENT-2026-09-05, `P40`): `audit-titles.ts` was run to apply one exclusion and deleted six series through a cascade against a stale fixture index; `afg-expansion.ts` has no dry-run and created a series when the flag was passed. Never run a script for its side effect; find the ruling map its job belongs to.
+- **A confirmed default lands as a T6 PIN, never as a no-op** (batch 24 wave 1, 2026-09-07 — the S3 verifier): `type_default_unclassified` retires only on a T6 pin or an AFL number, and `deriveVisibility` publishes on the pin, so a lane-T verdict's "CONFIRMED AS STORED" entry goes into EPISODE_TYPE_OVERRIDES with the verdict as its reason — that is the class's retirement path for a season AFL never lists.
+- **A continue equal to the END is derived, never stored** (T24 landing, 2026-09-07): a C1 continue inside a straddled unit equals the END by construction (gits-2026's five; re-zero 79) — skip it in the apply; store only a continue that differs (a C2 parity across a reorder, an A47 hold).
 - **Repairs on derivation-tier rows get wiped** (`P8`): a repaired value on
   `mu` / `afg` / `afg-continua` is deleted by that source's next re-derive.
   Flip the row to `manual`. Batches 15/16 forgot — 14 rows carry a

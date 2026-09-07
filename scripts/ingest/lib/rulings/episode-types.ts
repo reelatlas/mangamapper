@@ -1546,6 +1546,42 @@ export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
     cite: ['scripts/ingest/research/batch22/WAVE3-RECOVERY.md', 'scripts/ingest/research/batch22/verify/w3-rok.md', 'scripts/ingest/research/batch22/verify/w3-beelzebub.md', 'scripts/ingest/research/batch22/verify/w3-eyeshield.md', 'scripts/ingest/research/batch22/verify/w3-sailor-moon.md', 'docs/changelog.md §12.120'],
     supersedes: "the afg-derived 46 / 47 END 115 (Line A of the display: a graft as a position) and wave 2's ep-51 rearranged",
   },
+  // ---- batch 24 wave 1 — THE TYPING WAVE (2026-09-07): the wiki-minted default-canon rows typed on sources. A confirmed default is a
+  // PIN, not a no-op: type_default_unclassified retires only on a T6 pin or an AFL number (the S3 verifier), and deriveVisibility
+  // publishes on the pin — so every confirmed row carries its verdict here as the reason.
+  {
+    seriesId: 're-zero-starting-life-in-another-world',
+    ruleId: 'T6',
+    value: range(51, 79, 'canon'),
+    reason:
+      "batch 24 wave 1 (verified R24 — verify/w1-rezero-s3.md, w1-rezero-s4.md; Sean ruled 2026-09-07 with Cursor, decision 6): rows 51-66 (season 3 = LN Arc 5, volumes 16-20) and 67-79 (season 4 so far = Arc 6, volumes 20-24) CONFIRMED CANON against the light novel on two lineages each — every one of the 29 episode titles is verbatim a printed LN chapter title; the licensor's per-episode synopses and en-WP's summaries are LN content throughout; the only anime-original material any source names is slivers (divergence / abridged annotations). AFL lists 1-50 only (the chain's retiresWhen); the rows were the wiki mint's default with no typing source.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-07',
+    cite: ['scripts/ingest/research/batch24/out/re-zero-starting-life-in-another-world-w1a.json', 'scripts/ingest/research/batch24/out/re-zero-starting-life-in-another-world-w1b.json', 'scripts/ingest/research/batch24/verify/w1-rezero-s3.md', 'scripts/ingest/research/batch24/verify/w1-rezero-s4.md', 'https://myanimelist.net/anime/54857/Re_Zero_kara_Hajimeru_Isekai_Seikatsu_3rd_Season/episode'],
+    supersedes: 'nothing — the wiki mint default (type_default_unclassified), now typed',
+  },
+  {
+    seriesId: 'ghost-in-the-shell-2026',
+    ruleId: 'T6',
+    value: { 1: 'canon', 2: 'canon', 3: 'canon', 4: 'canon', 5: 'canon', 6: 'canon', 7: 'canon', 8: 'mixed', 9: 'canon' },
+    reason:
+      "batch 24 wave 1 (the FULL verifier, verify/w1-gits.md; Sean ruled 2026-09-07 with Cursor, decisions 6 and 8): an ADAPTATION of 士郎正宗『攻殻機動隊』 proven on the licensor's own STORY page (every episode title is the manga's chapter title(s) in printed order, i/ii/iii marking the cuts) — rows 1-7 and 9 CONFIRMED CANON; ep 8 RETYPED MIXED: the segment the licensor titles 'INTERMISSION' (the Project 2501 prequel, ~half the episode, newly drawn) is anime-original on four lineages incl. Science SARU's own 「第08話はオリジナル要素が含まれた話数になっております」 (animeanime's ep-8 round-up) and story-carrying under T28, while 'BRAIN DRAIN i' supplies the canon share; the anchor stays (A1 bars filler only). No AFL page exists for this series.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-07',
+    cite: ['scripts/ingest/research/batch24/out/ghost-in-the-shell-2026-w1.json', 'scripts/ingest/research/batch24/verify/w1-gits.md', 'https://www.theghostintheshell-anime.jp/story/'],
+    supersedes: "the wiki mint default on 1-9; ep 8's default canon",
+  },
+  {
+    seriesId: 'ace-of-the-diamond-act-ii',
+    ruleId: 'T6',
+    value: range(53, 65, 'canon'),
+    reason:
+      "batch 24 wave 1 (verified R24 — verify/w1-ace.md; Sean ruled 2026-09-07 with Cursor, decision 6): Second Season part 1 (rows 53-65) CONFIRMED CANON against the act II manga (ch 170-259): eleven of the thirteen episode titles are their chapters' titles verbatim, the licensor's per-episode あらすじ are source-only, ja-WP carries no アニメオリジナル marker, and every next-episode teaser names what the following synopsis opens on. AFL's page ends at 52; the rows were the wiki mint's default with no typing source.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-07',
+    cite: ['scripts/ingest/research/batch24/out/ace-of-the-diamond-act-ii-w1.json', 'scripts/ingest/research/batch24/verify/w1-ace.md', 'https://diaace.com/story/13/'],
+    supersedes: 'nothing — the wiki mint default (type_default_unclassified), now typed',
+  },
 ];
 
 export const EPISODE_TYPE_OVERRIDES: Record<string, EpisodeTypes> = ENTRIES.reduce<Record<string, EpisodeTypes>>((acc, e) => {

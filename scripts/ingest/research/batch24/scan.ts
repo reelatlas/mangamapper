@@ -67,7 +67,12 @@ async function main() {
     const anchoredEps = new Set(anchors.map((a) => a.episode));
     for (const c of v.continue_points ?? []) if (!anchoredEps.has(Number(c.episode)) && !byEp.has(Number(c.episode))) notes.push(`ORPHAN continue: ep ${c.episode} has no anchor (stored or delivered)`);
     // summary numbers vs rows
-    const nums = [...String(v.summary ?? '').matchAll(/\b(?:ch(?:apter)?\.?\s*)(\d{1,3})\b/gi)].map((m) => Number(m[1]));
+    // T24 (batch 24): a VOLUME-space verdict (every anchor's volume = its END — a novel owner) cites positions as 'vN'; its 'ch M' are the
+    // units inside a volume and never anchors — read the volume tokens instead
+    const volumeSpace = (v.anchors ?? []).length > 0 && (v.anchors ?? []).every((a: any) => a.volume != null && Number(a.volume) === Number(a.end_chapter));
+    const nums = volumeSpace
+      ? [...String(v.summary ?? '').matchAll(/\bv(?:ol(?:ume)?\.?\s*)?(\d{1,3})\b/gi)].map((m) => Number(m[1]))
+      : [...String(v.summary ?? '').matchAll(/\b(?:ch(?:apter)?\.?\s*)(\d{1,3})\b/gi)].map((m) => Number(m[1]));
     const delivered = new Set(anchors.flatMap((a) => [a.end, a.start_chapter].filter((x) => x != null).map(Number)));
     const strays = nums.filter((n) => !delivered.has(n) && !stored.some((s) => s.chapter === n || s.start_chapter === n));
     if (strays.length) notes.push(`summary cites chapters not in any anchor (read): ${[...new Set(strays)].join(', ')}`);

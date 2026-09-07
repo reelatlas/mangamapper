@@ -1154,6 +1154,57 @@
    19-23 / 39 (chain_source) and 18 / 93-95 (AFL's loose Mixed bucket),
    beelzebub 15 / 26-28 / 51, rurouni TV ep 95 (identity). Batch 22 opens on
    the boruto follow-up (lanes I + C) with the batch-21 tooling copied.
+155. ✅ **BATCH 24 WAVE 1 — THE TYPING WAVE APPLIED (2026-09-07; Sean ruled with Cursor: all eleven decisions as recommended, the two
+    forks as the verifiers read the rules).** THE WAVE: four research-agents (Opus) on lane T — a wiki-minted default-canon block typed
+    under T25-T28 AND anchored from zero, the instrument stated PER ASK ('one protocol shape will lie') — and four Fable reports (R23 ON:
+    gits-2026 the FULL sweep, the other three SCOPED), every one SOUND WITH FIXES, no END refuted. RE-ZERO 51-79 (S3 = LN Arc 5, volumes
+    16 → 20; S4 = Arc 6, 20 → 24): the catalog's FIRST NOVEL-OWNER ANCHOR SET — T24 LANDED (planned → live): end_chapter / start_chapter /
+    volume carry the LN VOLUME number, chapters_adapted names 'vN ch M', the space is an N35 entry {chapters: 45 volumes}; 29 anchors, all
+    29 confirmed canon (every title is verbatim a printed LN chapter title). GITS-2026 1-9: THE FORK → an ADAPTATION, proven on the
+    licensor's own STORY page (every title is the manga's chapter title in printed order, i/ii/iii the cuts; I40 needs an uncitable
+    outline and the source is the published book; T21 needs no episode ↔ chapter map and the titles are one); 9 anchors in the PRINTED
+    1-12 space (N35: Kodansha's own 目次 numbers 「12　EPILOGUE」 — the stored 11 was AniList's; this series only); ep 8 canon → MIXED (the
+    'INTERMISSION' half is the anime-original Project 2501 prequel, Science SARU's own 「オリジナル要素が含まれた話数」). ACE ACT II 53-65:
+    ch 170-259 in the act II space — the season opens on 189-197 (the Norikane game) and only then returns to 170-187 (Ichidaisan vs
+    Yakushi, the manga's first): an un-cross-cut, `rearranged` on 54-55, two C2 parity continues (53 → 170, 55 → 198); 13 anchors, all 13
+    confirmed canon on the title-chain instrument; ch 188 UNPLACED (flagged, no seat invented); 259 = vol 29 (MU chapter-right,
+    volume-wrong). THE DECISIONS (WAVE1-RECOVERY.md § THE DECISIONS): (1) T24 as delivered, 45 seeded; (2) re-zero ep 54 END 17 held, the
+    two thread labels corrected (the Emilia / Regulus stinger closes v17 and continues in v18's opening; the rooftop / Capella thread is
+    what leaves ch 5 unfinished); (3) ep 77 END 24 [23] — A47's hold needs a ≤ 5-page or teaser-worded scrap and the closing beat is v24
+    ch 1's opening scene on three lineages; (4) a continue equal to the END is DERIVED, never stored (seven skipped: gits's five C1s,
+    re-zero 77 / 79; the parity healer's own C2 conversions — 29 on the three series — are that derived tier, continue_source healer);
+    (5) row 67's title PARSER FIRST: lib/wikipedia.ts#multiPartTitle joins a two-part entry's Title_1..N with ' / ' (NumParts — the row
+    minted title-less because parseEpisodeList read `| Title =` only; ~140 empty-title wiki rows catalog-wide are the shape to re-check),
+    the wiki event run then FILLED the row itself (dry run 'would fill 1, create 0'; live 'filled 1') — no manual repair; (6) the 51
+    confirmed defaults as T6 PINS (a confirmed default is a pin, never a no-op: type_default_unclassified retires only on a pin or an AFL
+    number and deriveVisibility publishes on it — the S3 verifier); (7) gits ep 2 START 3 (A10 inclusive at five pages; 「ラスト5ページ目前後」
+    on the line; the lead rewritten '2 (final 5 pp, pp.45-49 …)' so sliverStart agrees); (8) ep 8 mixed + anchor 10 [9] + unverified{9};
+    (9) space 12; (10) Ace as delivered, flag #927 closed (the ep-52 graft{189} corroborated; MU's S2P1 line now has rows), MU's volume
+    ignored; (11) the captures. THE APPLY (apply-w1.ts, file-driven + overlay, dry-run → apply → dry-run idempotent): 51 anchors (manual;
+    A47 / A10 normalized through lib/sliver.ts which now reads the VOLUME vocabulary — the first dry run refused re-zero 59 because a
+    scrap-worded tail named the END volume while the body carried it, a clause chapter space never needs; fixed + tested), 42
+    annotations, 2 continues stored, 9 overlay entries, 8 anchor notes DEDUPED (the batch-17 append loop — ace 52's REPAIR sentence
+    ×5; hikaru-no-go 75, mashle 23, rosario-vampire 11, bleach 146, x 20, sailor-moon-crystal 39, yowamushi-pedal 38), flag #927 dismissed
+    with its resolution. THE HEAL: assert-overrides — totals gits 11/1 → 12/1 and re-zero null → 45/45 (N35), gits ep 8 canon → mixed (T6),
+    **ghost-in-the-shell-2026 visibility staged → PUBLIC (P39 — the T6 pin publishes a seeded series, by design)**; heal-anchor-volumes 0
+    (no boundary table on any of the three); parity converted 29. CENSUS (vs §12.154, every delta explained — P17): type_default_unclassified
+    87 → 84 (the three series retired — a per-series class); frontier_tail_null 14 → 13 (Ace's tail anchored); pending_airing_no_anchor 4 → 2
+    (re-zero, gits — airing and now anchored); title_incomplete 20 → 19 (row 67); unverified_share 3 → 4 (gits ep 8, the queued share);
+    anchor_gap_research 3 → 4 (re-zero 1-50 — the AFL-typed, never-anchored block the wave exposed: a gap-block ask of its own, off this
+    wave by ruling); asterisk_unreviewed 178 → 180 (the apply's standing asterisk_review = pending on re-zero and gits); series_staged 35 →
+    34 (gits public); ok_full 253 → 255 (Ace and gits complete); anchor_note_repeated (NEW, violation) 0 after the dedupe; start / end
+    sliver mismatch 1 / 1 UNCHANGED — the 29 volume-space rows are silent under the vocabulary and no chapter-space verdict moved (the
+    deep trigger fired on lib/sliver.ts, an A10 / A47 enforcement site: the two sliver classes over every standing anchor ARE the rescan
+    and read the same; 22 unit tests hold); every violation class 0; 222 verified (220 + gits public + re-zero now anchored), 0 failing;
+    discovery classes unchanged. LEDGER: T24 live (enforcement lib/sliver.ts#volumeUnit / sliverStart / sliverEnd + chapter-spaces + the
+    applied map; auditClass start_sliver_mismatch / end_sliver_mismatch; witnesses + re-zero-starting-life-in-another-world); N35 ×2; T6
+    ×3 (51 rows + the retype); lib/rulings/applied/batch-24.ts (13 entries, registered); lib/note-text.ts (repeatedSegment / dedupeSegments)
+    + the census class; the research-batch skill ('an ask names the FACT, never the column' — both re-zero asks named a 原作 column that
+    does not exist) and the apply-batch skill (the T6-pin landing; the derived-continue rule). USAGE: research ≈ 1.44M (≈ 360k per lane-T
+    work), verification ≈ 0.90M (three scoped 203-231k, the full 248k — the scope lever saved almost nothing: a verifier's floor is the
+    instrument pages; the lever is the COUNT of verifiers, recorded in memory), wave ≈ 2.34M. Off this apply by ruling: re-zero 80-81 and
+    gits ep 10 (not rows; the wiki run created 0), slime / tennis / beyblade, Ace 188. Lint 463 (437 + the 26 warnings of batch 24's
+    copied helpers — the same as batch 23's); 305 tests; edges deployed ×5; system census green.
 154. ✅ **THE ANNECY CLAUSE — I46 amended: a shared external id registers to NEITHER (2026-09-07; Sean with Cursor: 'register to
     neither, never pick a winner, never a row repair').** THE SHAPE (§12.151's census, related_work_identity_conflict 1): AniList gives
     ONE MAL id (59832) to two distinct one-minute Annecy Festival 60th Anniversary shorts — One Piece 143293 (one-piece @978.5) and

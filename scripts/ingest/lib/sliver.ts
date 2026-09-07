@@ -29,6 +29,14 @@ export type SliverVerdict = {
 const WORDY = /half|most|bulk|remainder|rest of|majority|through/i;
 const SCRAPPY = /sliver|teaser|cold[- ]open|fragment|panel|scrap|recap|flashback|montage|preview|replay/i;
 
+/** T24 (2026-09-07, the re-zero landing): a segment written in VOLUME space — 'v20 ch 7 (…)', 'v22 ch 2-ch 4', 'v21 prologue' — names its
+ * volume; on a novel owner end_chapter / start_chapter carry volume numbers, so the sliver parsers compare on the volume and never read
+ * the chapter or range inside it as a page count. null for a chapter-space segment. */
+export const volumeUnit = (segment: string): number | null => {
+  const m = segment.match(/^v(?:ol\.?|olume)?\s*(\d+)\b/i);
+  return m ? Number(m[1]) : null;
+};
+
 /** the first comma-separated segment of a chapters_adapted record (commas inside parentheses do not split) */
 export const leadingSegment = (chaptersAdapted: string | null | undefined): string =>
   String(chaptersAdapted ?? '').split(/,(?![^()]*\))/)[0]?.trim() ?? '';
@@ -43,12 +51,14 @@ export const statedPages = (lead: string): number => {
 /** A10: derive the START the sliver rule gives a record; `start` is the stored / proposed value */
 export const sliverStart = (chaptersAdapted: string | null | undefined, start: number): SliverVerdict => {
   const lead = leadingSegment(chaptersAdapted);
-  const leadNum = Number((lead.match(/^(\d+)(?!\.)/) ?? [])[1]);
+  const vol = volumeUnit(lead);
+  const leadNum = vol ?? Number((lead.match(/^(\d+)(?!\.)/) ?? [])[1]);
   if (!lead || !Number.isInteger(leadNum) || leadNum < 1) return { start, lead, leadChapter: null, pages: 0, reason: 'no-lead' };
   if (leadNum === start) return { start, lead, leadChapter: null, pages: 0, reason: 'lead-is-start' };
   if (leadNum !== start - 1) return { start, lead, leadChapter: null, pages: 0, reason: 'not-preceding' };
-  const pages = statedPages(lead);
-  const substantive = !SCRAPPY.test(lead) && (WORDY.test(lead) || pages >= 6);
+  // T24 (2026-09-07): in VOLUME space a leading partial of the preceding volume is chapters, never pages — it counts unless its wording says scraps
+  const pages = vol != null ? 0 : statedPages(lead);
+  const substantive = !SCRAPPY.test(lead) && (vol != null || WORDY.test(lead) || pages >= 6);
   return substantive ? { start: leadNum, lead, leadChapter: leadNum, pages, reason: 'substantive' } : { start, lead, leadChapter: leadNum, pages, reason: 'scraps' };
 };
 
@@ -77,18 +87,24 @@ export type EndSliverVerdict = {
   reason: 'no-tail' | 'tail-not-end' | 'sole-segment' | 'no-next' | 'next-not-on-end' | 'substantive' | 'owned-tail';
 };
 
+/** every comma-separated segment of a chapters_adapted record (commas inside parentheses do not split; ' · ' also separates) */
+export const allSegments = (chaptersAdapted: string | null | undefined): string[] =>
+  String(chaptersAdapted ?? '').split(/,(?![^()]*\))|\s·\s/).map((x) => x.trim()).filter(Boolean);
+
 /** the last comma-separated segment of a chapters_adapted record (commas inside parentheses do not split) */
 export const trailingSegment = (chaptersAdapted: string | null | undefined): string => {
-  const parts = String(chaptersAdapted ?? '').split(/,(?![^()]*\))|\s·\s/).map((x) => x.trim()).filter(Boolean); // commas (outside parens) or the ' · ' separator some records use
+  const parts = allSegments(chaptersAdapted); // commas (outside parens) or the ' · ' separator some records use
   return parts[parts.length - 1] ?? '';
 };
 
 /** A47: derive the END the end-side sliver rule gives a record; `nextStart` is the next anchored episode's START (null = no next anchor) */
 export const sliverEnd = (chaptersAdapted: string | null | undefined, end: number, nextStart: number | null): EndSliverVerdict => {
   const tail = trailingSegment(chaptersAdapted);
-  // a range segment ("43-46") names its upper bound; a single chapter names itself
-  const m = tail.match(/^(\d+)(?:\s*[-–]\s*(\d+))?(?!\.)/);
-  const tailNum = m ? Number(m[2] ?? m[1]) : NaN;
+  // a range segment ("43-46") names its upper bound; a single chapter names itself; a VOLUME-space segment ("v24 ch 1 (…)", T24)
+  // names its volume — the chapters inside it are units, never pages, so only its wording can make it a scrap
+  const vol = volumeUnit(tail);
+  const m = vol != null ? null : tail.match(/^(\d+)(?:\s*[-–]\s*(\d+))?(?!\.)/);
+  const tailNum = vol ?? (m ? Number(m[2] ?? m[1]) : NaN);
   if (!tail || !Number.isInteger(tailNum) || tailNum < 1) return { end, tail, tailChapter: null, pages: 0, reason: 'no-tail' };
   if (m?.[2]) return { end, tail, tailChapter: tailNum, pages: 0, reason: 'tail-not-end' }; // a whole range is never a scrap
   if (tailNum !== end) return { end, tail, tailChapter: tailNum, pages: 0, reason: 'tail-not-end' };
@@ -98,9 +114,12 @@ export const sliverEnd = (chaptersAdapted: string | null | undefined, end: numbe
   if (leadingSegment(chaptersAdapted) === tail) return { end, tail, tailChapter: tailNum, pages: 0, reason: 'sole-segment' };
   if (nextStart == null) return { end, tail, tailChapter: tailNum, pages: 0, reason: 'no-next' };
   if (nextStart !== end) return { end, tail, tailChapter: tailNum, pages: 0, reason: 'next-not-on-end' };
+  // VOLUME space (T24): several segments can name the END volume — when an earlier segment does (re-zero 59: 'v19 prologue, v19 ch 1-2'
+  // before a 'v19 ch 6 (out-of-order fragment)' tail), the tail is not the volume's only presence and the END rests on the body
+  if (vol != null && allSegments(chaptersAdapted).slice(0, -1).some((seg) => volumeUnit(seg) === end)) return { end, tail, tailChapter: tailNum, pages: 0, reason: 'substantive' };
   // a range counts as PAGES only behind a page marker (p. / pp. / page): '46 — 44-45 skipped' and
   // '638 (opening of the 638-640 …)' name chapters, not pages (the first census run listed both)
-  const pages = /\bp(?:p|ages?|g)?\.?\s*\d/i.test(tail) ? statedPages(tail) : 0;
+  const pages = vol == null && /\bp(?:p|ages?|g)?\.?\s*\d/i.test(tail) ? statedPages(tail) : 0;
   const scraps = SCRAPPY.test(tail) || (pages > 0 && pages <= 5 && !WORDY.test(tail));
   return scraps ? { end: end - 1, tail, tailChapter: tailNum, pages, reason: 'owned-tail' } : { end, tail, tailChapter: tailNum, pages, reason: 'substantive' };
 };

@@ -1,7 +1,7 @@
 // A10 — the sliver rule, proven on the records that ruled it (2026-08-26,
 // batch 19 E3). Pure; no DB.
 import { describe, expect, it } from 'vitest';
-import { sliverStart, sliverEnd, statedPages } from './sliver';
+import { sliverStart, sliverEnd, statedPages, volumeUnit } from './sliver';
 
 describe('sliverStart (A10)', () => {
   it('MHA ep 170: an 8-page leading partial of the preceding chapter IS the start', () => {
@@ -88,5 +88,28 @@ describe('sliverEnd (A47 — the END-side twin, Sean 2026-09-02)', () => {
   });
   it('a whole trailing range is never a scrap', () => {
     expect(sliverEnd('598-599', 599, 599).reason).toBe('tail-not-end');
+  });
+});
+
+describe('the VOLUME vocabulary (T24, the re-zero landing 2026-09-07 — a novel owner anchored in LN volumes)', () => {
+  it('reads the volume of a vN segment and nothing inside it', () => {
+    expect(volumeUnit('v20 ch 7 (from the proposal to the chapter\'s end)')).toBe(20);
+    expect(volumeUnit('v22 ch 2-ch 4 (an added conversation)')).toBe(22);
+    expect(volumeUnit('vol 21 prologue')).toBe(21);
+    expect(volumeUnit('84 (p.17-18)')).toBeNull();
+  });
+  it('sliverStart: a lead on the START volume is the start; a leading partial of the preceding volume counts unless its wording says scraps — chapters are not pages', () => {
+    expect(sliverStart('v20 ch 7 (from the proposal to the chapter\'s end), v21 prologue, v21 ch 1', 20).reason).toBe('lead-is-start');
+    expect(sliverStart('v18 ch 5, v19 prologue, v19 ch 1-2', 19)).toMatchObject({ start: 18, reason: 'substantive', pages: 0 });
+    expect(sliverStart('v18 ch 5 (a teaser of the arc to come), v19 prologue', 19)).toMatchObject({ start: 19, reason: 'scraps' });
+  });
+  it('sliverEnd: a volume-space tail on the END that the next episode starts on stays unless its wording says scraps; a tail on another volume never moves the END', () => {
+    expect(sliverEnd('v23 ch 5, v23 ch 6, v24 ch 1 (the closing respawn beat only)', 24, 24).reason).toBe('substantive');
+    expect(sliverEnd('v23 ch 5, v23 ch 6, v24 ch 1 (a teaser of the next volume)', 24, 24)).toMatchObject({ end: 23, reason: 'owned-tail' });
+    expect(sliverEnd('v23 ch 5, v23 ch 6, v24 ch 1 (the closing respawn beat only)', 23, 24).reason).toBe('tail-not-end');
+    expect(sliverEnd('v20 ch 1, v20 ch 6-7 (ch 7 unfinished — ep 67 continues in it)', 20, 20).reason).toBe('substantive');
+    // re-zero 59: the END volume is carried by the body ('v19 prologue, v19 ch 1-2'); a scrap-worded tail of the SAME volume never moves it
+    expect(sliverEnd('v18 ch 5, v19 prologue, v19 ch 1-2, v19 ch 6 (out-of-order fragment)', 19, 19).reason).toBe('substantive');
+    expect(sliverEnd('v18 ch 5, v19 ch 6 (out-of-order fragment)', 19, 19)).toMatchObject({ end: 18, reason: 'owned-tail' });
   });
 });

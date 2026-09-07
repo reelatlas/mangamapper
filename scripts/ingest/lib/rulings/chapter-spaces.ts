@@ -91,6 +91,27 @@ export const ENTRIES: RulingEntry<ChapterSpace>[] = [
     ruledOn: '2026-09-02',
     cite: ['scripts/ingest/research/batch20/verify/dragon-quest-the-adventure-of-dai-w13abc.md', 'scripts/ingest/research/batch20/verify/dragon-quest-the-adventure-of-dai-w13defg.md', 'scripts/ingest/research/batch20/WAVE13-RECOVERY.md', 'https://ja.wikipedia.org/wiki/DRAGON_QUEST_-ダイの大冒険-'],
   },
+  {
+    seriesId: 'ghost-in-the-shell-2026',
+    ruleId: 'N35',
+    value: { chapters: 12, volumes: 1 },
+    reason:
+      "The printed numbering of 士郎正宗『攻殻機動隊』 (AniList 31023, one volume) is TWELVE units: Kodansha's own 目次 numbers 「11　GHOST COAST」 and 「12　EPILOGUE」 (347 pages), マガポケ's serialization ends at unit 【11(2)/12】 GHOST COAST/EPILOGUE, ja-WP's article, en-WP's chapter list and the fandom's chapter table all end at 12 — and 'INTERMISSION' is in none of them (which is exactly why ep 8's first half is anime-original). The stored 11 is AniList's count, shared by a real '11 + epilogue' lineage (ANN's reviewer, the fandom's infobox and its Ghost Coast page 'the eleventh and final chapter'); the publisher's own table of contents wins. THIS SERIES ONLY: Stand Alone Complex and the 1995 film share the manga link and keep AniList's 11 until their own sitting. Batch 24 wave 1 (verified R24, the FULL verifier: verify/w1-gits.md item B); Sean ruled 2026-09-07 with Cursor (decision 9).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-07',
+    cite: ['scripts/ingest/research/batch24/out/ghost-in-the-shell-2026-w1.json', 'scripts/ingest/research/batch24/verify/w1-gits.md', 'https://kc.kodansha.co.jp/product?item=0000006425'],
+  },
+  {
+    seriesId: 're-zero-starting-life-in-another-world',
+    ruleId: 'N35',
+    value: { chapters: 45, volumes: 45 },
+    reason:
+      "A VOLUME-SPACE instrument (T24, landed 2026-09-07): the series' source is the light novel 長月達平『Re:ゼロから始める異世界生活』 (MF文庫J) and its positions are LN VOLUME numbers, so the space is the main line's volume count — 45 per ja-WP's 既刊一覧 header 「既刊65巻+4巻（本編45巻、短編集14巻、外伝6巻、円盤特典4巻）」 (2026-09; the short-story, side-story and disc-bonus volumes are outside the instrument). `chapters` = the count of position units (volumes) so every totals writer and the validator bound the space; the UI reading of a volume-unit position is the UI pass's. The series row carried null / null / null with no boundary table before this ruling. Batch 24 wave 1 (verify/w1-rezero-s3.md, w1-rezero-s4.md); Sean ruled 2026-09-07 with Cursor (decision 1: 'seed 45 now').",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-07',
+    cite: ['scripts/ingest/research/batch24/out/re-zero-starting-life-in-another-world-w1a.json', 'scripts/ingest/research/batch24/verify/w1-rezero-s3.md', 'https://ja.wikipedia.org/wiki/Re:ゼロから始める異世界生活'],
+    retiresWhen: 'the LN main line passes 45 volumes — amend the count (the ongoing series publishes ~2 volumes a year)',
+  },
 ];
 
 export const CHAPTER_SPACE_OVERRIDES: Record<string, ChapterSpace> = toRecord(ENTRIES);

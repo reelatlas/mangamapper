@@ -2,7 +2,7 @@
 
 Four research-agents (Opus), lane T (a typed block: every target row typed under
 T25-T28 and anchored or hostile), dispatched 2026-09-07 on Sean's go (with
-Cursor). NOTHING APPLIED. Verification R23 ON: gits-2026 the FULL verifier, the
+Cursor). **APPLIED 2026-09-07 (§12.155)** — Sean ruled all eleven decisions as recommended with Cursor, the two forks as the verifiers read the rules; apply-w1.ts (dry-run → apply → dry-run idempotent): 51 anchors, 42 annotations, 2 continues stored (7 derived skipped), 9 overlay entries, 8 notes deduped, flag #927 closed; the wiki event run filled row 67 through the parser fix; the heal asserted the N35 spaces and the T6 pins (gits ep 8 → mixed; gits-2026 → PUBLIC by P39); census every violation 0, 222 verified. Verification R23 ON: gits-2026 the FULL verifier, the
 other three SCOPED to the weight-bearing claims (PROTOCOL.md § Verification),
 dispatched in halves as verdicts land. Recovery is FROM DISK: `out/` holds the
 verdicts, `verify/` the reports; re-dispatch only what is missing, pointing a

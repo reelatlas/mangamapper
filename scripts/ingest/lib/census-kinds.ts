@@ -24,6 +24,8 @@ export const CENSUS_CLASS_KINDS: Record<string, CensusClassKind> = {
   related_work_cluster_disorder: 'listing',
   series_relation_missing: 'violation',
   related_work_identity_gap: 'violation', related_work_identity_conflict: 'violation', related_work_identity_orphan: 'violation',
+  // P5 (2026-09-07, batch 24): an anchor note carrying the same sentence twice is a writer's append loop
+  anchor_note_repeated: 'violation',
 };
 
 /** the suffix printed beside a class count */

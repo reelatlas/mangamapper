@@ -98,7 +98,7 @@
 - `T21` Derivative-manga rule (Evangelion class) — aka `derivative-manga rule`, `Evangelion class`, `Evangelion/Madoka class`
 - `T22` manga_status vocabulary and the 'anime_only' homonym — aka `manga_status vocabulary`, `MANGA_STATUS_MAP`, `manga_status 'anime_only'`, `hasSource`, `anime_only homonym`
 - `T23` Format is orthogonal to canon standing — aka `format ⟂ canon standing`, `format-is-orthogonal`, `format is orthogonal to standing`, `never overload episodes.type`
-- `T24` LN instrument ruling: volume-space for light novels *(planned)* — aka `LN instrument ruling`, `LN class`, `light-novel instrument`, `Queue 3 LN ruling`, `LN volume-space instrument`
+- `T24` LN instrument ruling: volume-space for light novels — aka `LN instrument ruling`, `LN class`, `light-novel instrument`, `Queue 3 LN ruling`, `LN volume-space instrument`
 - `T25` Source is series identity: the SOURCE_KINDS registry — aka `SOURCE_KINDS`, `source kinds registry`, `source-kinds`, `D-9`, `source is identity`, `source is series identity`, `SOURCE_TYPE_OVERRIDES`, `hasInstrument`, `hasSource vs hasInstrument`, `series_without_source_kind`, `studio original`, `fail closed source`, `visual novel source`, `game source`
 - `T26` Overrides are annotations, never a fourth episode type — aka `overrides are annotations`, `adopted annotation`, `adopted`, `retconned`, `side_source`, `adopted basis`, `community canon is not a type`, `no fourth type`, `D-10 annotations`, `annotation_invalid`, `chain_source`, `reading chain`, `the chain`, `chain_source_unmapped`, `side_source_on_chain`, `source_work_unlabelled`, `a licence is not adoption`, `licence is not adoption`, `the adoption sitting`, `T26 sitting`, `side_source_unadopted`, `weight-bearing tie`, `weight not kind`, `sideSourceStandingProblem`, `only-tie`, `the parallel clause`, `corresponded`
 - `T27` Standing is canon / mixed / filler, relative to the source — aka `three standings`, `canon mixed filler only`, `anime-only-canon retired`, `AFL anime_canon mapping`, `aflAnimeCanon`, `afl_anime_canon_unruled`, `standing migration`, `D-10 standing`, `anime only retired`
@@ -1404,19 +1404,19 @@ Format (tv / ova / special / movie / recap) is orthogonal to canon standing: epi
 - aliases: format ⟂ canon standing, format-is-orthogonal, format is orthogonal to standing, never overload episodes.type
 - see: T1, T20
 
-### T24 · LN instrument ruling: volume-space for light novels *(planned)*
+### T24 · LN instrument ruling: volume-space for light novels
 
-Light-novel-sourced series (source_type light_novel — the 86 / Re:Zero class) get a VOLUME-space instrument — anchors, frontier and continue-from in LN volumes on the same machinery — never a fake manga position. Per-series behaviour research is logged as it lands; UI adaptation is decided in the UI pass.
+Light-novel-sourced series (source_type light_novel — the 86 / Re:Zero class) get a VOLUME-space instrument — anchors, frontier and continue-from in LN volumes on the same machinery — never a fake manga position. Per-series behaviour research is logged as it lands; UI adaptation is decided in the UI pass. LANDED 2026-09-07 (batch 24 wave 1, the first novel-owner anchor set — re-zero 51-79): THE CONVENTION — end_chapter / start_chapter / volume carry the LN VOLUME number and chapters_adapted names the units inside it as 'vN ch M' (the printed table of contents; never the web-novel part numbering, never a comicalization chapter); the sliver parsers read that vocabulary (lib/sliver.ts#volumeUnit: a leading partial of the preceding volume counts unless its wording says scraps, a trailing volume segment moves the END only on scrap wording — chapters inside a volume are never pages); the space is an N35 entry whose chapters = the volume count (re-zero 45); a continue equal to the END is derived, never stored; a UI label for a volume position is the UI pass's.
 
 *Why:* Their adaptation edge is format NOVEL, so no manga instrument exists (34 series; §12.16 said 38). Ruled 2026-08-23, build pending; system-evolution names it the sibling of T4.0 source-first typing — 'canon TO WHAT source', with D-12's per-source instrument unit (chapter / volume / episode).
 
 - ruled Sean 2026-08-23 (data-pipeline §10 "LN instrument ruling"; §12.16 / §12.23 Q3; apply-research-batch-7.ts comment)
-- layer **process**
-- enforced: [docs/system-evolution.md](../docs/system-evolution.md)
-- **audit: none — automation backlog**
-- witnesses: 86-eighty-six, re-zero, sword-art-online, overlord
+- layer **both**
+- enforced: [lib/sliver.ts#volumeUnit](../scripts/ingest/lib/sliver.ts) · [lib/sliver.ts#sliverStart](../scripts/ingest/lib/sliver.ts) · [lib/sliver.ts#sliverEnd](../scripts/ingest/lib/sliver.ts) · [lib/rulings/chapter-spaces.ts](../scripts/ingest/lib/rulings/chapter-spaces.ts) · [lib/rulings/applied/batch-24.ts](../scripts/ingest/lib/rulings/applied/batch-24.ts)
+- audit: `start_sliver_mismatch`, `end_sliver_mismatch`
+- witnesses: re-zero-starting-life-in-another-world, 86-eighty-six, sword-art-online, overlord
 - aliases: LN instrument ruling, LN class, light-novel instrument, Queue 3 LN ruling, LN volume-space instrument
-- see: T20, T22
+- see: T20, T22, N35, A10, A47
 
 ### T25 · Source is series identity: the SOURCE_KINDS registry
 
@@ -5713,6 +5713,6 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 
 ## Scoreboard
 
-- rules: 292 (live 277, planned 8, superseded 7)
+- rules: 292 (live 278, planned 7, superseded 7)
 - live data rules with no audit class (the automation backlog): 83
-- by layer: writer 151 · display 23 · both 33 · process 85
+- by layer: writer 151 · display 23 · both 34 · process 84

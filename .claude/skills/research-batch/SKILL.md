@@ -59,6 +59,8 @@ traps). One agent per target. Every prompt states:
 
 **Quote the census line verbatim in the ask — never translate our parsed label into a page colour or a column state** (batch 21 wave 3, 2026-09-04): the asks said "AFG prints FILLER (red, no chapter)"; Beelzebub's page was the old format printing chapters with `* Filler` in the title cell, Boruto's rows were blue `* Anime Canon` that lib/afg.ts maps to filler. Both agents had to refute the premise before working (R3). The class reports OUR label; say so.
 
+**An ask names the FACT wanted, never the column it lives in** (batch 24 wave 1, 2026-09-07): both Re:Zero asks pointed at "ja-WP's 原作 column"; no season table has one, and each agent spent its first hour refuting the premise before rebuilding the instrument from the fandom's volume fields and the licensor's synopses. Name the fact ("the LN volume each episode adapts"), let the agent find its home.
+
 **The fork is not a premise** (batch 22 wave 3, 2026-09-05): when a census class names a row by its RELATION to stored data (a reorder hole between two anchors; a disagreement with a label), the ask must leave open that the STORED endpoint is the error — the hole wave's identical shape resolved three ways (the far START, the near END, the row itself anime-original). Write 'deliver whichever the pages prove: an anchor + rearranged, or a repair with old → new' — never 'anchor this row'.
 
 Pin the PROTOCOL for the batch's lifetime (`R31`): changing the contract

@@ -187,6 +187,14 @@ const stripMarkup = (s: string) =>
     .replace(/\s+/g, ' ')
     .trim();
 
+/** `Title_1` … `Title_N` of a multi-part {{Episode list}} entry, joined with ' / ' — null when the entry has none */
+export function multiPartTitle(block: string): string | null {
+  const parts: [number, string][] = [];
+  for (const m of block.matchAll(/\|\s*Title_(\d+)\s*=\s*([^\n]*)/gi)) { const t = stripMarkup(m[2]); if (t) parts.push([Number(m[1]), t]); }
+  if (!parts.length) return null;
+  return parts.sort((a, b) => a[0] - b[0]).map(([, t]) => t).join(' / ');
+}
+
 export function parseEpisodeList(wikitext: string): WikiEpisode[] {
   const out: WikiEpisode[] = [];
   const blocks = wikitext.split(/\{\{Episode list/i).slice(1);
@@ -197,7 +205,10 @@ export function parseEpisodeList(wikitext: string): WikiEpisode[] {
     if (!overall) continue;
     const number = Number(overall[1]);
     const titleRaw = block.match(/\|\s*Title\s*=\s*([^\n]*)/i)?.[1] ?? '';
-    const title = stripMarkup(titleRaw) || null;
+    // a TWO-PART episode (2026-09-07, re-zero row 67 — G59): the entry carries `NumParts = N` with `Title_1` … `Title_N` and NO
+    // `Title`, so the row minted title-less and the FILL-ONLY event run could never fill it — the parts join with ' / '
+    // (the licensor's own form is a full-width slash; en-WP's precedent for a double bill)
+    const title = stripMarkup(titleRaw) || multiPartTitle(block) || null;
     const dateMatch =
       block.match(/\{\{Start date\|(\d{4})\|(\d{1,2})\|(\d{1,2})/i) ??
       block.match(/OriginalAirDate\s*=\s*[^\n]*?(\d{4})-(\d{2})-(\d{2})/i);
