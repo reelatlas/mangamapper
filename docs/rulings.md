@@ -2,7 +2,7 @@
 
 > GENERATED from `scripts/ingest/lib/rulings/**` by `scripts/restructure/gen-rulings.ts` — do not edit by hand. A ruling is an INSTANCE of a rule (`docs/rules.md`); the map is the record, this is the index.
 
-- rulings: 2760 across 369 series/keys · by Sean: 1259 · UNRECORDED reasons: 9 · with a retire condition: 102
+- rulings: 2783 across 388 series/keys · by Sean: 1282 · UNRECORDED reasons: 9 · with a retire condition: 119
 
 ## Retire conditions (re-evaluate when…)
 
@@ -10,6 +10,8 @@
 - **AFG fixes its continua episode, or the continua→episode conversion gains a chart cross-check (restructure gate candidate)** — you-and-i-are-polar-opposites (G26)
 - **AFL lists S2 (the page reaches 24) — the walk then derives the chain (the film as an order-only hop it skips)** — sage-tanya-evil (I27)
 - **AFL lists S3 / S4 (the page reaches 85) — the walk then derives the chain** — re-zero-starting-life-another-world (I27)
+- **AFL lists Steel Ball Run (the page passes 190) — the extension becomes the walked chain** — jojos-bizarre-adventure-tv (I24)
+- **AFL lists the new season (the page reaches its rows) — the walk then derives the chain** — aoashi (I27), black-clover (I27), ace-diamond-act-ii (I27)
 - **Bousou Ressha-hen (210073) airs — chain gains an id** — golden-kamuy (I27)
 - **D2 lands (Clear-Card-style scoped entries split the multi-manga run)** — fate-kaleid-liner-prisma-illya (G37)
 - **D2 lands** — magic-knight-rayearth (I36)
@@ -39,13 +41,14 @@
 - **RETIRED 2026-08-27 — taxonomy v2 IS the three standings (T4.0, 2026-08-26); the only-ending class stays filler + divergence + asterisk (T13), re-affirmed in episode-types.ts (x, 2026-08-25/26)** — x (T10)
 - **RETIRED — stitched 2026-08-23 (§12.34: Kingdom S5/S6 → 155); the record is history** — kingdom (I33)
 - **RETIRED — stitched 2026-08-23 (§12.34: Rent-a-Girlfriend S4/S5 → 60); the record is history** — rent-a-girlfriend (I33)
+- **S3 Part 2 (anilist 200927) is dated to the day / airs — add it to ids; or an AFL page appears (I44 adoption)** — the-apothecary-diaries (I27)
 - **S5 (anilist 199185) is dated — add it to ids** — rising-shield-hero (I27)
 - **Sean re-rules the JoJo chain (the D2 per-part split) — then the works are re-labelled to his split** — jojos-bizarre-adventure (I41)
 - **Sean rules the Haruhi chain himself** — the-melancholy-of-haruhi-suzumiya (I41)
 - **T24 build lands (planned)** — * (T24)
 - **T28 the sliver clause ruled (§12.106)** — * (T28)
 - **Zoku-hen (204688) airs — chain gains an id** — kingdom (I27)
-- **an AFL page appears (I44 adoption) — then keyed by its slug** — you-and-i-are-polar-opposites (I27), welcome-to-demon-school-iruma-kun (I27), the-100-girlfriends-who-really-really-really-really-really-love-you (I27)
+- **an AFL page appears (I44 adoption) — then keyed by its slug** — you-and-i-are-polar-opposites (I27), welcome-to-demon-school-iruma-kun (I27), the-100-girlfriends-who-really-really-really-really-really-love-you (I27), blue-box (I27), ranma1-2-2024 (I27), tougen-anki (I27)
 - **flips to mixed if the step-stool line is ever confirmed inside ch 166** — beastars (T6)
 - **landed as the N35 chapter-space ruling (chapter-spaces.ts) — check the standing map** — gto-great-teacher-onizuka (N35), zatch-bell (N35)
 - **phase B lands (the no-instrument record) — then a series ruling at the next sitting** — anilist:188388 (I13)
@@ -54,6 +57,7 @@
 - **the lane-B date pair lands (wave 9, killing-bites-w9)** — killing-bites (G53)
 - **the mechanism is moved into lib/ and rostered (T2 dedupe); this record then cites that healer** — * (N20)
 - **the retype it records was RE-RULED filler 2026-08-25 (T10 only-ending class, §12.50)** — x (G3)
+- **the shorts gate lands (queued /add-rule: a TV_SHORT, or an ONA of at most five minutes, on a SPIN_OFF / SIDE_STORY edge of an owned series routes to the extras bucket) — the derivation then carries this ruling** — anilist:21780 (I13), anilist:21891 (I13), anilist:120700 (I13), anilist:182417 (I13), anilist:210687 (I13), anilist:98186 (I13), anilist:213961 (I13), anilist:170508 (I13), anilist:186148 (I13)
 - **the watch-order / movies design pass re-evaluates film collections** — berserk-golden-age-arc (I11), kizumonogatari (I11), digimon-adventure-tri (I11)
 - **verdict files renumbered** — mashle-magic-and-muscles (A8), mashle-magic-and-muscles (P16), mashle-magic-and-muscles (P16)
 
@@ -122,6 +126,12 @@
 | `I45` | {"anilistId":19697,"standing":"filler","note":"original (triage): The two Railgun S MMR bonus discs (MMR III with BD/DVD vol 1, 2013-07-24; MMR IV with vol 5… | Owner triage (triage__a-certain-scientific-railgun.json): A Certain Scientific Railgun S Specials adapts no chapters of the instrument — The two Railgun S MMR bonus discs (MMR III with BD/DVD vol 1, 2013-07-24; MMR IV with vol 5, 2013-11-27) — the same chibi parody format. | Sean 2026-09-05 · scripts/ingest/research/discovery/out/triage__a-certain-scientific-railgun.json, https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Motto%20Marutto%20Railgun%20Episode%2003&prop=wikitext&format=json, https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Motto%20Marutto%20Railgun%20Episode%2004&prop=wikitext&format=json, https://toaru-project.com/railgun_s/goods/bddvd/01.html |  |
 | `I45` | {"anilistId":20686,"standing":"filler","airDate":"2014-03-27","note":"original (triage): Anime-original short (#特典 大事なことはぜんぶ銭湯に教わった) on the Blu-ray attached … | Owner triage (triage__a-certain-scientific-railgun.json): A Certain Scientific Railgun S: All the Important Things I Learned in a Bathhouse adapts no chapters of the instrument — Anime-original short (#特典 大事なことはぜんぶ銭湯に教わった) on the Blu-ray attached to the Railgun S OFFICIAL VISUAL BOOK. | Sean 2026-09-05 · scripts/ingest/research/discovery/out/triage__a-certain-scientific-railgun.json, https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Toaru%20Kagaku%20no%20Railgun%20S%20OVA&prop=wikitext&format=json, https://ja.wikipedia.org/w/api.php?action=parse&page=%E3%81%A8%E3%81%82%E3%82%8B%E7%A7%91%E5%AD%A6%E3%81%AE%E8%B6%85%E9%9B%BB%E7%A3%81%E7%A0%B2%20(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext&format=json, https://www.kadokawa.co.jp/product/312031400000/ |  |
 | `I45` | {"anilistId":122041,"standing":"filler","note":"original (triage): The two Railgun T MMR bonus features (MMR V on BD/DVD Vol."} | Owner triage (triage__a-certain-scientific-railgun.json): Toaru Kagaku no Railgun T: Motto Marutto Railgun adapts no chapters of the instrument — The two Railgun T MMR bonus features (MMR V on BD/DVD Vol. | Sean 2026-09-05 · scripts/ingest/research/discovery/out/triage__a-certain-scientific-railgun.json, https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Motto%20Marutto%20Railgun%20Episode%2005&prop=wikitext&format=json, https://toarumajutsunoindex.fandom.com/api.php?action=parse&page=Motto%20Marutto%20Railgun%20Episode%2006&prop=wikitext&format=json, https://toaru-project.com/railgun_t/bd/ |  |
+
+### ace-diamond-act-ii (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I27` | {"ids":[105749,177634,213658],"ruledExtent":"AFL page = act II (52 rows); act II Second Season (177634, TV, 13 eps, 2026-04-05 → 06-28, our 53-65) is an AIRE… | C2 (2026-09-07, the second airing sitting; Sean with Cursor: 'C2 as proposed, with four flips'): halo_airing — SEQUEL hop 2 via 177634, season ordinal; Sean: component ×2 (the hole and the part in one extension). | Sean 2026-09-07 · audit-discovery halo_airing (2026-09-07), scripts/ingest/research/discovery/recap.ts --scope sequel,series --airing (2026-09-07), docs/changelog.md §12.148 | AFL lists the new season (the page reaches its rows) — the walk then derives the chain |
 
 ### ace-of-the-diamond (1)
 
@@ -210,6 +220,12 @@
 |---|---|---|---|---|
 | `I13` | {"disposition":"series","chain":[10937],"relation":{"to":"mobile-suit-gundam","kind":"prequel"},"slug":"mobile-suit-gundam-the-origin","franchise":"mobile-su… | CHAIN PINNED 2026-09-06 (the seed dry run): the SEQUEL walk ran from The Origin into the 1981 compilation films of the original Gundam (1090 →) — The Origin is its own 6-episode OVA run. Decision (d) of the extras sitting (Sean 2026-09-05): Mobile Suit Gundam: The Origin (OVA 2015) adapts Kidou Senshi Gundam: The Origin (AniList manga 30214: MANGA · FINISHED · 112/24 · 7722) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of mobile-suit-gundam. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
 
+### anilist:120700 (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I13` | {"disposition":"related_work","owner":"re-zero-starting-life-in-another-world","bucket":"original"} | C2 (2026-09-07, the second airing sitting; Sean with Cursor: 'C2 as proposed, with four flips'): Re:Zero Break Time 2nd Season — ONA, 13 × 3-min shorts, 2020-07-10 → 10-02, SPIN_OFF of S2. Proposed `series` only because ONA / TV_SHORT is TV-shaped in the halo; the Frieren ●● no Mahou shape (C1): an EXTRA of the owner by ruling, a ledger row, filler by rule (original). | Sean 2026-09-07 · audit-discovery halo_airing (2026-09-07), scripts/ingest/research/discovery/recap.ts --scope sequel,series --airing (2026-09-07), docs/changelog.md §12.148 | the shorts gate lands (queued /add-rule: a TV_SHORT, or an ONA of at most five minutes, on a SPIN_OFF / SIDE_STORY edge of an owned series routes to the extras bucket) — the derivation then carries this ruling |
+
 ### anilist:12231 (1)
 
 | rule | value | reason | ruled | retires when |
@@ -239,6 +255,12 @@
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `I13` | {"disposition":"series","relation":{"to":"jujutsu-kaisen","kind":"prequel"},"slug":"jujutsu-kaisen-0","franchise":"jujutsu-kaisen"} | Decision (d) of the extras sitting (Sean 2026-09-05): JUJUTSU KAISEN 0 (MOVIE 2021) adapts Jujutsu Kaisen 0: Tokyo Toritsu Jujutsu Koutou Senmon Gakkou (AniList manga 105469: MANGA · FINISHED · 4/1 · 71509) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of jujutsu-kaisen. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
+
+### anilist:135866 (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I13` | {"disposition":"related_work","owner":"saga-of-tanya-the-evil","bucket":"original"} | C2 (2026-09-07, the second airing sitting; Sean with Cursor: 'C2 as proposed, with four flips'): Saga of Tanya the Evil: Operation Desert Pasta (135866, ONA, ONE 17-minute short, 2021-06-19, source ORIGINAL, SIDE_STORY of S1) — NOT one of the chibi shorts (Cursor's flip 4: dropped from that set): its OWN extra of Tanya, a ledger row, filler by rule (original); the writer derives its slot from the release date (the film holds 12.5; the wiki's 12.5 'Operation Desert Pasta' row is the fractional_unmodeled the census already lists — Sean's review class). Proposed `series` only because ONA is TV-shaped in the halo. | Sean 2026-09-07 · audit-discovery halo_airing (2026-09-07), scripts/ingest/research/discovery/recap.ts --scope sequel,series --airing (2026-09-07), docs/changelog.md §12.148 |  |
 
 ### anilist:1470 (1)
 
@@ -282,6 +304,12 @@
 |---|---|---|---|---|
 | `I13` | {"disposition":"related_work","owner":"frieren-beyond-journeys-end","bucket":"original"} | C1 (2026-09-06): ●● no Mahou (Part 1: ONA, 12 shorts) — the same work's first part, one row per AniList id (I46), the same ruling as Part 3 (P9). | Sean 2026-09-06 · audit-discovery halo_airing (2026-09-06), scripts/ingest/research/discovery/recap.ts --scope sequel,series --airing (2026-09-06) |  |
 
+### anilist:170508 (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I13` | {"disposition":"related_work","owner":"the-apothecary-diaries","bucket":"original"} | C2 (2026-09-07, the second airing sitting; Sean with Cursor: 'C2 as proposed, with four flips'): Maomao no Hitorigoto — ONA, 24 × 2-min shorts, 2023-10-23 → 2024-03-25, SIDE_STORY of S1. Proposed `series` only because ONA / TV_SHORT is TV-shaped in the halo; the Frieren ●● no Mahou shape (C1): an EXTRA of the owner by ruling, a ledger row, filler by rule (original). | Sean 2026-09-07 · audit-discovery halo_airing (2026-09-07), scripts/ingest/research/discovery/recap.ts --scope sequel,series --airing (2026-09-07), docs/changelog.md §12.148 | the shorts gate lands (queued /add-rule: a TV_SHORT, or an ONA of at most five minutes, on a SPIN_OFF / SIDE_STORY edge of an owned series routes to the extras bucket) — the derivation then carries this ruling |
+
 ### anilist:17187 (1)
 
 | rule | value | reason | ruled | retires when |
@@ -300,11 +328,35 @@
 |---|---|---|---|---|
 | `I13` | {"disposition":"series","chain":[177699],"relation":{"to":"ghost-in-the-shell-stand-alone-complex","kind":"alternative"},"slug":"ghost-in-the-shell-2026","fr… | C1 (2026-09-06): THE GHOST IN THE SHELL (Science SARU, TV, 10 eps, 2026-07-07 → 09-08) is a new adaptation of the original manga (31023 — the same instrument as Stand Alone Complex): a SERIES, alternative to the franchise base, never a component of SAC — the 1995 film's shape (I16: same manga is no signal against a split). The slug carries the year like ranma1-2-2024 / rurouni-kenshin-2023. | Sean 2026-09-06 · audit-discovery halo_airing (2026-09-06), scripts/ingest/research/discovery/recap.ts --scope sequel,series --airing (2026-09-06) |  |
 
+### anilist:178868 (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I13` | {"disposition":"series","chain":[178868],"relation":{"to":"magic-knight-rayearth","kind":"alternative"},"slug":"magic-knight-rayearth-2026","franchise":"magi… | C2 (2026-09-07, the second airing sitting; Sean with Cursor: 'C2 as proposed, with four flips'): Magic Knight Rayearth (2026) (178868, TV, from 2026-10-07; E&H production with UNLIMITED PRODUCE by TMS; ANN 2026-07-04, Crunchyroll 2026-07-04) is a NEW adaptation of the same CLAMP manga (30119 — the 1994 series' instrument): a SERIES alternative to the base, never a component (the GitS-2026 shape; I16: same manga is no signal against a split). Slug per I1: no English title on AniList, so the romaji 'Magic Knight Rayearth (2026)' → the year suffix like ghost-in-the-shell-2026. A new 'magic-knight-rayearth' franchise with the 1994 series as base, ruled with the seed. | Sean 2026-09-07 · audit-discovery halo_airing (2026-09-07), scripts/ingest/research/discovery/recap.ts --scope sequel,series --airing (2026-09-07), docs/changelog.md §12.148 |  |
+
+### anilist:182417 (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I13` | {"disposition":"related_work","owner":"re-zero-starting-life-in-another-world","bucket":"original"} | C2 (2026-09-07, the second airing sitting; Sean with Cursor: 'C2 as proposed, with four flips'): Re:Zero Break Time 3rd Season — ONA shorts, SPIN_OFF of S3 (UNSTAGED at ruling time — AniList's API was down; the row lands when the halo restages). Proposed `series` only because ONA / TV_SHORT is TV-shaped in the halo; the Frieren ●● no Mahou shape (C1): an EXTRA of the owner by ruling, a ledger row, filler by rule (original). | Sean 2026-09-07 · audit-discovery halo_airing (2026-09-07), scripts/ingest/research/discovery/recap.ts --scope sequel,series --airing (2026-09-07), docs/changelog.md §12.148 | the shorts gate lands (queued /add-rule: a TV_SHORT, or an ONA of at most five minutes, on a SPIN_OFF / SIDE_STORY edge of an owned series routes to the extras bucket) — the derivation then carries this ruling |
+
 ### anilist:182469 (1)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `I13` | {"disposition":"series","relation":{"to":"one-piece","kind":"side_story"},"slug":"one-piece-novel-mugiwara-stories","franchise":"one-piece"} | Decision (d) of the extras sitting (Sean 2026-09-05): ONE PIECE FAN LETTER (SPECIAL 2024) adapts ONE PIECE novel Mugiwara Stories (AniList manga 128291: NOVEL · FINISHED · 9/1 · 629) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of one-piece. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
+
+### anilist:186148 (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I13` | {"disposition":"related_work","owner":"the-apothecary-diaries","bucket":"original"} | C2 (2026-09-07, the second airing sitting; Sean with Cursor: 'C2 as proposed, with four flips'): Maomao no Hitorigoto 2nd Season — ONA, 24 × 2-min shorts, 2025-01-13 → 07-07, SIDE_STORY of S2. Proposed `series` only because ONA / TV_SHORT is TV-shaped in the halo; the Frieren ●● no Mahou shape (C1): an EXTRA of the owner by ruling, a ledger row, filler by rule (original). | Sean 2026-09-07 · audit-discovery halo_airing (2026-09-07), scripts/ingest/research/discovery/recap.ts --scope sequel,series --airing (2026-09-07), docs/changelog.md §12.148 | the shorts gate lands (queued /add-rule: a TV_SHORT, or an ONA of at most five minutes, on a SPIN_OFF / SIDE_STORY edge of an owned series routes to the extras bucket) — the derivation then carries this ruling |
+
+### anilist:186742 (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I13` | {"disposition":"series","chain":[186742],"relation":{"to":"a-certain-magical-index","kind":"spin_off"},"slug":"toaru-anbu-no-item","franchise":"a-certain-mag… | C2 (2026-09-07, the second airing sitting; Sean with Cursor: 'C2 as proposed, with four flips'): Toaru Anbu no ITEM (186742, TV, from 2026-10-09 JST — AniList's staged 10-10 is the same broadcast; J.C.Staff; ANN 2026-07-03, the Index wiki) adapts Kamachi Kazuma's own light-novel spin-off (ADAPTATION → novel 159459, 6 volumes; a manga adaptation 162615 exists, listed ALTERNATIVE): a SERIES spin_off of Index in the Toaru franchise, the novel-owner shape (T25: the LN is the instrument, no manga id registered — the Railgun precedent in I17's vocabulary). Slug per I1 (Cursor's flip 3): English else romaji — AniList carries NO English title and ANN prints the romaji ('A Certain Dark Side's Item' is a synonym, not a printed English title), so 'toaru-anbu-no-item'; re-slug is refused by I1 if an official English title later appears (identity is ours). | Sean 2026-09-07 · audit-discovery halo_airing (2026-09-07), scripts/ingest/research/discovery/recap.ts --scope sequel,series --airing (2026-09-07), docs/changelog.md §12.148 |  |
 
 ### anilist:188388 (1)
 
@@ -354,6 +406,12 @@
 |---|---|---|---|---|
 | `I13` | {"disposition":"series","relation":{"to":"durarara","kind":"side_story"},"chain":[21068,21331],"slug":"durarara-gaiden","franchise":"durarara"} | Decision (d) of the extras sitting (Sean 2026-09-05): Durarara!! X2: My Heart is in the Pattern of a Hot Pot (SPECIAL 2015) adapts Durarara!! Gaiden!? (AniList manga 85836: NOVEL · FINISHED · 10/1 · 333) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of durarara. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
 
+### anilist:210687 (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I13` | {"disposition":"related_work","owner":"re-zero-starting-life-in-another-world","bucket":"original"} | C2 (2026-09-07, the second airing sitting; Sean with Cursor: 'C2 as proposed, with four flips'): Re:Zero Break Time 4th Season — ONA shorts, RELEASING, SPIN_OFF of S4 (UNSTAGED at ruling time — AniList's API was down; the row lands when the halo restages). Proposed `series` only because ONA / TV_SHORT is TV-shaped in the halo; the Frieren ●● no Mahou shape (C1): an EXTRA of the owner by ruling, a ledger row, filler by rule (original). | Sean 2026-09-07 · audit-discovery halo_airing (2026-09-07), scripts/ingest/research/discovery/recap.ts --scope sequel,series --airing (2026-09-07), docs/changelog.md §12.148 | the shorts gate lands (queued /add-rule: a TV_SHORT, or an ONA of at most five minutes, on a SPIN_OFF / SIDE_STORY edge of an owned series routes to the extras bucket) — the derivation then carries this ruling |
+
 ### anilist:21132 (1)
 
 | rule | value | reason | ruled | retires when |
@@ -371,6 +429,12 @@
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `I13` | {"disposition":"series","relation":{"to":"kurokos-basketball","kind":"sequel"},"slug":"kurokos-basketball-extra-game","franchise":"kurokos-basketball"} | Decision (d) of the extras sitting (Sean 2026-09-05): Kuroko's Basketball: Last Game (MOVIE 2017) adapts Kuroko no Basket: Extra Game (AniList manga 85604: MANGA · FINISHED · 9/2 · 4449) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of kurokos-basketball. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
+
+### anilist:213961 (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I13` | {"disposition":"related_work","owner":"saga-of-tanya-the-evil","bucket":"original"} | C2 (2026-09-07, the second airing sitting; Sean with Cursor: 'C2 as proposed, with four flips'): Youjo Shenki 2 — ONA, 1.5-min chibi shorts, airing since 2026-07-08 (LiveChart), SIDE_STORY of S2 (UNSTAGED at ruling time — AniList's API was down; the row lands when the halo restages). Proposed `series` only because ONA / TV_SHORT is TV-shaped in the halo; the Frieren ●● no Mahou shape (C1): an EXTRA of the owner by ruling, a ledger row, filler by rule (original). The same 4-koma caveat as Youjo Shenki. | Sean 2026-09-07 · audit-discovery halo_airing (2026-09-07), scripts/ingest/research/discovery/recap.ts --scope sequel,series --airing (2026-09-07), docs/changelog.md §12.148 | the shorts gate lands (queued /add-rule: a TV_SHORT, or an ONA of at most five minutes, on a SPIN_OFF / SIDE_STORY edge of an owned series routes to the extras bucket) — the derivation then carries this ruling |
 
 ### anilist:21458 (1)
 
@@ -396,6 +460,12 @@
 |---|---|---|---|---|
 | `I13` | {"disposition":"series","relation":{"to":"jojos-bizarre-adventure","kind":"side_story"},"slug":"thus-spoke-rohan-kishibe","franchise":"jojos-bizarre-adventure"} | Decision (d) of the extras sitting (Sean 2026-09-05): Thus Spoke Rohan Kishibe (OVA 2017) adapts Kishibe Rohan wa Ugokanai (AniList manga 103029: MANGA · RELEASING · ?/? · 6967) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of jojos-bizarre-adventure. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
 
+### anilist:21780 (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I13` | {"disposition":"related_work","owner":"re-zero-starting-life-in-another-world","bucket":"original"} | C2 (2026-09-07, the second airing sitting; Sean with Cursor: 'C2 as proposed, with four flips'): Re:ZERO ~Starting Break Time From Zero~ — TV_SHORT, 11 × 3-min comedy shorts, 2016-04-08 → 06-21, SPIN_OFF of S1 (AniList's source tag LIGHT_NOVEL is the parent's). Proposed `series` only because ONA / TV_SHORT is TV-shaped in the halo; the Frieren ●● no Mahou shape (C1): an EXTRA of the owner by ruling, a ledger row, filler by rule (original). | Sean 2026-09-07 · audit-discovery halo_airing (2026-09-07), scripts/ingest/research/discovery/recap.ts --scope sequel,series --airing (2026-09-07), docs/changelog.md §12.148 | the shorts gate lands (queued /add-rule: a TV_SHORT, or an ONA of at most five minutes, on a SPIN_OFF / SIDE_STORY edge of an owned series routes to the extras bucket) — the derivation then carries this ruling |
+
 ### anilist:21806 (1)
 
 | rule | value | reason | ruled | retires when |
@@ -407,6 +477,12 @@
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `I13` | {"disposition":"series","relation":{"to":"assassination-classroom","kind":"spin_off"},"slug":"koro-sensei-q","franchise":"assassination-classroom"} | Decision (d) of the extras sitting (Sean 2026-09-05): Koro-sensei Q! (MOVIE 2016) adapts Koro-sensei Q! (AniList manga 86949: MANGA · FINISHED · 40/5 · 1233) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of assassination-classroom. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
+
+### anilist:21891 (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I13` | {"disposition":"related_work","owner":"re-zero-starting-life-in-another-world","bucket":"original"} | C2 (2026-09-07, the second airing sitting; Sean with Cursor: 'C2 as proposed, with four flips'): Re:PETIT ~Starting Life in Another World From PETIT~ — TV_SHORT, 14 × 3-min chibi shorts, 2016-06-24 → 09-23, SPIN_OFF of S1. Proposed `series` only because ONA / TV_SHORT is TV-shaped in the halo; the Frieren ●● no Mahou shape (C1): an EXTRA of the owner by ruling, a ledger row, filler by rule (original). | Sean 2026-09-07 · audit-discovery halo_airing (2026-09-07), scripts/ingest/research/discovery/recap.ts --scope sequel,series --airing (2026-09-07), docs/changelog.md §12.148 | the shorts gate lands (queued /add-rule: a TV_SHORT, or an ONA of at most five minutes, on a SPIN_OFF / SIDE_STORY edge of an owned series routes to the extras bucket) — the derivation then carries this ruling |
 
 ### anilist:3272 (1)
 
@@ -456,6 +532,12 @@
 |---|---|---|---|---|
 | `I13` | {"disposition":"series","relation":{"to":"blue-exorcist","kind":"side_story"},"slug":"blue-exorcist-weekend-hero","franchise":"blue-exorcist"} | Decision (d) of the extras sitting (Sean 2026-09-05): Ao no Exorcist: Kyoto Fujouou-hen OVA (OVA 2017) adapts Ao no Exorcist: Weekend Hero (AniList manga 58103: NOVEL · FINISHED · 5/1 · 428) — a run of its own; under the films ruling (I13) the work becomes a one-row staged series with that run as its instrument; its halo row stays the related work of blue-exorcist. Mint: step 2's writer, from /discover. Slug per I1 from the English title. | Sean 2026-09-05 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §0 (d) |  |
 
+### anilist:98186 (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I13` | {"disposition":"related_work","owner":"saga-of-tanya-the-evil","bucket":"original"} | C2 (2026-09-07, the second airing sitting; Sean with Cursor: 'C2 as proposed, with four flips'): Youjo Shenki — ONA, 13 × 3-min chibi shorts, 2017-01-10 → 04-03, SIDE_STORY of S1. Proposed `series` only because ONA / TV_SHORT is TV-shaped in the halo; the Frieren ●● no Mahou shape (C1): an EXTRA of the owner by ruling, a ledger row, filler by rule (original). Whether the shorts adapt the ようじょしぇんき 4-koma is unverified — the bucket is revisable at the extras programme; standing is filler either way. | Sean 2026-09-07 · audit-discovery halo_airing (2026-09-07), scripts/ingest/research/discovery/recap.ts --scope sequel,series --airing (2026-09-07), docs/changelog.md §12.148 | the shorts gate lands (queued /add-rule: a TV_SHORT, or an ONA of at most five minutes, on a SPIN_OFF / SIDE_STORY edge of an owned series routes to the extras bucket) — the derivation then carries this ruling |
+
 ### anilist:995 (1)
 
 | rule | value | reason | ruled | retires when |
@@ -479,6 +561,12 @@
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
 | `I39` | {"extras":[{"anilistId":11701,"kind":"ova","label":"The Other - Inga","after":null,"rows":1,"startAt":0}]} | Row 0 'The other' 2012-05-26 = AniList 11701 'Another: The Other - Inga' (OVA, 2012-05-26), the prequel OVA the community numbers 0 (N7). | Sean 2026-08-26 · https://anilist.co/anime/11701 |  |
+
+### aoashi (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I27` | {"ids":[134732,191788],"ruledExtent":"AFL page = S1 (24 rows); S2 (191788, TV, 24 eps, from 2026-10-04, our 25-48) joins now — the series flips to 'upcoming'… | C2 (2026-09-07, the second airing sitting; Sean with Cursor: 'C2 as proposed, with four flips'): halo_airing — SEQUEL, season ordinal; Sean: component. | Sean 2026-09-07 · audit-discovery halo_airing (2026-09-07), scripts/ingest/research/discovery/recap.ts --scope sequel,series --airing (2026-09-07), docs/changelog.md §12.148 | AFL lists the new season (the page reaches its rows) — the walk then derives the chain |
 
 ### arms-alchemy (2)
 
@@ -751,7 +839,7 @@
 | `G54` | [15,16] | A first-run SUBSET (the bebop shape): TBS/MBS skipped #15 遠ざかる猫 entirely (syoboi memo #15はTBS系では未放送); its first and only broadcast is Animax 2006-05-23 (G53, replacing the DVD street date 07-26), which sits after row 14 (01-26) and before row 16 (02-02) in TBS order — row 16 regresses against it. Follows from the B4-5 date ruling (session, from the verdict's flagged candidate; not a separate Sean line). | Sean 2026-08-27 · scripts/ingest/research/batch19/out/airdates/black-cat.json, scripts/ingest/research/batch19/verify/black-cat.md, https://cal.syoboi.jp/tid/685 |  |
 | `I39` | {"spans":{"68":{"episodeEnd":24}}} | The community numbers 24 with the DVD-only 遠ざかる猫 'The Distant Cat' as #15 (en-WP's table 1-24; AFL 24; blackcat.fandom; syoboi TID 685 1-24 — Animax aired all 24; the R2 DVDs; Crunchyroll; Funimation); only AniList 68 (TV, 23) and ja-WP's TBS column count 23 (ja-WP: 全24話（未放送1話）, '#15（未放送）', '#23（#24）気ままな猫'). Our rows are the DVD numbering, so component 68 spanning 1-23 left row 24 気ままな猫 — the TV FINALE, 2006-03-30, the ask's refuted premise — uncovered and format-less. The outlaw-star shape ('components follow the rows; the rows were not renumbered'), N3/N4; I39's extras cannot model an insert INSIDE a member's span. Row 15 = AniList 2589 (OVA, DVD street date 2006-07-26; FIRST BROADCAST Animax 2006-05-23 — G53); format stays tv (Sean: it was broadcast, on Animax; the span derives it). TRAP: a mid-run insert — our 16-24 = TV 15-23; join ja-WP / AniList by title or date, never index (R20). | Sean 2026-08-27 · scripts/ingest/research/batch19/out/black-cat.json, scripts/ingest/research/batch19/verify/black-cat.md, https://ja.wikipedia.org/wiki/BLACK_CAT, https://anilist.co/anime/2589, https://cal.syoboi.jp/tid/685 |  |
 
-### black-clover (14)
+### black-clover (15)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -768,6 +856,7 @@
 | `T6` | {"68":"filler"} | Batch 21 wave 1 (the STRONG AFL-vs-AFG contradictions settled by chapter accounting; verified R24), Sean ruled 2026-09-04: CONFIRMATION, NOT A CHANGE — stored type is already filler and AFL is RIGHT here ('Filler'); recorded so the T4 flag can be closed with evidence. T27/T28: one source segment, ch 103 p.14-15, WEIGHT SLIVER — a ~30-second closing hook (AFG's own window 20:29→end) that is a DUPLICATE of ep 69's opening (Chapter 103 page: p.14-17 → eps 68 AND 69; ep 69 page: p.15-17; licensor's 第69話 synopsis opens on the same beat). Remainder ~19-20 minutes anime-original: the food-stall contest, Julius's Chrono Stasis gag. The licensor's 第68話 synopsis contains only the stalls and ends on teaser wording ('ついには……!?'). Sole-adaptation exception fails on both halves. AFG's blue 'Mixed' class is the flag's false pos | Sean 2026-09-04 · scripts/ingest/research/batch21/out/black-clover-w1.json, scripts/ingest/research/batch21/verify/w1-flips.md |  |
 | `T6` | {"67":"canon","85":"mixed","86":"filler","88":"mixed"} | Batch 21 wave 2 (verified R24, w2-flips.md), Sean ruled 2026-09-03 — settled by chapter accounting on two independent sources beyond AFL/AFG; confirmations are pinned so the type_source_disagreement class stops re-listing them (T6). 67 confirmed as stored (canon); 85 → mixed (the seam-episode standing, ruled once for bc 85/88, db 34, dbz 118, TPN 21/22: a page-verified source share beside a story-carrying original act is MIXED); 86 → filler (the Yami/Vangeance original episode — animateTimes 'オリジナル回'; the ch-133 p.10 tag is a sliver duplicating ep 87; the afg anchor comes out under A1); 88 → mixed (the seam-episode standing, ruled once for bc 85/88, db 34, dbz 118, TPN 21/22: a page-verified source share beside a story-carrying original act is MIXED) | Sean 2026-09-03 · scripts/ingest/research/batch21/WAVE2-RECOVERY.md, scripts/ingest/research/batch21/verify/w2-flips.md, scripts/ingest/research/batch21/out/black-clover-w2.json |  |
 | `T6` | {"55":"filler","56":"filler"} | G1 of the T26 adoption sitting (Sean 2026-09-05, research/batch22/T26-SITTING.md): a licence is not adoption — a canon / mixed row whose only source tie is a licensed prose novel (side_source, no adopted{basis}, no weight-bearing tie) is FILLER + side_source, the one-piece 50 shape applied consistently. The writer default (lib/side-source.ts) and the healer say the same; the pin is the ruling record and keeps the loose AFL / AFG buckets from re-listing the rows. Position, coverage and the frontier do not move (offSource already, T14); only the badge changes. 55-56 adapt the licensed light novel Abareushi no Sho (Onda; Tabata illustrated — not the 130-157 Tabata-SUPERVISED class, which keeps adopted{author}). Ep 56's ch-81 close stays a partial (a sliver — no weight, no anchor; T28), so nothing lifts the row. | Sean 2026-09-05 · scripts/ingest/research/batch22/T26-SITTING.md, docs/changelog.md §12.117 |  |
+| `I27` | {"ids":[97940,195604],"ruledExtent":"AFL page = the 2017-2021 run (170 rows); Season 2 (195604, TV, October 2026 — month-dated on AniList, our 171+) joins no… | C2 (2026-09-07, the second airing sitting; Sean with Cursor: 'C2 as proposed, with four flips'): halo_airing — SEQUEL, season ordinal; Sean: component. | Sean 2026-09-07 · audit-discovery halo_airing (2026-09-07), scripts/ingest/research/discovery/recap.ts --scope sequel,series --airing (2026-09-07), docs/changelog.md §12.148 | AFL lists the new season (the page reaches its rows) — the walk then derives the chain |
 | `A1` | {"episode":86,"deletedAnchor":133} | retyped FILLER (A1): a graft of ch 133 inside an original episode; eps 84 / 85 / 87 hold ch 133 — nothing strands | Sean 2026-09-04 · scripts/ingest/history/batch21-apply-wave2.ts, scripts/ingest/research/batch21/verify/w2-flips.md |  |
 
 ### black-lagoon (48)
@@ -957,6 +1046,12 @@
 | `A40` | {"table":"series","mapping_mode":"loose"} | pervasive anime-original White/Black thread woven through every S1 episode + heavy S2 shuffle → loose (research-ruled); anchors stored regardless as borrow-maps. | session 2026-08-23 · scripts/ingest/apply-research-batch-11.ts, scratchpad batch11/blood-blockade-battlefront.json (session scratchpad, not on disk), docs/changelog.md §12.30 |  |
 | `I41` | {"works":[{"label":"Kekkai Sensen","anilistMangaId":42994,"note":"Kekkai Sensen (2009-15, 33 ch / 10 vols; AniList 42994 / MAL 12994), the entry's instrument… | The step-2 picks pass (2026-09-06, Cursor's correction): the & BEYOND OVA (101695) adapts side chapters of Back 2 Back — the owner's own S2 instrument, not another run; registering the chain (I41) makes every Back 2 Back edge the owner's own (I47) so the OVA reads same_instrument and the picks read never proposes a mint for it. | Sean 2026-09-06 · scripts/ingest/research/discovery/EXTRAS-SITTING.md §6.3 |  |
 | `A40` | loose | Borrows chapters out of any order (the A40 witness with Ouran): anchors are maps, not a curve (Sean 2026-08-23). | Sean 2026-08-23 · docs/changelog.md §12.29-31 (2026-08-23, the MU-pin verification session), docs/rules.md A40 |  |
+
+### blue-box (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I27` | {"ids":[170942,189123],"ruledExtent":"NO AFL page (keyed by series id); S1 = 25 rows; S2 (189123, TV, from 2026-10-04, our 26+) joins now — the series flips … | C2 (2026-09-07, the second airing sitting; Sean with Cursor: 'C2 as proposed, with four flips'): halo_airing — SEQUEL, season ordinal; Sean: component. | Sean 2026-09-07 · audit-discovery halo_airing (2026-09-07), scripts/ingest/research/discovery/recap.ts --scope sequel,series --airing (2026-09-07), docs/changelog.md §12.148 | an AFL page appears (I44 adoption) — then keyed by its slug |
 
 ### blue-exorcist (10)
 
@@ -2336,7 +2431,7 @@
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
-| `I24` | {"ids":[14719,20474,20799,21450,102883,131942,146722]} | Assisted-batch explicit chain: the relation walker cannot derive it. Sean ruled JoJo ONE series (unheld 2026-08-22). Off & Monster Season (173533) intentionally absent — AFL's page (100 rows) predates it; the count_mismatch flag on AFL's next update re-adds it here. | Sean 2026-08-22 |  |
+| `I24` | {"ids":[14719,20474,20799,21450,102883,131942,146722,190327,210482],"ruledExtent":"AFL page = the seven TV parts (190 rows). Steel Ball Run joins as parts 8-… | Assisted-batch explicit chain: the relation walker cannot derive it. Sean ruled JoJo ONE series (unheld 2026-08-22). AMENDED C2 (2026-09-07): Steel Ball Run's two stages appended as the ruled extension (see ruledExtent); a stray Monogatari sentence (Off & Monster Season 173533 — that series' own I24 entry carries the note) removed from this reason. | Sean 2026-08-22 · audit-discovery halo_airing + halo_sequel_unclaimed (2026-09-07), scripts/ingest/research/discovery/recap.ts --scope sequel,series --owner jojos-bizarre-adventure (2026-09-07), docs/changelog.md §12.148 | AFL lists Steel Ball Run (the page passes 190) — the extension becomes the walked chain |
 
 ### jujutsu-kaisen (22)
 
@@ -2635,7 +2730,7 @@
 | `I17` | {"to":"detective-conan","kind":"side_story"} | The step-2 film mint (2026-09-06): Magic Kaito (the 2010-12 specials) is Aoyama's sister series to Conan; AniList links the two by CHARACTER only — the declared kind (I13 d) lands as a ruled relation. | Sean 2026-09-06 · scripts/ingest/lib/rulings/discovery.ts (anilist:8310) |  |
 | `I43` | {"franchise":"detective-conan"} | The step-2 picks pass (2026-09-06): a series minted from a (d) declaration (I13 b/d) belongs to its parent's franchise; the membership is ruled with the seed so the row lands in it at creation. | Sean 2026-09-06 · scripts/ingest/lib/rulings/discovery.ts (the declaration) |  |
 
-### magic-knight-rayearth (4)
+### magic-knight-rayearth (5)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
@@ -2643,6 +2738,14 @@
 | `A24` | {"episode":20,"end_chapter":15,"start_chapter":null,"chapters_adapted":"11-15 (vol 3)","volume":3,"confidence":"high","note":"Sean's numbering ruling 2026-08… | overrides the verdict's END 14 (built on the refuted re-cut numbering) — the curated map decides and the verdict's ep-20 anchor is skipped as the duplicate; the verdict's own boundary evidence (v3 → eps 10-20) is unchanged | Sean 2026-08-25 · scripts/ingest/research/batch17/out/magic-knight-rayearth.json, scripts/ingest/apply-research-batch-17.ts, §12.51 |  |
 | `V6` | {"full":true,"rows":[{"volume":1,"chapter_start":1,"chapter_end":5},{"volume":2,"chapter_start":6,"chapter_end":10},{"volume":3,"chapter_start":11,"chapter_e… | Sean's 15-ruling (verifier-corrected): MKR I serialization numbering 1-15 over 3 volumes (Nakayoshi record + tankōbon; the storefront re-cut's 5b/14 labels rejected) — FULL replace | Sean 2026-08-25 · scripts/ingest/research/batch17/out/magic-knight-rayearth.json, scripts/ingest/apply-research-batch-17.ts, §12.51 |  |
 | `I36` | {"episodes":[21],"kind":"divergence","note":"Sean's D2 ruling 2026-08-25: eps 21-49 adapt Magic Knight Rayearth II — a SEPARATE manga with its own restarted … | eps 21-49 adapt Magic Knight Rayearth II — a SEPARATE manga with restarted numbering — while this entry's chapter space is MKR I (chs 1-15, fully adapted by ep 20); the 14 canon/mixed rows in 21-49 can never carry anchors in this space without lying. Scoped/segmented representation is deferred to the D2 design pass (specimen #3, with prisma-illya and rosario ep 14) | Sean 2026-08-25 · scripts/ingest/research/batch17/out/magic-knight-rayearth.json, scripts/ingest/apply-research-batch-17.ts, §12.51 | D2 lands |
+| `I43` | {"franchise":"magic-knight-rayearth","title":"Magic Knight Rayearth","titleNative":"魔法騎士レイアース","base":true} | C2 (2026-09-07, the second airing sitting; Sean with Cursor: 'C2 as proposed, with four flips'): the base of the 'magic-knight-rayearth' franchise — the 1994-95 series (two seasons, 49 rows); created so the 2026 alternative adaptation lands in it at creation (the ghost-in-the-shell shape). | Sean 2026-09-07 · scripts/ingest/lib/rulings/discovery.ts (anilist:178868), docs/changelog.md §12.148 |  |
+
+### magic-knight-rayearth-2026 (2)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I38` | {"relation":"adaptation","mangaAnilistId":30119} | C2 (2026-09-07, the seed dry run): AniList links the 2026 series to the CLAMP manga (30119 — the 1994 series' own ADAPTATION instrument) with an ALTERNATIVE label, not ADAPTATION, so the I38 pick found no manga and the plan read 'manga none'. The edge-label trap on a re-adaptation: the tag routes, the edge is the fact (I47); a manual override, never a wider filter (I38). | Sean 2026-09-07 · scripts/ingest/seed.ts --dry-run (2026-09-07), https://anilist.co/anime/178868, https://anilist.co/manga/30119, docs/changelog.md §12.148 |  |
+| `I43` | {"franchise":"magic-knight-rayearth"} | C2 (2026-09-07, the second airing sitting; Sean with Cursor: 'C2 as proposed, with four flips'): Magic Knight Rayearth (2026) minted as a series alternative to the base — the membership is ruled with the seed so the row lands in the franchise at creation. | Sean 2026-09-07 · scripts/ingest/lib/rulings/discovery.ts (anilist:178868) |  |
 
 ### masamune-kun-s-revenge (1)
 
@@ -3391,10 +3494,11 @@
 | `I45` | {"anilistId":1008,"standing":"canon","chapter":278,"volume":26,"chaptersAdapted":"266-278 (25巻10話 → 26巻11話, the Ryugenzawa arc; Part One 266-268, Part Two 26… | Wave 4a (verified SOUND WITH NOTES): canon on the negative control (ja-WP's OVAオリジナル marker sits on Vol.2 / 5 / 6, not here), both edges on the volume table, the 新装版 contents at publisher tier; one fabricated citation struck (no ja-WP 原作 column); the title repair refuted (AniList's romaji is stored correctly). Sean 2026-09-05: canon, 161.51 ruled. | Sean 2026-09-05 · scripts/ingest/research/discovery/out/ranma-1-2__1008.json, scripts/ingest/research/discovery/verify/ranma-1-2__1008.md |  |
 | `I45` | {"anilistId":1010,"standing":"mixed","chapter":302,"volume":29,"chaptersAdapted":"301-302 (29巻1-2話, 恐怖の鳳凰剣 / 不滅の鳳凰剣 — the Phoenix Sword arc), adapted end to … | Wave 4a (verified SOUND WITH NOTES): 301-302 on ja-WP, the wiki's closed reverse index, en-WP's tables and the title-page scans; Shogakukan's own 新装版 29 目次; the verifier's own share count (36-39%) and MIXED recommended with the verdict; 配給 東映 on seven sources. Sean 2026-09-05 (Cursor's note evaluated): mixed; 'Flew' → 'Grew' as the English string; the title language is the display pass's rule, not a one-row swap. | Sean 2026-09-05 · scripts/ingest/research/discovery/out/ranma-1-2__1010.json, scripts/ingest/research/discovery/verify/ranma-1-2__1010.md |  |
 
-### ranma1-2-2024 (1)
+### ranma1-2-2024 (2)
 
 | rule | value | reason | ruled | retires when |
 |---|---|---|---|---|
+| `I27` | {"ids":[178533,185731,209872],"ruledExtent":"NO AFL page (keyed by series id); S1 + S2 = 24 rows; S3 (209872, TV, from 2026-10-04, our 25+) joins now — the s… | C2 (2026-09-07, the second airing sitting; Sean with Cursor: 'C2 as proposed, with four flips'): halo_airing — SEQUEL, season ordinal; Sean: component. | Sean 2026-09-07 · audit-discovery halo_airing (2026-09-07), scripts/ingest/research/discovery/recap.ts --scope sequel,series --airing (2026-09-07), docs/changelog.md §12.148 | an AFL page appears (I44 adoption) — then keyed by its slug |
 | `I43` | {"franchise":"ranma-1-2"} | Ranma ½ 1989 and the 2024 remake (alternative); one IP. | Sean 2026-09-05 · signed by Sean 2026-09-05 ("Sign the 39 / 97 franchise table"), the 2026-09-05 franchise bootstrap (connected components of series_relations ∪ AniList story / PARENT / SAME_UNIVERSE edges between owned entries; scripts/ingest/research/discovery/PROPOSAL.md §2) |  |
 
 ### rave-master (3)
@@ -3967,6 +4071,12 @@
 | `T29` | {"position":24.1,"record":{"kind":"ova","anilistId":130713}} | AniList 130713 format=OVA, 3 eps, 2021-09-10 to 2022-09-09. en-WP infobox: type=oad (original animation DVD), 'The Ancient Magus' Bride: The Boy from the West and the Knight of the Blue Storm' — OAD is the home-video-bundle form of OVA. | Sean 2026-08-27 · scripts/ingest/research/batch19/out/watch-order-kinds.json, https://anilist.co/anime/130713, https://en.wikipedia.org/wiki/The_Ancient_Magus%27_Bride |  |
 | `I45` | {"anilistId":21688,"standing":"filler","position":9.5,"note":"FILLER — 「ヤマザキコレ原案による完全オリジナルアニメーション」 (Mag Garden's OVA site; ja-WP; lisani; ANN; Shochiku): Chi… | Wave 5 (verified SOUND WITH NOTES on the standing, REFUTED on the delivered 8.5): the original-story claim on five lineages; the verifier found ep 9's seclusion clause (the fandom's Chapter = 13, 14; en-WP) and named 9.5 as the earliest slot the frame permits, 0.5 as release order only. Sean 2026-09-06 (Cursor's line): 9.5 — the setting collides with the release slot, the Kinnikuman date-slot class; the frame is recorded in the note and 'earliest the frame permits' is NOT a convention (P9 — a per-work judgment). Queued: the second trilogy's wiki row @24.1 (two AniList ids — identity). | Sean 2026-09-06 · scripts/ingest/research/discovery/out/the-ancient-magus-bride__21688.json, scripts/ingest/research/discovery/verify/the-ancient-magus-bride__21688.md |  |
 
+### the-apothecary-diaries (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I27` | {"ids":[161645,176301,195516],"ruledExtent":"NO AFL page (keyed by series id); S1 + S2 = 48 rows; S3 (195516, TV, from 2026-10-02, our 49+) joins now — the s… | C2 (2026-09-07, the second airing sitting; Sean with Cursor: 'C2 as proposed, with four flips'): halo_airing — SEQUEL, season ordinal; Sean: component (S3 only; Part 2 on retiresWhen). | Sean 2026-09-07 · audit-discovery halo_airing (2026-09-07), scripts/ingest/research/discovery/recap.ts --scope sequel,series --airing (2026-09-07), docs/changelog.md §12.148 | S3 Part 2 (anilist 200927) is dated to the day / airs — add it to ids; or an AFL page appears (I44 adoption) |
+
 ### the-asterisk-war (1)
 
 | rule | value | reason | ruled | retires when |
@@ -4214,6 +4324,12 @@
 | `A43` | {"episodes":[46,48],"kind":"rearranged","chapters":"132","asterisk_review":"pending (if unset)"} | ch 132's opening cut from ep 46, grafted into ep 48 as flashback | session 2026-08-23 · scripts/ingest/apply-research-batch-9.ts, docs/changelog.md §12.26, session scratchpad batch9/to-your-eternity.json |  |
 | `A43` | {"episodes":[56,57,58,59],"kind":"partial","chapters":"151-158","asterisk_review":"pending (if unset)"} | chained half-chapter boundaries; interior ±half chapter | session 2026-08-23 · scripts/ingest/apply-research-batch-9.ts, docs/changelog.md §12.26, session scratchpad batch9/to-your-eternity.json |  |
 
+### toaru-anbu-no-item (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I43` | {"franchise":"a-certain-magical-index"} | C2 (2026-09-07, the second airing sitting; Sean with Cursor: 'C2 as proposed, with four flips'): Toaru Anbu no ITEM minted as a series spin_off of Index (Kamachi's own light-novel spin-off) — the Toaru universe, the Railgun shape; the membership is ruled with the seed so the row lands in the franchise at creation. | Sean 2026-09-07 · scripts/ingest/lib/rulings/discovery.ts (anilist:186742) |  |
+
 ### tokyo-babylon (2)
 
 | rule | value | reason | ruled | retires when |
@@ -4327,6 +4443,12 @@
 | `A43` | {"episodes":[146],"kind":"divergence","chapters":"254","note":"REPLACES the stored eps 142,146 divergence {243-253} on this row (146 now ends at 254): Gourme… | REPLACES the stored eps 142,146 divergence {243-253} on this row (146 now ends at 254): Gourmet 254 is adapted with its outcome changed — in the anime Ichiryu's secret technique lands (dodged in the manga) and Midora does not kill him (toriko.fandom's Ichiryu page: 'the most important change… Ichiryu still lives'); ep 147's studio ending follows from that. | session 2026-08-27 · scripts/ingest/research/batch20/out/toriko.json, scripts/ingest/research/batch20/verify/toriko.md, scripts/ingest/history/apply-wave1.ts, §12.78 |  |
 | `T28` | {"episodes":[147],"kind":"loose_parallel","chapters":"255, 257, 264 (and the skipped 245)","note":"T28 tie on a filler row: the studio ending restages three … | T28 tie on a filler row: the studio ending restages three manga beats without adapting their pages — Midora sparing Ichiryu (255), the Meteor Spice fallout and the IGO's emergency food relief (255/257), Toriko and Komatsu setting out for the Gourmet World (264 opens the Billion Bird arc). Ch 245 (Starjun's Bloom, Meteor Spice with Toriko collapsed) was never animated at all. | session 2026-08-27 · scripts/ingest/research/batch20/out/toriko.json, scripts/ingest/research/batch20/verify/toriko.md, scripts/ingest/history/apply-wave1.ts, §12.78 |  |
 | `G3` | {"flag":695,"resolution":"RESOLVED (batch 20 wave 1, verified R24): ONE reading edition (Gourmet 1-396, 43 vols) shared by AniList, toriko.fandom, MU ('43 Vo… | ingest_flags #695 dismissed with the verdict's finding (G3: only Sean dismisses): RESOLVED (batch 20 wave 1, verified R24): ONE reading edition (Gourmet 1-396, 43 vols) shared by AniList, toriko.fandom, MU ('43 Volumes (Complete)', coverage in the same space) and our anchors; MU's latest_chapter 2 is the chapter of its latest-DATED release rows (a colored re-release of ch 1-2), not an edition and not a purge (595 release rows exist). | Sean 2026-08-27 · scripts/ingest/history/apply-wave1.ts, §12.78 |  |
+
+### tougen-anki (1)
+
+| rule | value | reason | ruled | retires when |
+|---|---|---|---|---|
+| `I27` | {"ids":[177474,204650],"ruledExtent":"NO AFL page (keyed by series id); S1 = 24 rows; Nikko Kegon Falls Arc (204650, TV, October 2026, our 25+) is the arc-ti… | C2 (2026-09-07, the second airing sitting; Sean with Cursor: 'C2 as proposed, with four flips'): halo_airing — SEQUEL, new subtitle on the same manga (the recap read it ambiguous); Sean: component — an arc title is a season ordinal in disguise when story, staff and source continue. | Sean 2026-09-07 · audit-discovery halo_airing (2026-09-07), scripts/ingest/research/discovery/recap.ts --scope sequel,series --airing (2026-09-07), docs/changelog.md §12.148 | an AFL page appears (I44 adoption) — then keyed by its slug |
 
 ### trigun (12)
 

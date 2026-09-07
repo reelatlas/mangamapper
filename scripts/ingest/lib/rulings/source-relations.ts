@@ -62,6 +62,16 @@ export const ENTRIES: RulingEntry<SourceRelationRuling>[] = [
     ruledOn: '2026-09-06',
     cite: ['scripts/ingest/research/discovery/out/triage__attack-on-titan.json', 'https://anilist.co/manga/85199'],
   },
+  {
+    seriesId: 'magic-knight-rayearth-2026',
+    ruleId: 'I38',
+    value: { relation: 'adaptation', mangaAnilistId: 30119 },
+    reason:
+      "C2 (2026-09-07, the seed dry run): AniList links the 2026 series to the CLAMP manga (30119 — the 1994 series' own ADAPTATION instrument) with an ALTERNATIVE label, not ADAPTATION, so the I38 pick found no manga and the plan read 'manga none'. The edge-label trap on a re-adaptation: the tag routes, the edge is the fact (I47); a manual override, never a wider filter (I38).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-07',
+    cite: ['scripts/ingest/seed.ts --dry-run (2026-09-07)', 'https://anilist.co/anime/178868', 'https://anilist.co/manga/30119', 'docs/changelog.md §12.148'],
+  },
 ];
 
 /** seriesId → the ruled relation (parallel today; an adaptation ruling would only override a wrong derivation) */

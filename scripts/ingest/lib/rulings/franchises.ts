@@ -1314,6 +1314,34 @@ export const ENTRIES: RulingEntry<FranchiseMembership>[] = [
     ruledOn: '2026-09-06',
     cite: ['scripts/ingest/lib/rulings/discovery.ts (anilist:995)'],
   },
+  // ── C2 (2026-09-07) ──
+  {
+    seriesId: 'magic-knight-rayearth',
+    ruleId: 'I43',
+    value: { franchise: 'magic-knight-rayearth', title: 'Magic Knight Rayearth', titleNative: '魔法騎士レイアース', base: true },
+    reason: "C2 (2026-09-07, the second airing sitting; Sean with Cursor: 'C2 as proposed, with four flips'): the base of the 'magic-knight-rayearth' franchise — the 1994-95 series (two seasons, 49 rows); created so the 2026 alternative adaptation lands in it at creation (the ghost-in-the-shell shape).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-07',
+    cite: ['scripts/ingest/lib/rulings/discovery.ts (anilist:178868)', 'docs/changelog.md §12.148'],
+  },
+  {
+    seriesId: 'magic-knight-rayearth-2026',
+    ruleId: 'I43',
+    value: { franchise: 'magic-knight-rayearth' },
+    reason: "C2 (2026-09-07, the second airing sitting; Sean with Cursor: 'C2 as proposed, with four flips'): Magic Knight Rayearth (2026) minted as a series alternative to the base — the membership is ruled with the seed so the row lands in the franchise at creation.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-07',
+    cite: ['scripts/ingest/lib/rulings/discovery.ts (anilist:178868)'],
+  },
+  {
+    seriesId: 'toaru-anbu-no-item',
+    ruleId: 'I43',
+    value: { franchise: 'a-certain-magical-index' },
+    reason: "C2 (2026-09-07, the second airing sitting; Sean with Cursor: 'C2 as proposed, with four flips'): Toaru Anbu no ITEM minted as a series spin_off of Index (Kamachi's own light-novel spin-off) — the Toaru universe, the Railgun shape; the membership is ruled with the seed so the row lands in the franchise at creation.",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-07',
+    cite: ['scripts/ingest/lib/rulings/discovery.ts (anilist:186742)'],
+  },
 ];
 
 export type Franchise = { title: string; titleNative?: string; note?: string; base: string | null; members: string[] };

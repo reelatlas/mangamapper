@@ -1154,6 +1154,59 @@
    19-23 / 39 (chain_source) and 18 / 93-95 (AFL's loose Mixed bucket),
    beelzebub 15 / 26-28 / 51, rurouni TV ep 95 (identity). Batch 22 opens on
    the boruto follow-up (lanes I + C) with the batch-21 tooling copied.
+148. ✅ **C2 — THE SECOND AIRING /discover SITTING (Sean ruled 2026-09-07 with Cursor: 'C2 as proposed, with four flips').**
+    The recap (recap.ts --scope sequel,series --airing: 57 candidates over 54 owners) was derived from disk — AniList's API
+    was still 403, so the halo could not be restaged (the last staging: the weekly refresh-discovery of 2026-09-06 10:30 UTC).
+    THE SIZING RULE: only rows dated inside the coming cour join now (the standing practice — an announced season joins when
+    dated / airs, Kingdom S6 Part 2 via retiresWhen); the 2027 and undated rows wait for C3. RULED AND APPLIED — eight I27
+    RULED EXTENSIONS: the-apothecary-diaries S3 (195516, 2026-10-02; S3 Part 2 200927 on retiresWhen — Cursor's flip 1: the
+    precedent is wait, never include-now), blue-box S2 (189123), aoashi S2 (191788, 24 eps), ranma1-2-2024 S3 (209872),
+    black-clover S2 (195604, October), ace-diamond-act-ii — act II Second Season (177634, 13 eps, 2026-04 → 06, an AIRED HOLE the
+    catalog had missed, our 53-65) THEN Second Season Part 2 (213658) in one extension, tougen-anki — Nikko Kegon Falls Arc
+    (204650) as a COMPONENT (Cursor's flip 2: an arc-titled continuation on the same manga with the same staff; the recap had
+    read it ambiguous — the precedent for Golden Kamuy's and Kaiju No. 8's arc-titled final seasons), and JoJo's I24 entry
+    amended — Steel Ball Run 1st STAGE (190327, ONA, 1 ep, aired 2026-03-19, our 191) THEN 2nd - 3rd STAGE (210482, 11 eps
+    from 2026-09-25) as parts 8-9 under the declared open-ended I15, the stray Monogatari sentence removed from its reason.
+    Every extended series flips to 'upcoming' (chain.ts). TWO SERIES minted STAGED (P39): magic-knight-rayearth-2026 (178868,
+    TV, 2026-10-07, E&H production / TMS) — alternative to the 1994 base, a NEW 'magic-knight-rayearth' franchise with the
+    1994 series ruled base; toaru-anbu-no-item (186742, TV, 2026-10-09 JST, J.C.Staff) — spin_off of Index in the Toaru
+    franchise, the novel-owner shape (its LN 159459 is the instrument; a manga 162615 exists, listed ALTERNATIVE), the slug per
+    I1 (Cursor's flip 3: English else romaji, never a synonym). The seed dry run read Rayearth's 'manga none': AniList labels
+    the CLAMP manga (30119) ALTERNATIVE, not ADAPTATION — settled by an I38 `mangaAnilistId` ruling in source-relations.ts
+    (the No Regrets shape; I47: the tag routes, the edge is the fact), the plan then read manga 30119. TEN related_work
+    rulings (bucket original): the nine chibi shorts — Re:Zero Break Time S1-S4 (21780, 120700, 182417, 210687) + Re:PETIT
+    (21891), Youjo Shenki (98186) + Youjo Shenki 2 (213961), Maomao no Hitorigoto S1-S2 (170508, 186148) — proposed `series`
+    only because ONA / TV_SHORT is TV-shaped (the Frieren precedent, four owners now: THE SHORTS GATE is queued as an
+    /add-rule — format TV_SHORT, or an ONA of at most five minutes, on a SPIN_OFF / SIDE_STORY edge → the extras bucket; each
+    ruling's retiresWhen names it); Operation Desert Pasta (135866, ONA, ONE 17-minute original) is NOT that shape (Cursor's
+    flip 4) — its own extra of Tanya, the writer derived @12.51 from its 2021 release (after the film's 12.5; Sean's word if
+    he wants it re-seated by an N7 ruling). Three ruled shorts are unstaged (182417, 210687, 213961) — their rows land when
+    the halo restages. DEFERRED, named: every 2027 / undated row (Dandadan S3, Frieren S3, Delicious in Dungeon S2, Shangri-La
+    S3, Sakamoto Days S2, KonoSuba 4, Shield Hero S5, Oshi no Ko Final, THE ONE PIECE 2027-02 — an alternative like GitS 2026,
+    a C3 series mint when firm — Gundam, Evangelion, NARUTO 2026, the rest); DIGIMON BEATBREAK stays deferred to B; the two
+    New Prince of Tennis works (165810, 123476) to their owner-scoped sitting. THE WRITERS: seed 2 CREATE / 0 HELD; stitch
+    --only per key 8 EXTENDED (Ace 65 eps vs AFL 52; JoJo 191 vs AFL 190; the six unaired seasons add 0 rows); sync-related-
+    works 7 inserted (the heal's second pass then updated 3), 0 removed; the wiki writer (G59 A, no dry run — the C1 precedent)
+    created JoJo's row 191 from the 'Steel Ball Run' page (continuity-locked — the JoJo wiki numbers OVERALL) and created
+    NOTHING for Ace act II: 'Ace of Diamond Act II season 2' numbers 179-191 in the FRANCHISE space while our act II tops at 52,
+    so the continuity lock (pmin === top + 1) fails and the sibling page's proven offset (-126) does not carry across pages —
+    rows 53-65 OWED (the re-zero S3 / S4 class; the general fix is a family-offset carry in the lock, queued as engineering — a
+    ruled page key alone would not lock it). heal: franchise_id asserted on magic-knight-rayearth; relations 182 → 186 (the
+    rayearth alternative pair; ITEM spin_off + parent); heal-format 1 (row 191); afg#1250 marked killed. Edges rebuilt +
+    deployed ×5; 294 tests; system census green (rulings.md regenerated: 2783 rulings, 119 with a retire condition).
+    CENSUS (vs §12.147, every delta explained — P17): series_staged 33 → 35 (the two mints); title_incomplete 24 → 25
+    (ace-of-the-diamond-act-ii: 13 aired eps with no rows — the owed 53-65); type_default_unclassified 81 → 82 (JoJo's wiki-
+    minted 191); fractional_unmodeled 2 → 5 (the JoJo page's 126.5 'The Beginning of Golden Wind', 134.5 'Determination', 141.5
+    'Destiny' — Sean's review class, with Tanya's two); pending_airing_no_anchor 3 → 4 (jojos-bizarre-adventure: an aired tail
+    row with no anchor, now 'upcoming'); pending_no_canon lists the two mints (no rows yet); frontier_tail_null 12, asterisk_
+    unreviewed 178, permanence_candidate 52 unchanged; ruling_violation 0; every violation-kind class 0; 220 series verified,
+    0 failing. DISCOVERY: halo_sequel_unclaimed 103 → 93 (the ten season ids); halo_series_unclaimed 174 → 162 (two series +
+    ten related_work rulings); halo_airing 56 → 44; extra_original 146 → 156 (the ten rulings); extra_unstaged 1 → 2 (the
+    Apothecary film 'Bouhi no Hihou' 200929, an OTHER edge of the newly owned S3 — the apply's own ownership widens the halo,
+    the C1 trap); discovery_new_since_sitting 5 → 2 (the Tennis pair); discovery_ruled_unbuilt 2 → 0; series_relation_missing
+    0; anilist_resolve_debt 0; related works listed 814 → 816 (the mints' own halos). CAPTURED: six traps in the discover
+    skill (the ALTERNATIVE-labelled manga; the franchise-numbered sub-page lock; the wait precedent; the arc-titled
+    continuation; the I1 slug; the shorts gate); the sitting logged in SITTINGS (2026-09-07T01:32:04Z).
 147. ✅ **CONSOLIDATE DEEP after §12.146 (2026-09-06; P21 — enforcement sites changed: G58, G52, G60, I13, I27, I42, I45,
     T31).** THE WRITER SWEEP found one real churn: the AFG / continua anchor writers left `volume` NULL and heal-anchor-volumes
     re-filled 1385 rows in a day (one-piece's 1029 alone) after every AFG refresh — every anchor writer now derives the volume
