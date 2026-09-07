@@ -59,7 +59,7 @@ refetch) so staging never holds output a current parse wouldn't produce
 
 ## 4. Healers — `npm run heal`
 
-- **An EVENT roster script runs only on its trigger, after you have READ it, with `--dry-run` first where it has one — and a script with no dry-run is never assumed to have one** (INCIDENT-2026-09-05, `P40`): `audit-titles.ts` was run to apply one exclusion and deleted six series through a cascade against a stale fixture index; `afg-expansion.ts` has no dry-run and created a series when the flag was passed. Never run a script for its side effect; find the ruling map its job belongs to.
+- **An EVENT roster script runs only on its trigger, after you have READ it, with `--dry-run` first where it has one — and a script with no dry-run is never assumed to have one** (INCIDENT-2026-09-05, `P40`): `audit-titles.ts` was run to apply one exclusion and deleted six series through a cascade against a stale fixture index; `afg-expansion.ts` has no dry-run and created a series when the flag was passed. `wiki-episodes-backfill.ts` HAS one since 2026-09-07 (`--dry-run`): its first catalog run refused a wrong +14 lock on re-zero that a live run would have written — use it before every event run. Never run a script for its side effect; find the ruling map its job belongs to.
 
 Runs the HEAL roster's standard entries in order (`P20`): scopes, continua,
 coverage (self-healing), volume boundaries, parity continues (`C2`/`C3`),

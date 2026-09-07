@@ -1,7 +1,7 @@
 // G55 — the series-window identity gate, proven on the rows that ruled it
 // (2026-08-26, batch 19 E2). Pure; no DB.
 import { describe, expect, it } from 'vitest';
-import { dateFit, disambiguatedTitles, offWindowRows, pageFitsSeries, seriesDatesInvalid } from './wiki-identity';
+import { dateFit, disambiguatedTitles, offWindowRows, pageFitsSeries, seriesDatesInvalid, titleCased } from './wiki-identity';
 
 const kenshin = { start_date: '2023-07-07', end_date: '2025-03-21', status: 'finished' };
 
@@ -57,5 +57,17 @@ describe('page helpers', () => {
   it('disambiguatedTitles strips a trailing parenthetical and uses the start year', () => {
     expect(disambiguatedTitles('Rurouni Kenshin (2023)', '2023-07-07')[0]).toBe('Rurouni Kenshin (2023 TV series)');
     expect(disambiguatedTitles('BEYBLADE X', null)).toEqual([]);
+  });
+});
+
+describe('titleCased (the gits-2026 lesson, 2026-09-07)', () => {
+  it('re-cases an ALL-CAPS AniList title the way a Wikipedia article is titled', () => {
+    expect(titleCased('THE GHOST IN THE SHELL')).toBe('The Ghost in the Shell');
+    expect(titleCased('SAKAMOTO DAYS')).toBe('Sakamoto Days');
+    expect(titleCased('DAN DA DAN')).toBe('Dan Da Dan');
+  });
+  it('leaves a mixed-case title alone (nothing to normalise)', () => {
+    expect(titleCased('Re:ZERO -Starting Life in Another World-')).toBeNull();
+    expect(titleCased('Blue Box')).toBeNull();
   });
 });

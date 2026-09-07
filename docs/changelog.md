@@ -1154,6 +1154,42 @@
    19-23 / 39 (chain_source) and 18 / 93-95 (AFL's loose Mixed bucket),
    beelzebub 15 / 26-28 / 51, rurouni TV ep 95 (identity). Batch 22 opens on
    the boruto follow-up (lanes I + C) with the batch-21 tooling copied.
+152. ✅ **THE WIKI WRITER'S LOCKS — G59 amended (2026-09-07; the C1 / C2 owed rows landed: re-zero 51-79, Ace act II 53-65,
+    gits-2026 1-9 = 51 rows).** THE DRY RUN FIRST (P40): wiki-episodes-backfill.ts has `--dry-run` — every lock line and every
+    planned row printed, no insert / update / fractional / flag / run — and it paid for itself on the first witness: re-zero's
+    list page DATE-LOCKED AT +14 with 34 title conflicts, a wrong lock a live run would have written over rows 51-79. Each
+    witness failed for a DIFFERENT reason, found by watching, not inferring: (1) re-zero never reached the lock — the finder's
+    search fallback tried only its first two title variants and the two year-disambiguated forms held both slots while the
+    native title (the one the search resolves) sat fifth → every variant is searched (lib/wikipedia.ts#findEpisodePages);
+    (2) the page it then found, "List of Re:Zero episodes", holds only the OVA / shorts table itself and links its season
+    tables as {{Main|Re:Zero season 3{{!}}…}} sub-articles and {{#Section-h:…}} section transclusions → walked like
+    transclusions (extractMainArticles; 2 unit tests); (3) the shorts table's weekly rows aired the SAME DAYS as season 2 —
+    50 exact date votes for +14 → the COMPANION-TABLE GUARD on the date-vote lock, its measure MEASURED on the catalog dry
+    run, not assumed: a true table under a different titling system still shares a distinctive word on a quarter of its
+    rows (One Piece's AniFiller titles vs Wikipedia's 4Kids titles 3 of 13 / 5 of 19; Cuckoos' translation variants 17 of
+    23), a companion table on almost none (re-zero 1 of 51) — at least ten compared rows and a shared distinctive word on at
+    most one in twenty refuses the page (the first cut, ≥ 0.75 token similarity with disagree > agree, had refused One
+    Piece's true season pages — the catalog dry run caught it); (4) Ace act II's "season 2" sub-page numbers 179-191 in the
+    FRANCHISE space while our act II tops at 52, and "Second Season" is a word ordinal the label parser did not read → the
+    FAMILY-OFFSET CARRY (a skipped page whose numbering continues a locked sibling's, pmin = its top + 1, takes the sibling's
+    PROVEN offset and must still land where our rows end, fit our count and continue the dates; no locked sibling, no carry)
+    + word ordinals in seasonOfLabel; (5) gits-2026's article is "The Ghost in the Shell (2026 TV series)" and MediaWiki titles
+    are case-sensitive past the first letter — an ALL-CAPS AniList title also tries Wikipedia's casing (lib/wiki-identity.ts#
+    titleCased; 2 unit tests). Evidence, never a guess: every lock still runs under G55's date gate; the three earlier
+    lock kinds are unchanged. THE APPLY: the three witnesses only (their trigger is the ruled extensions and the mint; each
+    dry-run clean) — re-zero 29 created (51-79; the S3 / S4 sub-pages component-locked in overall numbering), gits-2026 9
+    (1-9, its own article), ace 13 (53-65, family-offset-locked); heal-format 51. THE CATALOG-WIDE DRY RUN (41 target
+    series, nothing written) is the event run's next reading, NOT applied: kakegurui would fill 24 titles from its 2017
+    article, utena 2, slime create 2, and two creates ride on many conflicts (the-prince-of-tennis 1 with 14 conflicts beside
+    24 G55-refused OVA rows; beyblade-x 1 with 16) — read one by one before any live run. CENSUS (vs §12.151, every delta
+    explained — P17): title_incomplete 25 → 23 (ace's 13 and gits' 9 rowless eps filled; re-zero's "29 aired eps have no
+    rows" became "1/79 rows missing titles" — the S4 page's newest row is title-less); type_default_unclassified 82 → 85
+    (the three series' wiki-minted rows owe their typing: re-zero 29, ace 13, gits 9); frontier_tail_null 12 → 13 (ace: 13
+    canon eps past anchor 52 render null — honest, P6); pending_airing_no_anchor 4 unchanged; every violation class 0;
+    220 verified, 0 failing; discovery unchanged. LEDGER: G59 amended (amendedOn 2026-09-07; witnesses + re-zero / ace /
+    gits-2026; enforcement + findEpisodePages / extractMainArticles / titleCased; aliases); the discover skill's step 5 says
+    dry-run first and its trap line is corrected; the consolidate skill's P40 line notes the writer now has a dry run.
+    Edges rebuilt + deployed ×5 (lib/wikipedia + lib/wiki-identity); 299 tests; lint 437; system census green.
 151. ✅ **I48 — SHORT-FORM SPIN-OFFS ARE RELATED WORKS, NEVER SERIES (the shorts gate; /add-rule, 2026-09-07; Sean with Cursor:
     'rulings now, gate queued' at C2).** THE PREDICATE: a TV_SHORT or ONA whose STAGED per-episode length is at most five minutes,
     reached from an owned series by any in-run relation other than SEQUEL, routes to the related-works ledger as an EXTRA of that

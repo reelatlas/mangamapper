@@ -240,7 +240,7 @@
 - `G56` Honest terminal: a covered MU pin is redundant, not a flag — aka `honest terminal`, `honest-terminal redundancy`, `covered pin`, `MU "EP N" pin`, `EP N pin`, `skipped_terminal`, `mu_pin_flag_redundant`, `claymore #945 class`, `pin already covered`
 - `G57` Row provenance: a writer deletes only rows it minted — aka `row provenance`, `minted_by`, `a writer deletes only rows it minted`, `row_minted_by_missing`, `the 5D 145 lesson`, `no delete-then-insert`
 - `G58` Budgeted edges: structural hash, deferral, closed run row — aka `budgeted edge`, `structural hash`, `volatile fields`, `edge wall clock`, `run_stuck`, `deferred not skipped`, `the refresh-anilist lesson`, `aniListHash`, `time budget`, `resolved_hash`, `resolve debt`, `anilist_resolve_debt`, `airing-first queue`, `refreshAniList`, `stampResolved`, `the catch-up`, `the airing writer fix`
-- `G59` The mint rule: who creates the grid when AFL has nothing — aka `the mint rule`, `who mints the grid`, `grid minting`, `ruled wiki page`, `WIKI_PAGES`, `MINTED_GRIDS`, `manual grid`, `grid_unminted`, `AFL has nothing`
+- `G59` The mint rule: who creates the grid when AFL has nothing — aka `the mint rule`, `who mints the grid`, `grid minting`, `ruled wiki page`, `WIKI_PAGES`, `MINTED_GRIDS`, `manual grid`, `grid_unminted`, `AFL has nothing`, `wiki writer dry run`, `family-offset carry`, `companion-table guard`, `the finder searches every variant`, `titleCased`, `extractMainArticles`, `season sub-articles`
 - `G60` Rankings are a reader: a ranked queue, never authority — aka `rankings`, `the rankings reader`, `AniList rankings`, `ingest_anilist_rankings`, `seed_candidate`, `the seed queue`, `seed engine`, `product fit`, `productFitScore`, `the score`, `refresh-discovery`, `the fifth bundle`, `weekly discovery`, `LISTS`, `snapshotRankings`, `seedCandidates`, `manga-first`, `popularity is a sort key`, `rank is a sort key`, `top 500`
 
 **V — Volumes & boundaries** (11)
@@ -3271,16 +3271,16 @@ An edge refresh never does unbounded work: each invocation decides what changed 
 
 ### G59 · The mint rule: who creates the grid when AFL has nothing
 
-When AFL has nothing for an entry (no page, an empty page, a page held sparse), the episode grid is minted by exactly one ruled writer, never by a research apply script and never by the display: (A) the WIKI writer from the episode list its finder locates (the standing path — shy, 24 rows minted 2026-09-04); (B) the WIKI writer from a RULED page when the finder fails (lib/rulings/wiki-pages.ts — a namesake wins the search: orient's finder returned the 1987 TMNT seasons, refused by G55; a franchise-numbered list wins over the show's own table: code-black); (C) the MANUAL writer from a RULED grid (lib/rulings/minted-grids.ts, rows with title / air date / type and the source cited; the mint-grids healer asserts them) when no page exists (shounan-junai-gumi: a 5-episode OVA with a sparse-held AFL page and no wiki list). Rows minted on paths A / B take the canon-tier default type on insert and the T6 map asserts afterward; only path C carries a ruled type per row. Every minted row carries minted_by (wiki | manual) and G57 governs its deletion; G55 identity and the alignment gates apply on every path; filterEpisodeRows gates the rows. A42's synthesized row remains the display's LAG fallback (an anchor ahead of AFL by an episode), not a source of rows: an entry with anchors and zero rows and no ruled minter is grid_unminted. The mint rule unblocks DISPLAY (rows exist to hang types, titles and dates on); it does not create anchors (those already landed as anchor_without_row). The type PROVENANCE is a census queue, never a fourth type: a wiki-minted row with no AFL classification and no T6 ruling is listed at series grain as type_default_unclassified (typing owed) until AFL restamps or T6 covers it; the per-row provenance column is the queued sidecar before the UI pass.
+When AFL has nothing for an entry (no page, an empty page, a page held sparse), the episode grid is minted by exactly one ruled writer, never by a research apply script and never by the display: (A) the WIKI writer from the episode list its finder locates (the standing path — shy, 24 rows minted 2026-09-04); (B) the WIKI writer from a RULED page when the finder fails (lib/rulings/wiki-pages.ts — a namesake wins the search: orient's finder returned the 1987 TMNT seasons, refused by G55; a franchise-numbered list wins over the show's own table: code-black); (C) the MANUAL writer from a RULED grid (lib/rulings/minted-grids.ts, rows with title / air date / type and the source cited; the mint-grids healer asserts them) when no page exists (shounan-junai-gumi: a 5-episode OVA with a sparse-held AFL page and no wiki list). Rows minted on paths A / B take the canon-tier default type on insert and the T6 map asserts afterward; only path C carries a ruled type per row. Every minted row carries minted_by (wiki | manual) and G57 governs its deletion; G55 identity and the alignment gates apply on every path; filterEpisodeRows gates the rows. A42's synthesized row remains the display's LAG fallback (an anchor ahead of AFL by an episode), not a source of rows: an entry with anchors and zero rows and no ruled minter is grid_unminted. The mint rule unblocks DISPLAY (rows exist to hang types, titles and dates on); it does not create anchors (those already landed as anchor_without_row). The type PROVENANCE is a census queue, never a fourth type: a wiki-minted row with no AFL classification and no T6 ruling is listed at series grain as type_default_unclassified (typing owed) until AFL restamps or T6 covers it; the per-row provenance column is the queued sidecar before the UI pass. AMENDED 2026-09-07 (§12.152 — the C1 / C2 owed rows: re-zero 51-79, Ace act II 53-65, gits-2026 1-9): the wiki writer has a --dry-run (P40: a writer that mints rows prints every lock and every planned row first; the event run is never assumed safe without it) and four evidence locks/guards, each with its witness — (1) the FINDER searches every title variant (the two year-disambiguated forms had held the only two search slots; re-zero's native title, the one the search resolves, sat fifth) and an ALL-CAPS AniList title also tries Wikipedia's casing (titleCased — 'THE GHOST IN THE SHELL' → 'The Ghost in the Shell (2026 TV series)'; MediaWiki titles are case-sensitive past the first letter); (2) a list page's {{Main|…}} season sub-articles and section transclusions are walked like transclusions (extractMainArticles — 'List of Re:Zero episodes' holds only the OVA / shorts table itself and points at 'Re:Zero season 3 / 4'); (3) the COMPANION-TABLE GUARD on the date-vote lock: dates prove a row only when the titles do not contradict it — over the date-matched rows where both sides carry a title, more disagreements than agreements refuses the page (re-zero's weekly shorts aired the same days as season 2: 50 date votes for +14, 23 of 23 titles disagreeing — a wrong lock the dry run caught); (4) the FAMILY-OFFSET CARRY: a franchise numbers its season sub-pages in ONE family space ('Ace of Diamond Act II season 2' runs 179-191, our act II tops at 52) — a skipped page whose numbering continues a locked sibling's (pmin = its top + 1) takes the sibling's PROVEN offset, and must still land where our rows end, fit our count and continue the dates; no locked sibling, no carry. Component labels with word ordinals ('Second Season') name their season like the digit forms. Evidence, never a guess: every lock still runs under G55's date gate.
 
 *Why:* orient (2 anchors) and cells-at-work-code-black (13 anchors, a reorder zone) sat with ZERO rows for two weeks — AFL's pages were empty and the wiki writer's finder could not locate their lists; the display synthesized rows from the anchors (A42) and every census read anchor_without_row. Cursor's naming fix (2026-09-04): G57 says who may DELETE a row; this is who may CREATE the grid — a new rule, not an amendment. Sean ruled the lane 2026-09-04.
 
 - ruled Sean 2026-09-04 (docs/STATE.md awaiting-Sean item (4) 2026-09-02 → §12.109)
 - layer **writer**
-- enforced: [lib/rulings/wiki-pages.ts#WIKI_PAGES](../scripts/ingest/lib/rulings/wiki-pages.ts) · [lib/rulings/minted-grids.ts#MINTED_GRIDS](../scripts/ingest/lib/rulings/minted-grids.ts) · [wiki-episodes-backfill.ts](../scripts/ingest/wiki-episodes-backfill.ts) · [mint-grids.ts](../scripts/ingest/mint-grids.ts) · [audit-ui-truth.ts#grid_unminted](../scripts/ingest/audit-ui-truth.ts) · [audit-ui-truth.ts#type_default_unclassified](../scripts/ingest/audit-ui-truth.ts)
+- enforced: [lib/rulings/wiki-pages.ts#WIKI_PAGES](../scripts/ingest/lib/rulings/wiki-pages.ts) · [lib/rulings/minted-grids.ts#MINTED_GRIDS](../scripts/ingest/lib/rulings/minted-grids.ts) · [wiki-episodes-backfill.ts](../scripts/ingest/wiki-episodes-backfill.ts) · [lib/wikipedia.ts#findEpisodePages](../scripts/ingest/lib/wikipedia.ts) · [lib/wikipedia.ts#extractMainArticles](../scripts/ingest/lib/wikipedia.ts) · [lib/wiki-identity.ts#titleCased](../scripts/ingest/lib/wiki-identity.ts) · [mint-grids.ts](../scripts/ingest/mint-grids.ts) · [audit-ui-truth.ts#grid_unminted](../scripts/ingest/audit-ui-truth.ts) · [audit-ui-truth.ts#type_default_unclassified](../scripts/ingest/audit-ui-truth.ts)
 - audit: `grid_unminted`, `anchor_without_row`, `type_default_unclassified`
-- witnesses: orient, cells-at-work-code-black, shounan-junai-gumi, shy
-- aliases: the mint rule, who mints the grid, grid minting, ruled wiki page, WIKI_PAGES, MINTED_GRIDS, manual grid, grid_unminted, AFL has nothing
+- witnesses: orient, cells-at-work-code-black, shounan-junai-gumi, shy, re-zero-starting-life-in-another-world, ace-of-the-diamond-act-ii, ghost-in-the-shell-2026
+- aliases: the mint rule, who mints the grid, grid minting, ruled wiki page, WIKI_PAGES, MINTED_GRIDS, manual grid, grid_unminted, AFL has nothing, wiki writer dry run, family-offset carry, companion-table guard, the finder searches every variant, titleCased, extractMainArticles, season sub-articles
 - see: G57, G55, A42, N13, P2, P9
 
 ### G60 · Rankings are a reader: a ranked queue, never authority
@@ -4635,6 +4635,7 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - community-count restructure heal → `N20`
 - community-count rule → `N3`
 - community-count rulings → `N3`
+- companion-table guard → `G59`
 - completeness as an outcome → `P32`
 - completeness sidecar → `P32`
 - component kind → `I19`
@@ -4829,6 +4830,7 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - extra_same_instrument → `I45`
 - extra_unknown → `I45`
 - extraBucket → `I45`
+- extractMainArticles → `G59`
 - extras ledger → `I45`
 - EXTRAS_ADOPTED → `N1`
 - eyeshield ep-74 lesson → `T6`
@@ -4836,6 +4838,7 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - eyeshield title report → `T16`
 - eyeshield-21 155 lesson → `N2`
 - fail closed source → `T25`
+- family-offset carry → `G59`
 - fan mapping threads → `R5`
 - fan threads first-class → `R5`
 - fandom + accounting beats AFL → `T4`
@@ -5375,6 +5378,7 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - Sean's UY report → `N21`
 - Sean's vocabulary → `T2`
 - search ranking is not identity → `G43`
+- season sub-articles → `G59`
 - second wiki → `R7`
 - second-wiki habit → `R7`
 - section envelope → `A36`
@@ -5546,6 +5550,7 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - the discover sitting → `I42`
 - the event-script trap → `P40`
 - the fifth bundle → `G60`
+- the finder searches every variant → `G59`
 - the first watch seat → `I45`
 - the fixture index is not an authority → `P40`
 - the flag rule → `G1`
@@ -5602,6 +5607,7 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - title-alignment verification → `N21`
 - title-join rule → `R20`
 - title-token overlap gate → `V5`
+- titleCased → `G59`
 - titles:excluded → `I11`
 - Tokyo Ghoul 144/143 rule → `N22`
 - Tokyo Ghoul rule → `N22`
@@ -5682,6 +5688,7 @@ A `series` row is deleted by exactly one path — rebuild.ts, a canonical-shape 
 - whole-series verifier → `P19`
 - wiki fill gates → `G45`
 - wiki row adoption → `I46`
+- wiki writer dry run → `G59`
 - WIKI_NUMBERING_SHIFTS → `N21`
 - WIKI_PAGES → `G59`
 - Wikipedia episode-list locks → `G44`

@@ -20,12 +20,14 @@
 //     series flagged once; lib/wiki-identity.ts is the one predicate, the
 //     census class episode_date_off_window the outcome check
 // Idempotent; re-runs fill only what is still missing.
-//   npx tsx --env-file=.env.ingest scripts/ingest/wiki-episodes-backfill.ts [seriesId ...]
+//   npx tsx --env-file=.env.ingest scripts/ingest/wiki-episodes-backfill.ts [--dry-run] [--ruled] [seriesId ...]
+//   --dry-run (2026-09-07, P40: a writer that mints rows has one): every lock and every planned row is printed, nothing is
+//   written — no episode insert / update, no fractional staging, no flag, no ingest run
 
 import { db, selectAll, startRun, finishRun, fileFlagOnce } from './lib/db';
-import { extractTransclusions, findEpisodePages, fetchWikitext, parseEpisodeList, type WikiEpisode } from './lib/wikipedia';
+import { extractMainArticles, extractTransclusions, fetchWikitext, findEpisodePages, parseEpisodeList, type WikiEpisode } from './lib/wikipedia';
 import { filterEpisodeRows, SOURCE_NUMBERING_SHIFTS, translateEpisodeNumber } from './lib/resolve';
-import { dateFit, disambiguatedTitles, pageFitsSeries } from './lib/wiki-identity';
+import { dateFit, disambiguatedTitles, pageFitsSeries, titleCased } from './lib/wiki-identity';
 import { WIKI_PAGES } from './lib/rulings/wiki-pages';
 import { loadEpisodeTies } from './lib/side-source';
 
@@ -52,7 +54,8 @@ const declaresWikiShift = (sid: string): boolean => {
 
 async function main() {
   const only = process.argv.slice(2).filter((a) => !a.startsWith('--'));
-  const runId = await startRun('resolve');
+  const DRY = process.argv.includes('--dry-run');
+  const runId = DRY ? -1 : await startRun('resolve');
   const counters = { fetched: 0, unchanged: 0, changed: 0, flagged: 0 };
   try {
     // targets: series with missing titles/dates (or no rows at all)
@@ -99,7 +102,9 @@ async function main() {
         // the prefix search for a remake / spin-off
         // G59 path B: a RULED page replaces the finder (the finder matched a namesake / a franchise list for orient / code-black)
         const ruledPage = WIKI_PAGES[t.id];
-        const pages = ruledPage ? [ruledPage.page] : await findEpisodePages([...disambiguatedTitles(t.title, t.start_date), t.title, t.title_native ?? ''].filter(Boolean));
+        // an ALL-CAPS AniList title also tries Wikipedia's casing (titleCased — the gits-2026 lesson); the finder searches every variant
+        const cased = titleCased(t.title);
+        const pages = ruledPage ? [ruledPage.page] : await findEpisodePages([...disambiguatedTitles(t.title, t.start_date), t.title, ...(cased ? [...disambiguatedTitles(cased, t.start_date), cased] : []), t.title_native ?? ''].filter(Boolean));
         if (ruledPage) console.log(`  ${t.id}: ruled wiki page "${ruledPage.page}" (G59)`);
         counters.fetched++;
         // no list page is NOT terminal — the main-article fallback below
@@ -112,7 +117,8 @@ async function main() {
           if (!wt) continue;
           const own = parseEpisodeList(wt);
           if (own.length) pageSets.push({ name: p, eps: own });
-          for (const sub of extractTransclusions(wt).slice(0, 15)) {
+          // transclusions AND {{Main|…}} season sub-articles (the re-zero lesson) — one bounded depth-1 walk
+          for (const sub of [...new Set([...extractTransclusions(wt), ...extractMainArticles(wt)])].slice(0, 15)) {
             const swt = await fetchWikitext(sub);
             if (swt) {
               const se = parseEpisodeList(swt);
@@ -137,7 +143,10 @@ async function main() {
         // ("Saishuushou", the head season) — callers fall back to position
         const seasonOfLabel = (label: string | null): number | null => {
           const m = String(label ?? '').match(/\b(\d+)(?:st|nd|rd|th)\s+season\b|\bseason\s+(\d+)\b/i);
-          return m ? Number(m[1] ?? m[2]) : null;
+          if (m) return Number(m[1] ?? m[2]);
+          // word ordinals (2026-09-07, Ace act II: AniList labels "Second Season") — the same season the digit form names
+          const w = String(label ?? '').match(/\b(first|second|third|fourth|fifth|sixth|seventh|eighth|ninth|tenth)\s+season\b/i);
+          return w ? ['first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth', 'ninth', 'tenth'].indexOf(w[1].toLowerCase()) + 1 : null;
         };
         // namesake guard for name-only page locks (the Kingdom lesson: the
         // 2007 British drama's list page is "List of Kingdom episodes"): a
@@ -154,6 +163,7 @@ async function main() {
         // a franchise family fills the seasons it can prove.
         const storedRows = eps.filter((e) => e.series_id === t.id);
         const byDate = new Map(storedRows.filter((e) => e.air_date).map((e) => [String(e.air_date), e.number]));
+        const storedTitleByNumber = new Map(storedRows.map((e) => [e.number, String(e.title ?? '').trim()]));
         const norm2 = (x: string) => x.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
         // similarity voting (exact equality missed translation variants —
         // Kenshin-2023's season pages were unlockable): ≥75% token overlap
@@ -182,6 +192,8 @@ async function main() {
         };
         let wiki: WikiEpisode[] = [];
         const skipped: { name: string; eps: WikiEpisode[]; isOwnArticle?: boolean }[] = [];
+        // every page set that LOCKED, with its proven offset and the top of its own numbering — the family-offset carry reads it
+        const locked: { name: string; offset: number; pmax: number }[] = [];
         const lockAndMerge = (sets: { name: string; eps: WikiEpisode[]; isOwnArticle?: boolean }[]) => {
         for (const ps of sets) {
           // G55 (the Thunderbolt lesson, 2026-09-06): a numbered table with NO air dates cannot be locked to the run — it is refused whole,
@@ -203,7 +215,36 @@ async function main() {
           // margin lock: the winner must dominate the runner-up (top-vs-
           // total drowned in cross-title vote spam — When They Cry had 223
           // votes at 0 yet failed the old ratio)
-          if (best && best[1] >= 3 && best[1] >= 3 * Math.max(second, 1)) offset = best[0];
+          if (best && best[1] >= 3 && best[1] >= 3 * Math.max(second, 1)) {
+            // COMPANION-TABLE GUARD (G55, 2026-09-07 — the re-zero lesson): a list page's own rows were the OVA / shorts table, and the
+            // weekly shorts aired the SAME DAYS as the season-2 episodes — 50 exact date votes for +14, a wrong lock that would have
+            // merged "Otto's Diary" over rows 51-79. Dates prove a row only when the titles do not contradict it. The measure is
+            // MEASURED, not assumed (the catalog dry run): a true table under a different titling system still shares a distinctive
+            // word on a quarter of its rows (One Piece's AniFiller titles vs Wikipedia's 4Kids titles: 3 of 13, 5 of 19; Cuckoos'
+            // translation variants: 17 of 23) — a companion table shares one on almost none (re-zero's shorts: 1 of 51). So: over
+            // the date-matched rows where both sides carry a title, at least ten compared and a distinctive word shared on at most
+            // one row in twenty = another table, refused; fewer compared rows is no evidence and the lock stands as before.
+            const STOP = new Set(['the', 'a', 'an', 'of', 'and', 'to', 'in', 'on', 'is', 'for', 'with', 'at', 'by', 'from', 'no', 'wa', 'ga', 'ni', 'part', 'episode', 'chapter', 'season']);
+            const sharesDistinctive = (a: string, b: string) => {
+              const tb = new Set(norm2(b).split(' ').filter(Boolean));
+              return norm2(a).split(' ').some((x) => x.length >= 4 && !STOP.has(x) && tb.has(x));
+            };
+            let agree = 0, compared = 0;
+            for (const w of ints) {
+              if (!w.airDate || !byDate.has(w.airDate) || !w.title) continue;
+              const ours = byDate.get(w.airDate)!;
+              if (ours - w.number !== best[0]) continue;
+              const st = storedTitleByNumber.get(ours);
+              if (!st) continue;
+              compared++;
+              if (sharesDistinctive(st, w.title) || simTokens(st, w.title) >= 0.75) agree++;
+            }
+            if (compared >= 10 && agree <= Math.max(1, Math.floor(compared / 20))) {
+              console.log(`  ${t.id}: page "${ps.name}" REFUSED — ${best[1] / 2} date matches at offset ${best[0]} but the titles share a distinctive word on only ${agree} of ${compared} (a companion table: shorts / OVAs aired alongside the run)`);
+              continue;
+            }
+            offset = best[0];
+          }
           // component lock: a page named "... season N" maps to our season-
           // order-N component's start (Kenshin-2023's junk-cleaned rows had
           // no votes to give)
@@ -258,6 +299,7 @@ async function main() {
             continue;
           }
           wiki = wiki.concat(ps.eps.map((w) => ({ ...w, number: w.number + offset })));
+          locked.push({ name: ps.name, offset, pmax: Math.max(...ints.map((w) => w.number)) });
           if (offset !== 0) console.log(`  ${t.id}: page "${ps.name}" locked at offset ${offset > 0 ? '+' : ''}${offset}`);
         }
         // CONTINUITY lock (the Kingdom S6 lesson: a list page's own rows run
@@ -274,7 +316,37 @@ async function main() {
             .map((r) => String(r.airDate))
             .sort()
             .pop();
-          const idx = skipped.findIndex((ps) => {
+          // FAMILY-OFFSET CARRY (G59 amended 2026-09-07, the Ace act II lesson): a franchise numbers its season sub-pages in ONE
+          // family space ("Ace of Diamond Act II season 2" runs 179-191 while our act II tops at 52); a sibling page PROVED the
+          // family's offset by votes (-126). A skipped set whose numbering continues a locked page's numbering (pmin = that
+          // page's top + 1) takes that page's offset — and must still fit our count and continue the dates, like any
+          // continuity lock. Evidence, never a guess: no locked sibling, no carry.
+          const carried = (ps: { eps: WikiEpisode[] }): { offset: number; via: string } | null => {
+            const ints = ps.eps.filter((w) => Number.isInteger(w.number));
+            if (!ints.length) return null;
+            const pmin = Math.min(...ints.map((w) => w.number));
+            const pmax = Math.max(...ints.map((w) => w.number));
+            const firstDate = ints.map((w) => w.airDate).filter(Boolean).sort()[0];
+            for (const l of locked) {
+              if (pmin !== l.pmax + 1) continue;
+              if (pmin + l.offset !== top + 1) continue; // the carried numbering must land exactly where our rows end
+              if (pmax + l.offset > ourTopForLock + 2) continue;
+              if (lastDate && firstDate && firstDate < lastDate) continue;
+              return { offset: l.offset, via: l.name };
+            }
+            return null;
+          };
+          let idx = skipped.findIndex((ps) => carried(ps) != null);
+          if (idx >= 0) {
+            const ps = skipped.splice(idx, 1)[0];
+            const c = carried(ps)!;
+            const ints = ps.eps.filter((w) => Number.isInteger(w.number));
+            wiki = wiki.concat(ps.eps.map((w) => ({ ...w, number: w.number + c.offset })));
+            locked.push({ name: ps.name, offset: c.offset, pmax: Math.max(...ints.map((w) => w.number)) });
+            console.log(`  ${t.id}: page "${ps.name}" family-offset-locked (continues "${c.via}"'s numbering at offset ${c.offset > 0 ? '+' : ''}${c.offset} → rows from ${top + 1})`);
+            continue;
+          }
+          idx = skipped.findIndex((ps) => {
             const ints = ps.eps.filter((w) => Number.isInteger(w.number));
             if (!ints.length) return false;
             const pmin = Math.min(...ints.map((w) => w.number));
@@ -285,6 +357,7 @@ async function main() {
           if (idx < 0) break;
           const ps = skipped.splice(idx, 1)[0];
           wiki = wiki.concat(ps.eps);
+          locked.push({ name: ps.name, offset: 0, pmax: Math.max(...ps.eps.filter((w) => Number.isInteger(w.number)).map((w) => w.number)) });
           console.log(`  ${t.id}: page "${ps.name}" continuity-locked (rows continue our numbering from ${top + 1})`);
         }
         for (const ps of skipped) {
@@ -304,6 +377,7 @@ async function main() {
           // series) episodes")
           for (const cand of [
             ...disambiguatedTitles(t.title, t.start_date).flatMap((d) => [`List of ${d} episodes`, d]),
+            ...(cased ? disambiguatedTitles(cased, t.start_date).flatMap((d) => [`List of ${d} episodes`, d]) : []),
             `List of ${t.title} (Japanese TV series) episodes`,
             `List of ${t.title} (TV series) episodes`,
             `List of ${t.title} (anime) episodes`,
@@ -366,7 +440,7 @@ async function main() {
           console.log(`  ${t.id}: page top ${pageTop} = our count — numbering aligned without fractional separators`);
         }
         if (midRunOrderOnly && !wikiAligned && !declaresWikiShift(t.id)) {
-          await fileFlagOnce(runId, t.id, 'wikipedia', 'count_mismatch', {
+          if (!DRY) await fileFlagOnce(runId, t.id, 'wikipedia', 'count_mismatch', {
             note: 'mid-run order-only component and the wiki page shows no fractional separators — numbering space unverified; fills past the insert withheld until a shift is declared or alignment verified',
           });
           counters.flagged++;
@@ -376,6 +450,7 @@ async function main() {
           // stage every fractional entry durably (Sean's ruling: non-main
           // entries are NOTED so the UI/watch-order phase decides from data)
           for (const f of fractionals) {
+            if (DRY) continue;
             await db.from('ingest_fractionals').upsert({
               series_id: t.id,
               position: f.number,
@@ -429,13 +504,14 @@ async function main() {
           if (!cur.air_date && w.airDate) patch.air_date = w.airDate;
           if (!patch.title && curTitle && w.title && curTitle.toLowerCase() !== w.title.toLowerCase()) conflicts++;
           if (Object.keys(patch).length) {
-            await db.from('episodes').update(patch).eq('series_id', t.id).eq('number', n);
+            if (!DRY) await db.from('episodes').update(patch).eq('series_id', t.id).eq('number', n);
             filled++;
           }
         }
         if (newRows.length) {
           const ruled = filterEpisodeRows(t.id, newRows, 'wiki', { sourceType: t.source_type, ties: await loadEpisodeTies(t.id) }); // T26: the side_source default
-          for (let i = 0; i < ruled.length; i += 500) {
+          if (DRY && ruled.length) console.log(`  ${t.id}: DRY — would create ${ruled.length} row(s) ${ruled[0].number}-${ruled[ruled.length - 1].number} (${ruled[0].air_date ?? '—'} … ${ruled[ruled.length - 1].air_date ?? '—'})`);
+          for (let i = 0; i < ruled.length && !DRY; i += 500) {
             const { error } = await db.from('episodes').insert(ruled.slice(i, i + 500).map((r) => ({ ...r, minted_by: 'wiki' }))); // G57: a wiki-created row is the wiki's — no AFL re-resolve may delete it
             if (error) throw new Error(error.message);
           }
@@ -444,30 +520,30 @@ async function main() {
         if (refused.length) {
           const first = refused[0], last = refused[refused.length - 1];
           console.log(`  ${t.id}: G55 REFUSED ${refused.length} row(s) dated outside the series' run (${first.number} ${first.airDate} … ${last.number} ${last.airDate}) — a namesake's page`);
-          await fileFlagOnce(runId, t.id, 'wikipedia', 'match_ambiguous', {
+          if (!DRY) await fileFlagOnce(runId, t.id, 'wikipedia', 'match_ambiguous', {
             note: `G55 identity gate: ${refused.length} wiki row(s) dated ${first.fit === 'before_start' ? 'before the series began' : 'after the series ended'} were refused (eps ${first.number}-${last.number}, ${first.airDate}…${last.airDate}) — the page belongs to a namesake; titles/dates withheld`,
             refused: refused.slice(0, 20),
           });
           counters.flagged++;
         }
         if (conflicts > 3) {
-          await fileFlagOnce(runId, t.id, 'wikipedia', 'taxonomy_conflict', {
+          if (!DRY) await fileFlagOnce(runId, t.id, 'wikipedia', 'taxonomy_conflict', {
             conflicts,
             note: 'wiki titles disagree with stored titles on many rows — numbering offset suspected; stored titles kept, verify',
           });
           counters.flagged++;
         }
         if (filled || created) counters.changed++;
-        console.log(`  ${t.id}: filled ${filled}, created ${created}${corrected ? `, CORRECTED ${corrected} shifted` : ''}${conflicts ? `, ${conflicts} title conflicts (kept stored)` : ''} [${pages.length} page(s)]`);
+        console.log(`  ${t.id}: ${DRY ? 'DRY — would fill' : 'filled'} ${filled}, ${DRY ? 'create' : 'created'} ${created}${corrected ? `, CORRECTED ${corrected} shifted` : ''}${conflicts ? `, ${conflicts} title conflicts (kept stored)` : ''} [${pages.length} page(s)]`);
         await sleep(400);
       } catch (e) {
         console.log(`  ${t.id}: ERROR ${String(e).slice(0, 90)}`);
       }
     }
-    await finishRun(runId, 'ok', counters, `wiki episodes backfill: ${counters.changed} series filled, ${counters.flagged} withheld`);
-    console.log('=== WIKI EPISODES BACKFILL COMPLETE ===');
+    if (!DRY) await finishRun(runId, 'ok', counters, `wiki episodes backfill: ${counters.changed} series filled, ${counters.flagged} withheld`);
+    console.log(`=== WIKI EPISODES BACKFILL COMPLETE${DRY ? ' (DRY RUN — nothing written)' : ''} ===`);
   } catch (err) {
-    await finishRun(runId, 'error', counters, String(err).slice(0, 200));
+    if (!DRY) await finishRun(runId, 'error', counters, String(err).slice(0, 200));
     throw err;
   }
 }

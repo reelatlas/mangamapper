@@ -78,6 +78,23 @@ export const pageFitsSeries = (series: WindowSeries, pageDates: (string | null |
 };
 
 /** year-disambiguated Wikipedia title forms for a namesake (a remake, a spin-off, a same-named earlier show) — generic, from the series' own start year */
+/**
+ * An ALL-CAPS title in Wikipedia's casing (2026-09-07, the gits-2026 lesson: AniList prints "THE GHOST IN THE SHELL", the article is
+ * "The Ghost in the Shell (2026 TV series)" and MediaWiki titles are case-sensitive past the first letter). Words capitalised, the
+ * small words lowered after the first; null when the title is not all caps (nothing to normalise). A heuristic CANDIDATE only —
+ * a miss is a missing page, never a wrong one (G55 still gates every row by date).
+ */
+export const titleCased = (title: string): string | null => {
+  const letters = title.replace(/[^A-Za-z]/g, '');
+  if (!letters || letters !== letters.toUpperCase()) return null;
+  const small = new Set(['a', 'an', 'the', 'and', 'or', 'of', 'in', 'on', 'at', 'to', 'for', 'by', 'with', 'from', 'no', 'wa', 'ga', 'ni', 'x']);
+  return title
+    .toLowerCase()
+    .split(/(\s+)/)
+    .map((w, i) => (i === 0 || !small.has(w) ? w.replace(/^([a-z])/, (m) => m.toUpperCase()) : w))
+    .join('');
+};
+
 export const disambiguatedTitles = (title: string, startDate: string | null | undefined): string[] => {
   const base = title.replace(/\s*\([^)]*\)\s*$/, '').trim();
   const year = startDate ? String(startDate).slice(0, 4) : null;

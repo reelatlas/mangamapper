@@ -220,6 +220,18 @@ export function extractTransclusions(wikitext: string): string[] {
   return [...new Set(out)];
 }
 
+// Season SUB-ARTICLES a list page links instead of transcluding (2026-09-07, the re-zero lesson: "List of Re:Zero episodes" holds
+// only the OVA / shorts table itself and points at "Re:Zero season 3" / "season 4" with {{Main|…}} — the episode tables live there).
+// Depth-1 targets to fetch like transclusions; a target with no episode rows is simply empty.
+export function extractMainArticles(wikitext: string): string[] {
+  const out: string[] = [];
+  // {{Main|Title}} / {{Main|Title{{!}}label}} / {{Main article|Title|l1=…}} — the target ends at the first pipe, nested {{!}} or close
+  for (const m of wikitext.matchAll(/\{\{\s*(?:Main|Main article|See also)\s*\|\s*([^{}|]+?)\s*(?:\{\{!\}\}|\||\}\})/gi)) out.push(m[1].trim());
+  // section transclusions — {{#Section-h:Title|Section}} / {{#section:Title|…}} / {{#lst:Title|…}} — pull a sub-article's table by part
+  for (const m of wikitext.matchAll(/\{\{#(?:Section-h|section|lst|lsth):\s*([^{}|]+?)\s*\|/gi)) out.push(m[1].trim());
+  return [...new Set(out)];
+}
+
 // "List of X episodes" family — mirrors findChapterPages.
 export async function findEpisodePages(titleCandidates: string[]): Promise<string[]> {
   const tried = new Set<string>();
@@ -247,7 +259,9 @@ export async function findEpisodePages(titleCandidates: string[]): Promise<strin
       for (const t of a) if (b.has(t)) shared++;
       return shared / Math.min(a.size, b.size) >= 0.5;
     });
-  for (const v of variants.slice(0, 2)) {
+  // every variant is searched (2026-09-07, the re-zero lesson): the two year-disambiguated forms used to occupy the only two
+  // search slots while the native title — the one the search resolves — sat fifth; a search is one request per variant
+  for (const v of variants) {
     const data = (await wikiGet({
       action: 'query',
       list: 'search',
