@@ -21,7 +21,7 @@ import { haloCandidates, loadDiscoveryInput } from './lib/discovery';
 import { adaptedNodes, deriveWatchPosition, ledgerWorthy, ownerInstrumentSet, planRuledMoves, retiredByOwnership, extraKind, freePosition, isoDate, pickAdoption, relatedWorkStanding, type ExtraBucket } from './lib/related-works';
 import { relatedWorkRuling } from './lib/rulings/related-works';
 import { RULED_POSITION_BY_ANILIST } from './lib/rulings/watch-order-labels';
-import { loadRelatedWorkRegistry, lookupRelatedWork, registerRelatedWorkIds, wikiKey } from './lib/related-work-ids';
+import { loadRelatedWorkRegistry, lookupRelatedWork, registerRelatedWorkIds, sharedMalIds, wikiKey } from './lib/related-work-ids';
 
 const DRY = process.argv.includes('--dry-run');
 const LEDGER_BUCKETS = new Set(['extra', 'recap', 'crossover']);
@@ -68,7 +68,19 @@ async function main() {
     // I46 (amended): THE IDENTITY REGISTRY — every id this writer knows maps into (series, anilist_id) once; only what the registry lacks is written
     const registry = await loadRelatedWorkRegistry();
     let registeredIds = 0; const collisions: string[] = [];
-    const malOf = (id: number) => (input.staged.get(id) as { idMal?: number | null } | undefined)?.idMal ?? null;
+    // I46 (amended 2026-09-07, the Annecy clause): a MAL id AniList assigns to two distinct works registers to NEITHER — withheld at every
+    // registration below, and un-registered where an earlier run had attached it to the first work it met (never pick a winner, never a row repair)
+    const sharedMal = sharedMalIds(input.staged as Map<number, { idMal?: number | null }>);
+    const malOf = (id: number) => { const mal = (input.staged.get(id) as { idMal?: number | null } | undefined)?.idMal ?? null; return mal != null && sharedMal.has(String(mal)) ? null : mal; };
+    let unregistered = 0;
+    for (const [mal, works] of sharedMal) {
+      const held = lookupRelatedWork(registry, 'mal', mal);
+      if (!held) continue;
+      unregistered++;
+      console.log(`  un-register mal:${mal} (held for work ${held.anilist_id}): AniList assigns it to ${works.join(', ')} — it registers to neither (I46, the Annecy clause); both AniList identities stay`);
+      if (!DRY) { const { error } = await db.from('related_work_external_ids').delete().eq('source', 'mal').eq('external_id', mal); if (error) throw new Error(`registry mal:${mal}: ${error.message}`); }
+      registry.delete(`mal:${mal}`);
+    }
     const register = async (sid: string, anilistId: number, ids: Record<string, string | number | null | undefined>, by: 'halo' | 'adoption') => {
       const missing: Record<string, string | number> = {};
       for (const [source, v] of Object.entries(ids)) if (v != null && v !== '' && !lookupRelatedWork(registry, source, v)) missing[source] = v;
@@ -224,8 +236,8 @@ async function main() {
       if (owners && !owners.has(r.series_id)) await remove(r, `re-attributed by rule to ${[...owners].join(', ')} (an alternative adaptation sits once, under the franchise base — I16 / I43)`);
     }
     if (collisions.length) console.log(`  ${collisions.length} identity collision(s) refused (I46):\n    ${collisions.join('\n    ')}`);
-    counters.changed = inserted + updated + adopted + dropped + registeredIds; counters.flagged = unpositioned + ambiguous + collisions.length;
-    console.log(`[sync-related-works] ${cands.length} staged related works → ${inserted} inserted, ${updated} updated, ${counters.unchanged} unchanged, ${adopted} identities adopted by wiki / ruled rows (I46), ${dropped} halo rows removed (duplicates / promotional / moved), ${ambiguous} ambiguous matches left to the census, ${held} standing pending (the sitting), ${unpositioned} without a derivable position, ${registeredIds} identities registered${DRY ? ' — DRY RUN' : ''}`);
+    counters.changed = inserted + updated + adopted + dropped + registeredIds + unregistered; counters.flagged = unpositioned + ambiguous + collisions.length;
+    console.log(`[sync-related-works] ${cands.length} staged related works → ${inserted} inserted, ${updated} updated, ${counters.unchanged} unchanged, ${adopted} identities adopted by wiki / ruled rows (I46), ${dropped} halo rows removed (duplicates / promotional / moved), ${ambiguous} ambiguous matches left to the census, ${held} standing pending (the sitting), ${unpositioned} without a derivable position, ${registeredIds} identities registered, ${sharedMal.size} shared MAL id(s) withheld (I46: registers to neither${unregistered ? `, ${unregistered} un-registered` : ''})${DRY ? ' — DRY RUN' : ''}`);
     await finishRun(runId, 'ok', counters, `related-works ledger: ${inserted} inserted, ${updated} updated, ${adopted} adopted, ${dropped} removed${DRY ? ' (dry run)' : ''}`);
   } catch (err) {
     await finishRun(runId, 'error', counters, String(err).slice(0, 200));

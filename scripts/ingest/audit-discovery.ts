@@ -14,7 +14,8 @@
 //   extra_alternative            I16 / I45: a work reached only by ALTERNATIVE / OTHER edges — a different telling of the same source, one row under the franchise base; a series candidate when it adapts an instrument
 //   related_work_duplicate       I46: a halo row and a wiki / ruled row name the same work, or a wiki / ruled row without an identity matches a staged work — sync-related-works adopts + removes
 //   related_work_identity_gap    I46 (amended): a stored identity the registry does not hold (a halo row's anilist / mal id, an adopted row's wiki key) — run sync-related-works
-//   related_work_identity_conflict  an id registered to a DIFFERENT work than the stored row shows — a mix-up, refused, ruled by Sean
+//   related_work_identity_conflict  an id registered to a DIFFERENT work than the stored row shows — a mix-up, refused, ruled by Sean; a MAL id AniList
+//                                   assigns to two distinct works that the registry holds for either (I46 amended 2026-09-07: it registers to neither)
 //   related_work_identity_orphan   a registry entry whose work has no stored row (the row went, the identity stays — P24 listing)
 //   related_work_stale           a ledger row (origin halo) whose AniList edge no longer reaches the series (P24 — a listing)
 //   related_work_violation       a ledger row whose standing / kind disagrees with the derivation (the healer must run)
@@ -35,7 +36,7 @@ import { relatedWorkRuling } from './lib/rulings/related-works';
 import { censusKindMark } from './lib/census-kinds';
 import { CANDIDATE_ENTRIES } from './lib/rulings/discovery';
 import { RULED_LABELS, RULED_POSITION_BY_ANILIST, RULED_RECORDS } from './lib/rulings/watch-order-labels';
-import { identityProblems, loadRelatedWorkRegistry } from './lib/related-work-ids';
+import { identityProblems, loadRelatedWorkRegistry, sharedMalIds } from './lib/related-work-ids';
 
 async function main() {
   const input = await loadDiscoveryInput();
@@ -71,7 +72,7 @@ async function main() {
   const stale: string[] = [], violation: string[] = [], duplicate: string[] = [];
   const registry = await loadRelatedWorkRegistry();
   const malOf = new Map<number, number | null>(); for (const [id, m] of input.staged) malOf.set(id, (m as { idMal?: number | null }).idMal ?? null);
-  const identity = identityProblems(allRows.map((r: any) => ({ series_id: r.series_id, position: Number(r.position), anilist_id: r.anilist_id, origin: r.origin, title: String(r.title) })), registry, malOf);
+  const identity = identityProblems(allRows.map((r: any) => ({ series_id: r.series_id, position: Number(r.position), anilist_id: r.anilist_id, origin: r.origin, title: String(r.title) })), registry, malOf, sharedMalIds(input.staged as Map<number, { idMal?: number | null }>)); // I46 (the Annecy clause): a shared MAL id registers to neither
   // I46 — one row per work: a halo row beside a wiki / ruled row naming the same work; a wiki / ruled row with no identity that a staged work matches
   for (const l of ledger) for (const o of others) if (o.series_id === l.series_id && o.anilist_id == null && (RULED_POSITION_BY_ANILIST[l.series_id]?.[Number(l.anilist_id)] === Number(o.position) || matchRelatedTitle(String(l.title), String(o.title)))) duplicate.push(`${l.series_id}: halo @${l.position} "${String(l.title).slice(0, 40)}" duplicates the ${o.origin ?? 'wiki'} row @${o.position} "${String(o.title).slice(0, 40)}" — run sync-related-works (adopt + remove)`);
   const yearOf = (c: typeof extras[number]) => (input.staged.get(c.anilistId) as { startDate?: { year?: number | null } | null } | undefined)?.startDate?.year ?? null;

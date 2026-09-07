@@ -598,6 +598,19 @@
         "extra"
       ],
       "source": "C2 (§12.148) and the /add-rule after it (§12.151), 2026-09-07"
+    },
+    {
+      "ask": "AniList gives the same MAL id to two different one-minute festival shorts under two owners — which work gets the MAL id in the related-work registry, and is the other a mix-up to repair?",
+      "expected": [
+        "I46",
+        "I44"
+      ],
+      "terms": [
+        "registers to neither",
+        "shared",
+        "MAL"
+      ],
+      "source": "the Annecy clause (§12.154), 2026-09-07"
     }
   ]
 }

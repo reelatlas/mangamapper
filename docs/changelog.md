@@ -1154,6 +1154,32 @@
    19-23 / 39 (chain_source) and 18 / 93-95 (AFL's loose Mixed bucket),
    beelzebub 15 / 26-28 / 51, rurouni TV ep 95 (identity). Batch 22 opens on
    the boruto follow-up (lanes I + C) with the batch-21 tooling copied.
+154. ✅ **THE ANNECY CLAUSE — I46 amended: a shared external id registers to NEITHER (2026-09-07; Sean with Cursor: 'register to
+    neither, never pick a winner, never a row repair').** THE SHAPE (§12.151's census, related_work_identity_conflict 1): AniList gives
+    ONE MAL id (59832) to two distinct one-minute Annecy Festival 60th Anniversary shorts — One Piece 143293 (one-piece @978.5) and
+    Dragon Ball 147996 (dragon-ball-super @131.53) — because MAL lists the pair as one entry: a GRANULARITY difference between sources,
+    not a mix-up in our data; the registry had attached the id to the first work it met and refused the second, the collision it
+    exists to catch. THE CLAUSE: an external id a source assigns to two or more DISTINCT works is not an identity of any of them — it
+    registers to neither; both AniList identities stay; no winner, no row repair. THE GATE (P2, one derivation): lib/related-work-ids.ts#
+    sharedExternalIds / sharedMalIds — a pure read of the staged (anilist, idMal) pairs — read by the writer (sync-related-works: malOf
+    withholds a shared id at every registration; a shared id an earlier run registered is un-registered, printed by id and counted)
+    and by the census (identityProblems takes the shared map: a withheld shared id is never a gap; one the registry holds for anyone
+    is ONE conflict line, by the id, never an orphan). THE RUN: dry run first (P40) — 'un-register mal:59832 (held for work 143293)',
+    3 shared MAL ids withheld, 1 un-registered, nothing else moved; live the same; the second dry run 0 un-registered (idempotent).
+    THE OTHER TWO shared ids are owned COMPONENT pairs — JoJo's Steel Ball Run 1st / 2nd-3rd STAGE (190327 / 210482 on MAL 61469,
+    C2's I24 components) and Knights of the Zodiac parts 1 / 2 (102427 / 114448 on MAL 36040, series-shaped candidates) — where a
+    component's mal_id is an ATTRIBUTE and only a head registers (I44): never in the related-work registry, nothing to un-register;
+    the clause lives where a MAL id is a KEY. NOT widened: the series registry (I44, registerIds) keeps its hard collision error — two
+    of OUR series sharing a MAL id would be a question for Sean, not a granularity fact. CENSUS (vs §12.153, every delta explained —
+    P17): related_work_identity_conflict 1 → 0, the only class this change moves; identity_gap 0, identity_orphan 0; every violation
+    class 0; discovery unchanged (halo_series_unclaimed 94, unruled 428, cluster_disorder 52, short_unlisted 0, new_since_sitting 2);
+    UI-truth identical (title_incomplete 20, airdate_incomplete 21, type_default_unclassified 87, frontier_tail_null 14,
+    fractional_unmodeled 5; 220 verified, 0 failing) — except permanence_candidate 52 → 53, which moved at §12.153 and was not
+    recorded there: revolutionary-girl-utena's two date fills were its last open item, so it joined Sean's signing queue (P25, never
+    signed for him). LEDGER: I46 amended (the shared-id clause in the statement, the fork in the why; amendedOn 2026-09-07; aliases
+    'registers to neither' / 'the Annecy clause' / 'shared MAL id' / 'sharedExternalIds'; enforcement + sharedExternalIds / sharedMalIds;
+    witnesses + one-piece / dragon-ball-super); one-hop case added (50/50); 2 unit tests (301). Edges rebuilt + deployed ×5; lint 437
+    (baseline); system census green.
 153. ✅ **THE EVENT WIKI RUN — the five catalog readings applied (2026-09-07).** §12.152's catalog-wide dry run named five
     series; each was dry-run on its own lock lines and read: that-time-i-got-reincarnated-as-a-slime creates 92-93 (the airing
     S4's newest rows, 2026-08-28 / 09-04; the main list page's own rows REJECTED as a namesake — the season sub-pages locked,
