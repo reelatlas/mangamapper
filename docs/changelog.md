@@ -1154,6 +1154,33 @@
    19-23 / 39 (chain_source) and 18 / 93-95 (AFL's loose Mixed bucket),
    beelzebub 15 / 26-28 / 51, rurouni TV ep 95 (identity). Batch 22 opens on
    the boruto follow-up (lanes I + C) with the batch-21 tooling copied.
+156. ✅ **THE EVENT WIKI RUN AFTER THE TWO-PART-TITLE PARSER FIX + the AniList check (2026-09-07).** THE TRIGGER: §12.155's parser fix
+    (lib/wikipedia.ts#multiPartTitle) made the ~140 empty-title wiki rows the S4 verifier counted fillable; title_incomplete is the event
+    run's trigger. THE DRY RUN FIRST (P40; 33 target series, every lock line read): three series fill — kinnikuman 134 (its 1983 run
+    is two segments per episode), welcome-to-demon-school-iruma-kun 9 (12 title conflicts kept stored — fill-only), cells-at-work 3;
+    the fills PREVIEWED row by row before the live run (number AND date match on every one: 'Messenger From Planet Kinniku / The Man
+    From America' …); nothing created anywhere (re-zero 80-81 and gits ep 10 stay off, as ruled); the companion-table guard refused
+    re-zero's shorts table again; 15 series read 'no page could be offset-locked' (dan-da-dan, wind-breaker, ranma1-2-2024, the
+    beginning-after-the-end, digimon-adventure, one-piece-log … — their empty titles are NOT the two-part shape; a lock question for a
+    later reading); G55 refused one-piece 1 and girls-last-tour 10 namesake rows. THE LIVE RUN on the three: filled 146, created 0. THE
+    ANILIST CHECK (Sean's question): still 403 — the body is BYTE-FOR-BYTE the documented 'API unavailable' example (docs.anilist.co
+    'API Stability': 'The AniList API has been temporarily disabled due to severe stability issues.'), the GLOBAL suspension, not a block
+    of us: a manual IP block carries 'a custom message letting you know that you have been blocked and why'; our client paces at 30
+    req/min against the documented degraded limit (90 normally), one daily cron plus budgeted stagings — far under; the rate-limiting page
+    reads 'We are not currently accepting requests for increased rate limits' — nothing to email now; the ask would be
+    contact@anilist.co ('Rate Limit Raise {app}': username, the limit wanted, a description, links, evidence) only if a restage or a
+    catalog-wide refresh ever needs more than 90/min, which today's cadence does not. CENSUS (UI-truth vs §12.155, every delta explained
+    — P17): title_incomplete 19 → 17 (iruma-kun and cells-at-work complete; kinnikuman keeps 3/137 its page does not carry); run_stuck 0 →
+    2 → 0 — afl #1391 (06:40 UTC) was killed by the §12.155 edge deploy landing in the same minute as the hourly refresh-afl (a TRAP: deploy
+    edges off the cron minutes) and afg #1407 (09:20 UTC) by the edge wall clock mid-rotation (G58); the standard healer heal-stuck-runs
+    marked both; THREE MOVERS THE KILLED AFG RUN LEFT before it died (it had rebuilt the afg tier on ~11 series, 09:20-09:23): (1)
+    anchor_start_offtrend 0 → 4 — record-of-ragnarok's afg anchors at 20 / 21 / 23 / 26 were re-created, so the batch-12 ROUND-GRAIN
+    manual STARTs (22 [31], 27 [43], 33 [55], 38 [66]) now sit below a preceding afg END: the exact rows of batch 23 wave 1's first ask
+    (the round-grain map refined to pages; an OPEN class, queued, not a violation); (2) ok_full 255 → 254 / ok_no_volume 9 → 10 —
+    a-couple-of-cuckoos' 36 afg anchors were rebuilt under V11 (the volume at write from the boundary table; manga 114383 has NO table →
+    null, the legacy volumes gone — honest under P6; the fix is a volume_boundaries ingest for 114383, the V11 event trigger); (3)
+    asterisk_unreviewed 180 → 181 — spy-x-family gained one afg-derived annotation and the census set its review to pending; every
+    violation class 0. NOT a spend: the whole pass is script work.
 155. ✅ **BATCH 24 WAVE 1 — THE TYPING WAVE APPLIED (2026-09-07; Sean ruled with Cursor: all eleven decisions as recommended, the two
     forks as the verifiers read the rules).** THE WAVE: four research-agents (Opus) on lane T — a wiki-minted default-canon block typed
     under T25-T28 AND anchored from zero, the instrument stated PER ASK ('one protocol shape will lie') — and four Fable reports (R23 ON:
