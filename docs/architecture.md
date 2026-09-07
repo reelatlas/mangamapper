@@ -111,6 +111,14 @@ in `docs/runbook.md`. The design constraints it runs under are ledger
 records: `G47` freshness map · `G15` conditional GETs · `G9` hash gate ·
 `G16` etiquette · `G29` validation tier is event-driven.
 
+## 4b. The airing lanes and the source partition (2026-09-06)
+
+Three lanes carry airing shows, all on the crons (`docs/runbook.md`):
+
+- **Held series that are airing** — `refresh-anilist` (daily 08:10 UTC) runs `lib/anilist-refresh.ts#refreshAniList`: every staged payload refreshes; a series is re-resolved when a resolve input's structural hash differs from `ingest_anilist_media.resolved_hash` — the hash the series was last RESOLVED from, stamped only by the resolvers (`lib/resolve.ts#stampResolved`) — never from staging's own hash, so a restage leaves a resolve debt by construction (`anilist_resolve_debt` must be 0). Airing and upcoming series go first, then the oldest resolve. The local form `scripts/ingest/refresh-anilist.ts` runs the same loop without the budgets (`--all` = the catch-up). `G58`.
+- **New seasons of held series** — the halo (`I42`): unowned story relations of owned entries, staged weekly by `refresh-discovery`; `halo_airing` lists the airing / announced ones for a `/discover` sitting; a ruled extension on an owner with no AFL page is keyed by its series id (`I27`).
+- **New IP** — the ranked lists (`G60`), a PARTITION of AniList's source enum (`T31`, `lib/rankings.ts`): the MANGA family (the mapping census, untouched), the NOVEL family, and OTHER (the exact complement — originals and their kin), each with airing / upcoming / popular lists, plus trending and manga-first. The seed queue keeps every no-instrument title and marks it; such a series enters as a full member with no chapter strip and publishes only by an explicit ruling (`P39`); a title nothing in the catalog relates to mints with `newIp: true` (`lib/rulings/discovery.ts#seedRelationHold`).
+
 ## 5. Where things run
 
 - **Backfill + development**: local `tsx` scripts under `scripts/ingest/`

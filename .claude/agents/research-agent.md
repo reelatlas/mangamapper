@@ -123,6 +123,13 @@ Read both, fully:
 
 ## Traps that have cost real time
 
+- **An interview is dated by the page's own publish date, never by the ja-WP citation date** (wave 6, DanMachi: Comic Natalie 2019-08-09 was filed as 08-16 from ja-WP's ref name; Da Vinci's 更新日 2020-04-30 is not its 2019-09-07 publish date). Read `datePublished` / the visible date on the fetched page.
+- **The wiki category / revisions API caps at 50 per query** (wave 6, Fruits Basket): a "coverage set from one query" over a run longer than 50 episodes is silently truncated — page through `cmcontinue` / `rvcontinue` or read the pages directly, and say which pages you read.
+- **A line you attribute to a licensor page must be verbatim in the fetched bytes** (wave 5, DanMachi: a 完全オリジナル line attributed to the STORY page was not on it — the verifier struck it). Paste the surrounding text into the note; every 「…」 quote is grepped against its URL.
+- **A comicalization is downstream of the anime, never an instrument** (wave 6: the 2009 Yo! Son Goku manga chapter; Takaya's -prelude- booklet): a printed piece drawn FROM the work is a tie-in (T26's direction — material INTO the source line is adoption, material OUT of it is not), never a chapter to cite or a manga to mint.
+- **A bundle is one row; each member's window goes in the note** (OPM S1 / S2): the position is the derived seam when every member's floor is cleared and nothing pins later — never "the last member" or "the latest pinned member" minted as a convention (P9).
+- **The stored row has fields the context may not print**: read the STORED LEDGER ROW block whole (air_date, origin, note) before writing `repairs: []` — a wrong AniList date is a `RelatedWorkRuling.airDate` repair (wave 6, Food Wars).
+
 - **MangaBaka is peek-only, never a citation.** Its `anime.start/end` field is MangaUpdates' coverage prose copied verbatim (the same MU "EP N" pins G56 treats as filler-row noise); its search ranks side works over the main series; its relations are untyped. Cite AniList / MU / the wikis directly instead.
 
 - **A season typed from one "the ending is anime-original" claim** can be

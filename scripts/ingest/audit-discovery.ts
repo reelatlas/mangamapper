@@ -27,6 +27,7 @@ import { candidateLine, discoveryClasses, haloCandidates, loadDiscoveryInput } f
 import { lastSitting, SITTINGS } from './lib/rulings/discovery';
 import { loadLatestRankings, seedCandidates, seedLine, type Seed } from './lib/rankings';
 import { resolveDebt, resolveInputsOf } from './lib/anilist-refresh';
+import { ENTRIES as RELATED_WORK_ENTRIES } from './lib/rulings/related-works';
 import { selectAll } from './lib/db';
 import { clusterDisorder, deriveWatchPosition, type ExtraBucket, pickAdoption, isoDate, ledgerBaseProblems, ledgerWorthy, matchRelatedTitle, relatedWorkStanding, extraKind } from './lib/related-works';
 import { relatedWorkRuling } from './lib/rulings/related-works';
@@ -114,6 +115,10 @@ async function main() {
     if (ruling.airDate !== undefined && (o.air_date ?? null) !== ruling.airDate) violation.push(`${o.series_id} @${o.position} (${o.origin} row): air_date ${o.air_date} ≠ ruled ${ruling.airDate} (P8 repair) — run sync-related-works`);
     if (ruling.position != null && Number(o.position) !== ruling.position) violation.push(`${o.series_id} @${o.position} (${o.origin} row): a ruled position ${ruling.position} on an adopted row is refused — the fractional's position is its own ruling; rule the fractional, not the work`);
   }
+  // P24 (the 2026-09-06 consolidate): a related-work RULING whose (series, anilist id) matches no ledger row — a row retired by ownership, a
+  // moved owner, a typo — is dead weight that would silently re-apply if the row ever returned; the three PoT chain entries were the witness
+  const rowKeys = new Set(allRows.filter((r: any) => r.anilist_id != null).map((r: any) => `${r.series_id}#${r.anilist_id}`));
+  const rulingOrphans = RELATED_WORK_ENTRIES.filter((e) => !rowKeys.has(`${e.seriesId}#${e.value.anilistId}`)).map((e) => `${e.seriesId} × anilist ${e.value.anilistId}: a ruling with no ledger row — retire the entry or restore the row (P24)`);
   // E2 — a positioned row whose base episode has no row
   const epNumbers = new Map<string, Set<number>>(); for (const [sid, eps] of epsBy) epNumbers.set(sid, new Set(eps.map((e) => e.number)));
   const ruledPosition = (sid: string, pos: number, anilistId: number | null) => RULED_RECORDS[sid]?.[pos] != null || RULED_LABELS[sid]?.[pos] != null || (anilistId != null && (relatedWorkRuling(sid, anilistId)?.position === pos || RULED_POSITION_BY_ANILIST[sid]?.[anilistId] === pos));
@@ -176,6 +181,7 @@ async function main() {
     discovery_ruling_stale: classes.discovery_ruling_stale.map((r) => `anilist ${r.anilistId}: ${r.why} (P24 — re-rule or retire the entry)`),
     seed_candidate: seeds.map(seedLine),
     anilist_resolve_debt: resolveDebtLines,
+    related_work_ruling_orphan: rulingOrphans,
     halo_airing: haloAiring.map(candidateLine),
     seed_airing: seedAiring.map(seedLine),
   };

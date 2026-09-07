@@ -11,6 +11,8 @@ export const CENSUS_CLASS_KINDS: Record<string, CensusClassKind> = {
   seed_candidate: 'queue',
   // G58 (amended 2026-09-06, the airing writer fix): the AniList refresh's outcome and the airing work-lists
   anilist_resolve_debt: 'violation', halo_airing: 'queue', seed_airing: 'queue',
+  // P24 (the 2026-09-06 consolidate): a ruling with no row is dead weight
+  related_work_ruling_orphan: 'listing',
   // I45 — the related-works buckets (AniList's CLAIM, a bucket census — not a work-list)
   extra_same_instrument: 'listing', extra_other_instrument: 'listing', extra_unknown: 'listing', extra_unstaged: 'listing',
   extra_recap: 'listing', extra_original: 'listing', extra_crossover: 'listing', extra_promo: 'listing', extra_alternative: 'listing',

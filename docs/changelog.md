@@ -1154,6 +1154,34 @@
    19-23 / 39 (chain_source) and 18 / 93-95 (AFL's loose Mixed bucket),
    beelzebub 15 / 26-28 / 51, rurouni TV ep 95 (identity). Batch 22 opens on
    the boruto follow-up (lanes I + C) with the batch-21 tooling copied.
+147. ✅ **CONSOLIDATE DEEP after §12.146 (2026-09-06; P21 — enforcement sites changed: G58, G52, G60, I13, I27, I42, I45,
+    T31).** THE WRITER SWEEP found one real churn: the AFG / continua anchor writers left `volume` NULL and heal-anchor-volumes
+    re-filled 1385 rows in a day (one-piece's 1029 alone) after every AFG refresh — every anchor writer now derives the volume
+    at write through the one derivation (lib/anchors.ts#volumeAtWrite → lib/volumes.ts#volumeForChapter; V11 amended); the
+    healer converges. THE HELD HEALERS ran with the roster: heal-anchor-volumes (the one-time 1385) and sync-watch-order (safe
+    — the No Regrets namesake fractional 13.5 'Since That Day', my own pre-fix wiki write, deleted from staging; the finder
+    now refuses namesake pages by air-date votes). STALE CLEANUP (P24): the three PoT chain rulings (995 / 2752 / 4053 under
+    the-prince-of-tennis) pointed at rows the Tennis sitting retired — retired, their facts are that series' 26 anchors from
+    the same verdicts; a census class for the shape, related_work_ruling_orphan (0); the STATE sidecar 'candidate media are
+    never re-fetched' corrected (they are); apply-tennis-anchors.ts moved to history/ (P34). THE retiresWhen WORKLIST walked
+    (23 conditions): none met mechanically except DIGIMON BEATBREAK's ('phase B lands' — it did; re-ruled at B's first
+    sitting); Shield Hero S5 is 2027 undated; Kingdom Zoku-hen and Golden Kamuy's finale undated; re-zero's AFL page still
+    stops at 50; the three no-AFL owners still have no AFL page. THE AMENDED-RULE READ-LIST (P23): the rulings citing G52 /
+    G58 / G60 / I13 / I27 / I42 / I45 / P39 / T26 / T31 re-read — no reason encodes a retired clause (ledger-check green on
+    every retiredPhrase). CAPTURES ROUTED (P29): research-agent traps (an interview's own publish date; the wiki API's 50-item
+    cap; the licensor-quote grep; a comicalization is downstream; a bundle is one row; read the stored row whole);
+    verdict-verifier (the grep test; a ruling must LAND — adopted rows, clusters, in-place edits; the context prints less than
+    the row holds); research-batch (stagger the verifiers, recover from disk, the AniList-outage clause); discover (--only per
+    key, the no-AFL owner keyed by series id, the finder's component lock, the mint's hangers-on, the apply's own staging);
+    apply-batch (adopted rows, one-package clusters, in-place edits, the parallel-owner shape, the recap flag); the validator
+    (a parallel-owner clause warns instead of refusing; null chapter fields proposed; a CLUSTER marker on a conditional
+    seat); I45 amended (rulings apply to adopted rows; the orphan class), I27 amended (the no-AFL owner keyed by series id);
+    architecture.md §4b (the airing lanes and the source partition). NOT DONE HERE, by design: the catalog-wide re-evaluation
+    of old rulings under every live rule (the lock pass, an amendedOn-vs-ruledOn worklist); Sean's queues untouched
+    (permanence_candidate 52, asterisk_unreviewed 178 incl. the Tennis annotation, Tanya's two fractionals, the Berserk
+    count_mismatch flag); the open-flag backlog (count_mismatch 210 · match_ambiguous 90 · parse_integrity 31 ·
+    taxonomy_conflict 26 · large_diff 2, oldest 2026-08-22) is Sean's triage class, listed, not farmed. CENSUS_DEEP_PLACEHOLDER
+
 146. ✅ **EXTRAS WAVE 6 APPLIED (Sean ruled 2026-09-06 with Cursor: all eleven as recommended — DBS Resurrection 'F' canon
     at 14.5, the DBZ 288.5x cluster as one package, Blue Exorcist pinned, no Kai row for Yo! Son Goku).** Seven works + the
     narrow Dragon Ball slot ask (Golden Age Arc III dropped: the Memorial Edition is a series and berserk-golden-age-arc an

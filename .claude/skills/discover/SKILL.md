@@ -102,6 +102,12 @@ revisit condition) · `standalone` (I13 default — no entry needed).
 
 ## Traps
 
+- **Apply a ruled extension with `stitch.ts --only <key>`, one key per ruling** (C1, 2026-09-06): the stitcher's dry run also lists every pre-existing open `count_mismatch` flag (Berserk Golden Age, 13 vs AFL 6) — those are Sean's triage, never a side effect of a sitting.
+- **An owner with NO AFL page is extended by its SERIES ID** (C1: Iruma-kun, 100 Girlfriends, Polar Opposites): the chain is the ruling, nothing of AFL's merges, the rows come from the wiki writer (G59 A) or AFG. The `OVERRIDE_CHAINS` key is the AFL slug where one exists, else the series id.
+- **The wiki finder's component lock needs season-ordinal labels** (C1, re-zero: "List of … episodes" with per-season tables against components labelled with the AniList title): no page locks → the rows are OWED, a RULED page key (G59 B, lib/rulings/wiki-pages.ts) is the next step. The finder's namesake refusals (air dates belonging to another show) are working — read them as evidence, not failures.
+- **A series mint takes the chain's hangers-on with it** (the Tennis sitting; the Unicorn precedent): the walk re-attributes works hanging off the new series' own instruments — show the ledger moves in the dry-run recap; they are re-derivable rows, never rulings.
+- **The apply's own staging shows up as `discovery_new_since_sitting`** until the next sitting log: read the members — at C1 they were the genuinely new hop-1 spin-offs the walk found only once the seasons were owned (Break Time S3 / S4, Youjo Shenki 2).
+
 - **An EVENT roster script runs only on its trigger, after you have READ it, with `--dry-run` first where it has one — and a script with no dry-run is never assumed to have one** (INCIDENT-2026-09-05, `P40`): `audit-titles.ts` was run to apply one exclusion and deleted six series through a cascade against a stale fixture index; `afg-expansion.ts` has no dry-run and created a series when the flag was passed. Never run a script for its side effect; find the ruling map its job belongs to.
 - **A held plan is never forced.** An ambiguous SEQUEL walk (two sequels) is a
   `chain:` ruling on the entry, decided by Sean.

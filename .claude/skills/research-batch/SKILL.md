@@ -94,6 +94,12 @@ regime, a repair contradicting stored data, a chapter-space claim — run
 the saint-seiya phantom-53 and the rayearth 14-chapter claims before they
 reached the data.
 
+## Traps this protocol has actually hit
+
+- **A session limit kills every agent at once — stagger the verifiers** (wave 6, 2026-09-06: eight research agents plus six verifiers in flight; seven verdicts had landed, every verifier died before writing). Dispatch verifiers in halves as verdicts land, never the whole wave at once; the recovery is FROM DISK (`out/` holds the verdicts, `verify/` the reports) — re-dispatch only what is missing, pointing each rerun at its predecessor's scratch dir (the fetched pages survive). An agent dispatched before the kill can still finish after an account switch: stop the duplicate.
+- **AniList's API can be down for a whole day** (2026-09-06, "temporarily disabled due to severe stability issues"): the contexts carry the staged facts — say so in every ask, and never let an agent guess a date or a count from memory.
+- **Quote the census line verbatim in the ask** — see step 3 (the AFG label lesson).
+
 ## When research is the wrong tool
 
 If a question can be settled by a script — an audit class, a census delta,

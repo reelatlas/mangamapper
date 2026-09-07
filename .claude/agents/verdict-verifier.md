@@ -35,6 +35,12 @@ errors.
    numbers, or a franchise-level value on a scoped entry.
 6. **Citation quality** — content farms or AI summaries used as primary.
 
+## Three checks that found the biggest defects (waves 5-6)
+
+- **Every quote is grepped against its cited URL, in the fetched bytes.** A licensor line attributed to a page that does not carry it is struck (wave 5, DanMachi); an AI-written wiki summary pasted as a "plot summary" is not a source (wave 6, Food Wars ch 118).
+- **A ruling must LAND.** Read the stored row's origin: a wiki / ruled row takes ruled facts through the adopted-row path and keeps its own position (BSD Walking Alone — the first verdict to hit a wiki row); a proposed seat that collides with a sibling row is a CLUSTER ruling, one package (the DBZ 288.5x; the writer refuses a half-applied cluster silently); an existing entry is edited in place, never replaced (DanMachi 21660 — a paste would have dropped the cluster position).
+- **The context prints less than the row holds.** Check the stored air_date, origin and note in the DB before accepting `repairs: []`.
+
 ## How to report
 
 **Recap baseline (Sean 2026-08-28):** every row you name carries its stored

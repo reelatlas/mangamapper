@@ -1204,6 +1204,7 @@ export const ENTRIES: RulingEntry<RelatedWorkRuling>[] = [
     cite: ['scripts/ingest/research/discovery/out/that-time-i-got-reincarnated-as-a-slime__106509.json', 'scripts/ingest/research/discovery/verify/that-time-i-got-reincarnated-as-a-slime__106509.md'],
   },
   // ---- WAVE 4a (Kinnikuman ×3, Ranma ×3, One Piece ×2) + WAVE 4b (the Prince of Tennis National Tournament chain), Sean ruled 2026-09-05 with Cursor's notes: positions as WATCH SLOTS where the licensor states the setting; the Ranma cluster ruled explicitly (E13); the PoT chain three ledger rows now, an OVA component at the next /discover sitting
+  //      (the three PoT chain entries — 995 / 2752 / 4053 under the-prince-of-tennis — were RETIRED at the 2026-09-06 consolidate (P24): the works became the-prince-of-tennis-national-tournament's own components at the Tennis sitting (§12.142), the rows retired under I13 (d), and their facts live as that series' 26 anchors from the same verdicts)
   {
     seriesId: 'kinnikuman',
     ruleId: 'I45',
@@ -1273,36 +1274,6 @@ export const ENTRIES: RulingEntry<RelatedWorkRuling>[] = [
     ruledBy: 'Sean',
     ruledOn: '2026-09-05',
     cite: ['scripts/ingest/research/discovery/out/one-piece__20835.json', 'scripts/ingest/research/discovery/verify/one-piece__20835.md'],
-  },
-  {
-    seriesId: 'the-prince-of-tennis',
-    ruleId: 'I45',
-    value: { anilistId: 995, standing: 'canon', chapter: 305, volume: 35, chaptersAdapted: "248-305 in running order (vols 29-35) + first-time interludes 237(tail)-239, 240, 242, 245, 247 (vols 27-29); 249 re-shown as flashbacks (a sliver); gaps 241 / 243 / 244 / 246 never animated; ep 5's Doubles 1 dramatised from a match the manga reports in 269 (the one original share)", note: "CANON — the 13-episode 全国大会篇 (2006-03-24 → 2007-03-23) restarts the adaptation the TV run abandoned after the Kanto final; every row on the wiki's fields AND the licensor's per-episode synopses. END 305 (Atobe's shave; the Semifinal opens on 306). Held until now because adaptedNodes drops every edge when AniList's source tag is null — the ADAPTATION → 30049 edge was staged all along (E15). Position 178.5 after ep 178 (2005-03-30), first of the chain. Konomi 原作 = a credit (T26)." },
-    reason:
-      "Wave 4b (verified SOUND WITH NOTES): all three triage corrections reproduced (245 in ep 2; ep 8's 248 the other half; 249 a flashback sliver); the 'stale snapshot' repair refuted on mechanism (E15); ep 5's original match mixed only at episode grain. Sean 2026-09-05: canon; the chain stays three ledger rows now and is declared an OVA COMPONENT (own numbering 1-26 or three sets, never TV 179-204; the verdict JSON the anchor source) at the next /discover sitting.",
-    ruledBy: 'Sean',
-    ruledOn: '2026-09-05',
-    cite: ['scripts/ingest/research/discovery/out/the-prince-of-tennis__995.json', 'scripts/ingest/research/discovery/verify/the-prince-of-tennis__995.md'],
-  },
-  {
-    seriesId: 'the-prince-of-tennis',
-    ruleId: 'I45',
-    value: { anilistId: 2752, standing: 'canon', chapter: 340, volume: 38, chaptersAdapted: "306-340 (vols 35-38): ep 1 306-313 (a 305 cold open re-shown — a sliver) · 2 314-321 · 3 321-327 · 4 327-332 · 5 331-336 + 338 · 6 336-340", note: "CANON — the six-episode Semifinal (2007-06-22 → 2008-01-25; the licensor's 9月25日 for disc 2, not the wiki's Sept 28): Seigaku vs Shitenhōji, 36 chapters in 136 min, every difference a cut. END 340 「テニスの王子達へ」 in full; the Final opens on 341. Numbering: the licensor 第1話-第6話, the platforms Episode 14-19, TV Tokyo 2011 ＃1-＃13 with the Final. Position 178.51, second of the chain. Konomi = a credit (T26)." },
-    reason:
-      "Wave 4b (verified SOUND WITH NOTES): all eight rows on both lineages character for character; the 305 seam leans re-shown (a pre-OP cold open); the seams 305/306 and 340/341 clean; vol 38 on four lineages. Sean 2026-09-05: canon, 178.51 (durable — strictly increasing dates).",
-    ruledBy: 'Sean',
-    ruledOn: '2026-09-05',
-    cite: ['scripts/ingest/research/discovery/out/the-prince-of-tennis__2752.json', 'scripts/ingest/research/discovery/verify/the-prince-of-tennis__2752.md'],
-  },
-  {
-    seriesId: 'the-prince-of-tennis',
-    ruleId: 'I45',
-    value: { anilistId: 4053, standing: 'canon', chapter: 379, volume: 42, chaptersAdapted: "341-379 (vols 39-42): 341-344 · 345-353 · 354-358 · 359-365 · 365-370 · 370-375 · 374-379 — to the manga's last chapter", note: "CANON — the seven-episode Final (2008-04-25 → 2009-01-23; 第0話 on the BOX): Seigaku vs Rikkai to the epilogue; 379 is the final chapter (vol 42 = 372-379; MU: 'Vol 42, Chap 379 (Including OVA)'). Clean seam from 340. The next works (ANOTHER STORY 5751, the 2021 film 113254) adapt nothing printed. Position 178.52, third of the chain. Konomi = a credit (T26)." },
-    reason:
-      "Wave 4b (verified SOUND WITH NOTES): all seven rows on the fandom and the licensor, 379 the final chapter on four sources, the seam from 340 clean with no recap share, 178.52 durable; the chapter fields are one editor's 2015 sitting (the single-lineage caveat, corroborated by the licensor at every boundary). Sean 2026-09-05: canon, 178.52.",
-    ruledBy: 'Sean',
-    ruledOn: '2026-09-05',
-    cite: ['scripts/ingest/research/discovery/out/the-prince-of-tennis__4053.json', 'scripts/ingest/research/discovery/verify/the-prince-of-tennis__4053.md'],
   },
   // ---- WAVE 5 (One-Punch Man, DanMachi, Seven Deadly Sins, Gintama, Overlord, Noragami, Magus' Bride, Battle of Gods under three owners), Sean ruled 2026-09-06 with Cursor: as recommended except Magus' Bride → 9.5 (the frame collides with the release slot — the Kinnikuman date-slot class; the frame is recorded in the note, 'earliest the frame permits' is NOT a convention), DBS canon (I40 / T30); three CLUSTERS ruled whole in date order (E13 / E14 — without the sibling moves the writer refuses the ruled slot): gintama 369.5x, danmachi 13.5x, noragami 19.5x
   {

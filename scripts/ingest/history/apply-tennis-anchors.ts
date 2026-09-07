@@ -1,3 +1,5 @@
+// HISTORY (P34, moved at the 2026-09-06 consolidate): applied once at the Tennis own-series sitting (§12.142) — 26 anchors from the three
+// verified verdicts; the anchors are the record, the verdicts the citation. Never run again.
 // The Tennis own-series sitting (Sean 2026-09-06, with Cursor): the 26 anchors of the-prince-of-tennis-national-tournament, curated
 // FROM THE THREE VERIFIED VERDICTS (the verdict JSON is the anchor source — out/the-prince-of-tennis__995 / 2752 / 4053.json):
 // each chapters_adapted entry names its EPISODE; rows 1-13 = 995's eps 1-13, 14-19 = 2752's eps 1-6, 20-26 = 4053's eps 0-6.
@@ -6,8 +8,8 @@
 // the verdict's volume on the END entry (en-WP's Shogakukan boundaries — the series has no boundary table yet). source 'manual'.
 //   npx tsx --env-file=.env.ingest scripts/ingest/research/discovery/apply-tennis-anchors.ts [--dry-run]
 import { readFileSync } from 'node:fs';
-import { db, selectAll } from '../../lib/db';
-import { sliverEnd } from '../../lib/sliver';
+import { db, selectAll } from '../lib/db';
+import { sliverEnd } from '../lib/sliver';
 
 const SID = 'the-prince-of-tennis-national-tournament';
 const DRY = process.argv.includes('--dry-run');

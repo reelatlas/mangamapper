@@ -11,6 +11,25 @@ import { AFG_CHART_SUPPRESSED } from './rulings/afg-chart-suppressed';
 import { isAnchorSuppressed } from './rulings/anchor-suppressed';
 import { isParallelSeries } from './rulings/source-relations';
 import { toRuledChapter } from './rulings/chapter-spaces';
+import { volumeForChapter, type VolumeBound } from './volumes';
+
+// THE VOLUME AT WRITE (2026-09-06, the consolidate after wave 6): heal-anchor-volumes re-derived 1385 volumes in one day — one-piece's
+// 1029 AFG anchors alone — because the anchor writers left `volume` NULL and the daily AFG refresh re-wrote them null, so the healer
+// filled them every heal (P8's churn shape on our own writer). Every anchor writer now derives the volume through the ONE derivation
+// (lib/volumes.ts#volumeForChapter — the boundary table's volume for the END chapter) at write; the healer converges to 0 and a
+// re-derive means the TABLE changed. No table → null (the volumes backfill / the healer fill it later).
+const boundsCache = new Map<number, VolumeBound[]>();
+export async function boundsFor(mangaAnilistId: number | null | undefined): Promise<VolumeBound[]> {
+  if (!mangaAnilistId) return [];
+  let bounds = boundsCache.get(mangaAnilistId);
+  if (!bounds) {
+    bounds = await selectAll<VolumeBound>('volume_boundaries', 'volume, chapter_start, chapter_end', (q) => q.eq('manga_anilist_id', mangaAnilistId));
+    boundsCache.set(mangaAnilistId, bounds);
+  }
+  return bounds;
+}
+export const volumeAtWrite = async (mangaAnilistId: number | null | undefined, chapter: number | null | undefined): Promise<number | null> =>
+  chapter == null ? null : volumeForChapter(await boundsFor(mangaAnilistId), Number(chapter));
 
 // heading comparison: decode leftover entities, drop parenthetical year
 // suffixes ("Rurouni Kenshin (1996)"), then collapse to word soup
@@ -197,7 +216,7 @@ export async function applyContinua(
   const { error } = await db.from('chapter_anchors').upsert({
     series_id: s.id,
     episode: ep,
-    volume: null,
+    volume: await volumeAtWrite(s.manga_anilist_id, continua.endChapter), // the volume at write (2026-09-06)
     chapter: continua.endChapter,
     source: 'afg-continua',
     note: `AFG continua table: "${continua.text.slice(0, 180)}"`,
@@ -264,6 +283,8 @@ export async function syncAnchors(
   if (!anchors.length) return { anchors: 0, withheld: false };
   // A46: no anchors on a parallel series (the ruling is the record; the healer removes standing rows)
   if (isParallelSeries(seriesId)) return { anchors: 0, withheld: false };
+  const { data: mangaRow } = await db.from('series').select('manga_anilist_id').eq('id', seriesId).maybeSingle();
+  const bounds = await boundsFor(mangaRow?.manga_anilist_id ?? null); // the volume at write (2026-09-06)
 
   const { data: maxRow } = await db
     .from('episodes')
@@ -369,7 +390,7 @@ export async function syncAnchors(
     .map((a) => ({
       series_id: seriesId,
       episode: a.episode,
-      volume: null,
+      volume: volumeForChapter(bounds, a.chapter),
       chapter: a.chapter,
       start_chapter: a.startChapter,
       chapters_adapted: a.chaptersAdapted,
