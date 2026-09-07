@@ -1,0 +1,413 @@
+{
+  "series_id": "re-zero-starting-life-in-another-world",
+  "summary": "THE INSTRUMENT FIRST, AND THE ASK'S NAMED INSTRUMENT DOES NOT EXIST. The ask points at 'ja.wikipedia's episode list for Re:ゼロから始める異世界生活 (the 4th season table's 原作 column)'. Read live, ja-WP's 「Re:ゼロから始める異世界生活 (アニメ)」 各話リスト has SIX aux columns on the 第4期 tables — 脚本 / 絵コンテ / 演出 / 作画監督 / 総作画監督 / 初放送日 — and no 原作 column on any season's table, nor any アニメオリジナル legend anywhere in the article. A task premise is a claim, not a fact; the instrument had to be built from other lineages, and it was. WHAT THE BLOCK IS. Season 4 is 全19話 in two cours — 「喪失編」 11 episodes (67-77, 2026-04-08 → 06-17) and 「奪還編」 8 episodes (78-85, from 2026-08-12) — per ja-WP's 略歴 and the licensor's own ON AIR page (「喪失編(全11話)・奪還編(全8話)」, AT-X Wednesdays 22:00 from 4月8日). It adapts 第六章, and 第六章 is LN volumes 21-25: ja-WP's 既刊一覧, whose every row cites a KADOKAWA product page, groups 16-20 as 第五章 and 21-25 as 第六章 (26 onward is 第七章). Volume 20 is Arc 5's last volume, so rows 67-79 sit in volumes 20-24 and volume 25 belongs to the unaired tail. THE TWO LINEAGES. (1) rezero.fandom's per-episode `Volume` field, read through the MediaWiki API, gives a volume-and-chapter range for all thirteen rows. (2) Independently: the LICENSOR'S per-episode synopses at re-zero-anime.jp/tv/story/ (a full paragraph per episode, 67-81) matched against a Japanese chapter-by-chapter summary of volumes 20-24 published in 2020 — six years before this season and independent of both the anime and the fandom — whose tables of contents agree with the fandom's chapter lists volume for volume, chapter for chapter, in order. Volume 21: プロローグ「旅の道中」/ 第一章「君を連れ出す理由」/ 第二章「砂時間を超えろ！」/ 第三章「監視塔の洗礼」/ 第四章「砂上の信頼」/ 第五章「監視塔の番人」/ 幕間「ゴージャス・タイガー・リローデッド」. Volume 22: 大図書館プレイアデス / 白い星空のアステリズム / タイゲタの書庫 / 棒振り / ユリウス・ユークリウス / 塔共同生活のすヽめ / ■■■・■■■. Volume 23: コンビニを出ると、そこは不思議の世界でした / オマエハダレダ / 残骸 / 生者たちの塔 / 幕間 メイリィ・ポートルート / 殺人は、癖になる / Re:ゼロから始まる異世界生活. Volume 24: 雪解けを待つあなた / これからの話し / 立ちなさい / ５つの障害 / 理不尽な剣の鉄槌 / 一途な星. THE TITLE TEST: every one of these thirteen episode titles is a printed LN chapter title, verbatim, and KADOKAWA's own back-cover copy pins three of them to their volumes without any wiki — volume 23's tagline is 「―『ナツキ・スバル』、オマエハダレダ？」 (ep 74), volume 24's cover quote is 「―立ちなさい！立って、立ち上がって、救ってきて、全てを！」 (ep 79), and volume 21's is 「目覚めたとき、最初に見る顔が俺であってほしい」, Subaru's line to the sleeping Rem, which ep 67 animates. THE MAP: 67 → v21 [v20], 68-69 → v21, 70 → v22 [v21], 71-73 → v22, 74-77 → v23, 78-79 → v24. Thirteen anchors, monotone, one back-reach at the season fence and none inside the block. TWO SEAMS WORTH THE WORK. Ep 73's END is 22, not 23, and the pages settle it rather than the field: volume 22's own last scene, printed inside 第七章「■■■・■■■」, is the section 「迎えた朝」, whose text is 「緑部屋で目覚めたスバルの前には、エミリア、ベアトリス、パトラッシュがいた。」 and then 「これは異世界転生ってやつか!?」と驚き、はしゃぐ — which is exactly the shot ep 73 ends on. The episode's TITLE 「コンビニを出ると、そこは不思議の世界でした」 is the title of volume 23's opening chapter, borrowed FORWARD as the punchline: the mirror of the orient trap, where a title runs a chapter or two BEHIND its content. A title match is not a coverage claim. Ep 77's END is 23 under A47: the body is volume 23 chapters 5 and 6 through the volume's printed close 「影に飲み込まれる」, and the cour's final beat — the respawn and the vow — is volume 24's first chapter, at its opening, which ep 78 then adapts whole; the scrap stays in chapters_adapted with a `partial`, and A47's existence clause is met (the fandom's field and en-WP's closing sentence both credit it). THE TYPE. All thirteen rows are CONFIRMED CANON, the stored default upheld and now sourced. T25: the standing is measured against the light novel, and every row's content is the novel's, chapter by chapter, on the two lineages above, with the licensor's synopsis as the per-episode primary. T28: no row carries a story-carrying original share. The only non-source material any source names is a compression pattern — the Echidna parallel-world conversation, a Shaula foreshadowing exchange and a witch's-book aside cut around the Taygeta library, Subaru's pre-death monologue cut at the staircase, and one added Subaru-and-Meili conversation filling the gap — reported by a Japanese fan comparison that says in its own words 「物語の根幹を変えるような改変はありません」 and 「幹は同じです」. Under T28's faithfulness clause those are `abridged` / `divergence` annotations on canon rows, never weight toward mixed. Ep 67 additionally restages two scenes from volume 20’s seventh and last chapter (the Echidna reveal moves from the Priestella shelter to the road; the Watchtower-barrier explanation is given to Otto rather than Subaru) and pulls volume 21's closing 幕間 forward to sit beside 第一章 as its second half — a `divergence` and a `rearranged`, both source material either way. The series' own baseline agrees: animefillerlist types every episode it lists, 1-50, 'Manga Canon' with zero filler and zero mixed rows. THE ROW-67 REPAIR. The stored row is title-less because en-WP's entry is a two-part episode — `NumParts = 2` with `Title_1` / `Title_2` and no `Title` — and lib/wikipedia.ts's parseEpisodeList reads `| Title =` only, so the mint stored null. Three sources give the title: the licensor's STORY page prints 「‐ 第67話 ‐ 君を連れ出す理由／ゴージャス・タイガー・リローデッド」, ja-WP's table prints 「君を連れ出す理由<hr />{{nobr|ゴージャス・タイガー・リローデッド}}」, and en-WP gives the English pair. Proposed: 'The Reason I'm Taking You With Me / Gorgeous Tiger Reloaded', joined with ' / ' — the Ranking of Kings precedent for a two-part Wikipedia title, and en-WP's wording because every other stored title in this block is en-WP's verbatim. Air dates were swept: all thirteen stored dates are Wednesdays and match ja-WP and the licensor's ON AIR page exactly, so nothing there needs repair.",
+  "anchors": [
+    {
+      "episode": 67,
+      "end_chapter": 21,
+      "start_chapter": 20,
+      "chapters_adapted": "v20 ch 7 (from Anastasia's proposal to the chapter's end), v21 prologue, v21 ch 1, v21 interlude",
+      "volume": 21,
+      "confidence": "high",
+      "why": "LN VOLUME SPACE (T24): end_chapter / start_chapter / volume are MF文庫J 長月達平『Re:ゼロから始める異世界生活』 tankobon volume numbers; chapters_adapted names the chapters INSIDE each volume as the printed table of contents numbers them (v21's ToC is プロローグ「旅の道中」/ 第一章「君を連れ出す理由」/ 第二章「砂時間を超えろ！」/ 第三章「監視塔の洗礼」/ 第四章「砂上の信頼」/ 第五章「監視塔の番人」/ 幕間「ゴージャス・タイガー・リローデッド」). END 21 (A4): volume 21 is the furthest volume this episode adapts. START 20 (A10, NOT a sliver): the episode OPENS on v20 ch 7 「水面に波紋を残して」 and gives it its whole first act — 「アナスタシアの提案」(Anastasia proposes going to the Sage's tower), 「オットーとガーフィール」, 「ユリウスはスバルと同行する」, 「アナスタシアの正体」(the Echidna reveal), 「症例としてのレム」, 「ラインハルトの心配」, 「エミリア、ベアトリスと並んで歩く」. The licensor's own synopsis for the episode carries that content verbatim: 「アナスタシアの提案でルグニカ三英傑の一人、『賢者』シャウラの住まうプレアデス監視塔へ向かうことを決意する」. That is 6 of v20 ch 7's 7 sections and it is NEW, not re-shown: ep 66 (the S3 finale) took only the chapter's first section (the camps' meeting, Sirius's transport to the capital, Emilia freezing Lust's victims — en-WP's ep 66 summary end to end), which is why a `partial` records the split rather than a `recap`. Two lineages: rezero.fandom's episode field ('Volume 20 (Ch 7), Volume 21 (Prologue-Ch 1, Interlude)') and, independently, the licensor synopsis matched against a Japanese chapter-by-chapter book summary of v20 / v21 written in 2020, six years before the anime. The v21 side is corroborated a third way: KADOKAWA's own back-cover copy for volume 21 quotes 「目覚めたとき、最初に見る顔が俺であってほしい。―それはたぶん、俺のエゴなんだよ」, Subaru's line to the sleeping Rem, which this episode animates.",
+      "sources": [
+        "https://rezero.fandom.com/api.php?action=parse&page=Episode%2067&prop=wikitext&format=json",
+        "https://re-zero-anime.jp/tv/story/",
+        "https://lanobare.com/rezero-netabare-novel-20th/",
+        "https://lanobare.com/rezero-netabare-novel-21st/",
+        "https://rezero.fandom.com/api.php?action=parse&page=Re%3AZero%20Light%20Novel%20Volume%2021&prop=wikitext&format=json",
+        "https://www.kinokuniya.co.jp/f/dsg-01-9784040640068",
+        "https://en.wikipedia.org/w/api.php?action=parse&page=Re%3AZero%20season%204&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 68,
+      "end_chapter": 21,
+      "start_chapter": 21,
+      "chapters_adapted": "v21 ch 1 (the departure morning), v21 ch 2, v21 ch 3",
+      "volume": 21,
+      "confidence": "high",
+      "why": "END 21 / START 21. The episode runs v21 ch 1's closing section 「出発の朝」 into ch 2 「砂時間を超えろ！」 and ch 3 「監視塔の洗礼」. The licensor synopsis is ch 1's tail plus ch 2 almost line for line — 「ラムやレム、メィリィも加わって…アウグリア砂丘への挑戦の旅が始まった。しかしミルーラの町で聞いた「監視塔には四百年間だれも辿り着けてはいない」…メィリィの加護で魔獣をいなし、砂風吹き荒れる『砂時間』をやり過ごしながら進む…ラムが『千里眼』で突破口を探る」 against the book's 「ミルーラの町の酒場の店主の忠告 / アウグリア砂丘に出発 / アウグリア砂丘の脅威 / 作戦会議 / 「砂時間」を超える / 花魁熊と光」 — and en-WP's summary then carries ch 3's own beats (the sniping deaths, the anti-magic field, the rift). rezero.fandom's field says 'Volume 21 (Ch 1-Ch 3)'. The episode's title 「砂時間を越えろ」 is ch 2's printed title (the book prints 超えろ, the anime 越えろ — a kanji variant, same title).",
+      "sources": [
+        "https://rezero.fandom.com/api.php?action=parse&page=Episode%2068&prop=wikitext&format=json",
+        "https://re-zero-anime.jp/tv/story/",
+        "https://lanobare.com/rezero-netabare-novel-21st/",
+        "https://rezero.fandom.com/api.php?action=parse&page=Re%3AZero%20Light%20Novel%20Volume%2021&prop=wikitext&format=json",
+        "https://en.wikipedia.org/w/api.php?action=parse&page=Re%3AZero%20season%204&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 69,
+      "end_chapter": 21,
+      "start_chapter": 21,
+      "chapters_adapted": "v21 ch 4, v21 ch 5 (to Shaula's 「見つけた」)",
+      "volume": 21,
+      "confidence": "high",
+      "why": "END 21 / START 21. v21 ch 4 「砂上の信頼」 is the underground passage — 「二又の分かれ道と鉄の扉とパトラッシュ」「瘴気の影響」「四枚目の扉の前での惨劇」「砂の地下で目覚めるスバル」 — and the licensor synopsis opens exactly there (「陰魔法によって空間の歪みが生じ、砂丘の地下に飛ばされてしまったスバルはラムに叩き起こされる。」 and 「風もなく、気温も低く、砂を踏む足音だけが響く地下通路を、スバルたちは進み始める。」). The episode then plays ch 5 「監視塔の番人」 as far as its centaur fight and stops on the line the book gives that scene: 「スバルが意識を手放す寸前、姿を表したのは笑みを浮かべる女性で、「見つけた」と言っていた」 — the fandom's summary ends on the same words ('a woman donned in orange and black looks at Subaru and says, \"I found you\"'). ch 5's remaining section 「全員と再会」 is ep 70's opening, so this row does not own the whole chapter; in VOLUME space that split does not move the END. rezero.fandom: 'Volume 21 (Ch 4-Ch 5)'.",
+      "sources": [
+        "https://rezero.fandom.com/api.php?action=parse&page=Episode%2069&prop=wikitext&format=json",
+        "https://re-zero-anime.jp/tv/story/",
+        "https://lanobare.com/rezero-netabare-novel-21st/",
+        "https://rezero.fandom.com/api.php?action=parse&page=Re%3AZero%20Light%20Novel%20Volume%2021&prop=wikitext&format=json",
+        "https://en.wikipedia.org/w/api.php?action=parse&page=Re%3AZero%20season%204&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 70,
+      "end_chapter": 22,
+      "start_chapter": 21,
+      "chapters_adapted": "v21 ch 5 (the reunion inside the tower), v22 ch 1, v22 ch 2",
+      "volume": 22,
+      "confidence": "high",
+      "why": "END 22 (A4) / START 21 (A10 — a substantive leading share, not a sliver). The leading share is v21 ch 5's closing section 「全員と再会」, and the book and the licensor describe the same scene independently: the book has 「スバルは竜車の寝台の上で目を覚まし…ベアトリスがいて…全員無事に揃っていると話す…ここがプレアデス監視塔の中だ…賢者シャウラがスバルを抱きしめて「お師様、長かったっす〜」」; the licensor writes 「竜車の中で目を覚ましたスバルは、ベアトリスから全員無事に合流できたこと、プレアデス監視塔の内部に到達したことを聞かされる…スバルを「お師様」と呼び慕う少女…シャウラの熱烈な抱擁が歓迎した」. The episode then takes v22 ch 1 「大図書館プレイアデス」 and ch 2 「白い星空のアステリズム」 (the episode's own title) through the Orion riddle and the teleport to the library — the licensor's 「彼女の案内で一行は塔の三層『タイゲタ』に足を踏み入れる。そこは監視塔の本来の機能――大図書館プレイアデスの書庫に入る資格を得るための試験会場だった。」 and KADOKAWA's volume-22 back cover, whose whole subject is Shaula's welcome and the invitation to the Great Library's 『試験』. rezero.fandom: 'Volume 21 (Ch 5), Volume 22 (Ch 1-Ch 2)'.",
+      "sources": [
+        "https://rezero.fandom.com/api.php?action=parse&page=Episode%2070&prop=wikitext&format=json",
+        "https://re-zero-anime.jp/tv/story/",
+        "https://lanobare.com/rezero-netabare-novel-21st/",
+        "https://lanobare.com/rezero-netabare-novel-22nd/",
+        "https://rezero.fandom.com/api.php?action=parse&page=Re%3AZero%20Light%20Novel%20Volume%2022&prop=wikitext&format=json",
+        "https://www.kinokuniya.co.jp/f/dsg-01-9784040645537",
+        "https://en.wikipedia.org/w/api.php?action=parse&page=Re%3AZero%20season%204&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 71,
+      "end_chapter": 22,
+      "start_chapter": 22,
+      "chapters_adapted": "v22 ch 2 (the library's books), v22 ch 3, v22 ch 4 (the exam opens)",
+      "volume": 22,
+      "confidence": "high",
+      "why": "END 22 / START 22. The episode opens on v22 ch 2's later sections 「書架に並ぶ本」「本が人を引き込む条件」 — the licensor: 「星座にまつわる『試験』を解いたことで、三層は白い空間から無数の書架が並んでいる巨大な書庫へと姿を変えた。一冊の蔵書に触れたスバルは、無邪気の残酷を具現化したような記憶を追体験する」 (the Typhon Book of the Dead) — runs ch 3 「タイゲタの書庫」 (「次の行動」「二層への階段」) and ends as ch 4 「棒振り」 opens: 「二層『エレクトラ』の白亜の領域に突き刺さる剣を引き抜き、次なる『試験』が始まる」, which en-WP renders as 'the group takes the second exam on the next floor: a duel against an individual materialized by the tower, who calls himself a \"Stick Swinger\"'. rezero.fandom: 'Volume 22 (Ch 2-Ch 4)'.",
+      "sources": [
+        "https://rezero.fandom.com/api.php?action=parse&page=Episode%2071&prop=wikitext&format=json",
+        "https://re-zero-anime.jp/tv/story/",
+        "https://lanobare.com/rezero-netabare-novel-22nd/",
+        "https://rezero.fandom.com/api.php?action=parse&page=Re%3AZero%20Light%20Novel%20Volume%2022&prop=wikitext&format=json",
+        "https://en.wikipedia.org/w/api.php?action=parse&page=Re%3AZero%20season%204&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 72,
+      "end_chapter": 22,
+      "start_chapter": 22,
+      "chapters_adapted": "v22 ch 4 (the duels), v22 ch 5",
+      "volume": 22,
+      "confidence": "high",
+      "why": "END 22 / START 22. v22 ch 4 「棒振り」 is 「ユリウス vs レイド」「エミリア vs レイド」「勝利条件の変更とレイドの影響」「ラムの部屋で剣聖レイドの正体を知る」「ユリウス vs レイド再び」 and ch 5 「ユリウス・ユークリウス」 (the episode's title) is 「スバルが救出」「ユリウスの騎士としての意地」 — the licensor's synopsis and en-WP's summary run those beats in that order (Julius defeated, Emilia passing, Shaula naming Reid Astrea, Julius slipping away to be beaten again, Subaru carrying him back). rezero.fandom: 'Volume 22 (Ch 4-Ch 5)'. KADOKAWA's volume-22 back cover names the same subject: 「―砕け散るは、騎士の矜持か、友愛か。」",
+      "sources": [
+        "https://rezero.fandom.com/api.php?action=parse&page=Episode%2072&prop=wikitext&format=json",
+        "https://re-zero-anime.jp/tv/story/",
+        "https://lanobare.com/rezero-netabare-novel-22nd/",
+        "https://rezero.fandom.com/api.php?action=parse&page=Re%3AZero%20Light%20Novel%20Volume%2022&prop=wikitext&format=json",
+        "https://www.kinokuniya.co.jp/f/dsg-01-9784040645537",
+        "https://en.wikipedia.org/w/api.php?action=parse&page=Re%3AZero%20season%204&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 73,
+      "end_chapter": 22,
+      "start_chapter": 22,
+      "chapters_adapted": "v22 ch 6, v22 ch 7 (to the volume's last scene)",
+      "volume": 22,
+      "confidence": "high",
+      "why": "END 22 / START 22, and the END does NOT advance to 23 — this is the block's cleanest seam. The episode is v22 ch 6 「塔共同生活のすヽめ」 (「食事の準備」「就寝前の日課」「導かれる三人」) and ch 7 「■■■・■■■」 (「襟ドナとユリウス」「塔の中でラムにデコピンされる」「迎えた朝」); the licensor's synopsis is ch 6 into ch 7 (「レイドとの戦いで負傷したユリウスはひとまず緑部屋で休養することに。スバルたちは初代剣聖攻略のヒントをシャウラから聞き出そうとするも、有益な情報を得られない。束の間の朗らかな食事を終えた夜更け、目覚めたスバルはバルコニーでたたずむ襟ドナを発見する。」 and 「互いの真意を問いただしていると、その会話をユリウスに聞かれ――。」). The episode's closing scene — Subaru waking to Emilia and Beatrice, not knowing them, delighted to be in another world — IS volume 22's own last scene, printed inside ch 7: the section 「迎えた朝」, whose text is 「緑部屋で目覚めたスバルの前には、エミリア、ベアトリス、パトラッシュがいた。」 and then 「これは異世界転生ってやつか!?」と驚き、はしゃぐ. So nothing of volume 23 is animated here. The episode's TITLE 「コンビニを出ると、そこは不思議の世界でした」 is volume 23 chapter 1's printed title, borrowed FORWARD as the punchline (the mirror of the orient-ep-12 trap, where a title runs behind the content) — a title match is not a coverage claim, and the pages say the volume ends here. rezero.fandom: 'Volume 22 (Ch 6-Ch 7)'.",
+      "sources": [
+        "https://rezero.fandom.com/api.php?action=parse&page=Episode%2073&prop=wikitext&format=json",
+        "https://re-zero-anime.jp/tv/story/",
+        "https://lanobare.com/rezero-netabare-novel-22nd/",
+        "https://lanobare.com/rezero-netabare-novel-23rd/",
+        "https://rezero.fandom.com/api.php?action=parse&page=Re%3AZero%20Light%20Novel%20Volume%2022&prop=wikitext&format=json",
+        "https://rezero.fandom.com/api.php?action=parse&page=Re%3AZero%20Light%20Novel%20Volume%2023&prop=wikitext&format=json",
+        "https://en.wikipedia.org/w/api.php?action=parse&page=Re%3AZero%20season%204&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 74,
+      "end_chapter": 23,
+      "start_chapter": 23,
+      "chapters_adapted": "v23 ch 1, v23 ch 2, v23 ch 3 (the flight from the tower)",
+      "volume": 23,
+      "confidence": "high",
+      "why": "END 23 / START 23. v23 ch 1 「コンビニを出ると、そこは不思議の世界でした」 opens on the same morning volume 22 closed on, retold from the amnesiac Subaru's side (「目覚めたスバルが記憶をなくしていることに、エミリアとベアトリスはひどく動揺する」) and runs 「襟ドナの存在も共有される」「タイゲタでの手掛かり捜索」「今後についての話し合い」「緑部屋で目覚める」 (the staircase death and the first respawn); ch 2 「オマエハダレダ」 is 「繰り返される一日」「混乱と残骸」; ch 3 「残骸」 begins with Subaru fleeing the tower, which is where this episode stops (en-WP: 'Subaru deduces Return by Death's mechanics and flees the tower, unknowingly breaking its rules'). The licensor's own synopsis is ch 1's premise verbatim — 「コンビニからの帰り道、突如として異世界へと召喚されてしまった少年、ナツキ・スバル。目の前に広がるファンタジーな異世界に目を輝かせるスバルだったが、どうやら召喚されてから今までの記憶を失ってしまったらしい。」 — and KADOKAWA's volume-23 back cover is the same text again (「俺の名前はナツキ・スバル！」 and 「俺が記憶喪失？塔の『試験』続行中？」) with the tagline 「―『ナツキ・スバル』、オマエハダレダ？」, this episode's title. rezero.fandom: 'Volume 23 (Ch 1-Ch 3)'.",
+      "sources": [
+        "https://rezero.fandom.com/api.php?action=parse&page=Episode%2074&prop=wikitext&format=json",
+        "https://re-zero-anime.jp/tv/story/",
+        "https://lanobare.com/rezero-netabare-novel-23rd/",
+        "https://rezero.fandom.com/api.php?action=parse&page=Re%3AZero%20Light%20Novel%20Volume%2023&prop=wikitext&format=json",
+        "https://www.kinokuniya.co.jp/f/dsg-01-9784040647302",
+        "https://en.wikipedia.org/w/api.php?action=parse&page=Re%3AZero%20season%204&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 75,
+      "end_chapter": 23,
+      "start_chapter": 23,
+      "chapters_adapted": "v23 ch 3, v23 ch 4",
+      "volume": 23,
+      "confidence": "high",
+      "why": "END 23 / START 23. The licensor's synopsis is v23 ch 3 「残骸」 section by section — 「砂漠で巨大な砂蚯蚓に襲われ、砂に呑まれて地下へと迷い込んでしまった。精神的に追い詰められながら地下通路を進むも、何故か監視塔からは逃れられない。目的を変え、凶気を携えて四層へと登ったスバルは、見るに堪えない光景を目撃する」 against the book's 「砂丘で砂蚯蚓に襲われる」「地下で目覚めるスバル」「殺意の虜になったスバルが階段を上る」「緑部屋のパトラッシュ」「バルコニーで出会う生きている何か」「プレアデス監視塔、四周目」 — and en-WP's summary then carries ch 4 「生者たちの塔」 (「ユリウスとの話し合い」「通路の先でメイリィと出会う」, ending on 'Subaru Natsuki was here' etched into his forearm). rezero.fandom: 'Volume 23 (Ch 3-Ch 4)'.",
+      "sources": [
+        "https://rezero.fandom.com/api.php?action=parse&page=Episode%2075&prop=wikitext&format=json",
+        "https://re-zero-anime.jp/tv/story/",
+        "https://lanobare.com/rezero-netabare-novel-23rd/",
+        "https://rezero.fandom.com/api.php?action=parse&page=Re%3AZero%20Light%20Novel%20Volume%2023&prop=wikitext&format=json",
+        "https://en.wikipedia.org/w/api.php?action=parse&page=Re%3AZero%20season%204&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 76,
+      "end_chapter": 23,
+      "start_chapter": 23,
+      "chapters_adapted": "v23 ch 4 (Beatrice finds the Book of the Dead), v23 interlude, v23 ch 5",
+      "volume": 23,
+      "confidence": "high",
+      "why": "END 23 / START 23. The three segments are consecutive in volume 23's printed order (ch 4, then 幕間「メイリィ・ポートルート」, then ch 5), so this row is a plain in-order read, not a reorder. The licensor's synopsis names all three: 「目の前にはメィリィの死体、そして腕には『ナツキスバル参上』の文字」 (ch 4's close), 「書庫でベアトリスがメィリィ・ポートルートと書かれた『死者の書』を発見していた。代表して『死者の書』を読み、彼女の孤独な過去と、死の真相を追体験するスバル」 (the interlude, whose printed title is exactly メイリィ・ポートルート), and 「脳裏に『わたし』の声が甘く響き始める」 into ch 5 「殺人は、癖になる」, this episode's title. rezero.fandom: 'Volume 23 (Ch 4-Ch 5, Interlude)'.",
+      "sources": [
+        "https://rezero.fandom.com/api.php?action=parse&page=Episode%2076&prop=wikitext&format=json",
+        "https://re-zero-anime.jp/tv/story/",
+        "https://lanobare.com/rezero-netabare-novel-23rd/",
+        "https://rezero.fandom.com/api.php?action=parse&page=Re%3AZero%20Light%20Novel%20Volume%2023&prop=wikitext&format=json",
+        "https://en.wikipedia.org/w/api.php?action=parse&page=Re%3AZero%20season%204&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 77,
+      "end_chapter": 23,
+      "start_chapter": 23,
+      "chapters_adapted": "v23 ch 5, v23 ch 6, v24 ch 1 (the closing respawn beat only)",
+      "volume": 23,
+      "confidence": "medium",
+      "why": "END 23, HELD by A47 — it does not advance to 24. The body is v23 ch 5 「殺人は、癖になる」 and ch 6 「Re:ゼロから始まる異世界生活」 (the episode's title): the licensor's synopsis is ch 5's close (「消えてしまったメィリィの死体を探す現場を抑えられ、氷の檻に囚われたスバル。」 and 「覚えのない事態の連続に混乱するスバルの背後で、四層にいるはずのないレイド・アストレアが待ち受ける。」) and en-WP carries ch 6 to its printed end — the book's last section for volume 23 is 「影に飲み込まれる」, Subaru and Emilia devoured by the miasma after her confession. What follows in the episode is one closing beat, the respawn and the vow ('Subsequently, after respawning, Subaru vows to save everyone this time'), and that beat is volume 24 chapter 1 「雪解けを待つあなた」's opening (「スバルは緑部屋で目を覚まし、エミリアとベアトリスが目の前にいることに安堵する。」 and 「エミリアとベアトリスに慰められながら、スバルはプレアデス監視塔に迫る危機を乗り越えるべく、決意に立つ。」). A47: a teaser-shaped trailing scrap of volume X when the NEXT anchored episode STARTS on X belongs to that episode — ep 78 starts on v24 ch 1 and adapts it whole (the licensor's ep-78 synopsis opens 「『死に戻り』から目覚めると真っ先に記憶喪失になったと打ち明ける」). So the END stays 23, the scrap stays in chapters_adapted and a `partial` names it. A47's existence clause is satisfied: two sources credit the beat (rezero.fandom's field 'Volume 24 (Ch 1)' and en-WP's closing sentence). Medium, not high, because no source states the beat's length; the judgment that it is a cour-ending teaser rather than a share rests on the licensor's synopsis for ep 78 opening on the same scene.",
+      "sources": [
+        "https://rezero.fandom.com/api.php?action=parse&page=Episode%2077&prop=wikitext&format=json",
+        "https://rezero.fandom.com/api.php?action=parse&page=Episode%2078&prop=wikitext&format=json",
+        "https://re-zero-anime.jp/tv/story/",
+        "https://lanobare.com/rezero-netabare-novel-23rd/",
+        "https://lanobare.com/rezero-netabare-novel-24th/",
+        "https://rezero.fandom.com/api.php?action=parse&page=Re%3AZero%20Light%20Novel%20Volume%2023&prop=wikitext&format=json",
+        "https://rezero.fandom.com/api.php?action=parse&page=Re%3AZero%20Light%20Novel%20Volume%2024&prop=wikitext&format=json",
+        "https://en.wikipedia.org/w/api.php?action=parse&page=Re%3AZero%20season%204&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 78,
+      "end_chapter": 24,
+      "start_chapter": 24,
+      "chapters_adapted": "v24 ch 1, v24 ch 2",
+      "volume": 24,
+      "confidence": "high",
+      "why": "END 24 / START 24 — the 奪還編 cour opens on volume 24. v24 ch 1 「雪解けを待つあなた」 is 「記憶喪失の共有」「雪に埋もれた花」「スバルを殺した犯人」 and the licensor's synopsis is those three sections in order: 「『死に戻り』から目覚めると真っ先に記憶喪失になったと打ち明ける。レムのことも自分の記憶も取り戻し、全員で無事に帰還する。その宣言でラムからの協力も取り付けると、塔内の螺旋階段へと向かうスバル。そこは二度、背中を押されて落下死した殺人現場に他ならなかった」. en-WP then carries ch 2 「これからの話し」 (the episode's title) — Meili caught at the stairs, her attempted suicide, the rescue, and the proposal to read Reid's Book of the Dead instead of chasing the memories. rezero.fandom: 'Volume 24 (Ch 1-Ch 2)'.",
+      "sources": [
+        "https://rezero.fandom.com/api.php?action=parse&page=Episode%2078&prop=wikitext&format=json",
+        "https://re-zero-anime.jp/tv/story/",
+        "https://lanobare.com/rezero-netabare-novel-24th/",
+        "https://rezero.fandom.com/api.php?action=parse&page=Re%3AZero%20Light%20Novel%20Volume%2024&prop=wikitext&format=json",
+        "https://en.wikipedia.org/w/api.php?action=parse&page=Re%3AZero%20season%204&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episode": 79,
+      "end_chapter": 24,
+      "start_chapter": 24,
+      "chapters_adapted": "v24 ch 2 (the library run), v24 ch 3",
+      "volume": 24,
+      "confidence": "high",
+      "why": "END 24 / START 24, and this is the block's frontier. The episode takes v24 ch 2's later sections (「「タイゲタ」攻略 / ユリウスにレイド戦を預ける / レイドの書を発見 / 記憶の回廊」) — the licensor: 「レイド攻略の極意書としてレイド本人の『死者の書』を探しに書庫へ行く途中、調子を取り戻せずにいるユリウスと言葉を交わすスバル。その後、発見された『死者の書』を読むと――目の前に広がったのは、魂の終着地点、オド・ラグナの揺り籠。記憶の回廊で、少女がスバルを出迎える」 — and then ch 3 「立ちなさい」, this episode's title, through its printed sections (Louis Arneb, Rem's 「立ちなさい」, Greed budding, Gluttony's assault on the tower, the return to the Taygeta archive). KADOKAWA's volume-24 back cover carries the same line as its cover quote: 「―立ちなさい！立って、立ち上がって、救ってきて、全てを！」. Volume 24 continues past this row: ch 4 「５つの障害」 is ep 80's title and ch 6 「一途な星」 is ep 81's — both aired but neither is a stored row, which is why the frontier here is volume 24 PARTIALLY adapted (ch 1-3 of 6). rezero.fandom: 'Volume 24 Chapters 2-3'.",
+      "sources": [
+        "https://rezero.fandom.com/api.php?action=parse&page=Episode%2079&prop=wikitext&format=json",
+        "https://re-zero-anime.jp/tv/story/",
+        "https://lanobare.com/rezero-netabare-novel-24th/",
+        "https://rezero.fandom.com/api.php?action=parse&page=Re%3AZero%20Light%20Novel%20Volume%2024&prop=wikitext&format=json",
+        "https://www.kinokuniya.co.jp/f/dsg-01-9784040649450",
+        "https://en.wikipedia.org/w/api.php?action=parse&page=Re%3AZero%20season%204&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=Re%3A%E3%82%BC%E3%83%AD%E3%81%8B%E3%82%89%E5%A7%8B%E3%82%81%E3%82%8B%E7%95%B0%E4%B8%96%E7%95%8C%E7%94%9F%E6%B4%BB%20(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "continue_points": [
+    {
+      "episode": 77,
+      "continue_chapter": 24,
+      "kind": "parity",
+      "confidence": "medium",
+      "why": "C1 — the 喪失編 cour ends INSIDE volume 24: the episode closes on v24 ch 1's opening beat (the respawn and the vow) after finishing volume 23, so a reader stopping at the cour break continues in volume 24, at 第一章「雪解けを待つあなた」. Not a post-series continue: the season is airing and eps 78-85 carry the rest. Volume 24 is where the reading resumes even on the alternative reading of the seam (if the closing beat is instead volume 23's last line, the next unseen material is still volume 24 chapter 1), which is why the value is stable while the anchor is medium.",
+      "sources": [
+        "https://rezero.fandom.com/api.php?action=parse&page=Episode%2077&prop=wikitext&format=json",
+        "https://rezero.fandom.com/api.php?action=parse&page=Episode%2078&prop=wikitext&format=json",
+        "https://lanobare.com/rezero-netabare-novel-23rd/",
+        "https://lanobare.com/rezero-netabare-novel-24th/",
+        "https://re-zero-anime.jp/tv/story/"
+      ]
+    },
+    {
+      "episode": 79,
+      "continue_chapter": 24,
+      "kind": "parity",
+      "confidence": "high",
+      "why": "C1 — the block's frontier. Ep 79 ends inside volume 24, having adapted its chapters 1-3 of 6, so the reader continues IN volume 24 at 第四章「５つの障害」. Named for the record, since it is the honest statement of what this block leaves unread: volume 24 chapters 4-6 (「５つの障害」/「理不尽な剣の鉄槌」/「一途な星」) and the whole of volume 25. This is NOT a post-series continue — 第四章 is ep 80 and 第六章 is ep 81, both already aired and neither a stored row, and volume 25 is the season's unaired tail.",
+      "sources": [
+        "https://rezero.fandom.com/api.php?action=parse&page=Episode%2079&prop=wikitext&format=json",
+        "https://lanobare.com/rezero-netabare-novel-24th/",
+        "https://rezero.fandom.com/api.php?action=parse&page=Re%3AZero%20Light%20Novel%20Volume%2024&prop=wikitext&format=json",
+        "https://re-zero-anime.jp/tv/story/",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=Re%3A%E3%82%BC%E3%83%AD%E3%81%8B%E3%82%89%E5%A7%8B%E3%82%81%E3%82%8B%E7%95%B0%E4%B8%96%E7%95%8C%E7%94%9F%E6%B4%BB%20(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "anchor_hostile": [],
+  "annotations": [
+    {
+      "episodes": [
+        67
+      ],
+      "kind": "rearranged",
+      "chapters": "v21 interlude 「ゴージャス・タイガー・リローデッド」 (printed LAST in volume 21, after 第五章), animated here beside v21 ch 1",
+      "note": "weight: SIGNIFICANT — because it is one of the episode's two title cards and roughly its second half, not a fragment. Volume 21's printed table of contents ends on the 幕間, after 第五章「監視塔の番人」 (both the fandom's chapter list and the 2020 Japanese book summary give that order), yet the anime plays it in ep 67 before animating 第二章-第五章: Garfiel and Mimi in the rebuilding Priestella, the visit to his memory-less mother Reala, and the names of his half-siblings Rafiel and Fred. The licensor's synopsis names it as the episode's second strand (「一方、療養のためプリステラに残ったガーフィールはミミと一緒に、記憶を失った母リアラの家を訪れていた」) and en-WP separates it with an {{hr}}. The relocation is chronological, not inventive — the interlude runs parallel in time to Subaru's departure — so under T28's faithfulness clause the row stays canon; A42 wants the reorder named rather than left silent. Material is NEW: this is its sole adaptation. A reader who checks the book will find these pages at the END of volume 21.",
+      "sources": [
+        "https://rezero.fandom.com/api.php?action=parse&page=Episode%2067&prop=wikitext&format=json",
+        "https://rezero.fandom.com/api.php?action=parse&page=Re%3AZero%20Light%20Novel%20Volume%2021&prop=wikitext&format=json",
+        "https://lanobare.com/rezero-netabare-novel-21st/",
+        "https://re-zero-anime.jp/tv/story/",
+        "https://en.wikipedia.org/w/api.php?action=parse&page=Re%3AZero%20season%204&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [
+        67
+      ],
+      "kind": "partial",
+      "chapters": "v20 ch 7 「水面に波紋を残して」 — its first section (the camps' meeting, Sirius's transport, Emilia freezing Lust's victims) is ep 66's; ep 67 takes the remaining six",
+      "note": "weight: SIGNIFICANT — because the six sections ep 67 takes are the episode's entire first act, not a lead-in sliver, which is why the START is volume 20 under A10 rather than 21. The chapter straddles the SEASON boundary: en-WP's ep 66 summary (the S3 finale) ends at 'They decide to have Emilia put Lust's victims into cryosleep… while the captured Sirius is to be transported to the capital' plus the Julius reunion, which is the chapter's opening section; ep 67 then runs 「アナスタシアの提案」/「オットーとガーフィール」/「ユリウスはスバルと同行する」/「アナスタシアの正体」/「症例としてのレム」/「ラインハルトの心配」/「エミリア、ベアトリスと並んで歩く」. Material is NEW, not re-shown — no source describes a recap at the head of ep 67, and the beats ep 67 animates are absent from every summary of ep 66 — so this is a `partial`, not a `recap`.",
+      "sources": [
+        "https://rezero.fandom.com/api.php?action=parse&page=Episode%2067&prop=wikitext&format=json",
+        "https://rezero.fandom.com/api.php?action=parse&page=Episode%2066&prop=wikitext&format=json",
+        "https://en.wikipedia.org/w/api.php?action=parse&page=Re%3AZero%20season%203&prop=wikitext&format=json",
+        "https://lanobare.com/rezero-netabare-novel-20th/",
+        "https://re-zero-anime.jp/tv/story/"
+      ]
+    },
+    {
+      "episodes": [
+        67
+      ],
+      "kind": "divergence",
+      "chapters": "v20 ch 7 (the Echidna reveal and the Watchtower-barrier explanation, both restaged)",
+      "note": "weight: SLIVER — because both are the source's own scenes moved or re-cast, not original plot; T28's faithfulness clause keeps the row canon and forbids weighing them toward mixed. In the novel the Echidna reveal happens in Priestella — 「スバルは避難所の集会所に戻り、そこにいたアナスタシアに対して、お前は誰だと問い詰める」 — while the anime plays it on the road after the party has left the Watergate City (the fandom: 'During their travels, Subaru confronts Anastasia'). And the novel's 「ラインハルトの心配」 is Reinhard telling SUBARU why he could not cross the Augria dunes two years ago; the anime gives that conversation to Reinhard and OTTO as the party departs. Same events, same information, different staging.",
+      "sources": [
+        "https://rezero.fandom.com/api.php?action=parse&page=Episode%2067&prop=wikitext&format=json",
+        "https://lanobare.com/rezero-netabare-novel-20th/",
+        "https://en.wikipedia.org/w/api.php?action=parse&page=Re%3AZero%20season%204&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [
+        71
+      ],
+      "kind": "divergence",
+      "chapters": "v22 ch 2-ch 4 (an added Subaru-and-Meili conversation after the library search)",
+      "note": "weight: SLIVER — because it is one conversation inside three fully adapted chapters, which under T28's faithfulness clause is a studio beat NOTED, never weighed toward mixed. Stated plainly: the only positive claim is a Japanese fan comparison, which hedges it (「スバルとメィリィの新しい会話シーンが追加されたと見られます」) and declares its own derivation from the English fandom wiki, so it is CROSS-CHECK tier and no primary states it. What can be checked independently is the shape: en-WP's ep-71 summary records the scene ('Concurrently, Subaru attempts to bond with Meili, prompting the latter to reveal that she was abandoned by her parents and raised by mabeasts') while the 2020 chapter-by-chapter book summary of v22 ch 2-4 lists no such section. That is an absence in a summary, not a proof of absence in the book — the row's canon standing does not rest on it either way.",
+      "sources": [
+        "https://lanobare.com/rezero-anime4ki-cut/",
+        "https://en.wikipedia.org/w/api.php?action=parse&page=Re%3AZero%20season%204&prop=wikitext&format=json",
+        "https://lanobare.com/rezero-netabare-novel-22nd/",
+        "https://rezero.fandom.com/api.php?action=parse&page=Episode%2071&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [
+        71,
+        74
+      ],
+      "kind": "abridged",
+      "chapters": "v22 ch 2-ch 3 (the Echidna parallel-world conversation, the Shaula-appearance foreshadowing and a witch's-book aside), v23 ch 1 (Subaru's monologue before the staircase death)",
+      "note": "weight: SLIVER — omissions, not original material; a compressed telling of the source stays CANON under T28's faithfulness clause. The same Japanese comparison summarises the season's method as 「幹を守り、枝葉を圧縮し、空白を再構成で埋める」 and its cut list as three families: the Return-by-Death / parallel-world reasoning, foreshadowing asides about the witches and the tower's keeper, and Subaru's long interior monologues. CROSS-CHECK tier for the same reason as the ep-71 note (the article names the English fandom wiki as its source and hedges each item), delivered because the lane asks every non-source segment to be named rather than left silent, and because it is the honest account of what a reader gains by opening volumes 22-23. Nothing here is anime-original content: it is source content the episodes do not show.",
+      "sources": [
+        "https://lanobare.com/rezero-anime4ki-cut/",
+        "https://lanobare.com/rezero-netabare-novel-22nd/",
+        "https://lanobare.com/rezero-netabare-novel-23rd/",
+        "https://en.wikipedia.org/w/api.php?action=parse&page=Re%3AZero%20season%204&prop=wikitext&format=json"
+      ]
+    },
+    {
+      "episodes": [
+        77
+      ],
+      "kind": "partial",
+      "chapters": "v24 ch 1 「雪解けを待つあなた」 (its opening beat only — the respawn and the vow that close the 喪失編 cour)",
+      "note": "weight: SLIVER — because it is one closing beat, teaser-shaped, and the chapter is adapted properly by ep 78, which opens on it (the licensor's ep-78 synopsis: 「『死に戻り』から目覚めると真っ先に記憶喪失になったと打ち明ける」). This is the A47 record: the END stays at volume 23 and the scrap is kept here rather than advancing the position, so the display never claims volume 24 was reached at the cour break. A47's existence clause is satisfied — two sources credit the beat: rezero.fandom's ep-77 page gives Volume = [[Re:Zero Light Novel Volume 23|Volume 23]] (Ch 5-Ch 6)<br>[[Re:Zero Light Novel Volume 24|Volume 24]] (Ch 1) and en-WP's summary ends 'Subsequently, after respawning, Subaru vows to save everyone this time', which is the book's 「スバルは緑部屋で目を覚まし、エミリアとベアトリスが目の前にいることに安堵する。」 and 「エミリアとベアトリスに慰められながら、スバルはプレアデス監視塔に迫る危機を乗り越えるべく、決意に立つ。」. Material is a DUPLICATE in the sense that matters for position: ep 78 shows the scene again as the chapter's own opening.",
+      "sources": [
+        "https://rezero.fandom.com/api.php?action=parse&page=Episode%2077&prop=wikitext&format=json",
+        "https://rezero.fandom.com/api.php?action=parse&page=Episode%2078&prop=wikitext&format=json",
+        "https://en.wikipedia.org/w/api.php?action=parse&page=Re%3AZero%20season%204&prop=wikitext&format=json",
+        "https://lanobare.com/rezero-netabare-novel-24th/",
+        "https://re-zero-anime.jp/tv/story/"
+      ]
+    }
+  ],
+  "repairs": [
+    {
+      "episode": 67,
+      "target": "episodes.title",
+      "field": "title",
+      "old": "",
+      "new": "The Reason I'm Taking You With Me / Gorgeous Tiger Reloaded",
+      "why": "The row is title-less because the mint's parser could not see the title, not because the episode has none. en-WP's 'Re:Zero season 4' entry for overall episode 67 is a TWO-PART episode — `NumParts = 2`, `Title_1 = The Reason I'm Taking You With Me`, `Title_2 = Gorgeous Tiger Reloaded`, `NativeTitle_1 = 君を連れ出す理由`, `NativeTitle_2 = ゴージャス・タイガー・リローデッド` — and lib/wikipedia.ts's parseEpisodeList matches `|\\s*Title\\s*=` only, so `title` came out null on this one row while every other S4 row parsed. Three independent sources give the title: (1) the licensor's own STORY page prints 「‐ 第67話 ‐ 君を連れ出す理由／ゴージャス・タイガー・リローデッド」 with a full-width slash; (2) ja-WP's 第4期 table prints `| Title = 君を連れ出す理由<hr />{{nobr|ゴージャス・タイガー・リローデッド}}` (the wikitext exactly); (3) rezero.fandom's episode page carries the same string in its Kanji field, 君を連れ出す理由／ゴージャス・タイガー・リローデッド, with the same full-width slash. The two halves are the light novel's own chapter titles — volume 21's 第一章 and its 幕間 — which is why the episode carries two title cards. The proposed value joins the two English titles with ' / ', following the Ranking of Kings: The Treasure Chest of Courage precedent in this catalog for a two-part Wikipedia title ('Kage's Errand / The Prince and Money'), and takes en-WP's English wording because every other stored title in rows 68-79 is en-WP's verbatim. If Sean would rather store the Japanese, the licensor's exact string is 「君を連れ出す理由／ゴージャス・タイガー・リローデッド」. NOTE ON `old`: the context prints '(no title)', which does not distinguish null from the empty string; the protocol says a wiki-minted title-less row's `old` is the empty string, so that is what is written here.",
+      "sources": [
+        "https://re-zero-anime.jp/tv/story/",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=Re%3A%E3%82%BC%E3%83%AD%E3%81%8B%E3%82%89%E5%A7%8B%E3%82%81%E3%82%8B%E7%95%B0%E4%B8%96%E7%95%8C%E7%94%9F%E6%B4%BB%20(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext&format=json",
+        "https://en.wikipedia.org/w/api.php?action=parse&page=Re%3AZero%20season%204&prop=wikitext&format=json",
+        "https://rezero.fandom.com/api.php?action=parse&page=Episode%2067&prop=wikitext&format=json"
+      ]
+    }
+  ],
+  "type_corrections": [
+    {
+      "episodes": [
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79
+      ],
+      "type": "canon",
+      "why": "CONFIRMED AS STORED — canon, on two independent lineages per row, and the census default is now a sourced verdict rather than the wiki mint's label. T25: the source is the light novel (T24, source_type light_novel), and each row's content is that novel's, chapter by chapter — rezero.fandom's per-episode Volume field on one side, and on the other the licensor's per-episode synopses at re-zero-anime.jp/tv/story/ matched against a Japanese chapter-by-chapter summary of volumes 20-24 written in 2020, whose tables of contents match the fandom's chapter lists exactly and whose section headings match the licensor's synopses scene for scene. T28: no row has a story-carrying original share. The only non-source material any source names across the whole block is a compression pattern plus one added conversation (annotated on eps 67, 71, 74), and the Japanese comparison that names it says of the season 「物語の根幹を変えるような改変はありません」 and 「幹は同じです」 — cuts, restagings and a small studio beat inside adapted chapters are `abridged` / `divergence` / `rearranged` annotations under T28's faithfulness clause, never mixed. There is no recap row and no clip show in the block: the season's 19 episodes carry LN volumes 21-25 at roughly 3.8 episodes per volume, which leaves no room for padding, and ja-WP's article marks no episode of any Re:Zero season as アニメオリジナル. The series' own baseline agrees — animefillerlist types all 50 episodes it lists 'Manga Canon', with no filler and no mixed row in the run. Delivered as a type_corrections entry carrying the STORED type per the batch-21 confirmation rule so the apply can pin it; the per-row wording lane T asks for is in structure.notes, and a flag says so in case the curator wants only one of the two.",
+      "sources": [
+        "https://re-zero-anime.jp/tv/story/",
+        "https://rezero.fandom.com/api.php?action=parse&page=Episode%2067&prop=wikitext&format=json",
+        "https://rezero.fandom.com/api.php?action=parse&page=Episode%2073&prop=wikitext&format=json",
+        "https://rezero.fandom.com/api.php?action=parse&page=Episode%2079&prop=wikitext&format=json",
+        "https://lanobare.com/rezero-netabare-novel-21st/",
+        "https://lanobare.com/rezero-netabare-novel-22nd/",
+        "https://lanobare.com/rezero-netabare-novel-23rd/",
+        "https://lanobare.com/rezero-netabare-novel-24th/",
+        "https://rezero.fandom.com/api.php?action=parse&page=Re%3AZero%20Light%20Novel%20Volume%2021&prop=wikitext&format=json",
+        "https://rezero.fandom.com/api.php?action=parse&page=Re%3AZero%20Light%20Novel%20Volume%2024&prop=wikitext&format=json",
+        "https://en.wikipedia.org/w/api.php?action=parse&page=Re%3AZero%20season%204&prop=wikitext&format=json",
+        "https://ja.wikipedia.org/w/api.php?action=parse&page=Re%3A%E3%82%BC%E3%83%AD%E3%81%8B%E3%82%89%E5%A7%8B%E3%82%81%E3%82%8B%E7%95%B0%E4%B8%96%E7%95%8C%E7%94%9F%E6%B4%BB%20(%E3%82%A2%E3%83%8B%E3%83%A1)&prop=wikitext&format=json",
+        "https://www.animefillerlist.com/shows/re-zero-starting-life-another-world",
+        "https://lanobare.com/rezero-anime4ki-cut/"
+      ]
+    }
+  ],
+  "structure": {
+    "notes": "THE ARC ↔ INSTRUMENT MAP. Season 4 = 第六章 = LN volumes 21-25 (ja-WP's 既刊一覧, every row citing a KADOKAWA product page: 16-20 = 第五章, 21-25 = 第六章, 26-33 = 第七章). Rows 67-79 land in volumes 20-24; volume 20 is Arc 5's last volume and is reached only because ep 67 finishes the chapter the S3 finale started. Per row: 67 → v21 [START v20] {v20 ch 7 tail, v21 prologue, ch 1, interlude}; 68 → v21 {ch 1 tail, ch 2, ch 3}; 69 → v21 {ch 4, ch 5}; 70 → v22 [START v21] {v21 ch 5 tail, v22 ch 1, ch 2}; 71 → v22 {ch 2 tail, ch 3, ch 4}; 72 → v22 {ch 4, ch 5}; 73 → v22 {ch 6, ch 7}; 74 → v23 {ch 1, ch 2, ch 3}; 75 → v23 {ch 3, ch 4}; 76 → v23 {ch 4, interlude, ch 5}; 77 → v23 {ch 5, ch 6} + v24 ch 1's opening beat (A47, END held at 23); 78 → v24 {ch 1, ch 2}; 79 → v24 {ch 2, ch 3}. Monotone across the block, one back-reach at the season fence (ep 67 → v20) and none inside it. TYPE, ROW BY ROW — every one is a CONFIRMATION, which is a result and not an empty verdict. ep 67 CONFIRMED canon: v20 ch 7's last six sections + v21's prologue, 第一章 and the 幕間, on the licensor's synopsis and two chapter lists; the only non-source facts are a restaging and a reorder, both annotated. ep 68 CONFIRMED canon: v21 ch 1's departure morning through 第二章 and 第三章; licensor synopsis = the book's section list. ep 69 CONFIRMED canon: 第四章「砂上の信頼」 and 第五章 to Shaula's 「見つけた」; the book gives that exact closing line. ep 70 CONFIRMED canon: v21 第五章's 「全員と再会」 then v22 第一章 and 第二章; the licensor's opening sentence is the book's scene. ep 71 CONFIRMED canon: v22 第二章's library pages, 第三章 and 第四章's opening; one added Subaru-Meili conversation is a sliver (annotated), the rest is the novel. ep 72 CONFIRMED canon: v22 第四章's duels and 第五章; KADOKAWA's own volume-22 copy names the subject (「砕け散るは、騎士の矜持か、友愛か」). ep 73 CONFIRMED canon: v22 第六章 and 第七章 to the volume's printed last scene. ep 74 CONFIRMED canon: v23 第一章-第三章; the volume's back cover is this episode's premise verbatim. ep 75 CONFIRMED canon: v23 第三章 and 第四章; the licensor's synopsis is 第三章's section list in order. ep 76 CONFIRMED canon: v23 第四章, the 幕間「メイリィ・ポートルート」 and 第五章 — three consecutive printed units, no reorder. ep 77 CONFIRMED canon: v23 第五章 and 第六章 to 「影に飲み込まれる」, plus v24 第一章's opening beat as a held tail. ep 78 CONFIRMED canon: v24 第一章 and 第二章; the licensor's synopsis is 第一章's three sections in order. ep 79 CONFIRMED canon: v24 第二章's library run and 第三章; KADOKAWA's volume-24 cover quote is this episode's title line. WHAT THE SOURCES SAY AND DO NOT SAY. ja-WP carries no 原作 column and no アニメオリジナル legend for any Re:Zero season — that is SILENCE, not a finding, and the positive readings above carry the standing. rezero.fandom's 'Anime Differences' section is present but EMPTY on all thirteen episode pages; also silence. The one source that speaks to differences is a Japanese fan comparison which declares its own derivation from the English fandom wiki, so it is not an independent lineage and is used as cross-check only. A useful positive from it, checkable against the book summaries: the season follows the BOOK version of the underground-doors sequence (multiple doors, no descent to the sixth basement) rather than the web novel's single door — i.e. fidelity to OUR source, where the web novel is a different text and a different numbering space. THE SPACE. Every number in this verdict is an MF文庫J tankobon VOLUME number and every chapter reference is that volume's own printed 章 / プロローグ / 幕間, never the web novel's arc-and-episode numbering and never the per-arc comicalizations, which are downstream licensed works and were not used for any position (T24). chapters_adapted segments are prefixed 'v<NN>' so the space is explicit on the row. FENCE AND FRONTIER. Below: ep 66, the S3 finale, which the fandom puts at v20 (Ch 1, Ch 6-Ch 7) — its Ch 7 share is the chapter's first section only. Above: eps 80 and 81 have aired (2026-08-26, 2026-09-02) and are NOT stored rows; their titles 「五つの障害」 and 「一途な星」 are volume 24's 第四章 and 第六章, which is an out-of-scope corroboration that the volume-24 reading is right and that the block's frontier is volume 24 partially adapted (chapters 1-3 of 6).",
+    "coverage_set_checked": "ep 66 (fence, not ours) = v20 ch 1, ch 6, ch 7 (first section only); ep 67 = v20 ch 7 (six sections) + v21 prologue + ch 1 + interlude; ep 68 = v21 ch 1 (tail) + ch 2 + ch 3; ep 69 = v21 ch 4 + ch 5 (to 「見つけた」); ep 70 = v21 ch 5 (tail) + v22 ch 1 + ch 2; ep 71 = v22 ch 2 (tail) + ch 3 + ch 4 (opening); ep 72 = v22 ch 4 + ch 5; ep 73 = v22 ch 6 + ch 7 (to the volume's end); ep 74 = v23 ch 1 + ch 2 + ch 3 (opening); ep 75 = v23 ch 3 + ch 4; ep 76 = v23 ch 4 + interlude + ch 5; ep 77 = v23 ch 5 + ch 6 + v24 ch 1 (opening beat); ep 78 = v24 ch 1 + ch 2; ep 79 = v24 ch 2 + ch 3. Every printed unit of volumes 21, 22 and 23 is accounted for with no gap; volume 20 chapters 1-6 belong to season 3; volume 24 chapters 4-6 and the whole of volume 25 are unadapted as of ep 79 (chapters 4 and 6 air as eps 80 and 81, which are not stored rows)."
+  },
+  "flags_for_sean": [
+    "THE ASK'S INSTRUMENT DOES NOT EXIST, and the context should stop naming it: ja-WP's 「Re:ゼロから始める異世界生活 (アニメ)」 has NO 原作 column on the 第1期/第2期/第3期/第4期 tables (the aux columns are 脚本 / 絵コンテ / 演出 / 作画監督 / 総作画監督 / 初放送日) and no アニメオリジナル legend anywhere. If a later wave researches rows 1-66 on the same premise it will burn the same time. The instruments that DO work on this series are: rezero.fandom's per-episode `Volume` field, the licensor's per-episode synopses at re-zero-anime.jp/tv/story/ (a full paragraph per episode, and the S1-S3 tabs are on the same page), and Japanese per-volume book summaries that print the LN's 目次 verbatim.",
+    "THE SLIVER NORMALIZERS ARE BLIND TO VOLUME SPACE, by construction and harmlessly — but Sean should know before the census reads this series. lib/sliver.ts's sliverStart and sliverEnd parse the leading / trailing chapters_adapted segment with /^(\\d+)/; every segment delivered here begins 'v20' / 'v21' / … so both return 'no-lead' / 'no-tail' and neither A10 nor A47 is mechanically derived on these rows. That is the right outcome (the rules are written for chapter space and the A47 hold on ep 77 is a judgment stated in the anchor), but end_sliver_mismatch and its start-side twin will never fire on a novel owner, so this class of row has no mechanical backstop. If volume-space anchors become common, the parsers want a space-aware form.",
+    "ROW 67's TITLE FORM IS SEAN'S CALL, not research's. The pages give three defensible values: en-WP's English pair joined with ' / ' (what the repair proposes, matching the Ranking of Kings precedent and the rest of this block's en-WP titles), the fandom's alternative English ('The Reason to Bring You Out / Gorgeous Tiger Reloaded'), or the licensor's Japanese string 「君を連れ出す理由／ゴージャス・タイガー・リローデッド」 with the full-width slash. The catalog has no ruled convention for a two-part title separator that I could find; the ' / ' form is the precedent, not a rule.",
+    "AN UNVERIFIED PREMIERE CLAIM ON ROW 67, deliberately NOT acted on. rezero.fandom's episode page gives the Air Date as 'November 1, 2025 (Premiere) (Lucca Comics & Games 2025)' followed by 'April 8, 2026'. No second source found it — the licensor's ON AIR page, ja-WP and en-WP all give 2026-04-08 only — and a foreign convention screening is not a broadcast in any case, so the stored 2026-04-08 (the AT-X Wednesday 22:00 first airing) stands unrepaired. Listed because a later air-date wave will meet the same field.",
+    "TWO ROWS THAT ARE NOT ROWS: eps 80 (2026-08-26, 「五つの障害」) and 81 (2026-09-02, 「一途な星」) have aired and both titles are volume 24's 第四章 and 第六章 — the map is already known for them, and 82-85 will finish volume 24 and take volume 25. When the roster catches up, the reading is v24 ch 4 → 80, v24 ch 5-6 → 81 and onward; that is a free continuation of this block, not new research.",
+    "THE CONFIRMATION IS DELIVERED TWICE, on purpose, and the curator should keep whichever the lane wants. The batch-24 lane-T text says a confirmed default is recorded per row in structure.notes; the standing batch-21 rule (Sean, wave 2) says a confirmation is delivered as a type_corrections entry carrying the STORED type so the apply can pin it in T6 and the disagreement class stops re-listing the row. Both are present: one type_corrections entry over all thirteen rows with type 'canon' and a why beginning 'CONFIRMED AS STORED', and the per-row wording in structure.notes. Dropping the type_corrections entry loses the pin; dropping the notes loses the per-row reasons.",
+    "A SERIES-LEVEL GAP THIS BLOCK EXPOSES, out of scope but now cheap: rows 1-66 carry no anchor either, and the same two lineages cover them end to end — the fandom's Volume field runs from Episode 1, the licensor's STORY page has 1st/2nd/3rd season tabs with the same per-episode paragraphs, and the Japanese per-volume book summaries exist for volumes 1-20. ja-WP's 略歴 already states the season-level map in the publisher's own terms: S1 = 第一章-第三章 (「第1話は1時間枠で放送され、原作の第一章から第三章までの映像化となる」), S2 = 「原作の第三章ラストから第四章」, S3 = 第五章, S4 = 第六章. Anchoring 1-66 is a mapping job, not a research fork."
+  ]
+}

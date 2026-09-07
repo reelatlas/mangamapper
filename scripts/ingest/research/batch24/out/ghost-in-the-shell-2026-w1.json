@@ -1,0 +1,462 @@
+{
+ "series_id": "ghost-in-the-shell-2026",
+ "summary": "THE FORK RESOLVES ON HORN (a): AN ADAPTATION, not a parallel telling and not the Outlaw Star class — so all nine target rows are anchored, eps 1-9 -> chapters 2, 3, 5, 6, 7, 8, 9, 10, 10 in the manga's PRINTED 1-12 space (volume 1 throughout), covering chs 1-10 in printed order with nothing reordered and nothing skipped. The fork is decided by the licensor itself: every episode title on the official STORY page is the manga's own chapter title(s) in printed order with i/ii/iii marking the cuts (「第01話　PROLOGUE + SUPER SPARTAN i」 … 「第09話　BRAIN DRAIN ii」), the production states the aim as 「可能な限り原作に忠実なアプローチ」, and two manga-reading reviewers verify it page by page (しげる: 「原作コミックほぼそのままの内容でのアニメ化となった」; ANN: 'amazing fidelity to the source material'). I40's parallel test fails on its own terms — the source is a finished 1989-91 work the anime opens on 35 years later, not one unpublished outline realized twice — and T21 fails because the licensor publishes an episode-to-chapter map. TYPING: eight rows CONFIRMED AS STORED canon (1-7, 9), delivered with the stored type so the default is pinned; ONE retype, ep 8 canon -> MIXED, because the segment the licensor calls 'INTERMISSION' is anime-original on four lineages including Science SARU's own comment (「第08話はオリジナル要素が含まれた話数になっております。原作にはなかったやりとり等に注目していただけると、より攻殻機動隊の世界が楽しめるのではないかと思います！」) and it is roughly half the episode and story-carrying (Project 2501's creation and flight), which clears T28 while 'BRAIN DRAIN i' supplies the canon share. The mixed row keeps its anchor (A1 bars filler rows only). CHAPTER SPACE: the stored total is 11, the printed total is 12 — Kodansha's own 目次 and マガポケ, ja-WP, en-WP and the fandom's own table all end 「11 GHOST COAST」/「12 EPILOGUE」, and 'INTERMISSION' is nowhere in any of them, which is what makes ep 8's first half original rather than a chapter. No END here exceeds 10 so this block is unaffected, but ep 10 needs 11-12; flagged, not repaired (a derivation-tier field, P8, with AniList down). REPAIRS: none — all nine stored titles and air dates are confirmed verbatim on four independent lists and every date is a Tuesday on the 火アニバル!! slot. FIVE C1/C2 continue points (eps 1, 2, 7, 8, 9), all parity, none post_series: the series is still airing, ep 9 breaks off mid-chapter inside ch 10 and ep 10 resumes there. ELEVEN annotations, every non-source segment weighted (one SIGNIFICANT original block on ep 8; the rest are partials on straddled chapters plus sliver-weight cuts, clarifying additions and country renames that keep their rows canon under the faithfulness clause). BIGGEST UNCERTAINTY: ep 8's START 9 rests on an inference (ANN's 'ep 7 adapts most of chapter nine' plus en-WP placing the case's wrap inside ep 8) that no source page-counts; ep 2's START 2 straddles A10's five-page line by about one page. Both are named in the anchors and in flags_for_sean, and neither moves any END.",
+ "anchors": [
+  {
+   "episode": 1,
+   "end_chapter": 2,
+   "start_chapter": 1,
+   "chapters_adapted": "1 (complete — pp.2-9), 2 (pp.10-~43 — the Relief Center raid through the remote punch on the Home Minister)",
+   "volume": 1,
+   "confidence": "high",
+   "why": "START 1 / END 2. The licensor's own episode title is the two chapter titles in printed order — the official STORY page prints 「第01話　PROLOGUE + SUPER SPARTAN i」, and ja-WP, en-WP and the fandom's episode template all carry the same string. Real Sound's しげる, reading the book alongside, writes 「第一話は、コミックのエピソード「PROLOGUE」と「SUPER SPARTAN」を、びっくりするほどそのままなぞったものだった。」 ANN's Kevin Cormack (a manga reader) says of eps 1-3 that 'Between them they adapt the first five manga chapters, including the short prologue and two other short skits' — the short prologue is ch 1. CONTENT: animatetimes' ep-1 recap runs Aramaki's raid and Kusanagi's assassination of the Volgarena representative (ch 1, pp.2-9) straight into the 聖庶民救済センター case (ch 2), ending on the wired connection that makes the Home Minister punch himself and the message left for Aramaki — which the per-page walkthrough of ch 2 places at pp.42/43. END 2 by A4 (the furthest mainline chapter adapted in running order): the episode owns the bulk of ch 2 (roughly pp.10-43 of a 10-49 chapter), so A47's tail clause does not apply in reverse — it is ep 2 that holds ch 2's last ~5-6 pages, not ep 1 that holds a scrap. `partial` names the tail.",
+   "sources": [
+    "https://www.theghostintheshell-anime.jp/story/episode1/",
+    "https://www.theghostintheshell-anime.jp/story/",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E6%94%BB%E6%AE%BB%E6%A9%9F%E5%8B%95%E9%9A%8A%20THE%20GHOST%20IN%20THE%20SHELL&prop=wikitext&format=json&formatversion=2",
+    "https://en.wikipedia.org/wiki/The_Ghost_in_the_Shell_(2026_TV_series)",
+    "https://ghostintheshell.fandom.com/api.php?action=parse&page=Template:GitS%202026%20episodelist&prop=wikitext&format=json&formatversion=2",
+    "https://realsound.jp/book/2026/07/post-2455846.html",
+    "https://www.animatetimes.com/news/details.php?id=1783512302",
+    "https://www.animenewsnetwork.com/review/the-ghost-in-the-shell/episodes-1-3/.239863",
+    "https://kc.kodansha.co.jp/product?item=0000006425",
+    "https://note.com/hitoimitation/n/n7576b4b1de8b",
+    "https://note.com/hitoimitation/n/n16013423d8ae"
+   ]
+  },
+  {
+   "episode": 2,
+   "end_chapter": 3,
+   "start_chapter": 2,
+   "chapters_adapted": "2 (final ~5-6 pp — ~pp.44-49; the disbandment order and the founding of the 攻殻機動隊), 3 (opening — ~pp.50-77; Batou's stakeout through the culprit's discovery)",
+   "volume": 1,
+   "confidence": "medium",
+   "why": "END 3 is high confidence; the START is the medium part, stated plainly. The licensor's title is 「第02話　SUPER SPARTAN ii + JUNK JUNGLE i」 (official STORY page; identically on ja-WP, en-WP and the fandom). Real Sound's しげる, week two of a manga-comparison column: 「今回は前回の「SUPER SPARTAN」の終盤と、原作コミックでは3つめのエピソードである「JUNK JUNGLE」の前半が放送された。」 and, page-level, 「原作コミックでいうと、「SUPER SPARTAN」のラスト5ページ目前後からの内容ということになる。」 START 2 under A10: A10 excludes a leading partial of the preceding chapter only when it is PROVABLY ≤5 pages or is teaser / cold-open / recap / flashback material. Neither holds. 前後 means 'around' — the only measurement anyone published is approximate, and the per-page walkthrough of ch 2 puts the two beats ep 2's own recap describes (Togusa at home + Aramaki at the bar telling Kusanagi the unit is dissolved = pp.44/45; the 攻殻機動隊 announcement = pp.46/47/49) across SIX pages of a chapter that ends at p.49. The segment is also title-billed by the licensor and story-carrying (it is the founding of Section 9, the premise of the series), which is the opposite of a teaser. So the exception is not established and the START stands at 2; I name the ±1 risk rather than hide it — if the share is exactly 5 pages the START would be 3 and everything else on this row is unchanged. END 3 (A4): the episode ends inside ch 3 where the hacker is discovered and runs — 「その後、素子とトグサの追跡によって清掃員に擬似記憶を捩じ込んだ犯人が発見され、逃走を図るところで終わった第二話。コミックではこの後市場を舞台にした大立ち回りが展開され」 — i.e. before the market set-piece, which is ep 3's. しげる cites 『攻殻機動隊(1)』55ページ and 64ページ for scenes inside this episode, both inside ch 3's pp.50-94.",
+   "sources": [
+    "https://www.theghostintheshell-anime.jp/story/episode2/",
+    "https://theghostintheshell.jp/news/the-ghost-in-the-shell-episode2",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E6%94%BB%E6%AE%BB%E6%A9%9F%E5%8B%95%E9%9A%8A%20THE%20GHOST%20IN%20THE%20SHELL&prop=wikitext&format=json&formatversion=2",
+    "https://en.wikipedia.org/wiki/The_Ghost_in_the_Shell_(2026_TV_series)",
+    "https://ghostintheshell.fandom.com/api.php?action=parse&page=Template:GitS%202026%20episodelist&prop=wikitext&format=json&formatversion=2",
+    "https://realsound.jp/book/2026/07/post-2461317.html",
+    "https://www.animatetimes.com/news/details.php?id=1784110845",
+    "https://www.animenewsnetwork.com/review/the-ghost-in-the-shell/episodes-1-3/.239863",
+    "https://note.com/hitoimitation/n/n16013423d8ae",
+    "https://note.com/hitoimitation/n/n19b5129fb916"
+   ]
+  },
+  {
+   "episode": 3,
+   "end_chapter": 5,
+   "start_chapter": 3,
+   "chapters_adapted": "3 (~pp.78-94 — the alley fight; the market chase; the Malles mansion and the 'every Puppet Master was itself a puppet' reveal), 4 (complete), 5 (complete)",
+   "volume": 1,
+   "confidence": "high",
+   "why": "START 3 / END 5. The licensor's title is 「第03話　JUNK JUNGLE ii + MEGATECH MACHINE i + ii」. THE i+ii QUESTION IS SETTLED ON CONTENT, not on the numerals: animatetimes' ep-3 recap says 「後半はエピソード「MEGATECH MACHINE i + ii」へ。」 and then describes, in order, the Fuchikoma dance and the robot-rebellion debate that turns out to be a maintenance test Kusanagi programmed (= ch 4, MEGATECH MACHINE1「ロボットの反乱」) AND the cyborg manufacturing tour plus the girls' talk about whether the present personality is really one's own (= ch 5, MEGATECH MACHINE2「メイキング・オブ・サイボーグ」; the per-page walkthrough quotes that exact line at p.104). en-WP's episode table splits the same episode into '''Junk Jungle ii''' / '''Megatech Machine i''' / '''Megatech Machine ii''' with the same three contents. So 'i + ii' is the anime rendering Shirow's 1 and 2, not two halves of one chapter — which is also how Kodansha's own マガポケ pairs them (【04/05】 as a single short unit). ANN's arithmetic closes it: eps 1-3 'adapt the first five manga chapters ... the short prologue and two other short skits', and 'the seven remaining must adapt six full chapters and a short epilogue' — 5 + 6 + 1 = 12. END 5 by A4.",
+   "sources": [
+    "https://www.theghostintheshell-anime.jp/story/episode3/",
+    "https://theghostintheshell.jp/news/the-ghost-in-the-shell-episode3",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E6%94%BB%E6%AE%BB%E6%A9%9F%E5%8B%95%E9%9A%8A%20THE%20GHOST%20IN%20THE%20SHELL&prop=wikitext&format=json&formatversion=2",
+    "https://en.wikipedia.org/wiki/The_Ghost_in_the_Shell_(2026_TV_series)",
+    "https://ghostintheshell.fandom.com/api.php?action=parse&page=Template:GitS%202026%20episodelist&prop=wikitext&format=json&formatversion=2",
+    "https://www.animatetimes.com/news/details.php?id=1784649956",
+    "https://www.animenewsnetwork.com/review/the-ghost-in-the-shell/episodes-1-3/.239863",
+    "https://kc.kodansha.co.jp/product?item=0000006425",
+    "https://pocket.shonenmagazine.com/title/01567/episode/333655",
+    "https://note.com/hitoimitation/n/n19b5129fb916",
+    "https://note.com/hitoimitation/n/n16d7d67b4db5"
+   ]
+  },
+  {
+   "episode": 4,
+   "end_chapter": 6,
+   "start_chapter": 6,
+   "chapters_adapted": "6 (complete — pp.106-146)",
+   "volume": 1,
+   "confidence": "high",
+   "why": "START 6 / END 6 — one chapter, whole. Licensor title 「第04話　ROBOT RONDO」 = Kodansha's 「06　ROBOT RONDO 2029.10.1」. ANN: 'Robot Rondo, the chapter adapted in this episode, is definitely one of my very favorite chapters in the entire manga', and 'This episode replicates, and even enhances, both the charm and compelling storytelling of the original manga almost flawlessly.' CONTENT MATCH, beat for beat, against the per-page walkthrough of ch 6 (pp.106/107 through pp.144/145/146): the Tomlianne-type androids going berserk, the SOS in the cyberbrain, Hanka's shipping inspector Kubonuma sniped by a yakuza gunman, the ghost-dubbing machine, the smuggled girls 'Link' and 'Adam', the president's flight by boat. animatetimes' ep-4 recap and en-WP's summary give the same chain.",
+   "sources": [
+    "https://www.theghostintheshell-anime.jp/story/episode4/",
+    "https://theghostintheshell.jp/news/the-ghost-in-the-shell-episode4",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E6%94%BB%E6%AE%BB%E6%A9%9F%E5%8B%95%E9%9A%8A%20THE%20GHOST%20IN%20THE%20SHELL&prop=wikitext&format=json&formatversion=2",
+    "https://en.wikipedia.org/wiki/The_Ghost_in_the_Shell_(2026_TV_series)",
+    "https://ghostintheshell.fandom.com/api.php?action=parse&page=Template:GitS%202026%20episodelist&prop=wikitext&format=json&formatversion=2",
+    "https://www.animatetimes.com/news/details.php?id=1785317210",
+    "https://www.animenewsnetwork.com/review/the-ghost-in-the-shell/episode-4/.240065",
+    "https://kc.kodansha.co.jp/product?item=0000006425",
+    "https://note.com/hitoimitation/n/n5a69f3d23c38"
+   ]
+  },
+  {
+   "episode": 5,
+   "end_chapter": 7,
+   "start_chapter": 7,
+   "chapters_adapted": "7 (complete — from p.148)",
+   "volume": 1,
+   "confidence": "high",
+   "why": "START 7 / END 7 — one chapter, whole. Licensor title 「第05話　PHANTOM FUND」 = Kodansha's 「07　PHANTOM FUND 2029.12.24」. ANN: 'It's an issue with the original chapter, which is full of author [Shirow's asides]' ... 'In the original manga, the advanced northern city is built on one of the Kuril Islands north of Hokkaido' ... 'amazingly, they manage to cram everything into a single episode.' CONTENT MATCH against the per-page walkthrough of ch 7: the episode opens on the Fuchikoma / Section-1 think-tank exchange (walkthrough p.149), then the northern deployment, Koil Krasnov, Sagawa Electronics' underground expansion at Etorofu (p.156), the tail Yano killed at Bertarube station (p.161), the informant Krolden (p.164), the gold cache, the arm suits, Kagasaki and the encrypted second ledger (pp.183-186). animatetimes' ep-5 recap names Krolden, Kagasaki and Yano's grave; en-WP names Methuselah, Asechinov, Marlov and Kagasaki.",
+   "sources": [
+    "https://www.theghostintheshell-anime.jp/story/episode5/",
+    "https://theghostintheshell.jp/news/the-ghost-in-the-shell-episode5",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E6%94%BB%E6%AE%BB%E6%A9%9F%E5%8B%95%E9%9A%8A%20THE%20GHOST%20IN%20THE%20SHELL&prop=wikitext&format=json&formatversion=2",
+    "https://en.wikipedia.org/wiki/The_Ghost_in_the_Shell_(2026_TV_series)",
+    "https://ghostintheshell.fandom.com/api.php?action=parse&page=Template:GitS%202026%20episodelist&prop=wikitext&format=json&formatversion=2",
+    "https://www.animatetimes.com/news/details.php?id=1785867448",
+    "https://www.animenewsnetwork.com/review/the-ghost-in-the-shell/episode-5/.240292",
+    "https://kc.kodansha.co.jp/product?item=0000006425",
+    "https://note.com/hitoimitation/n/n501e47aa4aac"
+   ]
+  },
+  {
+   "episode": 6,
+   "end_chapter": 8,
+   "start_chapter": 8,
+   "chapters_adapted": "8 (complete)",
+   "volume": 1,
+   "confidence": "high",
+   "why": "START 8 / END 8 — one chapter, whole. Licensor title 「第06話　DUMB BARTER」 = Kodansha's 「08　DUMB BARTER 2030.5.2」. ANN: '\"Dumb Barter\" is one of the original manga's better chapters, and this episode does an incredible job of adapting it with brutal efficiency for the screen.' CROSS-CHECKS THAT THE CONTENT IS CH 8's: the ch-4/5 walkthrough cross-references 「第八話で相馬が脳にマイクロマシンを注入している場面」 — Souma is a ch-8 character, and Souma Tooru is exactly the terrorist ep 6 is about; and ja-WP's manga article cites 「1巻148頁、217頁、225-226頁」 for the German-made think tank operated against Section 9, which is the German think tank in ep 6's abandoned-factory battle. animatetimes' ep-6 recap and en-WP's summary agree on the whole chain (the assassination attempt on Kusanagi and her boyfriend, Souma's revenge for his son, Section 1's trade with Souma for the Anaconda intelligence, Borma's anti-tank shot, Kusanagi executing Souma).",
+   "sources": [
+    "https://www.theghostintheshell-anime.jp/story/episode6/",
+    "https://theghostintheshell.jp/news/the-ghost-in-the-shell-episode6",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E6%94%BB%E6%AE%BB%E6%A9%9F%E5%8B%95%E9%9A%8A%20THE%20GHOST%20IN%20THE%20SHELL&prop=wikitext&format=json&formatversion=2",
+    "https://en.wikipedia.org/wiki/The_Ghost_in_the_Shell_(2026_TV_series)",
+    "https://ghostintheshell.fandom.com/api.php?action=parse&page=Template:GitS%202026%20episodelist&prop=wikitext&format=json&formatversion=2",
+    "https://www.animatetimes.com/news/details.php?id=1786631620",
+    "https://www.animenewsnetwork.com/review/the-ghost-in-the-shell/episode-6/.240497",
+    "https://kc.kodansha.co.jp/product?item=0000006425",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E6%94%BB%E6%AE%BB%E6%A9%9F%E5%8B%95%E9%9A%8A&prop=wikitext&format=json&formatversion=2",
+    "https://note.com/hitoimitation/n/n16d7d67b4db5"
+   ]
+  },
+  {
+   "episode": 7,
+   "end_chapter": 9,
+   "start_chapter": 9,
+   "chapters_adapted": "9 (most of the chapter — the Megatech runaway body; the Puppet Master's self-declaration and asylum demand before Aramaki; Section 6's snatch; the recovery and Kusanagi's dive. The chapter's closing pages are ep 8's)",
+   "volume": 1,
+   "confidence": "high",
+   "why": "START 9 / END 9. Licensor title 「第07話　BYE BYE CLAY」 = Kodansha's 「09　BYE BYE CLAY 2030.7.15」. ANN, explicitly: 'Episode seven adapts most of manga chapter nine, which includes much of creator Masamune Shirow's signature esoteric musings on the nature of existence and consciousness.' CROSS-CHECKS THAT THE CONTENT IS CH 9's: the ch-3 walkthrough twice cross-references ch 9 — 「ページがおーーきく飛んで第九話・p267の解説になります」 (its ch-3 entry jumps forward to gloss ch 9's p.267, where the Puppet Master is revealed to Aramaki as a Foreign Ministry program) with the Puppet Master's line to Aramaki quoted from p.267, and 「第九話にて”人形使いをチェロケースに入れて運ぶ6課（外務省）の二人組”がひっそり初登場してます」 for the Section 6 pair who carry it away. Both are ep 7's beats. END 9 by A4; `partial` records that the chapter is not finished here (ANN's 'most of'), and the remainder lands in ep 8.",
+   "sources": [
+    "https://www.theghostintheshell-anime.jp/story/episode7/",
+    "https://theghostintheshell.jp/news/the-ghost-in-the-shell-episode7",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E6%94%BB%E6%AE%BB%E6%A9%9F%E5%8B%95%E9%9A%8A%20THE%20GHOST%20IN%20THE%20SHELL&prop=wikitext&format=json&formatversion=2",
+    "https://en.wikipedia.org/wiki/The_Ghost_in_the_Shell_(2026_TV_series)",
+    "https://ghostintheshell.fandom.com/api.php?action=parse&page=Template:GitS%202026%20episodelist&prop=wikitext&format=json&formatversion=2",
+    "https://www.animatetimes.com/news/details.php?id=1787127669",
+    "https://www.animenewsnetwork.com/review/the-ghost-in-the-shell/episode-7/.240716",
+    "https://kc.kodansha.co.jp/product?item=0000006425",
+    "https://note.com/hitoimitation/n/n19b5129fb916"
+   ]
+  },
+  {
+   "episode": 8,
+   "end_chapter": 10,
+   "start_chapter": 9,
+   "chapters_adapted": "9 (closing pages — Batou pulls Kusanagi's ghost out of the dying Puppet Master; Nakamura arrested; the case tied off), 10 (opening — the September-2030 shipboard raid; the misfire on the leader; the drone evidence against Foreign Minister Hidaka; the broadcast that exposes her)",
+   "volume": 1,
+   "confidence": "medium",
+   "why": "MIXED ROW, ANCHORED (A1 bars only filler and A44 rows). END 10 is high confidence; the START is the medium part. Licensor title 「第08話　INTERMISSION + BRAIN DRAIN i」 — and INTERMISSION is NOT a manga chapter: Kodansha's own 目次 and マガポケ both run 01-12 with no such piece (see structure.notes). END 10 (A4): the second half is ch 10's opening. Kodansha dates ch 10 「BRAIN DRAIN 2030.9.9」 and animeanime's recap of the source half opens 「2030年9月、公安9課はタレ込みで始まった作戦に出向く」 — the same in-world date. animatetimes: 「後半はいよいよ「BRAIN DRAIN i」がスタート」, then the ship infiltration, the accidental killing of the leader, the news broadcast. That is a substantial, story-carrying source share, so the row is anchored, not hostile. START 9, at medium confidence, on an INFERENCE I name: ANN's ep-7 review says ep 7 adapts 'most of manga chapter nine', and en-WP's ep-8 table entry puts the case's resolution inside the INTERMISSION segment ('In the present, Batou is able to pull Kusanagi out of the Puppet Master's dying consciousness ... Aramaki has Nakamura arrested for his crimes ... Section 9 ties up any remaining loose ends'), which the official synopsis echoes (「人形使いへのダイブを経て、目を覚ます草薙。事件の真相は明らかとなる」) and animatetimes repeats (「人形使いへのダイブから目覚めた素子」). No source states a page count for that remainder and no source calls it anime-original — the three sources that flag original material in this episode all name the 2025 Project 2501 sequence and the Poseidon material, never the case wrap. A10's exclusion needs proof of ≤5 pages or teaser wording; neither exists, so the leading partial counts and the START is 9. THE HONEST GAP: if that wrap turns out to be studio staging rather than ch 9's pages, this row's START is 10 and nothing else changes.",
+   "sources": [
+    "https://www.theghostintheshell-anime.jp/story/episode8/",
+    "https://theghostintheshell.jp/news/the-ghost-in-the-shell-episode8",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E6%94%BB%E6%AE%BB%E6%A9%9F%E5%8B%95%E9%9A%8A%20THE%20GHOST%20IN%20THE%20SHELL&prop=wikitext&format=json&formatversion=2",
+    "https://en.wikipedia.org/wiki/The_Ghost_in_the_Shell_(2026_TV_series)",
+    "https://ghostintheshell.fandom.com/api.php?action=parse&page=Template:GitS%202026%20episodelist&prop=wikitext&format=json&formatversion=2",
+    "https://www.animatetimes.com/news/details.php?id=1787677830",
+    "https://animeanime.jp/article/2026/08/26/102381.html",
+    "https://www.animenewsnetwork.com/review/the-ghost-in-the-shell/episode-7/.240716",
+    "https://www.animenewsnetwork.com/review/the-ghost-in-the-shell/episode-8/.240992",
+    "https://kc.kodansha.co.jp/product?item=0000006425",
+    "https://pocket.shonenmagazine.com/title/01567/episode/333668"
+   ]
+  },
+  {
+   "episode": 9,
+   "end_chapter": 10,
+   "start_chapter": 10,
+   "chapters_adapted": "10 (middle third — the Diet debate and the Justice Ministry's squeeze on Aramaki; the leak investigation and the Ghorantl/Mesamia false flags; Togusa hospitalised; the trial and Kusanagi's speech; the recess; the escape; the hostage and the helicopter demand)",
+   "volume": 1,
+   "confidence": "high",
+   "why": "START 10 / END 10 — the episode plays entirely inside ch 10. Licensor title 「第09話　BRAIN DRAIN ii」, the middle of the three parts the anime cuts ch 10 into (ep 10, 2026-09-08, is 'BRAIN DRAIN iii + GHOST COAST + EPILOGUE' on both the fandom's episode template and en-WP). THAT THE CONTENT IS THE MANGA's, not studio invention, is settled on a line-level comparison: animeanime's ep-9 write-up quotes Kusanagi's courtroom line and then the book — 「たとえば「でもプログラムから醒めたことは確かです」の部分は、原作では「でも悪夢《ルビ：プログラム》から醒めたことは確かです」となっている」 — i.e. the anime kept the sentence and dropped Shirow's ruby gloss. ANN's reviewer, comparing to the book, treats the whole political plot as the manga's and notes only the country renames: 'In the original manga ... the main aggressor country is Israel (renamed Gerantl here), while Kusanagi has contacts with agents in Russia (Volgarena) and Mossad.' en-WP's summary gives the same chain and footnotes the renames the same way. No source reports anime-original material in this episode. C1: the episode stops mid-chapter, in the park stand-off — 「あれ、ここで終わり？」 in the reaction round-up — so the reader continues IN ch 10.",
+   "sources": [
+    "https://www.theghostintheshell-anime.jp/story/episode9/",
+    "https://theghostintheshell.jp/news/the-ghost-in-the-shell-episode9",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E6%94%BB%E6%AE%BB%E6%A9%9F%E5%8B%95%E9%9A%8A%20THE%20GHOST%20IN%20THE%20SHELL&prop=wikitext&format=json&formatversion=2",
+    "https://en.wikipedia.org/wiki/The_Ghost_in_the_Shell_(2026_TV_series)",
+    "https://ghostintheshell.fandom.com/api.php?action=parse&page=Template:GitS%202026%20episodelist&prop=wikitext&format=json&formatversion=2",
+    "https://animeanime.jp/article/2026/09/02/102598.html",
+    "https://www.animenewsnetwork.com/review/the-ghost-in-the-shell/episode-9/.241215",
+    "https://kc.kodansha.co.jp/product?item=0000006425",
+    "https://pocket.shonenmagazine.com/title/01567/episode/333669",
+    "https://www.b-ch.com/titles/9782/009"
+   ]
+  }
+ ],
+ "continue_points": [
+  {
+   "episode": 1,
+   "continue_chapter": 2,
+   "kind": "parity",
+   "confidence": "high",
+   "why": "C1 and C2 agree on 2. Ep 1 stops inside ch 2 (roughly p.43 of a chapter that runs to p.49), so the reader is mid-chapter and continues IN ch 2; ep 2 opens on the same chapter's last pages, so parity lands on the same number. Nothing is skipped, so there is no C3 note.",
+   "sources": [
+    "https://realsound.jp/book/2026/07/post-2461317.html",
+    "https://www.animatetimes.com/news/details.php?id=1783512302",
+    "https://www.animatetimes.com/news/details.php?id=1784110845"
+   ]
+  },
+  {
+   "episode": 2,
+   "continue_chapter": 3,
+   "kind": "parity",
+   "confidence": "high",
+   "why": "C1 and C2 agree on 3. Ep 2 stops inside ch 3 at the hacker's flight (しげる: 「逃走を図るところで終わった第二話。コミックではこの後市場を舞台にした大立ち回りが展開され」), and ep 3 resumes on that pursuit. Mid-chapter, so continue IN ch 3; nothing skipped.",
+   "sources": [
+    "https://realsound.jp/book/2026/07/post-2461317.html",
+    "https://www.animatetimes.com/news/details.php?id=1784649956",
+    "https://note.com/hitoimitation/n/n19b5129fb916"
+   ]
+  },
+  {
+   "episode": 7,
+   "continue_chapter": 9,
+   "kind": "parity",
+   "confidence": "high",
+   "why": "C1 and C2 agree on 9. ANN: 'Episode seven adapts most of manga chapter nine' — the chapter is not finished, so the reader continues IN ch 9, and ep 8's first source material is that same chapter's closing pages. Nothing skipped.",
+   "sources": [
+    "https://www.animenewsnetwork.com/review/the-ghost-in-the-shell/episode-7/.240716",
+    "https://en.wikipedia.org/wiki/The_Ghost_in_the_Shell_(2026_TV_series)",
+    "https://www.theghostintheshell-anime.jp/story/episode8/"
+   ]
+  },
+  {
+   "episode": 8,
+   "continue_chapter": 10,
+   "kind": "parity",
+   "confidence": "high",
+   "why": "C1 and C2 agree on 10. Ep 8 stops partway into ch 10 (the broadcast that exposes Kusanagi), and ep 9 continues in ch 10. Mid-chapter, nothing skipped.",
+   "sources": [
+    "https://www.animatetimes.com/news/details.php?id=1787677830",
+    "https://animeanime.jp/article/2026/08/26/102381.html",
+    "https://en.wikipedia.org/wiki/The_Ghost_in_the_Shell_(2026_TV_series)"
+   ]
+  },
+  {
+   "episode": 9,
+   "continue_chapter": 10,
+   "kind": "parity",
+   "confidence": "high",
+   "why": "C1 — the block's edge, and deliberately NOT a post_series continue: the series is still airing (ep 10 broadcasts 2026-09-08 and is not a stored row), so the frontier here is a mid-chapter stop, not a terminal. Ep 9 breaks off inside ch 10 in the middle of the park hostage scene; ep 10 is titled 'BRAIN DRAIN iii + GHOST COAST + EPILOGUE' (fandom episode template, en-WP), i.e. it resumes in ch 10 and then runs 11-12 to the end of the manga. So the reader continues IN ch 10. Nothing is skipped anywhere in the run — chs 1-10 are covered in printed order — so there is no C3 note to give.",
+   "sources": [
+    "https://animeanime.jp/article/2026/09/02/102598.html",
+    "https://www.animenewsnetwork.com/review/the-ghost-in-the-shell/episode-9/.241215",
+    "https://ghostintheshell.fandom.com/api.php?action=parse&page=Template:GitS%202026%20episodelist&prop=wikitext&format=json&formatversion=2",
+    "https://en.wikipedia.org/wiki/The_Ghost_in_the_Shell_(2026_TV_series)"
+   ]
+  }
+ ],
+ "anchor_hostile": [],
+ "annotations": [
+  {
+   "episodes": [
+    1
+   ],
+   "kind": "partial",
+   "chapters": "2 (pp.10-~43 of a chapter running pp.10-49)",
+   "note": "weight: SIGNIFICANT — ch 2 is the bulk of the episode (the whole 聖庶民救済センター case), not a sliver; the row's END is 2 by A4. What is deferred is the chapter's last ~5-6 pages (Aramaki telling Kusanagi the unit is dissolved and then announcing the 攻殻機動隊), which open ep 2. Ch 1 is adapted complete.",
+   "sources": [
+    "https://realsound.jp/book/2026/07/post-2455846.html",
+    "https://realsound.jp/book/2026/07/post-2461317.html",
+    "https://www.animatetimes.com/news/details.php?id=1783512302",
+    "https://note.com/hitoimitation/n/n16013423d8ae"
+   ]
+  },
+  {
+   "episodes": [
+    1
+   ],
+   "kind": "abridged",
+   "chapters": "2",
+   "note": "weight: SLIVER (T28 faithfulness clause — cuts of the source's own material keep the row CANON and are noted, never weighed toward mixed). Real Sound's しげる lists what ep 1 drops from SUPER SPARTAN: 「「SUPER SPARTAN」で有名な「トグサがマンホールを閉めた時に周囲の草を挟んだことで作戦が危機に陥る」場面が削られていたり、素子が他のメンバーを脳に入れた際にノイズの多さを指摘されて「生理なんだよ」と答える場面もなかった」. Both are omissions of manga beats, not additions; the same column's verdict on the episode as a whole is 「原作コミックほぼそのままの内容でのアニメ化となった」.",
+   "sources": [
+    "https://realsound.jp/book/2026/07/post-2455846.html",
+    "https://www.animenewsnetwork.com/review/the-ghost-in-the-shell/episodes-1-3/.239863"
+   ]
+  },
+  {
+   "episodes": [
+    2
+   ],
+   "kind": "partial",
+   "chapters": "2 (final ~5-6 pp), 3 (~pp.50-77)",
+   "note": "weight: SIGNIFICANT on both segments — the ch-2 tail is the founding of Section 9 (the series' premise, and the licensor bills it in the episode title as 'SUPER SPARTAN ii'), and the ch-3 opening is the bulk of the episode. Neither is a tease. This annotation is what carries the page split A10 could otherwise hide: しげる measured the ch-2 share as 「ラスト5ページ目前後から」 and the per-chapter walkthrough places the two beats at pp.44/45 and pp.46/47/49.",
+   "sources": [
+    "https://realsound.jp/book/2026/07/post-2461317.html",
+    "https://www.animatetimes.com/news/details.php?id=1784110845",
+    "https://note.com/hitoimitation/n/n16013423d8ae"
+   ]
+  },
+  {
+   "episodes": [
+    2
+   ],
+   "kind": "divergence",
+   "chapters": "2, 3",
+   "note": "weight: SLIVER — three small studio changes inside an otherwise faithful adaptation, all reported by the one column that read the pages alongside. (i) An ADDED clarifying scene: 「アニメでは駐車場で荒巻の車を発見するシーンが追加されており、多少説明が追加された形となっている」 (the manga has Batou simply walk into the bar). (ii) A SIMPLIFIED beat: the manga's Batou cocks and then thumb-decocks his pistol as Aramaki approaches under thermoptic camouflage; the anime reduces it to 「荒巻が後ろから近づく→バトーが気付く」. (iii) The 'endorphin' recording scene is toned down to 「ちょっと前のアニメっぽいお色気要素」 and the swimsuits added. None is a story-carrying original share, so T28's materiality bar is not met and the row stays CANON.",
+   "sources": [
+    "https://realsound.jp/book/2026/07/post-2461317.html",
+    "https://www.animenewsnetwork.com/review/the-ghost-in-the-shell/episodes-1-3/.239863"
+   ]
+  },
+  {
+   "episodes": [
+    3
+   ],
+   "kind": "partial",
+   "chapters": "3 (~pp.78-94)",
+   "note": "weight: SIGNIFICANT — the back half of ch 3 (the invisible-man alley fight, the market chase, the Malles mansion raid and the 'everyone was a puppet' reveal) is the episode's whole A-part. Chs 4 and 5 are adapted complete in the B-part. NEW pages throughout: ep 2 stopped before the pursuit, so nothing here duplicates it.",
+   "sources": [
+    "https://realsound.jp/book/2026/07/post-2461317.html",
+    "https://www.animatetimes.com/news/details.php?id=1784649956",
+    "https://note.com/hitoimitation/n/n19b5129fb916"
+   ]
+  },
+  {
+   "episodes": [
+    5
+   ],
+   "kind": "divergence",
+   "chapters": "7",
+   "note": "weight: SLIVER — setting and nomenclature only, inside a complete and faithful adaptation of ch 7. ANN: 'In the original manga, the advanced northern city is built on one of the Kuril Islands north of Hokkaido, though in the real world they remain disputed territory between Japan and Russia, so the adaptation fudges the details a little.' The USSR of the manga is renamed Volgarena throughout the anime (en-WP footnotes it on this episode: 'USSR in the original manga'). Renames are not original story material; the row stays CANON.",
+   "sources": [
+    "https://www.animenewsnetwork.com/review/the-ghost-in-the-shell/episode-5/.240292",
+    "https://en.wikipedia.org/wiki/The_Ghost_in_the_Shell_(2026_TV_series)"
+   ]
+  },
+  {
+   "episodes": [
+    7
+   ],
+   "kind": "partial",
+   "chapters": "9 (most of the chapter)",
+   "note": "weight: SIGNIFICANT — ch 9 is the entire episode. ANN states the split in as many words: 'Episode seven adapts most of manga chapter nine.' The remainder (the dive's resolution) lands in ep 8; nothing is skipped and no other episode revisits these pages.",
+   "sources": [
+    "https://www.animenewsnetwork.com/review/the-ghost-in-the-shell/episode-7/.240716",
+    "https://en.wikipedia.org/wiki/The_Ghost_in_the_Shell_(2026_TV_series)",
+    "https://www.theghostintheshell-anime.jp/story/episode7/"
+   ]
+  },
+  {
+   "episodes": [
+    8
+   ],
+   "kind": "divergence",
+   "chapters": null,
+   "note": "weight: SIGNIFICANT — THIS IS WHY THE ROW IS MIXED (T25/T27 + T28). The segment the licensor titles 'INTERMISSION' is not a manga chapter (Kodansha's 目次 and マガポケ both run 01-12 with no such piece) but anime-original material, on four independent lineages. (1) THE STUDIO ITSELF, in Science SARU's post-broadcast comment from the episode's storyboard/direction lead 山田加余仲: 「第08話はオリジナル要素が含まれた話数になっております。原作にはなかったやりとり等に注目していただけると、より攻殻機動隊の世界が楽しめるのではないかと思います！」 (2) animatetimes: 「第8話冒頭は、2025年を舞台にしたアニメオリジナルシーンからスタート」 and 「原作コミックスでは描かれなかったエピソード」; the Poseidon Industrial meeting that follows is 「こちらもアニメオリジナルのシーンであり」. (3) animeanime: 「プロジェクト2501、人形使い目線の前日譚から始まった第08話。そのアニメオリジナルのエピソードを経て、第07話のワンシーンにつながる。」 (4) ANN: 'this episode's first half ... surprisingly features this adaptation's most prominent anime-original material so far ... a whole bunch of fascinating new scenes that intelligently expand on the origins of Project 2501', plus 'Some extra non-manga additions to this part of the episode include some references to the artificial island Poseidon ... A character from that story arc even briefly appears on screen' (Lee, Poseidon's security chief — animatetimes: 「リーは原作コミックス第2巻に登場する人物であり」). MATERIALITY (T28): this is roughly the episode's first half and it is story-carrying, not a quote — it establishes the antagonist's origin (Section 6 built Project 2501 as an autonomous hacking tool; it acquired self-awareness; Nakamura moved to erase it; it fled), the single largest unexplained thing in the series. THE RECAP BOUNDARY (Sean 2026-09-02, shippuden 388) rather than the recap clause governs the retelling inside it: viewers describe it as 「人形使いの視点から、これまでの話が分かりやすく再話されている」, but it is NEWLY DRAWN, of significant length, and contains scenes the source lacks (the 2025 lab, the switch-on, the board games, the escape onto the wider net) — so it is anime production that shapes the episode, weighs toward filler, and with a real canon share (BRAIN DRAIN i) in the same episode makes the row MIXED. NOT `side_source`: the Poseidon/Lee elements are a cameo and a reference to Ghost in the Shell 2: Man-Machine Interface, not an adaptation of it (T26 — a second licensed work is side_source only where the episode ADAPTS it), and no source claims any GitS-2 chapter is animated here.",
+   "sources": [
+    "https://animeanime.jp/article/2026/08/26/102381.html",
+    "https://www.animatetimes.com/news/details.php?id=1787677830",
+    "https://www.animenewsnetwork.com/review/the-ghost-in-the-shell/episode-8/.240992",
+    "https://kc.kodansha.co.jp/product?item=0000006425"
+   ]
+  },
+  {
+   "episodes": [
+    8
+   ],
+   "kind": "partial",
+   "chapters": "9 (closing pages), 10 (opening)",
+   "note": "weight: SIGNIFICANT for the ch-10 opening (the whole B-part: the shipboard raid, the misfire, the exposure) — that is the share the anchor rests on. The ch-9 closing pages are the smaller, INFERRED segment (see the anchor's why): ANN says ep 7 adapts 'most of' ch 9 and en-WP puts the case's wrap (Batou pulling Kusanagi out, Nakamura's arrest, the loose ends) inside this episode's INTERMISSION frame; no source gives its page count, and no source calls it original.",
+   "sources": [
+    "https://www.animenewsnetwork.com/review/the-ghost-in-the-shell/episode-7/.240716",
+    "https://en.wikipedia.org/wiki/The_Ghost_in_the_Shell_(2026_TV_series)",
+    "https://www.animatetimes.com/news/details.php?id=1787677830",
+    "https://www.theghostintheshell-anime.jp/story/episode8/"
+   ]
+  },
+  {
+   "episodes": [
+    9
+   ],
+   "kind": "partial",
+   "chapters": "10 (middle third)",
+   "note": "weight: SIGNIFICANT — ch 10 is the entire episode; this row is the middle of the three parts the anime cuts BRAIN DRAIN into (ep 8 = i, ep 9 = ii, ep 10 = iii). It opens where ep 8 stopped and breaks off mid-scene in the park (the reaction round-up records the audience's 「あれ、ここで終わり？」), so the reader continues IN ch 10.",
+   "sources": [
+    "https://animeanime.jp/article/2026/09/02/102598.html",
+    "https://www.animenewsnetwork.com/review/the-ghost-in-the-shell/episode-9/.241215",
+    "https://ghostintheshell.fandom.com/api.php?action=parse&page=Template:GitS%202026%20episodelist&prop=wikitext&format=json&formatversion=2"
+   ]
+  },
+  {
+   "episodes": [
+    9
+   ],
+   "kind": "divergence",
+   "chapters": "10",
+   "note": "weight: SLIVER — nomenclature only, inside a faithful adaptation. ANN, comparing to the book: 'In the original manga, written in the late 1980s and early 1990s, the main aggressor country is Israel (renamed Gerantl here), while Kusanagi has contacts with agents in Russia (Volgarena) and Mossad'; en-WP footnotes the same two renames on this row ('Israel in the original manga', 'Syria in the original manga' for Mesamia). animeanime records one line-level change: the anime keeps Kusanagi's courtroom sentence but drops Shirow's ruby gloss — 「原作では「でも悪夢《ルビ：プログラム》から醒めたことは確かです」となっている」. Renames and a dropped ruby are not original story material; the row stays CANON.",
+   "sources": [
+    "https://www.animenewsnetwork.com/review/the-ghost-in-the-shell/episode-9/.241215",
+    "https://en.wikipedia.org/wiki/The_Ghost_in_the_Shell_(2026_TV_series)",
+    "https://animeanime.jp/article/2026/09/02/102598.html"
+   ]
+  }
+ ],
+ "repairs": [],
+ "type_corrections": [
+  {
+   "episodes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    9
+   ],
+   "type": "canon",
+   "note": "CONFIRMED AS STORED (canon) on all eight rows — delivered with the stored type so the default is pinned rather than left as the wiki mint's unexamined label. Each is an in-order adaptation of consecutive chapters of the series' identified source (士郎正宗『攻殻機動隊』, one volume, printed chs 1-12): ep 1 = 1 + most of 2; ep 2 = the rest of 2 + the front of 3; ep 3 = the rest of 3 + 4 + 5; ep 4 = 6; ep 5 = 7; ep 6 = 8; ep 7 = most of 9; ep 9 = the middle of 10. NO ROW HERE CARRIES A STORY-CARRYING ORIGINAL SHARE to weigh under T28, and no row is a recap. What the sources do report on these rows is cuts, simplifications, small clarifying additions and country renames — which under the faithfulness clause (T28, Sean 2026-09-02) keep a row CANON and are recorded as `abridged` / `divergence` annotations above. The positive evidence is a production statement plus two manga-reading reviewers: ja-WP's production section, 「制作にあたっては、原作に独自の解釈を加える従来作とは異なり、その要素を安易に削らず、可能な限り忠実に映像化することが目指された」 and 「可能な限り原作に忠実なアプローチをとっている」; Real Sound's しげる, 「原作コミックほぼそのままの内容でのアニメ化となった」; ANN's Kevin Cormack, 'this adaptation maintains amazing fidelity to the source material, in an attempt to cram almost everything in, from every panel, snippet of dialogue, to even Shirow's infamously dense infodump footnotes' and, on eps 1-3, 'that's a result of slavish fidelity to the manga's structure'. The community read is the same: the reaction round-up for ep 8 quotes viewers reacting to the first original block with 「ずっと原作1巻に沿ってたのにいきなりディレクターズカット的なアニオリが盛られてびびった」 — 'it had been following volume 1 all along'. There is no AFL page for this series (the context prints 'AFL: —' on every row) and AFG is not used as a type witness.",
+   "sources": [
+    "https://www.theghostintheshell-anime.jp/story/",
+    "https://ja.wikipedia.org/w/api.php?action=parse&page=%E6%94%BB%E6%AE%BB%E6%A9%9F%E5%8B%95%E9%9A%8A%20THE%20GHOST%20IN%20THE%20SHELL&prop=wikitext&format=json&formatversion=2",
+    "https://en.wikipedia.org/wiki/The_Ghost_in_the_Shell_(2026_TV_series)",
+    "https://ghostintheshell.fandom.com/api.php?action=parse&page=Template:GitS%202026%20episodelist&prop=wikitext&format=json&formatversion=2",
+    "https://kc.kodansha.co.jp/product?item=0000006425",
+    "https://www.animenewsnetwork.com/review/the-ghost-in-the-shell/episodes-1-3/.239863",
+    "https://www.animenewsnetwork.com/review/the-ghost-in-the-shell/episode-4/.240065",
+    "https://www.animenewsnetwork.com/review/the-ghost-in-the-shell/episode-5/.240292",
+    "https://www.animenewsnetwork.com/review/the-ghost-in-the-shell/episode-6/.240497",
+    "https://www.animenewsnetwork.com/review/the-ghost-in-the-shell/episode-7/.240716",
+    "https://realsound.jp/book/2026/07/post-2455846.html",
+    "https://realsound.jp/book/2026/07/post-2461317.html"
+   ]
+  },
+  {
+   "episodes": [
+    8
+   ],
+   "type": "mixed",
+   "note": "RETYPE canon -> MIXED (T25/T27: source and non-source in one episode; T28's materiality bar met). The episode is two halves: the licensor-titled 'INTERMISSION', which is anime-original material — the studio's own comment says so (Science SARU, 山田加余仲: 「第08話はオリジナル要素が含まれた話数になっております。原作にはなかったやりとり等に注目していただけると、より攻殻機動隊の世界が楽しめるのではないかと思います！」), as do animatetimes (「第8話冒頭は、2025年を舞台にしたアニメオリジナルシーンからスタート」, 「原作コミックスでは描かれなかったエピソード」), animeanime (「プロジェクト2501、人形使い目線の前日譚から始まった第08話。そのアニメオリジナルのエピソードを経て、第07話のワンシーンにつながる。」) and ANN ('this adaptation's most prominent anime-original material so far') — and 'BRAIN DRAIN i', which adapts ch 10's opening. The original half is story-carrying, not a quote: it establishes Project 2501's creation by Section 6, its acquisition of self-awareness and its flight, and Nakamura's attempt to erase it. It is also NEWLY ANIMATED rather than re-shown footage, so the recap clause does not discount it — the recap BOUNDARY (Sean 2026-09-02, shippuden 388) puts a newly drawn sequence of significant length with scenes the source lacks on the original side, and a real canon share in the same episode makes the row MIXED. The row keeps its anchor: A1 bars anchors on filler rows only, and mixed rows carry them.",
+   "sources": [
+    "https://animeanime.jp/article/2026/08/26/102381.html",
+    "https://www.animatetimes.com/news/details.php?id=1787677830",
+    "https://www.animenewsnetwork.com/review/the-ghost-in-the-shell/episode-8/.240992",
+    "https://kc.kodansha.co.jp/product?item=0000006425",
+    "https://en.wikipedia.org/wiki/The_Ghost_in_the_Shell_(2026_TV_series)"
+   ]
+  }
+ ],
+ "structure": {
+  "source_relation": "adaptation",
+  "notes": "THE FORK RESOLVES ON HORN (a): THIS IS AN ADAPTATION, and the anchors above are ordinary chapter positions in the manga's printed 1-12 space. The evidence, stated explicitly as the ask requires.\n\n(1) THE LICENSOR PUBLISHES THE MAP. Every episode title on the official site's STORY page is one or more of the manga's own chapter titles, in the manga's printed order, with lower-case roman numerals marking where a chapter is cut across episodes: 第01話 PROLOGUE + SUPER SPARTAN i / 第02話 SUPER SPARTAN ii + JUNK JUNGLE i / 第03話 JUNK JUNGLE ii + MEGATECH MACHINE i + ii / 第04話 ROBOT RONDO / 第05話 PHANTOM FUND / 第06話 DUMB BARTER / 第07話 BYE BYE CLAY / 第08話 INTERMISSION + BRAIN DRAIN i / 第09話 BRAIN DRAIN ii, and (fandom episode template + en-WP) 第10話 BRAIN DRAIN iii + GHOST COAST + EPILOGUE. Laid against Kodansha's 目次 that is chs 1-2 / 2-3 / 3-4-5 / 6 / 7 / 8 / 9 / 9-10 / 10 / 10-11-12: strictly monotone, nothing reordered, nothing skipped. The stored titles were EVIDENCE to be confirmed, not a premise, and four independent transcriptions confirm them verbatim (the official site, ja-WP's 各話リスト, en-WP's episode table, the fandom's Template:GitS 2026 episodelist), with Bandai Channel's nine per-episode pages (b-ch.com/titles/9782/001-009) carrying the same nine subtitles, and thetv.jp the same for the rows its listing shows.\n\n(2) THE PRODUCTION SAYS IT IS ADAPTING. ja-WP's production section, sourced to MAGEDGE Vol.2 and WIRED: 「制作にあたっては、原作に独自の解釈を加える従来作とは異なり、その要素を安易に削らず、可能な限り忠実に映像化することが目指された」 and 「可能な限り原作に忠実なアプローチをとっている」. Series composition 円城塔 「原作を文字に起こして最適な話数を検証」 before settling on ten episodes — a scriptwriter transcribing the book to work out the episode count is the behaviour of an adaptation, not of a second realization of an outline.\n\n(3) TWO MANGA-READING REVIEWERS CHECK IT PAGE BY PAGE AND FIND AN ADAPTATION. Real Sound's しげる: 「原作コミックほぼそのままの内容でのアニメ化となった」, and on ep 1 「第一話は、コミックのエピソード「PROLOGUE」と「SUPER SPARTAN」を、びっくりするほどそのままなぞったものだった。」 ANN's Kevin Cormack: 'this adaptation maintains amazing fidelity to the source material, in an attempt to cram almost everything in, from every panel, snippet of dialogue, to even Shirow's infamously dense infodump footnotes'.\n\n(4) THE OTHER TWO HORNS FAIL ON THEIR OWN TESTS. Horn (b), I40 parallel telling, requires two official realizations of ONE UNPUBLISHED outline, neither adapting the other (dragon-ball-super is the witness). Here the source is a finished work published 1989-1990 and collected in 1991, and the anime is 35 years downstream of it, opening with that work's first chapter; no source, licensor or otherwise, describes the two as alternative tellings, and AniList/MU carry no ALTERNATIVE edge of that kind — MangaUpdates' curated coverage line for the manga names this entry as ordinary adaptation coverage, 'Vol 1, Chap 1 (Movie/2026)' … 'Vol 1, Chap 11 (2026)', in the same 1-12 space it uses for the 1995 film. Horn (c), the OUTLAW STAR / T21 class, requires the author's spine with NO episode-to-chapter source; here the licensor itself publishes an episode-to-chapter map in the episode titles and two reviewers verify it against the pages. So: horn (a), with ordinary anchors.\n\nTHE CHAPTER SPACE (N35, the PRINTED numbering). Kodansha's own product page for 攻殻機動隊（１）(KCデラックス, 1991-10-02, 347pp) prints the tankobon's 目次 as TWELVE numbered chapters — 01 PROLOGUE / 02 SUPER SPARTAN / 03 JUNK JUNGLE / 04 MEGATECH MACHINE1[ロボットの反乱] / 05 MEGATECH MACHINE2[メイキング・オブ・サイボーグ] / 06 ROBOT RONDO / 07 PHANTOM FUND / 08 DUMB BARTER / 09 BYE BYE CLAY / 10 BRAIN DRAIN / 11 GHOST COAST / 12 EPILOGUE — with NO piece called INTERMISSION. Kodansha's own digital serialization (マガポケ title 01567) numbers the same twelve, splitting the long ones into parts and pairing the two short ones: 【01】PROLOGUE, 【02】SUPER SPARTAN, 【03】JUNK JUNGLE, 【04/05】MEGATECH MACHINE 1/MEGATECH MACHINE 2, 【06(1)-(3)】ROBOT RONDO, 【07(1)-(3)】PHANTOM FUND, 【08(1)-(3)】DUMB BARTER, 【09(1)-(3)】BYE BYE CLAY, 【10(1)-(3)】BRAIN DRAIN, 【11(1)】GHOST COAST, 【11(2)/12】GHOST COAST/EPILOGUE. ja-WP's manga article says the same in prose: 「単行本には雑誌未掲載の「11 GHOST COAST」と「12 EPILOGUE」を収録して刊行された」. en-WP's chapter list and ghostintheshell.fandom's own chapter table both run 01-12 identically. Real Sound's しげる writes 「コミック版一冊目は12のエピソードで構成されており」. ALL NINE ANCHORS BELOW ARE IN THAT PRINTED 1-12 SPACE. The stored space says total_chapters=11 (AniList 31023, and the fandom infobox's |chapters = 11 which contradicts the table on its own page) — that is one short. No anchor here exceeds 10, so the stored 11 does not distort this block, but ep 10 (2026-09-08, not a stored row) will need 11 and 12; flagged.\n\nTHE BLOCK'S ARC-TO-INSTRUMENT MAP (episode -> printed chapter, all volume 1):\n  ep 1 -> 1 complete + 2 (pp.10-~43)            [canon, CONFIRMED AS STORED]\n  ep 2 -> 2 (final ~5-6 pp) + 3 (~pp.50-77)     [canon, CONFIRMED AS STORED]\n  ep 3 -> 3 (~pp.78-94) + 4 complete + 5 complete [canon, CONFIRMED AS STORED]\n  ep 4 -> 6 complete (pp.106-146)               [canon, CONFIRMED AS STORED]\n  ep 5 -> 7 complete (from p.148)               [canon, CONFIRMED AS STORED]\n  ep 6 -> 8 complete                            [canon, CONFIRMED AS STORED]\n  ep 7 -> 9, most of it                         [canon, CONFIRMED AS STORED]\n  ep 8 -> 9 (closing pp.) + 10 (opening)        [RETYPED canon -> MIXED: the INTERMISSION half is anime-original]\n  ep 9 -> 10 (middle third)                     [canon, CONFIRMED AS STORED]\n  (ep 10, 2026-09-08, is not a stored row and is not covered here.)\n\nPAGE GEOGRAPHY AND ITS TIER. Chapter page ranges used above (ch 1 = pp.2-9, ch 2 = pp.10-49, ch 3 = pp.50-94, chs 4+5 = ~pp.96-105, ch 6 = pp.106-146, ch 7 = from p.148) come from a page-by-page walkthrough of the tankobon published on note by ヒト in 2023-24, BEFORE the anime existed — a fan source, so cross-check tier (R1), never a citation standing alone. It is corroborated at four points by sources of a different lineage: Kodansha's own 347-page count for the volume; Real Sound's しげる citing 『攻殻機動隊(1)』55ページ and 64ページ for scenes that must be in ch 3 (inside 50-94); ja-WP's manga article citing 1巻15頁 for the 聖庶民救済センター (inside ch 2's 10-49), 1巻156頁 for 択捉 (inside ch 7, from 148) and 1巻217頁/225-226頁 for the German think tank (ch 8, after ch 7). Every page figure in this verdict is written with a '~' where it is approximate, and no anchor turns on one: the END and START values are chapter-level and each rests on the licensor's title plus a content match.\n\nWHAT WAS CHECKED FOR ORIGINAL MATERIAL, ROW BY ROW (the A-7 lesson: type the block row by row, never from one claim). Weekly manga-comparison coverage exists for the whole run and only ONE episode is reported to contain original story material: animatetimes published a 振り返り for eps 1-8 and only ep 8's is headlined 「アニメオリジナルシーン満載！」; ANN reviewed eps 1-3, 4, 5, 6, 7, 8, 9 and only ep 8's says 'this adaptation's most prominent anime-original material so far'; animeanime's spoiler round-ups flag ep 8's 「アニオリ前日譚」 and report nothing of the kind for eps 2, 6, 7 or 9; Real Sound's column found on eps 1-2 only cuts and small clarifying additions. On ep 9, the newest row, the animatetimes 振り返り series has not published an entry as of 2026-09-06 — that is SILENCE, not evidence, and it is said here rather than leaned on; ep 9's typing rests instead on ANN's review, en-WP's summary and animeanime's line-level comparison against the book, all three of which treat its content as ch 10's.\n\nSCOPE. Only rows 1-9 of ghost-in-the-shell-2026 are touched. The 1995 film, Stand Alone Complex and Arise are separate series under I16 and nothing here is written about them; the two facts encountered that bear on them are in flags_for_sean. 攻殻機動隊1.5 and 攻殻機動隊2 are other works: nothing in rows 1-9 adapts either (the ep-8 Lee cameo is a reference, not an adaptation — see the ep-8 divergence note), so no side_source annotation is delivered.",
+  "coverage_set_checked": "All 9 stored rows plus the unaired ep 10, read on five independent episode lists: the official site's STORY index and its nine per-episode pages (theghostintheshell-anime.jp/story/episodeN/); the official global site's nine per-episode news posts; ja-WP's 各話リスト; en-WP's Episode list (which carries per-SEGMENT summaries splitting each episode into its named chapter parts); and ghostintheshell.fandom's Template:GitS 2026 episodelist (read through api.php, never scraped) which alone also lists ep 10 = 'BRAIN DRAIN iii + GHOST COAST + EPILOGUE', 2026-09-08. Row-count identity holds: ten rows on every list, no recap, no fractional, no special — 全10話構成 is stated on the official global site's ep-8 post (「本作『攻殻機動隊 THE GHOST IN THE SHELL』は第08話を含めて残り3話、全10話構成のシリーズとなります」). Air dates cross-checked on four lineages (ja-WP, en-WP, fandom, the official per-episode announcements) and swept for day-of-week: all ten are Tuesdays, matching the 関西テレビ・フジテレビ系 火曜 23:00 『火アニバル!!』 slot. No date and no title is refuted, so repairs is empty. The manga's chapter list was read on five: Kodansha's product page 目次, Kodansha's マガポケ serialization (episode ids 333652-333672 enumerated one by one), ja-WP, en-WP and the fandom's own chapter table plus its eleven per-chapter pages (each of which states its own number: 'Robot Rondo is the sixth chapter', 'Bye Bye Clay is the ninth chapter ... preceding chapter ten, Brain Drain', and so on)."
+ },
+ "flags_for_sean": [
+  "CHAPTER SPACE: the stored total_chapters is 11; the PRINTED total is 12. Five independent lineages give twelve numbered chapters ending 「11 GHOST COAST」/「12 EPILOGUE」 — Kodansha's own 目次 for 攻殻機動隊（１）, Kodansha's マガポケ serialization (whose last unit is 【11(2)/12】GHOST COAST/EPILOGUE), ja-WP, en-WP and ghostintheshell.fandom's own chapter table. ANN's reviewer arrives at the same total by arithmetic from the anime: eps 1-3 'adapt the first five manga chapters' and 'the seven remaining must adapt six full chapters and a short epilogue' (5+6+1=12). The '11' appears to come from AniList 31023, and the fandom's manga infobox repeats it (|chapters = 11) while its own table below lists twelve — the same off-by-one, probably from dropping the unpaginated EPILOGUE. NOTHING IN THIS BLOCK IS AFFECTED (every END here is <= 10 and the validator's space check passes), but ep 10 needs chs 11 and 12, so the total wants correcting before that row is anchored. Not delivered as a repair because total_chapters is a derivation-tier field fed by AniList (P8) and AniList's API has been down since 2026-09-06 — Sean's call on whether this becomes a manual-tier override or a re-derive.",
+  "EPISODE TITLE CASING (not delivered as a repair). The stored titles are en-WP's title-cased rendering ('Prologue + Super Spartan i', 'Intermission + Brain Drain i'). The licensor's own form is all-caps: the official STORY page prints 「第01話　PROLOGUE + SUPER SPARTAN i」 … 「第08話　INTERMISSION + BRAIN DRAIN i」, and so do ja-WP's 各話リスト and the fandom's template. That is a display convention, not a factual error, and the manga's chapter titles are themselves all-caps in Kodansha's 目次 — so if the catalog wants the licensor's form the change is a nine-row cosmetic pass, Sean's call. No date or title here is refuted on the facts; repairs is empty.",
+  "EP 8's TWO OPEN QUESTIONS, both named in the anchor. (a) The ch-9 share is INFERRED: ANN says ep 7 adapts 'most of manga chapter nine' and en-WP puts the case's resolution inside ep 8's INTERMISSION frame, but no source page-counts that remainder and I could not read the chapter's closing pages (マガポケ serves the chapter behind its reader; no free page images). If Sean prefers the conservative reading, ep 8's START becomes 10 and nothing else on the row changes. (b) The Poseidon Industrial / Lee material is treated as `divergence` (anime-original with a franchise reference), NOT `side_source`: Lee is a character from 攻殻機動隊2 MANMACHINE INTERFACE (animatetimes: 「リーは原作コミックス第2巻に登場する人物であり」) and ANN calls the whole Poseidon strand 'extra non-manga additions', but a cameo is not an adaptation of that volume and no source claims any GitS-2 chapter is animated. If Sean rules that a cameo from a named second work is side_source, the annotation changes kind and the row is unaffected otherwise (it is already mixed).",
+  "EP 2's START CARRIES A ±1-PAGE RISK. The only measurement published is しげる's 「「SUPER SPARTAN」のラスト5ページ目前後からの内容」 — 'from around the fifth-to-last page'. A10's exclusion is a bright line at 5 pages, so 'around 5' straddles it. I delivered START 2 because A10's carve-out is the exception and needs proof (the Dai wave-13/14 principle: position language and an unquantified share are not evidence of smallness), because the licensor bills the segment in the episode title, and because the per-chapter walkthrough puts the two beats ep 2's recap describes across six pages (44/45 and 46/47/49). If the true share is exactly five pages the START is 3; chapters_adapted and the `partial` annotation carry the fact either way.",
+  "EP 10 (2026-09-08) IS NOT A STORED ROW AND IS NOT ANCHORED HERE, but its coverage is stated by sources so it is recorded for the next pass: the fandom's episode template and en-WP both title it 'BRAIN DRAIN iii + GHOST COAST + EPILOGUE', i.e. the close of ch 10 plus chs 11 and 12 — the end of the manga. ANN's ep-1-3 review predicted exactly that ('the seven remaining must adapt six full chapters and a short epilogue'). When that row is minted the series' terminal is ch 12 and the post-series continue is the end of the source, with 攻殻機動隊1.5 and 攻殻機動隊2 as separate works, not a continuation of this chapter space.",
+  "FRANCHISE FACTS THAT BEAR ON OTHER SERIES (I16 — recorded here only, nothing written to them). (i) MangaUpdates' single coverage string on the shared manga entry 420561570 now holds three labelled segments — 'Vol 1, Chap 1 (Movie/2026) / Vol 1, Chap 6 (Innocence)' and 'Vol 1, Chap 12 (Movie) Based on material from Chap 1, 3, 5, 8-12 / Vol 1, Chap 6 (Innocence) Movies different throughout /Vol 1, Chap 11 (2026)'. Per the G32 gate the picker must read only THIS entry's segment; the '(Movie)' and '(Innocence)' segments belong to the 1995 film and Innocence, and the '(Movie)' one is itself a scatter list, not a range. (ii) The Stand Alone Complex series carries 52 default-canon rows on this same manga link; ja-WP's manga article states plainly that the SAC world is a parallel one and that Shirow himself said so (「士郎正宗自身も原作とSACは違う世界観だと明言している」), and ANN's reviewer says SAC 'adapted the concepts of the original manga, without replicating the individual details'. That block is a typing question of its own and is NOT touched here."
+ ]
+}
