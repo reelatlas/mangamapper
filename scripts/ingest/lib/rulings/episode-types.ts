@@ -27,6 +27,37 @@ const B17b = 'scripts/ingest/research/batch17/out2';
 const B14 = 'scripts/ingest/research/batch14/out';
 
 export const ENTRIES: RulingEntry<EpisodeTypes>[] = [
+  // ---- batch 23 wave 1 (2026-09-07, the refuted-pin wave; Sean ruled with Cursor) ----
+  {
+    seriesId: 'sailor-moon',
+    ruleId: 'T6',
+    value: { 75: 'filler', 76: 'filler', 77: 'filler' },
+    reason:
+      "Batch 23 wave 1 (verified R24, Sean ruled 2026-09-07): eps 75-77 adapt no act — 75 (medium): no Act-19 page is in the row, Sailor Pluto's debut is adapted properly later at ep 82 (batch 17's anchor 19 [19] read the same facts as a position and is deleted, A1); 76 (high): the fandom's own line 'This is a filler episode. None of these events happened in the manga', wikimoon; 77 (high): wikimoon's trivia, ja-WP 地場衛 「31話（通算77話）」 + the King Endymion dream device. Sliver ties stay as loose_parallel annotations (18-19; 20). Ep 74 stays canon (the source's resolutions land) but position-less (A44 [74]).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-07',
+    cite: ['scripts/ingest/research/batch23/out/sailor-moon-w1.json', 'scripts/ingest/research/batch23/verify/w1-sailor-moon.md'],
+  },
+  {
+    seriesId: 'eyeshield-21',
+    ruleId: 'T6',
+    value: { 55: 'canon', 56: 'canon', 57: 'mixed' },
+    reason:
+      "Batch 23 wave 1 (verified R24, Sean ruled 2026-09-07): 55 / 56 CONFIRMED canon on the pages (a confirmed default is a pin — AFL has no page for this series); 57 → MIXED: its closing act (Sena's staged 1-on-1 with Kakei, the Devil Bat Ghost, Hiruma recording) is a full act with its own arc, the episode's climax, half of en-WP's summary, and NEW plot — the source answers the challenge in the match (ch 122 / ep 60) with the opposite outcome; no sizing instrument exists; the anchor 112 [111] stands, divergence{111} names the act (the verdict delivered canon under T28's faithfulness clause and flagged the fork; Sean weighed it mixed).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-07',
+    cite: ['scripts/ingest/research/batch23/out/eyeshield-21-w1.json', 'scripts/ingest/research/batch23/verify/w1-eyeshield.md'],
+  },
+  {
+    seriesId: 'record-of-ragnarok',
+    ruleId: 'T6',
+    value: { ...range(18, 41, 'canon') },
+    reason:
+      "Batch 23 wave 1 (verified R24, Sean ruled 2026-09-07): the 24 wiki / afg-minted rows 18-41 CONFIRMED canon on the pages (AFL's page lists S1 only, so these default-canon rows had no source typing — a confirmed default is a pin, the class's retirement path); ep 28 confirmed under T28's recap clause (the clip-show montage counts for nothing; the remainder, ch 55 pp.1-18, is a straight adaptation).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-07',
+    cite: ['scripts/ingest/research/batch23/out/record-of-ragnarok-w1.json', 'scripts/ingest/research/batch23/verify/w1-rok.md'],
+  },
   {
     seriesId: 'x',
     ruleId: 'T10',

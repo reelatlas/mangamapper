@@ -50,6 +50,7 @@ export const HEAL: RosterEntry[] = [
   { file: 'heal-format.ts', when: 'standard', note: 'episodes.format from the containing component kind + FORMAT_OVERRIDES (T29); null = format_missing queue' },
   { file: 'relations.ts', when: 'standard', note: 'series_relations from AniList edges + ruled overrides (I16)' },
   { file: 'cleanup-flags.ts', when: 'standard', note: 'dismiss exact-duplicate open flags (G3)' },
+  { file: 'convert-curated-continues.ts', when: 'event', trigger: "the C2 amendment (2026-09-07): the one-time conversion of CURATED continues to the coverage walk under Sean's split (holes / clamps / other convert; a named C1 and a researched finale above an unknown are kept) — dry-run first (P40); re-run only on a ruling that changes the split", note: 'C2 amended 2026-09-07 — the curated queue conversion' },
   { file: 'reconcile-structure.ts', when: 'event', trigger: 'integrity_eps_beyond_total / late-airing entries', note: 'episodes outrunning components → chain walk + rebuild (I33)' },
   { file: 'stitch.ts', when: 'event', trigger: 'count_mismatch candidates or a ruled extension', note: 'the stitcher (I24–I27)' },
   { file: 'seed.ts', when: 'event', trigger: 'from /discover ONLY, after the dry-run recap (I42 mint rule; discovery_ruled_unbuilt lists what it would create)', note: 'THE SEED WRITER (G52 rostered form): a `series` ruling → a staged series row + identity + components; no rows, no anchors' },

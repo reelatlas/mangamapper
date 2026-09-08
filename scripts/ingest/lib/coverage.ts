@@ -63,6 +63,11 @@ export function spanContributions(chaptersAdapted: string | null | undefined): M
   for (const seg of allSegments(chaptersAdapted)) {
     const head = seg.replace(/\(.*$/, '').trim();
     const qualifier = seg.slice(head.length).trim();
+    // ANOTHER WORK's unit contributes nothing and is never listed: two or more words before the first number name a
+    // spin-off, a bonus or a scene ('Elma OL ch 6' on dragon-maid 25, 'Kanna's Daily Life 3'); one unit word before it
+    // ('Act 18', 'Lesson 105', 'ch 6', 'Round 8') is the instrument's own numbering
+    const pre = (head.match(/^([^\d]*)\d/)?.[1] ?? '').trim();
+    if (pre.split(/\s+/).filter(Boolean).length >= 2) continue;
     const vol = volumeUnit(seg);
     if (vol != null) {
       // T24: 'v17' names the volume whole; 'v16 ch 1-3', 'v19 prologue', 'v20 ch 7 (…)' name units inside it
@@ -74,13 +79,14 @@ export function spanContributions(chaptersAdapted: string | null | undefined): M
       for (const n of ints(head)) put(n, 'never');
       continue;
     }
-    const range = head.match(/^(\d+)\s*[-–]\s*(\d+)$/);
+    // one unit word may precede the number(s): 'Act 18', 'Acts 15-17', 'Lesson 105', 'ch 6', 'File 629'
+    const range = head.match(/^(?:[A-Za-z][\w'’.-]*\s+)?(\d+)\s*[-–]\s*(\d+)$/);
     if (range) {
       const a = Number(range[1]), b = Number(range[2]);
       if (b >= a && b - a < 400) for (let n = a; n <= b; n++) put(n, 'whole');
       continue;
     }
-    const single = head.match(/^(\d+)(?:\.\d+)?$/);
+    const single = head.match(/^(?:[A-Za-z][\w'’.-]*\s+)?(\d+)(?:\.\d+)?$/);
     if (single) {
       const n = Number(single[1]);
       put(n, qualifier && !WHOLE_WORDS.test(qualifier) && PARTIAL_WORDS.test(qualifier) ? 'part' : 'whole');
@@ -232,23 +238,27 @@ export function walkContinue(row: CoverageAnchor, index: CoverageIndex, opts: { 
   const end = Number(row.chapter);
   const ep = row.episode;
   const listed = index.listed(row);
-  // 1. holes this episode made: between the lowest unit it names and its END, unnamed, not finished so far
+  // 1. holes this episode made: between its floor and its END, unnamed, not finished so far. The floor is the START, or a
+  // named unit at most five below it (RoK 18 plays 31 then 34 from a START of 34); a far-earlier unit is a relocated
+  // fragment (A12 — nagatoro 12's 'ch 8 epilogue, first animated here' under a START of 43) and never the floor
   const named = [...listed.entries()].filter(([, t]) => t !== 'never').map(([c]) => c);
-  const lo = named.length ? Math.min(...named) : end;
+  const start = row.start_chapter == null ? null : Number(row.start_chapter);
+  const near = start == null ? named : named.filter((c) => c <= start && start - c <= 5);
+  const lo = start != null ? Math.min(start, ...near) : named.length ? Math.min(...named) : end;
   const holes: number[] = [];
   if (end - lo <= 100) for (let c = lo + 1; c < end; c++) if (!listed.has(c) && !index.finishedAt(c, ep)) holes.push(c);
   // 2. the END still open
   const open = index.endOpenAt(row, ep);
-  // 3. the forward walk
-  let walk = end + 1;
+  // 3. the forward walk — from the next INTEGER unit (a fractional END, ajin 19 → 27.5, continues at 28, never 28.5)
+  let walk = Math.floor(end) + 1;
   while (walk <= end + 500 && index.finishedAt(walk, ep)) walk++;
   const value = holes.length ? holes[0] : open ? end : walk;
-  let kind: ContinueKind = holes.length ? 'hole' : open ? 'open' : walk > end + 1 ? 'walk' : 'default';
+  let kind: ContinueKind = holes.length ? 'hole' : open ? 'open' : walk > Math.floor(end) + 1 ? 'walk' : 'default';
   if (opts.finale) kind = 'post_series';
   const stored = kind !== 'default';
   const finishedChapters: number[] = [];
   const finishedEps = new Set<number>();
-  if (!holes.length && !open) for (let c = end + 1; c < value; c++) {
+  if (!holes.length && !open) for (let c = Math.floor(end) + 1; c < value; c++) {
     finishedChapters.push(c);
     for (const k of index.byChapter.get(c) ?? []) if (k.episode <= ep && (k.touch === 'whole' || k.isStart || k.isEnd)) finishedEps.add(k.episode);
   }
@@ -279,6 +289,26 @@ export function walkContinue(row: CoverageAnchor, index: CoverageIndex, opts: { 
 /** the stored VALUE agrees with the walk: the walk's value, or nothing where the walk says END + 1 — a stored END + 1 is redundant, never wrong */
 export const continueValueAgrees = (row: CoverageAnchor, w: WalkResult): boolean =>
   row.continue_chapter == null ? !w.stored : Number(row.continue_chapter) === w.value;
+
+/** C2 (amended 2026-09-07) — the two facts the walk cannot see, ruled by Sean with Cursor (the curated-queue split): a curated
+ * continue STANDS when (a) it is a named C1 — stored = its own END, the walk says END + 1, and the note says C1 / mid-chapter /
+ * straddle (soul-eater 36 the witness) — or (b) it is a researched FINALE (post_series) above a walk that stopped at a unit no
+ * anchored row touches (hajime-no-ippo 127: rows 103-126 carry no anchors — the stop is an unknown, A14) — or (c) it is
+ * recorded in lib/rulings/curated-continues.ts (a ruled page-level fact, eyeshield 57 → 115). The audit lists a curated
+ * disagreement only outside these; the conversion script keeps (a) and (b). */
+export const NAMED_C1 = /\bC1\b|mid-?chapter|straddl/i;
+export const curatedStandsByRuling = (row: CoverageAnchor, w: WalkResult, index: CoverageIndex, ruled?: { chapter: number } | undefined): 'named-c1' | 'finale-above-unknown' | 'ruled' | null => {
+  if (row.continue_chapter == null) return null;
+  const stored = Number(row.continue_chapter), end = Number(row.chapter);
+  // (c) a curated continue recorded in lib/rulings/curated-continues.ts with this value — a page-level fact ruled in
+  if (ruled && Number(ruled.chapter) === stored) return 'ruled';
+  if (stored === end && w.value === end + 1 && NAMED_C1.test(String(row.continue_note ?? ''))) return 'named-c1';
+  if ((row.continue_kind === 'post_series' || w.kind === 'post_series') && stored > w.value && walkStoppedAtUnknown(w, index)) return 'finale-above-unknown';
+  return null;
+};
+
+/** the walk stopped at a unit NO anchored row touches — an unknown (A14), not a fact about the adaptation */
+export const walkStoppedAtUnknown = (w: WalkResult, index: CoverageIndex): boolean => w.kind !== 'open' && !w.holes.length && !index.byChapter.has(w.value);
 
 /** the kind a stored row should carry for this walk (C6): the walk's own, or 'walk' for a curated value the healer would not store */
 export const kindFor = (w: WalkResult): Exclude<ContinueKind, 'default'> => (w.kind === 'default' ? 'walk' : w.kind);

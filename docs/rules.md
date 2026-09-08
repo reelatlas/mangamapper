@@ -983,7 +983,7 @@ AMENDED 2026-09-07 (Sean with Cursor, after batch 23 wave 1 — eyeshield 54 / 5
 
 - ruled Sean 2026-08-24 (batch-15 DECISIONS-FOR-SEAN "C2 continue-read = ANIME PARITY"; data-pipeline §12.37; migration 20260825200000)
 - layer **both**
-- enforced: [lib/coverage.ts#walkContinue](../scripts/ingest/lib/coverage.ts) · [lib/coverage.ts#buildCoverage](../scripts/ingest/lib/coverage.ts) · [heal-coverage-continues.ts](../scripts/ingest/heal-coverage-continues.ts) · [audit-ui-truth.ts#classes.continue_offwalk_healer](../scripts/ingest/audit-ui-truth.ts) · [audit-ui-truth.ts#classes.continue_offwalk_curated](../scripts/ingest/audit-ui-truth.ts)
+- enforced: [lib/coverage.ts#walkContinue](../scripts/ingest/lib/coverage.ts) · [lib/coverage.ts#buildCoverage](../scripts/ingest/lib/coverage.ts) · [heal-coverage-continues.ts](../scripts/ingest/heal-coverage-continues.ts) · [audit-ui-truth.ts#classes.continue_offwalk_healer](../scripts/ingest/audit-ui-truth.ts) · [audit-ui-truth.ts#classes.continue_offwalk_curated](../scripts/ingest/audit-ui-truth.ts) · [lib/rulings/curated-continues.ts#CURATED_CONTINUES](../scripts/ingest/lib/rulings/curated-continues.ts) · [lib/coverage.ts#curatedStandsByRuling](../scripts/ingest/lib/coverage.ts)
 - audit: `continue_offwalk_healer`, `continue_offwalk_curated`
 - witnesses: eyeshield-21, sailor-moon, record-of-ragnarok, beelzebub
 - aliases: C2 rule, anime parity, parity continue, C2 ANIME-PARITY continue rule, open the book here, the coverage walk, coverage walk, continue walk, walkContinue, first unfinished chapter, covered means finished

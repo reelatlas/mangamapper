@@ -23,8 +23,9 @@ import { STANDING_ANNOTATIONS } from './lib/rulings/standing-annotations';
 import { AIR_DATE_OVERRIDES } from './lib/rulings/air-dates';
 import { EPISODE_TITLE_OVERRIDES } from './lib/rulings/episode-titles';
 import { continueUnprovenanced, curatedOverwritten, isCuratedContinue } from './lib/continues';
-import { buildCoverage, continueAgrees, continueValueAgrees, walkContinue, type CoverageAnchor, type CoverageAnnotation } from './lib/coverage';
+import { buildCoverage, continueAgrees, continueValueAgrees, curatedStandsByRuling, walkContinue, type CoverageAnchor, type CoverageAnnotation } from './lib/coverage';
 import { sourceKindOf } from './lib/rulings/source-kinds';
+import { ruledContinue } from './lib/rulings/curated-continues';
 import { annotationWorkLabel, isChainWork } from './lib/rulings/source-chains';
 import { WIKI_PAGES } from './lib/rulings/wiki-pages';
 import { AFG_CHART_SUPPRESSED } from './lib/rulings/afg-chart-suppressed';
@@ -718,7 +719,7 @@ async function main() {
           const curated = isCuratedContinue(row) || row.continue_source === 'source';
           if (curated) {
             const notes: string[] = [];
-            if (!continueValueAgrees(row, w)) notes.push(`the walk says ${w.value} [${w.kind}]${w.stored ? '' : ' (END + 1, nothing stored)'}`);
+            if (!continueValueAgrees(row, w) && !curatedStandsByRuling(row, w, index, ruledContinue(sid, row.episode))) notes.push(`the walk says ${w.value} [${w.kind}]${w.stored ? '' : ' (END + 1, nothing stored)'}`);
             if (row.continue_chapter != null && c3Ahead(row.chapters_adapted, row.continue_chapter).length && !hasSkipLanguage(row.continue_note ?? null)) notes.push('the note names no skip for the chapters this episode covered above its continue (C3)');
             if (notes.length) classes.continue_offwalk_curated.push(`${sid}: ep ${row.episode}→ch${row.chapter} curated continue ${row.continue_chapter} [${row.continue_kind ?? 'no kind'}] — ${notes.join('; ')} — ${w.note.slice(0, 140)}`);
             continue;

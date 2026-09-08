@@ -51,6 +51,8 @@ export const RULES: Rule[] = [
       { path: 'scripts/ingest/heal-coverage-continues.ts' },
       { path: 'scripts/ingest/audit-ui-truth.ts', symbol: 'classes.continue_offwalk_healer' },
       { path: 'scripts/ingest/audit-ui-truth.ts', symbol: 'classes.continue_offwalk_curated' },
+      { path: 'scripts/ingest/lib/rulings/curated-continues.ts', symbol: 'CURATED_CONTINUES' },
+      { path: 'scripts/ingest/lib/coverage.ts', symbol: 'curatedStandsByRuling' },
     ],
     layer: 'both',
     amendedOn: ['2026-09-07'],

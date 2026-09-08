@@ -102,6 +102,26 @@ export const ENTRIES: RulingEntry<ChapterSpace>[] = [
     cite: ['scripts/ingest/research/batch24/out/ghost-in-the-shell-2026-w1.json', 'scripts/ingest/research/batch24/verify/w1-gits.md', 'https://kc.kodansha.co.jp/product?item=0000006425'],
   },
   {
+    seriesId: 'sailor-moon',
+    ruleId: 'N35',
+    value: { chapters: 60 },
+    reason:
+      "The stored space is the 60-ACT RENEWAL numbering (新装版 2003-04 / 完全版 / 文庫版 / Kodansha USA) — every stored sailor-moon record is in it. Ceiling 60 on four independent lineages (ja-WP's 新装版 table, en-WP's chapter list, wikimoon's Act 60 'Chapter Number: 60 / Original Number: 52 / Next Chapter: N/A', MangaUpdates 'Vol 18, Chap 60'); nothing supports AniList's 61 (batch 23 wave 1, verified R24; Sean ruled 2026-09-07). Volumes stay AniList's (the original 18; the renewal edition prints 12).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-07',
+    cite: ['scripts/ingest/research/batch23/out/sailor-moon-w1.json', 'scripts/ingest/research/batch23/verify/w1-sailor-moon.md'],
+  },
+  {
+    seriesId: 'sailor-moon-crystal',
+    ruleId: 'N35',
+    value: { chapters: 60 },
+    reason:
+      "The twin of the sailor-moon entry (the verifier's landing note): both series share manga 30092 and the same 61 / 60 / 18 fields — the map is keyed per series, so the 60-act renewal space is asserted here too (Sean 2026-09-07).",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-07',
+    cite: ['scripts/ingest/research/batch23/verify/w1-sailor-moon.md'],
+  },
+  {
     seriesId: 'gto-great-teacher-onizuka',
     ruleId: 'N35',
     value: { chapters: 200 },

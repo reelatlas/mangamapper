@@ -1,6 +1,6 @@
 // C2 (amended 2026-09-07) — the coverage walk, proven on the rows that ruled it (batch 23 wave 1 + the consolidate).
 import { describe, expect, it } from 'vitest';
-import { annotationChapters, buildCoverage, continueAgrees, spanContributions, walkContinue, type CoverageAnchor } from './coverage';
+import { annotationChapters, buildCoverage, continueAgrees, curatedStandsByRuling, spanContributions, walkContinue, type CoverageAnchor } from './coverage';
 
 const canon = () => 'canon';
 const row = (episode: number, chapter: number, start: number | null, span: string | null, extra: Partial<CoverageAnchor> = {}): CoverageAnchor => ({ episode, chapter, start_chapter: start, chapters_adapted: span, ...extra });
@@ -121,6 +121,59 @@ describe('the reader on the shapes stored data actually has', () => {
     const index = buildCoverage(rows, [{ episode: 44, kind: 'graft', chapters: '74-82' }], canon);
     const w = walkContinue(rows[1], index, { finale: false });
     expect(w.holes).toEqual([]); expect(index.finishedAt(75, 44)).toBe(false);
+  });
+});
+
+describe('a segment naming another work contributes nothing (dragon-maid 25)', () => {
+  it("'Elma OL ch 6' is a spin-off reference, never main-line chapter 6; 'Act 18' and 'Lesson 105' are the instrument's own units", () => {
+    const m = spanContributions('40, 48, Elma OL ch 6');
+    expect(m.has(6)).toBe(false); expect(m.get(40)).toBe('whole'); expect(m.get(48)).toBe('whole');
+    expect(spanContributions('Act 18').get(18)).toBe('whole');
+    expect(spanContributions('Act 18 (opening)').get(18)).toBe('part');
+    expect(spanContributions('Lesson 105').get(105)).toBe('whole');
+  });
+  it('the finale walks from its own chapters, not from the spin-off number (49-64 finished earlier → post_series 65)', () => {
+    const rows = [row(16, 64, 49, '49-64'), row(24, 47, 41, '41-47'), row(25, 48, 40, '40, 48, Elma OL ch 6')];
+    const w = walkContinue(rows[2], buildCoverage(rows, [], canon), { finale: true });
+    expect(w.holes).toEqual([]); expect(w.value).toBe(65); expect(w.kind).toBe('post_series');
+  });
+});
+
+describe('a far-back sliver never sets the hole floor (nagatoro 12)', () => {
+  it("'43-46; ch 8 epilogue (post-credits scene, first animated here)' walks from 47, not from 9", () => {
+    const rows = [row(11, 42, 39, '39-42'), row(12, 46, 43, '43-46; ch 8 epilogue (post-credits scene, first animated here)')];
+    const w = walkContinue(rows[1], buildCoverage(rows, [], canon), { finale: true });
+    expect(w.holes).toEqual([]); expect(w.value).toBe(47); expect(w.kind).toBe('post_series');
+  });
+});
+
+describe('a fractional END walks to the next integer unit (ajin 19)', () => {
+  it('27.5 → 28, never 28.5', () => {
+    const rows = [row(18, 26, 25, '25-26'), row(19, 27.5, 27, '27, 27.5')];
+    const w = walkContinue(rows[1], buildCoverage(rows, [], canon), { finale: true });
+    expect(w.value).toBe(28); expect(w.kind).toBe('post_series');
+  });
+});
+
+describe('a curated continue stands by ruling (the two facts the walk cannot see)', () => {
+  it('a named C1 on a clamp stands; the same value with no C1 wording does not', () => {
+    const rows = [row(35, 35, 34, '34-35'), row(36, 37, 36, '36-37', { continue_chapter: 37, continue_kind: 'parity', continue_source: 'manual', continue_note: "C1 straddle (Sean 2026-08-26): ep 36 ends mid-ch-37" }), row(37, 40, 38, '38-40')];
+    const index = buildCoverage(rows, [], canon);
+    const w = walkContinue(rows[1], index, { finale: false });
+    expect(w.value).toBe(38);
+    expect(curatedStandsByRuling(rows[1], w, index)).toBe('named-c1');
+    expect(curatedStandsByRuling({ ...rows[1], continue_note: 'parity' }, w, index)).toBeNull();
+  });
+  it('a researched finale above a walk that stopped at an unknown stands (ippo 127)', () => {
+    const rows = [row(102, 420, 415, '415-420'), row(127, 557, 555, '555-557', { continue_chapter: 558, continue_kind: 'post_series', continue_source: 'manual', continue_note: 'C5 coverage + 1' })];
+    const index = buildCoverage(rows, [], canon);
+    const w = walkContinue(rows[1], index, { finale: true });
+    expect(w.value).toBe(558);
+    const rows2 = [row(102, 420, 415, '415-420'), row(127, 420, 419, '419-420', { continue_chapter: 558, continue_kind: 'post_series', continue_source: 'manual' })];
+    const index2 = buildCoverage(rows2, [], canon);
+    const w2 = walkContinue(rows2[1], index2, { finale: true });
+    expect(w2.value).toBe(421);
+    expect(curatedStandsByRuling(rows2[1], w2, index2)).toBe('finale-above-unknown');
   });
 });
 

@@ -1154,6 +1154,48 @@
    19-23 / 39 (chain_source) and 18 / 93-95 (AFL's loose Mixed bucket),
    beelzebub 15 / 26-28 / 51, rurouni TV ep 95 (identity). Batch 22 opens on
    the boruto follow-up (lanes I + C) with the batch-21 tooling copied.
+160. ✅ **BATCH 23 WAVE 1 APPLIED + THE CURATED CONTINUE QUEUE CONVERTED UNDER THE WALK (2026-09-08 ~00:30 UTC; Sean ruled
+    2026-09-07 with Cursor: 'No to ruling 1 as one yes — split them. Ruling 2 is yes.').** THE APPLY (batch23/apply-w1.ts —
+    file-driven + overlay on the batch-24 pattern, idempotent): 31 anchors, the repairs included — record-of-ragnarok 12 START 1 →
+    19 / span / END 19 → 20, 22 END 42 → 43 [41], 33 END 65 → 66 [64], the four A14 nulls filled (22 = 43 [41], 27 = 54 [52], 33 =
+    66 [64], 38 = 77 [76]), 19's afg START 34 → 32, the nineteen afg rows confirmed at the research tier; eyeshield 54 END 111 →
+    109, 55 START 112 → 113 (A10's letter: five pages is scraps), 56 confirmed, 57's first anchor 112 [111] {111 (pp.6-19), 112
+    (pp.5-19)}; sailor-moon 73 → 18 [18] v5 (option (b) — one principle for 73 / 74: a re-tread never sets a START); beelzebub 59
+    → 121 [119]. 23 annotations with six overlay fixes (RoK 25 / 26's rearranged{49} REJECTED as a gap, 29's recap narrowed to the
+    door / disguise / prophecy beat, 28's recap chapters a list; eyeshield 57 divergence{111} and weight on the partials; sailor-moon
+    73 rearranged{15-17}, 76's fandom filler line); one anchor deleted (sailor-moon 75, A1). THE MAPS: T6 — sailor-moon 75-77 filler,
+    eyeshield 55-56 canon + 57 MIXED (Sean weighed the new-plot closing act), RoK 18-41 canon (24 confirmed defaults pinned); A44
+    sailor-moon [74]; N35 sailor-moon + sailor-moon-crystal 60 acts (assert-overrides: totals 61 → 60 on both, 4 types asserted); the
+    RoK A14 interim RETIRED; applied/batch-23.ts (E58) records the decisions. NO CONTINUE WRITTEN BY THE APPLY — heal-coverage-continues
+    derived them (RoK 11 → 19 open, 18 → 32 hole, 25 → 49 open, 37 → 76 open, 41 → 83 open; eyeshield 54 → 111 walk; sailor-moon 73
+    → 18 open; beelzebub 59 → 122 post_series) — except ONE curated continue, eyeshield 57 → 115 [walk]: with ep 55's START at 113,
+    ch 112 is no longer a position on any row and its two page-ranged listings read as open, while the verifier established it
+    complete by pages — a page-level fact the walk cannot see, recorded in the NEW map lib/rulings/curated-continues.ts (E59) that
+    the audit reads (a ruled disagreement never lists). THE CONVERSION (convert-curated-continues.ts — event, dry-run first, P40):
+    Cursor's split — 43 HOLES converted (gantz 2 kept 10 and hid 5-9), 20 STRADDLE CLAMPS converted (stored = END, no page range,
+    the next row not on it), 116 OTHERS converted (skips whose chapters are unread, back-jumps, END + 1 values the walk holds at or
+    steps past) — 179 in all; KEPT: 16 named C1s (soul-eater 36 the witness; fist-of-the-north-star ×7, one-piece 94, made-in-abyss
+    13, erased 11 …) restamped 'open', and 3 researched finales above a walk that stopped at a unit no anchored row touches
+    (hajime-no-ippo 127 → the walk's 421 sits where rows 103-126 carry no anchors; detective-school-q 43; ayakashi-triangle 12) —
+    the stop is an unknown (A14), the researched value is a fact the walk cannot see. The converted note leads with the conversion
+    tag and keeps the curated note behind it (the first run led with the walk's prefix and read as 179 healer notes on manual rows —
+    ruling_violation — repaired in the same script). ONE predicate for 'a curated continue stands by ruling' (lib/coverage.ts#
+    curatedStandsByRuling: a named C1, a finale above an unknown, or the ruled map) is read by the script and the audit (P2). THE
+    READER FIXES CURSOR'S GLANCE EXPOSED (lib/coverage.ts, 30 tests): a segment naming ANOTHER WORK contributes nothing ('Elma OL ch
+    6' on dragon-maid 25 had manufactured holes from 7 — its finale now walks to 56, where a page-partial ch 56 is the honest stop);
+    a semicolon separates segments (nagatoro 12's '43-46; ch 8 epilogue …' had read as prose); the hole floor is the START or a
+    named unit at most five below it (nagatoro's far-back sliver, A12, had floored the walk at 8; RoK 18's 31 still counts); a
+    fractional END walks to the next integer (ajin 19 → 28, never 28.5); one unit word may precede a number ('Act 18', 'Lesson
+    105'); echo / callback / wrap join the restaging words. CENSUS (vs §12.159, every delta explained — P17): continue_offwalk_curated
+    204 → 0; continue_offwalk_healer 0; ruling_violation 0 (179 during the pass — the note shape — → 0); afl_page_stale 286 → 226
+    (draining); sailor-moon / crystal totals 60; type_default_unclassified 84 unchanged (RoK's rows were never in the class — the
+    pins are the confirmed defaults' record); every other class unchanged; 222 verified, 0 failing; the healer converged (0 writes).
+    Gates: tsc, lint 456 (0 errors), 330 tests, build, ledger-check, one-hop 51 / 51, system census; edges deployed 00:13 and 00:20.
+    QUEUED (named, never silent): RoK ep 42's END 85 + graft{B5, 84-85} (its own ask); eyeshield 58's START and chs 117-118 (a
+    follow-up ask); the P30 gate gap (a START on a ≤ 5-page scrap of the previous chapter is not caught by start_sliver_mismatch);
+    the C7 note-shape trap captured in the apply-batch skill; the AniList catch-up (re-zero's resolve debt). CAPTURED: the ja-WP
+    character-page 通算 trap, Toei's per-episode pages, wikimoon via Wayback (applied/batch-23.ts R3; the research-agent definition
+    carries the instruments).
 159. ✅ **C2 AMENDED — THE CONTINUE IS THE COVERAGE WALK, "OPEN THE BOOK HERE" (2026-09-07 evening; Sean ruled with Cursor after
     batch 23 wave 1; built through /add-rule and a rule-change deep).** THE RULE: the continue is where a reader who stops watching
     after this episode opens the book — the first chapter not yet FINISHED by this or any earlier episode in watch order. Three

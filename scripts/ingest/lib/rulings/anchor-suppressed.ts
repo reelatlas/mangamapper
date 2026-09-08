@@ -15,6 +15,16 @@ import { toMergedList, type RulingEntry } from './types';
 
 export const ENTRIES: RulingEntry<number[]>[] = [
   {
+    seriesId: 'sailor-moon',
+    ruleId: 'A44',
+    value: [74],
+    reason:
+      "Batch 23 wave 1 (verified R24, Sean ruled 2026-09-07 — option (b), one principle for 73 / 74): ep 74 animates no act's pages — its whole plot is the anime's own resolution of its own mass abduction (Toei R28; the fandom's plot) — and delivers only the source's OUTCOMES (the rescue, Rubeus's death); a restaging is position-less by A44's restaging clause; the row stays canon. Ep 73's restaged 15-17 montage is the same shape and never sets a START (A10), so 73 reads 18 [18].",
+    ruledBy: 'Sean',
+    ruledOn: '2026-09-07',
+    cite: ['scripts/ingest/research/batch23/out/sailor-moon-w1.json', 'scripts/ingest/research/batch23/verify/w1-sailor-moon.md'],
+  },
+  {
     seriesId: 'one-piece',
     ruleId: 'A44',
     value: [453, 454, 455, 456],

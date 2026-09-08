@@ -87,9 +87,9 @@ export type EndSliverVerdict = {
   reason: 'no-tail' | 'tail-not-end' | 'sole-segment' | 'no-next' | 'next-not-on-end' | 'substantive' | 'owned-tail';
 };
 
-/** every comma-separated segment of a chapters_adapted record (commas inside parentheses do not split; ' · ' also separates) */
+/** every comma- or semicolon-separated segment of a chapters_adapted record (separators inside parentheses do not split; ' · ' also separates) */
 export const allSegments = (chaptersAdapted: string | null | undefined): string[] =>
-  String(chaptersAdapted ?? '').split(/,(?![^()]*\))|\s·\s/).map((x) => x.trim()).filter(Boolean);
+  String(chaptersAdapted ?? '').split(/[,;](?![^()]*\))|\s·\s/).map((x) => x.trim()).filter(Boolean);
 
 /** the last comma-separated segment of a chapters_adapted record (commas inside parentheses do not split) */
 export const trailingSegment = (chaptersAdapted: string | null | undefined): string => {
