@@ -142,3 +142,23 @@ Work is tiered by judgment density, not by task type:
 Artifacts are the handoff (`P11`). A verdict JSON, a context file, a ledger
 record — these survive model switches and account switches; conversation
 context does not.
+
+## Profile (read by the global skills)
+
+Global skills come from the kit (`~/Projects/claude-kit`,
+github.com/reelatlas/claude-kit): `orchestrate`, `tidy`, `ship`, `save`,
+`research-practice`. The pipeline skills (`apply-batch`, `consolidate`,
+`discover`, `research-batch`, `add-rule`) and the two agents stay here.
+
+```
+gate: npx tsc -b --noEmit && npm run lint && npm test && npm run build && npm run ledger:check
+deploy: push main deploys (Vercel); edge functions deploy by hand, every bundle after any lib change (P3)
+branch: main, no PRs
+commits: conventional prefix (feat, fix, docs, chore, test, data), subject under 72 characters, ledger ids cited
+homes:
+  state: docs/STATE.md
+  architecture: docs/architecture.md
+  design: DESIGN_SYSTEM.md
+  research: docs/restructure/
+tokens: src/index.css
+```
