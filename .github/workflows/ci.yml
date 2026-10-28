@@ -17,7 +17,7 @@ jobs:
   verify:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       # Reads .nvmrc, so CI, local and Vercel all track the same Node major.
       - uses: actions/setup-node@v4
