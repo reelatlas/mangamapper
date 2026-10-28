@@ -11,14 +11,17 @@ import { Card, CardContent } from '@/components/ui/card';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { useCatalogSeries, useCatalogMapping } from '@/hooks/useCatalog';
 import { MappingStrip } from '@/components/MappingStrip';
+import { FetchError } from '@/components/FetchError';
 import { motion } from 'motion/react';
 import { Play, ArrowLeft, SkipForward } from 'lucide-react';
 import { TvIcon as Tv, BookOpenIcon as BookOpen } from '@/components/icons';
 
 const AnimeDetail = () => {
   const { id } = useParams<{ id: string }>();
-  const { data: anime, isLoading } = useCatalogSeries(id);
-  const { data: mapping } = useCatalogMapping(id);
+  const seriesQuery = useCatalogSeries(id);
+  const { data: anime, isLoading } = seriesQuery;
+  const mappingQuery = useCatalogMapping(id);
+  const { data: mapping } = mappingQuery;
   const [showAll, setShowAll] = useState(false);
   const [activeFilters, setActiveFilters] = useState<Set<EpisodeType>>(new Set(['canon', 'mixed', 'filler']));
 
@@ -46,6 +49,18 @@ const AnimeDetail = () => {
               {'>'} fetch_series({id}) ...
             </motion.span>
           </div>
+        </main>
+      </div>
+    );
+  }
+
+  // A fetch that failed is not "not found": say so, and offer the retry.
+  if (seriesQuery.isError) {
+    return (
+      <div className="min-h-screen bg-background font-mono">
+        <Header />
+        <main className="container py-16">
+          <FetchError code="fetch_failed" detail={`fetch_series(${id}) did not return`} onRetry={() => void seriesQuery.refetch()} />
         </main>
       </div>
     );
@@ -84,6 +99,13 @@ const AnimeDetail = () => {
       <Header />
       
       <main className="container py-8">
+        {mappingQuery.isError && (
+          // The series loaded but its mapping did not: the page stays usable
+          // (counts fall back to the episode sample) and the gap is named.
+          <div className="mb-8">
+            <FetchError code="mapping_unavailable" onRetry={() => void mappingQuery.refetch()} />
+          </div>
+        )}
         {/* Hero section */}
         <div className="flex flex-col lg:flex-row gap-6 mb-10">
           {/* Cover image */}

@@ -1,9 +1,12 @@
 name: CI
 
+# Dispatch-only by policy (Sean, 2026-10-28, same as his other repos):
+# the gates run locally before every push, and the account's shared 2,000
+# Actions minutes do not stretch to a run per push for a solo repo. Start
+# it from Actions → Run workflow or `gh workflow run CI`. Revisit with a
+# second contributor.
 on:
-  push:
-    branches: [main]
-  pull_request:
+  workflow_dispatch:
 
 # Cancel superseded runs on the same branch.
 concurrency:

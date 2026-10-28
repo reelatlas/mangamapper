@@ -86,7 +86,8 @@ export const usePositionLookup = (
   const rest = useMemo(() => {
     const ep = mapping ? mapping.airedEpisodes : anime.currentEpisode;
     const vol = mangaEditable ? mapping!.latestKnown!.volume : null;
-    const ch = mangaEditable ? lastChapterNumber(mapping!.latestKnown!.chapters) : null;
+    const chapters = mangaEditable ? mapping!.latestKnown!.chapters : null;
+    const ch = chapters ? lastChapterNumber(chapters) : null;
     return { ep, vol, ch };
   }, [anime, mapping, mangaEditable]);
 

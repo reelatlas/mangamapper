@@ -83,7 +83,9 @@ function checkCitations(ids: Map<string, Rule>) {
     const full = join(ROOT, p);
     if (!existsSync(full)) return;
     if (statSync(full).isDirectory()) { for (const f of readdirSync(full)) if (!f.startsWith('.') || p === '.claude') walk(join(p, f)); }
-    else if (/\.(md|ts)$/.test(p) && !/\/out2?\//.test(p) && !p.includes('lib/ledger/') && !p.startsWith('docs/restructure')) files.push(p);
+    // .claude/worktrees holds whole checkouts (node_modules included) — a
+    // citation in lib.dom.d.ts is noise, not a rule reference.
+    else if (/\.(md|ts)$/.test(p) && !/\/out2?\//.test(p) && !p.includes('lib/ledger/') && !p.startsWith('docs/restructure') && !p.includes('.claude/worktrees/')) files.push(p);
   };
   roots.forEach(walk);
   const seen = new Map<string, Set<string>>();

@@ -1,73 +1,81 @@
-# Welcome to your Lovable project
+# mangaMapper
 
-## Project info
+Anime ↔ manga chapter-mapping catalog: for ~343 series, where an episode
+sits in the source material, with the honest answer ("no exact record")
+shown instead of a guess. Live at https://mangamapper.vercel.app.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+The product promise is that a position shown to a user is TRUE. Most of the
+repo exists to make that mechanical: a typed rules ledger, ingest scripts
+that share one library with the Supabase edge functions, and audit scripts
+that verify outcomes in the data rather than intentions in the code.
 
-## How can I edit this code?
+## Stack
 
-There are several ways of editing your application.
+Vite 8 · React 19 · TypeScript 6 (strict in `src/`) · Tailwind 4 (CSS-first)
+· shadcn/ui (15 primitives, customised) · Motion · TanStack Query + Virtual ·
+Supabase (Postgres, RLS on every table, 5 edge functions, pg_cron + Vault)
+· Vercel from `main`.
 
-**Use Lovable**
+## Run
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
+npm install          # Node 24 (.nvmrc, engine-strict)
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Browser env: `VITE_SUPABASE_URL`, `VITE_SUPABASE_PUBLISHABLE_KEY` in `.env`.
+Ingest scripts read `.env.ingest` (service role, never shipped):
+`npm run pull`, `npm run heal`, `npm run census`.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Gates
 
-**Use GitHub Codespaces**
+```bash
+npx tsc -b --noEmit && npm run lint && npm test && npm run build && npm run system:census
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+`system:census` is the project's own gate: ledger integrity (every rule
+points at a file, a symbol, and an audit class that exist), citation sweep,
+edge-bundle hash parity, roster membership, generated-doc freshness. The
+GitHub Actions workflow runs the first four on dispatch only (see "What is
+deliberately not here").
 
-## What technologies are used for this project?
+## Structure
 
-This project is built with:
+- `src/data/catalog/` — the `CatalogSource` seam (`source.ts`), the pure
+  assembly of DB rows into the UI's `Episode`/`MappingSummary` shapes
+  (`assemble.ts`), and the Supabase and mock implementations.
+- `src/lib/mapping.ts` — position math (episode ↔ volume ↔ chapter).
+- `src/components/` — `CatalogField` (the search-and-takeover instrument),
+  `EpisodeList` (virtualised, hand-rolled scroll anchoring), `MappingStrip`.
+  Behavioural contracts per component live in `docs/components/`.
+- `scripts/ingest/lib/` — the rules and gates, consumed identically by the
+  CLI scripts and the edge functions (`supabase/functions/_src/`), bundled
+  by `build-functions.ts` with a lib hash the census checks.
+- `scripts/ingest/lib/ledger/` — the rules as typed records; rendered to
+  `docs/rules.md` by `npm run ledger:docs`.
+- `scripts/restructure/` — `ledger-check`, `system-census`, doc generators.
+- `supabase/migrations/` — 56 migrations: schema, RLS, cron, vault.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Docs: `CLAUDE.md` routes to everything; `docs/STATE.md` is where the
+project stands; `docs/rules.md` the ledger; `docs/architecture.md`,
+`docs/data-pipeline.md`, `docs/runbook.md`; `DESIGN_SYSTEM.md` the visual
+system and motion intents; `docs/changelog.md` the `§12.N` history that
+commits cite.
 
-## How can I deploy this project?
+## What is deliberately not here (yet)
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+Personal project, one maintainer, built for speed. Each omission has a
+trigger:
 
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+- **No CI on push.** Gates run locally before every push; the workflow is
+  dispatch-only. The account's shared Actions minutes do not stretch to a
+  job per push for a solo repo. Trigger: a second contributor.
+- **No error reporting service.** A render failure hits the app's one
+  `ErrorBoundary`; a failed fetch shows `FetchError`; both log to the
+  console. Trigger: real traffic.
+- **Scripts are not strict TypeScript.** `src/` is; `scripts/` (51k lines,
+  heavy `any` at the HTTP boundaries) is typed per module behind its 300
+  tests as modules are touched. Trigger: a module's next change.
+- **Research transcripts are tracked** (`scripts/ingest/research/`, 15 MB):
+  they are the provenance the ledger cites. Trigger for LFS: the clone
+  getting slow.

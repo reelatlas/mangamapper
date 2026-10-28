@@ -23,6 +23,15 @@ Motion · Supabase (`ysjnqbnbtftjdepovpkt`) · Vercel deploys from `main`.
   `npm test`, `npm run build`, and `npx tsx scripts/restructure/ledger-check.ts`
   (red = blocking).
 
+## Commits
+
+Subject ≤ 72 characters, conventional prefix (`feat:`, `fix:`, `docs:`,
+`chore:`, `test:`, `data:`), one change per commit. Ledger ids, `§12.N`
+changelog sections, and the ruling's date go in the BODY, where they stay
+greppable; `git log --oneline` has to be readable by someone without the
+ledger open. The pre-2026-10 history put all of that in the subject (median
+283 chars); that is the convention this replaces, not a rewrite.
+
 ## Hard invariants (always on)
 
 These are not preferences. Breaking one is a bug even if everything is green.

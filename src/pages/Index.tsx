@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Search } from 'lucide-react';
 import { Header } from '@/components/Header';
 import { Kbd } from '@/components/Kbd';
+import { FetchError } from '@/components/FetchError';
 import { CatalogField, META_RESERVE } from '@/components/CatalogField';
 import { useCatalogList } from '@/hooks/useCatalog';
 
@@ -194,12 +195,18 @@ const Index = () => {
             traveling focus law anchors the list to the frame's top edge, so
             there is no dead space regardless of frame height. */}
         <div className="container h-full">
-          <CatalogField
-            series={listQuery.data ?? []}
-            query={query}
-            loading={listQuery.isLoading}
-            onOpenChange={setCardOpen}
-          />
+          {listQuery.isError ? (
+            // P5 on the UI side: a failed fetch is a failure state, never an
+            // empty catalog that reads as "no series".
+            <FetchError code="catalog_unavailable" onRetry={() => void listQuery.refetch()} />
+          ) : (
+            <CatalogField
+              series={listQuery.data ?? []}
+              query={query}
+              loading={listQuery.isLoading}
+              onOpenChange={setCardOpen}
+            />
+          )}
         </div>
       </main>
     </div>
