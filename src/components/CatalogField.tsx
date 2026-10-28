@@ -774,7 +774,7 @@ export const CatalogField = ({ series, query, loading, onOpenChange }: CatalogFi
 interface TakeoverOverlayProps {
   anime: AnimeSeries;
   anchorY: number;
-  stageRef: React.RefObject<HTMLDivElement>;
+  stageRef: React.RefObject<HTMLDivElement | null>;
   closing: boolean;
   reducedMotion: boolean;
   onRequestClose: () => void;

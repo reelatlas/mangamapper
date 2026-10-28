@@ -97,7 +97,8 @@ export interface WatchOrderEntry {
 
 export interface Episode {
   number: number;
-  title: string;
+  /** null = title pending (DB stores '' for NOT NULL; assemble.ts maps it to null, EpisodeList renders `// title_pending`) */
+  title: string | null;
   type: EpisodeType;
   mangaMapping: MangaMapping | null; // null for filler and off-source rows
   airDate: string;
